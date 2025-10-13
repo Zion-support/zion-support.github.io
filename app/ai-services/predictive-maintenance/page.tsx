@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -6,6 +7,8 @@ export default function predictiveMaintenance() {
 =======
 export default function Page() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

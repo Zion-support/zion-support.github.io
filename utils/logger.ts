@@ -114,6 +114,24 @@ export default loggerInstance;
   }
 }
 
+<<<<<<< HEAD
 const loggerInstance = new Logger();
 export default loggerInstance;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+=======
+const logger = new Logger();
+export const logger = {
+  // Logger implementation
+  info: (message: string) => {
+    console.log(`[INFO] ${message}`);
+  },
+  error: (message: string) => {
+    console.error(`[ERROR] ${message}`);
+  },
+  warn: (message: string) => {
+    console.warn(`[WARN] ${message}`);
+  }
+};
+
+export { logger };
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50

@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 interface AnalyticsProps {
   className?: string;
   children?: React.ReactNode;
@@ -17,4 +18,18 @@ export default function Analytics({ className = '', children, ...props }: Analyt
       {children}
     </div>
   );
+=======
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
+interface AnalyticsProps {
+  children: React.ReactNode;
+}
+
+export default function Analytics({ children }: AnalyticsProps) {
+  return <>{children}</>;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 }

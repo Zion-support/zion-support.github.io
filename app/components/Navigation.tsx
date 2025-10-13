@@ -10,6 +10,7 @@ interface NavigationProps {
   className?: string;
   children?: React.ReactNode;
 }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export default function Navigation({ className = '', children }: NavigationProps) {
@@ -174,3 +175,5 @@ const Navigation: React.FC<NavigationProps> = () => {
 
 export default Navigation;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50

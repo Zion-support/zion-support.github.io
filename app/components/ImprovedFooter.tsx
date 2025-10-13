@@ -15,4 +15,7 @@ export default function Improvedfooter({ className = '', children, ...props }: I
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50

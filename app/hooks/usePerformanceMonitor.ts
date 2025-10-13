@@ -9,6 +9,7 @@ export function usePerformanceMonitor() {
     // Performance monitoring logic will be implemented here
     console.log('Performance monitor initialized');
   }, []);
+<<<<<<< HEAD
 
   return {
     metrics: metricsRef.current,
@@ -43,3 +44,5 @@ export function slugify(text: string): string {
     .replace(/^-+|-+$/g, '');
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50

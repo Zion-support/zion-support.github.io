@@ -7,7 +7,10 @@ interface ImageOptimizerProps {
   alt: string;
   width?: number;
   height?: number;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
   className?: string;
   children?: React.ReactNode;
 }

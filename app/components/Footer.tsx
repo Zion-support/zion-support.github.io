@@ -1,5 +1,6 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface FooterProps {
   className?: string;
@@ -14,18 +15,25 @@ export default function Footer({ className = '', children }: FooterProps) {
   );
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 import { Link } from 'react-router-dom';
 import { 
   Twitter, 
   Linkedin, 
   Github, 
   Mail, 
+<<<<<<< HEAD
   Phone, 
   MapPin, 
   Shield, 
   Award, 
   Users, 
   Clock 
+=======
+  Phone,
+  MapPin
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 } from 'lucide-react';
 
 const Footer: React.FC = () => {
@@ -88,6 +96,7 @@ const Footer: React.FC = () => {
     { name: "GDPR", path: "/gdpr" }
   ];
 
+<<<<<<< HEAD
   const stats = [
     { number: "500+", label: "Projects Completed", icon: <Award className="w-5 h-5" /> },
     { number: "10,000+", label: "Happy Clients", icon: <Users className="w-5 h-5" /> },
@@ -104,6 +113,17 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold">Zion Tech Group</h3>
             <p className="text-gray-300 text-sm">
               Advanced AI and IT Solutions for Modern Businesses
+=======
+  return (
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div>
+            <h3 className="text-xl font-bold mb-4">Zion Tech Group</h3>
+            <p className="text-gray-300 mb-4">
+              Advanced AI and IT solutions for modern businesses.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             </p>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
@@ -111,14 +131,59 @@ const Footer: React.FC = () => {
                   key={link.name}
                   href={link.href}
                   className="text-gray-400 hover:text-white transition-colors"
+<<<<<<< HEAD
                   aria-label={link.name}
+=======
+                  target="_blank"
+                  rel="noopener noreferrer"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
                 >
                   {link.icon}
                 </a>
               ))}
+<<<<<<< HEAD
+=======
             </div>
           </div>
 
+          {/* Services */}
+          {serviceCategories.map((category) => (
+            <div key={category.title}>
+              <h4 className="text-lg font-semibold mb-4">{category.title}</h4>
+              <ul className="space-y-2">
+                {category.services.map((service) => (
+                  <li key={service.name}>
+                    <Link
+                      to={service.href}
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      {service.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+            </div>
+          ))}
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+<<<<<<< HEAD
           {/* Quick Links */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
@@ -128,12 +193,24 @@ const Footer: React.FC = () => {
                   <Link
                     to={link.path}
                     className="text-gray-300 hover:text-white transition-colors text-sm"
+=======
+          {/* Legal */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Legal</h4>
+            <ul className="space-y-2">
+              {legalLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    to={link.path}
+                    className="text-gray-300 hover:text-white transition-colors"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
                   >
                     {link.name}
                   </Link>
                 </li>
               ))}
             </ul>
+<<<<<<< HEAD
           </div>
 
           {/* Services */}
@@ -212,12 +289,24 @@ const Footer: React.FC = () => {
                 </Link>
               ))}
             </div>
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
           </div>
+        </div>
+
+        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400">
+            © {currentYear} Zion Tech Group. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
   );
 };
 
+<<<<<<< HEAD
 export default Footer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+=======
+export default Footer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50

@@ -11,4 +11,7 @@ export default function ImprovedImage({ className = '', children }: ImprovedImag
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50

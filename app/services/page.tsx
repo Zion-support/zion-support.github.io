@@ -1,5 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+=======
+import { Brain, Shield, Globe, Code, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones, Phone } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 
 export default function services() {
   return (
@@ -19,4 +25,9 @@ export default function services() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50

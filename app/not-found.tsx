@@ -1,5 +1,9 @@
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 
 interface notfoundProps {
   className?: string;
@@ -8,6 +12,7 @@ interface notfoundProps {
 
 export default function notfound({ className = '', children }: notfoundProps) {
   return (
+<<<<<<< HEAD
     <div className={`${className}`}>
       {children}
 =======
@@ -26,6 +31,21 @@ export default function NotFound() {
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive notfound solutions designed to meet your business needs.
+=======
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>404 - Page Not Found | Zion Tech Group</title>
+        <meta name="description" content="The page you are looking for could not be found." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            404 - Page Not Found
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            The page you are looking for could not be found.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
@@ -52,7 +72,15 @@ export default function NotFound() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
     </div>
   );
 }
+=======
+    </div>
+  );
+};
+
+export default NotFoundPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50

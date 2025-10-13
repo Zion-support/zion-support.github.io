@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface imageProps {
@@ -36,4 +37,32 @@ export function slugify(text: string): string {
     .replace(/[\s_-]+/g, '-')
     .replace(/^-+|-+$/g, '');
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+=======
+import React from 'react';
+
+interface ImageProps {
+  src: string;
+  alt: string;
+  className?: string;
+  width?: number;
+  height?: number;
+}
+
+export default function Image({ 
+  src, 
+  alt, 
+  className = '', 
+  width, 
+  height 
+}: ImageProps) {
+  return (
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      width={width}
+      height={height}
+    />
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 }

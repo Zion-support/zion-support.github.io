@@ -21,4 +21,7 @@ export default function Improvedsidebar({ className = '', children, ...props }: 
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50

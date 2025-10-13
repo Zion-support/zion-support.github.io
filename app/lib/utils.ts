@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // utils utility functions
 
 export interface utilsConfig {
@@ -25,11 +26,14 @@ export class utils {
 export const utilsInstance = new utils();
 export default utilsInstance;
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
+<<<<<<< HEAD
 }
 
 export function formatDate(date: Date | string): string {
@@ -61,3 +65,6 @@ export function truncateText(text: string, maxLength: number): string {
   return text.slice(0, maxLength).trim() + '...';
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50

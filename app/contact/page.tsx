@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React, { useState } from "react";
+import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 
 export default function contact() {
   return (
@@ -19,4 +26,9 @@ export default function contact() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50

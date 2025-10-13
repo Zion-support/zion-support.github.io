@@ -15,6 +15,7 @@ export default function aiEmailMarketingAutomation() {
           <h1 className="text-4xl font-bold mb-8">Ai Email Marketing Automation</h1>
           <p className="text-xl text-gray-300 mb-8">
             This page is under development. Please check back later.
+<<<<<<< HEAD
 =======
 export default function Page() {
   return (
@@ -30,6 +31,8 @@ export default function Page() {
           <p className="text-xl text-gray-300 mb-8">
             Discover our comprehensive page solutions designed to meet your business needs.
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
           </p>
         </div>
       </div>
