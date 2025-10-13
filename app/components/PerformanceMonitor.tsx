@@ -131,30 +131,50 @@ const PerformanceMonitor = () => {
           <div className="space-y-3 text-sm">
             <div className="flex justify-between items-center">
               <span className="text-gray-600">Load Time:</span>
+              <span className={`font-mono ${getMetricColor(metrics.loadTime || 0, { good: 2000, poor: 4000 })}`}>
+                {metrics.loadTime ? `${metrics.loadTime.toFixed(2)}ms` : 'N/A'}
               </span>
             </div>
             
             <div className="flex justify-between items-center">
               <span className="text-gray-600">FCP:</span>
+              <span className={`font-mono ${getMetricColor(metrics.firstContentfulPaint || 0, { good: 1800, poor: 3000 })}`}>
+                {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(2)}ms` : 'N/A'}
               </span>
             </div>
             
             <div className="flex justify-between items-center">
               <span className="text-gray-600">LCP:</span>
+              <span className={`font-mono ${getMetricColor(metrics.largestContentfulPaint || 0, { good: 2500, poor: 4000 })}`}>
+                {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(2)}ms` : 'N/A'}
               </span>
             </div>
             
             <div className="flex justify-between items-center">
+              <span className="text-gray-600">FID:</span>
+              <span className={`font-mono ${getMetricColor(metrics.firstInputDelay || 0, { good: 100, poor: 300 })}`}>
+                {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(2)}ms` : 'N/A'}
               </span>
             </div>
             
             <div className="flex justify-between items-center">
               <span className="text-gray-600">CLS:</span>
+              <span className={`font-mono ${getMetricColor(metrics.cumulativeLayoutShift || 0, { good: 0.1, poor: 0.25 })}`}>
+                {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A'}
               </span>
             </div>
             
             <div className="flex justify-between items-center">
               <span className="text-gray-600">TTFB:</span>
+              <span className={`font-mono ${getMetricColor(metrics.timeToFirstByte || 0, { good: 800, poor: 1800 })}`}>
+                {metrics.timeToFirstByte ? `${metrics.timeToFirstByte.toFixed(2)}ms` : 'N/A'}
+              </span>
+            </div>
+
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">Memory:</span>
+              <span className="font-mono">
+                {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(2)}MB` : 'N/A'}
               </span>
             </div>
           </div>

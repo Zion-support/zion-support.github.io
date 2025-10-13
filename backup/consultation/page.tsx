@@ -1,4 +1,3 @@
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Clock, Users, Shield, Brain, Cloud, Zap, Star, Phone, Mail, MapPin } from 'lucide-react';
@@ -104,7 +103,6 @@ export default function Consultation() {
       description: 'Free consultation with no strings attached'
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -140,12 +138,6 @@ export default function Consultation() {
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300">
                 Call Us: +1 302 464 0950
               </button>
-            </div>
-          </div>
-        </section>
-
-                </div>
-              ))}
             </div>
           </div>
         </section>

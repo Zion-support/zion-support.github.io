@@ -8,9 +8,9 @@ const CacheManager = () => {
       if ('serviceWorker' in navigator) {
         try {
           const registration = await navigator.serviceWorker.register('/sw.js');
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
+          console.log('Service Worker registered:', registration);
+        } catch (error) {
+          console.error('Service Worker registration failed:', error);
         }
       }
     }
@@ -32,9 +32,9 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
+          console.log('Static assets cached successfully');
+        } catch (error) {
+          console.error('Failed to cache static assets:', error);
         }
       }
 
@@ -49,6 +49,8 @@ const CacheManager = () => {
           }
           
           return response
+        } catch (error) {
+          console.error('Failed to cache API response:', error);
           return fetch(request);
         }
       }
@@ -127,7 +129,7 @@ const CacheManager = () => {
     // Cleanup function
     return () => {
       // Cleanup any intervals or observers
-      }
+    }
   }, [])
 
   return null

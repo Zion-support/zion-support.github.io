@@ -62,10 +62,7 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       url: window.location.href,
     };
 
-
-=======
     console.error('Error data:', errorData);
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
     // Example: Send to your error reporting service
     // You could send this to your backend:
     // fetch('/api/error-report', {
