@@ -1,18 +1,11 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
-<<<<<<< HEAD
 import StructuredData from "./components/StructuredData";
-import FuturisticBackground from "./components/FuturisticBackground";
-import FuturisticCard from "./components/FuturisticCard";
-import FuturisticButton from "./components/FuturisticButton";
-import FuturisticText from "./components/FuturisticText";
-=======
 import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
 import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
 import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
@@ -209,80 +202,80 @@ const HomePage = () => {
             }} 
           />
 
-      {/* Main Content */}
-      <main id="main-content" role="main" aria-label="Main content">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
-          </div>
-          
-          <FuturisticTextEnhanced
-            variant="display"
-            size="6xl"
-            gradient={true}
-            animated={true}
-            glow={true}
-            neon={true}
-            className="mb-6 leading-tight"
-          >
-            Welcome to Zion Tech Group
-          </FuturisticTextEnhanced>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
-            Transform your operations with cutting-edge technology and innovative solutions.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButtonEnhanced
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={Sparkles}
-              iconPosition="left"
-              glowColor="cyan"
-              neon={true}
-              animated={true}
-            >
-              Get Started Today
-            </FuturisticButtonEnhanced>
-            <FuturisticButtonEnhanced
-              href="/demo"
-              variant="outline"
-              size="lg"
-              icon={Monitor}
-              iconPosition="left"
-              glowColor="purple"
-              neon={true}
-              animated={true}
-            >
-              Watch Demo
-            </FuturisticButtonEnhanced>
-          </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-                </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
+        {/* Main Content */}
+        <main id="main-content" role="main" aria-label="Main content">
+          {/* Hero Section */}
+          <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+            {/* Animated Background Elements */}
+            <div className="absolute inset-0 overflow-hidden">
+              <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+              <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+            </div>
+            
+            <ResponsiveContainer className="text-center relative z-10">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+                <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
               </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
+              
+              <FuturisticTextEnhanced
+                variant="display"
+                size="6xl"
+                gradient={true}
+                animated={true}
+                glow={true}
+                neon={true}
+                className="mb-6 leading-tight"
+              >
+                Welcome to Zion Tech Group
+              </FuturisticTextEnhanced>
+              
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
+                Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
+                Transform your operations with cutting-edge technology and innovative solutions.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <FuturisticButtonEnhanced
+                  href="/contact"
+                  variant="primary"
+                  size="lg"
+                  icon={Sparkles}
+                  iconPosition="left"
+                  glowColor="cyan"
+                  neon={true}
+                  animated={true}
+                >
+                  Get Started Today
+                </FuturisticButtonEnhanced>
+                <FuturisticButtonEnhanced
+                  href="/demo"
+                  variant="outline"
+                  size="lg"
+                  icon={Monitor}
+                  iconPosition="left"
+                  glowColor="purple"
+                  neon={true}
+                  animated={true}
+                >
+                  Watch Demo
+                </FuturisticButtonEnhanced>
+              </div>
+              
+              {/* Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center group">
+                    <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      {stat.icon}
+                    </div>
+                    <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                    <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </ResponsiveContainer>
+          </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -498,17 +491,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      </main>
-<<<<<<< HEAD
-      </div>
-=======
-          </main>
-        </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
+        </main>
         </FuturisticBackgroundEnhanced>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );
