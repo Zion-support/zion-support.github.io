@@ -12,25 +12,11 @@ interface PerformanceMetrics {
 }
 
 interface PerformanceEntryExtended extends PerformanceEntry {
-
   processingStart?: number;
   hadRecentInput?: boolean;
   value?: number;
   responseStart?: number;
   requestStart?: number;
-
-} catch (error) {
-  console.error('Error:', error);
-  res.status(500).json({ error: 'Internal server error' });
-}
-
-declare global {
-  interface PerformanceEntry {
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;
-  }
 }
 
 export function usePerformanceMetrics() {
@@ -69,8 +55,8 @@ export function usePerformanceMetrics() {
         if (entry.processingStart !== undefined && entry.startTime !== undefined) {
           setMetrics(prev => ({ 
             ...prev, 
-            fid: entry.processingStart! - entry.startTime ;
-}));
+            fid: entry.processingStart! - entry.startTime 
+          }));
         }
       });
     }).observe({ entryTypes: ['first-input'] });
@@ -94,8 +80,8 @@ export function usePerformanceMetrics() {
         if (entry.responseStart !== undefined && entry.requestStart !== undefined) {
           setMetrics(prev => ({ 
             ...prev, 
-            ttfb: entry.responseStart! - entry.requestStart! ;
-}));
+            ttfb: entry.responseStart! - entry.requestStart! 
+          }));
         }
       });
     }).observe({ entryTypes: ['navigation'] });

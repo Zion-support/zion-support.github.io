@@ -13,7 +13,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   description,
   keywords,
   canonical,
-  children;
+  children
 }) => {
   return (
     <>
@@ -27,3 +27,8 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     </>;
 );
 };
+<<<<<<< HEAD
+=======
+
+export default EnhancedSEO;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405

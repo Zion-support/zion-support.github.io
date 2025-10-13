@@ -124,4 +124,7 @@ export default SEOEnhancer;
 =======
 
 export default SEOEnhancer;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405

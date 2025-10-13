@@ -1,22 +1,11 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 // Type definitions for browser APIs
 declare global {
   interface PerformanceObserver {
     observe(options: { entryTypes: string[] }): void;
     disconnect(): void;
   }
-<<<<<<< HEAD
-  
-<<<<<<< HEAD
   const PerformanceObserver: {
     new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
   };
@@ -27,6 +16,8 @@ declare global {
 =======
 
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
 import React, { useEffect, useState } from 'react';
 
 // Extend the global PerformanceEntry interface
@@ -130,6 +121,7 @@ const PerformanceMonitor: React.FC = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart }));
           }
@@ -142,6 +134,8 @@ const PerformanceMonitor: React.FC = () => {
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
@@ -199,7 +193,10 @@ const PerformanceMonitor: React.FC = () => {
 
 <<<<<<< HEAD
 export default PerformanceMonitor;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
 export default PerformanceMonitor;
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405

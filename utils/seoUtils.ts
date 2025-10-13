@@ -2,16 +2,27 @@ interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-  canonicalUrl: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
-  robots: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  ogType?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterCard?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+  robots?: string;
+  viewport?: string;
+  charset?: string;
   author?: string;
+  publisher?: string;
+  language?: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
   publishedTime?: string;
   modifiedTime?: string;
   section?: string;
   tags?: string[];
+<<<<<<< HEAD
   viewport?: string;
   charset?: string;
   publisher?: string;
@@ -21,6 +32,8 @@ interface SEOConfig {
   twitterTitle?: string;
   twitterDescription?: string;
   twitterImage?: string;
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
   geo?: {
     latitude?: string;
     longitude?: string;
@@ -28,8 +41,13 @@ interface SEOConfig {
     placename?: string;
   };
   alternate?: Array<{
+<<<<<<< HEAD
     href: string;
     hreflang: string;
+=======
+    hreflang: string;
+    href: string;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
   }>;
   structuredData?: any;
 }

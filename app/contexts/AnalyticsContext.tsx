@@ -5,16 +5,6 @@ interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void;
   setUser: (userId: string, properties?: Record<string, any>) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
-=======
-  isEnabled: boolean;
-  isEnabled: boolean;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
   isEnabled: boolean;
 }
 
@@ -31,12 +21,20 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
     if (!isEnabled) return;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
     // Track event logic here
     console.log('Analytics Event:', eventName, properties);
   };
 
   const trackPageView = (pageName: string) => {
     if (!isEnabled) return;
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
     // Track page view logic here
     console.log('Page View:', pageName);
   };
@@ -51,6 +49,9 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     trackPageView,
     setUser,
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
     isEnabled,
   };
 
