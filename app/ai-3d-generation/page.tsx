@@ -1,5 +1,5 @@
 import React from 'react';
-import { Cube, Zap, Palette, Download, Share2, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from 'lucide-react';
+import { Box, Zap, Palette, Download, Share2, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
@@ -11,7 +11,7 @@ const AI3DGenerationPage = () => {
     {
       title: "AI-Powered 3D Modeling",
       description: "Generate high-quality 3D models from text descriptions using advanced AI algorithms",
-      icon: <Cube className="w-6 h-6" />,
+      icon: <Box className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
@@ -134,7 +134,7 @@ const AI3DGenerationPage = () => {
     {
       title: "Game Development",
       description: "Create 3D assets, characters, and environments for games",
-      icon: <Cube className="w-8 h-8" />,
+      icon: <Box className="w-8 h-8" />,
       examples: ["Character models", "Environment assets", "Weapons & props", "UI elements"]
     },
     {
@@ -216,7 +216,7 @@ const AI3DGenerationPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Cube className="w-5 h-5" />}
+              icon={<Box className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -234,7 +234,7 @@ const AI3DGenerationPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
-                <Cube className="w-6 h-6 text-cyan-400" />
+                <Box className="w-6 h-6 text-cyan-400" />
               </div>
               <div className="text-xl md:text-2xl font-bold text-white mb-2">10,000+</div>
               <div className="text-gray-300 text-sm">3D Models Generated</div>
@@ -500,7 +500,7 @@ const AI3DGenerationPage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<Cube className="w-5 h-5" />}
+                icon={<Box className="w-5 h-5" />}
               >
                 View Demo
               </FuturisticButton>
