@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 interface AccessibilityEnhancerProps {
-  children: .Node;
+  children: React.ReactNode;
 }
 
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
@@ -111,8 +111,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     return () => {
       focusableElements.forEach(element => {
-        element.removeEventListener(&apos;focus&apos;, handleFocus);
-        element.removeEventListener(&apos;blur&apos;, handleBlur);
+        element.removeEventListener('focus', handleFocus);
+        element.removeEventListener('blur', handleBlur);
       });
     };
   }, []);
