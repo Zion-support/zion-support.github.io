@@ -4,27 +4,7 @@ interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void;
   setUser: (userId: string, properties?: Record<string, any>) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
   isEnabled: boolean;
-<<<<<<< HEAD
-  isEnabled: boolean;
-  isEnabled: boolean;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-  isEnabled: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
-  isEnabled: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-  isEnabled: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

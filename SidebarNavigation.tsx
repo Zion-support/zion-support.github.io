@@ -1,11 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Home, User, Settings, HelpCircle, X } from 'lucide-react';
-=======
 import { Home, User, Settings, HelpCircle } from 'lucide-react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
 interface SidebarNavigationProps {
   isOpen: boolean;
   onClose: () => void;

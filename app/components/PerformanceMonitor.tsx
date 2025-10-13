@@ -1,29 +1,4 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-// Type definitions for browser APIs
-declare global {
-  interface PerformanceObserver {
-    observe(options: { entryTypes: string[] }): void;
-    disconnect(): void;
-  }
-=======
-
-
-import React, { useEffect, useState } from 'react';
-
-// Extend the global PerformanceEntry interface
-declare global {
-  interface PerformanceEntry {
-    // This extends the built-in PerformanceEntry
-  }
-}
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
 
 // Type definitions for browser APIs
 declare global {
@@ -31,31 +6,6 @@ declare global {
     requestStart: number;
     responseStart: number;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const PerformanceObserver: {
-    new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
-  };
-  const performance: {
-    getEntriesByType(type: string): PerformanceEntry[];
-  };
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-}
-import React, { useEffect, useState } from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
-  interface PerformanceEntry {
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;
-  }
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
   
   interface PerformanceEntry {
     name: string;
@@ -64,7 +14,7 @@ import React, { useEffect, useState } from 'react';
     duration: number;
   }
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
+
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -72,6 +22,7 @@ interface PerformanceMetrics {
   cls: number | null;
   ttfb: number | null;
 }
+
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
@@ -80,6 +31,7 @@ const PerformanceMonitor: React.FC = () => {
     cls: null,
     ttfb: null,
   });
+
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor Core Web Vitals
@@ -93,56 +45,33 @@ const PerformanceMonitor: React.FC = () => {
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
           } else if (entry.entryType === 'first-input') {
             const inputEntry = entry as any;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
           } else if (entry.entryType === 'layout-shift') {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
           }
         }
       });
+
       observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+
       // Monitor TTFB
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       if (navigationEntry) {
         setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
       }
+
       return () => observer.disconnect();
     }
     return undefined;
   }, []);
+
   // Only show in development
   if (process.env.NODE_ENV !== 'development') {
     return null;
   }
+
   return (
     <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
       <h3 className="font-bold mb-2">Performance Metrics</h3>
@@ -156,5 +85,5 @@ const PerformanceMonitor: React.FC = () => {
     </div>
   );
 };
-export default PerformanceMonitor;
 
+export default PerformanceMonitor;
