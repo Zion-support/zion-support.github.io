@@ -214,7 +214,12 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         >
                           View All Services →
                         </Link>
-                      </div>                {/* Dropdown Menu */}
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+                {/* Dropdown Menu */}
                 {item.hasDropdown && item.dropdownItems && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">
