@@ -19,13 +19,18 @@ const CacheManager = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
+    const registerServiceWorker = async () => {
+      try {
+        if ('serviceWorker' in navigator) {
+          const registration = await navigator.serviceWorker.register('/sw.js');
           console.log('Service Worker registered:', registration);
-
-        } catch (error) {
-          console.error('Service Worker registration failed:', error);
         }
+      } catch (error) {
+        console.error('Service Worker registration failed:', error);
       }
-    }
+    };
+
+    registerServiceWorker();
 
     // Cache API for dynamic caching
     const setupCacheStrategy = () => {
@@ -44,23 +49,27 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
+        } catch (error) {
+          console.error('Cache static assets failed:', error);
         }
-      }
+      };
 
       // Cache API responses
       const cacheAPIResponses = async (request: Request) => {
         try {
-          const cache = await caches.open(CACHE_NAME)
-          const response = await fetch(request)
+          const cache = await caches.open(CACHE_NAME);
+          const response = await fetch(request);
           
           if (response.ok) {
-            cache.put(request, response.clone())
+            cache.put(request, response.clone());
           }
           
-          return response
+          return response;
+        } catch (error) {
+          console.error('Cache API response failed:', error);
           return fetch(request);
         }
-      }
+      };
 
       // Initialize caching
       cacheStaticAssets()
@@ -115,6 +124,10 @@ const CacheManager = () => {
               imageObserver.unobserve(img)
             }
           }
+        })
+      })
+    }
+
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
@@ -246,7 +259,7 @@ const CacheManager = () => {
         Press Ctrl+Shift+C to toggle
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CacheManager
+export default CacheManager;

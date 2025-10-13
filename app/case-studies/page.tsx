@@ -1,11 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Star, Globe, Shield, CheckCircle } from 'lucide-react';
-
-import { ArrowRight, TrendingUp, Zap, BarChart3, Clock, CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { ArrowRight, Target, Star, Globe, Shield, CheckCircle, TrendingUp, Zap, BarChart3, Clock } from 'lucide-react';
 
 export default function CaseStudies() {
   const caseStudies = [
@@ -127,7 +123,38 @@ export default function CaseStudies() {
     { number: "60%", label: "Average Efficiency Gain", icon: <Zap className="w-6 h-6" /> }
   ];
 
-              </Link>
+  return (
+    <>
+      <Helmet>
+        <title>Case Studies - Zion Tech Group Success Stories</title>
+        <meta name="description" content="Explore our successful AI and IT solutions case studies. See how we've helped businesses transform with cutting-edge technology." />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Success Stories
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Discover how we've helped businesses transform with our AI and IT solutions.
+            </p>
+          </div>
+        </div>
+
+        {/* Stats Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
