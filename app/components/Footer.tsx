@@ -27,7 +27,7 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -56,56 +56,166 @@ const Footer = React.memo(() => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4">AI Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/ai-services"
+                  to="/ai-analytics"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Services
+                  AI Analytics
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/ai-automation"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Solutions
+                  AI Automation
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity"
+                  to="/ai-content-generation"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cybersecurity
+                  Content Generation
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/5g-implementation"
+                  to="/ai-customer-support"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  5G Implementation
+                  Customer Support
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  to="/ai-cybersecurity"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Data Analytics
+                  AI Cybersecurity
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/custom-development"
+                  to="/ai-business-intelligence"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Custom Development
+                  Business Intelligence
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">IT Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/cloud-infrastructure"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cloud Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/web-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/mobile-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Mobile Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/database-management"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Database Management
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/network-infrastructure"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Network Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cybersecurity-solutions"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cybersecurity Solutions
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Micro SAAS</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/zion-analytics-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Analytics Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-security-shield"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Security Shield
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-content-studio"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Content Studio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-project-master"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Project Master
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-email-automation"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Email Automation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-workflow-automation"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Workflow Automation
                 </Link>
               </li>
             </ul>
