@@ -1,21 +1,21 @@
 const fs = require('fs');
 const path = require('path');
 
-// Define all the routes in your application
+// Define all the routes in your application with priority and frequency
 const routes = [
-  '/',
-  '/about',
-  '/contact',
-  '/services',
-  '/ai-services',
-  '/micro-saas',
-  '/5g-solutions',
-  '/blog',
-  '/tutorials',
-  '/demo',
-  '/support',
-  '/privacy',
-  '/terms',
+  { path: '/', priority: '1.0', changefreq: 'daily' },
+  { path: '/about', priority: '0.9', changefreq: 'monthly' },
+  { path: '/contact', priority: '0.9', changefreq: 'monthly' },
+  { path: '/services', priority: '0.9', changefreq: 'weekly' },
+  { path: '/ai-services', priority: '0.9', changefreq: 'weekly' },
+  { path: '/micro-saas', priority: '0.9', changefreq: 'weekly' },
+  { path: '/5g-solutions', priority: '0.9', changefreq: 'weekly' },
+  { path: '/blog', priority: '0.8', changefreq: 'daily' },
+  { path: '/tutorials', priority: '0.8', changefreq: 'weekly' },
+  { path: '/demo', priority: '0.8', changefreq: 'monthly' },
+  { path: '/support', priority: '0.8', changefreq: 'weekly' },
+  { path: '/privacy', priority: '0.3', changefreq: 'yearly' },
+  { path: '/terms', priority: '0.3', changefreq: 'yearly' },
   // AI Services
   '/ai-analytics',
   '/ai-content-generation',
