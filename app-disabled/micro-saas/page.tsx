@@ -1,15 +1,19 @@
-import React from 'react;
+import react;
+
+import { Helmet } from  from 'react;
 
 import { Helmet } from 'react-helmet-async;
 
-import { Link } from 'react-router-dom;
+import { } from 'react-router-dom;
 
-import { CheckCircle, ArrowRight, Zap, Star, Users, TrendingUp, Shield, Cloud, BarChart3, MessageSquare } from 'lucide-react;
+import { Circle, Right, Star, 3, } from 'lucide-react;
 
-interface MicroSaasProduct {}
+interface MicroSaasProduct {
+  // Add properties here
+}
   id: string;
 
-  icon: React.ComponentType<any>;
+  icon: .ComponentType<any>;
 
   title: string;
 
@@ -40,12 +44,12 @@ const MicroSaasPage: React.FC = () => {}
 import React from 'react';
 
 const MicroSaasPage: React.FC = () => {
-import { CheckCircle, ArrowRight, Zap } from 'lucide-react'
+import { Circle, Right, } from 'lucide-react'
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Database, Brain } from 'lucide-react';
+import { } from 'react-router-dom';
+import { Right, Circle, Star, } from 'lucide-react';
       users: 'Up to 50 users',
       popular: true,
       category: 'Analytics
@@ -62,16 +66,16 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
     {
       id: '3,
       icon: '🔒,
-      title: 'Security Monitoring Suite,
+      title: 'Monitoring Suite,
       description: 'Comprehensive cybersecurity monitoring and threat detection for growing businesses,
       features: ['Threat detection', 'Vulnerability scanning', 'Compliance reporting', '24/7 monitoring', 'Incident response],
       price: '$199/month,
       users: 'Up to 200 users,
-      category: 'Security});)},
+      category: '});)},
     {
       id: '4,
       icon: '☁️,
-      title: 'Cloud Infrastructure Manager,
+      title: 'Infrastructure Manager,
       description: 'Automated cloud resource management and cost optimization for multi-cloud environments,
       features: ['Resource optimization', 'Cost tracking', 'Auto-scaling', 'Multi-cloud support', 'Backup management],
       price: '$299/month,
@@ -90,14 +94,11 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
     Cancel anytime, no long-term contracts
     {
     {}
-      icon: Users,
-      value: '10,000+,
-      label: 'Active Users,
-      description: Growing community of satisfied customers
+      icon: value: '10,000+,
+      label: 'Active description: Growing community of satisfied customers
     },
     {}
-      icon: TrendingUp,
-      value: '99.9%,
+      icon: value: '99.9%,
       label: 'Uptime,
       description: Reliable service you can count on
     },
@@ -108,20 +109,17 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
       description: Highly rated by our customers
     },
     {}
-      icon: Zap,
-      value: '24/7,
+      icon: value: '24/7,
       label: 'Support,
       description: Always here when you need us
   const features = [;;
 
     {
-      icon: Zap,
-      title: 'Lightning Fast Setup,
+      icon: title: 'Fast Setup,
       description: Get up and running in minutes with our streamlined onboarding process
     },
     {
-      icon: Target,
-      title: 'Focused Solutions,
+      icon: title: 'Focused Solutions,
       description: Each micro SaaS is designed to solve specific business challenges effectively
     },
     {
@@ -191,7 +189,7 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
                     {product.features.map((feature, index) => (
 
                       <li key={index} className="flex items-center text-gray-300 text-sm>
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 />
+                        <Circle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 />
                         {feature}                      </li>
 
         <section className="py-16 px-4>
@@ -208,15 +206,14 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
                 {benefits.map((benefit, index) => (
 
                   <div key={index} className="flex items-start space-x-3>
-                    <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />                    <span className="text-gray-300>{benefit}</span>
+                    <Circle className="w-5 h-5 text-green-400 flex-shrink-0 mt-1" />                    <span className="text-gray-300>{benefit}</span>
                   to="/contact
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 transform hover:scale-105
                 >
-                  <Zap className="w-5 h-5 />
+                  <className="w-5 h-5 />
                   Start Free Trial
-                </Link>
-                <Link
-                  to="/pricing
+                </>
+                <to="/pricing
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300
     </>
   );

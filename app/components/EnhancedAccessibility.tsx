@@ -1,7 +1,7 @@
-import React, { useEffect, ReactNode } from 'react';
+import { useEffect, Node } from 'react';
 
 interface EnhancedAccessibilityProps {
-  children: ReactNode;
+  children: Node;
 }
 
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children }) => {
@@ -50,7 +50,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({ children 
       const links = document.querySelectorAll('a:not([aria-label])');
       links.forEach((link) => {
         if (!link.textContent?.trim()) {
-          link.setAttribute('aria-label', 'Link');
+          link.setAttribute('aria-label', '');
         }
       });
     };

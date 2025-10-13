@@ -10,11 +10,15 @@ const __dirname = path.dirname(__filename);
 // Function to fix a malformed page
 function fixPage(filePath) {
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
     // Check if this looks like a malformed page
-    if (!content.includes('export default') || content.includes(');') || content.includes('};')) {
+    if (!content.includes('export default') || content.includes(');') || content.includes('
+} catch (error) {
+  console.error('Error:', error);
+};')) {
       console.log(`Fixing malformed page: ${filePath}`);
       
       // Extract the component name from the file path

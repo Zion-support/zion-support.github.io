@@ -24,7 +24,7 @@ const createBasicPageTemplate = (pageName) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ${pageName}: React.FC = () => {
+const ${pageName}: React: React: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -113,7 +113,11 @@ export default ${pageName};`;
 // Function to fix a specific file
 function fixSpecificFile(filePath) {
   try {
-    console.log(`Fixing: ${filePath}`);
+
+    console.log(`Fixing: ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}`);
     
     // Extract page name from file path
     const fileName = path.basename(filePath, '.tsx');
@@ -149,7 +153,11 @@ console.log(`\nFixed ${fixedCount} files.`);
 // Run a quick syntax check
 console.log('\nRunning syntax check...');
 try {
-  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe' });
+
+  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe' 
+} catch (error) {
+  console.error('Error:', error);
+});
   console.log('✅ TypeScript syntax check passed');
 } catch (error) {
   console.log('❌ TypeScript syntax check failed - some files may still have issues');

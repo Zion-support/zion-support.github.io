@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface FuturisticCardProps {
-  children: React.ReactNode;
+  children: .Node;
   className?: string;
   variant?: 'default' | 'glow' | 'gradient';
 }

@@ -1,16 +1,19 @@
 import React from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 'use client;
 
-import React from 'react;
+import react;
+
+import { Helmet } from  from 'react;
 
 import { Helmet } from 'react-helmet-async;
 
-import { Brain, MessageSquare, Eye, Zap, BarChart, Box, Mic, Shield, TrendingUp, Target, FileText, Search, Phone } from 'lucide-react;
+import { Box, Mic, } from 'lucide-react;
 
-import Navigation from ../components
+import from ../components
 import Footer from ../components
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from lucide-react;
+import { Circle, Right, Star, } from lucide-react;
 
 ;
 
@@ -18,15 +21,14 @@ const AIServicesPagePage: React.FC = () => {const features = [;;;
 
     {
       ico,
-    n: Brain,
-      title: 'AI-Powered Intelligence,
+    n: title: 'AI-Powered Intelligence,
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.,
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis]
 import { Helmet } from 'react-helmet-async';
-import { Brain, MessageSquare, Eye, Zap, BarChart, Box, Mic, Shield, TrendingUp, Target, FileText, Search, Phone } from 'lucide-react';
-import Navigation from '../components/Navigation';
+import { Box, Mic, } from 'lucide-react';
+import ../components/ from '../components/';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+import { Circle, Right, Star, } from 'lucide-react';
 ;
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -70,7 +72,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       popular: true
     },
     {
-      icon: <Zap className="w-8 h-8 text-purple-500" />,
+      icon: <className="w-8 h-8 text-purple-500" />,
       title: 'AI Automation',
       description: 'Automate repetitive tasks and workflows with intelligent AI-powered automation solutions.',
       features: ['Workflow automation', 'Process optimization', 'Custom integrations', 'Real-time monitoring'],
@@ -79,7 +81,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       popular: true
     },
     {
-      icon: <Shield className="w-8 h-8 text-red-500" />,
+      icon: <className="w-8 h-8 text-red-500" />,
       title: 'AI Cybersecurity',
       description: 'Advanced AI-powered security solutions to protect your digital assets and detect threats.',
       features: ['Threat detection', 'Anomaly monitoring', 'Automated response', 'Compliance reporting'],
@@ -88,7 +90,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       popular: false
     },
     {
-      icon: <Globe className="w-8 h-8 text-green-500" />,
+      icon: <className="w-8 h-8 text-green-500" />,
       title: 'AI Analytics',
       description: 'Transform your data into actionable insights with powerful AI-driven analytics tools.',
       features: ['Predictive analytics', 'Data visualization', 'Custom dashboards', 'Real-time insights'],
@@ -97,7 +99,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       popular: false
     },
     {
-      icon: <Brain className="w-8 h-8 text-orange-500" />,
+      icon: <className="w-8 h-8 text-orange-500" />,
       title: 'Machine Learning',
       description: 'Build intelligent systems that learn and adapt to your business needs.',
       features: ['Predictive Modeling', 'Pattern Recognition', 'Automated Learning', 'Real-time Adaptation'],
@@ -106,7 +108,7 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       popular: true
     },
     {
-      icon: <MessageSquare className="w-8 h-8 text-green-500" />,
+      icon: <className="w-8 h-8 text-green-500" />,
       title: 'Natural Language Processing',
       description: 'Transform text and speech into actionable insights and automated responses.',
       features: ['Text Analysis', 'Sentiment Analysis', 'Language Translation', 'Chatbot Development'],
@@ -115,16 +117,16 @@ import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Tar
       popular: false
     },
     {
-      icon: <Eye className="w-8 h-8 text-purple-500" />,
+      icon: <className="w-8 h-8 text-purple-500" />,
       title: 'Computer Vision',
       description: 'Extract meaningful information from images and videos for business automation.',
-      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Video Analysis'],
+      features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Analysis'],
       pricing: 'Starting at $119/month',
       link: '/computer-vision',
       popular: true
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-yellow-500" />,
+      icon: <3 className="w-8 h-8 text-yellow-500" />,
       title: 'Predictive Analytics',
       description: 'Forecast future trends and behaviors to make data-driven business decisions.',
       features: ['Trend Analysis', 'Risk Assessment', 'Performance Prediction', 'Scenario Planning'],

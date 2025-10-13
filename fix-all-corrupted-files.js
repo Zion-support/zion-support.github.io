@@ -9,8 +9,12 @@ console.log('Starting comprehensive file corruption fix...');
 // Function to find all files with syntax errors
 function findCorruptedFiles() {
   try {
+
     // Run TypeScript check and capture errors
-    const output = execSync('npx tsc --noEmit --skipLibCheck 2>&1 || true', { encoding: 'utf8' });
+    const output = execSync('npx tsc --noEmit --skipLibCheck 2>&1 || true', { encoding: 'utf8' 
+} catch (error) {
+  console.error('Error:', error);
+});
     const lines = output.split('\n');
     const corruptedFiles = new Set();
     
@@ -118,7 +122,11 @@ export default ${fileName};`;
 // Function to fix a corrupted file
 function fixCorruptedFile(filePath) {
   try {
-    console.log(`Fixing corrupted file: ${filePath}`);
+
+    console.log(`Fixing corrupted file: ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}`);
     
     let template = '';
     if (filePath.endsWith('.tsx')) {
@@ -139,11 +147,15 @@ function fixCorruptedFile(filePath) {
 
 // Main execution
 try {
+
   const corruptedFiles = findCorruptedFiles();
   
   if (corruptedFiles.length === 0) {
     console.log('No corrupted files found.');
-  } else {
+  
+} catch (error) {
+  console.error('Error:', error);
+} else {
     console.log(`Found ${corruptedFiles.length} corrupted files`);
     
     let fixedCount = 0;

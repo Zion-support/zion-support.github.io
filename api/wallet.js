@@ -21,12 +21,16 @@ export default function handler(req, res) {
   }
   let existing = [];
   try {
+
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
-    }
-  } catch (_error) {
+    
+} catch (error) {
+  console.error('Error:', error);
+}
+  } catch (error) {
     // console.error('Error reading existing wallets:', error);
     existing = [];
   }
@@ -49,6 +53,7 @@ export default function handler(req, res) {
   };
   existing.push(newWallet);
   try {
+
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -56,8 +61,11 @@ export default function handler(req, res) {
       success: true, 
       message: 'Wallet added successfully',
       id: newWallet.id
-    }));
-  } catch (_error) {
+    
+} catch (error) {
+  console.error('Error:', error);
+}));
+  } catch (error) {
     // console.error('Error saving wallet:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

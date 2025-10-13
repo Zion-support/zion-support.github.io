@@ -28,11 +28,15 @@ function resolveMergeConflicts(content) {
 // Function to process a single file
 function processFile(filePath) {
   try {
+
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
     if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Processing: ${filePath}`);
+      console.log(`Processing: ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}`);
       const resolved = resolveMergeConflicts(content);
       fs.writeFileSync(filePath, resolved);
       console.log(`Fixed: ${filePath}`);

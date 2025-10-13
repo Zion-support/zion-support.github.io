@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const HomePage: React.FC = () => {
+const Page: React.FC = () => {
   return (
     <>
       <Helmet>
@@ -47,7 +47,7 @@ const HomePage: React.FC = () => {
                 </p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
-                <h3 className="text-xl font-semibold mb-4">Cloud Computing</h3>
+                <h3 className="text-xl font-semibold mb-4">Computing</h3>
                 <p className="text-gray-300">
                   Scalable cloud infrastructure and migration services.
                 </p>
@@ -79,4 +79,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default Page;

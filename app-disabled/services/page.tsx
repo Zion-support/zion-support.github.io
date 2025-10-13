@@ -1,26 +1,16 @@
 import React from 'react';
 import { }
-  Brain, 
-  Cloud, 
-  Shield, 
-  BarChart3, 
-  Smartphone, 
-  Database, 
-  Zap, 
-  Globe,
-  CheckCircle,
-  ArrowRight,
-  Search,
-
-} from 'lucide-react;
+  3, 
+  Circle,
+  Right,
+  } from 'lucide-react;
 
 ;
 
 const ServicesPage: React.FC = () => {const services = [;
     // AI Services
     {      ico,
-    n: Brain,
-      title: 'AI Solutions,
+    n: title: 'AI Solutions,
       description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.,
       features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting],
       price: Starting at $1,500

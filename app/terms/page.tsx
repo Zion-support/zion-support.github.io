@@ -62,7 +62,7 @@ const TermsPage: React.FC = () => {
                   accurate, complete, or current.
                 </p>
 
-                <h2 className="text-2xl font-semibold text-white mb-4">Links</h2>
+                <h2 className="text-2xl font-semibold text-white mb-4">s</h2>
                 <p className="text-gray-300 mb-6">
                   We have not reviewed all of the sites linked to our website and are not responsible 
                   for the contents of any such linked site.

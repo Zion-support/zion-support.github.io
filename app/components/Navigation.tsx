@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
-const Navigation: React.FC = () => {
+const : React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const navigationItems = [
-    { name: 'Home', href: '/' },
+    { name: '', href: '/' },
     { name: 'About', href: '/about' },
     { 
       name: 'Services', 
@@ -15,7 +15,7 @@ const Navigation: React.FC = () => {
       submenu: [
         { name: 'AI Services', href: '/ai-services' },
         { name: 'IT Services', href: '/it-services' },
-        { name: 'Cloud Solutions', href: '/cloud-infrastructure' },
+        { name: 'Solutions', href: '/cloud-infrastructure' },
         { name: 'Digital Transformation', href: '/digital-transformation' }
       ]
     },
@@ -30,37 +30,35 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="text-2xl font-bold text-white">
+            <to="/" className="text-2xl font-bold text-white">
               Zion Tech Group
-            </Link>
+            </>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
               {navigationItems.map((item) => (
                 <div key={item.name} className="relative group">
-                  <Link
-                    to={item.href}
+                  <to={item.href}
                     className="text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
                     onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
                     onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
                   >
                     {item.name}
                     {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
-                  </Link>
+                  </>
                   
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
                     <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
+                        <key={subItem.name}
                           to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
                         >
                           {subItem.name}
-                        </Link>
+                        </>
                       ))}
                     </div>
                   )}
@@ -71,12 +69,11 @@ const Navigation: React.FC = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link
-              to="/contact"
+            <to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
             >
               Get Started
-            </Link>
+            </>
           </div>
 
           {/* Mobile menu button */}
@@ -90,43 +87,40 @@ const Navigation: React.FC = () => {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile */}
         {isOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
               {navigationItems.map((item) => (
                 <div key={item.name}>
-                  <Link
-                    to={item.href}
+                  <to={item.href}
                     className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
-                  </Link>
+                  </>
                   {item.submenu && (
                     <div className="ml-4 space-y-1">
                       {item.submenu.map((subItem) => (
-                        <Link
-                          key={subItem.name}
+                        <key={subItem.name}
                           to={subItem.href}
                           className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
-                        </Link>
+                        </>
                       ))}
                     </div>
                   )}
                 </div>
               ))}
               <div className="pt-4">
-                <Link
-                  to="/contact"
+                <to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started
-                </Link>
+                </>
               </div>
             </div>
           </div>
@@ -136,4 +130,4 @@ const Navigation: React.FC = () => {
   );
 };
 
-export default Navigation;
+export default ;

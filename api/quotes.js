@@ -7,7 +7,11 @@ export default async function handler(req, res) {
   }
   
   try {
-    const { name, email, phone, details, country, service } = req.body || {};
+
+    const { name, email, phone, details, country, service 
+} catch (error) {
+  console.error('Error:', error);
+} = req.body || {};
     
     if (!name || !email || !phone || !details) {
       res.statusCode = 400;

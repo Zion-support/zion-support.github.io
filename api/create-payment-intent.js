@@ -1,8 +1,12 @@
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
+
       await handler(req, res);
-    } catch (error) {
+    
+} catch (error) {
+  console.error('Error:', error);
+} catch (error) {
       console.error('API Error:', error);
       res.statusCode = 500;
       res.setHeader('Content-Type', 'application/json');
@@ -22,10 +26,18 @@ export default function handler(req, res) {
   }
 
   try {
-    const { amount = 100, currency = 'usd' } = req.body || {};
+
+    const { amount = 100, currency = 'usd' 
+} catch (error) {
+  console.error('Error:', error);
+} = req.body || {};
     
   try {
-    const { amount, currency = 'usd' } = req.body || {};
+
+    const { amount, currency = 'usd' 
+} catch (error) {
+  console.error('Error:', error);
+} = req.body || {};
     if (!amount) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
@@ -55,3 +67,5 @@ export default function handler(req, res) {
   }
 }
 
+
+}}

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps {
   title?: string;
@@ -7,7 +7,7 @@ interface SEOEnhancerProps {
   image?: string;
   url?: string;
   type?: string;
-  structuredData?: any;
+  structuredData?: unknown;
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -47,7 +47,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { property: 'og:url', content: url },
     { property: 'og:type', content: type },
     { property: 'og:site_name', content: 'Zion Tech Group' },
-    // Twitter Card tags
+    // Twitter d tags
     { name: 'twitter:card', content: 'summary_large_image' },
     { name: 'twitter:title', content: title },
     { name: 'twitter:description', content: description },
@@ -81,7 +81,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   );
 };
 // Default structured data for the organization
-export const defaultStructuredData = {
+const  {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Zion Tech Group",

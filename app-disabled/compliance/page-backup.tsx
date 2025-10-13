@@ -1,22 +1,19 @@
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
+import ../components/ from '../components/';
 import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp}}from 'lucide-react';
+import {Circle, Right, Star, }}from 'lucide-react';
 const PageBackupPage: React.FC = () => {,
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
+    {icon: benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
+    {icon: title: 'Precision ing',
+      description: 'specific goals and objectives with precision and accuracy.',
       benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
-    {icon: TrendingUp,
-      title: 'Growth Optimization',
+    {icon: title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-return(<React.Fragment>)
+return(<.Fragment>)
       <Helmet />
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
@@ -42,7 +39,7 @@ return(<React.Fragment>)
                   {feature.benefits && (;
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} <li>
-                          <CheckCircle />
+                          <Circle />
         {/* CTA Section */} <section className="py-20 px-4">
         {/* CTA Section */}
         <section className="py-20 px-4">

@@ -21,6 +21,7 @@ class AccessibilityOptimizer {
     console.log('♿ Starting enhanced accessibility optimizations...');
     
     try {
+
       await this.analyzeComponents();
       await this.optimizeARIALabels();
       await this.optimizeKeyboardNavigation();
@@ -28,7 +29,10 @@ class AccessibilityOptimizer {
       await this.generateAccessibilityReport();
       
       console.log('✅ Enhanced accessibility optimizations completed successfully!');
-    } catch (error) {
+    
+} catch (error) {
+  console.error('Error:', error);
+} catch (error) {
       console.error('❌ Accessibility optimization failed:', error);
     }
   }

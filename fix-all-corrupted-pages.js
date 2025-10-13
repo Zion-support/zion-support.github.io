@@ -11,7 +11,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const ${serviceName}Page: React.FC = () => {
+const ${serviceName}Page: React: React: React.FC = () => {
   const features = [
     {
       icon: Zap,
@@ -220,6 +220,7 @@ const main = () => {
   for (const filePath of pageFiles) {
     totalCount++;
     try {
+
       const content = fs.readFileSync(filePath, 'utf8');
       
       if (isCorrupted(content)) {
@@ -230,7 +231,10 @@ const main = () => {
         const newContent = createGenericPage(serviceName, title, description);
         fs.writeFileSync(filePath, newContent);
         
-        console.log(`Fixed: ${filePath}`);
+        console.log(`Fixed: ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}`);
         fixedCount++;
       }
     } catch (error) {

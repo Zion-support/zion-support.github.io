@@ -9,7 +9,7 @@ const createBasicPageTemplate = (pageName) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ${pageName}: React.FC = () => {
+const ${pageName}: React: React: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -98,6 +98,7 @@ export default ${pageName};`;
 // Function to check if a file has syntax errors
 function hasSyntaxErrors(filePath) {
   try {
+
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check for common syntax error patterns
@@ -109,7 +110,10 @@ function hasSyntaxErrors(filePath) {
       /Unexpected token/,
       /Expression expected/,
       /'\)' expected/,
-      /'}' expected/,
+      /'
+} catch (error) {
+  console.error('Error:', error);
+}' expected/,
       /JSX expressions must have one parent element/,
       /Expected corresponding closing tag for JSX fragment/,
       /    ];
@@ -123,7 +127,11 @@ function hasSyntaxErrors(filePath) {
 // Function to fix a file
 function fixFile(filePath) {
   try {
-    console.log(`Fixing: ${filePath}`);
+
+    console.log(`Fixing: ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}`);
     
     // Extract page name from file path
     const fileName = path.basename(filePath, '.tsx');
@@ -142,7 +150,11 @@ function fixFile(filePath) {
 // Function to find all files with errors by running TypeScript check
 function findFilesWithErrors() {
   try {
-    const result = execSync('npx tsc --noEmit --skipLibCheck 2>&1', { encoding: 'utf8' });
+
+    const result = execSync('npx tsc --noEmit --skipLibCheck 2>&1', { encoding: 'utf8' 
+} catch (error) {
+  console.error('Error:', error);
+});
     return [];
   } catch (error) {
     const output = error.stdout || error.message;
@@ -189,7 +201,11 @@ console.log(`\nFixed ${fixedCount} files.`);
 // Run a final syntax check
 console.log('\nRunning final syntax check...');
 try {
-  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe' });
+
+  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe' 
+} catch (error) {
+  console.error('Error:', error);
+});
   console.log('✅ TypeScript syntax check passed - All errors fixed!');
 } catch (error) {
   console.log('❌ TypeScript syntax check still has issues');

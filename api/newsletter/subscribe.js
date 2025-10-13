@@ -18,7 +18,11 @@ export default async function handler(req, res) {
   }
   
   try {
-    const { email } = req.body || {};
+
+    const { email 
+} catch (error) {
+  console.error('Error:', error);
+} = req.body || {};
     
     if (!email) {
       res.statusCode = 400;
@@ -68,3 +72,5 @@ export default async function handler(req, res) {
 
 export default handler;
 
+
+}}}

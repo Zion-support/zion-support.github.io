@@ -21,8 +21,7 @@ export default function AIAutomation() {
 
   return (</div>
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
+    {icon: benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
   ]
 return(<>)
       <Helmet />

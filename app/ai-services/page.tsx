@@ -1,43 +1,38 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Brain, BarChart3, Bot, Zap, Shield, Users, Star } from 'lucide-react';
+import { Right, 3, Star } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 
 const AiServicesPage: React.FC = () => {
   const services = [
     {
-      icon: Brain,
-      title: 'AI Consulting',
+      icon: title: 'AI Consulting',
       description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: BarChart3,
+      icon: 3,
       title: 'AI Analytics',
       description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: Bot,
-      title: 'AI Automation',
+      icon: title: 'AI Automation',
       description: 'Intelligent automation solutions to streamline your business processes.',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: Zap,
-      title: 'AI Content Generation',
+      icon: title: 'AI Content Generation',
       description: 'AI-powered content creation for marketing, documentation, and communication.',
       color: 'from-orange-500 to-red-500'
     },
     {
-      icon: Users,
-      title: 'AI Customer Service',
+      icon: title: 'AI Customer Service',
       description: 'Intelligent chatbots and customer service solutions powered by AI.',
       color: 'from-indigo-500 to-purple-500'
     },
     {
-      icon: Shield,
-      title: 'AI Security',
+      icon: title: 'AI ',
       description: 'AI-powered security solutions to protect your business and data.',
       color: 'from-cyan-500 to-blue-500'
     }
@@ -94,7 +89,7 @@ const AiServicesPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Get Started
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  <Right className="w-5 h-5 ml-2 inline" />
                 </button>
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                   Learn More
@@ -163,7 +158,7 @@ const AiServicesPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Start Your AI Journey
-                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  <Right className="w-5 h-5 ml-2 inline" />
                 </button>
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                   Schedule Consultation

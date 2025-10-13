@@ -39,3 +39,4 @@ function resolveMergeConflicts(content) {
     
     if (line.startsWith('<<<<<<<')) {
       // Skip until we find 
+}}}

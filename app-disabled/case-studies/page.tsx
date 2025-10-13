@@ -1,9 +1,12 @@
-import React from 'react;
-
 import React from 'react';
+import react;
+
+import from  from 'react;
+
+import from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide-react';
+import { } from 'react-router-dom';
+import { Right, Star, } from 'lucide-react';
     {
       id: '1,
       title: 'AI-Powered Customer Service Transformation,
@@ -30,7 +33,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
         Compliance with all regulatory requirements
     {
       id: '3,
-      title: 'Cloud Migration & Optimization,
+      title: 'Migration & Optimization,
       client: 'Manufacturing Corporation,
       image: '/images/case-studies/ai-customer-service.jpg,
       duration: '3 months,
@@ -46,7 +49,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
       team: '8 specialists});)},
     {
       id: 2,
-      title: 'Cloud Migration for Financial Services,
+      title: 'Migration for Financial Services,
       company: 'FinanceFlow Ltd.,
       industry: 'Financial Services,
       challenge: 'Legacy on-premises infrastructure limiting scalability and increasing maintenance costs.,
@@ -131,10 +134,10 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
       team: '11 specialists    }
 
   const stats = [;
-    { label: 'Projects Completed', value: '150+, icon: CheckCircle },
-    { label: 'Client Satisfaction', value: '98%, icon: TrendingUp },
-    { label: 'Team Members', value: '50+, icon: Users },
-    { label: 'Industry Awards', value: '25+, icon: Award }  ];
+    { label: 'Projects Completed', value: '150+, icon: Circle },
+    { label: 'Client Satisfaction', value: '98%, icon: },
+    { label: 'Team Members', value: '50+, icon: },
+    { label: 'Industry s', value: '25+, icon: }  ];
 {/* Stats Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -197,7 +200,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
                     </div>
                     <button className="flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors">
                       View Details
-                      <ArrowRight className="w-4 h-4" />
+                      <Right className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
@@ -210,12 +213,12 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
                       
                       <div className="grid grid-cols-2 gap-6">
                         <div className="text-center">
-                          <TrendingUp className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+                          <className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
                           <div className="text-xl font-bold">{study.results.conversion}</div>
                           <div className="text-sm opacity-75">Conversion Rate</div>
                         </div>
                         <div className="text-center">
-                          <DollarSign className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
+                          <className="w-8 h-8 text-cyan-400 mx-auto mb-2" />
                           <div className="text-xl font-bold">{study.results.revenue}</div>
                           <div className="text-sm opacity-75">Revenue Increase</div>
                         </div>
@@ -254,7 +257,7 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
                         {study.results.map((result, index) => (
 
                           <li key={index} className="flex items-center text-gray-300 text-sm>
-                            <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 />
+                            <Circle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0 />
 
         <section className="py-16 px-4>
           <div className="max-w-4xl mx-auto text-center>
@@ -266,19 +269,17 @@ import { ArrowRight, ExternalLink, Star, TrendingUp, Users, Clock } from 'lucide
                 Lets discuss how we can help transform your business with our AI and IT solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center>
-                <Link
-                  to="/contact
+                <to="/contact
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-blue-500 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105
                 >
                   Get Started Today
-                  <ExternalLink className="w-5 h-5 />
-                </Link>
-                <Link
-                  to="/services
+                  <className="w-5 h-5 />
+                </>
+                <to="/services
                   className="inline-flex items-center gap-2 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300
                 >
                   Explore Our Services
-                </Link>
+                </>
               </div>
             </div>
           </div>

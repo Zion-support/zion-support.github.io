@@ -1,30 +1,26 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
+import { Play, Right, Circle, Star, } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
   const features = [
     {
-      icon: Zap,
-      title: 'AI-Powered Analytics',
+      icon: title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
       demo: 'Live Demo'
     },
     {
-      icon: Shield,
-      title: 'Advanced Security',
+      icon: title: 'Advanced ',
       description: 'Experience our enterprise-grade security features',
-      demo: 'Security Demo'
+      demo: 'Demo'
     },
     {
-      icon: BarChart,
-      title: 'Business Intelligence',
+      icon: title: 'Business Intelligence',
       description: 'Explore our comprehensive BI dashboard',
       demo: 'BI Demo'
     },
     {
-      icon: Users,
-      title: 'Team Collaboration',
+      icon: title: 'Team Collaboration',
       description: 'See how teams work together seamlessly',
       demo: 'Collaboration Demo'
     }
@@ -111,7 +107,7 @@ const DemoPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Demo Video Section */}
+        {/* Demo Section */}
         <section className="py-20 px-4 bg-slate-800/30">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
@@ -123,11 +119,10 @@ const DemoPage: React.FC = () => {
                   <div className="w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
                     <Play className="w-10 h-10 text-white ml-1" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Product Demo Video</h3>
+                  <h3 className="text-2xl font-bold text-white mb-2">Product Demo </h3>
                   <p className="text-gray-300 mb-4">See our AI solutions in action</p>
                   <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                    Play Video
-                  </button>
+                    Play </button>
                 </div>
               </div>
             </div>
@@ -138,7 +133,7 @@ const DemoPage: React.FC = () => {
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-white text-center mb-16">
-              What People Say About Our Demos
+              What Say About Our Demos
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
@@ -171,7 +166,7 @@ const DemoPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Schedule Live Demo
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <Right className="w-5 h-5 ml-2 inline" />
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Contact Sales

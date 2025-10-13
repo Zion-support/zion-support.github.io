@@ -44,8 +44,12 @@ function resolveMergeConflicts(content) {
 
 function fixFile(filePath) {
   try {
+
     if (!fs.existsSync(filePath)) {
-      console.log(`File not found: ${filePath}`);
+      console.log(`File not found: ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}`);
       return;
     }
     

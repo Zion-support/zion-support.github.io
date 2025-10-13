@@ -24,7 +24,7 @@ const ContactPage: React.FC = () => {
                     </a>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold">Phone</h3>
+                    <h3 className="text-lg font-semibold"></h3>
                     <a href="tel:+1234567890" className="text-blue-400 hover:text-blue-300">
                       +1 (234) 567-890
                     </a>

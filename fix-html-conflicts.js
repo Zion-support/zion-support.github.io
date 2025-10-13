@@ -10,12 +10,16 @@ const __dirname = path.dirname(__filename);
 // Function to fix merge conflicts in HTML files
 function fixHTMLConflicts(filePath) {
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflicts
     if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false;
-    }
+    
+} catch (error) {
+  console.error('Error:', error);
+}
     
     console.log(`Fixing merge conflicts in: ${filePath}`);
     

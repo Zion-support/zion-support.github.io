@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { Circle, Send } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -15,14 +15,14 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: .FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
@@ -35,26 +35,22 @@ export default function ContactPage() {
 
   const contactInfo = [
     {
-      icon: Phone,
-      title: 'Phone',
+      icon: title: '',
       value: '+1 (555) 123-4567',
       description: 'Mon-Fri 9AM-6PM EST'
     },
     {
-      icon: Mail,
-      title: 'Email',
+      icon: title: 'Email',
       value: 'contact@ziontechgroup.com',
       description: 'We respond within 24 hours'
     },
     {
-      icon: MapPin,
-      title: 'Address',
+      icon: title: 'Address',
       value: '123 Tech Street, Suite 100',
       description: 'San Francisco, CA 94105'
     },
     {
-      icon: Clock,
-      title: 'Business Hours',
+      icon: title: 'Business Hours',
       value: 'Monday - Friday',
       description: '9:00 AM - 6:00 PM EST'
     }
@@ -63,7 +59,7 @@ export default function ContactPage() {
   const subjects = [
     'AI Services',
     'IT Services',
-    'Cloud Services',
+    'Services',
     'Micro SAAS',
     'Digital Transformation',
     '5G Implementation',
@@ -128,11 +124,11 @@ export default function ContactPage() {
           {isSubmitted ? (
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-6">
-                <CheckCircle className="w-8 h-8 text-white" />
+                <Circle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent Successfully!</h3>
               <p className="text-gray-300 mb-6">
-                Thank you for contacting us. We&apos;ll get back to you within 24 hours.
+                Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
               <button
                 onClick={() => {
@@ -203,7 +199,7 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-white font-medium mb-2">
-                    Phone Number
+                    Number
                   </label>
                   <input
                     type="tel"

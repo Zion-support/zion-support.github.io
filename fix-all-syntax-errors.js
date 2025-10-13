@@ -6,6 +6,7 @@ import path from 'path';
 // Function to fix all syntax errors in a file
 function fixAllSyntaxErrors(filePath) {
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     let modified = false;
 
@@ -13,7 +14,10 @@ function fixAllSyntaxErrors(filePath) {
     content = content.replace(/"([^"]*)$/gm, (match, str) => {
       if (!match.includes('\\"')) {
         modified = true;
-        return `"${str}"`;
+        return `"${str
+} catch (error) {
+  console.error('Error:', error);
+}"`;
       }
       return match;
     });
@@ -65,7 +69,7 @@ function fixAllSyntaxErrors(filePath) {
     content = content.replace(/<\/(\w+)>\s*(?<!;)\s*$/gm, '</$1>');
 
     // Fix component definitions
-    content = content.replace(/const\s+(\w+):\s*React\.FC\s*=\s*\(\)\s*=>\s*\{/g, 'const $1: React.FC = () => {');
+    content = content.replace(/const\s+(\w+):\s*React\: React.FC\s*=\s*\(\)\s*=>\s*\{/g, 'const $1: React: React: React.FC = () => {');
 
     // Fix malformed object literals in JSX props
     content = content.replace(/(\w+)=\{([^}]+)\}/g, (match, prop, value) => {

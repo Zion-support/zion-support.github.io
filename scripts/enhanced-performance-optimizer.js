@@ -21,6 +21,7 @@ class PerformanceOptimizer {
     console.log('🚀 Starting enhanced performance optimizations...');
     
     try {
+
       await this.optimizeBundleSize();
       await this.optimizeImages();
       await this.optimizeCSS();
@@ -28,7 +29,10 @@ class PerformanceOptimizer {
       await this.generatePerformanceReport();
       
       console.log('✅ Enhanced performance optimizations completed successfully!');
-    } catch (error) {
+    
+} catch (error) {
+  console.error('Error:', error);
+} catch (error) {
       console.error('❌ Performance optimization failed:', error);
     }
   }

@@ -1,10 +1,10 @@
-import Navigation from './components/Navigation';
+import ./components/ from './components/';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 import ErrorBoundary from './components/ErrorBoundary';
 
 // Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
+const Page = lazy(() => import('./page'));
 const AboutPage = lazy(() => import('./about/page'));
 const ContactPage = lazy(() => import('./contact/page'));
 const CaseStudiesPage = lazy(() => import('./case-studies/page'));
@@ -19,7 +19,7 @@ const AiFintechPage = lazy(() => import('./ai-fintech/page'));
 
 // IT Services
 const ItServicesPage = lazy(() => import('./it-services/page'));
-const CloudServicesPage = lazy(() => import('./cloud-services/page'));
+const ServicesPage = lazy(() => import('./cloud-services/page'));
 const CybersecurityPage = lazy(() => import('./cybersecurity/page'));
 const DataAnalyticsPage = lazy(() => import('./data-analytics/page'));
 const DevOpsPage = lazy(() => import('./devops/page'));
@@ -34,7 +34,7 @@ const RoboticsPage = lazy(() => import('./robotics/page'));
 
 // Company Pages
 const TeamPage = lazy(() => import('./team/page'));
-const CareersPage = lazy(() => import('./careers/page'));
+const eersPage = lazy(() => import('./careers/page'));
 const NewsPage = lazy(() => import('./news/page'));
 
 // Support Pages
@@ -74,16 +74,16 @@ const App: React.FC = () => {
     return <LoadingSpinner />;
   }
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <Navigation />
+          </>
           <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               {/* Main Pages */}
-              <Route path="/" element={<HomePage />} />
+              <Route path="/" element={<Page />} />
               
               {/* Company Pages */}
               <Route path="/about" element={<AboutPage />} />
               <Route path="/team" element={<TeamPage />} />
-              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/careers" element={<eersPage />} />
               <Route path="/news" element={<NewsPage />} />
               <Route path="/contact" element={<ContactPage />} />
               
@@ -102,7 +102,7 @@ const App: React.FC = () => {
               
               {/* IT Services */}
               <Route path="/it-services" element={<ItServicesPage />} />
-              <Route path="/cloud-services" element={<CloudServicesPage />} />
+              <Route path="/cloud-services" element={<ServicesPage />} />
               <Route path="/cybersecurity" element={<CybersecurityPage />} />
               <Route path="/data-analytics" element={<DataAnalyticsPage />} />
               <Route path="/devops" element={<DevOpsPage />} />

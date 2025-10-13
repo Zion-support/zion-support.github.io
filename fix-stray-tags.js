@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 // Function to fix stray HTML tags in JSX files
 function fixStrayTags(filePath) {
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     let originalContent = content;
     
@@ -18,7 +19,10 @@ function fixStrayTags(filePath) {
     
     for (const tag of strayTags) {
       // Remove tags that appear at the end of lines or standalone
-      content = content.replace(new RegExp(`\\s*${tag}\\s*$`, 'gm'), '');
+      content = content.replace(new RegExp(`\\s*${tag
+} catch (error) {
+  console.error('Error:', error);
+}\\s*$`, 'gm'), '');
       content = content.replace(new RegExp(`^\\s*${tag}\\s*$`, 'gm'), '');
     }
     

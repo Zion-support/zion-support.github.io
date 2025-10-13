@@ -29,12 +29,12 @@ export default function NetworkInfrastructure() {
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Scalable architecture</li>
               <li>• High availability</li>
-              <li>• Security-first design</li>
+              <li>• -first design</li>
             </ul>
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Network Security</h3>
+            <h3 className="text-xl font-semibold text-white mb-4">Network </h3>
             <p className="text-gray-300 mb-4">
               Comprehensive security solutions to protect your network infrastructure.
             </p>

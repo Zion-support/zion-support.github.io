@@ -24,7 +24,11 @@ export default utilityFunction;`;
 // Function to find all corrupted files by running TypeScript check
 function findCorruptedFiles() {
   try {
-    const result = execSync('npx tsc --noEmit --skipLibCheck 2>&1', { encoding: 'utf8' });
+
+    const result = execSync('npx tsc --noEmit --skipLibCheck 2>&1', { encoding: 'utf8' 
+} catch (error) {
+  console.error('Error:', error);
+});
     return [];
   } catch (error) {
     const output = error.stdout || error.message;
@@ -45,7 +49,11 @@ function findCorruptedFiles() {
 // Function to fix a file
 function fixFile(filePath) {
   try {
-    console.log(`Fixing: ${filePath}`);
+
+    console.log(`Fixing: ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}`);
     
     const fileName = path.basename(filePath, '.ts');
     const content = createUtilsTemplate(fileName);
@@ -86,7 +94,11 @@ console.log(`\nFixed ${fixedCount} files.`);
 // Run a final syntax check
 console.log('\nRunning final syntax check...');
 try {
-  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe' });
+
+  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'pipe' 
+} catch (error) {
+  console.error('Error:', error);
+});
   console.log('✅ TypeScript syntax check passed - All errors fixed!');
 } catch (error) {
   console.log('❌ TypeScript syntax check still has issues');

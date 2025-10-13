@@ -58,7 +58,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const ${serviceName}Page: React.FC = () => {
+const ${serviceName}Page: React: React: React.FC = () => {
   const features = [
     {
       icon: Zap,
@@ -221,12 +221,16 @@ const main = () => {
   
   for (const pagePath of missingPages) {
     try {
+
       const fullPath = path.join(__dirname, 'app', pagePath);
       const dirPath = path.dirname(fullPath);
       
       // Create directory if it doesn't exist
       if (!fs.existsSync(dirPath)) {
-        fs.mkdirSync(dirPath, { recursive: true });
+        fs.mkdirSync(dirPath, { recursive: true 
+} catch (error) {
+  console.error('Error:', error);
+});
       }
       
       // Check if file already exists

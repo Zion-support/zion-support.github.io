@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { CheckCircle, ExternalLink, ArrowRight, Building2, Handshake, Award, Users, Zap } from 'lucide-react';
+import { } from 'react-router-dom';
+import { Circle, Right, } from 'lucide-react';
 
 const PartnersPage: React.FC = () => {
   const partners = [
@@ -14,11 +14,11 @@ const PartnersPage: React.FC = () => {
     {
       name: 'Amazon Web Services',
       logo: '☁️',
-      description: 'Cloud infrastructure and AI services collaboration',
-      category: 'Cloud'
+      description: 'infrastructure and AI services collaboration',
+      category: ''
     },
     {
-      name: 'Google Cloud',
+      name: 'Google ',
       logo: '🔍',
       description: 'AI and machine learning platform integration',
       category: 'AI/ML'
@@ -38,8 +38,8 @@ const PartnersPage: React.FC = () => {
     {
       name: 'Oracle',
       logo: '🗄️',
-      description: 'Database and enterprise application solutions',
-      category: 'Database'
+      description: 'and enterprise application solutions',
+      category: ''
     }
   ];
 
@@ -77,7 +77,7 @@ const PartnersPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Become a Partner
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <Right className="w-5 h-5 ml-2 inline" />
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Learn More
@@ -117,7 +117,7 @@ const PartnersPage: React.FC = () => {
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
-                    <CheckCircle className="w-4 h-4 text-white" />
+                    <Circle className="w-4 h-4 text-white" />
                   </div>
                   <span className="text-gray-300 font-medium">{benefit}</span>
                 </div>
@@ -138,7 +138,7 @@ const PartnersPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Apply Now
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <Right className="w-5 h-5 ml-2 inline" />
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Contact Us

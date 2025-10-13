@@ -1,5 +1,5 @@
 'use client';
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void;
@@ -7,11 +7,11 @@ interface AnalyticsContextType {
   isEnabled: boolean;
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const  ({ children }) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
   useEffect(() => {
-    // Check if analytics is enabled
+    // if analytics is enabled
     setIsEnabled(true);
   }, []);
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {

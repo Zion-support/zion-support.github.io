@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import { Node } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
@@ -6,8 +6,8 @@ interface SEOEnhancerProps {
   description: string;
   keywords: string[];
   noIndex?: boolean;
-  structuredData?: any;
-  children?: ReactNode;
+  structuredData?: unknown;
+  children?: Node;
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
@@ -35,7 +35,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
-    <React.Fragment>
+    <.Fragment>
       <Helmet>
         {/* Basic Meta Tags */}
         <title>{title}
@@ -57,7 +57,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         <meta property="og:site_name" content="Zion Tech Group" />
         <meta property="og:locale" content="en_US" />
         
-        {/* Twitter Card Tags */}
+        {/* Twitter d Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />

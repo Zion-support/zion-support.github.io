@@ -50,7 +50,7 @@ const PrivacyPage: React.FC = () => {
                   without your consent, except as described in this privacy policy.
                 </p>
 
-                <h2 className="text-2xl font-semibold text-white mb-4">Data Security</h2>
+                <h2 className="text-2xl font-semibold text-white mb-4">Data </h2>
                 <p className="text-gray-300 mb-6">
                   We implement appropriate security measures to protect your personal information against 
                   unauthorized access, alteration, disclosure, or destruction.

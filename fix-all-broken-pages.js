@@ -27,6 +27,7 @@ function getAllPageFiles(dir) {
   
   function walkDir(currentPath) {
     try {
+
       const items = fs.readdirSync(currentPath);
       
       for (const item of items) {
@@ -35,7 +36,10 @@ function getAllPageFiles(dir) {
         
         if (stat.isDirectory()) {
           walkDir(fullPath);
-        } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
+        
+} catch (error) {
+  console.error('Error:', error);
+} else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts'))) {
           files.push(fullPath);
         }
       }
@@ -51,7 +55,11 @@ function getAllPageFiles(dir) {
 // Check if a file has syntax errors by running TypeScript check
 function hasSyntaxErrors(filePath) {
   try {
-    const result = execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, { 
+
+    const result = execSync(`npx tsc --noEmit --skipLibCheck ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}`, { 
       encoding: 'utf8',
       stdio: 'pipe'
     });
@@ -71,12 +79,16 @@ let skippedCount = 0;
 
 for (const filePath of allFiles) {
   try {
+
     // Skip if it's already a simple page
     const content = fs.readFileSync(filePath, 'utf8');
     if (content.includes('This page is under development')) {
       skippedCount++;
       continue;
-    }
+    
+} catch (error) {
+  console.error('Error:', error);
+}
     
     // Check if file has syntax errors
     if (hasSyntaxErrors(filePath)) {

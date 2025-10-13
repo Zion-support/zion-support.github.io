@@ -1,9 +1,9 @@
-import React, { ReactElement, useCallback } from 'react';
+import { Element, useCallback } from 'react';
 import { render, RenderOptions, RenderResult } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 
 // Custom render function with providers
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
+const AllTheProviders = ({ children }: { children: .Node }) => {
   return (
     <BrowserRouter>
       {children}
@@ -12,7 +12,7 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
 };
 
 const customRender = (
-  ui: ReactElement,
+  ui: Element,
   options?: Omit<RenderOptions, 'wrapper'>
 ): RenderResult => {
   return render(ui, { wrapper: AllTheProviders, ...options });

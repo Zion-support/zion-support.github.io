@@ -21,6 +21,7 @@ class SEOOptimizer {
     console.log('🔍 Starting enhanced SEO optimizations...');
     
     try {
+
       await this.analyzePages();
       await this.optimizeMetaTags();
       await this.addStructuredData();
@@ -28,7 +29,10 @@ class SEOOptimizer {
       await this.generateSEOReport();
       
       console.log('✅ Enhanced SEO optimizations completed successfully!');
-    } catch (error) {
+    
+} catch (error) {
+  console.error('Error:', error);
+} catch (error) {
       console.error('❌ SEO optimization failed:', error);
     }
   }
@@ -303,7 +307,7 @@ interface StructuredDataProps {
   data?: any
 }
 
-const StructuredData: React.FC<StructuredDataProps> = ({ 
+const StructuredData: React: React.FC<StructuredDataProps> = ({ 
   type = 'Organization', 
   data 
 }) => {

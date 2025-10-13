@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useCallback, useRef } from 'react';
+import { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOData {
@@ -9,12 +9,12 @@ interface SEOData {
   canonicalUrl?: string;
   ogImage?: string;
   noIndex?: boolean;
-  structuredData?: any;
+  structuredData?: unknown;
 }
 
 interface AdvancedSEOOptimizerProps {
   seoData: SEOData;
-  children?: React.ReactNode;
+  children?: .Node;
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
@@ -48,7 +48,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   const finalStructuredData = structuredData || baseStructuredData;
 
   return (
-    <React.Fragment>
+    <.Fragment>
       <Helmet>
         {/* Basic Meta Tags */}
         <title>{title}
@@ -67,7 +67,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         <meta property="og:url" content={canonicalUrl || "https://ziontechgroup.com"} />
         {ogImage && <meta property="og:image" content={ogImage} />}
         
-        {/* Twitter Card Tags */}
+        {/* Twitter d Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />

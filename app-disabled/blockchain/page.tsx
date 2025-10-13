@@ -1,5 +1,5 @@
 import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap}}from 'lucide-react';
+import {Circle, Right, }}from 'lucide-react';
 const BlockchainPage: React.FC = () => {,
   </>
       <Helmet>

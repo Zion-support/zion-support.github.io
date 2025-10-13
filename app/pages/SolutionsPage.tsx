@@ -34,12 +34,12 @@ const SolutionsPage: React.FC = () => {
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Cloud Solutions</h3>
+            <h3 className="text-xl font-semibold text-white mb-4">Solutions</h3>
             <p className="text-gray-300 mb-4">
               Scalable cloud infrastructure and services for modern businesses.
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Cloud migration</li>
+              <li>• migration</li>
               <li>• Infrastructure as code</li>
               <li>• DevOps automation</li>
             </ul>
@@ -52,7 +52,7 @@ const SolutionsPage: React.FC = () => {
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Threat detection</li>
-              <li>• Security audits</li>
+              <li>• audits</li>
               <li>• Compliance management</li>
             </ul>
           </div>

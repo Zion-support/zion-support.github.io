@@ -9,10 +9,14 @@ console.log('Starting merge conflict resolution...');
 // Function to resolve merge conflicts by choosing remote version
 function resolveMergeConflicts(filePath) {
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     
     if (!content.includes('      return false; // No conflicts
-    }
+    
+} catch (error) {
+  console.error('Error:', error);
+}
     
     console.log(`Resolving conflicts in: ${filePath}`);
     
@@ -64,7 +68,11 @@ function resolveMergeConflicts(filePath) {
 // Function to find all files with merge conflicts
 function findConflictedFiles() {
   try {
-    const output = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
+
+    const output = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' 
+} catch (error) {
+  console.error('Error:', error);
+});
     return output.trim().split('\n').filter(file => file.length > 0);
   } catch (error) {
     console.error('Error finding conflicted files:', error.message);
@@ -74,12 +82,16 @@ function findConflictedFiles() {
 
 // Main execution
 try {
+
   const conflictedFiles = findConflictedFiles();
   
   if (conflictedFiles.length === 0) {
     console.log('No merge conflicts found.');
     process.exit(0);
-  }
+  
+} catch (error) {
+  console.error('Error:', error);
+}
   
   console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
   

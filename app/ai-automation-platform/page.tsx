@@ -1,4 +1,4 @@
-import { ArrowRight, Zap, Brain, CheckCircle, TrendingUp, Settings, Workflow } from 'lucide-react';
+import { Right, Circle, Workflow } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -15,19 +15,19 @@ const AIAutomationPlatform = () => {
     {
       title: "Smart Decision Making",
       description: "AI-driven decision making for automated business processes",
-      icon: <Brain className="w-6 h-6" />,
+      icon: <className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Process Optimization",
       description: "Continuously optimize processes using machine learning",
-      icon: <TrendingUp className="w-6 h-6" />,
+      icon: <className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Integration Hub",
       description: "Connect and automate across all your business systems",
-      icon: <Settings className="w-6 h-6" />,
+      icon: <className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -56,7 +56,7 @@ const AIAutomationPlatform = () => {
           <ResponsiveContainer>
             <div className="relative z-10 text-center py-20">
               <div className="flex items-center justify-center mb-6">
-                <Zap className="w-4 h-4 text-cyan-400 mr-2" />
+                <className="w-4 h-4 text-cyan-400 mr-2" />
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
               </div>
               
@@ -71,13 +71,13 @@ const AIAutomationPlatform = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <FuturisticButton
-                  icon={<ArrowRight className="w-5 h-5" />}
+                  icon={<Right className="w-5 h-5" />}
                 >
                   Get Started Today
                 </FuturisticButton>
                 <FuturisticButton
                   variant="outline"
-                  icon={<Zap className="w-5 h-5" />}
+                  icon={<className="w-5 h-5" />}
                 >
                   View Demo
                 </FuturisticButton>
@@ -131,7 +131,7 @@ const AIAutomationPlatform = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg">
-                  <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+                  <Circle className="w-6 h-6 text-green-400 flex-shrink-0" />
                   <span className="text-white font-medium">{benefit}</span>
                 </div>
               ))}
@@ -151,7 +151,7 @@ const AIAutomationPlatform = () => {
               </p>
               <FuturisticButton
                 size="lg"
-                icon={<Zap className="w-6 h-6" />}
+                icon={<className="w-6 h-6" />}
               >
                 Start Your Automation Journey
               </FuturisticButton>

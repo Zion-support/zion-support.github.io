@@ -31,17 +31,21 @@ const filesToFix = [
 
 filesToFix.forEach(filePath => {
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix common unescaped entities
-    content = content.replace(/'/g, '&apos;');
-    content = content.replace(/"/g, '&quot;');
-    content = content.replace(/>/g, '&gt;');
-    content = content.replace(/</g, '&lt;');
-    content = content.replace(/&/g, '&amp;');
+    content = content.replace(/'/g, ''');
+    content = content.replace(/"/g, '"');
+    content = content.replace(/>/g, '>');
+    content = content.replace(/</g, '<');
+    content = content.replace(/&/g, '&');
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    console.log(`Fixed: ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }

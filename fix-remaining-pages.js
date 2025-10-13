@@ -12,12 +12,16 @@ const pageFiles = [
 
 pageFiles.forEach(filePath => {
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Remove the first conflict section (simple version)
     content = content.replace(/    
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    console.log(`Fixed: ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }

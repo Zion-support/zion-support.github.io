@@ -1,16 +1,14 @@
 import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
+import ../components/ from '../components/';
 import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+import {Circle, Right, Star, }}from 'lucide-react';
 const AiCybersecurityPage: React.FC = () => {,
     const features = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
+      icon: title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
+    {icon: benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
   ]
 return(<>)
       <Helmet />

@@ -4,11 +4,11 @@ import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
 
 // Mock components
-const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { children: React.ReactNode; enableRetry?: boolean; onError?: jest.Mock }) => {
-  const [hasError, setHasError] = React.useState(false);
-  const [error, setError] = React.useState<Error | null>(null);
+const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { children: .Node; enableRetry?: boolean; onError?: jest.Mock }) => {
+  const [hasError, setHasError] = .useState(false);
+  const [error, setError] = .useState<Error | null>(null);
 
-  React.useEffect(() => {
+  .useEffect(() => {
     const handleError = (error: Error) => {
       setHasError(true);
       setError(error);
@@ -42,7 +42,7 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { children: R
           <>
             <button>Try Again</button>
             <button>Reload Page</button>
-            <button>Go to Homepage</button>
+            <button>Go to page</button>
           </>
         )}
       </div>
@@ -52,7 +52,7 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { children: R
   return <div data-testid="error-boundary">{children}</div>;
 };
 
-const AdvancedSEOOptimizer = ({ seoData }: { seoData?: any }) => {
+const AdvancedSEOOptimizer = ({ seoData }: { seoData?: unknown }) => {
   return (
     <div data-testid="seo-optimizer">
       <HelmetProvider>
@@ -71,7 +71,7 @@ const AdvancedPerformanceMonitor = ({ enableRealTimeMonitoring, onMetricsUpdate,
     return null;
   }
   
-  React.useEffect(() => {
+  .useEffect(() => {
     if (onMetricsUpdate) {
       onMetricsUpdate({ loadTime: 100, renderTime: 50 });
     }
@@ -259,7 +259,7 @@ describe('AdvancedSEOOptimizer', () => {
     });
   });
 
-  it('renders Twitter Card tags when enabled', async () => {
+  it('renders Twitter d tags when enabled', async () => {
     const helmetContext = {};
     const { container } = render(
       <MemoryRouter>

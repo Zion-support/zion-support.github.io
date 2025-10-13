@@ -21,11 +21,15 @@ export default function handler(req, res) {
   }
   let existing = [];
   try {
+
     if (fs.existsSync(file)) {
       const data = fs.readFileSync(file, 'utf8');
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
-    }
+    
+} catch (error) {
+  console.error('Error:', error);
+}
   } catch (error) {
     console.error('Error reading existing subscribers:', error);
     existing = [];
@@ -48,6 +52,7 @@ export default function handler(req, res) {
   };
   existing.push(newSubscriber);
   try {
+
     fs.writeFileSync(file, JSON.stringify(existing, null, 2));
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -55,8 +60,11 @@ export default function handler(req, res) {
       success: true, 
       message: 'Successfully subscribed to newsletter',
       id: newSubscriber.id
-    }));
-  } catch (_error) {
+    
+} catch (error) {
+  console.error('Error:', error);
+}));
+  } catch (error) {
     // console.error('Error saving subscriber:', error);
 
     res.statusCode = 500;

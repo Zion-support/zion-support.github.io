@@ -3,19 +3,19 @@ import React from 'react';
 
 import { Helmet } from 'react-helmet-async';
 
-export default function CloudInfrastructure() {
+export default function Infrastructure() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Cloud Infrastructure | Zion Tech Group</title>
-        <meta name="description" content="Professional Cloud Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+        <title>Infrastructure | Zion Tech Group</title>
+        <meta name="description" content="Professional Infrastructure services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="cloud infrastructure, cloud services, IT services, Zion Tech Group, cloud computing" />
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Cloud Infrastructure <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+            Infrastructure <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business with our advanced cloud infrastructure solutions designed for scalability, security, and performance.
@@ -24,7 +24,7 @@ export default function CloudInfrastructure() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Cloud Migration</h3>
+            <h3 className="text-xl font-semibold text-white mb-4">Migration</h3>
             <p className="text-gray-300 mb-4">
               Seamlessly migrate your applications and data to the cloud with minimal downtime.
             </p>
@@ -36,7 +36,7 @@ export default function CloudInfrastructure() {
           </div>
 
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-            <h3 className="text-xl font-semibold text-white mb-4">Cloud Security</h3>
+            <h3 className="text-xl font-semibold text-white mb-4"></h3>
             <p className="text-gray-300 mb-4">
               Comprehensive security solutions to protect your cloud infrastructure.
             </p>

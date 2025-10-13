@@ -27,7 +27,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const ${serviceName}Page: React.FC = () => {
+const ${serviceName}Page: React: React: React.FC = () => {
   const features = ${JSON.stringify(features, null, 4)};
 
   const stats = [
@@ -460,8 +460,12 @@ corruptedFiles.forEach(filePath => {
     );
     
     try {
+
       fs.writeFileSync(fullPath, content);
-      console.log(`Fixed: ${filePath}`);
+      console.log(`Fixed: ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}`);
     } catch (error) {
       console.error(`Error fixing ${filePath}:`, error.message);
     }

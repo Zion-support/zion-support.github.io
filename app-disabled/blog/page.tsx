@@ -7,8 +7,8 @@ interface BlogPost {
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Calendar, User, ArrowRight, Search, Filter } from 'lucide-react';
+import { } from 'react-router-dom';
+import { User, Right, Filter } from 'lucide-react';
 import Footer from '../components/Footer';
 
 const BlogPage: React.FC = () => {
@@ -21,7 +21,7 @@ const BlogPage: React.FC = () => {
       readTime: '5 min read'
     },
     {
-      title: 'Cloud Migration Best Practices',
+      title: 'Migration Best Practices',
       excerpt: 'Essential strategies for successful cloud migration and optimization.',
       author: 'Zion Tech Team',
       date: '2024-01-10',
@@ -41,7 +41,7 @@ const categories = [
     'AI & Machine Learning',
     'Quantum Computing',
     'Cybersecurity',
-    'Cloud Computing',
+    'Computing',
     'Data Analytics',
     'Business Strategy'
 
@@ -117,7 +117,7 @@ const BlogPage: React.FC = () => {
                       {post.author}
                     </div>
                     <div className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-2" />
+                      <className="w-4 h-4 mr-2" />
                       {post.date}
                     </div>
                   </div>
@@ -125,7 +125,7 @@ const BlogPage: React.FC = () => {
                     <span className="text-sm text-gray-400">{post.readTime}</span>
                     <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
                       Read More
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      <Right className="w-4 h-4 ml-1" />
                     </button>
                   </div>
                 </article>
@@ -144,7 +144,7 @@ const BlogPage: React.FC = () => {
                 <div className="h-48 bg-gradient-to-r from-purple-500/20 to-blue-500/20 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-12 h-12 bg-purple-500/30 rounded-full flex items-center justify-center mx-auto mb-2">
-                      <BookOpen className="w-6 h-6 text-purple-400" />
+                      <className="w-6 h-6 text-purple-400" />
                     </div>
                     <span className="text-sm text-gray-300">Article Image</span>
                   <div className="flex items-center gap-4 mb-3">
@@ -157,11 +157,11 @@ const BlogPage: React.FC = () => {
                 <div className="p-8">
                   <div className="flex items-center gap-4 text-sm text-gray-400 mb-4">
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
+                      <className="w-4 h-4" />
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
+                      <className="w-4 h-4" />
                       {post.readTime}
                     </span>
                   </div>
@@ -181,7 +181,7 @@ const BlogPage: React.FC = () => {
                     </div>
                     <button className="flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors">
                       Read More
-                      <ArrowRight className="w-4 h-4" />
+                      <Right className="w-4 h-4" />
                     </button>
                   </div>
                 </div>
@@ -202,11 +202,11 @@ const BlogPage: React.FC = () => {
                 <div className="p-6">
                   <div className="flex items-center gap-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
+                      <className="w-4 h-4" />
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
+                      <className="w-4 h-4" />
                       {post.readTime}
                     </span>
         {/* Featured Post */}
@@ -237,17 +237,17 @@ const BlogPage: React.FC = () => {
                           <span>{post.author}</span>
                         </div>
                         <div className="flex items-center space-x-1">
-                          <Calendar className="w-4 h-4" />
+                          <className="w-4 h-4" />
                           <span>{new Date(post.date).toLocaleDateString()}</span>
                         </div>
                         <div className="flex items-center space-x-1">
-                          <Clock className="w-4 h-4" />
+                          <className="w-4 h-4" />
                           <span>{post.readTime}</span>
                         </div>
                       </div>
                       <button className="flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors font-medium">
                         <span>Read More</span>
-                        <ArrowRight className="w-4 h-4" />
+                        <Right className="w-4 h-4" />
                       </button>
                     </div>
                   </div>
@@ -293,11 +293,11 @@ const BlogPage: React.FC = () => {
                             <span>{featuredPost.author}</span>
                           </div>
                           <div className="flex items-center space-x-1">
-                            <Calendar className="w-4 h-4" />
+                            <className="w-4 h-4" />
                             <span>{featuredPost.date}</span>
                           </div>
                           <div className="flex items-center space-x-1">
-                            <Clock className="w-4 h-4" />
+                            <className="w-4 h-4" />
                             <span>{featuredPost.readTime}</span>
                           </div>
                         </div>
@@ -314,7 +314,7 @@ const BlogPage: React.FC = () => {
                         ))}
                       </div>
                       <button className="cyber-button w-fit">
-                        Read More <ArrowRight className="w-4 h-4 inline ml-2" />
+                        Read More <Right className="w-4 h-4 inline ml-2" />
                       </button>
                     </div>
                   </div>
@@ -346,7 +346,7 @@ const BlogPage: React.FC = () => {
                       <span>{post.author}</span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      <Calendar className="w-4 h-4" />
+                      <className="w-4 h-4" />
                       <span>{post.date}</span>
                     </div>
                   </div>
@@ -379,7 +379,7 @@ const BlogPage: React.FC = () => {
                 </div>
                 
                 <button className="cyber-button w-full">
-                  Read More <ArrowRight className="w-4 h-4 inline ml-2" />
+                  Read More <Right className="w-4 h-4 inline ml-2" />
                 </button>
               </article>
             ))}

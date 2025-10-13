@@ -19,6 +19,7 @@ const filesToFix = [
 
 function fixJSXFile(filePath) {
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Fix common JSX syntax issues
@@ -27,7 +28,10 @@ function fixJSXFile(filePath) {
       .replace(/<div([^>]*)>(?!.*<\/div>)/g, (match, attrs) => {
         // This is a complex fix, let's handle it differently
         return match;
-      })
+      
+} catch (error) {
+  console.error('Error:', error);
+})
       // Fix malformed JSX fragments
       .replace(/<>([^<]*?)(?!<\/>)/g, '<React.Fragment>$1</React.Fragment>')
       // Fix unclosed JSX tags

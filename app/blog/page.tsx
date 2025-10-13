@@ -1,13 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Calendar, User } from 'lucide-react';
+import { Right, User } from 'lucide-react';
 
 const BlogPage: React.FC = () => {
   const categories = [
     { id: "all", name: "All Posts", count: 12 },
     { id: "ai", name: "AI & Machine Learning", count: 5 },
     { id: "cybersecurity", name: "Cybersecurity", count: 3 },
-    { id: "cloud", name: "Cloud Computing", count: 2 },
+    { id: "cloud", name: "Computing", count: 2 },
     { id: "development", name: "Development", count: 2 }
   ];
 
@@ -34,7 +34,7 @@ const BlogPage: React.FC = () => {
     },
     {
       id: 3,
-      title: "Cloud Migration: A Complete Guide",
+      title: "Migration: A Complete Guide",
       excerpt: "Everything you need to know about migrating to the cloud successfully.",
       author: "Emily Rodriguez",
       date: "2024-01-10",
@@ -44,7 +44,7 @@ const BlogPage: React.FC = () => {
     },
     {
       id: 4,
-      title: "Building Scalable Applications with Modern Tech",
+      title: "Scalable Applications with Modern Tech",
       excerpt: "Discover the technologies and practices for building scalable applications.",
       author: "David Kim",
       date: "2024-01-08",
@@ -64,7 +64,7 @@ const BlogPage: React.FC = () => {
     },
     {
       id: 6,
-      title: "Zero Trust Security Architecture",
+      title: "Zero Trust Architecture",
       excerpt: "Implementing zero trust security for modern enterprise environments.",
       author: "James Wilson",
       date: "2024-01-03",
@@ -124,7 +124,7 @@ const BlogPage: React.FC = () => {
                   <div className="text-4xl mb-4">{post.image}</div>
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
-                      <Calendar className="w-4 h-4 mr-1" />
+                      <className="w-4 h-4 mr-1" />
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">
@@ -140,7 +140,7 @@ const BlogPage: React.FC = () => {
                     <span className="text-cyan-400 text-sm font-medium">{post.readTime}</span>
                     <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
                       Read More
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      <Right className="w-4 h-4 ml-1" />
                     </button>
                   </div>
                 </article>

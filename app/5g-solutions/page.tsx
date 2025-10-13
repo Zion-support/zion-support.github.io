@@ -1,24 +1,21 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Zap, Globe, Smartphone, Wifi, CheckCircle } from 'lucide-react';
+import { Right, Wifi, Circle } from 'lucide-react';
 
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
-      icon: Zap,
-      title: 'Ultra-Fast Speeds',
+      icon: title: 'Ultra-Fast Speeds',
       description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps',
       benefits: ['10x faster than 4G', 'Low latency', 'High bandwidth', 'Reliable connection']
     },
     {
-      icon: Globe,
-      title: 'Global Coverage',
+      icon: title: 'Global Coverage',
       description: 'Comprehensive 5G network coverage across multiple regions',
       benefits: ['Wide coverage', 'Seamless roaming', 'International support', 'Network redundancy']
     },
     {
-      icon: Smartphone,
-      title: 'Mobile Optimization',
+      icon: title: 'Mobile Optimization',
       description: 'Optimized 5G solutions for mobile devices and applications',
       benefits: ['Mobile-first design', 'App optimization', 'Battery efficiency', 'Device compatibility']
     },
@@ -76,7 +73,7 @@ const FiveGSolutionsPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Get Started
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <Right className="w-5 h-5 ml-2 inline" />
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Learn More
@@ -104,7 +101,7 @@ const FiveGSolutionsPage: React.FC = () => {
                     <ul className="space-y-2">
                       {feature.benefits.map((benefit, benefitIndex) => (
                         <li key={benefitIndex} className="flex items-center space-x-2 text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                          <Circle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                           <span>{benefit}</span>
                         </li>
                       ))}
@@ -131,7 +128,7 @@ const FiveGSolutionsPage: React.FC = () => {
                   <ul className="space-y-2 mb-6">
                     {solution.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
+                        <Circle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -157,7 +154,7 @@ const FiveGSolutionsPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Start Your 5G Journey
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <Right className="w-5 h-5 ml-2 inline" />
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Contact Us

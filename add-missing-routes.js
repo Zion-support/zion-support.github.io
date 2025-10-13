@@ -31,7 +31,11 @@ const appFilePath = path.join(process.cwd(), 'App.tsx');
 let appContent = '';
 
 try {
+
   appContent = fs.readFileSync(appFilePath, 'utf8');
+
+} catch (error) {
+  console.error('Error:', error);
 } catch (error) {
   console.error('Error reading App.tsx:', error);
   process.exit(1);
@@ -61,8 +65,12 @@ const finalContent = beforeRoutes + '\n' + routeStatements + '\n          ' + af
 
 // Write the updated content back to App.tsx
 try {
+
   fs.writeFileSync(appFilePath, finalContent);
   console.log('Successfully added missing routes to App.tsx');
+
+} catch (error) {
+  console.error('Error:', error);
 } catch (error) {
   console.error('Error writing to App.tsx:', error);
   process.exit(1);

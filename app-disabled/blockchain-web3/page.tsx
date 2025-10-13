@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
-      icon: Globe,
-      title: 'Global Reach',
+import { Circle, Right, } from 'lucide-react';
+      icon: title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
     }
   ];
@@ -24,14 +23,11 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
         <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
       benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security']},
-    {icon: Shield,
-      benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data']},
-    {icon: Brain,
-      title: 'AI Integration',
+    {icon: benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data']},
+    {icon: title: 'AI Integration',
       description: 'AI-powered blockchain solutions for intelligent automation and optimization.',
       benefits: ['Smart automation', 'Predictive analytics', 'Optimized transactions', 'Intelligent contracts']},
-    {icon: Globe,
-      title: 'Global Access',
+    {icon: title: 'Global Access',
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
       benefits: ['24/7 availability', 'Global reach', 'Cross-border transactions', 'Universal access']}]
 return(<>)
@@ -77,7 +73,7 @@ return(<>)
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+                <Circle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
@@ -97,11 +93,11 @@ return(<>)
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
+                <className="mr-2 h-5 w-5" />
                 Call Now
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
+                <className="mr-2 h-5 w-5" />
                 Email Us
               </button>
             </div>

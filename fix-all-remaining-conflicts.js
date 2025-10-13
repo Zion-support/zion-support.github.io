@@ -9,16 +9,24 @@ console.log('Starting comprehensive merge conflict resolution...');
 // Function to find all files with merge conflicts
 function findFilesWithConflicts() {
   try {
+
     // Find all TypeScript and JavaScript files
-    const output = execSync('find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v .git', { encoding: 'utf8' });
+    const output = execSync('find . -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" | grep -v node_modules | grep -v .git', { encoding: 'utf8' 
+} catch (error) {
+  console.error('Error:', error);
+});
     const files = output.trim().split('\n').filter(file => file.length > 0);
     
     const conflictedFiles = [];
     for (const file of files) {
       try {
+
         const content = fs.readFileSync(file, 'utf8');
         if (content.includes('          conflictedFiles.push(file);
-        }
+        
+} catch (error) {
+  console.error('Error:', error);
+}
       } catch (error) {
         // Skip files that can't be read
         continue;
@@ -35,10 +43,14 @@ function findFilesWithConflicts() {
 // Function to resolve merge conflicts by choosing remote version
 function resolveMergeConflicts(filePath) {
   try {
+
     let content = fs.readFileSync(filePath, 'utf8');
     
     if (!content.includes('      return false; // No conflicts
-    }
+    
+} catch (error) {
+  console.error('Error:', error);
+}
     
     console.log(`Resolving conflicts in: ${filePath}`);
     
@@ -90,6 +102,7 @@ function resolveMergeConflicts(filePath) {
 // Function to fix corrupted files by replacing with a basic template
 function fixCorruptedFile(filePath) {
   try {
+
     const content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file is severely corrupted (has many syntax errors)
@@ -98,7 +111,10 @@ function fixCorruptedFile(filePath) {
     
     for (const line of lines) {
       if (line.includes('        errorCount++;
-      }
+      
+} catch (error) {
+  console.error('Error:', error);
+}
       if (line.includes('error TS') || line.includes('Declaration or statement expected')) {
         errorCount++;
       }
@@ -166,11 +182,15 @@ export const utility = () => {
 
 // Main execution
 try {
+
   const conflictedFiles = findFilesWithConflicts();
   
   if (conflictedFiles.length === 0) {
     console.log('No merge conflicts found.');
-  } else {
+  
+} catch (error) {
+  console.error('Error:', error);
+} else {
     console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
     
     let resolvedCount = 0;

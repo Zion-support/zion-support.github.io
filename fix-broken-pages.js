@@ -41,6 +41,7 @@ console.log('Fixing broken AI pages...');
 let fixedCount = 0;
 for (const pagePath of brokenPages) {
   try {
+
     // Extract page name from path
     const pageName = path.basename(path.dirname(pagePath)).replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()).replace(/\s/g, '') + 'Page';
     const title = path.basename(path.dirname(pagePath)).replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
@@ -50,7 +51,10 @@ for (const pagePath of brokenPages) {
     // Ensure directory exists
     const dir = path.dirname(pagePath);
     if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
+      fs.mkdirSync(dir, { recursive: true 
+} catch (error) {
+  console.error('Error:', error);
+});
     }
     
     fs.writeFileSync(pagePath, content, 'utf8');

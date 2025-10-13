@@ -20,13 +20,17 @@ let fixedCount = 0;
 
 for (const filePath of filesToCheck) {
   try {
+
     if (fs.existsSync(filePath)) {
       let content = fs.readFileSync(filePath, 'utf8');
       
       // Fix function names that start with numbers
       content = content.replace(/export default function (\d+[a-zA-Z]+)/g, (match, funcName) => {
         const newName = 'Page' + funcName;
-        console.log(`Fixing ${filePath}: ${funcName} -> ${newName}`);
+        console.log(`Fixing ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}: ${funcName} -> ${newName}`);
         return `export default function ${newName}`;
       });
       

@@ -5,7 +5,11 @@ export default function handler(req, res) {
   }
   
   try {
-    const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
+
+    const { error, stack, componentStack, timestamp, userAgent, url 
+} catch (error) {
+  console.error('Error:', error);
+} = req.body;
     
     // Log the error details
     console.error('Client Error Report:', {
@@ -33,3 +37,5 @@ export default function handler(req, res) {
     res.status(500).json({ error: 'Failed to process error report' });
   }
 
+
+}

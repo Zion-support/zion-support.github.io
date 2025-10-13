@@ -10,7 +10,11 @@ import { execSync } from 'child_process';
 // Run TypeScript check and get all files with errors
 const runTypeCheck = () => {
   try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
+
+    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' 
+} catch (error) {
+  console.error('Error:', error);
+});
     return output;
   } catch (error) {
     return error.stdout || error.stderr || '';
@@ -41,7 +45,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react';
 
-const ${serviceName}Page: React.FC = () => {
+const ${serviceName}Page: React: React: React.FC = () => {
   const features = [
     {
       icon: Zap,
@@ -177,7 +181,7 @@ export default ${serviceName}Page;
 // Component template for non-page files
 const createComponentTemplate = (componentName) => `import React from 'react';
 
-const ${componentName}: React.FC = () => {
+const ${componentName}: React: React: React.FC = () => {
   return (
     <div className="${componentName.toLowerCase()}">
       {/* ${componentName} component */}
@@ -207,10 +211,14 @@ const main = () => {
   
   for (const filePath of filesWithErrors) {
     try {
+
       const fullPath = path.join(__dirname, filePath);
       
       if (!fs.existsSync(fullPath)) {
-        console.log(`File not found: ${filePath}`);
+        console.log(`File not found: ${filePath
+} catch (error) {
+  console.error('Error:', error);
+}`);
         continue;
       }
       

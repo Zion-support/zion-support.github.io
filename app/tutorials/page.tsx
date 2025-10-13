@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Play, BookOpen, Clock, User, Star, CheckCircle } from 'lucide-react';
+import { Right, Play, User, Star, Circle } from 'lucide-react';
 
 const TutorialsPage: React.FC = () => {
   const tutorials = [
@@ -17,7 +17,7 @@ const TutorialsPage: React.FC = () => {
     },
     {
       id: 2,
-      title: "Cloud Infrastructure Setup",
+      title: "Infrastructure Setup",
       description: "Complete guide to setting up cloud infrastructure on AWS and Azure.",
       duration: "3 hours",
       level: "Intermediate",
@@ -75,7 +75,7 @@ const TutorialsPage: React.FC = () => {
   const categories = [
     { name: "All", count: 24 },
     { name: "AI & ML", count: 8 },
-    { name: "Cloud Computing", count: 6 },
+    { name: "Computing", count: 6 },
     { name: "Cybersecurity", count: 4 },
     { name: "DevOps", count: 3 },
     { name: "Data Science", count: 3 }
@@ -156,7 +156,7 @@ const TutorialsPage: React.FC = () => {
                   <p className="text-gray-300 mb-4 text-sm">{tutorial.description}</p>
                   <div className="flex items-center justify-between text-sm text-gray-400 mb-4">
                     <span className="flex items-center">
-                      <Clock className="w-4 h-4 mr-1" />
+                      <className="w-4 h-4 mr-1" />
                       {tutorial.duration}
                     </span>
                     <span className="flex items-center">
@@ -168,7 +168,7 @@ const TutorialsPage: React.FC = () => {
                     <span className="text-cyan-400 text-sm font-medium">{tutorial.instructor}</span>
                     <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
                       Start Tutorial
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      <Right className="w-4 h-4 ml-1" />
                     </button>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ const TutorialsPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Get Started Free
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
+                <Right className="w-5 h-5 ml-2 inline" />
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 View All Tutorials

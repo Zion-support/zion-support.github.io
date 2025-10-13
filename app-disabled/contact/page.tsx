@@ -11,23 +11,23 @@ const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
 
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
 
-const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
+const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
 
     setFormData(prev => ({
     message: '';)
 })
 const [isSubmitting, setIsSubmitting] = useState(false);
 const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
+const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
     setFormData(prev => ({}
       ...prev,
       [e.target.name]: e.target.value;)
 })))
 }, []);
 
-const handleSubmit = useCallback(async (e: React.FormEvent) => {    setFormData(prev => ({;
-  const handleSubmit = useCallback(async (e: React.FormEvent) => {;
-  const handleSubmit = useCallback (async (e: React.FormEvent) => {;
+const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev => ({;
+  const handleSubmit = useCallback(async (e: .FormEvent) => {;
+  const handleSubmit = useCallback (async (e: .FormEvent) => {;
     e.preventDefault();    setIsSubmitting(true);
       setFormData({
         name: ',
@@ -53,9 +53,7 @@ message: ']
         <meta name="keywords" content="contact us, AI consulting, IT support, free consultation, get quote, technical support 
       <
 
-      <Navigation 
-      
-      {/* Hero Section *
+      <{/* Hero Section *
       <section className="relative py-20 px-4 overflow-hidden>)
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }}
@@ -104,7 +102,7 @@ message: ']
                         Email *
                       </label>
                       <div className="relative">
-                        <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                        <className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                         <input
                           type="email"
                           name="email"
@@ -116,10 +114,9 @@ message: ']
                         />
                       </div>
                       <label className="block text-sm font-medium text-gray-300 mb-2">
-                        Phone
-                      </label>
+                        </label>
                       <div className="relative">
-                        <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                        <className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
                         <input
                           type="tel"
                           name="phone"
@@ -146,7 +143,7 @@ message: ']
                       <option value="">Select a service</option>
                       <option value="ai-solutions">AI Solutions</option>
                       <option value="it-services">IT Services</option>
-                      <option value="cloud-migration">Cloud Migration</option>
+                      <option value="cloud-migration">Migration</option>
                       <option value="cybersecurity">Cybersecurity</option>
                       <option value="consulting">Consulting</option>
                       <option value="other">Other</option>
@@ -180,7 +177,7 @@ message: ']
               <h2 className="text-3xl font-bold text-white mb-6>Send us a message<
               
               {submitStatus === 'success' && (<div className=mb-6 p-4 bg-green-500/20 border border-green-500
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-2 
+                  <Circle className="w-5 h-5 text-green-400 mr-2 
                   <span className="text-green-400>Message sent successfully!<
                 <)
               )}
@@ -228,7 +225,7 @@ message: ']
                 <div className="flex items-start space-x-4>
                   <div className="w-12 h-12 bg-cyan-500 rounded-lg flex items-center justify-center flex-shrink-0>
                     
-                    <h3 className="text-lg font-semibold text-white mb-1>Phone<
+                    <h3 className="text-lg font-semibold text-white mb-1><
                     <p className="text-gray-300>+1-302-464-0950<
                     <p className="text-sm text-gray-400>Mon-Fri 9AM-6PM EST<
                   <

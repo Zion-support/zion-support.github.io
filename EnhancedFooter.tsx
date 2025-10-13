@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export const EnhancedFooter: React.FC = () => {
+const  () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>

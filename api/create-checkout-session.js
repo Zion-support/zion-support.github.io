@@ -1,8 +1,12 @@
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
+
       await handler(req, res);
-    } catch (error) {
+    
+} catch (error) {
+  console.error('Error:', error);
+} catch (error) {
       console.error('API Error:', error);
       res.statusCode = 500;
       res.setHeader('Content-Type', 'application/json');
@@ -29,8 +33,12 @@ const handler = async (req, res) => {
   }
 
   try {
+
     // Mock checkout session creation
-    const sessionId = `cs_${Date.now()}`;
+    const sessionId = `cs_${Date.now()
+} catch (error) {
+  console.error('Error:', error);
+}`;
     const sessionData = {
       id: sessionId,
       productId,

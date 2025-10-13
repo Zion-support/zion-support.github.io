@@ -6,7 +6,7 @@ const ImprovedNavigation: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Improved Navigation - Zion Tech Group</title>
+        <title>Improved - Zion Tech Group</title>
         <meta name="description" content="Professional improved navigation services by Zion Tech Group." />
       </Helmet>
 
@@ -14,8 +14,7 @@ const ImprovedNavigation: React.FC = () => {
       <section className="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-gray-900 mb-6">
-            Improved Navigation
-          </h1>
+            Improved </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Professional improved navigation services 
             designed to help your business grow and succeed.

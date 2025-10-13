@@ -1,7 +1,7 @@
 import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
+import ../components/ from '../components/';
 import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+import {Circle, Right, Star, }}from 'lucide-react';
 const AiCloudInfrastructurePage: React.FC = () => {,
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
@@ -12,4 +12,4 @@ const AiCloudInfrastructurePage: React.FC = () => {,
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Cloud Infrastructure
+              Ai Infrastructure

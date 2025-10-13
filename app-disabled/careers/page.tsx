@@ -1,13 +1,15 @@
-import React, { useState } from 'react;
+import { useState } from 'react;
 
 import { Helmet } from 'react-helmet-async;
 
-import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Briefcase, GraduationCap } from 'lucide-react;
+import { Right, Circle, Star, } from 'lucide-react;
 
-interface JobPosition {}
+interface JobPosition {
+  // Add properties here
+}
   id: number;
 
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
+import { Right, Circle, } from 'lucide-react;
 
 const PagePage: React.FC = () => {}
   title: string;
@@ -31,7 +33,7 @@ const PagePage: React.FC = () => {}
   featured: boolean;
 
 }
-const CareersPage: React.FC = () => {
+const eersPage: React.FC = () => {
   const [selectedDepartment, setSelectedDepartment] = useState('all);
 
   const [selectedLocation, setSelectedLocation] = useState('all);
@@ -76,13 +78,13 @@ const CareersPage: React.FC = () => {
         'Competitive salary and benefits,
         'State-of-the-art facilities
 
-const CareersPage: React.FC = () => {
+const eersPage: React.FC = () => {
   return (
     <div className="min-h-screen pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-cyan-400">Careers</span>
+            <span className="text-cyan-400">eers</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Join our team and help shape the future of AI and IT solutions.
@@ -92,7 +94,7 @@ const CareersPage: React.FC = () => {
     </div>
   );
 };
-import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'lucide-react';
+import { Right, Circle, Star, } from 'lucide-react';
     },
     {}
       id: 3,
@@ -137,8 +139,7 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
         'Professional development opportunities,
         'Stock options
       title: 'Cybersecurity Specialist,
-      department: 'Security,
-      location: 'Austin, TX,
+      department: 'location: 'Austin, TX,
       type: 'Full-time,
       experience: '4+ years,
       posted: '1 week ago,
@@ -155,7 +156,7 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
         'Health and wellness benefits,
         'Professional certification support,
         'Flexible work schedule,
-        'Security conference attendance
+        'conference attendance
       title: 'Data Scientist,
       department: 'Data,
       location: 'Seattle, WA,
@@ -224,7 +225,7 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});;)
 }
 
-    'Career growth opportunities'
+    'eer growth opportunities'
   const values = [;;
 
     {
@@ -249,10 +250,10 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
       stat: '4.9/5,
       label: 'Glassdoor Rating,
       description: 'Highly rated workplace});)
-        <title>Careers - Zion Tech Group | Join Our Team</title>
+        <title>eers - Zion Tech Group | Join Our Team</title>
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI, quantum computing, and emerging technologies. Explore open positions and start your career with us. />
         <meta name="keywords" content="careers, jobs, AI engineer, quantum computing, tech jobs, remote work, engineering positions />
-        <meta property="og:title" content="Careers - Zion Tech Group />
+        <meta property="og:title" content="eers - Zion Tech Group />
         <meta property="og:description" content="Join our team and work on the future of technology />
         <meta property="og:type" content="website />
         <meta property="og:url" content="https://ziontechgroup.com/careers />
@@ -309,7 +310,7 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
                   <option key={loc.id} value={loc.id} className="bg-slate-800>
         </section>
   return (<div>
-        <title>Careers - Zion Tech Group | Join Our Team<
+        <title>eers - Zion Tech Group | Join Our Team<
         <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture. 
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs 
       <
@@ -403,4 +404,4 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
 
                         <li className="text-sm text-gray-400>
             </div>  ));)
-export default CareersPage;
+export default eersPage;
