@@ -67,39 +67,42 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
       name: 'AI Services',
       path: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
+      color: 'cyan',
       services: [
-        { name: 'AI Analytics', path: '/ai-analytics' },
-        { name: 'AI Automation', path: '/ai-automation' },
-        { name: 'AI Content Generation', path: '/ai-content-generation' },
-        { name: 'AI Customer Support', path: '/ai-customer-support' },
-        { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' }
+        { name: 'AI Analytics', path: '/ai-analytics', description: 'Data insights & predictions' },
+        { name: 'AI Automation', path: '/ai-automation', description: 'Process automation' },
+        { name: 'AI Content Generation', path: '/ai-content-generation', description: 'Content creation' },
+        { name: 'AI Customer Support', path: '/ai-customer-support', description: '24/7 support' },
+        { name: 'AI Marketing Automation', path: '/ai-marketing-automation', description: 'Marketing optimization' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity', description: 'AI-powered security' }
       ]
     },
     {
       name: 'IT Services',
       path: '/it-services',
       icon: <Shield className="w-4 h-4" />,
+      color: 'green',
       services: [
-        { name: 'Cloud Services', path: '/cloud-services' },
-        { name: 'Cybersecurity', path: '/cybersecurity' },
-        { name: 'Custom Development', path: '/custom-development' },
-        { name: 'Web Development', path: '/web-development' },
-        { name: 'Mobile Development', path: '/mobile-development' },
-        { name: 'Database Management', path: '/database-management' }
+        { name: 'Cloud Services', path: '/cloud-services', description: 'Cloud migration & management' },
+        { name: 'Cybersecurity', path: '/cybersecurity', description: 'Security solutions' },
+        { name: 'Custom Development', path: '/custom-development', description: 'Tailored software' },
+        { name: 'Web Development', path: '/web-development', description: 'Modern web apps' },
+        { name: 'Mobile Development', path: '/mobile-development', description: 'iOS & Android apps' },
+        { name: 'Database Management', path: '/database-management', description: 'Data optimization' }
       ]
     },
     {
       name: '5G Solutions',
       path: '/5g-solutions',
       icon: <Globe className="w-4 h-4" />,
+      color: 'purple',
       services: [
-        { name: '5G Implementation', path: '/5g-implementation' },
-        { name: '5G Edge Computing', path: '/5g-edge-computing' },
-        { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
-        { name: '5G Smart Cities', path: '/5g-smart-city-solutions' },
-        { name: '5G Private Networks', path: '/5g-private-networks' },
-        { name: '5G Data Analytics', path: '/5g-data-analytics' }
+        { name: '5G Implementation', path: '/5g-implementation', description: '5G deployment' },
+        { name: '5G Edge Computing', path: '/5g-edge-computing', description: 'Edge processing' },
+        { name: '5G IoT Solutions', path: '/5g-iot-solutions', description: 'IoT connectivity' },
+        { name: '5G Smart Cities', path: '/5g-smart-city-solutions', description: 'Smart city tech' },
+        { name: '5G Private Networks', path: '/5g-private-networks', description: 'Private 5G' },
+        { name: '5G Data Analytics', path: '/5g-data-analytics', description: '5G data insights' }
       ]
     }
   ], [])
@@ -198,24 +201,29 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                           {category.icon}
                           <span>{category.name}</span>
                         </div>
-                        <div className="ml-6 space-y-1">
+                        <div className="ml-6 space-y-2">
                           {category.services.slice(0, 3).map((service) => (
                             <Link
                               key={service.name}
                               to={service.path}
-                              className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
+                              className="block group hover:bg-cyan-500/10 rounded-lg p-2 -m-2 transition-all duration-200"
                               onClick={() => setIsServicesOpen(false)}
                             >
-                              {service.name}
+                              <div className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm font-medium">
+                                {service.name}
+                              </div>
+                              <div className="text-gray-500 group-hover:text-cyan-300 transition-colors text-xs">
+                                {service.description}
+                              </div>
                             </Link>
                           ))}
                           {category.services.length > 3 && (
                             <Link
                               to={category.path}
-                              className="block text-cyan-400 hover:text-cyan-300 transition-colors text-xs font-medium py-1"
+                              className="block text-cyan-400 hover:text-cyan-300 transition-colors text-xs font-medium py-1 mt-2"
                               onClick={() => setIsServicesOpen(false)}
                             >
-                              View All →
+                              View All {category.name} →
                             </Link>
                           )}
                         </div>
@@ -353,30 +361,35 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                           {category.icon}
                           <span>{category.name}</span>
                         </div>
-                        <div className="ml-4 space-y-1">
+                        <div className="ml-4 space-y-2">
                           {category.services.slice(0, 3).map((service) => (
                             <Link
                               key={service.name}
                               to={service.path}
-                              className="block text-gray-300 hover:text-cyan-400 transition-colors text-sm py-1"
+                              className="block group hover:bg-cyan-500/10 rounded-lg p-2 -m-2 transition-all duration-200"
                               onClick={() => {
                                 setIsServicesOpen(false)
                                 toggleMenu()
                               }}
                             >
-                              {service.name}
+                              <div className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm font-medium">
+                                {service.name}
+                              </div>
+                              <div className="text-gray-500 group-hover:text-cyan-300 transition-colors text-xs">
+                                {service.description}
+                              </div>
                             </Link>
                           ))}
                           {category.services.length > 3 && (
                             <Link
                               to={category.path}
-                              className="block text-cyan-400 hover:text-cyan-300 transition-colors text-xs font-medium py-1"
+                              className="block text-cyan-400 hover:text-cyan-300 transition-colors text-xs font-medium py-1 mt-2"
                               onClick={() => {
                                 setIsServicesOpen(false)
                                 toggleMenu()
                               }}
                             >
-                              View All →
+                              View All {category.name} →
                             </Link>
                           )}
                         </div>

@@ -37,6 +37,41 @@ const PerformanceMonitor: React.FC = () => {
       // For now, we'll use placeholder values
     }
 
+<<<<<<< HEAD
+=======
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
+  if (!isVisible || process.env.NODE_ENV !== 'development') {
+    return null
+  }
+
+  const formatMetric = (value: number | null, unit: string = 'ms') => {
+    if (value === null) return 'N/A'
+    return `${value.toFixed(2)}${unit}`
+  }
+
+  const getMetricColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
+    if (value === null) return 'text-gray-400'
+    if (value <= thresholds.good) return 'text-green-400'
+    if (value <= thresholds.needsImprovement) return 'text-yellow-400'
+    return 'text-red-400'
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-black/90 backdrop-blur-sm border border-white/20 rounded-lg p-4 text-white text-sm font-mono max-w-sm z-50">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="font-bold text-blue-400">Performance Monitor</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white transition-colors"
+        >
+          ×
+        </button>
+      </div>
+      
+>>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
       {isVisible && (
         <div className="absolute bottom-12 left-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80">
           <h3 className="text-lg font-semibold mb-4 text-gray-800">Performance Metrics</h3>
@@ -85,12 +120,15 @@ const PerformanceMonitor: React.FC = () => {
             </div>
             </div>
           </div>
+<<<<<<< HEAD
       <div className="space-y-2">
         <div className="flex justify-between">
           <span className="text-gray-300">Load Time:</span>
           <span className={getMetricColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>
             {formatMetric(metrics.loadTime)}
           </span>
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
         </div>
         
         <div className="flex justify-between">

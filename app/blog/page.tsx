@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react";
 import { ArrowRight, Calendar, User } from "lucide-react";
 import { ArrowRight, Search, Calendar, Clock, User, Zap } from "lucide-react";
@@ -11,11 +12,16 @@ import { Link } from "react-router-dom";
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Latest insights and updates from Zion Tech Group" />
 =======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -89,14 +95,18 @@ export default function Blog() {
     <>
       <Helmet>
         <title>Blog - Zion Tech Group | AI & IT Solutions</title>
+<<<<<<< HEAD
         <meta name="description" content="Stay updated with the latest insights on AI, technology, and business solutions from Zion Tech Group experts." />
         <meta name="keywords" content="AI blog, technology insights, business solutions, enterprise AI, cloud computing" />
 >>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
+=======
+        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
+        <meta name="description" content="Latest insights and updates from Zion Tech Group" />
+>>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-20">
           <div className="max-w-7xl mx-auto px-4">
             <div className="text-center">
@@ -114,6 +124,7 @@ export default function Blog() {
         <section className="py-8 bg-white/10 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+<<<<<<< HEAD
               <div className="relative flex-1 max-w-md">
                         ? 'bg-blue-600 text-white'
                         : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
@@ -137,11 +148,15 @@ export default function Blog() {
             <div className="max-w-2xl mx-auto mb-12">
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+=======
+              <div className="flex-1 max-w-md">
+>>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
                 <input
                   type="text"
                   placeholder="Search articles..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
+<<<<<<< HEAD
                   className="w-full pl-12 pr-4 py-4 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 />
               </div>
@@ -163,15 +178,39 @@ export default function Blog() {
                 </button>
               ))}
 >>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
+=======
+                  className="w-full px-4 py-2 border border-cyan-400/30 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-300"
+                />
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                {categories.map(category => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      selectedCategory === category.id
+                        ? 'bg-blue-600 text-white'
+                        : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
+                    }`}
+                  >
+                    {category.name} ({category.count})
+                  </button>
+                ))}
+              </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Featured Post */}
         {featuredPost && (
+=======
+        {/* Featured Posts */}
+        {filteredPosts.filter(post => post.featured).length > 0 && (
+>>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
           <section className="py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-8">Featured Article</h2>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20">
                 <div className="md:flex">
@@ -247,6 +286,7 @@ export default function Blog() {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Featured Posts */}
         {filteredPosts.filter(post => post.featured).length > 0 && (
           <div className="py-16 px-4 sm:px-6 lg:px-8">
@@ -358,14 +398,21 @@ export default function Blog() {
             </div>
           </div>
         </div>
+=======
+            </div>
+          </div>
+        </section>
+>>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
       </div>
     </>
   );
-<<<<<<< HEAD
 };
+<<<<<<< HEAD
 
 export default BlogPage;
 
 =======
 }
 >>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-3b6d

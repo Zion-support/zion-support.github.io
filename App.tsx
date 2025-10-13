@@ -8,10 +8,18 @@ import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
+=======
+import { LoadingPage } from "./app/components/LoadingStates";
+import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import FuturisticBackground from "./app/components/FuturisticBackground";
+>>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
@@ -616,6 +624,7 @@ function App() {
                   </EnhancedAccessibility>
                 </FuturisticBackground>
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
                 <PerformanceMonitor />
                 <EnhancedSEO 
@@ -624,6 +633,8 @@ function App() {
                   keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
                 />
 >>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
               </div>
               <EnhancedAccessibility>
                 <div></div>
