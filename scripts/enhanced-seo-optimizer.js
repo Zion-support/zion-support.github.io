@@ -1,8 +1,8 @@
+import React from 'react'
 // Fixed regex
  * Enhanced SEO Optimizer
  * Implements advanced SEO optimizations for the Zion Tech Group website
  *// Fixed regex
-
 const fs = require('fs'
 const path = require('path'
     console.log('🔍 Starting enhanced SEO optimizations...'

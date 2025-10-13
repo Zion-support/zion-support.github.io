@@ -1,5 +1,5 @@
-'use client';
-
+import React from 'react'
+'use client'
 export default function ComponentsPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
@@ -10,5 +10,5 @@ export default function ComponentsPage() {
         </p>
       </div>
     </div>
-  );
+  )
 }

@@ -1,8 +1,6 @@
 #!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-
+import fs from 'fs'
+import path from 'path'
 // Common contractions and their escaped versions
 const contractions = {
   "Let's": "Let&apos;s",
@@ -43,49 +41,47 @@ const contractions = {
   "this's": "this&apos;s",
   "these's": "these&apos;s",
   "those's": "those&apos;s"
-};
-
+}
 function fixFile(filePath) {
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    
+    let content = fs.readFileSync(filePath, 'utf8')
+let modified = false
     // Fix contractions
     for (const [contraction, escaped] of Object.entries(contractions)) {
-      const regex = new RegExp(`\\b${contraction.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'g');
+      const regex = new RegExp(`\\b${contraction.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'g')
       if (content.includes(contraction)) {
-        content = content.replace(regex, escaped);
-        modified = true;
+        content = content.replace(regex, escaped)
+        modified = true
       }
     }
     
     // Fix standalone apostrophes in text content
-    content = content.replace(/(\w)'(\w)/g, '$1&apos;$2');
+    content = content.replace(/(\w)'(\w)/g, '$1&apos;$2')
     
     if (modified) {
-      fs.writeFileSync(filePath, content, 'utf8');
-      console.log(`Fixed apostrophes in: ${filePath}`);
+      fs.writeFileSync(filePath, content, 'utf8')
+      console.log(`Fixed apostrophes in: ${filePath}`)
     }
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message)
   }
 }
 
 function processDirectory(dir) {
-  const files = fs.readdirSync(dir);
+  const files = fs.readdirSync(dir)
   
   for (const file of files) {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+    const filePath = path.join(dir, file)
+const stat = fs.statSync(filePath)
     
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
-      processDirectory(filePath);
+      processDirectory(filePath)
     } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      fixFile(filePath);
+      fixFile(filePath)
     }
   }
 }
 
 // Process the workspace
-processDirectory('/workspace');
-console.log('Apostrophe fixing complete!');
+processDirectory('/workspace')
+console.log('Apostrophe fixing complete!')

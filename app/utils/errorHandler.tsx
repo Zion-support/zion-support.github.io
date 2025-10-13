@@ -1,7 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const ErrorHandler: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -83,7 +82,6 @@ const ErrorHandler: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default ErrorHandler;
+  )
+}
+export default ErrorHandler

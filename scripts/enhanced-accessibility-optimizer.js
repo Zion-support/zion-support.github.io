@@ -1,8 +1,8 @@
+import React from 'react'
 // Fixed regex
  * Enhanced Accessibility Optimizer
  * Implements advanced accessibility optimizations for the Zion Tech Group website
  *// Fixed regex
-
 const fs = require('fs'
 const path = require('path'
     console.log('♿ Starting enhanced accessibility optimizations...'

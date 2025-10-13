@@ -1,36 +1,32 @@
-import { useState, useEffect } from 'react';
-import { } from 'react-router-dom';
-import { ChevronDown, Menu, X, Right, Star, Square, } from 'lucide-react';
-
+import { useState, useEffect } from 'react'
+import { } from 'react-router-dom'
+import { ChevronDown, Menu, X, Right, Star, Square, } from 'lucide-react'
 const : React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+const [servicesOpen, setServicesOpen] = useState(false)
+const [aiServicesOpen, setAiServicesOpen] = useState(false)
+const [itServicesOpen, setItServicesOpen] = useState(false)
+const [microSaasOpen, setMicroSaasOpen] = useState(false)
+const [isScrolled, setIsScrolled] = useState(false)
 
-      setIsScrolled(window.scrollY > 50);
-    };
+      setIsScrolled(window.scrollY > 50)
+    }
 
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
-  const closeAllMenus = () => {
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
-    setIsOpen(false);
-  };
-
-  ];
-
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+const closeAllMenus = () => {
+    setServicesOpen(false)
+    setAiServicesOpen(false)
+    setItServicesOpen(false)
+    setMicroSaasOpen(false)
+    setIsOpen(false)
+  }
+  ]
               <h1 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group
               <p className="text-xs text-cyan-400">AI & IT Solutions
             <to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
@@ -79,7 +75,6 @@ const : React.FC = () => {
                   <className="w-4 h-4 inline mr-2" />
                   (302) 464-0950
         )}
-  );
-};
-
-export default ;
+  )
+}
+export default 

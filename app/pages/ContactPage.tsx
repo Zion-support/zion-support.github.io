@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { 
   PhoneIcon,
   EnvelopeIcon,
@@ -11,8 +11,7 @@ import {
   UserIcon,
   BuildingOfficeIcon,
   CalendarIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -23,23 +22,20 @@ export default function ContactPage() {
     subject: '',
     message: '',
     service: ''
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
+  })
+const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    }))
+  }
+const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
     // Handle form submission
-    console.log('Form submitted:', formData);
-  };
-
-  const contactMethods = [
+    console.log('Form submitted:', formData)
+  }
+const contactMethods = [
     {
       icon: PhoneIcon,
       title: "Phone",
@@ -68,9 +64,8 @@ export default function ContactPage() {
       description: "9:00 AM - 6:00 PM EST",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
-
-  const services = [
+  ]
+const services = [
     "AI Solutions",
     "Cybersecurity",
     "Cloud Infrastructure",
@@ -78,7 +73,7 @@ export default function ContactPage() {
     "Micro SaaS",
     "5G Solutions",
     "General Inquiry"
-  ];
+  ]
 
   return (
     <>
@@ -120,7 +115,7 @@ export default function ContactPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {contactMethods.map((method, index) => {
-              const Icon = method.icon;
+              const Icon = method.icon
               return (
                 <div 
                   key={method.title}
@@ -134,7 +129,7 @@ export default function ContactPage() {
                   <p className="text-lg font-semibold text-purple-300 mb-2">{method.details}</p>
                   <p className="text-gray-300">{method.description}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -385,5 +380,5 @@ export default function ContactPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

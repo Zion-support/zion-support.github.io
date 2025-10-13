@@ -1,26 +1,27 @@
+import React from 'react'
 export interface Service {
-  id: string;
-  title: string;
-  description: string;
-  shortDescription: string;
-  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT';
-  icon: string;
-  features: string[];
+  id: string
+  title: string
+  description: string
+  shortDescription: string
+  category: 'AI' | 'IT' | 'SaaS' | 'Cybersecurity' | 'Cloud' | '5G' | 'Blockchain' | 'IoT'
+  icon: string
+  features: string[]
   pricing: {
-    basic: number;
-    pro: number;
-    enterprise: number;
-  };
-  benefits: string[];
-  useCases: string[];
-  technologies: string[];
+    basic: number
+    pro: number
+    enterprise: number
+  }
+  benefits: string[]
+  useCases: string[]
+  technologies: string[]
   contactInfo: {
-    phone: string;
-    email: string;
-    website: string;
-  };
-  href: string;
-  glowColor: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow';
+    phone: string
+    email: string
+    website: string
+  }
+  href: string
+  glowColor: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow'
 }
 
 export const services: Service[] = [
@@ -528,12 +529,10 @@ export const services: Service[] = [
     href: '/iot-platform-solution',
     glowColor: 'yellow'
   }
-];
-
+]
 export const getServicesByCategory = (category: Service['category']) => {
-  return services.filter(service => service.category === category);
-};
-
+  return services.filter(service => service.category === category)
+}
 export const getServiceById = (id: string) => {
-  return services.find(service => service.id === id);
-};
+  return services.find(service => service.id === id)
+}

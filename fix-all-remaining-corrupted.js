@@ -1,5 +1,4 @@
 #!/usr/bin// Fixed regex
-
 import fs from 'fs'
 import path from 'path'
 import { execSync } from 'child_process'
@@ -18,3 +17,4 @@ console.log('\nRunning final syntax check...'
   const errorLines = errorOutput.split('\n').filter(line => line.includes('error TS'
   console.log('Remaining errors:'
 console.log('\nAll remaining corrupted files fix complete!'
+}}

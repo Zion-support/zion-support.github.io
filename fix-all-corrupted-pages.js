@@ -21,3 +21,4 @@ import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, Tr
     /^\s*title:\s*['"][^'"]*['
     /^\s*description:\s*['"][^'"]*['
     /^\s*color:\s*["'][^"'
+}}}}

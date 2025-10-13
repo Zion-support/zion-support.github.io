@@ -1,12 +1,10 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
-
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Menu, X, ChevronDown } from 'lucide-react'
 const Header: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
-  const navigationItems = [
+  const [isOpen, setIsOpen] = useState(false)
+const [isServicesOpen, setIsServicesOpen] = useState(false)
+const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
     { 
@@ -23,7 +21,7 @@ const Header: React.FC = () => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
-  ];
+  ]
 
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-slate-700/50 sticky top-0 z-50">
@@ -134,7 +132,6 @@ const Header: React.FC = () => {
         )}
       </div>
     </nav>
-  );
-};
-
-export default Header;
+  )
+}
+export default Header

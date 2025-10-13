@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -20,8 +17,7 @@ import {
   ClockIcon,
   UserGroupIcon,
   CogIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function MicroSaaSSolutionsPage() {
   const microSaaSProducts = [
     {
@@ -252,7 +248,7 @@ export default function MicroSaaSSolutionsPage() {
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
       href: "/ai-email-marketing"
     }
-  ];
+  ]
 
   return (
     <>
@@ -285,7 +281,7 @@ export default function MicroSaaSSolutionsPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {microSaaSProducts.map((product, index) => {
-              const Icon = product.icon;
+              const Icon = product.icon
               return (
                 <div 
                   key={product.title}
@@ -359,7 +355,7 @@ export default function MicroSaaSSolutionsPage() {
                     </Link>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -570,5 +566,5 @@ export default function MicroSaaSSolutionsPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

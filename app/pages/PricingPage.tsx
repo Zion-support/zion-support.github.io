@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   CheckIcon,
   XMarkIcon,
@@ -9,12 +9,10 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   ChatBubbleLeftRightIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function PricingPage() {
-  const [billingCycle, setBillingCycle] = useState('monthly');
-
-  const plans = [
+  const [billingCycle, setBillingCycle] = useState('monthly')
+const plans = [
     {
       name: "Starter",
       description: "Perfect for small businesses getting started with AI",
@@ -86,9 +84,8 @@ export default function PricingPage() {
       color: "from-cyan-600 to-blue-600",
       popular: false
     }
-  ];
-
-  const addOns = [
+  ]
+const addOns = [
     {
       name: "Cybersecurity Suite",
       description: "Advanced security monitoring and threat detection",
@@ -116,9 +113,8 @@ export default function PricingPage() {
       },
       features: ["Custom applications", "API development", "Integration services"]
     }
-  ];
-
-  const faqs = [
+  ]
+const faqs = [
     {
       question: "Can I change my plan at any time?",
       answer: "Yes, you can upgrade or downgrade your plan at any time. Changes will be prorated and reflected in your next billing cycle."
@@ -143,7 +139,7 @@ export default function PricingPage() {
       question: "What support is included with each plan?",
       answer: "Starter includes email support, Professional includes priority support, and Enterprise includes 24/7 dedicated support."
     }
-  ];
+  ]
 
   return (
     <>
@@ -411,5 +407,5 @@ export default function PricingPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

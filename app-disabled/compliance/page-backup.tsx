@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import ../components/ from '../components/';
-import Footer from '../components/Footer';
-import {Circle, Right, Star, }}from 'lucide-react';
+'use client'
+import React from 'react'
+import {Helmet}}from 'react-helmet-async'
+import ../components/ from '../components/'
+import Footer from '../components/Footer'
+import {Circle, Right, Star, }}from 'lucide-react'
 const PageBackupPage: React.FC = () => {,
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -23,7 +23,7 @@ return(<.Fragment>)
               Page Backup
             <p>Advanced page backup solutions powered by AI technology.
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;
+              <button>Get Started
               <button>Learn More,
         {/* Features Section */}
         <section className="py-20 px-4">
@@ -33,10 +33,10 @@ return(<.Fragment>)
               <h2 className="text-4xl font-bold text-white mb-4">Section Title
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2>Key Features;
-              <p>Powerful AI technology that drives results;
+              <h2>Key Features
+              <p>Powerful AI technology that drives results
                   <p className="text-gray-300 mb-4">{feature.description</p>}
-                  {feature.benefits && (;
+                  {feature.benefits && (
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <Circle />
@@ -51,13 +51,12 @@ return(<.Fragment>)
               <h2>Ready to Get Started?
               <p>Contact our experts to discuss your requirements and get started today.
               <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>Contact Us;
-                <button>Learn More;
+                <button>Contact Us
+                <button>Learn More
       ))
       <Footer />
 
-  );
-};
-
-export default PageBackupPage;
+  )
+}
+export default PageBackupPage
 </div></div></div></div></div></section></section></h1>

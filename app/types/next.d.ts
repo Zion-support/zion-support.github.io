@@ -1,7 +1,7 @@
 // Next.js type declarations
 declare module 'next' {
   interface NextApiRequest {
-    user?: any;
+    user?: any
   }
   interface NextConfig {
     // Add any Next.js specific types here
@@ -10,6 +10,6 @@ declare module 'next' {
 // Export a utility function
 export const nextUtil = () => {
   // Implementation
-  return true;
-};
-export default nextUtil;
+  return true
+}
+export default nextUtil

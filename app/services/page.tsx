@@ -1,15 +1,8 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Circle, Star, Right, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe } from 'lucide-react';
-=======
-import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
-import { Circle, Star, Right } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Circle, Star, Right, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe } from 'lucide-react'
+import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react'
+import { Circle, Star, Right } from 'lucide-react'
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
     {
@@ -46,9 +39,8 @@ const ServicesPage: React.FC = () => {
         { name: 'Data Analytics', price: '$1,900/month', description: 'Advanced data analytics and business intelligence solutions', features: ['Data Visualization', 'Predictive Analytics', 'Dashboard Creation', 'Insights Generation'] }
       ]
     }
-  ];
-
-  const testimonials = [
+  ]
+const testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
@@ -70,7 +62,7 @@ const ServicesPage: React.FC = () => {
       content: "The AI automation tools have revolutionized our workflows. Highly recommend their services.",
       rating: 5
     }
-  ];
+  ]
 
   return (
     <>
@@ -155,7 +147,7 @@ const ServicesPage: React.FC = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                  <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo</p>
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
                     <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>
@@ -188,7 +180,6 @@ const ServicesPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default ServicesPage;
+  )
+}
+export default ServicesPage

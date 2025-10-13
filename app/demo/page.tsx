@@ -1,56 +1,39 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Play, Right, Circle, Star } from 'lucide-react';
-=======
-import { Play, Right, Star, BarChart3, Shield } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Play, Right, Circle, Star } from 'lucide-react'
+import { Play, Right, Star, BarChart3, Shield } from 'lucide-react'
 const DemoPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: 'Analytics',
-=======
       icon: BarChart3,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
       demo: 'Live Demo'
     },
     {
-<<<<<<< HEAD
       icon: 'Security',
-=======
       icon: Shield,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Advanced Security',
       description: 'Experience our enterprise-grade security features',
       demo: 'Demo'
     },
     {
-<<<<<<< HEAD
       icon: 'Intelligence',
-=======
       icon: BarChart3,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Business Intelligence',
       description: 'Explore our comprehensive BI dashboard',
       demo: 'BI Demo'
     },
     {
-<<<<<<< HEAD
       icon: 'Collaboration',
-=======
       icon: Play,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Team Collaboration',
       description: 'See how teams work together seamlessly',
       demo: 'Collaboration Demo'
     }
-  ];
-
-  const testimonials = [
+  ]
+const testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
@@ -69,7 +52,7 @@ const DemoPage: React.FC = () => {
       content: "The demo team was knowledgeable and answered all our questions thoroughly.",
       rating: 5
     }
-  ];
+  ]
 
   return (
     <>
@@ -113,7 +96,7 @@ const DemoPage: React.FC = () => {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => {
-                const Icon = feature.icon;
+                const Icon = feature.icon
                 return (
                   <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
                     <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -125,7 +108,7 @@ const DemoPage: React.FC = () => {
                       {feature.demo}
                     </button>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -167,7 +150,7 @@ const DemoPage: React.FC = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                  <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo</p>
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
                     <p className="text-cyan-400 text-sm">{testimonial.company}</p>
@@ -200,7 +183,6 @@ const DemoPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default DemoPage;
+  )
+}
+export default DemoPage

@@ -15,7 +15,7 @@ export function createAdvancedMonitoring() {
     'caching/redis-client.js': {
       redisClient: () => ({ connected: true })
     }
-  };
+  }
   
-  return monitoringFiles;
+  return monitoringFiles
 }

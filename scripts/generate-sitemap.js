@@ -1,12 +1,10 @@
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-<<<<<<< HEAD
-const baseUrl = 'https://ziontechgroup.com';
+import React from 'react'
+import fs from 'fs'
+import path from 'path'
+import { fileURLToPath } from 'url'
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = path.dirname(__filename)
+const baseUrl = 'https://ziontechgroup.com'
 const pages = [
   { url: '/', priority: '1.0', changefreq: 'daily' },
   { url: '/about', priority: '0.8', changefreq: 'monthly' },
@@ -20,15 +18,13 @@ const pages = [
   { url: '/terms', priority: '0.3', changefreq: 'yearly' },
   { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
   { url: '/solutions', priority: '0.8', changefreq: 'monthly' }
-];
-
+]
 const generateSitemap = () => {
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `  <url>
     <loc>${baseUrl}${page.url}</loc>
     <lastmod>${new Date().toISOString().split('T')[0]}</lastmod>
-=======
 // Define all the pages and their priorities
 const pages = [
   { url: '/', priority: '1.0', changefreq: 'weekly' },
@@ -74,43 +70,36 @@ const pages = [
   // Other pages
   { url: '/case-studies', priority: '0.6', changefreq: 'monthly' },
   { url: '/careers', priority: '0.5', changefreq: 'monthly' },
-];
-
-const baseUrl = 'https://ziontechgroup.com';
-const currentDate = new Date().toISOString();
-
+]
+const baseUrl = 'https://ziontechgroup.com'
+const currentDate = new Date().toISOString()
 // Generate sitemap XML
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(page => `  <url>
     <loc>${baseUrl}${page.url}</loc>
     <lastmod>${currentDate}</lastmod>
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
   </url>`).join('\n')}
-</urlset>`;
-
-<<<<<<< HEAD
-  const publicDir = path.join(__dirname, '..', 'public');
+</urlset>`
+const publicDir = path.join(__dirname, '..', 'public')
   if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true });
+    fs.mkdirSync(publicDir, { recursive: true })
   }
 
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-  console.log('Sitemap generated successfully!');
-};
-
-generateSitemap();
-=======
-// Write sitemap to public directory
-const publicDir = path.join(__dirname, '..', 'public');
-if (!fs.existsSync(publicDir)) {
-  fs.mkdirSync(publicDir, { recursive: true });
+  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)
+  console.log('Sitemap generated successfully!')
 }
 
-fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
+generateSitemap()
+// Write sitemap to public directory
+const publicDir = path.join(__dirname, '..', 'public')
+if (!fs.existsSync(publicDir)) {
+  fs.mkdirSync(publicDir, { recursive: true })
+}
 
+fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)
 // Generate robots.txt
 const robotsTxt = `User-agent: *
 Allow: /
@@ -136,11 +125,11 @@ Allow: /demo
 Allow: /support
 
 # Crawl delay
-Crawl-delay: 1`;
+Crawl-delay: 1`
 
-fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt);
+fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt)
 
-console.log('✅ Sitemap and robots.txt generated successfully!');
-console.log(`📄 Generated sitemap with ${pages.length} pages`);
-console.log(`🤖 Generated robots.txt`);
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+console.log('✅ Sitemap and robots.txt generated successfully!')
+console.log(`📄 Generated sitemap with ${pages.length} pages`)
+console.log(`🤖 Generated robots.txt`)
+}

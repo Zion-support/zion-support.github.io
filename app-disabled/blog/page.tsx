@@ -1,16 +1,13 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 export default function Blog() {
 interface BlogPost {
-  id: number;  title: string;
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { } from 'react-router-dom';
-import { User, Right, Filter } from 'lucide-react';
-import Footer from '../components/Footer';
-
+  id: number;  title: string
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { } from 'react-router-dom'
+import { User, Right, Filter } from 'lucide-react'
+import Footer from '../components/Footer'
 const BlogPage: React.FC = () => {
   const blogPosts = [
     {
@@ -34,8 +31,7 @@ const BlogPage: React.FC = () => {
       date: '2024-01-05',
       readTime: '6 min read'
     }
-  ];
-
+  ]
 const categories = [
     'All Posts',
     'AI & Machine Learning',
@@ -45,17 +41,15 @@ const categories = [
     'Data Analytics',
     'Business Strategy'
 
-  ];
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+  ]
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const BlogPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState(');
-
-  const [selectedCategory, setSelectedCategory] = useState('all);
-  const filteredPosts = blogPosts.filter(post => {;
-    const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||;
+  const [searchQuery, setSearchQuery] = useState(')
+const [selectedCategory, setSelectedCategory] = useState('all)
+const filteredPosts = blogPosts.filter(post => {
+const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         <title>Blog - Zion Tech Group</title>
         <meta name="description" content="Advanced blog solutions by Zion Tech Group" />
         <title>Blog - Zion Tech Group | AI & Technology Insights</title>
@@ -262,7 +256,7 @@ const BlogPage: React.FC = () => {
               Featured Article
             </h2>
             {(() => {
-              const featuredPost = filteredPosts.find(post => post.featured);
+              const featuredPost = filteredPosts.find(post => post.featured)
               return featuredPost ? (
                 <article className="cyber-card hologram-card p-8 mb-16">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -319,7 +313,7 @@ const BlogPage: React.FC = () => {
                     </div>
                   </div>
                 </article>
-              ) : null;
+              ) : null
             })()}
           </div>
         </section>
@@ -385,7 +379,7 @@ const BlogPage: React.FC = () => {
             ))}
       </section>
     </div>
-  );
-};
-
-export default BlogPage;
+  )
+}
+export default BlogPage
+}}}}}}

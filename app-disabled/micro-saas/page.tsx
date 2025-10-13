@@ -1,34 +1,28 @@
-import react;
-
-import { Helmet } from  from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import { } from 'react-router-dom;
-
-import { Circle, Right, Star, 3, } from 'lucide-react;
-
+import react
+import { Helmet } from  from 'react
+import { Helmet } from 'react-helmet-async
+import { } from 'react-router-dom
+import { Circle, Right, Star, 3, } from 'lucide-react
 interface MicroSaasProduct {
   // Add properties here
 }
-  id: string;
+  id: string
 
-  icon: .ComponentType<any>;
+  icon: .ComponentType<any>
 
-  title: string;
+  title: string
 
-  description: string;
+  description: string
 
-  features: string[];
+  features: string[]
 
-  price: string;
+  price: string
 
-  users: string;
+  users: string
 
-  popular: boolean;
+  popular: boolean
 
-  category: string;
-
+  category: string
 }
 
 const MicroSaasPage: React.FC = () => {}
@@ -41,15 +35,13 @@ const MicroSaasPage: React.FC = () => {}
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app', 'API integration],
       price: '$99/month,
       users: 'Up to 50 users,
-import React from 'react';
-
+import React from 'react'
 const MicroSaasPage: React.FC = () => {
 import { Circle, Right, } from 'lucide-react'
-
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { } from 'react-router-dom';
-import { Right, Circle, Star, } from 'lucide-react';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { } from 'react-router-dom'
+import { Right, Circle, Star, } from 'lucide-react'
       users: 'Up to 50 users',
       popular: true,
       category: 'Analytics
@@ -84,7 +76,7 @@ import { Right, Circle, Star, } from 'lucide-react';
       id: '5,
     {
       id: '6,
-  const benefits = [    'No upfront costs or setup fees,;
+  const benefits = [    'No upfront costs or setup fees,
     'Quick deployment in 24-48 hours,
     'Scalable solutions that grow with you,
     'Regular updates and new features,
@@ -112,8 +104,7 @@ import { Right, Circle, Star, } from 'lucide-react';
       icon: value: '24/7,
       label: 'Support,
       description: Always here when you need us
-  const features = [;;
-
+  const features = [
     {
       icon: title: 'Fast Setup,
       description: Get up and running in minutes with our streamlined onboarding process
@@ -128,9 +119,7 @@ import { Right, Circle, Star, } from 'lucide-react';
       description: Frequent updates and new features based on user feedback and market needs
     }
 
-  ];
-
-
+  ]
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
@@ -158,7 +147,6 @@ import { Right, Circle, Star, } from 'lucide-react';
                       ? bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900
                       : bg-white/10 text-gray-300 hover:bg-white/20
                   }}
-
 
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
@@ -216,6 +204,6 @@ import { Right, Circle, Star, } from 'lucide-react';
                 <to="/pricing
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300
     </>
-  );
-
-export default MicroSaasPage;
+  )
+export default MicroSaasPage
+}}}}

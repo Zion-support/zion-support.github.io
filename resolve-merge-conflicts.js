@@ -1,5 +1,4 @@
 #!/usr/bin// Fixed regex
-
 import fs from 'fs'
 import path from 'path'
 import { execSync } from 'child_process'
@@ -23,3 +22,4 @@ console.log('Starting merge conflict resolution...'
     execSync('git add .', { stdio: 'inherit'
     console.log('Staged resolved files'
   console.error('Error during merge conflict resolution:'
+}

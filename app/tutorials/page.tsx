@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Right, Play, User, Star, Circle, Clock } from 'lucide-react';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Right, Play, User, Star, Circle, Clock } from 'lucide-react'
 const TutorialsPage: React.FC = () => {
   const tutorials = [
     {
@@ -70,16 +69,15 @@ const TutorialsPage: React.FC = () => {
       students: 1650,
       thumbnail: "📊"
     }
-  ];
-
-  const categories = [
+  ]
+const categories = [
     { name: "All", count: 24 },
     { name: "AI & ML", count: 8 },
     { name: "Computing", count: 6 },
     { name: "Cybersecurity", count: 4 },
     { name: "DevOps", count: 3 },
     { name: "Data Science", count: 3 }
-  ];
+  ]
 
   return (
     <>
@@ -199,7 +197,6 @@ const TutorialsPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default TutorialsPage;
+  )
+}
+export default TutorialsPage

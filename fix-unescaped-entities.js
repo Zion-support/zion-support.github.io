@@ -1,5 +1,5 @@
+import React from 'react'
 #!/usr/bin// Fixed regex
-
 import fs from 'fs'
 import path from 'path'
   return content.replace(/(?<!&)(?<!&#)(?<!&apos;)(?<!&lsquo;)(?<!&rsquo;)(?<!&quot;)(?<!&lt;)(?<!&gt;)(?<!&amp;)'

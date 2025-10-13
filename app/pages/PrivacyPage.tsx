@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { 
   ShieldCheckIcon,
   EyeIcon,
@@ -7,10 +7,9 @@ import {
   DocumentTextIcon,
   UserIcon,
   CogIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function PrivacyPage() {
-  const lastUpdated = "January 15, 2024";
+  const lastUpdated = "January 15, 2024"
 
   return (
     <>
@@ -267,5 +266,5 @@ export default function PrivacyPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

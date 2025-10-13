@@ -1,34 +1,31 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-'use client;
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+'use client
 const ContactPage: React.FC = () => {const [formData, setFormData] = useState({
     name: '',    email: ',
     company: ',
     phone: ',
     service: ',
     message: ';)
-})const [isSubmitting, setIsSubmitting] = useState(false);
-
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle);
-
-const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {;;
+})const [isSubmitting, setIsSubmitting] = useState(false)
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>(idle)
+const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {
 
     setFormData(prev => ({
     message: '';)
 })
-const [isSubmitting, setIsSubmitting] = useState(false);
-const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const [isSubmitting, setIsSubmitting] = useState(false)
+const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 const handleChange = useCallback((e: .ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement></HTMLInputElement>) => {}
     setFormData(prev => ({}
       ...prev,
       [e.target.name]: e.target.value;)
 })))
-}, []);
-
-const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev => ({;
-  const handleSubmit = useCallback(async (e: .FormEvent) => {;
-  const handleSubmit = useCallback (async (e: .FormEvent) => {;
-    e.preventDefault();    setIsSubmitting(true);
+}, [])
+const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev => ({
+const handleSubmit = useCallback(async (e: .FormEvent) => {
+const handleSubmit = useCallback (async (e: .FormEvent) => {
+    e.preventDefault();    setIsSubmitting(true)
       setFormData({
         name: ',
         email: ',
@@ -36,15 +33,13 @@ const handleSubmit = useCallback(async (e: .FormEvent) => {    setFormData(prev 
         phone: ',
         service: ',
 message: ']
-    });]
+    })]
     } catch (error) {
       setSubmitStatus('error)]
-      setSubmitStatus('error);
-
+      setSubmitStatus('error)
     } finally {
-      setIsSubmitting(false);
-
-  }, []);
+      setIsSubmitting(false)
+  }, [])
 
   return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
       
@@ -165,7 +160,7 @@ message: ']
                         Send Message
         </div>
       </div>
-  );
+  )
 }
       {/* Contact Form and Info *
       <section className="py-20 px-4>
@@ -191,9 +186,9 @@ message: ']
                   <textarea
                     id="message"
                     name="message"
-                    value = { formData.message };
-                    onChange = { handleChange };
-                    rows = { 5 };
+                    value = { formData.message }
+                    onChange = { handleChange }
+                    rows = { 5 }
 
                     className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus: ring-2 focus:ring-cyan-500 focu,
     s:border-transparent"
@@ -203,7 +198,7 @@ message: ']
 
                 <button
                   type="submit"
-                  disabled = { isSubmitting };
+                  disabled = { isSubmitting }
                   className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover: from-purple-600 hover:to-blue-700 disabled:opacity-50 disable,
     d:cursor-not-allowed text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center"
                 >
@@ -267,11 +262,10 @@ message: ']
 
       <Footer 
     <
-  );
-
+  )
 )]
-    };
+    }
+}
+export default ContactPage}
 
-};
-
-export default ContactPage;}
+}}}}

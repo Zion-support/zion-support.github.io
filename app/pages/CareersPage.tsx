@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react'
 const CareersPage: React.FC = () => {
   const benefits = [
     {
@@ -24,9 +23,8 @@ const CareersPage: React.FC = () => {
       title: 'Career Growth',
       description: 'Clear career paths, mentorship programs, and opportunities for advancement.'
     }
-  ];
-
-  const openPositions = [
+  ]
+const openPositions = [
     {
       title: 'Senior AI Engineer',
       location: 'Remote / Delaware',
@@ -69,7 +67,7 @@ const CareersPage: React.FC = () => {
       department: 'Design',
       description: 'Create intuitive and engaging user experiences for our products.'
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-rose-900 to-slate-900">
@@ -96,7 +94,7 @@ const CareersPage: React.FC = () => {
           <h2 className="text-3xl font-bold text-white text-center mb-12">Why Work With Us?</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
+              const Icon = benefit.icon
               return (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 text-center">
                   <div className="p-3 bg-gradient-to-r from-rose-500 to-pink-500 rounded-lg w-fit mx-auto mb-4">
@@ -105,7 +103,7 @@ const CareersPage: React.FC = () => {
                   <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300 text-sm">{benefit.description}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -182,7 +180,6 @@ const CareersPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default CareersPage;
+  )
+}
+export default CareersPage

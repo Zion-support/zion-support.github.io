@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 import { 
   DocumentTextIcon,
   ScaleIcon,
@@ -7,10 +7,9 @@ import {
   ExclamationTriangleIcon,
   CheckCircleIcon,
   UserIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function TermsPage() {
-  const lastUpdated = "January 15, 2024";
+  const lastUpdated = "January 15, 2024"
 
   return (
     <>
@@ -345,5 +344,5 @@ export default function TermsPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

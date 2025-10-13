@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -14,8 +14,7 @@ import {
   UserGroupIcon,
   BuildingOfficeIcon,
   AcademicCapIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function SolutionsPage() {
   const solutions = [
     {
@@ -138,9 +137,8 @@ export default function SolutionsPage() {
       color: "from-indigo-500 to-purple-500",
       href: "/solutions/5g-technology"
     }
-  ];
-
-  const industries = [
+  ]
+const industries = [
     {
       name: "Healthcare",
       description: "AI-powered diagnostics, patient management, and medical research solutions",
@@ -165,9 +163,8 @@ export default function SolutionsPage() {
       icon: ChartBarIcon,
       solutions: ["Predictive Maintenance", "Quality Control", "Supply Chain AI", "Process Optimization"]
     }
-  ];
-
-  const caseStudies = [
+  ]
+const caseStudies = [
     {
       title: "Fortune 500 Retailer",
       challenge: "Needed to optimize inventory management and reduce waste across 500+ stores",
@@ -201,7 +198,7 @@ export default function SolutionsPage() {
       ],
       industry: "Manufacturing"
     }
-  ];
+  ]
 
   return (
     <>
@@ -243,7 +240,7 @@ export default function SolutionsPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {solutions.map((solution, index) => {
-              const Icon = solution.icon;
+              const Icon = solution.icon
               return (
                 <div 
                   key={solution.title}
@@ -306,7 +303,7 @@ export default function SolutionsPage() {
                     Learn More <ArrowRightIcon className="w-4 h-4" />
                   </Link>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -326,7 +323,7 @@ export default function SolutionsPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {industries.map((industry, index) => {
-              const Icon = industry.icon;
+              const Icon = industry.icon
               return (
                 <div 
                   key={industry.name}
@@ -349,7 +346,7 @@ export default function SolutionsPage() {
                     ))}
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -441,5 +438,5 @@ export default function SolutionsPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

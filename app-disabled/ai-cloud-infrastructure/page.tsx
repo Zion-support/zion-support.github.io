@@ -1,7 +1,8 @@
-import {Helmet}}from 'react-helmet-async';
-import ../components/ from '../components/';
-import Footer from '../components/Footer';
-import {Circle, Right, Star, }}from 'lucide-react';
+import React from 'react'
+import {Helmet}}from 'react-helmet-async'
+import ../components/ from '../components/'
+import Footer from '../components/Footer'
+import {Circle, Right, Star, }}from 'lucide-react'
 const AiCloudInfrastructurePage: React.FC = () => {,
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">

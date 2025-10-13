@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const TermsPage: React.FC = () => {
   return (
     <>
@@ -91,7 +90,6 @@ const TermsPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default TermsPage;
+  )
+}
+export default TermsPage

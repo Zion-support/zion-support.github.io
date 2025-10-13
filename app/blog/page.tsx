@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Right, User, Calendar } from 'lucide-react';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Right, User, Calendar } from 'lucide-react'
 const BlogPage: React.FC = () => {
   const categories = [
     { id: "all", name: "All Posts", count: 12 },
@@ -9,9 +8,8 @@ const BlogPage: React.FC = () => {
     { id: "cybersecurity", name: "Cybersecurity", count: 3 },
     { id: "cloud", name: "Computing", count: 2 },
     { id: "development", name: "Development", count: 2 }
-  ];
-
-  const blogPosts = [
+  ]
+const blogPosts = [
     {
       id: 1,
       title: "The Future of AI in Business: 2024 Trends",
@@ -72,7 +70,7 @@ const BlogPage: React.FC = () => {
       readTime: "9 min read",
       image: "🛡️"
     }
-  ];
+  ]
 
   return (
     <>
@@ -124,11 +122,8 @@ const BlogPage: React.FC = () => {
                   <div className="text-4xl mb-4">{post.image}</div>
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
-<<<<<<< HEAD
                       <Calendar className="w-4 h-4 mr-1" />
-=======
                       <div className="w-4 h-4 mr-1" />
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">
@@ -176,7 +171,6 @@ const BlogPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default BlogPage;
+  )
+}
+export default BlogPage

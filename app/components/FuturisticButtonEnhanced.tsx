@@ -1,7 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const FuturisticButtonEnhanced: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -83,7 +82,6 @@ const FuturisticButtonEnhanced: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default FuturisticButtonEnhanced;
+  )
+}
+export default FuturisticButtonEnhanced

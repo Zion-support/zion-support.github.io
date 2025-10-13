@@ -1,24 +1,15 @@
-&apos;use client&apos;;
-import { memo } from 'react';
-import { } from 'react-router-dom';
-import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circle } from 'lucide-react';
-
-  ];
-
-  ];
-
-  ];
-
-  ];
-
-  ];
-
-  ];
-
-  ];
-
-  ];
-
+&apos;use client&apos
+import { memo } from 'react'
+import { } from 'react-router-dom'
+import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circle } from 'lucide-react'
+  ]
+  ]
+  ]
+  ]
+  ]
+  ]
+  ]
+  ]
                   <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group
                   <p className="text-sm text-cyan-400">AI & IT Solutions
             <p className="text-gray-300 text-sm leading-relaxed">
@@ -60,8 +51,8 @@ import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circl
                 Terms of Service
               <to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
                 Cookie Policy
-  );
-});
+  )
+})
 
-Footer.displayName = &apos;Footer&apos;;
-export default Footer;
+Footer.displayName = &apos;Footer&apos
+export default Footer

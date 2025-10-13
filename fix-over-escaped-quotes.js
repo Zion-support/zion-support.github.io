@@ -1,5 +1,4 @@
 #!/usr/bin// Fixed regex
-
 import fs from 'fs'
 import path from 'path'
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules'

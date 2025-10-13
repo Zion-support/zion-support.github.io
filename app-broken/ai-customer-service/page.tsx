@@ -1,6 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 export default function AiCustomerService() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -18,13 +17,10 @@ export default function AiCustomerService() {
           </p>
         </div>
         <div className="text-center">
-<<<<<<< HEAD
           <p className="text-gray-300">Coming Soon - AiCustomerService Solutions</p>
-=======
           <p className="text-gray-300">Coming Soon - AI Customer Service Solutions</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
         </div>
       </div>
     </div>
-  );
+  )
 }

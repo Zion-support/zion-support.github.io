@@ -1,32 +1,30 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { HelmetProvider, Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import { HelmetProvider, Helmet } from 'react-helmet-async'
 // Mock components
 const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { 
   children: React.ReactNode; 
   enableRetry?: boolean; 
   onError?: any 
 }) => {
-  const [hasError, setHasError] = React.useState(false);
-  const [error, setError] = React.useState<Error | null>(null);
+  const [hasError, setHasError] = React.useState(false)
+const [error, setError] = React.useState<Error | null>(null)
 
   React.useEffect(() => {
     const handleError = (error: Error) => {
-      setHasError(true);
-      setError(error);
+      setHasError(true)
+      setError(error)
       if (onError) {
-        onError(error);
+        onError(error)
       }
-    };
-
+    }
     // Simulate error boundary behavior
     try {
       // This will catch any errors thrown by children
     } catch (err) {
-      handleError(err as Error);
+      handleError(err as Error)
     }
-  }, [onError]);
+  }, [onError])
 
   if (hasError) {
     return (
@@ -48,16 +46,15 @@ const AdvancedErrorBoundary = ({ children, enableRetry, onError }: {
           </>
         )}
       </div>
-    );
+    )
   }
 
-  return <>{children}</>;
-};
-
-const TestComponent = () => <div>Test Component</div>;
+  return <>{children}</>
+}
+const TestComponent = () => <div>Test Component</div>
 const ErrorComponent = () => {
-  throw new Error('Test error');
-};
+  throw new Error('Test error')
+}
 
 describe('Advanced Components', () => {
   test('AdvancedErrorBoundary renders children when no error', () => {
@@ -65,29 +62,24 @@ describe('Advanced Components', () => {
       <AdvancedErrorBoundary>
         <TestComponent />
       </AdvancedErrorBoundary>
-    );
-    expect(screen.getByText('Test Component')).toBeInTheDocument();
-  });
+    )
+    expect(screen.getByText('Test Component')).toBeInTheDocument()
+  })
 
   test('AdvancedErrorBoundary shows error UI when error occurs', () => {
-    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {});
+    const consoleSpy = jest.spyOn(console, 'error').mockImplementation(() => {})
     
     render(
       <AdvancedErrorBoundary>
         <ErrorComponent />
       </AdvancedErrorBoundary>
-    );
+    )
     
-    expect(screen.getByTestId('error-boundary')).toBeInTheDocument();
-    expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();
-<<<<<<< HEAD
+    expect(screen.getByTestId('error-boundary')).toBeInTheDocument()
+    expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument()
     // The mock error boundary doesn&apos;t actually catch errors, so we just check for the error message
-
-=======
-    
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-    consoleSpy.mockRestore();
-  });
+    consoleSpy.mockRestore()
+  })
 
   test('SEOEnhancer works with HelmetProvider', () => {
     const SEOEnhancer = () => (
@@ -95,27 +87,23 @@ describe('Advanced Components', () => {
         <title>Test Title</title>
         <meta name="description" content="Test description" />
       </Helmet>
-    );
-
-<<<<<<< HEAD
+    )
     // Since the mock doesn&apos;t actually catch errors, we just verify it renders
-    expect(screen.getByText('Test content')).toBeInTheDocument();
-    consoleSpy.mockRestore();
-  });
+    expect(screen.getByText('Test content')).toBeInTheDocument()
+    consoleSpy.mockRestore()
+  })
 
   it('retries when retry button is clicked', async () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
-      .mockImplementation(() => {});
+      .mockImplementation(() => {})
 
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
     render(
       <HelmetProvider>
         <SEOEnhancer />
       </HelmetProvider>
-    );
+    )
     
-    expect(document.title).toBe('Test Title');
-  });
-});
+    expect(document.title).toBe('Test Title')
+  })
+})

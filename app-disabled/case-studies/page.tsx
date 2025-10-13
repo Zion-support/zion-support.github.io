@@ -1,12 +1,10 @@
-import React from 'react';
-import react;
-
-import from  from 'react;
-
-import from 'react';
-import { Helmet } from 'react-helmet-async';
-import { } from 'react-router-dom';
-import { Right, Star, } from 'lucide-react';
+import React from 'react'
+import react
+import from  from 'react
+import from 'react'
+import { Helmet } from 'react-helmet-async'
+import { } from 'react-router-dom'
+import { Right, Star, } from 'lucide-react'
     {
       id: '1,
       title: 'AI-Powered Customer Service Transformation,
@@ -133,11 +131,11 @@ import { Right, Star, } from 'lucide-react';
       duration: '7 months,
       team: '11 specialists    }
 
-  const stats = [;
+  const stats = [
     { label: 'Projects Completed', value: '150+, icon: Circle },
     { label: 'Client Satisfaction', value: '98%, icon: User,
     { label: 'Team Members', value: '50+, icon: User,
-    { label: 'Industry s', value: '25+, icon: User  ];
+    { label: 'Industry s', value: '25+, icon: User  ]
 {/* Stats Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -285,4 +283,5 @@ import { Right, Star, } from 'lucide-react';
           </div>
 
   );  ));)
-export default CaseStudiesPage;
+export default CaseStudiesPage
+}}}}}}}

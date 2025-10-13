@@ -1,42 +1,36 @@
-import { useState } from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import { Right, Circle, Star, } from 'lucide-react;
-
+import React from 'react'
+import { useState } from 'react
+import { Helmet } from 'react-helmet-async
+import { Right, Circle, Star, } from 'lucide-react
 interface JobPosition {
   // Add properties here
 }
-  id: number;
-
-import { Right, Circle, } from 'lucide-react;
-
+  id: number
+import { Right, Circle, } from 'lucide-react
 const PagePage: React.FC = () => {}
-  title: string;
+  title: string
 
-  department: string;
+  department: string
 
-  location: string;
+  location: string
 
-  type: string;
+  type: string
 
-  experience: string;
+  experience: string
 
-  posted: string;
+  posted: string
 
-  description: string;
+  description: string
 
-  requirements: string[];
+  requirements: string[]
 
-  benefits: string[];
+  benefits: string[]
 
-  featured: boolean;
-
+  featured: boolean
 }
 const eersPage: React.FC = () => {
-  const [selectedDepartment, setSelectedDepartment] = useState('all);
-
-  const [selectedLocation, setSelectedLocation] = useState('all);
+const [selectedDepartment, setSelectedDepartment] = useState('all)
+const [selectedLocation, setSelectedLocation] = useState('all)
       title: 'Senior AI Engineer,
       department: 'Engineering,
       location: 'Remote,
@@ -77,7 +71,6 @@ const eersPage: React.FC = () => {
         'Collaboration with top researchers,
         'Competitive salary and benefits,
         'State-of-the-art facilities
-
 const eersPage: React.FC = () => {
   return (
     <div className="min-h-screen pt-20">
@@ -92,9 +85,9 @@ const eersPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-import { Right, Circle, Star, } from 'lucide-react';
+  )
+}
+import { Right, Circle, Star, } from 'lucide-react'
     },
     {}
       id: 3,
@@ -177,14 +170,11 @@ import { Right, Circle, Star, } from 'lucide-react';
         'Data science conference attendance,
         'Access to cutting-edge tools,
         'Collaborative team environment
-  const filteredPositions = positions.filter(position => {;
-    const matchesDepartment = selectedDepartment === 'all || position.department === selectedDepartment;;
-
-    const matchesLocation = selectedLocation === 'all || position.location === selectedLocation;;
-
-  const featuredPositions = filteredPositions.filter(position => position.featured);;
-
-  const regularPositions = filteredPositions.filter(position => !position.featured);;
+const filteredPositions = positions.filter(position => {
+const matchesDepartment = selectedDepartment === 'all || position.department === selectedDepartment
+const matchesLocation = selectedLocation === 'all || position.location === selectedLocation
+const featuredPositions = filteredPositions.filter(position => position.featured)
+const regularPositions = filteredPositions.filter(position => !position.featured);
 
       id: '1,
       title: 'Senior AI Engineer,
@@ -219,18 +209,15 @@ import { Right, Circle, Star, } from 'lucide-react';
         'Professional development budget'
       ],
       posted: '2 days ago,
-      featured: true});
-
+      featured: true})
 },
       requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']});;)
 }
 
     'eer growth opportunities'
-  const values = [;;
-
+const values = [
     {
-  const culture = [;;
-
+const culture = [
     {
       stat: '98%,
       label: 'Employee Satisfaction,
@@ -285,15 +272,9 @@ import { Right, Circle, Star, } from 'lucide-react';
                 {departments.map((dept) => (
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-<<<<<<< HEAD
-<<<<<<< HEAD
               Be part of a team that's shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
-=======
               Be part of a team that&apos;s shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
               Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
           {/* Why Work With Us */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
@@ -395,10 +376,9 @@ import { Right, Circle, Star, } from 'lucide-react';
                 <p className="text-gray-300 mb-8>Try adjusting your filters or check back later for new opportunities</p>
                 <button
                   onClick={() => {
-                    setSelectedDepartment('all);
+                    setSelectedDepartment('all)
 
-                    setSelectedLocation('all);
-
+                    setSelectedLocation('all)
 
                   className={bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20
@@ -412,4 +392,5 @@ import { Right, Circle, Star, } from 'lucide-react';
 
                         <li className="text-sm text-gray-400>
             </div>  ));)
-export default eersPage;
+export default eersPage
+}}}}}

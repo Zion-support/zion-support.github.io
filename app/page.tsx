@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
-'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from './components/SEO';
+'use client'
+import React from 'react'
+import { Link } from 'react-router-dom'
+import SEO from './components/SEO'
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -15,8 +12,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function HomePage() {
   return (
     <>
@@ -260,5 +256,5 @@ export default function HomePage() {
         </div>
       </section>
     </>
-  );
+  )
 }

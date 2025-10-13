@@ -1,39 +1,28 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Right, Circle } from 'lucide-react';
-=======
-import { Right, Circle, MessageCircle, Mail, Phone, BookOpen } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Right, Circle } from 'lucide-react'
+import { Right, Circle, MessageCircle, Mail, Phone, BookOpen } from 'lucide-react'
 const SupportPage: React.FC = () => {
   const supportOptions = [
     {
-<<<<<<< HEAD
       icon: 'Chat',
-=======
       icon: MessageCircle,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Live Chat',
       description: 'Get instant help from our support team',
       action: 'Start Chat',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-<<<<<<< HEAD
       icon: 'Phone',
       title: 'Phone Support',
-=======
       icon: Mail,
       title: 'Email Support',
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       description: 'Call us for immediate assistance',
       action: 'Call Now',
       color: 'from-green-500 to-emerald-500'
     },
     {
-<<<<<<< HEAD
       icon: 'Email',
       title: 'Email Support',
       description: 'Send us a detailed message',
@@ -42,7 +31,6 @@ const SupportPage: React.FC = () => {
     },
     {
       icon: 'Book',
-=======
       icon: Phone,
       title: 'Phone Support',
       description: 'Call us for immediate assistance',
@@ -51,15 +39,13 @@ const SupportPage: React.FC = () => {
     },
     {
       icon: BookOpen,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Documentation',
       description: 'Browse our comprehensive guides',
       action: 'View Docs',
       color: 'from-orange-500 to-red-500'
     }
-  ];
-
-  const faqs = [
+  ]
+const faqs = [
     {
       question: 'How do I get started with your AI services?',
       answer: 'Getting started is easy! Contact our team for a consultation, and we\'ll help you identify the best AI solutions for your business needs.'
@@ -76,7 +62,7 @@ const SupportPage: React.FC = () => {
       question: 'What if I need custom development?',
       answer: 'We offer custom development services for unique requirements. Contact our team to discuss your specific needs and get a quote.'
     }
-  ];
+  ]
 
   return (
     <>
@@ -110,7 +96,7 @@ const SupportPage: React.FC = () => {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {supportOptions.map((option, index) => {
-                const Icon = option.icon;
+                const Icon = option.icon
                 return (
                   <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center group">
                     <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${option.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -123,7 +109,7 @@ const SupportPage: React.FC = () => {
                       <Right className="w-4 h-4 ml-2 inline" />
                     </button>
                   </div>
-                );
+                )
               })}
             </div>
           </div>
@@ -176,7 +162,6 @@ const SupportPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default SupportPage;
+  )
+}
+export default SupportPage

@@ -1,37 +1,38 @@
+import React from 'react'
 interface SEOConfig {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl: string;
-  ogImage: string;
-  ogType: string;
-  twitterCard: string;
-  robots: string;
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
-  viewport?: string;
-  charset?: string;
-  publisher?: string;
-  language?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl: string
+  ogImage: string
+  ogType: string
+  twitterCard: string
+  robots: string
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
+  viewport?: string
+  charset?: string
+  publisher?: string
+  language?: string
+  ogTitle?: string
+  ogDescription?: string
+  twitterTitle?: string
+  twitterDescription?: string
+  twitterImage?: string
   geo?: {
-    latitude?: string;
-    longitude?: string;
-    region?: string;
-    placename?: string;
-  };
+    latitude?: string
+    longitude?: string
+    region?: string
+    placename?: string
+  }
   alternate?: Array<{
-    href: string;
-    hreflang: string;
-  }>;
-  structuredData?: any;
+    href: string
+    hreflang: string
+  }>
+  structuredData?: any
 }
 
 export const defaultSEOConfig: SEOConfig = {
@@ -81,8 +82,7 @@ export const defaultSEOConfig: SEOConfig = {
     url: 'https://zion.app',
     logo: 'https://zion.app/images/logo.png'
   }
-};
-
+}
 export const generateSEOMeta = (config: SEOConfig) => {
   return {
     title: config.title,
@@ -114,23 +114,19 @@ export const generateSEOMeta = (config: SEOConfig) => {
       hreflang: alt.hreflang,
       href: alt.href
     }))
-  };
-};
-
+  }
+}
 export const generateStructuredData = (config: SEOConfig) => {
-  return config.structuredData ? JSON.stringify(config.structuredData) : '';
-};
-
+  return config.structuredData ? JSON.stringify(config.structuredData) : ''
+}
 export const generateImageAlt = (imagePath: string, alt: string) => {
-  return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0] || 'image'}`;
-};
-
+  return alt || `Zion Tech Group - ${imagePath.split('/').pop()?.split('.')[0] || 'image'}`
+}
 export const generateCanonicalUrl = (path: string, baseUrl: string = 'https://zion.app') => {
-  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`;
-};
-
+  return `${baseUrl}${path.startsWith('/') ? path : `/${path}`}`
+}
 export const generateSitemap = (pages: Array<{ path: string; lastmod?: string; priority?: number }>) => {
-  const baseUrl = 'https://zion.app';
+  const baseUrl = 'https://zion.app'
   
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -141,16 +137,13 @@ export const generateSitemap = (pages: Array<{ path: string; lastmod?: string; p
       <priority>${page.priority || 0.5}</priority>
     </url>
   `).join('')}
-</urlset>`;
-};
-
+</urlset>`
+}
 export const generateRobotsTxt = (config: SEOConfig) => {
   return `User-agent: *
 Allow: /
-
-Sitemap: ${config.canonicalUrl}/sitemap.xml`;
-};
-
+Sitemap: ${config.canonicalUrl}/sitemap.xml`
+}
 export default {
   defaultSEOConfig,
   generateSEOMeta,
@@ -159,4 +152,4 @@ export default {
   generateCanonicalUrl,
   generateSitemap,
   generateRobotsTxt
-};
+}

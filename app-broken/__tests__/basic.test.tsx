@@ -1,13 +1,13 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import React from 'react'
+import { render, screen } from '@testing-library/react'
+import '@testing-library/jest-dom'
 describe('Basic Tests', () => {
   it('should pass basic test', () => {
-    expect(true).toBe(true);
-  });
+    expect(true).toBe(true)
+  })
   it('should render a simple component', () => {
-    const TestComponent = () => <div>Test</div>;
-    render(<TestComponent />);
-    expect(screen.getByText('Test')).toBeInTheDocument();
-  });
-});
+    const TestComponent = () => <div>Test</div>
+    render(<TestComponent />)
+    expect(screen.getByText('Test')).toBeInTheDocument()
+  })
+})

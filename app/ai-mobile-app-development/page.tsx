@@ -1,6 +1,5 @@
-'use client';
-import React from 'react';
-
+'use client'
+import React from 'react'
 export default function AiMobileAppDevelopmentPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
@@ -11,5 +10,5 @@ export default function AiMobileAppDevelopmentPage() {
         </p>
       </div>
     </div>
-  );
+  )
 }

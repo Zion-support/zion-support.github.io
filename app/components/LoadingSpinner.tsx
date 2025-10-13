@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-import React from 'react';
-import { Loader2 } from 'lucide-react';
-
+'use client'
+import React from 'react'
+import { Loader2 } from 'lucide-react'
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  text?: string;
-  fullScreen?: boolean;
-  className?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl'
+  text?: string
+  fullScreen?: boolean
+  className?: string
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -18,30 +13,25 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   text = 'Loading...',
   fullScreen = false,
   className = ''
-=======
-import React from 'react';
-
+import React from 'react'
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  className?: string;
+  size?: 'sm' | 'md' | 'lg'
+  text?: string
+  className?: string
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
   size = 'md', 
   text = 'Loading...', 
   className = '' 
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-<<<<<<< HEAD
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'
-  };
-
-  const spinner = (
+  }
+const spinner = (
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <Loader2 className={`${sizeClasses[size]} text-purple-500 animate-spin`} />
       {text && (
@@ -50,7 +40,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         </p>
       )}
     </div>
-  );
+  )
 
   if (fullScreen) {
     return (
@@ -59,13 +49,12 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {spinner}
         </div>
       </div>
-    );
+    )
   }
 
-  return spinner;
-=======
+  return spinner
     lg: 'w-12 h-12'
-  };
+  }
 
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
@@ -74,8 +63,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         <p className="mt-2 text-sm text-gray-400">{text}</p>
       )}
     </div>
-  );
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-};
-
-export default LoadingSpinner;
+  )
+}
+export default LoadingSpinner

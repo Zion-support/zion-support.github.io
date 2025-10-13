@@ -1,5 +1,4 @@
-import React from 'react';
-
+import React from 'react'
 export default function PagePage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white py-20">
@@ -10,9 +9,8 @@ export default function PagePage() {
         </p>
       </div>
     </div>
-  );
-  );
-  );
-};
-
-export default AboutPage;
+  )
+  )
+  )
+}
+export default AboutPage

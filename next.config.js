@@ -5,3 +5,4 @@ import crypto from 'crypto'
     domains: ['images.unsplash.com', 'via.placeholder.com', 'ziontechgroup.com'
     formats: ['image/webp', '
     contentSecurityPolicy: "default-src 'self'; script-src 'none'
+}

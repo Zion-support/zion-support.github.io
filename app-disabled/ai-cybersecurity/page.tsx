@@ -1,7 +1,8 @@
-import {Helmet}}from 'react-helmet-async';
-import ../components/ from '../components/';
-import Footer from '../components/Footer';
-import {Circle, Right, Star, }}from 'lucide-react';
+import React from 'react'
+import {Helmet}}from 'react-helmet-async'
+import ../components/ from '../components/'
+import Footer from '../components/Footer'
+import {Circle, Right, Star, }}from 'lucide-react'
 const AiCybersecurityPage: React.FC = () => {,
     const features = [
     {

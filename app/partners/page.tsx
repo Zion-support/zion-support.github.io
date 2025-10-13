@@ -1,8 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { } from 'react-router-dom';
-import { Circle, Right, } from 'lucide-react';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { } from 'react-router-dom'
+import { Circle, Right, } from 'lucide-react'
 const PartnersPage: React.FC = () => {
   const partners = [
     {
@@ -41,16 +40,15 @@ const PartnersPage: React.FC = () => {
       description: 'and enterprise application solutions',
       category: ''
     }
-  ];
-
-  const benefits = [
+  ]
+const benefits = [
     'Access to cutting-edge technology',
     'Joint go-to-market opportunities',
     'Technical support and training',
     'Co-marketing and co-selling programs',
     'Priority access to new features',
     'Dedicated partner success manager'
-  ];
+  ]
 
   return (
     <>
@@ -148,7 +146,6 @@ const PartnersPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
-
-export default PartnersPage;
+  )
+}
+export default PartnersPage

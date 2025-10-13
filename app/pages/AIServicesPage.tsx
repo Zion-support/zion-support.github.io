@@ -1,7 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Brain, Bot, BarChart3, Shield, Zap, Target } from 'lucide-react'
 const AIServicesPage: React.FC = () => {
   const services = [
     {
@@ -40,7 +39,7 @@ const AIServicesPage: React.FC = () => {
       description: 'Implement visual recognition systems for quality control, security, and enhanced user experiences.',
       features: ['Image Recognition', 'Object Detection', 'Facial Recognition', 'Quality Inspection']
     }
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -65,7 +64,7 @@ const AIServicesPage: React.FC = () => {
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {services.map((service, index) => {
-            const Icon = service.icon;
+            const Icon = service.icon
             return (
               <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300">
                 <div className="flex items-center mb-4">
@@ -84,7 +83,7 @@ const AIServicesPage: React.FC = () => {
                   ))}
                 </ul>
               </div>
-            );
+            )
           })}
         </div>
 
@@ -107,7 +106,6 @@ const AIServicesPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-};
-
-export default AIServicesPage;
+  )
+}
+export default AIServicesPage

@@ -1,20 +1,19 @@
-&apos;use client&apos;;
-import { useEffect, useCallback, useRef } from 'react';
-import { Helmet } from 'react-helmet-async';
-
+&apos;use client&apos
+import { useEffect, useCallback, useRef } from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOData {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  noIndex?: boolean;
-  structuredData?: unknown;
+  title: string
+  description: string
+  keywords: string[]
+  canonicalUrl?: string
+  ogImage?: string
+  noIndex?: boolean
+  structuredData?: unknown
 }
 
 interface AdvancedSEOOptimizerProps {
-  seoData: SEOData;
-  children?: .Node;
+  seoData: SEOData
+  children?: .Node
 }
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
@@ -29,9 +28,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     ogImage,
     noIndex = false,
     structuredData
-  } = seoData;
-
-  const baseStructuredData = {
+  } = seoData
+const baseStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -43,9 +41,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       "telephone": "+1-302-464-0950",
       "contactType": "customer service"
     }
-  };
-
-  const finalStructuredData = structuredData || baseStructuredData;
+  }
+const finalStructuredData = structuredData || baseStructuredData
 
   return (
     <.Fragment>
@@ -77,7 +74,6 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         <script type="application/ld+json">
           {JSON.stringify(finalStructuredData)}
       {children}
-  );
-};
-
-export default AdvancedSEOOptimizer;
+  )
+}
+export default AdvancedSEOOptimizer

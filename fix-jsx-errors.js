@@ -1,3 +1,4 @@
+import React from 'react'
 const fs = require('fs'
 const path = require('path'
   '
@@ -18,3 +19,4 @@ const path = require('path'
         if (content.includes('`') && content.includes('${'
           return `{${content.replace(/`/g, '').replace(/\$\{/g, '{'
 console.log('JSX fixes completed'
+}}}}}

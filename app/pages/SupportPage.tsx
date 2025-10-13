@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { 
   MagnifyingGlassIcon,
   ChatBubbleLeftRightIcon,
@@ -13,21 +13,18 @@ import {
   DocumentTextIcon,
   VideoCameraIcon,
   UserGroupIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function SupportPage() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-
-  const supportCategories = [
+  const [searchQuery, setSearchQuery] = useState('')
+const [selectedCategory, setSelectedCategory] = useState('all')
+const supportCategories = [
     { id: 'all', name: 'All Topics', icon: DocumentTextIcon },
     { id: 'technical', name: 'Technical Support', icon: InformationCircleIcon },
     { id: 'billing', name: 'Billing & Account', icon: CheckCircleIcon },
     { id: 'general', name: 'General Questions', icon: ChatBubbleLeftRightIcon },
     { id: 'emergency', name: 'Emergency Support', icon: ExclamationTriangleIcon }
-  ];
-
-  const faqs = [
+  ]
+const faqs = [
     {
       id: 1,
       question: "How do I get started with your AI solutions?",
@@ -64,9 +61,8 @@ export default function SupportPage() {
       answer: "In case of a system outage, our emergency support team is immediately notified and works around the clock to restore services. We also provide regular updates and have backup systems in place.",
       category: 'emergency'
     }
-  ];
-
-  const supportChannels = [
+  ]
+const supportChannels = [
     {
       title: "Live Chat",
       description: "Get instant help from our support team",
@@ -99,14 +95,13 @@ export default function SupportPage() {
       responseTime: "Scheduled",
       color: "from-yellow-500 to-orange-500"
     }
-  ];
-
-  const filteredFaqs = faqs.filter(faq => 
+  ]
+const filteredFaqs = faqs.filter(faq => 
     selectedCategory === 'all' || faq.category === selectedCategory
   ).filter(faq =>
     faq.question.toLowerCase().includes(searchQuery.toLowerCase()) ||
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  )
 
   return (
     <>
@@ -153,7 +148,7 @@ export default function SupportPage() {
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4">
               {supportCategories.map((category) => {
-                const Icon = category.icon;
+                const Icon = category.icon
                 return (
                   <button
                     key={category.id}
@@ -167,7 +162,7 @@ export default function SupportPage() {
                     <Icon className="w-5 h-5" />
                     <span>{category.name}</span>
                   </button>
-                );
+                )
               })}
             </div>
           </div>
@@ -188,7 +183,7 @@ export default function SupportPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {supportChannels.map((channel, index) => {
-              const Icon = channel.icon;
+              const Icon = channel.icon
               return (
                 <div 
                   key={index}
@@ -212,7 +207,7 @@ export default function SupportPage() {
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -354,5 +349,5 @@ export default function SupportPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

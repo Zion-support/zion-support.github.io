@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -20,8 +20,7 @@ import {
   ChatBubbleLeftRightIcon,
   DocumentTextIcon,
   LightBulbIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 export default function AISolutionsPage() {
   const aiServices = [
     {
@@ -240,7 +239,7 @@ export default function AISolutionsPage() {
       useCases: ["Strategic planning", "Market analysis", "Competitive research"],
       href: "/ai-business-intelligence"
     }
-  ];
+  ]
 
   return (
     <>
@@ -273,7 +272,7 @@ export default function AISolutionsPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {aiServices.map((service, index) => {
-              const Icon = service.icon;
+              const Icon = service.icon
               return (
                 <div 
                   key={service.title}
@@ -341,7 +340,7 @@ export default function AISolutionsPage() {
                     </Link>
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
@@ -501,5 +500,5 @@ export default function AISolutionsPage() {
         </div>
       </section>
     </>
-  );
+  )
 }

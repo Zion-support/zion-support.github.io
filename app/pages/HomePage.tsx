@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEOHead from '../components/SEOHead';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import SEOHead from '../components/SEOHead'
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -14,17 +14,14 @@ import {
   RocketLaunchIcon,
   SparklesIcon,
   BoltIcon
-} from '@heroicons/react/24/outline';
-import FuturisticBackground from '../components/FuturisticBackground';
-import NeonButton from '../components/NeonButton';
-import AnimatedCard from '../components/AnimatedCard';
-import { services } from '../data/servicesData';
-
+} from '@heroicons/react/24/outline'
+import FuturisticBackground from '../components/FuturisticBackground'
+import NeonButton from '../components/NeonButton'
+import AnimatedCard from '../components/AnimatedCard'
+import { services } from '../data/servicesData'
 export default function HomePage() {
-<<<<<<< HEAD
-  const featuredServices = services.slice(0, 6);
-=======
-  const structuredData = {
+  const featuredServices = services.slice(0, 6)
+const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Zion Tech Group",
@@ -35,8 +32,7 @@ export default function HomePage() {
       "target": "https://ziontechgroup.com/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
-  };
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
+  }
 
   return (
     <>
@@ -240,5 +236,5 @@ export default function HomePage() {
         </div>
       </section>
     </>
-  );
+  )
 }

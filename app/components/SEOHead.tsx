@@ -1,16 +1,15 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOHeadProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: string;
-  structuredData?: object;
-  canonical?: string;
-  noindex?: boolean;
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: string
+  structuredData?: object
+  canonical?: string
+  noindex?: boolean
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -24,11 +23,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   canonical,
   noindex = false
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = canonical || `${url}${typeof window !== 'undefined' ? window.location.pathname : ''}`;
-  const fullImage = image.startsWith('http') ? image : `${url}${image}`;
-
-  const defaultStructuredData = {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+const fullUrl = canonical || `${url}${typeof window !== 'undefined' ? window.location.pathname : ''}`
+const fullImage = image.startsWith('http') ? image : `${url}${image}`
+const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -63,7 +61,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       "Micro SaaS",
       "5G Solutions"
     ]
-  };
+  }
 
   return (
     <Helmet>
@@ -117,7 +115,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
-};
-
-export default SEOHead;
+  )
+}
+export default SEOHead

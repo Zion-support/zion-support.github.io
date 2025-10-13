@@ -1,5 +1,4 @@
 #!/usr/bin// Fixed regex
-
 import fs from 'fs'
 import path from 'path'
   content = content.replace(/} catch \(error\) \{\s*console\.error\('Error:', error\);\s*\} catch \(error\) \{\s*console\.error\('API Error:', error\);\s*res\.statusCode = 500;\s*res\.setHeader\('Content-Type', 'application\/json'\);\s*res\.end\(JSON\.stringify\(\{ error: 'Internal server error'
@@ -12,3 +11,4 @@ import path from 'path'
 const apiDir = '
 console.log('Starting to fix API files...'
 console.log('Finished fixing API files.'
+}

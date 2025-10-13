@@ -1,52 +1,48 @@
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
-      await handler(req, res);
+      await handler(req, res)
     } catch (error) {
-      console.error('API Error:', error);
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Internal server error' }));
+      console.error('API Error:', error)
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify({ error: 'Internal server error' }))
     }
-  };
-};
-
+  }
+}
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Method not allowed' }))
+    return
   }
 
-  const { productId } = req.body;
+  const { productId } = req.body
   if (!productId) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Product ID is required' }));
-    return;
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Product ID is required' }))
+    return
   }
 
   try {
-<<<<<<< HEAD
-    console.log('Creating checkout session for product:', productId);
-    res.setHeader('Content-Type', 'application/json');
+    console.log('Creating checkout session for product:', productId)
+    res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
       status: 'pending',
       message: 'Checkout session created successfully'
-    }));
+    }))
   } catch (error) {
-    console.error('Error:', error);
-=======
-    const session = {
+    console.error('Error:', error)
+const session = {
       id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
       status: 'pending',
       productId: productId
-    };
+    }
 
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(session));
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify(session))
   } catch (error) {
-    console.error('Checkout session creation error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to create checkout session' }));
+    console.error('Checkout session creation error:', error)
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Failed to create checkout session' }))
   }
-});
+})

@@ -1,7 +1,8 @@
-import {Helmet}}from 'react-helmet-async';
-import ../components/ from '../components/';
-import Footer from '../components/Footer';
-import {Circle, Right, Star, }}from 'lucide-react';
+import React from 'react'
+import {Helmet}}from 'react-helmet-async'
+import ../components/ from '../components/'
+import Footer from '../components/Footer'
+import {Circle, Right, Star, }}from 'lucide-react'
 const AiMobileAppDevelopmentPage: React.FC = () => {,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency'
@@ -14,7 +15,7 @@ const AiMobileAppDevelopmentPage: React.FC = () => {,
     {icon: title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-    'Gain competitive advantage with advanced technology';
+    'Gain competitive advantage with advanced technology'
   ]
 return(<>)
       <Helmet />

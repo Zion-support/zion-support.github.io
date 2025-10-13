@@ -1,3 +1,4 @@
+import React from 'react'
 #!/usr/bin// Fixed regex
 
     /// Fixed regex

@@ -1,18 +1,17 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 interface SEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  image?: string;
-  url?: string;
-  type?: 'website' | 'article' | 'profile';
-  author?: string;
-  publishedTime?: string;
-  modifiedTime?: string;
-  section?: string;
-  tags?: string[];
+  title?: string
+  description?: string
+  keywords?: string
+  image?: string
+  url?: string
+  type?: 'website' | 'article' | 'profile'
+  author?: string
+  publishedTime?: string
+  modifiedTime?: string
+  section?: string
+  tags?: string[]
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -28,11 +27,10 @@ const SEO: React.FC<SEOProps> = ({
   section,
   tags = []
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
-  const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`;
-  const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`;
-
-  const structuredData = {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`
+const fullUrl = url.startsWith('http') ? url : `https://ziontechgroup.com${url}`
+const fullImage = image.startsWith('http') ? image : `https://ziontechgroup.com${image}`
+const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -56,7 +54,7 @@ const SEO: React.FC<SEOProps> = ({
       'https://twitter.com/ziontechgroup',
       'https://github.com/ziontechgroup'
     ]
-  };
+  }
 
   return (
     <Helmet>
@@ -118,7 +116,6 @@ const SEO: React.FC<SEOProps> = ({
         {JSON.stringify(structuredData)}
       </script>
     </Helmet>
-  );
-};
-
-export default SEO;
+  )
+}
+export default SEO

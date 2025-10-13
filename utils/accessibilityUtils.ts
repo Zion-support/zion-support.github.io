@@ -1,7 +1,6 @@
 // accessibilityUtils utility
 export const accessibilityUtils = () => {
   // Implementation
-  return true;
-};
-
-export default accessibilityUtils;
+  return true
+}
+export default accessibilityUtils

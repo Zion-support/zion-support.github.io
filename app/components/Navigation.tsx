@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { 
-  Bars3Icon, 
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import {
+  Bars3Icon,
   XMarkIcon,
   HomeIcon,
   InformationCircleIcon,
@@ -16,14 +16,12 @@ import {
   CogIcon,
   ChevronDownIcon,
   GlobeAltIcon
-} from '@heroicons/react/24/outline';
-
+} from '@heroicons/react/24/outline'
 const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const location = useLocation();
-
-  const navigation = [
+  const [isOpen, setIsOpen] = useState(false)
+const [isServicesOpen, setIsServicesOpen] = useState(false)
+const location = useLocation()
+const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
@@ -39,10 +37,6 @@ const Navigation = () => {
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
@@ -50,17 +44,6 @@ const Navigation = () => {
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-<<<<<<< HEAD
-=======
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Support', href: '/support' },
-    { name: 'Contact', href: '/contact' }
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
   ];
 
   const isActive = (path: string) => {
@@ -81,7 +64,6 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
@@ -112,9 +94,8 @@ const Navigation = () => {
                 )}
               </div>
             ))}
-=======
             {navigation.map((item) => {
-              const Icon = item.icon;
+              const Icon = item.icon
               return (
                 <div key={item.name} className="relative group">
                   <Link
@@ -146,9 +127,8 @@ const Navigation = () => {
                     </div>
                   )}
                 </div>
-              );
+              )
             })}
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
           </div>
 
           {/* CTA Button */}
@@ -177,7 +157,7 @@ const Navigation = () => {
           <div className="lg:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
               {navigation.map((item) => {
-                const Icon = item.icon;
+                const Icon = item.icon
                 return (
                   <div key={item.name}>
                     <Link
@@ -203,7 +183,7 @@ const Navigation = () => {
                       </div>
                     )}
                   </div>
-                );
+                )
               })}
               <div className="pt-4 border-t border-slate-700">
                 <Link
@@ -219,7 +199,6 @@ const Navigation = () => {
         )}
       </div>
     </nav>
-  );
-};
-
-export default Navigation;
+  )
+}
+export default Navigation

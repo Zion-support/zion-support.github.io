@@ -1,7 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+'use client'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
 const LazyImage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -83,7 +82,6 @@ const LazyImage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-};
-
-export default LazyImage;
+  )
+}
+export default LazyImage

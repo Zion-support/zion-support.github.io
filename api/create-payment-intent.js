@@ -1,56 +1,49 @@
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
-      await handler(req, res);
+      await handler(req, res)
     } catch (error) {
-      console.error('API Error:', error);
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Internal server error' }));
+      console.error('API Error:', error)
+      res.setHeader('Content-Type', 'application/json')
+      res.end(JSON.stringify({ error: 'Internal server error' }))
     }
-  };
-};
-
+  }
+}
 export default withErrorLogging(async (req, res) => {
   if (req.method !== 'POST') {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Method not allowed' }));
-    return;
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Method not allowed' }))
+    return
   }
 
-<<<<<<< HEAD
-  const { amount } = req.body;
-=======
-  const { amount, currency = 'usd' } = req.body;
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
+  const { amount } = req.body
+const { amount, currency = 'usd' } = req.body
   if (!amount) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Amount is required' }));
-    return;
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Amount is required' }))
+    return
   }
 
   try {
-<<<<<<< HEAD
-    res.setHeader('Content-Type', 'application/json');
+    res.setHeader('Content-Type', 'application/json')
     res.end(JSON.stringify({ 
       status: 'pending',
       message: 'Payment intent created successfully'
-    }));
+    }))
   } catch (error) {
-    console.error('Error:', error);
-=======
-    const paymentIntent = {
+    console.error('Error:', error)
+const paymentIntent = {
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
       status: 'requires_payment_method',
       amount: amount,
       currency: currency
-    };
+    }
 
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify(paymentIntent));
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify(paymentIntent))
   } catch (error) {
-    console.error('Payment intent creation error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
+    console.error('Payment intent creation error:', error)
+    res.setHeader('Content-Type', 'application/json')
+    res.end(JSON.stringify({ error: 'Failed to create payment intent' }))
   }
-});
+})
