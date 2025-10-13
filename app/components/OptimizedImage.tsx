@@ -61,13 +61,11 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
-  };
-
+  }
   const handleError = () => {
     setIsError(true);
     onError?.();
-  };
-
+  }
   // Generate WebP src if supported
   const getOptimizedSrc = (originalSrc: string) => {
     if (originalSrc.startsWith('data:') || originalSrc.startsWith('blob:')) {
@@ -81,8 +79,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     
     // For local images, you could implement WebP conversion here
     return originalSrc;
-  };
-
+  }
   const optimizedSrc = getOptimizedSrc(src);
 
   return (
@@ -144,6 +141,5 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       </div>
     </>
   );
-};
-
+}
 export default OptimizedImage;

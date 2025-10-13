@@ -55,8 +55,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       'https://github.com/ziontechgroup',
       'https://twitter.com/ziontechgroup'
     ]
-  };
-
+  }
   const mergedStructuredData = structuredData || defaultStructuredData;
 
   return (
@@ -113,6 +112,5 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       </script>
     </Helmet>
   );
-};
-
+}
 export default EnhancedSEO;

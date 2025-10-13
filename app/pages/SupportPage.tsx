@@ -18,6 +18,5 @@ const SupportPage: React.FC = () => {
       </div>
     </>
   );
-};
-
+}
 export default SupportPage;

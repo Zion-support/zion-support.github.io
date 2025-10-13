@@ -43,12 +43,11 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
       "telephone": "+1-302-464-0950",
       "contactType": "customer service";
     }
-  };
-
+  }
   const finalStructuredData = structuredData || baseStructuredData;
 
   return (
-    <.Fragment>;
+    <.Fragment>
       <Helmet>
         {/* Basic Meta Tags */}
         <title>{title}
@@ -73,10 +72,9 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
         {ogImage && <meta name="twitter:image" content={ogImage} />}
         
         {/* Structured Data */}
-        <script type="application/ld+json">;
+        <script type="application/ld+json">
           {JSON.stringify(finalStructuredData)}
       {children}
   );
-};
-
+}
 export default AdvancedSEOOptimizer;

@@ -25,29 +25,7 @@ function findFilesWithConflicts(dir) {
       } else if (stat.isFile() && /\.(tsx?|jsx?)$/.test(item)) {
         try {
           const content = fs.readFileSync(fullPath, 'utf8');
-          if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-            files.push(fullPath);
-          }
-        } catch (err) {
-          // Skip files that can't be read
-        }
-      }
-    }
-  }
-  
-  searchDirectory(dir);
-  return files;
-}
-
-// Function to fix merge conflicts
-function fixMergeConflicts(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    const originalContent = content;
-    
-    // Fix common merge conflict patterns
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, (match, headContent, branchContent) => {
-      // For most cases, prefer the HEAD content (current branch)
+          if (content.includes('') || content.includes('      // For most cases, prefer the HEAD content (current branch)
       return headContent.trim();
     });
     

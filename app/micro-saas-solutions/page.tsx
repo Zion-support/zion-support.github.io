@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-=======
-
-'use client';
-
->>>>>>> origin/main
-=======
-'use client';
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+'use client';'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -470,10 +459,8 @@ export default function MicroSaaSSolutionsPage()   {
       href: "/ai-event-management"
     }
   ];
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 
 const MicroSaaSSolutionsPage: React.FC = () => {
   return (
@@ -492,6 +479,5 @@ const MicroSaaSSolutionsPage: React.FC = () => {
       </div>
     </>
   );
-};
-
+}
 export default MicroSaaSSolutionsPage;

@@ -21,8 +21,7 @@ const EnhancedAccessibility: React.FC = () => {
       skipLink.textContent = 'Skip to main content';
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
       document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-
+    }
     const enhanceFocusManagement = () => {
       // Add focus indicators;
       const style = document.createElement('style');
@@ -44,8 +43,7 @@ const EnhancedAccessibility: React.FC = () => {
         }
       `;
       document.head.appendChild(style);
-    };
-
+    }
     const addAriaLabels = () => {
       // Add ARIA labels to interactive elements;
       const buttons = document.querySelectorAll('button:not([aria-label])');
@@ -62,7 +60,7 @@ const EnhancedAccessibility: React.FC = () => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const handleChange = () => {
       setSettings(prev => ({ ...prev, reducedMotion: mediaQuery.matches }));
-    };
+    }
     mediaQuery.addEventListener('change', handleChange);
 
     const setupKeyboardNavigation = () => {
@@ -76,8 +74,7 @@ const EnhancedAccessibility: React.FC = () => {
       document.addEventListener('mousedown', () => {';
         document.body.classList.remove('keyboard-navigation');
       });
-    };
-
+    }
     // Initialize accessibility enhancements;
     addSkipLinks();
     enhanceFocusManagement();
@@ -87,7 +84,7 @@ const EnhancedAccessibility: React.FC = () => {
     // Cleanup;
     return () => {
       // Cleanup if needed;
-    };
+    }
   }, []);
 
   useEffect(() => {
@@ -117,20 +114,16 @@ const EnhancedAccessibility: React.FC = () => {
     } else {
       root.classList.remove('reduced-motion');
     }
-  };
-
+  }
   const toggleHighContrast = () => {
     setSettings(prev => ({ ...prev, highContrast: !prev.highContrast }));
-  };
-
+  }
   const setFontSize = (size: AccessibilitySettings['fontSize']) => {
     setSettings(prev => ({ ...prev, fontSize: size }));
-  };
-
+  }
   const toggleVisibility = () => {
     setIsVisible(prev => !prev);
-  };
-
+  }
   // Add CSS for accessibility features
   useEffect(() => {
     const style = document.createElement('style');
@@ -205,7 +198,7 @@ const EnhancedAccessibility: React.FC = () => {
       if (existingStyle) {
         existingStyle.remove();
       }
-    };
+    }
   }, []);
 
   return (
@@ -273,6 +266,5 @@ const EnhancedAccessibility: React.FC = () => {
       </div>
     </>
   );
-};
-
+}
 export default EnhancedAccessibility;

@@ -124,13 +124,8 @@ const BlogPage: React.FC = () => {
                   <div className="text-4xl mb-4">{post.image}</div>
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
-<<<<<<< HEAD
 
                       <div className="w-4 h-4 mr-1" />
-
-=======
-<div className="w-4 h-4 mr-1" />
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">
@@ -179,6 +174,5 @@ const BlogPage: React.FC = () => {
       </div>
     </>
   );
-};
-
+}
 export default BlogPage;

@@ -50,9 +50,7 @@ function fixFile(filePath) {
     }
     
     // Fix merge conflict markers
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-    content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)\n=======\n([\s\S]*?)\n>>>>>>> [^\n]+/g, '$1');
-    
+    content = content.replace(/\n([\s\S]*?)\n    content = content.replace(/\n([\s\S]*?)\n    
     // Fix specific syntax errors
     content = content.replace(/;\s*\);/g, '\n  );');
     content = content.replace(/;\s*<\/>;/g, '\n    </>');
@@ -102,8 +100,8 @@ function findProblematicFiles(dir) {
               content.includes('import { Helmet } from \'react-helmet-async;') ||
               content.includes('<>') ||
               content.includes('</>') ||
-              content.includes('<<<<<<< HEAD') ||
-              content.includes('=======') ||
+              content.includes('') ||
+              content.includes('') ||
               content.includes('>>>>>>>')) {
             files.push(fullPath);
           }

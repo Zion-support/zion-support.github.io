@@ -22,7 +22,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null,
       errorId: ''
-    };
+    }
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
@@ -30,7 +30,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       hasError: true,
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    };
+    }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -65,8 +65,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         timestamp: new Date().toISOString(),
         userAgent: navigator.userAgent,
         url: window.location.href
-      };
-
+      }
       // Example: Send to error tracking service
       // errorTrackingService.captureException(error, { extra: errorData });
       
@@ -74,8 +73,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     } catch (loggingError) {
       console.error('Failed to log error to service:', loggingError);
     }
-  };
-
+  }
   private handleRetry = () => {
     this.setState({
       hasError: false,
@@ -83,16 +81,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       errorInfo: null,
       errorId: ''
     });
-  };
-
+  }
   private handleReload = () => {
     window.location.reload();
-  };
-
+  }
   private handleGoHome = () => {
     window.location.href = '/';
-  };
-
+  }
   render() {
     if (this.state.hasError) {
       // Custom fallback UI

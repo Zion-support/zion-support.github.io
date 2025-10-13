@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 'use client';
-
-=======
-'use client';
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -251,10 +245,8 @@ export default function ITSolutionsPage()   {
       href: "/it-compliance"
     }
   ];
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 
 const ITSolutionsPage: React.FC = () => {
   return (
@@ -273,6 +265,5 @@ const ITSolutionsPage: React.FC = () => {
       </div>
     </>
   );
-};
-
+}
 export default ITSolutionsPage;

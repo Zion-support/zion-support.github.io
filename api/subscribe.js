@@ -11,28 +11,19 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
   const { email, name } = req.body;
-
-=======
-const { email, name } = req.body;
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   if (!email) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Email is required' }));
     return;
   }
 
-<<<<<<< HEAD
   let subscribers = [];
-=======
-let subscribers = [];
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+  
   try {
     const data = fs.readFileSync(file, 'utf8');
     subscribers = JSON.parse(data);
   } catch (error) {
-    console.error('Error:', error);
     console.error('Error reading existing subscribers:', error);
   }
 
@@ -57,15 +48,11 @@ let subscribers = [];
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-<<<<<<< HEAD
-
-=======
-      message: 'Successfully subscribed to newsletter' 
+      message: 'Successfully subscribed!'
     }));
   } catch (error) {
-    console.error('Error:', error);
+    console.error('Error saving subscriber:', error);
     res.setHeader('Content-Type', 'application/json');
-res.end(JSON.stringify({ error: 'Failed to save subscription' }));
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+    res.end(JSON.stringify({ error: 'Failed to save subscription' }));
   }
 }

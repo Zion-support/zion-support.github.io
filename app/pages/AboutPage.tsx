@@ -1,12 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-import { 
+import { Helmet } from 'react-helmet-async';import { 
   CheckCircleIcon,
   UserGroupIcon,
   LightBulbIcon,
@@ -20,81 +13,12 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
 export default function AboutPage()    {
-return (
-=======
-import { Helmet } from 'react-helmet-async';
-
-const AboutPage: React.FC = () => {
-  return (
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-    <>
+return (    <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission and team" />
       </Helmet>
-<<<<<<< HEAD
-=======
-export default function AboutPage() {
-const values = [
-    {
-      icon: CheckCircleIcon,
-      title: 'Mission-Driven',
-      description: 'We are committed to delivering innovative solutions that drive real business value and transformation.'
-    },
-    {
-      icon: UserGroupIcon,
-      title: 'Client-Focused',
-      description: 'Our success is measured by our clients\' success. We build lasting partnerships based on trust and results.'
-    },
-    {
-      icon: StarIcon,
-      title: 'Excellence',
-      description: 'We maintain the highest standards of quality and continuously strive for excellence in everything we do.'
-    },
-    {
-      icon: LightBulbIcon,
-      title: 'Innovation',
-      description: 'We embrace cutting-edge technologies and creative approaches to solve complex business challenges.'
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Integrity',
-      description: 'We conduct business with honesty, transparency, and ethical practices in all our interactions.'
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Agility',
-      description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'
-    }
-  ];
-
-  const team = [
-    {
-      name: 'Kleber Santos',
-      role: 'Founder & CEO',
-      description: 'Technology visionary with 15+ years of experience in AI and enterprise solutions.',
-      image: '/team/kleber.jpg'
-    },
-    {
-      name: 'Sarah Johnson',
-      role: 'CTO',
-      description: 'Expert in cloud architecture and cybersecurity with a passion for innovation.',
-      image: '/team/sarah.jpg'
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Lead AI Engineer',
-      description: 'Machine learning specialist focused on practical AI applications for business.',
-      image: '/team/michael.jpg'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Head of Design',
-      description: 'User experience designer creating intuitive and engaging digital experiences.',
-      image: '/team/emily.jpg'
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
   ];
 
@@ -128,18 +52,10 @@ const values = [
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
 Empowering businesses through innovative technology solutions
             </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <p className="text-lg text-gray-400 max-w-3xl mx-auto">
               Founded in 2020, we've been at the forefront of digital transformation, 
               helping companies leverage the power of artificial intelligence, cybersecurity, 
-              and cloud technologies to achieve unprecedented growth.
-=======
-<p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Founded in 2020, Zion Tech Group has been at the forefront of digital transformation, 
-              helping businesses leverage cutting-edge AI and IT solutions to achieve their goals.
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-            </p>
+              and cloud technologies to achieve unprecedented growth.            </p>
           </div>
         </div>
       </section>
@@ -296,7 +212,6 @@ Let's discuss how we can help transform your business with our innovative soluti
           </div>
         </div>
       </section>
-=======
       <div className="min-h-screen bg-slate-900 text-white p-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">About Zion Tech Group</h1>
@@ -305,9 +220,7 @@ Let's discuss how we can help transform your business with our innovative soluti
           </p>
         </div>
       </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
     </>
   );
-};
-
+}
 export default AboutPage;

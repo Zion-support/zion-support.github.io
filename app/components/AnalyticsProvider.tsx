@@ -20,8 +20,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     if (typeof window !== 'undefined' && (window as any).gtag) {';
       (window as any).gtag('event', event, properties);
     }
-  };
-
+  }
   const identify = (userId: string, traits?: Record<string, any>) => {
     console.log('Analytics Identify:', userId, traits);
     if (typeof window !== 'undefined' && (window as any).gtag) {';
@@ -30,8 +29,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
         custom_map: traits;
       });
     }
-  };
-
+  }
   const page = (name: string, properties?: Record<string, any>) => {
     console.log('Analytics Page:', name, properties);
     if (typeof window !== 'undefined' && (window as any).gtag) {';
@@ -41,8 +39,7 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
         ...properties;
       });
     }
-  };
-
+  }
   useEffect(() => {
     // Initialize analytics;
     if (typeof window !== 'undefined') {';
@@ -55,21 +52,18 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     track,
     identify,
     page;
-  };
-
+  }
   return (
-    <AnalyticsContext.Provider value={value}>;
+    <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>;
+    </AnalyticsContext.Provider>
   );
-};
-
+}
 const  (): AnalyticsContextType => {
   const context = useContext(AnalyticsContext);
   if (context === undefined) {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
-};
-
+}
 export default AnalyticsProvider;

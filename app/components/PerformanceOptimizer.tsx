@@ -14,8 +14,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           img.setAttribute('loading', 'lazy');
         }
       });
-    };
-
+    }
     const optimizeFonts = () => {
       // Preload critical fonts;
       const link = document.createElement('link');
@@ -25,8 +24,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       link.type = 'font/woff2';
       link.crossOrigin = 'anonymous';
       document.head.appendChild(link);
-    };
-
+    }
     const optimizeResources = () => {
       // Preload critical resources;
       const criticalResources = ['/css/critical.css',';
@@ -40,8 +38,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         link.as = resource.endsWith('.css') ? 'style' : 'script';
         document.head.appendChild(link);
       });
-    };
-
+    }
     // Run optimizations;
     optimizeImages();
     optimizeFonts();
@@ -50,10 +47,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     // Cleanup function;
     return () => {
       // Cleanup if needed;
-    };
+    }
   }, []);
 
   return <>{children}</>
-};
-
+}
 export default PerformanceOptimizer;

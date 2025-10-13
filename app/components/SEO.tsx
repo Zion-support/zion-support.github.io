@@ -56,8 +56,7 @@ const SEO: React.FC<SEOProps> = ({
       'https://twitter.com/ziontechgroup',
       'https://github.com/ziontechgroup'
     ]
-  };
-
+  }
   return (
     <Helmet>
       {/* Basic Meta Tags */}
@@ -119,6 +118,5 @@ const SEO: React.FC<SEOProps> = ({
       </script>
     </Helmet>
   );
-};
-
+}
 export default SEO;

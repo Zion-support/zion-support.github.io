@@ -40,7 +40,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       href: '/services', 
       icon: BriefcaseIcon,
       submenu: [
-<<<<<<< HEAD
         { name: 'AI Solutions', href: '/ai-solutions' },
         { name: 'IT Solutions', href: '/it-solutions' },
         { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
@@ -50,12 +49,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
-=======
         { name: 'AI Solutions', href: '/ai-solutions', icon: CpuChipIcon },
         { name: 'Cybersecurity', href: '/cybersecurity', icon: ShieldCheckIcon },
         { name: 'Cloud Infrastructure', href: '/cloud-solutions', icon: CloudIcon },
@@ -75,48 +69,31 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { name: 'Case Studies', href: '/case-studies', icon: DocumentTextIcon }
       ]
     },
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
   ];
 
   const isActive = (path: string) => {
     return location.pathname === path;
-  };
-
+  }
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
-  };
-
+  }
   const toggleServicesMenu = () => {
     setIsServicesOpen(!isServicesOpen);
-  };
-
+  }
   const toggleSolutionsMenu = () => {
     setIsSolutionsOpen(!isSolutionsOpen);
-  };
-
+  }
   return (
     <nav className="bg-slate-900 border-b border-slate-700 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-<<<<<<< HEAD
           <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">Z</span>
@@ -126,10 +103,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
@@ -151,22 +124,13 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
-<<<<<<< HEAD
                     <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
                       {item.submenu.map((subItem) => (
                         <Link
                           key={subItem.name}
                           to={subItem.href}
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                          onClick={() => setIsServicesOpen(false)}
-=======
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
-                      {item.submenu.map((subItem) => (
-                        <Link key={subItem.name}
-                          to={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-                        >
+                          onClick={() => setIsServicesOpen(false)}                        >
                           {subItem.name}
                         </Link>
                       ))}
@@ -175,41 +139,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                 </div>
               );
             })}
-<<<<<<< HEAD
-=======
-{navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                  onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
-                </Link>
-                
-                {/* Dropdown Menu */}
-                {item.submenu && isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
           </div>
 
           {/* CTA Button */}
@@ -219,14 +148,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
             >
               Get Started
-=======
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-cyan-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="text-white font-bold text-xl">Zion Tech Group</span>
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
             </Link>
           </div>
 
@@ -360,6 +287,5 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       </div>
     </nav>
   );
-};
-
+}
 export default Navigation;

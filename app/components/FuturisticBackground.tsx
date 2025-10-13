@@ -53,6 +53,5 @@ const FuturisticBackground = () => {
       </div>
     </div>
   );
-};
-
+}
 export default FuturisticBackground;

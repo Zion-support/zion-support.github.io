@@ -1,27 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 'use client';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import SEO from './components/SEO';
-=======
-=======
-=======
-import SEOHead from './components/SEOHead';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-import { 
+import SEO from './components/SEO';import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
@@ -31,7 +12,6 @@ import {
   StarIcon
 } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
 export default function HomePage()  {
   const structuredData = {
     "@context": "https://schema.org",
@@ -60,35 +40,7 @@ export default function HomePage()  {
         "https://linkedin.com/company/ziontechgroup",
         "https://twitter.com/ziontechgroup",
         "https://github.com/ziontechgroup"
-      ]
-=======
-const HomePage: React.FC = () => {
-  const services = [
-    {
-      icon: CpuChipIcon,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
-      href: '/ai-solutions'
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-      href: '/cybersecurity'
-    },
-    {
-      icon: CloudIcon,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
-      href: '/cloud-solutions'
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation strategies to modernize your operations.',
-      href: '/digital-transformation'
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-    }
+      ]    }
   ];
 
   const features = [
@@ -109,16 +61,11 @@ const HomePage: React.FC = () => {
 
   return (
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <SEO 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        url="/"
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
-      />
+        url="/"      />
       
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden particles">
@@ -298,7 +245,6 @@ const HomePage: React.FC = () => {
                 <div className="text-4xl font-bold text-green-400 mb-2">99%</div>
                 <div className="text-gray-300">Success Rate</div>
               </div>
-=======
       <Helmet>
         <title>Zion Tech Group - Advanced AI & IT Solutions</title>
         <meta name="description" content="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology." />
@@ -366,7 +312,6 @@ const HomePage: React.FC = () => {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive technology solutions designed to accelerate your digital transformation journey.
               </p>
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -446,6 +391,5 @@ const HomePage: React.FC = () => {
       </div>
     </>
   );
-};
-
+}
 export default HomePage;

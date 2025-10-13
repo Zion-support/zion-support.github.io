@@ -1,1 +1,1 @@
-/* global describe, test, expect, it, beforeEach */
+// This is a page component, not a test file

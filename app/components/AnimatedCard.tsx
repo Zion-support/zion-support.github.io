@@ -20,8 +20,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
     green: 'shadow-green-500/25 hover:shadow-green-500/40',
     blue: 'shadow-blue-500/25 hover:shadow-blue-500/40',
     yellow: 'shadow-yellow-500/25 hover:shadow-yellow-500/40'
-  };
-
+  }
   const borderColors = {
     purple: 'border-purple-500/30 hover:border-purple-500/60',
     cyan: 'border-cyan-500/30 hover:border-cyan-500/60',
@@ -29,8 +28,7 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
     green: 'border-green-500/30 hover:border-green-500/60',
     blue: 'border-blue-500/30 hover:border-blue-500/60',
     yellow: 'border-yellow-500/30 hover:border-yellow-500/60'
-  };
-
+  }
   return (
     <div
       className={`
@@ -52,6 +50,5 @@ const AnimatedCard: React.FC<AnimatedCardProps> = ({
       </div>
     </div>
   );
-};
-
+}
 export default AnimatedCard;

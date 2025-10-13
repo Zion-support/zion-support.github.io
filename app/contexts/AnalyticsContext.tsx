@@ -18,26 +18,26 @@ const  ({ children }) => {
     if (!isEnabled) return;
     // Track event logic here;
     console.log('Analytics Event:', eventName, properties);
-  };
+  }
   const trackPageView = (pageName: string) => {
     if (!isEnabled) return;
     // Track page view logic here;
     console.log('Page View:', pageName);
-  };
+  }
   const setUser = (newUserId: string, properties?: Record<string, any>) => {
     setUserId(newUserId);
     console.log('User Set:', newUserId, properties);
-  };
+  }
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
     setUser,
     isEnabled,
-  };
+  }
   return (
-    <AnalyticsContext.Provider value={value}>;
+    <AnalyticsContext.Provider value={value}>
       {children}
-    </AnalyticsContext.Provider>;
+    </AnalyticsContext.Provider>
   );
-};
-export { AnalyticsContext };
+}
+export { AnalyticsContext }

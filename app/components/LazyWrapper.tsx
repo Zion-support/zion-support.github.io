@@ -15,8 +15,7 @@ const LazyWrapper: React.FC<LazyWrapperProps> = ({
       {children}
     </Suspense>
   );
-};
-
+}
 // Higher-order component for lazy loading
 export const withLazyLoading = <P extends object>(
   Component: ComponentType<P>,
@@ -29,6 +28,5 @@ export const withLazyLoading = <P extends object>(
       <LazyComponent {...props} />
     </LazyWrapper>
   );
-};
-
+}
 export default LazyWrapper;

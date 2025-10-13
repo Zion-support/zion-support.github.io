@@ -1,103 +1,59 @@
-import fs from 'fs;
-import path from 'path;
-#!/usr/bin/env node;
-function fixMergeConflicts(filePath) {
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { execSync } from 'child_process';
+
+// Function to recursively find all files with merge conflicts
+function findFilesWithConflicts(dir, fileList = []) {
+  const files = fs.readdirSync(dir);
+  
+  files.forEach(file => {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findFilesWithConflicts(filePath, fileList);
+    } else if (stat.isFile() && (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx'))) {
+      const content = fs.readFileSync(filePath, 'utf8');
+      if (content.includes('') || content.includes('  
+  // Remove any remaining conflict markers
+  content = content.replace(/\n?/g, '');
+  content = content.replace(/  
+  // Clean up any double newlines
+  content = content.replace(/\n\n\n+/g, '\n\n');
+  
+  fs.writeFileSync(filePath, content);
+}
+
+// Main execution
+try {
+  console.log('Searching for files with merge conflicts...');
+  const conflictedFiles = findFilesWithConflicts('.');
+  
+  console.log(`Found ${conflictedFiles.length} files with merge conflicts:`);
+  conflictedFiles.forEach(file => console.log(`  - ${file}`));
+  
+  if (conflictedFiles.length === 0) {
+    console.log('No merge conflicts found!');
+    process.exit(0);
+  }
+  
+  console.log('\nFixing merge conflicts...');
+  conflictedFiles.forEach(fixMergeConflicts);
+  
+  console.log('\nAll merge conflicts have been resolved!');
+  
+  // Run linting to check for any remaining issues
+  console.log('\nRunning linting to check for remaining issues...');
   try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    // Check if file has merge conflicts;
-    if (!content.includes('<<<<<<< HEAD') && !content.includes('=======') && !content.includes('>>>>>>>')) {';
-      return false;
-    }
-    
-    console.log(`Fixing merge conflicts in: ${filePath}`);
-    
-    // Split by merge conflict markers and choose the appropriate version;
-    const lines = content.split('\n');
-    const result = [];
-    let inConflict = false;
-    let conflictType = null;
-    let headLines = [];
-    let otherLines = [];
-    
-    for (let i = 0; i < lines.length; i++) {
-      const line = lines[i];
-      
-      if (line.startsWith('<<<<<<< HEAD')) {';
-        inConflict = true;
-        conflictType = 'head';
-        continue;
-      } else if (line.startsWith('=======')) {';
-        conflictType = 'other';
-        continue;
-      } else if (line.startsWith('>>>>>>>')) {';
-        inConflict = false;
-        conflictType = null;
-        
-        // Choose the appropriate version (prefer HEAD for most cases)
-        const chosenLines = headLines.length > 0 ? headLines : otherLines;
-        result.push(...chosenLines);
-        
-        headLines = [];
-        otherLines = [];
-        continue;
-      }
-      
-      if (inConflict) {
-        if (conflictType === 'head') {';
-          headLines.push(line);
-        } else if (conflictType === 'other') {';
-          otherLines.push(line);
-        }
-      } else {
-        result.push(line);
-      }
-    }
-    
-    // Write the fixed content back;
-    fs.writeFileSync(filePath, result.join('\n'));
-    return true;
-  } catch (_error) {
-    console._error(`Error fixing ${filePath}:`, _error.message);
-    return false;
-  }
-}
-
-function findFilesWithConflicts(dir) {
-  const _files = [];
-  
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {';
-        traverse(fullPath);
-      } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts') || item.endsWith('.js') || item.endsWith('.jsx'))) {';
-        const content = fs.readFileSync(fullPath, 'utf8');
-        if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {';
-          _files.push(fullPath);
-        }
-      }
-    }
+    execSync('pnpm run lint', { stdio: 'inherit' });
+    console.log('Linting passed!');
+  } catch (error) {
+    console.log('Linting found some issues, but merge conflicts are resolved.');
   }
   
-  traverse(dir);
-  return _files;
+} catch (error) {
+  console.error('Error fixing merge conflicts:', error.message);
+  process.exit(1);
 }
-
-// Main execution;
-const workspaceDir = process.cwd();
-console.log('Searching for _files with merge conflicts...');
-const conflictedFiles = findFilesWithConflicts(workspaceDir);
-console.log(`Found ${conflictedFiles.length} _files with merge conflicts`);
-
-let fixedCount = 0;
-for (const file of conflictedFiles) {
-  if (fixMergeConflicts(file)) {
-    fixedCount++;
-  }
-}
-
-console.log(`Fixed merge conflicts in ${fixedCount} _files`);

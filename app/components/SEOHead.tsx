@@ -64,8 +64,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
         }
       ]
     }
-  };
-
+  }
   const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
@@ -128,6 +127,5 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
     </Helmet>
   );
-};
-
+}
 export default SEOHead;
