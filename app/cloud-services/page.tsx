@@ -1,16 +1,9 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
-import { Link } from "react-router-dom";
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, Cloud, Server, Database, Lock } from 'lucide-react';
-
 const CloudServicesPage: React.FC = () => {
   const services = [
     {
@@ -38,7 +31,6 @@ const CloudServicesPage: React.FC = () => {
       features: ['Identity & Access Management', 'Encryption', 'Compliance', 'Security Monitoring']
     }
   ];
-
   const benefits = [
     'Reduced infrastructure costs by up to 40%',
     'Improved scalability and flexibility',
@@ -46,49 +38,19 @@ const CloudServicesPage: React.FC = () => {
     '24/7 monitoring and support',
     'Faster deployment and time-to-market',
     'Disaster recovery and business continuity'
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
-
-export default function GDataAnalyticsZionTechGroupPage() {
+  ]; export default function GDataAnalyticsZionTechGroupPage() {
   return (
-<<<<<<< HEAD
-    <>
-      <Helmet>
-        <title>5G Data Analytics - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Cloud Services</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional cloud services services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+<div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Cloud Services | Zion Tech Group</title>
         <meta name="description" content="Professional cloud services by Zion Tech Group. Advanced cloud migration, infrastructure, and security solutions for your business." />
         <meta name="keywords" content="cloud services, cloud migration, cloud infrastructure, cloud security, AWS, Azure, GCP, Zion Tech Group" />
       </Helmet>
-
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -112,7 +74,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
           </div>
         </div>
       </section>
-
       {/* Services Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -124,7 +85,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
               Comprehensive cloud solutions designed to accelerate your digital transformation.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400 transition-all duration-300 group">
@@ -150,7 +110,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -162,7 +121,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
               Experience the benefits of working with cloud experts who understand your business needs.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-4">
@@ -175,7 +133,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -197,11 +154,8 @@ export default function GDataAnalyticsZionTechGroupPage() {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
 };
-
-export default CloudServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
+export default CloudServicesPage; 

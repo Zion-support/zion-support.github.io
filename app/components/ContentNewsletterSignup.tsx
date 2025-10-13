@@ -1,41 +1,27 @@
 import React, { useState } from "react";
 import { Mail, CheckCircle } from "lucide-react";
-
 interface ContentNewsletterSignupProps {
   className?: string;
 }
-
 const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   className = "",
 }) => {
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
-
     try {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setIsSubscribed(true);
       setEmail("");
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console.error('Failed to subscribe to newsletter:', error);
-=======
-      console.error('Newsletter signup error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
-=======
-      console.error('Newsletter signup error:', error);
->>>>>>> cursor/website-audit-and-update-with-deployment-6e33
-    } finally {
+console.error('Newsletter signup error:', error); } finally {
       setIsLoading(false);
     }
   };
-
   if (isSubscribed) {
     return (
       <div
@@ -49,7 +35,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
       </div>
     );
   }
-
   return (
     <div
       className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
@@ -61,7 +46,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           Get the latest AI and tech insights delivered to your inbox.
         </p>
       </div>
-
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <input
@@ -73,7 +57,6 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
             className="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
-
         <button
           type="submit"
           disabled={isLoading}
@@ -82,12 +65,10 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           {isLoading ? "Subscribing..." : "Subscribe Now"}
         </button>
       </form>
-
       <p className="text-xs text-gray-400 text-center mt-4">
         We respect your privacy. Unsubscribe at any time.
       </p>
     </div>
   );
 };
-
 export default ContentNewsletterSignup;

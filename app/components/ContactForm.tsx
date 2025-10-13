@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { MessageSquare } from "lucide-react";
-
 interface FormData {
   name: string;
   email: string;
@@ -9,7 +8,6 @@ interface FormData {
   message: string;
   service: string;
 }
-
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -21,7 +19,6 @@ const ContactForm: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -33,11 +30,9 @@ const ContactForm: React.FC = () => {
       [name]: value,
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     try {
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -51,20 +46,10 @@ const ContactForm: React.FC = () => {
         service: "",
       });
     } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      console.error('Failed to submit contact form:', error);
-=======
-      console.error('Form submission error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
-=======
-      console.error('Form submission error:', error);
->>>>>>> cursor/website-audit-and-update-with-deployment-6e33
-    } finally {
+console.error('Form submission error:', error); } finally {
       setIsSubmitting(false);
     }
   };
-
   if (isSubmitted) {
     return (
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
@@ -76,7 +61,6 @@ const ContactForm: React.FC = () => {
       </div>
     );
   }
-
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -97,7 +81,6 @@ const ContactForm: React.FC = () => {
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
-
         <div>
           <label
             htmlFor="email"
@@ -116,7 +99,6 @@ const ContactForm: React.FC = () => {
           />
         </div>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label
@@ -134,7 +116,6 @@ const ContactForm: React.FC = () => {
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
           />
         </div>
-
         <div>
           <label
             htmlFor="company"
@@ -152,7 +133,6 @@ const ContactForm: React.FC = () => {
           />
         </div>
       </div>
-
       <div>
         <label
           htmlFor="service"
@@ -175,7 +155,6 @@ const ContactForm: React.FC = () => {
           <option value="other">Other</option>
         </select>
       </div>
-
       <div>
         <label
           htmlFor="message"
@@ -194,7 +173,6 @@ const ContactForm: React.FC = () => {
           placeholder="Tell us about your project or requirements..."
         />
       </div>
-
       <button
         type="submit"
         disabled={isSubmitting}
@@ -205,5 +183,4 @@ const ContactForm: React.FC = () => {
     </form>
   );
 };
-
 export default ContactForm;

@@ -1,6 +1,5 @@
 'use client'
 import { useEffect } from 'react'
-
 const CacheManager = () => {
   useEffect(() => {
     // Service Worker registration for caching
@@ -10,19 +9,9 @@ const CacheManager = () => {
           const registration = await navigator.serviceWorker.register('/sw.js');
           console.log('Service Worker registered:', registration);
         } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          console.error('Service Worker registration failed:', error);
-=======
-          console.warn('Service Worker registration failed:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
-=======
-          console.warn('Service Worker registration failed:', error);
->>>>>>> cursor/website-audit-and-update-with-deployment-6e33
-        }
+console.warn('Service Worker registration failed:', error); }
       }
     }
-
     // Cache API for dynamic caching
     const setupCacheStrategy = () => {
       const CACHE_NAME = 'zion-tech-cache-v1'
@@ -34,7 +23,6 @@ const CacheManager = () => {
         '/styles/main.css',
         '/scripts/main.js'
       ]
-
       // Cache static assets
       const cacheStaticAssets = async () => {
         try {
@@ -42,60 +30,34 @@ const CacheManager = () => {
           await cache.addAll(CACHE_URLS);
           console.log('Static assets cached successfully');
         } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          console.error('Failed to cache static assets:', error);
-=======
-          console.warn('Failed to cache static assets:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
-=======
-          console.warn('Failed to cache static assets:', error);
->>>>>>> cursor/website-audit-and-update-with-deployment-6e33
-        }
+console.warn('Failed to cache static assets:', error); }
       }
-
       // Cache API responses
       const cacheAPIResponses = async (request: Request) => {
         try {
           const cache = await caches.open(CACHE_NAME)
           const response = await fetch(request)
-          
           if (response.ok) {
             cache.put(request, response.clone())
           }
-          
           return response
         } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-          console.error('Cache API error:', error);
-=======
-          console.warn('Cache API error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
-=======
-          console.warn('Cache API error:', error);
->>>>>>> cursor/website-audit-and-update-with-deployment-6e33
-          return fetch(request);
+console.warn('Cache API error:', error); return fetch(request);
         }
       }
-
       // Initialize caching
       cacheStaticAssets()
-
       // Intercept fetch requests for caching
       const originalFetch = window.fetch
       window.fetch = async (input, init) => {
         const request = new Request(input, init)
-        
         // Check if request should be cached
         if (request.url.includes('/api/') || request.url.includes('/data/')) {
           return cacheAPIResponses(request)
         }
-        
         return originalFetch(input, init)
       }
     }
-
     // Memory management for large objects
     const setupMemoryManagement = () => {
       // Clean up unused objects periodically
@@ -103,7 +65,6 @@ const CacheManager = () => {
         if ((performance as any).memory) {
           const memoryInfo = (performance as any).memory
           const usedMemory = memoryInfo.usedJSHeapSize / memoryInfo.totalJSHeapSize
-          
           // If memory usage is high, trigger garbage collection
           if (usedMemory > 0.8) {
             // Force garbage collection if available
@@ -113,13 +74,11 @@ const CacheManager = () => {
           }
         }
       }, 30000) // Check every 30 seconds
-
       // Cleanup on page unload
       window.addEventListener('beforeunload', () => {
         clearInterval(cleanupInterval)
       })
     }
-
     // Image lazy loading with intersection observer
     const setupLazyLoading = () => {
       const imageObserver = new IntersectionObserver((entries) => {
@@ -137,26 +96,21 @@ const CacheManager = () => {
         rootMargin: '50px 0px',
         threshold: 0.01
       })
-
       // Observe all lazy images
       document.querySelectorAll('img[data-src]').forEach(img => {
         imageObserver.observe(img)
       })
     }
-
     // Initialize all caching strategies
     registerServiceWorker()
     setupCacheStrategy()
     setupMemoryManagement()
     setupLazyLoading()
-
     // Cleanup function
     return () => {
       // Cleanup any intervals or observers
       }
   }, [])
-
   return null
 }
-
 export default CacheManager

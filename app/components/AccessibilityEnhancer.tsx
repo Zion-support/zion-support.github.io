@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Eye, EyeOff, VolumeX, Type, Contrast } from 'lucide-react';
-
 interface AccessibilitySettings {
   highContrast: boolean;
   largeText: boolean;
@@ -8,11 +7,9 @@ interface AccessibilitySettings {
   screenReader: boolean;
   focusVisible: boolean;
 }
-
 interface AccessibilityEnhancerProps {
   children?: React.ReactNode;
 }
-
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
@@ -21,16 +18,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     screenReader: false,
     focusVisible: true
   });
-
   const [isVisible, setIsVisible] = useState(false);
-
   useEffect(() => {
     // Load saved settings from localStorage
     const savedSettings = localStorage.getItem('accessibility-settings');
     if (savedSettings) {
       setSettings(JSON.parse(savedSettings));
     }
-
     // Check for user preferences
     const checkPreferences = () => {
       // High contrast mode
@@ -38,13 +32,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         setSettings(prev => ({ ...prev, highContrast: true }));
         document.documentElement.classList.add('high-contrast');
       }
-
       // Reduced motion
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         setSettings(prev => ({ ...prev, reducedMotion: true }));
         document.documentElement.classList.add('reduced-motion');
       }
-
       // Large text preference
       const savedLargeText = localStorage.getItem('large-text');
       if (savedLargeText === 'true') {
@@ -52,13 +44,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         document.documentElement.classList.add('large-text');
       }
     };
-
     checkPreferences();
-
     // Listen for changes in preferences
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
-
     const handleHighContrastChange = (e: MediaQueryListEvent) => {
       setSettings(prev => ({ ...prev, highContrast: e.matches }));
       if (e.matches) {
@@ -67,7 +56,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         document.documentElement.classList.remove('high-contrast');
       }
     };
-
     const handleReducedMotionChange = (e: MediaQueryListEvent) => {
       setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
       if (e.matches) {
@@ -76,10 +64,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         document.documentElement.classList.remove('reduced-motion');
       }
     };
-
     highContrastQuery.addEventListener('change', handleHighContrastChange);
     reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
-
     // Keyboard navigation enhancement
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
@@ -87,15 +73,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         document.body.classList.add('keyboard-navigation');
       }
     };
-
     const handleMouseDown = () => {
       setSettings(prev => ({ ...prev, focusVisible: false }));
       document.body.classList.remove('keyboard-navigation');
     };
-
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('mousedown', handleMouseDown);
-
     // Add skip links
     const addSkipLinks = () => {
       const skipLinks = document.createElement('div');
@@ -107,9 +90,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       skipLinks.className = 'skip-links';
       document.body.insertBefore(skipLinks, document.body.firstChild);
     };
-
     addSkipLinks();
-
     // Cleanup
     return () => {
       highContrastQuery.removeEventListener('change', handleHighContrastChange);
@@ -118,48 +99,40 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       document.removeEventListener('mousedown', handleMouseDown);
     };
   }, []);
-
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
-    
     // High contrast mode
     if (newSettings.highContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-
     // Large text mode
     if (newSettings.largeText) {
       root.classList.add('large-text');
     } else {
       root.classList.remove('large-text');
     }
-
     // Reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-
     // Focus visible
     if (newSettings.focusVisible) {
       root.classList.add('focus-visible');
     } else {
       root.classList.remove('focus-visible');
     }
-
     // Save to localStorage
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
-
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applyAccessibilitySettings(newSettings);
   };
-
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings = {
       highContrast: false,
@@ -171,17 +144,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     setSettings(defaultSettings);
     applyAccessibilitySettings(defaultSettings);
   };
-
   // Removed unused functions - functionality is handled by updateSetting directly
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-952e
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-6e33
+  
   return (
     <>
       {children}
-      
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsVisible(!isVisible)}
@@ -191,7 +158,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       >
         <Eye className="w-5 h-5" />
       </button>
-
       {/* Accessibility Panel */}
       {isVisible && (
         <div className="fixed bottom-20 left-4 z-50 bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6 w-80 max-h-96 overflow-y-auto">
@@ -207,7 +173,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
               <EyeOff className="w-5 h-5" />
             </button>
           </div>
-
           <div className="space-y-4">
             {/* High Contrast */}
             <div className="flex items-center justify-between">
@@ -232,7 +197,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 />
               </button>
             </div>
-
             {/* Large Text */}
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
@@ -256,7 +220,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 />
               </button>
             </div>
-
             {/* Reduced Motion */}
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
@@ -280,7 +243,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 />
               </button>
             </div>
-
             {/* Focus Visible */}
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-2">
@@ -304,7 +266,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
                 />
               </button>
             </div>
-
             {/* Reset Button */}
             <button
               onClick={resetSettings}
@@ -315,7 +276,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           </div>
         </div>
       )}
-
       {/* CSS for accessibility features */}
       <style>{`
         .skip-links {
@@ -324,7 +284,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           left: 6px;
           z-index: 1000;
         }
-        
         .skip-link {
           position: absolute;
           top: -40px;
@@ -337,43 +296,35 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           z-index: 1000;
           transition: top 0.3s;
         }
-        
         .skip-link:focus {
           top: 6px;
         }
-        
         .keyboard-navigation *:focus {
           outline: 2px solid #3b82f6 !important;
           outline-offset: 2px !important;
         }
-        
         .high-contrast {
           filter: contrast(150%) brightness(1.2);
         }
-        
         .high-contrast * {
           background-color: white !important;
           color: black !important;
           border-color: black !important;
         }
-        
         .large-text {
           font-size: 1.125rem;
         }
-        
         .large-text h1 { font-size: 2.5rem; }
         .large-text h2 { font-size: 2rem; }
         .large-text h3 { font-size: 1.75rem; }
         .large-text h4 { font-size: 1.5rem; }
         .large-text h5 { font-size: 1.25rem; }
         .large-text h6 { font-size: 1.125rem; }
-        
         .reduced-motion * {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
         }
-        
         .focus-visible *:focus {
           outline: 2px solid #8b5cf6 !important;
           outline-offset: 2px !important;
@@ -382,5 +333,4 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     </>
   );
 };
-
 export default AccessibilityEnhancer;

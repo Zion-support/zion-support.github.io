@@ -13,7 +13,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableLazyLoading = true,
     enablePreloading = true,
     enableImageOptimization = true,
-    enableCodeSplitting = true,
+    // enableCodeSplitting = true,
     enableCaching = true,
   } = options;
 
@@ -139,7 +139,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       
       try {
         observer.observe({ entryTypes: ['longtask'] });
-      } catch (e) {
+      } catch {
         // Long task observer not supported
       }
     }

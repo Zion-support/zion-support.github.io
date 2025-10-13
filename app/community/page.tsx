@@ -1,41 +1,9 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-
-export default function CommunityZionTechGroup() {
-  return (
-    <>
-      <Helmet>
-        <title>Community - Zion Tech Group</title>
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Community</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional community services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-}
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { Users, MessageCircle, Calendar, Award, Globe, Heart, Star, ArrowRight } from 'lucide-react';
-
+import { Users, Calendar, Award, Heart, Star, ArrowRight } from 'lucide-react';
 const CommunityPage: React.FC = () => {
   const events = [
     {
@@ -60,7 +28,6 @@ const CommunityPage: React.FC = () => {
       attendees: 300
     }
   ];
-
   const testimonials = [
     {
       name: 'Sarah Johnson',
@@ -81,7 +48,6 @@ const CommunityPage: React.FC = () => {
       rating: 5
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -89,14 +55,11 @@ const CommunityPage: React.FC = () => {
         <meta name="description" content="Join the Zion Tech community. Connect with industry experts, attend events, and grow your network in AI and IT." />
         <meta name="keywords" content="tech community, AI community, IT networking, tech events, professional development" />
       </Helmet>
-
       <Navigation />
-
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        
         <div className="relative max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Join Our <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">Community</span>
@@ -116,7 +79,6 @@ const CommunityPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -152,7 +114,6 @@ const CommunityPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Events Section */}
       <section className="py-16 px-4 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -164,7 +125,6 @@ const CommunityPage: React.FC = () => {
               Join our community events and connect with industry leaders and peers.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-purple-400 transition-all duration-300 group">
@@ -187,7 +147,6 @@ const CommunityPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -199,7 +158,6 @@ const CommunityPage: React.FC = () => {
               Hear from our community members about their experiences.
             </p>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
@@ -223,7 +181,6 @@ const CommunityPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
@@ -245,11 +202,8 @@ const CommunityPage: React.FC = () => {
           </div>
         </div>
       </section>
-
       <Footer />
     </div>
   );
 };
-
-export default CommunityPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
+export default CommunityPage; 

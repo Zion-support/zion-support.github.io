@@ -17,15 +17,10 @@ function fixMergeConflicts(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
 
-      if (line.startsWith("<<<<<<< HEAD")) {
-        inConflict = true;
-        keepHead = true;
-        modified = true;
-        continue;
-      } else if (line.startsWith("=======")) {
+      if (line.startsWith("")) {
         keepHead = false;
         continue;
-      } else if (line.startsWith(">>>>>>> ")) {
+      } else if (line.startsWith(" ")) {
         inConflict = false;
         keepHead = false;
         continue;
@@ -70,9 +65,8 @@ function findFilesWithConflicts(dir) {
       ) {
         const content = fs.readFileSync(fullPath, "utf8");
         if (
-          content.includes("<<<<<<< HEAD") ||
-          content.includes("=======") ||
-          content.includes(">>>>>>> ")
+          content.includes("") ||
+          content.includes(" ")
         ) {
           files.push(fullPath);
         }

@@ -1,15 +1,9 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { ArrowRight, CheckCircle, MapPin, Clock, Users, Heart, Zap, Globe, Award } from 'lucide-react';
-
 const CareersPage: React.FC = () => {
   const positions = [
     {
@@ -67,7 +61,6 @@ const CareersPage: React.FC = () => {
       description: 'Lead product strategy and roadmap for our AI-powered solutions platform.'
     }
   ];
-
   const values = [
     {
       icon: Heart,
@@ -90,7 +83,6 @@ const CareersPage: React.FC = () => {
       description: 'Competitive compensation and growth opportunities'
     }
   ];
-
   const benefits = [
     'Competitive salary and equity package',
     'Comprehensive health, dental, and vision insurance',
@@ -100,47 +92,20 @@ const CareersPage: React.FC = () => {
     'Top-tier equipment and home office setup',
     'Team building events and company retreats',
     'Mentorship and career growth opportunities'
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
-
-export default function Careers() {
+  ]; export default function Careers() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Careers - Zion Tech Group</title>
-        <meta name="description" content="Join our team at Zion Tech Group" />
-      </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Careers</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Join our team and build the future with us.
-          </p>
-
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-=======
-        <title>Careers | Zion Tech Group</title>
+<title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join our team of innovators at Zion Tech Group. Explore career opportunities in AI, cloud computing, and IT solutions." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, software developer, tech jobs" />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
         <Navigation />
-
         {/* Hero Section */}
         <section className="relative py-20 px-4 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               Join Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Team</span>
@@ -160,7 +125,6 @@ export default function Careers() {
             </div>
           </div>
         </section>
-
         {/* Values Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -172,7 +136,6 @@ export default function Careers() {
                 We're building the future of technology, and we want you to be part of it.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {values.map((value, index) => (
                 <div key={index} className="text-center">
@@ -186,7 +149,6 @@ export default function Careers() {
             </div>
           </div>
         </section>
-
         {/* Open Positions Section */}
         <section className="py-16 px-4 bg-white/5">
           <div className="max-w-7xl mx-auto">
@@ -198,7 +160,6 @@ export default function Careers() {
                 Find your next career opportunity with us.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {positions.map((position, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-blue-400 transition-all duration-300 group">
@@ -208,15 +169,12 @@ export default function Careers() {
                     </span>
                     <span className="text-gray-400 text-sm">{position.type}</span>
                   </div>
-
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">
                     {position.title}
                   </h3>
-
                   <p className="text-gray-300 mb-6 text-sm">
                     {position.description}
                   </p>
-
                   <div className="flex items-center gap-4 mb-6 text-sm text-gray-400">
                     <div className="flex items-center gap-1">
                       <MapPin className="w-4 h-4" />
@@ -231,7 +189,6 @@ export default function Careers() {
                       <span>Posted {position.posted}</span>
                     </div>
                   </div>
-
                   <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group">
                     Apply Now
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -241,7 +198,6 @@ export default function Careers() {
             </div>
           </div>
         </section>
-
         {/* Benefits Section */}
         <section className="py-16 px-4">
           <div className="max-w-7xl mx-auto">
@@ -253,7 +209,6 @@ export default function Careers() {
                 We offer comprehensive benefits to support your personal and professional growth.
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-center space-x-3">
@@ -264,7 +219,6 @@ export default function Careers() {
             </div>
           </div>
         </section>
-
         {/* CTA Section */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -286,9 +240,7 @@ export default function Careers() {
             </div>
           </div>
         </section>
-
         <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
       </div>
     </>
   );
