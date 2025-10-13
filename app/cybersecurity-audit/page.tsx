@@ -1,20 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Shield, 
-  Search, 
-  AlertTriangle, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Brain,
-  Lock,
-  Eye,
-  Settings,
-  Zap
-} from 'lucide-react';
+import { Search, ArrowRight, Sparkles, CheckCircle, Target, Zap } from 'lucide-react';
 
 const CybersecurityAuditPage = () => {
   const features = [
@@ -42,15 +29,6 @@ const CybersecurityAuditPage = () => {
       icon: <CheckCircle className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
-  const benefits = [
-    "Identify security gaps before attackers do",
-    "Ensure regulatory compliance",
-    "Reduce risk of data breaches by 90%",
-    "Improve security posture significantly",
-    "Get detailed remediation roadmap",
-    "Protect your business reputation"
   ];
 
   return (

@@ -30,11 +30,9 @@ function processFile(filePath) {
 const fixedContent = fixAllJSXIssues(content);
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed all JSX issues: ${filePath}`);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
     return false;
 // Function to recursively find and process TSX files;
 function processDirectory(dirPath) {
@@ -52,6 +50,4 @@ const stat = fs.statSync(fullPath);
   walkDir(dirPath);
   return processedCount;
 // Main execution;
-console.log('Starting comprehensive JSX fixes...');
 const processedCount = processDirectory('./app');
-console.log(`Processed ${processedCount} files.`);

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { BarChart3, Package, TrendingUp, AlertTriangle, Users, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Smartphone, Globe, Database, Settings } from 'lucide-react';
+import { BarChart3, Package, TrendingUp, AlertTriangle, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, Smartphone, Globe } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ZionAIInventoryManager = () => {
@@ -93,40 +93,6 @@ const ZionAIInventoryManager = () => {
       ],
       popular: false
     }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechGear Solutions",
-      role: "Operations Manager",
-      content: "Zion AI Inventory Manager reduced our stockouts by 70% and saved us $50,000 in the first year. The AI forecasting is incredibly accurate.",
-      rating: 5,
-      savings: "$50,000 saved"
-    },
-    {
-      name: "Michael Chen",
-      company: "RetailMax Inc",
-      role: "CEO",
-      content: "The multi-channel integration is seamless. We can now track inventory across all our sales channels in real-time.",
-      rating: 5,
-      savings: "60% fewer stockouts"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Fashion Forward",
-      role: "Inventory Director",
-      content: "The mobile app is fantastic. I can check inventory levels and place orders from anywhere. Game changer for our business.",
-      rating: 5,
-      savings: "40% time saved"
-    }
-  ];
-
-  const stats = [
-    { number: "95%", label: "Forecast Accuracy", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "60%", label: "Reduction in Stockouts", icon: <AlertTriangle className="w-6 h-6" /> },
-    { number: "40%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
   ];
 
   return (

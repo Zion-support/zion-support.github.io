@@ -135,8 +135,7 @@ const EnhancedServicesShowcase`,
 
   if (modified) {
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
-  }
+    }
 }
 
 // Main execution
@@ -144,11 +143,8 @@ async function main() {
   // Find all page.tsx files in the app directory
   const pageFiles = await glob("app/**/page.tsx");
 
-  console.log(`Found ${pageFiles.length} page files to fix...`);
-
   pageFiles.forEach(fixPageFile);
 
-  console.log("TypeScript errors fix completed!");
-}
+  }
 
 main().catch(console.error);

@@ -1,20 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Database, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Zap,
-  Brain,
-  PieChart,
-  Activity,
-  LineChart
-} from 'lucide-react';
 
 const AIDataAnalyticsProPage = () => {
   const features = [
@@ -42,15 +28,6 @@ const AIDataAnalyticsProPage = () => {
       icon: <PieChart className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
-  const benefits = [
-    "Make data-driven decisions 10x faster",
-    "Identify opportunities before competitors",
-    "Reduce data analysis time by 90%",
-    "Improve forecast accuracy by 40%",
-    "Automate report generation",
-    "Scale analytics across your organization"
   ];
 
   return (

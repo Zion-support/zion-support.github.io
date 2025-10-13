@@ -1,30 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  Play, 
-  Pause, 
-  SkipForward, 
-  SkipBack, 
-  Volume2, 
-  VolumeX,
-  Maximize,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Award,
-  BarChart3,
-  Brain,
-  Shield,
-  Zap,
-  Globe,
-  Mail,
-  Smartphone,
-  MapPin,
-  Calendar,
-  Clock
-} from 'lucide-react';
 
 export default function DemoPage() {
   const [currentDemo, setCurrentDemo] = useState(0);
@@ -91,36 +67,6 @@ export default function DemoPage() {
       thumbnail: '/api/placeholder/800/450',
       videoUrl: '#'
     }
-  ];
-
-  const benefits = [
-    {
-      title: 'Interactive Demos',
-      description: 'Experience our solutions hands-on with interactive demonstrations',
-      icon: <Play className="w-6 h-6" />
-    },
-    {
-      title: 'Real Use Cases',
-      description: 'See how our solutions work in real-world business scenarios',
-      icon: <BarChart3 className="w-6 h-6" />
-    },
-    {
-      title: 'Expert Commentary',
-      description: 'Get insights from our technical experts during the demos',
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      title: 'Q&A Sessions',
-      description: 'Ask questions and get immediate answers from our team',
-      icon: <Award className="w-6 h-6" />
-    }
-  ];
-
-  const stats = [
-    { number: '50+', label: 'Live Demos Available' },
-    { number: '1000+', label: 'Businesses Transformed' },
-    { number: '99.9%', label: 'Customer Satisfaction' },
-    { number: '24/7', label: 'Demo Access' }
   ];
 
   const handlePlayPause = () => {

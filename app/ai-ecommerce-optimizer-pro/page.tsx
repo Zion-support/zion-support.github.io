@@ -1,12 +1,5 @@
 "use client";
-import {
-  Brain,
-  Zap,
-  CheckCircle,
-  Star,
-  BarChart3,
-  TrendingUp,
-} from "lucide-react";
+import { Brain, Zap, CheckCircle, Star, BarChart3, TrendingUp } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -132,30 +125,6 @@ export default function AIEcommerceOptimizerPro() {
         "SLA guarantee",
       ],
       popular: false,
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Maria Rodriguez",
-      company: "Fashion Store",
-      content:
-        "AI E-commerce Optimizer Pro increased our conversion rate by 35% and boosted revenue by 50% in just 3 months.",
-      rating: 5,
-    },
-    {
-      name: "David Kim",
-      company: "Electronics Retailer",
-      content:
-        "The automated optimization features saved us hours of manual work while significantly improving our store performance.",
-      rating: 5,
-    },
-    {
-      name: "Sarah Johnson",
-      company: "Home & Garden Store",
-      content:
-        "Our customers love the personalized shopping experience. Sales have increased dramatically since implementation.",
-      rating: 5,
     },
   ];
 

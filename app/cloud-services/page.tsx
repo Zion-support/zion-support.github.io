@@ -1,19 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  ArrowRight, 
-  CheckCircle, 
-  BarChart3, 
-  Database, 
-  Lock, 
-  Users, 
-  Settings, 
-  Monitor 
-} from 'lucide-react';
+import { Cloud, Shield, Zap, Globe, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
   const services = [
@@ -46,29 +33,6 @@ const CloudServicesPage: React.FC = () => {
       title: "Database Services",
       description: "Managed database services with automated backups, scaling, and performance optimization.",
       icon: <Database className="w-6 h-6" />
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Cost Reduction",
-      description: "Reduce infrastructure costs by up to 40% with optimized cloud solutions",
-      icon: <CheckCircle className="w-5 h-5" />
-    },
-    {
-      title: "Enhanced Security",
-      description: "Enterprise-grade security with 99.9% uptime guarantee",
-      icon: <Lock className="w-5 h-5" />
-    },
-    {
-      title: "Scalability",
-      description: "Scale your infrastructure instantly based on demand",
-      icon: <Settings className="w-5 h-5" />
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock support from our cloud experts",
-      icon: <Users className="w-5 h-5" />
     }
   ];
 

@@ -89,6 +89,4 @@ const pageFile = path.join(pageDir, 'page.tsx');
     fs.mkdirSync(pageDir, { recursive: true });
   // Overwrite page file with correct template;
   fs.writeFileSync(pageFile, pageTemplate(pageName, title, componentName));
-  console.log(`Fixed: ${pageFile}`);
-});
-console.log('All pages fixed!');
+  });

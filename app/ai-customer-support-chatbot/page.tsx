@@ -60,25 +60,6 @@ export default function AICustomerSupportChatbot() {
       popular: false,
     },
   ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechCorp",
-      text: "Amazing chatbot solution!",
-      rating: 5,
-      content:
-        "The AI chatbot has transformed our customer service operations.",
-    },
-    {
-      name: "Mike Chen",
-      company: "StartupXYZ",
-      text: "Increased customer satisfaction by 40%.",
-      rating: 5,
-      content:
-        "Our response times have improved dramatically with this solution.",
-    },
-  ];
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,

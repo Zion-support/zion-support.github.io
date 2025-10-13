@@ -76,30 +76,6 @@ export default function AISmartScheduler() {
     },
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      company: "TechStart Inc.",
-      content:
-        "This AI scheduler saved us 10+ hours per week. The intelligent optimization is incredible.",
-      rating: 5,
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Global Consulting",
-      content:
-        "Finally, a scheduling tool that actually understands our complex team dynamics.",
-      rating: 5,
-    },
-    {
-      name: "Emily Watson",
-      company: "RemoteFirst Co.",
-      content:
-        "The time zone handling is flawless. Our international team coordination has never been smoother.",
-      rating: 5,
-    },
-  ];
-
   return (
     <Layout>
       {/* Hero Section */}

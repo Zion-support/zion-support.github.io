@@ -1,65 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  Brain, 
-  Shield, 
-  BarChart3, 
-  Cloud, 
-  Users, 
-  Mail, 
-  Smartphone, 
-  Globe, 
-  Zap, 
-  Target, 
-  Calendar, 
-  FileText, 
-  Database, 
-  Settings, 
-  Monitor, 
-  Lock, 
-  Server, 
-  Cpu, 
-  Network, 
-  HardDrive, 
-  Phone, 
-  Laptop, 
-  Headphones, 
-  CheckCircle, 
-  Star, 
-  Award, 
-  Rocket, 
-  Sparkles,
-  TrendingUp,
-  Heart,
-  Receipt,
-  Package,
-  Clock,
-  Code,
-  Bot,
-  Wifi,
-  Cpu as Processor,
-  Database as DataIcon,
-  FileText as DocumentIcon,
-  Mail as EmailIcon,
-  Globe as WebIcon,
-  Smartphone as MobileIcon,
-  Monitor as DesktopIcon,
-  Headphones as SupportIcon,
-  Settings as ConfigIcon,
-  Lock as SecurityIcon,
-  Server as ServerIcon,
-  Network as NetworkIcon,
-  HardDrive as StorageIcon,
-  Zap as LightningIcon,
-  Target as MarketingIcon,
-  Calendar as ScheduleIcon,
-  Users as TeamIcon,
-  BarChart3 as AnalyticsIcon,
-  Cloud as CloudIcon,
-  Brain as AIIcon,
-  Shield as ProtectionIcon
-} from "lucide-react";
+import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Code, Globe as WebIcon, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon } from 'lucide-react';
 
 export default function MicroSaasServices() {
   const microSaasServices = [
@@ -387,28 +328,6 @@ export default function MicroSaasServices() {
         "Complete DevOps automation"
       ]
     }
-  ];
-
-  const categories = [
-    { name: "AI Analytics", icon: <AnalyticsIcon className="w-5 h-5" />, count: 2 },
-    { name: "Cybersecurity", icon: <ProtectionIcon className="w-5 h-5" />, count: 1 },
-    { name: "Cloud Storage", icon: <CloudIcon className="w-5 h-5" />, count: 1 },
-    { name: "CRM & Sales", icon: <TeamIcon className="w-5 h-5" />, count: 1 },
-    { name: "Marketing Automation", icon: <MarketingIcon className="w-5 h-5" />, count: 1 },
-    { name: "Project Management", icon: <ScheduleIcon className="w-5 h-5" />, count: 1 },
-    { name: "Email Management", icon: <EmailIcon className="w-5 h-5" />, count: 1 },
-    { name: "Inventory Management", icon: <Package className="w-5 h-5" />, count: 1 },
-    { name: "Customer Analytics", icon: <Heart className="w-5 h-5" />, count: 1 },
-    { name: "Financial Management", icon: <Receipt className="w-5 h-5" />, count: 1 },
-    { name: "Content Creation", icon: <DocumentIcon className="w-5 h-5" />, count: 1 },
-    { name: "DevOps & Automation", icon: <ConfigIcon className="w-5 h-5" />, count: 1 }
-  ];
-
-  const stats = [
-    { number: "12+", label: "Micro SAAS Solutions", icon: <Rocket className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <SupportIcon className="w-6 h-6" /> },
-    { number: "50%", label: "Average Cost Savings", icon: <TrendingUp className="w-6 h-6" /> }
   ];
 
   return (

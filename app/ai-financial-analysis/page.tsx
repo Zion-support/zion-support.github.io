@@ -1,20 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  DollarSign, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Zap,
-  Brain,
-  PieChart,
-  Activity,
-  Shield
-} from 'lucide-react';
 
 const AIFinancialAnalysisPage = () => {
   const features = [
@@ -42,15 +28,6 @@ const AIFinancialAnalysisPage = () => {
       icon: <PieChart className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
-  const benefits = [
-    "Improve investment returns by 30%",
-    "Reduce financial risk by 50%",
-    "Automate 90% of financial analysis",
-    "Make decisions 10x faster",
-    "Identify opportunities in real-time",
-    "Ensure regulatory compliance"
   ];
 
   return (

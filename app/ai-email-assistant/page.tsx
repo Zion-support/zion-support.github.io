@@ -1,17 +1,7 @@
 "use client";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import {
-  MessageSquare,
-  Brain,
-  Shield,
-  Zap,
-  Star,
-  Mail,
-  BarChart3,
-  Settings,
-  Users,
-} from "lucide-react";
+import { MessageSquare, Brain, Shield, Zap, Star, Mail, BarChart3, Settings, Users } from 'lucide-react';
 
 export default function AIEmailAssistant() {
   const features = [
@@ -115,30 +105,6 @@ export default function AIEmailAssistant() {
         "SLA guarantee",
       ],
       popular: false,
-    },
-  ];
-
-  const testimonials = [
-    {
-      name: "Jennifer Smith",
-      company: "Customer Service Manager",
-      content:
-        "AI Email Assistant reduced our response time by 60% and improved customer satisfaction significantly.",
-      rating: 5,
-    },
-    {
-      name: "Michael Chen",
-      company: "Sales Director",
-      content:
-        "The automated email generation has increased our outreach efficiency by 3x while maintaining personalization.",
-      rating: 5,
-    },
-    {
-      name: "Sarah Wilson",
-      company: "Marketing Manager",
-      content:
-        "Our email campaigns are now more effective thanks to AI-powered content optimization and targeting.",
-      rating: 5,
     },
   ];
 

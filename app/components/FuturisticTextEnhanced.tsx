@@ -92,7 +92,7 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
       transition: {
         duration: duration,
         delay: delay,
-        ease: "easeOut"
+        ease: [0.4, 0, 0.2, 1]
       }
     },
     hover: {

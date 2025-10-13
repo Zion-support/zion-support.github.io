@@ -1,47 +1,5 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  Shield, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Award, 
-  Zap, 
-  Cloud, 
-  Smartphone, 
-  Globe, 
-  Mail, 
-  Phone, 
-  TrendingUp,
-  Database,
-  Settings,
-  Monitor,
-  Lock,
-  Server,
-  Cpu,
-  Network,
-  HardDrive,
-  Headphones,
-  Sparkles,
-  Target,
-  Calendar,
-  FileText,
-  Code,
-  Bot,
-  Wifi,
-  Heart,
-  Receipt,
-  Package,
-  Clock,
-  AlertTriangle,
-  Eye,
-  Key,
-  Fingerprint,
-  Search,
-  Activity
-} from "lucide-react";
 
 export default function ZionSecurityShieldPro() {
   const features = [
@@ -137,33 +95,6 @@ export default function ZionSecurityShieldPro() {
         "On-premise deployment"
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "David Martinez",
-      company: "Financial Services Corp",
-      role: "CISO",
-      content: "Zion Security Shield Pro has been a game-changer for our security posture. The AI threat detection caught several sophisticated attacks that traditional systems missed.",
-      rating: 5,
-      avatar: "DM"
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Healthcare Solutions",
-      role: "IT Director",
-      content: "The compliance reporting feature saved us countless hours. We passed our SOC2 audit with flying colors thanks to the automated documentation.",
-      rating: 5,
-      avatar: "LT"
-    },
-    {
-      name: "Robert Kim",
-      company: "E-commerce Platform",
-      role: "Security Manager",
-      content: "The 24/7 monitoring gives us peace of mind. Our security team can focus on strategic initiatives while the AI handles routine threat detection.",
-      rating: 5,
-      avatar: "RK"
     }
   ];
 

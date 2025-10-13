@@ -1,14 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe as GlobeIcon } from "lucide-react";
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucide-react';
 
 export default function AboutPage() {
-  const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "100+", label: "Happy Clients" },
-    { number: "50+", label: "AI Solutions" },
-    { number: "24/7", label: "Support" }
-  ];
 
   const values = [
     {
@@ -229,7 +223,7 @@ export default function AboutPage() {
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <GlobeIcon className="w-6 h-6 text-white" />
+                    <Globe className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
