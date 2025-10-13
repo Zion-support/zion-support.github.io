@@ -14,7 +14,11 @@ import {
   ShieldCheckIcon,
   CurrencyDollarIcon,
   CogIcon,
-  ChevronDownIcon
+  ChevronDownIcon,
+  CpuChipIcon,
+  GlobeAltIcon,
+  ServerIcon,
+  WifiIcon
 } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
@@ -26,18 +30,81 @@ const Navigation = () => {
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
-      name: 'Services', 
-      href: '/services', 
-      icon: BriefcaseIcon,
+      name: 'AI Solutions', 
+      href: '/ai-solutions', 
+      icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-        { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
-        { name: '5G Solutions', href: '/5g-solutions' }
+        { name: 'Machine Learning', href: '/ai-machine-learning-models' },
+        { name: 'Computer Vision', href: '/ai-computer-vision' },
+        { name: 'Natural Language Processing', href: '/ai-natural-language-processing' },
+        { name: 'Predictive Analytics', href: '/ai-predictive-analytics' },
+        { name: 'Voice Recognition', href: '/ai-voice-recognition' },
+        { name: 'Content Generation', href: '/ai-content-generation-pro' },
+        { name: 'Data Analytics', href: '/ai-data-analytics-pro' },
+        { name: 'Chatbots & Virtual Assistants', href: '/ai-chatbot-enterprise' }
       ]
     },
+    { 
+      name: 'Micro SaaS', 
+      href: '/micro-saas-solutions', 
+      icon: GlobeAltIcon,
+      submenu: [
+        { name: 'Analytics Dashboard', href: '/ai-analytics-dashboard-pro' },
+        { name: 'Content Management', href: '/ai-content-management-system' },
+        { name: 'Customer Support Bot', href: '/ai-customer-support-bot' },
+        { name: 'Project Management', href: '/ai-project-management-suite' },
+        { name: 'E-commerce Optimizer', href: '/ai-ecommerce-optimizer' },
+        { name: 'HR Management', href: '/ai-hr-management-system' },
+        { name: 'Financial Analytics', href: '/ai-financial-analytics' },
+        { name: 'Marketing Automation', href: '/ai-marketing-automation' },
+        { name: 'Inventory Management', href: '/ai-inventory-management' },
+        { name: 'Document Processing', href: '/ai-document-processing' },
+        { name: 'Social Media Manager', href: '/ai-social-media-manager' },
+        { name: 'Email Marketing Suite', href: '/ai-email-marketing-suite' }
+      ]
+    },
+    { 
+      name: 'IT Solutions', 
+      href: '/it-solutions', 
+      icon: ServerIcon,
+      submenu: [
+        { name: 'Infrastructure Management', href: '/it-infrastructure-management' },
+        { name: 'Cloud Migration', href: '/cloud-migration-service' },
+        { name: 'Database Management', href: '/database-management' },
+        { name: 'Network Security', href: '/network-security-monitoring' },
+        { name: 'IT Support & Helpdesk', href: '/it-support-helpdesk' },
+        { name: 'Software Development', href: '/software-development' },
+        { name: 'IT Consulting', href: '/it-consulting-strategy' },
+        { name: 'Data Backup & Recovery', href: '/data-backup-recovery' },
+        { name: 'Asset Management', href: '/it-asset-management' },
+        { name: 'Remote Work Solutions', href: '/remote-work-solutions' },
+        { name: 'Compliance & Governance', href: '/it-compliance-governance' }
+      ]
+    },
+    { 
+      name: 'Cybersecurity', 
+      href: '/cybersecurity-solutions', 
+      icon: ShieldCheckIcon,
+      submenu: [
+        { name: 'Security Suite Pro', href: '/cybersecurity-suite-pro' },
+        { name: 'AI Security Monitor', href: '/ai-cybersecurity-monitor' },
+        { name: 'Penetration Testing', href: '/penetration-testing' },
+        { name: 'Security Training', href: '/security-awareness-training' }
+      ]
+    },
+    { 
+      name: '5G Solutions', 
+      href: '/5g-solutions', 
+      icon: WifiIcon,
+      submenu: [
+        { name: '5G Network Solutions', href: '/5g-network-solutions' },
+        { name: '5G Edge Computing', href: '/5g-edge-computing' },
+        { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
+        { name: 'Smart City Solutions', href: '/5g-smart-city-solutions' },
+        { name: 'Private Networks', href: '/5g-private-networks' }
+      ]
+    },
+    { name: 'All Services', href: '/services', icon: BriefcaseIcon },
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },

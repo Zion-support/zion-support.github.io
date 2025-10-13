@@ -13,11 +13,11 @@ const Footer: React.FC = () => {
 
   const services = [
     { name: 'AI Solutions', href: '/ai-solutions' },
-    { name: 'Cybersecurity', href: '/cybersecurity' },
-    { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-    { name: 'Digital Transformation', href: '/digital-transformation' },
-    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
+    { name: 'IT Solutions', href: '/it-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
+    { name: 'All Services', href: '/services' },
   ];
 
   const company = [

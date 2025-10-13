@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -42,8 +39,8 @@ export default function HomePage() {
               Advanced AI and IT Solutions for Modern Businesses
             </p>
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
-              cloud infrastructure, and digital transformation services to drive innovation and growth.
+              Empowering businesses with cutting-edge AI solutions, innovative micro SaaS applications, 
+              comprehensive IT services, advanced cybersecurity, and next-generation 5G solutions to drive innovation and growth.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -79,7 +76,7 @@ export default function HomePage() {
               Our Core Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed to accelerate your business growth
+              Comprehensive AI, micro SaaS, IT, cybersecurity, and 5G solutions designed to accelerate your business growth
             </p>
           </div>
           
@@ -149,12 +146,12 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <GlobeAltIcon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS Solutions</h3>
               <p className="text-gray-300 mb-6">
-                Custom micro SaaS solutions designed to solve specific business 
-                challenges with scalable, cost-effective applications.
+                AI-powered micro SaaS applications including analytics dashboards, content management, 
+                customer support bots, and marketing automation tools.
               </p>
-              <Link to="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+              <Link to="/micro-saas-solutions" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
