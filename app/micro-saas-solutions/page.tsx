@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 'use client';
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -19,7 +16,8 @@ import {
   CurrencyDollarIcon,
   ClockIcon,
   UserGroupIcon,
-  CogIcon
+  CogIcon,
+  HeartIcon
 } from '@heroicons/react/24/outline';
 
 export default function MicroSaaSSolutionsPage() {
@@ -251,6 +249,82 @@ export default function MicroSaaSSolutionsPage() {
       benefits: ["40% open rates", "Personalized content", "Optimized timing"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
       href: "/ai-email-marketing"
+    },
+    {
+      title: "AI Sustainability Tracker",
+      description: "Comprehensive environmental impact monitoring with carbon footprint tracking, ESG reporting, and sustainability analytics.",
+      icon: GlobeAltIcon,
+      features: [
+        "Carbon footprint tracking",
+        "Energy consumption monitoring",
+        "ESG compliance reporting",
+        "Supply chain sustainability",
+        "AI-powered insights",
+        "Real-time analytics"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "$199/month",
+      setupFee: "$800",
+      benefits: ["Reduce carbon footprint", "ESG compliance", "Cost savings"],
+      useCases: ["Environmental monitoring", "ESG reporting", "Sustainability goals"],
+      href: "/ai-sustainability-tracker"
+    },
+    {
+      title: "AI Voice Cloning",
+      description: "Professional voice cloning technology for content creation, accessibility, and personalized audio experiences.",
+      icon: PhoneIcon,
+      features: [
+        "High-quality voice synthesis",
+        "Multi-language support",
+        "Real-time processing",
+        "Custom voice training",
+        "API integration",
+        "Privacy & security"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "$199/month",
+      setupFee: "$500",
+      benefits: ["99.9% voice accuracy", "Multi-language", "Real-time generation"],
+      useCases: ["Content creation", "Accessibility", "Voice assistants"],
+      href: "/ai-voice-cloning"
+    },
+    {
+      title: "AI Blockchain Analytics",
+      description: "Advanced blockchain intelligence for DeFi, cryptocurrency trading, and smart contract monitoring with real-time insights.",
+      icon: CurrencyDollarIcon,
+      features: [
+        "Transaction analysis",
+        "DeFi protocol analytics",
+        "Smart contract monitoring",
+        "Market intelligence",
+        "Risk assessment",
+        "Multi-chain support"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "$599/month",
+      setupFee: "$1,200",
+      benefits: ["Real-time insights", "Multi-chain analysis", "Risk mitigation"],
+      useCases: ["DeFi analytics", "Crypto trading", "Blockchain monitoring"],
+      href: "/ai-blockchain-analytics"
+    },
+    {
+      title: "AI Medical Diagnosis",
+      description: "Advanced medical diagnosis platform with imaging analysis, diagnostic assistance, and patient care optimization.",
+      icon: HeartIcon,
+      features: [
+        "Medical imaging analysis",
+        "Diagnostic assistance",
+        "Patient monitoring",
+        "Drug discovery",
+        "EHR integration",
+        "Clinical research"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "$999/month",
+      setupFee: "$2,500",
+      benefits: ["99.5% accuracy", "HIPAA compliant", "FDA approved"],
+      useCases: ["Medical diagnosis", "Healthcare analytics", "Clinical research"],
+      href: "/ai-medical-diagnosis"
     }
   ];
 
