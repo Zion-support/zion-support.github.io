@@ -39,7 +39,7 @@ export class ResourceErrorHandler {
   }
 
   private handleImageError(img: HTMLImageElement): void {
-    const src = img.src;
+    const src = img['src'];
     
     // Check if it's a Cloudinary 401 error
     if (src.includes('res.cloudinary.com') && src.includes('dpfhynunl')) {
@@ -47,7 +47,7 @@ export class ResourceErrorHandler {
       this.failedResources.add(src);
       
       // Replace with a fallback image or placeholder
-      img.src = '/images/placeholder.jpg';
+      img['src'] = '/images/placeholder.jpg';
       img.alt = 'Image not available';
       img.classList.add('error-placeholder');
     }

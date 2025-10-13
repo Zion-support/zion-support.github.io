@@ -38,7 +38,10 @@ export default function FiveGSolutions() {
               </p>
             </div>
           </div>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/clean-main-20251013-145848
         </div>
       </div>
     </div>

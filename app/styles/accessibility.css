@@ -1,33 +1,4 @@
-/* Accessibility and Performance Enhancements */
-
-/* Focus management */
-.using-mouse *:focus {
-  outline: none;
-}
-
-.using-mouse *:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* High contrast mode */
-.high-contrast {
-  filter: contrast(150%);
-}
-
-.high-contrast * {
-  border-color: currentColor !important;
-}
-
-/* Reduced motion */
-.reduce-motion *,
-.reduce-motion *::before,
-.reduce-motion *::after {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
-}
+/* Accessibility Enhancements */
 
 /* Screen reader only content */
 .sr-only {
@@ -42,33 +13,170 @@
   border: 0;
 }
 
-.sr-only:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  padding: inherit;
-  margin: inherit;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
+/* Focus management */
+.focus-visible {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
-/* Skip link */
+/* High contrast mode */
+.high-contrast {
+  --tw-bg-opacity: 1;
+  --tw-text-opacity: 1;
+}
+
+.high-contrast * {
+  background-color: white !important;
+  color: black !important;
+  border-color: black !important;
+}
+
+.high-contrast .bg-gradient-to-r,
+.high-contrast .bg-gradient-to-br,
+.high-contrast .bg-gradient-to-l {
+  background: white !important;
+  color: black !important;
+}
+
+/* Reduced motion */
+.reduced-motion * {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+/* Keyboard navigation */
+.keyboard-navigation *:focus {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+/* Font size adjustments */
+[data-font-size="small"] {
+  font-size: 0.875rem;
+}
+
+[data-font-size="medium"] {
+  font-size: 1rem;
+}
+
+[data-font-size="large"] {
+  font-size: 1.125rem;
+}
+
+/* Skip links */
 .skip-link {
   position: absolute;
   top: -40px;
   left: 6px;
-  background: #2563eb;
-  color: white;
-  padding: 8px 16px;
+  background: #000;
+  color: #fff;
+  padding: 8px;
   text-decoration: none;
-  border-radius: 4px;
   z-index: 1000;
-  transition: top 0.3s;
+  border-radius: 4px;
 }
 
 .skip-link:focus {
   top: 6px;
+}
+
+/* ARIA live regions */
+[aria-live] {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* Focus trap */
+.focus-trap {
+  position: relative;
+}
+
+.focus-trap::before,
+.focus-trap::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+/* High contrast focus indicators */
+.high-contrast .focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 3px;
+}
+
+/* Color scheme adjustments */
+[data-color-scheme="light"] {
+  color-scheme: light;
+}
+
+[data-color-scheme="dark"] {
+  color-scheme: dark;
+}
+
+[data-color-scheme="auto"] {
+  color-scheme: light dark;
+}
+
+/* Button accessibility */
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button:disabled:hover {
+  transform: none;
+}
+
+/* Link accessibility */
+a:focus {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+}
+
+a:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Form accessibility */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #06b6d4;
+  outline-offset: 2px;
+  border-color: #06b6d4;
+}
+
+/* Error states */
+.error {
+  border-color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Success states */
+.success {
+  border-color: #10b981;
+  background-color: #f0fdf4;
+}
+
+.success-message {
+  color: #10b981;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
 }
 
 /* Loading states */
@@ -78,7 +186,7 @@
 }
 
 .loading::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -86,136 +194,82 @@
   height: 20px;
   margin: -10px 0 0 -10px;
   border: 2px solid #f3f3f3;
-  border-top: 2px solid #3498db;
+  border-top: 2px solid #06b6d4;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
-/* Enhanced focus indicators */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-  border-radius: 4px;
+/* Reduced motion loading */
+.reduced-motion .loading::after {
+  animation: none;
+  border: 2px solid #06b6d4;
 }
 
-/* Improved contrast for interactive elements */
-button:not(:disabled):hover,
-a:hover {
-  opacity: 0.9;
+/* Table accessibility */
+table {
+  border-collapse: collapse;
+  width: 100%;
 }
 
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
+th, td {
+  border: 1px solid #e5e7eb;
+  padding: 0.5rem;
+  text-align: left;
 }
 
-/* Better text contrast */
-.text-low-contrast {
-  color: #6b7280;
+th {
+  background-color: #f9fafb;
+  font-weight: 600;
 }
 
-/* Responsive typography */
-@media (max-width: 640px) {
-  .text-responsive {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
+/* List accessibility */
+ul, ol {
+  margin: 0;
+  padding-left: 1.5rem;
 }
 
-/* Performance optimizations */
-.will-change-transform {
-  will-change: transform;
+li {
+  margin-bottom: 0.25rem;
 }
 
-.will-change-opacity {
-  will-change: opacity;
+/* Heading hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 1rem 0;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.875rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+h5 { font-size: 1.125rem; }
+h6 { font-size: 1rem; }
+
+/* Image accessibility */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-/* Improved form accessibility */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-input[type="url"],
-textarea,
-select {
-  border: 2px solid #e5e7eb;
-  border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 16px; /* Prevents zoom on mobile */
+img[alt=""] {
+  border: 2px dashed #ef4444;
 }
 
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+/* Video accessibility */
+video {
+  max-width: 100%;
+  height: auto;
 }
 
-/* Error states */
-.input-error {
-  border-color: #ef4444;
-}
-
-.input-error:focus {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
-}
-
-/* Success states */
-.input-success {
-  border-color: #10b981;
-}
-
-.input-success:focus {
-  border-color: #10b981;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
-}
-
-/* Loading button states */
-.btn-loading {
-  position: relative;
-  color: transparent;
-}
-
-.btn-loading::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 16px;
-  height: 16px;
-  margin: -8px 0 0 -8px;
-  border: 2px solid transparent;
-  border-top: 2px solid currentColor;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-/* Dark mode improvements */
-@media (prefers-color-scheme: dark) {
-  .auto-dark {
-    background-color: #1f2937;
-    color: #f9fafb;
-  }
+/* Audio accessibility */
+audio {
+  width: 100%;
 }
 
 /* Print styles */
@@ -223,16 +277,57 @@ select:focus {
   .no-print {
     display: none !important;
   }
-
+  
   .print-only {
     display: block !important;
   }
-
-  a[href]:after {
-    content: " (" attr(href) ")";
+  
+  * {
+    background: white !important;
+    color: black !important;
   }
+}
 
-  .page-break {
-    page-break-before: always;
+/* Mobile accessibility */
+@media (max-width: 768px) {
+  .focus-visible {
+    outline-width: 3px;
+  }
+  
+  button, a, input, textarea, select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .focus-visible {
+    outline-width: 1px;
+  }
+}
+
+/* Dark mode accessibility */
+@media (prefers-color-scheme: dark) {
+  .focus-visible {
+    outline-color: #06b6d4;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast preferences */
+@media (prefers-contrast: high) {
+  .focus-visible {
+    outline-width: 3px;
+    outline-color: #000;
   }
 }

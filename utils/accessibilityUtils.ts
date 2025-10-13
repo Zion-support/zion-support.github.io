@@ -1,6 +1,6 @@
 export interface AccessibilityConfig {
   enabled: boolean;
-  announceChanges: boolean;
+announceChanges: boolean;
   highContrast: boolean;
   reducedMotion: boolean;
   fontSize: number;
@@ -22,7 +22,11 @@ export class AccessibilityUtils {
     };
   }
 
+<<<<<<< HEAD
   announceToScreenReader(message: string): void {
+=======
+announceToScreenReader(message: string) {
+>>>>>>> origin/clean-main-20251013-145848
     if (this.config.enabled && this.config.announceChanges) {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');

@@ -4,6 +4,7 @@ import { HelmetProvider } from 'react-helmet-async';
 import LoadingSpinner from '../app/components/LoadingSpinner';
 import SEOEnhancer from '../app/components/SEOEnhancer';
 
+<<<<<<< HEAD
 describe('Component Tests', () => {
   test('LoadingSpinner renders correctly', () => {
     render(<LoadingSpinner />);
@@ -19,3 +20,5 @@ describe('Component Tests', () => {
     expect(document.head).toBeInTheDocument();
   });
 });
+=======
+>>>>>>> 087b9b5bb73300eddd182f26a6fee488e6ebab96
