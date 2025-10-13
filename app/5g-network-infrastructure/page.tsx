@@ -1,34 +1,37 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
-const FiveGNetworkInfrastructurePage: React.FC = () => {
+export default function NetworkInfrastructure5GPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="5G Network Infrastructure - Advanced 5G Networks"
-        description="Build and manage advanced 5G network infrastructure with our comprehensive 5G solutions."
-        keywords="5G network infrastructure, 5G networks, network infrastructure, 5G solutions, 5G technology"
-        canonical="/5g-network-infrastructure"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              5G Network Infrastructure
-            </span>
+    <>
+      <Helmet>
+        <title>5G Network Infrastructure - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Professional 5G network infrastructure services"
+        />
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            5G Network Infrastructure
           </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Build and manage advanced 5G network infrastructure with our comprehensive 5G solutions.
+          <p className="text-lg text-gray-300 mb-8">
+            Professional 5G network infrastructure services by Zion Tech Group.
+            Transform your business with our expert solutions.
           </p>
-        </div>
-        
-        <div className="text-center">
-          <p className="text-gray-300 text-lg">Service details coming soon. Contact us for more information.</p>
+
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
       </div>
-    </div>
+    </>
   );
-};
-
-export default FiveGNetworkInfrastructurePage;
+}

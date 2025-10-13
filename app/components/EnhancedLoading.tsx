@@ -1,224 +1,70 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Loader2, CheckCircle, AlertCircle, RefreshCw } from 'lucide-react';
 
-interface LoadingStateProps {
-  type?: 'loading' | 'success' | 'error' | 'retry';
-  message?: string;
-  size?: 'sm' | 'md' | 'lg';
-  showSpinner?: boolean;
-  onRetry?: () => void;
-}
-
-const LoadingState: React.FC<LoadingStateProps> = ({
-  type = 'loading',
-  message,
-  size = 'md',
-  showSpinner = true,
-  onRetry
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
-
-  const containerClasses = {
-    sm: 'p-2',
-    md: 'p-4',
-    lg: 'p-8'
-  };
-
-  const getIcon = () => {
-    switch (type) {
-      case 'success':
-        return <CheckCircle className={`${sizeClasses[size]} text-green-500`} />;
-      case 'error':
-        return <AlertCircle className={`${sizeClasses[size]} text-red-500`} />;
-      case 'retry':
-        return <RefreshCw className={`${sizeClasses[size]} text-blue-500`} />;
-      default:
-        return showSpinner ? (
-          <Loader2 className={`${sizeClasses[size]} text-cyan-500 animate-spin`} />
-        ) : null;
-    }
-  };
-
-  const getMessage = () => {
-    if (message) return message;
-    
-    switch (type) {
-      case 'success':
-        return 'Success!';
-      case 'error':
-        return 'Something went wrong. Please try again.';
-      case 'retry':
-        return 'Retrying...';
-      default:
-        return 'Loading...';
-    }
-  };
-
-  return (
-    <div className={`flex flex-col items-center justify-center ${containerClasses[size]} bg-white/5 backdrop-blur-sm rounded-lg border border-white/10`}>
-      {getIcon()}
-      <p className="mt-2 text-sm text-gray-300 text-center">{getMessage()}</p>
-      {type === 'error' && onRetry && (
-        <button
-          onClick={onRetry}
-          className="mt-3 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white text-sm rounded-lg transition-colors flex items-center gap-2"
-        >
-          <RefreshCw className="w-4 h-4" />
-          Try Again
-        </button>
-      )}
-=======
-import { Loader2, Sparkles, Zap, Brain, Shield } from 'lucide-react';
-
-interface LoadingProps {
+interface EnhancedLoadingProps {
   message?: string;
   showProgress?: boolean;
   progress?: number;
-  variant?: 'default' | 'futuristic' | 'minimal';
-  size?: 'sm' | 'md' | 'lg';
 }
 
-const EnhancedLoading: React.FC<LoadingProps> = ({
-  message = 'Loading...',
+const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
+  message = "Loading...",
   showProgress = false,
-  progress = 0,
-  variant = 'futuristic',
-  size = 'md'
+  progress = 0
 }) => {
-  const sizeClasses = {
-    sm: 'w-8 h-8',
-    md: 'w-12 h-12',
-    lg: 'w-16 h-16'
-  };
-
-  const iconSizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8'
-  };
-
-  const textSizeClasses = {
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg'
-  };
-
-  if (variant === 'minimal') {
-    return (
-      <div className="flex items-center justify-center p-8">
-        <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />
-        {message && (
-          <span className={`ml-3 text-gray-300 ${textSizeClasses[size]}`}>
-            {message}
-          </span>
-        )}
-      </div>
-    );
-  }
-
-  if (variant === 'futuristic') {
-    return (
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-        <div className="max-w-md mx-auto text-center">
-          <div className="relative mb-8">
-            {/* Animated background elements */}
-            <div className="absolute inset-0 overflow-hidden">
-              <div className="absolute -top-20 -right-20 w-40 h-40 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-              <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-            </div>
-            
-            {/* Main loading icon */}
-            <div className="relative z-10">
-              <div className="w-24 h-24 mx-auto mb-6 relative">
-                <div className="absolute inset-0 rounded-full border-4 border-cyan-500/20"></div>
-                <div className="absolute inset-0 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin"></div>
-                <div className="absolute inset-2 rounded-full bg-gradient-to-r from-cyan-500/10 to-purple-500/10 flex items-center justify-center">
-                  <Sparkles className="w-8 h-8 text-cyan-400 animate-pulse" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {message}
-          </h2>
-
-          {showProgress && (
-            <div className="mb-6">
-              <div className="w-full bg-gray-700 rounded-full h-2 mb-2">
-                <div 
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-300 ease-out"
-                  style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-                ></div>
-              </div>
-              <p className="text-gray-300 text-sm">
-                {Math.round(progress)}% complete
-              </p>
-            </div>
-          )}
-
-          {/* Animated dots */}
-          <div className="flex justify-center space-x-2">
-            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
-            <div className="w-2 h-2 bg-purple-400 rounded-full animate-bounce delay-100"></div>
-            <div className="w-2 h-2 bg-pink-400 rounded-full animate-bounce delay-200"></div>
-          </div>
-
-          {/* Service icons animation */}
-          <div className="mt-8 flex justify-center space-x-4">
-            <div className="w-8 h-8 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center animate-pulse">
-              <Brain className="w-4 h-4 text-cyan-400" />
-            </div>
-            <div className="w-8 h-8 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center animate-pulse delay-200">
-              <Shield className="w-4 h-4 text-emerald-400" />
-            </div>
-            <div className="w-8 h-8 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center animate-pulse delay-400">
-              <Zap className="w-4 h-4 text-purple-400" />
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  // Default variant
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
-      <div className="max-w-md mx-auto text-center">
-        <div className="w-20 h-20 mx-auto mb-6 relative">
-          <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        {/* Animated Logo/Icon */}
+        <div className="mb-8">
+          <div className="w-20 h-20 mx-auto relative">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 animate-spin"></div>
+            <div className="absolute inset-2 rounded-full bg-slate-900 flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse"></div>
+            </div>
+          </div>
         </div>
-        
-        <h2 className="text-2xl font-bold text-white mb-4">
+
+        {/* Loading Message */}
+        <h2 className="text-2xl font-bold text-white mb-4 animate-pulse">
           {message}
         </h2>
 
+        {/* Progress Bar */}
         {showProgress && (
-          <div className="mb-6">
-            <div className="w-full bg-gray-700 rounded-full h-2 mb-2">
+          <div className="w-64 mx-auto mb-4">
+            <div className="bg-slate-700 rounded-full h-2 overflow-hidden">
               <div 
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full transition-all duration-300 ease-out"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
                 style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
               ></div>
             </div>
-            <p className="text-gray-300 text-sm">
-              {Math.round(progress)}% complete
+            <p className="text-sm text-gray-400 mt-2">
+              {Math.round(progress)}% Complete
             </p>
           </div>
         )}
 
-        <p className="text-gray-300">
-          Please wait while we prepare everything for you...
+        {/* Loading Animation */}
+        <div className="flex justify-center space-x-2">
+          {[...Array(3)].map((_, i) => (
+            <div
+              key={i}
+              className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-bounce"
+              style={{
+                animationDelay: `${i * 0.1}s`,
+                animationDuration: '1s'
+              }}
+            ></div>
+          ))}
+        </div>
+
+        {/* Additional Info */}
+        <p className="text-gray-400 text-sm mt-6 max-w-md mx-auto">
+          Preparing your experience with cutting-edge technology...
         </p>
       </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-a546
     </div>
   );
 };
 
-export default LoadingState;
+export default EnhancedLoading;
