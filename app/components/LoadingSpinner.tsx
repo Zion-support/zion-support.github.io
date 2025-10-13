@@ -1,29 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 import React from 'react';
 import { Loader2 } from 'lucide-react';
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
-<<<<<<< HEAD
-=======
   color?: 'primary' | 'secondary' | 'white' | 'gray';
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
-import React from 'react';
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
   text?: string;
   fullScreen?: boolean;
   className?: string;
@@ -31,52 +11,18 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
-<<<<<<< HEAD
-<<<<<<< HEAD
-text = 'Loading...',
-  fullScreen = false,
-  className = ''
-<<<<<<< HEAD
-=======
-import React from 'react';
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  className?: string;
-}
-
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  text = 'Loading...', 
-  className = '' 
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
   color = 'primary',
   text,
   fullScreen = false,
   className = ''
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
-  text = 'Loading...',
-  fullScreen = false,
-  className = ''
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'
   };
 
-<<<<<<< HEAD
   const colorClasses = {
     primary: 'text-purple-600',
     secondary: 'text-cyan-600',
@@ -87,7 +33,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   const spinner = (
     <div className={`flex flex-col items-center justify-center ${className}`} role="status" aria-label="Loading">
       <div className="relative">
-        {/* Optimized spinner with better performance */}
         <div 
           className={`${sizeClasses[size]} ${colorClasses[color]} animate-spin`}
           style={{
@@ -121,7 +66,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       
       {text && (
         <p className={`mt-3 text-sm ${colorClasses[color]} animate-pulse`}>
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
           {text}
         </p>
       )}
@@ -130,12 +74,6 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 
   if (fullScreen) {
     return (
-<<<<<<< HEAD
-<div className="fixed inset-0 bg-slate-900/80 backdrop-blur-sm flex items-center justify-center z-50">
-        <div className="bg-slate-800 rounded-lg p-8 shadow-xl">
-          {spinner}
-        </div>
-=======
       <div 
         className="fixed inset-0 bg-slate-900/95 backdrop-blur-sm flex items-center justify-center z-50"
         role="dialog"
@@ -143,50 +81,11 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         aria-label="Loading page"
       >
         {spinner}
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
       </div>
     );
   }
 
   return spinner;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
-lg: 'w-12 h-12'
-  };
-
-  return (
-=======
-  const spinner = (
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
-    <div className={`flex flex-col items-center justify-center ${className}`}>
-      <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-purple-600`}></div>
-      {text && (
-        <p className="mt-2 text-sm text-gray-400">{text}</p>
-      )}
-    </div>
-  );
-<<<<<<< HEAD
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
-
-  if (fullScreen) {
-    return (
-      <div className="fixed inset-0 bg-slate-900/95 backdrop-blur-sm flex items-center justify-center z-50">
-        {spinner}
-      </div>
-    );
-  }
-
-  return spinner;
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-bef6
 };
 
 export default LoadingSpinner;
