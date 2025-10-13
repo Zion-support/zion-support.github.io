@@ -3,14 +3,13 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
   ArrowRight, 
-  Shield, 
-  Lock, 
-  Eye, 
-  AlertTriangle, 
+  Brain, 
+  MessageSquare, 
+  Users, 
+  Zap, 
   CheckCircle, 
   Star, 
-  Zap, 
-  Brain, 
+  Shield, 
   Database, 
   Globe, 
   Smartphone, 
@@ -42,7 +41,6 @@ import {
   PhoneMissed, 
   PhoneOff, 
   PhoneForwarded, 
-  MessageSquare, 
   Mail, 
   Share2, 
   Edit3, 
@@ -59,6 +57,7 @@ import {
   Calendar, 
   Sparkles, 
   Rocket, 
+  Lock, 
   Unlock, 
   Key, 
   Fingerprint, 
@@ -87,97 +86,144 @@ import {
   BookmarkTag, 
   BookmarkTags,
   Clock,
-  Users,
   DollarSign,
   TrendingUp,
   Activity,
-  BarChart3
+  BarChart3,
+  Bot,
+  ShoppingCart
 } from "lucide-react";
 
-export default function ZionSecurityShield() {
+export default function ZionAIAssistant() {
   const features = [
     {
-      title: "AI Threat Detection",
-      description: "Advanced machine learning algorithms that identify and neutralize threats in real-time, including zero-day attacks and sophisticated malware.",
+      title: "Natural Language Processing",
+      description: "Advanced NLP capabilities that understand context, intent, and sentiment to provide human-like interactions.",
       icon: <Brain className="w-8 h-8" />,
       benefits: [
-        "99.9% threat detection accuracy",
-        "Zero-day attack protection",
-        "Behavioral analysis",
+        "Context-aware responses",
+        "Multi-language support",
+        "Sentiment analysis",
+        "Intent recognition"
+      ]
+    },
+    {
+      title: "Multi-Channel Support",
+      description: "Deploy across web, mobile, social media, and messaging platforms with consistent experience everywhere.",
+      icon: <Globe className="w-8 h-8" />,
+      benefits: [
+        "Web chat integration",
+        "Mobile app support",
+        "Social media bots",
+        "API connectivity"
+      ]
+    },
+    {
+      title: "Custom Training",
+      description: "Train the AI with your specific data, processes, and knowledge base for personalized responses.",
+      icon: <Settings className="w-8 h-8" />,
+      benefits: [
+        "Custom knowledge base",
+        "Brand voice training",
+        "Process automation",
         "Continuous learning"
       ]
     },
     {
-      title: "Automated Incident Response",
-      description: "Instant response to security incidents with automated containment, investigation, and remediation processes.",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Analytics Dashboard",
+      description: "Comprehensive analytics to track performance, user satisfaction, and conversation insights.",
+      icon: <BarChart3 className="w-8 h-8" />,
       benefits: [
-        "Sub-second response time",
-        "Automated containment",
-        "Incident investigation",
-        "Self-healing systems"
+        "Conversation analytics",
+        "Performance metrics",
+        "User satisfaction tracking",
+        "ROI measurement"
       ]
     },
     {
-      title: "Compliance Monitoring",
-      description: "Comprehensive compliance monitoring for GDPR, HIPAA, SOX, and other regulatory requirements with automated reporting.",
-      icon: <CheckCircle className="w-8 h-8" />,
+      title: "API Integration",
+      description: "Seamlessly integrate with your existing systems, CRM, and business applications.",
+      icon: <Database className="w-8 h-8" />,
       benefits: [
-        "Multi-framework support",
-        "Automated compliance reports",
-        "Real-time monitoring",
-        "Audit trail maintenance"
+        "CRM integration",
+        "ERP connectivity",
+        "Custom API endpoints",
+        "Real-time data sync"
       ]
     },
     {
-      title: "Real-Time Alerts",
-      description: "Instant notifications for security events with customizable alert levels and escalation procedures.",
-      icon: <AlertTriangle className="w-8 h-8" />,
+      title: "24/7 Availability",
+      description: "Always-on assistant that never sleeps, providing instant responses to customer inquiries.",
+      icon: <Clock className="w-8 h-8" />,
       benefits: [
-        "Multi-channel alerts",
-        "Customizable thresholds",
-        "Escalation procedures",
-        "Mobile notifications"
+        "Round-the-clock support",
+        "Instant responses",
+        "No downtime",
+        "Scalable performance"
+      ]
+    }
+  ];
+
+  const useCases = [
+    {
+      title: "Customer Support",
+      description: "Handle common inquiries, provide product information, and escalate complex issues to human agents.",
+      icon: <Headphones className="w-6 h-6" />,
+      benefits: [
+        "Reduce support tickets by 60%",
+        "24/7 customer availability",
+        "Consistent responses",
+        "Faster resolution times"
       ]
     },
     {
-      title: "Security Audit Reports",
-      description: "Comprehensive security assessments with detailed reports, recommendations, and compliance status.",
-      icon: <FileText className="w-8 h-8" />,
+      title: "Sales Support",
+      description: "Qualify leads, answer product questions, and guide prospects through the sales process.",
+      icon: <Target className="w-6 h-6" />,
       benefits: [
-        "Detailed vulnerability reports",
-        "Risk assessments",
-        "Compliance status",
-        "Remediation guidance"
+        "Qualify leads automatically",
+        "Provide product information",
+        "Schedule demos",
+        "Follow up on prospects"
       ]
     },
     {
-      title: "24/7 Monitoring",
-      description: "Round-the-clock security monitoring with dedicated security operations center (SOC) support.",
-      icon: <Eye className="w-8 h-8" />,
+      title: "Internal Operations",
+      description: "Assist employees with HR questions, IT support, and internal process guidance.",
+      icon: <Users className="w-6 h-6" />,
       benefits: [
-        "24/7 SOC monitoring",
-        "Expert security analysts",
-        "Proactive threat hunting",
-        "Incident response support"
+        "Reduce HR workload",
+        "Instant IT support",
+        "Process automation",
+        "Employee self-service"
+      ]
+    },
+    {
+      title: "E-commerce Assistant",
+      description: "Help customers find products, process orders, and handle returns and exchanges.",
+      icon: <ShoppingCart className="w-6 h-6" />,
+      benefits: [
+        "Product recommendations",
+        "Order tracking",
+        "Return processing",
+        "Upselling opportunities"
       ]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Essential",
-      price: "$49",
+      name: "Starter",
+      price: "$39",
       period: "per month",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for small businesses starting with AI",
       features: [
-        "Basic threat detection",
-        "Email security",
-        "Firewall protection",
-        "Basic reporting",
+        "Up to 1,000 conversations/month",
+        "Basic NLP capabilities",
+        "Web chat widget",
         "Email support",
-        "Up to 25 users",
-        "1GB log storage"
+        "Basic analytics",
+        "1 custom integration"
       ],
       popular: false
     },
@@ -185,37 +231,35 @@ export default function ZionSecurityShield() {
       name: "Professional",
       price: "$99",
       period: "per month",
-      description: "Ideal for growing businesses with advanced security needs",
+      description: "Ideal for growing businesses with advanced needs",
       features: [
-        "AI threat detection",
-        "Automated incident response",
-        "Compliance monitoring",
-        "Advanced reporting",
+        "Up to 10,000 conversations/month",
+        "Advanced NLP capabilities",
+        "Multi-channel support",
         "Priority support",
-        "Up to 100 users",
-        "10GB log storage",
-        "Mobile app",
+        "Advanced analytics",
+        "5 custom integrations",
+        "Custom training",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$299",
       period: "per month",
-      description: "For large organizations with complex security requirements",
+      description: "For large organizations with complex requirements",
       features: [
-        "Advanced AI protection",
-        "Full incident response",
-        "Multi-framework compliance",
-        "Custom reporting",
+        "Unlimited conversations",
+        "Premium NLP capabilities",
+        "All channels supported",
         "24/7 phone support",
-        "Unlimited users",
-        "Unlimited log storage",
-        "Advanced mobile app",
+        "Enterprise analytics",
+        "Unlimited integrations",
+        "Advanced custom training",
         "Full API access",
-        "Dedicated security manager",
-        "Custom integrations"
+        "Dedicated account manager",
+        "Custom development"
       ],
       popular: false
     }
@@ -223,109 +267,98 @@ export default function ZionSecurityShield() {
 
   const testimonials = [
     {
-      name: "David Kim",
-      company: "Financial Services Corp",
-      role: "CISO",
-      content: "Zion Security Shield has been a game-changer for our security posture. The AI threat detection caught several sophisticated attacks that other solutions missed.",
+      name: "Jennifer Lee",
+      company: "Customer Success Co",
+      role: "VP of Operations",
+      content: "Zion AI Assistant has revolutionized our customer support. We've reduced response time by 80% and increased customer satisfaction significantly.",
       rating: 5,
-      avatar: "DK"
+      avatar: "JL"
     },
     {
-      name: "Lisa Martinez",
-      company: "Healthcare Solutions",
-      role: "IT Director",
-      content: "The compliance monitoring feature saved us countless hours during our HIPAA audit. Everything was automatically documented and ready for review.",
-      rating: 5,
-      avatar: "LM"
-    },
-    {
-      name: "Robert Johnson",
+      name: "Mark Thompson",
       company: "E-commerce Platform",
-      role: "Security Manager",
-      content: "The automated incident response is incredible. When we had a breach attempt, the system contained it within seconds and notified our team immediately.",
+      role: "Sales Director",
+      content: "The AI assistant handles our lead qualification perfectly. It's like having a sales rep that never sleeps and always follows up.",
       rating: 5,
-      avatar: "RJ"
+      avatar: "MT"
+    },
+    {
+      name: "Sarah Wilson",
+      company: "Tech Startup",
+      role: "CEO",
+      content: "The custom training feature allowed us to create an AI that truly understands our business. It's become an integral part of our operations.",
+      rating: 5,
+      avatar: "SW"
     }
   ];
 
   const stats = [
-    { number: "99.9%", label: "Threat Detection Accuracy", icon: <Shield className="w-6 h-6" /> },
-    { number: "95%", label: "Reduction in Security Incidents", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "24/7", label: "Security Monitoring", icon: <Eye className="w-6 h-6" /> },
-    { number: "<1s", label: "Response Time", icon: <Zap className="w-6 h-6" /> }
-  ];
-
-  const securityFrameworks = [
-    "GDPR Compliance",
-    "HIPAA Compliance", 
-    "SOX Compliance",
-    "ISO 27001",
-    "NIST Framework",
-    "PCI DSS",
-    "SOC 2 Type II",
-    "FedRAMP"
+    { number: "60%", label: "Reduction in Support Tickets", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "80%", label: "Faster Response Time", icon: <Zap className="w-6 h-6" /> },
+    { number: "95%", label: "Customer Satisfaction", icon: <Star className="w-6 h-6" /> },
+    { number: "24/7", label: "Always Available", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion Security Shield - Advanced Cybersecurity Protection | Zion Tech Group</title>
+        <title>Zion AI Assistant - Intelligent Virtual Assistant | Zion Tech Group</title>
         <meta
           name="description"
-          content="Protect your business with Zion Security Shield - advanced AI-powered cybersecurity with threat detection, incident response, and compliance monitoring."
+          content="Transform customer service with Zion AI Assistant - intelligent virtual assistant with natural language processing, multi-channel support, and custom training."
         />
         <meta
           name="keywords"
-          content="cybersecurity, threat detection, incident response, compliance, security monitoring, AI security, data protection"
+          content="AI assistant, virtual assistant, chatbot, customer service, natural language processing, automation"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-pink-600/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-pink-600/20"></div>
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
               <div className="flex justify-center mb-6">
-                <div className="p-4 bg-gradient-to-r from-red-500 to-pink-500 rounded-2xl">
-                  <Shield className="w-12 h-12 text-white" />
+                <div className="p-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-2xl">
+                  <Brain className="w-12 h-12 text-white" />
                 </div>
               </div>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-                Zion Security Shield
+                Zion AI Assistant
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Advanced AI-powered cybersecurity protection that keeps your business safe from evolving threats. 
-                Real-time threat detection, automated incident response, and comprehensive compliance monitoring.
+                Intelligent virtual assistant that transforms customer service, sales support, and business automation. 
+                Powered by advanced natural language processing and machine learning.
               </p>
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 <div className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                  <span>AI threat detection</span>
+                  <span>Natural language processing</span>
                 </div>
                 <div className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                  <span>Automated response</span>
+                  <span>Multi-channel support</span>
                 </div>
                 <div className="flex items-center text-white">
                   <CheckCircle className="w-5 h-5 text-green-400 mr-2" />
-                  <span>24/7 monitoring</span>
+                  <span>Custom training</span>
                 </div>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
+                  className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
                 >
-                  Get Protected Now
-                  <Shield className="w-5 h-5 ml-2" />
+                  Start Free Trial
+                  <Rocket className="w-5 h-5 ml-2" />
                 </Link>
                 <Link
                   to="/demo"
                   className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
                 >
-                  Security Assessment
-                  <Scan className="w-5 h-5 ml-2" />
+                  Try Demo
+                  <Play className="w-5 h-5 ml-2" />
                 </Link>
               </div>
             </div>
@@ -339,7 +372,7 @@ export default function ZionSecurityShield() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="flex justify-center mb-4">
-                    <div className="p-3 bg-gradient-to-r from-red-500 to-pink-500 rounded-full">
+                    <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full">
                       {stat.icon}
                     </div>
                   </div>
@@ -355,9 +388,9 @@ export default function ZionSecurityShield() {
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Advanced Security Features</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Powerful AI Capabilities</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Comprehensive protection against all types of cyber threats with cutting-edge AI technology.
+                Advanced artificial intelligence that understands, learns, and adapts to your business needs.
               </p>
             </div>
 
@@ -368,7 +401,7 @@ export default function ZionSecurityShield() {
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20 hover:border-white/40 transition-all duration-300"
                 >
                   <div className="flex items-center justify-center mb-4">
-                    <div className="p-3 bg-gradient-to-r from-red-500 to-pink-500 rounded-xl">
+                    <div className="p-3 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl">
                       {feature.icon}
                     </div>
                   </div>
@@ -388,23 +421,37 @@ export default function ZionSecurityShield() {
           </div>
         </div>
 
-        {/* Compliance Section */}
+        {/* Use Cases Section */}
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Compliance & Standards</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Perfect for Every Business</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Meet regulatory requirements with automated compliance monitoring and reporting.
+                From customer support to sales automation, our AI assistant adapts to your specific needs.
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {securityFrameworks.map((framework, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {useCases.map((useCase, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 text-center hover:border-white/40 transition-all duration-300"
+                  className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
                 >
-                  <div className="text-white font-semibold">{framework}</div>
+                  <div className="flex items-center mb-4">
+                    <div className="p-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg mr-4">
+                      {useCase.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-white">{useCase.title}</h3>
+                  </div>
+                  <p className="text-gray-300 mb-4">{useCase.description}</p>
+                  <ul className="space-y-2">
+                    {useCase.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="text-sm text-gray-300 flex items-center">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -415,9 +462,9 @@ export default function ZionSecurityShield() {
         <div className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Security That Scales</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Choose Your AI Assistant Plan</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                Choose the security level that matches your business needs and budget.
+                Scale your AI assistant as your business grows. All plans include our core features.
               </p>
             </div>
 
@@ -427,7 +474,7 @@ export default function ZionSecurityShield() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-lg rounded-2xl p-6 border ${
                     plan.popular 
-                      ? 'border-red-500 ring-2 ring-red-500/50' 
+                      ? 'border-purple-500 ring-2 ring-purple-500/50' 
                       : 'border-white/20'
                   } hover:border-white/40 transition-all duration-300`}
                 >
@@ -459,12 +506,12 @@ export default function ZionSecurityShield() {
                     to="/contact"
                     className={`w-full py-3 rounded-lg font-semibold text-center transition-all duration-300 flex items-center justify-center ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-red-500 to-pink-500 text-white hover:from-red-600 hover:to-pink-600'
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600'
                         : 'border border-white/30 text-white hover:bg-white/10'
                     }`}
                   >
-                    Get Protected
-                    <Shield className="w-4 h-4 ml-2" />
+                    Get Started
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
               ))}
@@ -476,9 +523,9 @@ export default function ZionSecurityShield() {
         <div className="py-16 bg-black/20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-white mb-4">Trusted by Security Professionals</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Loved by Businesses Worldwide</h2>
               <p className="text-gray-300 max-w-2xl mx-auto">
-                See what security experts say about Zion Security Shield.
+                See how companies are transforming their operations with Zion AI Assistant.
               </p>
             </div>
 
@@ -489,7 +536,7 @@ export default function ZionSecurityShield() {
                   className="bg-white/10 backdrop-blur-lg rounded-2xl p-6 border border-white/20"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold mr-4">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -511,27 +558,27 @@ export default function ZionSecurityShield() {
         </div>
 
         {/* CTA Section */}
-        <div className="py-16 bg-gradient-to-r from-red-600/20 to-pink-600/20">
+        <div className="py-16 bg-gradient-to-r from-purple-600/20 to-pink-600/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">
-              Don't Wait for a Breach
+              Ready to Transform Your Customer Experience?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Protect your business today with Zion Security Shield. Get a free security assessment and see how we can protect your organization.
+              Start your free trial today and see how Zion AI Assistant can revolutionize your business operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-red-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-red-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-300 flex items-center justify-center"
               >
-                Get Security Assessment
-                <Scan className="w-5 h-5 ml-2" />
+                Start Free Trial
+                <Rocket className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300 flex items-center justify-center"
               >
-                Watch Demo
+                Schedule Demo
                 <Play className="w-5 h-5 ml-2" />
               </Link>
             </div>
@@ -541,9 +588,9 @@ export default function ZionSecurityShield() {
         {/* Contact Info */}
         <div className="py-12 bg-black/20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 className="text-2xl font-bold text-white mb-4">Need Security Expertise?</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">Need Help Getting Started?</h3>
             <p className="text-gray-300 mb-6">
-              Our security experts are available 24/7 to help you implement and optimize your security posture.
+              Our AI experts are here to help you implement and optimize your virtual assistant.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center text-sm text-gray-300">
               <div className="flex items-center justify-center">
