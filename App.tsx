@@ -18,7 +18,7 @@ import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -100,8 +100,9 @@ function App() {
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
         <HelmetProvider>
-          <AccessibilityEnhancer>
-            <Router>
+          <PerformanceOptimizer>
+            <EnhancedAccessibility>
+              <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground>
                   <Navigation onSidebarToggle={toggleSidebar} />
@@ -182,9 +183,6 @@ function App() {
                 </FuturisticBackground>
                 <PerformanceMonitor />
                 <WebVitalsTracker />
-                <EnhancedAccessibility>
-                  <div></div>
-                </EnhancedAccessibility>
               </div>
               <AnalyticsProvider>
                 <div>
@@ -192,8 +190,9 @@ function App() {
                   <WebVitalsTracker />
                 </div>
               </AnalyticsProvider>
-            </Router>
-          </AccessibilityEnhancer>
+              </Router>
+            </EnhancedAccessibility>
+          </PerformanceOptimizer>
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>

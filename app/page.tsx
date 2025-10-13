@@ -51,7 +51,49 @@ const HomePage = () => {
         "name": "Cloud Infrastructure", 
         "description": "Cloud computing and infrastructure services"
       }
-    ]
+    ],
+    "foundingDate": "2020",
+    "numberOfEmployees": "50-100",
+    "industry": "Technology Services",
+    "areaServed": "United States",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Technology Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI-Powered Solutions",
+            "description": "Cutting-edge artificial intelligence to transform your business operations"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "IT Services",
+            "description": "Comprehensive technology solutions including cloud infrastructure and cybersecurity"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Micro SAAS",
+            "description": "Ready-to-use software solutions for immediate deployment"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "5G Solutions",
+            "description": "Next-generation connectivity and infrastructure services"
+          }
+        }
+      ]
+    }
   };
   const features = [
     {
@@ -177,6 +219,14 @@ const HomePage = () => {
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
         canonical="https://ziontechgroup.com"
+      />
+      
+      {/* Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData)
+        }}
       />
 
       {/* Hero Section */}
