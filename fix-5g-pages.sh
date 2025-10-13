@@ -1,3 +1,12 @@
+#!/bin/bash
+
+echo "Fixing all 5G pages..."
+
+for file in app/5g-*/page.tsx; do
+  echo "Fixing $file"
+  
+  # Create a temporary file with the corrected content
+  cat > "${file}.tmp" << 'EOF'
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -24,3 +33,10 @@ export default function FiveGPage() {
     </div>
   );
 }
+EOF
+  
+  # Replace the original file
+  mv "${file}.tmp" "$file"
+done
+
+echo "5G pages fixes completed!"
