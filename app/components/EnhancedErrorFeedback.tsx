@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
 
@@ -19,198 +18,141 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   private maxRetries = 3;
 
   constructor(props: Props) {
-=======
-import React from 'react';
-
-interface ErrorBoundaryState {
-  hasError: boolean;
-  error?: Error;
-}
-
-export class GlobalErrorBoundary extends React.Component<
-  React.PropsWithChildren<{}>,
-  ErrorBoundaryState
-> {
-  constructor(props: React.PropsWithChildren<{}>) {
->>>>>>> cursor/analyze-improve-and-deploy-application-da10
     super(props);
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null,
-      retryCount: 0
+      retryCount: 0,
     };
   }
 
-<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
       hasError: true,
-      error
+      error,
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo
+      errorInfo,
     });
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-
-    // Call custom error handler if provided
+    // Call the onError callback if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
 
-    // Log to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by GlobalErrorBoundary:', error, errorInfo);
     }
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real app, you would send this to an error reporting service
-    // like Sentry, LogRocket, or Bugsnag
-    console.error('Production error:', {
-      message: error.message,
-      stack: error.stack,
-      componentStack: errorInfo.componentStack,
-      timestamp: new Date().toISOString(),
-      userAgent: navigator.userAgent,
-      url: window.location.href
-    });
-  };
-
-  private handleRetry = () => {
+  handleRetry = () => {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
         hasError: false,
         error: null,
         errorInfo: null,
-        retryCount: prevState.retryCount + 1
+        retryCount: prevState.retryCount + 1,
       }));
     }
   };
 
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleReload = () => {
+  handleReload = () => {
     window.location.reload();
   };
 
-=======
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
-  }
+  handleGoHome = () => {
+    window.location.href = '/';
+  };
 
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    console.error('Global Error Boundary caught an error:', error, errorInfo);
-  }
-
->>>>>>> cursor/analyze-improve-and-deploy-application-da10
   render() {
     if (this.state.hasError) {
-      // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
       return (
-<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-2xl mx-auto text-center">
-            <div className="mb-8">
-              <div className="w-24 h-24 mx-auto rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center mb-6">
-                <AlertTriangle className="w-12 h-12 text-red-400" />
+          <div className="max-w-2xl w-full bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <div className="text-center">
+              <div className="w-20 h-20 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
+                <AlertTriangle className="w-10 h-10 text-red-400" />
               </div>
-              <h1 className="text-4xl font-bold text-white mb-4">
+              
+              <h1 className="text-3xl font-bold text-white mb-4">
                 Oops! Something went wrong
               </h1>
-              <p className="text-xl text-gray-300 mb-8">
-                We're sorry, but something unexpected happened. Our team has been notified.
+              
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                We're sorry, but something unexpected happened. Our team has been notified and we're working to fix it.
               </p>
-            </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 mb-8">
-              <h2 className="text-lg font-semibold text-white mb-4 flex items-center">
-                <Bug className="w-5 h-5 mr-2" />
-                Error Details
-              </h2>
-              <div className="text-left">
-                <p className="text-red-400 font-mono text-sm mb-2">
-                  {this.state.error?.message || 'Unknown error occurred'}
-                </p>
-                {process.env.NODE_ENV === 'development' && this.state.error?.stack && (
-                  <details className="mt-4">
-                    <summary className="text-gray-300 cursor-pointer hover:text-white">
-                      Stack Trace
-                    </summary>
-                    <pre className="mt-2 p-4 bg-black/50 rounded text-xs text-gray-300 overflow-auto max-h-40">
-                      {this.state.error.stack}
+              {process.env.NODE_ENV === 'development' && this.state.error && (
+                <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg">
+                  <h3 className="text-red-400 font-semibold mb-2">Error Details:</h3>
+                  <pre className="text-sm text-red-300 whitespace-pre-wrap break-words">
+                    {this.state.error.toString()}
+                  </pre>
+                  {this.state.errorInfo && (
+                    <pre className="text-sm text-red-300 whitespace-pre-wrap break-words mt-2">
+                      {this.state.errorInfo.componentStack}
                     </pre>
-                  </details>
-                )}
-              </div>
-            </div>
+                  )}
+                </div>
+              )}
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              {this.state.retryCount < this.maxRetries && (
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                {this.state.retryCount < this.maxRetries && (
+                  <button
+                    onClick={this.handleRetry}
+                    className="inline-flex items-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors"
+                  >
+                    <RefreshCw className="w-5 h-5 mr-2" />
+                    Try Again ({this.maxRetries - this.state.retryCount} attempts left)
+                  </button>
+                )}
+                
                 <button
-                  onClick={this.handleRetry}
-                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                  onClick={this.handleReload}
+                  className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg transition-colors"
                 >
                   <RefreshCw className="w-5 h-5 mr-2" />
-                  Try Again ({this.maxRetries - this.state.retryCount} left)
+                  Reload Page
                 </button>
-              )}
-              
-              <button
-                onClick={this.handleGoHome}
-                className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center border border-white/20"
-              >
-                <Home className="w-5 h-5 mr-2" />
-                Go Home
-              </button>
-              
-              <button
-                onClick={this.handleReload}
-                className="bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center border border-white/20"
-              >
-                <RefreshCw className="w-5 h-5 mr-2" />
-                Reload Page
-              </button>
-            </div>
+                
+                <button
+                  onClick={this.handleGoHome}
+                  className="inline-flex items-center px-6 py-3 bg-slate-600 hover:bg-slate-700 text-white font-semibold rounded-lg transition-colors"
+                >
+                  <Home className="w-5 h-5 mr-2" />
+                  Go Home
+                </button>
+              </div>
 
-            {this.state.retryCount >= this.maxRetries && (
-              <div className="mt-6 p-4 bg-yellow-500/20 border border-yellow-500/30 rounded-lg">
-                <p className="text-yellow-300 text-sm">
-                  Maximum retry attempts reached. Please try reloading the page or contact support if the problem persists.
+              <div className="mt-8 text-sm text-gray-400">
+                <p>If this problem persists, please contact our support team.</p>
+                <p className="mt-2">
+                  <a 
+                    href="mailto:kleber@ziontechgroup.com" 
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    kleber@ziontechgroup.com
+                  </a>
+                  {' | '}
+                  <a 
+                    href="tel:+13024640950" 
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    +1 302 464 0950
+                  </a>
                 </p>
               </div>
-            )}
-
-            <div className="mt-8 text-sm text-gray-400">
-              <p>Error ID: {Date.now().toString(36)}</p>
-              <p>If this problem continues, please contact our support team.</p>
             </div>
-=======
-        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-          <div className="text-center">
-            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
-            <p className="text-gray-300 mb-6">We're working to fix this issue. Please try again later.</p>
-            <button
-              onClick={() => window.location.reload()}
-              className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-2 rounded-lg transition-colors"
-            >
-              Reload Page
-            </button>
->>>>>>> cursor/analyze-improve-and-deploy-application-da10
           </div>
         </div>
       );
@@ -220,40 +162,4 @@ export class GlobalErrorBoundary extends React.Component<
   }
 }
 
-<<<<<<< HEAD
-// Functional error boundary for specific components
-export const ErrorBoundary: React.FC<{
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error) => void;
-}> = ({ children, fallback, onError }) => {
-  const [hasError, setHasError] = React.useState(false);
-  const [error, setError] = React.useState<Error | null>(null);
-
-  React.useEffect(() => {
-    const handleError = (event: ErrorEvent) => {
-      setHasError(true);
-      setError(new Error(event.message));
-      if (onError) {
-        onError(new Error(event.message));
-      }
-    };
-
-    window.addEventListener('error', handleError);
-    return () => window.removeEventListener('error', handleError);
-  }, [onError]);
-
-  if (hasError) {
-    return fallback || (
-      <div className="p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
-        <p className="text-red-300">Something went wrong: {error?.message}</p>
-      </div>
-    );
-  }
-
-  return <>{children}</>;
-};
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-da10
 export default GlobalErrorBoundary;
