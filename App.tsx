@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-<<<<<<< HEAD
 import Navigation from './app/components/Navigation';
+<<<<<<< HEAD
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
@@ -20,6 +20,11 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+=======
+import Footer from './app/components/Footer';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 
 // Page Components
 import HomePage from './app/page';
@@ -77,6 +82,7 @@ function App() {
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <HelmetProvider>
 <<<<<<< HEAD
       <Router>
@@ -90,6 +96,15 @@ function App() {
             <Navigation />
             <main className="relative z-10" id="main-content" role="main">
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+=======
+    <HelmetProvider>
+      <EnhancedErrorBoundary>
+        <Router>
+          <div className="min-h-screen bg-slate-900">
+            <PerformanceMonitor />
+            <Navigation />
+            <main className="relative z-10" id="main-content" role="main">
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
             <Routes>
 =======
     <HelmetProvider>
@@ -143,6 +158,7 @@ function App() {
             </Routes>
             </main>
             <Footer />
+<<<<<<< HEAD
             <PerformanceMonitor />
           </div>
         </Router>
@@ -158,6 +174,11 @@ function App() {
         </AccessibilityEnhancer>
       </EnhancedErrorBoundary>
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+=======
+          </div>
+        </Router>
+      </EnhancedErrorBoundary>
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
     </HelmetProvider>
 =======
     <ErrorBoundary>

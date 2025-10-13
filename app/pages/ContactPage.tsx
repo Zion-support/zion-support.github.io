@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
+<<<<<<< HEAD
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon,
@@ -11,6 +12,15 @@ import {
   UserIcon,
   BuildingOfficeIcon,
   CalendarIcon
+=======
+  EnvelopeIcon, 
+  PhoneIcon, 
+  MapPinIcon, 
+  ClockIcon, 
+  PaperAirplaneIcon, 
+  CheckCircleIcon,
+  ExclamationCircleIcon
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 } from '@heroicons/react/24/outline';
 
 export default function ContactPage() {
@@ -24,6 +34,33 @@ export default function ContactPage() {
     message: '',
     service: ''
   });
+<<<<<<< HEAD
+=======
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const validateForm = () => {
+    const newErrors: Record<string, string> = {};
+
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -31,16 +68,59 @@ export default function ContactPage() {
       ...prev,
       [name]: value
     }));
+
+    // Clear error when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+<<<<<<< HEAD
     // Handle form submission
     console.log('Form submitted:', formData);
+=======
+    
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      console.log('Form submitted:', formData);
+      setIsSubmitted(true);
+      
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({
+          name: '',
+          email: '',
+          company: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+      }, 3000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
   };
 
   const contactMethods = [
     {
+<<<<<<< HEAD
       icon: PhoneIcon,
       title: "Phone",
       details: "+1-302-464-0950",
@@ -67,6 +147,30 @@ export default function ContactPage() {
       details: "Monday - Friday",
       description: "9:00 AM - 6:00 PM EST",
       color: "from-yellow-500 to-orange-500"
+=======
+      icon: EnvelopeIcon,
+      title: 'Email',
+      details: 'kleber@ziontechgroup.com',
+      description: 'Send us an email anytime'
+    },
+    {
+      icon: PhoneIcon,
+      title: 'Phone',
+      details: '+1-302-464-0950',
+      description: 'Call us during business hours'
+    },
+    {
+      icon: MapPinIcon,
+      title: 'Address',
+      details: '364 E Main St STE 1008',
+      description: 'Middletown, DE 19709'
+    },
+    {
+      icon: ClockIcon,
+      title: 'Business Hours',
+      details: 'Mon - Fri: 9:00 AM - 6:00 PM',
+      description: 'EST (Eastern Standard Time)'
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
     }
   ];
 
@@ -134,11 +238,68 @@ export default function ContactPage() {
                   <p className="text-lg font-semibold text-purple-300 mb-2">{method.details}</p>
                   <p className="text-gray-300">{method.description}</p>
                 </div>
+<<<<<<< HEAD
               );
             })}
           </div>
         </div>
       </section>
+=======
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                        Full Name *
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
+                          errors.name 
+                            ? 'border-red-500 focus:ring-red-500' 
+                            : 'border-white/20 focus:ring-purple-500'
+                        }`}
+                        placeholder="Your full name"
+                      />
+                      {errors.name && (
+                        <p className="mt-1 text-sm text-red-400 flex items-center">
+                          <ExclamationCircleIcon className="w-4 h-4 mr-1" />
+                          {errors.name}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
+                          errors.email 
+                            ? 'border-red-500 focus:ring-red-500' 
+                            : 'border-white/20 focus:ring-purple-500'
+                        }`}
+                        placeholder="your@email.com"
+                      />
+                      {errors.email && (
+                        <p className="mt-1 text-sm text-red-400 flex items-center">
+                          <ExclamationCircleIcon className="w-4 h-4 mr-1" />
+                          {errors.email}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 
       {/* Contact Form */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
@@ -245,6 +406,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
+<<<<<<< HEAD
                 <div>
                   <label className="block text-white font-semibold mb-2">Subject</label>
                   <input
@@ -256,6 +418,33 @@ export default function ContactPage() {
                     placeholder="Enter the subject of your message"
                   />
                 </div>
+=======
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                      Message *
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      required
+                      rows={5}
+                      className={`w-full px-4 py-3 bg-white/10 border rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:border-transparent ${
+                        errors.message 
+                          ? 'border-red-500 focus:ring-red-500' 
+                          : 'border-white/20 focus:ring-purple-500'
+                      }`}
+                      placeholder="Tell us about your project or requirements..."
+                    />
+                    {errors.message && (
+                      <p className="mt-1 text-sm text-red-400 flex items-center">
+                        <ExclamationCircleIcon className="w-4 h-4 mr-1" />
+                        {errors.message}
+                      </p>
+                    )}
+                  </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 
                 <div>
                   <label className="block text-white font-semibold mb-2">
@@ -275,10 +464,27 @@ export default function ContactPage() {
                 <div className="text-center">
                   <button
                     type="submit"
+<<<<<<< HEAD
                     className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2 mx-auto"
                   >
                     Send Message
                     <ArrowRightIcon className="w-5 h-5" />
+=======
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <PaperAirplaneIcon className="w-5 h-5 ml-2" />
+                      </>
+                    )}
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
                   </button>
                 </div>
               </form>

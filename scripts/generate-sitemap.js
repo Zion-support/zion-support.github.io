@@ -7,6 +7,7 @@ const __dirname = path.dirname(__filename);
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const baseUrl = 'https://ziontechgroup.com';
 =======
 // List of all pages in the application
@@ -102,11 +103,32 @@ const pages = [
   { url: '/careers', priority: '0.5', changefreq: 'monthly' },
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+=======
+// Define all the pages in your application
+const pages = [
+  { url: '/', priority: '1.0', changefreq: 'daily' },
+  { url: '/about', priority: '0.8', changefreq: 'monthly' },
+  { url: '/contact', priority: '0.9', changefreq: 'monthly' },
+  { url: '/services', priority: '0.8', changefreq: 'monthly' },
+  { url: '/micro-saas-solutions', priority: '0.7', changefreq: 'monthly' },
+  { url: '/ai-solutions', priority: '0.7', changefreq: 'monthly' },
+  { url: '/it-solutions', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog', priority: '0.6', changefreq: 'weekly' },
+  { url: '/tutorials', priority: '0.6', changefreq: 'weekly' },
+  { url: '/demo', priority: '0.5', changefreq: 'monthly' },
+  { url: '/support', priority: '0.5', changefreq: 'monthly' },
+  { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
+  { url: '/terms', priority: '0.3', changefreq: 'yearly' },
+  { url: '/pricing', priority: '0.6', changefreq: 'monthly' },
+  { url: '/solutions', priority: '0.7', changefreq: 'monthly' },
+  // Add more pages as needed
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 ];
 
 const baseUrl = 'https://ziontechgroup.com';
 const currentDate = new Date().toISOString();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Generate sitemap XML
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -159,10 +181,27 @@ const generateSitemap = () => {
   });
 
   sitemap += `</urlset>`;
+=======
+const generateSitemap = () => {
+  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+
+  pages.forEach(page => {
+    sitemap += '  <url>\n';
+    sitemap += `    <loc>${baseUrl}${page.url}</loc>\n`;
+    sitemap += `    <lastmod>${currentDate}</lastmod>\n`;
+    sitemap += `    <changefreq>${page.changefreq}</changefreq>\n`;
+    sitemap += `    <priority>${page.priority}</priority>\n`;
+    sitemap += '  </url>\n';
+  });
+
+  sitemap += '</urlset>';
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 
   return sitemap;
 };
 
+<<<<<<< HEAD
 const generateRobotsTxt = () => {
   return `User-agent: *
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
@@ -228,3 +267,10 @@ console.log('✅ Robots.txt generated successfully at:', robotsPath);
 console.log(`📊 Generated sitemap with ${pages.length} pages`);
 console.log('🚀 SEO files are ready for deployment!');
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+=======
+const sitemap = generateSitemap();
+const outputPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
+
+fs.writeFileSync(outputPath, sitemap);
+console.log('Sitemap generated successfully at:', outputPath);
+>>>>>>> cursor/analyze-improve-and-deploy-application-59f5
