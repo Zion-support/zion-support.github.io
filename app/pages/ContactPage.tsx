@@ -1,18 +1,7 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { 
-<<<<<<< HEAD
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-  ClockIcon,
-  ChatBubbleLeftRightIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  UserIcon,
-  BuildingOfficeIcon,
-  CalendarIcon
-=======
+
   EnvelopeIcon, 
   PhoneIcon, 
   MapPinIcon, 
@@ -20,7 +9,7 @@ import {
   PaperAirplaneIcon, 
   CheckCircleIcon,
   ExclamationCircleIcon
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
+
 } from '@heroicons/react/24/outline';
 
 export default function ContactPage() {
@@ -34,8 +23,7 @@ export default function ContactPage() {
     message: '',
     service: ''
   });
-<<<<<<< HEAD
-=======
+
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
@@ -60,7 +48,6 @@ export default function ContactPage() {
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -80,11 +67,7 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-<<<<<<< HEAD
-    // Handle form submission
-    console.log('Form submitted:', formData);
-=======
-    
+
     if (!validateForm()) {
       return;
     }
@@ -115,39 +98,12 @@ export default function ContactPage() {
     } finally {
       setIsSubmitting(false);
     }
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
+
   };
 
   const contactMethods = [
     {
-<<<<<<< HEAD
-      icon: PhoneIcon,
-      title: "Phone",
-      details: "+1-302-464-0950",
-      description: "Call us for immediate assistance",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: EnvelopeIcon,
-      title: "Email",
-      details: "kleber@ziontechgroup.com",
-      description: "Send us a detailed message",
-      color: "from-cyan-500 to-blue-500"
-    },
-    {
-      icon: MapPinIcon,
-      title: "Office",
-      details: "364 E Main St STE 1008",
-      description: "Middletown, DE 19709",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: ClockIcon,
-      title: "Business Hours",
-      details: "Monday - Friday",
-      description: "9:00 AM - 6:00 PM EST",
-      color: "from-yellow-500 to-orange-500"
-=======
+
       icon: EnvelopeIcon,
       title: 'Email',
       details: 'kleber@ziontechgroup.com',
@@ -170,7 +126,7 @@ export default function ContactPage() {
       title: 'Business Hours',
       details: 'Mon - Fri: 9:00 AM - 6:00 PM',
       description: 'EST (Eastern Standard Time)'
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
+
     }
   ];
 
@@ -238,15 +194,27 @@ export default function ContactPage() {
                   <p className="text-lg font-semibold text-purple-300 mb-2">{method.details}</p>
                   <p className="text-gray-300">{method.description}</p>
                 </div>
-<<<<<<< HEAD
               );
             })}
           </div>
         </div>
       </section>
-=======
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-6">
+
+      {/* Contact Form Section */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Send us a Message
+              </h2>
+              <p className="text-xl text-gray-300">
+                We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+              </p>
+            </div>
+            
+            <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl border border-slate-600 p-8 md:p-12">
+              <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -299,22 +267,12 @@ export default function ContactPage() {
                       )}
                     </div>
                   </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 
       {/* Contact Form */}
       <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Send Us a Message
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Fill out the form below and we'll get back to you within 24 hours
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-xl border border-slate-600 p-8">
+            {/* Duplicate form section removed */}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
@@ -406,19 +364,6 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-<<<<<<< HEAD
-                <div>
-                  <label className="block text-white font-semibold mb-2">Subject</label>
-                  <input
-                    type="text"
-                    name="subject"
-                    value={formData.subject}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 bg-slate-700 border border-slate-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
-                    placeholder="Enter the subject of your message"
-                  />
-                </div>
-=======
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
                       Message *
@@ -444,7 +389,6 @@ export default function ContactPage() {
                       </p>
                     )}
                   </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
 
                 <div>
                   <label className="block text-white font-semibold mb-2">
@@ -464,12 +408,7 @@ export default function ContactPage() {
                 <div className="text-center">
                   <button
                     type="submit"
-<<<<<<< HEAD
-                    className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center gap-2 mx-auto"
-                  >
-                    Send Message
-                    <ArrowRightIcon className="w-5 h-5" />
-=======
+
                     disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white py-3 px-6 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                   >
@@ -484,7 +423,7 @@ export default function ContactPage() {
                         <PaperAirplaneIcon className="w-5 h-5 ml-2" />
                       </>
                     )}
->>>>>>> cursor/analyze-improve-and-deploy-application-59f5
+
                   </button>
                 </div>
               </form>

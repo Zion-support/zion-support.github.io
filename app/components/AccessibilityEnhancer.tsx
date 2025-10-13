@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
 
-const AccessibilityEnhancer: React.FC = () => {
-  useEffect(() => {
-    // Skip to main content functionality
-    const addSkipLink = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-purple-600 text-white px-4 py-2 rounded z-50';
-      skipLink.style.zIndex = '9999';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-=======
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -48,48 +35,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     return () => {
       highContrastQuery.removeEventListener('change', handleHighContrastChange);
       reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+
     };
 
-<<<<<<< HEAD
-    // Focus management for keyboard navigation
-    const handleKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Tab') {
-        document.body.classList.add('keyboard-navigation');
-      }
-    };
-
-    const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation');
-    };
-
-    // Add focus indicators for keyboard navigation
-    const addFocusStyles = () => {
-      const style = document.createElement('style');
-      style.textContent = `
-        .keyboard-navigation *:focus {
-          outline: 2px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
-        }
-        
-        .keyboard-navigation button:focus,
-        .keyboard-navigation a:focus,
-        .keyboard-navigation input:focus,
-        .keyboard-navigation textarea:focus,
-        .keyboard-navigation select:focus {
-          box-shadow: 0 0 0 2px #8b5cf6 !important;
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    // Add ARIA landmarks
-    const addAriaLandmarks = () => {
-      const main = document.querySelector('main');
-      if (main && !main.getAttribute('role')) {
-        main.setAttribute('role', 'main');
-      }
-=======
   useEffect(() => {
     // Apply accessibility preferences
     const root = document.documentElement;
@@ -159,15 +107,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
-<<<<<<< HEAD
-    return () => {
-<<<<<<< HEAD
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-=======
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
@@ -186,12 +126,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         if (!img.getAttribute('alt')) {
           img.setAttribute('alt', `Image ${index + 1}`);
         }
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
+
       });
-=======
-      document.removeEventListener('focusin', handleFocusIn);
-      document.removeEventListener('focusout', handleFocusOut);
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+
     };
 
     // Initialize accessibility enhancements
@@ -211,9 +148,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
   }, []);
 
-<<<<<<< HEAD
-  return null;
-=======
   return (
     <>
       <style jsx global>{`
@@ -302,7 +236,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       {children}
     </>
   );
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+
 };
 
 export default AccessibilityEnhancer;
