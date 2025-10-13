@@ -33,7 +33,6 @@ const AdvancedPerformanceMonitor = () => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
-<<<<<<< HEAD
     const measurePerformance = () => {
       // Measure Core Web Vitals
       const observer = new PerformanceObserver((list) => {
@@ -93,13 +92,10 @@ const AdvancedPerformanceMonitor = () => {
           }
         }
       })
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
     </div>
   )
 }
 
-<<<<<<< HEAD
     try {
         onCLS((metric: any) => {
           setMetrics(prev => ({ ...prev, cls: metric.value }))
@@ -250,7 +246,3 @@ const AdvancedPerformanceMonitor = () => {
 
 export default AdvancedPerformanceMonitor
 
-=======
-export default AdvancedPerformanceMonitor
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
