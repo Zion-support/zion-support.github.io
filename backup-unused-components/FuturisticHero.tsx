@@ -1,3 +1,14 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-export default function FuturisticHero() 
+import React from 'react';
+
+interface FuturisticHeroProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function FuturisticHero({ className = '', children }: FuturisticHeroProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

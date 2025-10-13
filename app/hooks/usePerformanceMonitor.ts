@@ -1,11 +1,19 @@
-import { useState, useEffect } from 'react';
+// usePerformanceMonitor hook
+import { useEffect, useRef } from 'react';
 
-export const usePerformanceMonitor = () => {
-  const [state, setState] = useState<string | null>(null);
-  
+export function usePerformanceMonitor() {
+  const metricsRef = useRef({});
+
   useEffect(() => {
-    setState('initialized');
+    // Performance monitoring logic will be implemented here
+    console.log('Performance monitor initialized');
   }, []);
-  
-  return { state };
-};
+
+  return {
+    metrics: metricsRef.current,
+    startMonitoring: () => console.log('Monitoring started'),
+    stopMonitoring: () => console.log('Monitoring stopped')
+  };
+}
+
+export default usePerformanceMonitor;

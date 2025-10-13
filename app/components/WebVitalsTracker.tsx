@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface WebvitalstrackerProps {
+interface WebVitalsTrackerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Webvitalstracker({ className = '', children, ...props }: WebvitalstrackerProps) {
+export default function WebVitalsTracker({ className = '', children }: WebVitalsTrackerProps) {
   return (
-    <div className={`webvitalstracker-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

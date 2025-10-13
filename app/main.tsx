@@ -1,10 +1,14 @@
 import React from 'react';
 
-export default function Main() {
+interface mainProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function main({ className = '', children }: mainProps) {
   return (
-    <div>
-      <h1>Main App</h1>
-      <p>This is the main application component.</p>
+    <div className={`${className}`}>
+      {children}
     </div>
   );
 }

@@ -5,9 +5,9 @@ interface NavigationProps {
   children?: React.ReactNode;
 }
 
-export default function Navigation({ className = '', children, ...props }: NavigationProps) {
+export default function Navigation({ className = '', children }: NavigationProps) {
   return (
-    <div className={`navigation-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

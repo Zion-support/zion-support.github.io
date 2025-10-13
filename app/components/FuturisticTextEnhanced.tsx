@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface FuturistictextenhancedProps {
+interface FuturisticTextEnhancedProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Futuristictextenhanced({ className = '', children, ...props }: FuturistictextenhancedProps) {
+export default function FuturisticTextEnhanced({ className = '', children }: FuturisticTextEnhancedProps) {
   return (
-    <div className={`futuristictextenhanced-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

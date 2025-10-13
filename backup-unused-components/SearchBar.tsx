@@ -1,23 +1,14 @@
-import React from "react";
-interface SearchBarProps 
-  children?: React.ReactNode;
-  className?: string;
-  title?: string;
-  description?: string;
+import React from 'react';
 
-const SearchBar: React.FC<SearchBarProps> = (
-  children,
-  className = "",
-  title,
-  description,
-) => 
+interface SearchBarProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function SearchBar({ className = '', children }: SearchBarProps) {
   return (
-    <div className="{`enhanced-component" ${className}`}></div>
-      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}
-      {description && <p className="text-gray-600 mb-4">{description}</p>}
+    <div className={`${className}`}>
       {children}
     </div>
   );
-;
-export default SearchBar;
-</SearchBarProps>
+}

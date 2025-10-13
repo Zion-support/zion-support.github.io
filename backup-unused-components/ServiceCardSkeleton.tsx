@@ -1,4 +1,14 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-export default function ComponentsPage() 
+import React from 'react';
+
+interface ServiceCardSkeletonProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function ServiceCardSkeleton({ className = '', children }: ServiceCardSkeletonProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

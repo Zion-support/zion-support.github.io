@@ -1,10 +1,14 @@
-// Image utility functions
-export const optimizeImage = (src: string) => {
-  console.log('Optimizing image:', src);
-  return src;
-};
+import React from 'react';
 
-export const getImageDimensions = (src: string) => {
-  console.log('Getting dimensions for:', src);
-  return { width: 0, height: 0 };
-};
+interface imageProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function image({ className = '', children }: imageProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

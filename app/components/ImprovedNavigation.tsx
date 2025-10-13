@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface ImprovednavigationProps {
+interface ImprovedNavigationProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Improvednavigation({ className = '', children, ...props }: ImprovednavigationProps) {
+export default function ImprovedNavigation({ className = '', children }: ImprovedNavigationProps) {
   return (
-    <div className={`improvednavigation-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

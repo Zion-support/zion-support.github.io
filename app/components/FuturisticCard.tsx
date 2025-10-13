@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface FuturisticcardProps {
+interface FuturisticCardProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Futuristiccard({ className = '', children, ...props }: FuturisticcardProps) {
+export default function FuturisticCard({ className = '', children }: FuturisticCardProps) {
   return (
-    <div className={`futuristiccard-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface SeoheadProps {
+interface SEOHeadProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Seohead({ className = '', children, ...props }: SeoheadProps) {
+export default function SEOHead({ className = '', children }: SEOHeadProps) {
   return (
-    <div className={`seohead-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

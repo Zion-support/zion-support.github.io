@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-interface ServiceTemplateProps {
+interface servicetemplateProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function ServiceTemplate({ className = '', children, ...props }: ServiceTemplateProps) {
+export default function servicetemplate({ className = '', children }: servicetemplateProps) {
   return (
-    <div className={`servicetemplate-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

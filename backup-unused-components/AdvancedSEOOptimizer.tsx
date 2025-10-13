@@ -1,10 +1,14 @@
 import React from 'react';
 
-export default function Component() {
+interface AdvancedSEOOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function AdvancedSEOOptimizer({ className = '', children }: AdvancedSEOOptimizerProps) {
   return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
+    <div className={`${className}`}>
+      {children}
     </div>
   );
 }

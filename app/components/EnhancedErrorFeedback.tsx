@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface EnhancederrorfeedbackProps {
+interface EnhancedErrorFeedbackProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Enhancederrorfeedback({ className = '', children, ...props }: EnhancederrorfeedbackProps) {
+export default function EnhancedErrorFeedback({ className = '', children }: EnhancedErrorFeedbackProps) {
   return (
-    <div className={`enhancederrorfeedback-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );
