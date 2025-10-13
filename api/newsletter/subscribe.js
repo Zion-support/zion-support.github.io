@@ -10,7 +10,6 @@ export default async function handler(req, res) {
     return;
   }
 
-<<<<<<< HEAD
   const { email } = req.body;
   if (!email) {
     res.setHeader('Content-Type', 'application/json');
@@ -22,32 +21,19 @@ export default async function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Invalid email format' }));
 
-=======
-const { email, name } = req.body;
-  
-  if (!email || !isValidEmail(email)) {
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Valid email is required' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
     return;
   }
 
   try {
-<<<<<<< HEAD
 
     console.log('Newsletter subscription:', email);
 
-=======
-// Here you would typically save to a database
-    console.log('Newsletter subscription:', { email, name });
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true, 
       message: 'Successfully subscribed to newsletter' 
     }));
   } catch (error) {
-<<<<<<< HEAD
 
     console.error('Newsletter subscription error:', error);
     res.setHeader('Content-Type', 'application/json');
@@ -56,10 +42,5 @@ const { email, name } = req.body;
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));
 
-=======
-console.error('Error processing newsletter subscription:', error);
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to process subscription' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
   }
 }

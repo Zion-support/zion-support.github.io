@@ -50,7 +50,6 @@ const AccessibilityEnhancer: React.FC = () => {
         main.setAttribute('role', 'main');
       }
 
-<<<<<<< HEAD
     // Reduced motion mode
     if (isReducedMotion) {
       root.classList.add('reduced-motion');
@@ -112,15 +111,11 @@ const AccessibilityEnhancer: React.FC = () => {
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
 <<<<<<< HEAD
-<<<<<<< HEAD
     return () => {
 <<<<<<< HEAD
       focusableElements.forEach(element => {
         element.removeEventListener('focus', handleFocus);
         element.removeEventListener('blur', handleBlur);
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
@@ -140,12 +135,6 @@ const AccessibilityEnhancer: React.FC = () => {
           img.setAttribute('alt', `Image ${index + 1}`);
         }
 
-=======
-return () => {
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       });
     };
 

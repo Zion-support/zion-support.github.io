@@ -14,7 +14,7 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-export default function AboutPage()   {
+export default function AboutPage()    {
 return (
     <>
       <Helmet>

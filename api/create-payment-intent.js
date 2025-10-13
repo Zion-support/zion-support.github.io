@@ -17,12 +17,8 @@ export default withErrorLogging(async (req, res) => {
     return;
   }
 
-<<<<<<< HEAD
   const { amount, currency = 'usd' } = req.body;
 
-=======
-const { amount } = req.body;
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
   if (!amount) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Amount is required' }));
@@ -30,7 +26,6 @@ const { amount } = req.body;
   }
 
   try {
-<<<<<<< HEAD
 
     const paymentIntent = {
       id: 'pi_' + Math.random().toString(36).substr(2, 9),
@@ -44,15 +39,6 @@ const { amount } = req.body;
   } catch (error) {
     console.error('Payment intent creation error:', error);
 
-=======
-res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      status: 'pending',
-      message: 'Payment intent created successfully'
-    }));
-  } catch (error) {
-    console.error('Error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }

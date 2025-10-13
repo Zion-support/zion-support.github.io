@@ -65,7 +65,7 @@ function fixMergeConflicts(filePath) {
     content = content.replace(/<meta[^>]*\/>;/g, (match) => match.slice(0, -1));
     
     // Fix common syntax errors
-    content = content.replace(/export default function ([^  {]+)\s*{/g, 'export default function $1   {');
+    content = content.replace(/export default function ([^   {]+)\s*{/g, 'export default function $1    {');
     content = content.replace(/return \(\s*<>/g, 'return (\n    <>');
     content = content.replace(/;\s*<\/>;/g, '\n    </>');
     content = content.replace(/;\s*\);/g, '\n  );');

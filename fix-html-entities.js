@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 #!/usr/bin/env node
 
@@ -8,32 +7,20 @@ import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-=======
-const fs = require('fs');
-const path = require('path');
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
 
 function fixHtmlEntities(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
-<<<<<<< HEAD
 
     
     // Fix common HTML entities
     const fixes = [
 
-=======
-let modified = false;
-
-    // Fix common HTML entities
-    const replacements = [
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       { from: /&apos;/g, to: "'" },
       { from: /&quot;/g, to: '"' },
       { from: /&lt;/g, to: '<' },
       { from: /&gt;/g, to: '>' },
       { from: /&amp;/g, to: '&' },
-<<<<<<< HEAD
 
       { from: /&rbrace;/g, to: '}' },
       { from: /&lbrace;/g, to: '{' }
@@ -49,56 +36,11 @@ let modified = false;
     
     if (hasChanges) {
 
-=======
-{ from: /&nbsp;/g, to: ' ' },
-      { from: /&rbrace;/g, to: '}' },
-      { from: /&lbrace;/g, to: '{' },
-      { from: /&rpar;/g, to: ')' },
-      { from: /&lpar;/g, to: '(' },
-      { from: /&rsqb;/g, to: ']' },
-      { from: /&lsqb;/g, to: '[' },
-      { from: /&comma;/g, to: ',' },
-      { from: /&semi;/g, to: ';' },
-      { from: /&colon;/g, to: ':' },
-      { from: /&period;/g, to: '.' },
-      { from: /&excl;/g, to: '!' },
-      { from: /&quest;/g, to: '?' },
-      { from: /&plus;/g, to: '+' },
-      { from: /&minus;/g, to: '-' },
-      { from: /&times;/g, to: '*' },
-      { from: /&divide;/g, to: '/' },
-      { from: /&equals;/g, to: '=' },
-      { from: /&hash;/g, to: '#' },
-      { from: /&dollar;/g, to: '$' },
-      { from: /&percent;/g, to: '%' },
-      { from: /&at;/g, to: '@' },
-      { from: /&caret;/g, to: '^' },
-      { from: /&tilde;/g, to: '~' },
-      { from: /&grave;/g, to: '`' },
-      { from: /&bar;/g, to: '|' },
-      { from: /&bsol;/g, to: '\\' },
-      { from: /&sol;/g, to: '/' },
-      { from: /&lowbar;/g, to: '_' },
-    ];
-
-    replacements.forEach(({ from, to }) => {
-      if (from.test(content)) {
-        content = content.replace(from, to);
-        modified = true;
-      }
-    });
-
-    if (modified) {
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       fs.writeFileSync(filePath, content, 'utf8');
       console.log(`Fixed HTML entities in: ${filePath}`);
       return true;
     }
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
     
 
     return false;
@@ -108,7 +50,6 @@ let modified = false;
   }
 }
 
-<<<<<<< HEAD
 function findTsxFiles(dir) {
   const files = [];
   
@@ -146,37 +87,3 @@ files.forEach(file => {
 
 console.log(`Fixed HTML entities in ${fixedCount} files.`);
 
-=======
-<<<<<<< HEAD
-function processDirectory(dirPath) {
-  let fixedCount = 0;
-  
-  try {
-    const items = fs.readdirSync(dirPath);
-    
-    for (const item of items) {
-      const fullPath = path.join(dirPath, item);
-      const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory()) {
-        // Skip node_modules and other common directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next', 'coverage'].includes(item)) {
-          fixedCount += processDirectory(fullPath);
-        }
-      } else if (stat.isFile() && /\.(tsx?|jsx?|ts|js)$/.test(item)) {
-        if (fixHtmlEntities(fullPath)) {
-          fixedCount++;
-        }
-      }
-    }
-  } catch (error) {
-    console.error(`Error reading directory ${dirPath}:`, error.message);
-  }
-  
-  return fixedCount;
-}
-
-console.log('Starting HTML entity fix...');
-const totalFixed = processDirectory('./app');
-console.log(`Fixed HTML entities in ${totalFixed} files.`);
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e

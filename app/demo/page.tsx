@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
+import React from 'react';'react-helmet-async;
 import { Play, Right, Circle, Star } from 'lucide-react;
 const DemoPage: React.FC = () => {
   const features = [{
@@ -31,46 +24,6 @@ const DemoPage: React.FC = () => {
       title: 'Team Collaboration',';
       description: 'See how teams work together seamlessly',';
       demo: 'Collaboration Demo'';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-import { Play, Right, Star, BarChart3, Shield } from 'lucide-react';
-
-const DemoPage: React.FC = () => {
-  const features = [
-    {
-
-      icon: BarChart3,
-
-      title: 'AI-Powered Analytics',
-      description: 'See how our AI analyzes your data in real-time',
-      demo: 'Live Demo'
-    },
-    {
-
-      icon: Shield,
-
-      title: 'Advanced Security',
-      description: 'Experience our enterprise-grade security features',
-      demo: 'Demo'
-    },
-    {
-
-      icon: BarChart3,
-
-      title: 'Business Intelligence',
-      description: 'Explore our comprehensive BI dashboard',
-      demo: 'BI Demo'
-    },
-    {
-
-      icon: Play,
-
-      title: 'Team Collaboration',
-      description: 'See how teams work together seamlessly',
-      demo: 'Collaboration Demo'
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
     }
   ];
 
@@ -145,8 +98,8 @@ const DemoPage: React.FC = () => {
                     <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">;
                       {feature.demo}
                     </button>;
-                  </div>;
-                );
+                  </div>
+  );
               })}
             </div>;
           </div>;

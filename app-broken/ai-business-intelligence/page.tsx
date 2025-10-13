@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function AiBusinessIntelligence()  {
+export default function AiBusinessIntelligence()   {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -18,13 +18,9 @@ export default function AiBusinessIntelligence()  {
           </p>
         </div>
         <div className="text-center">
-<<<<<<< HEAD
 
           <p className="text-gray-300">Coming Soon - AI Business Intelligence Solutions</p>
 
-=======
-<p className="text-gray-300">Coming Soon - AiBusinessIntelligence Solutions</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
         </div>
       </div>
     </div>

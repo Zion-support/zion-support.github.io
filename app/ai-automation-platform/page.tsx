@@ -15,37 +15,25 @@ const AIAutomationPlatform = () => {
     {
       title: "Smart Decision Making",
       description: "AI-driven decision making for automated business processes",
-<<<<<<< HEAD
 
       icon: <Brain className="w-6 h-6" />,
 
-=======
-      icon: <Circle className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Process Optimization",
       description: "Continuously optimize processes using machine learning",
-<<<<<<< HEAD
 
       icon: <Settings className="w-6 h-6" />,
 
-=======
-      icon: <Circle className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Integration Hub",
       description: "Connect and automate across all your business systems",
-<<<<<<< HEAD
 
       icon: <Zap className="w-6 h-6" />,
 
-=======
-      icon: <Circle className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -74,13 +62,9 @@ const AIAutomationPlatform = () => {
           <ResponsiveContainer>
             <div className="relative z-10 text-center py-20">
               <div className="flex items-center justify-center mb-6">
-<<<<<<< HEAD
 
                 <Brain className="w-4 h-4 text-cyan-400 mr-2" />
 
-=======
-                <Circle className="w-4 h-4 text-cyan-400 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
               </div>
               
@@ -101,13 +85,9 @@ const AIAutomationPlatform = () => {
                 </FuturisticButton>
                 <FuturisticButton
                   variant="outline"
-<<<<<<< HEAD
 
                   icon={<Play className="w-5 h-5" />}
 
-=======
-                  icon={<Right className="w-5 h-5" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
                 >
                   View Demo
                 </FuturisticButton>
@@ -181,13 +161,9 @@ const AIAutomationPlatform = () => {
               </p>
               <FuturisticButton
                 size="lg"
-<<<<<<< HEAD
 
                 icon={<Zap className="w-6 h-6" />}
 
-=======
-                icon={<Right className="w-6 h-6" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
               >
                 Start Your Automation Journey
               </FuturisticButton>

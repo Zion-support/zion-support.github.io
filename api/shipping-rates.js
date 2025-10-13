@@ -1,12 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'shipping-rates.json');
-=======
-// Shipping rates calculation
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -16,7 +12,6 @@ export default async function handler(req, res) {
   }
 
   const { destination, weight } = req.body;
-<<<<<<< HEAD
 
   if (!destination || !weight) {
     return res.status(400).json({ error: 'Destination and weight are required' });
@@ -53,19 +48,12 @@ export default async function handler(req, res) {
       rate: rate,
       message: 'Shipping rate calculated successfully' 
 
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
     }));
   } catch (error) {
     console.error('Error:', error);
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
 
     res.end(JSON.stringify({ error: 'Failed to save rate' }));
 
-=======
-res.end(JSON.stringify({ error: 'Failed to calculate shipping rates' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
   }
 }

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
@@ -53,19 +52,6 @@ const PerformanceMonitor: React.FC = () => {
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
-    return null;
-  }
-
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
-=======
-<div className="fixed bottom-4 right-4 bg-black/80 text-white p-4 rounded-lg text-xs font-mono z-50">
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       <h3 className="font-bold mb-2">Performance Metrics</h3>
       <div className="space-y-1">
         <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
@@ -117,19 +103,7 @@ const PerformanceMonitor: React.FC = () => {
         Press Ctrl+Shift+P to toggle
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
       </div>
-<<<<<<< HEAD
 =======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg text-xs font-mono z-50">
-      <div className="font-bold mb-2">Performance Metrics</div>
-      <div>CLS: {metrics.cls?.toFixed(3) || 'N/A'}</div>
-      <div>INP: {metrics.inp?.toFixed(1) || 'N/A'}ms</div>
-      <div>FCP: {metrics.fcp?.toFixed(1) || 'N/A'}ms</div>
-      <div>LCP: {metrics.lcp?.toFixed(1) || 'N/A'}ms</div>
-      <div>TTFB: {metrics.ttfb?.toFixed(1) || 'N/A'}ms</div>
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
     </div>
   );
 };

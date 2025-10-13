@@ -1,21 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react;
-=======
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
-import { useEffect, Node } from 'react;
+import React from 'react';'react;
 interface EnhancedAccessibilityProps {
   children: Node;
-=======
-import React, { useEffect, useState } from 'react';
-
-interface AccessibilitySettings {
-  highContrast: boolean;
-  fontSize: 'small' | 'normal' | 'large' | 'extra-large';
-  reducedMotion: boolean;
-  screenReader: boolean;
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 }
 
 const EnhancedAccessibility: React.FC = () => {
@@ -29,7 +14,6 @@ const EnhancedAccessibility: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-<<<<<<< HEAD
     // Enhanced accessibility features;
     const addSkipLinks = () => {
       const skipLink = document.createElement('a');
@@ -70,33 +54,6 @@ const EnhancedAccessibility: React.FC = () => {
           button.setAttribute('aria-label', 'Button');
         }
       });
-=======
-    // Load saved settings from localStorage
-    const savedSettings = localStorage.getItem('accessibility-settings');
-    if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
-    }
-
-    // Detect screen reader usage
-    const detectScreenReader = () => {
-      const isScreenReader = window.speechSynthesis || 
-        (window as any).speechSynthesis ||
-        navigator.userAgent.includes('NVDA') ||
-        navigator.userAgent.includes('JAWS') ||
-        navigator.userAgent.includes('VoiceOver');
-      
-      setSettings(prev => ({ ...prev, screenReader: !!isScreenReader }));
-    };
-
-    // Detect reduced motion preference
-    const detectReducedMotion = () => {
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      setSettings(prev => ({ ...prev, reducedMotion: prefersReducedMotion }));
-    };
-
-    detectScreenReader();
-    detectReducedMotion();
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 
     // Apply accessibility settings
     applyAccessibilitySettings(settings);
@@ -108,7 +65,6 @@ const EnhancedAccessibility: React.FC = () => {
     };
     mediaQuery.addEventListener('change', handleChange);
 
-<<<<<<< HEAD
     const setupKeyboardNavigation = () => {
       // Enhanced keyboard navigation;
       document.addEventListener('keydown', (e) => {';
@@ -131,14 +87,9 @@ const EnhancedAccessibility: React.FC = () => {
     // Cleanup;
     return () => {
       // Cleanup if needed;
-=======
-    return () => {
-      mediaQuery.removeEventListener('change', handleChange);
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
     };
   }, []);
 
-<<<<<<< HEAD
   useEffect(() => {
     applyAccessibilitySettings(settings);
     localStorage.setItem('accessibility-settings', JSON.stringify(settings));
@@ -322,9 +273,6 @@ const EnhancedAccessibility: React.FC = () => {
       </div>
     </>
   );
-=======
-  return <>{children}</>
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
 };
 
 export default EnhancedAccessibility;
