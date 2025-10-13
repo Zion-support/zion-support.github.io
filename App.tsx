@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
 
 // Page Components
 import HomePage from './app/pages/HomePage';
@@ -15,6 +17,37 @@ import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
 import SolutionsPage from './app/pages/SolutionsPage';
+
+// AI Services Pages
+import AiServicesPage from './app/ai-services/page';
+import AiAnalyticsPage from './app/ai-services/business-intelligence/page';
+import AiContentGenerationPage from './app/ai-services/content-generation/page';
+import AiCustomerExperiencePage from './app/ai-services/customer-experience/page';
+import AiDocumentProcessingPage from './app/ai-services/document-processing/page';
+import AiEnergyManagementPage from './app/ai-services/energy-management/page';
+import AiFraudDetectionPage from './app/ai-services/fraud-detection/page';
+import AiHrAnalyticsPage from './app/ai-services/hr-analytics/page';
+import AiMarketingAutomationPage from './app/ai-services/marketing-automation/page';
+import AiPredictiveMaintenancePage from './app/ai-services/predictive-maintenance/page';
+import AiProcessAutomationPage from './app/ai-services/process-automation/page';
+import AiQualityAssurancePage from './app/ai-services/quality-assurance/page';
+import AiSupplyChainPage from './app/ai-services/supply-chain/page';
+
+// 5G Solutions Pages
+import FiveGSolutionsPage from './app/5g-solutions/page';
+import FiveGDataAnalyticsPage from './app/5g-data-analytics/page';
+import FiveGEdgeComputingPage from './app/5g-edge-computing/page';
+import FiveGImplementationPage from './app/5g-implementation/page';
+import FiveGIotSolutionsPage from './app/5g-iot-solutions/page';
+import FiveGMobileApplicationsPage from './app/5g-mobile-applications/page';
+import FiveGNetworkInfrastructurePage from './app/5g-network-infrastructure/page';
+import FiveGPrivateNetworksPage from './app/5g-private-networks/page';
+import FiveGSmartCitySolutionsPage from './app/5g-smart-city-solutions/page';
+
+// Additional Service Pages
+import AdManagementPage from './app/ad-management/page';
+import AdvancedSecuritySuitePage from './app/advanced-security-suite/page';
+import AccessibilityPage from './app/accessibility/page';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -48,6 +81,7 @@ function App() {
     <HelmetProvider>
       <Router>
         <div className="min-h-screen bg-gray-900">
+          <Navigation />
           <main className="relative z-10" id="main-content" role="main">
             <Routes>
               {/* Main Pages */}
@@ -64,6 +98,37 @@ function App() {
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/solutions" element={<SolutionsPage />} />
               
+              {/* AI Services Routes */}
+              <Route path="/ai-services" element={<AiServicesPage />} />
+              <Route path="/ai-services/business-intelligence" element={<AiAnalyticsPage />} />
+              <Route path="/ai-services/content-generation" element={<AiContentGenerationPage />} />
+              <Route path="/ai-services/customer-experience" element={<AiCustomerExperiencePage />} />
+              <Route path="/ai-services/document-processing" element={<AiDocumentProcessingPage />} />
+              <Route path="/ai-services/energy-management" element={<AiEnergyManagementPage />} />
+              <Route path="/ai-services/fraud-detection" element={<AiFraudDetectionPage />} />
+              <Route path="/ai-services/hr-analytics" element={<AiHrAnalyticsPage />} />
+              <Route path="/ai-services/marketing-automation" element={<AiMarketingAutomationPage />} />
+              <Route path="/ai-services/predictive-maintenance" element={<AiPredictiveMaintenancePage />} />
+              <Route path="/ai-services/process-automation" element={<AiProcessAutomationPage />} />
+              <Route path="/ai-services/quality-assurance" element={<AiQualityAssurancePage />} />
+              <Route path="/ai-services/supply-chain" element={<AiSupplyChainPage />} />
+              
+              {/* 5G Solutions Routes */}
+              <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+              <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
+              <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+              <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+              <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
+              <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
+              <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+              <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+              <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
+              
+              {/* Additional Service Routes */}
+              <Route path="/ad-management" element={<AdManagementPage />} />
+              <Route path="/advanced-security-suite" element={<AdvancedSecuritySuitePage />} />
+              <Route path="/accessibility" element={<AccessibilityPage />} />
+              
               {/* Catch all route */}
               <Route path="*" element={
                 <div className="min-h-screen flex items-center justify-center">
@@ -78,6 +143,7 @@ function App() {
               } />
             </Routes>
           </main>
+          <Footer />
         </div>
       </Router>
     </HelmetProvider>
