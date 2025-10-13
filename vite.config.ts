@@ -35,23 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
-    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
-=======
-    chunkSizeWarningLimit: 150, // Reduced warning threshold
-    assetsInlineLimit: 1024, // Reduced for better caching
->>>>>>> origin/main
-=======
-    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
-    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
-    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
-    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
+    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
+    assetsInlineLimit: 512, // Reduced for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -98,7 +83,7 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries - keep together for better caching
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
@@ -106,7 +91,7 @@ export default defineConfig({
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - split heavy libraries
           if (id.includes('framer-motion')) {
             return 'animations'
           }
@@ -133,20 +118,30 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - split into smaller chunks
+          // Group AI services by category for better caching
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
-            return `ai-${serviceName || 'services'}`
+            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+              return 'ai-analytics'
+            }
+            if (serviceName?.includes('automation') || serviceName?.includes('workflow')) {
+              return 'ai-automation'
+            }
+            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
+              return 'ai-customer'
+            }
+            if (serviceName?.includes('marketing') || serviceName?.includes('content')) {
+              return 'ai-marketing'
+            }
+            return 'ai-other'
           }
-          // Zion service pages
+          // Group Zion services
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/zion-')[1]?.split('/')[0];
-            return `zion-${serviceName || 'services'}`
+            return 'zion-services'
           }
-          // 5G service pages
+          // Group 5G services
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/5g-')[1]?.split('/')[0];
-            return `5g-${serviceName || 'services'}`
+            return '5g-services'
           }
           // Other service pages
           if (id.includes('/app/') && id.includes('/page.tsx') && 
