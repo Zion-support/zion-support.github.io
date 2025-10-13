@@ -1,4 +1,4 @@
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 export default function ZionAiSocialMediaManager() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -12,16 +12,16 @@ export default function ZionAiSocialMediaManager() {
             Zion Ai Social Media Manager <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive zionaisocialmediamanager solutions designed to transform your business;
+            Discover our comprehensive zionaisocialmediamanager solutions designed to transform your business.
           </p>
         </div>
         <div className="text-center">"
           <p className="text-gray-300">Coming Soon - ZionAiSocialMediaManager Solutions</p>"
-import React from "react";
-import React, { ArrowRight, CheckCircle, Star, Share2, BarChart3, Zap, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Users, Award, Headphones, Mic as MicIcon, Video as VideoIcon, Image as ImageIcon, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play as PlayIcon, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react';
-import React, { Helmet } from 'react-helmet-async';
-import React, { Link } from 'react-router-dom';
-import SEOOptimizer from "../components/SEOOptimizer";
+import React from "react".
+import React, { ArrowRight, CheckCircle, Star, Share2, BarChart3, Zap, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Users, Award, Headphones, Mic as MicIcon, Video as VideoIcon, Image as ImageIcon, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play as PlayIcon, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from 'lucide-react'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { Link } from 'react-router-dom'.
+import SEOOptimizer from "../components/SEOOptimizer".
 
 export default function ZionAISocialMediaManager() {
   const features = [
@@ -55,7 +55,7 @@ export default function ZionAISocialMediaManager() {
       period: "month",
       description: "Perfect for small businesses",
       features: ["Up to 3 social accounts", "Basic AI content", "Email support", "1 user", "Standard analytics"],"
-      popular: false;
+      popular: false.
     },
     {
       name: "Professional",
@@ -63,7 +63,7 @@ export default function ZionAISocialMediaManager() {
       period: "month",
       description: "Ideal for growing brands",
       features: ["Up to 10 social accounts", "Advanced AI features", "Priority support", "3 users", "Advanced analytics", "API access"],"
-      popular: true;
+      popular: true.
     },
     {
       name: "Enterprise",
@@ -71,7 +71,7 @@ export default function ZionAISocialMediaManager() {
       period: "month",
       description: "For large organizations",
       features: ["Unlimited accounts", "Full AI suite", "24/7 support", "Unlimited users", "White-label options", "Custom integrations"],"
-      popular: false;
+      popular: false.
     }
   ];
 
@@ -140,7 +140,7 @@ export default function ZionAISocialMediaManager() {
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">"
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  Zion AI Social Media Manager;
+                  Zion AI Social Media Manager.
                 </span>
               </h1>
               
@@ -194,16 +194,16 @@ export default function ZionAISocialMediaManager() {
           <div className="max-w-7xl mx-auto">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Powerful Social Media Features;
+                Powerful Social Media Features.
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to manage and grow your social media presence;
+                Everything you need to manage and grow your social media presence.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div;
+                <div.
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
@@ -224,7 +224,7 @@ export default function ZionAISocialMediaManager() {
           <div className="max-w-7xl mx-auto">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple, Transparent Pricing;
+                Simple, Transparent Pricing.
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Choose the plan that fits your social media management needs. All plans include a 14-day free trial.
@@ -233,7 +233,7 @@ export default function ZionAISocialMediaManager() {
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
-                <div;
+                <div.
                   key={index}
                   className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
                     plan.popular 
@@ -244,7 +244,7 @@ export default function ZionAISocialMediaManager() {
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular;
+                        Most Popular.
                       </span>
                     </div>
                   )}
@@ -289,16 +289,16 @@ export default function ZionAISocialMediaManager() {
           <div className="max-w-7xl mx-auto">"
             <div className="text-center mb-16">"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Our Customers Say;
+                What Our Customers Say.
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of brands using Zion AI Social Media Manager to grow their presence;
+                Join thousands of brands using Zion AI Social Media Manager to grow their presence.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
-                <div;
+                <div.
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
                 >
@@ -349,7 +349,7 @@ export default function ZionAISocialMediaManager() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 <DollarSign className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                View Pricing;
+                View Pricing.
               </Link>
             </div>
 
@@ -361,5 +361,5 @@ export default function ZionAISocialMediaManager() {
         </section>
       </div>
     </>
-  );
+  ).
 }

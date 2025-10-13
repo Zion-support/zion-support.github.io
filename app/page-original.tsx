@@ -1,36 +1,36 @@
-'use client';
-import React from 'react';
-'use client';
-import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
-import {Phone, Mail, MapPin, Clock}}from 'lucide-react';
-import Navigation from './components/Navigation';
-import Footer from './components/Footer';
-import PerformanceOptimizer from './components/PerformanceOptimizer';
-import SEOOptimizer from './components/SEOOptimizer';
-import AccessibilityEnhancer from './components/AccessibilityEnhancer';
-import Analytics from './components/Analytics';
-import SecurityEnhancer from './components/SecurityEnhancer';
-// Dynamically import heavy components for better performance;
-const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner'));
-const ContentCarousel = lazy(() => import('./components/ContentCarousel'));
-const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase'));
-const ContentStatistics = lazy(() => import('./components/ContentStatistics'));
-const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup'));
-// Preload critical components;
-const preloadComponents = (;
-  if (typeof window !== 'undefined') {// Preload critical components after initial render;
+'use client'.
+import React from 'react'.
+'use client'.
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react'.
+import {Phone, Mail, MapPin, Clock}}from 'lucide-react'.
+import Navigation from './components/Navigation'.
+import Footer from './components/Footer'.
+import PerformanceOptimizer from './components/PerformanceOptimizer'.
+import SEOOptimizer from './components/SEOOptimizer'.
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'.
+import Analytics from './components/Analytics'.
+import SecurityEnhancer from './components/SecurityEnhancer'.
+// Dynamically import heavy components for better performance.
+const ContentPromotionBanner = lazy(() => import('./components/ContentPromotionBanner')).
+const ContentCarousel = lazy(() => import('./components/ContentCarousel')).
+const DynamicContentShowcase = lazy(() => import('./components/DynamicContentShowcase')).
+const ContentStatistics = lazy(() => import('./components/ContentStatistics')).
+const ContentNewsletterSignup = lazy(() => import('./components/ContentNewsletterSignup')).
+// Preload critical components.
+const preloadComponents = (.
+  if (typeof window !== 'undefined') {// Preload critical components after initial render.
     setTimeout(() => {
       import('./components/ContentPromotionBanner');) => {
   return ($3;)
   )}import('./components/ContentCarousel');}
-    }, 100);
+    }, 100).
   }
 }
-// Loading skeleton component;
+// Loading skeleton component.
 const ServiceCardSkeleton: React.FC = memo(() => (,
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>
-  );
-  );
+  ).
+  ).
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>"
     <div className="h-4 bg-gray-200 rounded mb-2"></div>"
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
@@ -38,25 +38,25 @@ const ServiceCardSkeleton: React.FC = memo(() => (,
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
 const HomePage: React.FC = memo(() => {,
-    const [isLoaded, setIsLoaded] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+    const [isLoaded, setIsLoaded] = useState(false).
+  const [isVisible, setIsVisible] = useState(false).
 useEffect(() => {
 
-    setIsLoaded(true);
-    // Trigger visibility animation;
-    const timer = setTimeout(() => setIsVisible(true), 100);
-    // Preload components;
-    preloadComponents();
+    setIsLoaded(true).
+    // Trigger visibility animation.
+    const timer = setTimeout(() => setIsVisible(true), 100).
+    // Preload components.
+    preloadComponents().
     const Component = () => {
   
-      return () => clearTimeout(timer)}}, []);
-  // Analytics tracking for phone clicks - optimized;
+      return () => clearTimeout(timer)}}, []).
+  // Analytics tracking for phone clicks - optimized.
   const handlePhoneClick = useCallback(() => {if (typeof window !== 'undefined' && 'gtag' in window) {'
       (window as any).gtag('event', 'phone_click', {)'
         event_category: 'engagement',
         event_label: 'main_phone_number',}})
     }
-  }, []);
+  }, []).
 
   const Component = () => {
   
@@ -64,48 +64,48 @@ useEffect(() => {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
     </>
   )
-      import('./components/ContentPromotionBanner');
-      import('./components/ContentCarousel');
-    }, 100);
+      import('./components/ContentPromotionBanner').
+      import('./components/ContentCarousel').
+    }, 100).
   }
 };
-// Loading skeleton component;
+// Loading skeleton component.
 const ServiceCardSkeleton: React.FC = memo(() => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card"></div>"
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>"
     <div className="h-4 bg-gray-200 rounded mb-2"></div>"
     <div className="h-4 bg-gray-200 rounded w-5/6"></div>
   </div>
-));
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
-    preloadComponents();
+)).
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton'.
+    preloadComponents().
     const Component = () => {
   
-      return () => clearTimeout(timer);
-  }, []);
-  // Analytics tracking for phone clicks - optimized;
+      return () => clearTimeout(timer).
+  }, []).
+  // Analytics tracking for phone clicks - optimized.
   const handlePhoneClick = useCallback(() => {
     if (typeof window !== 'undefined' && 'gtag' in window) {'
       (window as any).gtag('event', 'phone_click', {'
         event_category: 'engagement',
         event_label: 'main_phone_number'
-      });
+      }).
     }
-  }, []);
+  }, []).
   const Component = () => {
   
     return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
   </>
@@ -149,13 +149,13 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
           }
         }}
       />
-      <PerformanceOptimizer;
+      <PerformanceOptimizer.
         enableImageOptimization={true}
         enableLazyLoading={true}
         enablePreloading={true}
         enableCodeSplitting={true}
       />
-      <AccessibilityEnhancer;
+      <AccessibilityEnhancer.
         enableKeyboardNavigation={true}
         enableScreenReaderSupport={true}
         enableHighContrast={true}
@@ -163,13 +163,13 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
         enableSkipLinks={true}
         enableARIALabels={true}
       />
-      <Analytics;
+      <Analytics.
         enableGoogleAnalytics={true}
         enablePerformanceMonitoring={true}
         enableErrorTracking={true}
         enableUserBehaviorTracking={true}
       />
-      <SecurityEnhancer;
+      <SecurityEnhancer.
         enableCSP={true}
         enableHTTPSRedirect={true}
         enableXSSProtection={true}
@@ -183,7 +183,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
         >
-          Skip to main content;
+          Skip to main content.
         </a>
       {/* Content Promotion Banner */}
       <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
@@ -191,7 +191,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
       </Suspense>
       <main id="main-content" className="container mx-auto px-4 py-16 pt-24" role="main">
         {/* Hero Section */}
-        <section;
+        <section.
         </section>
           className={`text-center mb-16 transition-all duration-1000 cyber-scan-line ${
             isLoaded && isVisible 
@@ -209,7 +209,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
               Zion Tech Group</h1>
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-8 font-medium cyber-glow neon-text" role="doc-subtitle">
-              Advanced AI and IT Solutions;
+              Advanced AI and IT Solutions.
             </p>
             <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
               Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services.
@@ -247,7 +247,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                 className="cyber-button w-full sm:w-auto text-center"
                 aria-label="Call us at (302) 464-0950"
             >
-              📞 Call: (302) 464-0950;
+              📞 Call: (302) 464-0950.
             </a>
             <a 
               href="/contact"
@@ -261,7 +261,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
         <section className="mb-16" aria-labelledby="services-heading">
         </section>
           <h2 id="services-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Our Services;
+            Our Services.
           </h2>
           <p className="text-base sm:text-lg text-gray-300 text-center mb-12 max-w-3xl mx-auto px-4">
           <h2>Our Services;</h2>
@@ -270,7 +270,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
           </p>
 
           {/* Primary Services Grid */} <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>,
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>.
               <article className="quantum-card p-4 sm: p-6 energy-pulse"></article>,"
                 <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">🤖</div>,"
                 <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Services</h3>,
@@ -284,7 +284,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                 <div className="text-center"></div>"
                   <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2 neon-text">Starting at $1,500/month</div>"
                   <a href="/ai-services" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>.
               <article className="quantum-card p-4 sm: p-6 energy-pulse"></article>,"
                 <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">📢</div>,"
                 <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Marketing</h3>,
@@ -303,7 +303,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                   <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2 neon-text">Starting at $199/month</div>"
                   <a href="/ai-marketing" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>.
               <article className="quantum-card p-4 sm: p-6 energy-pulse"></article>,"
                 <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center cyber-scan-line">⚙️</div>,"
                 <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center neon-text">AI Automation</h3>,
@@ -323,7 +323,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                   <a href="/ai-automation" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base transition-all duration-300 hover:neon-glow">
                     Learn More →
           {/* Secondary Services Grid */} <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-12"></div>,
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>.
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                 <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">🏥</div>,"
                 <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Healthcare</h3>,
@@ -337,7 +337,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                 <div className="text-center"></div>"
                   <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">Starting at $1,999/month</div>"
                   <a href="/ai-healthcare" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>.
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                 <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">💰</div>,"
                 <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Fintech</h3>,
@@ -349,7 +349,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                 <div className="text-center"></div>"
                   <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">Starting at $1,499/month</div>"
                   <a href="/ai-fintech" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
-            <Suspense fallback={<ServiceCardSkeleton />}>;
+            <Suspense fallback={<ServiceCardSkeleton />}>.
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                 <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">⚛️</div>,"
                 <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">Quantum Computing</h3>,
@@ -370,10 +370,10 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     Learn More →
           {/* Micro SAAS Services Grid */} <div className="mb-12"></div>
             <h3>
-              Micro SAAS Solutions;
+              Micro SAAS Solutions.
             </h3>
             <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>,
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">💻</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI-Powered CRM</h3>,
@@ -384,7 +384,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <a>
           <div className="mb-12"></div>"
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Micro SAAS Solutions;
+              Micro SAAS Solutions.
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>
               <Suspense fallback={<ServiceCardSkeleton />}>
@@ -398,7 +398,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-orange-400 mb-2">$149/month</div>"
                     <a href="/ai-crm" className="text-orange-400 hover:text-orange-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">📊</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Analytics Dashboard</h3>,
@@ -417,7 +417,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-cyan-400 mb-2">$199/month</div>"
                     <a href="/ai-analytics" className="text-cyan-400 hover:text-cyan-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">✍️</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Content Studio</h3>,
@@ -436,7 +436,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-pink-400 mb-2">$299/month</div>"
                     <a href="/ai-content-studio" className="text-pink-400 hover:text-pink-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">🤖</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Chatbot Builder</h3>,
@@ -455,7 +455,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-green-400 mb-2">$99/month</div>"
                     <a href="/ai-chatbot-builder" className="text-green-400 hover:text-green-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">📧</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Email Marketing</h3>,
@@ -474,7 +474,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-purple-400 mb-2">$179/month</div>"
                     <a href="/ai-email-marketing" className="text-purple-400 hover:text-purple-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">📱</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Mobile App Builder</h3>,
@@ -493,7 +493,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-blue-400 mb-2">$399/month</div>"
                     <a href="/ai-mobile-builder" className="text-blue-400 hover:text-blue-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">🔍</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI SEO Optimizer</h3>,
@@ -512,7 +512,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-yellow-400 mb-2">$129/month</div>"
                     <a href="/ai-seo-optimizer" className="text-yellow-400 hover:text-yellow-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">💰</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Invoice Generator</h3>,
@@ -531,7 +531,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-indigo-400 mb-2">$79/month</div>"
                     <a href="/ai-invoice-generator" className="text-indigo-400 hover:text-indigo-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">🎯</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Lead Scoring</h3>,
@@ -550,7 +550,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-red-400 mb-2">$89/month</div>"
                     <a href="/ai-lead-scoring" className="text-red-400 hover:text-red-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">📈</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Social Media Manager</h3>,
@@ -569,7 +569,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-teal-400 mb-2">$159/month</div>"
                     <a href="/ai-social-media-manager" className="text-teal-400 hover:text-teal-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">🛒</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI E-commerce Assistant</h3>,
@@ -588,7 +588,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-violet-400 mb-2">$249/month</div>"
                     <a href="/ai-ecommerce-assistant" className="text-violet-400 hover:text-violet-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">📝</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Document Processor</h3>,
@@ -607,7 +607,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-amber-400 mb-2">$119/month</div>"
                     <a href="/ai-document-processor" className="text-amber-400 hover:text-amber-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">🎨</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Design Studio</h3>,
@@ -626,7 +626,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-rose-400 mb-2">$189/month</div>"
                     <a href="/ai-design-studio" className="text-rose-400 hover:text-rose-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">🔐</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Security Monitor</h3>,
@@ -645,7 +645,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-emerald-400 mb-2">$199/month</div>"
                     <a href="/ai-security-monitor" className="text-emerald-400 hover:text-emerald-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">📊</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Financial Planner</h3>,
@@ -664,7 +664,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-sky-400 mb-2">$169/month</div>"
                     <a href="/ai-financial-planner" className="text-sky-400 hover:text-sky-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">🏥</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Health Tracker</h3>,
@@ -683,7 +683,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     <div className="text-lg sm:text-2xl font-bold text-lime-400 mb-2">$79/month</div>"
                     <a href="/ai-health-tracker" className="text-lime-400 hover:text-lime-300 font-medium text-sm sm:text-base">
                       Learn More →
-              <Suspense fallback={<ServiceCardSkeleton />}>;
+              <Suspense fallback={<ServiceCardSkeleton />}>.
                 <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
                   <div className="text-4xl sm: text-5xl mb-4 sm:mb-6 text-center">🎓</div>,"
                   <h3 className="text-xl sm: text-2xl font-bold text-white mb-3 sm:mb-4 text-center">AI Learning Platform</h3>,
@@ -704,7 +704,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                       Learn More →
           {/* IT Services & Infrastructure */} <div className="mb-12"></div>
             <h3>
-              IT Services & Infrastructure;
+              IT Services & Infrastructure.
             </h3>
             <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>,"
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
@@ -713,7 +713,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                 <p>Seamless cloud migration with AWS, Azure, and GCP. 99.9% uptime guarantee and 24/7 expert support.</p>
           <div className="mb-12"></div>"
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure;
+              IT Services & Infrastructure.
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>"
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -980,7 +980,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                   <a>
           {/* Advanced AI Services Grid */} <div className="mb-12"></div>
             <h3>
-              Advanced AI Services;
+              Advanced AI Services.
             </h3>
             <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>,"
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
@@ -993,7 +993,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                   <a>
           <div className="mb-12"></div>"
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Advanced AI Services;
+              Advanced AI Services.
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>"
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -1245,7 +1245,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                   <a>
           {/* Emerging Technologies Grid */} <div className="mb-12"></div>
             <h3>
-              Emerging Technologies;
+              Emerging Technologies.
             </h3>
             <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>,"
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
@@ -1254,7 +1254,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                 <p>Intelligent robotic solutions for manufacturing, healthcare, and service industries.</p>
           <div className="mb-12"></div>"
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              Emerging Technologies;
+              Emerging Technologies.
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>"
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -1304,7 +1304,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     Learn More →
           {/* IT Services Grid */} <div className="mb-12"></div>
             <h3>
-              IT Services & Infrastructure;
+              IT Services & Infrastructure.
             </h3>
             <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>,"
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
@@ -1313,7 +1313,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                 <p>Streamline development workflows with automated testing, deployment, and monitoring solutions.</p>
           <div className="mb-12"></div>"
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-8 text-center neon-text">
-              IT Services & Infrastructure;
+              IT Services & Infrastructure.
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>"
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -1360,7 +1360,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
         <section className="mb-16" aria-labelledby="micro-saas-heading">
         </section>
           <h2 id="micro-saas-heading" className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center neon-text">
-            Micro SAAS Solutions;
+            Micro SAAS Solutions.
           </h2>
           <h2>Micro SAAS Solutions;</h2>
           </h2>
@@ -1368,7 +1368,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
           </p>
           {/* Productivity Tools */} <div className="mb-12"></div>
             <h3>
-              Productivity & Business Tools;
+              Productivity & Business Tools.
             </h3>
             <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>,"
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
@@ -1377,7 +1377,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                 <p>Advanced AI writing tool for blogs, emails, reports, and content creation with 50+ templates.</p>
           <div className="mb-12"></div>"
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Productivity & Business Tools;
+              Productivity & Business Tools.
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>"
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -1471,7 +1471,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
           </div>
           {/* Marketing & Sales Tools */} <div className="mb-12"></div>
             <h3>
-              Marketing & Sales Tools;
+              Marketing & Sales Tools.
             </h3>
             <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>,"
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
@@ -1480,7 +1480,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                 <p>Create stunning graphics, logos, and marketing materials with AI-powered design tools.</p>
           <div className="mb-12"></div>"
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Marketing & Sales Tools;
+              Marketing & Sales Tools.
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>"
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -1534,7 +1534,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
           </div>
           {/* Developer Tools */} <div className="mb-12"></div>
             <h3>
-              Developer Tools;
+              Developer Tools.
             </h3>
             <div className="grid grid-cols-1 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>,"
               <article className="cyber-card hologram-card p-4 sm: p-6 hover:scale-105 transition-all duration-300"></article>,"
@@ -1543,7 +1543,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                 <p>AI-powered code completion, debugging, and optimization for multiple programming languages.</p>
           <div className="mb-12"></div>"
             <h3 className="text-xl sm:text-2xl font-bold text-white mb-6 text-center neon-text">
-              Developer Tools;
+              Developer Tools.
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8"></div>"
               <article className="cyber-card hologram-card p-4 sm:p-6 hover:scale-105 transition-all duration-300">"
@@ -1586,16 +1586,16 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                 <div className="text-center"></div>"
                   <div className="text-lg font-bold text-purple-400 mb-2">$19/month</div>"
                   <a href="/doc-generator" className="text-purple-400 hover:text-purple-300 font-medium text-sm">"
-        {/* Statistics Section */} <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>;
+        {/* Statistics Section */} <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>.
           <ContentStatistics>
         </Suspense>
-        {/* Content Carousel */} <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>;
+        {/* Content Carousel */} <Suspense fallback={<div className="h-64 bg-gray-100 animate-pulse rounded-lg"></div>}>.
           <ContentCarousel>
         </Suspense>
-        {/* Dynamic Content Showcase */} <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>;
+        {/* Dynamic Content Showcase */} <Suspense fallback={<div className="h-96 bg-gray-100 animate-pulse rounded-lg"></div>}>.
           <DynamicContentShowcase>
         </Suspense>
-        {/* Newsletter Signup */} <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>;
+        {/* Newsletter Signup */} <Suspense fallback={<div className="h-32 bg-gray-100 animate-pulse rounded-lg"></div>}>.
           <ContentNewsletterSignup>
         </Suspense>
         {/* Contact Section */} <section className="py-20 px-4">"
@@ -1646,7 +1646,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
             </p>
             <div className="grid grid-cols-1 lg: grid-cols-2 gap-8"></div>,
                       <a>
-                        +1 (302) 464-0950;
+                        +1 (302) 464-0950.
                   
                   <div className="flex items-center space-x-4"></div>"
                     <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center"></div>"
@@ -1656,7 +1656,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                       <p className="text-gray-300 text-sm">Email</p>"
                       <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300 font-semibold text-lg">
                       <a>
-                        kleber@ziontechgroup.com;
+                        kleber@ziontechgroup.com.
                   
                   <div className="flex items-center space-x-4"></div>"
                     <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-teal-600 rounded-lg flex items-center justify-center"></div>"
@@ -1667,7 +1667,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                       <p className="text-white font-semibold">
                         364 E Main St STE 1008<br />
                         364 E Main St STE 1008<br>
-                        Middletown, DE 19709;
+                        Middletown, DE 19709.
                   
                   <div className="flex items-center space-x-4"></div>"
                     <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center"></div>"
@@ -1677,7 +1677,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                       <p className="text-gray-300 text-sm">Business Hours</p>"
                       <p className="text-white font-semibold">
                         Monday - Friday: 9:00 AM - 6:00 PM EST<br />
-                        24/7 Emergency Support Available;
+                        24/7 Emergency Support Available.
                         Monday - Friday: 9:00 AM - 6:00 PM EST<br>,
               {/* Quick Contact Form */} <div className="cyber-card hologram-card p-8"></div>"
               <div className="cyber-card hologram-card p-8"></div>"
@@ -1685,26 +1685,26 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                 <form className="space-y-6">
                   <div></div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                      Full Name;
+                      Full Name.
                     <input />
                   <div />
                     <label>
-                      Email Address;
+                      Email Address.
                     </label>
                     <input />
                   <div />
                     <label>
-                      Phone Number;
+                      Phone Number.
                     </label>
                     <input />
                   <div />
                     <label>
-                      Service Interest;
+                      Service Interest.
                   <div />
                     <label>
-                      Message;
+                      Message.
                     </label>
-                    <textarea;
+                    <textarea.
                       id="message";"
                       name="message";"
                       rows={4}className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors","
@@ -1734,7 +1734,7 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                   
                   <div></div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                      Message;
+                      Message.
                     </label>
                       className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors"
                       placeholder="Tell us about your project or requirements"
@@ -1745,13 +1745,13 @@ ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
                     type="submit"
                     className="w-full cyber-button text-center py-4"
                   >
-                    Send Message;
+                    Send Message.
       {/* Footer */} <Footer />
       <Footer />
     </div>
 
-  );
-});
+  ).
+}).
 
-HomePage.displayName = 'HomePage';
-export default HomePage;
+HomePage.displayName = 'HomePage'.
+export default HomePage.

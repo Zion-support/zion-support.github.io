@@ -1,4 +1,4 @@
-import React, { CheckCircle, Star, Target, TrendingUp, Users, BarChart, Zap, Brain } from 'lucide-react';
+import React, { CheckCircle, Star, Target, TrendingUp, Users, BarChart, Zap, Brain } from 'lucide-react'.
 const AIMarketingPage: React.FC = () => {
   const aiMarketingServices = [
     {
@@ -6,132 +6,132 @@ const AIMarketingPage: React.FC = () => {
       description: 'Intelligent ad campaign management with real-time optimization, audience targeting, and budget allocation across all platforms.',
       icon: '🎯',
       price: '$299/month',
-      features: ['Real-time bid optimization', 'Audience segmentation', 'Cross-platform management', 'Performance analytics', 'A/B testing automation'],'
-      benefits: ['Increase ROAS by 40%', 'Reduce cost per acquisition by 35%', 'Save 20+ hours/week'],'
+      features: ['Real-time bid optimization', 'Audience segmentation', 'Cross-platform management', 'Performance analytics', 'A/B testing automation'],
+      benefits: ['Increase ROAS by 40%', 'Reduce cost per acquisition by 35%', 'Save 20+ hours/week'],
       marketPrice: '$500-1,200/month',
       category: 'Advertising',
-      technologies: ['Google Ads API', 'Facebook Marketing API', 'Machine Learning', 'Python', 'TensorFlow'],'
+      technologies: ['Google Ads API', 'Facebook Marketing API', 'Machine Learning', 'Python', 'TensorFlow'],
     },
     {
       title: 'AI Content Generation & SEO',
       description: 'Automated content creation with SEO optimization, keyword research, and performance tracking for blogs, social media, and websites.',
       icon: '✍️',
       price: '$199/month',
-      features: ['Blog post generation', 'SEO optimization', 'Keyword research', 'Content calendar', 'Performance tracking'],'
-      benefits: ['Increase organic traffic by 60%', 'Generate 50+ articles/month', 'Improve search rankings'],'
+      features: ['Blog post generation', 'SEO optimization', 'Keyword research', 'Content calendar', 'Performance tracking'],
+      benefits: ['Increase organic traffic by 60%', 'Generate 50+ articles/month', 'Improve search rankings'],
       marketPrice: '$300-800/month',
       category: 'Content Marketing',
-      technologies: ['OpenAI GPT', 'SEMrush API', 'Ahrefs API', 'WordPress', 'Custom AI Models'],'
+      technologies: ['OpenAI GPT', 'SEMrush API', 'Ahrefs API', 'WordPress', 'Custom AI Models'],
     },
     {
       title: 'AI Social Media Management',
       description: 'Intelligent social media posting, engagement, and analytics with automated content creation and optimal timing.',
       icon: '📱',
       price: '$149/month',
-      features: ['Automated posting', 'Content generation', 'Engagement optimization', 'Hashtag research', 'Analytics dashboard'],'
-      benefits: ['Increase engagement by 45%', 'Save 15 hours/week', 'Grow followers by 200%'],'
+      features: ['Automated posting', 'Content generation', 'Engagement optimization', 'Hashtag research', 'Analytics dashboard'],
+      benefits: ['Increase engagement by 45%', 'Save 15 hours/week', 'Grow followers by 200%'],
       marketPrice: '$250-600/month',
       category: 'Social Media',
-      technologies: ['Twitter API', 'Instagram API', 'LinkedIn API', 'Hootsuite API', 'Custom AI'],'
+      technologies: ['Twitter API', 'Instagram API', 'LinkedIn API', 'Hootsuite API', 'Custom AI'],
     },
     {
       title: 'AI Email Marketing Automation',
       description: 'Smart email campaigns with personalization, send-time optimization, and behavioral triggers for maximum engagement.',
       icon: '📧',
       price: '$179/month',
-      features: ['Behavioral triggers', 'Personalization engine', 'Send-time optimization', 'A/B testing', 'Advanced analytics'],'
-      benefits: ['Increase open rates by 50%', 'Boost click-through rates by 35%', 'Reduce unsubscribe rates'],'
+      features: ['Behavioral triggers', 'Personalization engine', 'Send-time optimization', 'A/B testing', 'Advanced analytics'],
+      benefits: ['Increase open rates by 50%', 'Boost click-through rates by 35%', 'Reduce unsubscribe rates'],
       marketPrice: '$300-700/month',
       category: 'Email Marketing',
-      technologies: ['SendGrid', 'Mailchimp', 'Klaviyo', 'Machine Learning', 'Customer Data Platform'],'
+      technologies: ['SendGrid', 'Mailchimp', 'Klaviyo', 'Machine Learning', 'Customer Data Platform'],
     },
     {
       title: 'AI Customer Journey Mapping',
       description: 'Intelligent customer journey analysis with touchpoint optimization and conversion rate improvement recommendations.',
       icon: '🗺️',
       price: '$249/month',
-      features: ['Journey visualization', 'Touchpoint analysis', 'Conversion optimization', 'Customer segmentation', 'Predictive modeling'],'
-      benefits: ['Improve conversion by 30%', 'Reduce customer acquisition cost', 'Increase customer lifetime value'],'
+      features: ['Journey visualization', 'Touchpoint analysis', 'Conversion optimization', 'Customer segmentation', 'Predictive modeling'],
+      benefits: ['Improve conversion by 30%', 'Reduce customer acquisition cost', 'Increase customer lifetime value'],
       marketPrice: '$400-1,000/month',
       category: 'Customer Experience',
-      technologies: ['Google Analytics', 'Mixpanel', 'Amplitude', 'Python', 'Machine Learning'],'
+      technologies: ['Google Analytics', 'Mixpanel', 'Amplitude', 'Python', 'Machine Learning'],
     },
     {
       title: 'AI Competitor Analysis & Intelligence',
       description: 'Automated competitor monitoring with pricing analysis, content gap identification, and market trend predictions.',
       icon: '🔍',
       price: '$199/month',
-      features: ['Competitor monitoring', 'Pricing analysis', 'Content gap analysis', 'Market trends', 'Alert system'],'
-      benefits: ['Stay ahead of competitors', 'Identify market opportunities', 'Optimize pricing strategy'],'
+      features: ['Competitor monitoring', 'Pricing analysis', 'Content gap analysis', 'Market trends', 'Alert system'],
+      benefits: ['Stay ahead of competitors', 'Identify market opportunities', 'Optimize pricing strategy'],
       marketPrice: '$350-800/month',
       category: 'Competitive Intelligence',
-      technologies: ['Web Scraping', 'Price Intelligence APIs', 'Natural Language Processing', 'Data Visualization'],'
+      technologies: ['Web Scraping', 'Price Intelligence APIs', 'Natural Language Processing', 'Data Visualization'],
     },
     {
       title: 'AI Lead Scoring & Qualification',
       description: 'Intelligent lead scoring using machine learning to identify high-value prospects and optimize sales processes.',
       icon: '🎯',
       price: '$229/month',
-      features: ['Lead scoring models', 'Behavioral analysis', 'Predictive analytics', 'CRM integration', 'Sales forecasting'],'
-      benefits: ['Increase qualified leads by 50%', 'Improve sales efficiency', 'Reduce lead response time'],'
+      features: ['Lead scoring models', 'Behavioral analysis', 'Predictive analytics', 'CRM integration', 'Sales forecasting'],
+      benefits: ['Increase qualified leads by 50%', 'Improve sales efficiency', 'Reduce lead response time'],
       marketPrice: '$400-900/month',
       category: 'Lead Generation',
-      technologies: ['Salesforce', 'HubSpot', 'Pipedrive', 'Machine Learning', 'Predictive Analytics'],'
+      technologies: ['Salesforce', 'HubSpot', 'Pipedrive', 'Machine Learning', 'Predictive Analytics'],
     },
     {
       title: 'AI Video Marketing Automation',
       description: 'Automated video creation, editing, and optimization for social media, ads, and content marketing campaigns.',
       icon: '🎬',
       price: '$299/month',
-      features: ['Video generation', 'Auto-editing', 'Thumbnail optimization', 'Caption generation', 'Performance analytics'],'
-      benefits: ['Create videos 10x faster', 'Increase engagement by 60%', 'Reduce production costs'],'
+      features: ['Video generation', 'Auto-editing', 'Thumbnail optimization', 'Caption generation', 'Performance analytics'],
+      benefits: ['Create videos 10x faster', 'Increase engagement by 60%', 'Reduce production costs'],
       marketPrice: '$500-1,500/month',
       category: 'Video Marketing',
-      technologies: ['OpenAI DALL-E', 'Runway ML', 'FFmpeg', 'Computer Vision', 'Video Processing'],'
+      technologies: ['OpenAI DALL-E', 'Runway ML', 'FFmpeg', 'Computer Vision', 'Video Processing'],
     },
     {
       title: 'AI Influencer Marketing Platform',
       description: 'AI-powered influencer discovery, campaign management, and performance tracking for authentic brand partnerships.',
       icon: '🌟',
       price: '$199/month',
-      features: ['Influencer discovery', 'Audience analysis', 'Campaign management', 'Performance tracking', 'ROI optimization'],'
-      benefits: ['Find perfect influencers', 'Increase campaign ROI by 40%', 'Streamline collaboration'],'
+      features: ['Influencer discovery', 'Audience analysis', 'Campaign management', 'Performance tracking', 'ROI optimization'],
+      benefits: ['Find perfect influencers', 'Increase campaign ROI by 40%', 'Streamline collaboration'],
       marketPrice: '$350-800/month',
       category: 'Influencer Marketing',
-      technologies: ['Instagram API', 'TikTok API', 'YouTube API', 'Social Listening', 'Machine Learning'],'
+      technologies: ['Instagram API', 'TikTok API', 'YouTube API', 'Social Listening', 'Machine Learning'],
     },
     {
       title: 'AI Marketing Attribution & Analytics',
       description: 'Advanced marketing attribution modeling with multi-touch analysis and ROI optimization recommendations.',
       icon: '📊',
       price: '$249/month',
-      features: ['Multi-touch attribution', 'ROI analysis', 'Channel optimization', 'Predictive modeling', 'Custom dashboards'],'
-      benefits: ['Optimize marketing spend', 'Increase ROI by 35%', 'Make data-driven decisions'],'
+      features: ['Multi-touch attribution', 'ROI analysis', 'Channel optimization', 'Predictive modeling', 'Custom dashboards'],
+      benefits: ['Optimize marketing spend', 'Increase ROI by 35%', 'Make data-driven decisions'],
       marketPrice: '$400-1,200/month',
       category: 'Marketing Analytics',
-      technologies: ['Google Analytics 4', 'Adobe Analytics', 'Mixpanel', 'Python', 'Statistical Modeling'],'
+      technologies: ['Google Analytics 4', 'Adobe Analytics', 'Mixpanel', 'Python', 'Statistical Modeling'],
     },
     {
       title: 'AI Voice Search Optimization',
       description: 'Optimize content and campaigns for voice search with natural language processing and conversational AI.',
       icon: '🎤',
       price: '$179/month',
-      features: ['Voice search optimization', 'Conversational content', 'Local SEO', 'Featured snippets', 'Performance tracking'],'
-      benefits: ['Capture voice search traffic', 'Improve local visibility', 'Stay ahead of trends'],'
+      features: ['Voice search optimization', 'Conversational content', 'Local SEO', 'Featured snippets', 'Performance tracking'],
+      benefits: ['Capture voice search traffic', 'Improve local visibility', 'Stay ahead of trends'],
       marketPrice: '$300-700/month',
       category: 'Voice Marketing',
-      technologies: ['Google Assistant API', 'Amazon Alexa', 'Natural Language Processing', 'Local SEO Tools'],'
+      technologies: ['Google Assistant API', 'Amazon Alexa', 'Natural Language Processing', 'Local SEO Tools'],
     },
     {
       title: 'AI Marketing Personalization Engine',
       description: 'Real-time personalization of marketing messages, offers, and experiences based on user behavior and preferences.',
       icon: '🎨',
       price: '$299/month',
-      features: ['Real-time personalization', 'Dynamic content', 'Behavioral targeting', 'A/B testing', 'Performance optimization'],'
-      benefits: ['Increase conversion by 45%', 'Improve user experience', 'Boost customer engagement'],'
+      features: ['Real-time personalization', 'Dynamic content', 'Behavioral targeting', 'A/B testing', 'Performance optimization'],
+      benefits: ['Increase conversion by 45%', 'Improve user experience', 'Boost customer engagement'],
       marketPrice: '$500-1,500/month',
       category: 'Personalization',
-      technologies: ['Customer Data Platform', 'Real-time APIs', 'Machine Learning', 'A/B Testing Tools'],'
+      technologies: ['Customer Data Platform', 'Real-time APIs', 'Machine Learning', 'A/B Testing Tools'],
     }
   ];
   const categories = [...new Set(aiMarketingServices.map(service => service.category))];
@@ -139,8 +139,8 @@ const AIMarketingPage: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-pink-50">
@@ -150,17 +150,17 @@ const AIMarketingPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center">"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI-Powered Marketing Solutions;
+                AI-Powered Marketing Solutions.
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-pink-100 max-w-3xl mx-auto">
-                Transform your marketing with cutting-edge AI technology that automates, optimizes, and scales your campaigns;
+                Transform your marketing with cutting-edge AI technology that automates, optimizes, and scales your campaigns.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors">
-                  Start AI Marketing;
+                  Start AI Marketing.
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors">
-                  View Case Studies;
+                  View Case Studies.
                 </button>
               </div>
             </div>
@@ -174,7 +174,7 @@ const AIMarketingPage: React.FC = () => {
                 Why Choose AI Marketing?
               </h2>
               <p className="text-xl text-gray-600">
-                Revolutionary AI technology that transforms traditional marketing into intelligent, data-driven campaigns;
+                Revolutionary AI technology that transforms traditional marketing into intelligent, data-driven campaigns.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
@@ -215,14 +215,14 @@ const AIMarketingPage: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
               <div className="text-center mb-12">"
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Solutions;
+                  {category} Solutions.
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology;
+                  Advanced {category.toLowerCase()} services powered by state-of-the-art AI technology.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {aiMarketingServices;
+                {aiMarketingServices.
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">"
@@ -235,7 +235,7 @@ const AIMarketingPage: React.FC = () => {
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 60% vs market rates;
+                          Save up to 60% vs market rates.
                         </div>
                       </div>
                       <div className="mb-4">"
@@ -271,7 +271,7 @@ const AIMarketingPage: React.FC = () => {
                         </ul>
                       </div>
                       <button className="w-full bg-pink-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-pink-700 transition-colors">
-                        Get Marketing Consultation;
+                        Get Marketing Consultation.
                       </button>
                     </div>
                   ))}
@@ -284,10 +284,10 @@ const AIMarketingPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center mb-12">"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                AI Marketing Capabilities;
+                AI Marketing Capabilities.
               </h2>
               <p className="text-xl text-gray-600">
-                Cutting-edge AI technologies that revolutionize how you approach marketing;
+                Cutting-edge AI technologies that revolutionize how you approach marketing.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
@@ -331,20 +331,20 @@ const AIMarketingPage: React.FC = () => {
               Ready to Revolutionize Your Marketing?
             </h2>
             <p className="text-xl mb-8 text-pink-100">
-              Contact our AI marketing experts for a free consultation and custom strategy development;
+              Contact our AI marketing experts for a free consultation and custom strategy development.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-pink-600 px-8 py-3 rounded-lg font-semibold hover:bg-pink-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950;
+                📞 +1 302 464 0950.
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-pink-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com;
+                ✉️ kleber@ziontechgroup.com.
               </a>
             </div>
             <div className="mt-8 text-sm text-pink-200">
@@ -354,6 +354,6 @@ const AIMarketingPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ).
 };
-export default AIMarketingPage;
+export default AIMarketingPage.

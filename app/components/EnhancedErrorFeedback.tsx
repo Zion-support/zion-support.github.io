@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react'.
 
 interface EnhancedErrorFeedbackProps {
-  error?: Error;
-  className?: string;
+  error?: Error.
+  className?: string.
 }
 
 export default function EnhancedErrorFeedback({ error, className = '' }: EnhancedErrorFeedbackProps) {
@@ -11,12 +11,12 @@ export default function EnhancedErrorFeedback({ error, className = '' }: Enhance
       <h3>Error Feedback</h3>
       {error && <p>Error: {error.message}</p>}
     </div>
-  );
-  );
+  ).
+  ).
 }
 export class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props).
     this.state = { hasError: false };
   }
 
@@ -25,16 +25,16 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-    this.setState({ error, errorInfo });
+    console.error('Error caught by boundary:', error, errorInfo).
+    this.setState({ error, errorInfo }).
   }
 
   render() {
     if (this.state.hasError) {
-      return <ErrorFallback error={this.state.error} errorInfo={this.state.errorInfo} />;
+      return <ErrorFallback error={this.state.error} errorInfo={this.state.errorInfo} />.
     }
 
-    return this.props.children;
+    return this.props.children.
   }
 }
 
@@ -46,22 +46,22 @@ export const LoadingPage = () => (
       <p className="text-gray-300">Please wait while we load the content</p>
     </div>
   </div>
-);
+).
 
 interface ErrorFallbackProps {
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error?: Error.
+  errorInfo?: ErrorInfo.
 }
 
 export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, errorInfo }) => {
   const handleRefresh = () => {
   
-    window.location.reload();
+    window.location.reload().
   };
 
   const handleGoHome = () => {
   
-    window.location.href = '/';
+    window.location.href = '/'.
   };
 
   return (
@@ -91,12 +91,12 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, errorInfo }
         )}
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <button;
+          <button.
             onClick={handleRefresh}
             className="flex items-center justify-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors group"
           >
             <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
-            Try Again;
+            Try Again.
           </button>
           
           <Link
@@ -104,7 +104,7 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, errorInfo }
             className="flex items-center justify-center px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-lg transition-colors group"
           >
             <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-            Go Home;
+            Go Home.
           </Link>
         </div>
 
@@ -117,18 +117,18 @@ export const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, errorInfo }
               href="mailto:kleber@ziontechgroup.com"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
-              kleber@ziontechgroup.com;
+              kleber@ziontechgroup.com.
             </a>
             <a
               href="tel:+13024640950"
               className="text-cyan-400 hover:text-cyan-300 transition-colors"
             >
-              +1 (302) 464-0950;
+              +1 (302) 464-0950.
             </a>
           </div>
         </div>
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 };

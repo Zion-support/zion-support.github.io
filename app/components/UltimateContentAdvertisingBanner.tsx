@@ -1,12 +1,12 @@
-import React from 'react';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import React, { Sparkles, Rocket, Zap, Clock, CheckCircle, Star, Users, DollarSign, Target, Shield } from 'lucide-react';
+import React from 'react'.
+import Link from 'next/link'.
+import { motion } from 'framer-motion'.
+import React, { Sparkles, Rocket, Zap, Clock, CheckCircle, Star, Users, DollarSign, Target, Shield } from 'lucide-react'.
 interface AdvertisingFeature {
-  icon: string;
-  title: string;
-  description: string;
-  highlight: string;
+  icon: string.
+  title: string.
+  description: string.
+  highlight: string.
 }
 
 const UltimateContentAdvertisingBanner: React.FC = () => {
@@ -63,7 +63,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-20">"
           <div className="flex items-center justify-center gap-4 mb-8 flex-wrap">
-            <motion.div;
+            <motion.div.
               animate={{ rotate: [0, 3, 6, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
             >
@@ -82,10 +82,10 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
           </div>
           
           <h2 className="text-7xl md:text-8xl font-extrabold mb-8 bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
-            Ultimate Content;
+            Ultimate Content.
           </h2>
           <h3 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-            Advertising Hub;
+            Advertising Hub.
           </h3>
           <p className="text-2xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
             Discover the most advanced AI content library available. From quantum neural computing to autonomous operations - 
@@ -104,7 +104,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {advertisingFeatures.map((feature, index) => (
-            <motion.div;
+            <motion.div.
               key={index}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -134,7 +134,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
         {/* Success Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">
           {successStats.map((stat, index) => (
-            <motion.div;
+            <motion.div.
               key={index}
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -243,7 +243,7 @@ const UltimateContentAdvertisingBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  );
+  ).
 };
 
-export default UltimateContentAdvertisingBanner;
+export default UltimateContentAdvertisingBanner.

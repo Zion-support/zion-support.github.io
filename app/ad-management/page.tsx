@@ -1,6 +1,6 @@
-import React from 'react';
-import { Metadata } from 'next';
-import AdDashboard from '../components/AdDashboard';
+import React from 'react'.
+import { Metadata } from 'next'.
+import AdDashboard from '../components/AdDashboard'.
 
 export const metadata: Metadata = {
   title: 'Ad Management System | Zion Tech Group',
@@ -20,8 +20,8 @@ const AdManagementPage: React.FC = () => {
         <AdDashboard />
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default AdManagementPage;
+export default AdManagementPage.

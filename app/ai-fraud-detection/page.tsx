@@ -1,4 +1,4 @@
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 export default function AiFraudDetection() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -12,7 +12,7 @@ export default function AiFraudDetection() {
             Ai Fraud Detection <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive aifrauddetection solutions designed to transform your business;
+            Discover our comprehensive aifrauddetection solutions designed to transform your business.
           </p>
         </div>
         <div className="text-center">"
@@ -24,7 +24,7 @@ export default function AiFraudDetection() {
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page;
+                Page.
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -39,7 +39,7 @@ export default function AiFraudDetection() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
+                Learn More.
               </button>
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},'
     {icon: BarChart,
@@ -52,7 +52,7 @@ export default function AiFraudDetection() {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]'
-    'Gain competitive advantage with advanced technology';
+    'Gain competitive advantage with advanced technology'.
   ]
 return (
     <div>
@@ -73,7 +73,7 @@ return (
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />"
           <div className="relative max-w-7xl mx-auto text-center">"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Fraud Detection;
+              Ai Fraud Detection.
             <p>Advanced AI-powered ai fraud detection solution for modern businesses.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
@@ -94,7 +94,7 @@ return (
               </h2>
               <p>Advanced AI technology that drives results;</p>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                  {feature.benefits && (;
+                  {feature.benefits && (.
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
@@ -141,9 +141,9 @@ return (
                 </button>
                 <button>Learn More;</button>
       <Footer />
-  );
+  ).
 };
 
 
-export default Component;
-export default PagePage;
+export default Component.
+export default PagePage.

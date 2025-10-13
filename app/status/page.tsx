@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'.
 
 const StatusPage: React.FC = () => {
   return (
@@ -12,8 +12,8 @@ const StatusPage: React.FC = () => {
         </div>
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default StatusPage;
+export default StatusPage.

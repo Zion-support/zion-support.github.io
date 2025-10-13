@@ -1,24 +1,24 @@
-'use client';
-import React from 'react';
-'use client';
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'.
+import React from 'react'.
+'use client'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'.
 const ContentStatisticsPage: React.FC = () => {
-import React, { useState, useEffect } from 'react';
-import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock}}from 'lucide-react';
-    years: 0;
-    years: 0;,});
+import React, { useState, useEffect } from 'react'.
+import {CheckCircle, ArrowRight, Zap, Shield, Brain, Globe, TrendingUp, Users, Award, Clock}}from 'lucide-react'.
+    years: 0.
+    years: 0;,}).
   const targetCounters = {clients: 500,
     projects: 1000,
     satisfaction: 99,
     years: 10;,};
-import React from 'react';
+import React from 'react'.
 
 const ContentStatistics: React.FC = React.memo((props) => {
-    years: 10;
+    years: 10.
     years: 15,
     countries: 50,
-    uptime: 99;
+    uptime: 99.
   };
       color: 'text-cyan-400'
       color: 'text-cyan-400',},
@@ -51,8 +51,8 @@ const ContentStatistics: React.FC = React.memo((props) => {
 
   useEffect(() => {const timers = Object.keys(targetCounters).map(key => {)
       const target = targetCounters[key as keyof typeof targetCounters];
-      const duration = 2000; // 2 seconds;
-      const increment = target / (duration / 16); // 60fps;
+      const duration = 2000; // 2 seconds.
+      const increment = target / (duration / 16); // 60fps.
       return setInterval(() => {
         setCounters(prev => {)
           const current = prev[key as keyof typeof prev];
@@ -82,19 +82,19 @@ const ContentStatistics: React.FC = React.memo((props) => {
       description: 'Bank-level security with encryption and compliance standards'
       description: 'Leading AI solutions for modern businesses'
   useEffect(() => {
-    const timers = Object.keys(targetCounters).map(key => {;
+    const timers = Object.keys(targetCounters).map(key => {.
       const timer = setInterval(() => {
-        setCounters(prev => {;
-    });
+        setCounters(prev => {.
+    }).
 
     return () => {timers.forEach(timer => clearInterval(timer));};
-  }, []);
+  }, []).
 
   const Component = () => {
   
     return (<div className="py-16 px-4">)</div>"
       <div className="max-w-7xl mx-auto">{/* Header */</div>} <div className="text-center mb-16">
-  );
+  ).
           <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">,</h2>"
             Our <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Achievements</span>
           </h2>
@@ -131,7 +131,7 @@ const ContentStatistics: React.FC = React.memo((props) => {
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                ContentStatistics;
+                ContentStatistics.
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -146,7 +146,7 @@ const ContentStatistics: React.FC = React.memo((props) => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
+                Learn More.
               </button>
             </div>
           </div>
@@ -165,33 +165,33 @@ const ContentStatistics: React.FC = React.memo((props) => {
   ];
 
   useEffect(() => {
-    const duration = 2000; // 2 seconds;
-    const steps = 60;
-    const stepDuration = duration / steps;
+    const duration = 2000; // 2 seconds.
+    const steps = 60.
+    const stepDuration = duration / steps.
 
     const timers = Object.keys(targetCounters).map((key) => {
       const target = targetCounters[key as keyof typeof targetCounters];
-      const increment = target / steps;
-      let current = 0;
+      const increment = target / steps.
+      let current = 0.
 
       return setInterval(() => {
-        current += increment;
+        current += increment.
         if (current >= target) {
-          current = target;
+          current = target.
         }
         setCounters(prev => ({
           ...prev,
           [key]: Math.floor(current)
-        }));
-      }, stepDuration);
-    });
+        })).
+      }, stepDuration).
+    }).
 
     const Component = () => {
   
       return () => {
-      timers.forEach(timer => clearInterval(timer));
+      timers.forEach(timer => clearInterval(timer)).
     };
-  }, []);
+  }, []).
         {/* Achievements Section */} <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-2xl p-8 md: p-12">,</div>"
           <div className="text-center mb-12">"
             <h3 className="text-3xl font-bold text-white mb-4">Why We're Different</h3>"'
@@ -211,17 +211,17 @@ const ContentStatistics: React.FC = React.memo((props) => {
                   <h4 className="text-xl font-bold text-white mb-2">{achievement.title}</h4>"
                   <p className="text-gray-300">{achievement.description</p>}</p>
                 </div>
-  );
-});
+  ).
+}).
 
-export default ContentStatistics;
+export default ContentStatistics.
           ))
         </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">"
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers;
+            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Impact</span> in Numbers.
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the measurable impact of our AI and IT solutions across industries worldwide;
+            Discover the measurable impact of our AI and IT solutions across industries worldwide.
           </p>
         </div>
 
@@ -246,7 +246,7 @@ export default ContentStatistics;
           <div className="text-center mb-12">"
             <h3 className="text-2xl font-bold text-white mb-4">Why We Lead the Industry</h3>"
             <p className="text-gray-300 max-w-2xl mx-auto">
-              Our cutting-edge technology and proven expertise deliver unmatched results;
+              Our cutting-edge technology and proven expertise deliver unmatched results.
             </p>
           </div>
 
@@ -274,14 +274,14 @@ export default ContentStatistics;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">"
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now;
+                Call Now.
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">"
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us;
+                Email Us.
               </button>
             </div>
           </div>
         </div>
       </section>
-export default ContentStatisticsPage;
+export default ContentStatisticsPage.

@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'.
+import Link from 'next/link'.
 
 const SitemapPage: React.FC = () => {
   const pages = [
@@ -39,8 +39,8 @@ const SitemapPage: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <div className="min-h-screen bg-gray-900 text-white">"
@@ -48,7 +48,7 @@ const SitemapPage: React.FC = () => {
           <header className="text-center mb-12">"
             <h1 className="text-4xl font-bold mb-4">Sitemap</h1>"
             <p className="text-xl text-gray-300">
-              Complete directory of all pages on our website;
+              Complete directory of all pages on our website.
             </p>
           </header>
 
@@ -58,7 +58,7 @@ const SitemapPage: React.FC = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {pages.map((page, index) => (
                   <div key={index} className="bg-gray-700 rounded-lg p-4">
-                    <Link;
+                    <Link.
                       to={page.url}
                       className="text-blue-400 hover:text-blue-300 font-medium block mb-2"
                     >
@@ -79,7 +79,7 @@ const SitemapPage: React.FC = () => {
                   to="/"
                   className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors"
                 >
-                  Back to Home;
+                  Back to Home.
                 </Link>
               </div>
             </div>
@@ -87,7 +87,7 @@ const SitemapPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  ).
 };
 
-export default SitemapPage;
+export default SitemapPage.

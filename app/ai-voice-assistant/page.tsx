@@ -30,12 +30,12 @@
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+'use client'.
+import React from 'react'.
+import {Helmet}}from 'react-helmet-async'.
+import Navigation from '../components/Navigation'.
+import Footer from '../components/Footer'.
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react'.
 const AiVoiceAssistantPage: React.FC = () => {,
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},'
     {icon: BarChart,
@@ -48,14 +48,14 @@ const AiVoiceAssistantPage: React.FC = () => {,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]'
-    'Gain competitive advantage with advanced technology';
+    'Gain competitive advantage with advanced technology'.
   ]
 return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
     </>
@@ -72,7 +72,7 @@ return (
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page;
+                Page.
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -98,7 +98,7 @@ return (
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />"
           <div className="relative max-w-7xl mx-auto text-center">"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Voice Assistant;
+              Ai Voice Assistant.
             <p>Advanced AI-powered ai voice assistant solution for modern businesses.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
@@ -119,7 +119,7 @@ return (
               </h2>
               <p>Advanced AI technology that drives results;</p>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                  {feature.benefits && (;
+                  {feature.benefits && (.
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />
@@ -166,9 +166,9 @@ return (
                 </button>
                 <button>Learn More;</button>
       <Footer />
-  );
+  ).
 };
 
 
-export default Component;
-export default PagePage;
+export default Component.
+export default PagePage.

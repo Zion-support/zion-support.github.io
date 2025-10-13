@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
+'use client'.
+import React from 'react'.
+import {Helmet}}from 'react-helmet-async'.
+import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react'.
 const FuturisticHeroPage: React.FC = () => {,
       description: 'Worldwide deployment and support for international businesses',}}
   ]
@@ -21,7 +21,7 @@ const benefits = [
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                FuturisticHero;
+                FuturisticHero.
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -36,7 +36,7 @@ const benefits = [
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
+                Learn More.
               </button>
             </div>
           </div>
@@ -74,7 +74,7 @@ const benefits = [
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
+              Key Benefits.
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our futuristichero solutions for your business.
@@ -93,7 +93,7 @@ const Component = () => {
           </div>
         </div>
       </section>
-  );
+  ).
       {/* CTA Section */} <section className="py-20 px-4">"
           <div className="max-w-7xl mx-auto">"
             <div className="text-center mb-16">"
@@ -109,20 +109,20 @@ const Component = () => {
             </h2>
             <p>Contact our experts to discuss your futuristichero needs and get a customized solution.</p>
                 <Phone>
-                Call Now;
+                Call Now.
               </button>
               <button>
                 <Mail>
-                Email Us;
+                Email Us.
               </button>
             </div>
           </div>
         </div>
       </section>
     </div>
-  );
+  ).
 };
 
 
-export default Component;
-export default FuturisticHeroPage;
+export default Component.
+export default FuturisticHeroPage.

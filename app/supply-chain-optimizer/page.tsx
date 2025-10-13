@@ -1,7 +1,7 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import {Truck, BarChart, Zap, Shield, CheckCircle, Target}}from 'lucide-react';
+'use client'.
+import React from 'react'.
+import {Helmet}}from 'react-helmet-async'.
+import {Truck, BarChart, Zap, Shield, CheckCircle, Target}}from 'lucide-react'.
 const SupplyChainOptimizerPage: React.FC = () => {,
     { icon: Truck, title: 'Logistics Optimization', description: 'AI-powered logistics optimization for efficient supply chain management.' ,},'
     {icon: BarChart, title: 'Demand Forecasting', description: 'Accurate demand forecasting and inventory optimization using AI analytics.' ,},'

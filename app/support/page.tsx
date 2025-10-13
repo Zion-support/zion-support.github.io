@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import React, { Helmet } from 'react-helmet-async';
-import React, { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, ArrowRight, BookOpen, Video, FileText } from 'lucide-react';
+import React, { useState } from 'react'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { Phone, Mail, MessageCircle, Clock, CheckCircle, Search, ArrowRight, BookOpen, Video, FileText } from 'lucide-react'.
 const SupportPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('').
+  const [selectedCategory, setSelectedCategory] = useState('all').
 
   const categories = [
     { id: 'all', name: 'All Topics' },'
@@ -13,7 +13,7 @@ const SupportPage: React.FC = () => {
     { id: 'implementation', name: 'Implementation' }'
   ];
 
-  const categories = [;
+  const categories = [.
     { id: 'all', name: 'All Topics },'
     { id: 'general', name: 'General },'
     { id: 'technical', name: 'Technical },'
@@ -75,7 +75,7 @@ const SupportPage: React.FC = () => {
       category: 'development;'
     }  ];
 
-  const supportChannels = [;;
+  const supportChannels = [;.
 
     {
       name: 'Phone Support,'
@@ -127,21 +127,21 @@ const SupportPage: React.FC = () => {
       hours: '24/7 Available'
   ];
 
-  const filteredFAQs = faqs.filter(faq => {;
-    const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());;
+  const filteredFAQs = faqs.filter(faq => {.
+    const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||                         faq.answer.toLowerCase().includes(searchTerm.toLowerCase());.
 
-  const toggleFAQ = (index: number) => {;
-    setExpandedFAQ(expandedFAQ === index ? null : index);
+  const toggleFAQ = (index: number) => {.
+    setExpandedFAQ(expandedFAQ === index ? null : index).
 
   };
 
 const PagePage: React.FC = () => {}
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 const SupportPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-    return matchesSearch && matchesCategory;
-  });
+    return matchesSearch && matchesCategory.
+  }).
       title: 'Email Support',
       description: 'Get help via email within 24 hours',
       icon: Mail,
@@ -193,8 +193,8 @@ const SupportPage: React.FC = () => {
   ];
 
   const filteredFaqs = faqs.filter(faq => 
-    selectedCategory === 'all' || faq.category === selectedCategory;
-  );
+    selectedCategory === 'all' || faq.category === selectedCategory.
+  ).
 
   const Component = () => {
   
@@ -216,8 +216,8 @@ const SupportPage: React.FC = () => {
             Get help and support for all your needs.
           </p>
         </div>
-  );
-  );
+  ).
+  ).
         <div className="max-w-4xl mx-auto">"
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">"
             <div className="bg-white rounded-lg shadow-md p-6">"
@@ -308,7 +308,7 @@ const SupportPage: React.FC = () => {
             
             <div className="flex flex-wrap justify-center gap-2">
               {categories.map((category) => (
-                <button;
+                <button.
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id</div>
                   className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
@@ -324,10 +324,10 @@ const SupportPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">"
             <div className="text-center mb-12">"
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Get in Touch;
+                Get in Touch.
               </h2>
               <p className="text-gray-300 max-w-3xl mx-auto">
-                Choose your preferred way to contact our support team;
+                Choose your preferred way to contact our support team.
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">"
@@ -343,7 +343,7 @@ const SupportPage: React.FC = () => {
               </p>
             </div>
           </div>
-import React from 'react';
+import React from 'react'.
 
 const SupportPage: React.FC = () => {
   const Component = () => {
@@ -360,9 +360,9 @@ const SupportPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       </div>
     </div>
-  );
-  );
-  );
+  ).
+  ).
+  ).
 }
             <div className="space-y-6">
               {filteredFaqs.map((faq, index) => (
@@ -425,7 +425,7 @@ const SupportPage: React.FC = () => {
                   href="mailto:support@ziontechgroup.com"
                   className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 text-center"
                 >
-                  Email Support;
+                  Email Support.
                 </a>
               </div>
             </div>
@@ -433,10 +433,10 @@ const SupportPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ).
 };
-export default SupportPage;
-  );
+export default SupportPage.
+  ).
 }
-export default SupportPage;
-export default SupportPage;
+export default SupportPage.
+export default SupportPage.

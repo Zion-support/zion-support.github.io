@@ -1,5 +1,5 @@
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, BookOpen, GraduationCap, Users, Award } from 'lucide-react';
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, BookOpen, GraduationCap, Users, Award } from 'lucide-react'.
 const AIEducationPlatformPage: React.FC = () => {
   const educationServices = [
     {
@@ -26,7 +26,7 @@ const AIEducationPlatformPage: React.FC = () => {
       ],
       marketPrice: '$800-2,500/month',
       category: 'Personalized Learning',
-      technologies: ['Machine Learning', 'Adaptive Algorithms', 'Learning Analytics', 'Content Management', 'Mobile Apps'],'
+      technologies: ['Machine Learning', 'Adaptive Algorithms', 'Learning Analytics', 'Content Management', 'Mobile Apps'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -53,7 +53,7 @@ const AIEducationPlatformPage: React.FC = () => {
       ],
       marketPrice: '$500-1,800/month',
       category: 'AI Tutoring',
-      technologies: ['NLP', 'Machine Learning', 'Knowledge Graphs', 'Voice Recognition', 'Mobile Apps'],'
+      technologies: ['NLP', 'Machine Learning', 'Knowledge Graphs', 'Voice Recognition', 'Mobile Apps'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -80,7 +80,7 @@ const AIEducationPlatformPage: React.FC = () => {
       ],
       marketPrice: '$1,200-4,000/month',
       category: 'Content Generation',
-      technologies: ['NLP', 'Content Generation', 'Curriculum APIs', 'Multimedia Tools', 'Quality Assurance'],'
+      technologies: ['NLP', 'Content Generation', 'Curriculum APIs', 'Multimedia Tools', 'Quality Assurance'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -107,7 +107,7 @@ const AIEducationPlatformPage: React.FC = () => {
       ],
       marketPrice: '$600-2,000/month',
       category: 'Assessment',
-      technologies: ['Machine Learning', 'NLP', 'Automated Grading', 'Analytics', 'Plagiarism Detection'],'
+      technologies: ['Machine Learning', 'NLP', 'Automated Grading', 'Analytics', 'Plagiarism Detection'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -134,7 +134,7 @@ const AIEducationPlatformPage: React.FC = () => {
       ],
       marketPrice: '$400-1,500/month',
       category: 'Language Learning',
-      technologies: ['Speech Recognition', 'NLP', 'Cultural AI', 'Mobile Apps', 'Voice Synthesis'],'
+      technologies: ['Speech Recognition', 'NLP', 'Cultural AI', 'Mobile Apps', 'Voice Synthesis'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -161,7 +161,7 @@ const AIEducationPlatformPage: React.FC = () => {
       ],
       marketPrice: '$300-1,200/month',
       category: 'Career Guidance',
-      technologies: ['Machine Learning', 'Career APIs', 'Skill Assessment', 'Matching Algorithms', 'Analytics'],'
+      technologies: ['Machine Learning', 'Career APIs', 'Skill Assessment', 'Matching Algorithms', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -188,7 +188,7 @@ const AIEducationPlatformPage: React.FC = () => {
       ],
       marketPrice: '$1,500-5,000/month',
       category: 'Special Education',
-      technologies: ['Accessibility AI', 'Adaptive Learning', 'Multi-sensory Tools', 'Progress Tracking', 'Therapy Integration'],'
+      technologies: ['Accessibility AI', 'Adaptive Learning', 'Multi-sensory Tools', 'Progress Tracking', 'Therapy Integration'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -215,7 +215,7 @@ const AIEducationPlatformPage: React.FC = () => {
       ],
       marketPrice: '$500-2,000/month',
       category: 'Teacher Tools',
-      technologies: ['NLP', 'Administrative Automation', 'Analytics', 'Communication Tools', 'Resource Management'],'
+      technologies: ['NLP', 'Administrative Automation', 'Analytics', 'Communication Tools', 'Resource Management'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
@@ -232,7 +232,7 @@ const AIEducationPlatformPage: React.FC = () => {
       <section className="pt-24 pb-16 px-4">"
         <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Education Platform;
+            AI Education Platform.
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform education with AI-powered solutions that personalize learning, enhance teaching, and improve student outcomes.
@@ -282,7 +282,7 @@ const AIEducationPlatformPage: React.FC = () => {
       <section className="py-16 px-4">"
         <div className="max-w-7xl mx-auto">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Education AI Solution;
+            Choose Your Education AI Solution.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {educationServices.map((service, index) => (
@@ -314,7 +314,7 @@ const AIEducationPlatformPage: React.FC = () => {
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features;
+                        +{service.features.length - 4} more features.
                       </li>
                     )}
                   </ul>
@@ -348,7 +348,7 @@ const AIEducationPlatformPage: React.FC = () => {
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started Now;
+                    Get Started Now.
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
                     {service.contactInfo}
@@ -374,20 +374,20 @@ const AIEducationPlatformPage: React.FC = () => {
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              Call (302) 464-0950;
+              Call (302) 464-0950.
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us;
+              Email Us.
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default AIEducationPlatformPage;
+export default AIEducationPlatformPage.

@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react'.
 
 interface AdvertisingBannerProps {
-  title: string;
-  description: string;
-  ctaText: string;
-  ctaUrl: string;
-  imageUrl?: string;
-  backgroundColor?: string;
-  textColor?: string;
+  title: string.
+  description: string.
+  ctaText: string.
+  ctaUrl: string.
+  imageUrl?: string.
+  backgroundColor?: string.
+  textColor?: string.
   variant?: 'default' | 'gradient' | 'minimal';'
   size?: 'small' | 'medium' | 'large';'
-  className?: string;
+  className?: string.
 }
 
 const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
@@ -51,7 +51,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
     >
       {imageUrl && (
         <div className="banner-image flex-shrink-0">
-          <img;
+          <img.
             src={imageUrl}
             alt={title}
             className="rounded-md"
@@ -78,12 +78,12 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
           style={{ 
             margin: '0 0 1.5rem 0', 
             fontSize: size === 'small' ? '0.875rem' : '1rem','
-            opacity: 0.9;
+            opacity: 0.9.
           }}
         >
           {description}
         </p>
-        <a;
+        <a.
           href={ctaUrl}
           className="inline-block px-6 py-3 rounded-md font-bold transition-all duration-200 hover:opacity-80"
           style={{
@@ -97,18 +97,18 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
             transition: 'background-color 0.2s'
           }}
           onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)';
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'.
           }}
           onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
+            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'.
           }}
         >
           {ctaText}
         </a>
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default AdvertisingBanner;
+export default AdvertisingBanner.

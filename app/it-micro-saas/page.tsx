@@ -1,5 +1,5 @@
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, Server, Database, Cloud, Shield } from 'lucide-react';
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, Server, Database, Cloud, Shield } from 'lucide-react'.
 const ITMicroSaasPage: React.FC = () => {
   const itServices = [
     {
@@ -26,7 +26,7 @@ const ITMicroSaasPage: React.FC = () => {
       ],
       marketPrice: '$500-1,500/month',
       category: 'Cloud Services',
-      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],'
+      technologies: ['AWS', 'Azure', 'Google Cloud', 'Terraform', 'Kubernetes', 'Docker'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -53,7 +53,7 @@ const ITMicroSaasPage: React.FC = () => {
       ],
       marketPrice: '$800-2,500/month',
       category: 'Database Services',
-      technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Performance Tools'],'
+      technologies: ['MySQL', 'PostgreSQL', 'MongoDB', 'Redis', 'Elasticsearch', 'Performance Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -80,7 +80,7 @@ const ITMicroSaasPage: React.FC = () => {
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'API Services',
-      technologies: ['Node.js', 'Python', 'Go', 'GraphQL', 'Swagger', 'API Gateway'],'
+      technologies: ['Node.js', 'Python', 'Go', 'GraphQL', 'Swagger', 'API Gateway'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -107,7 +107,7 @@ const ITMicroSaasPage: React.FC = () => {
       ],
       marketPrice: '$1,500-4,000/month',
       category: 'DevOps',
-      technologies: ['Jenkins', 'GitLab CI', 'Docker', 'Kubernetes', 'Terraform', 'Ansible'],'
+      technologies: ['Jenkins', 'GitLab CI', 'Docker', 'Kubernetes', 'Terraform', 'Ansible'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -134,7 +134,7 @@ const ITMicroSaasPage: React.FC = () => {
       ],
       marketPrice: '$2,000-5,000/month',
       category: 'Cybersecurity',
-      technologies: ['Security Tools', 'Penetration Testing', 'Compliance Frameworks', 'Monitoring', 'Incident Response'],'
+      technologies: ['Security Tools', 'Penetration Testing', 'Compliance Frameworks', 'Monitoring', 'Incident Response'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -161,7 +161,7 @@ const ITMicroSaasPage: React.FC = () => {
       ],
       marketPrice: '$2,500-6,000/month',
       category: 'Architecture',
-      technologies: ['Kubernetes', 'Istio', 'Envoy', 'Prometheus', 'Grafana', 'Jaeger'],'
+      technologies: ['Kubernetes', 'Istio', 'Envoy', 'Prometheus', 'Grafana', 'Jaeger'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -188,7 +188,7 @@ const ITMicroSaasPage: React.FC = () => {
       ],
       marketPrice: '$1,200-3,500/month',
       category: 'Data Engineering',
-      technologies: ['Apache Kafka', 'Apache Airflow', 'Apache Spark', 'Python', 'SQL', 'Cloud Storage'],'
+      technologies: ['Apache Kafka', 'Apache Airflow', 'Apache Spark', 'Python', 'SQL', 'Cloud Storage'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -215,7 +215,7 @@ const ITMicroSaasPage: React.FC = () => {
       ],
       marketPrice: '$800-2,500/month',
       category: 'Monitoring',
-      technologies: ['Prometheus', 'Grafana', 'ELK Stack', 'Jaeger', 'Custom Dashboards', 'Alerting'],'
+      technologies: ['Prometheus', 'Grafana', 'ELK Stack', 'Jaeger', 'Custom Dashboards', 'Alerting'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -242,7 +242,7 @@ const ITMicroSaasPage: React.FC = () => {
       ],
       marketPrice: '$1,800-5,000/month',
       category: 'Mobile Development',
-      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase', 'App Store APIs'],'
+      technologies: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase', 'App Store APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -269,7 +269,7 @@ const ITMicroSaasPage: React.FC = () => {
       ],
       marketPrice: '$1,200-3,500/month',
       category: 'Web Development',
-      technologies: ['React', 'Vue.js', 'Angular', 'Node.js', 'Python', 'PostgreSQL'],'
+      technologies: ['React', 'Vue.js', 'Angular', 'Node.js', 'Python', 'PostgreSQL'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
@@ -286,7 +286,7 @@ const ITMicroSaasPage: React.FC = () => {
       <section className="pt-24 pb-16 px-4">"
         <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            IT Micro SAAS Services;
+            IT Micro SAAS Services.
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Professional IT services delivered as micro SAAS solutions. Scale your technology infrastructure with our expert services.
@@ -336,7 +336,7 @@ const ITMicroSaasPage: React.FC = () => {
       <section className="py-16 px-4">"
         <div className="max-w-7xl mx-auto">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your IT Service;
+            Choose Your IT Service.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {itServices.map((service, index) => (
@@ -368,7 +368,7 @@ const ITMicroSaasPage: React.FC = () => {
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features;
+                        +{service.features.length - 4} more features.
                       </li>
                     )}
                   </ul>
@@ -402,7 +402,7 @@ const ITMicroSaasPage: React.FC = () => {
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started Now;
+                    Get Started Now.
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
                     {service.contactInfo}
@@ -428,20 +428,20 @@ const ITMicroSaasPage: React.FC = () => {
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              Call (302) 464-0950;
+              Call (302) 464-0950.
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us;
+              Email Us.
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default ITMicroSaasPage;
+export default ITMicroSaasPage.

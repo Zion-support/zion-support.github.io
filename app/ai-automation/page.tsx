@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'.
 
 
 const AiAutomationPage: React.FC = () => {
@@ -6,8 +6,8 @@ const AiAutomationPage: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <Helmet>
@@ -21,7 +21,7 @@ const AiAutomationPage: React.FC = () => {
           <div className="text-center mb-16">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Ai Automation;
+                Ai Automation.
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -36,13 +36,13 @@ const AiAutomationPage: React.FC = () => {
               Contact us to learn more about our services.
             </p>
             <button className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
-              Contact Us;
+              Contact Us.
             </button>
           </div>
         </div>
       </div>
     </>
-  );
+  ).
 };
 
-export default AiAutomationPage;
+export default AiAutomationPage.

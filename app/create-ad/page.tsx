@@ -1,6 +1,6 @@
-import React from 'react';
-import { Metadata } from 'next';
-import AdManagementSystem from '../components/AdManagementSystem';
+import React from 'react'.
+import { Metadata } from 'next'.
+import AdManagementSystem from '../components/AdManagementSystem'.
 
 export const metadata: Metadata = {
   title: 'Create Ad Campaign | Zion Tech Group',
@@ -26,8 +26,8 @@ const CreateAdPage: React.FC = () => {
         <AdManagementSystem />
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default CreateAdPage;
+export default CreateAdPage.

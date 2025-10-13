@@ -1,6 +1,6 @@
-'use client';
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'.
 const ContentCarouselPage: React.FC = () => {
   const features = [
     {
@@ -17,10 +17,10 @@ const ContentCarouselPage: React.FC = () => {
       icon: Shield,
       title: 'Enterprise Security',
       description: 'Bank-level security with encryption and compliance standards'
-import React, { useState, useEffect } from 'react';
-import {Cloud, Zap, Shield, ChevronLeft, ChevronRight}}from 'lucide-react';
-import React, { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-react';
-import React from 'react';
+import React, { useState, useEffect } from 'react'.
+import {Cloud, Zap, Shield, ChevronLeft, ChevronRight}}from 'lucide-react'.
+import React, { ChevronLeft, ChevronRight, Cloud, Zap, Shield, Brain } from 'lucide-react'.
+import React from 'react'.
 
 const ContentCarousel: React.FC = React.memo((props) => {
       title: 'AI Solutions',
@@ -38,7 +38,7 @@ const ContentCarousel: React.FC = React.memo((props) => {
     {id: 2,
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',
-      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],'
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics'],
       stats: [
         { value: '95%', label: 'Accuracy Rate' },'
         { value: '10x', label: 'Faster Processing' },'
@@ -54,12 +54,12 @@ const ContentCarousel: React.FC = React.memo((props) => {
   ];
 
   useEffect(() => {];];
-    const timer = setInterval(() => {;
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    const timer = setInterval(() => {.
+      setCurrentSlide((prev) => (prev + 1) % slides.length).
+    }, 5000).
 
-    return () => clearInterval(timer);
-  }, [slides.length]);
+    return () => clearInterval(timer).
+  }, [slides.length]).
 
   const nextSlide = () => {setCurrentSlide((prev) => (prev + 1) % slides.length);};
 
@@ -69,7 +69,7 @@ const ContentCarousel: React.FC = React.memo((props) => {
   
     return (<div className="relative w-full max-w-6xl mx-auto">)</div>"
       <div className="overflow-hidden rounded-2xl">
-        <div;
+        <div.
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentSlide * 100,)}%)` }}
         >{slides.map((slide) => (</div>
@@ -94,25 +94,25 @@ const ContentCarousel: React.FC = React.memo((props) => {
                   </div>
       </div>
       
-      {/* Navigation buttons */} <button;
+      {/* Navigation buttons */} <button.
         onClick={prevSlide}className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover: bg-white/30 text-white p-2 rounded-full transition-all duration-300",
       >
         <ChevronLeft className="h-6 w-6" />
       </button>
-      <button;
+      <button.
         onClick={nextSlide}className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover: bg-white/30 text-white p-2 rounded-full transition-all duration-300",
       >
         <ChevronRight className="h-6 w-6" />
       </button>
       
       {/* Dots indicator */} <div className="flex justify-center mt-6 space-x-2">{slides.map((_, index) => (</div>
-          <button;
+          <button.
             key={index}onClick={() =>setCurrentSlide(index)</button>}className={`w-3 h-3 rounded-full transition-all duration-300 ${
               index === currentSlide ? 'bg-blue-600' : 'bg-gray-300'}`}'
-  );
-});
+  ).
+}).
 
-export default ContentCarousel;
+export default ContentCarousel.
       description: 'Worldwide deployment and support for international businesses'
   ];
 
@@ -122,21 +122,21 @@ export default ContentCarousel;
       company: 'TechCorp Solutions',
       role: 'CTO',
       content: 'Zion Tech Group transformed our entire IT infrastructure. The AI solutions they implemented increased our efficiency by 300%.',
-      rating: 5;
+      rating: 5.
     },
     {
       name: 'Michael Chen',
       company: 'FinanceFlow Inc',
       role: 'CEO',
       content: 'Outstanding service and cutting-edge technology. Their cloud migration saved us $2M annually while improving performance.',
-      rating: 5;
+      rating: 5.
     },
     {
       name: 'Alex Rodriguez',
       company: 'HealthTech Plus',
       role: 'IT Director',
       content: 'The cybersecurity solutions provided by Zion Tech Group are exceptional. We\'ve had zero security incidents since implementation.','
-      rating: 5;
+      rating: 5.
     }
   ];
 
@@ -156,7 +156,7 @@ export default ContentCarousel;
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                ContentCarousel;
+                ContentCarousel.
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -171,7 +171,7 @@ export default ContentCarousel;
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
+                Learn More.
               </button>
             </div>
           </div>
@@ -209,7 +209,7 @@ export default ContentCarousel;
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
+              Key Benefits.
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our contentcarousel solutions for your business.
@@ -240,11 +240,11 @@ export default ContentCarousel;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">"
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now;
+                Call Now.
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">"
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us;
+                Email Us.
               </button>
             </div>
           </div>
@@ -253,7 +253,7 @@ export default ContentCarousel;
           {/* Dots Indicator */}
           <div className="flex justify-center mt-8 space-x-2">
             {slides.map((_, index) => (
-              <button;
+              <button.
                 key={index}
                 onClick={() => setCurrentSlide(index</div>
                 className={`w-3 h-3 rounded-full transition-colors duration-200 ${
@@ -288,9 +288,9 @@ export default ContentCarousel;
           </div>
         </div>
       </div>
-  );
+  ).
     </div>
-  );
+  ).
 };
 
-export default ContentCarouselPage;
+export default ContentCarouselPage.

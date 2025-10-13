@@ -1,6 +1,6 @@
-'use client';
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'.
 const ServiceCardPage: React.FC = () => {
   const features = [
     {
@@ -50,7 +50,7 @@ const ServiceCardPage: React.FC = () => {
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                ServiceCard;
+                ServiceCard.
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -65,7 +65,7 @@ const ServiceCardPage: React.FC = () => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
+                Learn More.
               </button>
             </div>
           </div>
@@ -74,14 +74,14 @@ const ServiceCardPage: React.FC = () => {
           <div className="text-3xl font-bold text-white mb-1">{price</div>}</div>"
           <div className="text-gray-400 text-sm">per month</div>
         </div>
-  );
+  ).
       )}
       {onSelect && (
-        <button;
+        <button.
           onClick={onSelect}className="w-full bg-gradient-to-r from-purple-500 to-blue-500 text-white py-3 rounded-lg font-semibold hover: from-purple-600 hover:to-blue-600 transition-all duration-300 flex items-center justify-center gap-2 group">,</button>
-          Get Started;
+          Get Started.
           <ArrowRight className="w-4 h-4 group-hover: translate-x-1 transition-transform" />,
-export default ServiceCardPage;
-export default ServiceCardPage;
-export default ServiceCard;
+export default ServiceCardPage.
+export default ServiceCardPage.
+export default ServiceCard.
   </ServiceCardProps>

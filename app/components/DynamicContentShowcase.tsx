@@ -1,6 +1,6 @@
-'use client';
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'.
 const DynamicContentShowcasePage: React.FC = () => {
   const features = [
     {
@@ -22,17 +22,17 @@ const DynamicContentShowcasePage: React.FC = () => {
       icon: Globe,
       title: 'Global Reach',
       description: 'Worldwide deployment and support for international businesses'
-import React, { useState, useEffect } from 'react';
-import {Cloud, Zap, Shield, Globe, Brain, Star}}from 'lucide-react';
+import React, { useState, useEffect } from 'react'.
+import {Cloud, Zap, Shield, Globe, Brain, Star}}from 'lucide-react'.
 
 const DynamicContentShowcase: React.FC = () => {,
-  const [currentFeature, setCurrentFeature] = useState(0);
-import React, { Brain, Cloud, Zap, Shield, Globe, Users, CheckCircle, Star, ArrowRight } from 'lucide-react';
+  const [currentFeature, setCurrentFeature] = useState(0).
+import React, { Brain, Cloud, Zap, Shield, Globe, Users, CheckCircle, Star, ArrowRight } from 'lucide-react'.
 const DynamicContentShowcase: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0).
 
   const features = [
-import React from 'react';
+import React from 'react'.
 
 const DynamicContentShowcase: React.FC = React.memo((props) => {
       title: 'AI Solutions',
@@ -74,7 +74,7 @@ const DynamicContentShowcase: React.FC = React.memo((props) => {
   ];
 
   ];];];
-    'Proven track record of success';
+    'Proven track record of success'.
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -100,7 +100,7 @@ const DynamicContentShowcase: React.FC = React.memo((props) => {
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                DynamicContentShowcase;
+                DynamicContentShowcase.
               </span>
               <br />
               <span className="text-white">Solutions</span>
@@ -115,7 +115,7 @@ const DynamicContentShowcase: React.FC = React.memo((props) => {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
+                Learn More.
               </button>
             </div>
   const testimonials = [
@@ -136,7 +136,7 @@ const DynamicContentShowcase: React.FC = React.memo((props) => {
       rating: 5;,}];
 
   useEffect(() => {const timer = setInterval(() => {
-      setCurrentFeature((prev) => (prev + 1) % features.length);}, 3000);
+      setCurrentFeature((prev) => (prev + 1) % features.length);}, 3000).
       content: 'Outstanding performance and reliability. Our team productivity increased by 300%.',
       content: 'The performance improvements we\'ve seen are remarkable. Highly recommended!','
       content: 'Outstanding performance and reliability. Our team productivity increased by 300% and we\'ve seen a 50% reduction in operational costs.','
@@ -148,14 +148,14 @@ const DynamicContentShowcase: React.FC = React.memo((props) => {
       content: 'The best investment we made. Seamless integration and exceptional support.',
       content: 'The best investment we made this year. ROI was evident within the first month.',
       content: 'Seamless integration with our existing systems. The scalability and performance exceeded our expectations.',
-      rating: 5;
+      rating: 5.
     }
   ]
 
   useEffect(() => {];];
-    const timer = setInterval(() => {;
-      setCurrentIndex((prev) => (prev + 1) % features.length);
-    }, 3000);
+    const timer = setInterval(() => {.
+      setCurrentIndex((prev) => (prev + 1) % features.length).
+    }, 3000).
     const timer = setInterval(() => {
   const Component = () => {
   
@@ -175,14 +175,14 @@ const DynamicContentShowcase: React.FC = React.memo((props) => {
                 {features[currentFeature].title} </h3>
               <p className="text-xl text-gray-300 mb-6">{features[currentFeature].description</p>} </p>"
               <div className="flex space-x-2">{features.map((_, index) => (</div>
-                  <button;
+                  <button.
                     key={index}onClick={() =>setCurrentFeature(index)</button>}className={`w-3 h-3 rounded-full transition-all duration-300 ${
                       index === currentFeature ? 'bg-blue-500' : 'bg-gray-400'}`}'
                   />
                 ))}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
     ))
-  );
+  ).
 };
 
       {/* Benefits Section */}
@@ -190,7 +190,7 @@ const DynamicContentShowcase: React.FC = React.memo((props) => {
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
+              Key Benefits.
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our dynamiccontentshowcase solutions for your business.
@@ -217,14 +217,14 @@ const DynamicContentShowcase: React.FC = React.memo((props) => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">"
                 <Phone className="mr-2 h-5 w-5" />
-                Call Now;
+                Call Now.
               </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">"
                 <Mail className="mr-2 h-5 w-5" />
-                Email Us;
+                Email Us.
               </button>
             </div>
-export default DynamicContentShowcasePage;
+export default DynamicContentShowcasePage.
             <div className="flex items-center mb-4">"
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mr-4">"
                 <feature.icon className="w-6 h-6" />"
@@ -263,7 +263,7 @@ export default DynamicContentShowcasePage;
               <h4 className="text-lg font-bold text-white mb-2">AI Demo</h4>"
               <p className="text-gray-300 text-sm mb-4">See AI in action with our interactive demos</p>"
               <button className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                Try Demo;
+                Try Demo.
               </button>
             </div>
             
@@ -272,7 +272,7 @@ export default DynamicContentShowcasePage;
               <h4 className="text-lg font-bold text-white mb-2">Cloud Trial</h4>"
               <p className="text-gray-300 text-sm mb-4">Test our cloud solutions with a free trial</p>"
               <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                Start Trial;
+                Start Trial.
               </button>
             </div>
             
@@ -281,7 +281,7 @@ export default DynamicContentShowcasePage;
               <h4 className="text-lg font-bold text-white mb-2">Security Scan</h4>"
               <p className="text-gray-300 text-sm mb-4">Get a free security assessment</p>"
               <button className="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">
-                Scan Now;
+                Scan Now.
               </button>
             </div>
             <p className="text-xl text-blue-100 max-w-2xl mx-auto">Experience the power of our AI and IT solutions with interactive demos and live examples.</p>
@@ -294,7 +294,7 @@ export default DynamicContentShowcasePage;
               <h4 className="text-lg font-bold text-white mb-2">AI Demo</h4>"
               <p className="text-gray-300 text-sm mb-4">See AI in action with our interactive demos</p>"
               <button className="bg-cyan-500 hover: bg-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">,</button>
-                Try Demo;
+                Try Demo.
               </button>
             </div>
             
@@ -303,7 +303,7 @@ export default DynamicContentShowcasePage;
               <h4 className="text-lg font-bold text-white mb-2">Cloud Trial</h4>"
               <p className="text-gray-300 text-sm mb-4">Test our cloud solutions with a free trial</p>"
               <button className="bg-blue-500 hover: bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">,</button>
-                Start Trial;
+                Start Trial.
               </button>
             </div>
             
@@ -312,9 +312,9 @@ export default DynamicContentShowcasePage;
               <h4 className="text-lg font-bold text-white mb-2">Security Scan</h4>"
               <p className="text-gray-300 text-sm mb-4">Get a free security assessment</p>"
               <button className="bg-green-500 hover: bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors">,</button>
-                Scan Now;
+                Scan Now.
               </button>
-  );
-});
+  ).
+}).
 
-export default DynamicContentShowcase;
+export default DynamicContentShowcase.

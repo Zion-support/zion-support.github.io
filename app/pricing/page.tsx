@@ -7,23 +7,23 @@ import { Link } from 'react-router-dom;'
 import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;'
 
 const PagePage: React.FC = () => {}
-import React, { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import SEOOptimizer from '../components/SEOOptimizer';
-import React, { CheckCircle, Star, Phone, Mail, ArrowRight, Zap, Shield, Users, Clock, DollarSign, Award, TrendingUp } from 'lucide-react';
-import React, { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Link from 'next/link';
-import React, { CheckCircle, Star, Phone, Mail, MapPin, Zap, Brain, Cloud, Code } from 'lucide-react';
-import React, { useState } from 'react';
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, Star, ArrowRight, Zap, Brain, Cloud, Cpu, DollarSign, Users, Shield, BarChart3, FileText, Target, Globe, Database, Settings, Calendar, Eye, Mic, Heart, Lock, Package, Monitor, Wifi, Code, Smartphone } from 'lucide-react';
+import React, { Helmet } from 'react-helmet-async'.
+import Navigation from '../components/Navigation'.
+import Footer from '../components/Footer'.
+import SEOOptimizer from '../components/SEOOptimizer'.
+import React, { CheckCircle, Star, Phone, Mail, ArrowRight, Zap, Shield, Users, Clock, DollarSign, Award, TrendingUp } from 'lucide-react'.
+import React, { Helmet } from 'react-helmet-async'.
+import Navigation from '../components/Navigation'.
+import Footer from '../components/Footer'.
+import Link from 'next/link'.
+import React, { CheckCircle, Star, Phone, Mail, MapPin, Zap, Brain, Cloud, Code } from 'lucide-react'.
+import React, { useState } from 'react'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, Star, ArrowRight, Zap, Brain, Cloud, Cpu, DollarSign, Users, Shield, BarChart3, FileText, Target, Globe, Database, Settings, Calendar, Eye, Mic, Heart, Lock, Package, Monitor, Wifi, Code, Smartphone } from 'lucide-react'.
 const PricingPage: React.FC = () => {
-import React, { Helmet } from 'react-helmet-async';
-import React, { Link } from 'react-router-dom';
-import React, { CheckCircle, Star, ArrowRight, Zap, Phone, Mail } from 'lucide-react';
+import React, { Helmet } from 'react-helmet-async'.
+import React, { Link } from 'react-router-dom'.
+import React, { CheckCircle, Star, ArrowRight, Zap, Phone, Mail } from 'lucide-react'.
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -38,7 +38,7 @@ const PricingPage: React.FC = () => {
         'Monthly Reports',
         'Basic Analytics Dashboard']
       ],
-      popular: false;
+      popular: false.
     },
     {
       name: 'Professional',
@@ -54,7 +54,7 @@ const PricingPage: React.FC = () => {
         'API Access',
         'Training Sessions']
       ],
-      popular: true;
+      popular: true.
     },
     {
       name: 'Enterprise',
@@ -71,7 +71,7 @@ const PricingPage: React.FC = () => {
         'On-site Training',
         'SLA Guarantee']
       ],
-      popular: false;
+      popular: false.
     }
   ];
 
@@ -88,7 +88,7 @@ const PricingPage: React.FC = () => {
         'Standard Templates',
         '1 User Account']
       ],
-      popular: false;
+      popular: false.
     },
     {
       name: 'Pro',
@@ -104,7 +104,7 @@ const PricingPage: React.FC = () => {
         'API Access',
         'White-label Options']
       ],
-      popular: true;
+      popular: true.
     },
     {
       name: 'Enterprise',
@@ -120,7 +120,7 @@ const PricingPage: React.FC = () => {
         'SLA Guarantee',
         'Training & Consulting']
       ],
-      popular: false;
+      popular: false.
     }
   ];
 
@@ -133,10 +133,10 @@ const PricingPage: React.FC = () => {
       <div className="container mx-auto px-4 py-16">"
         <div className="text-center">"
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Pricing;
+            Pricing.
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Advanced pricing solutions by Zion Tech Group;
+            Advanced pricing solutions by Zion Tech Group.
           </p>
         </div>
         <div className="max-w-4xl mx-auto">"
@@ -182,21 +182,21 @@ const PricingPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-91ea
       </div>
     </div>
-  );
-  );
-  );
+  ).
+  ).
+  ).
 }
 };
 
-export default PricingPage;
-export default PricingPage;
+export default PricingPage.
+export default PricingPage.
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-24 pb-16 px-4">"
           <div className="max-w-7xl mx-auto text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 neon-text">
-              Transparent Pricing;
+              Transparent Pricing.
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Choose the perfect plan for your business needs. All plans include our industry-leading support and cutting-edge technology.
@@ -208,11 +208,11 @@ export default PricingPage;
         <section className="py-16 px-4">"
           <div className="max-w-7xl mx-auto">"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-              AI & IT Solutions;
+              AI & IT Solutions.
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {plans.map((plan, index) => (
-                <div;
+                <div.
                   key={plan.name}
                   className={`cyber-card hologram-card p-8 relative ${
                     plan.popular ? 'ring-2 ring-cyan-500 scale-105' : '
@@ -222,7 +222,7 @@ export default PricingPage;
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                       <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">"
                         <Star className="w-4 h-4 mr-1" />
-                        Most Popular;
+                        Most Popular.
                       </span>
                     </div>
                   )}
@@ -263,11 +263,11 @@ export default PricingPage;
         <section className="py-16 px-4 bg-gray-900/30">"
           <div className="max-w-7xl mx-auto">"
             <h2 className="text-3xl font-bold text-white mb-12 text-center neon-text">
-              Micro SAAS Solutions;
+              Micro SAAS Solutions.
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {microSaasPlans.map((plan, index) => (
-                <div;
+                <div.
                   key={plan.name}
                   className={`cyber-card hologram-card p-8 relative ${
                     plan.popular ? 'ring-2 ring-cyan-500 scale-105' : '
@@ -277,7 +277,7 @@ export default PricingPage;
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
                       <span className="bg-cyan-500 text-white px-4 py-2 rounded-full text-sm font-medium flex items-center">"
                         <Star className="w-4 h-4 mr-1" />
-                        Most Popular;
+                        Most Popular.
                       </span>
                     </div>
                   )}
@@ -332,19 +332,19 @@ export default PricingPage;
                   <ul className="space-y-2 text-gray-300">"
                     <li className="flex items-center">"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      Custom AI Development;
+                      Custom AI Development.
                     </li>
                     <li className="flex items-center">"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      Dedicated Project Manager;
+                      Dedicated Project Manager.
                     </li>
                     <li className="flex items-center">"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      24/7 Technical Support;
+                      24/7 Technical Support.
                     </li>
                     <li className="flex items-center">"
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      Training & Documentation;
+                      Training & Documentation.
                     </li>
                   </ul>
                 </div>
@@ -382,7 +382,7 @@ export default PricingPage;
                   href="tel:+13024640950"
                   className="border-2 border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500 hover:text-white transition-all duration-300 text-center"
                 >
-                  Call Now;
+                  Call Now.
                 </a>
               </div>
         <title>Pricing - Zion Tech Group | Affordable AI & IT Solutions</title>
@@ -409,17 +409,17 @@ export default PricingPage;
                 { id: 'it', label: 'IT Services', icon: Code },'
                 { id: 'micro-saas', label: 'Micro SaaS', icon: Cloud }'
               ].map((tab) => {
-                const Icon = tab.icon;
+                const Icon = tab.icon.
                 const Component = () => {
   
                   return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
-                  <button;
+                  <button.
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
@@ -431,7 +431,7 @@ export default PricingPage;
                     <Icon className="w-5 h-5" />
                     <span>{tab.label}</span>
                   </button>
-                );
+                ).
               })}
             </div>
           </div>
@@ -439,7 +439,7 @@ export default PricingPage;
           {/* Pricing Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {getCurrentServices().map((service, index) => (
-              <div;
+              <div.
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300 group"
               >
@@ -517,7 +517,7 @@ export default PricingPage;
         </div>
       </div>
                       <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold">
-                        Most Popular;
+                        Most Popular.
                       </span>
                     </div>
                   )}
@@ -645,7 +645,7 @@ export default PricingPage;
               className="cyber-button inline-flex items-center text-lg px-8 py-4"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Get Custom Quote;
+              Get Custom Quote.
             </Link>
           </div>
         </section>
@@ -653,7 +653,7 @@ export default PricingPage;
       
       <Footer />
     </>
-  );
+  ).
 };
 
-export default PricingPage;
+export default PricingPage.

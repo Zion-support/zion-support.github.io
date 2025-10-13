@@ -115,6 +115,18 @@ export default [
         ecmaFeatures: {
           jsx: true
         }
+      },
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        window: 'readonly',
+        document: 'readonly',
+        module: 'readonly',
+        require: 'readonly',
+        __dirname: 'readonly',
+        __filename: 'readonly',
+        global: 'readonly',
+        Buffer: 'readonly'
       }
     },
     plugins: {

@@ -1,5 +1,5 @@
-import React, { Helmet } from 'react-helmet-async';
-import React, { Target, CheckCircle, AlertTriangle, Cpu } from 'lucide-react';
+import React, { Helmet } from 'react-helmet-async'.
+import React, { Target, CheckCircle, AlertTriangle, Cpu } from 'lucide-react'.
 const ZionAICustomerChurnPredictorProPage: React.FC = () => {
   const features = [
     {
@@ -32,7 +32,7 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
       <div className="container mx-auto px-4 py-20">"
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-white mb-6">
-            Zion AI Customer Churn Predictor Pro;
+            Zion AI Customer Churn Predictor Pro.
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Predict and prevent customer churn with our advanced AI-powered platform. 
@@ -66,18 +66,18 @@ const ZionAICustomerChurnPredictorProPage: React.FC = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
               <button className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-all duration-300">
-                Start Free Trial;
+                Start Free Trial.
               </button>
               <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-                Learn More;
+                Learn More.
               </button>
             </div>
           </div>
         </div>
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default ZionAICustomerChurnPredictorProPage;
+export default ZionAICustomerChurnPredictorProPage.

@@ -1,9 +1,9 @@
-'use client';
-import React from 'react';
-import {Helmet}}from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react';
+'use client'.
+import React from 'react'.
+import {Helmet}}from 'react-helmet-async'.
+import Navigation from '../components/Navigation'.
+import Footer from '../components/Footer'.
+import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings}}from 'lucide-react'.
 const ErrorPage: React.FC = () => {,
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},'
     {icon: BarChart,
@@ -27,13 +27,13 @@ const ErrorPage: React.FC = () => {,
           <div className="max-w-7xl mx-auto">"
             <div className="text-center">"
               <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
-                Error;
+                Error.
   </
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Error page.</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>"
                 <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">,</button>
-                  Get Started;
+                  Get Started.
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>"
         {/* Features Section */} <section className="py-20 px-4 sm: px-6 lg:px-8">,</section>"
@@ -54,8 +54,8 @@ const ErrorPage: React.FC = () => {,
             <p className="text-xl text-blue-100 mb-8">Contact us today to learn more about our services.</p>
             </p>
             <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover: bg-gray-100 transition-colors font-semibold">,</button>
-              Contact Us;
+              Contact Us.
   </
 };
 
-export default ErrorPage;
+export default ErrorPage.

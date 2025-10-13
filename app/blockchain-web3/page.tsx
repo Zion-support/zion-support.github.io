@@ -1,4 +1,4 @@
-import React, { CheckCircle } from 'lucide-react';
+import React, { CheckCircle } from 'lucide-react'.
 const BlockchainWeb3Page: React.FC = () => {
   const blockchainServices = [
     {
@@ -6,132 +6,132 @@ const BlockchainWeb3Page: React.FC = () => {
       description: 'Secure, audited smart contracts for DeFi, NFTs, DAOs, and enterprise blockchain applications.',
       icon: '📜',
       price: 'Starting at $8,000/project',
-      features: ['Solidity development', 'Smart contract auditing', 'Gas optimization', 'Security testing', 'Deployment & maintenance'],'
-      benefits: ['Automate business processes', 'Reduce transaction costs', 'Ensure transparency and trust'],'
+      features: ['Solidity development', 'Smart contract auditing', 'Gas optimization', 'Security testing', 'Deployment & maintenance'],
+      benefits: ['Automate business processes', 'Reduce transaction costs', 'Ensure transparency and trust'],
       marketPrice: '$15,000-50,000/project',
       category: 'Smart Contracts',
-      technologies: ['Solidity', 'Vyper', 'Hardhat', 'Truffle', 'OpenZeppelin'],'
+      technologies: ['Solidity', 'Vyper', 'Hardhat', 'Truffle', 'OpenZeppelin'],
     },
     {
       title: 'DeFi Protocol Development',
       description: 'Decentralized finance protocols including DEXs, lending platforms, and yield farming solutions.',
       icon: '🏦',
       price: 'Starting at $25,000/project',
-      features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity mining', 'Cross-chain bridges'],'
-      benefits: ['Enable decentralized finance', 'Reduce financial intermediaries', 'Increase financial inclusion'],'
+      features: ['DEX development', 'Lending protocols', 'Yield farming', 'Liquidity mining', 'Cross-chain bridges'],
+      benefits: ['Enable decentralized finance', 'Reduce financial intermediaries', 'Increase financial inclusion'],
       marketPrice: '$50,000-200,000/project',
       category: 'DeFi',
-      technologies: ['Uniswap', 'Compound', 'Aave', 'Chainlink', 'Web3.js'],'
+      technologies: ['Uniswap', 'Compound', 'Aave', 'Chainlink', 'Web3.js'],
     },
     {
       title: 'NFT Marketplace Development',
       description: 'Complete NFT marketplace solutions with minting, trading, and royalty management capabilities.',
       icon: '🎨',
       price: 'Starting at $15,000/project',
-      features: ['NFT minting', 'Marketplace functionality', 'Royalty management', 'Metadata storage', 'Payment integration'],'
-      benefits: ['Monetize digital assets', 'Enable creator economy', 'Provide new revenue streams'],'
+      features: ['NFT minting', 'Marketplace functionality', 'Royalty management', 'Metadata storage', 'Payment integration'],
+      benefits: ['Monetize digital assets', 'Enable creator economy', 'Provide new revenue streams'],
       marketPrice: '$30,000-100,000/project',
       category: 'NFTs',
-      technologies: ['ERC-721', 'ERC-1155', 'IPFS', 'OpenSea API', 'Web3 Integration'],'
+      technologies: ['ERC-721', 'ERC-1155', 'IPFS', 'OpenSea API', 'Web3 Integration'],
     },
     {
       title: 'DAO Development & Governance',
       description: 'Decentralized autonomous organizations with voting mechanisms and governance token systems.',
       icon: '🗳️',
       price: 'Starting at $12,000/project',
-      features: ['Governance token design', 'Voting mechanisms', 'Proposal systems', 'Treasury management', 'Multi-sig wallets'],'
-      benefits: ['Enable decentralized governance', 'Increase community participation', 'Ensure transparent decision making'],'
+      features: ['Governance token design', 'Voting mechanisms', 'Proposal systems', 'Treasury management', 'Multi-sig wallets'],
+      benefits: ['Enable decentralized governance', 'Increase community participation', 'Ensure transparent decision making'],
       marketPrice: '$25,000-80,000/project',
       category: 'DAOs',
-      technologies: ['Governance Tokens', 'Snapshot', 'Gnosis Safe', 'Aragon', 'Compound Governance'],'
+      technologies: ['Governance Tokens', 'Snapshot', 'Gnosis Safe', 'Aragon', 'Compound Governance'],
     },
     {
       title: 'Blockchain Infrastructure',
       description: 'Custom blockchain networks, sidechains, and layer 2 solutions for enterprise applications.',
       icon: '⛓️',
       price: 'Starting at $50,000/project',
-      features: ['Custom blockchain development', 'Consensus mechanisms', 'Node infrastructure', 'API development', 'Monitoring systems'],'
-      benefits: ['Customize blockchain for specific needs', 'Improve scalability', 'Reduce transaction costs'],'
+      features: ['Custom blockchain development', 'Consensus mechanisms', 'Node infrastructure', 'API development', 'Monitoring systems'],
+      benefits: ['Customize blockchain for specific needs', 'Improve scalability', 'Reduce transaction costs'],
       marketPrice: '$100,000-500,000/project',
       category: 'Infrastructure',
-      technologies: ['Substrate', 'Cosmos SDK', 'Hyperledger', 'Ethereum', 'Polkadot'],'
+      technologies: ['Substrate', 'Cosmos SDK', 'Hyperledger', 'Ethereum', 'Polkadot'],
     },
     {
       title: 'Web3 Integration Services',
       description: 'Integrate Web3 functionality into existing applications with wallet connections and blockchain interactions.',
       icon: '🔗',
       price: 'Starting at $5,000/project',
-      features: ['Wallet integration', 'Web3 authentication', 'Blockchain data fetching', 'Transaction handling', 'User onboarding'],'
-      benefits: ['Modernize existing applications', 'Enable Web3 features', 'Improve user experience'],'
+      features: ['Wallet integration', 'Web3 authentication', 'Blockchain data fetching', 'Transaction handling', 'User onboarding'],
+      benefits: ['Modernize existing applications', 'Enable Web3 features', 'Improve user experience'],
       marketPrice: '$10,000-30,000/project',
       category: 'Web3 Integration',
-      technologies: ['MetaMask', 'WalletConnect', 'Web3.js', 'Ethers.js', 'React Web3'],'
+      technologies: ['MetaMask', 'WalletConnect', 'Web3.js', 'Ethers.js', 'React Web3'],
     },
     {
       title: 'Cryptocurrency Exchange Development',
       description: 'Secure, scalable cryptocurrency exchanges with advanced trading features and compliance tools.',
       icon: '💱',
       price: 'Starting at $40,000/project',
-      features: ['Trading engine', 'Order matching', 'KYC/AML integration', 'Security features', 'Mobile applications'],'
-      benefits: ['Enable cryptocurrency trading', 'Generate trading fees', 'Provide liquidity'],'
+      features: ['Trading engine', 'Order matching', 'KYC/AML integration', 'Security features', 'Mobile applications'],
+      benefits: ['Enable cryptocurrency trading', 'Generate trading fees', 'Provide liquidity'],
       marketPrice: '$80,000-300,000/project',
       category: 'Exchanges',
-      technologies: ['Matching Engine', 'Security Protocols', 'KYC Solutions', 'Mobile SDKs', 'API Development'],'
+      technologies: ['Matching Engine', 'Security Protocols', 'KYC Solutions', 'Mobile SDKs', 'API Development'],
     },
     {
       title: 'Token Economics & Design',
       description: 'Comprehensive tokenomics design including token distribution, utility, and economic models.',
       icon: '💰',
       price: 'Starting at $8,000/project',
-      features: ['Token utility design', 'Economic modeling', 'Vesting schedules', 'Inflation mechanisms', 'Governance integration'],'
-      benefits: ['Create sustainable token economy', 'Align incentives', 'Ensure long-term value'],'
+      features: ['Token utility design', 'Economic modeling', 'Vesting schedules', 'Inflation mechanisms', 'Governance integration'],
+      benefits: ['Create sustainable token economy', 'Align incentives', 'Ensure long-term value'],
       marketPrice: '$15,000-50,000/project',
       category: 'Tokenomics',
-      technologies: ['Economic Modeling', 'Token Standards', 'Vesting Contracts', 'Governance Systems'],'
+      technologies: ['Economic Modeling', 'Token Standards', 'Vesting Contracts', 'Governance Systems'],
     },
     {
       title: 'Blockchain Security Audits',
       description: 'Comprehensive security audits for smart contracts, protocols, and blockchain applications.',
       icon: '🔒',
       price: 'Starting at $5,000/audit',
-      features: ['Smart contract auditing', 'Vulnerability assessment', 'Penetration testing', 'Code review', 'Security recommendations'],'
-      benefits: ['Identify security vulnerabilities', 'Prevent exploits', 'Ensure code quality'],'
+      features: ['Smart contract auditing', 'Vulnerability assessment', 'Penetration testing', 'Code review', 'Security recommendations'],
+      benefits: ['Identify security vulnerabilities', 'Prevent exploits', 'Ensure code quality'],
       marketPrice: '$10,000-50,000/audit',
       category: 'Security',
-      technologies: ['Static Analysis', 'Dynamic Testing', 'Formal Verification', 'Security Tools'],'
+      technologies: ['Static Analysis', 'Dynamic Testing', 'Formal Verification', 'Security Tools'],
     },
     {
       title: 'Cross-Chain Solutions',
       description: 'Interoperability solutions enabling seamless asset and data transfer between different blockchains.',
       icon: '🌉',
       price: 'Starting at $20,000/project',
-      features: ['Cross-chain bridges', 'Asset wrapping', 'Interoperability protocols', 'Multi-chain wallets', 'Cross-chain DEXs'],'
-      benefits: ['Enable blockchain interoperability', 'Increase liquidity', 'Reduce fragmentation'],'
+      features: ['Cross-chain bridges', 'Asset wrapping', 'Interoperability protocols', 'Multi-chain wallets', 'Cross-chain DEXs'],
+      benefits: ['Enable blockchain interoperability', 'Increase liquidity', 'Reduce fragmentation'],
       marketPrice: '$40,000-150,000/project',
       category: 'Interoperability',
-      technologies: ['Polkadot', 'Cosmos', 'Chainlink', 'Wormhole', 'LayerZero'],'
+      technologies: ['Polkadot', 'Cosmos', 'Chainlink', 'Wormhole', 'LayerZero'],
     },
     {
       title: 'Metaverse Development',
       description: 'Virtual worlds, avatars, and immersive experiences built on blockchain technology.',
       icon: '🌐',
       price: 'Starting at $30,000/project',
-      features: ['3D virtual worlds', 'Avatar systems', 'Virtual real estate', 'In-world economies', 'VR/AR integration'],'
-      benefits: ['Create immersive experiences', 'Enable virtual economies', 'Provide new engagement channels'],'
+      features: ['3D virtual worlds', 'Avatar systems', 'Virtual real estate', 'In-world economies', 'VR/AR integration'],
+      benefits: ['Create immersive experiences', 'Enable virtual economies', 'Provide new engagement channels'],
       marketPrice: '$60,000-250,000/project',
       category: 'Metaverse',
-      technologies: ['Unity', 'Unreal Engine', 'WebXR', 'Blockchain Integration', 'NFT Standards'],'
+      technologies: ['Unity', 'Unreal Engine', 'WebXR', 'Blockchain Integration', 'NFT Standards'],
     },
     {
       title: 'Blockchain Consulting & Strategy',
       description: 'Strategic blockchain consulting and technology roadmap development for enterprise adoption.',
       icon: '💡',
       price: 'Starting at $400/hour',
-      features: ['Blockchain strategy', 'Technology assessment', 'Use case identification', 'Implementation planning', 'Regulatory guidance'],'
-      benefits: ['Navigate blockchain landscape', 'Make informed decisions', 'Ensure successful adoption'],'
+      features: ['Blockchain strategy', 'Technology assessment', 'Use case identification', 'Implementation planning', 'Regulatory guidance'],
+      benefits: ['Navigate blockchain landscape', 'Make informed decisions', 'Ensure successful adoption'],
       marketPrice: '$600-1,500/hour',
       category: 'Consulting',
-      technologies: ['Strategic Planning', 'Technology Assessment', 'Regulatory Analysis', 'Risk Management'],'
+      technologies: ['Strategic Planning', 'Technology Assessment', 'Regulatory Analysis', 'Risk Management'],
     }
   ];
   // const categories = [...new Set(blockchainServices.map(service => service.category))];
@@ -139,8 +139,8 @@ const BlockchainWeb3Page: React.FC = () => {
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <div className="min-h-screen bg-gradient-to-br from-slate-50 to-purple-50">
@@ -150,17 +150,17 @@ const BlockchainWeb3Page: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center">"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Blockchain & Web3 Services;
+                Blockchain & Web3 Services.
               </h1>
               <p className="text-xl md:text-2xl mb-8 text-purple-100 max-w-3xl mx-auto">
-                Build the future of decentralized applications with cutting-edge blockchain and Web3 solutions;
+                Build the future of decentralized applications with cutting-edge blockchain and Web3 solutions.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">"
                 <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors">
-                  Explore Web3 Solutions;
+                  Explore Web3 Solutions.
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors">
-                  Schedule Consultation;
+                  Schedule Consultation.
                 </button>
               </div>
             </div>
@@ -174,7 +174,7 @@ const BlockchainWeb3Page: React.FC = () => {
                 Why Choose Our Blockchain Services?
               </h2>
               <p className="text-xl text-gray-600">
-                Leading blockchain expertise with proven track record in DeFi, NFTs, and Web3 applications;
+                Leading blockchain expertise with proven track record in DeFi, NFTs, and Web3 applications.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">"
@@ -215,14 +215,14 @@ const BlockchainWeb3Page: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
               <div className="text-center mb-12">"
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                  {category} Services;
+                  {category} Services.
                 </h2>
                 <p className="text-xl text-gray-600">
-                  Specialized {category.toLowerCase()} solutions for the decentralized future;
+                  Specialized {category.toLowerCase()} solutions for the decentralized future.
                 </p>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {blockchainServices;
+                {blockchainServices.
                   .filter(service => service.category === category)
                   .map((service, index) => (
                     <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">"
@@ -235,7 +235,7 @@ const BlockchainWeb3Page: React.FC = () => {
                           <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
-                          Save up to 50% vs market rates;
+                          Save up to 50% vs market rates.
                         </div>
                       </div>
                       <div className="mb-4">"
@@ -271,7 +271,7 @@ const BlockchainWeb3Page: React.FC = () => {
                         </ul>
                       </div>
                       <button className="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors">
-                        Get Web3 Consultation;
+                        Get Web3 Consultation.
                       </button>
                     </div>
                   ))}
@@ -284,10 +284,10 @@ const BlockchainWeb3Page: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center mb-12">"
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                Our Blockchain Capabilities;
+                Our Blockchain Capabilities.
               </h2>
               <p className="text-xl text-gray-600">
-                Comprehensive blockchain technologies and Web3 development expertise;
+                Comprehensive blockchain technologies and Web3 development expertise.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
@@ -331,20 +331,20 @@ const BlockchainWeb3Page: React.FC = () => {
               Ready to Build the Future of Web3?
             </h2>
             <p className="text-xl mb-8 text-purple-100">
-              Contact our blockchain experts for a free consultation and custom Web3 strategy;
+              Contact our blockchain experts for a free consultation and custom Web3 strategy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
                 className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors inline-flex items-center"
               >
-                📞 +1 302 464 0950;
+                📞 +1 302 464 0950.
               </a>
               <a 
                 href="mailto:kleber@ziontechgroup.com"
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-colors"
               >
-                ✉️ kleber@ziontechgroup.com;
+                ✉️ kleber@ziontechgroup.com.
               </a>
             </div>
             <div className="mt-8 text-sm text-purple-200">
@@ -354,6 +354,6 @@ const BlockchainWeb3Page: React.FC = () => {
         </section>
       </div>
     </>
-  );
+  ).
 };
-export default BlockchainWeb3Page;
+export default BlockchainWeb3Page.

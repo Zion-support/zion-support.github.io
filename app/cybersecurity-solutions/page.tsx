@@ -1,5 +1,5 @@
-import React, { Helmet } from 'react-helmet-async';
-import React, { Eye, AlertTriangle, Users, Database, CheckCircle } from 'lucide-react';
+import React, { Helmet } from 'react-helmet-async'.
+import React, { Eye, AlertTriangle, Users, Database, CheckCircle } from 'lucide-react'.
 export default function CybersecuritySolutions() {
   const services = [
     {
@@ -99,10 +99,10 @@ export default function CybersecuritySolutions() {
       <div className="container mx-auto px-4 py-20">"
         <div className="text-center mb-16">"
           <h1 className="text-5xl font-bold text-white mb-6">
-            Cybersecurity Solutions;
+            Cybersecurity Solutions.
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Protect your business with our comprehensive cybersecurity services and solutions;
+            Protect your business with our comprehensive cybersecurity services and solutions.
           </p>
         </div>
 
@@ -137,7 +137,7 @@ export default function CybersecuritySolutions() {
               <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-blue-400 ring-2 ring-blue-400' : 'border-white/20'} hover:bg-white/20 transition-all duration-300`}>'
                 {plan.popular && (
                   <div className="bg-blue-400 text-white text-center py-1 px-4 rounded-full text-sm font-semibold mb-4 -mt-2">
-                    Most Popular;
+                    Most Popular.
                   </div>
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
@@ -256,7 +256,7 @@ const CybersecuritySolutionsPage: React.FC = () => {,
 
           <div className="text-center">"
             <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105">,</button>
-              Secure Your Organization;
+              Secure Your Organization.
             </button>
           </div>
         </div>

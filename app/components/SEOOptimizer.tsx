@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react';
-import React, { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react'.
+import React, { Helmet } from 'react-helmet-async'.
 interface SEOOptimizerProps {
-  title?: string;
-  description?: string;
+  title?: string.
+  description?: string.
   keywords?: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  structuredData?: Record<string, unknown>;
-  noIndex?: boolean;
+  canonicalUrl?: string.
+  ogImage?: string.
+  ogType?: string.
+  structuredData?: Record<string, unknown>.
+  noIndex?: boolean.
 }
 
 export default function SEOOptimizer({
@@ -28,24 +28,24 @@ export default function SEOOptimizer({
   ogImage = '/images/og-image.jpg',
   ogType = 'website',
   structuredData,
-  noIndex = false;
+  noIndex = false.
 }: SEOOptimizerProps) {
   useEffect(() => {
-    // Add structured data to the page;
+    // Add structured data to the page.
     if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+      const script = document.createElement('script').
+      script.type = 'application/ld+json'.
+      script.text = JSON.stringify(structuredData).
+      document.head.appendChild(script).
 
       return () => {
         if (document.head.contains(script)) {
-          document.head.removeChild(script);
+          document.head.removeChild(script).
         }
       };
     }
-    return undefined;
-  }, [structuredData]);
+    return undefined.
+  }, [structuredData]).
 
   const defaultStructuredData = {
     "@context": "https://schema.org","
@@ -85,8 +85,8 @@ export default function SEOOptimizer({
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <Helmet>
       {/* Basic Meta Tags */}
@@ -130,7 +130,7 @@ export default function SEOOptimizer({
         {JSON.stringify(structuredData || defaultStructuredData)}
       </script>
     </Helmet>
-  );
+  ).
 }
       
       {/* Structured Data */}
@@ -145,5 +145,5 @@ export default function SEOOptimizer({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />"
       <link rel="dns-prefetch" href="https://ziontechgroup.com" />
     </Helmet>
-  );
+  ).
 }

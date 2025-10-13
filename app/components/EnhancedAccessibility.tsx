@@ -1,28 +1,28 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useEffect, useState, useCallback } from 'react'.
 
 interface AccessibilityMetrics {
-  contrastRatio: number;
-  focusableElements: number;
-  headingStructure: number;
-  altTexts: number;
-  ariaLabels: number;
-  keyboardNavigation: boolean;
-  screenReaderCompatible: boolean;
-'use client';
-import React, { useEffect, useState } from 'react';
+  contrastRatio: number.
+  focusableElements: number.
+  headingStructure: number.
+  altTexts: number.
+  ariaLabels: number.
+  keyboardNavigation: boolean.
+  screenReaderCompatible: boolean.
+'use client'.
+import React, { useEffect, useState } from 'react'.
 
 interface AccessibilitySettings {
-  highContrast: boolean;
-  reducedMotion: boolean;
+  highContrast: boolean.
+  reducedMotion: boolean.
   fontSize: 'small' | 'medium' | 'large';'
-  screenReader: boolean;
-  keyboardNavigation: boolean;
+  screenReader: boolean.
+  keyboardNavigation: boolean.
 }
 
 interface EnhancedAccessibilityProps {
-  children: React.ReactNode;
-  onMetricsUpdate?: (metrics: AccessibilityMetrics) => void;
-  enableMonitoring?: boolean;
+  children: React.ReactNode.
+  onMetricsUpdate?: (metrics: AccessibilityMetrics) => void.
+  enableMonitoring?: boolean.
 }
 
 const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
@@ -75,35 +75,35 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReaderSupport = true,
   enableHighContrast = false,
-  enableFocusManagement = true;
+  enableFocusManagement = true.
 }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: enableHighContrast,
     reducedMotion: false,
     fontSize: 'medium',
     screenReader: enableScreenReaderSupport,
-    keyboardNavigation: enableKeyboardNavigation;
-  });
+    keyboardNavigation: enableKeyboardNavigation.
+  }).
 
   useEffect(() => {
-    // Apply accessibility settings;
-    const root = document.documentElement;
+    // Apply accessibility settings.
+    const root = document.documentElement.
     
-    // High contrast;
+    // High contrast.
     if (settings.highContrast) {
-      root.classList.add('high-contrast');
+      root.classList.add('high-contrast').
     } else {
-      root.classList.remove('high-contrast');
+      root.classList.remove('high-contrast').
     }
 
-    // Reduced motion;
+    // Reduced motion.
     if (settings.reducedMotion) {
-      root.classList.add('reduced-motion');
+      root.classList.add('reduced-motion').
     } else {
-      root.classList.remove('reduced-motion');
+      root.classList.remove('reduced-motion').
     }
 
-    // Font size;
+    // Font size.
     const fontSizeMap = {
       small: '14px',
       medium: '16px',
@@ -111,43 +111,43 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     };
     root.style.fontSize = fontSizeMap[settings.fontSize];
 
-    // Screen reader support;
+    // Screen reader support.
     if (settings.screenReader) {
       root.setAttribute('aria-live', 'polite');'
     } else {
-      root.removeAttribute('aria-live');
+      root.removeAttribute('aria-live').
     }
-  }, [settings]);
+  }, [settings]).
 
   useEffect(() => {
-    // Keyboard navigation;
+    // Keyboard navigation.
     if (settings.keyboardNavigation) {
       const handleKeyDown = (event: KeyboardEvent) => {
         // Skip to main content
         if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
-          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement.
           if (skipLink) {
-            skipLink.focus();
-            event.preventDefault();
+            skipLink.focus().
+            event.preventDefault().
           }
         }
 
         // Escape key handling
         if (event.key === 'Escape') {
-          const activeElement = document.activeElement as HTMLElement;
+          const activeElement = document.activeElement as HTMLElement.
           if (activeElement && activeElement.blur) {
-            activeElement.blur();
+            activeElement.blur().
           }
         }
       };
 
-      document.addEventListener('keydown', handleKeyDown);
-      return () => document.removeEventListener('keydown', handleKeyDown);
+      document.addEventListener('keydown', handleKeyDown).
+      return () => document.removeEventListener('keydown', handleKeyDown).
     }
-  }, [settings.keyboardNavigation]);
+  }, [settings.keyboardNavigation]).
 
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-    setSettings(prev => ({ ...prev, [key]: value }));
+    setSettings(prev => ({ ...prev, [key]: value })).
   };
 
   const Component = () => {
@@ -196,7 +196,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
             <label className="text-sm text-gray-300 mb-2 block">Font Size</label>"
             <div className="flex space-x-2">"
               {(['small', 'medium', 'large'] as const).map((size) => ('
-                <button;
+                <button.
                   key={size}
                   onClick={() => updateSetting('fontSize', size)}
                   className={`px-3 py-1 text-xs rounded ${
@@ -247,9 +247,9 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
       {children}
     </div>
-  );
+  ).
 }
-  return <>{children}</>;
+  return <>{children}</>.
 };
 
-export default EnhancedAccessibility;
+export default EnhancedAccessibility.

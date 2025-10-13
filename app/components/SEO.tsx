@@ -1,28 +1,28 @@
-'use client';
+'use client'.
 
 /**
- * SEO Component;
- * Provides comprehensive SEO meta tags and structured data;
+ * SEO Component.
+ * Provides comprehensive SEO meta tags and structured data.
  */
 
-import React from 'react';
+import React from 'react'.
 
 
 export interface SEOProps {
-  title?: string;
-  description?: string;
+  title?: string.
+  description?: string.
   keywords?: string[];
-  image?: string;
-  url?: string;
+  image?: string.
+  url?: string.
   type?: 'website' | 'article' | 'product' | 'profile';'
-  author?: string;
-  publishDate?: string;
-  modifiedDate?: string;
-  canonical?: string;
-  noIndex?: boolean;
-  structuredData?: Record<string, unknown>;
+  author?: string.
+  publishDate?: string.
+  modifiedDate?: string.
+  canonical?: string.
+  noIndex?: boolean.
+  structuredData?: Record<string, unknown>.
   twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player';'
-  locale?: string;
+  locale?: string.
   alternateLocales?: { locale: string; url: string }[];
 }
 
@@ -72,11 +72,11 @@ export const SEO: React.FC<SEOProps> = ({
     locale,
   };
 
-  // Generate structured data;
+  // Generate structured data.
   const generateStructuredData = () => {
   
     if (structuredData) {
-      return structuredData;
+      return structuredData.
     }
 
     const baseStructuredData: Record<string, unknown> = {
@@ -96,24 +96,24 @@ export const SEO: React.FC<SEOProps> = ({
     }
 
     if (publishDate) {
-      baseStructuredData.datePublished = publishDate;
+      baseStructuredData.datePublished = publishDate.
     }
 
     if (modifiedDate) {
-      baseStructuredData.dateModified = modifiedDate;
+      baseStructuredData.dateModified = modifiedDate.
     }
 
-    return baseStructuredData;
+    return baseStructuredData.
   };
 
   return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
-  );
+  ).
 };
 
-export default SEO;
+export default SEO.

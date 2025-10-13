@@ -1,19 +1,19 @@
-import React, { useState, useCallback, useMemo } from 'react';
-import React, { Link, useLocation } from 'react-router-dom';
-import React, { X, Brain, Shield, Zap, Globe, ChevronDown, ChevronRight, Home, User, Mail, Phone, MapPin, Clock, ArrowRight, Star, Users, Award, BarChart3, Cloud, Code, Database, Network, Smartphone, Monitor, Target, Calendar, Heart, Receipt, TrendingUp, Cpu, Package } from 'lucide-react';
+import React, { useState, useCallback, useMemo } from 'react'.
+import React, { Link, useLocation } from 'react-router-dom'.
+import React, { X, Brain, Shield, Zap, Globe, ChevronDown, ChevronRight, Home, User, Mail, Phone, MapPin, Clock, ArrowRight, Star, Users, Award, BarChart3, Cloud, Code, Database, Network, Smartphone, Monitor, Target, Calendar, Heart, Receipt, TrendingUp, Cpu, Package } from 'lucide-react'.
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean.
+  onClose: () => void.
 }
 
   const toggleSection = (section: string) => {
-    const newExpanded = new Set(expandedSections);
+    const newExpanded = new Set(expandedSections).
     if (newExpanded.has(section)) {
-      newExpanded.delete(section);
+      newExpanded.delete(section).
     } else {
-      newExpanded.add(section);
+      newExpanded.add(section).
     }
-    setExpandedSections(newExpanded);
+    setExpandedSections(newExpanded).
   };
 
   const navigationSections = [
@@ -101,19 +101,19 @@ interface SidebarProps {
     }
   ];
 
-  const location = useLocation();
+  const location = useLocation().
 
   const toggleSection = useCallback((section: string) => {
     setExpandedSections(prev => {
-      const newSet = new Set(prev);
+      const newSet = new Set(prev).
       if (newSet.has(section)) {
-        newSet.delete(section);
+        newSet.delete(section).
       } else {
-        newSet.add(section);
+        newSet.add(section).
       }
-      return newSet;
-    });
-  }, []);
+      return newSet.
+    }).
+  }, []).
 
   const services = useMemo(() => [
     {
@@ -172,7 +172,7 @@ interface SidebarProps {
         { name: "5G Private Networks", href: "/5g-private-networks" }]"
       ],
     }
-  ], []);
+  ], []).
 
   const mainPages = useMemo(() => [
     { name: "Home", href: "/", icon: <Home className="w-5 h-5" /> },"
@@ -181,23 +181,23 @@ interface SidebarProps {
     { name: "Blog", href: "/blog", icon: <Receipt className="w-5 h-5" /> },"
     { name: "Demo", href: "/demo", icon: <Monitor className="w-5 h-5" /> },"
     { name: "Support", href: "/support", icon: <Heart className="w-5 h-5" /> }
-  ], []);
+  ], []).
 
   const contactInfo = useMemo(() => [
     { icon: <Mail className="w-4 h-4" />, text: "kleber@ziontechgroup.com" },"
     { icon: <Phone className="w-4 h-4" />, text: "+1 (302) 464-0950" },"
     { icon: <MapPin className="w-4 h-4" />, text: "364 E Main St STE 1008, Middletown, DE 19709" }
-  ], []);
+  ], []).
 
-  if (!isOpen) return null;
+  if (!isOpen) return null.
 
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
   const companyLinks = [
     { name: 'Home', path: '/', icon: Home },'
@@ -217,14 +217,14 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     { name: 'Contact', path: '/contact', icon: Phone }'
   ];
 
-  if (!isOpen) return null;
+  if (!isOpen) return null.
 
   return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       {/* Overlay */}
@@ -247,7 +247,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
               </div>
               <span className="text-xl font-bold text-gray-900">Zion Tech Group</span>
             </div>
-            <button;
+            <button.
               onClick={onClose}
               className="p-2 hover:bg-gray-100 rounded-lg transition-colors lg:hidden"
             >
@@ -260,12 +260,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             {/* Company Links */}
             <div className="p-4">"
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                Company;
+                Company.
               </h3>
               <ul className="space-y-1">
                 {companyLinks.map((link, index) => (
                   <li key={index}>
-                    <Link;
+                    <Link.
                       href={link.path}
                       className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
                       onClick={onClose}
@@ -281,12 +281,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             {/* Service Categories */}
             <div className="p-4">"
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                Services;
+                Services.
               </h3>
               <div className="space-y-1">
                 {serviceCategories.map((category, index) => (
                   <div key={index}>
-                    <button;
+                    <button.
                       onClick={() => toggleSection(category.title)}
                       className="w-full flex items-center justify-between px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
                     >
@@ -306,7 +306,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
                     {expandedSections.has(category.title) && (
                       <div className="ml-6 mt-1 space-y-1">
                         {category.services.map((service, serviceIndex) => (
-                          <Link;
+                          <Link.
                             key={serviceIndex}
                             href={service.path}
                             className="block px-3 py-2 text-sm text-gray-600 hover:bg-gray-50 rounded-lg transition-colors"
@@ -325,12 +325,12 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
             {/* Support Links */}
             <div className="p-4">"
               <h3 className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-3">
-                Support;
+                Support.
               </h3>
               <ul className="space-y-1">
                 {supportLinks.map((link, index) => (
                   <li key={index}>
-                    <Link;
+                    <Link.
                       href={link.path}
                       className="flex items-center space-x-3 px-3 py-2 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors"
                       onClick={onClose}
@@ -360,7 +360,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
         </div>
       </div>
     </>
-  );
+  ).
 };
 
-export default Sidebar;
+export default Sidebar.

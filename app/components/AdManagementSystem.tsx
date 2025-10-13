@@ -1,42 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import React, { Plus, Edit, Trash2, Play, Pause, Eye, BarChart3, Calendar, Target, DollarSign, Users, TrendingUp, Filter, Search, Download, Upload } from 'lucide-react';
+import React, { useState, useEffect } from 'react'.
+import { motion, AnimatePresence } from 'framer-motion'.
+import React, { Plus, Edit, Trash2, Play, Pause, Eye, BarChart3, Calendar, Target, DollarSign, Users, TrendingUp, Filter, Search, Download, Upload } from 'lucide-react'.
 interface Ad {
-  id: string;
-  title: string;
-  description: string;
+  id: string.
+  title: string.
+  description: string.
   type: 'banner' | 'popup' | 'sidebar' | 'inline';'
   status: 'draft' | 'active' | 'paused' | 'completed';'
-  targetAudience: string;
-  budget: number;
-  spent: number;
-  impressions: number;
-  clicks: number;
-  conversions: number;
-  startDate: string;
-  endDate: string;
-  createdAt: string;
-  updatedAt: string;
-  imageUrl?: string;
-  ctaText: string;
-  ctaUrl: string;
+  targetAudience: string.
+  budget: number.
+  spent: number.
+  impressions: number.
+  clicks: number.
+  conversions: number.
+  startDate: string.
+  endDate: string.
+  createdAt: string.
+  updatedAt: string.
+  imageUrl?: string.
+  ctaText: string.
+  ctaUrl: string.
   tags: string[];
 }
 
 interface AdManagementSystemProps {
-  className?: string;
+  className?: string.
 }
 
 const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' }) => {
-  const [ads, setAds] = useState<Ad[]>([]);
-  const [selectedAd, setSelectedAd] = useState<Ad | null>(null);
-  const [isCreating, setIsCreating] = useState(false);
-  const [isEditing, setIsEditing] = useState(false);
+  const [ads, setAds] = useState<Ad[]>([]).
+  const [selectedAd, setSelectedAd] = useState<Ad | null>(null).
+  const [isCreating, setIsCreating] = useState(false).
+  const [isEditing, setIsEditing] = useState(false).
   const [filter, setFilter] = useState<'all' | 'draft' | 'active' | 'paused' | 'completed'>('all');'
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState('').
   const [sortBy, setSortBy] = useState<'createdAt' | 'budget' | 'performance'>('createdAt');'
 
-  // Mock data - in real app, this would come from an API;
+  // Mock data - in real app, this would come from an API.
   useEffect(() => {
     const mockAds: Ad[] = [
       {
@@ -58,7 +58,7 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
         imageUrl: '/images/ai-banner.jpg',
         ctaText: 'Learn More',
         ctaUrl: '/ai-solutions',
-        tags: ['AI', 'Technology', 'B2B'],'
+        tags: ['AI', 'Technology', 'B2B'],
       },
       {
         id: '2',
@@ -78,34 +78,34 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
         updatedAt: '2024-01-20T14:20:00Z',
         ctaText: 'Get Started',
         ctaUrl: '/edge-computing',
-        tags: ['Edge', 'Computing', 'Developers'],'
+        tags: ['Edge', 'Computing', 'Developers'],
       }
     ];
-    setAds(mockAds);
-  }, []);
+    setAds(mockAds).
+  }, []).
 
   const filteredAds = ads.filter(ad => {
-    const matchesFilter = filter === 'all' || ad.status === filter;
+    const matchesFilter = filter === 'all' || ad.status === filter.
     const matchesSearch = ad.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          ad.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         ad.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesFilter && matchesSearch;
-  });
+                         ad.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())).
+    return matchesFilter && matchesSearch.
+  }).
 
   const sortedAds = [...filteredAds].sort((a, b) => {
     switch (sortBy) {
       case 'createdAt':
-        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+        return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime().
       case 'budget':
-        return b.budget - a.budget;
+        return b.budget - a.budget.
       case 'performance':
-        const aPerformance = a.conversions / a.clicks || 0;
-        const bPerformance = b.conversions / b.clicks || 0;
-        return bPerformance - aPerformance;
+        const aPerformance = a.conversions / a.clicks || 0.
+        const bPerformance = b.conversions / b.clicks || 0.
+        return bPerformance - aPerformance.
       default:
-        return 0;
+        return 0.
     }
-  });
+  }).
 
   const getStatusColor = (status: string) => {
     switch (status) {
@@ -113,7 +113,7 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
       case 'paused': return 'bg-yellow-500';'
       case 'draft': return 'bg-gray-500';'
       case 'completed': return 'bg-blue-500';'
-      default: return 'bg-gray-500';
+      default: return 'bg-gray-500'.
     }
   };
 
@@ -123,21 +123,21 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
       case 'popup': return '💬';'
       case 'sidebar': return '📋';'
       case 'inline': return '📝';'
-      default: return '📄';
+      default: return '📄'.
     }
   };
 
   const calculateCTR = (clicks: number, impressions: number) => {
-    return impressions > 0 ? ((clicks / impressions) * 100).toFixed(2) : '0.00';
+    return impressions > 0 ? ((clicks / impressions) * 100).toFixed(2) : '0.00'.
   };
 
   const calculateConversionRate = (conversions: number, clicks: number) => {
-    return clicks > 0 ? ((conversions / clicks) * 100).toFixed(2) : '0.00';
+    return clicks > 0 ? ((conversions / clicks) * 100).toFixed(2) : '0.00'.
   };
 
   const calculateROI = (spent: number, conversions: number, averageValue: number = 100) => {
-    const revenue = conversions * averageValue;
-    return spent > 0 ? (((revenue - spent) / spent) * 100).toFixed(1) : '0.0';
+    const revenue = conversions * averageValue.
+    return spent > 0 ? (((revenue - spent) / spent) * 100).toFixed(1) : '0.0'.
   };
 
   return (
@@ -149,12 +149,12 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
             <h1 className="text-3xl font-bold text-gray-900">Ad Management System</h1>"
             <p className="text-gray-600 mt-1">Manage and optimize your advertising campaigns</p>
           </div>
-          <button;
+          <button.
             onClick={() => setIsCreating(true)}
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium flex items-center gap-2 transition-colors"
           >
             <Plus className="w-5 h-5" />
-            Create New Ad;
+            Create New Ad.
           </button>
         </div>
 
@@ -225,7 +225,7 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
           </div>
           
           <div className="flex gap-4">
-            <select;
+            <select.
               value={filter}
               onChange={(e) => setFilter(e.target.value as any)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -237,7 +237,7 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
               <option value="completed">Completed</option>
             </select>
             
-            <select;
+            <select.
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -254,7 +254,7 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
         <AnimatePresence>
           {sortedAds.map((ad) => (
-            <motion.div;
+            <motion.div.
               key={ad.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -276,13 +276,13 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
                       {ad.status}
                     </span>
                     <div className="flex gap-1">
-                      <button;
+                      <button.
                         onClick={() => setSelectedAd(ad)}
                         className="p-1 text-gray-400 hover:text-blue-600 transition-colors"
                       >
                         <Eye className="w-4 h-4" />
                       </button>
-                      <button;
+                      <button.
                         onClick={() => setIsEditing(true)}
                         className="p-1 text-gray-400 hover:text-green-600 transition-colors"
                       >
@@ -298,7 +298,7 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
                 {/* Ad Image */}
                 {ad.imageUrl && (
                   <div className="mb-4">
-                    <img;
+                    <img.
                       src={ad.imageUrl}
                       alt={ad.title}
                       className="w-full h-32 object-cover rounded-lg"
@@ -360,12 +360,12 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
                     {ad.status === 'active' ? (
                       <button className="px-3 py-1 text-sm bg-yellow-100 text-yellow-800 rounded-md hover:bg-yellow-200 transition-colors">"
                         <Pause className="w-4 h-4 inline mr-1" />
-                        Pause;
+                        Pause.
                       </button>
                     ) : (
                       <button className="px-3 py-1 text-sm bg-green-100 text-green-800 rounded-md hover:bg-green-200 transition-colors">"
                         <Play className="w-4 h-4 inline mr-1" />
-                        Start;
+                        Start.
                       </button>
                     )}
                   </div>
@@ -392,19 +392,19 @@ const AdManagementSystem: React.FC<AdManagementSystemProps> = ({ className = '' 
             }
           </p>
           {!searchTerm && filter === 'all' && (
-            <button;
+            <button.
               onClick={() => setIsCreating(true)}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
             >
-              Create Your First Ad;
+              Create Your First Ad.
             </button>
           )}
         </div>
       )}
     </div>
-  );
-  );
-  );
+  ).
+  ).
+  ).
 };
 
-export default AdManagementSystem;
+export default AdManagementSystem.

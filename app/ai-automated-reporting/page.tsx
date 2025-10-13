@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'.
 
   return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <>
       <Helmet>
@@ -27,13 +27,13 @@ import React from 'react';
               <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
                 AI Automated
                 <span className="block bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  Reporting;
+                  Reporting.
                 </span>
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Transform your business intelligence with AI-powered automated reporting. 
-                Generate comprehensive insights, analytics, and reports automatically ;
+                Generate comprehensive insights, analytics, and reports automatically .
                 with our advanced AI reporting solutions.
               </p>
               
@@ -43,7 +43,7 @@ import React from 'react';
                   <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </button>
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
-                  View Demo;
+                  View Demo.
                 </button>
               </div>
             </div>
@@ -55,10 +55,10 @@ import React from 'react';
           <div className="max-w-7xl mx-auto">"
             <div className="text-center mb-16">"
               <h2 className="text-4xl font-bold text-white mb-4">
-                Intelligent Reporting Features;
+                Intelligent Reporting Features.
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI-powered reporting platform delivers comprehensive insights ;
+                Our AI-powered reporting platform delivers comprehensive insights .
                 and automated analytics for data-driven decision making.
               </p>
             </div>
@@ -70,21 +70,21 @@ import React from 'react';
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Real-time Analytics</h3>"
                 <p className="text-gray-300 mb-4">
-                  Generate real-time reports and analytics with live data integration ;
+                  Generate real-time reports and analytics with live data integration .
                   and instant insights for immediate decision making.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">"
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                    Live data streaming;
+                    Live data streaming.
                   </li>
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                    Instant report generation;
+                    Instant report generation.
                   </li>
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-cyan-400 mr-2" />
-                    Real-time dashboards;
+                    Real-time dashboards.
                   </li>
                 </ul>
               </div>
@@ -101,15 +101,15 @@ import React from 'react';
                 <ul className="space-y-2 text-sm text-gray-400">"
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
-                    Scheduled reporting;
+                    Scheduled reporting.
                   </li>
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
-                    Custom templates;
+                    Custom templates.
                   </li>
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-purple-400 mr-2" />
-                    Multi-format export;
+                    Multi-format export.
                   </li>
                 </ul>
               </div>
@@ -120,21 +120,21 @@ import React from 'react';
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Predictive Insights</h3>"
                 <p className="text-gray-300 mb-4">
-                  Leverage AI to predict trends, identify patterns, and forecast ;
+                  Leverage AI to predict trends, identify patterns, and forecast .
                   future performance with advanced machine learning algorithms.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">"
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Trend forecasting;
+                    Trend forecasting.
                   </li>
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Anomaly detection;
+                    Anomaly detection.
                   </li>
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                    Performance predictions;
+                    Performance predictions.
                   </li>
                 </ul>
               </div>
@@ -151,15 +151,15 @@ import React from 'react';
                 <ul className="space-y-2 text-sm text-gray-400">"
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-orange-400 mr-2" />
-                    Workflow automation;
+                    Workflow automation.
                   </li>
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-orange-400 mr-2" />
-                    Smart scheduling;
+                    Smart scheduling.
                   </li>
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-orange-400 mr-2" />
-                    Auto-distribution;
+                    Auto-distribution.
                   </li>
                 </ul>
               </div>
@@ -170,21 +170,21 @@ import React from 'react';
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Data Security</h3>"
                 <p className="text-gray-300 mb-4">
-                  Enterprise-grade security ensures your data and reports are protected ;
+                  Enterprise-grade security ensures your data and reports are protected .
                   with advanced encryption and compliance standards.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">"
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
-                    End-to-end encryption;
+                    End-to-end encryption.
                   </li>
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
-                    Access controls;
+                    Access controls.
                   </li>
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
-                    Audit trails;
+                    Audit trails.
                   </li>
                 </ul>
               </div>
@@ -195,21 +195,21 @@ import React from 'react';
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">Custom Dashboards</h3>"
                 <p className="text-gray-300 mb-4">
-                  Create personalized dashboards with drag-and-drop functionality ;
+                  Create personalized dashboards with drag-and-drop functionality .
                   and customizable widgets for your specific reporting needs.
                 </p>
                 <ul className="space-y-2 text-sm text-gray-400">"
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
-                    Drag-and-drop builder;
+                    Drag-and-drop builder.
                   </li>
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
-                    Custom widgets;
+                    Custom widgets.
                   </li>
                   <li className="flex items-center">"
                     <CheckCircle className="w-4 h-4 text-pink-400 mr-2" />
-                    Interactive charts;
+                    Interactive charts.
                   </li>
                 </ul>
               </div>
@@ -225,7 +225,7 @@ import React from 'react';
                 Why Choose AI Automated Reporting?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your reporting process with intelligent automation ;
+                Transform your reporting process with intelligent automation .
                 and gain competitive advantages through data-driven insights.
               </p>
             </div>
@@ -240,7 +240,7 @@ import React from 'react';
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Save 80% Time on Reporting</h3>"
                       <p className="text-gray-300">
-                        Automate repetitive reporting tasks and focus on strategic analysis ;
+                        Automate repetitive reporting tasks and focus on strategic analysis .
                         instead of manual data compilation and formatting.
                       </p>
                     </div>
@@ -266,7 +266,7 @@ import React from 'react';
                     <div>
                       <h3 className="text-xl font-semibold text-white mb-2">Better Decision Making</h3>"
                       <p className="text-gray-300">
-                        Access comprehensive insights and predictions to make ;
+                        Access comprehensive insights and predictions to make .
                         informed decisions faster and with greater confidence.
                       </p>
                     </div>
@@ -306,7 +306,7 @@ import React from 'react';
               Ready to Transform Your Reporting?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses already using AI-powered automated reporting ;
+              Join thousands of businesses already using AI-powered automated reporting .
               to drive better decisions and accelerate growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">"
@@ -315,7 +315,7 @@ import React from 'react';
                 <ArrowRight className="w-5 h-5 ml-2 inline" />
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
-                Schedule Demo;
+                Schedule Demo.
               </button>
             </div>
           </div>

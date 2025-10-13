@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'.
 
 
   return (
@@ -12,7 +12,7 @@ import React from 'react';
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]'
-    'Gain competitive advantage with advanced technology';
+    'Gain competitive advantage with advanced technology'.
   ]
 const Component = () => {
   
@@ -31,7 +31,7 @@ const Component = () => {
           <div className="text-center">"
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page;
+                Page.
               </span>
               <br />
               <span className="text-white">Solutions</span>"
@@ -45,7 +45,7 @@ const Component = () => {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />"
           <div className="relative max-w-7xl mx-auto text-center">"
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Email Marketing Automation;
+              Ai Email Marketing Automation.
             <p>Advanced AI-powered ai email marketing automation solution for modern businesses.</p>
             </p>
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
@@ -86,7 +86,7 @@ const Component = () => {
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits;
+              Key Benefits.
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the power of our page solutions for your business.
@@ -128,7 +128,7 @@ const Component = () => {
               </h2>
               <p>Advanced AI technology that drives results;</p>
                   <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                  {feature.benefits && (;
+                  {feature.benefits && (.
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} <li>
                           <CheckCircle />

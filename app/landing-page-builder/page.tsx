@@ -1,6 +1,6 @@
-'use client';
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+'use client'.
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'.
 const LandingPageBuilder: React.FC = () => {
   const features = [
     {
@@ -46,7 +46,7 @@ const LandingPageBuilder: React.FC = () => {
       <section className="relative py-20 px-4">"
         <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            AI-Powered Landing Page Builder;
+            AI-Powered Landing Page Builder.
           </h1>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Create stunning, high-converting landing pages in minutes with our intelligent builder. 
@@ -58,7 +58,7 @@ const LandingPageBuilder: React.FC = () => {
               <ArrowRight className="ml-2 h-5 w-5" />
             </button>
             <button className="border border-blue-600 text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-colors">
-              View Demo;
+              View Demo.
             </button>
           </div>
         </div>
@@ -68,7 +68,7 @@ const LandingPageBuilder: React.FC = () => {
       <section className="py-20 px-4">"
         <div className="max-w-7xl mx-auto">"
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">
-            Powerful Features;
+            Powerful Features.
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
@@ -113,7 +113,7 @@ const LandingPageBuilder: React.FC = () => {
             Join thousands of businesses already using our platform to create amazing landing pages.
           </p>
           <button className="bg-white text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition-colors">
-            Get Started Today;
+            Get Started Today.
           </button>
         </div>
       </section>
@@ -123,7 +123,7 @@ const LandingPageBuilder: React.FC = () => {
         <div className="max-w-7xl mx-auto">"
           <div className="text-center mb-16">"
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Get in Touch;
+              Get in Touch.
             </h2>
             <p className="text-xl text-gray-600">"
               Have questions? We're here to help you succeed.'
@@ -149,8 +149,8 @@ const LandingPageBuilder: React.FC = () => {
         </div>
       </section>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default LandingPageBuilder;
+export default LandingPageBuilder.

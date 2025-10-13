@@ -1,7 +1,7 @@
-'use client';
-import React, { CheckCircle, Star, Heart, Brain, Shield, Zap, Target, Users } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'.
+import React, { CheckCircle, Star, Heart, Brain, Shield, Zap, Target, Users } from 'lucide-react'.
+import Navigation from '../components/Navigation'.
+import Footer from '../components/Footer'.
 
 const AIHealthcarePage: React.FC = () => {
   const aiHealthcareServices = [
@@ -10,60 +10,60 @@ const AIHealthcarePage: React.FC = () => {
       description: 'Advanced AI-powered medical imaging analysis for radiology, pathology, and diagnostic imaging with 99.5% accuracy.',
       icon: '🩺',
       price: '$2,999/month',
-      features: ['X-ray analysis', 'MRI/CT scan interpretation', 'Pathology image analysis', 'Tumor detection', 'Diagnostic reporting'],'
-      benefits: ['Improve diagnostic accuracy by 40%', 'Reduce reading time by 60%', 'Early disease detection'],'
+      features: ['X-ray analysis', 'MRI/CT scan interpretation', 'Pathology image analysis', 'Tumor detection', 'Diagnostic reporting'],
+      benefits: ['Improve diagnostic accuracy by 40%', 'Reduce reading time by 60%', 'Early disease detection'],
       category: 'Medical Imaging',
-      technologies: ['TensorFlow', 'PyTorch', 'OpenCV', 'DICOM', 'Medical AI Models'],'
+      technologies: ['TensorFlow', 'PyTorch', 'OpenCV', 'DICOM', 'Medical AI Models'],
     },
     {
       title: 'AI Drug Discovery & Development',
       description: 'Machine learning models for pharmaceutical research, molecular design, and drug development optimization.',
       icon: '💊',
       price: '$4,999/month',
-      features: ['Molecular design', 'Drug-target interaction', 'Clinical trial optimization', 'Side effect prediction', 'Drug repurposing'],'
-      benefits: ['Reduce development time by 50%', 'Lower research costs', 'Higher success rates'],'
+      features: ['Molecular design', 'Drug-target interaction', 'Clinical trial optimization', 'Side effect prediction', 'Drug repurposing'],
+      benefits: ['Reduce development time by 50%', 'Lower research costs', 'Higher success rates'],
       category: 'Drug Discovery',
-      technologies: ['Deep Learning', 'Molecular Dynamics', 'Quantum Chemistry', 'Bioinformatics', 'Clinical Data'],'
+      technologies: ['Deep Learning', 'Molecular Dynamics', 'Quantum Chemistry', 'Bioinformatics', 'Clinical Data'],
     },
     {
       title: 'AI Personalized Medicine',
       description: 'Genomic analysis and personalized treatment recommendations based on patient genetic profiles.',
       icon: '🧬',
       price: '$3,499/month',
-      features: ['Genomic analysis', 'Treatment optimization', 'Risk assessment', 'Pharmacogenomics', 'Precision dosing'],'
-      benefits: ['Personalized treatments', 'Reduced adverse effects', 'Better outcomes'],'
+      features: ['Genomic analysis', 'Treatment optimization', 'Risk assessment', 'Pharmacogenomics', 'Precision dosing'],
+      benefits: ['Personalized treatments', 'Reduced adverse effects', 'Better outcomes'],
       category: 'Personalized Medicine',
-      technologies: ['Genomics', 'Machine Learning', 'Clinical Decision Support', 'Electronic Health Records'],'
+      technologies: ['Genomics', 'Machine Learning', 'Clinical Decision Support', 'Electronic Health Records'],
     },
     {
       title: 'AI Clinical Decision Support',
       description: 'Intelligent clinical decision support systems for healthcare providers with real-time recommendations.',
       icon: '🏥',
       price: '$2,499/month',
-      features: ['Clinical guidelines', 'Risk stratification', 'Treatment protocols', 'Alert systems', 'Outcome prediction'],'
-      benefits: ['Improved patient care', 'Reduced medical errors', 'Better resource utilization'],'
+      features: ['Clinical guidelines', 'Risk stratification', 'Treatment protocols', 'Alert systems', 'Outcome prediction'],
+      benefits: ['Improved patient care', 'Reduced medical errors', 'Better resource utilization'],
       category: 'Clinical Support',
-      technologies: ['NLP', 'Knowledge Graphs', 'Clinical Data', 'Evidence-Based Medicine'],'
+      technologies: ['NLP', 'Knowledge Graphs', 'Clinical Data', 'Evidence-Based Medicine'],
     },
     {
       title: 'AI Telemedicine Platform',
       description: 'Comprehensive telemedicine solution with AI-powered diagnostics and remote patient monitoring.',
       icon: '📱',
       price: '$1,999/month',
-      features: ['Remote consultations', 'AI symptom checker', 'Vital signs monitoring', 'Prescription management', 'Follow-up care'],'
-      benefits: ['Improved access to care', 'Reduced healthcare costs', 'Better patient engagement'],'
+      features: ['Remote consultations', 'AI symptom checker', 'Vital signs monitoring', 'Prescription management', 'Follow-up care'],
+      benefits: ['Improved access to care', 'Reduced healthcare costs', 'Better patient engagement'],
       category: 'Telemedicine',
-      technologies: ['Computer Vision', 'IoT', 'Mobile Health', 'Cloud Computing', 'Real-time Analytics'],'
+      technologies: ['Computer Vision', 'IoT', 'Mobile Health', 'Cloud Computing', 'Real-time Analytics'],
     },
     {
       title: 'AI Healthcare Analytics',
       description: 'Advanced analytics platform for healthcare data insights, population health management, and predictive modeling.',
       icon: '📊',
       price: '$3,999/month',
-      features: ['Population health analytics', 'Predictive modeling', 'Cost analysis', 'Quality metrics', 'Outcome tracking'],'
-      benefits: ['Data-driven decisions', 'Cost optimization', 'Improved quality of care'],'
+      features: ['Population health analytics', 'Predictive modeling', 'Cost analysis', 'Quality metrics', 'Outcome tracking'],
+      benefits: ['Data-driven decisions', 'Cost optimization', 'Improved quality of care'],
       category: 'Analytics',
-      technologies: ['Big Data', 'Machine Learning', 'Statistical Analysis', 'Healthcare Data Standards'],'
+      technologies: ['Big Data', 'Machine Learning', 'Statistical Analysis', 'Healthcare Data Standards'],
     }
   ];
 
@@ -79,7 +79,7 @@ const AIHealthcarePage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">"
             <div className="text-center">"
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                AI Healthcare Solutions;
+                AI Healthcare Solutions.
               </h1>
               <p className="text-xl md:text-2xl text-green-100 mb-8 max-w-4xl mx-auto">
                 Revolutionizing healthcare with advanced AI technology for medical imaging, drug discovery, personalized medicine, and clinical decision support.
@@ -89,13 +89,13 @@ const AIHealthcarePage: React.FC = () => {
                   href="/contact" "
                   className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-all"
                 >
-                  Get Started;
+                  Get Started.
                 </a>
                 <a 
                   href="/case-studies" "
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all"
                 >
-                  View Case Studies;
+                  View Case Studies.
                 </a>
               </div>
             </div>
@@ -203,13 +203,13 @@ const AIHealthcarePage: React.FC = () => {
                 href="/contact" "
                 className="bg-white text-green-600 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-all"
               >
-                Schedule Consultation;
+                Schedule Consultation.
               </a>
               <a 
                 href="tel:+1-302-464-0950" "
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-all"
               >
-                Call: +1 (302) 464-0950;
+                Call: +1 (302) 464-0950.
               </a>
             </div>
           </div>
@@ -217,8 +217,8 @@ const AIHealthcarePage: React.FC = () => {
       </main>
       <Footer />
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default AIHealthcarePage;
+export default AIHealthcarePage.

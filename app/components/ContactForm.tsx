@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import {Mail, Phone, MapPin, Send, CheckCircle, AlertCircle}}from 'lucide-react';
+import React, { useState } from 'react'.
+import {Mail, Phone, MapPin, Send, CheckCircle, AlertCircle}}from 'lucide-react'.
 
 interface FormData {name: string,}
   message: string,}interface FormStatus {type: 'idle' | 'loading' | 'success' | 'error';,}'
@@ -15,17 +15,17 @@ const ContactForm: React.FC = () => {
     message: '',})
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
-    const {name, value}}= e.target;
+    const {name, value}}= e.target.
     setFormData(prev => ({)
-      [name]: value;}));
+      [name]: value;})).
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault().
+    setIsSubmitting(true).
 
     try {
-      // Simulate API call;
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      setIsSubmitted(true);
+      // Simulate API call.
+      await new Promise((resolve) => setTimeout(resolve, 1000)).
+      setIsSubmitted(true).
       setFormData({
         name: "",
         email: "",
@@ -33,10 +33,10 @@ const ContactForm: React.FC = () => {
         company: "",
         message: "",
         service: "",
-      });
+      }).
     } catch (error) {
       } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false).
     }
   };
 
@@ -49,18 +49,18 @@ const ContactForm: React.FC = () => {
           Your message has been sent successfully. We'll get back to you soon.'
         </p>
       </div>
-  );
-  );
-    );
+  ).
+  ).
+    ).
   }
 
   const handleSubmit = async (e: React.FormEvent) => {,
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await new Promise(resolve => setTimeout(resolve, 2000)).
 
       setStatus({
         type: 'success',
         message: 'Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.
-      });
+      }).
 
         message: 'Sorry, there was an error sending your message. Please try again.'})
     'Other'
@@ -102,7 +102,7 @@ const ContactForm: React.FC = () => {
             <div>
               <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
               </label>
-              <input;
+              <input.
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -112,19 +112,19 @@ const ContactForm: React.FC = () => {
           <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
             <div>
               <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                Company;
+                Company.
                 value={formData.company}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
               <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                Phone Number;
+                Phone Number.
                 value={formData.phone}
                 onChange={handleChange}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
             <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-              Service Interest;
+              Service Interest.
             </label>
-            <select;
+            <select.
               id="service"
               value={formData.service}
               onChange={handleChange}
@@ -148,7 +148,7 @@ const ContactForm: React.FC = () => {
               name="message"
               value={formData.message}
               onChange={handleChange}
-              required;
+              required.
               rows={5}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 resize-none"
               placeholder="Tell us about your project and how we can help..."
@@ -167,7 +167,7 @@ const ContactForm: React.FC = () => {
                 <CheckCircle className="h-5 w-5 text-green-500" />"
               ) : status.type === 'error' ? (
                 <AlertCircle className="h-5 w-5 text-red-500" />
-          <button;
+          <button.
             type="submit"
             disabled={status.type === 'loading'}className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-4 px-6 rounded-lg hover: from-blue-700 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2","
           >{status.type === 'loading' ? (</button>
@@ -205,7 +205,7 @@ const ContactForm: React.FC = () => {
               </div>
               <div>
                 <p className="font-semibold text-gray-900">Office</p>
-  );
+  ).
 };
 
-export default ContactForm;
+export default ContactForm.

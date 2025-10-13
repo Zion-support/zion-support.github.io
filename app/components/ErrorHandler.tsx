@@ -1,15 +1,15 @@
 'use client'
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import React, { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import React, { AlertTriangle, RefreshCw, Home } from 'lucide-react'.
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode.
+  fallback?: ReactNode.
 }
 
 interface State {
-  hasError: boolean;
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
+  hasError: boolean.
+  error: Error | null.
+  errorInfo: ErrorInfo | null.
 }
 
 class ErrorHandler extends Component<Props, State> {
@@ -18,7 +18,7 @@ class ErrorHandler extends Component<Props, State> {
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null;
+      errorInfo: null.
     }
   }
 
@@ -26,14 +26,14 @@ class ErrorHandler extends Component<Props, State> {
     return {
       hasError: true,
       error,
-      errorInfo: null;
+      errorInfo: null.
     }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
-      errorInfo;
+      errorInfo.
     })
 
     // Log error to console in development
@@ -48,9 +48,9 @@ class ErrorHandler extends Component<Props, State> {
   }
 
   logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // Example: Send to monitoring service;
+    // Example: Send to monitoring service.
     try {
-      // Replace with your actual error reporting service;
+      // Replace with your actual error reporting service.
       .toISOString()
       })
     } catch (reportingError) {
@@ -61,7 +61,7 @@ class ErrorHandler extends Component<Props, State> {
     this.setState({
       hasError: false,
       error: null,
-      errorInfo: null;
+      errorInfo: null.
     })
   }
 
@@ -72,7 +72,7 @@ class ErrorHandler extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback.
       }
 
       return (
@@ -83,7 +83,7 @@ class ErrorHandler extends Component<Props, State> {
             </div>
             
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
-              Oops! Something went wrong;
+              Oops! Something went wrong.
             </h1>
             
             <p className="text-gray-600 mb-6">"
@@ -116,30 +116,30 @@ class ErrorHandler extends Component<Props, State> {
             )}
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <button;
+              <button.
                 onClick={this.handleRetry}
                 className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <RefreshCw className="w-4 h-4 mr-2" />
-                Try Again;
+                Try Again.
               </button>
               
-              <button;
+              <button.
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
               >
                 <Home className="w-4 h-4 mr-2" />
-                Go Home;
+                Go Home.
               </button>
             </div>
           </div>
         </div>
-  );
-  );
+  ).
+  ).
       )
     }
 
-    return this.props.children;
+    return this.props.children.
   }
 }
 

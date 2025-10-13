@@ -1,5 +1,5 @@
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, Heart, Brain, Stethoscope, Activity } from 'lucide-react';
+import React, { Helmet } from 'react-helmet-async'.
+import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, Heart, Brain, Stethoscope, Activity } from 'lucide-react'.
 const AIHealthcareSolutionsPage: React.FC = () => {
   const healthcareServices = [
     {
@@ -26,7 +26,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
       ],
       marketPrice: '$8,000-25,000/month',
       category: 'Medical Imaging',
-      technologies: ['Deep Learning', 'Computer Vision', 'DICOM Processing', 'Custom Neural Networks', 'Medical APIs'],'
+      technologies: ['Deep Learning', 'Computer Vision', 'DICOM Processing', 'Custom Neural Networks', 'Medical APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -53,7 +53,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
       ],
       marketPrice: '$15,000-50,000/month',
       category: 'Drug Discovery',
-      technologies: ['Machine Learning', 'Molecular Modeling', 'Quantum Computing', 'Bioinformatics', 'Clinical Data'],'
+      technologies: ['Machine Learning', 'Molecular Modeling', 'Quantum Computing', 'Bioinformatics', 'Clinical Data'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -80,7 +80,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
       ],
       marketPrice: '$4,000-12,000/month',
       category: 'Patient Monitoring',
-      technologies: ['IoT Sensors', 'Machine Learning', 'Real-time Analytics', 'Mobile Apps', 'Cloud Computing'],'
+      technologies: ['IoT Sensors', 'Machine Learning', 'Real-time Analytics', 'Mobile Apps', 'Cloud Computing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -107,7 +107,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
       ],
       marketPrice: '$3,500-10,000/month',
       category: 'EHR Systems',
-      technologies: ['NLP', 'Machine Learning', 'HL7 FHIR', 'Cloud Computing', 'API Integration'],'
+      technologies: ['NLP', 'Machine Learning', 'HL7 FHIR', 'Cloud Computing', 'API Integration'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -134,7 +134,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
       ],
       marketPrice: '$2,500-8,000/month',
       category: 'Telemedicine',
-      technologies: ['Video Conferencing', 'AI Diagnostics', 'Mobile Apps', 'Cloud Computing', 'Security'],'
+      technologies: ['Video Conferencing', 'AI Diagnostics', 'Mobile Apps', 'Cloud Computing', 'Security'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -161,7 +161,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
       ],
       marketPrice: '$2,000-6,000/month',
       category: 'Mental Health',
-      technologies: ['NLP', 'Sentiment Analysis', 'Mobile Apps', 'Privacy-Preserving ML', 'Therapy APIs'],'
+      technologies: ['NLP', 'Sentiment Analysis', 'Mobile Apps', 'Privacy-Preserving ML', 'Therapy APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -188,7 +188,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
       ],
       marketPrice: '$7,500-20,000/month',
       category: 'Clinical Trials',
-      technologies: ['Machine Learning', 'Predictive Analytics', 'Clinical Data', 'Regulatory APIs', 'Patient Databases'],'
+      technologies: ['Machine Learning', 'Predictive Analytics', 'Clinical Data', 'Regulatory APIs', 'Patient Databases'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -215,7 +215,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
       ],
       marketPrice: '$5,000-15,000/month',
       category: 'Healthcare Analytics',
-      technologies: ['Big Data Analytics', 'Machine Learning', 'Data Visualization', 'Cloud Computing', 'APIs'],'
+      technologies: ['Big Data Analytics', 'Machine Learning', 'Data Visualization', 'Cloud Computing', 'APIs'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
@@ -232,7 +232,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
       <section className="pt-24 pb-16 px-4">"
         <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Healthcare Solutions;
+            AI Healthcare Solutions.
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform healthcare delivery with AI-powered solutions that improve patient outcomes, reduce costs, and accelerate medical breakthroughs.
@@ -282,7 +282,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
       <section className="py-16 px-4">"
         <div className="max-w-7xl mx-auto">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Healthcare AI Solution;
+            Choose Your Healthcare AI Solution.
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {healthcareServices.map((service, index) => (
@@ -314,7 +314,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features;
+                        +{service.features.length - 4} more features.
                       </li>
                     )}
                   </ul>
@@ -348,7 +348,7 @@ const AIHealthcareSolutionsPage: React.FC = () => {
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started Now;
+                    Get Started Now.
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
                     {service.contactInfo}
@@ -374,20 +374,20 @@ const AIHealthcareSolutionsPage: React.FC = () => {
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              Call (302) 464-0950;
+              Call (302) 464-0950.
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us;
+              Email Us.
             </a>
           </div>
         </div>
       </section>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
-export default AIHealthcareSolutionsPage;
+export default AIHealthcareSolutionsPage.

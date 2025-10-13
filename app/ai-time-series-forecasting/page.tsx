@@ -1,8 +1,8 @@
-import React, { Link } from 'react-router-dom';
-import React, { ArrowRight, Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, Sparkles, Monitor, Mic, Mail, Smartphone, Globe } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
+import React, { Link } from 'react-router-dom'.
+import React, { ArrowRight, Brain, Zap, Shield, BarChart3, Users, Clock, CheckCircle, Star, Sparkles, Monitor, Mic, Mail, Smartphone, Globe } from 'lucide-react'.
+import EnhancedSEO from '../components/EnhancedSEO'.
+import FuturisticButton from '../components/FuturisticButton'.
+import ResponsiveContainer from '../components/ResponsiveContainer'.
 
 const AitimeseriesforecastingPage = () => {
   
@@ -65,7 +65,7 @@ const AitimeseriesforecastingPage = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">"
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Ai Time Series Forecasting;
+              Ai Time Series Forecasting.
             </span>
           </h1>
           
@@ -80,7 +80,7 @@ const AitimeseriesforecastingPage = () => {
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
             >
-              Get Started;
+              Get Started.
             </FuturisticButton>
             <FuturisticButton
               href="/demo"
@@ -88,7 +88,7 @@ const AitimeseriesforecastingPage = () => {
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
             >
-              Watch Demo;
+              Watch Demo.
             </FuturisticButton>
           </div>
         </ResponsiveContainer>
@@ -99,7 +99,7 @@ const AitimeseriesforecastingPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">"
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful Features;
+              Powerful Features.
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               Everything you need to transform your business with AI-powered solutions.
@@ -107,7 +107,7 @@ const AitimeseriesforecastingPage = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <div;
+              <div.
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
@@ -141,7 +141,7 @@ const AitimeseriesforecastingPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div;
+              <div.
                 key={index}
                 className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300"
               >
@@ -170,7 +170,7 @@ const AitimeseriesforecastingPage = () => {
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
             >
-              Contact Us;
+              Contact Us.
             </FuturisticButton>
             <FuturisticButton
               href="/demo"
@@ -178,16 +178,16 @@ const AitimeseriesforecastingPage = () => {
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
             >
-              Schedule Demo;
+              Schedule Demo.
             </FuturisticButton>
           </div>
         </div>
       </section>
     </div>
-  );
-  );
+  ).
+  ).
 };
 
 
-export default AitimeseriesforecastingPage;
-export default AitimeseriesforecastingPage;
+export default AitimeseriesforecastingPage.
+export default AitimeseriesforecastingPage.

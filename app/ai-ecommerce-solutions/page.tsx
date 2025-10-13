@@ -1,7 +1,7 @@
-'use client';
-import React, { CheckCircle, Star, Users, BarChart3, Zap, Shield, ShoppingCart, CreditCard, Package, TrendingUp, Globe, Smartphone } from 'lucide-react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+'use client'.
+import React, { CheckCircle, Star, Users, BarChart3, Zap, Shield, ShoppingCart, CreditCard, Package, TrendingUp, Globe, Smartphone } from 'lucide-react'.
+import Navigation from '../components/Navigation'.
+import Footer from '../components/Footer'.
 
 const AIEcommerceSolutionsPage: React.FC = () => {
   const ecommerceServices = [
@@ -119,7 +119,7 @@ const AIEcommerceSolutionsPage: React.FC = () => {
         {/* Hero Section */}
         <section className="text-center mb-16">"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            AI E-commerce Solutions;
+            AI E-commerce Solutions.
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your online business with AI-powered e-commerce solutions that increase sales, 
@@ -170,7 +170,7 @@ const AIEcommerceSolutionsPage: React.FC = () => {
                   href="/contact" "
                   className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
                 >
-                  Get Started;
+                  Get Started.
                 </a>
               </div>
             ))}
@@ -204,22 +204,22 @@ const AIEcommerceSolutionsPage: React.FC = () => {
               href="/contact" "
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
             >
-              Get Free Consultation;
+              Get Free Consultation.
             </a>
             <a 
               href="/case-studies" "
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
             >
-              View Case Studies;
+              View Case Studies.
             </a>
           </div>
         </section>
       </main>
       <Footer />
     </div>
-  );
-  );
-  );
+  ).
+  ).
+  ).
 };
 
-export default AIEcommerceSolutionsPage;
+export default AIEcommerceSolutionsPage.

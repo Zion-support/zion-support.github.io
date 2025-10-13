@@ -1,70 +1,70 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react'.
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode.
+  fallback?: ReactNode.
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
+  hasError: boolean.
+  error?: Error.
 
-import { AlertTriangle, RefreshCw, Home } from lucide-react;
+import { AlertTriangle, RefreshCw, Home } from lucide-react.
 
 interface Props {}
-  children: ReactNode;
+  children: ReactNode.
 
-  fallback?: ReactNode;
+  fallback?: ReactNode.
 
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  onError?: (error: Error, errorInfo: ErrorInfo) => void.
 
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  hasError: boolean.
+  error?: Error.
+  errorInfo?: ErrorInfo.
 }
 
 export class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props).
     this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    // Update state so the next render will show the fallback UI;
+    // Update state so the next render will show the fallback UI.
     return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     // Log the error to console and any error reporting service
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo).
     
     this.setState({
       error,
-      errorInfo;
-    });
+      errorInfo.
+    }).
 
     // You can also log the error to an error reporting service here
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', 'exception', {'
         description: error.message,
-        fatal: false;
-      });
+        fatal: false.
+      }).
     }
   }
   };
 
   render() {}
     if (this.state.hasError) {}
-      // Custom fallback UI;
+      // Custom fallback UI.
       if (this.props.fallback) {}
-        return this.props.fallback;
+        return this.props.fallback.
 
       }
 
-      // Default error UI;
+      // Default error UI.
       return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4>"
           <div className="max-w-md w-full bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 text-center>"
@@ -73,7 +73,7 @@ export class ErrorBoundary extends Component<Props, State> {
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4>
-              Oops! Something went wrong;
+              Oops! Something went wrong.
             </h1>
             
             <p className="text-gray-300 mb-6>
@@ -118,22 +118,22 @@ export class ErrorBoundary extends Component<Props, State> {
               )}
 
             <div className="flex flex-col sm:flex-row gap-4>
-              <button;
+              <button.
                 onClick={this.handleRetry}
 
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300;
+                className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300.
               >
                 <RefreshCw className="w-4 h-4 />
-                Try Again;
+                Try Again.
               </button>
               
-              <button;
+              <button.
                 onClick={this.handleGoHome}
 
-                className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-white/20;
+                className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 border border-white/20.
               >
                 <Home className="w-4 h-4 />
-                Go Home;
+                Go Home.
               </button>
             </div>
 
@@ -142,18 +142,18 @@ export class ErrorBoundary extends Component<Props, State> {
               <p className="mt-2>
                 <a 
                   href="mailto:support@ziontechgroup.com "
-                  className="text-cyan-400 hover:text-cyan-300;
+                  className="text-cyan-400 hover:text-cyan-300.
                 >
-                  support@ziontechgroup.com;
+                  support@ziontechgroup.com.
                 </a>
               </p>
             </div>
-  error?: Error;
+  error?: Error.
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props).
     this.state = { hasError: false };
   }
 
@@ -162,7 +162,7 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+    console.error('Error caught by boundary:', error, errorInfo).
   }
 
   render() {
@@ -176,7 +176,7 @@ class ErrorBoundary extends Component<Props, State> {
               <div className="mb-6">"
                 <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />"
                 <h1 className="text-2xl font-bold text-white mb-2">
-                  Oops! Something went wrong;
+                  Oops! Something went wrong.
                 </h1>
                 <p className="text-gray-300 mb-6">"
                   We're sorry, but something unexpected happened. Please try again or contact support if the problem persists.'
@@ -198,19 +198,19 @@ class ErrorBoundary extends Component<Props, State> {
               )}
 
               <div className="space-y-3">
-                <button;
+                <button.
                   onClick={this.handleRetry}
                   className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
                 >
                   <RefreshCw className="w-5 h-5 mr-2" />
-                  Try Again;
+                  Try Again.
                 </button>
-                <button;
+                <button.
                   onClick={this.handleGoHome}
                   className="w-full border border-white/30 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors flex items-center justify-center"
                 >
                   <Home className="w-5 h-5 mr-2" />
-                  Go Home;
+                  Go Home.
                 </button>
               </div>
 
@@ -222,7 +222,7 @@ class ErrorBoundary extends Component<Props, State> {
                   href="/contact"
                   className="text-purple-400 hover:text-purple-300 text-sm font-medium"
                 >
-                  Contact Support;
+                  Contact Support.
                 </a>
               </div>
             </div>
@@ -234,17 +234,17 @@ class ErrorBoundary extends Component<Props, State> {
               We're sorry, but something unexpected happened. Please try refreshing the page.'
             </p>
             <div className="space-y-3">
-              <button;
+              <button.
                 onClick={() => window.location.reload()}
                 className="w-full bg-cyan-600 hover:bg-cyan-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
               >
-                Refresh Page;
+                Refresh Page.
               </button>
               <button
                 onClick={() => window.location.href = '/'}
                 className="w-full bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
               >
-                Go Home;
+                Go Home.
               </button>
             </div>
             {process.env['NODE_ENV'] === 'development' && this.state.error && ('
@@ -258,15 +258,15 @@ class ErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+      ).
 
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI;
-      return this.props.fallback || <DefaultErrorFallback error={this.state.error} />;
+      // You can render any custom fallback UI.
+      return this.props.fallback || <DefaultErrorFallback error={this.state.error} />.
     }
 
-    return this.props.children;
+    return this.props.children.
   }
 }
 
@@ -294,38 +294,38 @@ function DefaultErrorFallback({ error }: { error?: Error }) {
             </pre>
           </details>
         )}
-        <button;
+        <button.
           onClick={() => window.location.reload()}
           className="mt-4 bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
         >
-          Refresh Page;
+          Refresh Page.
         </button>
       </div>
     </div>
-  );
+  ).
 }
 
-export default ErrorBoundary;
-export default ErrorBoundary;
+export default ErrorBoundary.
+export default ErrorBoundary.
 import React, { Component, ErrorInfo, ReactNode } from 'react'
-import React, { AlertTriangle, RefreshCw } from 'lucide-react';
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-import React, { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react';
-import React, { Link } from 'react-router-dom';
+import React, { AlertTriangle, RefreshCw } from 'lucide-react'.
+'use client'.
+import React, { Component, ErrorInfo, ReactNode } from 'react'.
+import React, { AlertTriangle, RefreshCw, Home, ArrowLeft } from 'lucide-react'.
+import React, { Link } from 'react-router-dom'.
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode.
+  fallback?: ReactNode.
 }
 
 interface State {
-  hasError: boolean;
-  error?: Error;
+  hasError: boolean.
+  error?: Error.
 }
 
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
-    hasError: false;
+    hasError: false.
   }
 
   public static getDerivedStateFromError(error: Error): State {
@@ -343,7 +343,7 @@ class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback.
       }
 
       const Component = () => {
@@ -353,17 +353,17 @@ class ErrorBoundary extends Component<Props, State> {
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">"
             <AlertTriangle className="w-16 h-16 text-red-500 mx-auto mb-4" />"
             <h2 className="text-2xl font-bold text-gray-900 mb-2">
-              Something went wrong;
+              Something went wrong.
             </h2>
             <p className="text-gray-600 mb-6">"
               We're sorry, but something unexpected happened. Please try refreshing the page.'
             </p>
-            <button;
+            <button.
               onClick={this.handleRetry}
               className="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               <RefreshCw className="w-4 h-4 mr-2" />
-              Try Again;
+              Try Again.
             </button>
             {process.env['NODE_ENV'] === 'development' && this.state.error && ('
               <details className="mt-4 text-left">"
@@ -377,11 +377,11 @@ class ErrorBoundary extends Component<Props, State> {
             )}
           </div>
         </div>
-      );
+      ).
     }
 
-    return this.props.children;
+    return this.props.children.
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary.

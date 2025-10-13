@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react'.
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';'
   color?: 'primary' | 'secondary' | 'white';'
-  text?: string;
-  fullScreen?: boolean;
+  text?: string.
+  fullScreen?: boolean.
 }
 
 const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
   color = 'primary',
   text,
-  fullScreen = false;
+  fullScreen = false.
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
@@ -55,18 +55,18 @@ const EnhancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         </p>
       )}
     </div>
-  );
+  ).
 
   if (fullScreen) {
     return (
     <div className="fixed inset-0 bg-gray-900/80 backdrop-blur-sm flex items-center justify-center z-50">
         {spinner}
       </div>
-  );
-    );
+  ).
+    ).
   }
 
-  return spinner;
+  return spinner.
 };
 
-export default EnhancedLoadingSpinner;
+export default EnhancedLoadingSpinner.

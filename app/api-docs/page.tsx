@@ -1,15 +1,15 @@
-'use client';
-import React, { useState } from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import Link from 'next/link';
-import React, { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react';
+'use client'.
+import React, { useState } from 'react'.
+import Navigation from '../components/Navigation'.
+import Footer from '../components/Footer'.
+import Link from 'next/link'.
+import React, { Search, Code, Key, Zap, ArrowRight, Copy, Check } from 'lucide-react'.
 const ApiDocsPage: React.FC = () => {
-  const [copiedCode, setCopiedCode] = useState<string | null>(null);
+  const [copiedCode, setCopiedCode] = useState<string | null>(null).
   const copyToClipboard = (code: string, id: string) => {
-    navigator.clipboard.writeText(code);
-    setCopiedCode(id);
-    setTimeout(() => setCopiedCode(null), 2000);
+    navigator.clipboard.writeText(code).
+    setCopiedCode(id).
+    setTimeout(() => setCopiedCode(null), 2000).
   };
   const apiEndpoints = [
     {
@@ -54,7 +54,7 @@ const ApiDocsPage: React.FC = () => {
       <main className="container mx-auto px-4 py-16 pt-24">"
         <section className="text-center mb-16">"
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            API Documentation;
+            API Documentation.
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
             Comprehensive API documentation for integrating with Zion Tech Group's AI and IT services;'
@@ -106,7 +106,7 @@ const ApiDocsPage: React.FC = () => {
                 All API requests require authentication using your API key. Include it in the Authorization header:
               </p>
               <code className="bg-gray-800 text-cyan-400 p-2 rounded block">
-                Authorization: Bearer YOUR_API_KEY;
+                Authorization: Bearer YOUR_API_KEY.
               </code>
             </div>
             <div className="cyber-card hologram-card p-6">"
@@ -120,27 +120,27 @@ const ApiDocsPage: React.FC = () => {
         <section className="text-center">"
           <h2 className="text-3xl font-bold text-white mb-8">Need Help?</h2>"
           <p className="text-gray-300 mb-8">
-            Contact our developer support team for assistance with API integration;
+            Contact our developer support team for assistance with API integration.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:dev@ziontechgroup.com"
               className="cyber-button"
             >
-              Email Support;
+              Email Support.
             </a>
             <a
               href="/contact"
               className="cyber-button"
             >
-              Contact Us;
+              Contact Us.
             </a>
           </div>
         </section>
       </main>
       <Footer />
     </div>
-  );
-  );
+  ).
+  ).
 };
-export default ApiDocsPage;
+export default ApiDocsPage.

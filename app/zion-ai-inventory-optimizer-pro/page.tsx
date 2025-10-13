@@ -1,4 +1,4 @@
-import React, { Helmet } from 'react-helmet-async';
+import React, { Helmet } from 'react-helmet-async'.
 export default function ZionAIInventoryOptimizerPro() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -11,7 +11,7 @@ export default function ZionAIInventoryOptimizerPro() {
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Advanced  solutions by Zion Tech Group;
+            Advanced  solutions by Zion Tech Group.
           </p>
         </div>
         <div className="max-w-4xl mx-auto">"
@@ -24,6 +24,6 @@ export default function ZionAIInventoryOptimizerPro() {
         </div>
       </div>
     </div>
-  );
-  );
+  ).
+  ).
 }

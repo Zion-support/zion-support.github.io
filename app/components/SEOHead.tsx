@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'.
 
 interface SEOHeadProps {
-  title: string;
-  description: string;
-  keywords?: string;
-  canonical?: string;
-  ogImage?: string;
-  ogType?: string;
+  title: string.
+  description: string.
+  keywords?: string.
+  canonical?: string.
+  ogImage?: string.
+  ogType?: string.
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -17,15 +17,15 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogImage = '/og-image.jpg',
   ogType = 'website'
 }) => {
-  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`.
   const fullCanonical = canonical || `https://ziontechgroup.com${typeof window !== 'undefined' ? window.location.pathname : ''}`;'
 
   return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <Helmet>
       <title>{fullTitle}</title>
@@ -49,7 +49,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="robots" content="index, follow" />"
       <meta name="author" content="Zion Tech Group" />
     </Helmet>
-  );
+  ).
 };
 
-export default SEOHead;
+export default SEOHead.

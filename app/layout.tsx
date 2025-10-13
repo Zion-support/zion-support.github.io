@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'.
 
   return (
     <div>
   )
     </div>
-  );
-  );
+  ).
+  ).
   )
     <html lang='en'>
       <head>
@@ -74,5 +74,5 @@ import React from 'react';
         {children}
       </body>
     </html>
-  );
+  ).
 }
