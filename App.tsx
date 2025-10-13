@@ -74,8 +74,11 @@ function App() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = useCallback(() => {
@@ -142,6 +145,7 @@ function App() {
                                   <Route path="/ai-marketing" element={<AIMarketingPage />} />
                                   <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
                                   <Route path="/ai-project-management" element={<AIProjectManagementPage />} />
+<<<<<<< HEAD
 
                                   {/* IT Services */}
                                   <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
@@ -152,6 +156,18 @@ function App() {
                                   <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
                                   <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
                                   <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitiesPage />} />
+=======
+
+                                  {/* 5G Solutions Routes */}
+                                  <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+                                  <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                                  <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
+                                  <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                                  <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitiesPage />} />
+
+                                  {/* IT Services */}
+                                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1
 
                                   {/* Catch all route */}
                                   <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
@@ -185,6 +201,7 @@ function App() {
 }
 
 export default App;
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 export default App;
@@ -231,3 +248,5 @@ export default App;
 >>>>>>> cursor/fix-errors-and-merge-to-main-c832
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1

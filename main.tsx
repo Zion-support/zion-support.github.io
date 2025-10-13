@@ -37,6 +37,7 @@ if ("serviceWorker" in navigator) {
   });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-48ac
@@ -44,3 +45,5 @@ if ("serviceWorker" in navigator) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-c832
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1

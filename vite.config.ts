@@ -41,6 +41,7 @@ export default defineConfig({
     assetsInlineLimit: 1024, // Optimized for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
+    sourcemap: true,
     // Better compression settings
     terserOptions: {
       compress: {
@@ -120,6 +121,7 @@ export default defineConfig({
           if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
             return 'ai-pages'
           }
+<<<<<<< HEAD
           // IT service pages
           if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
             return 'it-pages'
@@ -131,6 +133,33 @@ export default defineConfig({
           // 5G Solutions pages
           if (id.includes('/app/5g-') && id.includes('/page.tsx')) {
             return '5g-pages'
+=======
+          // AI service pages - more granular splitting
+          if (id.includes('/ai-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/ai-')[1]?.split('/')[0];
+            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+              return 'ai-analytics'
+            }
+            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
+              return 'ai-content'
+            }
+            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
+              return 'ai-security'
+            }
+            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
+              return 'ai-customer'
+            }
+            return 'ai-other'
+          }
+          // 5G service pages - group together
+          if (id.includes('/5g-') && id.includes('/page.tsx')) {
+            return '5g-services'
+          }
+          // Main pages - keep core pages together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/5g-')) {
+            return 'main-pages'
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1
           }
           // Default chunk for other pages
           if (id.includes('/app/') && id.includes('/page.tsx')) {
@@ -145,6 +174,7 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Enable tree shaking
     treeshake: true,
@@ -173,6 +203,8 @@ export default defineConfig({
 >>>>>>> cursor/fix-errors-and-merge-to-main-c832
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1
   },
   server: {
     port: 3000,
@@ -180,13 +212,17 @@ export default defineConfig({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1
     host: true,
     // Enable HMR
     hmr: {
       overlay: true,
     },
+<<<<<<< HEAD
     cors: true,
 <<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-48ac
@@ -195,6 +231,9 @@ export default defineConfig({
 >>>>>>> cursor/fix-errors-and-merge-to-main-c832
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+=======
+    cors: true,
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1
   },
   preview: {
     port: 4173,
@@ -202,6 +241,7 @@ export default defineConfig({
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     host: true,
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-48ac
@@ -210,6 +250,9 @@ export default defineConfig({
 =======
     host: true,
 >>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+=======
+    host: true,
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1
   },
   optimizeDeps: {
     include: [
@@ -225,10 +268,14 @@ export default defineConfig({
     devSourcemap: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
   },
 >>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+=======
+  },
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
   },

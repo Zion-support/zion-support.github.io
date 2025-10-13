@@ -1,10 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 
@@ -279,6 +282,7 @@ interface OptimizedImageProps {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <div className={`${className} relative`}>
       {!isLoaded && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
@@ -322,6 +326,8 @@ export default OptimizedImage;
 =======
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1
     <div className={`relative ${className}`} style={containerStyle}>
       {!isLoaded && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
@@ -343,6 +349,7 @@ export default OptimizedImage;
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-48ac
 =======
 
@@ -361,3 +368,5 @@ export default function OptimizedImage({ className = '', children }: OptimizedIm
 >>>>>>> cursor/fix-errors-and-merge-to-main-c832
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-4aee
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-69e1
