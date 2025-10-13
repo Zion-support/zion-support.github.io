@@ -39,7 +39,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       if ('performance' in window) {
         window.addEventListener('load', () => {
           const perfData = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-          console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart);
+          // Send performance data to analytics instead of console logging
+          if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'page_load_time', {
+              value: Math.round(perfData.loadEventEnd - perfData.loadEventStart),
+              custom_parameter: 'performance_optimizer'
+            });
+          }
         });
       }
     };
