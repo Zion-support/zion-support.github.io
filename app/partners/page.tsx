@@ -1,7 +1,4 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Users, Globe, Shield, Zap } from 'lucide-react';
 
 export default function Partners() {
   const partners = [
@@ -49,7 +46,6 @@ export default function Partners() {
     }
   ];
 
-  const tiers = [
     {
       name: "Platinum",
       color: "from-gray-400 to-gray-600",

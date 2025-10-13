@@ -1,6 +1,6 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { 
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import {
   ArrowRight, 
   BarChart3, 
   Brain, 

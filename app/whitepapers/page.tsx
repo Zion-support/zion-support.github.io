@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Download, ArrowRight, Sparkles, Target, Brain, Globe, Settings, Shield, BookOpen } from 'lucide-react';

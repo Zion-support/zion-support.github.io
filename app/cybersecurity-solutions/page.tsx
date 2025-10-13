@@ -1,6 +1,5 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Users, Clock, Award, Star, Activity, Database, FileText } from 'lucide-react';
+import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Users, Star, Activity, Database, FileText } from 'lucide-react';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
