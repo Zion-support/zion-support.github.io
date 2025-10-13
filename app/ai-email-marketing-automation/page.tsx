@@ -1,153 +1,164 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Mail, Bot, Zap, Target, BarChart, TrendingUp, Users, Clock, Star, Mic, Smartphone, Globe } from 'lucide-react';
+
+const AiEmailMarketingAutomationPage: React.FC = () => {
+  const features = [
+    {
+      icon: Mail,
+      title: 'Smart Email Campaigns',
+      description: 'AI-powered email marketing campaigns that adapt to user behavior and preferences.',
+      benefits: ['Behavioral targeting', 'Dynamic content', 'A/B testing', 'Performance optimization']
+    },
+    {
+      icon: Bot,
+      title: 'Automated Workflows',
+      description: 'Set up complex email automation workflows that nurture leads and customers.',
+      benefits: ['Lead nurturing', 'Welcome sequences', 'Re-engagement campaigns', 'Lifecycle marketing']
+    },
+    {
+      icon: Zap,
+      title: 'Real-time Personalization',
+      description: 'Personalize emails in real-time based on user data and interactions.',
+      benefits: ['Dynamic content', 'Personal recommendations', 'Behavioral triggers', 'Custom segments']
+    },
+    {
+      icon: Target,
+      title: 'Advanced Segmentation',
+      description: 'Create highly targeted email segments for maximum engagement and conversion.',
+      benefits: ['Demographic targeting', 'Behavioral segments', 'Predictive analytics', 'Custom criteria']
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics & Insights',
+      description: 'Comprehensive analytics to track and optimize your email marketing performance.',
+      benefits: ['Open rates', 'Click tracking', 'Conversion metrics', 'ROI analysis']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Growth Optimization',
+      description: 'Continuously optimize your email marketing for maximum growth and engagement.',
+      benefits: ['Growth strategies', 'Conversion optimization', 'List building', 'Retention tactics']
+    }
+  ];
+
+  const benefits = [
+    '50% increase in email engagement',
+    '35% higher conversion rates',
+    '60% reduction in manual work',
+    'Real-time personalization',
+    'Advanced automation workflows',
+    'Comprehensive analytics dashboard'
+  ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
-    {icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-    'Gain competitive advantage with advanced technology';
-  ]
-return(<>)
-      <Helmet />
+    <>
+      <Helmet>
+        <title>AI Email Marketing Automation - Smart Email Campaigns | Zion Tech Group</title>
+        <meta name="description" content="Transform your email marketing with AI-powered automation. Smart campaigns, personalized content, and automated workflows for maximum engagement." />
+        <meta name="keywords" content="AI email marketing, email automation, marketing campaigns, email personalization, marketing automation, email optimization" />
+      </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI Email Marketing
+              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Automation
               </span>
-              <br />
-              <span className="text-white">Solutions</span>
-        {/* Hero Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-        <section className="relative py-20 px-4 overflow-hidden">
-        </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Email Marketing Automation
-            <p>Advanced AI-powered ai email marketing automation solution for modern businesses.</p>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your email marketing with AI-powered automation. 
+              Smart campaigns, personalized content, and automated workflows for maximum engagement.
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
               </button>
-              <button>View Demo,</button>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your page needs and get a customized solution.
-            </p>
+        </section>
 
         {/* Features Section */}
         <section className="py-20 px-4">
-        </section>
-        {/* Features Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>Key Features;</h2>
-              </h2>
-              <p>Advanced AI technology that drives results;</p>
-                  <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                  {feature.benefits && (;
-                    <ul>
-                      {feature.benefits.map((benefit, idx) => (} <li>
-                          <CheckCircle />
-        {/* Benefits Section */} <section className="py-20 px-4">
+            <h2 className="text-4xl font-bold text-white text-center mb-16">
+              Powerful Email Marketing AI Features
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center space-x-2 text-sm text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
                     </ul>
                   </div>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>Why Choose Our Solution?</h2>
-              </h2>
-              <p>Proven results that drive business growth and efficiency;</p>
-              </p>
+                );
+              })}
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-white text-center mb-16">
+              Why Choose AI Email Marketing Automation?
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <CheckCircle />
-                  <p className="text-lg text-white font-medium">{benefit</p>}</p>
+                <div key={index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+                    <Star className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-gray-300 font-medium">{benefit}</span>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Automate Your Email Marketing?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of marketers already using AI-powered email automation 
+              to boost engagement and drive conversions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </button>
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
+          </div>
         </section>
+      </div>
+    </>
+  );
+};
+
+export default AiEmailMarketingAutomationPage;

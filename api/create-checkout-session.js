@@ -6,13 +6,12 @@ async function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
 
-    res.setHeader('Content-Type', 'application/json);
+    res.setHeader('Content-Type', 'application/json');
 
-    res.end(JSON.stringify({ error: 'Method not allowed }));
+    res.end(JSON.stringify({ error: 'Method not allowed' }));
 
-    return}
-
-;
+    return;
+  }
 
 const { productId, userId } = req.body || {};
 

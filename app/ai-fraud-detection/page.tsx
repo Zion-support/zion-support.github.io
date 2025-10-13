@@ -1,143 +1,164 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Shield, Brain, Zap, Target, BarChart, TrendingUp, Users, Clock, Star, Mic, Smartphone, Globe } from 'lucide-react';
 
-export default function AiFraudDetection() {
+const AiFraudDetectionPage: React.FC = () => {
+  const features = [
+    {
+      icon: Shield,
+      title: 'Real-time Fraud Detection',
+      description: 'AI-powered fraud detection that identifies suspicious activities in real-time.',
+      benefits: ['Instant alerts', 'Pattern recognition', 'Risk scoring', 'Automated blocking']
+    },
+    {
+      icon: Brain,
+      title: 'Machine Learning Models',
+      description: 'Advanced ML models that continuously learn and adapt to new fraud patterns.',
+      benefits: ['Adaptive learning', 'Pattern evolution', 'False positive reduction', 'Continuous improvement']
+    },
+    {
+      icon: Zap,
+      title: 'Automated Response',
+      description: 'Automatically respond to fraud attempts with appropriate security measures.',
+      benefits: ['Auto-blocking', 'Account suspension', 'Transaction holds', 'Alert notifications']
+    },
+    {
+      icon: Target,
+      title: 'Precision Targeting',
+      description: 'Target specific fraud patterns with high accuracy and minimal false positives.',
+      benefits: ['Pattern matching', 'Behavioral analysis', 'Risk assessment', 'Custom rules']
+    },
+    {
+      icon: BarChart,
+      title: 'Analytics & Reporting',
+      description: 'Comprehensive fraud analytics and reporting for security insights.',
+      benefits: ['Fraud trends', 'Attack patterns', 'Success rates', 'Security metrics']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Continuous Monitoring',
+      description: '24/7 monitoring of all transactions and activities for fraud prevention.',
+      benefits: ['Round-the-clock monitoring', 'Real-time analysis', 'Instant detection', 'Proactive protection']
+    }
+  ];
+
+  const benefits = [
+    '99.9% fraud detection accuracy',
+    '60% reduction in false positives',
+    'Real-time threat detection',
+    'Automated response system',
+    'Advanced ML algorithms',
+    'Comprehensive security analytics'
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>AiFraudDetection - Zion Tech Group</title>
-        <meta name="description" content="Advanced aifrauddetection solutions" />
+        <title>AI Fraud Detection - Advanced Security Solutions | Zion Tech Group</title>
+        <meta name="description" content="Protect your business with AI-powered fraud detection. Real-time monitoring, machine learning models, and automated security responses." />
+        <meta name="keywords" content="AI fraud detection, fraud prevention, security AI, machine learning security, fraud analytics, threat detection" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Ai Fraud Detection <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive aifrauddetection solutions designed to transform your business
-          </p>
-        </div>
-        <div className="text-center">
-          <p className="text-gray-300">Coming Soon - AiFraudDetection Solutions</p>
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                Page
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+              AI Fraud
+              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Detection
               </span>
-              <br />
-              <span className="text-white">Solutions</span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
+              Protect your business with AI-powered fraud detection. 
+              Real-time monitoring, machine learning models, and automated security responses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Schedule Demo
               </button>
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
-    {icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
-    'Gain competitive advantage with advanced technology';
-  ]
-return(<>)
-      <Helmet />
-        {/* Hero Section */} <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-        <section className="relative py-20 px-4 overflow-hidden">
+            </div>
+          </div>
         </section>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Fraud Detection
-            <p>Advanced AI-powered ai fraud detection solution for modern businesses.</p>
-            </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-              <button>Get Started;</button>
-              </button>
-              <button>View Demo,</button>
 
         {/* Features Section */}
         <section className="py-20 px-4">
-        </section>
-        {/* Features Section */} <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>Key Features;</h2>
-              </h2>
-              <p>Advanced AI technology that drives results;</p>
-                  <p className="text-gray-300 mb-4">{feature.description</p>}</p>
-                  {feature.benefits && (;
-                    <ul>
-                      {feature.benefits.map((benefit, idx) => (} <li>
-                          <CheckCircle />
-        {/* Benefits Section */} <section className="py-20 px-4">
+            <h2 className="text-4xl font-bold text-white text-center mb-16">
+              Advanced Fraud Detection Features
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mb-4">
+                      <Icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                    <p className="text-gray-300 mb-4">{feature.description}</p>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center space-x-2 text-sm text-gray-400">
+                          <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
                     </ul>
                   </div>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2>Why Choose Our Solution?</h2>
-              </h2>
-              <p>Proven results that drive business growth and efficiency;</p>
-              </p>
+                );
+              })}
             </div>
-            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"></div>,
+          </div>
+        </section>
+
+        {/* Benefits Section */}
+        <section className="py-20 px-4 bg-slate-800/30">
+          <div className="max-w-7xl mx-auto">
+            <h2 className="text-4xl font-bold text-white text-center mb-16">
+              Why Choose AI Fraud Detection?
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover: bg-white/10 transition-all duration-300 group"></div>,
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover: scale-110 transition-transform"></div>,
-                    <CheckCircle />
-                  <p className="text-lg text-white font-medium">{benefit</p>}</p>
+                <div key={index} className="flex items-center space-x-4 bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 border border-slate-700/30">
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center flex-shrink-0">
+                    <Star className="w-4 h-4 text-white" />
+                  </div>
+                  <span className="text-gray-300 font-medium">{benefit}</span>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 px-4">
-        </section>
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12"></div>
-              <h2>Ready to Get Started?</h2>
-              </h2>
-              <p>Contact our experts to discuss your requirements and get started today.</p>
-              </p>
-              <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
-                <button>Contact Us;</button>
-                </button>
-                <button>Learn More;</button>
-      <Footer />
-
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Secure Your Business?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join thousands of businesses already using AI-powered fraud detection 
+              to protect their assets and customers.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
+              </button>
+              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
+                Schedule Demo
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 };
 
-export default PagePage;
+export default AiFraudDetectionPage;
