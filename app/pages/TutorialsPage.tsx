@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'"
+import { Helmet } from 'react-helmet-async'"
+import { Link } from 'react-router-dom'"
 import { 
   PlayIcon,
   ClockIcon,
@@ -10,7 +10,7 @@ import {
   CodeBracketIcon,
   ShieldCheckIcon,
   CloudIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'"
 
 export default function TutorialsPage() {
   const tutorials = [
@@ -86,7 +86,7 @@ export default function TutorialsPage() {
       icon: BookOpenIcon,
       color: "from-yellow-500 to-orange-500"
     }
-  ];
+  ]"
 
   const categories = [
     "All Tutorials",
@@ -96,13 +96,13 @@ export default function TutorialsPage() {
     "Micro SaaS",
     "5G Solutions",
     "Digital Transformation"
-  ];
+  ]"
 
   const difficultyColors = {
     "Beginner": "bg-green-500",
     "Intermediate": "bg-yellow-500",
     "Advanced": "bg-red-500"
-  };
+  }"
 
   return (
     <>
@@ -151,7 +151,7 @@ export default function TutorialsPage() {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {tutorials.map((tutorial) => {
-              const Icon = tutorial.icon;
+              const Icon = tutorial.icon"
               return (
                 <div 
                   key={tutorial.id}
@@ -210,7 +210,7 @@ export default function TutorialsPage() {
                     </div>
                   </div>
                 </div>
-              );
+              )"
             })}
           </div>
         </div>
@@ -329,5 +329,5 @@ export default function TutorialsPage() {
         </div>
       </section>
     </>
-  );
+  )"
 }

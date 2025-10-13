@@ -1,17 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
-'use client';
+'use client'"
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-import React from 'react';
-import { Loader2 } from 'lucide-react';
+import React from 'react'"
+import { Loader2 } from 'lucide-react'"
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  text?: string;
-  fullScreen?: boolean;
-  className?: string;
+  size?: 'sm' | 'md' | 'lg' | 'xl'"
+  text?: string"
+  fullScreen?: boolean"
+  className?: string"
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
@@ -21,12 +21,12 @@ text = 'Loading...',
   className = ''
 <<<<<<< HEAD
 =======
-import React from 'react';
+import React from 'react'"
 
 interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  text?: string;
-  className?: string;
+  size?: 'sm' | 'md' | 'lg'"
+  text?: string"
+  className?: string"
 }
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
@@ -43,7 +43,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         </p>
       )}
     </div>
-  );
+  )"
 
   if (fullScreen) {
     return (
@@ -52,16 +52,16 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {spinner}
         </div>
       </div>
-    );
+    )"
   }
 
-  return spinner;
+  return spinner"
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 =======
 lg: 'w-12 h-12'
-  };
+  }"
 
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>
@@ -70,8 +70,8 @@ lg: 'w-12 h-12'
         <p className="mt-2 text-sm text-gray-400">{text}</p>
       )}
     </div>
-  );
+  )"
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-};
+}"
 
-export default LoadingSpinner;
+export default LoadingSpinner"

@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import React from 'react'"
+import { Link } from 'react-router-dom'"
+import SEO from '../components/SEO'"
 import { 
   GlobeAltIcon,
   CpuChipIcon,
@@ -11,7 +11,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'"
 
 export default function MicroSaaSPage() {
   const services = [
@@ -39,7 +39,7 @@ export default function MicroSaaSPage() {
       description: 'Seamless deployment and automatic scaling solutions for your micro SaaS applications.',
       features: ['Cloud deployment', 'Auto-scaling', 'Load balancing', 'Performance optimization']
     }
-  ];
+  ]"
 
   const industries = [
     { name: 'E-commerce', description: 'Online retail solutions' },
@@ -48,7 +48,7 @@ export default function MicroSaaSPage() {
     { name: 'Education', description: 'Learning management systems' },
     { name: 'Real Estate', description: 'Property management tools' },
     { name: 'Manufacturing', description: 'Production optimization' }
-  ];
+  ]"
 
   return (
     <>
@@ -255,5 +255,5 @@ export default function MicroSaaSPage() {
         </div>
       </section>
     </>
-  );
+  )"
 }

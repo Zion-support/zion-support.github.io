@@ -1,5 +1,5 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'"
+import { Link } from 'react-router-dom'"
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -11,7 +11,7 @@ import {
 <<<<<<< HEAD
   ArrowRightIcon,
   HeartIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'"
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -19,12 +19,12 @@ import {
 >>>>>>> origin/main
 =======
   ArrowRightIcon
-} from '@heroicons/react/24/outline';
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
+} from '@heroicons/react/24/outline'"
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react'"
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 
 const Footer: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear()"
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,20 +39,20 @@ const Footer: React.FC = () => {
     { name: 'Digital Transformation', href: '/digital-transformation' },
 <<<<<<< HEAD
     { name: '5G Solutions', href: '/5g-solutions' },
-  ];
+  ]"
 =======
 
 <<<<<<< HEAD
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
-  ];
+  ]"
 
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 >>>>>>> origin/main
 =======
     { name: 'Micro SaaS', href: '/micro-saas' },
     { name: '5G Solutions', href: '/5g-solutions' }
-  ];
+  ]"
 
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   const company = [
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
     { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Case Studies', href: '/case-studies' }
-  ];
+  ]"
 
   const support = [
     { name: 'Contact', href: '/contact' },
@@ -70,7 +70,7 @@ const Footer: React.FC = () => {
     { name: 'Tutorials', href: '/tutorials' },
     { name: 'Demo', href: '/demo' },
     { name: 'Documentation', href: '/docs' }
-  ];
+  ]"
 
   const legal = [
     { name: 'Privacy Policy', href: '/privacy' },
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
 <<<<<<< HEAD
-  ];
+  ]"
 
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: 'facebook' },
@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
 =======
     { name: 'Terms of Service', href: '/terms' }
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-  ];
+  ]"
 
   return (
     <footer className="bg-slate-900 border-t border-slate-700">
@@ -382,7 +382,7 @@ className="flex-1 px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg text
         </div>
       </div>
     </footer>
-  );
-};
+  )"
+}"
 
-export default Footer;
+export default Footer"

@@ -1,13 +1,13 @@
 <<<<<<< HEAD
 
-'use client';
+'use client'"
 
 =======
-'use client';
+'use client'"
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'"
+import { Helmet } from 'react-helmet-async'"
+import { Link } from 'react-router-dom'"
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -29,7 +29,7 @@ import {
   LightBulbIcon,
   WifiIcon,
   CircleStackIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'"
 
 export default function ITSolutionsPage()   {
   const itServices = [
@@ -249,7 +249,7 @@ export default function ITSolutionsPage()   {
       useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"],
       href: "/it-compliance"
     }
-  ];
+  ]"
 
   return (
     <>
@@ -282,7 +282,7 @@ export default function ITSolutionsPage()   {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {itServices.map((service, index) => {
-              const Icon = service.icon;
+              const Icon = service.icon"
               return (
                 <div 
                   key={service.title}
@@ -350,7 +350,7 @@ export default function ITSolutionsPage()   {
                     </Link>
                   </div>
                 </div>
-              );
+              )"
             })}
           </div>
         </div>
@@ -561,5 +561,5 @@ export default function ITSolutionsPage()   {
         </div>
       </section>
     </>
-  );
+  )"
 }

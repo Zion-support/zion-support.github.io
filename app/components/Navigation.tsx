@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react'"
+import { Link, useLocation } from 'react-router-dom'"
 import { 
   Bars3Icon, 
   XMarkIcon,
@@ -20,17 +20,17 @@ import {
   CpuChipIcon,
   SignalIcon,
   UserGroupIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'"
 
 interface NavigationProps {
-  onSidebarToggle?: () => void;
+  onSidebarToggle?: () => void"
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
-  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false)"
+  const [isServicesOpen, setIsServicesOpen] = useState(false)"
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)"
+  const location = useLocation()"
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -87,23 +87,23 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 >>>>>>> origin/main
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-  ];
+  ]"
 
   const isActive = (path: string) => {
-    return location.pathname === path;
-  };
+    return location.pathname === path"
+  }"
 
   const toggleMobileMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)"
+  }"
 
   const toggleServicesMenu = () => {
-    setIsServicesOpen(!isServicesOpen);
-  };
+    setIsServicesOpen(!isServicesOpen)"
+  }"
 
   const toggleSolutionsMenu = () => {
-    setIsSolutionsOpen(!isSolutionsOpen);
-  };
+    setIsSolutionsOpen(!isSolutionsOpen)"
+  }"
 
   return (
     <nav className="bg-slate-900 border-b border-slate-700 sticky top-0 z-50">
@@ -122,7 +122,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           <div className="hidden lg:flex items-center space-x-8">
 <<<<<<< HEAD
             {navigation.map((item) => {
-              const Icon = item.icon;
+              const Icon = item.icon"
               return (
                 <div key={item.name} className="relative group">
                   <Link
@@ -156,7 +156,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     </div>
                   )}
                 </div>
-              );
+              )"
             })}
 =======
 {navigation.map((item) => (
@@ -240,8 +240,8 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                             to={subItem.href}
                             className="flex items-center px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
                             onClick={() => {
-                              setIsServicesOpen(false);
-                              setIsSolutionsOpen(false);
+                              setIsServicesOpen(false)"
+                              setIsSolutionsOpen(false)"
                             }}
                           >
                             <subItem.icon className="w-4 h-4 mr-3" />
@@ -309,9 +309,9 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                         to={subItem.href}
                         className="flex items-center px-3 py-2 rounded-md text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
                         onClick={() => {
-                          setIsOpen(false);
-                          setIsServicesOpen(false);
-                          setIsSolutionsOpen(false);
+                          setIsOpen(false)"
+                          setIsServicesOpen(false)"
+                          setIsSolutionsOpen(false)"
                         }}
                       >
                         <subItem.icon className="w-4 h-4 mr-3" />
@@ -339,7 +339,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         </div>
       </div>
     </nav>
-  );
-};
+  )"
+}"
 
-export default Navigation;
+export default Navigation"

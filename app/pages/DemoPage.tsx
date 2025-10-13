@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useState } from 'react'"
+import { Helmet } from 'react-helmet-async'"
 import { 
   PlayIcon,
   CheckCircleIcon,
@@ -9,10 +9,10 @@ import {
   UserIcon,
   VideoCameraIcon,
   PresentationChartBarIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'"
 
 export default function DemoPage() {
-  const [selectedDemo, setSelectedDemo] = useState(0);
+  const [selectedDemo, setSelectedDemo] = useState(0)"
 
   const demos = [
     {
@@ -71,7 +71,7 @@ export default function DemoPage() {
       ],
       thumbnail: "/images/demos/micro-saas.jpg"
     }
-  ];
+  ]"
 
   const benefits = [
     {
@@ -94,7 +94,7 @@ export default function DemoPage() {
       title: "Q&A Session",
       description: "Ask questions and get immediate answers from our team"
     }
-  ];
+  ]"
 
   return (
     <>
@@ -218,7 +218,7 @@ export default function DemoPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {benefits.map((benefit, index) => {
-              const Icon = benefit.icon;
+              const Icon = benefit.icon"
               return (
                 <div key={index} className="text-center">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -227,7 +227,7 @@ export default function DemoPage() {
                   <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
-              );
+              )"
             })}
           </div>
         </div>
@@ -369,5 +369,5 @@ export default function DemoPage() {
         </div>
       </section>
     </>
-  );
+  )"
 }

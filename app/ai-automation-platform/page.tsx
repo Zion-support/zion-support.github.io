@@ -1,8 +1,8 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react'"
+import EnhancedSEO from '../components/EnhancedSEO'"
+import ResponsiveContainer from '../components/ResponsiveContainer'"
+import FuturisticCard from '../components/FuturisticCard'"
+import FuturisticButton from '../components/FuturisticButton'"
 
 const AIAutomationPlatform = () => {
   const features = [
@@ -54,7 +54,7 @@ icon: <div className="w-6 h-6" />,
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       color: "from-orange-500 to-red-500"
     }
-  ];
+  ]"
 
   const benefits = [
     "70% process efficiency gain",
@@ -63,7 +63,7 @@ icon: <div className="w-6 h-6" />,
     "Real-time optimization",
     "Scalable workflows",
     "Cost reduction"
-  ];
+  ]"
 
   return (
     <>
@@ -208,7 +208,7 @@ icon={<div className="w-6 h-6" />}
         </section>
       </div>
     </>
-  );
-};
+  )"
+}"
 
-export default AIAutomationPlatform;
+export default AIAutomationPlatform"

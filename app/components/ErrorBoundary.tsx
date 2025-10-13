@@ -1,36 +1,36 @@
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+import React, { Component, ErrorInfo, ReactNode } from 'react'"
 <<<<<<< HEAD
-import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react'"
+import { Link } from 'react-router-dom'"
 =======
-import { Link } from 'react-router-dom';
-import { ExclamationTriangleIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
+import { Link } from 'react-router-dom'"
+import { ExclamationTriangleIcon, ArrowPathIcon } from '@heroicons/react/24/outline'"
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 
 interface Props {
-  children: ReactNode;
-  fallback?: ReactNode;
+  children: ReactNode"
+  fallback?: ReactNode"
 }
 
 interface State {
-  hasError: boolean;
+  hasError: boolean"
 <<<<<<< HEAD
-error: Error | null;
-  errorInfo: ErrorInfo | null;
+error: Error | null"
+  errorInfo: ErrorInfo | null"
 =======
-error?: Error;
-  errorInfo?: ErrorInfo;
+error?: Error"
+  errorInfo?: ErrorInfo"
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props);
+    super(props)"
     this.state = {
       hasError: false,
       error: null,
       errorInfo: null
-    };
+    }"
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -38,29 +38,29 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: true,
       error,
       errorInfo: null
-    };
+    }"
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 <<<<<<< HEAD
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
+    console.error('ErrorBoundary caught an error:', error, errorInfo)"
 <<<<<<< HEAD
     
     if (this.props.onError) {
-      this.props.onError(error, errorInfo);
+      this.props.onError(error, errorInfo)"
     this.setState({
       error,
       errorInfo
-    });
+    })"
 // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:', error, errorInfo)"
     }
 
     // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send the error to a service like Sentry
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
+      console.error('ErrorBoundary caught an error:', error, errorInfo)"
     }
   }
 
@@ -69,23 +69,23 @@ class ErrorBoundary extends Component<Props, State> {
       hasError: false,
       error: null,
       errorInfo: null
-    });
+    })"
 =======
 this.setState({
       error,
       errorInfo
-    });
+    })"
 }
 
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })"
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-  };
+  }"
 
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
-        return this.props.fallback;
+        return this.props.fallback"
       }
 
       return (
@@ -192,11 +192,11 @@ className="block w-full border-2 border-purple-400 text-purple-300 px-6 py-3 rou
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
           </div>
         </div>
-      );
+      )"
     }
 
-    return this.props.children;
+    return this.props.children"
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary"

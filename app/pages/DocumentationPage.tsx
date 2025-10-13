@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import React from 'react'"
+import { Link } from 'react-router-dom'"
+import SEO from '../components/SEO'"
 import { 
   DocumentTextIcon,
   CodeBracketIcon,
@@ -10,7 +10,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'"
 
 export default function DocumentationPage() {
   const sections = [
@@ -58,14 +58,14 @@ export default function DocumentationPage() {
         { name: 'Contact Support', href: '/support' }
       ]
     }
-  ];
+  ]"
 
   const quickStart = [
     { step: 1, title: 'Sign Up', description: 'Create your account and get API credentials' },
     { step: 2, title: 'Install SDK', description: 'Install our SDK for your preferred language' },
     { step: 3, title: 'Configure', description: 'Set up your environment and configuration' },
     { step: 4, title: 'Make API Call', description: 'Start making API calls to our services' }
-  ];
+  ]"
 
   return (
     <>
@@ -207,13 +207,13 @@ export default function DocumentationPage() {
 const client = new ZionTechClient({
   apiKey: 'your-api-key',
   environment: 'production'
-});
+})"
 
 // Make an API call
 const response = await client.ai.generateText({
   prompt: 'Hello, world!',
   maxTokens: 100
-});
+})"
 
 console.log(response.data);`}</code>
               </pre>
@@ -290,5 +290,5 @@ console.log(response.data);`}</code>
         </div>
       </section>
     </>
-  );
+  )"
 }

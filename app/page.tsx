@@ -2,14 +2,14 @@
 <<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-'use client';
-import React from 'react';
-import { Link } from 'react-router-dom';
-import SEO from './components/SEO';
+'use client'"
+import React from 'react'"
+import { Link } from 'react-router-dom'"
+import SEO from './components/SEO'"
 =======
 =======
 =======
-import SEOHead from './components/SEOHead';
+import SEOHead from './components/SEOHead'"
 >>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
@@ -24,7 +24,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'"
 
 export default function HomePage()  {
   const structuredData = {
@@ -56,7 +56,7 @@ export default function HomePage()  {
         "https://github.com/ziontechgroup"
       ]
     }
-  };
+  }"
 
   return (
     <>
@@ -304,5 +304,5 @@ export default function HomePage()  {
         </div>
       </section>
     </>
-  );
+  )"
 }

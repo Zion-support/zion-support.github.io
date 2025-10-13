@@ -1,17 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-'use client';
+'use client'"
 =======
 
-'use client';
+'use client'"
 
 >>>>>>> origin/main
 =======
-'use client';
+'use client'"
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'"
+import { Helmet } from 'react-helmet-async'"
+import { Link } from 'react-router-dom'"
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -27,7 +27,7 @@ import {
   ClockIcon,
   UserGroupIcon,
   CogIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'"
 
 export default function MicroSaaSSolutionsPage()   {
   const microSaaSProducts = [
@@ -468,7 +468,7 @@ export default function MicroSaaSSolutionsPage()   {
       useCases: ["Conferences", "Webinars", "Corporate events"],
       href: "/ai-event-management"
     }
-  ];
+  ]"
 
   return (
     <>
@@ -501,7 +501,7 @@ export default function MicroSaaSSolutionsPage()   {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {microSaaSProducts.map((product, index) => {
-              const Icon = product.icon;
+              const Icon = product.icon"
               return (
                 <div 
                   key={product.title}
@@ -575,7 +575,7 @@ export default function MicroSaaSSolutionsPage()   {
                     </Link>
                   </div>
                 </div>
-              );
+              )"
             })}
           </div>
         </div>
@@ -786,5 +786,5 @@ export default function MicroSaaSSolutionsPage()   {
         </div>
       </section>
     </>
-  );
+  )"
 }

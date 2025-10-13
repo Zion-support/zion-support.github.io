@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react';
+import React from 'react'"
+import { Helmet } from 'react-helmet-async'"
+import { Right, Wifi, Circle, Zap, Globe, Smartphone } from 'lucide-react'"
 
 const FiveGSolutionsPage: React.FC = () => {
   const features = [
@@ -36,7 +36,7 @@ title: 'IoT Connectivity',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
-  ];
+  ]"
 
   const solutions = [
     {
@@ -66,7 +66,7 @@ title: '5G Network Infrastructure',
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
-  ];
+  ]"
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
@@ -122,7 +122,7 @@ title: '5G Network Infrastructure',
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => {
-              const IconComponent = feature.icon;
+              const IconComponent = feature.icon"
               return (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300">
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg mb-4">
@@ -139,7 +139,7 @@ title: '5G Network Infrastructure',
                     ))}
                   </ul>
                 </div>
-              );
+              )"
             })}
           </div>
         </div>
@@ -194,7 +194,7 @@ title: '5G Network Infrastructure',
         </div>
       </section>
     </div>
-  );
-};
+  )"
+}"
 
-export default FiveGSolutionsPage;
+export default FiveGSolutionsPage"

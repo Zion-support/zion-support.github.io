@@ -1,12 +1,12 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import React from 'react'"
+import { Helmet } from 'react-helmet-async'"
+import { Link } from 'react-router-dom'"
 import { 
   CalendarIcon,
   UserIcon,
   ArrowRightIcon,
   TagIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'"
 
 export default function BlogPage() {
   const blogPosts = [
@@ -70,7 +70,7 @@ export default function BlogPage() {
       readTime: "9 min read",
       image: "/images/blog/5g-business.jpg"
     }
-  ];
+  ]"
 
   const categories = [
     "All Posts",
@@ -80,7 +80,7 @@ export default function BlogPage() {
     "Digital Transformation",
     "Micro SaaS",
     "5G Solutions"
-  ];
+  ]"
 
   return (
     <>
@@ -204,5 +204,5 @@ export default function BlogPage() {
         </div>
       </section>
     </>
-  );
+  )"
 }

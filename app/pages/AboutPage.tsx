@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'"
 <<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'"
 =======
-import { Link } from 'react-router-dom';
-import SEO from '../components/SEO';
+import { Link } from 'react-router-dom'"
+import SEO from '../components/SEO'"
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 import { 
   CheckCircleIcon,
@@ -17,7 +17,7 @@ import {
   PhoneIcon,
   EnvelopeIcon,
   MapPinIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'"
 
 <<<<<<< HEAD
 export default function AboutPage()    {
@@ -61,7 +61,7 @@ const values = [
       title: 'Agility',
       description: 'We adapt quickly to changing market conditions and client needs to deliver optimal solutions.'
     }
-  ];
+  ]"
 
   const team = [
     {
@@ -89,14 +89,14 @@ const values = [
       image: '/team/emily.jpg'
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     }
-  ];
+  ]"
 
   const stats = [
     { number: '50+', label: 'Projects Completed' },
     { number: '25+', label: 'Happy Clients' },
     { number: '99%', label: 'Success Rate' },
     { number: '4+', label: 'Years Experience' }
-  ];
+  ]"
 
   return (
     <>
@@ -183,7 +183,7 @@ Empowering businesses through innovative technology solutions
           
 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {values.map((value, index) => {
-              const Icon = value.icon;
+              const Icon = value.icon"
               return (
                 <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
@@ -194,7 +194,7 @@ Empowering businesses through innovative technology solutions
                     {value.description}
                   </p>
                 </div>
-              );
+              )"
             })}
 </div>
         </div>
@@ -290,5 +290,5 @@ Let's discuss how we can help transform your business with our innovative soluti
         </div>
       </section>
     </>
-  );
+  )"
 }

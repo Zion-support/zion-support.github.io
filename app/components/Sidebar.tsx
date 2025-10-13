@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react'"
+import { Link, useLocation } from 'react-router-dom'"
 import { 
   HomeIcon,
   InformationCircleIcon,
@@ -19,16 +19,16 @@ import {
   SignalIcon,
   UserGroupIcon,
   XMarkIcon
-} from '@heroicons/react/24/outline';
+} from '@heroicons/react/24/outline'"
 
 interface SidebarProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean"
+  onClose: () => void"
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const location = useLocation();
-  const [expandedSections, setExpandedSections] = useState<string[]>([]);
+  const location = useLocation()"
+  const [expandedSections, setExpandedSections] = useState<string[]>([])"
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -63,29 +63,29 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-  ];
+  ]"
 
   const additionalLinks = [
     { name: 'Our Team', href: '/team', icon: UserGroupIcon },
     { name: 'Documentation', href: '/docs', icon: DocumentTextIcon },
     { name: 'Careers', href: '/careers', icon: BriefcaseIcon }
-  ];
+  ]"
 
   const isActive = (path: string) => {
-    return location.pathname === path;
-  };
+    return location.pathname === path"
+  }"
 
   const toggleSection = (sectionName: string) => {
     setExpandedSections(prev => 
       prev.includes(sectionName) 
         ? prev.filter(name => name !== sectionName)
         : [...prev, sectionName]
-    );
-  };
+    )"
+  }"
 
   const isExpanded = (sectionName: string) => {
-    return expandedSections.includes(sectionName);
-  };
+    return expandedSections.includes(sectionName)"
+  }"
 
   return (
     <>
@@ -220,7 +220,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
         </div>
       </div>
     </>
-  );
-};
+  )"
+}"
 
-export default Sidebar;
+export default Sidebar"
