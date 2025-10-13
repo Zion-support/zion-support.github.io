@@ -10,13 +10,11 @@ import {
   Globe, 
   Mail, 
   Phone, 
-  TrendingUp,
   Database,
   Settings,
   Monitor,
   Sparkles,
-  Lightbulb,
-  TrendingDown
+  Lightbulb
 } from "lucide-react";
 
 export default function AiAnalytics() {

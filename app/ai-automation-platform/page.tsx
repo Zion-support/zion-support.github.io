@@ -7,15 +7,12 @@ import {
   Shield, 
   Cloud, 
   Users, 
-  Code, 
-  Database, 
   ArrowRight,
   Sparkles,
   Star,
   CheckCircle,
   TrendingUp,
   Settings,
-  Bot,
   Workflow,
   Target
 } from 'lucide-react';
