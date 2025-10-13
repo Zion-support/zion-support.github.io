@@ -36,6 +36,17 @@ const PerformanceMonitor: React.FC = () => {
       // For now, we'll use placeholder values
     }
 
+    setMetrics(newMetrics);
+  }, []);
+
+  useEffect(() => {
+    updateMetrics();
+    const interval = setInterval(updateMetrics, 1000);
+    return () => clearInterval(interval);
+  }, [updateMetrics]);
+
+  return (
+    <>
       {isVisible && (
         <div className="absolute bottom-12 left-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80">
           <h3 className="text-lg font-semibold mb-4 text-gray-800">Performance Metrics</h3>
@@ -82,9 +93,9 @@ const PerformanceMonitor: React.FC = () => {
                 {metrics.timeToFirstByte ? `${metrics.timeToFirstByte.toFixed(0)}ms` : 'N/A'}
               </span>
             </div>
-            </div>
           </div>
-      <div className="space-y-2">
+          
+          <div className="space-y-2 mt-4">
         <div className="flex justify-between">
           <span className="text-gray-300">Load Time:</span>
           <span className={getMetricColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>
@@ -137,10 +148,12 @@ const PerformanceMonitor: React.FC = () => {
         )}
       </div>
       
-      <div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400">
-        Press Ctrl+Shift+P to toggle
+        <div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400">
+          Press Ctrl+Shift+P to toggle
+        </div>
       </div>
-    </div>
+      )}
+    </>
   );
 };
 
