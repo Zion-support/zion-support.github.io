@@ -1,1 +1,1 @@
-import React from 'react';
+// This file is a utility script, not a React component

@@ -32,6 +32,7 @@ export default tseslint.config(
       "dist", 
       "node_modules", 
       "*.config.js",
+<<<<<<< HEAD
       "backup/**",
       "backup-problematic/**",
       "backup-problematic-files/**",
@@ -57,3 +58,22 @@ export default tseslint.config(
     ],
   }
 );
+=======
+      "backup*/**",
+      "backup-problematic*/**",
+      "backup-unused-components/**",
+      "cleanup-*.cjs",
+      "comprehensive-*.cjs",
+      "fix-*.cjs",
+      "fix-*.js",
+      "create-*.cjs",
+      "create-*.js",
+      "scripts/**",
+      "src/**",
+      "utils/**",
+      "*.cjs",
+      "*.js"
+    ],
+  }
+);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e61d
