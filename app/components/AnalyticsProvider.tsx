@@ -1,9 +1,9 @@
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
-  track: (event: string, properties?: Record<string, unknown>) => void;
-  identify: (userId: string, traits?: Record<string, unknown>) => void;
-  page: (name: string, properties?: Record<string, unknown>) => void;
+  track: (event: string, properties?: Record<string, any>) => void;
+  identify: (userId: string, traits?: Record<string, any>) => void;
+  page: (name: string, properties?: Record<string, any>) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
@@ -13,7 +13,7 @@ interface AnalyticsProviderProps {
 }
 
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const track = (event: string, properties?: Record<string, unknown>) => {
+  const track = (event: string, properties?: Record<string, any>) => {
     // Analytics tracking implementation
     console.log('Analytics Event:', event, properties);
     
@@ -23,7 +23,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-  const identify = (userId: string, traits?: Record<string, unknown>) => {
+  const identify = (userId: string, traits?: Record<string, any>) => {
     console.log('Analytics Identify:', userId, traits);
     
     if (typeof window !== 'undefined' && (window as unknown).gtag) {
@@ -34,7 +34,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }
     }
   };
 
-  const page = (name: string, properties?: Record<string, unknown>) => {
+  const page = (name: string, properties?: Record<string, any>) => {
     console.log('Analytics Page:', name, properties);
     
     if (typeof window !== 'undefined' && (window as unknown).gtag) {
