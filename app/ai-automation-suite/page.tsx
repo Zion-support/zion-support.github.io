@@ -1,5 +1,7 @@
-import React, { Helmet } from 'react-helmet-async';
-import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, Zap, Bot, Settings, Workflow } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Zap, Bot, Settings, Workflow } from 'lucide-react';
+
 const AIAutomationSuitePage: React.FC = () => {
   const automationServices = [
     {
@@ -15,18 +17,18 @@ const AIAutomationSuitePage: React.FC = () => {
         'Exception Handling',
         'Performance Monitoring',
         'Custom Integrations',
-        'Scalable Architecture']
+        'Scalable Architecture'
       ],
       benefits: [
         'Automate 80% of repetitive tasks',
         'Reduce processing time by 70%',
         'Improve accuracy to 99.9%',
         'Free up staff for strategic work',
-        'Scale operations efficiently']
+        'Scale operations efficiently'
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'Workflow Automation',
-      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'Workflow Engines'],'
+      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'Workflow Engines'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -49,11 +51,11 @@ const AIAutomationSuitePage: React.FC = () => {
         'Reduce response time by 80%',
         'Improve customer satisfaction',
         'Eliminate manual sorting',
-        'Scale email operations']
+        'Scale email operations'
       ],
       marketPrice: '$500-1,500/month',
       category: 'Email Automation',
-      technologies: ['NLP', 'Machine Learning', 'Email APIs', 'Sentiment Analysis', 'Template Engine'],'
+      technologies: ['NLP', 'Machine Learning', 'Email APIs', 'Sentiment Analysis', 'Template Engine'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -76,11 +78,11 @@ const AIAutomationSuitePage: React.FC = () => {
         'Reduce data entry by 90%',
         'Improve accuracy to 99.5%',
         'Eliminate manual processing',
-        'Accelerate workflows']
+        'Accelerate workflows'
       ],
       marketPrice: '$800-2,500/month',
       category: 'Document Processing',
-      technologies: ['OCR', 'Computer Vision', 'NLP', 'Machine Learning', 'Document APIs', 'Data Extraction'],'
+      technologies: ['OCR', 'Computer Vision', 'NLP', 'Machine Learning', 'Document APIs', 'Data Extraction'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -103,11 +105,11 @@ const AIAutomationSuitePage: React.FC = () => {
         'Reduce response time to seconds',
         'Improve customer satisfaction by 50%',
         'Reduce support costs by 60%',
-        'Available 24/7/365']
+        'Available 24/7/365'
       ],
       marketPrice: '$1,200-3,500/month',
       category: 'Customer Service',
-      technologies: ['NLP', 'Chatbots', 'Knowledge Graphs', 'Sentiment Analysis', 'CRM Integration'],'
+      technologies: ['NLP', 'Chatbots', 'Knowledge Graphs', 'Sentiment Analysis', 'CRM Integration'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -130,11 +132,11 @@ const AIAutomationSuitePage: React.FC = () => {
         'Reduce sales cycle by 30%',
         'Improve lead quality',
         'Automate follow-ups',
-        'Scale sales operations']
+        'Scale sales operations'
       ],
       marketPrice: '$1,500-4,000/month',
       category: 'Sales Automation',
-      technologies: ['Machine Learning', 'CRM APIs', 'Email Automation', 'Lead Scoring', 'Analytics'],'
+      technologies: ['Machine Learning', 'CRM APIs', 'Email Automation', 'Lead Scoring', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -157,11 +159,11 @@ const AIAutomationSuitePage: React.FC = () => {
         'Improve conversion rates by 35%',
         'Reduce marketing costs by 40%',
         'Personalize at scale',
-        'Optimize campaigns automatically']
+        'Optimize campaigns automatically'
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'Marketing Automation',
-      technologies: ['Machine Learning', 'Personalization', 'A/B Testing', 'Marketing APIs', 'Analytics'],'
+      technologies: ['Machine Learning', 'Personalization', 'A/B Testing', 'Marketing APIs', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -184,11 +186,11 @@ const AIAutomationSuitePage: React.FC = () => {
         'Improve candidate quality',
         'Automate routine tasks',
         'Ensure compliance',
-        'Enhance employee experience']
+        'Enhance employee experience'
       ],
       marketPrice: '$800-2,500/month',
       category: 'HR Automation',
-      technologies: ['NLP', 'Machine Learning', 'HR APIs', 'Scheduling Systems', 'Compliance Tools'],'
+      technologies: ['NLP', 'Machine Learning', 'HR APIs', 'Scheduling Systems', 'Compliance Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -211,11 +213,11 @@ const AIAutomationSuitePage: React.FC = () => {
         'Improve accuracy to 99.9%',
         'Ensure compliance',
         'Detect fraud early',
-        'Streamline financial operations']
+        'Streamline financial operations'
       ],
       marketPrice: '$1,200-3,500/month',
       category: 'Financial Automation',
-      technologies: ['OCR', 'Machine Learning', 'Financial APIs', 'Compliance Tools', 'Analytics'],'
+      technologies: ['OCR', 'Machine Learning', 'Financial APIs', 'Compliance Tools', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -238,11 +240,11 @@ const AIAutomationSuitePage: React.FC = () => {
         'Eliminate stockouts by 90%',
         'Reduce waste by 50%',
         'Optimize supplier relationships',
-        'Improve cash flow']
+        'Improve cash flow'
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'Inventory Automation',
-      technologies: ['Time Series Analysis', 'Machine Learning', 'Supply Chain APIs', 'IoT Integration'],'
+      technologies: ['Time Series Analysis', 'Machine Learning', 'Supply Chain APIs', 'IoT Integration'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -265,11 +267,11 @@ const AIAutomationSuitePage: React.FC = () => {
         'Improve test coverage by 90%',
         'Detect bugs early',
         'Ensure quality standards',
-        'Accelerate releases']
+        'Accelerate releases'
       ],
       marketPrice: '$1,500-4,000/month',
       category: 'Quality Assurance',
-      technologies: ['Test Automation', 'Machine Learning', 'CI/CD', 'Performance Testing', 'Security Tools'],'
+      technologies: ['Test Automation', 'Machine Learning', 'CI/CD', 'Performance Testing', 'Security Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
@@ -278,53 +280,53 @@ const AIAutomationSuitePage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Automation Suite - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI automation solutions including workflow automation, email processing, document handling, and customer service. Starting at $199/month." />"
+        <meta name="description" content="Comprehensive AI automation solutions including workflow automation, email processing, document handling, and customer service. Starting at $199/month." />
         <meta name="keywords" content="ai automation, workflow automation, email automation, document processing, customer service automation, sales automation" />
       </Helmet>
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">"
-        <div className="max-w-7xl mx-auto text-center">"
+      <section className="pt-24 pb-16 px-4">
+        <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Automation Suite;
+            AI Automation Suite
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business operations with intelligent automation that learns, adapts, and scales with your needs.
           </p>
           
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
-              <div className="text-3xl font-bold text-cyan-400 mb-2">10+</div>"
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-cyan-400 mb-2">10+</div>
               <div className="text-gray-300">Automation Tools</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
-              <div className="text-3xl font-bold text-green-400 mb-2">$199</div>"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-green-400 mb-2">$199</div>
               <div className="text-gray-300">Starting Price</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
-              <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
               <div className="text-gray-300">Task Automation</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
-              <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
               <div className="text-gray-300">Accuracy</div>
             </div>
           </div>
           
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">"
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">"
-              <div className="flex items-center space-x-2">"
-                <Phone className="w-5 h-5" />"
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
+            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+              <div className="flex items-center space-x-2">
+                <Phone className="w-5 h-5" />
                 <span className="text-white font-medium">+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-2">"
-                <Mail className="w-5 h-5" />"
+              <div className="flex items-center space-x-2">
+                <Mail className="w-5 h-5" />
                 <span className="text-white font-medium">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-2">"
-                <MapPin className="w-5 h-5" />"
+              <div className="flex items-center space-x-2">
+                <MapPin className="w-5 h-5" />
                 <span className="text-white font-medium">Middletown, DE</span>
               </div>
             </div>
