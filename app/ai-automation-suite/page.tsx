@@ -15,18 +15,18 @@ const AIAutomationSuitePage: React.FC = () => {
         'Exception Handling',
         'Performance Monitoring',
         'Custom Integrations',
-        'Scalable Architecture']
+        'Scalable Architecture'
       ],
       benefits: [
         'Automate 80% of repetitive tasks',
         'Reduce processing time by 70%',
         'Improve accuracy to 99.9%',
         'Free up staff for strategic work',
-        'Scale operations efficiently']
+        'Scale operations efficiently'
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'Workflow Automation',
-      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'Workflow Engines'],'
+      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'Workflow Engines'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
