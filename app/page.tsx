@@ -1,13 +1,6 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Mic } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
-=======
-import SEOOptimizer from "./components/SEOOptimizer";
-=======
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
@@ -15,13 +8,6 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 
 const HomePage = () => {
   const structuredData = {
@@ -104,12 +90,44 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Neural Interface",
+      description: "Revolutionary brain-computer interface for thought-to-text conversion and mind control",
+      price: "From $199/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-neural-interface",
+      featured: true
+    },
+    {
+      name: "AI Voice Cloning Studio",
+      description: "Professional voice synthesis with 95% accuracy and multi-language support",
+      price: "From $29/month",
+      icon: <Mic className="w-6 h-6" />,
+      link: "/ai-voice-cloning-studio",
+      featured: true
+    },
+    {
+      name: "AI Quantum Financial Oracle",
+      description: "Quantum-powered financial predictions with 99.7% accuracy for market analysis",
+      price: "From $199/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/ai-quantum-financial-oracle",
+      featured: true
+    },
+    {
+      name: "AI Space Mission Optimizer",
+      description: "Advanced space mission optimization with 99.9% trajectory accuracy",
+      price: "From $499/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/ai-space-mission-optimizer",
+      featured: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro",
-      featured: true
+      featured: false
     },
     {
       name: "Zion Security Shield",
@@ -117,39 +135,7 @@ const HomePage = () => {
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
-      featured: true
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
-      price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
-      featured: true
-    },
-    {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
-      featured: true
+      featured: false
     }
   ];
 
@@ -186,19 +172,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-<<<<<<< HEAD
       <EnhancedSEO
-=======
-      <FuturisticBackground />
-<<<<<<< HEAD
-      <SEOOptimizer
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
-      <EnhancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
