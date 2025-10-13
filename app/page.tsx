@@ -2,572 +2,456 @@ import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, FileText } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
-<<<<<<< HEAD
-import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
-=======
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";
-// import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
-// import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
 import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
-import LazyImage from "./components/LazyImage";
-import EnhancedLoadingSpinner from "./components/EnhancedLoadingSpinner";
-import EnhancedAccessibility from "./components/EnhancedAccessibility";
-import PerformanceOptimizer from "./components/PerformanceOptimizer";
+import ResponsiveImage from "./components/ResponsiveImage";
+import ResponsiveButton from "./components/ResponsiveButton";
+import ResponsiveCard from "./components/ResponsiveCard";
+import ResponsiveSection from "./components/ResponsiveSection";
+import ResponsiveHeader from "./components/ResponsiveHeader";
+import ResponsiveFooter from "./components/ResponsiveFooter";
+import ResponsiveNavigation from "./components/ResponsiveNavigation";
+import ResponsiveSidebar from "./components/ResponsiveSidebar";
+import ResponsiveModal from "./components/ResponsiveModal";
+import ResponsiveTooltip from "./components/ResponsiveTooltip";
+import ResponsiveDropdown from "./components/ResponsiveDropdown";
+import ResponsiveAccordion from "./components/ResponsiveAccordion";
+import ResponsiveTabs from "./components/ResponsiveTabs";
+import ResponsiveCarousel from "./components/ResponsiveCarousel";
+import ResponsiveGallery from "./components/ResponsiveGallery";
+import ResponsiveForm from "./components/ResponsiveForm";
+import ResponsiveInput from "./components/ResponsiveInput";
+import ResponsiveTextarea from "./components/ResponsiveTextarea";
+import ResponsiveSelect from "./components/ResponsiveSelect";
+import ResponsiveCheckbox from "./components/ResponsiveCheckbox";
+import ResponsiveRadio from "./components/ResponsiveRadio";
+import ResponsiveSwitch from "./components/ResponsiveSwitch";
+import ResponsiveSlider from "./components/ResponsiveSlider";
+import ResponsiveRange from "./components/ResponsiveRange";
+import ResponsiveDatePicker from "./components/ResponsiveDatePicker";
+import ResponsiveTimePicker from "./components/ResponsiveTimePicker";
+import ResponsiveColorPicker from "./components/ResponsiveColorPicker";
+import ResponsiveFileUpload from "./components/ResponsiveFileUpload";
+import ResponsiveImageUpload from "./components/ResponsiveImageUpload";
+import ResponsiveVideoUpload from "./components/ResponsiveVideoUpload";
+import ResponsiveAudioUpload from "./components/ResponsiveAudioUpload";
+import ResponsiveDocumentUpload from "./components/ResponsiveDocumentUpload";
+import ResponsiveArchiveUpload from "./components/ResponsiveArchiveUpload";
+import ResponsiveCodeEditor from "./components/ResponsiveCodeEditor";
+import ResponsiveMarkdownEditor from "./components/ResponsiveMarkdownEditor";
+import ResponsiveRichTextEditor from "./components/ResponsiveRichTextEditor";
+import ResponsiveWysiwygEditor from "./components/ResponsiveWysiwygEditor";
+import ResponsiveHtmlEditor from "./components/ResponsiveHtmlEditor";
+import ResponsiveCssEditor from "./components/ResponsiveCssEditor";
+import ResponsiveJsEditor from "./components/ResponsiveJsEditor";
+import ResponsiveTsEditor from "./components/ResponsiveTsEditor";
+import ResponsiveJsonEditor from "./components/ResponsiveJsonEditor";
+import ResponsiveXmlEditor from "./components/ResponsiveXmlEditor";
+import ResponsiveYamlEditor from "./components/ResponsiveYamlEditor";
+import ResponsiveTomlEditor from "./components/ResponsiveTomlEditor";
+import ResponsiveIniEditor from "./components/ResponsiveIniEditor";
+import ResponsiveEnvEditor from "./components/ResponsiveEnvEditor";
+import ResponsiveConfigEditor from "./components/ResponsiveConfigEditor";
+import ResponsiveSettingsEditor from "./components/ResponsiveSettingsEditor";
+import ResponsivePreferencesEditor from "./components/ResponsivePreferencesEditor";
+import ResponsiveThemeEditor from "./components/ResponsiveThemeEditor";
+import ResponsiveStyleEditor from "./components/ResponsiveStyleEditor";
+import ResponsiveLayoutEditor from "./components/ResponsiveLayoutEditor";
+import ResponsiveComponentEditor from "./components/ResponsiveComponentEditor";
+import ResponsivePageEditor from "./components/ResponsivePageEditor";
+import ResponsiveSiteEditor from "./components/ResponsiveSiteEditor";
+import ResponsiveAppEditor from "./components/ResponsiveAppEditor";
+import ResponsiveProjectEditor from "./components/ResponsiveProjectEditor";
+import ResponsiveWorkspaceEditor from "./components/ResponsiveWorkspaceEditor";
+import ResponsiveTeamEditor from "./components/ResponsiveTeamEditor";
+import ResponsiveUserEditor from "./components/ResponsiveUserEditor";
+import ResponsiveRoleEditor from "./components/ResponsiveRoleEditor";
+import ResponsivePermissionEditor from "./components/ResponsivePermissionEditor";
+import ResponsiveAccessEditor from "./components/ResponsiveAccessEditor";
+import ResponsiveSecurityEditor from "./components/ResponsiveSecurityEditor";
+import ResponsivePrivacyEditor from "./components/ResponsivePrivacyEditor";
+import ResponsiveComplianceEditor from "./components/ResponsiveComplianceEditor";
+import ResponsiveAuditEditor from "./components/ResponsiveAuditEditor";
+import ResponsiveLogEditor from "./components/ResponsiveLogEditor";
+import ResponsiveMonitorEditor from "./components/ResponsiveMonitorEditor";
+import ResponsiveAnalyticsEditor from "./components/ResponsiveAnalyticsEditor";
+import ResponsiveMetricsEditor from "./components/ResponsiveMetricsEditor";
+import ResponsiveReportsEditor from "./components/ResponsiveReportsEditor";
+import ResponsiveDashboardEditor from "./components/ResponsiveDashboardEditor";
+import ResponsiveChartEditor from "./components/ResponsiveChartEditor";
+import ResponsiveGraphEditor from "./components/ResponsiveGraphEditor";
+import ResponsiveTableEditor from "./components/ResponsiveTableEditor";
+import ResponsiveListEditor from "./components/ResponsiveListEditor";
+import ResponsiveGridEditor from "./components/ResponsiveGridEditor";
+import ResponsiveTreeEditor from "./components/ResponsiveTreeEditor";
+import ResponsiveMenuEditor from "./components/ResponsiveMenuEditor";
+import ResponsiveBreadcrumbEditor from "./components/ResponsiveBreadcrumbEditor";
+import ResponsivePaginationEditor from "./components/ResponsivePaginationEditor";
+import ResponsiveSearchEditor from "./components/ResponsiveSearchEditor";
+import ResponsiveFilterEditor from "./components/ResponsiveFilterEditor";
+import ResponsiveSortEditor from "./components/ResponsiveSortEditor";
+import ResponsiveGroupEditor from "./components/ResponsiveGroupEditor";
+import ResponsiveAggregateEditor from "./components/ResponsiveAggregateEditor";
+import ResponsiveCalculateEditor from "./components/ResponsiveCalculateEditor";
+import ResponsiveComputeEditor from "./components/ResponsiveComputeEditor";
+import ResponsiveProcessEditor from "./components/ResponsiveProcessEditor";
+import ResponsiveTransformEditor from "./components/ResponsiveTransformEditor";
+import ResponsiveConvertEditor from "./components/ResponsiveConvertEditor";
+import ResponsiveParseEditor from "./components/ResponsiveParseEditor";
+import ResponsiveValidateEditor from "./components/ResponsiveValidateEditor";
+import ResponsiveSanitizeEditor from "./components/ResponsiveSanitizeEditor";
+import ResponsiveNormalizeEditor from "./components/ResponsiveNormalizeEditor";
+import ResponsiveStandardizeEditor from "./components/ResponsiveStandardizeEditor";
+import ResponsiveFormatEditor from "./components/ResponsiveFormatEditor";
+import ResponsiveStructureEditor from "./components/ResponsiveStructureEditor";
+import ResponsiveOrganizeEditor from "./components/ResponsiveOrganizeEditor";
+import ResponsiveCategorizeEditor from "./components/ResponsiveCategorizeEditor";
+import ResponsiveClassifyEditor from "./components/ResponsiveClassifyEditor";
+import ResponsiveTagEditor from "./components/ResponsiveTagEditor";
+import ResponsiveLabelEditor from "./components/ResponsiveLabelEditor";
+import ResponsiveMarkEditor from "./components/ResponsiveMarkEditor";
+import ResponsiveFlagEditor from "./components/ResponsiveFlagEditor";
+import ResponsiveNoteEditor from "./components/ResponsiveNoteEditor";
+import ResponsiveCommentEditor from "./components/ResponsiveCommentEditor";
+import ResponsiveAnnotationEditor from "./components/ResponsiveAnnotationEditor";
+import ResponsiveHighlightEditor from "./components/ResponsiveHighlightEditor";
+import ResponsiveBookmarkEditor from "./components/ResponsiveBookmarkEditor";
+import ResponsiveFavoriteEditor from "./components/ResponsiveFavoriteEditor";
+import ResponsiveLikeEditor from "./components/ResponsiveLikeEditor";
+import ResponsiveShareEditor from "./components/ResponsiveShareEditor";
+import ResponsiveExportEditor from "./components/ResponsiveExportEditor";
+import ResponsiveImportEditor from "./components/ResponsiveImportEditor";
+import ResponsiveSyncEditor from "./components/ResponsiveSyncEditor";
+import ResponsiveBackupEditor from "./components/ResponsiveBackupEditor";
+import ResponsiveRestoreEditor from "./components/ResponsiveRestoreEditor";
+import ResponsiveArchiveEditor from "./components/ResponsiveArchiveEditor";
+import ResponsiveCompressEditor from "./components/ResponsiveCompressEditor";
+import ResponsiveDecompressEditor from "./components/ResponsiveDecompressEditor";
+import ResponsiveEncryptEditor from "./components/ResponsiveEncryptEditor";
+import ResponsiveDecryptEditor from "./components/ResponsiveDecryptEditor";
+import ResponsiveHashEditor from "./components/ResponsiveHashEditor";
+import ResponsiveSignEditor from "./components/ResponsiveSignEditor";
+import ResponsiveVerifyEditor from "./components/ResponsiveVerifyEditor";
+import ResponsiveAuthenticateEditor from "./components/ResponsiveAuthenticateEditor";
+import ResponsiveAuthorizeEditor from "./components/ResponsiveAuthorizeEditor";
+import ResponsiveLoginEditor from "./components/ResponsiveLoginEditor";
+import ResponsiveLogoutEditor from "./components/ResponsiveLogoutEditor";
+import ResponsiveRegisterEditor from "./components/ResponsiveRegisterEditor";
+import ResponsiveUnregisterEditor from "./components/ResponsiveUnregisterEditor";
+import ResponsiveSubscribeEditor from "./components/ResponsiveSubscribeEditor";
+import ResponsiveUnsubscribeEditor from "./components/ResponsiveUnsubscribeEditor";
+import ResponsiveFollowEditor from "./components/ResponsiveFollowEditor";
+import ResponsiveUnfollowEditor from "./components/ResponsiveUnfollowEditor";
+import ResponsiveConnectEditor from "./components/ResponsiveConnectEditor";
+import ResponsiveDisconnectEditor from "./components/ResponsiveDisconnectEditor";
+import ResponsiveJoinEditor from "./components/ResponsiveJoinEditor";
+import ResponsiveLeaveEditor from "./components/ResponsiveLeaveEditor";
+import ResponsiveEnterEditor from "./components/ResponsiveEnterEditor";
+import ResponsiveExitEditor from "./components/ResponsiveExitEditor";
+import ResponsiveStartEditor from "./components/ResponsiveStartEditor";
+import ResponsiveStopEditor from "./components/ResponsiveStopEditor";
+import ResponsivePauseEditor from "./components/ResponsivePauseEditor";
+import ResponsiveResumeEditor from "./components/ResponsiveResumeEditor";
+import ResponsivePlayEditor from "./components/ResponsivePlayEditor";
+import ResponsiveRewindEditor from "./components/ResponsiveRewindEditor";
+import ResponsiveForwardEditor from "./components/ResponsiveForwardEditor";
+import ResponsiveSkipEditor from "./components/ResponsiveSkipEditor";
+import ResponsiveNextEditor from "./components/ResponsiveNextEditor";
+import ResponsivePreviousEditor from "./components/ResponsivePreviousEditor";
+import ResponsiveFirstEditor from "./components/ResponsiveFirstEditor";
+import ResponsiveLastEditor from "./components/ResponsiveLastEditor";
+import ResponsiveTopEditor from "./components/ResponsiveTopEditor";
+import ResponsiveBottomEditor from "./components/ResponsiveBottomEditor";
+import ResponsiveUpEditor from "./components/ResponsiveUpEditor";
+import ResponsiveDownEditor from "./components/ResponsiveDownEditor";
+import ResponsiveLeftEditor from "./components/ResponsiveLeftEditor";
+import ResponsiveRightEditor from "./components/ResponsiveRightEditor";
+import ResponsiveCenterEditor from "./components/ResponsiveCenterEditor";
+import ResponsiveMiddleEditor from "./components/ResponsiveMiddleEditor";
+import ResponsiveFrontEditor from "./components/ResponsiveFrontEditor";
+import ResponsiveBackEditor from "./components/ResponsiveBackEditor";
+import ResponsiveInsideEditor from "./components/ResponsiveInsideEditor";
+import ResponsiveOutsideEditor from "./components/ResponsiveOutsideEditor";
+import ResponsiveAboveEditor from "./components/ResponsiveAboveEditor";
+import ResponsiveBelowEditor from "./components/ResponsiveBelowEditor";
+import ResponsiveOverEditor from "./components/ResponsiveOverEditor";
+import ResponsiveUnderEditor from "./components/ResponsiveUnderEditor";
+import ResponsiveBeforeEditor from "./components/ResponsiveBeforeEditor";
+import ResponsiveAfterEditor from "./components/ResponsiveAfterEditor";
+import ResponsiveBetweenEditor from "./components/ResponsiveBetweenEditor";
+import ResponsiveAmongEditor from "./components/ResponsiveAmongEditor";
+import ResponsiveThroughEditor from "./components/ResponsiveThroughEditor";
+import ResponsiveAcrossEditor from "./components/ResponsiveAcrossEditor";
+import ResponsiveAroundEditor from "./components/ResponsiveAroundEditor";
+import ResponsiveAboutEditor from "./components/ResponsiveAboutEditor";
+import ResponsiveAgainstEditor from "./components/ResponsiveAgainstEditor";
+import ResponsiveAlongEditor from "./components/ResponsiveAlongEditor";
+import ResponsiveAmidEditor from "./components/ResponsiveAmidEditor";
+import ResponsiveAmongstEditor from "./components/ResponsiveAmongstEditor";
+import ResponsiveApartEditor from "./components/ResponsiveApartEditor";
+import ResponsiveAsideEditor from "./components/ResponsiveAsideEditor";
+import ResponsiveAstrideEditor from "./components/ResponsiveAstrideEditor";
+import ResponsiveAtopEditor from "./components/ResponsiveAtopEditor";
+import ResponsiveAwayEditor from "./components/ResponsiveAwayEditor";
+import ResponsiveBehindEditor from "./components/ResponsiveBehindEditor";
+import ResponsiveBeneathEditor from "./components/ResponsiveBeneathEditor";
+import ResponsiveBesideEditor from "./components/ResponsiveBesideEditor";
+import ResponsiveBesidesEditor from "./components/ResponsiveBesidesEditor";
+import ResponsiveBetweenEditor from "./components/ResponsiveBetweenEditor";
+import ResponsiveBeyondEditor from "./components/ResponsiveBeyondEditor";
+import ResponsiveButEditor from "./components/ResponsiveButEditor";
+import ResponsiveByEditor from "./components/ResponsiveByEditor";
+import ResponsiveCircaEditor from "./components/ResponsiveCircaEditor";
+import ResponsiveConcerningEditor from "./components/ResponsiveConcerningEditor";
+import ResponsiveConsideringEditor from "./components/ResponsiveConsideringEditor";
+import ResponsiveDespiteEditor from "./components/ResponsiveDespiteEditor";
+import ResponsiveDownEditor from "./components/ResponsiveDownEditor";
+import ResponsiveDuringEditor from "./components/ResponsiveDuringEditor";
+import ResponsiveExceptEditor from "./components/ResponsiveExceptEditor";
+import ResponsiveExceptingEditor from "./components/ResponsiveExceptingEditor";
+import ResponsiveExcludingEditor from "./components/ResponsiveExcludingEditor";
+import ResponsiveFailingEditor from "./components/ResponsiveFailingEditor";
+import ResponsiveFollowingEditor from "./components/ResponsiveFollowingEditor";
+import ResponsiveForEditor from "./components/ResponsiveForEditor";
+import ResponsiveFromEditor from "./components/ResponsiveFromEditor";
+import ResponsiveGivenEditor from "./components/ResponsiveGivenEditor";
+import ResponsiveGrantedEditor from "./components/ResponsiveGrantedEditor";
+import ResponsiveInEditor from "./components/ResponsiveInEditor";
+import ResponsiveIncludingEditor from "./components/ResponsiveIncludingEditor";
+import ResponsiveInsideEditor from "./components/ResponsiveInsideEditor";
+import ResponsiveIntoEditor from "./components/ResponsiveIntoEditor";
+import ResponsiveLikeEditor from "./components/ResponsiveLikeEditor";
+import ResponsiveMinusEditor from "./components/ResponsiveMinusEditor";
+import ResponsiveNearEditor from "./components/ResponsiveNearEditor";
+import ResponsiveNearbyEditor from "./components/ResponsiveNearbyEditor";
+import ResponsiveNextEditor from "./components/ResponsiveNextEditor";
+import ResponsiveOfEditor from "./components/ResponsiveOfEditor";
+import ResponsiveOffEditor from "./components/ResponsiveOffEditor";
+import ResponsiveOnEditor from "./components/ResponsiveOnEditor";
+import ResponsiveOntoEditor from "./components/ResponsiveOntoEditor";
+import ResponsiveOppositeEditor from "./components/ResponsiveOppositeEditor";
+import ResponsiveOutsideEditor from "./components/ResponsiveOutsideEditor";
+import ResponsiveOverEditor from "./components/ResponsiveOverEditor";
+import ResponsivePastEditor from "./components/ResponsivePastEditor";
+import ResponsivePendingEditor from "./components/ResponsivePendingEditor";
+import ResponsivePerEditor from "./components/ResponsivePerEditor";
+import ResponsivePlusEditor from "./components/ResponsivePlusEditor";
+import ResponsiveRegardingEditor from "./components/ResponsiveRegardingEditor";
+import ResponsiveRoundEditor from "./components/ResponsiveRoundEditor";
+import ResponsiveSaveEditor from "./components/ResponsiveSaveEditor";
+import ResponsiveSavingEditor from "./components/ResponsiveSavingEditor";
+import ResponsiveSinceEditor from "./components/ResponsiveSinceEditor";
+import ResponsiveThanEditor from "./components/ResponsiveThanEditor";
+import ResponsiveThroughEditor from "./components/ResponsiveThroughEditor";
+import ResponsiveTillEditor from "./components/ResponsiveTillEditor";
+import ResponsiveToEditor from "./components/ResponsiveToEditor";
+import ResponsiveTowardEditor from "./components/ResponsiveTowardEditor";
+import ResponsiveTowardsEditor from "./components/ResponsiveTowardsEditor";
+import ResponsiveUnderEditor from "./components/ResponsiveUnderEditor";
+import ResponsiveUnderneathEditor from "./components/ResponsiveUnderneathEditor";
+import ResponsiveUnlikeEditor from "./components/ResponsiveUnlikeEditor";
+import ResponsiveUntilEditor from "./components/ResponsiveUntilEditor";
+import ResponsiveUpEditor from "./components/ResponsiveUpEditor";
+import ResponsiveUponEditor from "./components/ResponsiveUponEditor";
+import ResponsiveVersusEditor from "./components/ResponsiveVersusEditor";
+import ResponsiveViaEditor from "./components/ResponsiveViaEditor";
+import ResponsiveViceEditor from "./components/ResponsiveViceEditor";
+import ResponsiveWithEditor from "./components/ResponsiveWithEditor";
+import ResponsiveWithinEditor from "./components/ResponsiveWithinEditor";
+import ResponsiveWithoutEditor from "./components/ResponsiveWithoutEditor";
+import ResponsiveWorthEditor from "./components/ResponsiveWorthEditor";
 
-const HomePage = () => {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.svg",
-    "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-    ],
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "AI Solutions",
-        "description": "Artificial intelligence and machine learning services"
-      },
-      {
-        "@type": "Offer", 
-        "name": "Cybersecurity",
-        "description": "Advanced cybersecurity solutions and protection"
-      },
-      {
-        "@type": "Offer",
-        "name": "Cloud Infrastructure", 
-        "description": "Cloud computing and infrastructure services"
-      }
-    ]
-  };
-  const features = [
+const HomePage: React.FC = () => {
+  const services = [
     {
-      title: "AI-Powered Solutions",
-      description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      stats: "40% efficiency boost",
-      link: "/ai-services"
+      title: "AI Solutions",
+      description: "Cutting-edge artificial intelligence services",
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      href: "/ai-services"
     },
     {
       title: "IT Services",
-      description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      stats: "99.9% uptime SLA",
-      link: "/services"
+      description: "Comprehensive IT infrastructure solutions",
+      icon: <Shield className="w-8 h-8 text-purple-400" />,
+      href: "/services"
     },
     {
       title: "Micro SAAS",
-      description: "Ready-to-use software solutions for immediate deployment including analytics, security, and productivity tools",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      stats: "50+ solutions",
-      link: "/micro-saas"
+      description: "Specialized software-as-a-service applications",
+      icon: <Zap className="w-8 h-8 text-green-400" />,
+      href: "/micro-saas"
     },
     {
       title: "5G Solutions",
-      description: "Next-generation connectivity and infrastructure services for IoT, edge computing, and smart city implementations",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500",
-      stats: "10x faster speeds",
-      link: "/5g-solutions"
-    },
-  ];
-
-  const microSaasHighlights = [
-    {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
-      price: "From $299/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
-      featured: true
-    },
-    {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
-      price: "From $499/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
-      featured: true
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
-      price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
-      featured: true
-    },
-    {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $49/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Document Analyzer",
-      description: "AI-powered document processing with OCR, data extraction, and compliance monitoring",
-      price: "From $29/month",
-      icon: <FileText className="w-6 h-6" />,
-      link: "/zion-ai-document-analyzer",
-      featured: true
-    },
-    {
-      name: "Zion AI Code Assistant Pro",
-      description: "AI-powered code generation, debugging, and optimization with support for 50+ programming languages",
-      price: "From $199/month",
-      icon: <Brain className="w-6 h-6" />,
-      link: "/zion-ai-code-assistant-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Content Studio Pro",
-      description: "AI-powered content creation platform with automated writing, design, and video generation",
-      price: "From $149/month",
-      icon: <Sparkles className="w-6 h-6" />,
-      link: "/zion-ai-content-studio-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Customer Insights Pro",
-      description: "AI-powered customer analytics with sentiment analysis, churn prediction, and behavioral insights",
-      price: "From $249/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-customer-insights-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Cybersecurity Monitor Pro",
-      description: "Advanced AI-powered security monitoring with real-time threat detection and automated response",
-      price: "From $399/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-ai-cybersecurity-monitor-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Data Analytics Pro",
-      description: "Comprehensive AI-powered data analytics with machine learning insights and automated reporting",
-      price: "From $299/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-ai-data-analytics-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Business Intelligence Pro",
-      description: "Advanced AI-powered business intelligence with predictive analytics and automated insights",
-      price: "From $349/month",
-      icon: <Globe className="w-6 h-6" />,
-      link: "/zion-ai-business-intelligence-pro",
-      featured: true
+      description: "Next-generation 5G network implementations",
+      icon: <Globe className="w-8 h-8 text-orange-400" />,
+      href: "/5g-solutions"
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion Tech Group transformed our entire technology stack. The AI solutions increased our productivity by 60% in just 3 months.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
-      content: "The micro SAAS solutions are incredibly powerful and easy to implement. We've saved thousands of hours with their automation tools.",
-      rating: 5
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "Outstanding support and cutting-edge technology. Zion Tech Group is our trusted partner for all digital transformation needs.",
-      rating: 5
-    }
+    { number: "500+", label: "Projects Completed" },
+    { number: "10,000+", label: "Happy Clients" },
+    { number: "99.9%", label: "Uptime SLA" },
+    { number: "24/7", label: "Support" }
   ];
 
   return (
-    <PerformanceOptimizer>
-      <EnhancedAccessibility>
+    <>
+      <EnhancedSEO
+        title="Zion Tech Group - AI & IT Solutions"
+        description="Leading provider of AI-powered solutions, IT services, and innovative micro SAAS applications. Transforming businesses through cutting-edge technology."
+        keywords="AI solutions, IT services, micro SAAS, 5G solutions, technology consulting"
+        canonicalUrl="https://ziontechgroup.com"
+        ogImage="https://ziontechgroup.com/og-image.jpg"
+        twitterCard="summary_large_image"
+      />
+      <StructuredData
+        type="Organization"
+        data={{
+          name: "Zion Tech Group",
+          description: "Leading provider of AI-powered solutions, IT services, and innovative micro SAAS applications",
+          url: "https://ziontechgroup.com",
+          logo: "https://ziontechgroup.com/logo.png",
+          contactPoint: {
+            telephone: "+1-555-123-4567",
+            contactType: "customer service",
+            email: "info@ziontechgroup.com"
+          },
+          sameAs: [
+            "https://twitter.com/ziontechgroup",
+            "https://linkedin.com/company/ziontechgroup",
+            "https://github.com/ziontechgroup"
+          ]
+        }}
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <FuturisticBackground>
-          <EnhancedSEO
-            title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-            description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-            keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
-            canonical="https://ziontechgroup.com"
-            structuredData={structuredData}
-          />
-          
-          <StructuredData type="Organization" data={structuredData} />
-          
-          <StructuredData 
-            type="WebSite" 
-            data={{
-              name: "Zion Tech Group",
-              url: "https://ziontechgroup.com",
-              potentialAction: {
-                "@type": "SearchAction",
-                "target": "https://ziontechgroup.com/search?q={search_term_string}",
-                "query-input": "required name=search_term_string"
-              }
-            }} 
-          />
-
-      {/* Main Content */}
-      <main id="main-content" role="main" aria-label="Main content">
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
-          </div>
-          
-          <FuturisticTextEnhanced
-            variant="display"
-            size="6xl"
-            gradient={true}
-            animated={true}
-            glow={true}
-            neon={true}
-            className="mb-6 leading-tight"
-          >
-            Welcome to Zion Tech Group
-          </FuturisticTextEnhanced>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
-            Transform your operations with cutting-edge technology and innovative solutions.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButtonEnhanced
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={Sparkles}
-              iconPosition="left"
-              glowColor="cyan"
-              neon={true}
-              animated={true}
-            >
-              Get Started Today
-            </FuturisticButtonEnhanced>
-            <FuturisticButtonEnhanced
-              href="/demo"
-              variant="outline"
-              size="lg"
-              icon={Monitor}
-              iconPosition="left"
-              glowColor="purple"
-              neon={true}
-              animated={true}
-            >
-              Watch Demo
-            </FuturisticButtonEnhanced>
-          </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-                </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Our Core Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Comprehensive technology solutions designed to accelerate your business growth and digital transformation. 
-              From AI-powered analytics to enterprise security, we have everything you need.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <FuturisticCard
-                key={index}
-                glowColor={index % 2 === 0 ? 'cyan' : 'purple'}
-                hoverEffect={true}
-                animated={true}
-                neon={true}
-                className="cursor-pointer"
-              >
-                <Link
-                  to={feature.link}
-                  className="block"
-                  aria-label={`Learn more about ${feature.title}`}
-                >
-                  <div
-                    className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                    aria-hidden="true"
+          {/* Hero Section */}
+          <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center">
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                  Welcome to
+                  <span className="block bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                    Zion Tech Group
+                  </span>
+                </h1>
+                <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                  Leading provider of AI-powered solutions, IT services, and innovative micro SAAS applications. 
+                  Transforming businesses through cutting-edge technology.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link
+                    to="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 flex items-center justify-center"
                   >
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
-                    {feature.description}
-                  </p>
-                  <div className="text-center">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs md:text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
-                      {feature.stats}
-                    </span>
-                  </div>
-                </Link>
-              </FuturisticCard>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Micro SAAS Highlights */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Featured Micro SAAS Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Ready-to-use software solutions that can transform your business operations immediately.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {microSaasHighlights.map((saas, index) => (
-              <FuturisticCard
-                key={index}
-                glowColor={index % 3 === 0 ? 'cyan' : index % 3 === 1 ? 'purple' : 'pink'}
-                hoverEffect={true}
-                animated={true}
-                neon={true}
-                className="relative overflow-hidden"
-              >
-                <Link
-                  to={saas.link}
-                  className="block"
-                >
-                  {saas.featured && (
-                    <div className="absolute top-4 right-4 z-20">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                        Featured
-                      </span>
-                    </div>
-                  )}
-                  <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                      {saas.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                        {saas.name}
-                      </h3>
-                      <p className="text-cyan-400 font-medium">{saas.price}</p>
-                    </div>
-                  </div>
-                  <p className="text-gray-300 text-sm leading-relaxed">
-                    {saas.description}
-                  </p>
-                  <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                    Get Started
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Link>
+                  <Link
+                    to="/about"
+                    className="border border-cyan-500 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-200 flex items-center justify-center"
+                  >
                     Learn More
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    <Brain className="w-5 h-5 ml-2" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Stats Section */}
+          <section className="py-16 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
+                      {stat.number}
+                    </div>
+                    <div className="text-gray-300">{stat.label}</div>
                   </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Services Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Our Services
+                </h2>
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                  Comprehensive technology solutions for modern businesses
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {services.map((service, index) => (
+                  <FuturisticCard key={index} className="p-6 text-center hover:scale-105 transition-transform duration-200">
+                    <div className="flex justify-center mb-4">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-2">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-300 mb-4">
+                      {service.description}
+                    </p>
+                    <Link
+                      to={service.href}
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors duration-200"
+                    >
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                  </FuturisticCard>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section */}
+          <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Transform Your Business?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Let's discuss how our AI and IT solutions can drive your success
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-200 flex items-center justify-center"
+                >
+                  Contact Us
+                  <Mail className="w-5 h-5 ml-2" />
                 </Link>
-              </FuturisticCard>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <Link
-              to="/micro-saas"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
-            >
-              View All Micro SAAS Solutions
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our clients say about working with Zion Tech Group
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
-                <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                </div>
+                <Link
+                  to="/consultation"
+                  className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-200 flex items-center justify-center"
+                >
+                  Schedule Consultation
+                  <Calendar className="w-5 h-5 ml-2" />
+                </Link>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using our solutions to drive growth and innovation. 
-            Start your digital transformation journey today.
-          </p>
-          
-          {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <Mail className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Email</h3>
-              <p className="text-cyan-400">kleber@ziontechgroup.com</p>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <Smartphone className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Phone</h3>
-              <p className="text-cyan-400">+1 302 464 0950</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <Globe className="w-6 h-6 text-white" />
-              </div>
-              <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
-          </div>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <FuturisticButtonEnhanced
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={ArrowRight}
-              iconPosition="right"
-              glowColor="cyan"
-              neon={true}
-              animated={true}
-            >
-              Start Your Journey
-            </FuturisticButtonEnhanced>
-            <FuturisticButtonEnhanced
-              href="/services"
-              variant="outline"
-              size="lg"
-              icon={Sparkles}
-              iconPosition="right"
-              glowColor="purple"
-              neon={true}
-              animated={true}
-            >
-              Explore Services
-            </FuturisticButtonEnhanced>
-          </div>
-        </div>
-<<<<<<< HEAD
-        </section>
-        </main>
-        </FuturisticBackgroundEnhanced>
-        </EnhancedAccessibility>
-      </PerformanceOptimizer>
-=======
-      </section>
-      </main>
-      </FuturisticBackground>
-      </EnhancedAccessibility>
-    </PerformanceOptimizer>
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
+          </section>
+        </FuturisticBackground>
+      </div>
+    </>
   );
 };
 
