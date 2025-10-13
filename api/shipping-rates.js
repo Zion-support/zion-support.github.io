@@ -1,5 +1,4 @@
-import fs from 'fs';
-import path from 'path';
+// import fs from 'fs'; // Not currently used
 
 // Shipping rates calculation
 
@@ -17,13 +16,6 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Ensure data directory exists
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-
-    // Calculate shipping rates (mock calculation)
-
     // Calculate shipping rates (mock calculation)
     const baseRate = 10;
     const weightMultiplier = parseFloat(weight) * 0.5;
