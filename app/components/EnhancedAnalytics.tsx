@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 interface EnhancedAnalyticsProps {
   children: React.ReactNode;
 }
@@ -32,4 +28,3 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
   return <>{children}</>;
 };
 
-export default EnhancedAnalytics;

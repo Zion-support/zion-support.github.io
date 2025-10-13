@@ -3,13 +3,8 @@ import { ArrowRight, FileText, Download, Settings, Sparkles, CheckCircle, Star, 
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIInvoiceGeneratorPage = () => {
-<<<<<<< HEAD
   // const [selectedPlan, setSelectedPlan] = useState('pro');
-=======
-<<<<<<< HEAD
   // const [selectedPlan, setSelectedPlan] = useState('pro');
-=======
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
   const features = [
     {
@@ -85,7 +80,6 @@ const ZionAIInvoiceGeneratorPage = () => {
       included: true
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
   const pricingPlans = [
     {
@@ -490,4 +484,3 @@ const ZionAIInvoiceGeneratorPage = () => {
   );
 };
 
-export default ZionAIInvoiceGeneratorPage;

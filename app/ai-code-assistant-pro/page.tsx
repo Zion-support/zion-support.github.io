@@ -10,61 +10,6 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AICodeAssistantProZionTechGroup = () => {
-<<<<<<< HEAD
-=======
-  const testimonials = [
-    {
-      name: "Alex Thompson",
-      company: "TechStart Inc",
-      role: "Lead Developer",
-      content: "Zion's AI Code Assistant has revolutionized our development process. It's like having a senior developer available 24/7.",
-      rating: 5,
-      avatar: "AT"
-    },
-    {
-      name: "Maria Garcia",
-      company: "CloudScale Solutions",
-      role: "CTO",
-      content: "The code generation quality is exceptional. It understands context and produces production-ready code consistently.",
-      rating: 5,
-      avatar: "MG"
-    },
-    {
-      name: "David Kim",
-      company: "DataFlow Systems",
-      role: "Senior Engineer",
-      content: "The debugging capabilities are incredible. It finds issues I would have spent hours tracking down manually.",
-      rating: 5,
-      avatar: "DK"
-    }
-  ];
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Zion AI Code Assistant Pro",
-    "description": "AI-powered code generation, debugging, and optimization with support for 50+ programming languages",
-    "url": "https://ziontechgroup.com/ai-code-assistant-pro",
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Web, Windows, macOS, Linux",
-    "offers": {
-      "@type": "Offer",
-      "price": "199",
-      "priceCurrency": "USD",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "199",
-        "priceCurrency": "USD",
-        "unitText": "MONTH"
-      }
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
-  };
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
   const features = [
     {

@@ -10,61 +10,6 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AIContentStudioZionTechGroup = () => {
-<<<<<<< HEAD
-=======
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Creative Marketing Co",
-      role: "Content Director",
-      content: "Zion's AI Content Studio has transformed our content creation process. We're producing 5x more content with higher quality than ever before.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Digital Agency Pro",
-      role: "Creative Lead",
-      content: "The AI understands brand voice perfectly and creates content that resonates with our audience. It's like having a team of expert writers.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "E-commerce Solutions",
-      role: "Marketing Manager",
-      content: "From product descriptions to social media posts, the AI generates exactly what we need. It's saved us countless hours and improved our engagement.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Zion AI Content Studio Pro",
-    "description": "AI-powered content creation platform with automated writing, design, and video generation",
-    "url": "https://ziontechgroup.com/ai-content-studio",
-    "applicationCategory": "ContentCreationApplication",
-    "operatingSystem": "Web, Windows, macOS, Linux",
-    "offers": {
-      "@type": "Offer",
-      "price": "149",
-      "priceCurrency": "USD",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "149",
-        "priceCurrency": "USD",
-        "unitText": "MONTH"
-      }
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
-      "url": "https://ziontechgroup.com"
-    }
-  };
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
   const features = [
     {

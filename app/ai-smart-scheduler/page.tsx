@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
 const features = [
     {
@@ -38,12 +37,6 @@ const testimonials = [
       rating: 5
     }
   ];
-=======
-import { Link } from 'react-router-dom';
-import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
-import Layout from "../layout";
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function AISmartScheduler() {
   const testimonials = [
     {

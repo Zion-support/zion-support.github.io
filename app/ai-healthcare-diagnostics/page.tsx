@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 const benefits = [
     "Advanced AI algorithms for accurate predictions",
@@ -35,13 +34,6 @@ export default function Page() {
     "Benefit 1",
     "Benefit 2"
   ];
-=======
-import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
-export default function AIHealthcareDiagnostics() {
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
   const features = [
     {
       title: "Medical Imaging Analysis",
@@ -377,4 +369,3 @@ export default function AIHealthcareDiagnostics() {
       </div>
 </div>
   );
-}

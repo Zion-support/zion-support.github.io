@@ -8,7 +8,7 @@ export default function Page() {
     "Benefit 1",
     "Benefit 2"
   ];
-  const features = [
+  const generalFeatures = [
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }
   ];

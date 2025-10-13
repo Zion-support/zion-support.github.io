@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import { ArrowRight, TrendingUp, Globe, CheckCircle, MessageSquare, Target, BarChart3 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -190,4 +187,3 @@ const AISentimentAnalysisPro = () => {
   );
 };
 
-export default AISentimentAnalysisPro;

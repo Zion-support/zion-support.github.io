@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-
-import React, { useState, useRef, useEffect } from 'react';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 interface ImageOptimizerProps {
   src: string;
   alt: string;
@@ -140,4 +134,3 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   );
 };
 
-export default ImageOptimizer;

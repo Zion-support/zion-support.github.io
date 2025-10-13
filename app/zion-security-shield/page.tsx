@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 const features = [
     {
@@ -38,12 +37,6 @@ const testimonials = [
       rating: 5
     }
   ];
-=======
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function ZionSecurityShield() {
   const features = [
     {

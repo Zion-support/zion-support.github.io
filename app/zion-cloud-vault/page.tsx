@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 const features = [
     {
@@ -38,12 +37,6 @@ const testimonials = [
       rating: 5
     }
   ];
-=======
-import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function ZionCloudVault() {
   const features = [
     {

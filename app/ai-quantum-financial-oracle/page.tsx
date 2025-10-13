@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { 
-=======
-import {
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
   Brain, 
   TrendingUp, 
   Shield, 
@@ -14,10 +10,7 @@ import {
   CheckCircle, 
   Cpu,
   Globe,
-<<<<<<< HEAD
   Clock,
-=======
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
   Activity,
   PieChart
 } from 'lucide-react';
@@ -370,4 +363,3 @@ const AIQuantumFinancialOraclePage = () => {
   );
 };
 
-export default AIQuantumFinancialOraclePage;

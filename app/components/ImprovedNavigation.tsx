@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-=======
-import { Link, useLocation } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles, Search, User, Settings, HelpCircle, Phone, Mail, MapPin, Star, TrendingUp, Users, Award, Clock, CheckCircle, DollarSign, Play } from 'lucide-react';
 
 const ImprovedNavigation = () => {
@@ -801,4 +797,3 @@ const ImprovedNavigation = () => {
   );
 };
 
-export default ImprovedNavigation;

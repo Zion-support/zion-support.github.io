@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 const features = [
     {
@@ -38,13 +37,6 @@ const testimonials = [
       rating: 5
     }
   ];
-=======
-"use client";
-import { Brain, Clock, Target, BarChart3 } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function AICustomerSupportChatbot() {
   const testimonials = [
     {

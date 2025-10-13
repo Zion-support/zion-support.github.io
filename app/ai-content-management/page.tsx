@@ -1,38 +1,33 @@
-<<<<<<< HEAD
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-=======
 import { ArrowRight } from 'lucide-react';
 
-import { Helmet } from 'react-helmet-async';
-
-import { Link } from 'react-router-dom';
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function AIContentManagementZionTechGroup() {
   return (
-    <div></div>
-      <Helmet></Helmet>
-        <title>AI Content Management - Zion Tech Group</title>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <Helmet>
+        <title>AIContentManagementZionTechGroup - Zion Tech Group</title>
+        <meta name="description" content="Professional AIContentManagementZionTechGroup services for businesses" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center"></div>
-        <div className="text-center"></div>
-          <h1 className="text-4xl font-bold text-white mb-6"></h1>
-            AI Content Management)
+      
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            AIContentManagementZionTechGroup
           </h1>
-          <p className="text-lg text-gray-300 mb-8"></p>
-            Professional AI content management services coming soon.
+          <p className="text-lg text-gray-300 mb-8">
+            Professional AIContentManagementZionTechGroup services coming soon.
           </p>
-          <Link)
+          <Link
             to="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          ></Link>
-            Contact Us)
-            <ArrowRight className="ml-2 h-5 w-5" /></ArrowRight>
+          >
+            Contact Us
+            <ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
-
-</ArrowRight>
 }

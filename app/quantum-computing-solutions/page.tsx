@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { 
-=======
-import {
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
   Cpu, 
   Zap, 
   Shield, 
@@ -364,4 +360,3 @@ const QuantumComputingSolutionsPage = () => {
   );
 };
 
-export default QuantumComputingSolutionsPage;

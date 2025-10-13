@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-=======
-import { Link, useLocation } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play } from 'lucide-react';
 
 interface SidebarProps {
@@ -288,4 +284,3 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default ImprovedSidebar;

@@ -1,9 +1,6 @@
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 export default function ConsultationPage() {
   const benefits = [
@@ -439,4 +436,3 @@ export default function ConsultationPage() {
       </div>
 </div>
   );
-}

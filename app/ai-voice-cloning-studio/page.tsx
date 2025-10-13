@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
 import { 
-=======
-import {
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
   Mic, 
   Play, 
   Settings, 
@@ -334,4 +330,3 @@ const AIVoiceCloningStudioPage = () => {
   );
 };
 
-export default AIVoiceCloningStudioPage;
