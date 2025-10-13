@@ -1,8 +1,8 @@
-<<<<<<< HEAD
-import React, { Suspense } from 'react';
-=======
 import React, { Suspense, lazy } from 'react';
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -16,11 +16,15 @@ import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 =======
 import LoadingSpinner from './app/components/LoadingSpinner';
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
+=======
+import LoadingSpinner from './app/components/LoadingSpinner';
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
 
 // Page Components
 import HomePage from './app/page';
@@ -199,7 +203,10 @@ function App() {
             <Footer />
             <PerformanceMonitor />
             <AccessibilityEnhancer />
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
           </div>
         </Router>
       </HelmetProvider>

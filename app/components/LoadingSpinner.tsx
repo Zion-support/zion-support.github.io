@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
@@ -16,6 +17,12 @@ interface LoadingSpinnerProps {
 =======
   color?: 'primary' | 'secondary' | 'white' | 'gray';
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
+=======
+import React from 'react';
+
+interface LoadingSpinnerProps {
+  size?: 'sm' | 'md' | 'lg' | 'xl';
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
   text?: string;
   fullScreen?: boolean;
   className?: string;
@@ -23,6 +30,7 @@ interface LoadingSpinnerProps {
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = 'md',
+<<<<<<< HEAD
 <<<<<<< HEAD
 text = 'Loading...',
   fullScreen = false,
@@ -48,17 +56,26 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   fullScreen = false,
   className = ''
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
+=======
+  text = 'Loading...',
+  fullScreen = false,
+  className = ''
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
 }) => {
   const sizeClasses = {
     sm: 'w-4 h-4',
     md: 'w-8 h-8',
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
     lg: 'w-12 h-12',
     xl: 'w-16 h-16'
   };
 
+<<<<<<< HEAD
   const colorClasses = {
     primary: 'text-purple-600',
     secondary: 'text-cyan-600',
@@ -140,6 +157,9 @@ lg: 'w-12 h-12'
   };
 
   return (
+=======
+  const spinner = (
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
     <div className={`flex flex-col items-center justify-center ${className}`}>
       <div className={`${sizeClasses[size]} animate-spin rounded-full border-2 border-gray-300 border-t-purple-600`}></div>
       {text && (
@@ -147,9 +167,22 @@ lg: 'w-12 h-12'
       )}
     </div>
   );
+<<<<<<< HEAD
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
+=======
+
+  if (fullScreen) {
+    return (
+      <div className="fixed inset-0 bg-slate-900/95 backdrop-blur-sm flex items-center justify-center z-50">
+        {spinner}
+      </div>
+    );
+  }
+
+  return spinner;
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
 };
 
 export default LoadingSpinner;

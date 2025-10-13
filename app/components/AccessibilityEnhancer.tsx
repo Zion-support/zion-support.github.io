@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
@@ -13,7 +12,11 @@ const AccessibilityEnhancer: React.FC = () => {
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
+<<<<<<< HEAD
 // Focus management for keyboard navigation
+=======
+    // Focus management for keyboard navigation
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
@@ -51,6 +54,7 @@ const AccessibilityEnhancer: React.FC = () => {
         main.setAttribute('role', 'main');
       }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Reduced motion mode
     if (isReducedMotion) {
@@ -118,6 +122,8 @@ const AccessibilityEnhancer: React.FC = () => {
       focusableElements.forEach(element => {
         element.removeEventListener('focus', handleFocus);
         element.removeEventListener('blur', handleBlur);
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
       const nav = document.querySelector('nav');
 =======
 const nav = document.querySelector('nav');
@@ -140,9 +146,12 @@ const nav = document.querySelector('nav');
           img.setAttribute('alt', `Image ${index + 1}`);
         }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
       });
     };
 
@@ -163,6 +172,7 @@ const nav = document.querySelector('nav');
     };
   }, []);
 
+<<<<<<< HEAD
 return null;
 =======
 import React from 'react';
@@ -170,6 +180,9 @@ import React from 'react';
 const AccessibilityEnhancer: React.FC = () => {
   return null;
 >>>>>>> cursor/analyze-improve-and-deploy-application-7aca
+=======
+  return null;
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
 };
 
 export default AccessibilityEnhancer;

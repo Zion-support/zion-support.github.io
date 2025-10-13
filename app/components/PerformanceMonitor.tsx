@@ -1,13 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 <<<<<<< HEAD
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
+=======
+import React, { useEffect, useState } from 'react';
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
 
 interface PerformanceMetrics {
   cls: number | null;
-  inp: number | null;
   fcp: number | null;
   lcp: number | null;
   ttfb: number | null;
@@ -17,9 +20,9 @@ interface PerformanceMetrics {
 const PerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
-    inp: null,
     fcp: null,
     lcp: null,
+<<<<<<< HEAD
 <<<<<<< HEAD
     ttfb: null
   });
@@ -154,6 +157,118 @@ const PerformanceMonitor: React.FC = () => {
           ✕
         </button>
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+=======
+    ttfb: null,
+    loadTime: null
+  });
+
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Only run in development or when debug mode is enabled
+    if (process.env.NODE_ENV !== 'development' && !localStorage.getItem('debug-performance')) {
+      return;
+    }
+
+    // Measure page load time
+    const loadTime = performance.now();
+    setMetrics(prev => ({ ...prev, loadTime }));
+
+    // Web Vitals measurement
+    const measureWebVitals = () => {
+      // First Contentful Paint (FCP)
+      const fcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const fcpEntry = entries.find(entry => entry.name === 'first-contentful-paint');
+        if (fcpEntry) {
+          setMetrics(prev => ({ ...prev, fcp: fcpEntry.startTime }));
+        }
+      });
+      fcpObserver.observe({ entryTypes: ['paint'] });
+
+      // Largest Contentful Paint (LCP)
+      const lcpObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        const lastEntry = entries[entries.length - 1];
+        setMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+      });
+      lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // Cumulative Layout Shift (CLS)
+      let clsValue = 0;
+      const clsObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry: any) => {
+          if (!entry.hadRecentInput) {
+            clsValue += entry.value;
+            setMetrics(prev => ({ ...prev, cls: clsValue }));
+          }
+        });
+      });
+      clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+      // Time to First Byte (TTFB)
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigationEntry) {
+        setMetrics(prev => ({ 
+          ...prev, 
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+        }));
+      }
+    };
+
+    // Start measuring after a short delay to ensure page is loaded
+    const timeoutId = setTimeout(measureWebVitals, 1000);
+
+    // Cleanup
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
+  // Toggle visibility with keyboard shortcut (Ctrl+Shift+P)
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        setIsVisible(prev => !prev);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  if (!isVisible) {
+    return null;
+  }
+
+  const getScoreColor = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
+    if (value === null) return 'text-gray-400';
+    if (value <= thresholds.good) return 'text-green-400';
+    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
+    return 'text-red-400';
+  };
+
+  const getScoreText = (value: number | null, thresholds: { good: number; needsImprovement: number }) => {
+    if (value === null) return 'N/A';
+    if (value <= thresholds.good) return 'Good';
+    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
+    return 'Poor';
+  };
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800 border border-slate-600 rounded-lg p-4 shadow-xl z-50 max-w-sm">
+      <div className="flex items-center justify-between mb-3">
+        <h3 className="text-white font-semibold text-sm">Performance Monitor</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white text-lg"
+          aria-label="Close performance monitor"
+        >
+          ×
+        </button>
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
       </div>
       
       <div className="space-y-2 text-xs">
@@ -169,6 +284,7 @@ const PerformanceMonitor: React.FC = () => {
             {metrics.lcp ? `${Math.round(metrics.lcp)}ms` : 'N/A'}
           </span>
         </div>
+<<<<<<< HEAD
         <div className="flex justify-between">
           <span>FID:</span>
           <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
@@ -180,6 +296,20 @@ const PerformanceMonitor: React.FC = () => {
           <span className={getScoreColor(metrics.cls, { good: 0.1, poor: 0.25 })}>
             {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
           </span>
+=======
+
+        {/* CLS */}
+        <div className="flex justify-between items-center">
+          <span className="text-gray-300">CLS:</span>
+          <div className="flex items-center gap-2">
+            <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
+              {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}
+            </span>
+            <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
+              {getScoreText(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}
+            </span>
+          </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
         </div>
         <div className="flex justify-between">
           <span>TTFB:</span>
@@ -190,6 +320,7 @@ const PerformanceMonitor: React.FC = () => {
       </div>
       
       <div className="mt-3 pt-2 border-t border-slate-600">
+<<<<<<< HEAD
         <div className="text-xs text-gray-400">
           <div>Good: Green | Needs Improvement: Yellow | Poor: Red</div>
         </div>
@@ -198,6 +329,12 @@ const PerformanceMonitor: React.FC = () => {
 =======
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-2b79
+=======
+        <p className="text-gray-400 text-xs">
+          Press <kbd className="bg-slate-700 px-1 rounded">Ctrl+Shift+P</kbd> to toggle
+        </p>
+      </div>
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
     </div>
   );
 =======

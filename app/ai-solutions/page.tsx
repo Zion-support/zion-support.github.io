@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom;
@@ -486,3 +487,20 @@ const AISolutionsPage: React.FC = () => {
 };
 
 export default AISolutionsPage;
+=======
+
+export default function AISolutionsPage() {
+  return (
+    <div className="min-h-screen bg-slate-900 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          AI Solutions
+        </h1>
+        <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          Discover our comprehensive AI solutions designed to accelerate your business growth.
+        </p>
+      </div>
+    </div>
+  );
+}
+>>>>>>> cursor/analyze-improve-and-deploy-application-705a
