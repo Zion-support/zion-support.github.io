@@ -25,12 +25,12 @@ const PerformanceEnhancer: React.FC = () => {
       const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
       
       const metrics: PerformanceMetrics = {
-        fcp: fcp ? fcp.startTime : 0,
-        lcp: lcp ? lcp.startTime : 0,
+//         fcp: fcp ? fcp.startTime : 0,
+//         lcp: lcp ? lcp.startTime : 0,
         fid: 0, // Would need PerformanceObserver
         cls: 0, // Would need PerformanceObserver
-        ttfb: navigation.responseStart - navigation.requestStart,
-        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+//         ttfb: navigation.responseStart - navigation.requestStart,
+//         loadTime: navigation.loadEventEnd - navigation.loadEventStart,
       };
 
       setMetrics(metrics);
@@ -102,13 +102,13 @@ const PerformanceEnhancer: React.FC = () => {
 
   return (
     <div className="fixed bottom-4 right-4 z-50">
-      <button
+//       <button
         onClick={() => setIsVisible(!isVisible)}
         className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
         aria-label="Toggle performance metrics"
-      >
+//       >
         Performance
-      </button>
+</button>
       
       {isVisible && (
         <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
@@ -117,23 +117,23 @@ const PerformanceEnhancer: React.FC = () => {
             <div className="flex justify-between">
               <span className="text-gray-600">FCP:</span>
               <span className="font-mono">{metrics.fcp.toFixed(2)}ms</span>
-            </div>
+</div>
             <div className="flex justify-between">
               <span className="text-gray-600">LCP:</span>
               <span className="font-mono">{metrics.lcp.toFixed(2)}ms</span>
-            </div>
+</div>
             <div className="flex justify-between">
               <span className="text-gray-600">TTFB:</span>
               <span className="font-mono">{metrics.ttfb.toFixed(2)}ms</span>
-            </div>
+</div>
             <div className="flex justify-between">
               <span className="text-gray-600">Load Time:</span>
               <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       )}
-    </div>
+</div>
   );
 };
 

@@ -1,24 +1,23 @@
 import { Star } from 'lucide-react';
-import { Monitor } from 'lucide-react';
 
 
 interface PerformanceMetrics {
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  firstInputDelay: number
+//   loadTime: number
+//   firstContentfulPaint: number
+//   largestContentfulPaint: number
+//   firstInputDelay: number
   cumulativeLayoutShift: number
-  timeToInteractive: number
+//   timeToInteractive: number
 }
 
 export const usePerformanceMonitor = () => {
   const metricsRef = useRef<PerformanceMetrics>({
-    loadTime: 0,
-    firstContentfulPaint: 0,
-    largestContentfulPaint: 0,
-    firstInputDelay: 0,
+//     loadTime: 0,
+//     firstContentfulPaint: 0,
+//     largestContentfulPaint: 0,
+//     firstInputDelay: 0,
     cumulativeLayoutShift: 0,
-    timeToInteractive: 0
+//     timeToInteractive: 0
   })
 
   useEffect(() => {
@@ -91,12 +90,12 @@ export const usePerformanceMonitor = () => {
         // Send to analytics service
         if (typeof window !== 'undefined' && (window as any).gtag) {
           (window as any).gtag('event', 'performance_metrics', {
-            load_time: metricsRef.current.loadTime,
-            first_contentful_paint: metricsRef.current.firstContentfulPaint,
-            largest_contentful_paint: metricsRef.current.largestContentfulPaint,
-            first_input_delay: metricsRef.current.firstInputDelay,
+//             load_time: metricsRef.current.loadTime,
+//             first_contentful_paint: metricsRef.current.firstContentfulPaint,
+//             largest_contentful_paint: metricsRef.current.largestContentfulPaint,
+//             first_input_delay: metricsRef.current.firstInputDelay,
             cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift,
-            time_to_interactive: metricsRef.current.timeToInteractive
+//             time_to_interactive: metricsRef.current.timeToInteractive
           })
         }
       }

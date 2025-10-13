@@ -1,11 +1,10 @@
 import fs from "fs";
-import path from "path";
 import { glob } from "glob";
 
 async function fixComplexJSXStructure() {
   // Find all problematic files
   const files = await glob("app/**/*.{ts,tsx}", {
-    ignore: ["node_modules/**", "dist/**", ".next/**"],
+//     ignore: ["node_modules/**", "dist/**", ".next/**"],
   });
 
   let fixedFiles = 0;
@@ -19,13 +18,13 @@ async function fixComplexJSXStructure() {
       // Fix malformed JSX fragments and elements
       content = content.replace(
         /<>\s*<div([^>]*?)>\s*<Helmet([^>]*?)>\s*<title>([^<]*?)<\/title>\s*<meta([^>]*?)>\s*<\/Helmet>\s*<div([^>]*?)>\s*<h1([^>]*?)>([^<]*?)<\/h1>\s*<p([^>]*?)>([^<]*?)<\/p>\s*<\/div>\s*<\/div>\s*<>/g,
-        "<div$1><Helmet$2><title>$3</title><meta$4></Helmet><div$5><h1$6>$7</h1><p$8>$9</p></div></div>",
+//         "<div$1><Helmet$2><title>$3</title><meta$4></Helmet><div$5><h1$6>$7</h1><p$8>$9</p></div></div>",
       );
 
       // Fix broken div structures
       content = content.replace(
         /<div([^>]*?)>\s*<div([^>]*?)>\s*<h1([^>]*?)>([^<]*?)<\/h1>\s*<p([^>]*?)>([^<]*?)<\/p>\s*<\/div>\s*<\/div>\s*$/gm,
-        "<div$1><div$2><h1$3>$4</h1><p$5>$6</p></div></div>",
+//         "<div$1><div$2><h1$3>$4</h1><p$5>$6</p></div></div>",
       );
 
       // Fix malformed className attributes with missing spaces
@@ -39,13 +38,13 @@ async function fixComplexJSXStructure() {
       // Fix broken JSX expressions
       content = content.replace(
         /(\s*)(<[^>]+>\s*<[^>]+>\s*<[^>]+>)\s*$/gm,
-        "$1<div>$2</div>",
+//         "$1<div>$2</div>",
       );
 
       // Fix missing closing tags for common patterns
       content = content.replace(
         /<div([^>]*?)>\s*<h1([^>]*?)>([^<]*?)<\/h1>\s*<p([^>]*?)>([^<]*?)<\/p>\s*$/gm,
-        "<div$1><h1$2>$3</h1><p$4>$5</p></div>",
+//         "<div$1><h1$2>$3</h1><p$4>$5</p></div>",
       );
 
       // Fix broken map functions

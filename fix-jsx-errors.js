@@ -1,8 +1,11 @@
-#!/usr/bin/env node
-
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+// #!/usr/bin/env node
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -24,11 +27,11 @@ function fixJSXContent(content) {
   // Fix broken closing tags
   content = content.replace(
     /<title>([^<]+)<div><div><\/title>/g,
-    "<title>$1</title>",
+//     "<title>$1</title>",
   );
   content = content.replace(
     /<meta([^>]+)><div><\/meta><\/div><\/div><\/div>/g,
-    "<meta$1 />",
+//     "<meta$1 />",
   );
   content = content.replace(/<Helmet><\/div><\/div>/g, "</Helmet>");
   content = content.replace(/<p([^>]+)><div><\/p>/g, "<p$1></p>");
@@ -36,11 +39,11 @@ function fixJSXContent(content) {
   // Fix broken Link components
   content = content.replace(
     /<Link;<\/Link><div><\/Link><\/div><\/div><\/div>/g,
-    "",
+//     "",
   );
   content = content.replace(
     /<Link([^>]*)><\/Link>/g,
-    "<Link$1>Contact Us</Link>",
+//     "<Link$1>Contact Us</Link>",
   );
   content = content.replace(/Contact Us;/g, "Contact Us");
 
@@ -66,8 +69,8 @@ function fixJSXContent(content) {
 
   // Remove orphaned closing tags
   content = content.replace(
-    /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g,
-    "</div>",
+//     /<\/div><\/div><\/div>\s*<\/div>\s*<\/div>\s*<\/div>/g,
+//     "</div>",
   );
   content = content.replace(/<\/div><\/div>\s*<\/div>\s*<\/div>/g, "</div>");
 
@@ -100,31 +103,28 @@ function fixJSXContent(content) {
 // Function to create a proper page structure
 function createProperPageStructure(pageName, title, description) {
   return `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 export default function ${pageName}() {
   return (
-    <>
-      <Helmet>
+//     <>
+//       <Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description}" />
-      </Helmet>
+//       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>
-          <Link
+//           <Link
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
+//           >
+//             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
+</Link>
+</div>
+</div>
+//     </>
   );
 }`;
 }
@@ -143,7 +143,7 @@ function processFile(filePath) {
       const pathParts = filePath.split("/");
       const fileName = pathParts[pathParts.length - 2]; // Get directory name
       const pageName =
-        fileName
+//         fileName
           .split("-")
           .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
           .join("") + "Page";
@@ -156,9 +156,9 @@ function processFile(filePath) {
       const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`;
 
       const newContent = createProperPageStructure(
-        pageName,
-        title,
-        description,
+//         pageName,
+//         title,
+//         description,
       );
       fs.writeFileSync(filePath, newContent);
       } else {

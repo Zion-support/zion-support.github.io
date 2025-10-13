@@ -13,12 +13,12 @@ interface LazyImageProps {
 }
 
 const LazyImage: React.FC<LazyImageProps> = ({
-  src,
-  alt,
+//   src,
+//   alt,
   className = '',
-  placeholder,
-  onLoad,
-  onError,
+//   placeholder,
+//   onLoad,
+//   onError,
   priority = false,
   sizes = '100vw',
   quality = 75
@@ -39,8 +39,8 @@ const LazyImage: React.FC<LazyImageProps> = ({
         }
       },
       {
-        rootMargin: '50px 0px',
-        threshold: 0.1
+//         rootMargin: '50px 0px',
+//         threshold: 0.1
       }
     );
 
@@ -69,15 +69,15 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {!isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 flex items-center justify-center">
           {placeholder ? (
-            <img
+//             <img
               src={placeholder}
               alt=""
               className="w-full h-full object-cover opacity-50"
-            />
+//             />
           ) : (
             <ImageIcon className="w-8 h-8 text-gray-400" />
           )}
-        </div>
+</div>
       )}
 
       {/* Error State */}
@@ -86,25 +86,25 @@ const LazyImage: React.FC<LazyImageProps> = ({
           <div className="text-center">
             <ImageIcon className="w-8 h-8 text-gray-400 mx-auto mb-2" />
             <p className="text-xs text-gray-500">Failed to load image</p>
-          </div>
-        </div>
+</div>
+</div>
       )}
 
       {/* Actual Image */}
       {isInView && !hasError && (
-        <img
+//         <img
           src={optimizedSrc}
           alt={alt}
           className={`w-full h-full object-cover transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+//             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           onLoad={handleLoad}
           onError={handleError}
           loading={priority ? 'eager' : 'lazy'}
           sizes={sizes}
-        />
+//         />
       )}
-    </div>
+</div>
   );
 };
 

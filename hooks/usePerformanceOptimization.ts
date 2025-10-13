@@ -46,8 +46,8 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         });
       },
       {
-        rootMargin: '50px 0px',
-        threshold: 0.01,
+//         rootMargin: '50px 0px',
+//         threshold: 0.01,
       }
     );
 
@@ -61,9 +61,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if (!enablePreloading || typeof window === 'undefined') return;
 
     const criticalResources = [
-      '/fonts/inter.woff2',
-      '/images/hero-bg.jpg',
-      '/images/logo.svg',
+//       '/fonts/inter.woff2',
+//       '/images/hero-bg.jpg',
+//       '/images/logo.svg',
     ];
 
     criticalResources.forEach((resource) => {
@@ -197,19 +197,19 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       }
     };
   }, [
-    setupLazyLoading,
-    preloadCriticalResources,
-    optimizeImages,
-    registerServiceWorker,
+//     setupLazyLoading,
+//     preloadCriticalResources,
+//     optimizeImages,
+//     registerServiceWorker,
     setupPerformanceMonitoring,
-    addResourceHints,
+//     addResourceHints,
   ]);
 
   return {
-    setupLazyLoading,
-    preloadCriticalResources,
-    optimizeImages,
-    registerServiceWorker,
+//     setupLazyLoading,
+//     preloadCriticalResources,
+//     optimizeImages,
+//     registerServiceWorker,
     setupPerformanceMonitoring,
   };
 };

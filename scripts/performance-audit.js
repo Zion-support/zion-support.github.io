@@ -1,13 +1,13 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+// #!/usr/bin/env node
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-/**
+// /**
  * Performance Audit Script
  * Analyzes the codebase for performance issues and provides recommendations
  */
@@ -34,9 +34,9 @@ function checkBundleSize() {
     if (sizeInKB > 500) {
       performanceIssues.push({
         type: 'Large Bundle',
-        file: file,
+//         file: file,
         size: `${sizeInKB.toFixed(2)} KB`,
-        severity: sizeInKB > 1000 ? 'high' : 'medium'
+//         severity: sizeInKB > 1000 ? 'high' : 'medium'
       });
     }
   });
@@ -67,9 +67,9 @@ function checkUnusedImports() {
               performanceIssues.push({
                 type: 'Potentially Unused Import',
                 file: path.relative(process.cwd(), file),
-                line: index + 1,
+//                 line: index + 1,
                 import: importName,
-                severity: 'low'
+//                 severity: 'low'
               });
             }
           });
@@ -147,13 +147,13 @@ function generateReport() {
   const report = {
     timestamp: new Date().toISOString(),
     issues: performanceIssues,
-    recommendations: recommendations,
+//     recommendations: recommendations,
     summary: {
       totalIssues: performanceIssues.length,
       highSeverity: performanceIssues.filter(issue => issue.severity === 'high').length,
       mediumSeverity: performanceIssues.filter(issue => issue.severity === 'medium').length,
       lowSeverity: performanceIssues.filter(issue => issue.severity === 'low').length,
-      totalRecommendations: recommendations.length
+//       totalRecommendations: recommendations.length
     }
   };
 

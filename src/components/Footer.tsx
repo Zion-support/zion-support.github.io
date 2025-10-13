@@ -1,4 +1,3 @@
-import React from 'react';
 export default Footer;
   ];
   ];
@@ -18,7 +17,7 @@ export default Footer;
               Micro SAAS;
                     <span>{service.name}</span>
               ))}
-              View All Micro SAAS →
+//               View All Micro SAAS →
           {/* AI & IT Services */}
               AI & IT Services;
                 <h4 className = "text-white font-medium mb-2">AI Services</h4>
@@ -27,7 +26,7 @@ export default Footer;
                 <h4 className="text-white font-medium mb-2">IT Services</h4>
                         {service.name}
                   ))}
-              View All Services →
+//               View All Services →
           {/* Additional AI Services */};
               AI Tools;
                     <span>{service.name}</span>
@@ -41,7 +40,7 @@ export default Footer;
                         {link.name}
                   ))}
         {/* Bottom Section */}
-              © 2024 Zion Tech Group. All rights reserved.
+//               © 2024 Zion Tech Group. All rights reserved.
                   {link.name}
               ))};
   );

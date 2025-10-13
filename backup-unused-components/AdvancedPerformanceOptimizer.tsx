@@ -222,12 +222,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       cleanup();
     };
   }, [
-    optimizeImages,
-    preloadCriticalResources,
-    setupCaching,
-    setupCompression,
-    optimizeMemory,
-    optimizeBundleSplitting,
+//     optimizeImages,
+//     preloadCriticalResources,
+//     setupCaching,
+//     setupCompression,
+//     optimizeMemory,
+//     optimizeBundleSplitting,
     setupPerformanceMonitoring,
   ]);
 
@@ -247,12 +247,12 @@ const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
 // Helper function to determine next likely page
 const getNextLikelyPage = (currentPath: string): string | null => {
   const likelyPages: Record<string, string> = {
-    '/': '/about',
-    '/about': '/services',
-    '/services': '/contact',
-    '/ai-services': '/ai-analytics',
-    '/micro-saas': '/zion-analytics-pro',
-    '/5g-solutions': '/5g-implementation',
+//     '/': '/about',
+//     '/about': '/services',
+//     '/services': '/contact',
+//     '/ai-services': '/ai-analytics',
+//     '/micro-saas': '/zion-analytics-pro',
+//     '/5g-solutions': '/5g-implementation',
   };
 
   return likelyPages[currentPath] || null;

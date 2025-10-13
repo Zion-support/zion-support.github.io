@@ -3,7 +3,7 @@ export default usePerformanceMonitoring;
   // const { trackPerformance } = useAnalytics();
       console.log('Performance metric:', name, value);
       // trackPerformance(name, value);
-    []
+//     []
   );
  {};
       // LCP - Largest Contentful Paint;

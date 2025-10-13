@@ -1,4 +1,5 @@
 import React from "react";
+import StructuredData from "../components/StructuredData";
 import { Helmet } from "react-helmet-async";
 
 interface SEOHeadProps {
@@ -22,32 +23,32 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   ogImage = "https://ziontechgroup.com/og-image.jpg",
   ogType = "website",
   twitterCard = "summary_large_image",
-  structuredData,
+//   structuredData,
   noindex = false,
   nofollow = false,
 }) => {
   const defaultStructuredData = {
-    "@context": "https://schema.org",
+//     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Zion Tech Group",
-    url: "https://ziontechgroup.com",
-    logo: "https://ziontechgroup.com/logo.png",
-    description: description,
+//     name: "Zion Tech Group",
+//     url: "https://ziontechgroup.com",
+//     logo: "https://ziontechgroup.com/logo.png",
+//     description: description,
     address: {
       "@type": "PostalAddress",
-      addressCountry: "US",
-      addressRegion: "Delaware",
+//       addressCountry: "US",
+//       addressRegion: "Delaware",
     },
-    sameAs: [
-      "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
-    ],
+//     sameAs: [
+//       "https://linkedin.com/company/ziontechgroup",
+//       "https://twitter.com/ziontechgroup",
+//     ],
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
-    <Helmet>
+//     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
@@ -58,10 +59,10 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:type" content={ogType} />
-      <meta
+//       <meta
         property="og:url"
         content={canonical || "https://ziontechgroup.com"}
-      />
+//       />
 
       {/* Twitter Card */}
       <meta name="twitter:card" content={twitterCard} />
@@ -76,30 +77,30 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
-      </script>
+//       </script>
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link
+//       <link
         rel="preconnect"
         href="https://fonts.gstatic.com"
         crossOrigin="anonymous"
-      />
+//       />
 
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "https://schema.org",
+//           "@context": "https://schema.org",
           "@type": "WebSite",
-          name: "Zion Tech Group",
-          url: "https://ziontechgroup.com",
+//           name: "Zion Tech Group",
+//           url: "https://ziontechgroup.com",
           potentialAction: {
             "@type": "SearchAction",
             target: "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string",
           },
         })}
-      </script>
+//       </script>
       <meta httpEquiv="X-Frame-Options" content="DENY" />
-    </Helmet>
+//     </Helmet>
   );
 };
 

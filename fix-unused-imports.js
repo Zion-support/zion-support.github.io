@@ -15,8 +15,8 @@ function removeUnusedImports(filePath) {
     // Use ESLint to fix unused imports
     try {
       execSync(`npx eslint "${filePath}" --fix --no-eslintrc --config '{"extends": ["@typescript-eslint/recommended"], "parser": "@typescript-eslint/parser", "rules": {"@typescript-eslint/no-unused-vars": "error"}}'`, { 
-        stdio: 'pipe',
-        cwd: '/workspace'
+//         stdio: 'pipe',
+//         cwd: '/workspace'
       });
       console.log(`Fixed unused imports in: ${filePath}`);
     } catch (error) {

@@ -14,15 +14,15 @@ class GlobalErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      retryCount: 0
+//       hasError: false,
+//       error: null,
+//       errorInfo: null,
+//       retryCount: 0
     };
   }
 
-          </div>
-        </div>
+</div>
+</div>
       );
     }
 

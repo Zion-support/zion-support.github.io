@@ -20,7 +20,7 @@ interface ImprovedAccessibilityProps {
 }
 
 const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
-  children,
+//   children,
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = false,
@@ -28,12 +28,12 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
   enableReducedMotion = false
 }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: enableHighContrast,
-    largeText: enableLargeText,
-    reducedMotion: enableReducedMotion,
-    screenReader: enableScreenReader,
-    keyboardNavigation: enableKeyboardNavigation,
-    focusVisible: false
+//     highContrast: enableHighContrast,
+//     largeText: enableLargeText,
+//     reducedMotion: enableReducedMotion,
+//     screenReader: enableScreenReader,
+//     keyboardNavigation: enableKeyboardNavigation,
+//     focusVisible: false
   });
 
   const [isVisible, setIsVisible] = useState(false);
@@ -150,32 +150,32 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
   };
 
   return (
-    <>
+//     <>
       {children}
       
       {/* Accessibility Toggle Button */}
-      <button
+//       <button
         onClick={() => setIsVisible(!isVisible)}
         className="fixed top-4 right-4 z-50 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-3 text-white hover:bg-slate-700/90 transition-colors"
         title="Accessibility Settings"
         aria-label="Open accessibility settings"
-      >
+//       >
         <Eye className="w-5 h-5" />
-      </button>
+</button>
 
       {/* Accessibility Panel */}
       {isVisible && (
         <div className="fixed top-16 right-4 z-50 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold">Accessibility Settings</h3>
-            <button
+//             <button
               onClick={() => setIsVisible(false)}
               className="text-gray-400 hover:text-white"
               aria-label="Close accessibility settings"
-            >
-              ×
-            </button>
-          </div>
+//             >
+//               ×
+</button>
+</div>
 
           <div className="space-y-4">
             {/* High Contrast */}
@@ -183,122 +183,122 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
               <div className="flex items-center gap-2">
                 <Eye className="w-4 h-4" />
                 <span className="text-sm">High Contrast</span>
-              </div>
-              <button
+</div>
+//               <button
                 onClick={() => toggleSetting('highContrast')}
                 className={`w-12 h-6 rounded-full transition-colors ${
-                  settings.highContrast ? 'bg-cyan-500' : 'bg-gray-600'
+//                   settings.highContrast ? 'bg-cyan-500' : 'bg-gray-600'
                 }`}
                 aria-label={`${settings.highContrast ? 'Disable' : 'Enable'} high contrast`}
-              >
-                <div
+//               >
+//                 <div
                   className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                    settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'
+//                     settings.highContrast ? 'translate-x-6' : 'translate-x-0.5'
                   }`}
-                />
-              </button>
-            </div>
+//                 />
+</button>
+</div>
 
             {/* Large Text */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Type className="w-4 h-4" />
                 <span className="text-sm">Large Text</span>
-              </div>
-              <button
+</div>
+//               <button
                 onClick={() => toggleSetting('largeText')}
                 className={`w-12 h-6 rounded-full transition-colors ${
-                  settings.largeText ? 'bg-cyan-500' : 'bg-gray-600'
+//                   settings.largeText ? 'bg-cyan-500' : 'bg-gray-600'
                 }`}
                 aria-label={`${settings.largeText ? 'Disable' : 'Enable'} large text`}
-              >
-                <div
+//               >
+//                 <div
                   className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                    settings.largeText ? 'translate-x-6' : 'translate-x-0.5'
+//                     settings.largeText ? 'translate-x-6' : 'translate-x-0.5'
                   }`}
-                />
-              </button>
-            </div>
+//                 />
+</button>
+</div>
 
             {/* Reduced Motion */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <MousePointer className="w-4 h-4" />
                 <span className="text-sm">Reduced Motion</span>
-              </div>
-              <button
+</div>
+//               <button
                 onClick={() => toggleSetting('reducedMotion')}
                 className={`w-12 h-6 rounded-full transition-colors ${
-                  settings.reducedMotion ? 'bg-cyan-500' : 'bg-gray-600'
+//                   settings.reducedMotion ? 'bg-cyan-500' : 'bg-gray-600'
                 }`}
                 aria-label={`${settings.reducedMotion ? 'Disable' : 'Enable'} reduced motion`}
-              >
-                <div
+//               >
+//                 <div
                   className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                    settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'
+//                     settings.reducedMotion ? 'translate-x-6' : 'translate-x-0.5'
                   }`}
-                />
-              </button>
-            </div>
+//                 />
+</button>
+</div>
 
             {/* Screen Reader */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 {settings.screenReader ? <Volume2 className="w-4 h-4" /> : <VolumeX className="w-4 h-4" />}
                 <span className="text-sm">Screen Reader</span>
-              </div>
-              <button
+</div>
+//               <button
                 onClick={() => toggleSetting('screenReader')}
                 className={`w-12 h-6 rounded-full transition-colors ${
-                  settings.screenReader ? 'bg-cyan-500' : 'bg-gray-600'
+//                   settings.screenReader ? 'bg-cyan-500' : 'bg-gray-600'
                 }`}
                 aria-label={`${settings.screenReader ? 'Disable' : 'Enable'} screen reader`}
-              >
-                <div
+//               >
+//                 <div
                   className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                    settings.screenReader ? 'translate-x-6' : 'translate-x-0.5'
+//                     settings.screenReader ? 'translate-x-6' : 'translate-x-0.5'
                   }`}
-                />
-              </button>
-            </div>
+//                 />
+</button>
+</div>
 
             {/* Keyboard Navigation */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Keyboard className="w-4 h-4" />
                 <span className="text-sm">Keyboard Navigation</span>
-              </div>
-              <button
+</div>
+//               <button
                 onClick={() => toggleSetting('keyboardNavigation')}
                 className={`w-12 h-6 rounded-full transition-colors ${
-                  settings.keyboardNavigation ? 'bg-cyan-500' : 'bg-gray-600'
+//                   settings.keyboardNavigation ? 'bg-cyan-500' : 'bg-gray-600'
                 }`}
                 aria-label={`${settings.keyboardNavigation ? 'Disable' : 'Enable'} keyboard navigation`}
-              >
-                <div
+//               >
+//                 <div
                   className={`w-5 h-5 bg-white rounded-full transition-transform ${
-                    settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-0.5'
+//                     settings.keyboardNavigation ? 'translate-x-6' : 'translate-x-0.5'
                   }`}
-                />
-              </button>
-            </div>
-          </div>
+//                 />
+</button>
+</div>
+</div>
 
           {/* Keyboard Shortcuts */}
           <div className="mt-6 pt-4 border-t border-white/10">
             <h4 className="text-sm font-semibold mb-2">Keyboard Shortcuts</h4>
             <div className="text-xs text-gray-400 space-y-1">
               <p>Alt + Shift + Tab: Skip to main content</p>
-              <p>Alt + Ctrl + Tab: Toggle this panel</p>
-              <p>Tab: Navigate elements</p>
-              <p>Enter/Space: Activate elements</p>
-            </div>
-          </div>
-        </div>
+<p>Alt + Ctrl + Tab: Toggle this panel</p>
+<p>Tab: Navigate elements</p>
+<p>Enter/Space: Activate elements</p>
+</div>
+</div>
+</div>
       )}
 
       {/* Skip to main content link */}
-      <a
+//       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-cyan-500 text-white px-4 py-2 rounded-lg z-50"
         onClick={(e) => {
@@ -309,9 +309,9 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
             mainContent.scrollIntoView({ behavior: 'smooth' });
           }
         }}
-      >
-        Skip to main content
-      </a>
+//       >
+//         Skip to main content
+</a>
 
       {/* Accessibility Styles */}
       <style jsx global>{`
@@ -376,7 +376,7 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
           white-space: normal;
         }
       `}</style>
-    </>
+//     </>
   );
 };
 

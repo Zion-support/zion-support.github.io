@@ -13,9 +13,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       // Preload critical resources
       const criticalResources = [
         '/fonts/inter-var.woff2',
-        '/images/hero-bg.jpg',
-        '/images/logo.svg',
-        '/icons/sprite.svg'
+//         '/images/hero-bg.jpg',
+//         '/images/logo.svg',
+//         '/icons/sprite.svg'
       ];
 
       criticalResources.forEach(resource => {
@@ -42,9 +42,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
       // Preconnect to external domains
       const externalDomains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://cdnjs.cloudflare.com'
+//         'https://fonts.googleapis.com',
+//         'https://fonts.gstatic.com',
+//         'https://cdnjs.cloudflare.com'
       ];
 
       externalDomains.forEach(domain => {
@@ -79,7 +79,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   return (
     <div className="performance-optimizer">
       {children}
-    </div>
+</div>
   );
 };
 

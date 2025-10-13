@@ -6,10 +6,10 @@ interface LogLevel {
 }
 
 const LOG_LEVELS: LogLevel = {
-  ERROR: 'error',
-  WARN: 'warn',
-  INFO: 'info',
-  DEBUG: 'debug',
+//   ERROR: 'error',
+//   WARN: 'warn',
+//   INFO: 'info',
+//   DEBUG: 'debug',
 };
 
 type LogLevelType = LogLevel[keyof LogLevel];
@@ -27,13 +27,13 @@ class Logger {
     const logMessage = `[${timestamp}] [${level.toUpperCase()}] ${message}`;
 
     switch (level) {
-      case 'error':
+//       case 'error':
         break;
-      case 'warn':
+//       case 'warn':
         break;
-      case 'info':
+//       case 'info':
         break;
-      case 'debug':
+//       case 'debug':
         break;
     }
 
@@ -49,12 +49,12 @@ class Logger {
     try {
       const logs = JSON.parse(localStorage.getItem('app-logs') || '[]');
       logs.push({
-        level,
-        message,
-        args,
+//         level,
+//         message,
+//         args,
         timestamp: new Date().toISOString(),
-        url: window.location.href,
-        userAgent: navigator.userAgent,
+//         url: window.location.href,
+//         userAgent: navigator.userAgent,
       });
       
       // Keep only the last 100 logs

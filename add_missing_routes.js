@@ -16,7 +16,7 @@ const missingPages = brokenLinks;
 const importStatements = missingPages
   .map((page) => {
     const componentName =
-      page
+//       page
         .split("-")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join("") + "Page";
@@ -28,7 +28,7 @@ const importStatements = missingPages
 const routeStatements = missingPages
   .map((page) => {
     const componentName =
-      page
+//       page
         .split("-")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join("") + "Page";
@@ -48,12 +48,12 @@ const afterRoutes = appContent.substring(routeInsertionPoint);
 const newRoutes =
   beforeRoutes +
   "\n                  {/* Auto-generated routes for existing pages */}\n" +
-  routes +
-  "\n\n                  " +
+//   routes +
+//   "\n\n                  " +
   afterRoutes;
 // Combine everything;
 const newAppContent =
-  newImports +
+//   newImports +
   afterImports.replace(
     appContent.substring(lastImportLineEnd, routeInsertionPoint),
     newRoutes.substring(lastImportLineEnd, routeInsertionPoint),
@@ -61,5 +61,5 @@ const newAppContent =
 // Write the updated App.tsx;
 fs.writeFileSync("/workspace/App.tsx", newAppContent);
 .join(", "),
-  "... and more",
+//   "... and more",
 );

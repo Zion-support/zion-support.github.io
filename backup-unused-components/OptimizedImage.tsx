@@ -13,15 +13,15 @@ interface OptimizedImageProps {
 }
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
+//   src,
+//   alt,
   className = '',
-  width,
-  height,
+//   width,
+//   height,
   priority = false,
   placeholder = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjNmNGY2Ii8+PC9zdmc+',
-  onLoad,
-  onError,
+//   onLoad,
+//   onError,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
@@ -61,35 +61,35 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const imageSrc = isInView ? src : placeholder;
 
   return (
-    <div
+//     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
       style={{ width, height }}
-    >
+//     >
       {!isLoaded && !hasError && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
           <div className="w-8 h-8 border-2 border-gray-300 border-t-cyan-500 rounded-full animate-spin"></div>
-        </div>
+</div>
       )}
       
       {hasError ? (
         <div className="absolute inset-0 bg-gray-100 flex items-center justify-center">
           <div className="text-gray-400 text-sm">Failed to load image</div>
-        </div>
+</div>
       ) : (
-        <img
+//         <img
           src={imageSrc}
           alt={alt}
           className={`transition-opacity duration-300 ${
-            isLoaded ? 'opacity-100' : 'opacity-0'
+//             isLoaded ? 'opacity-100' : 'opacity-0'
           }`}
           onLoad={handleLoad}
           onError={handleError}
           loading={priority ? 'eager' : 'lazy'}
           decoding="async"
-        />
+//         />
       )}
-    </div>
+</div>
   );
 };
 

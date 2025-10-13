@@ -1,6 +1,4 @@
 import React from 'react';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
 export default ITServicesPage;
   ];
   // Removed unused categories and services variables;
@@ -9,8 +7,8 @@ export default ITServicesPage;
   // Removed unused benefits variable;
         {/* Hero Section */}
               IT Services & Infrastructure;
-            Comprehensive IT solutions to support and optimize your business infrastructure. 
-            From cloud migration to cybersecurity, we keep your technology running smoothly.
+//             Comprehensive IT solutions to support and optimize your business infrastructure. 
+//             From cloud migration to cybersecurity, we keep your technology running smoothly.
               Get Free IT Assessment;
               (302) 464-0950;
         {/* Main Services Grid */}
@@ -32,7 +30,7 @@ export default ITServicesPage;
                       {feature}
                   ))}
                   <div className="text-lg font-bold text-cyan-400 mb-2">{service.price}</div>
-                    Learn More <ArrowRight></ArrowRight>
+//                     Learn More <ArrowRight></ArrowRight>
             ))}
         {/* Additional Services */}
           <h2 className="text-3xl font-bold text-white text-center mb-12">Additional IT Services</h2>

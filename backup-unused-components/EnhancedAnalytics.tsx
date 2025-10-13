@@ -7,7 +7,7 @@ interface EnhancedAnalyticsProps {
 }
 
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ 
-  children, 
+//   children, 
   trackingId = 'G-XXXXXXXXXX' 
 }) => {
   const location = useLocation();
@@ -30,8 +30,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         window.gtag = gtag;
         gtag('js', new Date());
         gtag('config', trackingId, {
-          page_title: document.title,
-          page_location: window.location.href,
+//           page_title: document.title,
+//           page_location: window.location.href,
         });
       }
     };
@@ -43,9 +43,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   useEffect(() => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
-        page_path: location.pathname,
-        page_title: document.title,
-        page_location: window.location.href,
+//         page_path: location.pathname,
+//         page_title: document.title,
+//         page_location: window.location.href,
       });
     }
   }, [location, trackingId]);
@@ -54,8 +54,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   const trackEvent = (eventName: string, parameters: Record<string, any> = {}) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', eventName, {
-        event_category: 'User Interaction',
-        ...parameters,
+//         event_category: 'User Interaction',
+//         ...parameters,
       });
     }
   };
@@ -63,8 +63,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   // Track service clicks
   const trackServiceClick = (serviceName: string, serviceCategory: string) => {
     trackEvent('service_click', {
-      service_name: serviceName,
-      service_category: serviceCategory,
+//       service_name: serviceName,
+//       service_category: serviceCategory,
       event_label: `${serviceCategory} - ${serviceName}`,
     });
   };
@@ -81,8 +81,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   // Track button clicks
   const trackButtonClick = (buttonName: string, buttonLocation: string) => {
     trackEvent('button_click', {
-      button_name: buttonName,
-      button_location: buttonLocation,
+//       button_name: buttonName,
+//       button_location: buttonLocation,
       event_label: `${buttonLocation} - ${buttonName}`,
     });
   };
@@ -123,8 +123,8 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       const timeOnPage = Math.round((Date.now() - startTime) / 1000);
       if (timeOnPage > 5) { // Only track if user spent more than 5 seconds
         trackEvent('time_on_page', {
-          time_seconds: timeOnPage,
-          page_path: location.pathname,
+//           time_seconds: timeOnPage,
+//           page_path: location.pathname,
         });
       }
     };
@@ -138,7 +138,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       
       if (link && link.href && !link.href.startsWith(window.location.origin)) {
         trackEvent('external_link_click', {
-          link_url: link.href,
+//           link_url: link.href,
           link_text: link.textContent?.trim() || 'Unknown',
         });
       }
@@ -160,9 +160,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         
         if (fileExtension && ['pdf', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx'].includes(fileExtension)) {
           trackEvent('file_download', {
-            file_name: fileName,
-            file_extension: fileExtension,
-            file_url: link.href,
+//             file_name: fileName,
+//             file_extension: fileExtension,
+//             file_url: link.href,
           });
         }
       }

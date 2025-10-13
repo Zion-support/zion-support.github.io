@@ -1,7 +1,7 @@
 export const Icon = ({
-  name,
+//   name,
   className = "",
-  ...props
+//   ...props
 }: {
   name: string;
   className?: string;
@@ -10,7 +10,7 @@ export const Icon = ({
   return (
     <span className={`icon ${className}`} {...props}>
       {name}
-    </span>
+</span>
   );
 };
 

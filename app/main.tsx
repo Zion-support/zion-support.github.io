@@ -1,7 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
-import "./index.css";
 import { Helmet } from 'react-helmet-async';
 
 const root = ReactDOM.createRoot(
@@ -9,11 +7,11 @@ const root = ReactDOM.createRoot(
 );
 
 root.render(
-  <React.StrictMode>
-    <HelmetProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </HelmetProvider>
-  </React.StrictMode>,
+//   <React.StrictMode>
+//     <HelmetProvider>
+//       <BrowserRouter>
+//         <App />
+//       </BrowserRouter>
+//     </HelmetProvider>
+//   </React.StrictMode>,
 );

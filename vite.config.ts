@@ -20,25 +20,25 @@ export default defineConfig({
     },
   },
   build: {
-    target: "es2020",
-    cssCodeSplit: true,
+//     target: "es2020",
+//     cssCodeSplit: true,
     modulePreload: {
-      polyfill: false,
+//       polyfill: false,
     },
     // Performance optimizations
     chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
     assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
     // Enable compression
-    reportCompressedSize: true,
+//     reportCompressedSize: true,
     // Optimize for production
     terserOptions: {
       compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        moduleSideEffects: false,
-        propertyReadSideEffects: false,
-        tryCatchDeoptimization: false,
+//         drop_console: true,
+//         drop_debugger: true,
+//         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+//         moduleSideEffects: false,
+//         propertyReadSideEffects: false,
+//         tryCatchDeoptimization: false,
       },
       output: {
         manualChunks: (id) => {
@@ -172,37 +172,37 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router': ['react-router-dom'],
-          'ui-animations': ['framer-motion'],
-          'ui-icons': ['lucide-react'],
-          'seo': ['react-helmet-async', 'gray-matter'],
-          'analytics': ['web-vitals'],
-          'charts': ['recharts'],
+//           'react-vendor': ['react', 'react-dom'],
+//           'router': ['react-router-dom'],
+//           'ui-animations': ['framer-motion'],
+//           'ui-icons': ['lucide-react'],
+//           'seo': ['react-helmet-async', 'gray-matter'],
+//           'analytics': ['web-vitals'],
+//           'charts': ['recharts'],
         },
       },
     },
   },
   server: {
-    port: 3000,
-    host: true,
-    open: true,
+//     port: 3000,
+//     host: true,
+//     open: true,
   },
   preview: {
-    port: 4173,
-    host: true,
+//     port: 4173,
+//     host: true,
   },
   optimizeDeps: {
-    include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'framer-motion',
-      'lucide-react',
-      'react-helmet-async',
-      'web-vitals',
-      'recharts',
-    ],
+//     include: [
+//       'react',
+//       'react-dom',
+//       'react-router-dom',
+//       'framer-motion',
+//       'lucide-react',
+//       'react-helmet-async',
+//       'web-vitals',
+//       'recharts',
+//     ],
   },
   define: {
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),

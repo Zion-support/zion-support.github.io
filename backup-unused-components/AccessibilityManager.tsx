@@ -10,11 +10,11 @@ interface AccessibilitySettings {
 
 const AccessibilityManager: React.FC = () => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false,
-    largeText: false,
-    reducedMotion: false,
-    focusVisible: true,
-    screenReader: false
+//     highContrast: false,
+//     largeText: false,
+//     reducedMotion: false,
+//     focusVisible: true,
+//     screenReader: false
   });
 
   useEffect(() => {
@@ -27,7 +27,7 @@ const AccessibilityManager: React.FC = () => {
     // Detect screen reader usage
     const detectScreenReader = () => {
       const isScreenReader = 
-        window.speechSynthesis ||
+//         window.speechSynthesis ||
         window.navigator.userAgent.includes('NVDA') ||
         window.navigator.userAgent.includes('JAWS') ||
         window.navigator.userAgent.includes('VoiceOver');
@@ -148,7 +148,7 @@ const AccessibilityManager: React.FC = () => {
           background: #00ff00;
         }
 
-        /* High contrast styles */
+//         /* High contrast styles */
         :global(.high-contrast) {
           --text-color: #ffffff;
           --bg-color: #000000;
@@ -160,7 +160,7 @@ const AccessibilityManager: React.FC = () => {
           background-color: var(--bg-color) !important;
         }
 
-        /* Large text styles */
+//         /* Large text styles */
         :global(.large-text) {
           font-size: 1.2em;
         }
@@ -177,20 +177,20 @@ const AccessibilityManager: React.FC = () => {
           font-size: 1.75em;
         }
 
-        /* Reduced motion styles */
+//         /* Reduced motion styles */
         :global(.reduced-motion) * {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
         }
 
-        /* Focus visible styles */
+//         /* Focus visible styles */
         :global(.focus-visible) *:focus {
           outline: 2px solid #00ffff !important;
           outline-offset: 2px !important;
         }
 
-        /* Screen reader styles */
+//         /* Screen reader styles */
         :global(.screen-reader) .sr-only {
           position: absolute;
           width: 1px;
@@ -204,52 +204,52 @@ const AccessibilityManager: React.FC = () => {
         }
       `}</style>
       
-      <h3>Accessibility Options</h3>
+<h3>Accessibility Options</h3>
       
       <div className="accessibility-toggle">
-        <span>High Contrast</span>
-        <button 
+<span>High Contrast</span>
+//         <button 
           className={settings.highContrast ? 'active' : ''}
           onClick={() => toggleSetting('highContrast')}
           aria-pressed={settings.highContrast}
-        >
+//         >
           {settings.highContrast ? 'ON' : 'OFF'}
-        </button>
-      </div>
+</button>
+</div>
       
       <div className="accessibility-toggle">
-        <span>Large Text</span>
-        <button 
+<span>Large Text</span>
+//         <button 
           className={settings.largeText ? 'active' : ''}
           onClick={() => toggleSetting('largeText')}
           aria-pressed={settings.largeText}
-        >
+//         >
           {settings.largeText ? 'ON' : 'OFF'}
-        </button>
-      </div>
+</button>
+</div>
       
       <div className="accessibility-toggle">
-        <span>Reduced Motion</span>
-        <button 
+<span>Reduced Motion</span>
+//         <button 
           className={settings.reducedMotion ? 'active' : ''}
           onClick={() => toggleSetting('reducedMotion')}
           aria-pressed={settings.reducedMotion}
-        >
+//         >
           {settings.reducedMotion ? 'ON' : 'OFF'}
-        </button>
-      </div>
+</button>
+</div>
       
       <div className="accessibility-toggle">
-        <span>Focus Indicators</span>
-        <button 
+<span>Focus Indicators</span>
+//         <button 
           className={settings.focusVisible ? 'active' : ''}
           onClick={() => toggleSetting('focusVisible')}
           aria-pressed={settings.focusVisible}
-        >
+//         >
           {settings.focusVisible ? 'ON' : 'OFF'}
-        </button>
-      </div>
-    </div>
+</button>
+</div>
+</div>
   );
 };
 

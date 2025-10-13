@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { Helmet } from 'react-helmet-async'
 import Layout from '../layout'
 export default ${pageName}Page`;
 // Find all page.tsx files that might be broken;
@@ -32,31 +31,31 @@ function isBrokenPage(filePath) {
   } catch (error) {
     return true;
 // Template for a basic page;
- `import React from 'react'
+//  `import React from 'react'
   return (
-    <div>Content</div>
+<div>Content</div>
   );
                 ${title}
               ${description}
               <h3 className = "text-xl font-semibold text-white mb-4">Feature 1</h3>
-                Description of the first key feature or service.
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
+//                 Description of the first key feature or service.
+//                 <li>• Benefit 1</li>
+//                 <li>• Benefit 2</li>
+//                 <li>• Benefit 3</li>
+//                 <li>• Benefit 4</li>
               <h3 className="text-xl font-semibold text-white mb-4">Feature 2</h3>
-                Description of the second key feature or service.
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
+//                 Description of the second key feature or service.
+//                 <li>• Benefit 1</li>
+//                 <li>• Benefit 2</li>
+//                 <li>• Benefit 3</li>
+//                 <li>• Benefit 4</li>
               <h3 className="text-xl font-semibold text-white mb-4">Feature 3</h3>
-                Description of the third key feature or service.
-                <li>• Benefit 1</li>
-                <li>• Benefit 2</li>
-                <li>• Benefit 3</li>
-                <li>• Benefit 4</li>
-  )
+//                 Description of the third key feature or service.
+//                 <li>• Benefit 1</li>
+//                 <li>• Benefit 2</li>
+//                 <li>• Benefit 3</li>
+//                 <li>• Benefit 4</li>
+//   )
 
 // Generate page configuration from file path;
 function generatePageConfig(filePath) {
@@ -65,7 +64,7 @@ const pageName = relativePath.split('/').pop();
     word.charAt(0).toUpperCase() + word.slice(1)
   ).join(' ');
   return {
-    title,
+//     title,
     description: `Professional ${title.toLowerCase()} services and solutions by Zion Tech Group.`,
     keywords: `${title.toLowerCase()}, services, solutions, technology, Zion Tech Group`
   };

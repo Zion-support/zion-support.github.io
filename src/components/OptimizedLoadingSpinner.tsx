@@ -13,15 +13,15 @@ export default OptimizedLoadingSpinner;
     );
     );
           );
-        case 'pulse':
+//         case 'pulse':
           );
         case 'skeleton':
   );
-        case 'bars':
+//         case 'bars':
               ))}
   );
-        case 'spinner':
-        default:
+//         case 'spinner':
+//         default:
           );
     }, [size, variant, color, sizeClasses, colorClasses, baseClasses]);
       return `${baseClasses} ${fullScreen ? fullScreenClasses : ''} ${className}`;

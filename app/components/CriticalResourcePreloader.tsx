@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-'use client'
+// 'use client'
 
 const CriticalResourcePreloader = () => {
   useEffect(() => {
@@ -9,35 +9,35 @@ const CriticalResourcePreloader = () => {
       const criticalFonts = [
         {
           href: 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap',
-          as: 'style',
-          crossorigin: 'anonymous'
+//           as: 'style',
+//           crossorigin: 'anonymous'
         },
         {
-          href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2',
-          as: 'font',
+//           href: 'https://fonts.gstatic.com/s/inter/v12/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2',
+//           as: 'font',
           type: 'font/woff2',
-          crossorigin: 'anonymous'
+//           crossorigin: 'anonymous'
         }
-      ]
+//       ]
 
       // Critical CSS
       const criticalCSS = [
-        '/styles/critical.css',
-        '/styles/animations.css'
-      ]
+//         '/styles/critical.css',
+//         '/styles/animations.css'
+//       ]
 
       // Critical JavaScript
       const criticalJS = [
         '/scripts/performance.js',
-        '/scripts/analytics.js'
-      ]
+//         '/scripts/analytics.js'
+//       ]
 
       // Critical images
       const criticalImages = [
-        '/images/logo.svg',
-        '/images/hero-bg.webp',
-        '/images/cta-bg.webp'
-      ]
+//         '/images/logo.svg',
+//         '/images/hero-bg.webp',
+//         '/images/cta-bg.webp'
+//       ]
 
       // Preload fonts
       criticalFonts.forEach(font => {
@@ -81,12 +81,12 @@ const CriticalResourcePreloader = () => {
     // Preconnect to external domains
     const preconnectDomains = () => {
       const domains = [
-        'https://fonts.googleapis.com',
-        'https://fonts.gstatic.com',
-        'https://www.google-analytics.com',
+//         'https://fonts.googleapis.com',
+//         'https://fonts.gstatic.com',
+//         'https://www.google-analytics.com',
         'https://www.googletagmanager.com',
-        'https://cdn.jsdelivr.net'
-      ]
+//         'https://cdn.jsdelivr.net'
+//       ]
 
       domains.forEach(domain => {
         const link = document.createElement('link')
@@ -100,10 +100,10 @@ const CriticalResourcePreloader = () => {
     // DNS prefetch for additional domains
     const dnsPrefetchDomains = () => {
       const domains = [
-        'https://api.ziontechgroup.com',
-        'https://cdn.ziontechgroup.com',
-        'https://analytics.ziontechgroup.com'
-      ]
+//         'https://api.ziontechgroup.com',
+//         'https://cdn.ziontechgroup.com',
+//         'https://analytics.ziontechgroup.com'
+//       ]
 
       domains.forEach(domain => {
         const link = document.createElement('link')

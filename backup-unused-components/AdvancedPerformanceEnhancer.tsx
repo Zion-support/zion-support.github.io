@@ -87,8 +87,8 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
       headers.set('Accept-Encoding', 'gzip, deflate, br');
       
       return originalFetch(input, {
-        ...init,
-        headers
+//         ...init,
+//         headers
       });
     };
   }, [enableCompression]);
@@ -109,8 +109,8 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
         }
       });
     }, {
-      rootMargin: '50px 0px',
-      threshold: 0.01
+//       rootMargin: '50px 0px',
+//       threshold: 0.01
     });
 
     // Observe all images with data-src
@@ -124,9 +124,9 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
   const addResourceHints = useCallback(() => {
     // DNS prefetch for external domains
     const domains = [
-      'fonts.googleapis.com',
-      'fonts.gstatic.com',
-      'www.google-analytics.com',
+//       'fonts.googleapis.com',
+//       'fonts.gstatic.com',
+//       'www.google-analytics.com',
       'www.googletagmanager.com'
     ];
 
@@ -139,8 +139,8 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
 
     // Preconnect to critical domains
     const criticalDomains = [
-      'fonts.googleapis.com',
-      'fonts.gstatic.com'
+//       'fonts.googleapis.com',
+//       'fonts.gstatic.com'
     ];
 
     criticalDomains.forEach((domain) => {
@@ -200,12 +200,12 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
       clearTimeout(timer);
     };
   }, [
-    optimizeImages,
-    preloadCriticalResources,
-    setupCaching,
-    setupCompression,
-    setupIntersectionObserver,
-    addResourceHints,
+//     optimizeImages,
+//     preloadCriticalResources,
+//     setupCaching,
+//     setupCompression,
+//     setupIntersectionObserver,
+//     addResourceHints,
     setupPerformanceMonitoring
   ]);
 
@@ -216,8 +216,8 @@ const AdvancedPerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({
     });
 
     observer.observe(document.body, {
-      childList: true,
-      subtree: true
+//       childList: true,
+//       subtree: true
     });
 
     return () => observer.disconnect();

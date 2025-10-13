@@ -1,23 +1,17 @@
-import React from "react";
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Code } from 'lucide-react';
-=======
 import { Code } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function ZionAICodeReviewer() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>ZionAICodeReviewer - Coming Soon | Zion Tech Group</title>
+//       <Helmet>
+//         <title>ZionAICodeReviewer - Coming Soon | Zion Tech Group</title>
         <meta name="description" content="AI-powered service coming soon." />
-      </Helmet>
+//       </Helmet>
       <div className="text-center">
         <h1 className="text-4xl font-bold text-white mb-4">ZionAICodeReviewer</h1>
         <p className="text-xl text-gray-300">Coming Soon</p>
-      </div>
-    </div>
+</div>
+</div>
   );
 }

@@ -1,15 +1,14 @@
 import fs from 'fs';
 import path from 'path';
-import React from 'react';
 export default ${componentName};`;
 // List of pages that need to be fixed;
 const pagesToFix = [
-  'cookies', 'privacy', 'terms', 'consultation', 'pricing', 'blog', 
+//   'cookies', 'privacy', 'terms', 'consultation', 'pricing', 'blog', 
   'case-studies', 'careers', 'ai-services', 'it-services', 'micro-saas';
 ];
  `'use client';
   return (
-    <div>Content</div>
+<div>Content</div>
   );
         <title>${title} - Zion Tech Group</title>
                 ${title}

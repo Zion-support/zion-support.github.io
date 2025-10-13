@@ -1,6 +1,5 @@
-"use client";
 import { useEffect, useCallback } from "react";
-import logger from "../../utils/logger";
+"use client";
 
 // Performance metrics interface for future use
 // interface PerformanceMetrics {
@@ -127,9 +126,9 @@ export default function EnhancedPerformanceOptimizer() {
           if (entry.entryType === "navigation") {
             const navEntry = entry as PerformanceNavigationTiming;
             logger.info("Navigation timing:", {
-              domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
+//               domContentLoaded: navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart,
               loadComplete: navEntry.loadEventEnd - navEntry.loadEventStart,
-              totalTime: navEntry.loadEventEnd - navEntry.fetchStart,
+//               totalTime: navEntry.loadEventEnd - navEntry.fetchStart,
             });
           }
         });
@@ -151,7 +150,7 @@ export default function EnhancedPerformanceOptimizer() {
 
   const setupServiceWorker = useCallback(() => {
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
+//       navigator.serviceWorker
         .register("/sw.js")
         .then((registration) => {
           logger.info("Service Worker registered:", registration);
@@ -189,13 +188,13 @@ export default function EnhancedPerformanceOptimizer() {
       // Cleanup if needed
     };
   }, [
-    preloadCriticalResources,
-    optimizeImages,
-    optimizeFonts,
-    deferNonCriticalScripts,
+//     preloadCriticalResources,
+//     optimizeImages,
+//     optimizeFonts,
+//     deferNonCriticalScripts,
     setupPerformanceMonitoring,
-    optimizeBundleLoading,
-    setupServiceWorker,
+//     optimizeBundleLoading,
+//     setupServiceWorker,
   ]);
 
   return null;

@@ -11,8 +11,8 @@ export default UltimateBusinessIntelligence2025Banner;
   if (!isVisible) return null;
       {/* Animated Background Effects */}
         <div className = "absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-        ></div>
-        ></div>
+//         ></div>
+//         ></div>
         {/* Header */}
             <span className="text-2xl">🚀</span>;
               BREAKING: ULTIMATE BUSINESS INTELLIGENCE REVOLUTION 2025;
@@ -34,7 +34,7 @@ export default UltimateBusinessIntelligence2025Banner;
                 <span>Read {currentContent.type}</span>
                 <span className="group-hover:translate-x-1 transition-transform">→</span>
                 <span className="text-xl">📞</span>
-                <span>Call +1 302 464 0950</span>
+<span>Call +1 302 464 0950</span>
           {/* Slide Indicators */}
  setCurrentSlide(index)}
                   index === currentSlide ? 'bg-cyan-400' : 'bg-white/30'

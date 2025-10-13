@@ -1,11 +1,10 @@
 import fs from "fs";
-import path from "path";
 import { glob } from "glob";
 
 async function fixRemainingErrors() {
   // Find all problematic files
   const files = await glob("app/**/*.{ts,tsx}", {
-    ignore: ["node_modules/**", "dist/**", ".next/**"],
+//     ignore: ["node_modules/**", "dist/**", ".next/**"],
   });
 
   let fixedFiles = 0;
@@ -35,14 +34,14 @@ async function fixRemainingErrors() {
       // Fix self-closing tags that should be containers
       content = content.replace(
         /<(\w+)([^>]*?)\s*\/\s*>\s*<\/\1>/g,
-        "<$1$2></$1>",
+//         "<$1$2></$1>",
       );
 
       // Fix missing closing tags for common elements
       content = content.replace(/<div([^>]*?)>\s*$/gm, "<div$1></div>");
       content = content.replace(
         /<section([^>]*?)>\s*$/gm,
-        "<section$1></section>",
+//         "<section$1></section>",
       );
       content = content.replace(/<h1([^>]*?)>\s*$/gm, "<h1$1></h1>");
       content = content.replace(/<h2([^>]*?)>\s*$/gm, "<h2$1></h2>");
@@ -52,7 +51,7 @@ async function fixRemainingErrors() {
       // Fix JSX expressions that need parent elements
       content = content.replace(
         /(\s*)(<[^>]+>\s*<[^>]+>\s*<[^>]+>)/gm,
-        "$1<div>$2</div>",
+//         "$1<div>$2</div>",
       );
 
       // Fix missing semicolons in import statements
@@ -77,7 +76,7 @@ async function fixRemainingErrors() {
       // Fix missing closing braces
       content = content.replace(
         /(\s*)(<[^>]+>\s*<[^>]+>\s*<[^>]+>)\s*$/gm,
-        "$1$2</div>",
+//         "$1$2</div>",
       );
 
       // Clean up any remaining syntax issues

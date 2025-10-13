@@ -1,7 +1,4 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import LoadingSpinner from '../app/components/LoadingSpinner';
 
 describe('LoadingSpinner', () => {
   it('renders with default props', () => {

@@ -1,7 +1,7 @@
-#!/usr/bin/env node
-
 import fs from "fs";
 import { glob } from "glob";
+// #!/usr/bin/env node
+
 
 function fixUnusedImports(filePath) {
   let content = fs.readFileSync(filePath, "utf8");

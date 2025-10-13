@@ -8,7 +8,7 @@
     const paintEntries = performance.getEntriesByType('paint');
       loadTime: navigation;
         ? navigation.loadEventEnd - navigation.loadEventStart;
-      firstContentfulPaint:
+//       firstContentfulPaint:
  entry.name = == 'first-contentful-paint');
       firstInputDelay: 0;
     };

@@ -1,5 +1,5 @@
 export default RateLimiter;
-/**
+// /**
  * Rate Limiting Middleware;
  * Prevents abuse by limiting the number of requests from a single IP;
  * @module rateLimiter;
@@ -11,7 +11,7 @@ export default RateLimiter;
   skipFailedRequests?: boolean;
   count: number;
   resetTime: number;
-/**
+// /**
  * Simple in-memory rate limiter;
  * For production, use Redis or similar distributed storage;
  */
@@ -21,7 +21,7 @@ export default RateLimiter;
     };
     // Cleanup old entries every minute;
  this.cleanup(), 60000);
-  /**
+//   /**
    * Check if request is allowed;
    * @param identifier - Unique identifier (e.g., IP address)
    * @returns Whether the request is allowed;
@@ -35,15 +35,15 @@ const record = this.requests.get(identifier);
     // Increment count;
     if (record.count;
         this.requests.delete(key);
-  /**
+//   /**
    * Get current stats;
    */
     return { totalTracked: this.requests.size };
-/**
+// /**
  * Pre-configured rate limiters for common use cases;
  */
 };
-/**
+// /**
  * Get client identifier from request;
  * @param request - Request object;
  * @returns Client identifier (IP address or, user, ID)
@@ -58,7 +58,7 @@ const cfConnectingIp = headers.get('cf-connecting-ip');
   if (forwardedFor) return forwardedFor.split(',')[0].trim();
   // Fallback to a default identifier;
   return 'unknown';
-/**
+// /**
  * Create rate limit middleware;
  * @param limiter - Rate limiter instance;
  * @returns Middleware function;

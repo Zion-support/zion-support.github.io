@@ -332,60 +332,60 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
       <h3 className="text-sm font-semibold text-gray-700 mb-3">Accessibility</h3>
       <div className="space-y-2">
         {enableHighContrast && (
-          <button
+//           <button
             onClick={toggleHighContrast}
             className={`w-full px-3 py-1 text-xs rounded ${
-              isHighContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
+//               isHighContrast ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
             }`}
             aria-label={`${isHighContrast ? 'Disable' : 'Enable'} high contrast mode`}
-          >
-            High Contrast
-          </button>
+//           >
+//             High Contrast
+</button>
         )}
         
         <div className="flex items-center space-x-2">
-          <button
+//           <button
             onClick={() => adjustFontSize(-2)}
             className="px-2 py-1 text-xs bg-gray-200 text-gray-700 rounded"
             aria-label="Decrease font size"
-          >
-            A-
-          </button>
+//           >
+//             A-
+</button>
           <span className="text-xs text-gray-600">{fontSize}px</span>
-          <button
+//           <button
             onClick={() => adjustFontSize(2)}
             className="px-2 py-1 text-xs bg-gray-200 text-gray-700 rounded"
             aria-label="Increase font size"
-          >
-            A+
-          </button>
-        </div>
+//           >
+//             A+
+</button>
+</div>
         
         {enableReducedMotion && (
-          <button
+//           <button
             onClick={toggleReducedMotion}
             className={`w-full px-3 py-1 text-xs rounded ${
-              isReducedMotion ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
+//               isReducedMotion ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'
             }`}
             aria-label={`${isReducedMotion ? 'Disable' : 'Enable'} reduced motion`}
-          >
-            Reduced Motion
-          </button>
+//           >
+//             Reduced Motion
+</button>
         )}
         
         {enableVoiceNavigation && (
-          <button
+//           <button
             onClick={toggleVoiceNavigation}
             className={`w-full px-3 py-1 text-xs rounded ${
-              isVoiceNavigationActive ? 'bg-green-600 text-white' : 'bg-gray-200 text-gray-700'
+//               isVoiceNavigationActive ? 'bg-green-600 text-white' : 'bg-gray-200 text-gray-700'
             }`}
             aria-label={`${isVoiceNavigationActive ? 'Stop' : 'Start'} voice navigation`}
-          >
+//           >
             {isVoiceNavigationActive ? 'Stop Voice' : 'Voice Nav'}
-          </button>
+</button>
         )}
-      </div>
-    </div>
+</div>
+</div>
   );
 
   return <AccessibilityControls />;

@@ -14,10 +14,10 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   fullScreen = false
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-6 h-6',
-    lg: 'w-8 h-8',
-    xl: 'w-12 h-12'
+//     sm: 'w-4 h-4',
+//     md: 'w-6 h-6',
+//     lg: 'w-8 h-8',
+//     xl: 'w-12 h-12'
   };
 
   const spinner = (
@@ -26,7 +26,7 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       {text && (
         <p className="mt-2 text-sm text-gray-400 animate-pulse">{text}</p>
       )}
-    </div>
+</div>
   );
 
   if (fullScreen) {
@@ -34,8 +34,8 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
       <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
         <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
           {spinner}
-        </div>
-      </div>
+</div>
+</div>
     );
   }
 

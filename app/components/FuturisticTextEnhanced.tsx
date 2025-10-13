@@ -1,4 +1,5 @@
 import React from 'react';
+import FuturisticText from "../components/FuturisticText";
 
 interface FuturisticTextEnhancedProps {
   children: React.ReactNode;
@@ -15,7 +16,7 @@ interface FuturisticTextEnhancedProps {
 }
 
 const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
-  children,
+//   children,
   variant = 'body',
   size = 'md',
   color = 'white',
@@ -28,42 +29,42 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
   duration = 0.6
 }) => {
   const variantClasses = {
-    heading: 'font-bold',
-    subheading: 'font-semibold',
-    body: 'font-normal',
-    caption: 'font-light',
-    display: 'font-black'
+//     heading: 'font-bold',
+//     subheading: 'font-semibold',
+//     body: 'font-normal',
+//     caption: 'font-light',
+//     display: 'font-black'
   };
 
   const sizeClasses = {
-    xs: 'text-xs',
-    sm: 'text-sm',
-    md: 'text-base',
-    lg: 'text-lg',
-    xl: 'text-xl',
-    '2xl': 'text-2xl',
-    '3xl': 'text-3xl',
-    '4xl': 'text-4xl',
-    '5xl': 'text-5xl',
-    '6xl': 'text-6xl'
+//     xs: 'text-xs',
+//     sm: 'text-sm',
+//     md: 'text-base',
+//     lg: 'text-lg',
+//     xl: 'text-xl',
+//     '2xl': 'text-2xl',
+//     '3xl': 'text-3xl',
+//     '4xl': 'text-4xl',
+//     '5xl': 'text-5xl',
+//     '6xl': 'text-6xl'
   };
 
   const colorClasses = {
-    primary: 'text-white',
-    secondary: 'text-gray-300',
-    accent: 'text-cyan-400',
-    muted: 'text-gray-400',
-    white: 'text-white',
-    cyan: 'text-cyan-400',
-    purple: 'text-purple-400',
-    pink: 'text-pink-400'
+//     primary: 'text-white',
+//     secondary: 'text-gray-300',
+//     accent: 'text-cyan-400',
+//     muted: 'text-gray-400',
+//     white: 'text-white',
+//     cyan: 'text-cyan-400',
+//     purple: 'text-purple-400',
+//     pink: 'text-pink-400'
   };
 
   const gradientClasses = {
-    primary: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400',
-    cyan: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-600',
-    purple: 'text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600',
-    pink: 'text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600'
+//     primary: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400',
+//     cyan: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-600',
+//     purple: 'text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600',
+//     pink: 'text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-pink-600'
   };
 
   const glowClasses = {
@@ -80,22 +81,22 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
 
   const textVariants = {
     hidden: { 
-      opacity: 0, 
-      y: 20,
-      scale: 0.95
+//       opacity: 0, 
+//       y: 20,
+//       scale: 0.95
     },
     visible: { 
-      opacity: 1, 
-      y: 0,
-      scale: 1,
+//       opacity: 1, 
+//       y: 0,
+//       scale: 1,
       transition: {
-        duration: duration,
-        delay: delay,
-        ease: [0.4, 0, 0.2, 1]
+//         duration: duration,
+//         delay: delay,
+//         ease: [0.4, 0, 0.2, 1]
       }
     },
     hover: {
-      scale: 1.05,
+//       scale: 1.05,
       transition: { duration: 0.2 }
     }
   };
@@ -132,23 +133,23 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
 
   if (animated) {
     return (
-      <motion.div
+//       <motion.div
         className={textClasses}
         variants={textVariants}
         initial="hidden"
         whileInView="visible"
         whileHover="hover"
         viewport={{ once: true, margin: "-100px" }}
-      >
+//       >
         {children}
-      </motion.div>
+//       </motion.div>
     );
   }
 
   return (
     <div className={textClasses}>
       {children}
-    </div>
+</div>
   );
 };
 

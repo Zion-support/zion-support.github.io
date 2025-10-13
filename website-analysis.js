@@ -17,11 +17,11 @@ class WebsiteAnalyzer {
     return new Promise((resolve) => {
       const urlObj = new URL(url);
       const options = {
-        hostname: urlObj.hostname,
+//         hostname: urlObj.hostname,
         port: urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
-        path: urlObj.pathname + urlObj.search,
-        method: 'HEAD',
-        timeout: 10000,
+//         path: urlObj.pathname + urlObj.search,
+//         method: 'HEAD',
+//         timeout: 10000,
         headers: {
           'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAnalyzer/1.0)'
         }
@@ -29,8 +29,8 @@ class WebsiteAnalyzer {
 
       const req = (urlObj.protocol === 'https:' ? https : http).request(options, (res) => {
         resolve({
-          url,
-          status: res.statusCode,
+//           url,
+//           status: res.statusCode,
           success: res.statusCode >= 200 && res.statusCode < 400,
           redirect: res.statusCode >= 300 && res.statusCode < 400
         });
@@ -38,20 +38,20 @@ class WebsiteAnalyzer {
 
       req.on('error', (err) => {
         resolve({
-          url,
-          status: 0,
-          success: false,
-          error: err.message
+//           url,
+//           status: 0,
+//           success: false,
+//           error: err.message
         });
       });
 
       req.on('timeout', () => {
         req.destroy();
         resolve({
-          url,
-          status: 0,
-          success: false,
-          error: 'Timeout'
+//           url,
+//           status: 0,
+//           success: false,
+//           error: 'Timeout'
         });
       });
 
@@ -97,11 +97,11 @@ class WebsiteAnalyzer {
     return new Promise((resolve) => {
       const urlObj = new URL(url);
       const options = {
-        hostname: urlObj.hostname,
+//         hostname: urlObj.hostname,
         port: urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
-        path: urlObj.pathname + urlObj.search,
-        method: 'GET',
-        timeout: 15000,
+//         path: urlObj.pathname + urlObj.search,
+//         method: 'GET',
+//         timeout: 15000,
         headers: {
           'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAnalyzer/1.0)'
         }
@@ -112,10 +112,10 @@ class WebsiteAnalyzer {
         res.on('data', chunk => data += chunk);
         res.on('end', () => {
           resolve({
-            url,
-            status: res.statusCode,
+//             url,
+//             status: res.statusCode,
             success: res.statusCode >= 200 && res.statusCode < 400,
-            content: data,
+//             content: data,
             links: this.extractLinks(data, url)
           });
         });
@@ -123,24 +123,24 @@ class WebsiteAnalyzer {
 
       req.on('error', (err) => {
         resolve({
-          url,
-          status: 0,
-          success: false,
-          error: err.message,
-          content: '',
-          links: []
+//           url,
+//           status: 0,
+//           success: false,
+//           error: err.message,
+//           content: '',
+//           links: []
         });
       });
 
       req.on('timeout', () => {
         req.destroy();
         resolve({
-          url,
-          status: 0,
-          success: false,
-          error: 'Timeout',
-          content: '',
-          links: []
+//           url,
+//           status: 0,
+//           success: false,
+//           error: 'Timeout',
+//           content: '',
+//           links: []
         });
       });
 
@@ -210,18 +210,18 @@ class WebsiteAnalyzer {
   generateReport() {
     const report = {
       summary: {
-        totalLinks: this.allLinks.size,
-        workingLinks: this.workingLinks.length,
-        brokenLinks: this.brokenLinks.length,
+//         totalLinks: this.allLinks.size,
+//         workingLinks: this.workingLinks.length,
+//         brokenLinks: this.brokenLinks.length,
         successRate: ((this.workingLinks.length / this.allLinks.size) * 100).toFixed(2) + '%'
       },
       brokenLinks: this.brokenLinks.map(link => ({
-        url: link.url,
-        status: link.status,
-        error: link.error
+//         url: link.url,
+//         status: link.status,
+//         error: link.error
       })),
-      workingLinks: this.workingLinks,
-      recommendations: []
+//       workingLinks: this.workingLinks,
+//       recommendations: []
     };
 
     // Generate recommendations

@@ -20,24 +20,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      retryCount: 0
+//       hasError: false,
+//       error: null,
+//       errorInfo: null,
+//       retryCount: 0
     };
   }
 
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
-      hasError: true,
-      error
+//       hasError: true,
+//       error
     };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error,
-      errorInfo
+//       error,
+//       errorInfo
     });
 
     // Log error to console in development
@@ -57,12 +57,12 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
     try {
       const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
+//         message: error.message,
+//         stack: error.stack,
+//         componentStack: errorInfo.componentStack,
         timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
+//         userAgent: navigator.userAgent,
+//         url: window.location.href
       };
 
       console.error('Error logged:', errorData);
@@ -74,10 +74,10 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   private handleRetry = () => {
     if (this.state.retryCount < this.maxRetries) {
       this.setState(prevState => ({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        retryCount: prevState.retryCount + 1
+//         hasError: false,
+//         error: null,
+//         errorInfo: null,
+//         retryCount: prevState.retryCount + 1
       }));
     }
   };
@@ -92,21 +92,21 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
   private handleReportError = () => {
     const errorReport = {
-      error: this.state.error?.message,
-      stack: this.state.error?.stack,
-      componentStack: this.state.errorInfo?.componentStack,
-      userAgent: navigator.userAgent,
-      url: window.location.href,
+//       error: this.state.error?.message,
+//       stack: this.state.error?.stack,
+//       componentStack: this.state.errorInfo?.componentStack,
+//       userAgent: navigator.userAgent,
+//       url: window.location.href,
       timestamp: new Date().toISOString()
     };
 
     const subject = encodeURIComponent('Error Report - Zion Tech Group Website');
     const body = encodeURIComponent(`
-Error Details:
+// Error Details:
 ${JSON.stringify(errorReport, null, 2)}
 
-Please describe what you were doing when this error occurred:
-[Your description here]
+// Please describe what you were doing when this error occurred:
+// [Your description here]
     `);
 
     window.open(`mailto:kleber@ziontechgroup.com?subject=${subject}&body=${body}`);
@@ -124,12 +124,12 @@ Please describe what you were doing when this error occurred:
             <div className="mb-6">
               <AlertTriangle className="w-16 h-16 text-red-400 mx-auto mb-4" />
               <h1 className="text-3xl font-bold text-white mb-2">
-                Oops! Something went wrong
-              </h1>
+//                 Oops! Something went wrong
+</h1>
               <p className="text-gray-300 mb-6">
                 We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-              </p>
-            </div>
+</p>
+</div>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
@@ -137,56 +137,56 @@ Please describe what you were doing when this error occurred:
                 <pre className="text-red-300 text-sm overflow-auto">
                   {this.state.error.message}
                   {this.state.error.stack && `\n\n${this.state.error.stack}`}
-                </pre>
-              </div>
+//                 </pre>
+</div>
             )}
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
               {this.state.retryCount < this.maxRetries && (
-                <button
+//                 <button
                   onClick={this.handleRetry}
                   className="flex items-center justify-center px-6 py-3 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors"
-                >
+//                 >
                   <RefreshCw className="w-5 h-5 mr-2" />
                   Try Again ({this.maxRetries - this.state.retryCount} attempts left)
-                </button>
+</button>
               )}
               
-              <button
+//               <button
                 onClick={this.handleReload}
                 className="flex items-center justify-center px-6 py-3 bg-purple-500 hover:bg-purple-600 text-white font-semibold rounded-lg transition-colors"
-              >
+//               >
                 <RefreshCw className="w-5 h-5 mr-2" />
-                Reload Page
-              </button>
+//                 Reload Page
+</button>
               
-              <button
+//               <button
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-6 py-3 bg-green-500 hover:bg-green-600 text-white font-semibold rounded-lg transition-colors"
-              >
+//               >
                 <Home className="w-5 h-5 mr-2" />
-                Go Home
-              </button>
-            </div>
+//                 Go Home
+</button>
+</div>
 
             <div className="border-t border-white/20 pt-6">
               <p className="text-gray-400 text-sm mb-4">
-                If this problem persists, please report it to our support team.
-              </p>
-              <button
+//                 If this problem persists, please report it to our support team.
+</p>
+//               <button
                 onClick={this.handleReportError}
                 className="flex items-center justify-center px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors mx-auto"
-              >
+//               >
                 <Mail className="w-5 h-5 mr-2" />
-                Report Error
-              </button>
-            </div>
+//                 Report Error
+</button>
+</div>
 
             <div className="mt-6 text-xs text-gray-500">
               Error ID: {Date.now().toString(36)}
-            </div>
-          </div>
-        </div>
+</div>
+</div>
+</div>
       );
     }
 

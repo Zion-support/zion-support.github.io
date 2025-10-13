@@ -24,10 +24,10 @@ export const useEnhancedPerformance = () => {
   };
 
   return {
-    data,
-    loading,
-    error,
-    processData,
+//     data,
+//     loading,
+//     error,
+//     processData,
   };
 };
 

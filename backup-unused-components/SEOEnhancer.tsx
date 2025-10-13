@@ -1,4 +1,5 @@
 import React from 'react';
+import StructuredData from "../components/StructuredData";
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
@@ -22,58 +23,58 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   ogImage = "https://ziontechgroup.com/og-image.jpg",
   ogType = "website",
   twitterCard = "summary_large_image",
-  structuredData,
+//   structuredData,
   noIndex = false,
   noFollow = false
 }) => {
   const defaultStructuredData = {
-    "@context": "https://schema.org",
+//     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.svg",
-    "description": description,
+//     "name": "Zion Tech Group",
+//     "url": "https://ziontechgroup.com",
+//     "logo": "https://ziontechgroup.com/logo.svg",
+//     "description": description,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
+//       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+//       "addressRegion": "DE",
+//       "postalCode": "19709",
+//       "addressCountry": "US"
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
+//       "telephone": "+1-302-464-0950",
+//       "contactType": "customer service",
+//       "email": "kleber@ziontechgroup.com"
     },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-    ],
-    "offers": [
+//     "sameAs": [
+//       "https://twitter.com/ziontechgroup",
+//       "https://linkedin.com/company/ziontechgroup"
+//     ],
+//     "offers": [
       {
         "@type": "Offer",
-        "name": "AI Solutions",
+//         "name": "AI Solutions",
         "description": "Artificial intelligence and machine learning services"
       },
       {
         "@type": "Offer", 
-        "name": "Cybersecurity",
-        "description": "Advanced cybersecurity solutions and protection"
+//         "name": "Cybersecurity",
+//         "description": "Advanced cybersecurity solutions and protection"
       },
       {
         "@type": "Offer",
-        "name": "Cloud Infrastructure", 
-        "description": "Cloud computing and infrastructure services"
+//         "name": "Cloud Infrastructure", 
+//         "description": "Cloud computing and infrastructure services"
       }
-    ]
+//     ]
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
   return (
-    <Helmet>
+//     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -129,7 +130,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(finalStructuredData)}
-      </script>
+//       </script>
       
       {/* Additional Meta Tags for Better SEO */}
       <meta name="google-site-verification" content="your-google-verification-code" />
@@ -144,7 +145,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       
       {/* Cache Control */}
       <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
-    </Helmet>
+//     </Helmet>
   );
 };
 

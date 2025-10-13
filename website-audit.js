@@ -1,6 +1,5 @@
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -14,13 +13,13 @@ class WebsiteAuditor {
     this.brokenLinks = [];
     this.missingPages = [];
     this.auditResults = {
-      totalPages: 0,
-      brokenLinks: [],
-      missingPages: [],
-      navigationIssues: [],
-      seoIssues: [],
+//       totalPages: 0,
+//       brokenLinks: [],
+//       missingPages: [],
+//       navigationIssues: [],
+//       seoIssues: [],
       performanceIssues: [],
-      accessibilityIssues: []
+//       accessibilityIssues: []
     };
   }
 
@@ -111,8 +110,8 @@ class WebsiteAuditor {
       if (link.startsWith('/') && !link.startsWith('http')) {
         if (!this.checkPageExists(link)) {
           this.auditResults.missingPages.push({
-            link,
-            foundIn: ['layout.tsx', 'page.tsx'],
+//             link,
+//             foundIn: ['layout.tsx', 'page.tsx'],
             type: 'navigation'
           });
         }
@@ -128,9 +127,9 @@ class WebsiteAuditor {
     for (const route of routes) {
       if (!existingPages.includes(route)) {
         this.auditResults.missingPages.push({
-          route,
+//           route,
           type: 'routing',
-          description: 'Route defined in App.tsx but page.tsx not found'
+//           description: 'Route defined in App.tsx but page.tsx not found'
         });
       }
     }
@@ -144,9 +143,9 @@ class WebsiteAuditor {
     for (const page of existingPages) {
       if (!routes.includes(page)) {
         this.auditResults.navigationIssues.push({
-          page,
+//           page,
           type: 'orphaned',
-          description: 'Page exists but no route defined in App.tsx'
+//           description: 'Page exists but no route defined in App.tsx'
         });
       }
     }
@@ -166,8 +165,8 @@ class WebsiteAuditor {
         if (link.startsWith('/') && !link.startsWith('http')) {
           if (!this.checkPageExists(link)) {
             this.auditResults.missingPages.push({
-              link,
-              foundIn: ['footer'],
+//               link,
+//               foundIn: ['footer'],
               type: 'footer'
             });
           }
@@ -185,7 +184,7 @@ class WebsiteAuditor {
     if (!content.includes('SEOOptimizer')) {
       this.auditResults.seoIssues.push({
         type: 'missing_seo_optimizer',
-        description: 'Home page missing SEOOptimizer component'
+//         description: 'Home page missing SEOOptimizer component'
       });
     }
     
@@ -193,7 +192,7 @@ class WebsiteAuditor {
     if (!content.includes('<h1') && !content.includes('className="text-4xl')) {
       this.auditResults.seoIssues.push({
         type: 'missing_h1',
-        description: 'Home page missing H1 tag'
+//         description: 'Home page missing H1 tag'
       });
     }
   }
@@ -221,12 +220,12 @@ class WebsiteAuditor {
       summary: {
         totalRoutes: this.extractRoutesFromApp().length,
         totalPages: this.getPagesFromAppDirectory().length,
-        brokenLinks: this.auditResults.brokenLinks.length,
-        missingPages: this.auditResults.missingPages.length,
-        navigationIssues: this.auditResults.navigationIssues.length,
-        seoIssues: this.auditResults.seoIssues.length
+//         brokenLinks: this.auditResults.brokenLinks.length,
+//         missingPages: this.auditResults.missingPages.length,
+//         navigationIssues: this.auditResults.navigationIssues.length,
+//         seoIssues: this.auditResults.seoIssues.length
       },
-      details: this.auditResults
+//       details: this.auditResults
     };
     
     // Save report

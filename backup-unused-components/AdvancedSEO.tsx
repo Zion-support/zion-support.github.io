@@ -1,4 +1,5 @@
 import React from 'react';
+import StructuredData from "../components/StructuredData";
 import { Helmet } from 'react-helmet-async';
 
 interface AdvancedSEOProps {
@@ -28,29 +29,29 @@ interface AdvancedSEOProps {
 }
 
 const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
-  title,
-  description,
-  keywords,
-  canonical,
-  ogTitle,
-  ogDescription,
-  ogImage,
-  ogUrl,
+//   title,
+//   description,
+//   keywords,
+//   canonical,
+//   ogTitle,
+//   ogDescription,
+//   ogImage,
+//   ogUrl,
   ogType = 'website',
   twitterCard = 'summary_large_image',
-  twitterTitle,
-  twitterDescription,
-  twitterImage,
-  structuredData,
+//   twitterTitle,
+//   twitterDescription,
+//   twitterImage,
+//   structuredData,
   noindex = false,
   nofollow = false,
   lang = 'en',
   author = 'Zion Tech Group',
-  publishedTime,
+//   publishedTime,
   modifiedTime,
   section = 'Technology',
   tags = [],
-  readingTime
+//   readingTime
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullOgTitle = ogTitle || fullTitle;
@@ -64,88 +65,88 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
 
   // Default structured data for organization
   const defaultStructuredData = {
-    "@context": "https://schema.org",
+//     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.svg",
+//     "name": "Zion Tech Group",
+//     "url": "https://ziontechgroup.com",
+//     "logo": "https://ziontechgroup.com/logo.svg",
     "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-    "foundingDate": "2020",
+//     "foundingDate": "2020",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
+//       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
+//       "addressRegion": "DE",
+//       "postalCode": "19709",
+//       "addressCountry": "US"
     },
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com",
-      "availableLanguage": ["English"]
+//       "telephone": "+1-302-464-0950",
+//       "contactType": "customer service",
+//       "email": "kleber@ziontechgroup.com",
+//       "availableLanguage": ["English"]
     },
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup",
-      "https://github.com/ziontechgroup"
-    ],
-    "offers": [
+//     "sameAs": [
+//       "https://twitter.com/ziontechgroup",
+//       "https://linkedin.com/company/ziontechgroup",
+//       "https://github.com/ziontechgroup"
+//     ],
+//     "offers": [
       {
         "@type": "Offer",
-        "name": "AI Solutions",
+//         "name": "AI Solutions",
         "description": "Artificial intelligence and machine learning services",
-        "category": "Technology Services"
+//         "category": "Technology Services"
       },
       {
         "@type": "Offer",
-        "name": "IT Services",
+//         "name": "IT Services",
         "description": "Information technology consulting and implementation",
-        "category": "Technology Services"
+//         "category": "Technology Services"
       },
       {
         "@type": "Offer",
-        "name": "Micro SAAS",
-        "description": "Ready-to-use software solutions",
-        "category": "Software"
+//         "name": "Micro SAAS",
+//         "description": "Ready-to-use software solutions",
+//         "category": "Software"
       }
-    ]
+//     ]
   };
 
   // Article structured data if publishedTime is provided
   const articleStructuredData = publishedTime ? {
-    "@context": "https://schema.org",
+//     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": fullTitle,
-    "description": description,
-    "image": fullOgImage,
+//     "headline": fullTitle,
+//     "description": description,
+//     "image": fullOgImage,
     "author": {
       "@type": "Organization",
-      "name": author,
-      "url": "https://ziontechgroup.com"
+//       "name": author,
+//       "url": "https://ziontechgroup.com"
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Zion Tech Group",
+//       "name": "Zion Tech Group",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://ziontechgroup.com/logo.svg"
+//         "url": "https://ziontechgroup.com/logo.svg"
       }
     },
-    "datePublished": publishedTime,
+//     "datePublished": publishedTime,
     "dateModified": modifiedTime || publishedTime,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": fullCanonical
+//       "@id": fullCanonical
     },
-    "articleSection": section,
+//     "articleSection": section,
     "keywords": tags.join(', '),
-    "wordCount": readingTime ? readingTime * 200 : undefined
+//     "wordCount": readingTime ? readingTime * 200 : undefined
   } : null;
 
   return (
-    <Helmet>
+//     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -221,37 +222,37 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       {/* Structured Data */}
       <script type="application/ld+json">
         {JSON.stringify(structuredData || defaultStructuredData)}
-      </script>
+//       </script>
 
       {/* Article structured data if applicable */}
       {articleStructuredData && (
         <script type="application/ld+json">
           {JSON.stringify(articleStructuredData)}
-        </script>
+//         </script>
       )}
 
       {/* Breadcrumb structured data */}
       <script type="application/ld+json">
         {JSON.stringify({
-          "@context": "https://schema.org",
+//           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
-          "itemListElement": [
+//           "itemListElement": [
             {
               "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://ziontechgroup.com"
+//               "position": 1,
+//               "name": "Home",
+//               "item": "https://ziontechgroup.com"
             },
             {
               "@type": "ListItem",
-              "position": 2,
-              "name": title,
-              "item": fullCanonical
+//               "position": 2,
+//               "name": title,
+//               "item": fullCanonical
             }
-          ]
+//           ]
         })}
-      </script>
-    </Helmet>
+//       </script>
+//     </Helmet>
   );
 };
 

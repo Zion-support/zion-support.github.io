@@ -4,8 +4,8 @@ import path from 'path';
 // Function to fix remaining JSX issues;
 function fixRemainingJSXIssues(content) {
   // Fix missing closing div tags - look for the pattern where we have:
-  // </Link>
-  // </div>
+</Link>
+</div>
   // );
   // }
   // But missing the outer div closing tag;

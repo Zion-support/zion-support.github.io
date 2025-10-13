@@ -1,4 +1,5 @@
 import React from 'react';
+import ResponsiveContainer from "../components/ResponsiveContainer";
 
 interface ResponsiveContainerProps {
   children: React.ReactNode;
@@ -6,13 +7,13 @@ interface ResponsiveContainerProps {
 }
 
 const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({ 
-  children, 
+//   children, 
   className = '' 
 }) => {
   return (
     <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${className}`}>
       {children}
-    </div>
+</div>
   );
 };
 

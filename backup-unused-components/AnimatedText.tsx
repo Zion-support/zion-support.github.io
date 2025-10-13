@@ -8,7 +8,7 @@ interface AnimatedTextProps {
 }
 
 const AnimatedText: React.FC<AnimatedTextProps> = ({
-  text,
+//   text,
   className = "",
   delay = 0,
   speed = 100,

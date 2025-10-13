@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from 'react';
 export default Navigation;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -34,8 +33,8 @@ export default Navigation;
                         IT Services;
                             <span>{service.name}</span>
                         ))}
-                        <span>View All Services</span>
-                        <span>Specialized Solutions</span>
+<span>View All Services</span>
+<span>Specialized Solutions</span>
               )}
               About;
               Blog;
@@ -47,21 +46,21 @@ export default Navigation;
           {/* Mobile Menu Button */}
             {isMenuOpen ? <X className="w-6 h-6" /&gt; : <Menu className="w-6 h-6" /&gt;}</X></X>
         {/* Mobile Menu */}
-                  <span>Services</span>
+<span>Services</span>
                       <h4 className = "text-cyan-400 font-semibold mb-2">Micro SAAS</h4>
                             {service.name}
                         ))}
                       <h4 className="text-cyan-400 font-semibold mb-2">AI Services</h4>
                             {service.name}
                         ))}
-                      View All Services →
+//                       View All Services →
                 )};
                 About;
                 Blog;
                 Case Studies;
                 Pricing;
                 Contact;
-                  <span>+1 302 464 0950</span>
+<span>+1 302 464 0950</span>
                   Get Started;
         )}
   );

@@ -73,7 +73,7 @@ class RouteFixer {
   // Generate import statement for a component
   generateImportStatement(route, componentName) {
     const importPath = route === '/' ? 
-      './app/page' : 
+//       './app/page' : 
       `./app${route}/page`;
     
     return `const ${componentName} = React.lazy(() => import("${importPath}"));`;

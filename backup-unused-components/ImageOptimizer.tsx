@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-import 'react-lazy-load-image-component/src/effects/blur.css';
 
 interface ImageOptimizerProps {
   src: string;
@@ -17,17 +16,17 @@ interface ImageOptimizerProps {
 }
 
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
-  src,
-  alt,
+//   src,
+//   alt,
   className = '',
-  width,
-  height,
+//   width,
+//   height,
   priority = false,
-  placeholder,
+//   placeholder,
   effect = 'blur',
   threshold = 100,
-  onLoad,
-  onError
+//   onLoad,
+//   onError
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -77,18 +76,18 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 
   if (hasError) {
     return (
-      <div 
+//       <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
-      >
+//       >
         <span className="text-gray-500 text-sm">Image failed to load</span>
-      </div>
+</div>
     );
   }
 
   if (priority) {
     return (
-      <img
+//       <img
         ref={imgRef}
         src={optimizedSrc}
         srcSet={srcSet}
@@ -100,12 +99,12 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         onError={handleError}
         loading="eager"
         decoding="async"
-      />
+//       />
     );
   }
 
   return (
-    <LazyLoadImage
+//     <LazyLoadImage
       src={optimizedSrc}
       srcSet={srcSet}
       alt={alt}
@@ -119,7 +118,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       onError={handleError}
       loading="lazy"
       decoding="async"
-    />
+//     />
   );
 };
 

@@ -34,12 +34,12 @@ function handler(req, res) {
 
   const newRequest = {
     id: Date.now().toString(),
-    name,
-    email,
-    company,
-    phone,
-    message,
-    location,
+//     name,
+//     email,
+//     company,
+//     phone,
+//     message,
+//     location,
     timestamp: new Date().toISOString(),
   };
 
@@ -51,8 +51,8 @@ function handler(req, res) {
     res.setHeader("Content-Type", "application/json");
     res.end(
       JSON.stringify({
-        success: true,
-        id: newRequest.id,
+//         success: true,
+//         id: newRequest.id,
       }),
     );
   } catch (error) {

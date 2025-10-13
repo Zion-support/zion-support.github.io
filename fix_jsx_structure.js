@@ -19,23 +19,23 @@ function fixJSXStructure(content) {
   // Fix missing closing tags for divs;
   content = content.replace(/<\/div>/g, '</div>');
   // Fix the specific structure issue where we have:
-  // <div></div>
+<div></div>
   //   <Helmet></Helmet>
   //     ...
   //   </Helmet>
-  //   <div></div>
+<div></div>
   //     ...
-  //   </div>
-  // </div>
+</div>
+</div>
   // This should be:
-  // <div></div>
+<div></div>
   //   <Helmet></Helmet>
   //     ...
   //   </Helmet>
-  //   <div></div>
+<div></div>
   //     ...
-  //   </div>
-  // </div>
+</div>
+</div>
   return content;
 // Function to process a single file;
 function processFile(filePath) {

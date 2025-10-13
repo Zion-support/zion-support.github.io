@@ -58,7 +58,7 @@ class AdvancedErrorBoundary extends Component;
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
       // Send to your error reporting service;
-          'Content-Type': 'application/json'
+//           'Content-Type': 'application/json'
         body: JSON.stringify(errorReport)
       });
         error: reportError;
@@ -75,7 +75,7 @@ class AdvancedErrorBoundary extends Component;
                   Oops! Something went wrong;
                   We&apos;re sorry, but something unexpected happened. Our team;
                   has been notified.
-                    Error Details:
+//                     Error Details:
                       <strong>Error ID:</strong> {this.state.errorId}
                       <strong>Message:</strong> {this.state.error?.message}
                         Stack Trace;
@@ -86,7 +86,7 @@ class AdvancedErrorBoundary extends Component;
                 {this.props.enableRetry &&
                   this.retryCount;
                       Try Again ({this.maxRetries - this.retryCount} attempts;
-                      left)
+//                       left)
                   )}
                   Reload Page;
                   Go to Homepage;

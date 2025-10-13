@@ -1,5 +1,5 @@
 export default useEnhancedPerformance;
-/**
+// /**
  * Enhanced Performance Hook;
  * Combines performance monitoring, error tracking, and analytics;
  */
@@ -31,14 +31,14 @@ const renderCountRef = useRef<number>(0);
       );
   });
         });
-    [component, trackErrors]
+//     [component, trackErrors]
   );
         analytics.trackCustomEvent('User Action', action, component, undefined, metadata);
-    [component, trackAnalytics]
+//     [component, trackAnalytics]
   );
       const startTime = performance.now();
 const duration = performance.now() - startTime;
- 1000 ? 'slow' : 'fast'
+//  1000 ? 'slow' : 'fast'
             );
           return duration;
       };

@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 export { fixFileContent, processFile };
 #!/usr/bin/env node;
 // Function to fix common parsing errors;

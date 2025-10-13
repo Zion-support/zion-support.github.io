@@ -1,11 +1,11 @@
-#!/usr/bin/env node
-
 import https from 'https';
 import http from 'http';
 import { JSDOM } from 'jsdom';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+// #!/usr/bin/env node
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -21,13 +21,13 @@ class WebsiteLinkAnalyzer {
     this.maxDepth = 3;
     this.currentDepth = 0;
     this.results = {
-      totalLinks: 0,
-      workingLinks: 0,
-      brokenLinks: 0,
-      missingPages: 0,
-      externalLinks: 0,
+//       totalLinks: 0,
+//       workingLinks: 0,
+//       brokenLinks: 0,
+//       missingPages: 0,
+//       externalLinks: 0,
       analysisDate: new Date().toISOString(),
-      baseUrl: this.baseUrl
+//       baseUrl: this.baseUrl
     };
   }
 
@@ -36,8 +36,8 @@ class WebsiteLinkAnalyzer {
       const protocol = url.startsWith('https:') ? https : http;
       const request = protocol.get(url, { timeout: 10000 }, (response) => {
         resolve({
-          url,
-          status: response.statusCode,
+//           url,
+//           status: response.statusCode,
           working: response.statusCode >= 200 && response.statusCode < 400,
           redirect: response.statusCode >= 300 && response.statusCode < 400
         });
@@ -45,20 +45,20 @@ class WebsiteLinkAnalyzer {
 
       request.on('error', (error) => {
         resolve({
-          url,
-          status: 'ERROR',
-          working: false,
-          error: error.message
+//           url,
+//           status: 'ERROR',
+//           working: false,
+//           error: error.message
         });
       });
 
       request.on('timeout', () => {
         request.destroy();
         resolve({
-          url,
-          status: 'TIMEOUT',
-          working: false,
-          error: 'Request timeout'
+//           url,
+//           status: 'TIMEOUT',
+//           working: false,
+//           error: 'Request timeout'
         });
       });
     });
@@ -80,10 +80,10 @@ class WebsiteLinkAnalyzer {
             try {
               const dom = new JSDOM(data);
               resolve({
-                url,
-                content: data,
-                dom: dom.window.document,
-                status: res.statusCode
+//                 url,
+//                 content: data,
+//                 dom: dom.window.document,
+//                 status: res.statusCode
               });
             } catch (error) {
               resolve(null);
@@ -117,21 +117,21 @@ class WebsiteLinkAnalyzer {
         const isExternal = !absoluteUrl.startsWith(this.baseUrl);
         
         links.push({
-          href,
-          absoluteUrl,
+//           href,
+//           absoluteUrl,
           text: link.textContent.trim(),
-          isExternal,
-          element: link.outerHTML
+//           isExternal,
+//           element: link.outerHTML
         });
       } catch (error) {
         // Invalid URL
         links.push({
-          href,
-          absoluteUrl: null,
+//           href,
+//           absoluteUrl: null,
           text: link.textContent.trim(),
-          isExternal: false,
-          error: 'Invalid URL',
-          element: link.outerHTML
+//           isExternal: false,
+//           error: 'Invalid URL',
+//           element: link.outerHTML
         });
       }
     });
@@ -150,17 +150,17 @@ class WebsiteLinkAnalyzer {
     const page = await this.fetchPage(url);
     if (!page) {
       this.brokenLinks.push({
-        url,
-        reason: 'Failed to fetch page',
-        depth: this.currentDepth
+//         url,
+//         reason: 'Failed to fetch page',
+//         depth: this.currentDepth
       });
       return;
     }
 
     this.workingLinks.push({
-      url,
-      status: page.status,
-      depth: this.currentDepth
+//       url,
+//       status: page.status,
+//       depth: this.currentDepth
     });
 
     const links = this.extractLinks(page.dom, url);
@@ -169,9 +169,9 @@ class WebsiteLinkAnalyzer {
 
       if (link.isExternal) {
         this.externalLinks.push({
-          url: link.absoluteUrl,
-          text: link.text,
-          sourcePage: url
+//           url: link.absoluteUrl,
+//           text: link.text,
+//           sourcePage: url
         });
         this.results.externalLinks++;
         continue;
@@ -179,10 +179,10 @@ class WebsiteLinkAnalyzer {
 
       if (!link.absoluteUrl) {
         this.brokenLinks.push({
-          url: link.href,
-          reason: link.error || 'Invalid URL',
-          sourcePage: url,
-          depth: this.currentDepth
+//           url: link.href,
+//           reason: link.error || 'Invalid URL',
+//           sourcePage: url,
+//           depth: this.currentDepth
         });
         this.results.brokenLinks++;
         continue;
@@ -195,10 +195,10 @@ class WebsiteLinkAnalyzer {
         if (linkResult.working) {
           this.results.workingLinks++;
           this.workingLinks.push({
-            url: link.absoluteUrl,
-            status: linkResult.status,
-            sourcePage: url,
-            depth: this.currentDepth
+//             url: link.absoluteUrl,
+//             status: linkResult.status,
+//             sourcePage: url,
+//             depth: this.currentDepth
           });
 
           // Recursively analyze if it's a new page
@@ -210,11 +210,11 @@ class WebsiteLinkAnalyzer {
         } else {
           this.results.brokenLinks++;
           this.brokenLinks.push({
-            url: link.absoluteUrl,
+//             url: link.absoluteUrl,
             reason: `HTTP ${linkResult.status}`,
-            sourcePage: url,
-            depth: this.currentDepth,
-            error: linkResult.error
+//             sourcePage: url,
+//             depth: this.currentDepth,
+//             error: linkResult.error
           });
         }
       }
@@ -223,10 +223,10 @@ class WebsiteLinkAnalyzer {
 
   async generateReport() {
     const report = {
-      ...this.results,
-      brokenLinks: this.brokenLinks,
-      workingLinks: this.workingLinks,
-      externalLinks: this.externalLinks,
+//       ...this.results,
+//       brokenLinks: this.brokenLinks,
+//       workingLinks: this.workingLinks,
+//       externalLinks: this.externalLinks,
       visitedPages: Array.from(this.visitedUrls),
       recommendations: this.generateRecommendations()
     };
@@ -252,21 +252,21 @@ class WebsiteLinkAnalyzer {
 
     if (this.brokenLinks.length > 0) {
       recommendations.push({
-        priority: 'HIGH',
-        category: 'Broken Links',
+//         priority: 'HIGH',
+//         category: 'Broken Links',
         description: `Found ${this.brokenLinks.length} broken links that need immediate attention`,
-        action: 'Fix or remove broken links to improve user experience and SEO'
+//         action: 'Fix or remove broken links to improve user experience and SEO'
       });
     }
 
     const commonBrokenPatterns = this.analyzeBrokenLinkPatterns();
     if (commonBrokenPatterns.length > 0) {
       recommendations.push({
-        priority: 'MEDIUM',
-        category: 'Link Patterns',
-        description: 'Common patterns in broken links detected',
-        patterns: commonBrokenPatterns,
-        action: 'Review and fix common link patterns'
+//         priority: 'MEDIUM',
+//         category: 'Link Patterns',
+//         description: 'Common patterns in broken links detected',
+//         patterns: commonBrokenPatterns,
+//         action: 'Review and fix common link patterns'
       });
     }
 

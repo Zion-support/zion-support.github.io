@@ -11,8 +11,8 @@ interface SEOHeadProps {
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title,
-  description,
+//   title,
+//   description,
   keywords = '',
   canonical = '',
   ogImage = '/og-image.jpg',
@@ -22,7 +22,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullCanonical = canonical || `https://ziontechgroup.com${window.location.pathname}`;
 
   return (
-    <Helmet>
+//     <Helmet>
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
@@ -45,7 +45,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-    </Helmet>
+//     </Helmet>
   );
 };
 

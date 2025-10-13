@@ -1,4 +1,5 @@
 import React, { useRef, useEffect, useState } from 'react';
+import FuturisticBackground from "../components/FuturisticBackground";
 
 const FuturisticBackgroundEnhanced = ({ children }: { children: React.ReactNode }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -256,11 +257,11 @@ const FuturisticBackgroundEnhanced = ({ children }: { children: React.ReactNode 
 
   return (
     <div className="relative min-h-screen overflow-hidden">
-      <canvas
+//       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 1 }}
-      />
+//       />
       
       {/* Additional CSS-based effects */}
       <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 2 }}>
@@ -275,12 +276,12 @@ const FuturisticBackgroundEnhanced = ({ children }: { children: React.ReactNode 
         
         {/* Scanning effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse"></div>
-      </div>
+</div>
       
       <div className="relative z-10">
         {children}
-      </div>
-    </div>
+</div>
+</div>
   );
 };
 

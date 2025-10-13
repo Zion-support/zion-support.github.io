@@ -5,7 +5,7 @@ export default useErrorMonitoring;
   // const { trackError } = useAnalytics();
       console.error('Error reported:', error, context);
       // trackError(error, context);
-    []
+//     []
   );
     // Global error handler;
       const errorEvent = event as { message: string; error?: Error };

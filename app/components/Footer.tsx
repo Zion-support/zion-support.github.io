@@ -1,45 +1,24 @@
 import React, { useMemo } from "react";
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-=======
 import { Link } from "react-router-dom";
 import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Clock, ArrowRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Code, Database, Users, Award, Star, Mic } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = useMemo(() => [
     {
-      name: "Twitter",
-      url: "https://twitter.com/ziontechgroup",
+//       name: "Twitter",
+//       url: "https://twitter.com/ziontechgroup",
       icon: <Twitter className="w-5 h-5" />,
     },
     {
-      name: "LinkedIn",
-      url: "https://linkedin.com/company/ziontechgroup",
+//       name: "LinkedIn",
+//       url: "https://linkedin.com/company/ziontechgroup",
       icon: <Linkedin className="w-5 h-5" />,
     },
     {
-      name: "GitHub",
-      url: "https://github.com/ziontechgroup",
+//       name: "GitHub",
+//       url: "https://github.com/ziontechgroup",
       icon: <Github className="w-5 h-5" />,
     },
   ], []);
@@ -104,29 +83,29 @@ const Footer = React.memo(() => {
               <div className="flex items-center space-x-2">
                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                   <Brain className="w-5 h-5 text-white" />
-                </div>
+</div>
                 <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                  Zion Tech Group
-                </span>
-              </div>
+//                   Zion Tech Group
+</span>
+</div>
               <p className="text-gray-300 mb-6 max-w-md">
                 Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.
-              </p>
+</p>
               <div className="space-y-2">
                 <div className="flex items-center space-x-2 text-gray-300">
                   <Mail className="w-4 h-4" />
-                  <span>kleber@ziontechgroup.com</span>
-                </div>
+<span>kleber@ziontechgroup.com</span>
+</div>
                 <div className="flex items-center space-x-2 text-gray-300">
                   <Phone className="w-4 h-4" />
                   <span>+1 (302) 464-0950</span>
-                </div>
+</div>
                 <div className="flex items-center space-x-2 text-gray-300">
                   <MapPin className="w-4 h-4" />
                   <span>364 E Main St STE 1008, Middletown, DE 19709</span>
-                </div>
-              </div>
-            </div>
+</div>
+</div>
+</div>
 
             {/* Services */}
             <div className="space-y-4">
@@ -134,19 +113,19 @@ const Footer = React.memo(() => {
               <ul className="space-y-3">
                 {services.map((service) => (
                   <li key={service.name}>
-                    <Link
+//                     <Link
                       to={service.path}
                       className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors group"
-                    >
+//                     >
                       <span className="mr-2 group-hover:scale-110 transition-transform duration-300">
                         {service.icon}
-                      </span>
+</span>
                       <span className="text-sm">{service.name}</span>
-                    </Link>
-                  </li>
+</Link>
+//                   </li>
                 ))}
-              </ul>
-            </div>
+//               </ul>
+</div>
 
             {/* Company */}
             <div className="space-y-4">
@@ -154,16 +133,16 @@ const Footer = React.memo(() => {
               <ul className="space-y-3">
                 {companyLinks.map((link) => (
                   <li key={link.name}>
-                    <Link
+//                     <Link
                       to={link.path}
                       className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
-                    >
+//                     >
                       {link.name}
-                    </Link>
-                  </li>
+</Link>
+//                   </li>
                 ))}
-              </ul>
-            </div>
+//               </ul>
+</div>
 
             {/* Support */}
             <div className="space-y-4">
@@ -171,16 +150,16 @@ const Footer = React.memo(() => {
               <ul className="space-y-3">
                 {supportLinks.map((link) => (
                   <li key={link.name}>
-                    <Link
+//                     <Link
                       to={link.path}
                       className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
-                    >
+//                     >
                       {link.name}
-                    </Link>
-                  </li>
+</Link>
+//                   </li>
                 ))}
-              </ul>
-            </div>
+//               </ul>
+</div>
 
             {/* Legal */}
             <div className="space-y-4">
@@ -188,17 +167,17 @@ const Footer = React.memo(() => {
               <ul className="space-y-3">
                 {legalLinks.map((link) => (
                   <li key={link.name}>
-                    <Link
+//                     <Link
                       to={link.path}
                       className="text-gray-300 hover:text-cyan-400 transition-colors text-sm"
-                    >
+//                     >
                       {link.name}
-                    </Link>
-                  </li>
+</Link>
+//                   </li>
                 ))}
-              </ul>
-            </div>
-          </div>
+//               </ul>
+</div>
+</div>
 
           {/* Stats Section */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
@@ -206,60 +185,60 @@ const Footer = React.memo(() => {
               <div key={index} className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
-                </div>
+</div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-              </div>
+</div>
             ))}
-          </div>
+</div>
 
           {/* Social Links */}
           <div className="flex justify-center space-x-6 mb-8">
             {socialLinks.map((social) => (
-              <a
+//               <a
                 key={social.name}
                 href={social.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 hover:scale-110"
                 aria-label={social.name}
-              >
+//               >
                 {social.icon}
-              </a>
+</a>
             ))}
-          </div>
+</div>
 
           {/* Bottom Footer */}
           <div className="border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 text-sm">
                 © {currentYear} Zion Tech Group. All rights reserved.
-              </p>
+</p>
               <div className="flex space-x-6 mt-4 md:mt-0">
-                <Link
+//                 <Link
                   to="/privacy"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
-                >
-                  Privacy Policy
-                </Link>
-                <Link
+//                 >
+//                   Privacy Policy
+</Link>
+//                 <Link
                   to="/terms"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
-                >
-                  Terms of Service
-                </Link>
-                <Link
+//                 >
+//                   Terms of Service
+</Link>
+//                 <Link
                   to="/cookies"
                   className="text-gray-400 hover:text-white transition-colors text-sm"
-                >
-                  Cookie Policy
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+//                 >
+//                   Cookie Policy
+</Link>
+</div>
+</div>
+</div>
+</div>
+</div>
+//     </footer>
   );
 });
 

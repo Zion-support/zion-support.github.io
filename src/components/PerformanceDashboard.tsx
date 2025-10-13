@@ -46,7 +46,7 @@ const renderTime = performance.now() - renderStart;
         <h3 className = "text-lg font-semibold text-gray-800">Performance Dashboard</h3>
  setIsVisible(false)}
           className="text-gray-500 hover:text-gray-700"
-          ×
+//           ×
           <span className="text-sm text-gray-600">Load Time:</span>;
             {metrics.loadTime.toFixed(2)}ms;
           <span className = "text-sm text-gray-600">Render Time:</span>;

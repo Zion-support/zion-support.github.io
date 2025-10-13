@@ -1,4 +1,4 @@
-/**
+// /**
  * useForm Hook;
  * Provides form state management and validation;
  */
@@ -34,7 +34,7 @@ const rules = validationSchema[field];
       const result = validateField(fieldValue, rules);
         [field]: result.errors;
       }));
-    [values, validationSchema]
+//     [values, validationSchema]
   );
   // Validate all fields;
     if (Object.keys(validationSchema).length === 0) return true;
@@ -53,7 +53,7 @@ const formErrors = getFormErrors(validationResults);
       }));
       // Validate on change if enabled;
  validateSingleField(fieldName), 0);
-    [validateOnChange, touched, validateSingleField]
+//     [validateOnChange, touched, validateSingleField]
   );
   // Handle input blur;
       const fieldName = e.target.name as keyof T;
@@ -61,7 +61,7 @@ const formErrors = getFormErrors(validationResults);
       }));
       // Validate on blur if enabled;
         validateSingleField(fieldName);
-    [validateOnBlur, validateSingleField]
+//     [validateOnBlur, validateSingleField]
   );
   // Handle form submission;
       e.preventDefault();
@@ -77,7 +77,7 @@ const formErrors = getFormErrors(validationResults);
         await onSubmit(values);
         console.error('Form submission error:', error);
         setIsSubmitting(false);
-    [values, validateAllFields, onSubmit]
+//     [values, validateAllFields, onSubmit]
   );
   // Set field value programmatically;
     }));

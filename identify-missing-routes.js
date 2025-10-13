@@ -120,16 +120,16 @@ const generateRouteElements = (routes) => {
 
 // Save the analysis to a file
 const analysis = {
-  totalPages: pages.length,
-  existingRoutes: existingRoutes.length,
-  missingRoutes: missingRoutes.length,
-  missingRoutesList: missingRoutes,
+//   totalPages: pages.length,
+//   existingRoutes: existingRoutes.length,
+//   missingRoutes: missingRoutes.length,
+//   missingRoutesList: missingRoutes,
   categorized: {
-    aiServices,
-    microSaas,
-    itServices,
-    fiveGServices,
-    otherPages
+//     aiServices,
+//     microSaas,
+//     itServices,
+//     fiveGServices,
+//     otherPages
   }
 };
 

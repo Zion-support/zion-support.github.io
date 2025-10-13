@@ -1,8 +1,11 @@
-#!/usr/bin/env node
-
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+// #!/usr/bin/env node
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,31 +13,28 @@ const __dirname = path.dirname(__filename);
 // Function to create a proper page structure
 function createProperPageStructure(pageName, title, description) {
   return `import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 export default function ${pageName}() {
   return (
-    <>
-      <Helmet>
+//     <>
+//       <Helmet>
         <title>${title} - Zion Tech Group</title>
         <meta name="description" content="${description}" />
-      </Helmet>
+//       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
           <h1 className="text-4xl font-bold text-white mb-6">${title}</h1>
           <p className="text-lg text-gray-300 mb-8">Professional ${title.toLowerCase()} services coming soon.</p>
-          <Link
+//           <Link
             to="/contact"
             className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-          >
-            Contact Us
+//           >
+//             Contact Us
             <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-        </div>
-      </div>
-    </>
+</Link>
+</div>
+</div>
+//     </>
   );
 }`;
 }
@@ -44,19 +44,19 @@ function generateValidFunctionName(dirName) {
   // Handle special cases for numbers at the start
   if (dirName.startsWith("5g-")) {
     return (
-      "FiveG" +
-      dirName
+//       "FiveG" +
+//       dirName
         .substring(3)
         .split("-")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
         .join("") +
-      "Page"
+//       "Page"
     );
   }
 
   // Handle other cases
   return (
-    dirName
+//     dirName
       .split("-")
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
       .join("") + "Page"
@@ -68,8 +68,8 @@ function generateTitle(dirName) {
   // Handle special cases
   if (dirName.startsWith("5g-")) {
     return (
-      "5G " +
-      dirName
+//       "5G " +
+//       dirName
         .substring(3)
         .split("-")
         .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
@@ -115,9 +115,9 @@ function processFile(filePath) {
 
     if (hasParsingErrors) {
       const newContent = createProperPageStructure(
-        pageName,
-        title,
-        description,
+//         pageName,
+//         title,
+//         description,
       );
       fs.writeFileSync(filePath, newContent);
       }

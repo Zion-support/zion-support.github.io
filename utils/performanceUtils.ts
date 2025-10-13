@@ -47,8 +47,8 @@ export const performanceOptimizer = {
   setupLazyLoading() {
     // Preload critical resources
     const criticalResources = [
-      '/app/styles/futuristic.css',
-      '/app/styles/futuristic-enhanced.css'
+//       '/app/styles/futuristic.css',
+//       '/app/styles/futuristic-enhanced.css'
     ];
 
     criticalResources.forEach(resource => {

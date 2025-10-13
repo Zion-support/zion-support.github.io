@@ -1,6 +1,4 @@
 import fs from 'fs'
-import path from 'path'
-import { fileURLToPath } from 'url'
 #!/usr/bin/env node;
       for (let i = 0; i;
           inConflict = false;
@@ -33,4 +31,4 @@ import { fileURLToPath } from 'url'
     return false}
 // Function to find all files that need fixing;
 const filesToFix = findFilesToFix(srcDir);`
-"`
+// "`

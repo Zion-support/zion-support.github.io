@@ -97,7 +97,7 @@ const enhancedChunking = `
 // Update vite config with enhanced chunking
 viteConfig = viteConfig.replace(
   /manualChunks: \(id\) => \{[\s\S]*?\},/,
-  enhancedChunking
+//   enhancedChunking
 );
 
 fs.writeFileSync(viteConfigPath, viteConfig);
@@ -106,12 +106,12 @@ fs.writeFileSync(viteConfigPath, viteConfig);
 const serviceWorkerContent = `
 const CACHE_NAME = 'zion-tech-v1';
 const urlsToCache = [
-  '/',
-  '/about',
-  '/contact',
-  '/services',
-  '/static/js/bundle.js',
-  '/static/css/main.css'
+//   '/',
+//   '/about',
+//   '/contact',
+//   '/services',
+//   '/static/js/bundle.js',
+//   '/static/css/main.css'
 ];
 
 self.addEventListener('install', (event) => {
@@ -130,7 +130,7 @@ self.addEventListener('fetch', (event) => {
         }
         return fetch(event.request);
       }
-    )
+//     )
   );
 });
 `;
@@ -166,28 +166,28 @@ fs.writeFileSync(path.join(__dirname, '..', 'public', 'performance.js'), perform
 
 // 4. Create enhanced PWA manifest
 const manifestContent = {
-  "name": "Zion Tech Group - AI & IT Solutions",
-  "short_name": "Zion Tech",
+//   "name": "Zion Tech Group - AI & IT Solutions",
+//   "short_name": "Zion Tech",
   "description": "Leading provider of AI-powered solutions, IT services, and digital transformation",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#00ffff",
-  "icons": [
+//   "start_url": "/",
+//   "display": "standalone",
+//   "background_color": "#0f172a",
+//   "theme_color": "#00ffff",
+//   "icons": [
     {
-      "src": "/icon-192.png",
-      "sizes": "192x192",
+//       "src": "/icon-192.png",
+//       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/icon-512.png",
-      "sizes": "512x512",
+//       "src": "/icon-512.png",
+//       "sizes": "512x512",
       "type": "image/png"
     }
-  ],
-  "categories": ["business", "productivity", "technology"],
-  "lang": "en-US",
-  "orientation": "portrait-primary"
+//   ],
+//   "categories": ["business", "productivity", "technology"],
+//   "lang": "en-US",
+//   "orientation": "portrait-primary"
 };
 
 fs.writeFileSync(

@@ -23,16 +23,16 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.',
   keywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting',
-  canonicalUrl,
-  ogTitle,
-  ogDescription,
+//   canonicalUrl,
+//   ogTitle,
+//   ogDescription,
   ogImage = '/images/og-image.jpg',
-  ogUrl,
+//   ogUrl,
   twitterCard = 'summary_large_image',
-  twitterTitle,
-  twitterDescription,
-  twitterImage,
-  structuredData,
+//   twitterTitle,
+//   twitterDescription,
+//   twitterImage,
+//   structuredData,
   noindex = false,
   nofollow = false
 }) => {
@@ -45,7 +45,7 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
   const fullOgUrl = ogUrl || canonicalUrl;
 
   return (
-    <Helmet>
+//     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -105,41 +105,41 @@ const ImprovedSEO: React.FC<ImprovedSEOProps> = ({
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}
-        </script>
+//         </script>
       )}
       
       {/* Default Organization Structured Data */}
       {!structuredData && (
         <script type="application/ld+json">
           {JSON.stringify({
-            "@context": "https://schema.org",
+//             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Zion Tech Group",
-            "url": "https://ziontechgroup.com",
-            "logo": "https://ziontechgroup.com/logo.svg",
+//             "name": "Zion Tech Group",
+//             "url": "https://ziontechgroup.com",
+//             "logo": "https://ziontechgroup.com/logo.svg",
             "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "364 E Main St STE 1008",
+//               "streetAddress": "364 E Main St STE 1008",
               "addressLocality": "Middletown",
-              "addressRegion": "DE",
-              "postalCode": "19709",
-              "addressCountry": "US"
+//               "addressRegion": "DE",
+//               "postalCode": "19709",
+//               "addressCountry": "US"
             },
             "contactPoint": {
               "@type": "ContactPoint",
-              "telephone": "+1-302-464-0950",
-              "contactType": "customer service",
-              "email": "kleber@ziontechgroup.com"
+//               "telephone": "+1-302-464-0950",
+//               "contactType": "customer service",
+//               "email": "kleber@ziontechgroup.com"
             },
-            "sameAs": [
-              "https://twitter.com/ziontechgroup",
-              "https://linkedin.com/company/ziontechgroup"
-            ]
+//             "sameAs": [
+//               "https://twitter.com/ziontechgroup",
+//               "https://linkedin.com/company/ziontechgroup"
+//             ]
           })}
-        </script>
+//         </script>
       )}
-    </Helmet>
+//     </Helmet>
   );
 };
 

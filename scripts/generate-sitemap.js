@@ -26,11 +26,11 @@ function generateSitemap() {
   const routes = getAllRoutes()
   const baseUrl = 'https://ziontechgroup.com'
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
- `
+//  `
     <loc>${baseUrl}${route}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+//     <changefreq>weekly</changefreq>
+//     <priority>0.8</priority>
   </url>`).join('')}
 </urlset>`;
   // Write to public directory;

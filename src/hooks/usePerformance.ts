@@ -21,7 +21,7 @@
                 (entry as unknown as { processingStart: number }).processingStart - entry.startTime;
         });
         observer.observe({ entryTypes: ['first-input'] });
-        domContentLoaded:
+//         domContentLoaded:
         firstInputDelay;
       };
       setMetrics(performanceData);

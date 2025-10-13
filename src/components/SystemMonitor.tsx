@@ -1,6 +1,5 @@
-import React, { useState, useEffect, useCallback } from 'react';
 export default SystemMonitor;
-/**
+// /**
  * System Monitor Component;
  * Real-time monitoring dashboard for performance, errors, and system health;
  */
@@ -169,25 +168,25 @@ const a = document.createElement('a');
       {/* Memory and Network */}
         <h3 className="text-lg font-semibold text-gray-900 mb-4">System Resources</h3>
             <h4 className="text-sm font-medium text-gray-600 mb-2">Memory Usage</h4>
-                <span>Used</span>
+<span>Used</span>
                 <span>{metrics.memory.used.toFixed(2)} MB</span>
-                <span>Total</span>
+<span>Total</span>
                 <span>{metrics.memory.total.toFixed(2)} MB</span>
-                <span>Limit</span>
+<span>Limit</span>
                 <span>{metrics.memory.limit.toFixed(2)} MB</span>
- 80 ? 'bg-red-500' :
- 60 ? 'bg-yellow-500' : 'bg-green-500'
+//  80 ? 'bg-red-500' :
+//  60 ? 'bg-yellow-500' : 'bg-green-500'
                   }`}
                   style={{ width: `${Math.min(metrics.memory.percentage, 100)}%` }}
-                ></div>
+//                 ></div>
             <h4 className="text-sm font-medium text-gray-600 mb-2">Network</h4>
-                <span>Connection</span>
+<span>Connection</span>
                 <span>{metrics.network.effectiveType}</span>
-                <span>Downlink</span>
+<span>Downlink</span>
                 <span>{metrics.network.downlink} Mbps</span>
-                <span>RTT</span>
+<span>RTT</span>
                 <span>{metrics.network.rtt} ms</span>
-                <span>Save Data</span>
+<span>Save Data</span>
                 <span>{metrics.network.saveData ? 'Yes' : 'No'}</span>
       {/* Recent Errors */}
           <h3 className="text-lg font-semibold text-gray-900 mb-4">Recent Errors</h3>

@@ -1,10 +1,10 @@
-  '/',
-  '/about',
-  '/contact',
-  '/services',
-  '/ai-services',
-  '/micro-saas',
-  '/5g-solutions',
+//   '/',
+//   '/about',
+//   '/contact',
+//   '/services',
+//   '/ai-services',
+//   '/micro-saas',
+//   '/5g-solutions',
   '/manifest.json',
 ];
 

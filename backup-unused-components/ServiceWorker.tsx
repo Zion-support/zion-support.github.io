@@ -6,7 +6,7 @@ interface ServiceWorkerProps {
 }
 
 const ServiceWorker: React.FC<ServiceWorkerProps> = ({
-  children,
+//   children,
   className = "",
 }) => {
   return <div className={className}>{children}</div>;

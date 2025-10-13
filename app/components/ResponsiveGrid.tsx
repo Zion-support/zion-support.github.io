@@ -14,16 +14,16 @@ interface ResponsiveGridProps {
 }
 
 const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
-  children,
+//   children,
   className = '',
   cols = { default: 1, sm: 2, md: 3, lg: 4 },
   gap = 'md'
 }) => {
   const gapClasses = {
-    sm: 'gap-2',
-    md: 'gap-6',
-    lg: 'gap-8',
-    xl: 'gap-12'
+//     sm: 'gap-2',
+//     md: 'gap-6',
+//     lg: 'gap-8',
+//     xl: 'gap-12'
   };
 
   const gridCols = `grid-cols-${cols.default || 1} ${
@@ -35,7 +35,7 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
   return (
     <div className={`grid ${gridCols} ${gapClasses[gap]} ${className}`}>
       {children}
-    </div>
+</div>
   );
 };
 

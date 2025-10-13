@@ -12,10 +12,10 @@ class ComprehensiveWebsiteAnalyzer {
     this.missingPages = [];
     this.allRoutes = new Set();
     this.analysisResults = {
-      brokenLinks: [],
-      workingLinks: [],
-      missingPages: [],
-      recommendations: []
+//       brokenLinks: [],
+//       workingLinks: [],
+//       missingPages: [],
+//       recommendations: []
     };
   }
 
@@ -23,11 +23,11 @@ class ComprehensiveWebsiteAnalyzer {
     return new Promise((resolve) => {
       const urlObj = new URL(url);
       const options = {
-        hostname: urlObj.hostname,
+//         hostname: urlObj.hostname,
         port: urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
-        path: urlObj.pathname + urlObj.search,
-        method: 'HEAD',
-        timeout: 10000,
+//         path: urlObj.pathname + urlObj.search,
+//         method: 'HEAD',
+//         timeout: 10000,
         headers: {
           'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAnalyzer/1.0)'
         }
@@ -35,8 +35,8 @@ class ComprehensiveWebsiteAnalyzer {
 
       const req = (urlObj.protocol === 'https:' ? https : http).request(options, (res) => {
         resolve({
-          url,
-          status: res.statusCode,
+//           url,
+//           status: res.statusCode,
           success: res.statusCode >= 200 && res.statusCode < 400,
           redirect: res.statusCode >= 300 && res.statusCode < 400
         });
@@ -44,20 +44,20 @@ class ComprehensiveWebsiteAnalyzer {
 
       req.on('error', (err) => {
         resolve({
-          url,
-          status: 0,
-          success: false,
-          error: err.message
+//           url,
+//           status: 0,
+//           success: false,
+//           error: err.message
         });
       });
 
       req.on('timeout', () => {
         req.destroy();
         resolve({
-          url,
-          status: 0,
-          success: false,
-          error: 'Timeout'
+//           url,
+//           status: 0,
+//           success: false,
+//           error: 'Timeout'
         });
       });
 
@@ -82,10 +82,10 @@ class ComprehensiveWebsiteAnalyzer {
 
       // Add common routes that might be referenced
       const commonRoutes = [
-        '/about', '/contact', '/services', '/ai-services', '/micro-saas', 
-        '/5g-solutions', '/team', '/careers', '/case-studies', '/blog',
-        '/news', '/press', '/partners', '/pricing', '/demo', '/support',
-        '/consultation', '/privacy', '/terms', '/cookies', '/sitemap'
+//         '/about', '/contact', '/services', '/ai-services', '/micro-saas', 
+//         '/5g-solutions', '/team', '/careers', '/case-studies', '/blog',
+//         '/news', '/press', '/partners', '/pricing', '/demo', '/support',
+//         '/consultation', '/privacy', '/terms', '/cookies', '/sitemap'
       ];
       
       commonRoutes.forEach(route => this.allRoutes.add(route));
@@ -104,17 +104,17 @@ class ComprehensiveWebsiteAnalyzer {
       
       if (result.success) {
         this.workingLinks.push({
-          url: fullUrl,
-          route: route,
-          status: result.status
+//           url: fullUrl,
+//           route: route,
+//           status: result.status
         });
         `);
       } else {
         this.brokenLinks.push({
-          url: fullUrl,
-          route: route,
-          status: result.status,
-          error: result.error
+//           url: fullUrl,
+//           route: route,
+//           status: result.status,
+//           error: result.error
         });
         - ${result.error || 'Not found'}`);
       }
@@ -139,18 +139,18 @@ class ComprehensiveWebsiteAnalyzer {
         
         if (result.success) {
           this.workingLinks.push({
-            url: fullUrl,
-            route: link,
-            status: result.status,
-            source: 'navigation'
+//             url: fullUrl,
+//             route: link,
+//             status: result.status,
+//             source: 'navigation'
           });
         } else {
           this.brokenLinks.push({
-            url: fullUrl,
-            route: link,
-            status: result.status,
-            error: result.error,
-            source: 'navigation'
+//             url: fullUrl,
+//             route: link,
+//             status: result.status,
+//             error: result.error,
+//             source: 'navigation'
           });
         }
       }
@@ -161,11 +161,11 @@ class ComprehensiveWebsiteAnalyzer {
     return new Promise((resolve) => {
       const urlObj = new URL(url);
       const options = {
-        hostname: urlObj.hostname,
+//         hostname: urlObj.hostname,
         port: urlObj.port || (urlObj.protocol === 'https:' ? 443 : 80),
-        path: urlObj.pathname + urlObj.search,
-        method: 'GET',
-        timeout: 15000,
+//         path: urlObj.pathname + urlObj.search,
+//         method: 'GET',
+//         timeout: 15000,
         headers: {
           'User-Agent': 'Mozilla/5.0 (compatible; WebsiteAnalyzer/1.0)'
         }
@@ -176,9 +176,9 @@ class ComprehensiveWebsiteAnalyzer {
         res.on('data', chunk => data += chunk);
         res.on('end', () => {
           resolve({
-            url,
-            status: res.statusCode,
-            content: data
+//             url,
+//             status: res.statusCode,
+//             content: data
           });
         });
       });
@@ -224,33 +224,33 @@ class ComprehensiveWebsiteAnalyzer {
 
     if (this.brokenLinks.length > 0) {
       recommendations.push({
-        priority: 'HIGH',
-        issue: 'Broken Links',
-        count: this.brokenLinks.length,
+//         priority: 'HIGH',
+//         issue: 'Broken Links',
+//         count: this.brokenLinks.length,
         description: 'Several links are returning 404 or other errors',
-        action: 'Fix broken links and create missing pages'
+//         action: 'Fix broken links and create missing pages'
       });
     }
 
     const brokenRoutes = this.brokenLinks.filter(link => link.route);
     if (brokenRoutes.length > 0) {
       recommendations.push({
-        priority: 'HIGH',
-        issue: 'Missing Pages',
-        count: brokenRoutes.length,
-        description: 'Pages referenced in navigation do not exist',
-        action: 'Create missing page components'
+//         priority: 'HIGH',
+//         issue: 'Missing Pages',
+//         count: brokenRoutes.length,
+//         description: 'Pages referenced in navigation do not exist',
+//         action: 'Create missing page components'
       });
     }
 
     const successRate = (this.workingLinks.length / (this.workingLinks.length + this.brokenLinks.length)) * 100;
     if (successRate < 90) {
       recommendations.push({
-        priority: 'MEDIUM',
-        issue: 'Low Success Rate',
+//         priority: 'MEDIUM',
+//         issue: 'Low Success Rate',
         count: successRate.toFixed(1) + '%',
-        description: 'Overall link success rate is below 90%',
-        action: 'Improve overall site reliability'
+//         description: 'Overall link success rate is below 90%',
+//         action: 'Improve overall site reliability'
       });
     }
 
@@ -260,13 +260,13 @@ class ComprehensiveWebsiteAnalyzer {
   generateReport() {
     const report = {
       summary: {
-        totalRoutes: this.allRoutes.size,
-        workingLinks: this.workingLinks.length,
-        brokenLinks: this.brokenLinks.length,
+//         totalRoutes: this.allRoutes.size,
+//         workingLinks: this.workingLinks.length,
+//         brokenLinks: this.brokenLinks.length,
         successRate: ((this.workingLinks.length / (this.workingLinks.length + this.brokenLinks.length)) * 100).toFixed(2) + '%'
       },
-      brokenLinks: this.brokenLinks,
-      workingLinks: this.workingLinks,
+//       brokenLinks: this.brokenLinks,
+//       workingLinks: this.workingLinks,
       recommendations: this.generateRecommendations(),
       timestamp: new Date().toISOString()
     };
