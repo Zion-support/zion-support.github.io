@@ -18,6 +18,7 @@ export default function Pricing() {
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
+<<<<<<< HEAD
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Basic</h3>
@@ -48,6 +49,26 @@ export default function Pricing() {
                 <li>Advanced analytics</li>
                 <li>White-label options</li>
               </ul>
+=======
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+              <p className="text-gray-600">
+                Description of the first feature.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
+              <p className="text-gray-600">
+                Description of the second feature.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+              <p className="text-gray-600">
+                Description of the third feature.
+              </p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6246
             </div>
           </div>
         </div>

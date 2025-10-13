@@ -20,14 +20,21 @@ export default function CloudInfrastructureManagement() {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-md p-6">
+<<<<<<< HEAD
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Infrastructure Monitoring</h3>
               <p className="text-gray-600">
                 Real-time monitoring and alerting for your cloud infrastructure.
+=======
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 1</h3>
+              <p className="text-gray-600">
+                Description of the first feature.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6246
               </p>
             </div>
             <div className="bg-white rounded-lg shadow-md p-6">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 2</h3>
               <p className="text-gray-600">
+<<<<<<< HEAD
                 Optimize cloud costs and resource utilization with AI-powered insights.
               </p>
             </div>
@@ -35,6 +42,15 @@ export default function CloudInfrastructureManagement() {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Security Management</h3>
               <p className="text-gray-600">
                 Comprehensive security management and compliance monitoring.
+=======
+                Description of the second feature.
+              </p>
+            </div>
+            <div className="bg-white rounded-lg shadow-md p-6">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
+              <p className="text-gray-600">
+                Description of the third feature.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6246
               </p>
             </div>
           </div>
