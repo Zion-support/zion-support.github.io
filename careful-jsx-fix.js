@@ -1,70 +1,39 @@
-import fs from 'fs';';
-import { glob } from 'glob';'
-// Very specific and safe JSX fixes;
+import fs from 'fs';'import { glob } from 'glob''// Very specific and safe JSX fixes;
 const fixes = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
+  
   // Fix corrupted closing tags
   {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     pattern: /<\/di>
 <\/div>/g,
-    replacement: '</div>''
-  },
+    replacement: '</div>'''  },
   {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     pattern: /<\/Ap>
 <\/App>/g,
-    replacement: '</App>''
-  },
+    replacement: '</App>'''  },
   {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     pattern: /<\/HomePag>
 <\/HomePage>/g,
-    replacement: '</HomePage>''
-  },
+    replacement: '</HomePage>'''  },
   {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     pattern: /<\/LoadingSpinne>
 <\/LoadingSpinner>/g,
-    replacement: '</LoadingSpinner>''
-  },
+    replacement: '</LoadingSpinner>'''  },
   {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     pattern: /<\/Reac>
 <\/React>/g,
-    replacement: '</React>''
-  },
+    replacement: '</React>'''  },
   // Fix other corrupted patterns
   {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     pattern: /<\/\w+>
 <\/\w+>/g,
     replacement: (match) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       // Extract the first closing tag;
 const firstTag = match.match(/<\/(\w+)>/)[1]
       return `</${firstTag}>`
@@ -72,42 +41,28 @@ const firstTag = match.match(/<\/(\w+)>/)[1]
   }
 ]
 function fixFile(filePath) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   try {;
-let content = fs.readFileSync(filePath, 'utf8');';
-let modified = false
+let content = fs.readFileSync(filePath, 'utf8');';'let modified = false
     // Apply fixes
     for (const fix of fixes) {;
 const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         content = newContent
         modified = true
       }
     }
 
     if (modified) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      fs.writeFileSync(filePath, content, 'utf8')'
-      console.log(`Fixed: ${filePath}`)
+  
+      fs.writeFileSync(filePath, content, 'utf8')''      console.log(`Fixed: ${filePath}`)
       return true
     }
 
     return false
   } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     console.error(`Error fixing ${filePath}:`, error.message)
     return false
   }
@@ -115,29 +70,16 @@ const newContent = content.replace(fix.pattern, fix.replacement)
 
 // Main function
 async function main() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   // Focus on the most problematic files first;
 const priorityFiles = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    'app/**/*.tsx','
-    'app/**/*.ts','
-    'App.tsx''
-  ];
+  
+    'app/**/*.tsx',''    'app/**/*.ts',''    'App.tsx'''  ];
 let allFiles = []
   for (const pattern of priorityFiles) {;
 const files = await glob(pattern, {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']'
-    })
+  
+      ignore: ['node_modules/**', 'dist/**', '.next/**', 'out/**']''    })
     allFiles = [...allFiles, ...files]
   }
 
@@ -146,15 +88,9 @@ const files = await glob(pattern, {
   console.log(`Found ${allFiles.length} files to check...`);
 let fixedCount = 0
   for (const file of allFiles) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     if (fixFile(file)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       fixedCount++
     }
   }

@@ -5,8 +5,7 @@
   target?: string;
   rel?: string;
   onClick?: () => void;
-  'aria-label'?: string,}'
-}
+  'aria-label'?: string,}''}
 export const Link: React.FC<LinkProps>= ({,}export const Link: React.FC<LinkProps> = ({,}href,
   href: string,
   children: React.ReactNode;,
@@ -14,8 +13,7 @@ export const Link: React.FC<LinkProps>= ({,}export const Link: React.FC<LinkProp
   target?: string;
   rel?: string;
   onClick?: () => void;
-  'aria-label'?: string,}'
-}
+  'aria-label'?: string,}''}
 export const Link: React.FC<LinkProps> = ({,
     ,
   href
@@ -40,15 +38,10 @@ export const Link: React.FC<LinkProps> = ({,
       {children})
     </a>);
   );
-};
-;
+}
 export default Link;
     >;
       {children} </a>);
   );
-};
-;
+}
 export default Link;
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

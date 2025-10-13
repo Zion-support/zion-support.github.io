@@ -1,9 +1,6 @@
 // Data store utilities;
 export const dataStore = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   // Add data store functionality here
   getData: () => []
   setData: (data: any) => null
@@ -21,10 +18,7 @@ export const dataStore = {
   deleteData: (id: string) => null
 }
 interface Project {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   id: string
   title: string
   description: string
@@ -32,66 +26,38 @@ interface Project {
   createdAt: Date
   updatedAt: Date
 }
-import fs from 'fs-extra';';
-import path from 'path';';
-import { Project, Review } from '../types/reviews';';';
-const DATA_DIR = path.join(process.cwd(), 'data');';
-const PROJECTS_PATH = path.join(DATA_DIR, 'projects.json');';
-const REVIEWS_PATH = path.join(DATA_DIR, 'reviews.json')'
-async function ensureFilesExist(): Promise<void> {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+import fs from 'fs-extra';'import path from 'path';'import { Project, Review } from '../types/reviews';';'const DATA_DIR = path.join(process.cwd(), 'data');';'const PROJECTS_PATH = path.join(DATA_DIR, 'projects.json');';'const REVIEWS_PATH = path.join(DATA_DIR, 'reviews.json')''async function ensureFilesExist(): Promise<void> {
+  
   await fs.ensureDir(DATA_DIR)
   if (!(await fs.pathExists(PROJECTS_PATH))) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     await fs.writeJson(PROJECTS_PATH, [], { spaces: 2 })
   }
   if (!(await fs.pathExists(REVIEWS_PATH))) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     await fs.writeJson(REVIEWS_PATH, [], { spaces: 2 })
   }
 }
 export async function readProjects(): Promise<Project[]> {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   await ensureFilesExist()
   return fs.readJson(PROJECTS_PATH)
 }
 export async function writeProjects(projects: Project[]): Promise<void> {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   await fs.writeJson(PROJECTS_PATH, projects, { spaces: 2 })
 }
 export async function readReviews(): Promise<Review[]> {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   await ensureFilesExist()
   return fs.readJson(REVIEWS_PATH)
 }
 export async function writeReviews(reviews: Review[]): Promise<void> {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   await fs.writeJson(REVIEWS_PATH, reviews, { spaces: 2 })
 }
 export async function findProjectById(
-  // TODO: Add parameters
-)
+  
   projectId: string
 ): Promise<Project | undefined> {;
 const projects = await readProjects()
@@ -105,16 +71,10 @@ const reviews = await readReviews();
 const idx = reviews.findIndex(r => r.id === newReview.id);
 const idx = reviews.findIndex((r) => r.id === newReview.id)
   if (idx >= 0) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     reviews[idx] = newReview
   } else {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     reviews.push(newReview)
   }
   await writeReviews(reviews)
@@ -124,26 +84,18 @@ const reviews = await readReviews()
   return reviews.filter(r => r.projectId === projectId && !r.removed)
 }
 export function counterpartRole(
-  // TODO: Add parameters
-)
-  role: 'client' | 'talent''
-): 'client' | 'talent' {'
-  return reviews.filter((r) => r.projectId === projectId && !r.removed)
+  
+  role: 'client' | 'talent'''): 'client' | 'talent' {''  return reviews.filter((r) => r.projectId === projectId && !r.removed)
 }
-export function counterpartRole(role: 'client' | 'talent'): 'client' | 'talent' {'
-  return role === 'client' ? 'talent' : 'client''
-}
+export function counterpartRole(role: 'client' | 'talent'): 'client' | 'talent' {''  return role === 'client' ? 'talent' : 'client'''}
 export async function hasExistingReview(
-  // TODO: Add parameters
-)
+  
   projectId: string,
-  fromRole: 'client' | 'talent','
-  fromId: string
+  fromRole: 'client' | 'talent',''  fromId: string
 ): Promise<boolean> {;
 const reviews = await readReviews()
   return reviews.some(
-  // TODO: Add parameters
-)
+  
     r =>
       r.projectId === projectId &&
       r.fromRole === fromRole &&
@@ -153,10 +105,7 @@ const reviews = await readReviews()
 }
 // Data store utilities;
 export const data_store = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   // Add data store functionality here
   get_data: () => [],
   set_data: (data: any) => null,
@@ -169,13 +118,11 @@ export const hasExistingReview = (projectId: string, fromRole: string, fromId: s
 export const upsertReview = (data: Partial<Review>) => store.upsertReview(data);
 export const getReviewsByProject = (projectId: string) => store.getReviewsByProject(projectId);
 export const getAllReviews = () => store.getAllReviews();
-export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role)'
-  fromId: string,
+export const counterpartRole = (role: 'client' | 'talent') => store.counterpartRole(role)''  fromId: string,
 ): Promise<boolean> {;
 const reviews = await readReviews()
   return reviews.some(
-  // TODO: Add parameters
-)
+  
     (r) => r.projectId === projectId && r.fromRole === fromRole && r.fromId === fromId && !r.removed,
   )
 }

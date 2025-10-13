@@ -1,40 +1,28 @@
 
-import fs from 'fs';
-import path from 'path';
-
+import fs from 'fs';'import path from 'path';'
 // Function to fix a component file
 function fixComponentFile(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-
+    const content = fs.readFileSync(filePath, 'utf8');'
     // Check if file has syntax errors or is malformed
-    if (content.includes('Parsing error') || content.includes('JSX element') ||
-        content.includes('Declaration or statement expected') ||
-        content.includes('Expression expected') || content.includes('} expected')) {
-
-      const fileName = path.basename(filePath, '.tsx');
-      const componentName = fileName.split('-').map(word =>
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('');
-
-      const newContent = `import React from 'react';
-
+    if (content.includes('Parsing error') || content.includes('JSX element') ||'        content.includes('Declaration or statement expected') ||'        content.includes('Expression expected') || content.includes('} expected')) {'
+      const fileName = path.basename(filePath, '.tsx');'      const componentName = fileName.split('-').map(word =>'        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join('');'
+      const newContent = `import React from 'react';'
 interface ${componentName}Props {
   className?: string;
   children?: React.ReactNode;
 }
 
 export default function ${componentName}({
-  className = '',
-  children
+  className = '','  children
 }: ${componentName}Props) {
   return (
 
   );
 }`;
 
-      fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`Fixed component: ${filePath}`);
+      fs.writeFileSync(filePath, newContent, 'utf8');'      console.log(`Fixed component: ${filePath}`);
       return true;
     }
 
@@ -56,13 +44,10 @@ function fixComponentFiles(dirPath) {
 
     if (stat.isDirectory()) {
       // Skip certain directories
-      if (['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
-        continue;
+      if (['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {'        continue;
       }
       fixedCount += fixComponentFiles(fullPath);
-    } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts')) &&
-               fullPath.includes('/components/')) {
-      if (fixComponentFile(fullPath)) {
+    } else if (stat.isFile() && (item.endsWith('.tsx') || item.endsWith('.ts')) &&'               fullPath.includes('/components/')) {'      if (fixComponentFile(fullPath)) {
         fixedCount++;
       }
     }
@@ -72,6 +57,4 @@ function fixComponentFiles(dirPath) {
 }
 
 // Main execution
-console.log('Starting component fixes...');
-const fixedCount = fixComponentFiles('/workspace/app');
-console.log(`Fixed ${fixedCount} component files.`);
+console.log('Starting component fixes...');'const fixedCount = fixComponentFiles('/workspace/app');'console.log(`Fixed ${fixedCount} component files.`);

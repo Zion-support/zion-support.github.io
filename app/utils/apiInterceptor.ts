@@ -37,10 +37,7 @@ class APIInterceptor {private requestInterceptors: Array<(config: any) => any> =
   applyRequestInterceptors(config: any): any {,}
     ,
     return this.requestInterceptors.reduce((acc, interceptor) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       try {return interceptor(acc)}}} catch (error) {return acc;}}
     }, config);
   }
@@ -48,10 +45,7 @@ class APIInterceptor {private requestInterceptors: Array<(config: any) => any> =
   applyResponseInterceptors(response: any): any {,}
     ,
     return this.responseInterceptors.reduce((acc, interceptor) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       try {return interceptor(acc)}}} catch (error) {return acc;}}
     }, response);
   }
@@ -59,10 +53,7 @@ class APIInterceptor {private requestInterceptors: Array<(config: any) => any> =
   applyErrorInterceptors(error: any): any {,}
     ,
     return this.errorInterceptors.reduce((acc, interceptor) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       try {return interceptor(acc)}}} catch (interceptorError) {return acc;}}
     }, error);
   }
@@ -142,8 +133,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
 <RequestConfig> = {})
   ): Promise</RequestConfig>
 <APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'GET' })'
-  }
+  d: 'GET' })''  }
   /**
    * POST request
    */
@@ -156,8 +146,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
 <RequestConfig> = {})
   ): Promise</RequestConfig>
 <APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'POST', body })'
-  }
+  d: 'POST', body })''  }
   /**
    * PUT request
    */
@@ -170,8 +159,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
 <RequestConfig> = {})
   ): Promise</RequestConfig>
 <APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'PUT', body })'
-  }
+  d: 'PUT', body })''  }
   /**
    * DELETE request
    */
@@ -183,8 +171,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
 <RequestConfig> = {})
   ): Promise</RequestConfig>
 <APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'DELETE' })'
-  }
+  d: 'DELETE' })''  }
   /**
    * PATCH request
    */
@@ -197,8 +184,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
 <RequestConfig> = {})
   ): Promise</RequestConfig>
 <APIResponse<T>> {/* TODO: Fix JSX expression */}
-  d: 'PATCH', body })'
-  }
+  d: 'PATCH', body })''  }
   /**
    * Prepare request configuration
    */
@@ -211,8 +197,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
   l: string,
     confi,;
   g: Partial<RequestConfig> = {,})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'GET' ,})'
-  }
+  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'GET' ,})''  }
   /**
    * POST request
    */
@@ -221,8 +206,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
     body?: unknown,;
     confi,;
   g: Partial<RequestConfig> = {,})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'POST', body })'
-  }
+  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'POST', body })''  }
   /**
    * PUT request
    */
@@ -231,8 +215,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
     body?: unknown,;
     confi,;
   g: Partial<RequestConfig> = {,})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'PUT', body })'
-  }
+  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'PUT', body })''  }
   /**
    * DELETE request
    */
@@ -240,8 +223,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
   l: string,
     confi,;
   g: Partial<RequestConfig> = {,})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'DELETE' ,})'
-  }
+  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'DELETE' ,})''  }
   /**
    * PATCH request
    */
@@ -250,8 +232,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
     body?: unknown,;
     confi,;
   g: Partial<RequestConfig> = {,})
-  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'PATCH', body })'
-  }
+  ): Promise<APIResponse<T>> {/* TODO: Fix JSX expression */,}d: 'PATCH', body })''  }
   g: RequestConfig): RequestConfig {/* TODO: Fix JSX expression */,}},
       timeou,;
       timeou,
@@ -268,8 +249,7 @@ export interface APIConfig {/* TODO: Fix JSX expression */,}}}
    */;
   private buildURL(confi);
   g: RequestConfig): string {/* TODO: Fix JSX expression */,}}`;
-    let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;'
-    if (config.params) {/* TODO: Fix JSX expression */,}})`;
+    let url = config.url.startsWith('http') ? config.url : `${this.config.baseURL}${config.url}`;''    if (config.params) {/* TODO: Fix JSX expression */,}})`;
       url += `?${params.toString()}`;
     }
   }

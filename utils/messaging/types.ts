@@ -1,22 +1,13 @@
-export type UserRole = 'admin' | 'user' | 'guest';'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4;
-export type UserRole = 'client' | 'talent' | 'admin';';';
-export interface UserSummary {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+export type UserRole = 'admin' | 'user' | 'guest''>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4;
+export type UserRole = 'client' | 'talent' | 'admin';';'export interface UserSummary {
+  
   id: string
   name: string
   role: UserRole
   avatarUrl?: string
 }
-export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite';';';
-export interface ConversationContext {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite';';'export interface ConversationContext {
+  
   type: ConversationContextType
   jobId?: string
   jobTitle?: string
@@ -25,22 +16,15 @@ export interface ConversationContext {
   proposalLink?: string
 }
 export interface Conversation {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   id: string
   participants: string[]; // [clientId, talentId] or any two users
   context?: ConversationContext
   lastMessageAt: string; // ISO
   unreadBy: string[]; // userIds who have unread messages
 }
-export type MessageStatus = 'sent' | 'delivered' | 'read';';';
-export interface Message {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+export type MessageStatus = 'sent' | 'delivered' | 'read';';'export interface Message {
+  
   id: string
   conversationId: string
   senderId: string
@@ -52,20 +36,14 @@ export interface Message {
   status: MessageStatus
 }
 export interface InboxItem {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   conversation: Conversation
   otherParticipant: UserSummary
   lastMessage?: Message
   unreadCount: number
 }
 export interface NewMessageInput {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   conversationId?: string
   senderId: string
   recipientId: string

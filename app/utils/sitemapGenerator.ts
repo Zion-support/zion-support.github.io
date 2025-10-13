@@ -1,57 +1,10 @@
-export const generateSitemap = useCallback((...args) => {const baseUrl = 'https: //ziontechgroup.com',;';
-const staticPages = [,}export const generateSitemap = useCallback((...args) => {}const baseUrl = 'https: //ziontechgroup.com',;';
-const staticPages = [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    '','
-    '/services','
-    '/contact','
-    '/ai-solutions','
-    '/it-services','
-    '/about','
-    '/blog','
-    '/case-studies','
-    '/pricing','
-    '/ai-project-manager','
-    '/ai-social-media-manager','
-    '/ai-analytics','
-    '/ai-email-marketing','
-    '/ai-customer-support-bot','
-    '/ai-code-generation','
-    '/ai-video-generation','
-    '/ai-voice-cloning','
-    '/ai-workflow-automation','
-    '/ai-sales-automation','
-    '/ai-content-writer','
-    '/ai-financial-advisor','
-    '/ai-data-visualization','
-    '/ai-3 d-generation','
-    '/ai-customer-support','
-    '/ai-inventory-manager','
-    '/ai-hr-assistant','
-    '/ai-legal-assistant','
-    '/cloud-migration','
-    '/it-consulting','
-    '/cybersecurity','
-    '/devops','
-    '/database-services','
-    '/network-infrastructure','
-    '/it-support','
-    '/compliance','
-    '/developer-tools','
-    '/marketing-tools','
-    '/productivity''
-  ];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,"
-  ${staticPages.map(page =>),;
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,}${staticPages.map(page =>)} <url>}"
-    <lastmod>${new Date().toISOString()}</lastmod>
+export const generateSitemap = useCallback((...args) => {const baseUrl = 'https: //ziontechgroup.com',;';'const staticPages = [,}export const generateSitemap = useCallback((...args) => {}const baseUrl = 'https: //ziontechgroup.com',;';'const staticPages = [
+  
+    '',''    '/services',''    '/contact',''    '/ai-solutions',''    '/it-services',''    '/about',''    '/blog',''    '/case-studies',''    '/pricing',''    '/ai-project-manager',''    '/ai-social-media-manager',''    '/ai-analytics',''    '/ai-email-marketing',''    '/ai-customer-support-bot',''    '/ai-code-generation',''    '/ai-video-generation',''    '/ai-voice-cloning',''    '/ai-workflow-automation',''    '/ai-sales-automation',''    '/ai-content-writer',''    '/ai-financial-advisor',''    '/ai-data-visualization',''    '/ai-3 d-generation',''    '/ai-customer-support',''    '/ai-inventory-manager',''    '/ai-hr-assistant',''    '/ai-legal-assistant',''    '/cloud-migration',''    '/it-consulting',''    '/cybersecurity',''    '/devops',''    '/database-services',''    '/network-infrastructure',''    '/it-support',''    '/compliance',''    '/developer-tools',''    '/marketing-tools',''    '/productivity'''  ];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>""<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,""  ${staticPages.map(page =>),;
+<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,}${staticPages.map(page =>)} <url>}""    <lastmod>${new Date().toISOString()}</lastmod>
 <changefreq>weekly</changefreq>
-<priority>${page === ' ? '1.0' : '0.8'}</priority></url>`).join('))''
-</urlset>`
+<priority>${page === ' ? '1.0' : '0.8'}</priority></url>`).join('))'''</urlset>`
   return sitemap
 }
 export const generateRobotsTxt = useCallback((...args) => {}
@@ -65,21 +18,14 @@ Disallow: /admin/,
 Disallow: /api/,
 Disallow: /_next/,
 Disallow: /private/`,}
-    '/developer-tools','
-    '/marketing-tools','
-    '/productivity''
-  ];
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>"
-<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,"
-  ${staticPages.map(page =>),
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">}"
-  ${staticPages.map(page =>)}
+    '/developer-tools',''    '/marketing-tools',''    '/productivity'''  ];
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>""<urlset xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">,""  ${staticPages.map(page =>),
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">}""  ${staticPages.map(page =>)}
   <url>}
     <loc>${baseUrl}${page}</loc>
 <lastmod>${new Date().toISOString()}</lastmod>
 <changefreq>weekly</changefreq>
-<priority>${page === ' ? '1.0' : '0.8'</p>}</priority></url>`).join(')}''
-</urlset>`;
+<priority>${page === ' ? '1.0' : '0.8'</p>}</priority></url>`).join(')}'''</urlset>`;
   return sitemap;
 }
 export const generateRobotsTxt = useCallback((...args) => {}return `User-agent: *;,
@@ -98,8 +44,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'daily','
-      priorit,
+  q: 'daily',''      priorit,
   y: 1.0,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -107,8 +52,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'monthly','
-      priorit,
+  q: 'monthly',''      priorit,
   y: 0.8,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -116,8 +60,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'weekly','
-      priorit,
+  q: 'weekly',''      priorit,
   y: 0.9,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -125,8 +68,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'weekly','
-      priorit,
+  q: 'weekly',''      priorit,
   y: 0.9,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -134,8 +76,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'weekly','
-      priorit,
+  q: 'weekly',''      priorit,
   y: 0.9,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -143,8 +84,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'weekly','
-      priorit,
+  q: 'weekly',''      priorit,
   y: 0.9,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -152,8 +92,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'weekly','
-      priorit,
+  q: 'weekly',''      priorit,
   y: 0.9,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -161,8 +100,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'weekly','
-      priorit,
+  q: 'weekly',''      priorit,
   y: 0.8,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -170,8 +108,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'weekly','
-      priorit,
+  q: 'weekly',''      priorit,
   y: 0.9,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -179,8 +116,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'monthly','
-      priorit,
+  q: 'monthly',''      priorit,
   y: 0.8,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -188,8 +124,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'monthly','
-      priorit,
+  q: 'monthly',''      priorit,
   y: 0.7,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -197,8 +132,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'weekly','
-      priorit,
+  q: 'weekly',''      priorit,
   y: 0.8,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -206,8 +140,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'daily','
-      priorit,
+  q: 'daily',''      priorit,
   y: 0.8,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -215,8 +148,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'yearly','
-      priorit,
+  q: 'yearly',''      priorit,
   y: 0.3,
     },;
     {/* TODO: Fix JSX expression */,}`;
@@ -224,8 +156,7 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
       lastmo,;
   d: currentDate,
       changefre,
-  q: 'yearly','
-      priorit,
+  q: 'yearly',''      priorit,
   y: 0.3,
 >>>>>>> cursor/delete-records-a75e
     }
@@ -233,6 +164,3 @@ export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expressio
 }
 }`;
 )
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

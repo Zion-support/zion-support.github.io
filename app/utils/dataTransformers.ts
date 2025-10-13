@@ -1,5 +1,4 @@
-'use client';'
-/**;
+'use client''/**;
  * Data Transformation Utilities;
  * Provides utilities for transforming and formatting data;
  */;
@@ -37,18 +36,14 @@ export function deepMerge<T extends Record<string, unknown>>(targe,
 }
 export function flattenObject(ob,;)
   j: Record<string, unknown>,;
-  prefix = '',;'
-  separator = '.');'
-): Record<string, unknown> {/* TODO: Fix JSX expression */,}flattened: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}const newKey = prefix ? `${prefix}${separator}${key}` : key;
-      if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}'
-    }
+  prefix = '',;''  separator = '.');''): Record<string, unknown> {/* TODO: Fix JSX expression */,}flattened: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}const newKey = prefix ? `${prefix}${separator}${key}` : key;
+      if (value && typeof value === 'object' && !Array.isArray(value)) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}}''    }
   }
   return flattened
 }
 export function unflattenObject(ob,;)
   j: Record<string, unknown>,;
-  separator = '.');'
-): Record<string, unknown> {/* TODO: Fix JSX expression */,}result: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}current[k] = current[k] || {}current = current[k] as Record<string>
+  separator = '.');''): Record<string, unknown> {/* TODO: Fix JSX expression */,}result: Record<string, unknown> = {}for (const key in obj) {/* TODO: Fix JSX expression */,}} else {/* TODO: Fix JSX expression */,}}current[k] = current[k] || {}current = current[k] as Record<string>
         }
       }
     }
@@ -116,32 +111,23 @@ export function sortBy</T>;
 <keyof T | ((ite),
   m: T) => unknown)>,
   order,
-  s: Array<'asc' | 'desc'> = [],;';
-export function formatDate(dat,;)
+  s: Array<'asc' | 'desc'> = [],;';'export function formatDate(dat,;)
   e: Date | string | number,
   option,;
   s: Intl.DateTimeFormatOptions = {,},;
-  locale = 'en-US');'
-): string {/* TODO: Fix JSX expression */,}}}
+  locale = 'en-US');''): string {/* TODO: Fix JSX expression */,}}}
 /**;
  * Format relative time;
  */;
 export function formatRelativeTime(dat);
   e: Date | string | number): string {/* TODO: Fix JSX expression */,}}`;
-  if (minutes < 60) return `${minutes}minute${minutes > 1 ? 's' : '}ago`;`;''
-  if (hours < 24) return `${hours}hour${hours > 1 ? 's' : '}ago`;`;''
-  if (days < 7) return `${days}day${days > 1 ? 's' : '}ago`;`;''
-  if (weeks < 4) return `${weeks}week${weeks > 1 ? 's' : '}ago`;`;''
-  if (months < 12) return `${months}month${months > 1 ? 's' : '}ago`;`;''
-  return `${years}year${years > 1 ? 's' : '}ago`;''
-}
+  if (minutes < 60) return `${minutes}minute${minutes > 1 ? 's' : '}ago`;`;'''  if (hours < 24) return `${hours}hour${hours > 1 ? 's' : '}ago`;`;'''  if (days < 7) return `${days}day${days > 1 ? 's' : '}ago`;`;'''  if (weeks < 4) return `${weeks}week${weeks > 1 ? 's' : '}ago`;`;'''  if (months < 12) return `${months}month${months > 1 ? 's' : '}ago`;`;'''  return `${years}year${years > 1 ? 's' : '}ago`;'''}
 /**;
  * Truncate string;
  */;
 export function truncate(st,;)
   r: string, lengt);
-  h: number, suffix = '...'): string {/* TODO: Fix JSX expression */,}}}'
-/**;
+  h: number, suffix = '...'): string {/* TODO: Fix JSX expression */,}}}''/**;
  * Capitalize first letter;
  */;
 export function capitalize(st);

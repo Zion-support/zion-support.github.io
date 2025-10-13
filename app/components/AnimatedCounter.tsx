@@ -9,24 +9,17 @@
       setCount(currentCount);
 
       if (progress < 1) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        animationFrame = requestAnimationFrame(animate);}}
+  
+        animationFrame = requestAnimationFrame(animate) }}
 
     animationFrame = requestAnimationFrame(animate);
 
     return () => {if (animationFrame) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         cancelAnimationFrame(animationFrame);}}
   }, [end, duration]);
 
   return(<span className={className)}>{prefix</span>}{count.toLocaleString()}{suffix} </span>
   );
-};
-;
+}
 export default AnimatedCounter;

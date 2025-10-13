@@ -1,39 +1,24 @@
 #!/usr/bin/env node;
-import fs from 'fs';';
-import path from 'path';';
-import { fileURLToPath } from 'url';';';
-const __filename = fileURLToPath(import.meta.url);
+import fs from 'fs';'import path from 'path';'import { fileURLToPath } from 'url';';'const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename)
 // Function to fix JSX tags that were incorrectly prefixed with underscores
 function fixJSXTags(content) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   // Fix JSX opening tags
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)/g, (match, tagName) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
 function fixJSXTags(content) {/* TODO: Fix JSX expression */}
-    return `<${tagName.substring(1)}`; // Remove the underscore
+    return `<${tagName.substring(1)}` // Remove the underscore
   })
   // Fix JSX closing tags
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   content = content.replace(/<\/(_[a-zA-Z][a-zA-Z0-9]*)>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
     return `</${tagName.substring(1)}>`; // Remove the underscore
   })
   // Fix self-closing JSX tags
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   content = content.replace(/<(_[a-zA-Z][a-zA-Z0-9]*)\s*\/>/g, (match, tagName) => {/* TODO: Fix JSX expression */}`
     return `<${tagName.substring(1)} />`; // Remove the underscore
   })
@@ -42,32 +27,19 @@ function fixJSXTags(content) {/* TODO: Fix JSX expression */}
 
 // Function to fix variable names that were incorrectly prefixed with underscores in destructuring
 function fixDestructuringVariables(content) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   // Fix destructuring in function parameters
   content = content.replace(/function\s+\w+\s*\([^)]*\)/g, (match) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1')'
-  })
+  
+    return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1')''  })
   // Fix arrow function parameters
   content = content.replace(/\([^)]*\)\s*=>/g, (match) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1')'
-  })
+  
+    return match.replace(/\b_([a-zA-Z_$][a-zA-Z0-9 _$]*)\b/g, '$1')''  })
   // Fix destructuring assignments
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {;
-const fixedVars = vars.split(',').map(v => {);';
-const trimmed = v.trim()
-      if (trimmed.startsWith('_') && trimmed.length > 1) {'
-        return trimmed.substring(1)
+const fixedVars = vars.split(',').map(v => {);';'const trimmed = v.trim()
+      if (trimmed.startsWith('_') && trimmed.length > 1) {''        return trimmed.substring(1)
 function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
   })
   // Fix arrow function parameters
@@ -77,32 +49,23 @@ function fixDestructuringVariables(content) {/* TODO: Fix JSX expression */}
   content = content.replace(/const\s*{\s*([^}]+)\s*}\s*=\s*([^;]+);/g, (match, vars, assignment) => {/* TODO: Fix JSX expression */}
       }
       return trimmed
-    }).join(', ');`'
-    return `const { ${fixedVars} } = ${assignment};`
+    }).join(', ');`''    return `const { ${fixedVars} } = ${assignment}`
   })
   return content
 }
 
 // Function to process a single file
 function processFile(filePath) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   try {;
-let content = fs.readFileSync(filePath, 'utf8');';
-let modified = false
+let content = fs.readFileSync(filePath, 'utf8');';'let modified = false
     // Apply fixes;
 const originalContent = content
     content = fixJSXTags(content)
     content = fixDestructuringVariables(content)
     if (content !== originalContent) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      fs.writeFileSync(filePath, content, 'utf8')'
-      modified = true
+  
+      fs.writeFileSync(filePath, content, 'utf8')''      modified = true
 function processFile(filePath) {/* TODO: Fix JSX expression */}
     }
 
@@ -122,25 +85,15 @@ const items = fs.readdirSync(currentPath)
 const fullPath = path.join(currentPath, item);
 const stat = fs.statSync(fullPath)
       if (stat.isDirectory()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         // Skip node_modules and other common directories
-        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {'
-          walkDir(fullPath)
+        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {''          walkDir(fullPath)
         }
       } else if (stat.isFile()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         // Check for TypeScript/JavaScript files
         if (/\.(ts|tsx|js|jsx)$/.test(item)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
           files.push(fullPath)
 function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
         }
@@ -155,10 +108,7 @@ function findSourceFiles(dir) {/* TODO: Fix JSX expression */}
 }
 
 // Main execution
-console.log('Starting JSX tag fixes...');';
-const srcDir = path.join(__dirname, 'src');';
-const appDir = path.join(__dirname, 'app');';
-const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)]
+console.log('Starting JSX tag fixes...');';'const srcDir = path.join(__dirname, 'src');';'const appDir = path.join(__dirname, 'app');';'const files = [...findSourceFiles(srcDir), ...findSourceFiles(appDir)]
 `
 console.log(`Found ${files.length} files to process`);
 let processedCount = 0
@@ -169,8 +119,7 @@ for (const file of files) {/* TODO: Fix JSX expression */}`
 `
 console.log(`Processed ${processedCount} files`)
 // Also process root level files;
-const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx']'
-for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
+const rootFiles = ['App.tsx', 'main.tsx', 'page.tsx', 'layout.tsx']''for (const file of rootFiles) {/* TODO: Fix JSX expression */}`
   d: ${file}`)
     }
   }

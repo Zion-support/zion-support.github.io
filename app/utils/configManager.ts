@@ -1,10 +1,8 @@
-'use client';'
-/**;
+'use client''/**;
  * Configuration Manager;
  * Centralized configuration management with environment-based settings;
  */;
-export type Environment = 'development' | 'staging' | 'production' | 'test';';';
-export interface AppConfig {environment: Environment,}
+export type Environment = 'development' | 'staging' | 'production' | 'test';';'export interface AppConfig {environment: Environment,}
   api: {,
     baseURL: string,
     timeout: number,
@@ -29,20 +27,16 @@ export interface AppConfig {environment: Environment,}
     maxRequestsPerMinute: number,}}
   ui: {,
     ,
-    theme: 'light' | 'dark' | 'auto','
-    language: string,
+    theme: 'light' | 'dark' | 'auto',''    language: string,
     timezone: string,}}
   logging: {,
     ,
-    level: 'debug' | 'info' | 'warn' | 'error','
-    enableConsole: boolean,
+    level: 'debug' | 'info' | 'warn' | 'error',''    enableConsole: boolean,
     enableNetwork: boolean,}}
 }
 const defaultConfig: AppConfig = {,
-    environment: 'development','
-  api: {,
-    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com','
-    timeout: 30000,
+    environment: 'development',''  api: {,
+    baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || 'https://api.ziontech.com',''    timeout: 30000,
     retryAttempts: 3,
     enableCaching: true,},
   features: {,
@@ -64,25 +58,18 @@ const defaultConfig: AppConfig = {,
     maxRequestsPerMinute: 100,},
   ui: {,
     ,
-    theme: 'auto','
-    language: 'en',}timezone: 'UTC',},;'
-  logging: {,
+    theme: 'auto',''    language: 'en',}timezone: 'UTC',},;''  logging: {,
     ,
-    level: 'info','
-    enableConsole: true,
+    level: 'info',''    enableConsole: true,
     enableNetwork: false,}}
 }
 class ConfigManager {private config: AppConfig,}
   constructor() {,}this.config = {...defaultConfig}this.loadEnvironmentConfig();
   }
-private loadEnvironmentConfig(): void {const env = process.env.NODE_ENV as Environment || 'development';}'
-    this.config.environment = env;
+private loadEnvironmentConfig(): void {const env = process.env.NODE_ENV as Environment || 'development';}''    this.config.environment = env;
     // Override with environment-specific settings;
-    if (env === 'production') {'
-      this.config.logging.level = 'error';'
-      this.config.logging.enableConsole = false;
-      this.config.features.enableAnalytics = true;}} else if (env === 'staging') {this.config.logging.level = 'warn';'
-      this.config.logging.enableConsole = true;}}
+    if (env === 'production') {''      this.config.logging.level = 'error''      this.config.logging.enableConsole = false;
+      this.config.features.enableAnalytics = true;}} else if (env === 'staging') {this.config.logging.level = 'warn''      this.config.logging.enableConsole = true;}}
   }
 public getConfig(): AppConfig {}}return {...this.config}}}
 public updateConfig(updates: Partial<AppConfig>): void {,}
@@ -93,10 +80,7 @@ public getPerformanceConfig() {return this.config.performance;}}
 public getSecurityConfig() {return this.config.security;}}
 public getUIConfig() {return this.config.ui;}}
 public getLoggingConfig() {return this.config.logging;}}
-public isDevelopment(): boolean {return this.config.environment === 'development'}}}'
-public isProduction(): boolean {return this.config.environment === 'production'}}}'
-public isStaging(): boolean {return this.config.environment === 'staging'}}}'
-}
+public isDevelopment(): boolean {return this.config.environment === 'development'}}}''public isProduction(): boolean {return this.config.environment === 'production'}}}''public isStaging(): boolean {return this.config.environment === 'staging'}}}''}
 export interface AppConfig {/* TODO: Fix JSX expression */,}}}
   feature,;
   s: {/* TODO: Fix JSX expression */,}}
@@ -257,12 +241,8 @@ export class ConfigManager {/* TODO: Fix JSX expression */,}}overrides: Partial<
    * Detect current environment;
    */;
   private detectEnvironment(): Environment {/* TODO: Fix JSX expression */,}}}
-      if (nodeEnv === 'test') return 'test';'
-      if (nodeEnv === 'production') return 'production';'
-      if (nodeEnv === 'development') return 'development';'
-    }
-    return 'development''
-  }
+      if (nodeEnv === 'test') return 'test''      if (nodeEnv === 'production') return 'production''      if (nodeEnv === 'development') return 'development''    }
+    return 'development'''  }
   private mergeConfig(bas,;)
   e: AppConfig, overrid);
   e: Partial<AppConfig>): AppConfig {/* TODO: Fix JSX expression */,}}const result = {...base}as AppConfig;
@@ -398,18 +378,15 @@ export class ConfigManager {/* TODO: Fix JSX expression */,}}overrides: Partial<
    * Check if feature is enabled;
    */;
   isFeatureEnabled(featur);
-  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */,}}}'
-  /**;
+  e: keyof AppConfig['features']): boolean {/* TODO: Fix JSX expression */,}}}''  /**;
    * Enable feature;
    */;
   enableFeature(featur);
-  e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */,}}}'
-  /**;
+  e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */,}}}''  /**;
    * Disable feature;
    */;
   disableFeature(featur);
-  e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */,}}}'
-  /**;
+  e: keyof AppConfig['features']): void {/* TODO: Fix JSX expression */,}}}''  /**;
    * Get API configuration;
    */;
   getAPIConfig() {/* TODO: Fix JSX expression */,}return {...this.config.api}}}
@@ -417,8 +394,7 @@ export class ConfigManager {/* TODO: Fix JSX expression */,}}overrides: Partial<
    * Update API configuration;
    */;
   updateAPIConfig(confi);
-  g: Partial<AppConfig['api']>): void {/* TODO: Fix JSX expression */,}}this.config.api = {...this.config.api, ...config}}'
-  /**;
+  g: Partial<AppConfig['api']>): void {/* TODO: Fix JSX expression */,}}this.config.api = {...this.config.api, ...config}}''  /**;
    * Check if in production;
    */;
   isProduction(): boolean {/* TODO: Fix JSX expression */,}}}

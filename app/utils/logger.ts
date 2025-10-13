@@ -5,10 +5,7 @@ export enum LogLevel {DEBUG = 0,;}
   FATAL = 4;}}
 export interface LogContext {userId?: string;}
 export enum LogLevel {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     DEBUG = 0,
   INFO = 1,
   WARN = 2,
@@ -17,10 +14,7 @@ export enum LogLevel {
   }
 }
 export interface LogContext {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     userId?: string;
   sessionId?: string;
   component?: string;
@@ -30,8 +24,7 @@ class Logger {private logLevel: LogLevel = LogLevel.INFO,}
   private logs: Array<{,
     level: LogLevel,
     message: string,
-    context?: LogContext;
-    metadata?: Record<string>
+    context?: LogContext metadata?: Record<string>
     timestamp: number,}}> = []
   setLogLevel(level: LogLevel): void {,}
     ,
@@ -44,18 +37,11 @@ let meta: Record</string>
 <string, unknown> | undefined
     // Handle different parameter combinations
     if (errorOrContextOrMetadata instanceof Error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   FATAL = 4;
 }
-;
 export interface LogContext {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   userId?: string;
   sessionId?: string;
   component?: string;
@@ -64,20 +50,13 @@ export interface LogContext {
 }
 
 class Logger {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   private logLevel: LogLevel = LogLevel.INFO;
   private logs: Array<{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     level: LogLevel,
     message: string,
-    context?: LogContext;
-    metadata?: Record<string, unknown>
+    context?: LogContext metadata?: Record<string, unknown>
     timestamp: number,
   }> = []
 
@@ -86,10 +65,7 @@ class Logger {
   }
 
   getLogLevel(): LogLevel {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     return this.logLevel;
   }
 
@@ -112,18 +88,11 @@ let error: Error | undefined;
     let meta: Record<string, unknown> | undefined;
     // Handle different parameter combinations;
     if (errorOrContextOrMetadata instanceof Error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       error = errorOrContextOrMetadata;
-      context = typeof contextOrMetadata === 'string' ? { action: contextOrMetadata } : contextOrMetadata;'
-      meta = metadata;
-    } else if (typeof errorOrContextOrMetadata === 'string') {'
-      context = { action: errorOrContextOrMetadata }
-      meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined;'
-    } else if (typeof errorOrContextOrMetadata === 'object') {'
-      context = errorOrContextOrMetadata;
+      context = typeof contextOrMetadata === 'string' ? { action: contextOrMetadata } : contextOrMetadata;''      meta = metadata;
+    } else if (typeof errorOrContextOrMetadata === 'string') {''      context = { action: errorOrContextOrMetadata }
+      meta = typeof contextOrMetadata === 'object' ? contextOrMetadata : undefined;''    } else if (typeof errorOrContextOrMetadata === 'object') {''      context = errorOrContextOrMetadata;
       meta = contextOrMetadata as Record<string, unknown>
  * Enhanced Logger Utility;
  * Provides structured logging with different levels and contexts;
@@ -174,51 +143,36 @@ class Logger {/* TODO: Fix JSX expression */}
     errorOrContextOrMetadata?: Error | string | Record<string, unknown>,
     contextOrMetadata?: string | Record<string, unknown>,
     metadata?: Record<string, unknown></string>);
-  ): void {/* TODO: Fix JSX expression */,}}} else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */,}t: errorOrContextOrMetadata ,}'
-      meta = contextOrMetadata as Record<string>
-    } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */,}}'
-this.log(LogLevel.ERROR, message, context, {...meta, error: error?.stack ,)})
+  ): void {/* TODO: Fix JSX expression */,}}} else if (typeof errorOrContextOrMetadata === 'string') {/* TODO: Fix JSX expression */,}t: errorOrContextOrMetadata ,}''      meta = contextOrMetadata as Record<string>
+    } else if (typeof errorOrContextOrMetadata === 'object') {/* TODO: Fix JSX expression */,}}''this.log(LogLevel.ERROR, message, context, {...meta, error: error?.stack ,)})
   }
 fatal(message: string, context?: LogContext, metadata?: Record<string, unknown>): void {</string></<<<string>this</string></string>.log(LogLevel.FATAL, message, context, metadata)}}}
 private log(level: LogLevel,),;
     message: string),
     context?: LogContext),
-  ): void {if (level < this.logLevel) return;}
+  ): void {if (level < this.logLevel) return }
     const logEntry = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       level,;
       message,;
       context,;
       metadata,}timestamp: Date.now(),}
 >>>>>>> origin/main
   ): void {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    if (level < this.logLevel) return;
-const logEntry = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
+    if (level < this.logLevel) return const logEntry = {
+  
       level,
       message,
       context,
       metadata,
-this.logs.push(logEntry);
->>>>>>> origin/main
+this.logs.push(logEntry)>>>>>>> origin/main
     // Keep only last 1000 logs;
     if (this.logs.length > 1000) {this.logs = this.logs.slice(-1000)}}
 // Console output;
     const levelName = LogLevel[level];
     const timestamp = new Date().toISOString();
-    const contextStr = context ? ` [${JSON.stringify(context)}]` : '';';
-const metaStr = metadata ? ` ${JSON.stringify(metadata)}` : '';';
-const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`;
+    const contextStr = context ? ` [${JSON.stringify(context)}]` : '';'const metaStr = metadata ? ` ${JSON.stringify(metadata)}` : '';'const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaStr}`;
     switch (level) {case LogLevel.DEBUG: break,
       case LogLevel.INFO: break,
       case LogLevel.WARN: break,
@@ -227,7 +181,7 @@ const logMessage = `[${timestamp}] ${levelName}: ${message}${contextStr}${metaSt
   }
 getLogs(level?: LogLevel): Array<{level: LogLevel,
     message: string,
-  private log(leve,;)
+  private log(leve, )
   private log(leve,
 >>>>>>> origin/main
   l: LogLevel,
@@ -241,25 +195,15 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
   }
 
   getLogs(level?: LogLevel): Array<{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     level: LogLevel,
     message: string,
-    context?: LogContext;
-    metadata?: Record<string, unknown>
+    context?: LogContext metadata?: Record<string, unknown>
     timestamp: number,
   }> {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     if (level !== undefined) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       return this.logs.filter(log => log.level === level)
   /**
    * Log a fatal error message
@@ -284,17 +228,14 @@ getLogs(level?: LogLevel): Array<{level: LogLevel,
     // Format the log entry;
     const formattedMessage = this.formatLogEntry(logEntry);
     // Output to console in development;
-    if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */,}}'
-    // In production, you might want to send to a logging service;
+    if (this.isDevelopment && typeof console !== 'undefined') {/* TODO: Fix JSX expression */,}}''    // In production, you might want to send to a logging service;
     if (!this.isDevelopment) {/* TODO: Fix JSX expression */,}}
   }
   /**;
    * Format a log entry for output;
    */;
   private formatLogEntry(entr);
-  y: LogMetadata): string {/* TODO: Fix JSX expression */,}}const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`;';
-const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`;'
-    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
+  y: LogMetadata): string {/* TODO: Fix JSX expression */,}}const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`;';'const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`;''    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
   }
   /**;
    * Format context object for display;
@@ -310,8 +251,7 @@ const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
   n: ${context.sessionId,}`);`;
     if (context.requestId) parts.push(`reques)`;
   t: ${context.requestId,}`);
-    return parts.join(', ');'
-  }
+    return parts.join(', ');''  }
   /**;
    * Output to console with appropriate styling;
    */;
@@ -335,9 +275,7 @@ const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
     // In a real application, you would send this to your logging service;
     // For example: Sentry, LogRocket, DataDog, etc.;
     // Example implementation: ;,
-    // fetch('/api/logs', {);'
-    //   method: 'POST'),}//   headers: {// 'Content-Type': 'application/json',})'
-    //   body: JSON.stringify(entry),
+    // fetch('/api/logs', {);''    //   method: 'POST'),}//   headers: {// 'Content-Type': 'application/json',})''    //   body: JSON.stringify(entry),
     // }).catch(err => {)
     )}//   // })
     if (!this.isDevelopment) {/* TODO: Fix JSX expression */}
@@ -348,9 +286,7 @@ const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
    */
   private formatLogEntry(entr)
   y: LogMetadata): string {/* TODO: Fix JSX expression */}
-    const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`;';
-const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`'
-    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
+    const contextStr = entry.context ? ` [${this.formatContext(entry.context)}]` : '';`;';'const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`''    return `[${timestamp}] ${levelStr}${contextStr}: ${entry.message}${metadataStr}`;
   }
   /**
    * Format context object for display
@@ -366,8 +302,7 @@ const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
   n:${context.sessionId}`);`
     if (context.requestId) parts.push(`reques)`
   t:${context.requestId}`);
-    return parts.join(', ');'
-  }
+    return parts.join(', ');''  }
   /**
    * Output to console with appropriate styling;
    */
@@ -397,27 +332,17 @@ const metadataStr = entry.metadata ? ` ${JSON.stringify(entry.metadata)}` : '';`
    * Send log entry to external logging service
    */
   private sendToLoggingService(entry: LogMetadata): void {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     ,
     // In a real application, you would send this to your logging service
     // For example: Sentry, LogRocket, DataDog, etc.
     // Example implementation:
-    // fetch('/api/logs', {)'
-    //   method: 'POST'),'
-    //   headers: {// 'Content-Type': 'application/json'})'
-    //   body: JSON.stringify(entry),
+    // fetch('/api/logs', {)''    //   method: 'POST'),''    //   headers: {// 'Content-Type': 'application/json'})''    //   body: JSON.stringify(entry),
     // }).catch(err => {)
     //   // });
   }
-;
 exportLogs(): string {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     return JSON.stringify(this.logs, null, 2)
   }
 }
@@ -428,11 +353,9 @@ exportLogs(): string {return JSON.stringify(this.logs, null, 2)}}}
 // Export singleton instance;
 export const logger = new Logger();
   private sendToLoggingService(entr);
-  y: LogMetadata): void {/* TODO: Fix JSX expression */,}}s: {// 'Content-Type': 'application/json',},;'
-    //   bod,;
+  y: LogMetadata): void {/* TODO: Fix JSX expression */,}}s: {// 'Content-Type': 'application/json',},;''    //   bod,;
   y: LogMetadata): void {/* TODO: Fix JSX expression */}
-  s: {// 'Content-Type': 'application/json'},'
-    //   bod,
+  s: {// 'Content-Type': 'application/json'},''    //   bod,
   y: JSON.stringify(entry)
     // }).catch(err => {/* TODO: Fix JSX expression */})
     //   // });
@@ -448,6 +371,3 @@ export const logger = new Logger();
   private getLevelString(leve);
   l: LogLevel): string {/* TODO: Fix JSX expression */,}}}
 >>>>>>> cursor/delete-records-a75e
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

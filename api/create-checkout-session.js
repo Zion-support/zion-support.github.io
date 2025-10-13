@@ -1,82 +1,30 @@
-import { withErrorLogging } from './withErrorLogging.cjs';';';
-const PROD_DOMAIN = 'https://ziontechgroup.com''
+import { withErrorLogging } from './withErrorLogging.cjs';'
+const PROD_DOMAIN = 'https://ziontechgroup.com';'
 async function handler(req, res) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (req.method !== 'POST') {'
-    res.statusCode = 405
-    res.setHeader('Content-Type', 'application/json')'
-    res.end(JSON.stringify({ error: 'Method not allowed' }))'
-    return
-  }
-;
-const { productId, userId } = req.body || {}
-  if (!productId) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    res.statusCode = 400
-    res.setHeader('Content-Type', 'application/json')'
-    res.end(JSON.stringify({ error: 'Product ID is required' }))'
-    return
+  if (req.method !== 'POST') {'    res.statusCode = 405;
+    res.setHeader('Content-Type', 'application/json');'    res.end(JSON.stringify({ error: 'Method not allowed' }));'    return;
   }
 
   try {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    // Basic checkout session creation logic;
-const sessionData = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      productId,
-      userId: userId || null,
-      timestamp: new Date().toISOString(),
-      status: 'pending''
+    const { amount, currency = 'usd', description } = req.body;'
+    if (!amount) {
+      res.statusCode = 400;
+      res.setHeader('Content-Type', 'application/json');'      res.end(JSON.stringify({ error: 'Amount is required' }));'      return;
     }
-    // In a real implementation, you would:
-    // 1. Create a session with your payment provider (Stripe, PayPal, etc.)
-    // 2. Store session data in your database
-    // 3. Return the session ID and checkout URL
 
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')'
-    res.end(JSON.stringify({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      success: true,
-      sessionId: `session_${Date.now()}`,
-      checkoutUrl: `${PROD_DOMAIN}/checkout?session=${Date.now()}`,
-      data: sessionData
-    }))
-  } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {'
-      console.error('Checkout session creation error:', error)'
+    // Here you would integrate with your payment processor (Stripe, PayPal, etc.)
+    // For now, we'll return a mock response'    const session = {
+      id: `cs_${Date.now()}`,
+      amount: amount,
+      currency: currency,
+      description: description || 'Zion Tech Group Service','      status: 'pending','      checkout_url: `${PROD_DOMAIN}/checkout?session_id=cs_${Date.now()}`
     }
-    res.statusCode = 500
-    res.setHeader('Content-Type', 'application/json')'
-    res.end(JSON.stringify({
-  // TODO: Add properties
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');'    res.end(JSON.stringify({ session }));
+  } catch (error) {
+    console.error('Error creating checkout session:', error);'    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');'    res.end(JSON.stringify({ error: 'Internal server error' }));'  }
 }
-  // TODO: Add properties
-}
-      error: 'Failed to create checkout session','
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined'
-    }))
-  }
-}
-;
-export default withErrorLogging(handler)
+
+export default withErrorLogging(handler);

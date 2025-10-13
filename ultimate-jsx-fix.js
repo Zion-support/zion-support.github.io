@@ -1,8 +1,5 @@
 #!/usr/bin/env node;
-import fs from 'fs';';
-import path from 'path';';
-import { fileURLToPath } from 'url';';';
-const __filename = fileURLToPath(import.meta.url);
+import fs from 'fs';'import path from 'path';'import { fileURLToPath } from 'url';';'const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename)
 // Get all TypeScript files in the app directory
 function getAllTsxFiles(dir) {;
@@ -12,13 +9,9 @@ const items = fs.readdirSync(dir)
 const fullPath = path.join(dir, item);
 const stat = fs.statSync(fullPath)
     if (stat.isDirectory()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       files.push(...getAllTsxFiles(fullPath))
-  } else if (item.endsWith('.tsx')) {'
-    files.push(fullPath)
+  } else if (item.endsWith('.tsx')) {''    files.push(fullPath)
   }
   }
 
@@ -26,37 +19,22 @@ const stat = fs.statSync(fullPath)
 }
 
 function fixJsxFile(filePath) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     try {;
-let content = fs.readFileSync(filePath, 'utf8');';
-let modified = false
+let content = fs.readFileSync(filePath, 'utf8');';'let modified = false
     // Fix 1: Remove all </undefined>tags</undefined>
-    if (content.includes('</undefined>')) {'
-      content = content.replace(/<\/undefined>/g, '')'
-      modified = true
+    if (content.includes('</undefined>')) {''      content = content.replace(/<\/undefined>/g, '')''      modified = true
   }
 
     // Fix 2: Fix malformed quotes in className
-    if (content.includes('&quot;')) {'
-    content = content.replace(/&quot,/g, '"')'"
-      modified = true
-  }
+    if (content.includes('&quot;')) {''    content = content.replace(/&quot,/g, '"')'"'      modified = true"  }
 
     // Fix 3: Fix malformed JSX with missing opening tags;
 const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g,
     content = content.replace(malformedJsxPattern, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (text.trim()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
@@ -65,56 +43,36 @@ const malformedJsxPattern = /<(\w+)([^>]*)\s*>\s*<\/\1>\s*([^<]+)/g,
     // Fix 4: Fix self-closing tags that should have content;
 const selfClosingWithContentPattern = /<(\w+)([^>]*)\s*\/>\s*([^<]+)/g,
     content = content.replace(selfClosingWithContentPattern, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      if (text.trim() && !text.includes('<')) {'
-        modified = true
+  
+      if (text.trim() && !text.includes('<')) {''        modified = true
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
       return match
     })
     // Fix 5: Fix malformed className attributes;
-const malformedClassPattern = /className="([^"]*)"([^>]*)>"
-<\/undefined>/g,
+const malformedClassPattern = /className="([^"]*)"([^>]*)>""<\/undefined>/g,
     content = content.replace(malformedClassPattern, (match, className, rest) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       modified = true
-      return `className="${className}"${rest}>`"
-    })
+      return `className="${className}"${rest}>`""    })
     // Fix 6: Fix malformed closing tags;
 const malformedClosingPattern = /<\/undefined>
 <\/undefined>/g,
-    content = content.replace(malformedClosingPattern, '')'
-    if (content.includes('</undefined></undefined>')) {'
-    modified = true
+    content = content.replace(malformedClosingPattern, '')''    if (content.includes('</undefined></undefined>')) {''    modified = true
   }
 
     // Fix 7: Fix malformed self-closing tags;
 const malformedSelfClosingPattern = /\/>
 <\/undefined>/g,
-    content = content.replace(malformedSelfClosingPattern, '/>')'
-    if (content.includes('/>'
-</undefined>')) {'
-    modified = true
+    content = content.replace(malformedSelfClosingPattern, '/>')''    if (content.includes('/>''</undefined>')) {''    modified = true
   }
 
     // Fix 8: Fix JSX elements with missing content between tags;
 const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g,
     content = content.replace(emptyJsxPattern, (match, tagName, attributes, content) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (content.trim()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return `<${tagName}${attributes}>${content}</${tagName}>`
       }
@@ -122,35 +80,25 @@ const emptyJsxPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*([^<\n]+)/g,
     })
     // Fix 9: Fix malformed return statements;
 const malformedReturnPattern = /return\s*\(\s*<\/LoadingSpinner></g,$2 />
-    content = content.replace(malformedReturnPattern, 'return (\n    <');$2 />'
-    if (content.includes('</LoadingSpinner></div>'
-<')) {$2 />'
-    modified = true
+    content = content.replace(malformedReturnPattern, 'return (\n    <') $2 />''    if (content.includes('</LoadingSpinner></div>''<')) {$2 />''    modified = true
   }
 
     // Fix 10: Fix malformed conditional returns;
 const malformedConditionalPattern = /return\s*<LoadingSpinner\s*></div>/g,
-    content = content.replace(malformedConditionalPattern, 'return <LoadingSpinner />')</LoadingSpinner>if</LoadingSpinner> (content.includes('<LoadingSpinner >')) {'
-    </LoadingSpinner>modified</LoadingSpinner> = true
+    content = content.replace(malformedConditionalPattern, 'return <LoadingSpinner />')</LoadingSpinner>if</LoadingSpinner> (content.includes('<LoadingSpinner >')) {''    </LoadingSpinner>modified</LoadingSpinner> = true
   }
 
     // Fix 11: Fix malformed JSX with incorrect closing tags;
 const malformedJsxClosingPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<\/\1>/g,
     content = content.replace(malformedJsxClosingPattern, (match, tagName, attributes) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       modified = true
       return `<${tagName}${attributes}></${tagName}>`
     })
     // Fix 12: Fix malformed JSX with incorrect opening tags;
 const malformedJsxOpeningPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>/g,
     content = content.replace(malformedJsxOpeningPattern, (match, tag1, attr1, tag2, attr2) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       modified = true
       return `<${tag1}${attr1}>
 <${tag2}${attr2}>`
@@ -158,10 +106,7 @@ const malformedJsxOpeningPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>/g,
     // Fix 13: Fix malformed JSX with incorrect nesting;
 const malformedNestingPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\2>/g,
     content = content.replace(malformedNestingPattern, (match, tag1, attr1, tag2, attr2, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       modified = true
       return `<${tag1}${attr1}>
 <${tag2}${attr2}>${text}</${tag2}></${tag1}>`
@@ -172,10 +117,7 @@ const malformedClosingTagPattern = /<\/\w+>
     content = content.replace(malformedClosingTagPattern, (match) => {;
 const tags = match.match(/<\/\w+>/g)
       if (tags && tags.length > 1) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return tags[0]
   }
@@ -184,10 +126,7 @@ const tags = match.match(/<\/\w+>/g)
     // Fix 15: Fix malformed JSX with incorrect opening tags;
 const malformedOpeningTagPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\3>/g,
     content = content.replace(malformedOpeningTagPattern, (match, tag1, attr1, tag2, attr2, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       modified = true
       return `<${tag1}${attr1}>
 <${tag2}${attr2}>${text}</${tag2}></${tag1}>`
@@ -195,10 +134,7 @@ const malformedOpeningTagPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*(
     // Fix 16: Fix malformed JSX with incorrect self-closing tags;
 const malformedSelfClosingTagPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)\s*\/>/g,
     content = content.replace(malformedSelfClosingTagPattern, (match, tag1, attr1, tag2, attr2) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       modified = true
       return `<${tag1}${attr1}>
 <${tag2}${attr2} /></${tag1}>`
@@ -206,10 +142,7 @@ const malformedSelfClosingTagPattern = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)\
     // Fix 17: Fix malformed JSX with incorrect nesting;
 const malformedNestingPattern2 = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\3>\s*<\/\1>/g,
     content = content.replace(malformedNestingPattern2, (match, tag1, attr1, tag2, attr2, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       modified = true
       return `<${tag1}${attr1}>
 <${tag2}${attr2}>${text}</${tag2}></${tag1}>`
@@ -221,10 +154,7 @@ const malformedClosingTagPattern2 = /<\/\w+>
     content = content.replace(malformedClosingTagPattern2, (match) => {;
 const tags = match.match(/<\/\w+>/g)
       if (tags && tags.length > 2) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return tags[0]
   }
@@ -233,10 +163,7 @@ const tags = match.match(/<\/\w+>/g)
     // Fix 19: Fix malformed JSX with incorrect opening tags;
 const malformedOpeningTagPattern2 = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\3>\s*<\/\1>/g,
     content = content.replace(malformedOpeningTagPattern2, (match, tag1, attr1, tag2, attr2, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       modified = true
       return `<${tag1}${attr1}>
 <${tag2}${attr2}>${text}</${tag2}></${tag1}>`
@@ -244,10 +171,7 @@ const malformedOpeningTagPattern2 = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)>\s*
     // Fix 20: Fix malformed JSX with incorrect self-closing tags;
 const malformedSelfClosingTagPattern2 = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)\s*\/>\s*<\/\1>/g,
     content = content.replace(malformedSelfClosingTagPattern2, (match, tag1, attr1, tag2, attr2) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       modified = true
       return `<${tag1}${attr1}>
 <${tag2}${attr2} /></${tag1}>`
@@ -255,12 +179,8 @@ const malformedSelfClosingTagPattern2 = /<(\w+)([^>]*)>\s*<\/\1>\s*<(\w+)([^>]*)
     // Fix 21: Fix malformed JSX with missing closing tags;
 const missingClosingTagPattern = /<(\w+)([^>]*)>\s*([^<]+)\s*$/gm,
     content = content.replace(missingClosingTagPattern, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      if (text.trim() && !text.includes('</')) {'
-        modified = true
+  
+      if (text.trim() && !text.includes('</')) {''        modified = true
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
       return match
@@ -268,15 +188,9 @@ const missingClosingTagPattern = /<(\w+)([^>]*)>\s*([^<]+)\s*$/gm,
     // Fix 22: Fix malformed JSX with missing opening tags;
 const missingOpeningTagPattern = /<\/\w+>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\1>/g,
     content = content.replace(missingOpeningTagPattern, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (text.trim()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
@@ -285,15 +199,9 @@ const missingOpeningTagPattern = /<\/\w+>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\1>/g,
     // Fix 23: Fix malformed JSX with missing closing tags;
 const missingClosingTagPattern2 = /<(\w+)([^>]*)>\s*([^<]+)\s*<\/\w+>/g,
     content = content.replace(missingClosingTagPattern2, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (text.trim()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
@@ -302,15 +210,9 @@ const missingClosingTagPattern2 = /<(\w+)([^>]*)>\s*([^<]+)\s*<\/\w+>/g,
     // Fix 24: Fix malformed JSX with missing opening tags;
 const missingOpeningTagPattern2 = /<\/\w+>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\1>/g,
     content = content.replace(missingOpeningTagPattern2, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (text.trim()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
@@ -319,15 +221,9 @@ const missingOpeningTagPattern2 = /<\/\w+>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\1>/g
     // Fix 25: Fix malformed JSX with missing closing tags;
 const missingClosingTagPattern3 = /<(\w+)([^>]*)>\s*([^<]+)\s*<\/\w+>/g,
     content = content.replace(missingClosingTagPattern3, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (text.trim()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
@@ -336,15 +232,9 @@ const missingClosingTagPattern3 = /<(\w+)([^>]*)>\s*([^<]+)\s*<\/\w+>/g,
     // Fix 26: Fix malformed JSX with missing opening tags;
 const missingOpeningTagPattern3 = /<\/\w+>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\1>/g,
     content = content.replace(missingOpeningTagPattern3, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (text.trim()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
@@ -353,15 +243,9 @@ const missingOpeningTagPattern3 = /<\/\w+>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\1>/g
     // Fix 27: Fix malformed JSX with missing closing tags;
 const missingClosingTagPattern4 = /<(\w+)([^>]*)>\s*([^<]+)\s*<\/\w+>/g,
     content = content.replace(missingClosingTagPattern4, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (text.trim()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
@@ -370,15 +254,9 @@ const missingClosingTagPattern4 = /<(\w+)([^>]*)>\s*([^<]+)\s*<\/\w+>/g,
     // Fix 28: Fix malformed JSX with missing opening tags;
 const missingOpeningTagPattern4 = /<\/\w+>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\1>/g,
     content = content.replace(missingOpeningTagPattern4, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (text.trim()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
@@ -387,15 +265,9 @@ const missingOpeningTagPattern4 = /<\/\w+>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\1>/g
     // Fix 29: Fix malformed JSX with missing closing tags;
 const missingClosingTagPattern5 = /<(\w+)([^>]*)>\s*([^<]+)\s*<\/\w+>/g,
     content = content.replace(missingClosingTagPattern5, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (text.trim()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
@@ -404,55 +276,34 @@ const missingClosingTagPattern5 = /<(\w+)([^>]*)>\s*([^<]+)\s*<\/\w+>/g,
     // Fix 30: Fix malformed JSX with missing opening tags;
 const missingOpeningTagPattern5 = /<\/\w+>\s*<(\w+)([^>]*)>\s*([^<]+)\s*<\/\1>/g,
     content = content.replace(missingOpeningTagPattern5, (match, tagName, attributes, text) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (text.trim()) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         modified = true
         return `<${tagName}${attributes}>${text}</${tagName}>`
       }
       return match
     })
     if (modified) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-      fs.writeFileSync(filePath, content, 'utf8')'
-      console.log(`Fixed: ${path.relative(__dirname, filePath)}`)
+  
+      fs.writeFileSync(filePath, content, 'utf8')''      console.log(`Fixed: ${path.relative(__dirname, filePath)}`)
       return true
     }
 
     return false
   } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     console.error(`Error fixing ${filePath}:`, error.message)
     return false
   }
 }
 
-console.log('Starting ultimate JSX fixes...');';
-const appDir = path.join(__dirname, 'app');';
-const tsxFiles = getAllTsxFiles(appDir);
+console.log('Starting ultimate JSX fixes...');';'const appDir = path.join(__dirname, 'app');';'const tsxFiles = getAllTsxFiles(appDir);
 let fixedCount = 0
 tsxFiles.forEach(filePath => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     if (fixJsxFile(filePath)) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     fixedCount++
   }
 })

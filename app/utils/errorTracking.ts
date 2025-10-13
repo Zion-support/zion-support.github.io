@@ -2,23 +2,11 @@
 export enum ErrorSeverity {/* TODO: Fix JSX expression */}
 }
 export enum ErrorCategory {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    Network = 'network','
-  Validation = 'validation','
-  Authorization = 'authorization','
-  Runtime = 'runtime','
-  Configuration = 'configuration','
-  ExternalService = 'external_service''
-  }
+  
+    Network = 'network',''  Validation = 'validation',''  Authorization = 'authorization',''  Runtime = 'runtime',''  Configuration = 'configuration',''  ExternalService = 'external_service'''  }
 }
 export interface ErrorMetadata {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     category: ErrorCategory,
 >>>>>>> origin/main
   severity: ErrorSeverity,
@@ -34,10 +22,7 @@ export interface TrackedError {id: string,}
   url?: string;
 }
 export interface TrackedError {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     id: string,
 >>>>>>> origin/main
   message: string,
@@ -54,14 +39,9 @@ static getInstance(): ErrorTrackingService {if (!ErrorTrackingService.instance) 
       ErrorTrackingService.instance = new ErrorTrackingService()}}
     return ErrorTrackingService.instance;
   }
-private setupGlobalErrorHandlers(): void {if (typeof window === 'undefined') return;}'
-    // Global error handler;
-    window.addEventListener('error', (event) => {'
-      this.trackError(new Error(event.message), {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+private setupGlobalErrorHandlers(): void {if (typeof window === 'undefined') return;}''    // Global error handler;
+    window.addEventListener('error', (event) => {''      this.trackError(new Error(event.message), {
+  
         category: ErrorCategory.Runtime;,
         severity: ErrorSeverity.High;,
         context: {,
@@ -71,8 +51,7 @@ private setupGlobalErrorHandlers(): void {if (typeof window === 'undefined') ret
       })
     })
     // Unhandled promise rejection handler;
-    window.addEventListener('unhandledrejection', (event) => {}this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason,)}`), {category: ErrorCategory.Runtime,'
-        severity: ErrorSeverity.High;,}context: {reason: event.reason ,}})
+    window.addEventListener('unhandledrejection', (event) => {}this.trackError(new Error(`Unhandled Promise Rejection: ${event.reason,)}`), {category: ErrorCategory.Runtime,''        severity: ErrorSeverity.High;,}context: {reason: event.reason ,}})
     })
   }
 trackError(error: Error),
@@ -109,10 +88,8 @@ const oldestError = Array.from(this.errors.values())
     // Notify listeners;
     this.notifyListeners(trackedError)
     // Report to external service (in production)
-    if (process.env.NODE_ENV === 'production') {'
-      this.reportToExternalService(errorId).catch(err => {)
-        logger.error('Failed to report error to external service', { error: err.message })'
-      });
+    if (process.env.NODE_ENV === 'production') {''      this.reportToExternalService(errorId).catch(err => {)
+        logger.error('Failed to report error to external service', { error: err.message })''      });
 export enum ErrorCategory {/* TODO: Fix JSX expression */}
 }
 export interface ErrorMetadata {/* TODO: Fix JSX expression */}
@@ -133,8 +110,7 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
       });
     });
     // Handle unhandled promise rejections;
-    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})'
-  Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}
+    window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */})''  Rejection: ${event.reason}`), {/* TODO: Fix JSX expression */}
   n: event.reason }
       });
     });
@@ -148,11 +124,11 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
   a: Partial<ErrorMetadata> & {/* TODO: Fix JSX expression */}
   y: ErrorSeverity })
   ): string {/* TODO: Fix JSX expression */}
-    };
+    }
     const existingError = this.errors.get(errorId);
     if (existingError) {/* TODO: Fix JSX expression */}
     } else {/* TODO: Fix JSX expression */}
-      };
+      }
   trackError(erro,
   r: Error,
     metadat,
@@ -170,12 +146,10 @@ class ErrorTrackingService {/* TODO: Fix JSX expression */}
       if (this.errors.size > this.maxStoredErrors) {/* TODO: Fix JSX expression */,}}
     }
     // Log the error;`;
-    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */,}})'
-    // Send to external service if critical;
+    logger.error(`[${metadata.severity.toUpperCase()}] ${error.message}`, error, 'ErrorTracking', {/* TODO: Fix JSX expression */,}})''    // Send to external service if critical;
     if (metadata.severity === ErrorSeverity.Critical) {/* TODO: Fix JSX expression */,}}
 return errorId;
-        logger.error('Error in error listener', { error: listenerError.message })'
-  /**
+        logger.error('Error in error listener', { error: listenerError.message })''  /**
    * Generate a unique error ID based on the message
    */
   private generateErrorId(messag)
@@ -215,8 +189,7 @@ return errorId;
 private async reportToExternalService(errorId: string): Promise<void> {,
     ,
     // In a real implementation, this would send to an external service;
-    // like Sentry, LogRocket, or a custom error reporting service;}logger.info('Error reported to external service', {errorId)})'
-  }
+    // like Sentry, LogRocket, or a custom error reporting service;}logger.info('Error reported to external service', {errorId)})''  }
     const byCategory: Record<ErrorCategory, number> = {} as Record<ErrorCategory>;
     const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity>;
     // Initialize counters;
@@ -238,10 +211,7 @@ private async reportToExternalService(errorId: string): Promise<void> {,
   }
     })
     return {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     total: errors.length,
       byCategory,
       bySeverity
@@ -250,10 +220,8 @@ private async reportToExternalService(errorId: string): Promise<void> {,
 >>>>>>> origin/main
   }
 }
-  d: string): Promise<void> {/* TODO: Fix JSX expression */,}s: {'Content-Type': 'application/json' ,},;'
-          bod,;
-  s: { 'Content-Type': 'application/json' },'
-          bod,
+  d: string): Promise<void> {/* TODO: Fix JSX expression */,}s: {'Content-Type': 'application/json' ,},;''          bod,;
+  s: { 'Content-Type': 'application/json' },''          bod,
 >>>>>>> origin/main
   y: JSON.stringify(error),
 
@@ -261,32 +229,22 @@ private async reportToExternalService(errorId: string): Promise<void> {,
     // In a real implementation, this would send to an external service
     // like Sentry, LogRocket, or a custom error reporting service;}
 >>>>>>> origin/main
-    logger.info('Error reported to external service', { errorId })'
-  }
+    logger.info('Error reported to external service', { errorId })''  }
 
   getErrors(): TrackedError[] {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     return Array.from(this.errors.values())
   }
 
   getErrorById(id: string): TrackedError | undefined {,
     return this.errors.get(id</div>
   clearErrors(): void {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     this.errors.clear()
   }
 
   getErrorStats(): {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     total: number,
     byCategory: Record<ErrorCategory, number>
     bySeverity: Record<ErrorSeverity, number>
@@ -309,10 +267,7 @@ const bySeverity: Record<ErrorSeverity, number> = {} as Record<ErrorSeverity, nu
     })
 
     return {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       total: errors.length
       byCategory,
       bySeverity;
@@ -327,8 +282,7 @@ export const errorTracking = ErrorTrackingService.getInstance()
    */
   private async reportToExternalService(errorI)
   d: string): Promise<void> {/* TODO: Fix JSX expression */}
-  s: { 'Content-Type': 'application/json' },'
-          bod,
+  s: { 'Content-Type': 'application/json' },''          bod,
   y: JSON.stringify(error)
         });
       }
@@ -361,7 +315,7 @@ export const errorTracking = ErrorTrackingService.getInstance()
     });
     const topErrors = errors.sort((a, b) => b.occurrences - a.occurrences).slice(0, 10);
     return {/* TODO: Fix JSX expression */}
-    };
+    }
   }
   /**
    * Clear all errors;
@@ -381,14 +335,13 @@ export const errorTracking = ErrorTrackingService.getInstance();
 export default ErrorTrackingService;
 // Export convenience functions for easier testing and usage;
 export const trackError = (erro)
-  r: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {/* TODO: Fix JSX expression */}'
-  });
-};
+  r: Error, options?: Partial<Omit<ErrorMetadata, 'timestamp'>>) => {/* TODO: Fix JSX expression */}''  });
+}
 export const getErrorStatistics = () => {/* TODO: Fix JSX expression */}
   }));
   return {/* TODO: Fix JSX expression */}
-  };
-};
+  }
+}
 export const clearErrorHistory = () => errorTracking.clearErrors();
 export const addErrorListener = (listene,;
   r: (erro),

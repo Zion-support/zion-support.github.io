@@ -1,36 +1,18 @@
-'use client';'
-/**;
+'use client''/**;
  * Advanced Error Handler;
  * Comprehensive error handling utilities for React applications;
  */;
-import React, {ErrorInfo, useCallback}from 'react';';'
-// Error types;
-export enum ErrorType {// Error types;}}export enum ErrorType {}}RUNTIME = 'RUNTIME','
-  NETWORK = 'NETWORK','
-  VALIDATION = 'VALIDATION','
-  AUTHENTICATION = 'AUTHENTICATION','
-  AUTHORIZATION = 'AUTHORIZATION','
-
-  NOT_FOUND = 'NOT_FOUND','
-
-  SERVER = 'SERVER','
-
-  CLIENT = 'CLIENT','
-
-  UNKNOWN = 'UNKNOWN''
-}
+import React, {ErrorInfo, useCallback}from 'react';''// Error types;
+export enum ErrorType {// Error types;}}export enum ErrorType {}}RUNTIME = 'RUNTIME',''  NETWORK = 'NETWORK',''  VALIDATION = 'VALIDATION',''  AUTHENTICATION = 'AUTHENTICATION',''  AUTHORIZATION = 'AUTHORIZATION',''
+  NOT_FOUND = 'NOT_FOUND',''
+  SERVER = 'SERVER',''
+  CLIENT = 'CLIENT',''
+  UNKNOWN = 'UNKNOWN'''}
 // Error severity levels;
-export enum ErrorSeverity {// Error severity levels;}}export enum ErrorSeverity {}}LOW = 'LOW','
-  MEDIUM = 'MEDIUM','
-  HIGH = 'HIGH','
-  CRITICAL = 'CRITICAL''
-}
+export enum ErrorSeverity {// Error severity levels;}}export enum ErrorSeverity {}}LOW = 'LOW',''  MEDIUM = 'MEDIUM',''  HIGH = 'HIGH',''  CRITICAL = 'CRITICAL'''}
 export interface AppError {id: string,,;}
 export interface AppError {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     id: string,,
     type: ErrorType,
   severity: ErrorSeverity,,
@@ -51,10 +33,7 @@ export interface AppError {
 }
 export interface ErrorHandlerConfig {enableLogging: boolean,,;}
 export interface ErrorHandlerConfig {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     enableLogging: boolean,,
 >>>>>>> origin/main
     enableReporting: boolean,
@@ -73,8 +52,7 @@ export interface ErrorHandlerConfig {
   enableConsoleLogging: boolean,
   enableNetworkLogging: boolean,
   reportEndpoint?: string;
-  logLevel: 'debug' | 'info' | 'warn' | 'error';'
-}
+  logLevel: 'debug' | 'info' | 'warn' | 'error''}
 // Default configuration;
 export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
     ,
@@ -86,8 +64,7 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
   enableUserNotification: true,
   enableConsoleLogging: true,
   enableNetworkLogging: true,
-  logLevel: 'error','
-// Default configuration,;
+  logLevel: 'error',''// Default configuration,;
 export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
     enableLogging: true,
   enableReporting: true,
@@ -96,8 +73,7 @@ export const defaultErrorHandlerConfig: ErrorHandlerConfig = {,
   retryDelay: 1000,
   enableUserNotification: true,
   enableConsoleLogging: true,
-  enableNetworkLogging: true,}logLevel: 'error',}'
-// Error Handler class;
+  enableNetworkLogging: true,}logLevel: 'error',}''// Error Handler class;
 export class ErrorHandler {// Error Handler class;}}export class ErrorHandler {}}private static instance: ErrorHandler,
   private config: ErrorHandlerConfig</string>,
   private errors: AppError[] = []</string>,
@@ -131,27 +107,20 @@ export class ErrorHandler {/* TODO: Fix JSX expression */,}}t: number ,}> = []
       message: error.message,
       stack: error.stack,
       timestamp: new Date(),
-      url: typeof window !== 'undefined' ? window.location.href : undefined,'
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,'
-  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {;
+      url: typeof window !== 'undefined' ? window.location.href : undefined,''      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,''  handleError(error: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {;
 const appError: AppError = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       id: this.generateErrorId()
       type: this.determineErrorType(error)
       severity: this.determineErrorSeverity(error)
       message: error.message;
       stack: error.stack;
       timestamp: new Date()
-      url: typeof window !== 'undefined' ? window.location.href : undefined;'
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;'
-      componentStack: errorInfo?.componentStack ?? undefined;
+      url: typeof window !== 'undefined' ? window.location.href : undefined;''      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;''      componentStack: errorInfo?.componentStack ?? undefined;
       context,
       resolved: false,
       retryCount: 0,
-    };
+    }
     this.errors.push(appError);
     if (this.config.enableLogging) {}this.logError(appError);
     }
@@ -174,9 +143,7 @@ const appError: AppError = {,
       stack: error.stack,
 >>>>>>> origin/main
       timestamp: new Date(),
-      url: typeof window !== 'undefined' ? window.location.href : undefined,'
-      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;,}context: {networkUrl: url, statusCode: status ,},'
-      resolved: false,
+      url: typeof window !== 'undefined' ? window.location.href : undefined,''      userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined;,}context: {networkUrl: url, statusCode: status ,},''      resolved: false,
       retryCount: 0,
     this.errors.push(appError);
     if (this.config.enableLogging) {}this.logError(appError);
@@ -191,18 +158,16 @@ const appError: AppError = {,
       severity: ErrorSeverity.LOW,
       message: `Validation error in ${field,}: ${message}`,
       timestamp: new Date(),
-      url: typeof window !== 'undefined' ? window.location.href : undefined,'
-      context: {field, value},
+      url: typeof window !== 'undefined' ? window.location.href : undefined,''      context: {field, value},
       resolved: false,
       retryCount: 0,
     this.errors.push(appError);
     if (this.config.enableLogging) {}this.logError(appError);
         case ErrorSeverity.MEDIUM: break,
         case ErrorSeverity.LOW:,
-          if (process.env['NODE_ENV'] === 'development') {,'
-            if (import.meta.env.DEV) {,
+          if (process.env['NODE_ENV'] === 'development') {,''            if (import.meta.env.DEV) {,
   r: Error, errorInfo?: ErrorInfo, context?: Record<string, unknown>): AppError {/* TODO: Fix JSX expression */}
-    };
+    }
     this.errors.push(appError);
     if (this.config.enableLogging) {/* TODO: Fix JSX expression */}
     }
@@ -236,8 +201,7 @@ const appError: AppError = {,
       timestam,
   p: new Date(),
       ur,
-  l: typeof window !== 'undefined' ? window.location.href : undefined,'
-      contex,
+  l: typeof window !== 'undefined' ? window.location.href : undefined,''      contex,
   t: {field, value},
       resolve,
   d: false,
@@ -254,20 +218,12 @@ const appError: AppError = {,
   // Determine error type;
   private determineErrorType(erro);
   r: Error): ErrorType {/* TODO: Fix JSX expression */,}}}
-    if (message.includes('validation') || message.includes('invalid')) {/* TODO: Fix JSX expression */,}}'
-    if (message.includes('auth') || message.includes('login') || message.includes('token')) {/* TODO: Fix JSX expression */,}}'
-    if (message.includes('permission') || message.includes('unauthorized')) {/* TODO: Fix JSX expression */,}}'
-    if (message.includes('not found') || message.includes('404')) {/* TODO: Fix JSX expression */,}}'
-    if (message.includes('server') || message.includes('500')) {/* TODO: Fix JSX expression */,}}'
-    if (stack.includes('react') || stack.includes('component')) {/* TODO: Fix JSX expression */,}}'
-    return ErrorType.UNKNOWN;
+    if (message.includes('validation') || message.includes('invalid')) {/* TODO: Fix JSX expression */,}}''    if (message.includes('auth') || message.includes('login') || message.includes('token')) {/* TODO: Fix JSX expression */,}}''    if (message.includes('permission') || message.includes('unauthorized')) {/* TODO: Fix JSX expression */,}}''    if (message.includes('not found') || message.includes('404')) {/* TODO: Fix JSX expression */,}}''    if (message.includes('server') || message.includes('500')) {/* TODO: Fix JSX expression */,}}''    if (stack.includes('react') || stack.includes('component')) {/* TODO: Fix JSX expression */,}}''    return ErrorType.UNKNOWN;
   }
   // Determine error severity;
   private determineErrorSeverity(erro);
   r: Error): ErrorSeverity {/* TODO: Fix JSX expression */,}}}
-    if (message.includes('error') || message.includes('exception')) {/* TODO: Fix JSX expression */,}}'
-    if (message.includes('warning') || message.includes('deprecated')) {/* TODO: Fix JSX expression */,}}'
-    return ErrorSeverity.LOW;
+    if (message.includes('error') || message.includes('exception')) {/* TODO: Fix JSX expression */,}}''    if (message.includes('warning') || message.includes('deprecated')) {/* TODO: Fix JSX expression */,}}''    return ErrorSeverity.LOW;
   }
   // Determine network error severity;
   private determineNetworkErrorSeverity(status?: number): ErrorSeverity {/* TODO: Fix JSX expression */,}}}
@@ -276,8 +232,7 @@ const appError: AppError = {,
   r: AppError) {/* TODO: Fix JSX expression */,}`;
       const logMessage = `[${error.severity}] ${error.type}: ${error.message}`;
       switch (error.severity) {/* TODO: Fix JSX expression */,}}
-        method: 'POST'),'
-} catch (err) {}}
+        method: 'POST'),''} catch (err) {}}
   // Report error;
   private async reportError(error: AppError) {,
     if (!this.config.reportEndpoint) return;
@@ -285,17 +240,13 @@ const appError: AppError = {,
   }
   // Report error;
   private async reportError(error: AppError) {,}if (!this.config.reportEndpoint) return;
-    try {}}await fetch(this.config.reportEndpoint, {)}method: 'POST','
-        headers: {,}'Content-Type': 'application/json';'
-        },
+    try {}}await fetch(this.config.reportEndpoint, {)}method: 'POST',''        headers: {,}'Content-Type': 'application/json''        },
         body: JSON.stringify({,)
     ...error)
     timestamp: error.timestamp.toISOString(),
     try {,}
       await fetch(this.config.reportEndpoint, {);
-        method: 'POST'),'
-        headers: {),}'Content-Type': 'application/json')})'
-        body: JSON.stringify({,)
+        method: 'POST'),''        headers: {),}'Content-Type': 'application/json')})''        body: JSON.stringify({,)
       await fetch(this.config.reportEndpoint, {} catch (err) {}
       }
   }
@@ -304,23 +255,16 @@ const appError: AppError = {,
     if (!this.config.reportEndpoint) return
     try {}
       await fetch(this.config.reportEndpoint, {</div>
-        method: 'POST','
-        headers: {}
-          'Content-Type': 'application/json''
-        },
+        method: 'POST',''        headers: {}
+          'Content-Type': 'application/json'''        },
         body: JSON.stringify({
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
           ...error)
     timestamp: error.timestamp.toISOString()
     try {,
       await fetch(this.config.reportEndpoint, {)
-        method: 'POST')'
-        headers: {)
-          'Content-Type': 'application/json')})'
-        body: JSON.stringify({)
+        method: 'POST')''        headers: {)
+          'Content-Type': 'application/json')})''        body: JSON.stringify({)
           ...error),
           timestamp: error.timestamp.toISOString(),
         body: JSON.stringify({</div>
@@ -331,8 +275,7 @@ const appError: AppError = {,
     } catch (err) {}
       }
   }
-          'Content-Type': 'application/json')})'
-        body: JSON.stringify()
+          'Content-Type': 'application/json')})''        body: JSON.stringify()
 >>>>>>> origin/main
     ),
           ...error),
@@ -361,27 +304,19 @@ const appError: AppError = {,
       font-family: Arial, sans-serif
     `</string>
     notification.innerHTML = `</string>
-<div style="display: flex;justify-content:space-between;align-items:center,"></div>"
-<div />
-<strong>${error.severity}Error<p style="margin: 5px 0 0 0;font-size:14px,">${error.message</p>}<button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>,"
-    `
+<div style="display: flex justify-content:space-between;align-items:center,"></div>""<div />
+<strong>${error.severity}Error<p style="margin: 5px 0 0 0 font-size:14px,">${error.message</p>}<button onclick="this.parentElement.parentElement.remove()" style="background: none border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>,""    `
     notification.innerHTML = `
-      <div style="display: flex;justify-content:space-between;align-items:center,">,</div>"
-<div>,</div>
+      <div style="display: flex justify-content:space-between;align-items:center,">,</div>""<div>,</div>
 <strong>${error.severity}Error</strong>
-<p style="margin: 5px 0 0 0;font-size:14px,">${error.message</p>}</p></div>"
-<button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>,"
-      <div style="display:flex;justify-content:space-between;align-items:center,"></div>"
-<div />
-<strong>${error.severity}Error<p style="margin: 5px 0 0 0;font-size:14px,">${error.message</p>}</p>"
-<button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>,"
-      </div>
+<p style="margin: 5px 0 0 0 font-size:14px,">${error.message</p>}</p></div>""<button onclick="this.parentElement.parentElement.remove()" style="background: none border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>,""      <div style="display:flex justify-content:space-between;align-items:center,"></div>""<div />
+<strong>${error.severity}Error<p style="margin: 5px 0 0 0 font-size:14px,">${error.message</p>}</p>""<button onclick="this.parentElement.parentElement.remove()" style="background: none border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>,""      </div>
     `
     document.body.appendChild(notification)
     // Auto-remove after 5 seconds for non-critical errors,
     if (error.severity !== ErrorSeverity.CRITICAL) {setTimeout(() => {,
         if (notification.parentElement) {,
-    background: ${this.getNotificationColor(error.severity)};
+    background: ${this.getNotificationColor(error.severity)}
       color: white;,
     padding: 15 px
       border-radius: 5 px
@@ -391,28 +326,17 @@ const appError: AppError = {,
       font-family: Arial, sans-serif;
     `;</string>
     notification.innerHTML = `</string>
-<div style="display:flex;justify-content:space-between;align-items:center;"></div>"
-<div></div>
-<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>"
-    `;
+<div style="display:flex justify-content:space-between;align-items:center;"></div>""<div></div>
+<strong>${error.severity} Error<p style="margin:5px 0 0 0 font-size:14px;">${error.message}<button onclick="this.parentElement.parentElement.remove()" style="background:none border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>""    `;
     notification.innerHTML = `
-      <div style="display: flex;justify-content:space-between;align-items:center;">,</div>"
-<div>,</div>
+      <div style="display: flex justify-content:space-between;align-items:center;">,</div>""<div>,</div>
 <strong>${error.severity} Error</strong>
-<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p></div>"
-<button onclick="this.parentElement.parentElement.remove()" style="background: none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>"
-<div style="display:flex;justify-content:space-between;align-items:center;"></div>"
-<div></div>
-<strong>${error.severity} Error<p style="margin:5px 0 0 0;font-size:14px;">${error.message}</p>"
-<button onclick="this.parentElement.parentElement.remove()" style="background:none;border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button></div>"
-    `;
+<p style="margin:5px 0 0 0 font-size:14px;">${error.message}</p></div>""<button onclick="this.parentElement.parentElement.remove()" style="background: none border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button>""<div style="display:flex justify-content:space-between;align-items:center;"></div>""<div></div>
+<strong>${error.severity} Error<p style="margin:5px 0 0 0 font-size:14px;">${error.message}</p>""<button onclick="this.parentElement.parentElement.remove()" style="background:none border:none;color:white;font-size:18px;cursor:pointer;margin-left:10px;">×</button></div>""    `;
     document.body.appendChild(notification);
     // Auto-remove after 5 seconds for non-critical errors;
     if (error.severity !== ErrorSeverity.CRITICAL) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       setTimeout(() => {,
         if (notification.parentElement) {,
     // Auto-remove after 5 seconds for non-critical errors;}
@@ -453,7 +377,7 @@ const appError: AppError = {,
     } catch (err) {/* TODO: Fix JSX expression */,}}
 >>>>>>> origin/main
   }
-  d: ${this.getNotificationColor(error.severity)};
+  d: ${this.getNotificationColor(error.severity)}
       colo,
 >>>>>>> origin/main
   r: white,
@@ -471,16 +395,9 @@ const appError: AppError = {,
   y: Arial, sans-serif;`
     `;`
     notification.innerHTML = `
-  t: space-between, align-item,";"
-  s: center,">"
-</div>
+  t: space-between, align-item,""  s: center,">""</div>
 <div />
-<strong>${error.severity}Error</strong>";"
-          <p style="margi,"
-  n: 5px 0 0 0, font-siz,";"
-  e: 14px,">${error.message</p>}</p></div>";"
-        <button onclick="this.parentElement.parentElement.remove()" style=";"
-          backgroun,
+<strong>${error.severity}Error</strong>""          <p style="margi,""  n: 5px 0 0 0, font-siz,""  e: 14px,">${error.message</p>}</p></div>""        <button onclick="this.parentElement.parentElement.remove()" style=""          backgroun,
   d: none,
           borde,
   r: none,
@@ -491,9 +408,7 @@ const appError: AppError = {,
           curso,
   r: pointer,
           margin-lef,
-  t: 10px;";,"
-        ">×</button></div>`"
-    `
+  t: 10px ";,""        ">×</button></div>`""    `
     document.body.appendChild(notification)
     // Auto-remove after 5 seconds for non-critical errors,
     if (error.severity !== ErrorSeverity.CRITICAL) {/* TODO: Fix JSX expression */,}}
@@ -503,32 +418,21 @@ const appError: AppError = {,
   // Get notification color based on severity;
   private getNotificationColor(severity: ErrorSeverity): string {,}
     switch (severity) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   // Get notification color based on severity;}private getNotificationColor(severity: ErrorSeverity): string {,}}switch (severity) {}case ErrorSeverity.CRITICAL: ;,
-        return '#dc3545';'
-      case ErrorSeverity.HIGH: ;,
-        return '#fd7 e14';'
-      case ErrorSeverity.MEDIUM: return '#ffc107','
-      case ErrorSeverity.LOW: return '#28a745',,;'
-    default: case ErrorSeverity.LOW:,
+        return '#dc3545''      case ErrorSeverity.HIGH: ;,
+        return '#fd7 e14''      case ErrorSeverity.MEDIUM: return '#ffc107',''      case ErrorSeverity.LOW: return '#28a745',,;''    default: case ErrorSeverity.LOW:,
       case ErrorSeverity.MEDIUM:
-        return '#ffc107''
-      case ErrorSeverity.LOW: return '#28a745',,'
-    default:
+        return '#ffc107'''      case ErrorSeverity.LOW: return '#28a745',,''    default:
       case ErrorSeverity.LOW:
 >>>>>>> origin/main
-        return '#28a745','
-      default:,
-        return '#6c757d';'
-    }
+        return '#28a745',''      default:,
+        return '#6c757d''    }
   }
   private shouldRetry(error: AppError): boolean {,
     return(error.type === ErrorType.NETWORK &&)
       error.retryCount! < this.config.maxRetries &&)
-      error.severity !== ErrorSeverity.CRITICAL;)
+      error.severity !== ErrorSeverity.CRITICAL )
     );
   }
   // Schedule retry;
@@ -536,8 +440,7 @@ const appError: AppError = {,
   // Check if error should be retried
   private shouldRetry(error: AppError): boolean {}
     return (
-  // TODO: Add parameters
-)
+  
       error.type === ErrorType.NETWORK &&
       error.retryCount! < this.config.maxRetries &&
       error.severity !== ErrorSeverity.CRITICAL
@@ -545,7 +448,7 @@ const appError: AppError = {,
   }
   // Schedule retry
   private scheduleRetry(error: AppError) {}
-    const retryItem = { error, retryCount: error.retryCount! + 1 };
+    const retryItem = { error, retryCount: error.retryCount! + 1 }
     this.retryQueue.push(retryItem);
     setTimeout(() => {}
       this.retryError(retryItem);
@@ -553,10 +456,7 @@ const appError: AppError = {,
   }
   // Retry error;
   private async retryError(retryItem: {// error: AppError; retryCount: number}) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   // Get notification color based on severity;
   private getNotificationColor(severit)
   y: ErrorSeverity): string {/* TODO: Fix JSX expression */}
@@ -575,41 +475,29 @@ const appError: AppError = {,
 // Retry error;
   private async retryError(retryItem: {error: AppError, retryCount: number ,)}) {try {// Implement retry logic based on error type;}
       if (retryItem.error.type === ErrorType.NETWORK) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         // Retry network request
-        if (process.env['NODE_ENV'] === 'development') {'
-          if (import.meta.env.DEV) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+        if (process.env['NODE_ENV'] === 'development') {''          if (import.meta.env.DEV) {
+  
   private async retryError(retryItem: {// error: AppError; retryCount: number}) {}
     try {}
       // Implement retry logic based on error type
       if (retryItem.error.type === ErrorType.NETWORK) {}
         // Retry network request
-        if (process.env['NODE_ENV'] === 'development') {}'
-          if (import.meta.env.DEV) {}
+        if (process.env['NODE_ENV'] === 'development') {}''          if (import.meta.env.DEV) {}
             }
         }
         // Add your retry logic here;
       }
     } catch {}
       if (retryItem.retryCount < this.config.maxRetries) {}
-        this.scheduleRetry(retryItem.error);
-      } else {}
+        this.scheduleRetry(retryItem.error) } else {}
         }
     }
   }
   // Get all errors;
   getErrors(): AppError[] {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     return [...this.errors];
   }
   // Get errors by type;
@@ -622,17 +510,13 @@ const appError: AppError = {,
   }
   // Get unresolved errors;
   getUnresolvedErrors(): AppError[] {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     return this.errors.filter(error => !error.resolved);
   }
         }
         // Add your retry logic here
       }
-    } catch {}}if (retryItem.retryCount < this.config.maxRetries) {}this.scheduleRetry(retryItem.error);
-      } else {}}}
+    } catch {}}if (retryItem.retryCount < this.config.maxRetries) {}this.scheduleRetry(retryItem.error) } else {}}}
     }
   }
   // Get all errors;
@@ -660,119 +544,79 @@ const appError: AppError = {,
   /**;
    * Initialize error handler;
    */;
-  init(): void {if (typeof window !== 'undefined') {}'
-      // Set up global error handler;
-      window.addEventListener('error', event => {);'
-    this.handleError(event.error || new Error(event.message));
+  init(): void {if (typeof window !== 'undefined') {}''      // Set up global error handler;
+      window.addEventListener('error', event => {);''    this.handleError(event.error || new Error(event.message));
 // Set up unhandled promise rejection handler;
-      window.addEventListener('unhandledrejection', event => {);'
-    this.handleError(new Error(event.reason))}}
+      window.addEventListener('unhandledrejection', event => {);''    this.handleError(new Error(event.reason))}}
   }
 }</ErrorSeverity>
 // React error boundary component</ErrorSeverity>
       // Set up global error handler;
-      window.addEventListener('error', event => {)'
-    );
+      window.addEventListener('error', event => {)''    );
         this.handleError(event.error || new Error(event.message));
 // Set up unhandled promise rejection handler;
-      window.addEventListener('unhandledrejection', event => {)}init(): void {}}if (typeof window !== 'undefined') {}// Set up global error handler;'
-      window.addEventListener('error', event => {)}this.handleError(event.error || new Error(event.message));'
-// Set up unhandled promise rejection handler;
-      window.addEventListener('unhandledrejection', event => {)}this.handleError(new Error(event.reason));'
-init(): void {/* TODO: Fix JSX expression */,}}})
+      window.addEventListener('unhandledrejection', event => {)}init(): void {}}if (typeof window !== 'undefined') {}// Set up global error handler;''      window.addEventListener('error', event => {)}this.handleError(event.error || new Error(event.message));''// Set up unhandled promise rejection handler;
+      window.addEventListener('unhandledrejection', event => {)}this.handleError(new Error(event.reason));''init(): void {/* TODO: Fix JSX expression */,}}})
       // Set up unhandled promise rejection handler;
-      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */,)})'
-    }
+      window.addEventListener('unhandledrejection', event => {/* TODO: Fix JSX expression */,)})''    }
   }
 }
   constructor(props: { children: React.ReactNode; fallback?: React.ReactNode }) {}
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false }
     this.errorHandler = ErrorHandler.getInstance();
   }
   static getDerivedStateFromError(error: Error) {,
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     this.errorHandler.handleError()
   static getDerivedStateFromError(error: Error) {}
-    return { hasError: true, error };
+    return { hasError: true, error }
   }
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     this.errorHandler.handleError(error, errorInfo, {</div>
-      component: 'ErrorBoundary''
-
+      component: 'ErrorBoundary'''
   })
     render() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {,
     this.errorHandler.handleError(error, errorInfo, {)
-      component: 'ErrorBoundary')'
-</div>
+      component: 'ErrorBoundary')''</div>
   render() {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     if (this.state.hasError) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       return(this.props.fallback || (
-  // TODO: Add parameters
-)
-          <div style={{ padding: '20px', textAlign: 'center' }}></div>'
-<h2>Something went wrong<p>We're sorry, but something unexpected happened.<button'
-  render() {}
+  
+          <div style={{ padding: '20px', textAlign: 'center' }}></div>''<h2>Something went wrong<p>We're sorry, but something unexpected happened.<button''  render() {}
     if (this.state.hasError) {}
       return (
-  // TODO: Add parameters
-)
+  
         this.props.fallback || (
-  // TODO: Add parameters
-)
-          <div style={{ padding: '20px', textAlign: 'center' }}></div>'
-<h2>Something went wrong</h2>
-<p>We're sorry, but something unexpected happened.</p>'
-<button
+  
+          <div style={{ padding: '20px', textAlign: 'center' }}></div>''<h2>Something went wrong</h2>
+<p>We're sorry, but something unexpected happened.</p>''<button
               onClick={() =>this.setState({ hasError: false, error: undefined }</div>
 <h2>Something went wrong</h2>)
-            <p>We're sorry, but something unexpected happened.</p>)'
-            <button;)
+            <p>We're sorry, but something unexpected happened.</p>)''            <button )
               onClick={() => this.setState({ hasError: false, error: undefined }</div>
               style={{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
               style={{}
-                padding: '10px 20px','
-                backgroundColor: '#007bff','
-                color: 'white','
-                border: 'none','
-                borderRadius: '4px'}'
-                cursor: 'pointer'}';
-export class ErrorBoundary extends React.Component<;
-  {/* TODO: Fix JSX expression */}
+                padding: '10px 20px',''                backgroundColor: '#007bff',''                color: 'white',''                border: 'none',''                borderRadius: '4px'}''                cursor: 'pointer'}';'export class ErrorBoundary extends React.Component< {/* TODO: Fix JSX expression */}
   n: React.ReactNode, fallback?: React.ReactNode },
   {/* TODO: Fix JSX expression */}
   r: boolean, error?: Error }
 > {/* TODO: Fix JSX expression */}
   n: React.ReactNode; fallback?: React.ReactNode }) {/* TODO: Fix JSX expression */}
-  r: false };
+  r: false }
     this.errorHandler = ErrorHandler.getInstance();
   }
   static getDerivedStateFromError(erro)
   r: Error) {/* TODO: Fix JSX expression */}
-  r: true, error };
+  r: true, error }
   }
   componentDidCatch(erro,
   r: Error, errorInf)
@@ -780,15 +624,12 @@ export class ErrorBoundary extends React.Component<;
     });
   }
   render() {/* TODO: Fix JSX expression */}
-  n: 'center' }}>'
-</div>
+  n: 'center' }}>''</div>
   }
-  render() {/* TODO: Fix JSX expression */,}n: 'center' ,}}>'
-</div>
+  render() {/* TODO: Fix JSX expression */,}n: 'center' ,}}>''</div>
 >>>>>>> origin/main
             <h2>Something went wrong</h2>
-<p>We're sorry, but something unexpected happened.</p>'
-  r: undefined }</div>
+<p>We're sorry, but something unexpected happened.</p>''  r: undefined }</div>
               style={/* TODO: Fix JSX expression */}
               }}
             >
@@ -805,14 +646,9 @@ export class ErrorBoundary extends React.Component<;
   }
 }
 export const useErrorHandler = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
+  
+  
+  
 // React hook for error handling;
 export const useErrorHandler = () => {}
   const errorHandler = ErrorHandler.getInstance();
@@ -838,8 +674,7 @@ export const useErrorHandler = () => {}
     getErrors: () => errorHandler.getErrors(),
     getErrorStatistics: () => errorHandler.getErrorStatistics(),
     clearResolvedErrors: () => errorHandler.clearResolvedErrors(),}
-};
-;
+}
 export default ErrorHandler</string></string>;
 // React hook for error handling;
 export const useErrorHandler = () => {/* TODO: Fix JSX expression */,},
@@ -857,12 +692,7 @@ export const useErrorHandler = () => {/* TODO: Fix JSX expression */,},
   );
   return {/* TODO: Fix JSX expression */,}}}
 >>>>>>> origin/main
-};
-;
+}
 export default ErrorHandler;
-"`"
->>>>>>> origin/main
+"`"">>>>>>> origin/main
 >>>>>>> cursor/delete-records-a75e
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

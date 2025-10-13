@@ -3,22 +3,15 @@
   paused?: boolean
 }
 export interface InstanceConfig {instanceId: string;
-export type SyncScope = "full" | "dao" | "marketplace";";";
-export interface Peer {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+export type SyncScope = "full" | "dao" | "marketplace";";"export interface Peer {
+  
   id: string
   baseUrl: string; // e.g., https://zion-latam.example.org
   scope?: SyncScope
   paused?: boolean
 }
 export interface InstanceConfig {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   instanceId: string
   optIn: boolean
   paused: boolean
@@ -26,29 +19,17 @@ export interface InstanceConfig {
   peers: Peer[]
   secretConfigured: boolean;
 export interface Peer {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   id: string
   baseUrl: string, // e.g., https: //zion-latam.example.org
   scope?: SyncScope,
   paused?: boolean
   } catch (error) {
-  // TODO: Add properties
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-;
 export interface InstanceConfig {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   instanceId: string
   optIn: boolean
   paused: boolean
@@ -56,22 +37,11 @@ export interface InstanceConfig {
   peers: Peer[]
   secretConfigured: boolean
   } catch (error) {
-  // TODO: Add properties
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-;
 export type SyncEventType =;
-  | "proposal""
-  | "token_transfer""
-  | "talent_mobility""
-  | "dao_endorsement""
-  | "leaderboard_entry";";
-export interface BaseEventPayload {id: string
+  | "proposal"""  | "token_transfer"""  | "talent_mobility"""  | "dao_endorsement"""  | "leaderboard_entry";"export interface BaseEventPayload {id: string
 }
 export interface ProposalVoteEntry {voterId: string
   weight: number
@@ -82,40 +52,24 @@ export interface ProposalPayload extends BaseEventPayload {proposalId: string
   votes: ProposalVoteEntry[]
 }
 export interface TokenTransferPayload extends BaseEventPayload {txId: string
-  | "leaderboard_entry",;";
-export interface BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  | "leaderboard_entry",;";"export interface BaseEventPayload {
+  
   id: string
 }
-;
 export interface ProposalVoteEntry {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   voterId: string,
   weight: number,
   choice: string
 }
-;
 export interface ProposalPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   proposalId: string,
   title: string,
   votes: ProposalVoteEntry[]
 }
-;
 export interface TokenTransferPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   txId: string,
   token: string,
   amount: number,
@@ -123,12 +77,8 @@ export interface TokenTransferPayload extends BaseEventPayload {
   toSubnet: string,
   timestamp: number
 }
-;
 export interface TalentMobilityPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   personId: string,
   fromNation: string,
   toNation: string,
@@ -136,98 +86,53 @@ export interface TalentMobilityPayload extends BaseEventPayload {
   startDate: string,
   endDate?: string
 }
-;
 export interface DaoEndorsementPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   fromDAO: string,
   toDAO: string,
   resolutionId: string,
-  decision: "endorse" | "reject","
-  timestamp: number
+  decision: "endorse" | "reject",""  timestamp: number
   } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
 
 }
 export type SyncEventType =;
-  | "proposal""
-  | "token_transfer""
-  | "talent_mobility""
-  | "dao_endorsement""
-  | "leaderboard_entry";";
-export interface BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  | "proposal"""  | "token_transfer"""  | "talent_mobility"""  | "dao_endorsement"""  | "leaderboard_entry";"export interface BaseEventPayload {
+  
   id: string
 }
 export interface ProposalVoteEntry {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   voterId: string
   weight: number
   choice: string
   } catch (error) {
-  // TODO: Add properties
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-;
 export interface ProposalPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   proposalId: string
   title: string
   votes: ProposalVoteEntry[]
   } catch (error) {
-  // TODO: Add properties
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-;
 export interface TokenTransferPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   txId: string
 }
 export interface ProposalPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   proposalId: string
   title: string
   votes: ProposalVoteEntry[]
 }
 export interface TokenTransferPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   txId: string
   token: string
   amount: number
@@ -237,27 +142,15 @@ export interface TokenTransferPayload extends BaseEventPayload {
 }
 export interface TalentMobilityPayload extends BaseEventPayload {personId: string
   } catch (error) {
-  // TODO: Add properties
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-;
 export interface TalentMobilityPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   personId: string
 }
 export interface TalentMobilityPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   personId: string
   fromNation: string
   toNation: string
@@ -268,15 +161,11 @@ export interface TalentMobilityPayload extends BaseEventPayload {
 export interface DaoEndorsementPayload extends BaseEventPayload {fromDAO: string
 }
 export interface DaoEndorsementPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   fromDAO: string
   toDAO: string
   resolutionId: string
-  decision: "endorse" | "reject""
-  timestamp: number
+  decision: "endorse" | "reject"""  timestamp: number
 }
 export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: string, // userId or teamId
   score: number
@@ -285,40 +174,21 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: st
   period?: string, // e.g., 2025-Q3
 }
   } catch (error) {
-  // TODO: Add properties
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-;
 export interface DaoEndorsementPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   fromDAO: string
   toDAO: string
   resolutionId: string
-  decision: "endorse" | "reject","
-  timestamp: number
+  decision: "endorse" | "reject",""  timestamp: number
   } catch (error) {
-  // TODO: Add properties
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-;
 export interface LeaderboardEntryPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   subjectId: string, // userId or teamId
   score: number,
   category: string, // e.g., grants, contributions
@@ -329,15 +199,9 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {
   rank?: number,
   period?: string, // e.g., 2025-Q3
   } catch (error) {
-  // TODO: Add properties
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-;
 export type SyncEventPayload =;
   | ProposalPayload
   | TokenTransferPayload
@@ -349,10 +213,7 @@ export interface SyncEvent {eventId: string
   payload: SyncEventPayload
   | LeaderboardEntryPayload,;
 export interface SyncEvent {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   eventId: string,
   type: SyncEventType,
   payload: SyncEventPayload,
@@ -369,10 +230,7 @@ export interface SyncEvent {
   merkleRoot?: string, // required for proposal events
 }
 export interface MultiverseState {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   config: InstanceConfig,
   lastSyncedAt: number,
   seenEventIds: Record < string true>,
@@ -380,29 +238,15 @@ export interface MultiverseState {
   proposalMerkleById: Record < string string>
   events: SyncEvent[]
   } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
   } catch (error) {
-  // TODO: Add properties
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
-}
-;
 export interface MultiverseState {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   config: InstanceConfig,
   lastSyncedAt: number,
   seenEventIds: Record<string true>,
@@ -415,19 +259,11 @@ export interface MultiverseState {
   proposalMerkleById: Record<string, string>
   events: SyncEvent[]
   } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
 export interface LeaderboardEntryPayload extends BaseEventPayload {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   subjectId: string; // userId or teamId
   score: number
   category: string; // e.g., grants, contributions
@@ -441,10 +277,7 @@ export type SyncEventPayload =;
   | DaoEndorsementPayload
   | LeaderboardEntryPayload;
 export interface SyncEvent {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   eventId: string
   type: SyncEventType
   payload: SyncEventPayload
@@ -454,10 +287,7 @@ export interface SyncEvent {
   merkleRoot?: string; // required for proposal events
 }
 export interface MultiverseState {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   config: InstanceConfig
   lastSyncedAt: number
   seenEventIds: Record<string, true>

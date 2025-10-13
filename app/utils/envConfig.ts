@@ -1,15 +1,12 @@
-'use client';'
-/**;
+'use client''/**;
  * Environment Configuration Manager;
  * Provides type-safe access to environment variables with validation;
  */;
-export interface EnvConfig {}}nodeEnv: 'development' | 'production' | 'test','
-  apiUrl: string,
+export interface EnvConfig {}}nodeEnv: 'development' | 'production' | 'test',''  apiUrl: string,
   apiKey?: string
   enableAnalytics: boolean,
   enableLogging: boolean,
-  logLevel: 'debug' | 'info' | 'warn' | 'error','
-  sentryDsn?: string
+  logLevel: 'debug' | 'info' | 'warn' | 'error',''  sentryDsn?: string
   gaTrackingId?: string;}
 }
   constructor() {,;
@@ -26,13 +23,9 @@ export interface EnvConfig {}}nodeEnv: 'development' | 'production' | 'test','
   }
   private loadConfig(): EnvConfig {}}// Safely access environment variables with defaults;
     return {}}nodeEnv,;
-      apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api';,'
-      apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY;,
-      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production','
-      enableLogging: nodeEnv !== 'test','
-      logLevel: ()
-        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],'
-      sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
+      apiUrl: process.env.NEXT_PUBLIC_API_URL || process.env.VITE_API_URL || 'http://localhost:3000/api';,''      apiKey: process.env.NEXT_PUBLIC_API_KEY || process.env.VITE_API_KEY;,
+      enableAnalytics: process.env.NEXT_PUBLIC_ENABLE_ANALYTICS === 'true' || nodeEnv === 'production',''      enableLogging: nodeEnv !== 'test',''      logLevel: ()
+        (nodeEnv === 'production' ? 'warn' : 'debug')) as EnvConfig['logLevel'],''      sentryDsn: process.env.NEXT_PUBLIC_SENTRY_DSN || process.env.VITE_SENTRY_DSN,
       gaTrackingId: process.env.NEXT_PUBLIC_GA_TRACKING_ID || process.env.VITE_GA_TRACKING_ID,}
     }
 export interface EnvConfig {/* TODO: Fix JSX expression */,}}}
@@ -55,18 +48,15 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */,}}}
   /**;
    * Check if running in production;
    */;
-  public isProduction(): boolean {}}return this.config.nodeEnv === 'production';}'
-  public isProduction(): boolean {/* TODO: Fix JSX expression */,}}}
+  public isProduction(): boolean {}}return this.config.nodeEnv === 'production';}''  public isProduction(): boolean {/* TODO: Fix JSX expression */,}}}
   /**;
    * Check if running in development;
    */;
-  public isDevelopment(): boolean {}}return this.config.nodeEnv === 'development';}'
-  public isDevelopment(): boolean {/* TODO: Fix JSX expression */,}}}
+  public isDevelopment(): boolean {}}return this.config.nodeEnv === 'development';}''  public isDevelopment(): boolean {/* TODO: Fix JSX expression */,}}}
   /**;
    * Check if running in test mode;
    */;
-  public isTest(): boolean {}}return this.config.nodeEnv === 'test';}'
-  public isTest(): boolean {/* TODO: Fix JSX expression */,}}}
+  public isTest(): boolean {}}return this.config.nodeEnv === 'test';}''  public isTest(): boolean {/* TODO: Fix JSX expression */,}}}
   /**;
    * Validate required environment variables;
    */;
@@ -95,15 +85,11 @@ class EnvironmentConfig {/* TODO: Fix JSX expression */,}}}
   /**;
    * Get API headers with authentication;
    */;
-  public getApiHeaders(): Record<string, string> {}const headers: Record<string, string> = {}'Content-Type': 'application/json'}'
-    }
-    if (this.config.apiKey) {}headers['Authorization'] = `Bearer ${this.config.apiKey}`;'
-  public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */,}}
-    if (this.config.apiKey) {/* TODO: Fix JSX expression */,}headers['Authorization'] = `Bearer ${this.config.apiKey}`;'
-    }
+  public getApiHeaders(): Record<string, string> {}const headers: Record<string, string> = {}'Content-Type': 'application/json'}''    }
+    if (this.config.apiKey) {}headers['Authorization'] = `Bearer ${this.config.apiKey}`;''  public getApiHeaders(): Record<string, string> {/* TODO: Fix JSX expression */,}}
+    if (this.config.apiKey) {/* TODO: Fix JSX expression */,}headers['Authorization'] = `Bearer ${this.config.apiKey}`;''    }
     if (this.config.apiKey) {/* TODO: Fix JSX expression */}
-      headers['Authorization'] = `Bearer ${this.config.apiKey}`'
-    }
+      headers['Authorization'] = `Bearer ${this.config.apiKey}`''    }
     return headers
   }
   /**;

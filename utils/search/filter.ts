@@ -1,39 +1,24 @@
-import type { ParsedFilters } from './parser',';';
-import { TALENT_PROFILES } from '../../data/talent',';';
-import type { TalentProfile } from '../../data/talent',;';';
-export type AccessLevel = 'public' | 'member' | 'admin',;';';
-export type SearchResult = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  type: 'talent' | 'job' | 'project','
-  id: string,
+import type { ParsedFilters } from './parser',';'import { TALENT_PROFILES } from '../../data/talent',';'import type { TalentProfile } from '../../data/talent',;';'export type AccessLevel = 'public' | 'member' | 'admin',;';'export type SearchResult = {
+  
+  type: 'talent' | 'job' | 'project',''  id: string,
   slug?: string,
   title: string,
   subtitle?: string,
   location?: string,
   tags: string[],
   hourlyRateUsd?: number,
-  availability?: 'full-time' | 'part-time' | 'contract','
-  verified?: boolean,
+  availability?: 'full-time' | 'part-time' | 'contract',''  verified?: boolean,
   visibility?: AccessLevel,
   description?: string,
   relevance: number
 },
 function computeRelevanceScore(text: string, keywords: string[], weight = 1): number {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   if (!keywords.length) return 0,;
 const lower = text.toLowerCase(),;
 let score = 0,
   for (const k of keywords) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     if (lower.includes(k.toLowerCase())) score += 1 * weight,
   }
   return score,
@@ -45,10 +30,7 @@ let score = 0,
   return score
 }
 function budgetScore(candidate?: number, min?: number, max?: number): number {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   if (!candidate) return 0,;
 let score = 0,
   if (max && candidate <= max) score += 1.5,
@@ -56,40 +38,25 @@ let score = 0,
   return score,
 }
 function availabilityMatches(candidate?: string, requested?: string): boolean {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   if (!requested) return true,
   if (!candidate) return false,
   return candidate.toLowerCase() === requested.toLowerCase(),
 }
 function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): boolean {;
-const level = visibility || 'public',;';
-const order: AccessLevel[] = ['publicmember', 'admin'],'
-  return order.indexOf(access) >= order.indexOf(level),
+const level = visibility || 'public',;';'const order: AccessLevel[] = ['publicmember', 'admin'],''  return order.indexOf(access) >= order.indexOf(level),
 }
-export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[], talent: SearchResult[], jobs: SearchResult[], projects: SearchResult[] } {;';
-const talent: SearchResult[] = TALENT_PROFILES
+export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[], talent: SearchResult[], jobs: SearchResult[], projects: SearchResult[] } {;';'const talent: SearchResult[] = TALENT_PROFILES
     .filter((p) => availabilityMatches(p.availability, filters.availability))
     .filter((p) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase()),
       return true,
     })
     .filter((p) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (filters.minBudgetUsd || filters.maxBudgetUsd) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false,
         if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false,
       }
@@ -100,42 +67,27 @@ const skillScore = computeSkillOverlap(p.skills, filters.skills),;
 const textScore = computeRelevanceScore(`${p.name} ${p.title} ${p.bio}`, filters.keywords, 0.8),;
 const priceScore = budgetScore(p.hourlyRateUsd, filters.minBudgetUsd, filters.maxBudgetUsd),;
 const relevance = skillScore + textScore + priceScore,;
-import type { ParsedFilters } from './parser';';
-import { TALENT_PROFILES } from '../../data/talent';';
-import type { TalentProfile } from '../../data/talent';';';
-export type AccessLevel = 'public' | 'member' | 'admin';';';
-export type SearchResult = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  type: 'talent' | 'job' | 'project''
-  id: string
+import type { ParsedFilters } from './parser';'import { TALENT_PROFILES } from '../../data/talent';'import type { TalentProfile } from '../../data/talent';';'export type AccessLevel = 'public' | 'member' | 'admin';';'export type SearchResult = {
+  
+  type: 'talent' | 'job' | 'project'''  id: string
   slug?: string
   title: string
   subtitle?: string
   location?: string
   tags: string[]
   hourlyRateUsd?: number
-  availability?: 'full-time' | 'part-time' | 'contract''
-  verified?: boolean
+  availability?: 'full-time' | 'part-time' | 'contract'''  verified?: boolean
   visibility?: AccessLevel
   description?: string
   relevance: number
 }
 function computeRelevanceScore(text: string, keywords: string[], weight = 1): number {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   if (!keywords.length) return 0;
 const lower = text.toLowerCase();
 let score = 0
   for (const k of keywords) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     if (lower.includes(k.toLowerCase())) score += 1 * weight
   }
   return score
@@ -147,10 +99,7 @@ let score = 0
   return score
 }
 function budgetScore(candidate?: number, min?: number, max?: number): number {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   if (!candidate) return 0;
 let score = 0
   if (max && candidate <= max) score += 1.5
@@ -158,40 +107,25 @@ let score = 0
   return score
 }
 function availabilityMatches(candidate?: string, requested?: string): boolean {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   if (!requested) return true
   if (!candidate) return false
   return candidate.toLowerCase() === requested.toLowerCase()
 }
 function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): boolean {;
-const level = visibility || 'public';';
-const order: AccessLevel[] = ['public', 'member', 'admin']'
-  return order.indexOf(access) >= order.indexOf(level)
+const level = visibility || 'public';'const order: AccessLevel[] = ['public', 'member', 'admin']''  return order.indexOf(access) >= order.indexOf(level)
 }
-export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[]; talent: SearchResult[]; jobs: SearchResult[]; projects: SearchResult[] } {;';
-const talent: SearchResult[] = TALENT_PROFILES
+export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[]; talent: SearchResult[]; jobs: SearchResult[]; projects: SearchResult[] } {;';'const talent: SearchResult[] = TALENT_PROFILES
     .filter((p) => availabilityMatches(p.availability, filters.availability))
     .filter((p) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase())
       return true
     })
     .filter((p) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       if (filters.minBudgetUsd || filters.maxBudgetUsd) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
         if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false
         if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false
       }
@@ -203,12 +137,8 @@ const textScore = computeRelevanceScore(`${p.name} ${p.title} ${p.bio}`, filters
 const priceScore = budgetScore(p.hourlyRateUsd, filters.minBudgetUsd, filters.maxBudgetUsd);
 const relevance = skillScore + textScore + priceScore
       return {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        type: 'talent','
-        id: p.slug,
+  
+        type: 'talent',''        id: p.slug,
         slug: p.slug,
         title: p.name,
         subtitle: p.title,
@@ -217,8 +147,7 @@ const relevance = skillScore + textScore + priceScore
         hourlyRateUsd: p.hourlyRateUsd,
         availability: p.availability,
         verified: true,
-        visibility: 'public','
-        description: p.bio,
+        visibility: 'public',''        description: p.bio,
         relevance},
     })
     .filter((r) => passesRls(r.visibility, access))
@@ -238,17 +167,9 @@ const all = [...talent, ...jobs, ...projects].sort((a, b) => b.relevance - a.rel
   return { all, talent, jobs, projects }
 }
 export function suggestDidYouMean(query: string): string | null {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM";";
-const q = query.toLowerCase(),
-  if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM','
-  if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr','
-  return null,;
+  
+  // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM";"const q = query.toLowerCase(),
+  if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM',''  if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr',''  return null,;
 const q = query.toLowerCase()
-  if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM''
-  if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr''
-  return null
+  if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM'''  if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr'''  return null
 }

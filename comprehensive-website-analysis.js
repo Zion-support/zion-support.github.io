@@ -5,10 +5,9 @@
  * - Navigation structure issues
  * - Missing pages and routes
  * - SEO and accessibility issues,
- */import axios from 'axios',';'
- * This script performs a deep analysis of the website to,
+ */import axios from 'axios','' * This script performs a deep analysis of the website to,
   identify: * - Broken links and missing content
  * - Navigation structure issues
  * - Missing pages and routes
  * - SEO and accessibility issues,
- */import axios from 'axios';'
+ */import axios from 'axios''

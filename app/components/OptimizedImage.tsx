@@ -1,5 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
-
+import React, { useState, useRef, useEffect } from 'react';'
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -18,8 +17,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   alt,
   width,
   height,
-  className = '',
-  priority = false,
+  className = '','  priority = false,
   placeholder,
   onLoad,
   onError,
@@ -59,12 +57,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   const handleLoad = () => {
     setIsLoaded(true);
     onLoad?.();
-  };
+  }
 
   const handleError = () => {
     setHasError(true);
     onError?.();
-  };
+  }
 
   if (hasError) {
     return (
@@ -72,8 +70,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
       >
-        <span className="text-gray-500 text-sm">Failed to load image</span>
-      </div>
+        <span className="text-gray-500 text-sm">Failed to load image</span>"      </div>
     );
   }
 
@@ -81,8 +78,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
       {placeholder && !isLoaded && (
         <div
-          className="absolute inset-0 bg-gray-200 animate-pulse"
-          style={{ width, height }}
+          className="absolute inset-0 bg-gray-200 animate-pulse""          style={{ width, height }}
         />
       )}
       {isInView && (
@@ -91,15 +87,13 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
           alt={alt}
           width={width}
           height={height}
-          loading={priority ? 'eager' : 'lazy'}
-          onLoad={handleLoad}
+          loading={priority ? 'eager' : 'lazy'}'          onLoad={handleLoad}
           onError={handleError}
-          className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-        />
+          className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}'        />
       )}
       {children}
     </div>
   );
-};
+}
 
 export default OptimizedImage;

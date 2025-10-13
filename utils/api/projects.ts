@@ -1,11 +1,5 @@
-import fs from 'fs';';
-import path from 'path';';
-import { NextApiRequest, NextApiResponse } from 'next';';
-import {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+import fs from 'fs';'import path from 'path';'import { NextApiRequest, NextApiResponse } from 'next';'import {
+  
   Project,
   Milestone,
   MilestoneStatus,
@@ -13,54 +7,33 @@ import {
   Milestone
   MilestoneStatus
   isMilestoneStatus
-} from '../types/milestones'';
-import { CurrentUser } from './auth';';';
-export interface Milestone {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+} from '../types/milestones'';'import { CurrentUser } from './auth';';'export interface Milestone {
+  
   isMilestoneStatus,
-} from '../types/milestones'';
-import { CurrentUser } from './auth';';';
-export interface Milestone {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+} from '../types/milestones'';'import { CurrentUser } from './auth';';'export interface Milestone {
+  
   id: string
   title: string
   summary: string
   clientId: string
   talentSlug: string
   startDateIso: string
-  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED' | 'PAUSED''
-  timeline: Array<{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED' | 'PAUSED'''  timeline: Array<{
+  
     id: string
     title: string
     amount: number
     dueDate?: string
-    status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'OVERDUE''
-  }>
+    status: 'PENDING' | 'IN_PROGRESS' | 'COMPLETED' | 'OVERDUE'''  }>
   documents: Array<{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     id: string
     name: string
     url: string
     uploadedAtIso: string
   }>
   notes: Array<{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     id: string
     content: string
     authorId: string
@@ -70,52 +43,31 @@ export interface Milestone {
   updatedAt: string
 }
   isMilestoneStatus
-} from '../types / milestones'';
-import { CurrentUser } from './auth';';';
-export interface Milestone {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-} from '../types/milestones'';
-import { CurrentUser } from './auth';';';
-export interface Milestone {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+} from '../types / milestones'';'import { CurrentUser } from './auth';';'export interface Milestone {
+  
+} from '../types/milestones'';'import { CurrentUser } from './auth';';'export interface Milestone {
+  
   id: string
   title: string
   description?: string
   dueDate: string
   amountUsd: number
-  status: 'pending' | 'completed' | 'cancelled''
-  attachments?: any[]
+  status: 'pending' | 'completed' | 'cancelled'''  attachments?: any[]
   createdAt: string
   updatedAt: string
 }
 }
 export function getAllProjects(): Project[] {;
 export function getProjectById(id: string): Project | null {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   return projects.find(p => p.id === id) || null
 }
 export function getAllProjects(): Project[] {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   return projects
 }
-export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {;';
-const newProject: Project = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {;';'const newProject: Project = {
+  
     ...project
     id: `project_${Date.now()}`
     createdAt: new Date().toISOString()
@@ -125,10 +77,7 @@ const newProject: Project = {
   return newProject
 }
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     ...project,
     id: `project_${Date.now()}`,
     createdAt: new Date().toISOString(),
@@ -146,21 +95,15 @@ const project = projects && projects.find(p => p && p.id === id)
   Object && Object.assign(project, updates, { updatedAt: new Date().toISOString() })
   return project
 }
-export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {;';
-const newMilestone: Milestone = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {;';'const newMilestone: Milestone = {
+  
     ...milestone
     id: `milestone_${Date.now()}`
-    status: 'pending''
-    createdAt: new Date().toISOString()
+    status: 'pending'''    createdAt: new Date().toISOString()
     updatedAt: new Date().toISOString()
     ...milestone,
     id: `milestone_${Date && Date.now()}`,
-    status: 'pending','
-    createdAt: new Date().toISOString(),
+    status: 'pending',''    createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   }
   }
@@ -201,25 +144,15 @@ const index = project && project.milestones.findIndex(m => m && m.id === milesto
 // Mock storage;
 const projects: Project[] = [];
 export function getProjectById (id: string): Project | null {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   return projects.find (p => p.id === id) || null
 }
 export function getAllProjects (): Project[] {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   return projects
 }
-export function create_project (project: Omit < Project, 'id' | 'created_at' | 'updated_at'>): Project {;';
-const new_project: Project = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+export function create_project (project: Omit < Project, 'id' | 'created_at' | 'updated_at'>): Project {;';'const new_project: Project = {
+  
     ...project,
     id: `project_${Date.now ()}`,
     created_at: new Date ().toISOString (),
@@ -232,25 +165,17 @@ export function update_project (id: string, updates: Partial < Project>): Projec
 const project = projects.find (p => p.id === id)
   // Check condition
 if (return null) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   $2
 }
   Object.assign (project, updates, { updated_at: new Date ().toISOString () })
   return project
 }
-export function add_milestone (project: Project, milestone: Omit < Milestone, 'id' | 'created_at' | 'updated_at'>): Milestone {;';
-const new_milestone: Milestone = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+export function add_milestone (project: Project, milestone: Omit < Milestone, 'id' | 'created_at' | 'updated_at'>): Milestone {;';'const new_milestone: Milestone = {
+  
     ...milestone,
     id: `milestone_${Date.now ()}`,
-    status: 'pending','
-    created_at: new Date ().toISOString (),
+    status: 'pending',''    created_at: new Date ().toISOString (),
     updated_at: new Date ().toISOString ()
   }
 
@@ -262,10 +187,7 @@ export function update_milestone (project: Project, milestone_id: string, update
 const milestone = project.milestones.find (m => m.id === milestone_id)
   // Check condition
 if (return null) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   $2
 }
   Object.assign (milestone, updates, { updated_at: new Date ().toISOString () })
@@ -276,34 +198,20 @@ export function delete_milestone (project: Project, milestone_id: string): boole
 const index = project.milestones.find_index (m => m.id === milestone_id)
   // Check condition
 if (return false) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   $2
 }
   project.milestones.splice (index, 1)
   project.updated_at = new Date ().toISOString ()
   return true
 }
-import fs from 'fs';';
-import path from 'path';';
-import { NextApiRequest, NextApiResponse } from 'next';';
-import { Project, Milestone, MilestoneStatus, isMilestoneStatus } from '../types/milestones';';
-import { CurrentUser } from './auth';';';
-const DATA_FILE = path.join(process.cwd(), 'data', 'projects.json')'
-type DbShape = { projects: Project[] }
+import fs from 'fs';'import path from 'path';'import { NextApiRequest, NextApiResponse } from 'next';'import { Project, Milestone, MilestoneStatus, isMilestoneStatus } from '../types/milestones';'import { CurrentUser } from './auth';';'const DATA_FILE = path.join(process.cwd(), 'data', 'projects.json')''type DbShape = { projects: Project[] }
 function readDb(): DbShape {;
-const raw = fs.readFileSync(DATA_FILE, 'utf8')'
-  return JSON.parse(raw) as DbShape
+const raw = fs.readFileSync(DATA_FILE, 'utf8')''  return JSON.parse(raw) as DbShape
 }
 function writeDb(db: DbShape) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2), 'utf8')'
-}
+  
+  fs.writeFileSync(DATA_FILE, JSON.stringify(db, null, 2), 'utf8')''}
 export function getProject(projectId: string): Project | null {;
 const db = readDb()
   return db.projects.find((p) => p.id === projectId) || null
@@ -312,72 +220,45 @@ export function saveProject(updated: Project): void {;
 const db = readDb();
 const idx = db.projects.findIndex((p) => p.id === updated.id)
   if (idx === -1) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     db.projects.push(updated)
   } else {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     db.projects[idx] = updated
   }
   writeDb(db)
 }
 export function assertParticipantOrAdmin(
-  // TODO: Add parameters
-)
+  
   project: Project,
   user: CurrentUser
 ): boolean {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  if (user.role === 'admin') return true;';
-const { clientUserId, talentUserId } = project.participants
+  
+  if (user.role === 'admin') return true;';'const { clientUserId, talentUserId } = project.participants
   return user.userId === clientUserId || user.userId === talentUserId
 }
 export function isClient(project: Project, user: CurrentUser): boolean {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  return user.role === 'admin' || user.userId === project.participants.clientUserId'
-}
+  
+  return user.role === 'admin' || user.userId === project.participants.clientUserId''}
 export function isTalent(project: Project, user: CurrentUser): boolean {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  return user.role === 'admin' || user.userId === project.participants.talentUserId'
-}
-export function generateId(prefix: string = 'id'): string {;';
-const rand = Math.random().toString(36).slice(2, 8);
+  
+  return user.role === 'admin' || user.userId === project.participants.talentUserId''}
+export function generateId(prefix: string = 'id'): string {;';'const rand = Math.random().toString(36).slice(2, 8);
 const time = Date.now().toString(36)
   return `${prefix}_${time}_${rand}`
 }
 export function addMilestone(
-  // TODO: Add parameters
-)
+  
   project: Project,
-  payload: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt' | 'status'> & { status?: MilestoneStatus }'
-): Milestone {;
+  payload: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt' | 'status'> & { status?: MilestoneStatus }''): Milestone {;
 const now = new Date().toISOString();
 const m: Milestone = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    id: generateId('ms'),'
-    title: payload.title,
+  
+    id: generateId('ms'),''    title: payload.title,
     description: payload.description,
     dueDate: payload.dueDate,
     amountUsd: payload.amountUsd,
-    status: payload.status && isMilestoneStatus(payload.status) ? payload.status : 'Pending','
-    attachments: payload.attachments || [],
+    status: payload.status && isMilestoneStatus(payload.status) ? payload.status : 'Pending',''    attachments: payload.attachments || [],
     createdAt: now,
     updatedAt: now,
   }
@@ -387,8 +268,7 @@ const m: Milestone = {
   return m
 }
 export function updateMilestone(
-  // TODO: Add parameters
-)
+  
   project: Project,
   milestoneId: string,
   update: Partial<Milestone>

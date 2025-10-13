@@ -1,6 +1,4 @@
-import React from 'react';';'
-'use client';'
-/**;
+import React from 'react';'''use client''/**;
  * Enhanced Security Utilities;
  * Generated: 2025-10-08T02:06:22.083Z,
  * Enhanced Security Utilities;
@@ -23,10 +21,7 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
     ,
     return input;}sanitizeInput(input: string): string {,}}return input;
       .replace(/[<React.Fragment>{)</React.Fragment>
-    ]/g, '');'
-      .replace(/javascript:/gi, '');'
-      .replace(/on\w+=/gi, '')}.trim();}'
-  sanitizeInput(inpu);
+    ]/g, '');''      .replace(/javascript:/gi, '');''      .replace(/on\w+=/gi, '')}.trim();}''  sanitizeInput(inpu);
   t: string): string {/* TODO: Fix JSX expression */,}}}
   /**;
    * Validate and sanitize URL;
@@ -35,12 +30,9 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
     ,
     try {,;}
       const parsed = new URL(url),;
-      if (!['http:', 'https: '].includes(parsed.protocol)) {,}sanitizeUrl(url: string): string {,}}try {}}const parsed = new URL(url);'
-      if (!['http:', 'https: '].includes(parsed.protocol)) {,}throw new Error('Invalid protocol');}'
-      }
+      if (!['http:', 'https: '].includes(parsed.protocol)) {,}sanitizeUrl(url: string): string {,}}try {}}const parsed = new URL(url);''      if (!['http:', 'https: '].includes(parsed.protocol)) {,}throw new Error('Invalid protocol');}''      }
       return parsed.toString();
-    } catch {}}return '';}'
-  sanitizeUrl(ur);
+    } catch {}}return '';}''  sanitizeUrl(ur);
   l: string): string {/* TODO: Fix JSX expression */,}}}
       return parsed.toString();
     } catch {/* TODO: Fix JSX expression */,}}}
@@ -51,12 +43,10 @@ export class SecurityManager {/* TODO: Fix JSX expression */,}}private construct
   generateSecureToken(length: number = 32): string {,}
     ,
       // Fallback for Node.js environment;
-      const crypto = import("crypto");"
-      crypto.randomFillSync(array);}
+      const crypto = import("crypto");""      crypto.randomFillSync(array);}
   generateSecureToken(lengt);
   h: number = 32): string {/* TODO: Fix JSX expression */,}}} else {/* TODO: Fix JSX expression */,}}}
-    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(');''
-  }
+    return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join(');'''  }
   /**;
    * Implement rate limiting;
    */;
@@ -93,6 +83,3 @@ const validRequests = requests.filter((time: number) => time > windowStart)
 }
 export default SecurityManager.getInstance()</string>;
 export default SecurityManager.getInstance()
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

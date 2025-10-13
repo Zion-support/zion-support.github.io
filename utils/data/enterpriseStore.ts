@@ -1,53 +1,22 @@
 const generateId = () => Math.random().toString(36).slice(2, 10);
-const seedCompany: CompanyRecord = {id: 'cmp_acme''
-  name: 'Acme Corporation''
-  slug: 'acme''
-  logoUrl: '/logo-acme.svg''
-  brandColor: '#4F46E5''
-  plan: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    tier: 'business''
-    seatsPurchased: 25
+const seedCompany: CompanyRecord = {id: 'cmp_acme'''  name: 'Acme Corporation'''  slug: 'acme'''  logoUrl: '/logo-acme.svg'''  brandColor: '#4F46E5'''  plan: {
+  
+    tier: 'business'''    seatsPurchased: 25
     seatsUsed: 3
     usageLimits: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       monthlyJobPosts: 50
       budgetCapUsd: 10000}}
   members: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' }'
-    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' }'
-    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }]'
-  activity: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' }'
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } }]'
-  invoices: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' }'
-    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]}';
-const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany }
+  
+    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' }''    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' }''    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }]''  activity: [
+  
+    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' }''    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } }]''  invoices: [
+  
+    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' }''    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]}';'const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany }
 const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany }
 export const store = {getCompanyBySlug(slug: string) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     return companiesBySlug[slug] |null
   }
   getCompanyById(id: string) {return companiesById[id] |null
@@ -55,17 +24,11 @@ export const store = {getCompanyBySlug(slug: string) {
   createCompany(input: Partial<CompanyRecord>): CompanyRecord {const id = `cmp_${generateId()}`;
 const slug = input.slug |`co-${generateId()}`;
 const record: CompanyRecord = {id
-      name: input.name |'New Company''
-      slug
+      name: input.name |'New Company'''      slug
       logoUrl: input.logoUrl
-      brandColor: input.brandColor |'#111827''
-      plan: input.plan |{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        tier: 'teams''
-        seatsPurchased: 10
+      brandColor: input.brandColor |'#111827'''      plan: input.plan |{
+  
+        tier: 'teams'''        seatsPurchased: 10
         seatsUsed: 0
         usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 }}
       members: []
@@ -78,102 +41,52 @@ const record: CompanyRecord = {id
   addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {const company = companiesById[companyId]
     if (!company) return null;
 const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role }
-import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';';';
-const generateId = () => Math.random().toString(36).slice(2, 10);
+import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';';'const generateId = () => Math.random().toString(36).slice(2, 10);
 const seedCompany: CompanyRecord = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  id: 'cmp_acme','
-  name: 'Acme Corporation','
-  slug: 'acme','
-  logoUrl: '/logo-acme.svg','
-  brandColor: '#4F46E5','
-  plan: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    tier: 'business','
-    seatsPurchased: 25,
+  
+  id: 'cmp_acme',''  name: 'Acme Corporation',''  slug: 'acme',''  logoUrl: '/logo-acme.svg',''  brandColor: '#4F46E5',''  plan: {
+  
+    tier: 'business',''    seatsPurchased: 25,
     seatsUsed: 3,
     usageLimits: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       monthlyJobPosts: 50,
       budgetCapUsd: 10000,
     },
   },
   members: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },'
-    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },'
-    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' },'
-  ],
+  
+    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },''    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },''    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' },''  ],
   activity: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' },'
-    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } },'
-  ],
+  
+    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'admin@acme.com', action: 'created_company' },''    { id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'maria@acme.com', action: 'posted_job', meta: { jobId: 'job_123' } },''  ],
   invoices: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },'
-    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' },'
-  ],
+  
+    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },''    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' },''  ],
 }
 const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany }
 const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany }
 export const store = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   getCompanyBySlug(slug: string) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     return companiesBySlug[slug] || null
   },
   getCompanyById(id: string) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     return companiesById[id] || null
   },
   createCompany(input: Partial<CompanyRecord>): CompanyRecord {;
 const id = `cmp_${generateId()}`;
 const slug = input.slug || `co-${generateId()}`;
 const record: CompanyRecord = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       id,
-      name: input.name || 'New Company','
-      slug,
+      name: input.name || 'New Company',''      slug,
       logoUrl: input.logoUrl,
-      brandColor: input.brandColor || '#111827','
-      plan: input.plan || {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        tier: 'teams','
-        seatsPurchased: 10,
+      brandColor: input.brandColor || '#111827',''      plan: input.plan || {
+  
+        tier: 'teams',''        seatsPurchased: 10,
         seatsUsed: 0,
         usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 },
       },
@@ -191,8 +104,7 @@ const company = companiesById[companyId]
 const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role }
     company.members.push(member)
     company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' })'
-    return member
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' })''    return member
   }
   removeMember(companyId: string, memberId: string): boolean {const company = companiesById[companyId]
   },
@@ -203,18 +115,11 @@ const before = company.members.length
     company.members = company.members.filter(m => m.id !== memberId);
 const changed = company.members.length !== before
     if (changed) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     if (changed) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
-      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })'
-    }
+      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })''    }
     return changed
   }
   updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {const company = companiesById[companyId]
@@ -225,130 +130,71 @@ const company = companiesById[companyId]
 const member = company.members.find(m => m.id === memberId)
     if (!member) return false
     member.role = role
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } })'
-    return true
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } })''    return true
   }
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {const company = companiesById[companyId]
     if (!company) return false
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd }
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } })'
-    return true
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } })''    return true
   }
   listInvoices(companyId: string): InvoiceRecord[] {const company = companiesById[companyId]
-  slug: 'acme','
-  logoUrl: '/logo-acme.svg','
-  brandColor: '#4F46E5','
-  plan: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    tier: 'business','
-    seatsPurchased: 25,
+  slug: 'acme',''  logoUrl: '/logo-acme.svg',''  brandColor: '#4F46E5',''  plan: {
+  
+    tier: 'business',''    seatsPurchased: 25,
     seatsUsed: 3,
     usageLimits: {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       monthlyJobPosts: 50,
       budgetCapUsd: 10000}},
   members: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },'
-    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },'
-    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],'
-  activity: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },'
-    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],'
-  invoices: [
-  // TODO: Add items
-]
-  // TODO: Add items
-]
-    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },'
-    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;';
-const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany },;
+  
+    { id: 'mem_1', email: 'admin@acme.com', name: 'Avery Admin', role: 'admin' },''    { id: 'mem_2', email: 'maria@acme.com', name: 'Maria Manager', role: 'manager' },''    { id: 'mem_3', email: 'reid@acme.com', name: 'Reid Recruiter', role: 'recruiter' }],''  activity: [
+  
+    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'admin@acme.com', action: 'created_company' },''    { id: generate_id (), timestamp_iso: new Date ().toISOString (), actor_email: 'maria@acme.com', action: 'posted_job', meta: { job_id: 'job_123' } }],''  invoices: [
+  
+    { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },''    { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;';'const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany },;
 const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany },;
 export const store = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   getCompanyBySlug(slug: string) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     return companiesBySlug[slug] || null
   },
   getCompanyById(id: string) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     return companiesById[id] || null
   },
   createCompany(input: Partial<CompanyRecord>): CompanyRecord {;
 const id = `cmp_${generateId()}`,;
 const slug = input.slug || `co-${generateId()}`,;
 const record: CompanyRecord = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       id,
-      name: input.name || 'New Company','
-      slug,
+      name: input.name || 'New Company',''      slug,
       logoUrl: input.logoUrl,;
 const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany }
 const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany }
 export const store = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   getCompanyBySlug(slug: string) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     return companiesBySlug[slug] || null
   }
   getCompanyById(id: string) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     return companiesById[id] || null
   }
   createCompany(input: Partial<CompanyRecord>): CompanyRecord {;
 const id = `cmp_${generateId()}`;
 const slug = input.slug || `co-${generateId()}`;
 const record: CompanyRecord = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       id
-      name: input.name || 'New Company''
-      slug
+      name: input.name || 'New Company'''      slug
       logoUrl: input.logoUrl
-      brandColor: input.brandColor || '#111827','
-      plan: input.plan || {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-        tier: 'teams','
-        seatsPurchased: 10,
+      brandColor: input.brandColor || '#111827',''      plan: input.plan || {
+  
+        tier: 'teams',''        seatsPurchased: 10,
         seatsUsed: 0,
         usageLimits: { monthlyJobPosts: 10, budgetCapUsd: 1000 }},
       members: [],
@@ -365,12 +211,10 @@ const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },
     company.members.push(member),
     company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),;
 const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });';
-const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });';'const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },
     company.members.push(member)
     company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),'
-    return member
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),''    return member
   },
   removeMember(companyId: string, memberId: string): boolean {;
 const company = companiesById[companyId],
@@ -379,13 +223,9 @@ const before = company.members.length,
     company.members = company.members.filter(m => m.id !== memberId),;
 const changed = company.members.length !== before,
     if (changed) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
       company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),
-      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })'
-    }
+      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })''    }
     return changed
   },
   updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {;
@@ -395,37 +235,25 @@ const member = company.members.find(m => m.id === memberId),
     if (!member) return false,
     member.role = role,;
 const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })'
-      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
-      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })'
-      } catch (error) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-    console.error("Error:", error)"
-    return res.status(500).json({ error: "Internal server error" })"
-  }
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })''      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length)
+      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } })''      } catch (error) {
+  
+    console.error("Error:", error)""    return res.status(500).json({ error: "Internal server error" })""  }
 }
     return changed
   },
   updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {;
 const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })'
-    member.role = role
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),'
-    return true
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })''    member.role = role
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),''    return true
   },
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {;
 const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });';
-const company = companiesById[companyId],
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });';'const company = companiesById[companyId],
     if (!company) return false,;
 const company = companiesById[companyId]
-    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })'
-    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),'
-    return true
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })''    company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),''    return true
   },
   list_invoices (company_id: string): InvoiceRecord[] {;
 const company = companiesById[company_id]
@@ -436,8 +264,7 @@ const company = companiesById[company_id]
 const company = companiesById[companyId]
     if (!company) return false
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd }
-    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } })'
-    return true
+    company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } })''    return true
   },
   listInvoices(companyId: string): InvoiceRecord[] {;
 const company = companiesById[companyId]

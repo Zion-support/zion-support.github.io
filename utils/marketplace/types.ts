@@ -1,8 +1,5 @@
 export interface Offer {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string
@@ -13,23 +10,15 @@ export interface Offer {
   scopeSummary: string
   paymentTerms: PaymentTerms
   agreementUrl?: string
-  status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED''
-  changeRequestNote?: string
+  status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED'''  changeRequestNote?: string
   projectId?: string
 }
 export interface PaymentTerms {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  type: 'hourly' | 'fixed' | 'milestone''
-  amount?: number
+  
+  type: 'hourly' | 'fixed' | 'milestone'''  amount?: number
   currency?: string
   milestones?: Array<{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     title: string
     amount: number
     dueDateIso: string
@@ -37,66 +26,40 @@ export interface PaymentTerms {
 }
 export interface Project {;
 export interface PaymentTerms {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  type: 'hourly' | 'fixed' | 'milestone''
-  amount?: number
+  
+  type: 'hourly' | 'fixed' | 'milestone'''  amount?: number
   currency?: string
   milestones?: Array<{
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
     title: string
     amount: number
     dueDateIso: string
   }>
 }
 export interface Project {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   id: string
   title: string
   summary: string
   client_id: string
   talent_slug: string
   startDateIso: string
-  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED''
-  timeline: any[]
+  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED'''  timeline: any[]
   documents: ProjectDocument[]
   notes: ProjectNote[]
 }
 export interface ProjectDocument {;
-export type PaymentTermsType = "hourly" | "fixed" | "milestone";";";
-export type Milestone = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+export type PaymentTermsType = "hourly" | "fixed" | "milestone";";"export type Milestone = {
+  
   id: string
   title: string
   dueDateIso?: string
   amountUsd?: number
-  status?: "planned" | "in-progress" | "done""
-}
+  status?: "planned" | "in-progress" | "done"""}
 export type PaymentTerms =;
-  | { type: "hourly"; hourlyRateUsd: number }"
-  | { type: "fixed"; fixedAmountUsd: number }"
-  | { type: "milestone"; milestones: Milestone[] }";
-export type OfferStatus =;
-  | "SENT""
-  | "CONFIRMED""
-  | "CHANGES_REQUESTED""
-  | "DECLINED";";
-export type Offer = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  | { type: "hourly"; hourlyRateUsd: number }""  | { type: "fixed"; fixedAmountUsd: number }""  | { type: "milestone"; milestones: Milestone[] }";"export type OfferStatus =;
+  | "SENT"""  | "CONFIRMED"""  | "CHANGES_REQUESTED"""  | "DECLINED";"export type Offer = {
+  
   id: string
   createdAtIso: string
   clientId: string
@@ -109,12 +72,8 @@ export type Offer = {
   changeRequestNote?: string
   projectId?: string
 }
-export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";";";
-export type ProjectDocument = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";";"export type ProjectDocument = {
+  
   id: string
   name: string
   url?: string
@@ -127,10 +86,7 @@ export type ProjectDocument = {
   createdAtIso: string
 }
 export interface ProjectNote {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   id: string
   authorId: string
   authorRole: string
@@ -139,21 +95,14 @@ export interface ProjectNote {
 }
 }
 export type ProjectNote = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   id: string
   authorId: string
-  authorRole: "client" | "talent""
-  content: string
+  authorRole: "client" | "talent"""  content: string
   createdAtIso: string
 }
 export type Project = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   id: string
   title: string
   summary: string
@@ -166,10 +115,7 @@ export type Project = {
   notes: ProjectNote[]
 }
 export type MarketplaceDb = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  
   offers: Offer[]
   projects: Project[]
 }
