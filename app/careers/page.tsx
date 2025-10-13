@@ -4,7 +4,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, Users, MapPin, Clock, Briefcase, Star, CheckCircle } from 'lucide-react';
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
 export default function Careers() {
   const openPositions = [
     {
@@ -242,6 +245,7 @@ export default function Careers() {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Company Values */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -433,6 +437,16 @@ export default function Careers() {
             </div>
           </div>
         </section>
+=======
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
       </div>
     </>
   );

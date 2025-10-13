@@ -61,9 +61,15 @@ class ErrorHandler extends Component<Props, State> {
       };
       console.log('Error logged:', errorData);
       // Send to your error reporting service here
+<<<<<<< HEAD
     } catch (reportingError) {
       console.warn('Error reporting failed:', reportingError);
 
+=======
+      console.log('Error data for reporting:', errorData);
+    } catch (reportingError) {
+      console.warn('Error reporting failed:', reportingError);
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
 
     }
   }

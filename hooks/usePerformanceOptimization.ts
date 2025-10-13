@@ -13,9 +13,13 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableLazyLoading = true,
     enablePreloading = true,
     enableImageOptimization = true,
+<<<<<<< HEAD
 
     // enableCodeSplitting = true,
 
+=======
+    // enableCodeSplitting = true,
+>>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
     enableCaching = true,
   } = options;
 
