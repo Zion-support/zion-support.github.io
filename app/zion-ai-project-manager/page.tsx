@@ -1,79 +1,78 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Video, Play, Edit3, Zap, Sparkles, Users, Award, Clock, DollarSign, Globe, Smartphone, Monitor, Headphones, Mic, Camera, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play as PlayIcon, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Calendar, Users, Target, BarChart3, Zap, Sparkles, Clock, DollarSign, Globe, Smartphone, Monitor, Headphones, Mic, Camera, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play as PlayIcon, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 import FuturisticCard from "../components/FuturisticCard";
 import FuturisticButton from "../components/FuturisticButton";
 
-export default function ZionAIVideoEditor() {
+export default function ZionAIProjectManager() {
   const features = [
-    "AI-powered video editing with one-click optimization",
-    "Automatic scene detection and smart cuts",
-    "Real-time video enhancement and color correction",
-    "Voice-to-text transcription with 99% accuracy",
-    "Auto-generated captions in 50+ languages",
-    "Smart background removal and replacement",
-    "AI music generation and sound effects",
-    "4K/8K video processing and export",
-    "Cloud-based rendering for faster processing",
-    "Team collaboration and version control",
-    "Brand kit integration and templates",
-    "Social media optimization for all platforms"
+    "AI-powered project planning and scheduling",
+    "Intelligent resource allocation and optimization",
+    "Automated risk assessment and mitigation",
+    "Real-time project health monitoring",
+    "Smart task prioritization and assignment",
+    "Predictive analytics for project outcomes",
+    "Automated progress reporting and insights",
+    "Team collaboration and communication tools",
+    "Integration with 100+ popular tools",
+    "Custom workflow automation",
+    "Budget tracking and cost optimization",
+    "Mobile app for on-the-go management"
   ];
 
   const pricingTiers = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$19",
       period: "/month",
-      originalPrice: "$59",
+      originalPrice: "$39",
       discount: "50% OFF",
       features: [
-        "Up to 10 hours of video processing",
-        "1080p export quality",
-        "Basic AI editing tools",
-        "5GB cloud storage",
-        "Standard templates",
-        "Email support"
+        "Up to 5 projects",
+        "Up to 10 team members",
+        "Basic AI features",
+        "5GB storage",
+        "Email support",
+        "Mobile app access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$49",
       period: "/month",
-      originalPrice: "$159",
+      originalPrice: "$99",
       discount: "50% OFF",
       features: [
-        "Unlimited video processing",
-        "4K export quality",
-        "Advanced AI editing tools",
-        "100GB cloud storage",
-        "Premium templates",
+        "Unlimited projects",
+        "Up to 50 team members",
+        "Advanced AI features",
+        "100GB storage",
         "Priority support",
-        "Team collaboration (up to 5 users)",
+        "Advanced analytics",
+        "Custom integrations",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$99",
       period: "/month",
-      originalPrice: "$399",
+      originalPrice: "$199",
       discount: "50% OFF",
       features: [
-        "Unlimited everything",
-        "8K export quality",
-        "All AI editing tools",
-        "1TB cloud storage",
-        "Custom templates",
+        "Everything in Professional",
+        "Unlimited team members",
+        "All AI features",
+        "1TB storage",
         "24/7 dedicated support",
-        "Unlimited team collaboration",
         "White-label options",
-        "Custom integrations",
-        "SLA guarantee"
+        "Custom AI training",
+        "SLA guarantee",
+        "On-premise deployment"
       ],
       popular: false
     }
@@ -81,54 +80,81 @@ export default function ZionAIVideoEditor() {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      company: "Creative Studios Inc",
-      role: "Video Producer",
-      content: "Zion AI Video Editor has revolutionized our workflow. We're producing 3x more content with better quality and half the time.",
+      name: "David Kim",
+      company: "TechStart Solutions",
+      role: "Project Director",
+      content: "Zion AI Project Manager has transformed how we handle complex projects. The AI insights help us stay on track and deliver 30% faster.",
       rating: 5,
-      avatar: "SC"
+      avatar: "DK"
     },
     {
-      name: "Michael Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Creative Director",
-      content: "The AI-powered features are incredible. Auto-captions and scene detection save us hours every day.",
+      name: "Lisa Martinez",
+      company: "Creative Agency",
+      role: "Operations Manager",
+      content: "The automated reporting and risk assessment features are game-changers. We've reduced project delays by 60% since implementation.",
       rating: 5,
-      avatar: "MR"
+      avatar: "LM"
     },
     {
-      name: "Emily Watson",
-      company: "E-learning Platform",
-      role: "Content Manager",
-      content: "Perfect for educational content. The voice-to-text and auto-captions make our videos accessible to everyone.",
+      name: "James Wilson",
+      company: "Software Development Co",
+      role: "CTO",
+      content: "Perfect for agile development teams. The AI-powered task prioritization and resource allocation save us hours every week.",
       rating: 5,
-      avatar: "EW"
+      avatar: "JW"
     }
   ];
 
   const useCases = [
     {
-      title: "Content Creators",
-      description: "Perfect for YouTubers, TikTokers, and social media influencers",
-      icon: <Video className="w-8 h-8" />,
-      color: "from-pink-500 to-rose-500"
-    },
-    {
-      title: "Marketing Teams",
-      description: "Create professional marketing videos and advertisements",
-      icon: <Target className="w-8 h-8" />,
+      title: "Software Development",
+      description: "Agile project management with AI-powered sprint planning",
+      icon: <Code className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "E-learning",
-      description: "Educational content with auto-captions and accessibility features",
-      icon: <BookOpen className="w-8 h-8" />,
+      title: "Marketing Campaigns",
+      description: "Campaign planning and execution with performance tracking",
+      icon: <Target className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Corporate",
-      description: "Internal training videos and corporate communications",
+      title: "Construction",
+      description: "Complex project management with timeline optimization",
+      icon: <Layers className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "Event Planning",
+      description: "Event coordination with vendor management and logistics",
+      icon: <Calendar className="w-8 h-8" />,
+      color: "from-purple-500 to-violet-500"
+    }
+  ];
+
+  const aiCapabilities = [
+    {
+      title: "Smart Planning",
+      description: "AI analyzes project requirements and creates optimal timelines",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      title: "Risk Prediction",
+      description: "Identifies potential issues before they become problems",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      title: "Resource Optimization",
+      description: "Automatically allocates team members based on skills and availability",
       icon: <Users className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Progress Insights",
+      description: "Real-time analytics and predictive project outcomes",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-purple-500 to-violet-500"
     }
   ];
@@ -136,20 +162,20 @@ export default function ZionAIVideoEditor() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Video Editor - AI-Powered Video Editing Platform | Zion Tech Group</title>
+        <title>Zion AI Project Manager - Intelligent Project Management Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered video editing platform with automatic scene detection, voice-to-text, auto-captions, and 4K/8K processing. Start your free trial today!"
+          content="Revolutionary AI-powered project management platform with intelligent planning, resource optimization, risk assessment, and predictive analytics. Start your free trial today!"
         />
         <meta
           name="keywords"
-          content="AI video editor, video editing software, automatic video editing, AI video enhancement, video transcription, auto-captions, video processing, 4K video editing"
+          content="AI project management, project planning software, resource optimization, risk assessment, project analytics, team collaboration, project tracking, agile management"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-editor" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-project-manager" />
       </Helmet>
       <SEOOptimizer
-        title="Zion AI Video Editor - AI-Powered Video Editing Platform | Zion Tech Group"
-        description="Revolutionary AI-powered video editing platform with automatic scene detection, voice-to-text, auto-captions, and 4K/8K processing. Start your free trial today!"
+        title="Zion AI Project Manager - Intelligent Project Management Platform | Zion Tech Group"
+        description="Revolutionary AI-powered project management platform with intelligent planning, resource optimization, risk assessment, and predictive analytics. Start your free trial today!"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -158,19 +184,19 @@ export default function ZionAIVideoEditor() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Revolutionary AI Video Editing</span>
+              <span className="text-cyan-400 text-sm font-medium">Intelligent Project Management</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Video Editor
+                {" "}Project Manager
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              The future of video editing is here. Create professional videos in minutes with AI-powered automation, 
-              automatic scene detection, voice-to-text transcription, and stunning visual effects.
+              The future of project management is here. Let AI handle the complexity while you focus on what matters most. 
+              Intelligent planning, resource optimization, and predictive insights for successful project delivery.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -178,7 +204,7 @@ export default function ZionAIVideoEditor() {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<Play className="w-5 h-5" />}
+                icon={<Target className="w-5 h-5" />}
               >
                 Start Free Trial
               </FuturisticButton>
@@ -192,16 +218,16 @@ export default function ZionAIVideoEditor() {
               </FuturisticButton>
             </div>
             
-            {/* Video Preview */}
-            <div className="relative max-w-4xl mx-auto mb-16">
+            {/* Dashboard Preview */}
+            <div className="relative max-w-6xl mx-auto mb-16">
               <div className="aspect-video bg-gradient-to-br from-slate-800/50 to-purple-800/50 rounded-2xl border border-white/20 backdrop-blur-sm overflow-hidden">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
                     <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 animate-pulse">
-                      <Play className="w-8 h-8 text-white ml-1" />
+                      <BarChart3 className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">See Zion AI Video Editor in Action</h3>
-                    <p className="text-gray-300">Watch how AI transforms your video editing workflow</p>
+                    <h3 className="text-2xl font-bold text-white mb-2">AI-Powered Project Dashboard</h3>
+                    <p className="text-gray-300">See how AI transforms your project management workflow</p>
                   </div>
                 </div>
               </div>
@@ -209,15 +235,51 @@ export default function ZionAIVideoEditor() {
           </div>
         </section>
 
-        {/* Features Section */}
+        {/* AI Capabilities */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Powerful AI Features
+                AI-Powered Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to create professional videos with the power of artificial intelligence
+                Harness the power of artificial intelligence to manage projects like never before
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {aiCapabilities.map((capability, index) => (
+                <FuturisticCard
+                  key={index}
+                  className="group cursor-pointer text-center"
+                  glowColor="cyan"
+                >
+                  <div className="p-6">
+                    <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${capability.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                      {capability.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                      {capability.title}
+                    </h3>
+                    <p className="text-gray-300 group-hover:text-gray-200 transition-colors">
+                      {capability.description}
+                    </p>
+                  </div>
+                </FuturisticCard>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Complete Project Management Suite
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to plan, execute, and deliver successful projects
               </p>
             </div>
             
@@ -226,11 +288,11 @@ export default function ZionAIVideoEditor() {
                 <FuturisticCard
                   key={index}
                   className="group cursor-pointer"
-                  glowColor="cyan"
+                  glowColor="purple"
                 >
                   <div className="p-6">
                     <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-600 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                         <Zap className="w-6 h-6 text-white" />
                       </div>
                       <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
@@ -245,14 +307,14 @@ export default function ZionAIVideoEditor() {
         </section>
 
         {/* Use Cases */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect for Every Use Case
+                Perfect for Every Industry
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Whether you're a content creator, marketer, educator, or business professional
+                From software development to construction, AI project management works everywhere
               </p>
             </div>
             
@@ -261,7 +323,7 @@ export default function ZionAIVideoEditor() {
                 <FuturisticCard
                   key={index}
                   className="group cursor-pointer text-center"
-                  glowColor="purple"
+                  glowColor="green"
                 >
                   <div className="p-6">
                     <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -281,14 +343,14 @@ export default function ZionAIVideoEditor() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start with our free trial and upgrade as you grow
+                Start with our free trial and scale as your team grows
               </p>
             </div>
             
@@ -352,7 +414,7 @@ export default function ZionAIVideoEditor() {
                 What Our Users Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of creators who trust Zion AI Video Editor
+                Join thousands of project managers who trust Zion AI Project Manager
               </p>
             </div>
             
@@ -390,10 +452,10 @@ export default function ZionAIVideoEditor() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Video Editing?
+              Ready to Transform Your Project Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of creators who are already using AI to create amazing videos. 
+              Join thousands of teams who are already using AI to deliver projects faster and more efficiently. 
               Start your free trial today - no credit card required.
             </p>
             
@@ -402,7 +464,7 @@ export default function ZionAIVideoEditor() {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<Play className="w-5 h-5" />}
+                icon={<Target className="w-5 h-5" />}
               >
                 Start Free Trial
               </FuturisticButton>

@@ -377,6 +377,130 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "zion-ai-video-editor",
+      name: "Zion AI Video Editor",
+      description: "Revolutionary AI-powered video editing with automatic scene detection and smart optimization",
+      price: "From $29/month",
+      originalPrice: "$59/month",
+      discount: "50% OFF",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      features: [
+        "AI-powered video editing",
+        "Automatic scene detection",
+        "Voice-to-text transcription",
+        "Auto-generated captions",
+        "Smart background removal",
+        "4K/8K video processing",
+        "Cloud-based rendering",
+        "Team collaboration"
+      ],
+      benefits: [
+        "Create videos 10x faster",
+        "Professional quality results",
+        "Save 20+ hours weekly",
+        "No editing experience needed"
+      ],
+      category: "Video Editing",
+      rating: 4.9,
+      reviews: 2156,
+      link: "/zion-ai-video-editor",
+      featured: true
+    },
+    {
+      id: "zion-ai-project-manager",
+      name: "Zion AI Project Manager",
+      description: "Intelligent project management with AI-powered planning, resource optimization, and risk assessment",
+      price: "From $19/month",
+      originalPrice: "$39/month",
+      discount: "50% OFF",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "AI-powered project planning",
+        "Intelligent resource allocation",
+        "Automated risk assessment",
+        "Real-time project monitoring",
+        "Smart task prioritization",
+        "Predictive analytics",
+        "Team collaboration tools",
+        "100+ tool integrations"
+      ],
+      benefits: [
+        "Complete projects 25% faster",
+        "Reduce project risks by 60%",
+        "Improve team productivity",
+        "Make data-driven decisions"
+      ],
+      category: "Project Management",
+      rating: 4.8,
+      reviews: 1892,
+      link: "/zion-ai-project-manager",
+      featured: true
+    },
+    {
+      id: "zion-ai-ecommerce",
+      name: "Zion AI E-commerce",
+      description: "Intelligent e-commerce platform with AI-powered recommendations, dynamic pricing, and automated customer service",
+      price: "From $39/month",
+      originalPrice: "$79/month",
+      discount: "50% OFF",
+      icon: <ShoppingCart className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "AI product recommendations",
+        "Dynamic pricing optimization",
+        "Automated customer service",
+        "Intelligent inventory management",
+        "Smart fraud detection",
+        "Personalized shopping experiences",
+        "Multi-channel selling",
+        "Real-time analytics"
+      ],
+      benefits: [
+        "Increase sales by 150%",
+        "Reduce operational costs by 40%",
+        "Improve customer satisfaction",
+        "Scale business automatically"
+      ],
+      category: "E-commerce",
+      rating: 4.7,
+      reviews: 1654,
+      link: "/zion-ai-ecommerce",
+      featured: true
+    },
+    {
+      id: "zion-ai-cybersecurity-pro",
+      name: "Zion AI Cybersecurity Pro",
+      description: "Advanced AI-powered cybersecurity platform with threat detection, behavioral analytics, and automated incident response",
+      price: "From $199/month",
+      originalPrice: "$399/month",
+      discount: "50% OFF",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      features: [
+        "AI threat detection",
+        "Behavioral analytics",
+        "Automated incident response",
+        "Zero-day vulnerability protection",
+        "Compliance monitoring",
+        "24/7 AI monitoring",
+        "Advanced encryption",
+        "Custom security policies"
+      ],
+      benefits: [
+        "Reduce security incidents by 95%",
+        "Protect against 99.9% of threats",
+        "Ensure compliance requirements",
+        "Save on security costs"
+      ],
+      category: "Cybersecurity",
+      rating: 4.9,
+      reviews: 892,
+      link: "/zion-ai-cybersecurity-pro",
+      featured: true
     }
   ];
 
@@ -393,12 +517,16 @@ export default function MicroSaas() {
     { name: "Support", count: microSaasServices.filter(s => s.category === "Support").length, active: false },
     { name: "Automation", count: microSaasServices.filter(s => s.category === "Automation").length, active: false },
     { name: "Finance", count: microSaasServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false }
+    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false },
+    { name: "Video Editing", count: microSaasServices.filter(s => s.category === "Video Editing").length, active: false },
+    { name: "Project Management", count: microSaasServices.filter(s => s.category === "Project Management").length, active: false },
+    { name: "E-commerce", count: microSaasServices.filter(s => s.category === "E-commerce").length, active: false },
+    { name: "Cybersecurity", count: microSaasServices.filter(s => s.category === "Cybersecurity").length, active: false }
   ];
 
   const stats = [
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
@@ -468,7 +596,7 @@ export default function MicroSaas() {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Powerful, AI-driven micro SAAS tools designed to transform your business operations. 
-                Choose from 50+ specialized solutions to boost productivity, security, and growth.
+                Choose from 60+ specialized solutions to boost productivity, security, and growth.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">
