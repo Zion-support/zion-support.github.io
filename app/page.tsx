@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Video, FileText, Mic } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
 import FuturisticBackground from "./components/FuturisticBackground";
@@ -95,51 +95,51 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
-      price: "From $299/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
+      name: "Zion AI Video Generator Pro",
+      description: "Create professional videos with AI-powered editing, voice synthesis, and automated content generation",
+      price: "From $199/month",
+      icon: <Video className="w-6 h-6" />,
+      link: "/ai-video-generator",
       featured: true
     },
     {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
+      name: "Zion AI Customer Insights Pro",
+      description: "Advanced customer analytics with behavioral insights, churn prediction, and personalized recommendations",
+      price: "From $299/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/ai-customer-insights",
+      featured: true
+    },
+    {
+      name: "Zion AI Cybersecurity Suite Pro",
+      description: "Advanced threat detection and response system with real-time monitoring and automated incident response",
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
+      link: "/ai-cybersecurity-suite-pro",
       featured: true
     },
     {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
-      price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
-      featured: true
-    },
-    {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
+      name: "Zion AI Content Generation Pro",
+      description: "Create high-quality content at scale with AI-powered writing tools and SEO optimization",
+      price: "From $149/month",
+      icon: <FileText className="w-6 h-6" />,
+      link: "/ai-content-generation-pro",
       featured: true
     },
     {
       name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
+      description: "End-to-end marketing automation with AI-driven personalization and advanced lead scoring",
+      price: "From $199/month",
       icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
+      link: "/ai-marketing-automation-pro",
       featured: true
     },
     {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
+      name: "Zion AI Voice Assistant Pro",
+      description: "Advanced voice assistant with natural language processing and multi-language support",
+      price: "From $199/month",
+      icon: <Mic className="w-6 h-6" />,
+      link: "/ai-voice-assistant-pro",
       featured: true
     }
   ];

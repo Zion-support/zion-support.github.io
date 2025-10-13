@@ -7,16 +7,8 @@ import {
   Shield, 
   Zap, 
   Globe, 
-<<<<<<< HEAD
-  ChevronDown
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
-=======
   ChevronDown,
   ChevronUp
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -69,15 +61,15 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       icon: <Brain className="w-4 h-4" />,
       hasDropdown: true,
       dropdownItems: [
-        { name: 'AI Analytics', path: '/ai-analytics' },
-        { name: 'AI Content Generation', path: '/ai-content-generation' },
-        { name: 'AI Customer Support', path: '/ai-customer-support' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
-        { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-        { name: 'AI Document Processing', path: '/ai-document-processing' },
-        { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
-        { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics' },
-        { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
+        { name: 'AI Video Generator', path: '/ai-video-generator' },
+        { name: 'AI Customer Insights', path: '/ai-customer-insights' },
+        { name: 'AI Content Generation', path: '/ai-content-generation-pro' },
+        { name: 'AI Customer Support', path: '/ai-customer-support-pro' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity-suite-pro' },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics-pro' },
+        { name: 'AI Document Processing', path: '/ai-document-intelligence' },
+        { name: 'AI Marketing Automation', path: '/ai-marketing-automation-pro' },
+        { name: 'AI Voice Assistant', path: '/ai-voice-assistant-pro' },
         { name: 'AI Workflow Automation', path: '/ai-workflow-automation' }
       ]
     },
@@ -87,14 +79,14 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       icon: <Zap className="w-4 h-4" />,
       hasDropdown: true,
       dropdownItems: [
-        { name: 'AI Video Generator', path: '/zion-ai-video-generator' },
+        { name: 'AI Video Generator', path: '/ai-video-generator' },
         { name: 'AI Invoice Generator', path: '/zion-ai-invoice-generator' },
-        { name: 'AI Customer Insights', path: '/zion-ai-customer-insights' },
+        { name: 'AI Customer Insights', path: '/ai-customer-insights' },
         { name: 'AI Email Analyzer', path: '/zion-ai-email-analyzer' },
         { name: 'Smart Inventory Optimizer', path: '/zion-smart-inventory-optimizer' },
         { name: 'AI Customer Sentiment Tracker', path: '/zion-ai-customer-sentiment-tracker' },
         { name: 'Smart Expense Categorizer', path: '/zion-smart-expense-categorizer' },
-        { name: 'AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro' },
+        { name: 'AI Voice Assistant Pro', path: '/ai-voice-assistant-pro' },
         { name: 'AI Code Reviewer', path: '/zion-ai-code-reviewer' },
         { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' }
       ]
@@ -186,37 +178,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                   )}
                 </Link>
                 
-<<<<<<< HEAD
-                {/* Services Dropdown */}
-                {item.hasDropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                    <div className="p-4">
-                      <h3 className="text-white font-semibold mb-3 text-sm">Popular Services</h3>
-                      <div className="grid grid-cols-1 gap-2">
-                        {serviceDropdownItems.map((service) => (
-                          <Link
-                            key={service.name}
-                            to={service.path}
-                            className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-colors group"
-                          >
-                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                              {service.name}
-                            </div>
-                            <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                              {service.description}
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                      <div className="mt-3 pt-3 border-t border-cyan-500/20">
-                        <Link
-                          to="/services"
-                          className="block text-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                        >
-                          View All Services →
-                        </Link>
-                      </div>
-=======
                 {/* Dropdown Menu */}
                 {item.hasDropdown && item.dropdownItems && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -232,7 +193,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                           {dropdownItem.name}
                         </Link>
                       ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
                     </div>
                   </div>
                 )}
