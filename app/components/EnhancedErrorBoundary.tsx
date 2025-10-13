@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
+=======
+'use client';
+import React, { Component, ReactNode } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 interface Props {
   children: ReactNode;
@@ -9,6 +14,7 @@ interface Props {
 
 interface State {
   hasError: boolean;
+<<<<<<< HEAD
   error: Error | null;
   errorInfo: ErrorInfo | null;
 }
@@ -21,6 +27,15 @@ export default class EnhancedErrorBoundary extends Component<Props, State> {
       error: null,
       errorInfo: null
     };
+=======
+  error?: Error;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
   }
 
   static getDerivedStateFromError(error: Error): State {
@@ -31,6 +46,7 @@ export default class EnhancedErrorBoundary extends Component<Props, State> {
     };
   }
 
+<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
       error,
@@ -108,6 +124,25 @@ export default class EnhancedErrorBoundary extends Component<Props, State> {
                 Go Home
               </Link>
             </div>
+=======
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div className="min-h-screen flex items-center justify-center bg-slate-900">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-300 mb-4">We're sorry, but something unexpected happened.</p>
+            <button
+              onClick={() => this.setState({ hasError: false })}
+              className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors"
+            >
+              Try again
+            </button>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
           </div>
         </div>
       );
@@ -115,4 +150,10 @@ export default class EnhancedErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
+<<<<<<< HEAD
 }
+=======
+}
+
+export default EnhancedErrorBoundary;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

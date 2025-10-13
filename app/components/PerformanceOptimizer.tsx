@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 =======
 <<<<<<< HEAD
 'use client;
+=======
+'use client';
+import React from 'react';
+'use client';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 import React, { useEffect, useState, useCallback } from 'react;
 
@@ -101,6 +107,7 @@ interface PerformanceOptimizerProps {
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
+<<<<<<< HEAD
     // Performance optimization logic
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
@@ -127,3 +134,53 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 >>>>>>> origin/cursor/ad-creation-and-management-f267
 };
 export default PerformanceOptimizer;
+=======
+    // Initial optimization
+    optimizeImages();
+    
+    // Re-optimize on route changes
+    const observer = new MutationObserver(optimizeImages);
+    observer.observe(document.body, { childList: true, subtree: true });
+
+    return () => observer.disconnect();
+  }, [optimizeImages]);
+
+  return <>{children}</>;
+};
+
+export default PerformanceOptimizer;
+  const optimizeMemory = useCallback(() => {if ('memory' in performance) {
+  const runOptimizations = useCallback(async () => {setIsOptimizing(true);
+    const newOptimizations: string[] = [],
+    // Optimize images;
+  return(<div className="performance-optimizer">)</div>
+      {children}{/* Performance Status Indicator (only in development) */}
+      {process.env['NODE_ENV'] === 'development' && (
+  );
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true;}) => {useEffect(() => {
+    // Preload critical resources;
+    if (enablePreloading && typeof window !== 'undefined') {
+      // Preload critical fonts;
+      const fontPreload = document.createElement('link');
+      fontPreload.rel = 'preload';
+      fontPreload.href = 'https: //fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
+      fontPreload.as = 'style'
+      document.head.appendChild(fontPreload),
+
+      // Preload critical images;
+      const criticalImages = [
+        '/images/hero-bg.jpg',
+        '/images/logo.png'
+      ]
+
+      criticalImages.forEach(src => {)
+    // Intersection Observer for lazy loading;
+    if (enableLazyLoading && typeof window !== 'undefined' && 'IntersectionObserver' in window) {const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {)
+          if (entry.isIntersecting) {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

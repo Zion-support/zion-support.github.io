@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
@@ -35,6 +36,28 @@ const STATIC_ASSETS = [
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
   event.waitUntil(
+=======
+const CACHE_NAME = 'zion-tech-group-v1';
+const CACHE_NAME = 'zion-tech-group-v1';
+const STATIC_CACHE = 'zion-static-v1';
+const DYNAMIC_CACHE = 'zion-dynamic-v1';
+
+// Files to cache immediately
+const STATIC_FILES = [
+  '/',
+  '/index.html',
+  '/manifest.json',
+  '/robots.txt',
+  '/sitemap.xml',
+  // Add other static assets as needed
+];
+
+// Install event - cache static files
+  '/manifest.json'
+];
+
+// Install event
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
     caches.open(STATIC_CACHE)
       .then((cache) => {
         return cache.addAll(STATIC_ASSETS);
@@ -132,6 +155,7 @@ self.addEventListener('message', (event) => {
   }
 });
 
+<<<<<<< HEAD
 
 async function handleFormSync() {
   try {
@@ -158,8 +182,23 @@ async function handleFormSync() {
     }
   } catch (error) {
     console.error('Form sync failed:', error);
+=======
+console.log('Service Worker loaded successfully');
+  );
+});
+
+// Fetch event
+  );
+});
+
+// Background sync for offline form submissions
+self.addEventListener('sync', (event) => {
+  if (event.tag === 'contact-form') {
+    event.waitUntil(syncContactForm());
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
   }
 }
+<<<<<<< HEAD
 
 // Helper functions for IndexedDB
 async function getPendingForms() {
@@ -170,3 +209,5 @@ async function getPendingForms() {
 async function removePendingForm(id) {
   // Implementation would go here
 }
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

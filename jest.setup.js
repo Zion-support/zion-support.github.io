@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 require('@testing-library/jest-dom');
 =======
 <<<<<<< HEAD
@@ -197,3 +198,8 @@ afterAll(() => {
 });
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 >>>>>>> origin/cursor/ad-creation-and-management-f267
+=======
+global.TextEncoder = TextEncoder;
+global.TextDecoder = TextDecoder;
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

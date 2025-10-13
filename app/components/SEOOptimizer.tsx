@@ -1,3 +1,37 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+'use client';
+interface SEOOptimizerProps {title: string;,}
+  description: string;,
+  keywords?: string[]
+  canonicalUrl?: string;
+  structuredData?: object;}const SEOOptimizer: React.FC<SEOOptimizerProps> = ({,
+  title,
+  description,
+  keywords = [],
+  canonicalUrl,
+  structuredData;}) => {
+  const keywordsString = keywords.join(', ');
+
+  return(<Helmet />)
+      <title>{title}</title>
+      <meta name="description" content={description}/>
+      <meta name="keywords" content={keywordsString}/>
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href={canonicalUrl}/>
+      
+      {/* Open Graph */} <meta property="og: title" content={title,}/>
+      <meta property="og: description" content={description,}/>
+      <meta property="og: type" content="website" />,
+      <meta property="og: url" content={canonicalUrl,}/>
+      
+      {/* Twitter Card */} <meta name="twitter: card" content="summary_large_image" />,
+      <meta name="twitter: title" content={title,}/>
+      <meta name="twitter: description" content={description,}/>
+'use client';
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -86,6 +120,7 @@ export default function SEOOptimizer({
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
+<<<<<<< HEAD
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords.join(', ')} />
       <meta name="robots" content={noIndex ? 'noindex, nofollow' : 'index, follow'} />
@@ -136,6 +171,9 @@ export default function SEOOptimizer({
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+=======
+      <meta name="theme-color" content="#1e40af" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
       
       {/* Structured Data */}
       <script type="application/ld+json">
@@ -143,4 +181,10 @@ export default function SEOOptimizer({
       </script>
     </Helmet>
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default SEOOptimizer;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -77,3 +78,7 @@ export default tseslint.config(
   }
 );
 >>>>>>> origin/clean-main-20251013-145848
+=======
+      'jest.setup.js'
+    ],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

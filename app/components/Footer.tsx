@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 <<<<<<< HEAD
@@ -35,10 +36,50 @@ const aiServices = [;;;
     { name: 'AI Process Automation', url: '/ai-automation', description: 'Intelligent process automation }
 
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 'use client';
 import React, { memo } from 'react';
 >>>>>>> origin/cursor/ad-creation-and-management-f267
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import { Phone, Mail, MapPin, Clock, Brain } from 'lucide-react';
+
+const Footer: React.FC = memo(() => {
+  const currentYear = new Date().getFullYear();
+  
+  const companyLinks = [
+    { name: 'About Us', url: '/about' },
+    { name: 'Our Team', url: '/team' },
+    { name: 'Case Studies', url: '/case-studies' },
+    { name: 'Blog', url: '/blog' },
+    { name: 'Careers', url: '/careers' },
+    { name: 'Partners', url: '/partners' },
+    { name: 'Support', url: '/support' },
+    { name: 'Status', url: '/status' }
+  ];
+
+  const resourcesLinks = [
+    { name: 'Pricing', url: '/pricing' },
+    { name: 'FAQ', url: '/faq' },
+    { name: 'Documentation', url: '/docs' },
+    { name: 'API Reference', url: '/api-docs' },
+    { name: 'Tutorials', url: '/tutorials' },
+    { name: 'Community', url: '/community' },
+    { name: 'Demo', url: '/demo' },
+    { name: 'Compliance', url: '/compliance' }
+  ];
+
+  const enterpriseLinks = [
+    { name: 'Enterprise Solutions', url: '/enterprise' },
+    { name: 'Digital Transformation', url: '/digital-transformation' },
+    { name: 'Business Intelligence', url: '/business-intelligence' },
+    { name: 'Edge Computing', url: '/edge-computing' },
+    { name: 'Consultation', url: '/consultation' },
+    { name: 'Custom Development', url: '/custom-software' }
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 export default function Footer() {
   return (
@@ -51,6 +92,7 @@ export default function Footer() {
               Advanced AI and IT solutions for modern businesses.
             </p>
           </div>
+<<<<<<< HEAD
           <div>
             <h4 className="text-md font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
@@ -122,6 +164,12 @@ export default function Footer() {
             </h3>
 <<<<<<< HEAD
             <ul className="space-y-2 mb-6>
+=======
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Company</h3>
+            <ul className="space-y-2">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
               {companyLinks.map((link, index) => (
 
 =======
@@ -140,6 +188,7 @@ export default function Footer() {
                 </li>
                 ))}
 
+<<<<<<< HEAD
             </ul>
 <<<<<<< HEAD
             <h3 className="text-lg font-semibold mb-4 text-cyan-400>Support</h3>
@@ -267,6 +316,54 @@ const Footer: React.FC = () => {
                 Terms of Service
               </a>
               <a href="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors>
+=======
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Resources</h3>
+            <ul className="space-y-2">
+              {resourcesLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.url}
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4 text-cyan-400">Enterprise</h3>
+            <ul className="space-y-2">
+              {enterpriseLinks.map((link, index) => (
+                <li key={index}>
+                  <Link
+                    to={link.url}
+                    className="text-gray-300 hover:text-cyan-400 text-sm transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-700 mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-sm">
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+            <div className="flex space-x-6">
+              <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                Privacy Policy
+              </Link>
+              <Link to="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+                Terms of Service
+              </Link>
+              <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors duration-200 text-sm">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
                 Cookie Policy
               </a>
             </div>
@@ -286,8 +383,15 @@ Footer.displayName = 'Footer
       </div>
     </footer>
   );
+<<<<<<< HEAD
 };
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 export default Footer;
 >>>>>>> origin/cursor/ad-creation-and-management-f267
+=======
+});
+
+Footer.displayName = 'Footer';
+export default Footer;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

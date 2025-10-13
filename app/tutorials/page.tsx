@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+'use client';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -46,4 +50,8 @@ export default function Tutorials() {
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -101,9 +102,35 @@ const timer = setTimeout(() => setIsVisible(true), 3000);
 import React from 'react';
 
 const PerformanceMonitor: React.FC = () => {
+=======
+'use client';
+import React, { useEffect } from 'react';
+
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      // Monitor performance metrics
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          console.log('Performance entry:', entry);
+        }
+      });
+
+      observer.observe({ entryTypes: ['measure', 'navigation'] });
+
+      return () => {
+        observer.disconnect();
+      };
+    }
+  }, []);
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
   return null;
 };
 
 export default PerformanceMonitor;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 >>>>>>> origin/cursor/ad-creation-and-management-f267
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

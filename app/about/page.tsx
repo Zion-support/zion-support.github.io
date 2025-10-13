@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+'use client';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
@@ -138,12 +142,17 @@ const AboutPage: React.FC = () => {}
 =======
   MessageCircle
 } from 'lucide-react';
+<<<<<<< HEAD
 
 const AboutPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 >>>>>>> origin/cursor/ad-creation-and-management-f267
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+=======
+    <>
+  </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
       <Helmet>
 <<<<<<< HEAD
         <title>About Us - Zion Tech Group</title>
@@ -532,6 +541,12 @@ const AboutPage: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
+=======
+);
+    <div className="min-h-screen pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
         <div className="text-center">
           <h2 className="text-3xl font-bold text-white mb-6">Ready to Work With Us?</h2>
           <p className="text-gray-300 mb-8">
@@ -549,6 +564,7 @@ const AboutPage: React.FC = () => {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 };
@@ -559,3 +575,6 @@ export default AboutPage;
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 >>>>>>> origin/cursor/ad-creation-and-management-f267
+=======
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

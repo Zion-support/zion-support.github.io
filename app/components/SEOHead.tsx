@@ -1,5 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -18,6 +21,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   keywords = '',
   canonical = '',
   ogImage = '/og-image.jpg',
+<<<<<<< HEAD
   ogType = 'website'
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
@@ -47,9 +51,29 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
+=======
+
+  ogType = 'website',
+
+  twitterCard = 'summary_large_image',
+
+  structuredData;}}) => {}const fullTitle = title.includes('Zion Tech Group') ? title : `${title}| Zion Tech Group`
+      "email": "kleber@ziontechgroup.com"},
+    "sameAs": [;
+return(<Helmet />)
+      {/* Basic Meta Tags */} <title>{fullTitle}</title>
+      <meta />
+      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}
+{/* Open Graph Meta Tags */} <meta name="description" content="AI-powered solution" />
+        {JSON.stringify(structuredData || defaultStructuredData</div>
+      </script>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
     </Helmet>
   );
 };
 
 export default SEOHead;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-console-errors-and-fix-issues-845e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

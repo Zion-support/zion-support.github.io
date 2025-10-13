@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client;
 
@@ -271,17 +272,63 @@ const ConsultationPage: React.FC = () => {}
     setSelectedType(typeId);
 
     console.log(`Booking consultation: ${typeId});
+=======
+'use client';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Calendar, Phone, Mail, CheckCircle, ArrowRight, Star, Users, Clock, Shield, Brain, Cloud, Zap, Globe, Settings, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+
+export default function ConsultationPage() {
+  const [selectedService, setSelectedService] = useState('ai-services');
+  const [isSubmitted, setIsSubmitted] = useState(false);
+'use client';
+import React from 'react';
+      </div>
+    service: '',
+    budget: '',
+    timeline: '',
+    message: ''
+  });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
     }
 
   ];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {    const { name, value } = e.target;;
 
     setFormData(prev => ({
 =======
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
+=======
+  const benefits = [
+    'Free initial consultation',
+    'Customized recommendations',
+    'Expert guidance',
+    'No obligation to proceed',
+    'Confidential discussion',
+    'Follow-up support'
+  ];
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitted(true);
+    console.log('Form submitted:', formData);
+  };
+
+    message: '',
+    preferredDate: '',
+    preferredTime: ''
+  });
+  ];
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
     const { name, value } = e.target;
     setFormData(prev => ({}
 >>>>>>> cursor/fix-errors-and-merge-to-main-d054
@@ -291,6 +338,7 @@ const ConsultationPage: React.FC = () => {}
 
   };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const handleSubmit = (e: React.FormEvent) => {;;
 
@@ -374,6 +422,115 @@ const ConsultationPage: React.FC = () => {
                 <a
                   href="tel:+13024640950
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900 px-8 py-4 rounded-lg font-semibold hover:from-cyan-300 hover:to-purple-300 transition-all duration-300
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Free Consultation - Zion Tech Group | Expert AI & IT Advice</title>
+        <meta name="description" content="Schedule a free consultation with our AI and IT experts. Get personalized recommendations for your business needs." />
+      </Helmet>
+      
+      <Navigation />
+      
+      {/* Hero Section */}
+      <section className="relative py-20 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
+        <div className="relative max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+            Free Expert
+            <span className="block bg-gradient-to-r from-purple-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              Consultation
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Get personalized advice from our AI and IT experts. Discover how our solutions 
+            can transform your business and drive growth.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25">
+              Schedule Now
+              <ArrowRight className="inline-block ml-2 w-5 h-5" />
+            </button>
+            <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Choose Your Focus Area</h2>
+            <p className="text-xl text-gray-300">Select the service you'd like to discuss during your consultation</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {services.map((service) => (
+              <div
+                key={service.id}
+                className={`p-6 rounded-xl border-2 transition-all duration-300 cursor-pointer ${
+                  selectedService === service.id
+                    ? 'border-purple-400 bg-purple-500/10'
+                    : 'border-gray-700 bg-white/5 hover:border-purple-400/50'
+                }`}
+                onClick={() => setSelectedService(service.id)}
+              >
+                <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                  <service.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="space-y-2">
+                  {service.features.map((feature, index) => (
+                    <li key={index} className="flex items-center text-sm text-gray-400">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      {feature}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Consultation?</h2>
+            <p className="text-xl text-gray-300">Get expert insights tailored to your business needs</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300">
+                <CheckCircle className="w-12 h-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">{benefit}</h3>
+              </div>
+            ))}
+    <>
+  </>
+      {/* Consultation Form */}
+      <section className="py-20 px-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
+            <h2 className="text-3xl font-bold text-white mb-6 text-center">Schedule Your Consultation</h2>
+            
+            {isSubmitted ? (
+              <div className="text-center py-12">
+                <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
+                <h3 className="text-2xl font-bold text-white mb-2">Consultation Scheduled!</h3>
+                <p className="text-gray-300 mb-6">
+                  Thank you for scheduling your consultation. We'll contact you within 24 hours to confirm the details.
+                </p>
+                <button 
+                  onClick={() => setIsSubmitted(false)}
+                  className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
                 >
                   <Phone className="w-5 h-5 />
                   Call Now
@@ -388,6 +545,7 @@ const ConsultationPage: React.FC = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8>
               {consultationTypes.map((type) => (
@@ -591,10 +749,57 @@ const ConsultationPage: React.FC = () => {
                       className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-cyan-400 transition-colors
                       placeholder="Enter your company name
                     />
+=======
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div>
+                    <label className="block text-white font-semibold mb-2">Service Interest</label>
+                    <select
+                      name="service"
+                      value={formData.service}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    >
+                      <option value="">Select a service</option>
+                      {services.map((service) => (
+                        <option key={service.id} value={service.id}>{service.title}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-white font-semibold mb-2">Budget Range</label>
+                    <select
+                      name="budget"
+                      value={formData.budget}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    >
+                      <option value="">Select budget</option>
+                      <option value="under-10k">Under $10,000</option>
+                      <option value="10k-50k">$10,000 - $50,000</option>
+                      <option value="50k-100k">$50,000 - $100,000</option>
+                      <option value="over-100k">Over $100,000</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-white font-semibold mb-2">Timeline</label>
+                    <select
+                      name="timeline"
+                      value={formData.timeline}
+                      onChange={handleInputChange}
+                      className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    >
+                      <option value="">Select timeline</option>
+                      <option value="asap">ASAP</option>
+                      <option value="1-3-months">1-3 months</option>
+                      <option value="3-6-months">3-6 months</option>
+                      <option value="6-months-plus">6+ months</option>
+                    </select>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
                   </div>
                 </div>
 
                 <div>
+<<<<<<< HEAD
                   <label htmlFor="consultationType" className="block text-sm font-medium text-gray-300 mb-2>
                     Preferred Consultation Type
                   </label>
@@ -649,12 +854,53 @@ const ConsultationPage: React.FC = () => {
                 >
                   <span>Schedule Consultation</span>
                   <ArrowRight className="w-5 h-5 ml-2 />
+=======
+                  <label className="block text-white font-semibold mb-2">Tell us about your project</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    rows={4}
+                    placeholder="Describe your current challenges, goals, and what you hope to achieve..."
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                  />
+                </div>
+
+                <div className="text-center">
+                  <button
+                    type="submit"
+                    className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25"
+                  >
+                    Schedule Free Consultation
+                    <ArrowRight className="inline-block ml-2 w-5 h-5" />
+                  </button>
+                </div>
+              </form>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+      {/* Consultation Types */}
+      <section id="consultation-types" className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Choose Your Consultation Type
+                  <Calendar className="w-5 h-5 mr-2" />
+                  Schedule Consultation
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
                 </button>
               </form>
             </div>
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Contact Info */}
 
         <section className="py-16 px-4>
@@ -795,9 +1041,81 @@ export default ConsultationPage;      <section className="py-16 px-4>
   );
 
 };
+=======
+      {/* Booking Form */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Schedule Your Consultation
+            </h2>
+            
+            <form onSubmit={handleSubmit} className="bg-gray-50 rounded-lg p-8">
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    Full Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    Email Address *
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your email"
+                  />
+                </div>
+      {/* CTA Section */}
+      <section className="py-16 bg-blue-900 text-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              Ready to Transform Your Business?
+            </h2>
+            <p className="text-xl mb-8 text-blue-100">
+              Schedule a consultation today and take the first step towards AI-powered success.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="#consultation-types"
+                className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors flex items-center justify-center"
+              >
+                <ArrowRight className="w-5 h-5 mr-2" />
+                Book Now
+              </a>
+              <Link
+                to="/services"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-colors"
+              >
+                Explore Services
+              </Link>
+            </div>
+          </div>
+        </section>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
 export default PagePage;
 =======
 export default ConsultationPage;
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 >>>>>>> origin/cursor/ad-creation-and-management-f267
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

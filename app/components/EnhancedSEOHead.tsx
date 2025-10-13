@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client;
 
 import React from 'react;
@@ -6,9 +7,16 @@ import React from 'react;
 import { Helmet } from react-helmet-async;
 
 interface EnhancedSEOHeadProps {}
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+interface SEOHeadProps {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
   title?: string;
 
   description?: string;
+<<<<<<< HEAD
 
   keywords?: string[];
 
@@ -70,6 +78,14 @@ const SEOHead: React.FC = () => {
 
     <Helmet>
       {/* Basic Meta Tags */}
+=======
+  title: string;
+  description: string;
+  keywords?: string[];
+  canonicalUrl?: string;
+  structuredData?: any;
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
       <title>{fullTitle}</title>
       <meta name="description content={fullDescription} />
@@ -153,6 +169,7 @@ const SEOHead: React.FC = () => {
 
         </script>
       )}
+<<<<<<< HEAD
 
       {/* Default Organization Structured Data */}
 <<<<<<< HEAD
@@ -240,3 +257,9 @@ export default EnhancedSEOHead;
 =======
 export default SEOHead;
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
+=======
+    </Helmet>
+  );
+};
+export default EnhancedSEOHead;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

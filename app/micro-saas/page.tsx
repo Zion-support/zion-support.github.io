@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client;
 
@@ -46,11 +47,24 @@ const MicroSaasPage: React.FC = () => {}
 =======
     {}
       id: '1',
+=======
+'use client';
+import React from 'react';
+
+const MicroSaasPage: React.FC = () => {
+import { CheckCircle, ArrowRight, Zap } from 'lucide-react'
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Database, Brain } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
       icon: '📊',
       title: 'AI Analytics Dashboard',
       description: 'Real-time business intelligence and predictive analytics for small to medium businesses',
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app', 'API integration'],
       price: '$99/month',
+<<<<<<< HEAD
       users: 'Up to 50 users',
 >>>>>>> cursor/fix-errors-and-merge-to-main-d054
       popular: true,
@@ -250,6 +264,12 @@ import { Helmet } from 'react-helmet-async';
 
 const MicroSaasPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
+=======
+      users: 'Up to 50 users'
+      users: 'Up to 100 users'
+      users: 'Up to 200 users'
+      users: 'Unlimited users'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
   return (
 
     <>
@@ -298,6 +318,7 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Category Filter */}
 <<<<<<< HEAD
 
@@ -505,6 +526,19 @@ const MicroSaasPage: React.FC = () => {
             </div>
           </div>
         </section>
+=======
+          {/* CTA Section */}
+          <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl p-12 text-center backdrop-blur-lg border border-white/10">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              Choose the micro SaaS solution that fits your business needs. 
+              Start with a free trial and scale as you grow.
+    <>
+  </>
+      <Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 
         {/* CTA Section */}
 
@@ -569,6 +603,7 @@ const MicroSaasPage: React.FC = () => {
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </>
   );
 
@@ -590,3 +625,186 @@ const MicroSaasPage: React.FC = () => {
 
 export default MicroSaasPage;
 >>>>>>> origin/cursor/ad-creation-and-management-f267
+=======
+
+    <div className="min-h-screen pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-cyan-400">Micro SAAS</span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Ready-to-use business tools with AI and automation.
+          </p>
+        </div>
+      </div>
+                  <p className="text-gray-300 text-sm">{benefit}</p>
+      {/* Featured Products */}
+      {popularProducts.length > 0 && (
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-white mb-6">Featured Tools</h2>
+              <p className="text-xl text-gray-300">Our most popular micro SaaS solutions</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {microSaasTools.map((tool, index) => (
+                <div key={index} className={`bg-white/5 backdrop-blur-lg rounded-2xl p-6 border transition-all duration-300 hover:scale-105 group ${
+                  tool.popular ? 'border-cyan-400/50 shadow-lg shadow-cyan-500/20' : 'border-white/10 hover:border-cyan-400/30'
+                }`}>
+                  {tool.popular && (
+                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        POPULAR
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="flex items-center mb-4">
+                    <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                      <tool.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-white mb-1">{tool.title}</h3>
+                      <div className="flex items-center space-x-2">
+                        <span className="text-cyan-400 font-bold text-lg">{tool.price}</span>
+                        {tool.marketPrice && (
+                          <span className="text-gray-400 text-sm line-through">{tool.marketPrice}</span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">{tool.description}</p>
+                  
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
+                    <ul className="space-y-1">
+                      {tool.features.slice(0, 4).map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-gray-300 text-sm">
+                          <CheckCircle className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {tool.benefits && (
+                    <div className="mb-6">
+                      <h4 className="text-sm font-semibold text-white mb-2">Benefits:</h4>
+                      <ul className="space-y-1">
+                        {tool.benefits.slice(0, 3).map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-center text-green-300 text-sm">
+                            <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                            {benefit}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  <div className="flex items-center justify-between">
+                    <div className="text-xs text-gray-400">
+                      <span className="bg-gray-700 px-2 py-1 rounded">{tool.category}</span>
+                    </div>
+                    <button className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-500 text-white text-sm font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300">
+                      Try Now
+                    </button>
+                  </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {popularProducts.map((product) => (
+                <div key={product.id} className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:border-blue-400/50 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                      <product.icon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Star className="w-5 h-5 text-yellow-400" />
+                      <span className="text-yellow-400 text-sm font-medium">Popular</span>
+                    </div>
+                  </div>
+
+                  <h3 className="text-2xl font-bold text-white mb-2">{product.name}</h3>
+                  <p className="text-gray-300 mb-4">{product.description}</p>
+                  <div className="text-3xl font-bold text-white mb-6">{product.price}</div>
+
+                  <ul className="space-y-3 mb-6">
+                    {product.features.map((feature, index) => (
+                      <li key={index} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300">
+                    Try Free Trial
+                  </button>
+        </section>
+    </>
+      )}
+
+      {/* All Products */}
+      <section className="py-16 px-4 bg-white/5">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row gap-4 mb-12">
+            <select
+              value={selectedCategory}
+              onChange={(e) => setSelectedCategory(e.target.value)}
+              className="px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500"
+            >
+              {categories.map(category => (
+                <option key={category} value={category}>
+                  {category === 'all' ? 'All Categories' : category}
+                </option>
+              ))}
+            </select>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {filteredProducts.map((product) => (
+              <div key={product.id} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 hover:bg-white/10 transition-all duration-300 border border-white/20">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-blue-500 rounded-lg flex items-center justify-center">
+                    <product.icon className="w-6 h-6 text-white" />
+                  </div>
+                  {product.popular && (
+                    <span className="bg-yellow-500/20 text-yellow-300 px-2 py-1 rounded-full text-xs font-medium">
+                      Popular
+                    </span>
+                  )}
+                </div>
+
+                <h3 className="text-xl font-bold text-white mb-2">{product.name}</h3>
+                <p className="text-gray-300 text-sm mb-4">{product.category}</p>
+                <p className="text-gray-300 mb-4">{product.description}</p>
+                <div className="text-2xl font-bold text-white mb-4">{product.price}</div>
+
+                <ul className="space-y-2 mb-6">
+                  {product.features.slice(0, 3).map((feature, index) => (
+                    <li key={index} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                      <span className="line-clamp-1">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <button className="w-full text-blue-400 hover:text-blue-300 font-medium transition-colors flex items-center justify-center gap-2">
+                  Learn More
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            ))}
+          </div>
+
+          {filteredProducts.length === 0 && (
+            <div className="text-center py-12">
+              <p className="text-gray-400 text-lg">No products found in this category.</p>
+            </div>
+          )}
+      </div>
+    </>
+export default MicroSaasPage;
+export default MicroSaasPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9

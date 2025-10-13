@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import fs from 'fs';
 import path from 'path';
 
@@ -8,10 +11,37 @@ function cleanMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
+<<<<<<< HEAD
     // Check if file has merge conflict markers
     if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts to clean
     }
+=======
+    // Check if file has merge conflicts
+    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
+      console.log(`Cleaning merge conflicts in: ${filePath}`);
+      
+      // Remove merge conflict markers and keep the HEAD version
+      content = content.replace(/<<<<<<< HEAD\n?/g, '');
+      content = content.replace(/=======\n?/g, '');
+      content = content.replace(/>>>>>>> [^\n]+\n?/g, '');
+      
+      // Clean up any extra whitespace
+      content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
+      
+      fs.writeFileSync(filePath, content);
+      return true;
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+function findTsxFiles(dir) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
     
     console.log(`Cleaning merge conflicts in: ${filePath}`);
     
@@ -58,6 +88,7 @@ function cleanMergeConflicts(filePath) {
         cleanedLines.push(line);
       }
     }
+<<<<<<< HEAD
     
     // Write cleaned content back to file
     const cleanedContent = cleanedLines.join('\n');
@@ -102,3 +133,23 @@ function cleanDirectory(dirPath) {
 console.log('Starting merge conflict cleanup...');
 const cleanedCount = cleanDirectory('/workspace');
 console.log(`Cleaned merge conflicts in ${cleanedCount} files.`);
+=======
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main execution
+const appDir = '/workspace/app';
+const files = findTsxFiles(appDir);
+
+let cleanedCount = 0;
+for (const file of files) {
+  if (cleanMergeConflicts(file)) {
+    cleanedCount++;
+  }
+}
+
+console.log(`Cleaned merge conflicts in ${cleanedCount} files`);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
