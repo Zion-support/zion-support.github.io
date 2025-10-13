@@ -2,6 +2,6 @@
 export const formValidation = {
   // Utility implementation
   init: () => {
-    console.log('formValidation initialized');
-  }
+    console.log("formValidation initialized");
+  },
 };

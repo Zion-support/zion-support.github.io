@@ -2,6 +2,6 @@
 export const accessibilityChecker = {
   // Utility implementation
   init: () => {
-    console.log('accessibilityChecker initialized');
-  }
+    console.log("accessibilityChecker initialized");
+  },
 };

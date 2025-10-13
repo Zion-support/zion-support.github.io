@@ -1,13 +1,20 @@
-import React from 'react';
+import React from "react";
 
 interface EnhancedperformancemonitorProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Enhancedperformancemonitor({ className = '', children, ...props }: EnhancedperformancemonitorProps) {
+export default function Enhancedperformancemonitor({
+  className = "",
+  children,
+  ...props
+}: EnhancedperformancemonitorProps) {
   return (
-    <div className={`enhancedperformancemonitor-component ${className}`} {...props}>
+    <div
+      className={`enhancedperformancemonitor-component ${className}`}
+      {...props}
+    >
       {children}
     </div>
   );

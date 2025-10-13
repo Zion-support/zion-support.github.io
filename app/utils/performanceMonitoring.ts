@@ -2,6 +2,6 @@
 export const performanceMonitoring = {
   // Utility implementation
   init: () => {
-    console.log('performanceMonitoring initialized');
-  }
+    console.log("performanceMonitoring initialized");
+  },
 };

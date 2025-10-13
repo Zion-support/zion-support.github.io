@@ -9,5 +9,5 @@ export const logger = {
   },
   warn: (message: string) => {
     console.warn(`[WARN] ${message}`);
-  }
+  },
 };

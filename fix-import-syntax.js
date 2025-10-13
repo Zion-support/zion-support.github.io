@@ -1,26 +1,29 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 // Function to fix malformed import statements
 function fixImportSyntax(filePath) {
   try {
-    if (!fs.existsSync(filePath) || (!filePath.endsWith('.tsx') && !filePath.endsWith('.ts'))) {
+    if (
+      !fs.existsSync(filePath) ||
+      (!filePath.endsWith(".tsx") && !filePath.endsWith(".ts"))
+    ) {
       return;
     }
 
-    const content = fs.readFileSync(filePath, 'utf8');
-    const lines = content.split('\n');
-    
+    const content = fs.readFileSync(filePath, "utf8");
+    const lines = content.split("\n");
+
     let fixed = false;
     const newLines = [];
-    
+
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      
+
       // Check for malformed import statements like "import { " followed by "import { ..."
-      if (line.trim() === 'import { ' && i + 1 < lines.length) {
+      if (line.trim() === "import { " && i + 1 < lines.length) {
         const nextLine = lines[i + 1];
-        if (nextLine.trim().startsWith('import { ')) {
+        if (nextLine.trim().startsWith("import { ")) {
           // Skip the malformed line and use the next one
           newLines.push(nextLine);
           i++; // Skip the next line since we already added it
@@ -28,16 +31,15 @@ function fixImportSyntax(filePath) {
           continue;
         }
       }
-      
+
       newLines.push(line);
     }
-    
+
     if (fixed) {
-      const newContent = newLines.join('\n');
+      const newContent = newLines.join("\n");
       fs.writeFileSync(filePath, newContent);
       console.log(`Fixed import syntax in: ${filePath}`);
     }
-    
   } catch (error) {
     console.error(`Error processing ${filePath}:`, error.message);
   }
@@ -46,27 +48,31 @@ function fixImportSyntax(filePath) {
 // Function to recursively find all TypeScript files
 function findFiles(dir, fileList = []) {
   const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
+
+  files.forEach((file) => {
     const filePath = path.join(dir, file);
     const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory() && !file.includes('node_modules') && !file.includes('.git')) {
+
+    if (
+      stat.isDirectory() &&
+      !file.includes("node_modules") &&
+      !file.includes(".git")
+    ) {
       findFiles(filePath, fileList);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
+    } else if (file.endsWith(".tsx") || file.endsWith(".ts")) {
       fileList.push(filePath);
     }
   });
-  
+
   return fileList;
 }
 
 // Main execution
-console.log('Starting to fix import syntax...');
+console.log("Starting to fix import syntax...");
 
-const files = findFiles('/workspace/app');
-files.forEach(file => {
+const files = findFiles("/workspace/app");
+files.forEach((file) => {
   fixImportSyntax(file);
 });
 
-console.log('Finished fixing import syntax.');
+console.log("Finished fixing import syntax.");

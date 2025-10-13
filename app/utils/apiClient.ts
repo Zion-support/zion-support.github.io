@@ -2,6 +2,6 @@
 export const apiClient = {
   // Utility implementation
   init: () => {
-    console.log('apiClient initialized');
-  }
+    console.log("apiClient initialized");
+  },
 };

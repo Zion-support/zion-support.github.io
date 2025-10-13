@@ -2,6 +2,6 @@
 export const analyticsTracker = {
   // Utility implementation
   init: () => {
-    console.log('analyticsTracker initialized');
-  }
+    console.log("analyticsTracker initialized");
+  },
 };

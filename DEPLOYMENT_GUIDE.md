@@ -3,11 +3,13 @@
 ## 🚀 Quick Start
 
 ### Prerequisites
+
 - Node.js 18.0.0 or higher
 - pnpm 8.0.0 or higher (recommended) or npm
 - Git
 
 ### Local Development
+
 ```bash
 # Install dependencies
 pnpm install
@@ -25,6 +27,7 @@ pnpm preview
 ## 📦 Production Build
 
 ### Build Process
+
 ```bash
 # Clean and build
 pnpm run build:production
@@ -37,6 +40,7 @@ pnpm run optimize:all
 ```
 
 ### Build Output
+
 - **Dist Directory**: `dist/`
 - **Entry Point**: `dist/index.html`
 - **Assets**: `dist/assets/`
@@ -46,6 +50,7 @@ pnpm run optimize:all
 ## 🌐 Deployment Platforms
 
 ### Vercel (Recommended)
+
 1. Connect your GitHub repository to Vercel
 2. Configure environment variables:
    - `NODE_ENV=production`
@@ -53,18 +58,21 @@ pnpm run optimize:all
 3. Deploy automatically on push to main branch
 
 ### Netlify
+
 1. Connect your GitHub repository to Netlify
 2. Build command: `pnpm run build`
 3. Publish directory: `dist`
 4. Configure redirects in `_redirects` file
 
 ### AWS S3 + CloudFront
+
 1. Build the project: `pnpm run build`
 2. Upload `dist/` contents to S3 bucket
 3. Configure CloudFront distribution
 4. Set up custom domain and SSL
 
 ### Docker
+
 ```dockerfile
 FROM node:18-alpine AS builder
 WORKDIR /app
@@ -83,6 +91,7 @@ CMD ["nginx", "-g", "daemon off;"]
 ## ⚡ Performance Optimizations
 
 ### Implemented Optimizations
+
 - ✅ Code splitting with dynamic imports
 - ✅ Tree shaking for unused code removal
 - ✅ Image optimization and lazy loading
@@ -93,6 +102,7 @@ CMD ["nginx", "-g", "daemon off;"]
 - ✅ Bundle analysis and optimization
 
 ### Performance Monitoring
+
 - Core Web Vitals tracking
 - Real-time performance metrics
 - Error boundary with reporting
@@ -101,6 +111,7 @@ CMD ["nginx", "-g", "daemon off;"]
 ## 🔧 Environment Variables
 
 Create a `.env.local` file:
+
 ```env
 NODE_ENV=production
 NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
@@ -111,6 +122,7 @@ NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 ## 📊 SEO & Analytics
 
 ### SEO Features
+
 - ✅ Meta tags and Open Graph
 - ✅ Structured data (JSON-LD)
 - ✅ XML sitemap generation
@@ -119,6 +131,7 @@ NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 - ✅ Social media optimization
 
 ### Analytics Integration
+
 - Google Analytics 4
 - Google Tag Manager
 - Core Web Vitals monitoring
@@ -127,6 +140,7 @@ NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 ## 🛡️ Security
 
 ### Security Headers
+
 - Content Security Policy (CSP)
 - X-Frame-Options
 - X-Content-Type-Options
@@ -134,6 +148,7 @@ NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 - Permissions-Policy
 
 ### Best Practices
+
 - Input sanitization
 - XSS protection
 - CSRF protection
@@ -143,6 +158,7 @@ NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 ## 📱 PWA Features
 
 ### Progressive Web App
+
 - ✅ Service Worker for offline support
 - ✅ Web App Manifest
 - ✅ Installable on mobile devices
@@ -150,6 +166,7 @@ NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 - ✅ Background sync
 
 ### Offline Support
+
 - Cached static assets
 - Offline page fallback
 - Background sync for forms
@@ -158,12 +175,14 @@ NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 ## 🔍 Monitoring & Debugging
 
 ### Error Tracking
+
 - Production error boundary
 - Error reporting service integration
 - User feedback collection
 - Performance monitoring
 
 ### Debugging Tools
+
 - React Developer Tools
 - Performance profiling
 - Network monitoring
@@ -172,6 +191,7 @@ NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 ## 📈 Performance Metrics
 
 ### Target Metrics
+
 - **LCP**: < 2.5s
 - **FID**: < 100ms
 - **CLS**: < 0.1
@@ -179,6 +199,7 @@ NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 - **TTFB**: < 600ms
 
 ### Monitoring Tools
+
 - Lighthouse CI
 - WebPageTest
 - Google PageSpeed Insights
@@ -187,6 +208,7 @@ NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 ## 🚀 Deployment Checklist
 
 ### Pre-deployment
+
 - [ ] Run `pnpm run build` successfully
 - [ ] Test all routes and functionality
 - [ ] Verify responsive design
@@ -195,6 +217,7 @@ NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 - [ ] Test PWA functionality
 
 ### Post-deployment
+
 - [ ] Verify site loads correctly
 - [ ] Check all external links
 - [ ] Test contact forms
@@ -205,6 +228,7 @@ NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
 ## 🔄 CI/CD Pipeline
 
 ### GitHub Actions Example
+
 ```yaml
 name: Deploy to Production
 on:
@@ -217,7 +241,7 @@ jobs:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
-          node-version: '18'
+          node-version: "18"
       - run: pnpm install
       - run: pnpm run build
       - run: pnpm run test
@@ -229,6 +253,7 @@ jobs:
 ## 📞 Support
 
 For deployment issues or questions:
+
 - **Email**: support@ziontechgroup.com
 - **Phone**: +1 (302) 464-0950
 - **Documentation**: [docs.ziontechgroup.com](https://docs.ziontechgroup.com)

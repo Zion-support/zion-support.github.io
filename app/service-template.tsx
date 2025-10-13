@@ -5,7 +5,11 @@ interface ServiceTemplateProps {
   children?: React.ReactNode;
 }
 
-export default function ServiceTemplate({ className = '', children, ...props }: ServiceTemplateProps) {
+export default function ServiceTemplate({
+  className = "",
+  children,
+  ...props
+}: ServiceTemplateProps) {
   return (
     <div className={`servicetemplate-component ${className}`} {...props}>
       {children}

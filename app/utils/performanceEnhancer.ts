@@ -2,6 +2,6 @@
 export const performanceEnhancer = {
   // Utility implementation
   init: () => {
-    console.log('performanceEnhancer initialized');
-  }
+    console.log("performanceEnhancer initialized");
+  },
 };

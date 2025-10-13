@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
 
 interface ResponsivetextProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Responsivetext({ className = '', children, ...props }: ResponsivetextProps) {
+export default function Responsivetext({
+  className = "",
+  children,
+  ...props
+}: ResponsivetextProps) {
   return (
     <div className={`responsivetext-component ${className}`} {...props}>
       {children}

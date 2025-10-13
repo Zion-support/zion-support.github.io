@@ -2,6 +2,6 @@
 export const sitemapGenerator = {
   // Utility implementation
   init: () => {
-    console.log('sitemapGenerator initialized');
-  }
+    console.log("sitemapGenerator initialized");
+  },
 };

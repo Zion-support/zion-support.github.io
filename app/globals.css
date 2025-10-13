@@ -7,18 +7,18 @@
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: "Inter", system-ui, sans-serif;
     line-height: 1.6;
   }
-  
+
   /* Focus styles */
   *:focus {
     outline: 2px solid #06b6d4;
     outline-offset: 2px;
   }
-  
+
   /* Skip to content link */
   .skip-link {
     position: absolute;
@@ -32,7 +32,7 @@
     z-index: 1000;
     transition: top 0.3s;
   }
-  
+
   .skip-link:focus {
     top: 6px;
   }
@@ -45,23 +45,23 @@
     --tw-bg-opacity: 1;
     --tw-text-opacity: 1;
   }
-  
+
   .high-contrast .bg-slate-900 {
     background-color: #000000 !important;
   }
-  
+
   .high-contrast .text-white {
     color: #ffffff !important;
   }
-  
+
   .high-contrast .text-gray-300 {
     color: #ffffff !important;
   }
-  
+
   .high-contrast .border-white\/20 {
     border-color: #ffffff !important;
   }
-  
+
   /* Reduced motion */
   .reduced-motion * {
     animation-duration: 0.01ms !important;
@@ -69,7 +69,7 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  
+
   /* Screen reader only content */
   .sr-only {
     position: absolute;
@@ -82,7 +82,7 @@
     white-space: nowrap;
     border: 0;
   }
-  
+
   /* Focus visible for better keyboard navigation */
   .focus-visible:focus {
     outline: 2px solid #06b6d4;
@@ -95,15 +95,15 @@
   .animate-fade-in {
     animation: fadeIn 0.5s ease-in-out;
   }
-  
+
   .animate-slide-up {
     animation: slideUp 0.5s ease-out;
   }
-  
+
   .animate-pulse-slow {
     animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   }
-  
+
   .animate-bounce-slow {
     animation: bounce 2s infinite;
   }
@@ -152,20 +152,20 @@
   .no-print {
     display: none !important;
   }
-  
+
   body {
     background: white !important;
     color: black !important;
   }
-  
+
   .bg-gradient-to-br {
     background: white !important;
   }
-  
+
   .text-white {
     color: black !important;
   }
-  
+
   .text-gray-300 {
     color: #666 !important;
   }

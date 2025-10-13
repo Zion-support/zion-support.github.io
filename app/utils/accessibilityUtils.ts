@@ -2,6 +2,6 @@
 export const accessibilityUtils = {
   // Utility implementation
   init: () => {
-    console.log('accessibilityUtils initialized');
-  }
+    console.log("accessibilityUtils initialized");
+  },
 };

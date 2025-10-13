@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 
 interface OptimizedImageProps {
   src: string;
@@ -16,10 +16,10 @@ export default function OptimizedImage({
   alt,
   width,
   height,
-  className = '',
+  className = "",
   priority = false,
   onLoad,
-  onError
+  onError,
 }: OptimizedImageProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -27,12 +27,12 @@ export default function OptimizedImage({
 
   useEffect(() => {
     if (imgRef.current) {
-      imgRef.current.addEventListener('load', () => {
+      imgRef.current.addEventListener("load", () => {
         setIsLoading(false);
         onLoad?.();
       });
-      
-      imgRef.current.addEventListener('error', () => {
+
+      imgRef.current.addEventListener("error", () => {
         setHasError(true);
         setIsLoading(false);
         onError?.();
@@ -42,9 +42,12 @@ export default function OptimizedImage({
 
   if (hasError) {
     return (
-      <div 
+      <div
         className={`bg-gray-200 flex items-center justify-center ${className}`}
-        style={{ width: width ? `${width}px` : '100%', height: height ? `${height}px` : '200px' }}
+        style={{
+          width: width ? `${width}px` : "100%",
+          height: height ? `${height}px` : "200px",
+        }}
       >
         <span className="text-gray-500">Failed to load image</span>
       </div>
@@ -52,7 +55,13 @@ export default function OptimizedImage({
   }
 
   return (
-    <div className={`relative ${className}`} style={{ width: width ? `${width}px` : '100%', height: height ? `${height}px` : 'auto' }}>
+    <div
+      className={`relative ${className}`}
+      style={{
+        width: width ? `${width}px` : "100%",
+        height: height ? `${height}px` : "auto",
+      }}
+    >
       {isLoading && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
           <span className="text-gray-500">Loading...</span>
@@ -64,8 +73,8 @@ export default function OptimizedImage({
         alt={alt}
         width={width}
         height={height}
-        loading={priority ? 'eager' : 'lazy'}
-        className={`transition-opacity duration-300 ${isLoading ? 'opacity-0' : 'opacity-100'}`}
+        loading={priority ? "eager" : "lazy"}
+        className={`transition-opacity duration-300 ${isLoading ? "opacity-0" : "opacity-100"}`}
       />
     </div>
   );

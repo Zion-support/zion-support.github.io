@@ -2,6 +2,6 @@
 export const monitoring = {
   // Utility implementation
   init: () => {
-    console.log('monitoring initialized');
-  }
+    console.log("monitoring initialized");
+  },
 };

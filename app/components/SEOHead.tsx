@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react";
 
 interface SeoheadProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Seohead({ className = '', children, ...props }: SeoheadProps) {
+export default function Seohead({
+  className = "",
+  children,
+  ...props
+}: SeoheadProps) {
   return (
     <div className={`seohead-component ${className}`} {...props}>
       {children}

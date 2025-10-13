@@ -2,6 +2,6 @@
 export const logger = {
   // Utility implementation
   init: () => {
-    console.log('logger initialized');
-  }
+    console.log("logger initialized");
+  },
 };

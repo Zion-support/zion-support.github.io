@@ -138,31 +138,97 @@
 }
 
 @media (min-width: 640px) {
-  .responsive-text-xs { font-size: 0.875rem; line-height: 1.25rem; }
-  .responsive-text-sm { font-size: 1rem; line-height: 1.5rem; }
-  .responsive-text-base { font-size: 1.125rem; line-height: 1.75rem; }
-  .responsive-text-lg { font-size: 1.25rem; line-height: 1.75rem; }
-  .responsive-text-xl { font-size: 1.5rem; line-height: 2rem; }
-  .responsive-text-2xl { font-size: 1.875rem; line-height: 2.25rem; }
-  .responsive-text-3xl { font-size: 2.25rem; line-height: 2.5rem; }
-  .responsive-text-4xl { font-size: 3rem; line-height: 1; }
-  .responsive-text-5xl { font-size: 3.75rem; line-height: 1; }
-  .responsive-text-6xl { font-size: 4.5rem; line-height: 1; }
-  .responsive-text-7xl { font-size: 6rem; line-height: 1; }
+  .responsive-text-xs {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+  .responsive-text-sm {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .responsive-text-base {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  .responsive-text-lg {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .responsive-text-xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .responsive-text-2xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  .responsive-text-3xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .responsive-text-4xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .responsive-text-5xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  .responsive-text-6xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+  .responsive-text-7xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
 }
 
 @media (min-width: 1024px) {
-  .responsive-text-xs { font-size: 1rem; line-height: 1.5rem; }
-  .responsive-text-sm { font-size: 1.125rem; line-height: 1.75rem; }
-  .responsive-text-base { font-size: 1.25rem; line-height: 1.75rem; }
-  .responsive-text-lg { font-size: 1.5rem; line-height: 2rem; }
-  .responsive-text-xl { font-size: 1.875rem; line-height: 2.25rem; }
-  .responsive-text-2xl { font-size: 2.25rem; line-height: 2.5rem; }
-  .responsive-text-3xl { font-size: 3rem; line-height: 1; }
-  .responsive-text-4xl { font-size: 3.75rem; line-height: 1; }
-  .responsive-text-5xl { font-size: 4.5rem; line-height: 1; }
-  .responsive-text-6xl { font-size: 6rem; line-height: 1; }
-  .responsive-text-7xl { font-size: 7.5rem; line-height: 1; }
+  .responsive-text-xs {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .responsive-text-sm {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+  .responsive-text-base {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  .responsive-text-lg {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  .responsive-text-xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  .responsive-text-2xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+  .responsive-text-3xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+  .responsive-text-4xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+  .responsive-text-5xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+  .responsive-text-6xl {
+    font-size: 6rem;
+    line-height: 1;
+  }
+  .responsive-text-7xl {
+    font-size: 7.5rem;
+    line-height: 1;
+  }
 }
 
 /* Responsive Spacing */
@@ -207,31 +273,71 @@
 }
 
 @media (min-width: 640px) {
-  .responsive-padding { padding: 1.5rem; }
-  .responsive-padding-sm { padding: 0.75rem; }
-  .responsive-padding-lg { padding: 2.5rem; }
-  .responsive-padding-xl { padding: 4rem; }
-  .responsive-padding-2xl { padding: 5rem; }
-  
-  .responsive-margin { margin: 1.5rem; }
-  .responsive-margin-sm { margin: 0.75rem; }
-  .responsive-margin-lg { margin: 2.5rem; }
-  .responsive-margin-xl { margin: 4rem; }
-  .responsive-margin-2xl { margin: 5rem; }
+  .responsive-padding {
+    padding: 1.5rem;
+  }
+  .responsive-padding-sm {
+    padding: 0.75rem;
+  }
+  .responsive-padding-lg {
+    padding: 2.5rem;
+  }
+  .responsive-padding-xl {
+    padding: 4rem;
+  }
+  .responsive-padding-2xl {
+    padding: 5rem;
+  }
+
+  .responsive-margin {
+    margin: 1.5rem;
+  }
+  .responsive-margin-sm {
+    margin: 0.75rem;
+  }
+  .responsive-margin-lg {
+    margin: 2.5rem;
+  }
+  .responsive-margin-xl {
+    margin: 4rem;
+  }
+  .responsive-margin-2xl {
+    margin: 5rem;
+  }
 }
 
 @media (min-width: 1024px) {
-  .responsive-padding { padding: 2rem; }
-  .responsive-padding-sm { padding: 1rem; }
-  .responsive-padding-lg { padding: 3rem; }
-  .responsive-padding-xl { padding: 5rem; }
-  .responsive-padding-2xl { padding: 6rem; }
-  
-  .responsive-margin { margin: 2rem; }
-  .responsive-margin-sm { margin: 1rem; }
-  .responsive-margin-lg { margin: 3rem; }
-  .responsive-margin-xl { margin: 5rem; }
-  .responsive-margin-2xl { margin: 6rem; }
+  .responsive-padding {
+    padding: 2rem;
+  }
+  .responsive-padding-sm {
+    padding: 1rem;
+  }
+  .responsive-padding-lg {
+    padding: 3rem;
+  }
+  .responsive-padding-xl {
+    padding: 5rem;
+  }
+  .responsive-padding-2xl {
+    padding: 6rem;
+  }
+
+  .responsive-margin {
+    margin: 2rem;
+  }
+  .responsive-margin-sm {
+    margin: 1rem;
+  }
+  .responsive-margin-lg {
+    margin: 3rem;
+  }
+  .responsive-margin-xl {
+    margin: 5rem;
+  }
+  .responsive-margin-2xl {
+    margin: 6rem;
+  }
 }
 
 /* Responsive Flexbox */
@@ -384,17 +490,17 @@
     padding: 1rem 2rem;
     font-size: 1rem;
   }
-  
+
   .responsive-button-sm {
     padding: 0.75rem 1.5rem;
     font-size: 0.875rem;
   }
-  
+
   .responsive-button-lg {
     padding: 1.25rem 2.5rem;
     font-size: 1.125rem;
   }
-  
+
   .responsive-button-xl {
     padding: 1.5rem 3rem;
     font-size: 1.25rem;
@@ -425,7 +531,7 @@
     flex-direction: row;
     gap: 1rem;
   }
-  
+
   .responsive-nav-item {
     padding: 0.5rem 1rem;
   }
@@ -470,11 +576,11 @@
   .responsive-form {
     gap: 1.5rem;
   }
-  
+
   .responsive-form-group {
     gap: 0.75rem;
   }
-  
+
   .responsive-form-input {
     padding: 1rem;
   }
@@ -562,7 +668,7 @@
   .responsive-hidden-sm {
     display: none;
   }
-  
+
   .responsive-visible-sm {
     display: block;
   }
@@ -572,7 +678,7 @@
   .responsive-hidden-md {
     display: none;
   }
-  
+
   .responsive-visible-md {
     display: block;
   }
@@ -582,7 +688,7 @@
   .responsive-hidden-lg {
     display: none;
   }
-  
+
   .responsive-visible-lg {
     display: block;
   }
@@ -592,7 +698,7 @@
   .responsive-hidden-xl {
     display: none;
   }
-  
+
   .responsive-visible-xl {
     display: block;
   }
@@ -615,11 +721,11 @@
   .responsive-text-left-sm {
     text-align: left;
   }
-  
+
   .responsive-text-center-sm {
     text-align: center;
   }
-  
+
   .responsive-text-right-sm {
     text-align: right;
   }
@@ -629,11 +735,11 @@
   .responsive-text-left-lg {
     text-align: left;
   }
-  
+
   .responsive-text-center-lg {
     text-align: center;
   }
-  
+
   .responsive-text-right-lg {
     text-align: right;
   }
@@ -811,10 +917,15 @@
 }
 
 @keyframes responsiveBounce {
-  0%, 20%, 53%, 80%, 100% {
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
     transform: translateY(0);
   }
-  40%, 43% {
+  40%,
+  43% {
     transform: translateY(-30px);
   }
   70% {
@@ -834,16 +945,16 @@
   .responsive-no-print {
     display: none !important;
   }
-  
+
   .responsive-print-only {
     display: block !important;
   }
-  
+
   .responsive-container {
     max-width: none;
     padding: 0;
   }
-  
+
   .responsive-card {
     break-inside: avoid;
     box-shadow: none;
@@ -856,11 +967,11 @@
   .responsive-card {
     border: 2px solid #fff;
   }
-  
+
   .responsive-form-input {
     border: 2px solid #fff;
   }
-  
+
   .responsive-button {
     border: 2px solid #fff;
   }
@@ -874,7 +985,7 @@
   .responsive-transition-slower {
     transition: none;
   }
-  
+
   .responsive-animate-fade-in,
   .responsive-animate-slide-in,
   .responsive-animate-bounce {

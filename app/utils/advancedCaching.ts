@@ -2,6 +2,6 @@
 export const advancedCaching = {
   // Utility implementation
   init: () => {
-    console.log('advancedCaching initialized');
-  }
+    console.log("advancedCaching initialized");
+  },
 };

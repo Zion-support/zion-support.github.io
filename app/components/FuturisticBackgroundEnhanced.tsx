@@ -1,13 +1,20 @@
-import React from 'react';
+import React from "react";
 
 interface FuturisticbackgroundenhancedProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Futuristicbackgroundenhanced({ className = '', children, ...props }: FuturisticbackgroundenhancedProps) {
+export default function Futuristicbackgroundenhanced({
+  className = "",
+  children,
+  ...props
+}: FuturisticbackgroundenhancedProps) {
   return (
-    <div className={`futuristicbackgroundenhanced-component ${className}`} {...props}>
+    <div
+      className={`futuristicbackgroundenhanced-component ${className}`}
+      {...props}
+    >
       {children}
     </div>
   );
