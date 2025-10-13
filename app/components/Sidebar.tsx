@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { 
@@ -21,10 +20,6 @@ import {
   Mail,
   MapPin
 } from 'lucide-react'
-=======
-import React from 'react';
-import { X } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
 interface SidebarProps {
   isOpen: boolean
@@ -101,7 +96,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null
 
   return (
-<<<<<<< HEAD
     <>
       {/* Overlay */}
       <div 

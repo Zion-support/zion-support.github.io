@@ -32,17 +32,13 @@ import {
   FileText,
   Clock
 } from 'lucide-react';
-<<<<<<< HEAD
 import FuturisticButton from './FuturisticButton';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
 interface NavigationProps {
   onSidebarToggle: () => void;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-<<<<<<< HEAD
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const location = useLocation();
@@ -58,30 +54,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const closeDropdowns = useCallback(() => {
     setActiveDropdown(null);
   }, []);
-=======
-  const [isAiServicesOpen, setIsAiServicesOpen] = useState(false);
-  const [isItServicesOpen, setIsItServicesOpen] = useState(false);
-  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
-  const [is5GServicesOpen, setIs5GServicesOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
-
-  const toggleAiServices = useCallback(() => {
-    setIsAiServicesOpen(!isAiServicesOpen);
-  }, [isAiServicesOpen]);
-
-  const toggleMicroSaas = useCallback(() => {
-    setIsMicroSaasOpen(!isMicroSaasOpen);
-  }, [isMicroSaasOpen]);
-
-  const toggleItServices = useCallback(() => {
-    setIsItServicesOpen(!isItServicesOpen);
-  }, [isItServicesOpen]);
-
-  const toggle5GServices = useCallback(() => {
-    setIs5GServicesOpen(!is5GServicesOpen);
-  }, [is5GServicesOpen]);
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
   const isActive = useCallback((path: string) => {
     return location.pathname === path;

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, ReactNode } from "react";
-=======
-import React, { useEffect } from 'react';
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
 declare global {
   interface Window {
@@ -10,7 +6,6 @@ declare global {
   }
 }
 
-<<<<<<< HEAD
 interface AnalyticsContextType {
   trackEvent: (eventName: string, parameters?: Record<string, unknown>) => void;
   trackPageView: (pageName: string) => void;

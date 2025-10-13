@@ -8,7 +8,6 @@ interface EnhancedSEOProps {
   canonical?: string;
   ogImage?: string;
   ogType?: string;
-<<<<<<< HEAD
   twitterCard?: string;
   twitterTitle?: string;
   twitterDescription?: string;
@@ -18,8 +17,6 @@ interface EnhancedSEOProps {
   lang?: string;
   noindex?: boolean;
   nofollow?: boolean;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
@@ -30,7 +27,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   ogImage = '/og-image.svg',
   ogType = 'website'
 }) => {
-<<<<<<< HEAD
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
   const defaultImage = 'https://ziontechgroup.com/og-image.jpg';
