@@ -1,49 +1,49 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Users, Brain, BarChart3, TrendingUp, Award, Shield, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Database, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Code, Brain, BarChart3, TrendingUp, Users, Award, Shield, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Database, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
-export default function ITConsulting() {
+export default function SoftwareDevelopment() {
   const features = [
-    "Strategic IT Planning",
-    "Technology Assessment",
-    "Digital Transformation",
-    "Cloud Strategy & Migration",
-    "Security Audits & Compliance",
-    "Process Optimization",
-    "Vendor Management",
-    "Change Management",
-    "Training & Support",
-    "ROI Analysis",
-    "Risk Assessment",
-    "24/7 Expert Support"
+    "Custom Web Applications",
+    "Mobile App Development",
+    "API Development & Integration",
+    "Database Design & Optimization",
+    "Cloud-Native Solutions",
+    "Microservices Architecture",
+    "Agile Development Process",
+    "Quality Assurance & Testing",
+    "DevOps Integration",
+    "Performance Optimization",
+    "Security Implementation",
+    "Maintenance & Support"
   ];
 
   const benefits = [
-    "Reduce IT costs by 35%",
-    "Improve operational efficiency by 50%",
-    "Enhance security posture by 90%",
-    "Accelerate digital transformation",
-    "Increase team productivity by 40%",
-    "Future-proof your technology stack"
+    "Reduce development time by 50%",
+    "Improve code quality by 80%",
+    "Increase scalability by 100%",
+    "Enhance user experience significantly",
+    "Reduce maintenance costs by 40%",
+    "Accelerate time to market"
   ];
 
   const pricing = [
     {
-      name: "Advisory",
-      price: "$199",
-      period: "hour",
-      description: "Perfect for strategic guidance",
-      features: ["Strategic planning", "Technology assessment", "Email support", "Monthly reports"],
+      name: "Project",
+      price: "Custom",
+      period: "project",
+      description: "Perfect for specific projects",
+      features: ["Fixed scope development", "Dedicated team", "Regular updates", "Quality assurance"],
       popular: false
     },
     {
-      name: "Consulting",
-      price: "$299",
-      period: "hour",
-      description: "Ideal for implementation projects",
-      features: ["Full consulting services", "Implementation support", "Priority support", "Weekly reports", "Dedicated consultant"],
+      name: "Dedicated Team",
+      price: "$8,999",
+      period: "month",
+      description: "Ideal for ongoing development",
+      features: ["Dedicated developers", "Full-stack expertise", "Priority support", "Flexible scope", "Agile methodology"],
       popular: true
     },
     {
@@ -51,7 +51,7 @@ export default function ITConsulting() {
       price: "Custom",
       period: "project",
       description: "For large organizations",
-      features: ["Comprehensive solutions", "Dedicated team", "24/7 support", "Custom pricing", "White-label options"],
+      features: ["Enterprise solutions", "Custom architecture", "24/7 support", "White-label options", "Dedicated account manager"],
       popular: false
     }
   ];
@@ -61,7 +61,7 @@ export default function ITConsulting() {
       name: "Sarah Johnson",
       company: "TechStart Inc.",
       role: "CEO",
-      content: "Zion's IT consulting helped us modernize our entire technology stack. The ROI was immediate and substantial.",
+      content: "Zion's software development team delivered an exceptional web application that exceeded our expectations. The quality and speed were outstanding.",
       rating: 5,
       avatar: "SJ"
     },
@@ -69,7 +69,7 @@ export default function ITConsulting() {
       name: "Michael Chen",
       company: "E-commerce Solutions",
       role: "CTO",
-      content: "Outstanding strategic guidance and implementation support. They transformed our IT infrastructure completely.",
+      content: "The mobile app they developed has been a game-changer for our business. User engagement increased by 200%.",
       rating: 5,
       avatar: "MC"
     },
@@ -77,7 +77,7 @@ export default function ITConsulting() {
       name: "Emily Rodriguez",
       company: "Digital Marketing Agency",
       role: "Operations Director",
-      content: "The digital transformation roadmap they provided was exactly what we needed to scale our business.",
+      content: "Outstanding development expertise and project management. They delivered on time and within budget consistently.",
       rating: 5,
       avatar: "ER"
     }
@@ -86,20 +86,20 @@ export default function ITConsulting() {
   return (
     <>
       <Helmet>
-        <title>IT Consulting - Strategic Technology Solutions | Zion Tech Group</title>
+        <title>Software Development - Custom Applications & Solutions | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your business with strategic IT consulting. Digital transformation, cloud strategy, security audits, and technology optimization services."
+          content="Transform your ideas into powerful software solutions. Custom web applications, mobile apps, API development, and cloud-native solutions."
         />
         <meta
           name="keywords"
-          content="IT consulting, digital transformation, technology strategy, cloud migration, security audit, process optimization"
+          content="software development, custom applications, web development, mobile apps, API development, cloud solutions"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/it-consulting" />
+        <link rel="canonical" href="https://ziontechgroup.com/software-development" />
       </Helmet>
       <SEOOptimizer
-        title="IT Consulting - Strategic Technology Solutions | Zion Tech Group"
-        description="Transform your business with strategic IT consulting. Digital transformation, cloud strategy, security audits, and technology optimization services."
+        title="Software Development - Custom Applications & Solutions | Zion Tech Group"
+        description="Transform your ideas into powerful software solutions. Custom web applications, mobile apps, API development, and cloud-native solutions."
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -112,19 +112,19 @@ export default function ITConsulting() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Users className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 IT Consulting Firm</span>
+                <Code className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">#1 Software Development Company</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  IT Consulting
+                  Software Development
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform your business with strategic IT consulting. Digital transformation, 
-                cloud strategy, security audits, and technology optimization services.
+                Transform your ideas into powerful software solutions. Custom web applications, 
+                mobile apps, API development, and cloud-native solutions.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -140,27 +140,27 @@ export default function ITConsulting() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Users className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                  <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
               
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">35%</div>
-                  <div className="text-gray-300 text-sm">Cost Reduction</div>
-                </div>
-                <div className="text-center">
                   <div className="text-3xl font-bold text-white mb-2">50%</div>
-                  <div className="text-gray-300 text-sm">Efficiency Gain</div>
+                  <div className="text-gray-300 text-sm">Faster Development</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">90%</div>
-                  <div className="text-gray-300 text-sm">Security Improvement</div>
+                  <div className="text-3xl font-bold text-white mb-2">80%</div>
+                  <div className="text-gray-300 text-sm">Better Quality</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-white mb-2">40%</div>
-                  <div className="text-gray-300 text-sm">Productivity Boost</div>
+                  <div className="text-3xl font-bold text-white mb-2">100%</div>
+                  <div className="text-gray-300 text-sm">Scalable Solutions</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-2">24/7</div>
+                  <div className="text-gray-300 text-sm">Support</div>
                 </div>
               </div>
             </div>
@@ -172,10 +172,10 @@ export default function ITConsulting() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Comprehensive IT Consulting Services
+                Comprehensive Development Services
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to modernize and optimize your technology infrastructure
+                Everything you need to build, deploy, and maintain world-class software solutions
               </p>
             </div>
             
@@ -202,10 +202,10 @@ export default function ITConsulting() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Consulting Options
+                Flexible Development Options
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the consulting approach that fits your needs and budget. All plans include a free initial consultation.
+                Choose the development approach that fits your project needs and budget. All plans include a free consultation.
               </p>
             </div>
             
@@ -270,7 +270,7 @@ export default function ITConsulting() {
                 What Our Clients Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join hundreds of companies using our IT consulting services to transform their business
+                Join hundreds of companies using our software development services to build innovative solutions
               </p>
             </div>
             
@@ -307,11 +307,11 @@ export default function ITConsulting() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your IT?
+              Ready to Build Your Software?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Start your IT transformation today. Get a free consultation and see how we can 
-              optimize your technology infrastructure.
+              Start your software development journey today. Get a free consultation and see how we can 
+              transform your ideas into powerful solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

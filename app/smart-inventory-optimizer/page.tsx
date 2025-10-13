@@ -1,431 +1,383 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
-import { 
-  Package, 
-  TrendingUp, 
-  AlertTriangle, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
-  CheckCircle,
-  Star,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe,
-  DollarSign,
-  Truck,
-  Shield
-} from 'lucide-react';
+import React from "react";
+import { ArrowRight, CheckCircle, Star, Package, Brain, BarChart3, TrendingUp, Users, Award, Shield, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Database, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import SEOOptimizer from "../../components/SEOOptimizer";
 
-const SmartInventoryOptimizerPage = () => {
+export default function SmartInventoryOptimizer() {
   const features = [
-    {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Demand Forecasting",
-      description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."
-    },
-    {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
-      title: "Smart Reorder Points",
-      description: "Automatically calculate optimal reorder points based on lead times, demand variability, and supplier reliability."
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Real-time Analytics Dashboard",
-      description: "Comprehensive analytics and reporting with real-time insights into inventory performance, turnover rates, and cost optimization."
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: "Multi-location Management",
-      description: "Seamlessly manage inventory across multiple warehouses, stores, and distribution centers with centralized control."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: "Automated Alerts & Notifications",
-      description: "Get instant alerts for low stock, overstock, expiring items, and unusual demand patterns to prevent costly mistakes."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-      title: "Supplier Integration",
-      description: "Connect with suppliers for automated ordering, real-time stock updates, and seamless supply chain management."
-    }
+    "AI-powered demand forecasting",
+    "Real-time inventory tracking",
+    "Automated reorder point optimization",
+    "Multi-location inventory management",
+    "Supplier performance analytics",
+    "Dead stock identification",
+    "Seasonal trend analysis",
+    "Integration with major e-commerce platforms",
+    "Custom reporting dashboard",
+    "Mobile app access",
+    "API integration",
+    "Automated purchase order generation"
   ];
 
-  const pricingPlans = [
+  const benefits = [
+    "Reduce inventory costs by 25%",
+    "Increase stock turnover by 40%",
+    "Eliminate stockouts by 90%",
+    "Save 10+ hours per week on inventory management",
+    "Improve cash flow management",
+    "Boost customer satisfaction"
+  ];
+
+  const pricing = [
     {
       name: "Starter",
-      price: "$49",
-      period: "/month",
+      price: "$39",
+      period: "month",
       description: "Perfect for small businesses",
-      features: [
-        "Up to 1,000 SKUs",
-        "Basic demand forecasting",
-        "Reorder point alerts",
-        "Basic analytics",
-        "Email support",
-        "1 warehouse location"
-      ],
+      features: ["Up to 1,000 SKUs", "Basic forecasting", "Email support", "1 user account"],
       popular: false
     },
     {
       name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 SKUs",
-        "Advanced AI forecasting",
-        "Multi-location support",
-        "Advanced analytics",
-        "Priority support",
-        "API access",
-        "Supplier integration"
-      ],
+      price: "$89",
+      period: "month",
+      description: "Ideal for growing companies",
+      features: ["Up to 10,000 SKUs", "Advanced AI analytics", "Priority support", "5 user accounts", "Multi-location support"],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$399",
-      period: "/month",
+      price: "$199",
+      period: "month",
       description: "For large organizations",
-      features: [
-        "Unlimited SKUs",
-        "Custom AI models",
-        "White-label solution",
-        "Advanced security",
-        "Dedicated support",
-        "Custom integrations",
-        "On-premise deployment"
-      ],
+      features: ["Unlimited SKUs", "AI-powered insights", "24/7 support", "Unlimited users", "White-label options"],
       popular: false
     }
   ];
 
-  const benefits = [
+  const testimonials = [
     {
-      icon: <DollarSign className="w-12 h-12 text-green-400" />,
-      title: "Reduce Inventory Costs",
-      description: "Save up to 30% on inventory costs through optimized stock levels and reduced carrying costs."
+      name: "Robert Kim",
+      company: "RetailMax Inc.",
+      role: "Operations Manager",
+      content: "Smart Inventory Optimizer has transformed our inventory management. We've reduced costs by 30% and eliminated stockouts completely.",
+      rating: 5,
+      avatar: "RK"
     },
     {
-      icon: <Truck className="w-12 h-12 text-blue-400" />,
-      title: "Improve Order Fulfillment",
-      description: "Increase order fulfillment rates by 25% with better stock availability and demand prediction."
+      name: "Maria Garcia",
+      company: "E-commerce Solutions",
+      role: "Supply Chain Director",
+      content: "The AI forecasting is incredibly accurate. We've improved our cash flow and reduced waste significantly with this tool.",
+      rating: 5,
+      avatar: "MG"
     },
     {
-      icon: <AlertTriangle className="w-12 h-12 text-yellow-400" />,
-      title: "Prevent Stockouts",
-      description: "Eliminate stockouts and lost sales with intelligent demand forecasting and automated reordering."
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-purple-400" />,
-      title: "Increase Profitability",
-      description: "Boost profit margins by 15-20% through optimized inventory management and reduced waste."
+      name: "James Wilson",
+      company: "TechStart Inc.",
+      role: "CEO",
+      content: "This platform has saved us thousands of dollars in inventory costs. The ROI was immediate and continues to grow.",
+      rating: 5,
+      avatar: "JW"
     }
   ];
 
-  const stats = [
-    { number: "30%", label: "Cost Reduction" },
-    { number: "95%", label: "Forecast Accuracy" },
-    { number: "25%", label: "Faster Fulfillment" },
-    { number: "50%", label: "Less Waste" }
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <>
       <Helmet>
-        <title>Smart Inventory Optimizer | Zion Tech Group</title>
-        <meta name="description" content="Revolutionize your inventory management with AI-powered demand forecasting, smart reorder points, and real-time analytics." />
-        <meta name="keywords" content="inventory management, demand forecasting, supply chain, inventory optimization, AI inventory" />
+        <title>Smart Inventory Optimizer - AI-Powered Inventory Management | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Optimize your inventory with AI-powered demand forecasting and automated reorder management. Reduce costs, eliminate stockouts, and boost efficiency."
+        />
+        <meta
+          name="keywords"
+          content="inventory management, inventory optimization, demand forecasting, stock management, inventory analytics, supply chain, inventory software"
+        />
+        <link rel="canonical" href="https://ziontechgroup.com/smart-inventory-optimizer" />
       </Helmet>
+      <SEOOptimizer
+        title="Smart Inventory Optimizer - AI-Powered Inventory Management | Zion Tech Group"
+        description="Optimize your inventory with AI-powered demand forecasting and automated reorder management. Reduce costs, eliminate stockouts, and boost efficiency."
+      />
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/20 border border-cyan-500/30 mb-6">
-              <Package className="w-5 h-5 text-cyan-400 mr-2" />
-              <span className="text-cyan-300 font-medium">AI-Powered Inventory Intelligence</span>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+        
+        {/* Hero Section */}
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+                <Package className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">#1 AI Inventory Management Platform</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+                  Smart Inventory Optimizer
+                </span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+                Optimize your inventory with AI-powered demand forecasting and automated reorder management. 
+                Reduce costs, eliminate stockouts, and boost efficiency with intelligent inventory insights.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                <Link
+                  to="/contact"
+                  className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  to="/demo"
+                  className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+                >
+                  Watch Demo
+                  <Package className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                </Link>
+              </div>
+              
+              {/* Key Stats */}
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-2">25%</div>
+                  <div className="text-gray-300 text-sm">Cost Reduction</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-2">40%</div>
+                  <div className="text-gray-300 text-sm">Faster Turnover</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-2">90%</div>
+                  <div className="text-gray-300 text-sm">Less Stockouts</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-3xl font-bold text-white mb-2">10+</div>
+                  <div className="text-gray-300 text-sm">Hours Saved/Week</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+                Powerful AI Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Everything you need to optimize your inventory with artificial intelligence
+              </p>
             </div>
             
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Optimize Your
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Inventory Management</span>
-            </h1>
-            
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your inventory operations with AI-powered demand forecasting, smart reorder points, 
-              and real-time analytics that reduce costs and improve efficiency.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-gray-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
-              >
-                View Demo
-              </motion.button>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                >
+                  <div className="flex items-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
+                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-300 transition-colors">
+                      {feature}
+                    </h3>
+                  </div>
+                </div>
+              ))}
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-400 font-medium">
-                  {stat.label}
-                </div>
-              </motion.div>
-            ))}
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Transform Your Inventory Operations
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered platform delivers measurable results that directly impact your bottom line 
-              and operational efficiency.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="text-center"
-              >
-                <div className="mb-6 flex justify-center">
-                  {benefit.icon}
+        {/* How It Works Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                How It Works
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Get started in minutes with our simple 3-step process
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Database className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {benefit.description}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Advanced AI Features
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge artificial intelligence to optimize every aspect of your inventory management.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
-              >
-                <div className="mb-6">
-                  {feature.icon}
+                <h3 className="text-xl font-semibold text-white mb-4">Connect Your Data</h3>
+                <p className="text-gray-300">Connect your inventory system, POS, or e-commerce platform to sync your data.</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Brain className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-4">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  {feature.description}
-                </p>
-              </motion.div>
-            ))}
+                <h3 className="text-xl font-semibold text-white mb-4">AI Analysis</h3>
+                <p className="text-gray-300">Our AI analyzes your sales patterns, seasonality, and demand trends to predict future needs.</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-4">Optimize & Automate</h3>
+                <p className="text-gray-300">Receive optimized reorder points, automated purchase orders, and actionable insights.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Pricing Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Flexible Pricing Plans
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your business size and inventory complexity. 
-              All plans include our core AI features with no setup fees.
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
-                    : 'border-white/10'
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+        {/* Pricing Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Simple, Transparent Pricing
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the plan that fits your inventory size. All plans include a 14-day free trial.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricing.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
+                    plan.popular 
+                      ? 'border-cyan-400 shadow-2xl shadow-cyan-500/20' 
+                      : 'border-white/20'
+                  } hover:border-white/40 transition-all duration-300 hover:scale-105`}
+                >
+                  {plan.popular && (
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <div className="flex items-baseline justify-center">
+                      <span className="text-4xl font-bold text-white">${plan.price}</span>
+                      <span className="text-gray-400 ml-2">/{plan.period}</span>
                     </div>
                   </div>
-                )}
-
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-400 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-5xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-400 ml-2">{plan.period}</span>
-                  </div>
+                  
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link
+                    to="/contact"
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
+                        : 'border border-white/20 text-white hover:bg-white/10'
+                    }`}
+                  >
+                    Get Started
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
                 </div>
-
-                <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
-                      ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:shadow-lg hover:shadow-cyan-500/25'
-                      : 'border border-gray-600 text-white hover:bg-white/10'
-                  }`}
-                >
-                  Get Started
-                </motion.button>
-              </motion.div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-sm border border-cyan-500/30 rounded-2xl p-12 text-center"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+        {/* Testimonials */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                What Our Customers Say
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Join thousands of businesses using Smart Inventory Optimizer to streamline their operations
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold">
+                      {testimonial.avatar}
+                    </div>
+                    <div className="ml-4">
+                      <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center mb-3">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                    ))}
+                  </div>
+                  
+                  <p className="text-gray-300 italic">"{testimonial.content}"</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Optimize Your Inventory?
             </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Join thousands of businesses already using our Smart Inventory Optimizer 
-              to reduce costs, improve efficiency, and boost profitability.
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Start your free 14-day trial today. No credit card required. 
+              See how Smart Inventory Optimizer can transform your operations.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 inline" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="border border-white/30 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all duration-300"
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Contact Sales
-              </motion.button>
+                <DollarSign className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                View Pricing
+              </Link>
             </div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Contact Information */}
-      <section className="py-16 px-4 bg-black/20">
-        <div className="max-w-7xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-          <p className="text-gray-300 mb-6">
-            Contact us today to learn more about our Smart Inventory Optimizer and how it can transform your business operations.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-gray-300">
-            <div className="flex items-center">
-              <Package className="w-5 h-5 mr-2 text-cyan-400" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center">
-              <Globe className="w-5 h-5 mr-2 text-cyan-400" />
-              <span>https://ziontechgroup.com</span>
+            <div className="mt-8 text-sm text-gray-400">
+              <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-cyan-400 hover:text-cyan-300">+1 302 464 0950</a></p>
+              <p className="mt-2">Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        </section>
+      </div>
+    </>
   );
-};
-
-export default SmartInventoryOptimizerPage;
+}
