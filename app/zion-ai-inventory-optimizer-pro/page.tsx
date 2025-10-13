@@ -2,34 +2,20 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Package, 
-  BarChart3, 
-  Target, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-
-  Zap, 
-
-
-
-
-
-  Sparkles,
+  AlertTriangle,
+  ArrowRight,
+  BarChart3,
+  CheckCircle,
+  Clock,
   Cpu,
   Globe,
-  AlertTriangle,
+  Package,
   ShoppingCart,
+  Sparkles,
+  Star,
+  Target,
   Truck,
-
-  Globe
-
-
   Zap
-
-
-
 } from 'lucide-react';
 
 const ZionAIInventoryOptimizerProPage: React.FC = () => {
