@@ -101,8 +101,6 @@ const HomePage = () => {
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, artificial intelligence, machine learning, cloud computing, data analytics, business intelligence, automation, digital transformation, technology consulting, enterprise solutions, software development, mobile applications, web development, blockchain, IoT, edge computing, smart cities, quantum computing, robotics, autonomous systems"
         canonical="https://ziontechgroup.com"
         ogImage="https://ziontechgroup.com/og-image.svg"
-        ogType="website"
-        twitterCard="summary_large_image"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "Organization",

@@ -218,10 +218,10 @@ function App() {
     enableCaching: true,
   });
 
-<<<<<<< HEAD
   const toggleSidebar = React.useCallback(() => {
     setIsSidebarOpen(prev => !prev);
-=======
+  }, []);
+
   // Preload critical resources
   React.useEffect(() => {
     const preloadCriticalResources = () => {
@@ -249,7 +249,6 @@ function App() {
     };
 
     preloadCriticalResources();
->>>>>>> cursor/analyze-improve-and-deploy-application-e0b7
   }, []);
 
   return (

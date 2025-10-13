@@ -2,7 +2,7 @@ import React, { createContext, useContext, useEffect, ReactNode } from "react";
 
 declare global {
   interface Window {
-    gtag: (...args: unknown[]) => void;
+    gtag: (...args: any[]) => void;
   }
 }
 

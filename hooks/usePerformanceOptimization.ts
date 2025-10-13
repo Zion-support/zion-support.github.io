@@ -13,11 +13,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableLazyLoading = true,
     enablePreloading = true,
     enableImageOptimization = true,
-<<<<<<< HEAD
-
-=======
     enableCodeSplitting = true,
->>>>>>> cursor/analyze-improve-and-deploy-application-e0b7
     enableCaching = true,
   } = options;
 
@@ -110,6 +106,25 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     });
   }, [enableImageOptimization]);
 
+  // Code splitting optimization
+  const optimizeCodeSplitting = useCallback(() => {
+    if (!enableCodeSplitting || typeof window === 'undefined') return;
+
+    // Preload critical chunks
+    const criticalChunks = [
+      '/static/js/main.js',
+      '/static/css/main.css'
+    ];
+
+    criticalChunks.forEach((chunk) => {
+      const link = document.createElement('link');
+      link.rel = 'preload';
+      link.href = chunk;
+      link.as = chunk.endsWith('.js') ? 'script' : 'style';
+      document.head.appendChild(link);
+    });
+  }, [enableCodeSplitting]);
+
   // Service Worker registration for caching
   const registerServiceWorker = useCallback(() => {
     if (!enableCaching || typeof window === 'undefined' || !('serviceWorker' in navigator)) return;
@@ -117,10 +132,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
-          .then((registration) => {
+          .then(() => {
             // Service worker registered successfully
           })
-          .catch((registrationError) => {
+          .catch(() => {
             // Service worker registration failed
           });
       });
@@ -193,6 +208,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     setupLazyLoading();
     preloadCriticalResources();
     optimizeImages();
+    optimizeCodeSplitting();
     registerServiceWorker();
     setupPerformanceMonitoring();
     addResourceHints();
@@ -207,6 +223,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     setupLazyLoading,
     preloadCriticalResources,
     optimizeImages,
+    optimizeCodeSplitting,
     registerServiceWorker,
     setupPerformanceMonitoring,
     addResourceHints,

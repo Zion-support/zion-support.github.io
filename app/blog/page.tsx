@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-
-import { useState } from "react";
-import { ArrowRight, Calendar, User } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-e0b7
+import { ArrowRight, Calendar, User } from 'lucide-react';
 
 
 export default function Blog() {
