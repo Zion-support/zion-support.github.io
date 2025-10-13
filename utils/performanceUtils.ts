@@ -28,10 +28,10 @@ export class PerformanceUtils {
       if (fcp) {
         this.metrics.renderTime = fcp.startTime;
       }
+    }
 
     if (typeof window !== 'undefined') {
       this.metrics.loadTime = performance.now();
-
     }
   }
 

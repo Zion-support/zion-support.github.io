@@ -2,20 +2,10 @@ export interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
-
-
   canonicalUrl?: string;
   ogImage?: string;
-
-  canonicalUrl: string;
-  ogImage?: string;
   ogType?: string;
-
   twitterCard?: string;
-
-  canonical?: string;
-  ogImage?: string;
-
 }
 
 export class SEOUtils {
@@ -54,6 +44,7 @@ export class SEOUtils {
       description: this.config.description,
       url: this.config.canonicalUrl,
     };
+  }
 
   updateTitle(title: string) {
     document.title = title;
@@ -108,7 +99,9 @@ export class SEOUtils {
         meta.setAttribute('property', tag.property);
         document.head.appendChild(meta);
       }
-      meta.setAttribute('content', tag.content);
+      if (tag.content) {
+        meta.setAttribute('content', tag.content);
+      }
     });
   }
 
@@ -124,7 +117,7 @@ export class SEOUtils {
     }
   }
 
-  generateStructuredData() {
+  generateStructuredDataScript() {
     const structuredData = {
       "@context": "https://schema.org",
       "@type": "Organization",
@@ -143,20 +136,13 @@ export class SEOUtils {
     this.updateTitle(this.config.title);
     this.updateMetaDescription(this.config.description);
     this.updateMetaKeywords(this.config.keywords);
-    this.updateCanonicalUrl(this.config.canonicalUrl);
+    if (this.config.canonicalUrl) {
+      this.updateCanonicalUrl(this.config.canonicalUrl);
+    }
     this.updateOpenGraphTags();
     this.updateTwitterCard();
-    this.generateStructuredData();
-
+    this.generateStructuredDataScript();
   }
-
-      canonical: this.config.canonical,
-      'og:title': this.config.title,
-      'og:description': this.config.description,
-      'og:image': this.config.ogImage,
-    };
-  }
-
 }
 
 export default SEOUtils;
