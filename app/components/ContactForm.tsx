@@ -51,11 +51,17 @@ const ContactForm: React.FC = () => {
         service: "",
       });
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     } catch (error) {
       console.error('Failed to submit contact form:', error);
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-3210
+=======
+
+    } catch (error) {
+      console.error('Failed to submit contact form:', error);
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
     } finally {
       setIsSubmitting(false);
     }

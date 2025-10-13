@@ -7,12 +7,27 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
+<<<<<<< HEAD
+=======
+import { LoadingPage } from "./app/components/EnhancedLoadingStates";
+import AdvancedPerformanceEnhancer from "./app/components/AdvancedPerformanceEnhancer";
+import AdvancedPerformanceOptimizer from "./app/components/AdvancedPerformanceOptimizer";
+import EnhancedSEOOptimizer from "./app/components/EnhancedSEOOptimizer";
+import EnhancedAccessibilityManager from "./app/components/EnhancedAccessibilityManager";
+import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import Breadcrumb from "./app/components/Breadcrumb";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
+<<<<<<< HEAD
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
 import FuturisticBackground from "./app/components/FuturisticBackground";
 
 // Lazy load pages for better performance
@@ -30,6 +45,7 @@ const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 // Additional pages
 const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
@@ -83,6 +99,16 @@ const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
 const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
 const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
 >>>>>>> cursor/website-audit-and-update-with-deployment-3210
+=======
+// New AI Services
+const AiQuantumComputingPage = React.lazy(() => import("./app/ai-quantum-computing/page"));
+const AiBlockchainSolutionsPage = React.lazy(() => import("./app/ai-blockchain-solutions/page"));
+const AiPoweredDevOpsPage = React.lazy(() => import("./app/ai-powered-devops/page"));
+
+// New Micro SAAS Services
+const ZionAiVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
+const ZionAiCustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
 
 // Main App Component
 function App() {
@@ -97,6 +123,9 @@ function App() {
       <EnhancedErrorBoundary>
         <HelmetProvider>
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
           <AccessibilityEnhancer>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -121,16 +150,62 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+<<<<<<< HEAD
+=======
+                        
+                        {/* New AI Services */}
+                        <Route path="/ai-quantum-computing" element={<AiQuantumComputingPage />} />
+                        <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                        <Route path="/ai-powered-devops" element={<AiPoweredDevOpsPage />} />
+                        
+                        {/* New Micro SAAS Services */}
+                        <Route path="/zion-ai-video-generator" element={<ZionAiVideoGeneratorPage />} />
+                        <Route path="/zion-ai-customer-insights" element={<ZionAiCustomerInsightsPage />} />
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
+<<<<<<< HEAD
                 </FuturisticBackground>
+=======
+                  <AdvancedPerformanceOptimizer 
+                    enableImageOptimization={true}
+                    enablePreloading={true}
+                    enableCaching={true}
+                    enableCompression={true}
+                  />
+                  <AdvancedPerformanceEnhancer 
+                    enableImageOptimization={true}
+                    enablePreloading={true}
+                    enableCaching={true}
+                    enableCompression={true}
+                  />
+                  <EnhancedAccessibilityManager
+                    enableKeyboardNavigation={true}
+                    enableScreenReader={true}
+                    enableHighContrast={true}
+                    enableFocusManagement={true}
+                    enableVoiceNavigation={true}
+                    enableReducedMotion={true}
+                  />
+                  <EnhancedAccessibility>
+                    <div></div>
+                  </EnhancedAccessibility>
+                </FuturisticBackground>
+                <AnalyticsProvider>
+                  <div>
+                    <PerformanceMonitor />
+                    <WebVitalsTracker />
+                    <EnhancedSEO />
+                    <EnhancedSEOOptimizer />
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
                   </div>
                 </AnalyticsProvider>
               </div>
             </Router>
           </AccessibilityEnhancer>
+<<<<<<< HEAD
 =======
           <Router>
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -201,6 +276,8 @@ function App() {
             </div>
           </Router>
 >>>>>>> cursor/website-audit-and-update-with-deployment-3210
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>

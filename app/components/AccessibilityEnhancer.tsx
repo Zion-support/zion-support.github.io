@@ -273,8 +273,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   };
 
   // Removed unused functions - functionality is handled by updateSetting directly
+<<<<<<< HEAD
 
 >>>>>>> cursor/website-audit-and-update-with-deployment-3210
+=======
+>>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-f373
   return (
     <>
       {children}
