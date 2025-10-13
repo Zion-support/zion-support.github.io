@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useRef, useEffect } from 'react';
 
 interface OptimizedImageProps {
@@ -62,16 +59,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   };
 
   const imageSrc = isInView ? src : placeholder;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 //     <div
       ref={imgRef}
       className={`relative overflow-hidden ${className}`}
@@ -101,6 +91,5 @@ export default function Component() {
 //         />
       )}
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

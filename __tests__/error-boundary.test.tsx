@@ -1,30 +1,17 @@
 import { render, screen } from '@testing-library/react';
-<<<<<<< HEAD
-import ErrorBoundary from '../app/components/ErrorBoundary';
-=======
 import { BrowserRouter } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 describe('ErrorBoundary', () => {
   it('renders without crashing', () => {
     render(
-<<<<<<< HEAD
-      <ErrorBoundary>
-        <div>Test content</div>
-      </ErrorBoundary>
-=======
 //       <BrowserRouter>
 //         <ErrorBoundary>
           <ThrowError shouldThrow={false} />
 //         </ErrorBoundary>
 //       </BrowserRouter>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
     );
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
-<<<<<<< HEAD
-});
-=======
 
   it('renders error UI when there is an error', () => {
     render(
@@ -68,4 +55,3 @@ describe('ErrorBoundary', () => {
     expect(screen.getByText('Custom error message')).toBeInTheDocument();
   });
 });
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

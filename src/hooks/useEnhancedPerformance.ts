@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 export default useEnhancedPerformance;
 // /**
  * Enhanced Performance Hook;
@@ -58,4 +46,3 @@ const duration = performance.now() - startTime;
   );
     measureOperation;
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

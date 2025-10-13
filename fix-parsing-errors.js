@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 import fs from 'fs';
 export { fixFileContent, processFile };
 #!/usr/bin/env node;
@@ -77,4 +65,3 @@ async function main() {
       fixedCount++;
   });
   // main().catch(console.error);
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

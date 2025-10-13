@@ -8,8 +8,6 @@ export default function Component() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
 const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   enableImageOptimization = true,
@@ -262,4 +260,3 @@ const getNextLikelyPage = (currentPath: string): string | null => {
 };
 
 export default AdvancedPerformanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

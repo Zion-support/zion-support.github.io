@@ -2,12 +2,6 @@ import React from 'react';
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-gray-900 border-t border-gray-700 p-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex items-start justify-between">
@@ -80,6 +74,5 @@ export default function Component() {
 </div>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

@@ -1,6 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { Loader2, Brain, Zap, Shield } from 'lucide-react';
 
 interface LoadingSpinnerProps {
@@ -17,24 +15,14 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
 //     md: 'w-8 h-8',
 //     lg: 'w-12 h-12'
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <div className={`flex items-center justify-center ${className}`}>
       <Loader2 className={`${sizeClasses[size]} animate-spin text-cyan-400`} />
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }
-<<<<<<< HEAD
-=======
 
 export const LoadingPage: React.FC<LoadingPageProps> = ({ 
   message = 'Loading...', 
@@ -133,4 +121,3 @@ export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ serviceName }) =
 };
 
 export default LoadingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

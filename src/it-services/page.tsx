@@ -1,23 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-export default function Page() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title> - Zion Tech Group</title>
-        <meta name="description" content=" solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8"></h1>
-        <div className="prose prose-invert max-w-none">
-          <p>This page is under construction. Please check back later for  solutions.</p>
-        </div>
-      </div>
-    </div>
-=======
 export default ITServicesPage;
   ];
   // Removed unused categories and services variables;
@@ -85,6 +66,5 @@ export default ITServicesPage;
               Get a free IT assessment and discover how our services can improve your technology infrastructure and reduce costs.;
                 Get Free IT Assessment;
                 (302) 464-0950;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

@@ -1,14 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-=======
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -143,5 +134,4 @@ class RouteFixer {
     this.missingRoutes.forEach(route => {
       });
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }

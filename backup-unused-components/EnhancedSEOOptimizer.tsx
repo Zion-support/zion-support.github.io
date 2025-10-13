@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useEffect } from 'react';
 import StructuredData from "../components/StructuredData";
 import EnhancedSEO from "../components/EnhancedSEO";
@@ -401,16 +398,9 @@ const EnhancedSEOOptimizer: React.FC<EnhancedSEOOptimizerProps> = ({
       });
     }
   }, [title, currentUrl]);
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 //     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -513,6 +503,5 @@ export default function Component() {
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
 //     </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

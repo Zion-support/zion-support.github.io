@@ -1,4 +1,6 @@
 
+import React, { useRef, useEffect } from 'react';
+
 const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -37,5 +39,3 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default FuturisticBackground;
-  );
-}

@@ -21,16 +21,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (
   title = "Transform Your Business with AI",
   subtitle = "Leading Provider of AI Solutions",
   description = "Revolutionize your operations with cutting-edge artificial intelligence technology. Our advanced solutions deliver measurable results and drive unprecedented growth.",
-<<<<<<< HEAD
-  primaryCta = 
-    text: "Get Started",
-    href: "/contact",
-,
-  secondaryCta = 
-    text: "Learn More",
-    href: "/about",
-,
-=======
   primaryCta = {
 //     text: "Get Started",
 //     href: "/contact",
@@ -39,7 +29,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (
 //     text: "Learn More",
 //     href: "/about",
   },
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   benefits = [
 //     "Advanced AI technology integration",
 //     "Real-time processing and analytics",
@@ -52,26 +41,6 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (
   className = "",
 ) => 
   const contactInfo = [
-<<<<<<< HEAD
-    
-      icon: Phone,
-      title: "Call Us",
-      details: "+1 (555) 123-4567",
-      description: "Mon-Fri 9 AM-6 PM PST",
-,
-    
-      icon: Mail,
-      title: "Email Us",
-      details: "info@ziontechgroup.com",
-      description: "We respond within 24 hours",
-,
-    
-      icon: MapPin,
-      title: "Visit Us",
-      details: "123 Tech Street, San Francisco, CA",
-      description: "Schedule a meeting",
-,
-=======
     {
 //       icon: Phone,
 //       title: "Call Us",
@@ -90,21 +59,8 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (
 //       details: "123 Tech Street, San Francisco, CA",
 //       description: "Schedule a meeting",
     },
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   ];
   return (
-<<<<<<< HEAD
-    <div
-      className="{`relative" min-h-screen flex items-center justify-center overflow-hidden ${className}`}
-    >
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        
-          <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-            style="{}" backgroundImage: `url(${backgroundImage})` {}
-          />
-=======
 //     <div
       className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}
 //     >
@@ -117,43 +73,26 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (
 //           />
         )}
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
       </div>
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 py-20"></div>
         <div className="grid lg:grid-cols-2 gap-12 items-center"></div>
           {/* Left Column */}
-<<<<<<< HEAD
-          <div className="space-y-8"></div>
-            <div></div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6"></h1>
-                {title}
-              </h1>
-              <p className="text-xl text-cyan-400 mb-4 font-semibold"></p>
-=======
           <div className="space-y-8">
 //             <div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
                 {title}
 </h1>
               <p className="text-xl text-cyan-400 mb-4 font-semibold">
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                 {subtitle}
 </p>
               <p className="text-lg text-gray-300 mb-8">{description}</p>
-<<<<<<< HEAD
-            </div>
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4"></div>
-              <Link
-=======
 </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
 //               <Link
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                 to={primaryCta.href}
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
 //               >
@@ -165,39 +104,15 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
 //               >
                 {secondaryCta.text}
-<<<<<<< HEAD
-              </Link>
-            </div>
-=======
 </Link>
 </div>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
             {/* Benefits */}
             <div className="grid sm:grid-cols-2 gap-4"></div>
               
                 <div key="{index}" className="flex items-center text-gray-300"></div>
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span className="text-sm">{benefit}</span>
-<<<<<<< HEAD
-                </div>
-
-            </div>
-          </div>
-          {/* Right Column - Contact Info */}
-          <div className="space-y-6"></div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20"></div>
-              <h3 className="text-xl font-semibold text-white mb-6 text-center"></h3>
-                Get in Touch
-              </h3>
-              <div className="space-y-4"></div>
-                
-                  <div key="{index}" className="flex items-start space-x-4"></div>
-                    <div className="flex-shrink-0"></div>
-                      <info.icon className="w-6 h-6 text-cyan-400" />
-                    </div>
-                    <div></div>
-=======
 </div>
               ))}
 </div>
@@ -216,19 +131,10 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (
                       <info.icon className="w-6 h-6 text-cyan-400" />
 </div>
 //                     <div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                       <h4 className="text-white font-medium">{info.title}</h4>
                       <p className="text-gray-300">{info.details}</p>
                       <p className="text-gray-400 text-sm"></p>
                         {info.description}
-<<<<<<< HEAD
-                      </p>
-                    </div>
-                  </div>
-
-              </div>
-            </div>
-=======
 </p>
 </div>
 </div>
@@ -236,27 +142,17 @@ const EnhancedHero: React.FC<EnhancedHeroProps> = (
 </div>
 </div>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4"></div>
               <div className="text-center"></div>
                 <div className="text-2xl font-bold text-white">500+</div>
                 <div className="text-gray-400 text-sm">Happy Clients</div>
-<<<<<<< HEAD
-              </div>
-              <div className="text-center"></div>
-                <div className="text-2xl font-bold text-white">99.9%</div>
-                <div className="text-gray-400 text-sm">Uptime</div>
-              </div>
-              <div className="text-center"></div>
-=======
 </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-white">99.9%</div>
                 <div className="text-gray-400 text-sm">Uptime</div>
 </div>
               <div className="text-center">
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                 <div className="text-2xl font-bold text-white">24/7</div>
                 <div className="text-gray-400 text-sm">Support</div>
 </div>

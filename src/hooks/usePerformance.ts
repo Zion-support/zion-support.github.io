@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
   loadTime: number;
   domContentLoaded: number;
   firstContentfulPaint: number;
@@ -59,4 +47,3 @@ export default function Component() {
   }, []);
   return { metrics, isMonitoring };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

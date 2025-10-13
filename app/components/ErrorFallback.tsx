@@ -1,2 +1,15 @@
-import { AlertTriangle, RefreshCw, Home, Mail, Bug } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+
+interface ErrorFallbackProps {
+  children?: React.ReactNode;
+}
+
+const ErrorFallback: React.FC<ErrorFallbackProps> = ({ children }) => {
+  return (
+    <div className="errorfallback">
+      {children}
+    </div>
+  );
+};
+
+export default ErrorFallback;

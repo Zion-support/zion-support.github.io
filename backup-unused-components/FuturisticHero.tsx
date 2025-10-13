@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-export default function FuturisticHero() 
-=======
 
 export default function FuturisticHero() {
   return (
@@ -19,4 +16,3 @@ export default function FuturisticHero() {
 //     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

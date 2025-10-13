@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 import fs from 'fs'
 #!/usr/bin/env node;
       for (let i = 0; i;
@@ -44,4 +32,3 @@ import fs from 'fs'
 // Function to find all files that need fixing;
 const filesToFix = findFilesToFix(srcDir);`
 // "`
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

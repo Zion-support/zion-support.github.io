@@ -5,9 +5,6 @@ export function utilityFunction() {
   return null;
 }
 
-<<<<<<< HEAD
-export default utilityFunction;
-=======
   optimizeImages() {
     // Lazy load images
     if ('IntersectionObserver' in window) {
@@ -134,4 +131,3 @@ export const cacheOptimizer = {
 };
 
 export default performanceOptimizer;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

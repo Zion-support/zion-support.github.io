@@ -1,8 +1,10 @@
+import React, { useEffect, useState } from 'react';
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  const [isOptimized, setIsOptimized] = useState(false);
 
   useEffect(() => {
     // Performance optimization logic
@@ -88,10 +90,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         </div>
       )}
     </div>
-</div>
   );
 };
 
 export default PerformanceOptimizer;
-  );
-}

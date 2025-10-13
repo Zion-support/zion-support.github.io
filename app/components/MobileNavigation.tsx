@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 const MobileNavigation: React.FC = () => {
@@ -127,5 +128,3 @@ const MobileNavigation: React.FC = () => {
 };
 
 export default MobileNavigation;
-  );
-}

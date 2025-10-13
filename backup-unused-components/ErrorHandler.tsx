@@ -1,15 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react'
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react'
-<<<<<<< HEAD
-interface Props 
-  children: ReactNode
-  fallback?: ReactNode
-
-interface State 
-  hasError: boolean
-  error: Error | null
-  errorInfo: ErrorInfo | null
-=======
 // 'use client'
 
 interface Props {
@@ -22,31 +12,10 @@ interface State {
 //   error: Error | null
 //   errorInfo: ErrorInfo | null
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 class ErrorHandler extends Component<Props, State> 
   constructor(props: Props) 
     super(props)
-<<<<<<< HEAD
-    this.state = 
-      hasError: false,
-      error: null,
-      errorInfo: null
-
-
-  static getDerivedStateFromError(error: Error): State 
-    return 
-      hasError: true,
-      error,
-      errorInfo: null
-
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) 
-    this.setState(
-      error,
-      errorInfo
-)
-=======
     this.state = {
 //       hasError: false,
 //       error: null,
@@ -68,7 +37,6 @@ class ErrorHandler extends Component<Props, State>
 //       errorInfo
     })
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') 
 
@@ -82,31 +50,16 @@ class ErrorHandler extends Component<Props, State>
     // Example: Send to monitoring service
     try 
       // Replace with your actual error reporting service
-<<<<<<< HEAD
-      const errorData = 
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-=======
       const errorData = {
 //         message: error.message,
 //         stack: error.stack,
 //         componentStack: errorInfo.componentStack,
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
         timestamp: new Date().toISOString()
 ;
       // Send to your error reporting service here
  catch (reportingError) 
 
 
-<<<<<<< HEAD
-  handleRetry = () => 
-    this.setState(
-      hasError: false,
-      error: null,
-      errorInfo: null
-)
-=======
   handleRetry = () => {
     this.setState({
 //       hasError: false,
@@ -114,7 +67,6 @@ class ErrorHandler extends Component<Props, State>
 //       errorInfo: null
     })
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
   handleGoHome = () => 
     window.location.href = '/'
@@ -129,41 +81,6 @@ class ErrorHandler extends Component<Props, State>
           <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center"></div>
             <div className="flex justify-center mb-4"></div>
               <AlertTriangle className="w-16 h-16 text-red-500" />
-<<<<<<< HEAD
-            </div>
-            <h1 className="text-2xl font-bold text-gray-900 mb-4"></h1>
-              Oops! Something went wrong
-            </h1>
-            <p className="text-gray-600 mb-6"></p>
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
-            </p>
-            
-              <details className="mb-6 text-left"></details>
-                <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700"></summary>
-                  Error Details (Development)
-                </summary>
-                <div className="mt-2 p-4 bg-gray-100 rounded text-xs font-mono overflow-auto"></div>
-                  <div className="mb-2"></div>
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  
-                    <div></div>
-                      <strong>Stack:</strong>
-                      <pre className="whitespace-pre-wrap">{this.state.error.stack}</pre>
-                    </div>
-
-                  
-                    <div></div>
-                      <strong>Component Stack:</strong>
-                      <pre className="whitespace-pre-wrap">{this.state.errorInfo.componentStack}</pre>
-                    </div>
-
-                </div>
-              </details>
-
-            <div className="flex flex-col sm:flex-row gap-3 justify-center"></div>
-              <button
-=======
 </div>
             
             <h1 className="text-2xl font-bold text-gray-900 mb-4">
@@ -201,33 +118,18 @@ class ErrorHandler extends Component<Props, State>
 
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
 //               <button
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                 onClick={this.handleRetry}
                 className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
 //               >
                 <RefreshCw className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-                Try Again
-              </button>
-              <button
-=======
 //                 Try Again
 </button>
               
 //               <button
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
                 onClick={this.handleGoHome}
                 className="flex items-center justify-center px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
 //               >
                 <Home className="w-4 h-4 mr-2" />
-<<<<<<< HEAD
-                Go Home
-              </button>
-            </div>
-          </div>
-        </div>
-      )
-=======
 //                 Go Home
 </button>
 </div>
@@ -235,7 +137,6 @@ class ErrorHandler extends Component<Props, State>
 </div>
 //       )
     }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
     return this.props.children
 

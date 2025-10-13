@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 interface ImageOptimizerProps {
   src: string;
@@ -136,5 +137,3 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 };
 
 export default ImageOptimizer;
-  );
-}

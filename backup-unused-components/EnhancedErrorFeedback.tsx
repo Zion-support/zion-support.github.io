@@ -8,8 +8,6 @@ export default function Component() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
 interface State {
   hasError: boolean;
@@ -35,4 +33,3 @@ class GlobalErrorBoundary extends Component<Props, State> {
 
     return this.props.children;
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 import fs from 'fs';
 export default ${pageName}Page`;
 // List of pages that need to be completely rewritten;
@@ -79,4 +67,3 @@ const config = pageConfigs[page];
     fs.writeFileSync(pagePath, content);
     // } catch (error) {
     // // 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

@@ -1,9 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-export default function MobileOptimizer() 
-=======
 
 export default function MobileOptimizer() {
   return (
@@ -27,4 +24,3 @@ export default function MobileOptimizer() {
 //     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

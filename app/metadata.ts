@@ -1,13 +1,5 @@
 // Metadata utility functions
 
-<<<<<<< HEAD
-export function metadata() {
-  // Implementation here
-  return null;
-}
-
-export default metadata;
-=======
 export const siteMetadata = {
 //   title: "Zion Tech Group - Advanced AI and IT Solutions",
 //   description:
@@ -41,4 +33,3 @@ export const defaultMetadata = {
 };
 
 export default siteMetadata;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

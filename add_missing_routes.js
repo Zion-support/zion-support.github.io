@@ -1,15 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 // Read the broken links (pages that exist but have no routes)
 const brokenLinks = fs
   .readFileSync("/workspace/broken_links.txt", "utf8")
@@ -73,4 +63,3 @@ fs.writeFileSync("/workspace/App.tsx", newAppContent);
 .join(", "),
 //   "... and more",
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

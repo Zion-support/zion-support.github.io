@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import fs from 'fs';
 import path from 'path';
 export default ${componentName};`;
@@ -78,7 +75,6 @@ const allPages = [
               Contact Us;
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (

@@ -1,15 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -208,4 +198,3 @@ console.log('✓ Enhanced chunking strategy applied');
 console.log('✓ Service worker updated');
 console.log('✓ Performance monitoring added');
 console.log('✓ PWA manifest enhanced');
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from "react";
 
 interface AnimatedCounterProps {
@@ -44,21 +41,13 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       }
     };
   }, [end, duration]);
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <span className={className}>
       {prefix}
       {count.toLocaleString()}
       {suffix}
 </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

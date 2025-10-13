@@ -7,11 +7,6 @@ export function usePerformanceMonitor() {
     // Implementation here
     setState('initialized');
   }, []);
-<<<<<<< HEAD
-  
-  return state;
-}
-=======
 
   const processData = (input: any) => {
     try {
@@ -33,6 +28,5 @@ export function usePerformanceMonitor() {
 //     processData,
   };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default usePerformanceMonitor;

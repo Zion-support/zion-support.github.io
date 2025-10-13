@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect, useCallback } from 'react';
 import { Eye, Volume2, VolumeX, Type, MousePointer, Keyboard } from 'lucide-react';
 
@@ -151,16 +148,9 @@ const ImprovedAccessibility: React.FC<ImprovedAccessibilityProps> = ({
       return newSettings;
     });
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 //     <>
       {children}
       
@@ -388,6 +378,5 @@ export default function Component() {
         }
       `}</style>
 //     </>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

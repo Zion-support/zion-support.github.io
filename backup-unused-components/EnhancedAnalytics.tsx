@@ -8,8 +8,6 @@ export default function Component() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ 
 //   children, 
@@ -201,4 +199,3 @@ declare global {
 }
 
 export default EnhancedAnalytics;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 // /**
  * useForm Hook;
  * Provides form state management and validation;
@@ -111,4 +99,3 @@ const formErrors = getFormErrors(validationResults);
  errorArray.length === 0);
     validateAllFields;
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

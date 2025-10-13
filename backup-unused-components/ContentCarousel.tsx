@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -78,16 +75,9 @@ export default function ContentCarousel({
   const goToNext = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <div className={`relative w-full ${className}`}>
       {/* Carousel Container */}
       <div className="relative overflow-hidden rounded-lg">
@@ -161,6 +151,5 @@ export default function Component() {
         ))}
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

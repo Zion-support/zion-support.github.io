@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react";
 
@@ -84,16 +81,9 @@ const DynamicContentShowcase: React.FC<DynamicContentShowcaseProps> = ({
   };
 
   const currentItem = items[currentIndex];
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <div className={`relative ${className}`}>
       <div className="relative overflow-hidden rounded-lg bg-gray-900">
         <div className="flex transition-transform duration-500 ease-in-out">
@@ -180,6 +170,5 @@ export default function Component() {
 </div>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

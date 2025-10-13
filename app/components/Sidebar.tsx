@@ -1,2 +1,15 @@
-import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import React from 'react';
+
+interface SidebarProps {
+  children?: React.ReactNode;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({ children }) => {
+  return (
+    <div className="sidebar">
+      {children}
+    </div>
+  );
+};
+
+export default Sidebar;

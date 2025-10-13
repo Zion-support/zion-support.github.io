@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-=======
 import https from 'https';
 import http from 'http';
 import { JSDOM } from 'jsdom';
@@ -312,5 +301,4 @@ class WebsiteLinkAnalyzer {
       throw error;
     }
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }

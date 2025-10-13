@@ -2,12 +2,6 @@ import React from 'react';
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 //     <div
       className={`bg-gray-700 ${rounded ? "rounded" : ""} ${animated ? "animate-pulse" : ""} ${className}`}
       style={style}
@@ -91,6 +85,5 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
 </div>
       ))}
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

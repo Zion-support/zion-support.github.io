@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-export default function OptimizedLoading() 
-=======
 
 export default function OptimizedLoading() {
   return (
@@ -21,4 +18,3 @@ export default function OptimizedLoading() {
 </div>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

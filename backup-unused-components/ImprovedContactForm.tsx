@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState } from "react";
 import { MessageSquare, Send, CheckCircle, AlertCircle, User, Mail, Phone, Building, FileText, ChevronDown } from "lucide-react";
 
@@ -183,16 +180,9 @@ const ImprovedContactForm: React.FC = () => {
 </div>
     );
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <div className="bg-white/5 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8">
       <div className="flex items-center gap-3 mb-6">
         <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
@@ -429,6 +419,5 @@ export default function Component() {
 </button>
       </form>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

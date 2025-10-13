@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useRef, useEffect, useState } from 'react';
 import FuturisticBackground from "../components/FuturisticBackground";
 
@@ -257,16 +254,9 @@ const FuturisticBackgroundEnhanced = ({ children }: { children: React.ReactNode 
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, [mousePosition]);
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <div className="relative min-h-screen overflow-hidden">
 //       <canvas
         ref={canvasRef}
@@ -293,6 +283,5 @@ export default function Component() {
         {children}
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

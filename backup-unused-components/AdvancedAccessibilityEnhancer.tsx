@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useEffect, useState } from 'react';
 import { Eye, Volume2, MousePointer, Keyboard, Contrast, ZoomIn } from 'lucide-react';
 'use client';
@@ -127,16 +124,9 @@ const AdvancedAccessibilityEnhancer: React.FC = () => {
 </button>
     );
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <div className="fixed bottom-4 right-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-gray-200 dark:border-gray-700 p-6 w-80 z-50">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -205,6 +195,5 @@ export default function Component() {
 </button>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

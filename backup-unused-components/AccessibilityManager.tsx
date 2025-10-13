@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilitySettings {
@@ -109,16 +106,9 @@ const AccessibilityManager: React.FC = () => {
   const toggleSetting = (key: keyof AccessibilitySettings) => {
     setSettings(prev => ({ ...prev, [key]: !prev[key] }));
   };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <div className="accessibility-manager">
       <style jsx>{`
         .accessibility-manager {
@@ -261,6 +251,5 @@ export default function Component() {
 </button>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

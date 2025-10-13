@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-}
-=======
 // /**
  * Security Configuration;
  * Defines security headers and policies for the application;
@@ -58,4 +46,3 @@ export default function Component() {
  byte.toString(16).padStart(2, '0')).join('');
   generateSecureToken;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

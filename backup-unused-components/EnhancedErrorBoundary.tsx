@@ -8,8 +8,6 @@ export default function Component() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
 interface State {
   hasError: boolean;
@@ -199,4 +197,3 @@ ${JSON.stringify(errorReport, null, 2)}
 }
 
 export default EnhancedErrorBoundary;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

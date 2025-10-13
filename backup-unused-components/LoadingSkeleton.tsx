@@ -1,9 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-<<<<<<< HEAD
-export default function LoadingSkeleton() 
-=======
 
 export default function LoadingSkeleton() {
   return (
@@ -28,4 +25,3 @@ export default function LoadingSkeleton() {
 //     </>
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

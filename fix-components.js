@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import fs from 'fs';
 import path from 'path';
 export default ${componentName};`;
@@ -16,7 +13,6 @@ const componentsToFix = [
       {/* ${componentName} component placeholder */}
   );
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (

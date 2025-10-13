@@ -21,5 +21,3 @@ const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> 
 };
 
 export default FuturisticBackgroundEnhanced;
-  );
-}

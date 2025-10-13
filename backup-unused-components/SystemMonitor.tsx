@@ -5,21 +5,12 @@ interface SystemMonitorProps
   title?: string;
   description?: string;
 
-<<<<<<< HEAD
-const SystemMonitor: React.FC<SystemMonitorProps> = (
-  children,
-  className = "",
-  title,
-  description,
-) => 
-=======
 const SystemMonitor: React.FC<SystemMonitorProps> = ({
 //   children,
   className = "",
 //   title,
 //   description,
 }) => {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   return (
     <div className="{`enhanced-component" ${className}`}></div>
       {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 interface Props {
@@ -108,5 +109,3 @@ class ErrorBoundary extends Component<Props, State> {
 }
 
 export default ErrorBoundary;
-  );
-}

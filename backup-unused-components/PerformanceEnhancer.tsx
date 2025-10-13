@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -102,16 +99,9 @@ const PerformanceEnhancer: React.FC = () => {
   if (process.env.NODE_ENV !== 'development' || !metrics) {
     return null;
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <div className="fixed bottom-4 right-4 z-50">
 //       <button
         onClick={() => setIsVisible(!isVisible)}
@@ -145,6 +135,5 @@ export default function Component() {
 </div>
       )}
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

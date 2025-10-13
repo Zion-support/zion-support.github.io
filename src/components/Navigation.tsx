@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 export default Navigation;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -73,6 +63,5 @@ export default Navigation;
 <span>+1 302 464 0950</span>
                   Get Started;
         )}
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

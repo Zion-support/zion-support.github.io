@@ -8,8 +8,6 @@ export default function Component() {
     </div>
   );
 }
-<<<<<<< HEAD
-=======
 
 findPages(appDir);
 
@@ -119,4 +117,3 @@ const analysis = {
 };
 
 fs.writeFileSync('/workspace/missing-routes-analysis.json', JSON.stringify(analysis, null, 2));
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

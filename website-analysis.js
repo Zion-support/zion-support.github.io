@@ -1,13 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 class WebsiteAnalyzer {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
@@ -245,6 +237,5 @@ class WebsiteAnalyzer {
 // Run the analysis
 const analyzer = new WebsiteAnalyzer('https://ziontechgroup.com');
 analyzer.analyzeWebsite().then(report => {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

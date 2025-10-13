@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
 import React, { useState, useRef, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
@@ -105,16 +102,9 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
 //       />
     );
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 //     <LazyLoadImage
       src={optimizedSrc}
       srcSet={srcSet}
@@ -130,6 +120,5 @@ export default function Component() {
       loading="lazy"
       decoding="async"
 //     />
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

@@ -24,17 +24,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
 //   structuredData,
   noIndex = false,
   noFollow = false
-<<<<<<< HEAD
-) => 
-  const defaultStructuredData = 
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "url": "https://ziontechgroup.com",
-    "logo": "https://ziontechgroup.com/logo.svg",
-    "description": description,
-    "address": 
-=======
 }) => {
   const defaultStructuredData = {
 //     "@context": "https://schema.org",
@@ -44,28 +33,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
 //     "logo": "https://ziontechgroup.com/logo.svg",
 //     "description": description,
     "address": {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       "@type": "PostalAddress",
 //       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
-<<<<<<< HEAD
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-,
-    "contactPoint": 
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-,
-    "sameAs": [
-      "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
-    ],
-    "offers": [
-      
-=======
 //       "addressRegion": "DE",
 //       "postalCode": "19709",
 //       "addressCountry": "US"
@@ -82,25 +52,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
 //     ],
 //     "offers": [
       {
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
         "@type": "Offer",
 //         "name": "AI Solutions",
         "description": "Artificial intelligence and machine learning services"
 ,
       
         "@type": "Offer", 
-<<<<<<< HEAD
-        "name": "Cybersecurity",
-        "description": "Advanced cybersecurity solutions and protection"
-,
-      
-        "@type": "Offer",
-        "name": "Cloud Infrastructure", 
-        "description": "Cloud computing and infrastructure services"
-
-    ]
-;
-=======
 //         "name": "Cybersecurity",
 //         "description": "Advanced cybersecurity solutions and protection"
       },
@@ -112,14 +69,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
 //     ]
   };
 
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   const finalStructuredData = structuredData || defaultStructuredData;
   return (
-<<<<<<< HEAD
-    <Helmet></Helmet>
-=======
 //     <Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       {/* Basic Meta Tags */}
       <title>{title}</title>
       <meta name="description" content="{description}" />
@@ -168,12 +120,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = (
       {/* Structured Data */}
       <script type="application/ld+json"></script>
         {JSON.stringify(finalStructuredData)}
-<<<<<<< HEAD
-      </script>
-=======
 //       </script>
       
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       {/* Additional Meta Tags for Better SEO */}
       <meta name="google-site-verification" content="your-google-verification-code" />
       <meta name="msvalidate.01" content="your-bing-verification-code" />

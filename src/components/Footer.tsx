@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 export default Footer;
   ];
   ];
@@ -53,6 +43,5 @@ export default Footer;
 //               © 2024 Zion Tech Group. All rights reserved.
                   {link.name}
               ))};
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

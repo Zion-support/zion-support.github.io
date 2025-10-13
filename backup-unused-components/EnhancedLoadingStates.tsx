@@ -2,12 +2,6 @@ import React from 'react';
 
 export default function Component() {
   return (
-<<<<<<< HEAD
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <div className="text-center">
         <div className="relative mb-8">
@@ -38,11 +32,8 @@ export default function Component() {
 </div>
 </div>
 </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }
-<<<<<<< HEAD
-=======
 
 export const ServiceLoading: React.FC<ServiceLoadingProps> = ({ 
 //   serviceType, 
@@ -274,4 +265,3 @@ export const ProgressLoading: React.FC<ProgressLoadingProps> = ({
 };
 
 export default LoadingPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

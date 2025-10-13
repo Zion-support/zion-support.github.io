@@ -153,5 +153,3 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
 };
 
 export default FuturisticTextEnhanced;
-  );
-}

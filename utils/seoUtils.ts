@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-// Utility functions
-
-export function utilityFunction() {
-  // Implementation here
-  return null;
-}
-
-export default utilityFunction;
-=======
 // SEO utilities and helpers
 
 export interface SEOData {
@@ -398,4 +388,3 @@ export const generateServiceSEO = (serviceData: {
     })
   };
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f

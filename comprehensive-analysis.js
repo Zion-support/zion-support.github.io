@@ -1,14 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
-=======
 class ComprehensiveWebsiteAnalyzer {
   constructor(baseUrl) {
     this.baseUrl = baseUrl;
@@ -300,5 +291,4 @@ class ComprehensiveWebsiteAnalyzer {
     fs.writeFileSync('comprehensive-analysis-report.json', JSON.stringify(report, null, 2));
     return report;
   }
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 }

@@ -1,3 +1,4 @@
+import React, { useState, useEffect, useRef } from 'react';
 import { ImageIcon } from 'lucide-react';
 interface LazyImageProps {
   src: string;
@@ -108,5 +109,3 @@ const LazyImage: React.FC<LazyImageProps> = ({
 };
 
 export default LazyImage;
-  );
-}

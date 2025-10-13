@@ -6,24 +6,6 @@ import tseslint from "typescript-eslint";
 
 export default tseslint.config(
   {
-<<<<<<< HEAD
-    ignores: [
-      "dist",
-      ".next",
-      "backup-problematic/**",
-      "backup-unused-components/**",
-      "corrupted-src-backup/**",
-      "backup-unused-components/**",
-      "src/**",
-      "*.js",
-      "scripts/**",
-      "public/sw.js",
-      "identify_missing_pages.js",
-      "merge-with-conflict-resolution.js",
-      "resolve-all-conflicts.js",
-      "fix-unused-imports.cjs",
-    ],
-=======
 //     ignores: [
 //       "dist",
 //       ".next",
@@ -37,7 +19,6 @@ export default tseslint.config(
 //       "merge-with-conflict-resolution.js",
 //       "resolve-all-conflicts.js",
 //     ],
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   },
   {
 //     extends: [js.configs.recommended, ...tseslint.configs.recommended],
@@ -51,15 +32,9 @@ export default tseslint.config(
 //       "react-refresh": reactRefresh,
     },
     rules: {
-<<<<<<< HEAD
-      ...reactHooks.configs.recommended.rules,
-      "react-refresh/only-export-components": "off",
-      "@typescript-eslint/no-unused-vars": "warn",
-=======
 //       ...reactHooks.configs.recommended.rules,
 //       "react-refresh/only-export-components": "off",
       "@typescript-eslint/no-unused-vars": "error",
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
       "@typescript-eslint/no-explicit-any": "off",
     },
   },

@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 export default AdvancedErrorBoundary;
 // Simple logger implementation;
       // console.error(message, context);
@@ -103,6 +93,5 @@ class AdvancedErrorBoundary extends Component;
                   If this problem persists, please contact our support team;
                   at&nbsp;
                     kleber@ziontechgroup.com;
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

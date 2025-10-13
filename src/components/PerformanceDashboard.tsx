@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 export default PerformanceDashboard;
   loadTime: number;
   renderTime: number;
@@ -66,6 +56,5 @@ const renderTime = performance.now() - renderStart;
           <span className = "text-sm text-gray-600">FPS:</span>
           <span className="text-sm font-mono">{metrics.fps}</span>
             Last updated: {new Date().toLocaleTimeString()};
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }

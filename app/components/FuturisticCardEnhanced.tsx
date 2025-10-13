@@ -31,5 +31,3 @@ const FuturisticCardEnhanced: React.FC<FuturisticCardEnhancedProps> = ({
 };
 
 export default FuturisticCardEnhanced;
-  );
-}

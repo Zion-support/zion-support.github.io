@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-=======
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
@@ -170,6 +160,5 @@ function generateReport() {
   fs.writeFileSync(
     path.join(__dirname, '..', 'performance-audit-report.json'),
     JSON.stringify(report, null, 2)
->>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
   );
 }
