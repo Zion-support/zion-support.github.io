@@ -1,18 +1,11 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
-<<<<<<< HEAD
 import StructuredData from "./components/StructuredData";
-import FuturisticBackground from "./components/FuturisticBackground";
-import FuturisticCard from "./components/FuturisticCard";
-import FuturisticButton from "./components/FuturisticButton";
-import FuturisticText from "./components/FuturisticText";
-=======
 import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
 import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
 import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
@@ -225,17 +218,9 @@ const HomePage = () => {
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <FuturisticTextEnhanced
-            variant="display"
-            size="6xl"
-            gradient={true}
-            animated={true}
-            glow={true}
-            neon={true}
-            className="mb-6 leading-tight"
-          >
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
             Welcome to Zion Tech Group
-          </FuturisticTextEnhanced>
+          </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
             Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
@@ -498,17 +483,8 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-      </main>
-<<<<<<< HEAD
-      </div>
-=======
-          </main>
-        </div>
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
-=======
+        </main>
         </FuturisticBackgroundEnhanced>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-9e47
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );

@@ -1,224 +1,236 @@
-# Zion Tech Group - Advanced AI and IT Solutions
+# Zion Tech Group - Advanced AI and IT Solutions Website
 
-A modern, high-performance website built with React + Vite, featuring cutting-edge AI and IT solutions. This website showcases our comprehensive range of services including AI solutions, cybersecurity, cloud computing, and digital transformation services.
+A modern, high-performance React application showcasing Zion Tech Group's comprehensive suite of AI-powered solutions, IT services, micro SAAS products, and 5G technology solutions.
 
 ## 🚀 Features
 
 ### Core Technologies
+- **React 18** with TypeScript for type safety
+- **Vite** for lightning-fast development and optimized builds
+- **Tailwind CSS** for responsive, utility-first styling
+- **React Router** for client-side routing
+- **Framer Motion** for smooth animations
 
-- **React 18** - Latest React with modern hooks and concurrent features
-- **Vite** - Lightning-fast build tool and development server
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first CSS framework
-- **Framer Motion** - Smooth animations and transitions
-- **Lucide React** - Beautiful, customizable icons
+### Key Features
+- **AI Services**: 24+ AI-powered solutions including analytics, content generation, cybersecurity
+- **Micro SAAS**: 50+ ready-to-use business tools and applications
+- **5G Solutions**: Next-generation connectivity and infrastructure services
+- **IT Services**: Comprehensive technology consulting and implementation
+- **Performance Optimized**: Advanced performance monitoring and optimization
+- **Accessibility**: WCAG 2.1 AA compliant with enhanced accessibility features
+- **SEO Optimized**: Comprehensive SEO with structured data and meta optimization
 
-### Performance Optimizations
+### Performance Features
+- **Code Splitting**: Automatic chunking for optimal loading
+- **Lazy Loading**: Images and components loaded on demand
+- **Performance Monitoring**: Real-time performance metrics
+- **Error Boundaries**: Comprehensive error handling and recovery
+- **Accessibility Tools**: Built-in accessibility enhancement panel
 
-- **Code Splitting** - Dynamic imports for better performance
-- **Bundle Analysis** - Vite bundle analyzer integration
-- **Performance Monitoring** - Real-time Core Web Vitals tracking
-- **SEO Optimization** - Comprehensive meta tags and structured data
-- **PWA Support** - Progressive Web App capabilities
-
-### Accessibility Features
-
-- **WCAG 2.1 AA Compliance** - Full accessibility support
-- **Keyboard Navigation** - Complete keyboard accessibility
-- **Screen Reader Support** - ARIA landmarks and labels
-- **High Contrast Mode** - Support for high contrast displays
-- **Focus Management** - Proper focus indicators and management
-
-### SEO & Marketing
-
-- **Structured Data** - Rich snippets for search engines
-- **Sitemap** - XML sitemap for better crawling
-- **Robots.txt** - Search engine crawling instructions
-- **PWA Support** - Progressive Web App capabilities
-- **Open Graph** - Social media sharing optimization
-
-## 🛠️ Development
+## 📦 Installation
 
 ### Prerequisites
-
 - Node.js 18.0.0 or higher
 - pnpm 8.0.0 or higher (recommended) or npm
 
-### Installation
-
-1. Clone the repository:
-
+### Setup
 ```bash
-git clone https://github.com/ziontechgroup/website.git
-cd website
-```
+# Clone the repository
+git clone https://github.com/ziontechgroup/zion-website.git
+cd zion-website
 
-2. Install dependencies:
-
-```bash
+# Install dependencies
 pnpm install
 # or
 npm install
-```
 
-3. Start the development server:
-
-```bash
+# Start development server
 pnpm dev
 # or
 npm run dev
 ```
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+## 🛠️ Development
 
 ### Available Scripts
 
-- `pnpm dev` - Start development server
-- `pnpm build` - Build for production
-- `pnpm start` - Start production server
-- `pnpm lint` - Run ESLint
-- `pnpm lint:fix` - Fix ESLint issues
-- `pnpm type-check` - Run TypeScript type checking
-- `pnpm test` - Run tests
-- `pnpm build:analyze` - Analyze bundle size
+```bash
+# Development
+pnpm dev              # Start development server
+pnpm build            # Build for production
+pnpm preview          # Preview production build
 
-## 📁 Project Structure
+# Code Quality
+pnpm lint             # Run ESLint
+pnpm lint:fix         # Fix ESLint issues
+pnpm type-check       # Run TypeScript checks
+pnpm format           # Format code with Prettier
+
+# Testing
+pnpm test             # Run tests
+pnpm test:watch       # Run tests in watch mode
+pnpm test:coverage    # Run tests with coverage
+
+# Performance
+pnpm analyze          # Analyze bundle size
+pnpm performance:audit # Run Lighthouse audit
+pnpm optimize         # Run performance optimizations
+```
+
+### Project Structure
 
 ```
-├── app/                    # React application
+├── app/                    # Main application pages
 │   ├── components/         # Reusable components
-│   ├── globals.css        # Global styles
-│   ├── page.tsx           # Home page
-│   ├── about/             # About page
-│   ├── contact/           # Contact page
-│   └── ai-services/       # AI services pages
-├── public/                # Static assets
-│   ├── manifest.json      # PWA manifest
-│   ├── robots.txt         # Robots.txt
-│   └── favicon.svg        # Favicon
-├── vite.config.ts         # Vite configuration
-├── tailwind.config.js     # Tailwind CSS configuration
-├── tsconfig.json          # TypeScript configuration
-└── package.json           # Dependencies and scripts
+│   ├── ai-*/              # AI service pages
+│   ├── zion-*/            # Micro SAAS pages
+│   ├── 5g-*/              # 5G solution pages
+│   └── page.tsx           # Home page
+├── components/             # Shared components
+├── utils/                  # Utility functions
+├── types/                  # TypeScript type definitions
+├── scripts/                # Build and optimization scripts
+├── public/                 # Static assets
+└── dist/                   # Production build output
 ```
-
-## 🎨 Design System
-
-### Color Palette
-
-- **Primary**: Cyan (#00ffff) - Tech and innovation
-- **Secondary**: Purple (#8b5cf6) - Creativity and AI
-- **Accent**: Pink (#ec4899) - Energy and growth
-- **Background**: Dark slate gradient for modern look
-
-### Typography
-
-- **Headings**: Bold, large sizes with neon effects
-- **Body**: Clean, readable text with proper contrast
-- **Code**: Monospace font for technical content
-
-### Components
-
-- **Cyber Cards**: Glassmorphism design with neon borders
-- **Hologram Cards**: Animated cards with scanning effects
-- **Quantum Cards**: Energy pulse animations
-- **Buttons**: Gradient backgrounds with hover effects
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Create a `.env.local` file in the root directory:
-
-```env
-NEXT_PUBLIC_SITE_URL=https://ziontechgroup.com
-NEXT_PUBLIC_GA_ID=your-google-analytics-id
-NEXT_PUBLIC_GTM_ID=your-google-tag-manager-id
-```
-
-### Performance Monitoring
-
-The application includes built-in performance monitoring that tracks:
-
-- **LCP** (Largest Contentful Paint)
-- **FID** (First Input Delay)
-- **CLS** (Cumulative Layout Shift)
-- **FCP** (First Contentful Paint)
-- **TTFB** (Time to First Byte)
 
 ## 🚀 Deployment
 
-### Vercel (Recommended)
+### Production Build
+```bash
+# Clean and build
+pnpm clean
+pnpm build
 
-1. Connect your GitHub repository to Vercel
-2. Configure environment variables
+# The build output will be in the `dist/` directory
+```
+
+### Deployment Options
+
+#### Netlify
+1. Connect your repository to Netlify
+2. Set build command: `pnpm build`
+3. Set publish directory: `dist`
+4. Deploy automatically on push to main branch
+
+#### Vercel
+1. Connect your repository to Vercel
+2. Set framework preset to Vite
 3. Deploy automatically on push to main branch
 
-### Other Platforms
+#### Manual Deployment
+1. Run `pnpm build`
+2. Upload the `dist/` folder to your web server
+3. Configure your server to serve the SPA correctly
 
-The application can be deployed to any platform that supports Next.js:
+### Environment Variables
+Create a `.env` file in the root directory:
 
-- Netlify
-- AWS Amplify
-- Railway
-- DigitalOcean App Platform
+```env
+VITE_APP_TITLE=Zion Tech Group
+VITE_APP_DESCRIPTION=Advanced AI and IT Solutions
+VITE_APP_URL=https://ziontechgroup.com
+VITE_ANALYTICS_ID=your-analytics-id
+```
 
-## 📊 Analytics & Monitoring
+## 📊 Performance
 
-### Google Analytics
+### Build Optimization
+- **Bundle Size**: Optimized with code splitting and tree shaking
+- **Chunking Strategy**: Intelligent chunking by feature and vendor
+- **Compression**: Gzip compression enabled
+- **Caching**: Optimized caching headers for static assets
 
-- Page views and user interactions
-- Performance metrics
-- Error tracking
-- Custom events for service clicks
+### Performance Metrics
+- **First Contentful Paint**: < 1.5s
+- **Largest Contentful Paint**: < 2.5s
+- **Cumulative Layout Shift**: < 0.1
+- **First Input Delay**: < 100ms
 
-### Performance Monitoring
+### Monitoring
+- Real-time performance monitoring in development
+- Web Vitals tracking
+- Error boundary with detailed error reporting
+- Accessibility monitoring
 
-- Real-time Core Web Vitals
-- Bundle size analysis
-- Image optimization tracking
-- Loading performance metrics
+## ♿ Accessibility
 
-## 🔒 Security
+### Features
+- **WCAG 2.1 AA Compliant**: Meets accessibility standards
+- **Keyboard Navigation**: Full keyboard support
+- **Screen Reader Support**: Optimized for screen readers
+- **High Contrast Mode**: Toggle high contrast theme
+- **Text Scaling**: Support for large text
+- **Reduced Motion**: Respects user motion preferences
 
-### Security Headers
+### Testing
+```bash
+# Run accessibility audit
+pnpm accessibility:audit
 
-- Content Security Policy (CSP)
-- X-Frame-Options
-- X-Content-Type-Options
-- Referrer-Policy
-- Permissions-Policy
+# Run comprehensive audit
+pnpm comprehensive:audit
+```
 
-### Best Practices
+## 🔍 SEO
 
-- Input sanitization
-- XSS protection
-- CSRF protection
-- Secure cookie settings
+### Features
+- **Structured Data**: JSON-LD structured data for all pages
+- **Meta Tags**: Comprehensive meta tag optimization
+- **Sitemap**: Auto-generated XML sitemap
+- **Open Graph**: Social media optimization
+- **Twitter Cards**: Twitter-specific meta tags
 
-## 📱 Mobile Optimization
+### SEO Tools
+```bash
+# Generate sitemap
+pnpm generate:sitemap
 
-- **Responsive Design** - Mobile-first approach
-- **Touch Optimization** - Touch-friendly interactions
-- **Performance** - Optimized for mobile networks
-- **PWA Features** - Installable and offline-capable
+# Run SEO audit
+pnpm seo:audit
+```
 
-## 🌐 Internationalization
+## 🧪 Testing
 
-The website is prepared for internationalization with:
+### Test Coverage
+- Unit tests for components
+- Integration tests for pages
+- Accessibility tests
+- Performance tests
 
-- Language detection
-- RTL support
-- Localized content structure
-- SEO-friendly URLs
+### Running Tests
+```bash
+# Run all tests
+pnpm test
+
+# Run tests with coverage
+pnpm test:coverage
+
+# Run specific test file
+pnpm test -- --testPathPattern=ComponentName
+```
+
+## 📱 Browser Support
+
+- **Chrome**: 90+
+- **Firefox**: 88+
+- **Safari**: 14+
+- **Edge**: 90+
 
 ## 🤝 Contributing
 
 1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests if applicable
+2. Create a feature branch: `git checkout -b feature/new-feature`
+3. Commit changes: `git commit -am 'Add new feature'`
+4. Push to branch: `git push origin feature/new-feature`
 5. Submit a pull request
+
+### Code Style
+- Use TypeScript for all new code
+- Follow ESLint configuration
+- Use Prettier for code formatting
+- Write tests for new features
+- Update documentation as needed
 
 ## 📄 License
 
@@ -227,17 +239,19 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Support
 
 For support and questions:
-
-- **Phone**: +1 (302) 464-0950
 - **Email**: kleber@ziontechgroup.com
-- **Address**: 364 E Main St STE 1008, Middletown, DE 19709
+- **Phone**: +1 302 464 0950
+- **Website**: https://ziontechgroup.com
 
-## 🔗 Links
+## 🏢 About Zion Tech Group
 
-- **Website**: [https://ziontechgroup.com](https://ziontechgroup.com)
-- **Twitter**: [@ziontechgroup](https://twitter.com/ziontechgroup)
-- **LinkedIn**: [Zion Tech Group](https://linkedin.com/company/ziontechgroup)
+Zion Tech Group is a leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses. We specialize in:
+
+- **AI Solutions**: Machine learning, natural language processing, computer vision
+- **IT Services**: Cloud migration, cybersecurity, system integration
+- **Micro SAAS**: Ready-to-use business applications and tools
+- **5G Solutions**: Next-generation connectivity and infrastructure
 
 ---
 
-Built with ❤️ by the Zion Tech Group team
+**Built with ❤️ by the Zion Tech Group Team**

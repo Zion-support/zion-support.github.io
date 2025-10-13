@@ -7,19 +7,8 @@ import {
   Shield, 
   Zap, 
   Globe, 
-<<<<<<< HEAD
-  ChevronDown
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
-=======
   ChevronDown,
   ChevronUp
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-f4a2
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -188,46 +177,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                   )}
                 </Link>
                 
-<<<<<<< HEAD
-                {/* Services Dropdown */}
-                {item.hasDropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                    <div className="p-6">
-                      <h3 className="text-white font-semibold mb-4 text-lg">Our Services</h3>
-                      <div className="space-y-6">
-                        {serviceDropdownItems.map((category, categoryIndex) => (
-                          <div key={categoryIndex}>
-                            <h4 className="text-cyan-400 font-medium mb-3 text-sm uppercase tracking-wide">
-                              {category.category}
-                            </h4>
-                            <div className="space-y-2">
-                              {category.items.map((service, serviceIndex) => (
-                                <Link
-                                  key={serviceIndex}
-                                  to={service.path}
-                                  className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-colors group"
-                                >
-                                  <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                                    {service.name}
-                                  </div>
-                                  <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                                    {service.description}
-                                  </div>
-                                </Link>
-                              ))}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                      <div className="mt-6 pt-4 border-t border-cyan-500/20">
-                        <Link
-                          to="/services"
-                          className="block text-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
-                        >
-                          View All Services →
-                        </Link>
-                      </div>
-=======
                 {/* Dropdown Menu */}
                 {item.hasDropdown && item.dropdownItems && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
@@ -243,7 +192,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                           {dropdownItem.name}
                         </Link>
                       ))}
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
                     </div>
                   </div>
                 )}

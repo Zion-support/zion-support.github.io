@@ -13,6 +13,7 @@ import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
@@ -121,7 +122,7 @@ function App() {
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <EnhancedErrorBoundary>
         <AnalyticsProvider>
           <EnhancedAnalytics>
             <PerformanceOptimizer>
@@ -242,7 +243,7 @@ function App() {
             </PerformanceOptimizer>
           </EnhancedAnalytics>
         </AnalyticsProvider>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 }

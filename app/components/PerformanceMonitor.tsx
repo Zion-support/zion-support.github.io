@@ -1,124 +1,127 @@
 import React, { useEffect, useState } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { Activity, Zap, Clock, Database } from 'lucide-react';
 
 interface PerformanceMetrics {
-  CLS: number | null;
-  INP: number | null;
-  FCP: number | null;
-  LCP: number | null;
-  TTFB: number | null;
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  networkRequests: number;
 }
 
 interface PerformanceMonitorProps {
-  children: React.ReactNode;
   showDetails?: boolean;
 }
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
-  children, 
-  showDetails = false 
-}) => {
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ showDetails = false }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    CLS: null,
-    INP: null,
-    FCP: null,
-    LCP: null,
-    TTFB: null
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    networkRequests: 0
   });
 
   useEffect(() => {
-    const sendToAnalytics = (metric: any) => {
-      console.log('Performance Metric:', metric.name, metric.value);
-      
-      setMetrics(prev => ({
-        ...prev,
-        [metric.name]: metric.value
-      }));
+    const startTime = performance.now();
+    
+    // Measure load time
+    const measureLoadTime = () => {
+      const loadTime = performance.now() - startTime;
+      setMetrics(prev => ({ ...prev, loadTime }));
+    };
 
-      // Send to analytics service (replace with your analytics)
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          value: Math.round(metric.value),
-          non_interaction: true,
-        });
+    // Measure memory usage
+    const measureMemoryUsage = () => {
+      if ('memory' in performance) {
+        const memory = (performance as any).memory;
+        const memoryUsage = Math.round(memory.usedJSHeapSize / 1024 / 1024);
+        setMetrics(prev => ({ ...prev, memoryUsage }));
       }
     };
 
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics);
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
+    // Count network requests
+    const countNetworkRequests = () => {
+      const entries = performance.getEntriesByType('resource');
+      setMetrics(prev => ({ ...prev, networkRequests: entries.length }));
+    };
+
+    // Measure render time
+    const measureRenderTime = () => {
+      const renderTime = performance.now() - startTime;
+      setMetrics(prev => ({ ...prev, renderTime }));
+    };
+
+    // Run measurements
+    if (document.readyState === 'complete') {
+      measureLoadTime();
+      measureMemoryUsage();
+      countNetworkRequests();
+      measureRenderTime();
+    } else {
+      window.addEventListener('load', () => {
+        measureLoadTime();
+        measureMemoryUsage();
+        countNetworkRequests();
+        measureRenderTime();
+      });
+    }
+
+    // Monitor performance continuously
+    const interval = setInterval(() => {
+      measureMemoryUsage();
+      countNetworkRequests();
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
-  const getMetricStatus = (value: number | null, thresholds: { good: number; poor: number }) => {
-    if (value === null) return 'pending';
-    if (value <= thresholds.good) return 'good';
-    if (value <= thresholds.poor) return 'needs-improvement';
-    return 'poor';
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'good': return 'text-green-400';
-      case 'needs-improvement': return 'text-yellow-400';
-      case 'poor': return 'text-red-400';
-      default: return 'text-gray-400';
+  // Log performance issues
+  useEffect(() => {
+    if (metrics.loadTime > 3000) {
+      console.warn('Slow page load detected:', metrics.loadTime + 'ms');
     }
-  };
-
-  const getStatusIcon = (status: string) => {
-    switch (status) {
-      case 'good': return '✅';
-      case 'needs-improvement': return '⚠️';
-      case 'poor': return '❌';
-      default: return '⏳';
+    if (metrics.memoryUsage > 100) {
+      console.warn('High memory usage detected:', metrics.memoryUsage + 'MB');
     }
-  };
+  }, [metrics]);
 
   if (!showDetails) {
-    return <>{children}</>;
+    return null;
   }
 
   return (
-    <div className="relative">
-      {children}
+    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 text-white text-xs z-50">
+      <div className="flex items-center mb-2">
+        <Activity className="w-4 h-4 text-cyan-400 mr-2" />
+        <span className="font-semibold">Performance Monitor</span>
+      </div>
       
-      {/* Performance Debug Panel */}
-      <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 max-w-sm z-50">
-        <h3 className="text-sm font-semibold text-white mb-3">Performance Metrics</h3>
-        <div className="space-y-2 text-xs">
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300">CLS:</span>
-            <span className={getStatusColor(getMetricStatus(metrics.CLS, { good: 0.1, poor: 0.25 }))}>
-              {getStatusIcon(getMetricStatus(metrics.CLS, { good: 0.1, poor: 0.25 }))} {metrics.CLS?.toFixed(3) || '...'}
-            </span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300">INP:</span>
-            <span className={getStatusColor(getMetricStatus(metrics.INP, { good: 200, poor: 500 }))}>
-              {getStatusIcon(getMetricStatus(metrics.INP, { good: 200, poor: 500 }))} {metrics.INP ? `${metrics.INP}ms` : '...'}
-            </span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300">FCP:</span>
-            <span className={getStatusColor(getMetricStatus(metrics.FCP, { good: 1800, poor: 3000 }))}>
-              {getStatusIcon(getMetricStatus(metrics.FCP, { good: 1800, poor: 3000 }))} {metrics.FCP ? `${metrics.FCP}ms` : '...'}
-            </span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300">LCP:</span>
-            <span className={getStatusColor(getMetricStatus(metrics.LCP, { good: 2500, poor: 4000 }))}>
-              {getStatusIcon(getMetricStatus(metrics.LCP, { good: 2500, poor: 4000 }))} {metrics.LCP ? `${metrics.LCP}ms` : '...'}
-            </span>
-          </div>
-          <div className="flex justify-between items-center">
-            <span className="text-gray-300">TTFB:</span>
-            <span className={getStatusColor(getMetricStatus(metrics.TTFB, { good: 800, poor: 1800 }))}>
-              {getStatusIcon(getMetricStatus(metrics.TTFB, { good: 800, poor: 1800 }))} {metrics.TTFB ? `${metrics.TTFB}ms` : '...'}
-            </span>
-          </div>
+      <div className="space-y-1">
+        <div className="flex items-center justify-between">
+          <span className="text-gray-300">Load Time:</span>
+          <span className={`font-mono ${metrics.loadTime > 2000 ? 'text-red-400' : 'text-green-400'}`}>
+            {metrics.loadTime.toFixed(0)}ms
+          </span>
+        </div>
+        
+        <div className="flex items-center justify-between">
+          <span className="text-gray-300">Memory:</span>
+          <span className={`font-mono ${metrics.memoryUsage > 50 ? 'text-yellow-400' : 'text-green-400'}`}>
+            {metrics.memoryUsage}MB
+          </span>
+        </div>
+        
+        <div className="flex items-center justify-between">
+          <span className="text-gray-300">Requests:</span>
+          <span className="font-mono text-cyan-400">
+            {metrics.networkRequests}
+          </span>
+        </div>
+        
+        <div className="flex items-center justify-between">
+          <span className="text-gray-300">Render:</span>
+          <span className={`font-mono ${metrics.renderTime > 1000 ? 'text-red-400' : 'text-green-400'}`}>
+            {metrics.renderTime.toFixed(0)}ms
+          </span>
         </div>
       </div>
     </div>
