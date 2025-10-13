@@ -66,8 +66,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
 
     // Enhanced keyboard navigation
-    const enhanceKeyboardNavigation = () => {
-      if (!enableKeyboardNavigation) return;
+    const enhanceKeyboardNavigation = (): (() => void) | undefined => {
+      if (!enableKeyboardNavigation) return undefined;
 
       const handleKeyDown = (e: KeyboardEvent) => {
         // Escape key to close modals/dropdowns
@@ -98,8 +98,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
 
     // Focus management
-    const enhanceFocusManagement = () => {
-      if (!enableFocusManagement) return;
+    const enhanceFocusManagement = (): (() => void) | undefined => {
+      if (!enableFocusManagement) return undefined;
 
       const trapFocus = (element: HTMLElement) => {
         const focusableElements = element.querySelectorAll(
@@ -135,11 +135,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       // Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
       modals.forEach(modal => trapFocus(modal as HTMLElement));
+      
+      return () => {
+        // Cleanup function
+      };
     };
 
     // High contrast mode detection
-    const enhanceHighContrast = () => {
-      if (!enableHighContrast) return;
+    const enhanceHighContrast = (): (() => void) | undefined => {
+      if (!enableHighContrast) return undefined;
 
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
       
@@ -152,7 +156,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       mediaQuery.addEventListener('change', handleContrastChange);
-      handleContrastChange(mediaQuery);
+      handleContrastChange(mediaQuery as any);
 
       return () => {
         mediaQuery.removeEventListener('change', handleContrastChange);
@@ -160,7 +164,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
 
     // Reduced motion detection
-    const handleReducedMotion = () => {
+    const handleReducedMotion = (): (() => void) | undefined => {
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
       
       const handleMotionChange = (e: MediaQueryListEvent) => {
@@ -172,7 +176,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       mediaQuery.addEventListener('change', handleMotionChange);
-      handleMotionChange(mediaQuery);
+      handleMotionChange(mediaQuery as any);
 
       return () => {
         mediaQuery.removeEventListener('change', handleMotionChange);
@@ -210,10 +214,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     enhanceScreenReader();
 
     return () => {
-      cleanupKeyboard?.();
-      cleanupFocus?.();
-      cleanupContrast?.();
-      cleanupMotion?.();
+      if (typeof cleanupKeyboard === 'function') cleanupKeyboard();
+      if (typeof cleanupFocus === 'function') cleanupFocus();
+      if (typeof cleanupContrast === 'function') cleanupContrast();
+      if (typeof cleanupMotion === 'function') cleanupMotion();
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
@@ -221,7 +225,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return (
     <>
       {children}
-      <style jsx global>{`
+      <style>{`
         /* Keyboard navigation styles */
         .keyboard-navigation *:focus {
           outline: 2px solid #06b6d4;

@@ -52,7 +52,64 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     });
   }, []);
 
-  // Voice navigation
+  // Voice navigation functions
+  const startVoiceNavigation = useCallback(() => {
+    if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+      console.warn('Speech recognition not supported');
+      return;
+    }
+
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+    
+    recognition.continuous = true;
+    recognition.interimResults = false;
+    recognition.lang = 'en-US';
+
+    recognition.onresult = (event: any) => {
+      const transcript = event.results[event.results.length - 1][0].transcript.toLowerCase();
+      
+      // Voice commands
+      if (transcript.includes('click') || transcript.includes('press')) {
+        const activeElement = document.activeElement as HTMLElement;
+        if (activeElement && activeElement.click) {
+          activeElement.click();
+        }
+      } else if (transcript.includes('next') || transcript.includes('tab')) {
+        const focusableElements = document.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element);
+        const nextElement = focusableElements[currentIndex + 1] as HTMLElement;
+        if (nextElement) nextElement.focus();
+      } else if (transcript.includes('previous') || transcript.includes('back')) {
+        const focusableElements = document.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element);
+        const prevElement = focusableElements[currentIndex - 1] as HTMLElement;
+        if (prevElement) prevElement.focus();
+      } else if (transcript.includes('home') || transcript.includes('main')) {
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) mainContent.focus();
+      }
+    };
+
+    recognition.onerror = (event: any) => {
+      console.error('Speech recognition error:', event.error);
+    };
+
+    recognition.start();
+    (window as any).voiceRecognition = recognition;
+  }, []);
+
+  const stopVoiceNavigation = useCallback(() => {
+    if ((window as any).voiceRecognition) {
+      (window as any).voiceRecognition.stop();
+      (window as any).voiceRecognition = null;
+    }
+  }, []);
+
   const toggleVoiceNavigation = useCallback(() => {
     if (!enableVoiceNavigation) return;
     
@@ -68,8 +125,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
   }, [enableVoiceNavigation, startVoiceNavigation, stopVoiceNavigation]);
 
   // Keyboard navigation enhancements
-  const setupKeyboardNavigation = useCallback(() => {
-    if (!enableKeyboardNavigation) return;
+  const setupKeyboardNavigation = useCallback((): (() => void) | undefined => {
+    if (!enableKeyboardNavigation) return undefined;
 
     const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content
@@ -113,8 +170,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
   }, [enableKeyboardNavigation]);
 
   // Screen reader enhancements
-  const setupScreenReaderSupport = useCallback(() => {
-    if (!enableScreenReader) return;
+  const setupScreenReaderSupport = useCallback((): (() => void) | undefined => {
+    if (!enableScreenReader) return undefined;
 
     // Add ARIA landmarks
     const addAriaLandmarks = () => {
@@ -170,8 +227,8 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
   }, [enableScreenReader]);
 
   // Focus management
-  const setupFocusManagement = useCallback(() => {
-    if (!enableFocusManagement) return;
+  const setupFocusManagement = useCallback((): (() => void) | undefined => {
+    if (!enableFocusManagement) return undefined;
 
     // Focus trap for modals
     const trapFocus = (element: HTMLElement) => {
@@ -224,58 +281,12 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
 
     // Store focus trap function globally for use in modals
     (window as any).trapFocus = trapFocus;
+    
+    return () => {
+      // Cleanup function
+    };
   }, [enableFocusManagement]);
 
-  // Voice navigation
-  const startVoiceNavigation = useCallback(() => {
-    if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
-      console.warn('Speech recognition not supported');
-      return;
-    }
-
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    const recognition = new SpeechRecognition();
-    
-    recognition.continuous = true;
-    recognition.interimResults = false;
-    recognition.lang = 'en-US';
-
-    recognition.onresult = (event: any) => {
-      const command = event.results[event.results.length - 1][0].transcript.toLowerCase().trim();
-      
-      // Voice commands
-      if (command.includes('go to home') || command.includes('home page')) {
-        window.location.href = '/';
-      } else if (command.includes('go to about') || command.includes('about page')) {
-        window.location.href = '/about';
-      } else if (command.includes('go to services') || command.includes('services page')) {
-        window.location.href = '/services';
-      } else if (command.includes('go to contact') || command.includes('contact page')) {
-        window.location.href = '/contact';
-      } else if (command.includes('scroll down')) {
-        window.scrollBy(0, 200);
-      } else if (command.includes('scroll up')) {
-        window.scrollBy(0, -200);
-      } else if (command.includes('stop voice navigation')) {
-        setIsVoiceNavigationActive(false);
-        recognition.stop();
-      }
-    };
-
-    recognition.onerror = (event: any) => {
-      console.error('Speech recognition error:', event.error);
-    };
-
-    recognition.start();
-    (window as any).voiceRecognition = recognition;
-  }, []);
-
-  const stopVoiceNavigation = useCallback(() => {
-    if ((window as any).voiceRecognition) {
-      (window as any).voiceRecognition.stop();
-      (window as any).voiceRecognition = null;
-    }
-  }, []);
 
   // Initialize accessibility features
   useEffect(() => {
@@ -302,9 +313,9 @@ const EnhancedAccessibilityManager: React.FC<AccessibilityManagerProps> = ({
     const cleanupFocus = setupFocusManagement();
 
     return () => {
-      cleanupKeyboard?.();
-      cleanupScreenReader?.();
-      cleanupFocus?.();
+      if (typeof cleanupKeyboard === 'function') cleanupKeyboard();
+      if (typeof cleanupScreenReader === 'function') cleanupScreenReader();
+      if (typeof cleanupFocus === 'function') cleanupFocus();
     };
   }, [setupKeyboardNavigation, setupScreenReaderSupport, setupFocusManagement]);
 

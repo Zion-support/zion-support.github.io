@@ -17,6 +17,7 @@ import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import EnhancedSEOOptimizer from "./app/components/EnhancedSEOOptimizer";
@@ -86,6 +87,7 @@ function App() {
                     <PerformanceMonitor />
                     <WebVitalsTracker />
                     <PerformanceEnhancer />
+                    <PerformanceOptimizer />
                     <SEOOptimizer />
                     <EnhancedSEO title="Zion Tech Group" description="Advanced AI and IT Solutions" />
                     <EnhancedSEOOptimizer />
