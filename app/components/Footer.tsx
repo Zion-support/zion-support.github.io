@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin, Twitter, Github, Mail, Smartphone, Globe, MapPin, Clock, Phone, ArrowRight } from "lucide-react";
 
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
@@ -23,9 +23,85 @@ const Footer = React.memo(() => {
     },
   ], []);
 
+  const contactInfo = useMemo(() => [
+    {
+      icon: <Mail className="w-5 h-5" />,
+      label: "Email",
+      value: "kleber@ziontechgroup.com",
+      link: "mailto:kleber@ziontechgroup.com"
+    },
+    {
+      icon: <Phone className="w-5 h-5" />,
+      label: "Phone",
+      value: "+1 302 464 0950",
+      link: "tel:+13024640950"
+    },
+    {
+      icon: <MapPin className="w-5 h-5" />,
+      label: "Address",
+      value: "364 E Main St STE 1008\nMiddletown DE 19709",
+      link: "https://maps.google.com/?q=364+E+Main+St+STE+1008+Middletown+DE+19709"
+    },
+    {
+      icon: <Clock className="w-5 h-5" />,
+      label: "Business Hours",
+      value: "Mon-Fri: 9AM-6PM EST",
+      link: null
+    }
+  ], []);
+
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="quantum-field-advanced data-stream-advanced text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Contact Information Section */}
+        <div className="holographic-card-advanced p-8 mb-12">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl font-bold text-cyberpunk-advanced neon-advanced-system mb-4">
+              Get In Touch
+            </h3>
+            <p className="text-gray-300 max-w-2xl mx-auto">
+              Ready to transform your business with cutting-edge technology? Contact us today for a personalized consultation.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {contactInfo.map((contact, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-12 h-12 mx-auto mb-3 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  {contact.icon}
+                </div>
+                <h4 className="text-white font-semibold mb-2">{contact.label}</h4>
+                {contact.link ? (
+                  <a
+                    href={contact.link}
+                    className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm"
+                  >
+                    {contact.value.split('\n').map((line, i) => (
+                      <div key={i}>{line}</div>
+                    ))}
+                  </a>
+                ) : (
+                  <p className="text-gray-300 text-sm">
+                    {contact.value.split('\n').map((line, i) => (
+                      <div key={i}>{line}</div>
+                    ))}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link
+              to="/contact"
+              className="btn-quantum-advanced inline-flex items-center group"
+            >
+              Start Your Project
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
