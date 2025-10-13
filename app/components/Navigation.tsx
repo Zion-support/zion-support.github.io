@@ -15,15 +15,15 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 
   const navigationItems = [
     {
-      label: 'Home',
-      href: '/',
+//       label: 'Home',
+//       href: '/',
       icon: <Brain className="w-4 h-4" />,
     },
     {
-      label: 'AI Services',
-      href: '/ai-services',
+//       label: 'AI Services',
+//       href: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
-      dropdown: [
+//       dropdown: [
         { label: 'AI Analytics', href: '/ai-analytics' },
         { label: 'AI Automation', href: '/ai-automation' },
         { label: 'AI Business Intelligence', href: '/ai-business-intelligence' },
@@ -35,31 +35,31 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
         { label: 'AI Healthcare', href: '/ai-healthcare' },
         { label: 'AI Marketing', href: '/ai-marketing' },
         { label: 'AI Cybersecurity', href: '/ai-cybersecurity' },
-      ],
+//       ],
     },
     {
-      label: 'Micro SAAS',
-      href: '/micro-saas',
+//       label: 'Micro SAAS',
+//       href: '/micro-saas',
       icon: <Zap className="w-4 h-4" />,
     },
     {
-      label: '5G Solutions',
-      href: '/5g-solutions',
+//       label: '5G Solutions',
+//       href: '/5g-solutions',
       icon: <Globe className="w-4 h-4" />,
     },
     {
-      label: 'IT Services',
-      href: '/services',
+//       label: 'IT Services',
+//       href: '/services',
       icon: <Shield className="w-4 h-4" />,
     },
     {
-      label: 'About',
-      href: '/about',
+//       label: 'About',
+//       href: '/about',
       icon: <Users className="w-4 h-4" />,
     },
     {
-      label: 'Contact',
-      href: '/contact',
+//       label: 'Contact',
+//       href: '/contact',
       icon: <Mail className="w-4 h-4" />,
     },
   ];
