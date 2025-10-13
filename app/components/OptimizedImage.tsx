@@ -24,14 +24,9 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className = '',
   priority = false,
-<<<<<<< HEAD
   placeholder = 'empty',
   blurDataURL = '',
-=======
-  // placeholder = 'empty',
-  // blurDataURL = '',
-  // quality = 75,
->>>>>>> cursor/fix-errors-and-merge-to-main-c834
+  // quality = 75, // Currently unused but kept for future implementation
   sizes = '100vw',
   loading = 'lazy',
   onLoad,
