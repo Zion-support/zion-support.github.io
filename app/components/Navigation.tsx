@@ -11,7 +11,6 @@ import {
   AcademicCapIcon,
   PlayIcon,
   QuestionMarkCircleIcon,
-  ShieldCheckIcon,
   CurrencyDollarIcon,
   CogIcon,
   ChevronDownIcon
@@ -20,7 +19,7 @@ import {
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const location = useLocation();
+  // const _location = useLocation();
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
