@@ -17,9 +17,8 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-import LoadingPageEnhanced from "./app/components/EnhancedLoading";
+import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -99,6 +98,7 @@ function App() {
                   <CoreWebVitals>
                     <Router>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                        <PerformanceOptimizer />
                         <FuturisticBackground />
                         <Navigation />
                         <Sidebar />

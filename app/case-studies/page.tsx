@@ -127,11 +127,31 @@ export default function CaseStudies() {
     { number: "60%", label: "Average Efficiency Gain", icon: <Zap className="w-6 h-6" /> }
   ];
 
-              </Link>
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Case Studies
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover how we've helped businesses transform their operations with our innovative technology solutions.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {caseStudies.map((study, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-4">{study.title}</h3>
+              <p className="text-gray-300 mb-4">{study.description}</p>
+              <div className="flex items-center text-cyan-400">
+                <ArrowRight className="w-4 h-4 mr-2" />
+                <span className="text-sm">Read More</span>
+              </div>
             </div>
-          </div>
-        </section>
+          ))}
+        </div>
       </div>
-    </>
+    </div>
   );
 }
