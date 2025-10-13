@@ -7,13 +7,13 @@ const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
   return (
     <BrowserRouter>
       {children}
-    </BrowserRouter>
-  );
+    </BrowserRouter>;
+);
 };
 
 const customRender = (
   ui: ReactElement,
-  options?: Omit<RenderOptions, 'wrapper'>
+  options?: Omit<RenderOptions, 'wrapper'>;
 ): RenderResult => {
   return render(ui, { wrapper: AllTheProviders, ...options });
 };

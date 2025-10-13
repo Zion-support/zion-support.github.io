@@ -17,7 +17,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   image = '/images/og-image.jpg',
   url = typeof window !== 'undefined' ? window.location.href : '',
   type = 'website',
-  structuredData
+  structuredData;
 }) => {
   useEffect(() => {
     // Add structured data to the page
@@ -63,8 +63,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     <Helmet>
       <title>{title}</title>
       {metaTags.map((tag, index) => (
-        <meta key={index} {...tag} />
-      ))}
+        <meta key={index} {...tag} />;
+))}
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
       {/* Favicon */}
@@ -78,8 +78,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       {/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>
-  );
+    </Helmet>;
+);
 };
 // Default structured data for the organization
 export const defaultStructuredData = {
@@ -93,8 +93,8 @@ export const defaultStructuredData = {
     "@type": "ContactPoint",
     "telephone": "+1-555-0123",
     "contactType": "customer service",
-    "availableLanguage": "English"
-  },
+    "availableLanguage": "English";
+},
   "sameAs": [
     "https://www.linkedin.com/company/zion-tech-group",
     "https://twitter.com/ziontechgroup",
@@ -106,8 +106,8 @@ export const defaultStructuredData = {
     "addressLocality": "San Francisco",
     "addressRegion": "CA",
     "postalCode": "94105",
-    "addressCountry": "US"
-  }
+    "addressCountry": "US";
+}
 };
 export default SEOEnhancer;
 

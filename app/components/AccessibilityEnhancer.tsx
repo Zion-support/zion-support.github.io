@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 
 
 import React, { useEffect, useState } from 'react';
@@ -27,24 +17,12 @@ declare global {
   }
 
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
 import React, { useEffect, useState } from 'react';
 
 // Using built-in DOM types
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
 import React, { useEffect, useState } from 'react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
 import React, { useEffect, useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -132,8 +110,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   // Focus management
   useEffect(() => {
     const focusableElements = document.querySelectorAll(
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-    );
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
+);
 
     const handleFocus = (e: Event) => {
       const target = e.target as HTMLElement;
@@ -204,36 +182,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           </div>
         </div>
       </div>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-6c11
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
+    </div>;
+);
 };
 
-export default AccessibilityEnhancer;
+export default AccessibilityEnhancer;}}

@@ -83,8 +83,8 @@ const ErrorFallback: React.FC = () => {
         </div>
       </section>
 
-    </div>
-  );
+    </div>;
+);
 };
 
 export default ErrorFallback;

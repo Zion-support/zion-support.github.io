@@ -82,8 +82,8 @@ const Services: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default Services;

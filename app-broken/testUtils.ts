@@ -3,8 +3,7 @@ export const wait = (ms: number): Promise<void> => {}
   return new Promise(resolve => setTimeout(resolve, ms));}
 ): Promise<void> => {
   interval = 100
-  headers: Record<string, string> = {}
-): void => {}
+  headers: Record<string, string> ={true} ): void => {}
   if (typeof global !== 'undefined') {}
     (global as typeof global & { fetch: typeof fetch }).fetch = jest.fn(() =>
       Promise.resolve({)
@@ -12,16 +11,16 @@ export const wait = (ms: number): Promise<void> => {}
         status),
       Promise.resolve({</div>
   status = 200,;
-  headers: Record<string, string> = {}): void => {}if (typeof global !== 'undefined') {}(global as typeof global & {fetch: typeof fetch ,}).fetch = jest.fn(() =>;
-      Promise.resolve({)
-    );
+  headers: Record<string, string> ={true} ): void => {}if (typeof global !== 'undefined') {}(global as typeof global & {fetch: typeof fetch ,}).fetch = jest.fn(() =>;
+      Promise.resolve({);
+);
         ok: status >= 200 && status < 300),
         status),}Promise.resolve({)}ok: status >= 200 && status < 300,
         status,;
         json: async () => response;
-        text: async () => JSON.stringify(response</div>
-      } as Response)
-    ) as typeof fetch;
+        text: async () => JSON.stringify(response</div>;
+} as Response);
+) as typeof fetch;
   }
         text: async () => JSON.stringify(response),}
       } as Response);
@@ -64,7 +63,7 @@ export const mockWindow = (overrides: Partial<Window> = {,}): void => {if (typeo
       value: {),
         ...global.window),}export const mockWindow = (overrides: Partial<Window> = {,}): void => {}if (typeof global !== 'undefined') {}Object.defineProperty(global, 'window', {)}value: {,}...global.window,;
         ...global.window),
-export const mockWindow = (overrides: Partial<Window> = {}): void => {}
+export const mockWindow = (overrides: Partial<Window> ={true} ): void => {}
   if (typeof global !== 'undefined') {}
     Object.defineProperty(global, 'window', {</div>
       value: {}
@@ -90,13 +89,13 @@ export const waitFor = async (conditio);
     await wait(interval);
   }
 };
-  s: Record<string, string> = {})
-    ) as typeof fetch;
+  s: Record<string, string> ={true} );
+) as typeof fetch;
   }
 };
 ): void => {/* TODO: Fix JSX expression */,}h: typeof fetch ,}).fetch = jest.fn(() =>;
-      Promise.resolve({/* TODO: Fix JSX expression */,)})
-      } as Response);
+      Promise.resolve({/* TODO: Fix JSX expression */)});
+} as Response);
     ) as typeof fetch;
   }
 }
@@ -131,11 +130,11 @@ export const createMockStorage = (): MockStorage => {/* TODO: Fix JSX expression
   setItem(ke,;)
   s: Partial<Window> = {,}): void => {/* TODO: Fix JSX expression */,},
       writabl,;
-  s: Partial<Window> = {}): void => {/* TODO: Fix JSX expression */}
+  s: Partial<Window> ={true} ): void => {/* TODO: Fix JSX expression */}
       },
       writabl,
-  e: true,
-    });
+  e: true,;
+});
 /**;
  * Create a mock performance API;
  */;
@@ -149,16 +148,16 @@ export const createMockPerformance = (): Performance => {}const entries: Perform
     now: () => Date.now()
       entries.push({</div>
         duration: 0,}
-        toJSON: () => ({,})
-      } as PerformanceEntry);
+        toJSON: () => ({,});
+} as PerformanceEntry);
     },;
     measure: (name: string, startMark?: string, endMark?: string) => {entries.push({);
         name);
         entryType: 'measure'),}measure: (name: string, startMark?: string, endMark?: string) => {}entries.push({)}name,;
       entries.push({</div>
         duration: 100,}
-        toJSON: () => ({,})
-      } as PerformanceEntry);
+        toJSON: () => ({,});
+} as PerformanceEntry);
     },
     getEntriesByName: (name: string) => entries.filter(e => e.name === name),
     getEntriesByType: (type: string) => entries.filter(e => e.entryType === type),
@@ -179,13 +178,13 @@ export const createMockPerformance = (): Performance => {}const entries: Perform
     clearMeasures: () => {}
       entries.length = 0;}
     },
-export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expression */,}N: () => ({,})
-      } as PerformanceEntry);
+export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expression */,}N: () => ({,});
+} as PerformanceEntry);
     },
     measur,
   e: (nam),
-  e: string, startMark?: string, endMark?: string) => {/* TODO: Fix JSX expression */,}N: () => ({,})
-      } as PerformanceEntry);
+  e: string, startMark?: string, endMark?: string) => {/* TODO: Fix JSX expression */,}N: () => ({,});
+} as PerformanceEntry);
       } as PerformanceEntry);
       } as PerformanceEntry);
     clearMark,;
@@ -208,14 +207,14 @@ export const createMockPerformance = (): Performance => {/* TODO: Fix JSX expres
     clearMeasure,
   s: () => {/* TODO: Fix JSX expression */}
     },
-  n: Date.now()
-  } as unknown as Performance;
+  n: Date.now();
+} as unknown as Performance;
 /**;
  * Generate random test data;
  */;
 export const generateTestData = {string: (length = 10): string => {,
     return Math.random(),;
-      .toString(36),}export const generateTestData = {}string: (length = 10): string => {,}return Math.random();
+      .toString(36),}export const generateTestData ={true} string: (length = 10): string => {,}return Math.random();
       .toString(36);
       .substring(2, length + 2);},
   number: (min = 0, max = 100): number => {}return Math.floor(Math.random() * (max - min + 1)) + min;},
@@ -491,11 +490,11 @@ export default {}}wait,;
   measureExecutionTime}
 }
 export const measureExecutionTime = async <T>(f);
-  n: () => T | Promise<T />,
+  n: () => T | Promise<T />,;
 ): Promise<{/* TODO: Fix JSX expression */,}n: number ,}> => {/* TODO: Fix JSX expression */,}return {result, duration}}}
 export default {/* TODO: Fix JSX expression */,}}}
 `;
-  n: () => T | Promise<T></T>
+  n: () => T | Promise<T></T>;
 ): Promise<{/* TODO: Fix JSX expression */}
   n: number }> => {/* TODO: Fix JSX expression */}
   return { result, duration };

@@ -1,66 +1,147 @@
+#!/usr/bin/env node
 
-// Function to fix common syntax errors in a file
+const fs = require('fs');
+const path = require('path');
+
+// Function to recursively find all files
+function getAllFiles(dirPath, arrayOfFiles = []) {
+  const files = fs.readdirSync(dirPath);
+
+  files.forEach(file => {
+    const fullPath = path.join(dirPath, file);
+    if (fs.statSync(fullPath).isDirectory()) {
+      // Skip certain directories
+      if (!['node_modules', '.git', 'dist', 'build', '.next', 'out'].includes(file)) {
+        getAllFiles(fullPath, arrayOfFiles);
+      }
+    } else {
+      // Only process certain file types
+      if (file.match(/\.(js|jsx|ts|tsx)$/)) {
+        arrayOfFiles.push(fullPath);
+      }
+    }
+  });
+
+  return arrayOfFiles;
+}
+
+// Function to fix common syntax errors
 function fixSyntaxErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
 
-    // Fix missing commas in object literals and arrays
-    // Look for patterns like: key: value\n  key2: value2
-    content = content.replace(/([a-zA-Z_$][a-zA-Z0-9_$]*\s*:\s*[^,\n}]+)\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
-    
-    // Fix missing commas in JSX props
-    content = content.replace(/(\w+="[^"]*")\n\s*(\w+=)/g, '$1\n  $2');
-    content = content.replace(/(\w+={[^}]*})\n\s*(\w+=)/g, '$1\n  $2');
-    
-    // Fix incomplete function calls - add missing closing parentheses
-    // Look for patterns like: lazy(() => import("./path/page")\nconst
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*const/g, 'lazy(() => import("$1")),\nconst');
-    
-    // Fix missing closing parentheses in lazy imports
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*([a-zA-Z_$])/g, 'lazy(() => import("$1")),\n$2');
-    
-    // Fix missing commas after lazy imports
-    content = content.replace(/lazy\(\(\) => import\("([^"]+)"\)\n\s*\/\/ /g, 'lazy(() => import("$1")),\n// ');
-    
-    // Fix incomplete JSX elements
-    content = content.replace(/(<[^>]+)\n\s*([a-zA-Z_$])/g, '$1>\n  $2');
-    
-    // Fix missing closing tags in JSX
-    content = content.replace(/(<[^>]+)\n\s*<\/[^>]+>/g, '$1>\n  </div>');
-    
-    // Fix missing commas in array elements
-    content = content.replace(/([^,\n])\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1,\n  $2');
-    
-    // Fix missing closing brackets in objects
-    content = content.replace(/([^}]\n\s*)([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '$1  $2');
-    
-    // Fix incomplete function declarations
-    content = content.replace(/function\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*\(\s*\)\s*{\s*\n\s*return\s*\(\s*\n\s*<[^>]*>\s*\n\s*\)\s*;\s*\n\s*}\s*\n\s*([a-zA-Z_$])/g, 
-      'function $1() {\n  return (\n    <div>\n      {/* Content */}\n    </div>\n  );\n}\n\n$2');
-    
-    // Fix missing export statements
-    content = content.replace(/}\s*\n\s*([a-zA-Z_$][a-zA-Z0-9_$]*\s*:)/g, '}\n\nexport { $1');
-    
-    // Clean up multiple empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    // Remove any remaining orphaned markers
-    content = content.replace(/^<<<<<<<|^
-      return true;
+    // Fix unescaped entities in JSX
+    if (content.includes("'")) {
+      const originalContent = content;
+      content = content.replace(/(?<!&)(?<!&#)(?<!&apos;)(?<!&lsquo;)(?<!&rsquo;)(?<!&quot;)(?<!&lt;)(?<!&gt;)(?<!&amp;)'(?![^<]*>)/g, '&apos;');
+      if (content !== originalContent) {
+        modified = true;
+        console.log(`✓ Fixed unescaped entities in: ${filePath}`);
+      }
     }
-    
-    return false;
-  } catch (error) {
-    console.error(`  ❌ Error processing ${filePath}:`, error.message);
-    return false;
-  }
 
+    // Fix duplicate Router imports
+    if (content.includes("import { Router }")) {
+      const lines = content.split('\n');
+      const routerLines = lines.filter(line => line.includes("import { Router }"));
+      if (routerLines.length > 1) {
+        const cleanedLines = lines.filter((line, index) => {
+          if (line.includes("import { Router }")) {
+            return index === lines.findIndex(l => l.includes("import { Router }"));
+          }
+          return true;
+        });
+        const cleanedContent = cleanedLines.join('\n');
+        if (cleanedContent !== content) {
+          content = cleanedContent;
+          modified = true;
+          console.log(`✓ Fixed duplicate Router import in: ${filePath}`);
         }
-    } catch (error) {
-      // Skip directories that can't be read
-
+      }
     }
-  } else {
-    console.log(`File not found: ${filePath}`);
-  }
 
+    // Fix missing closing tags
+    if (content.includes('<div') && !content.includes('</div>')) {
+      const divCount = (content.match(/<div/g) || []).length;
+      const closingDivCount = (content.match(/<\/div>/g) || []).length;
+      if (divCount > closingDivCount) {
+        const missingDivs = divCount - closingDivCount;
+        content += '\n' + '</div>'.repeat(missingDivs);
+        modified = true;
+        console.log(`✓ Added ${missingDivs} missing closing div tags in: ${filePath}`);
+      }
+    }
+
+    // Fix parsing errors in API files
+    if (filePath.includes('/api/')) {
+      // Fix missing commas in object literals
+      content = content.replace(/(\w+)\s*\n\s*}/g, '$1\n}');
+      
+      // Fix try-catch blocks
+      if (content.includes('try {') && !content.includes('} catch')) {
+        content = content.replace(/try\s*{([^}]+)}/g, (match, tryContent) => {
+          return `try {\n${tryContent}\n} catch (error) {\n  console.error('Error:', error);\n  res.status(500).json({ error: 'Internal server error' });\n}`;
+        });
+        modified = true;
+        console.log(`✓ Fixed try-catch block in: ${filePath}`);
+      }
+    }
+
+    // Fix missing semicolons
+    content = content.replace(/([^;}])\n\s*}/g, '$1;\n}');
+    content = content.replace(/([^;}])\n\s*\)/g, '$1;\n)');
+
+    // Fix missing commas in function parameters
+    content = content.replace(/\)\s*{/g, ') {');
+    content = content.replace(/,\s*\)/g, ')');
+
+    // Fix broken JSX attributes
+    content = content.replace(/=\s*{\s*}\s*/g, '={true} ');
+    content = content.replace(/=\s*{\s*undefined\s*}/g, '={false} ');
+
+    // Fix missing closing parentheses
+    const openParens = (content.match(/\(/g) || []).length;
+    const closeParens = (content.match(/\)/g) || []).length;
+    if (openParens > closeParens) {
+      const missingParens = openParens - closeParens;
+      content += ')'.repeat(missingParens);
+      modified = true;
+      console.log(`✓ Added ${missingParens} missing closing parentheses in: ${filePath}`);
+    }
+
+    // Fix missing closing braces
+    const openBraces = (content.match(/{/g) || []).length;
+    const closeBraces = (content.match(/}/g) || []).length;
+    if (openBraces > closeBraces) {
+      const missingBraces = openBraces - closeBraces;
+      content += '}'.repeat(missingBraces);
+      modified = true;
+      console.log(`✓ Added ${missingBraces} missing closing braces in: ${filePath}`);
+    }
+
+    // Only write if content actually changed
+    if (modified) {
+      fs.writeFileSync(filePath, content, 'utf8');
+    }
+    
+    return modified;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Main execution
+console.log('Starting syntax error fixes...');
+
+const allFiles = getAllFiles(process.cwd());
+let fixedCount = 0;
+
+allFiles.forEach(file => {
+  if (fixSyntaxErrors(file)) {
+    fixedCount++;
+  }
+});
+
+console.log(`\nCompleted! Fixed syntax errors in ${fixedCount} files.`);

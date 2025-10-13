@@ -63,8 +63,8 @@ const App: React.FC = () => {
         setIsInitialized(true);
       } catch (error) {
         console.error('Failed to initialize app:', error);
-        setIsInitialized(true); // Still show the app even if initialization fails
-      }
+        setIsInitialized(true); // Still show the app even if initialization fails;
+}
     };
 
     initApp();
@@ -135,3 +135,4 @@ const App: React.FC = () => {
           </Suspense>
           <Footer />
         </div>
+}

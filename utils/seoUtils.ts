@@ -68,8 +68,8 @@ export const defaultSEOConfig: SEOConfig = {
     latitude: '40.7128',
     longitude: '-74.0060',
     region: 'US-NY',
-    placename: 'New York'
-  },
+    placename: 'New York';
+},
   alternate: [
     { href: 'https://zion.app/en', hreflang: 'en' },
     { href: 'https://zion.app/es', hreflang: 'es' }
@@ -79,8 +79,8 @@ export const defaultSEOConfig: SEOConfig = {
     '@type': 'Organization',
     name: 'Zion Tech Group',
     url: 'https://zion.app',
-    logo: 'https://zion.app/images/logo.png'
-  }
+    logo: 'https://zion.app/images/logo.png';
+}
 };
 
 export const generateSEOMeta = (config: SEOConfig) => {
@@ -112,9 +112,9 @@ export const generateSEOMeta = (config: SEOConfig) => {
     'alternate': config.alternate?.map(alt => ({
       rel: 'alternate',
       hreflang: alt.hreflang,
-      href: alt.href
-    }))
-  };
+      href: alt.href;
+}));
+};
 };
 
 export const generateStructuredData = (config: SEOConfig) => {
@@ -158,5 +158,5 @@ export default {
   generateImageAlt,
   generateCanonicalUrl,
   generateSitemap,
-  generateRobotsTxt
+  generateRobotsTxt;
 };

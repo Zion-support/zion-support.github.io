@@ -52,8 +52,8 @@ function fixHTMLConflicts(filePath) {
         if (!separatorFound) {
           headContent.push(line);
         }
-        // Skip lines after  until >>>>>>>
-      } else {
+        // Skip lines after  until >>>>>>>;
+} else {
         result.push(line);
       }
     }

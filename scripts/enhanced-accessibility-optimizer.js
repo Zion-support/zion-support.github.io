@@ -13,8 +13,8 @@ class AccessibilityOptimizer {
       componentsAnalyzed: 0,
       accessibilityIssues: 0,
       wcagCompliance: 0,
-      ariaLabelsAdded: 0,
-    };
+      ariaLabelsAdded: 0,;
+};
   }
 
   async optimize() {
@@ -53,8 +53,8 @@ class AccessibilityOptimizer {
           file: component,
           issues: analysis.issues,
           recommendations: analysis.recommendations,
-          wcagLevel: analysis.wcagLevel,
-        });
+          wcagLevel: analysis.wcagLevel,;
+});
       }
     });
 
@@ -77,8 +77,8 @@ class AccessibilityOptimizer {
           type: 'aria',
           file: component,
           issues: issues,
-          recommendations: this.generateARIARecommendations(issues),
-        });
+          recommendations: this.generateARIARecommendations(issues),;
+});
         ariaOptimizations++;
       }
     });
@@ -103,8 +103,8 @@ class AccessibilityOptimizer {
           type: 'keyboard',
           file: component,
           issues: issues,
-          recommendations: this.generateKeyboardRecommendations(issues),
-        });
+          recommendations: this.generateKeyboardRecommendations(issues),;
+});
         keyboardOptimizations++;
       }
     });
@@ -128,8 +128,8 @@ class AccessibilityOptimizer {
           type: 'contrast',
           file: cssFile,
           issues: issues,
-          recommendations: this.generateContrastRecommendations(issues),
-        });
+          recommendations: this.generateContrastRecommendations(issues),;
+});
         contrastOptimizations++;
       }
     });
@@ -350,9 +350,9 @@ class AccessibilityOptimizer {
       summary: {
         totalIssues: this.optimizations.reduce((sum, opt) => sum + (opt.issues?.length || 0), 0),
         wcagCompliance: this.calculateWCAGCompliance(),
-        accessibilityScore: this.calculateAccessibilityScore(),
-      },
-    };
+        accessibilityScore: this.calculateAccessibilityScore(),;
+},;
+};
 
     const reportPath = path.join(__dirname, '../accessibility-report.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
@@ -387,3 +387,4 @@ if (require.main === module) {
 }
 
 module.exports = AccessibilityOptimizer;
+</div></div>

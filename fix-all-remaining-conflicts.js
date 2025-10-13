@@ -37,8 +37,8 @@ function resolveMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    if (!content.includes('      return false; // No conflicts
-    }
+    if (!content.includes('      return false; // No conflicts;
+}
     
     console.log(`Resolving conflicts in: ${filePath}`);
     
@@ -140,8 +140,8 @@ export default function Page() {
           </div>
         </div>
       </div>
-    </div>
-  );
+    </div>;
+);
 }`;
       } else if (filePath.endsWith('.ts')) {
         template = `// Utility file
@@ -191,8 +191,8 @@ try {
   // Stage all changes
   execSync('git add .', { stdio: 'inherit' });
   console.log('Staged all changes');
-  
+  ;
 } catch (error) {
   console.error('Error during conflict resolution:', error.message);
   process.exit(1);
-}
+}))))))))

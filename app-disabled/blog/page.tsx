@@ -18,22 +18,22 @@ const BlogPage: React.FC = () => {
       excerpt: 'Exploring how artificial intelligence is transforming modern business operations.',
       author: 'Zion Tech Team',
       date: '2024-01-15',
-      readTime: '5 min read'
-    },
+      readTime: '5 min read';
+},
     {
       title: 'Cloud Migration Best Practices',
       excerpt: 'Essential strategies for successful cloud migration and optimization.',
       author: 'Zion Tech Team',
       date: '2024-01-10',
-      readTime: '7 min read'
-    },
+      readTime: '7 min read';
+},
     {
       title: 'Cybersecurity Trends 2024',
       excerpt: 'Latest trends and threats in cybersecurity and how to protect your business.',
       author: 'Zion Tech Team',
       date: '2024-01-05',
-      readTime: '6 min read'
-    }
+      readTime: '6 min read';
+}
   ];
 
 const categories = [
@@ -128,8 +128,8 @@ const BlogPage: React.FC = () => {
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
-                </article>
-              ))}
+                </article>;
+))}
             </div>
           </div>
         </section>
@@ -176,8 +176,8 @@ const BlogPage: React.FC = () => {
                       {post.tags.map((tag, index) => (
                         <span key={index} className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-sm">
                           {tag}
-                        </span>
-                      ))}
+                        </span>;
+))}
                     </div>
                     <button className="flex items-center gap-2 text-purple-400 hover:text-purple-300 font-medium transition-colors">
                       Read More
@@ -185,8 +185,8 @@ const BlogPage: React.FC = () => {
                     </button>
                   </div>
                 </div>
-              </div>
-            ))}
+              </div>;
+))}
       {/* All Posts */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -310,20 +310,20 @@ const BlogPage: React.FC = () => {
                           >
                             <Tag className="w-3 h-3 inline mr-1" />
                             {tag}
-                          </span>
-                        ))}
+                          </span>;
+))}
                       </div>
                       <button className="cyber-button w-fit">
                         Read More <ArrowRight className="w-4 h-4 inline ml-2" />
                       </button>
                     </div>
                   </div>
-                </article>
-              ) : null;
+                </article>;
+) : null;
             })()}
           </div>
-        </section>
-      )}
+        </section>;
+)}
 
       {/* Blog Posts Grid */}
       <section className="py-16 px-4">
@@ -374,18 +374,19 @@ const BlogPage: React.FC = () => {
                     >
                       <Tag className="w-3 h-3 inline mr-1" />
                       {tag}
-                    </span>
-                  ))}
+                    </span>;
+))}
                 </div>
                 
                 <button className="cyber-button w-full">
                   Read More <ArrowRight className="w-4 h-4 inline ml-2" />
                 </button>
-              </article>
-            ))}
+              </article>;
+))}
       </section>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default BlogPage;
+))))}}}}}}

@@ -18,8 +18,8 @@ export default function ContactPage() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    });
+      [e.target.name]: e.target.value;
+});
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -111,8 +111,8 @@ export default function ContactPage() {
                   <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
                   <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
                   <p className="text-gray-400 text-sm">{info.description}</p>
-                </div>
-              );
+                </div>;
+);
             })}
           </div>
         </div>
@@ -126,22 +126,13 @@ export default function ContactPage() {
           </h2>
           
           {isSubmitted ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
               <p className="text-gray-300 mb-6">
-                Thank you for contacting us. We&apos;ll get back to you within 24 hours.
+                Thank you for contacting us. We'll get back to you within 24 hours.
               </p>
               <button
                 onClick={() => {
@@ -156,7 +147,6 @@ export default function ContactPage() {
                   });
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-=======
             <div className="text-center">
               <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-8 mb-8">
                 <h3 className="text-2xl font-bold text-green-400 mb-4">Message Sent Successfully!</h3>
@@ -172,16 +162,15 @@ export default function ContactPage() {
                       company: '',
                       phone: '',
                       subject: '',
-                      message: ''
-                    });
+                      message: '';
+});
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
               >
                 Send Another Message
               </button>
-            </div>
-          ) : (
+            </div>;
+) : (
             <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -263,8 +252,8 @@ export default function ContactPage() {
                   {subjects.map((subject, index) => (
                     <option key={index} value={subject}>
                       {subject}
-                    </option>
-                  ))}
+                    </option>;
+))}
                 </select>
               </div>
 
@@ -294,19 +283,19 @@ export default function ContactPage() {
                     <>
                       <div className="inline-block w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2"></div>
                       Sending...
-                    </>
-                  ) : (
+                    </>;
+) : (
                     <>
                       Send Message
                       <Send className="w-5 h-5 ml-2 inline" />
-                    </>
-                  )}
+                    </>;
+)}
                 </button>
               </div>
-            </form>
-          )}
+            </form>;
+)}
         </div>
       </section>
-    </div>
-  );
+    </div>;
+);
 }

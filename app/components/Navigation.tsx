@@ -17,8 +17,8 @@ const Navigation: React.FC = () => {
         { name: 'IT Services', href: '/it-services' },
         { name: 'Cloud Solutions', href: '/cloud-infrastructure' },
         { name: 'Digital Transformation', href: '/digital-transformation' }
-      ]
-    },
+      ];
+},
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
@@ -60,12 +60,12 @@ const Navigation: React.FC = () => {
                           className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
                         >
                           {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
+                        </Link>;
+))}
+                    </div>;
+)}
+                </div>;
+))}
             </div>
           </div>
 
@@ -113,12 +113,12 @@ const Navigation: React.FC = () => {
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
+                        </Link>;
+))}
+                    </div>;
+)}
+                </div>;
+))}
               <div className="pt-4">
                 <Link
                   to="/contact"
@@ -129,11 +129,11 @@ const Navigation: React.FC = () => {
                 </Link>
               </div>
             </div>
-          </div>
-        )}
+          </div>;
+)}
       </div>
-    </nav>
-  );
+    </nav>;
+);
 };
 
 export default Navigation;

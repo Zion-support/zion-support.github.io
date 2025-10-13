@@ -10,6 +10,6 @@ export default function WhitepapersPage() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>;
+);
 }

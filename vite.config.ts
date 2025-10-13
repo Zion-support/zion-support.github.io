@@ -9,9 +9,9 @@ export default defineConfig({
       '@': path.resolve(__dirname, './'),
       '@app': path.resolve(__dirname, './app'),
       '@components': path.resolve(__dirname, './app/components'),
-      '@utils': path.resolve(__dirname, './utils'),
-    },
-  },
+      '@utils': path.resolve(__dirname, './utils'),;
+},;
+},
   build: {
     outDir: 'dist',
     target: 'esnext',
@@ -22,21 +22,21 @@ export default defineConfig({
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
-          ui: ['@heroicons/react', 'lucide-react'],
-        },
-      },
-    },
-    chunkSizeWarningLimit: 1000,
-  },
+          ui: ['@heroicons/react', 'lucide-react'],;
+},;
+},;
+},
+    chunkSizeWarningLimit: 1000,;
+},
   server: {
     port: 3000,
-    open: true,
-  },
+    open: true,;
+},
   preview: {
     port: 4173,
-    open: true,
-  },
+    open: true,;
+},
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom'],
-  },
+    include: ['react', 'react-dom', 'react-router-dom'],;
+},;
 });

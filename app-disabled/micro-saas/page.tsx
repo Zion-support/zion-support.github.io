@@ -24,7 +24,7 @@ interface MicroSaasProduct {}
   popular: boolean;
 
   category: string;
-
+;
 }
 
 const MicroSaasPage: React.FC = () => {}
@@ -93,20 +93,20 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
       icon: Users,
       value: '10,000+,
       label: 'Active Users,
-      description: Growing community of satisfied customers
-    },
+      description: Growing community of satisfied customers;
+},
     {}
       icon: TrendingUp,
       value: '99.9%,
       label: 'Uptime,
-      description: Reliable service you can count on
-    },
+      description: Reliable service you can count on;
+},
     {}
       icon: Star,
       value: '4.8/5,
       label: 'Rating,
-      description: Highly rated by our customers
-    },
+      description: Highly rated by our customers;
+},
     {}
       icon: Zap,
       value: '24/7,
@@ -117,18 +117,18 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
     {
       icon: Zap,
       title: 'Lightning Fast Setup,
-      description: Get up and running in minutes with our streamlined onboarding process
-    },
+      description: Get up and running in minutes with our streamlined onboarding process;
+},
     {
       icon: Target,
       title: 'Focused Solutions,
-      description: Each micro SaaS is designed to solve specific business challenges effectively
-    },
+      description: Each micro SaaS is designed to solve specific business challenges effectively;
+},
     {
       icon: Rocket,
       title: 'Rapid Innovation,
-      description: Frequent updates and new features based on user feedback and market needs
-    }
+      description: Frequent updates and new features based on user feedback and market needs;
+}
 
   ];
 
@@ -158,8 +158,8 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
                   className={px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     category === All
                       ? bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900
-                      : bg-white/10 text-gray-300 hover:bg-white/20
-                  }}
+                      : bg-white/10 text-gray-300 hover:bg-white/20;
+}}
 
 
         <section className="py-16 px-4>
@@ -178,8 +178,8 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
                   key={product.id}
 
                   className={relative bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 hover:border-cyan-400/50 transition-all duration-300 group ${
-                    product.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20 : border-slate-700
-                  }}
+                    product.popular ? 'border-cyan-400/50 ring-2 ring-cyan-400/20 : border-slate-700;
+}}
 
                 >
                   {product.popular && (
@@ -218,7 +218,8 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
                 <Link
                   to="/pricing
                   className="inline-flex items-center gap-2 bg-slate-700 text-white px-8 py-4 rounded-lg font-semibold border border-slate-600 hover:bg-slate-600 transition-all duration-300
-    </>
-  );
+    </>;
+);
 
 export default MicroSaasPage;
+))))}}}}

@@ -90,8 +90,8 @@ const TermsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>;
+);
 };
 
 export default TermsPage;

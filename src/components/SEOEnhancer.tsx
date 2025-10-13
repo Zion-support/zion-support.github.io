@@ -16,7 +16,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   keywords,
   noIndex = false,
   structuredData,
-  children
+  children;
 }) => {
   const defaultStructuredData = {
     "@context": "https://schema.org",
@@ -28,8 +28,8 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
-      "contactType": "customer service"
-    }
+      "contactType": "customer service";
+}
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;

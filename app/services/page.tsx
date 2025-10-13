@@ -15,8 +15,8 @@ const ServicesPage: React.FC = () => {
         { name: 'Computer Vision', price: '$1,800/month', description: 'Image and video analysis solutions for object detection and recognition', features: ['Object Detection', 'Image Classification', 'Video Analysis', 'Facial Recognition'] },
         { name: 'AI Automation', price: '$1,400/month', description: 'Intelligent process automation with decision-making capabilities', features: ['Process Automation', 'Workflow Optimization', 'Decision Trees', 'Exception Handling'] },
         { name: 'AI Chatbots', price: '$800/month', description: 'Intelligent conversational AI for customer service and support', features: ['24/7 Support', 'Multi-language Support', 'Integration APIs', 'Analytics Dashboard'] }
-      ]
-    },
+      ];
+},
     {
       title: 'IT Infrastructure',
       color: 'text-blue-600',
@@ -26,8 +26,8 @@ const ServicesPage: React.FC = () => {
         { name: 'Network Security', price: '$2,200/month', description: 'Comprehensive network security solutions and monitoring', features: ['Firewall Configuration', 'Intrusion Detection', 'VPN Setup', 'Security Audits'] },
         { name: 'Database Management', price: '$1,800/month', description: 'Database design, optimization, and maintenance services', features: ['Database Design', 'Performance Tuning', 'Backup Solutions', 'Data Recovery'] },
         { name: 'DevOps & CI/CD', price: '$2,000/month', description: 'Automated deployment and continuous integration solutions', features: ['Pipeline Setup', 'Automated Testing', 'Deployment Automation', 'Monitoring'] }
-      ]
-    },
+      ];
+},
     {
       title: 'Digital Transformation',
       color: 'text-green-600',
@@ -36,8 +36,8 @@ const ServicesPage: React.FC = () => {
         { name: 'Digital Strategy', price: '$2,800/month', description: 'Comprehensive digital transformation strategy and implementation', features: ['Digital Assessment', 'Technology Roadmap', 'Change Management', 'Training Programs'] },
         { name: 'Process Automation', price: '$1,600/month', description: 'Business process automation and optimization solutions', features: ['Process Analysis', 'Workflow Design', 'Automation Implementation', 'Performance Monitoring'] },
         { name: 'Data Analytics', price: '$1,900/month', description: 'Advanced data analytics and business intelligence solutions', features: ['Data Visualization', 'Predictive Analytics', 'Dashboard Creation', 'Insights Generation'] }
-      ]
-    }
+      ];
+}
   ];
 
   const testimonials = [
@@ -46,22 +46,22 @@ const ServicesPage: React.FC = () => {
       company: "TechCorp Inc.",
       role: "CTO",
       content: "Zion Tech Group transformed our infrastructure with their AI solutions. We've seen a 40% increase in efficiency.",
-      rating: 5
-    },
+      rating: 5;
+},
     {
       name: "Michael Chen",
       company: "DataFlow Systems",
       role: "CEO",
       content: "Their cloud migration service was flawless. Zero downtime and improved performance across all systems.",
-      rating: 5
-    },
+      rating: 5;
+},
     {
       name: "Emily Rodriguez",
       company: "InnovateLabs",
       role: "Head of Operations",
       content: "The AI automation tools have revolutionized our workflows. Highly recommend their services.",
-      rating: 5
-    }
+      rating: 5;
+}
   ];
 
   return (
@@ -121,14 +121,14 @@ const ServicesPage: React.FC = () => {
                             <li key={featureIndex} className="flex items-center space-x-2 text-sm text-gray-400">
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
                               <span>{feature}</span>
-                            </li>
-                          ))}
+                            </li>;
+))}
                         </ul>
-                      </div>
-                    ))}
+                      </div>;
+))}
                   </div>
-                </div>
-              ))}
+                </div>;
+))}
             </div>
           </div>
         </section>
@@ -144,16 +144,16 @@ const ServicesPage: React.FC = () => {
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />;
+))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
                     <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>
                   </div>
-                </div>
-              ))}
+                </div>;
+))}
             </div>
           </div>
         </section>
@@ -179,8 +179,8 @@ const ServicesPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>
-  );
+    </>;
+);
 };
 
 export default ServicesPage;

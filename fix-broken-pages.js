@@ -16,8 +16,8 @@ export default function ${pageName}() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>;
+);
 }`;
 
 // List of broken AI pages to fix

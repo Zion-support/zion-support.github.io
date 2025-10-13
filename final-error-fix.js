@@ -89,8 +89,8 @@ const ${pageName}: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default ${pageName};`;
@@ -116,8 +116,8 @@ function hasSyntaxErrors(filePath) {
     
     return errorPatterns.some(pattern => pattern.test(content));
   } catch (error) {
-    return true; // If we can't read the file, consider it broken
-  }
+    return true; // If we can't read the file, consider it broken;
+}
 }
 
 // Function to fix a file
@@ -169,7 +169,7 @@ console.log(`Found ${errorFiles.length} files with errors`);
 
 // Filter to only .tsx files in the app directory
 const tsxErrorFiles = errorFiles.filter(file => 
-  file.includes('app/') && file.endsWith('.tsx')
+  file.includes('app/') && file.endsWith('.tsx');
 );
 
 console.log(`Found ${tsxErrorFiles.length} .tsx files with errors`);

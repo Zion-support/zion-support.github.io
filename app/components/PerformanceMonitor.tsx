@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
 // Type definitions for browser APIs
 declare global {
   interface PerformanceObserver {
     observe(options: { entryTypes: string[] }): void;
     disconnect(): void;
   }
-=======
 
 
 import React, { useEffect, useState } from 'react';
@@ -19,52 +12,53 @@ import React, { useEffect, useState } from 'react';
 // Extend the global PerformanceEntry interface
 declare global {
   interface PerformanceEntry {
-    // This extends the built-in PerformanceEntry
-  }
+
+    // This extends the built-in PerformanceEntry;
+
+} catch (error) {
+  console.error('Error:', error);
+  res.status(500).json({ error: 'Internal server error' });
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
+}
 
 // Type definitions for browser APIs
 declare global {
   interface PerformanceNavigationTiming extends PerformanceEntry {
+
     requestStart: number;
     responseStart: number;
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const PerformanceObserver: {
-    new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
-  };
-  const performance: {
-    getEntriesByType(type: string): PerformanceEntry[];
-  };
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
+  
+} catch (error) {
+  console.error('Error:', error);
+  res.status(500).json({ error: 'Internal server error' });
+}
 }
 import React, { useEffect, useState } from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
   interface PerformanceEntry {
+
     name: string;
     entryType: string;
     startTime: number;
     duration: number;
-  }
+  
+} catch (error) {
+  console.error('Error:', error);
+  res.status(500).json({ error: 'Internal server error' });
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
+}
   
   interface PerformanceEntry {
+
     name: string;
     entryType: string;
     startTime: number;
     duration: number;
-  }
+  
+} catch (error) {
+  console.error('Error:', error);
+  res.status(500).json({ error: 'Internal server error' });
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
+}
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;
@@ -78,8 +72,8 @@ const PerformanceMonitor: React.FC = () => {
     lcp: null,
     fid: null,
     cls: null,
-    ttfb: null,
-  });
+    ttfb: null,;
+});
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor Core Web Vitals
@@ -93,19 +87,6 @@ const PerformanceMonitor: React.FC = () => {
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
           } else if (entry.entryType === 'first-input') {
             const inputEntry = entry as any;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-            if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-            }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
 
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
@@ -115,16 +96,11 @@ const PerformanceMonitor: React.FC = () => {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-          } else if (entry.entryType === 'layout-shift') {
+;
+} else if (entry.entryType === 'layout-shift') {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
           }
         }
@@ -153,8 +129,8 @@ const PerformanceMonitor: React.FC = () => {
         <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
         <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
       </div>
-    </div>
-  );
+    </div>;
+);
 };
 export default PerformanceMonitor;
 

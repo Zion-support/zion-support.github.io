@@ -13,7 +13,7 @@ export default function handler(req, res) {
       timestamp,
       userAgent,
       url
-    });
+});
     // Log error details (in production you would send this to your monitoring service)
     // In a real application, you would:
     // 1. Send to Sentry, LogRocket, Bugsnag, etc.
@@ -22,30 +22,12 @@ export default function handler(req, res) {
     console.log('Error report received:', {
       error: req.body.error,
       timestamp: new Date().toISOString()
-    });
+});
     res.status(200).json({ success: true });
   } catch (error) {
     console.error('Error processing error report:', error);
     res.status(500).json({ error: 'Failed to process error report' });
   }
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
 
-  } catch (_error) { // eslint-disable-line no-unused-vars
-    // console.error('Error reporting error:', error);
-    // console.error removed for production
-    res.status(500).json({ error: 'Internal server error' });
-  }
 
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341

@@ -82,8 +82,8 @@ const ResponsiveGrid: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default ResponsiveGrid;

@@ -89,8 +89,8 @@ const ${pageName}: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>
-  );
+    </div>;
+);
 };
 
 export default ${pageName};`;
@@ -125,8 +125,8 @@ function fixBrokenFile(filePath) {
             files.push(fullPath);
           }
         } catch (error) {
-          // Skip files that can't be read
-        }
+          // Skip files that can't be read;
+}
       }
     }
   }
@@ -166,4 +166,4 @@ try {
   errorLines.forEach(line => console.log(`  ${line}`));
 }
 
-console.log('\nBroken file repair complete!');
+console.log('\nBroken file repair complete!');)))

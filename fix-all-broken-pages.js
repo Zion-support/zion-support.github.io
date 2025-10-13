@@ -17,8 +17,8 @@ export default function ${pageName}() {
           This page is under development.
         </p>
       </div>
-    </div>
-  );
+    </div>;
+);
 }`;
 
 // Get all TypeScript/JSX files in the app directory
@@ -40,8 +40,8 @@ function getAllPageFiles(dir) {
         }
       }
     } catch (error) {
-      // Skip directories that can't be read
-    }
+      // Skip directories that can't be read;
+}
   }
   
   walkDir(dir);
@@ -53,12 +53,12 @@ function hasSyntaxErrors(filePath) {
   try {
     const result = execSync(`npx tsc --noEmit --skipLibCheck ${filePath}`, { 
       encoding: 'utf8',
-      stdio: 'pipe'
-    });
-    return false; // No errors
-  } catch (error) {
-    return true; // Has errors
-  }
+      stdio: 'pipe';
+});
+    return false; // No errors;
+} catch (error) {
+    return true; // Has errors;
+}
 }
 
 console.log('Finding and fixing all broken pages...');

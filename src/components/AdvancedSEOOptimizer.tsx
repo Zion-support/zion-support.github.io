@@ -19,7 +19,7 @@ interface AdvancedSEOOptimizerProps {
 
 const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
   seoData,
-  children
+  children;
 }) => {
   const {
     title,
@@ -28,8 +28,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     canonicalUrl,
     ogImage,
     noIndex = false,
-    structuredData
-  } = seoData;
+    structuredData;
+} = seoData;
 
   const baseStructuredData = {
     "@context": "https://schema.org",
@@ -41,8 +41,8 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
-      "contactType": "customer service"
-    }
+      "contactType": "customer service";
+}
   };
 
   const finalStructuredData = structuredData || baseStructuredData;

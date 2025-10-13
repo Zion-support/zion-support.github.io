@@ -38,8 +38,8 @@ const Navigation: React.FC = () => {
                             <Link
                               to={`/${category.title.toLowerCase().replace(' ', '-')}`}
                     <Link
-                      to="/services"
-              )}
+                      to="/services";
+)}
           {/* Contact Info */}
           <div className="hidden lg:flex items-center space-x-4">
             <Link 
@@ -85,9 +85,11 @@ const Navigation: React.FC = () => {
                   onClick={closeAllMenus}
                 >
                   <Phone className="w-4 h-4 inline mr-2" />
-                  (302) 464-0950
-        )}
+                  (302) 464-0950;
+)}
   );
 };
 
 export default Navigation;
+
+</div></div>
