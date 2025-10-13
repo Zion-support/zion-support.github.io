@@ -12,51 +12,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
       const existingScript = document.querySelector('script[type="application/ld+json"]');
       if (existingScript) return;
 
-      const structuredData = {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Zion Tech Group",
-        "url": "https://ziontechgroup.com",
-        "logo": "https://ziontechgroup.com/logo.svg",
-        "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
-        "foundingDate": "2020",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "364 E Main St STE 1008",
-          "addressLocality": "Middletown",
-          "addressRegion": "DE",
-          "postalCode": "19709",
-          "addressCountry": "US"
-        },
-        "contactPoint": {
-          "@type": "ContactPoint",
-          "telephone": "+1-302-464-0950",
-          "contactType": "customer service",
-          "email": "kleber@ziontechgroup.com"
-        },
-        "sameAs": [
-          "https://twitter.com/ziontechgroup",
-          "https://linkedin.com/company/ziontechgroup"
-        ],
-        "offers": [
-          {
-            "@type": "Offer",
-            "name": "AI Solutions",
-            "description": "Artificial intelligence and machine learning services"
-          },
-          {
-            "@type": "Offer",
-            "name": "Cybersecurity",
-            "description": "Advanced cybersecurity solutions and protection"
-          },
-          {
-            "@type": "Offer",
-            "name": "Cloud Infrastructure",
-            "description": "Cloud computing and infrastructure services"
-          }
-        ]
-      };
-
       const script = document.createElement('script');
       script.type = 'application/ld+json';
       script.textContent = JSON.stringify(structuredData);
