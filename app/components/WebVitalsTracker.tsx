@@ -1,16 +1,23 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 const WebVitalsTracker: React.FC = () => {
-  useEffect(() => {
-    // Web Vitals tracking logic
-    if (typeof window !== 'undefined') {
-      // Track Core Web Vitals
-      const trackWebVitals = () => {
-        // This would typically integrate with analytics
-        console.log('Web Vitals tracking initialized');
-      };
+  React.useEffect(() => {
+    // Basic web vitals tracking
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const observer = new PerformanceObserver((list) => {
+        for (const entry of list.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            console.log('LCP:', entry.startTime);
+          }
+          if (entry.entryType === 'first-input') {
+            console.log('FID:', entry.processingStart - entry.startTime);
+          }
+        }
+      });
       
-      trackWebVitals();
+      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input'] });
+      
+      return () => observer.disconnect();
     }
   }, []);
 

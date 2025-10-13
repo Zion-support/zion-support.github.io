@@ -5,6 +5,13 @@ interface AnalyticsProviderProps {
 }
 
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  React.useEffect(() => {
+    // Basic analytics setup
+    if (typeof window !== 'undefined') {
+      console.log('Analytics initialized');
+    }
+  }, []);
+
   return <>{children}</>;
 };
 
