@@ -25,7 +25,9 @@ import {
   Users,
   Award,
   Clock,
-  CheckCircle
+  CheckCircle,
+  DollarSign,
+  Play
 } from 'lucide-react';
 
 const ImprovedNavigation = () => {
@@ -438,6 +440,36 @@ const ImprovedNavigation = () => {
           href: '/zion-ai-testing-automation',
           description: 'Automated testing',
           icon: <CheckCircle className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Meeting Transcriber Pro', 
+          href: '/zion-ai-meeting-transcriber-pro',
+          description: 'Real-time meeting transcription',
+          icon: <Users className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Email Optimizer Pro', 
+          href: '/zion-ai-email-optimizer-pro',
+          description: 'AI-powered email optimization',
+          icon: <Mail className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Social Media Scheduler Pro', 
+          href: '/zion-ai-social-media-scheduler-pro',
+          description: 'AI social media management',
+          icon: <Globe className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Expense Tracker Pro', 
+          href: '/zion-ai-expense-tracker-pro',
+          description: 'AI expense management',
+          icon: <BarChart3 className="w-4 h-4" />
+        },
+        { 
+          label: 'Zion AI Website Optimizer Pro', 
+          href: '/zion-ai-website-optimizer-pro',
+          description: 'AI website optimization',
+          icon: <Settings className="w-4 h-4" />
         },
         { 
           label: 'View All Micro SAAS', 

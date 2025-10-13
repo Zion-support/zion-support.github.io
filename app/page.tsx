@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Mic, Share2, Receipt } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
+import EnhancedFuturisticBackground from "./components/EnhancedFuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";
@@ -136,13 +137,53 @@ const HomePage = () => {
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
       featured: true
+    },
+    {
+      name: "Zion AI Meeting Transcriber Pro",
+      description: "Real-time meeting transcription with AI-powered summarization and speaker identification",
+      price: "From $29/month",
+      icon: <Mic className="w-6 h-6" />,
+      link: "/zion-ai-meeting-transcriber-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Email Optimizer Pro",
+      description: "AI-powered email marketing optimization with subject line generation and send time optimization",
+      price: "From $49/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/zion-ai-email-optimizer-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Social Media Scheduler Pro",
+      description: "AI-powered social media management with content generation and smart scheduling",
+      price: "From $39/month",
+      icon: <Share2 className="w-6 h-6" />,
+      link: "/zion-ai-social-media-scheduler-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Expense Tracker Pro",
+      description: "AI-powered expense tracking with receipt scanning and smart categorization",
+      price: "From $19/month",
+      icon: <Receipt className="w-6 h-6" />,
+      link: "/zion-ai-expense-tracker-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Website Optimizer Pro",
+      description: "AI-powered website optimization with performance analysis and SEO optimization",
+      price: "From $79/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-website-optimizer-pro",
+      featured: true
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "80+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -172,7 +213,7 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <FuturisticBackground />
+      <EnhancedFuturisticBackground />
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI & IT Solutions | Transform Your Business"
         description="Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation. Expert technology consulting for modern businesses. Get started today!"
@@ -297,7 +338,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}

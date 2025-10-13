@@ -12,9 +12,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = false
-}) => {
-  useEffect(() => {
-<<<<<<< HEAD
+  }) => {
+    useEffect(() => {
     // Skip to main content functionality
     const addSkipLink = () => {
       const skipLink = document.createElement('a');
@@ -351,58 +350,3 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 };
 
 export default AccessibilityEnhancer;
-<<<<<<< HEAD
-=======
-export default AccessibilityEnhancer
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  useEffect(() => {
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
-    // Add accessibility enhancements
-    if (enableKeyboardNavigation) {
-      // Add keyboard navigation support
-      document.addEventListener('keydown', handleKeyboardNavigation);
-    }
-
-    if (enableScreenReader) {
-      // Add screen reader support
-      document.body.setAttribute('aria-live', 'polite');
-    }
-
-    if (enableHighContrast) {
-      // Add high contrast mode
-      document.body.classList.add('high-contrast');
-    }
-
-    return () => {
-      if (enableKeyboardNavigation) {
-        document.removeEventListener('keydown', handleKeyboardNavigation);
-      }
-      if (enableHighContrast) {
-        document.body.classList.remove('high-contrast');
-      }
-    };
-  }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast]);
-
-  const handleKeyboardNavigation = (event: KeyboardEvent) => {
-    // Handle keyboard navigation
-    if (event.key === 'Tab') {
-      // Ensure focus is visible
-      document.body.classList.add('keyboard-navigation');
-    }
-  };
-
-  return <>{children}</>;
-};
-
-export default AccessibilityEnhancer;
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
