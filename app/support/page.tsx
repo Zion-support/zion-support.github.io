@@ -73,7 +73,7 @@ const SupportPage: React.FC = () => {
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We&apos;re here to help! Get support for our AI and IT solutions through multiple channels.
+              We're here to help! Get support for our AI and IT solutions through multiple channels.
             </p>
           </div>
         </section>

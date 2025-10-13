@@ -1,16 +1,8 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
 export default function ZionAIEmailAnalyzer() {
   return (
@@ -74,7 +66,3 @@ export default function ZionAIEmailAnalyzer() {
           </div>
   );
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c

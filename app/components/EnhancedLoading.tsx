@@ -48,10 +48,6 @@ const EnhancedLoading: React.FC = () => {
                 </li>
               </ul>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
             <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg p-8 text-white">
               <h3 className="text-2xl font-bold mb-4">Get Started</h3>
               <p className="mb-6">
@@ -63,27 +59,10 @@ const EnhancedLoading: React.FC = () => {
               >
                 Contact Us
               </a>
-<<<<<<< HEAD
-=======
-            <div className="bg-gray-100 rounded-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Get Started</h3>
-              <p className="text-gray-600 mb-6">
-                Contact us today to learn more about our enhanced loading services.
-              </p>
-              <button className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                Contact Us
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
             </div>
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
 
       {/* CTA Section */}
       <section className="py-16 px-4 bg-blue-600">
@@ -103,11 +82,6 @@ const EnhancedLoading: React.FC = () => {
           </a>
         </div>
       </section>
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
     </div>
   );
 };

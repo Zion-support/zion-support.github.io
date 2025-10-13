@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -14,6 +10,7 @@ interface SEOEnhancerProps {
   type?: string;
   structuredData?: any;
 }
+
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, automation, and digital innovation.',
@@ -38,6 +35,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     }
     return undefined;
   }, [structuredData]);
+
   // Generate meta tags
   const metaTags = [
     { name: 'description', content: description },
@@ -63,6 +61,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
     { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
   ];
+
   return (
     <Helmet>
       <title>{title}</title>
@@ -85,6 +84,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     </Helmet>
   );
 };
+
 // Default structured data for the organization
 export const defaultStructuredData = {
   "@context": "https://schema.org",
@@ -113,8 +113,5 @@ export const defaultStructuredData = {
     "addressCountry": "US"
   }
 };
-export default SEOEnhancer;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
+export default SEOEnhancer;
