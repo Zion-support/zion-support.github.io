@@ -71,10 +71,14 @@ const AdvancedPerformanceMonitor: React.FC = () => {
         })
       } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         console.error('Failed to measure web vitals:', error);
 =======
         console.warn('Performance monitoring error:', error);
 >>>>>>> cursor/fix-errors-and-merge-to-main-3db5
+=======
+        console.warn('Performance monitoring error:', error);
+>>>>>>> cursor/website-audit-and-update-with-deployment-6e33
       }
     }
 
@@ -120,10 +124,14 @@ const AdvancedPerformanceMonitor: React.FC = () => {
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
 <<<<<<< HEAD
+<<<<<<< HEAD
         console.log(`Performance Metric: ${name} = ${value}`);
 =======
         console.log('Performance metric:', { name, value, timestamp: Date.now() });
 >>>>>>> cursor/fix-errors-and-merge-to-main-3db5
+=======
+        console.log('Performance metric:', { name, value, timestamp: Date.now() });
+>>>>>>> cursor/website-audit-and-update-with-deployment-6e33
       }
     }
 

@@ -11,10 +11,14 @@ const CacheManager = () => {
           console.log('Service Worker registered:', registration);
         } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
           console.error('Service Worker registration failed:', error);
 =======
           console.warn('Service Worker registration failed:', error);
 >>>>>>> cursor/fix-errors-and-merge-to-main-3db5
+=======
+          console.warn('Service Worker registration failed:', error);
+>>>>>>> cursor/website-audit-and-update-with-deployment-6e33
         }
       }
     }
@@ -39,10 +43,14 @@ const CacheManager = () => {
           console.log('Static assets cached successfully');
         } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
           console.error('Failed to cache static assets:', error);
 =======
           console.warn('Failed to cache static assets:', error);
 >>>>>>> cursor/fix-errors-and-merge-to-main-3db5
+=======
+          console.warn('Failed to cache static assets:', error);
+>>>>>>> cursor/website-audit-and-update-with-deployment-6e33
         }
       }
 
@@ -59,10 +67,14 @@ const CacheManager = () => {
           return response
         } catch (error) {
 <<<<<<< HEAD
+<<<<<<< HEAD
           console.error('Cache API error:', error);
 =======
           console.warn('Cache API error:', error);
 >>>>>>> cursor/fix-errors-and-merge-to-main-3db5
+=======
+          console.warn('Cache API error:', error);
+>>>>>>> cursor/website-audit-and-update-with-deployment-6e33
           return fetch(request);
         }
       }
