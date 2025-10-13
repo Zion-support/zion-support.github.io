@@ -2,9 +2,11 @@
 
 export interface performanceUtilsConfig {
   enabled: boolean;
-// Utility functions;
+}
+
+// Utility functions
 export function utilityFunction() {
-  // Implementation here;
+  // Implementation here
   return null;
 }
 
@@ -27,54 +29,6 @@ export class performanceUtils {
 
 export const performanceutils = new performanceUtils();
 export default performanceutils;
-export default utilityFunction;
-  optimizeImages() {
-    // Lazy load images
-    if ('IntersectionObserver' in window) {
-      const imageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement;
-            if (img.dataset.src) {
-              img.src = img.dataset.src;
-              img.removeAttribute('data-src');
-              observer.unobserve(img);
-            }
-          }
-        });
-      });
-
-      document.querySelectorAll('img[data-src]').forEach(img => {
-        imageObserver.observe(img);
-      });
-    }
-  },
-
-  setupLazyLoading() {
-    // Preload critical resources
-    const criticalResources = [
-//       '/app/styles/futuristic.css',
-//       '/app/styles/futuristic-enhanced.css'
-    ];
-
-    criticalResources.forEach(resource => {
-      const link = document.createElement('link');
-      link.rel = 'preload';
-      link.href = resource;
-      link.as = 'style';
-      document.head.appendChild(link);
-    });
-  },
-
-  cleanup() {
-    // Cleanup performance monitoring
-    if (typeof window !== 'undefined') {
-      // Remove any performance observers
-      const observers = (window as any).__performanceObservers || [];
-      observers.forEach((observer: any) => observer.disconnect());
-    }
-  }
-};
 
 // Image optimization utility
 export const optimizeImage = (src: string, width?: number, height?: number, quality = 80) => {

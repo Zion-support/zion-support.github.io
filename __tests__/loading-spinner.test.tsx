@@ -27,9 +27,5 @@ describe('LoadingSpinner Component', () => {
   it('renders children', () => {
     render(<LoadingSpinner>Test content</LoadingSpinner>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
-// Mock test for loading spinner
-describe('Loading Spinner', () => {
-  it('should render without crashing', () => {
-    expect(true).toBe(true);
   });
 });

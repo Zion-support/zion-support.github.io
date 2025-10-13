@@ -2,9 +2,11 @@
 
 export interface accessibilityUtilsConfig {
   enabled: boolean;
-// Utility functions;
+}
+
+// Utility functions
 export function utilityFunction() {
-  // Implementation here;
+  // Implementation here
   return null;
 }
 

@@ -134,13 +134,15 @@ interface App_cleanProps {
 
 export default function App_clean({ className = '', children }: App_cleanProps) {
   return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-  </div>
+    <>
+      <div className={`${className}`}>
+        {children}
+      </div>
+      <div>
+        <h1>Component</h1>
+        <p>This component is under construction.</p>
+      </div>
+    </>
   );
 }
   return (

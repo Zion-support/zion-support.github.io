@@ -3,9 +3,11 @@
 
 export interface seoUtilsConfig {
   enabled: boolean;
-// Utility functions;
+}
+
+// Utility functions
 export function utilityFunction() {
-  // Implementation here;
+  // Implementation here
   return null;
 }
 
@@ -200,16 +202,16 @@ export class SEOOptimizer {
 //         'https://linkedin.com/company/ziontechgroup'
 //       ],
 //       foundingDate: '2020',
-//       numberOfEmployees: '10-50',
+      numberOfEmployees: '10-50',
       industry: 'Information Technology',
-//       knowsAbout: [
+      knowsAbout: [
         'Artificial Intelligence',
-//         'Cybersecurity',
-//         'Cloud Computing',
+        'Cybersecurity',
+        'Cloud Computing',
         'Digital Transformation',
-//         'Micro SAAS',
-//         '5G Technology'
-//       ]
+        'Micro SAAS',
+        '5G Technology'
+      ]
     };
   }
 
@@ -356,16 +358,16 @@ Disallow: /static/`;
       title: this.generateTitle(data.title),
 //       description: data.description,
       keywords: data.keywords.join(', '),
-//       canonical: data.canonical,
-//       robots: [
-//         data.noindex ? 'noindex' : 'index',
-//         data.nofollow ? 'nofollow' : 'follow',
-//         'max-snippet:-1',
-//         'max-image-preview:large',
-//         'max-video-preview:-1'
+      canonical: data.canonical,
+      robots: [
+        data.noindex ? 'noindex' : 'index',
+        data.nofollow ? 'nofollow' : 'follow',
+        'max-snippet:-1',
+        'max-image-preview:large',
+        'max-video-preview:-1'
       ].join(', '),
-//       ...ogData,
-//       ...twitterData
+      ...ogData,
+      ...twitterData
     };
   }
 }

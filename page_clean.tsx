@@ -69,7 +69,7 @@ const HomePage = () => {
     ]
   };
   const features = [
-    {,
+    {
     title: "AI-Powered Solutions",
         description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics",
         icon: <Brain className="w-8 h-8" />,
@@ -77,7 +77,7 @@ const HomePage = () => {
         stats: "40% efficiency boost",
         link: "/ai-services"
     },
-    {,
+    {
     title: "IT Services",
         description: "Comprehensive technology solutions including cloud infrastructure, cybersecurity, and digital transformation for modern businesses",
         icon: <Shield className="w-8 h-8" />,
@@ -85,7 +85,7 @@ const HomePage = () => {
         stats: "99.9% uptime SLA",
         link: "/services"
     },
-    {,
+    {
     title: "Micro SAAS",
         description: "Ready-to-use software solutions for immediate deployment including analytics, security, and productivity tools",
         icon: <Zap className="w-8 h-8" />,
@@ -93,7 +93,7 @@ const HomePage = () => {
         stats: "50+ solutions",
         link: "/micro-saas"
     },
-    {,
+    {
     title: "5G Solutions",
         description: "Next-generation connectivity and infrastructure services for IoT, edge computing, and smart city implementations",
         icon: <Globe className="w-8 h-8" />,
@@ -104,7 +104,7 @@ const HomePage = () => {
   ];
 
   const microSaasHighlights = [
-    {,
+    {
     name: "Zion AI Meeting Transcriber",
         description: "Real-time meeting transcription with 99.5% accuracy, speaker identification, and automatic action item extraction",
         price: "From $19/month",
@@ -112,7 +112,7 @@ const HomePage = () => {
         link: "/zion-ai-meeting-transcriber",
         featured: true
     },
-    {,
+    {
     name: "Zion AI Sales Predictor",
         description: "AI-powered sales forecasting with 95% accuracy, lead scoring, and customer behavior prediction",
         price: "From $39/month",
@@ -120,7 +120,7 @@ const HomePage = () => {
         link: "/zion-ai-sales-predictor",
         featured: true
     },
-    {,
+    {
     name: "Zion Analytics Pro",
         description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
         price: "From $299/month",
@@ -128,7 +128,7 @@ const HomePage = () => {
         link: "/zion-analytics-pro",
         featured: true
     },
-    {,
+    {
     name: "Zion Security Shield",
         description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
         price: "From $499/month",
@@ -136,7 +136,7 @@ const HomePage = () => {
         link: "/zion-security-shield",
         featured: true
     },
-    {,
+    {
     name: "Zion Cloud Vault",
         description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
         price: "From $99/month",
@@ -144,7 +144,7 @@ const HomePage = () => {
         link: "/zion-cloud-vault",
         featured: true
     },
-    {,
+    {
     name: "Zion AI CRM Pro",
         description: "AI-powered customer relationship management with intelligent lead scoring and automation",
         price: "From $199/month",
@@ -162,21 +162,21 @@ const HomePage = () => {
   ];
 
   const testimonials = [
-    {,
+    {
     name: "Sarah Johnson",
         company: "TechStart Inc.",
         role: "CEO",
         content: "Zion Tech Group transformed our entire technology stack. The AI solutions increased our productivity by 60% in just 3 months.",
         rating: 5
     },
-    {,
+    {
     name: "Michael Chen",
         company: "E-commerce Solutions",
         role: "CTO",
         content: "The micro SAAS solutions are incredibly powerful and easy to implement. We've saved thousands of hours with their automation tools.",
         rating: 5
     },
-    {,
+    {
     name: "Emily Rodriguez",
         company: "Digital Marketing Agency",
         role: "Operations Director",

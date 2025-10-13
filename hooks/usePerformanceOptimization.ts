@@ -1,9 +1,4 @@
 // Performance optimization hook
-export default function usePerformanceOptimization() {
-  // Hook implementation would go here
-  return {};
-}
-}
 import { useEffect, useCallback, useRef } from 'react';
 
 interface PerformanceOptimizationOptions {
