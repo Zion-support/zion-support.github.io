@@ -188,6 +188,33 @@ export class GlobalErrorBoundary extends React.Component<
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
   };
+};
+
+// Error Boundary Class Component
+class GlobalErrorBoundary extends React.Component<
+  { children: React.ReactNode },
+  { hasError: boolean; error?: Error }
+> {
+  constructor(props: { children: React.ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError(error: Error) {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+  }
+
+  handleRetry = () => {
+    this.setState({ hasError: false, error: undefined });
+  };
+
+  handleReport = (error: Error) => {
+    console.error('Error reported:', error);
+  };
 
   render() {
     if (this.state.hasError) {
