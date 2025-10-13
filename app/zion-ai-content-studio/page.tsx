@@ -1,101 +1,101 @@
-import { ArrowRight, Target, Zap, BarChart3, Mail, Users, CheckCircle, Star, Brain, TrendingUp, Globe, Smartphone } from "lucide-react";
+import { ArrowRight, PenTool, Brain, Zap, Target, CheckCircle, Star, FileText, Image, Video, Globe } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAiMarketingAutomation() {
+export default function ZionAiContentStudio() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Campaigns",
-      description: "Intelligent marketing automation that learns from customer behavior and optimizes campaigns in real-time"
+      title: "AI Content Generation",
+      description: "Create high-quality content in seconds with advanced AI that understands your brand voice and tone"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Advanced Segmentation",
-      description: "Create hyper-targeted audiences using AI-driven customer insights and behavioral data"
+      title: "SEO Optimization",
+      description: "Automatically optimize content for search engines with AI-powered keyword research and optimization"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Set up complex marketing workflows that trigger based on customer actions and engagement patterns"
+      title: "Multi-Format Creation",
+      description: "Generate blogs, social media posts, emails, ads, and more from a single content brief"
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Forecast customer lifetime value, churn probability, and campaign performance with AI models"
+      icon: <Image className="w-6 h-6" />,
+      title: "Visual Content AI",
+      description: "Create stunning images, infographics, and visual content with AI-powered design tools"
     },
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Smart Email Marketing",
-      description: "AI-optimized email campaigns with personalized content, send times, and subject lines"
+      icon: <Video className="w-6 h-6" />,
+      title: "Video Script Generation",
+      description: "Generate engaging video scripts, storyboards, and content for social media and marketing"
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Channel Orchestration",
-      description: "Coordinate campaigns across email, social media, SMS, and web channels seamlessly"
+      title: "Multi-Language Support",
+      description: "Create content in 50+ languages with native-level quality and cultural adaptation"
     }
   ];
 
-  const automationFeatures = [
-    "Email Marketing Automation",
-    "Social Media Scheduling",
-    "SMS Marketing Campaigns",
-    "Lead Nurturing Sequences",
-    "Customer Journey Mapping",
-    "A/B Testing & Optimization",
-    "Behavioral Triggers",
-    "Dynamic Content Personalization",
-    "Cross-Channel Attribution",
-    "ROI Tracking & Analytics",
-    "CRM Integration",
-    "Webinar & Event Automation"
+  const contentTypes = [
+    "Blog Posts & Articles",
+    "Social Media Content",
+    "Email Marketing Campaigns",
+    "Product Descriptions",
+    "Ad Copy & Headlines",
+    "Press Releases",
+    "White Papers & E-books",
+    "Video Scripts",
+    "Podcast Show Notes",
+    "Landing Page Copy",
+    "Email Sequences",
+    "Social Media Captions"
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$39",
+      name: "Creator",
+      price: "$19",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individual creators",
       features: [
-        "Up to 1,000 contacts",
-        "Basic email automation",
-        "Social media scheduling",
+        "50 AI-generated pieces/month",
+        "Basic templates",
+        "Standard image generation",
         "Email support",
-        "Standard templates",
-        "Basic analytics"
+        "1 brand voice profile",
+        "Basic SEO optimization"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$49",
       period: "/month",
-      description: "Most popular for growing teams",
+      description: "Most popular for content teams",
       features: [
-        "Up to 10,000 contacts",
-        "Advanced automation",
-        "AI-powered personalization",
+        "200 AI-generated pieces/month",
+        "Advanced templates",
+        "Premium image generation",
         "Priority support",
-        "Custom workflows",
-        "Advanced analytics",
-        "Multi-channel campaigns"
+        "5 brand voice profiles",
+        "Advanced SEO tools",
+        "Team collaboration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$149",
       period: "/month",
-      description: "For large organizations",
+      description: "For large content teams",
       features: [
-        "Unlimited contacts",
-        "Full AI suite",
-        "Custom integrations",
+        "Unlimited AI generation",
+        "Custom templates",
+        "Video script generation",
         "24/7 phone support",
+        "Unlimited brand voices",
         "White-label solution",
-        "Dedicated account manager",
-        "Advanced compliance"
+        "API access"
       ],
       popular: false
     }
@@ -103,24 +103,24 @@ export default function ZionAiMarketingAutomation() {
 
   const testimonials = [
     {
-      name: "Rachel Green",
-      company: "Digital Marketing Agency",
-      role: "Marketing Director",
-      content: "Zion AI Marketing Automation has transformed our client campaigns. We've seen a 300% increase in email open rates and 150% improvement in conversion rates.",
+      name: "Jessica Martinez",
+      company: "Content Marketing Agency",
+      role: "Content Director",
+      content: "Zion AI Content Studio has revolutionized our content creation process. We're producing 3x more content with higher quality and better engagement rates.",
       rating: 5
     },
     {
-      name: "Tom Wilson",
-      company: "E-commerce Platform",
-      role: "Growth Marketing Manager",
-      content: "The AI personalization is incredible. Our customers receive highly relevant content that feels like it was written just for them. Our revenue has increased by 85%.",
+      name: "David Park",
+      company: "E-commerce Brand",
+      role: "Marketing Manager",
+      content: "The AI understands our brand voice perfectly. It's like having a team of expert writers available 24/7. Our content ROI has increased by 80%.",
       rating: 5
     },
     {
-      name: "Amanda Lee",
-      company: "SaaS Company",
-      role: "VP of Marketing",
-      content: "This platform has revolutionized our marketing operations. The automation saves us 20+ hours per week while delivering better results than our previous tools.",
+      name: "Lisa Thompson",
+      company: "SaaS Startup",
+      role: "Head of Marketing",
+      content: "This tool is a game-changer for content marketing. The SEO optimization features alone have doubled our organic traffic in 3 months.",
       rating: 5
     }
   ];
@@ -128,45 +128,45 @@ export default function ZionAiMarketingAutomation() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Marketing Automation - Intelligent Marketing Platform | Zion Tech Group</title>
+        <title>Zion AI Content Studio - AI-Powered Content Creation Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your marketing with Zion AI Marketing Automation - the ultimate AI-powered marketing platform. Email automation, social media, personalization, and multi-channel campaigns."
+          content="Create high-quality content at scale with Zion AI Content Studio - the ultimate AI-powered content creation platform. Generate blogs, social media, emails, and more with advanced AI."
         />
         <meta
           name="keywords"
-          content="marketing automation, AI marketing, email automation, social media automation, marketing platform, customer segmentation, personalization, marketing analytics"
+          content="AI content creation, content marketing, AI writing, content generation, SEO content, social media content, content automation, AI copywriting"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 mb-6">
-              <Target className="w-4 h-4 text-emerald-400 mr-2" />
-              <span className="text-emerald-400 text-sm font-medium">AI-Powered Marketing Intelligence</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 mb-6">
+              <PenTool className="w-4 h-4 text-pink-400 mr-2" />
+              <span className="text-pink-400 text-sm font-medium">AI-Powered Content Creation</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-                Zion AI Marketing Automation
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+                Zion AI Content Studio
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Automate your marketing with the world's most intelligent marketing platform. 
-              AI-powered personalization, multi-channel campaigns, and predictive analytics for modern businesses.
+              Create high-quality content at scale with the world's most advanced AI content creation platform. 
+              Generate blogs, social media posts, emails, and more with intelligent automation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -175,16 +175,16 @@ export default function ZionAiMarketingAutomation() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-2">300%</div>
-                <div className="text-gray-300">Average Open Rate Increase</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">10M+</div>
+                <div className="text-gray-300">Pieces Generated</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">150%</div>
-                <div className="text-gray-300">Conversion Rate Improvement</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+                <div className="text-gray-300">Content Quality Score</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50,000+</div>
-                <div className="text-gray-300">Marketers Using AI</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
+                <div className="text-gray-300">Languages Supported</div>
               </div>
             </div>
           </div>
@@ -195,10 +195,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Intelligent Marketing Features
+                Powerful Content Creation Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to automate and optimize your marketing campaigns with AI.
+                Everything you need to create, optimize, and scale your content marketing efforts.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -207,7 +207,7 @@ export default function ZionAiMarketingAutomation() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -222,25 +222,25 @@ export default function ZionAiMarketingAutomation() {
           </div>
         </section>
 
-        {/* Automation Features List */}
+        {/* Content Types List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Marketing Automation Suite
+                Create Any Type of Content
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the tools you need to automate your entire marketing funnel.
+                From blog posts to social media content, our AI can create everything you need.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {automationFeatures.map((feature, index) => (
+              {contentTypes.map((type, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
+                  <span className="text-gray-300">{type}</span>
                 </div>
               ))}
             </div>
@@ -252,10 +252,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Smart Marketing Plans
+                Flexible Content Creation Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the automation plan that fits your marketing needs. All plans include 14-day free trial.
+                Choose the plan that matches your content needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -264,13 +264,13 @@ export default function ZionAiMarketingAutomation() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-emerald-400 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10'
-                      : 'border-white/20 hover:border-emerald-400'
+                      ? 'border-pink-400 bg-gradient-to-br from-pink-500/10 to-purple-500/10'
+                      : 'border-white/20 hover:border-pink-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -295,8 +295,8 @@ export default function ZionAiMarketingAutomation() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-emerald-500 to-cyan-600 text-white hover:from-emerald-600 hover:to-cyan-700'
-                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
+                        : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -312,10 +312,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Marketing Leaders
+                Trusted by Content Creators
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what marketing professionals say about Zion AI Marketing Automation
+                See what content creators say about Zion AI Content Studio
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -344,22 +344,22 @@ export default function ZionAiMarketingAutomation() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Marketing?
+              Ready to Scale Your Content Creation?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of marketers using Zion AI Marketing Automation to drive better results.
+              Join thousands of content creators using Zion AI Content Studio to produce better content faster.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>

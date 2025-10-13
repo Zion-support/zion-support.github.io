@@ -1,101 +1,101 @@
-import { ArrowRight, Target, Zap, BarChart3, Mail, Users, CheckCircle, Star, Brain, TrendingUp, Globe, Smartphone } from "lucide-react";
+import { ArrowRight, TrendingUp, DollarSign, Shield, BarChart3, CheckCircle, Star, Brain, Calculator, PieChart, Target, AlertTriangle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAiMarketingAutomation() {
+export default function ZionAiFinancialAnalytics() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Campaigns",
-      description: "Intelligent marketing automation that learns from customer behavior and optimizes campaigns in real-time"
+      title: "AI Financial Forecasting",
+      description: "Predict future financial performance with 95% accuracy using advanced machine learning models"
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Advanced Segmentation",
-      description: "Create hyper-targeted audiences using AI-driven customer insights and behavioral data"
+      icon: <Shield className="w-6 h-6" />,
+      title: "Fraud Detection",
+      description: "Real-time fraud detection and risk assessment with AI-powered anomaly detection algorithms"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Set up complex marketing workflows that trigger based on customer actions and engagement patterns"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Investment Analysis",
+      description: "AI-driven investment recommendations and portfolio optimization for maximum returns"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Forecast customer lifetime value, churn probability, and campaign performance with AI models"
+      title: "Real-time Analytics",
+      description: "Live financial dashboards with key performance indicators and automated reporting"
     },
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Smart Email Marketing",
-      description: "AI-optimized email campaigns with personalized content, send times, and subject lines"
+      icon: <Calculator className="w-6 h-6" />,
+      title: "Automated Bookkeeping",
+      description: "AI-powered expense categorization, invoice processing, and financial statement generation"
     },
     {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Channel Orchestration",
-      description: "Coordinate campaigns across email, social media, SMS, and web channels seamlessly"
+      icon: <Target className="w-6 h-6" />,
+      title: "Compliance Monitoring",
+      description: "Automated compliance checking for GAAP, IFRS, and regulatory requirements"
     }
   ];
 
-  const automationFeatures = [
-    "Email Marketing Automation",
-    "Social Media Scheduling",
-    "SMS Marketing Campaigns",
-    "Lead Nurturing Sequences",
-    "Customer Journey Mapping",
-    "A/B Testing & Optimization",
-    "Behavioral Triggers",
-    "Dynamic Content Personalization",
-    "Cross-Channel Attribution",
-    "ROI Tracking & Analytics",
-    "CRM Integration",
-    "Webinar & Event Automation"
+  const financialFeatures = [
+    "Cash Flow Analysis",
+    "Profit & Loss Forecasting",
+    "Balance Sheet Optimization",
+    "Tax Planning & Optimization",
+    "Budget Planning & Tracking",
+    "Expense Management",
+    "Invoice Processing",
+    "Payment Tracking",
+    "Financial Reporting",
+    "Risk Assessment",
+    "Investment Tracking",
+    "Audit Preparation"
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$39",
+      name: "Basic",
+      price: "$49",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 contacts",
-        "Basic email automation",
-        "Social media scheduling",
+        "Basic financial analytics",
+        "Monthly forecasting",
+        "Expense tracking",
         "Email support",
-        "Standard templates",
-        "Basic analytics"
+        "Standard reports",
+        "1 bank account"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$149",
       period: "/month",
-      description: "Most popular for growing teams",
+      description: "Most popular for growing companies",
       features: [
-        "Up to 10,000 contacts",
-        "Advanced automation",
-        "AI-powered personalization",
+        "Advanced AI analytics",
+        "Real-time forecasting",
+        "Fraud detection",
         "Priority support",
-        "Custom workflows",
-        "Advanced analytics",
-        "Multi-channel campaigns"
+        "Custom dashboards",
+        "Multiple accounts",
+        "Investment analysis"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited contacts",
         "Full AI suite",
-        "Custom integrations",
+        "Custom models",
+        "Advanced compliance",
         "24/7 phone support",
         "White-label solution",
-        "Dedicated account manager",
-        "Advanced compliance"
+        "Dedicated analyst",
+        "API access"
       ],
       popular: false
     }
@@ -103,24 +103,24 @@ export default function ZionAiMarketingAutomation() {
 
   const testimonials = [
     {
-      name: "Rachel Green",
-      company: "Digital Marketing Agency",
-      role: "Marketing Director",
-      content: "Zion AI Marketing Automation has transformed our client campaigns. We've seen a 300% increase in email open rates and 150% improvement in conversion rates.",
+      name: "Robert Kim",
+      company: "Investment Firm",
+      role: "CFO",
+      content: "Zion AI Financial Analytics has revolutionized our financial planning. The AI forecasting is incredibly accurate and has helped us make better investment decisions.",
       rating: 5
     },
     {
-      name: "Tom Wilson",
-      company: "E-commerce Platform",
-      role: "Growth Marketing Manager",
-      content: "The AI personalization is incredible. Our customers receive highly relevant content that feels like it was written just for them. Our revenue has increased by 85%.",
+      name: "Lisa Johnson",
+      company: "Tech Startup",
+      role: "Finance Director",
+      content: "The fraud detection saved us from a major loss. The AI caught suspicious transactions that our previous system missed. Highly recommended!",
       rating: 5
     },
     {
-      name: "Amanda Lee",
-      company: "SaaS Company",
-      role: "VP of Marketing",
-      content: "This platform has revolutionized our marketing operations. The automation saves us 20+ hours per week while delivering better results than our previous tools.",
+      name: "Michael Chen",
+      company: "Manufacturing Co.",
+      role: "Controller",
+      content: "This platform has streamlined our entire financial process. The automated bookkeeping alone saves us 15 hours per week.",
       rating: 5
     }
   ];
@@ -128,45 +128,45 @@ export default function ZionAiMarketingAutomation() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Marketing Automation - Intelligent Marketing Platform | Zion Tech Group</title>
+        <title>Zion AI Financial Analytics - Intelligent Financial Management Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your marketing with Zion AI Marketing Automation - the ultimate AI-powered marketing platform. Email automation, social media, personalization, and multi-channel campaigns."
+          content="Transform your financial management with Zion AI Financial Analytics - the ultimate AI-powered financial platform. Forecasting, fraud detection, investment analysis, and automated bookkeeping."
         />
         <meta
           name="keywords"
-          content="marketing automation, AI marketing, email automation, social media automation, marketing platform, customer segmentation, personalization, marketing analytics"
+          content="AI financial analytics, financial forecasting, fraud detection, investment analysis, automated bookkeeping, financial management, AI finance, financial planning"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 mb-6">
-              <Target className="w-4 h-4 text-emerald-400 mr-2" />
-              <span className="text-emerald-400 text-sm font-medium">AI-Powered Marketing Intelligence</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
+              <DollarSign className="w-4 h-4 text-green-400 mr-2" />
+              <span className="text-green-400 text-sm font-medium">AI-Powered Financial Intelligence</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-                Zion AI Marketing Automation
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                Zion AI Financial Analytics
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Automate your marketing with the world's most intelligent marketing platform. 
-              AI-powered personalization, multi-channel campaigns, and predictive analytics for modern businesses.
+              Transform your financial management with the world's most intelligent financial analytics platform. 
+              AI-powered forecasting, fraud detection, and automated bookkeeping for modern businesses.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -175,16 +175,16 @@ export default function ZionAiMarketingAutomation() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-2">300%</div>
-                <div className="text-gray-300">Average Open Rate Increase</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
+                <div className="text-gray-300">Forecasting Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">150%</div>
-                <div className="text-gray-300">Conversion Rate Improvement</div>
+                <div className="text-3xl font-bold text-emerald-400 mb-2">99.9%</div>
+                <div className="text-gray-300">Fraud Detection Rate</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50,000+</div>
-                <div className="text-gray-300">Marketers Using AI</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">$2B+</div>
+                <div className="text-gray-300">Assets Under Management</div>
               </div>
             </div>
           </div>
@@ -195,10 +195,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Intelligent Marketing Features
+                Advanced Financial Intelligence
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to automate and optimize your marketing campaigns with AI.
+                Everything you need to manage your finances intelligently with AI-powered insights.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -207,7 +207,7 @@ export default function ZionAiMarketingAutomation() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -222,19 +222,19 @@ export default function ZionAiMarketingAutomation() {
           </div>
         </section>
 
-        {/* Automation Features List */}
+        {/* Financial Features List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Marketing Automation Suite
+                Complete Financial Management Suite
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the tools you need to automate your entire marketing funnel.
+                All the tools you need to manage your finances effectively and intelligently.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {automationFeatures.map((feature, index) => (
+              {financialFeatures.map((feature, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
@@ -252,10 +252,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Smart Marketing Plans
+                Smart Financial Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the automation plan that fits your marketing needs. All plans include 14-day free trial.
+                Choose the financial analytics plan that fits your business needs. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -264,13 +264,13 @@ export default function ZionAiMarketingAutomation() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-emerald-400 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10'
-                      : 'border-white/20 hover:border-emerald-400'
+                      ? 'border-green-400 bg-gradient-to-br from-green-500/10 to-emerald-500/10'
+                      : 'border-white/20 hover:border-green-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -295,8 +295,8 @@ export default function ZionAiMarketingAutomation() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-emerald-500 to-cyan-600 text-white hover:from-emerald-600 hover:to-cyan-700'
-                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-green-500 to-emerald-600 text-white hover:from-green-600 hover:to-emerald-700'
+                        : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -312,10 +312,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Marketing Leaders
+                Trusted by Financial Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what marketing professionals say about Zion AI Marketing Automation
+                See what financial professionals say about Zion AI Financial Analytics
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -344,22 +344,22 @@ export default function ZionAiMarketingAutomation() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Marketing?
+              Ready to Transform Your Financial Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of marketers using Zion AI Marketing Automation to drive better results.
+              Join thousands of businesses using Zion AI Financial Analytics to make smarter financial decisions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-emerald-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>

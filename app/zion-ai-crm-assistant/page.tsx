@@ -1,101 +1,101 @@
-import { ArrowRight, Target, Zap, BarChart3, Mail, Users, CheckCircle, Star, Brain, TrendingUp, Globe, Smartphone } from "lucide-react";
+import { ArrowRight, Users, Brain, Target, TrendingUp, CheckCircle, Star, Zap, BarChart3, Mail, Phone, Calendar } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAiMarketingAutomation() {
+export default function ZionAiCrmAssistant() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Campaigns",
-      description: "Intelligent marketing automation that learns from customer behavior and optimizes campaigns in real-time"
+      title: "AI Lead Scoring",
+      description: "Intelligent lead qualification using machine learning to identify high-value prospects with 95% accuracy"
     },
     {
       icon: <Target className="w-6 h-6" />,
-      title: "Advanced Segmentation",
-      description: "Create hyper-targeted audiences using AI-driven customer insights and behavioral data"
+      title: "Predictive Sales Analytics",
+      description: "Forecast sales outcomes and identify opportunities with AI-powered predictive modeling"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Set up complex marketing workflows that trigger based on customer actions and engagement patterns"
+      title: "Automated Follow-ups",
+      description: "Smart email sequences and task automation based on customer behavior and engagement patterns"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Predictive Analytics",
-      description: "Forecast customer lifetime value, churn probability, and campaign performance with AI models"
+      title: "Real-time Insights",
+      description: "Live dashboards with actionable insights and performance metrics for sales teams"
     },
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Smart Email Marketing",
-      description: "AI-optimized email campaigns with personalized content, send times, and subject lines"
+      icon: <Users className="w-6 h-6" />,
+      title: "Customer Journey Mapping",
+      description: "Visualize and optimize customer touchpoints with AI-driven journey analytics"
     },
     {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Channel Orchestration",
-      description: "Coordinate campaigns across email, social media, SMS, and web channels seamlessly"
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Revenue Optimization",
+      description: "AI recommendations to maximize deal value and accelerate sales cycles"
     }
   ];
 
-  const automationFeatures = [
-    "Email Marketing Automation",
-    "Social Media Scheduling",
-    "SMS Marketing Campaigns",
-    "Lead Nurturing Sequences",
-    "Customer Journey Mapping",
-    "A/B Testing & Optimization",
-    "Behavioral Triggers",
-    "Dynamic Content Personalization",
-    "Cross-Channel Attribution",
-    "ROI Tracking & Analytics",
-    "CRM Integration",
-    "Webinar & Event Automation"
+  const crmFeatures = [
+    "Contact & Lead Management",
+    "Deal Pipeline Tracking",
+    "Email Integration (Gmail, Outlook)",
+    "Calendar Synchronization",
+    "Task & Activity Management",
+    "Document Management",
+    "Custom Fields & Workflows",
+    "Team Collaboration Tools",
+    "Mobile CRM App",
+    "API & Third-party Integrations",
+    "Advanced Reporting & Analytics",
+    "White-label Customization"
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$39",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
         "Up to 1,000 contacts",
-        "Basic email automation",
-        "Social media scheduling",
+        "Basic AI lead scoring",
+        "Email integration",
+        "Mobile app access",
         "Email support",
-        "Standard templates",
-        "Basic analytics"
+        "Standard reports"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$99",
+      price: "$79",
       period: "/month",
       description: "Most popular for growing teams",
       features: [
         "Up to 10,000 contacts",
-        "Advanced automation",
-        "AI-powered personalization",
+        "Advanced AI features",
+        "Predictive analytics",
+        "Automated workflows",
         "Priority support",
-        "Custom workflows",
-        "Advanced analytics",
-        "Multi-channel campaigns"
+        "Custom dashboards",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
         "Unlimited contacts",
         "Full AI suite",
-        "Custom integrations",
-        "24/7 phone support",
+        "Custom AI models",
         "White-label solution",
+        "24/7 phone support",
         "Dedicated account manager",
-        "Advanced compliance"
+        "Advanced integrations"
       ],
       popular: false
     }
@@ -103,24 +103,24 @@ export default function ZionAiMarketingAutomation() {
 
   const testimonials = [
     {
-      name: "Rachel Green",
-      company: "Digital Marketing Agency",
-      role: "Marketing Director",
-      content: "Zion AI Marketing Automation has transformed our client campaigns. We've seen a 300% increase in email open rates and 150% improvement in conversion rates.",
+      name: "Alex Thompson",
+      company: "SalesForce Solutions",
+      role: "VP of Sales",
+      content: "Zion AI CRM Assistant increased our conversion rate by 45%. The AI lead scoring is incredibly accurate and saves us hours every day.",
       rating: 5
     },
     {
-      name: "Tom Wilson",
-      company: "E-commerce Platform",
-      role: "Growth Marketing Manager",
-      content: "The AI personalization is incredible. Our customers receive highly relevant content that feels like it was written just for them. Our revenue has increased by 85%.",
+      name: "Sarah Williams",
+      company: "TechStart Inc.",
+      role: "Sales Director",
+      content: "The predictive analytics helped us identify our best opportunities. We've seen a 60% increase in deal closure rates since implementing this tool.",
       rating: 5
     },
     {
-      name: "Amanda Lee",
-      company: "SaaS Company",
-      role: "VP of Marketing",
-      content: "This platform has revolutionized our marketing operations. The automation saves us 20+ hours per week while delivering better results than our previous tools.",
+      name: "Michael Chen",
+      company: "Growth Marketing Co.",
+      role: "CEO",
+      content: "This is the most intelligent CRM I've ever used. The automation features have transformed how we manage our sales process.",
       rating: 5
     }
   ];
@@ -128,45 +128,45 @@ export default function ZionAiMarketingAutomation() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Marketing Automation - Intelligent Marketing Platform | Zion Tech Group</title>
+        <title>Zion AI CRM Assistant - Intelligent Sales Management Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your marketing with Zion AI Marketing Automation - the ultimate AI-powered marketing platform. Email automation, social media, personalization, and multi-channel campaigns."
+          content="Transform your sales process with Zion AI CRM Assistant - the ultimate AI-powered CRM platform. Lead scoring, predictive analytics, and automated workflows for modern sales teams."
         />
         <meta
           name="keywords"
-          content="marketing automation, AI marketing, email automation, social media automation, marketing platform, customer segmentation, personalization, marketing analytics"
+          content="AI CRM, sales automation, lead scoring, predictive analytics, customer relationship management, sales intelligence, CRM software"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 mb-6">
-              <Target className="w-4 h-4 text-emerald-400 mr-2" />
-              <span className="text-emerald-400 text-sm font-medium">AI-Powered Marketing Intelligence</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
+              <Brain className="w-4 h-4 text-indigo-400 mr-2" />
+              <span className="text-indigo-400 text-sm font-medium">AI-Powered Sales Intelligence</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-                Zion AI Marketing Automation
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
+                Zion AI CRM Assistant
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Automate your marketing with the world's most intelligent marketing platform. 
-              AI-powered personalization, multi-channel campaigns, and predictive analytics for modern businesses.
+              Revolutionize your sales process with the world's most intelligent CRM platform. 
+              AI-powered lead scoring, predictive analytics, and automated workflows for modern sales teams.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -175,16 +175,16 @@ export default function ZionAiMarketingAutomation() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-2">300%</div>
-                <div className="text-gray-300">Average Open Rate Increase</div>
+                <div className="text-3xl font-bold text-indigo-400 mb-2">45%</div>
+                <div className="text-gray-300">Average Conversion Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">150%</div>
-                <div className="text-gray-300">Conversion Rate Improvement</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+                <div className="text-gray-300">Lead Scoring Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50,000+</div>
-                <div className="text-gray-300">Marketers Using AI</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">10,000+</div>
+                <div className="text-gray-300">Sales Teams Using AI</div>
               </div>
             </div>
           </div>
@@ -195,10 +195,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Intelligent Marketing Features
+                Intelligent Sales Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to automate and optimize your marketing campaigns with AI.
+                Everything you need to supercharge your sales process with AI-powered intelligence.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -207,7 +207,7 @@ export default function ZionAiMarketingAutomation() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -222,19 +222,19 @@ export default function ZionAiMarketingAutomation() {
           </div>
         </section>
 
-        {/* Automation Features List */}
+        {/* CRM Features List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Marketing Automation Suite
+                Complete CRM Solution
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the tools you need to automate your entire marketing funnel.
+                All the tools you need to manage your sales process effectively and intelligently.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {automationFeatures.map((feature, index) => (
+              {crmFeatures.map((feature, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
@@ -252,10 +252,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Smart Marketing Plans
+                Smart Pricing for Every Team
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the automation plan that fits your marketing needs. All plans include 14-day free trial.
+                Choose the AI CRM plan that fits your sales team. All plans include 14-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -264,13 +264,13 @@ export default function ZionAiMarketingAutomation() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-emerald-400 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10'
-                      : 'border-white/20 hover:border-emerald-400'
+                      ? 'border-indigo-400 bg-gradient-to-br from-indigo-500/10 to-purple-500/10'
+                      : 'border-white/20 hover:border-indigo-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -295,8 +295,8 @@ export default function ZionAiMarketingAutomation() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-emerald-500 to-cyan-600 text-white hover:from-emerald-600 hover:to-cyan-700'
-                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700'
+                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -312,10 +312,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Marketing Leaders
+                Trusted by Sales Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what marketing professionals say about Zion AI Marketing Automation
+                See what sales professionals say about Zion AI CRM Assistant
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -344,22 +344,22 @@ export default function ZionAiMarketingAutomation() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Marketing?
+              Ready to Transform Your Sales Process?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of marketers using Zion AI Marketing Automation to drive better results.
+              Join thousands of sales teams using Zion AI CRM Assistant to close more deals faster.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>

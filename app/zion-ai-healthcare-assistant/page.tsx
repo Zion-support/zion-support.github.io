@@ -1,101 +1,101 @@
-import { ArrowRight, Target, Zap, BarChart3, Mail, Users, CheckCircle, Star, Brain, TrendingUp, Globe, Smartphone } from "lucide-react";
+import { ArrowRight, Heart, Brain, Shield, Users, CheckCircle, Star, Stethoscope, Activity, FileText, Clock, AlertTriangle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function ZionAiMarketingAutomation() {
+export default function ZionAiHealthcareAssistant() {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI-Powered Campaigns",
-      description: "Intelligent marketing automation that learns from customer behavior and optimizes campaigns in real-time"
+      title: "AI Diagnostic Support",
+      description: "Advanced AI algorithms assist healthcare professionals with accurate diagnosis and treatment recommendations"
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Advanced Segmentation",
-      description: "Create hyper-targeted audiences using AI-driven customer insights and behavioral data"
+      icon: <Heart className="w-6 h-6" />,
+      title: "Patient Monitoring",
+      description: "Real-time patient monitoring with AI-powered alerts for critical health indicators and anomalies"
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Workflows",
-      description: "Set up complex marketing workflows that trigger based on customer actions and engagement patterns"
+      icon: <Shield className="w-6 h-6" />,
+      title: "HIPAA Compliance",
+      description: "Enterprise-grade security and privacy protection with full HIPAA compliance and data encryption"
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
+      icon: <FileText className="w-6 h-6" />,
+      title: "Electronic Health Records",
+      description: "Intelligent EHR management with automated documentation and clinical decision support"
+    },
+    {
+      icon: <Activity className="w-6 h-6" />,
       title: "Predictive Analytics",
-      description: "Forecast customer lifetime value, churn probability, and campaign performance with AI models"
+      description: "AI-powered health predictions and risk assessments for proactive patient care"
     },
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Smart Email Marketing",
-      description: "AI-optimized email campaigns with personalized content, send times, and subject lines"
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Channel Orchestration",
-      description: "Coordinate campaigns across email, social media, SMS, and web channels seamlessly"
+      icon: <Users className="w-6 h-6" />,
+      title: "Telemedicine Platform",
+      description: "Integrated video consultations with AI-powered triage and appointment scheduling"
     }
   ];
 
-  const automationFeatures = [
-    "Email Marketing Automation",
-    "Social Media Scheduling",
-    "SMS Marketing Campaigns",
-    "Lead Nurturing Sequences",
-    "Customer Journey Mapping",
-    "A/B Testing & Optimization",
-    "Behavioral Triggers",
-    "Dynamic Content Personalization",
-    "Cross-Channel Attribution",
-    "ROI Tracking & Analytics",
-    "CRM Integration",
-    "Webinar & Event Automation"
+  const healthcareFeatures = [
+    "Patient Management System",
+    "Appointment Scheduling",
+    "Prescription Management",
+    "Lab Results Integration",
+    "Medical Imaging Analysis",
+    "Symptom Checker AI",
+    "Treatment Planning",
+    "Medication Reminders",
+    "Health Risk Assessment",
+    "Clinical Documentation",
+    "Insurance Verification",
+    "Billing & Claims Processing"
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$39",
+      name: "Clinic",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small clinics",
       features: [
-        "Up to 1,000 contacts",
-        "Basic email automation",
-        "Social media scheduling",
+        "Up to 100 patients",
+        "Basic AI diagnostics",
+        "EHR management",
         "Email support",
-        "Standard templates",
-        "Basic analytics"
+        "Standard reports",
+        "Basic telemedicine"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$99",
+      name: "Hospital",
+      price: "$599",
       period: "/month",
-      description: "Most popular for growing teams",
+      description: "Most popular for hospitals",
       features: [
-        "Up to 10,000 contacts",
-        "Advanced automation",
-        "AI-powered personalization",
+        "Up to 1,000 patients",
+        "Advanced AI features",
+        "Full EHR suite",
         "Priority support",
-        "Custom workflows",
+        "Custom integrations",
         "Advanced analytics",
-        "Multi-channel campaigns"
+        "Multi-location support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$299",
+      price: "$1,499",
       period: "/month",
-      description: "For large organizations",
+      description: "For large healthcare systems",
       features: [
-        "Unlimited contacts",
+        "Unlimited patients",
         "Full AI suite",
-        "Custom integrations",
+        "Custom AI models",
         "24/7 phone support",
         "White-label solution",
-        "Dedicated account manager",
-        "Advanced compliance"
+        "Dedicated support team",
+        "API access"
       ],
       popular: false
     }
@@ -103,24 +103,24 @@ export default function ZionAiMarketingAutomation() {
 
   const testimonials = [
     {
-      name: "Rachel Green",
-      company: "Digital Marketing Agency",
-      role: "Marketing Director",
-      content: "Zion AI Marketing Automation has transformed our client campaigns. We've seen a 300% increase in email open rates and 150% improvement in conversion rates.",
+      name: "Dr. Sarah Williams",
+      company: "City General Hospital",
+      role: "Chief Medical Officer",
+      content: "Zion AI Healthcare Assistant has transformed our patient care. The AI diagnostic support has improved our accuracy by 40% and reduced diagnosis time by 60%.",
       rating: 5
     },
     {
-      name: "Tom Wilson",
-      company: "E-commerce Platform",
-      role: "Growth Marketing Manager",
-      content: "The AI personalization is incredible. Our customers receive highly relevant content that feels like it was written just for them. Our revenue has increased by 85%.",
+      name: "Dr. Michael Chen",
+      company: "Family Care Clinic",
+      role: "Medical Director",
+      content: "The predictive analytics feature is incredible. We can now identify high-risk patients early and provide proactive care. Our patient outcomes have significantly improved.",
       rating: 5
     },
     {
-      name: "Amanda Lee",
-      company: "SaaS Company",
-      role: "VP of Marketing",
-      content: "This platform has revolutionized our marketing operations. The automation saves us 20+ hours per week while delivering better results than our previous tools.",
+      name: "Lisa Rodriguez",
+      company: "Regional Medical Center",
+      role: "IT Director",
+      content: "The HIPAA compliance and security features give us complete peace of mind. The platform integrates seamlessly with our existing systems and has improved our efficiency dramatically.",
       rating: 5
     }
   ];
@@ -128,45 +128,45 @@ export default function ZionAiMarketingAutomation() {
   return (
     <>
       <Helmet>
-        <title>Zion AI Marketing Automation - Intelligent Marketing Platform | Zion Tech Group</title>
+        <title>Zion AI Healthcare Assistant - Intelligent Healthcare Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Automate your marketing with Zion AI Marketing Automation - the ultimate AI-powered marketing platform. Email automation, social media, personalization, and multi-channel campaigns."
+          content="Transform healthcare delivery with Zion AI Healthcare Assistant - the ultimate AI-powered healthcare platform. Diagnostic support, patient monitoring, EHR management, and telemedicine solutions."
         />
         <meta
           name="keywords"
-          content="marketing automation, AI marketing, email automation, social media automation, marketing platform, customer segmentation, personalization, marketing analytics"
+          content="AI healthcare, medical AI, healthcare platform, diagnostic support, patient monitoring, EHR management, telemedicine, healthcare automation, medical technology"
         />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 mb-6">
-              <Target className="w-4 h-4 text-emerald-400 mr-2" />
-              <span className="text-emerald-400 text-sm font-medium">AI-Powered Marketing Intelligence</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-pink-500/20 border border-red-500/30 mb-6">
+              <Heart className="w-4 h-4 text-red-400 mr-2" />
+              <span className="text-red-400 text-sm font-medium">AI-Powered Healthcare Intelligence</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">
-                Zion AI Marketing Automation
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-400">
+                Zion AI Healthcare Assistant
               </span>
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Automate your marketing with the world's most intelligent marketing platform. 
-              AI-powered personalization, multi-channel campaigns, and predictive analytics for modern businesses.
+              Transform healthcare delivery with the world's most intelligent healthcare platform. 
+              AI-powered diagnostics, patient monitoring, and comprehensive healthcare management for modern medical practices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
+                className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center group"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
               >
                 Watch Demo
               </Link>
@@ -175,16 +175,16 @@ export default function ZionAiMarketingAutomation() {
             {/* Stats */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-emerald-400 mb-2">300%</div>
-                <div className="text-gray-300">Average Open Rate Increase</div>
+                <div className="text-3xl font-bold text-red-400 mb-2">40%</div>
+                <div className="text-gray-300">Diagnostic Accuracy Improvement</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">150%</div>
-                <div className="text-gray-300">Conversion Rate Improvement</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">60%</div>
+                <div className="text-gray-300">Faster Diagnosis Time</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50,000+</div>
-                <div className="text-gray-300">Marketers Using AI</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">500+</div>
+                <div className="text-gray-300">Healthcare Providers</div>
               </div>
             </div>
           </div>
@@ -195,10 +195,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Intelligent Marketing Features
+                Advanced Healthcare Intelligence
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to automate and optimize your marketing campaigns with AI.
+                Everything you need to deliver exceptional healthcare with AI-powered insights and automation.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -207,7 +207,7 @@ export default function ZionAiMarketingAutomation() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-emerald-500 to-cyan-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-red-500 to-pink-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3">
@@ -222,19 +222,19 @@ export default function ZionAiMarketingAutomation() {
           </div>
         </section>
 
-        {/* Automation Features List */}
+        {/* Healthcare Features List */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Marketing Automation Suite
+                Complete Healthcare Management Suite
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the tools you need to automate your entire marketing funnel.
+                All the tools you need to manage your healthcare practice effectively and efficiently.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {automationFeatures.map((feature, index) => (
+              {healthcareFeatures.map((feature, index) => (
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
@@ -252,10 +252,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Smart Marketing Plans
+                Healthcare-Focused Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the automation plan that fits your marketing needs. All plans include 14-day free trial.
+                Choose the healthcare platform that fits your practice needs. All plans include 30-day free trial.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -264,13 +264,13 @@ export default function ZionAiMarketingAutomation() {
                   key={index}
                   className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                     plan.popular
-                      ? 'border-emerald-400 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10'
-                      : 'border-white/20 hover:border-emerald-400'
+                      ? 'border-red-400 bg-gradient-to-br from-red-500/10 to-pink-500/10'
+                      : 'border-white/20 hover:border-red-400'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
@@ -295,8 +295,8 @@ export default function ZionAiMarketingAutomation() {
                     to="/contact"
                     className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-emerald-500 to-cyan-600 text-white hover:from-emerald-600 hover:to-cyan-700'
-                        : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-red-500 to-pink-600 text-white hover:from-red-600 hover:to-pink-700'
+                        : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
                     }`}
                   >
                     Start Free Trial
@@ -312,10 +312,10 @@ export default function ZionAiMarketingAutomation() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Marketing Leaders
+                Trusted by Healthcare Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what marketing professionals say about Zion AI Marketing Automation
+                See what healthcare professionals say about Zion AI Healthcare Assistant
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -344,22 +344,22 @@ export default function ZionAiMarketingAutomation() {
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your Marketing?
+              Ready to Transform Healthcare Delivery?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of marketers using Zion AI Marketing Automation to drive better results.
+              Join hundreds of healthcare providers using Zion AI Healthcare Assistant to deliver better patient care.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-emerald-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-emerald-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-red-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center"
               >
                 Start Your Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-emerald-400 text-emerald-400 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-red-400 text-red-400 px-8 py-4 rounded-lg font-semibold hover:bg-red-400 hover:text-slate-900 transition-all duration-300"
               >
                 Schedule Demo
               </Link>
