@@ -1,40 +1,42 @@
 #!/usr/bin/env python3
+"""
+Script to clean up merge conflicts in the codebase
+"""
 import os
 import re
 import glob
 
 def clean_merge_conflicts(file_path):
-    """Clean merge conflict markers from a file, keeping our version (after =======)"""
+    """Clean merge conflicts from a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Pattern to match merge conflict markers
-        # Keep everything before <<<<<<< HEAD and after =======
-        # Remove everything between <<<<<<< HEAD and =======
-        # Remove everything after >>>>>>> until end of conflict
-        pattern = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>>.*?(?=<<<<<<< HEAD|$)'
+        # Remove merge conflict markers
+        content = re.sub(r'<<<<<<< HEAD.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'=======.*?\n', '', content, flags=re.DOTALL)
+        content = re.sub(r'>>>>>>> .*?\n', '', content, flags=re.DOTALL)
         
-        # Replace with just our version (what's after =======)
-        cleaned = re.sub(pattern, r'\1', content, flags=re.DOTALL)
+        # Clean up duplicate imports
+        lines = content.split('\n')
+        seen_imports = set()
+        cleaned_lines = []
         
-        # Also handle cases where there's no ======= (just remove the conflict markers)
-        cleaned = re.sub(r'<<<<<<< HEAD.*?>>>>>>>.*?(?=<<<<<<< HEAD|$)', '', cleaned, flags=re.DOTALL)
+        for line in lines:
+            if line.strip().startswith('import ') or line.strip().startswith('from '):
+                if line.strip() not in seen_imports:
+                    seen_imports.add(line.strip())
+                    cleaned_lines.append(line)
+            else:
+                cleaned_lines.append(line)
         
-        # Clean up any remaining conflict markers
-        cleaned = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?(?=<<<<<<< HEAD|$)', '', cleaned, flags=re.DOTALL)
-        cleaned = re.sub(r'<<<<<<< HEAD.*?>>>>>>>.*?(?=<<<<<<< HEAD|$)', '', cleaned, flags=re.DOTALL)
+        content = '\n'.join(cleaned_lines)
         
-        # Remove any remaining individual conflict markers
-        cleaned = re.sub(r'<<<<<<< HEAD.*', '', cleaned)
-        cleaned = re.sub(r'=======.*', '', cleaned)
-        cleaned = re.sub(r'>>>>>>>.*', '', cleaned)
-        
-        # Clean up extra whitespace
-        cleaned = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned)
+        # Remove empty lines at the beginning
+        content = re.sub(r'^\s*\n+', '', content)
         
         with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(cleaned)
+            f.write(content)
         
         print(f"Cleaned: {file_path}")
         return True
@@ -43,20 +45,18 @@ def clean_merge_conflicts(file_path):
         return False
 
 def main():
-    # Find all TypeScript and JavaScript files
+    """Main function to clean all merge conflicts"""
+    # Find all TypeScript/JavaScript files in the app directory
     patterns = [
-        '**/*.tsx',
-        '**/*.ts', 
-        '**/*.js',
-        '**/*.jsx'
+        '/workspace/app/**/*.tsx',
+        '/workspace/app/**/*.ts',
+        '/workspace/app/**/*.jsx',
+        '/workspace/app/**/*.js'
     ]
     
     files_to_clean = []
     for pattern in patterns:
         files_to_clean.extend(glob.glob(pattern, recursive=True))
-    
-    # Filter out node_modules
-    files_to_clean = [f for f in files_to_clean if 'node_modules' not in f]
     
     cleaned_count = 0
     for file_path in files_to_clean:

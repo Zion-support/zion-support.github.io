@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowRight } from "lucide-react";
 
 import { Helmet } from "react-helmet-async";
@@ -28,7 +27,6 @@ export default function ComplianceZionTechGroup() {
     </>
   );
 }
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -256,4 +254,3 @@ const CompliancePage: React.FC = () => {
 };
 
 export default CompliancePage;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7

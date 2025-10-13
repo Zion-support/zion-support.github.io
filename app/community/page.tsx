@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ArrowRight } from "lucide-react";
 
 import { Helmet } from "react-helmet-async";
@@ -28,7 +27,6 @@ export default function CommunityZionTechGroup() {
     </>
   );
 }
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -252,4 +250,3 @@ const CommunityPage: React.FC = () => {
 };
 
 export default CommunityPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7

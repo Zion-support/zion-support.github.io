@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
 import { Link } from "react-router-dom";
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -47,11 +45,9 @@ const CloudServicesPage: React.FC = () => {
     'Faster deployment and time-to-market',
     'Disaster recovery and business continuity'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
 
 export default function GDataAnalyticsZionTechGroupPage() {
   return (
-<<<<<<< HEAD
     <>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
@@ -74,7 +70,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
     </>
   );
 }
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>
         <title>Cloud Services | Zion Tech Group</title>
@@ -204,4 +199,3 @@ export default function GDataAnalyticsZionTechGroupPage() {
 };
 
 export default CloudServicesPage;
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7

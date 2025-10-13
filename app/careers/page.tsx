@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -101,13 +96,11 @@ const CareersPage: React.FC = () => {
     'Team building events and company retreats',
     'Mentorship and career growth opportunities'
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
 
 export default function Careers() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
         <title>Careers - Zion Tech Group</title>
         <meta name="description" content="Join our team at Zion Tech Group" />
       </Helmet>
@@ -127,7 +120,6 @@ export default function Careers() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-=======
         <title>Careers | Zion Tech Group</title>
         <meta name="description" content="Join our team of innovators at Zion Tech Group. Explore career opportunities in AI, cloud computing, and IT solutions." />
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, software developer, tech jobs" />
@@ -288,7 +280,6 @@ export default function Careers() {
         </section>
 
         <Footer />
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
       </div>
     </>
   );
