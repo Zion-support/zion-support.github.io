@@ -64,6 +64,11 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       icon: <Globe className="w-4 h-4" />
     },
     {
+      name: 'Support',
+      path: '/support',
+      icon: <Shield className="w-4 h-4" />
+    },
+    {
       name: 'Contact',
       path: '/contact',
       icon: <Globe className="w-4 h-4" />

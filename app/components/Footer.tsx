@@ -52,7 +52,8 @@ const Footer: React.FC = () => {
     { name: "5G Solutions", path: "/5g-solutions" },
     { name: "Contact", path: "/contact" },
     { name: "Demo", path: "/demo" },
-    { name: "Consultation", path: "/consultation" },
+    { name: "Support", path: "/support" },
+    { name: "Tutorials", path: "/tutorials" },
   ];
 
   const services = [
@@ -68,10 +69,10 @@ const Footer: React.FC = () => {
 
   const microSaasServices = [
     { name: "Zion Analytics Pro", path: "/zion-analytics-pro" },
-    { name: "Zion Security Shield", path: "/zion-security-shield-pro" },
+    { name: "Zion Security Shield Pro", path: "/zion-security-shield-pro" },
     { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
-    { name: "Zion Cloud Vault", path: "/zion-cloud-vault-pro" },
-    { name: "Zion AI Marketing", path: "/zion-ai-marketing-automation" },
+    { name: "Zion Cloud Vault Pro", path: "/zion-cloud-vault-pro" },
+    { name: "Zion AI Marketing Automation", path: "/zion-ai-marketing-automation" },
     { name: "Zion AI Video Generator", path: "/zion-ai-video-generator" },
   ];
 
