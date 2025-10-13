@@ -1,184 +1,133 @@
-import React, { useState, useEffect } from "react";
-import { Activity, Zap, Clock, TrendingUp } from "lucide-react";
+import React, { useEffect, useState } from 'react';
+import { performanceLogger } from '../utils/performanceLogger';
 
 interface PerformanceMetrics {
   loadTime: number;
-  renderTime: number;
-  memoryUsage: number;
-  cpuUsage: number;
-  networkLatency: number;
-  errorRate: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToInteractive: number;
+  memoryUsage?: number;
 }
 
-interface EnhancedPerformanceMonitorProps {
-  className?: string;
-  showDetails?: boolean;
-  refreshInterval?: number;
-}
-
-const EnhancedPerformanceMonitor: React.FC<EnhancedPerformanceMonitorProps> = ({
-  className = "",
-  showDetails = true,
-  refreshInterval = 1000,
-}) => {
+const EnhancedPerformanceMonitor: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     loadTime: 0,
-    renderTime: 0,
-    memoryUsage: 0,
-    cpuUsage: 0,
-    networkLatency: 0,
-    errorRate: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    firstInputDelay: 0,
+    cumulativeLayoutShift: 0,
+    timeToInteractive: 0,
   });
-
-  const [isMonitoring, setIsMonitoring] = useState(false);
 
   useEffect(() => {
-    if (!isMonitoring) return;
+    const measurePerformance = () => {
+      if (typeof window === 'undefined' || !window.performance) return;
 
-    const updateMetrics = () => {
-      // Simulate performance metrics collection
-      setMetrics({
-        loadTime: Math.random() * 1000 + 100,
-        renderTime: Math.random() * 50 + 10,
-        memoryUsage: Math.random() * 100,
-        cpuUsage: Math.random() * 100,
-        networkLatency: Math.random() * 200 + 50,
-        errorRate: Math.random() * 5,
-      });
+      const newMetrics: PerformanceMetrics = {
+        loadTime: 0,
+        firstContentfulPaint: 0,
+        largestContentfulPaint: 0,
+        firstInputDelay: 0,
+        cumulativeLayoutShift: 0,
+        timeToInteractive: 0,
+      };
+
+      // Measure page load time
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        newMetrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+      }
+
+      // Measure memory usage if available
+      if ((performance as any).memory) {
+        newMetrics.memoryUsage = (performance as any).memory.usedJSHeapSize;
+      }
+
+      // Measure Core Web Vitals
+      const measureWebVitals = () => {
+        // First Contentful Paint (FCP)
+        const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0];
+        if (fcpEntry) {
+          newMetrics.firstContentfulPaint = fcpEntry.startTime;
+        }
+
+        // Largest Contentful Paint (LCP)
+        const lcpObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          newMetrics.largestContentfulPaint = lastEntry.startTime;
+          setMetrics(prev => ({ ...prev, largestContentfulPaint: lastEntry.startTime }));
+        });
+        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // First Input Delay (FID)
+        const fidObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            const fid = entry.processingStart - entry.startTime;
+            newMetrics.firstInputDelay = fid;
+            setMetrics(prev => ({ ...prev, firstInputDelay: fid }));
+          });
+        });
+        fidObserver.observe({ entryTypes: ['first-input'] });
+
+        // Cumulative Layout Shift (CLS)
+        let clsValue = 0;
+        const clsObserver = new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          entries.forEach((entry: any) => {
+            if (!entry.hadRecentInput) {
+              clsValue += entry.value;
+              newMetrics.cumulativeLayoutShift = clsValue;
+              setMetrics(prev => ({ ...prev, cumulativeLayoutShift: clsValue }));
+            }
+          });
+        });
+        clsObserver.observe({ entryTypes: ['layout-shift'] });
+
+        // Cleanup observers after 10 seconds
+        setTimeout(() => {
+          lcpObserver.disconnect();
+          fidObserver.disconnect();
+          clsObserver.disconnect();
+        }, 10000);
+      };
+
+      // Start measuring after page load
+      if (document.readyState === 'complete') {
+        measureWebVitals();
+      } else {
+        window.addEventListener('load', measureWebVitals);
+      }
+
+      // Log metrics
+      performanceLogger.log('info', 'Performance metrics collected', newMetrics);
+      setMetrics(newMetrics);
     };
 
-    const interval = setInterval(updateMetrics, refreshInterval);
-    updateMetrics(); // Initial update
+    measurePerformance();
+  }, []);
 
-    return () => clearInterval(interval);
-  }, [isMonitoring, refreshInterval]);
-
-  const getPerformanceStatus = (
-    value: number,
-    thresholds: { good: number; warning: number },
-  ) => {
-    if (value <= thresholds.good) return "good";
-    if (value <= thresholds.warning) return "warning";
-    return "poor";
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case "good":
-        return "text-green-400";
-      case "warning":
-        return "text-yellow-400";
-      case "poor":
-        return "text-red-400";
-      default:
-        return "text-gray-400";
-    }
-  };
-
-  const loadTimeStatus = getPerformanceStatus(metrics.loadTime, {
-    good: 200,
-    warning: 500,
-  });
-  const memoryStatus = getPerformanceStatus(metrics.memoryUsage, {
-    good: 50,
-    warning: 80,
-  });
-  const cpuStatus = getPerformanceStatus(metrics.cpuUsage, {
-    good: 30,
-    warning: 70,
-  });
+  // Only render in development
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
 
   return (
-    <div
-      className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
-    >
-      <div className="flex items-center justify-between mb-6">
-        <div className="flex items-center space-x-2">
-          <Activity className="w-6 h-6 text-cyan-400" />
-          <h3 className="text-xl font-semibold text-white">
-            Performance Monitor
-          </h3>
-        </div>
-        <button
-          onClick={() => setIsMonitoring(!isMonitoring)}
-          className={`px-4 py-2 rounded-lg font-semibold transition-all duration-300 ${
-            isMonitoring
-              ? "bg-red-500 hover:bg-red-600 text-white"
-              : "bg-green-500 hover:bg-green-600 text-white"
-          }`}
-        >
-          {isMonitoring ? "Stop" : "Start"} Monitoring
-        </button>
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-4 rounded-lg text-xs max-w-xs">
+      <h3 className="font-bold mb-2">Performance Metrics</h3>
+      <div className="space-y-1">
+        <div>Load Time: {metrics.loadTime.toFixed(2)}ms</div>
+        <div>FCP: {metrics.firstContentfulPaint.toFixed(2)}ms</div>
+        <div>LCP: {metrics.largestContentfulPaint.toFixed(2)}ms</div>
+        <div>FID: {metrics.firstInputDelay.toFixed(2)}ms</div>
+        <div>CLS: {metrics.cumulativeLayoutShift.toFixed(4)}</div>
+        {metrics.memoryUsage && (
+          <div>Memory: {(metrics.memoryUsage / 1024 / 1024).toFixed(2)}MB</div>
+        )}
       </div>
-
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-6">
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <Clock className="w-5 h-5 text-blue-400 mr-2" />
-            <span className="text-sm text-gray-300">Load Time</span>
-          </div>
-          <div
-            className={`text-2xl font-bold ${getStatusColor(loadTimeStatus)}`}
-          >
-            {metrics.loadTime.toFixed(0)}ms
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <Zap className="w-5 h-5 text-yellow-400 mr-2" />
-            <span className="text-sm text-gray-300">Memory</span>
-          </div>
-          <div className={`text-2xl font-bold ${getStatusColor(memoryStatus)}`}>
-            {metrics.memoryUsage.toFixed(1)}%
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="flex items-center justify-center mb-2">
-            <TrendingUp className="w-5 h-5 text-purple-400 mr-2" />
-            <span className="text-sm text-gray-300">CPU</span>
-          </div>
-          <div className={`text-2xl font-bold ${getStatusColor(cpuStatus)}`}>
-            {metrics.cpuUsage.toFixed(1)}%
-          </div>
-        </div>
-      </div>
-
-      {showDetails && (
-        <div className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <div className="text-sm text-gray-300 mb-1">Render Time</div>
-              <div className="text-lg font-semibold text-white">
-                {metrics.renderTime.toFixed(1)}ms
-              </div>
-            </div>
-            <div>
-              <div className="text-sm text-gray-300 mb-1">Network Latency</div>
-              <div className="text-lg font-semibold text-white">
-                {metrics.networkLatency.toFixed(0)}ms
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div className="text-sm text-gray-300 mb-1">Error Rate</div>
-            <div className="text-lg font-semibold text-white">
-              {metrics.errorRate.toFixed(2)}%
-            </div>
-          </div>
-        </div>
-      )}
-
-      {isMonitoring && (
-        <div className="mt-4 p-3 bg-green-500/20 border border-green-500/30 rounded-lg">
-          <div className="flex items-center text-green-400 text-sm">
-            <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse"></div>
-            Live monitoring active
-          </div>
-        </div>
-      )}
     </div>
   );
 };

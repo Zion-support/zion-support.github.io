@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
+import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -11,7 +12,14 @@ export default defineConfig({
       // Enable JSX runtime
       jsxRuntime: "automatic",
     }),
-  ],
+    // Bundle analyzer for production builds
+    process.env.ANALYZE === 'true' && visualizer({
+      filename: 'dist/stats.html',
+      open: false,
+      gzipSize: true,
+      brotliSize: true,
+    }),
+  ].filter(Boolean),
   resolve: {
     alias: {
       "@": resolve(__dirname, "./app"),
@@ -36,9 +44,16 @@ export default defineConfig({
     },
     // Performance optimizations
     chunkSizeWarningLimit: 1000,
-    assetsInlineLimit: 4096,
+    assetsInlineLimit: 2048, // Reduced from 4096 for better performance
     // Enable compression
     reportCompressedSize: true,
+    // Additional optimizations
+    terserOptions: {
+      compress: {
+        drop_console: true, // Remove console statements in production
+        drop_debugger: true,
+      },
+    },
     
     rollupOptions: {
       output: {

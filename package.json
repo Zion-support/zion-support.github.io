@@ -8,7 +8,7 @@
     "dev": "vite",
     "build": "vite build",
     "build:no-check": "vite build",
-    "build:analyze": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
+    "build:analyze": "ANALYZE=true vite build",
     "preview": "vite preview",
     "start": "vite preview",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx --max-warnings 0",

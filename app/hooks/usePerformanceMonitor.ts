@@ -86,7 +86,10 @@ export const usePerformanceMonitor = () => {
 
       // Log performance metrics
       const logMetrics = () => {
-        console.log('Performance Metrics:', metricsRef.current)
+        // Only log in development
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Performance Metrics:', metricsRef.current)
+        }
         
         // Send to analytics service
         if (typeof window !== 'undefined' && (window as any).gtag) {
