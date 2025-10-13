@@ -5,6 +5,66 @@ import { Link } from "react-router-dom";
 export default function Services() {
   const services = [
     {
+      title: "AI Voice Cloning Studio",
+      description: "Professional voice synthesis with 99.7% accuracy and multi-language support. Create perfect voice replicas for content creators, marketers, and businesses.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/ai-voice-cloning-studio",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $29/month",
+      originalPrice: "$59/month",
+      features: ["99.7% Accuracy", "50+ Languages", "Real-time Synthesis", "Emotion Control", "Commercial License", "API Access"],
+      category: "AI Content",
+      popular: true
+    },
+    {
+      title: "AI Quantum Financial Oracle",
+      description: "Revolutionary quantum-powered financial AI with 99.7% prediction accuracy. Advanced market analysis, risk assessment, and portfolio optimization for traders and institutions.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      path: "/ai-quantum-financial-oracle",
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Quantum Predictions", "Real-time Analysis", "Risk Assessment", "Multi-Asset Coverage", "Portfolio Optimization", "Compliance Ready"],
+      category: "Financial AI",
+      popular: true
+    },
+    {
+      title: "AI Space Mission Optimizer",
+      description: "Advanced space mission optimization with 99.9% trajectory accuracy. Perfect for aerospace companies, space agencies, and satellite operators.",
+      icon: <Rocket className="w-8 h-8" />,
+      path: "/ai-space-mission-optimizer",
+      color: "from-indigo-500 to-blue-500",
+      price: "Starting at $499/month",
+      originalPrice: "$999/month",
+      features: ["99.9% Accuracy", "Fuel Efficiency", "Risk Assessment", "Mission Planning", "Orbital Mechanics", "Payload Optimization"],
+      category: "Aerospace AI",
+      popular: true
+    },
+    {
+      title: "AI Holographic Workspace",
+      description: "Immersive 3D holographic interface for remote collaboration and data visualization. Next-generation workspace with gesture control and spatial computing.",
+      icon: <Monitor className="w-8 h-8" />,
+      path: "/ai-holographic-workspace",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $399/month",
+      originalPrice: "$799/month",
+      features: ["3D Holographic Display", "Gesture Control", "Remote Collaboration", "AI-Powered Insights", "Spatial Computing", "Multi-Platform Sync"],
+      category: "Immersive Tech",
+      popular: true
+    },
+    {
+      title: "Quantum Data Encryption Vault",
+      description: "Unbreakable quantum encryption for sensitive data with zero-knowledge architecture. Complete data sovereignty and compliance for enterprise security.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/quantum-data-encryption-vault",
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $599/month",
+      originalPrice: "$1,199/month",
+      features: ["Quantum Encryption", "Zero-Knowledge Architecture", "Data Sovereignty", "Compliance Ready", "Quantum-Resistant", "Multi-Factor Auth"],
+      category: "Security",
+      popular: true
+    },
+    {
       title: "AI-Powered Business Intelligence Pro",
       description: "Transform raw data into actionable insights with our advanced AI analytics platform. Real-time dashboards, predictive analytics, and automated reporting with 99.9% accuracy.",
       icon: <Brain className="w-8 h-8" />,
@@ -14,7 +74,7 @@ export default function Services() {
       originalPrice: "$599/month",
       features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Mobile App", "White-label Options"],
       category: "AI Analytics",
-      popular: true
+      popular: false
     },
     {
       title: "AI Customer Support Automation Suite",
@@ -503,6 +563,7 @@ export default function Services() {
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
                   <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+                  <p className="text-gray-400 text-sm mt-1">24/7 Support Available</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
@@ -510,6 +571,7 @@ export default function Services() {
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
                   <p className="text-cyan-400">+1 302 464 0950</p>
+                  <p className="text-gray-400 text-sm mt-1">Mon-Fri 9AM-6PM EST</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
@@ -517,6 +579,7 @@ export default function Services() {
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-gray-400 text-sm mt-1">United States</p>
                 </div>
               </div>
               
