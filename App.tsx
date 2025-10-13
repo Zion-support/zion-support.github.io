@@ -134,6 +134,7 @@ const QuantumComputingPage = React.lazy(() => import("./app/quantum-computing/pa
 const RoboticsPage = React.lazy(() => import("./app/robotics/page"));
 
 // Micro SAAS Pages
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const ZionAnalyticsProPage = React.lazy(
   () => import("./app/zion-analytics-pro/page"),
 );
@@ -224,7 +225,7 @@ function App() {
                   <Route path="/careers" element={<CareersPage />} />
                   <Route path="/ai-services" element={<AIServicesPage />} />
                   <Route path="/it-services" element={<ServicesPage />} />
-                  <Route path="/micro-saas" element={<ServicesPage />} />
+                  <Route path="/micro-saas" element={<MicroSaasPage />} />
                   <Route path="/tutorials" element={<TutorialsPage />} />
                   <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/demo" element={<DemoPage />} />
