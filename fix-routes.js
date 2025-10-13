@@ -86,8 +86,6 @@ class RouteFixer {
 
   // Fix routes in App.tsx
   fixRoutes() {
-    console.log('🔧 Starting route fixing process...\n');
-    
     // Get existing routes and all pages
     this.getExistingRoutes();
     const allPages = this.getAllPages();
@@ -99,10 +97,7 @@ class RouteFixer {
       }
     }
     
-    console.log(`Found ${this.missingRoutes.length} missing routes`);
-    
     if (this.missingRoutes.length === 0) {
-      console.log('✅ No missing routes found!');
       return;
     }
     
@@ -138,11 +133,8 @@ class RouteFixer {
     // Write updated content
     fs.writeFileSync(this.appPath, content);
     
-    console.log('✅ Successfully added missing routes to App.tsx');
-    console.log(`Added ${this.missingRoutes.length} routes:`);
     this.missingRoutes.forEach(route => {
-      console.log(`  - ${route}`);
-    });
+      });
   }
 }
 

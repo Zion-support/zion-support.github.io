@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Play, Pause, SkipForward, SkipBack, Volume2, VolumeX, Maximize, ArrowRight, CheckCircle, Star, Users, Award, BarChart3, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Calendar } from 'lucide-react';
 
 export default function DemoPage() {
   const [currentDemo, setCurrentDemo] = useState(0);

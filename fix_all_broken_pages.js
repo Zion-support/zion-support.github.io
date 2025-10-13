@@ -71,7 +71,6 @@ const pageName = relativePath.split('/').pop();
   };
 // Find and fix all broken page files;
 const pageFiles = findPageFiles('/workspace/app');
-console.log(`Found ${pageFiles.length} page files`);
 let fixedCount = 0;
 for (const file, of, pageFiles) {
   try {
@@ -80,8 +79,6 @@ for (const file, of, pageFiles) {
 const componentName = config.title.replace(/\s+/g, '');
       const content = pageTemplate(componentName, config.title, config.description, config.keywords);
       fs.writeFileSync(file, content);
-      console.log(`Fixed broken page: ${file}`);
       fixedCount++;
   } catch (error) {
-    console.error(`Error fixing ${file}:`, error.message);
-console.log(`Fixed ${fixedCount} broken pages`);
+    

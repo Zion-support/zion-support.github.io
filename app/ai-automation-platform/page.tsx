@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import { 
   BarChart3, 
   Cloud, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
   Workflow,
   Target
 } from 'lucide-react';

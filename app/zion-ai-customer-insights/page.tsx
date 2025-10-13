@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, Brain, BarChart3, TrendingUp, Target, Eye, ShoppingCart, Cloud, Heart, MessageSquare, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Award, Shield, Lock, Cloud, Database, Settings, Headphones, ExternalLink, ChevronRight, RefreshCw, RotateCcw, Save, Trash2, Plus, Minus, X, Menu, MoreHorizontal, MoreVertical, Grid, List, Layout, Maximize, Minimize, Move, Copy, Scissors, Clipboard, Bookmark, Tag, Flag, Bell, BellOff, Volume2, VolumeX, Mic, MicOff, Camera, CameraOff, Wifi, WifiOff, Battery, BatteryLow, Signal, SignalLow, SignalZero, SignalHigh, SignalMedium, DollarSign, CreditCard, Receipt, Calculator, PieChart, LineChart, BarChart, TrendingDown, AlertCircle, Info, HelpCircle, Play, Pause, ThumbsUp, Share, Download, Upload, Edit, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAICustomerInsightsPage = () => {

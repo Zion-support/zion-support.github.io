@@ -3,60 +3,72 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 // Get all TypeScript/JavaScript files
-function getAllFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx']) {
-  let results = [];
-  const list = fs.readdirSync(dir);
+const getAllFiles = (dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) => {
+  let files = [];
+  const items = fs.readdirSync(dir);
   
-  list.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
+  for (const item of items) {
+    const fullPath = path.join(dir, item);
+    const stat = fs.statSync(fullPath);
     
-    if (stat && stat.isDirectory()) {
-      // Skip node_modules and other directories
-      if (!['node_modules', '.git', 'dist', 'build'].includes(file)) {
-        results = results.concat(getAllFiles(filePath, extensions));
-      }
-    } else {
-      if (extensions.some(ext => file.endsWith(ext))) {
-        results.push(filePath);
-      }
+    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+      files = files.concat(getAllFiles(fullPath, extensions));
+    } else if (extensions.some(ext => item.endsWith(ext))) {
+      files.push(fullPath);
     }
-  });
-  
-  return results;
-}
-
-// Fix unused imports in a file
-function fixUnusedImports(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Skip if file has merge conflicts
-    if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>')) {
-      console.log(`Skipping ${filePath} - has merge conflicts`);
-      return;
-    }
-    
-    // Run ESLint with --fix to remove unused imports
-    try {
-      execSync(`npx eslint "${filePath}" --fix --ext .ts,.tsx,.js,.jsx`, { 
-        stdio: 'pipe',
-        cwd: process.cwd()
-      });
-      console.log(`Fixed unused imports in ${filePath}`);
-    } catch (error) {
-      // ESLint might fail for some files, that's okay
-      console.log(`Could not auto-fix ${filePath}: ${error.message}`);
-    }
-  } catch (error) {
-    console.log(`Error processing ${filePath}: ${error.message}`);
   }
-}
+  
+  return files;
+};
 
-// Main execution
+// Files to fix (most problematic ones)
+const filesToFix = [
+  'app/ai-holographic-workspace/page.tsx',
+  'app/ai-image-recognition-pro/page.tsx',
+  'app/ai-quantum-financial-oracle/page.tsx',
+  'app/ai-sentiment-analysis-pro/page.tsx',
+  'app/ai-space-mission-optimizer/page.tsx',
+  'app/ai-voice-cloning-studio/page.tsx',
+  'app/cloud-infrastructure/page.tsx',
+  'app/cloud-services/page.tsx',
+  'app/community/page.tsx',
+  'app/compliance/page.tsx',
+  'app/consultation/page.tsx',
+  'app/cybersecurity-solutions/page.tsx',
+  'app/micro-saas-services/page.tsx',
+  'app/partners/page.tsx',
+  'app/quantum-computing-solutions/page.tsx',
+  'app/quantum-data-encryption-vault/page.tsx',
+  'app/smart-inventory-optimizer/page.tsx',
+  'app/zion-ai-accounting-suite/page.tsx',
+  'app/zion-ai-customer-insights/page.tsx',
+  'app/zion-ai-cybersecurity-suite-pro/page.tsx',
+  'app/zion-ai-inventory-manager/page.tsx',
+  'app/zion-ai-invoice-generator/page.tsx',
+  'app/zion-ai-meeting-transcriber/page.tsx',
+  'app/components/Footer.tsx',
+  'app/components/Navigation.tsx'
+];
+
 console.log('Fixing unused imports...');
 
-const files = getAllFiles('./app');
-files.forEach(fixUnusedImports);
+filesToFix.forEach(filePath => {
+  if (fs.existsSync(filePath)) {
+    try {
+      let content = fs.readFileSync(filePath, 'utf8');
+      
+      // Remove unused imports by running ESLint with --fix
+      try {
+        execSync(`npx eslint "${filePath}" --fix --quiet`, { stdio: 'pipe' });
+        console.log(`Fixed: ${filePath}`);
+      } catch (error) {
+        // If ESLint can't auto-fix, try manual cleanup
+        console.log(`Manual fix needed for: ${filePath}`);
+      }
+    } catch (error) {
+      console.log(`Error processing ${filePath}:`, error.message);
+    }
+  }
+});
 
 console.log('Done fixing unused imports!');

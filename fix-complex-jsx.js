@@ -61,8 +61,6 @@ const fixes = [
 // Find all TSX files in the app directory
 const files = await glob("app/**/*.tsx");
 
-console.log(`Found ${files.length} TSX files to process...`);
-
 let fixedCount = 0;
 
 for (const file of files) {
@@ -79,11 +77,8 @@ for (const file of files) {
     if (content !== originalContent) {
       fs.writeFileSync(file, content, "utf8");
       fixedCount++;
-      console.log(`Fixed: ${file}`);
-    }
+      }
   } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
-  }
+    }
 }
 
-console.log(`\nFixed ${fixedCount} files.`);

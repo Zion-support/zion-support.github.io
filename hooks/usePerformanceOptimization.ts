@@ -115,11 +115,9 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
-            console.log('SW registered: ', registration);
-          })
+            })
           .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
-          });
+            });
       });
     }
   }, [enableCaching]);
@@ -133,8 +131,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
-            console.warn('Long task detected:', entry);
-          }
+            }
         }
       });
       
@@ -153,8 +150,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
         
         if (usedMB / totalMB > 0.8) {
-          console.warn('High memory usage detected:', { usedMB, totalMB });
-        }
+          }
       };
       
       setInterval(checkMemory, 30000); // Check every 30 seconds
