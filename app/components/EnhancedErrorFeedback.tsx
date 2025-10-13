@@ -164,6 +164,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default GlobalErrorBoundary;
   );
 }
@@ -175,3 +176,6 @@ export default GlobalErrorBoundary;
 export default function Enhancederrorfeedback({ className = '', children, ...props }: EnhancederrorfeedbackProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default GlobalErrorBoundary;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

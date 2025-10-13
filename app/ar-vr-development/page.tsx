@@ -191,6 +191,7 @@ const ARVRDevelopmentPage = () => {
     {
       icon: <Glasses className="w-8 h-8" />,
       title: "AR Development",
+<<<<<<< HEAD
       description: "Create augmented reality applications for mobile and wearable devices with advanced tracking",
       color: "from-blue-500 to-cyan-500"
     },
@@ -211,6 +212,34 @@ const ARVRDevelopmentPage = () => {
       title: "Cross-Platform",
       description: "Develop once, deploy everywhere with our cross-platform AR/VR development framework",
       color: "from-orange-500 to-red-500"
+=======
+      description: "Create immersive augmented reality experiences for mobile and web platforms.",
+    },
+    {
+      icon: <Box className="w-8 h-8" />,
+      title: "VR Development",
+      description: "Build virtual reality applications for Oculus, HTC Vive, and other VR headsets.",
+    },
+    {
+      icon: <Target className="w-8 h-8" />,
+      title: "Mixed Reality",
+      description: "Develop mixed reality solutions that blend physical and digital worlds.",
+    },
+    {
+      icon: <Brain className="w-8 h-8" />,
+      title: "AI Integration",
+      description: "Integrate AI and machine learning for intelligent AR/VR experiences.",
+    },
+    {
+      icon: <Users className="w-8 h-8" />,
+      title: "Multi-user Experiences",
+      description: "Create collaborative AR/VR experiences for teams and communities.",
+    },
+    {
+      icon: <Globe className="w-8 h-8" />,
+      title: "Cross-platform",
+      description: "Deploy across multiple platforms and devices with consistent performance.",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -529,6 +558,7 @@ const ARVRDevelopmentPage = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ARVRDevelopmentPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
@@ -547,3 +577,6 @@ export default function Page() {
 
 }}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

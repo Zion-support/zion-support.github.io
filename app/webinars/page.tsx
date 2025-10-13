@@ -336,6 +336,7 @@ export default function Page() {
 =======
 };
 
+<<<<<<< HEAD
 export default WebinarsPage;
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
@@ -353,3 +354,6 @@ const WebinarsPage = () => {
 }
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

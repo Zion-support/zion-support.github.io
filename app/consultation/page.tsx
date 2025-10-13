@@ -30,6 +30,7 @@ export default function consultation() {
           <p className="text-xl text-gray-300 mb-8">
 =======
 export default function ConsultationPage() {
+<<<<<<< HEAD
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
@@ -124,6 +125,8 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import { MessageCircle, ArrowRight, CheckCircle, Star, Users, Calendar, Phone, Mail } from 'lucide-react';
 =======
 export default function ConsultationPage() {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
   const benefits = [
     "Benefit 1",
     "Benefit 2"

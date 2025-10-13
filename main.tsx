@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface mainProps {
@@ -27,6 +28,8 @@ export default function main({ className = '', children }: mainProps) {
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
@@ -51,7 +54,10 @@ if ("serviceWorker" in navigator) {
   });
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-ff9f
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

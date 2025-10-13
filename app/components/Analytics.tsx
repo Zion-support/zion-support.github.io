@@ -275,6 +275,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
   return null; // This component doesn't render anything
 };
 
+<<<<<<< HEAD
 export default Analytics;
   );
 }
@@ -327,3 +328,6 @@ export default function Analytics({ className = '', children, ...props }: Analyt
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

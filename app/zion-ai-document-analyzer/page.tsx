@@ -2,7 +2,27 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+import { Helmet } from 'react-helmet-async';
+import { 
+  FileText,
+  Brain, 
+  Shield, 
+  Zap, 
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Users, 
+  Award, 
+  Clock, 
+  DollarSign, 
+  Globe, 
+  Smartphone,
+  Monitor
+} from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 import React from 'react';
@@ -30,25 +50,25 @@ const features = [
     title: "AI-Powered Document Processing",
     description: "Advanced OCR and NLP technology to extract, analyze, and understand content from any document format",
     icon: <Brain className="w-8 h-8" />,
-    color: "from-blue-500 to-cyan-500"
+    color: "from-blue-500 to-cyan-500",
   },
   {
     title: "Intelligent Data Extraction",
     description: "Automatically extract structured data from unstructured documents with 99% accuracy",
     icon: <FileText className="w-8 h-8" />,
-    color: "from-green-500 to-emerald-500"
+    color: "from-green-500 to-emerald-500",
   },
   {
     title: "Advanced Security",
     description: "Enterprise-grade security with end-to-end encryption and compliance with industry standards",
     icon: <Shield className="w-8 h-8" />,
-    color: "from-red-500 to-orange-500"
+    color: "from-red-500 to-orange-500",
   },
   {
     title: "Real-time Processing",
     description: "Process documents in real-time with lightning-fast AI algorithms and cloud infrastructure",
     icon: <Zap className="w-8 h-8" />,
-    color: "from-purple-500 to-pink-500"
+    color: "from-purple-500 to-pink-500",
   }
 ];
 
@@ -310,7 +330,6 @@ export default function ZionaidocumentanalyzerPage() {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        </section>
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
@@ -386,7 +405,6 @@ export default function ZionaidocumentanalyzerPage() {
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -423,7 +441,6 @@ export default function ZionaidocumentanalyzerPage() {
 
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        </section>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">

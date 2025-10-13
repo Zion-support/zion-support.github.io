@@ -110,6 +110,7 @@ export default function LoadingSpinner({ className = '', children, ...props }: L
 =======
 };
 
+<<<<<<< HEAD
 export default LoadingSpinner;
   );
 <<<<<<< HEAD
@@ -122,3 +123,6 @@ export default LoadingSpinner;
 export default function Loadingspinner({ className = '', children, ...props }: LoadingspinnerProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

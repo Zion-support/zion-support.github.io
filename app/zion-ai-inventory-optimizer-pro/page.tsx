@@ -128,7 +128,7 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
       role: "Operations Director",
       content: "Zion AI Inventory Optimizer Pro reduced our inventory costs by 30% and eliminated stockouts completely. The ROI was immediate!",
       rating: 5,
-      avatar: "JR"
+      avatar: "JR",
     },
     {
       name: "Lisa Chen",
@@ -136,7 +136,7 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
       role: "Supply Chain Manager",
       content: "The demand forecasting is incredibly accurate. We've reduced overstock by 45% while maintaining 99% service levels.",
       rating: 5,
-      avatar: "LC"
+      avatar: "LC",
     },
     {
       name: "Michael Thompson",
@@ -144,7 +144,7 @@ const ZionAIInventoryOptimizerProPage: React.FC = () => {
       role: "Inventory Manager",
       content: "Managing inventory across 15 locations is now effortless. The AI recommendations have transformed our operations.",
       rating: 5,
-      avatar: "MT"
+      avatar: "MT",
     }
   ];
 

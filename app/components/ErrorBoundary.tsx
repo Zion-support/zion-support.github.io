@@ -244,6 +244,7 @@ export default class ErrorBoundary extends Component<Props, State> {
 <<<<<<< HEAD
 }
 
+<<<<<<< HEAD
 export default ErrorBoundary;
   );
 }
@@ -255,3 +256,6 @@ export default ErrorBoundary;
 export default function Errorboundary({ className = '', children, ...props }: ErrorboundaryProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

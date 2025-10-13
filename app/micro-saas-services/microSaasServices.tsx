@@ -54,6 +54,7 @@ const Microsaasservices: React.FC<MicrosaasservicesProps> = ({
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
+<<<<<<< HEAD
 export default Microsaasservices;
   );
 }
@@ -66,3 +67,6 @@ export default Microsaasservices;
 export default function Microsaasservices({ className = '', children, ...props }: MicrosaasservicesProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

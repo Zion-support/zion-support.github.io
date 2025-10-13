@@ -52,6 +52,7 @@ const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> 
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
+<<<<<<< HEAD
 export default FuturisticBackgroundEnhanced;
   );
 }
@@ -64,3 +65,6 @@ export default FuturisticBackgroundEnhanced;
 export default function Futuristicbackgroundenhanced({ className = '', children, ...props }: FuturisticbackgroundenhancedProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

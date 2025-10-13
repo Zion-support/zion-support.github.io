@@ -79,6 +79,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
+<<<<<<< HEAD
 export default SEOHead;
   );
 }
@@ -91,3 +92,6 @@ export default SEOHead;
 export default function Seohead({ className = '', children, ...props }: SeoheadProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

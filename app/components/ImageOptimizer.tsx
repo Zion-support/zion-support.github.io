@@ -272,6 +272,7 @@ export default ImageOptimizer;
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ImageOptimizer;
 <<<<<<< HEAD
   );
@@ -283,3 +284,6 @@ export default ImageOptimizer;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

@@ -197,6 +197,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
 import React, { useState, useRef, useEffect } from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
+<<<<<<< HEAD
 export default LazyImage;
   );
 }
@@ -547,3 +548,6 @@ export default function LazyImage({
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

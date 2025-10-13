@@ -112,6 +112,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
+<<<<<<< HEAD
 export default Layout;
   );
 }
@@ -120,3 +121,6 @@ export default Layout;
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

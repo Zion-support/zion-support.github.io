@@ -126,6 +126,7 @@ import { Activity } from 'lucide-react';  Gauge  } from 'lucide-react';
 
 const QuantumComputingSolutionsPage = () => {
   const features = [
+<<<<<<< HEAD
     {,
     title: "Quantum Processing",
         description: "Harness quantum computing power for complex calculations and optimization problems",
@@ -149,6 +150,31 @@ const QuantumComputingSolutionsPage = () => {
         description: "Solve complex optimization problems with quantum algorithms",
         icon: <Target className="w-8 h-8" />,
         color: "from-orange-500 to-red-500"
+=======
+    {
+      title: "Quantum Processing",
+      description: "Harness quantum computing power for complex calculations and optimization problems",
+      icon: <Cpu className="w-8 h-8" />,
+      color: "from-purple-500 to-indigo-500",
+    },
+    {
+      title: "Quantum Security",
+      description: "Unbreakable quantum encryption and secure communication protocols",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      title: "Quantum Machine Learning",
+      description: "Advanced AI algorithms powered by quantum computing principles",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+    },
+    {
+      title: "Quantum Optimization",
+      description: "Solve complex optimization problems with quantum algorithms",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -364,6 +390,7 @@ const QuantumComputingSolutionsPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
@@ -398,6 +425,7 @@ const QuantumComputingSolutionsPage = () => {
             ))}
           </div>
         </ResponsiveContainer>
+      </section>
       </section>
 
       {/* Pricing Section */}
@@ -456,6 +484,7 @@ const QuantumComputingSolutionsPage = () => {
             ))}
           </div>
         </ResponsiveContainer>
+      </section>
       </section>
 
       {/* CTA Section */}

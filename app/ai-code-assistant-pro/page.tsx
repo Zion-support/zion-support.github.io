@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -86,6 +87,10 @@ import { Link } from "react-router-dom";
 import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe, BarChart3 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe, Target, BarChart3 } from "lucide-react";
+import { Link } from "react-router-dom";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -103,6 +108,7 @@ import { Helmet } from 'react-helmet-async';
 const AICodeAssistantProZionTechGroup = () => {
   const features = [
     {
+<<<<<<< HEAD
       title: "AI Code Generation",
       description: "Generate high-quality code in 50+ programming languages with advanced AI models",
       icon: <Code className="w-8 h-8" />,
@@ -113,6 +119,22 @@ const AICodeAssistantProZionTechGroup = () => {
       description: "Automatically detect and fix bugs with intelligent debugging assistance",
       icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
+=======
+      name: "Alex Thompson",
+      company: "TechStart Inc",
+      role: "Lead Developer",
+      content: "Zion's AI Code Assistant has revolutionized our development process. It's like having a senior developer available 24/7.",
+      rating: 5,
+      avatar: "AT",
+    },
+    {
+      name: "Maria Garcia",
+      company: "CloudScale Solutions",
+      role: "CTO",
+      content: "The code generation quality is exceptional. It understands context and produces production-ready code consistently.",
+      rating: 5,
+      avatar: "MG",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     },
     {
 <<<<<<< HEAD
@@ -121,6 +143,7 @@ const AICodeAssistantProZionTechGroup = () => {
       role: "Senior Engineer",
       content: "The debugging capabilities are incredible. It finds issues I would have spent hours tracking down manually.",
       rating: 5,
+<<<<<<< HEAD
       avatar: "DK"
 =======
 
@@ -200,6 +223,36 @@ const AICodeAssistantProZionTechGroup = () => {
       ],
       popular: false
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+      avatar: "DK",
+    }
+  ];
+
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6 text-white" />,
+      title: "AI Code Generation",
+      description: "Generate high-quality code in 50+ programming languages with intelligent context understanding.",
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      icon: <Code className="w-6 h-6 text-white" />,
+      title: "Smart Debugging",
+      description: "Automatically detect and fix bugs with AI-powered analysis and suggestions.",
+      color: "from-purple-500 to-pink-500",
+    },
+    {
+      icon: <Zap className="w-6 h-6 text-white" />,
+      title: "Code Optimization",
+      description: "Optimize your code for performance, readability, and best practices.",
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-white" />,
+      title: "Security Analysis",
+      description: "Identify security vulnerabilities and suggest secure coding practices.",
+      color: "from-red-500 to-orange-500",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -214,7 +267,17 @@ const AICodeAssistantProZionTechGroup = () => {
     "offers": {
       "@type": "Offer",
       "price": "199",
+<<<<<<< HEAD
       "priceCurrency": "USD"
+=======
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "1250"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
 <<<<<<< HEAD
   };
@@ -227,6 +290,7 @@ import { Zap } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Code } from 'lucide-react';
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 const AICodeAssistantProZionTechGroup = () => {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
@@ -338,21 +402,31 @@ export default function AiCodeAssistantProPage() {
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
         <FuturisticBackgroundEnhanced>
           <EnhancedSEO
+<<<<<<< HEAD
             title="AI Code Assistant Pro - Zion Tech Group"
 <<<<<<< HEAD
             description="Revolutionize your development workflow with AI-powered code generation, intelligent debugging, and optimization across 50+ programming languages."
             keywords="AI code assistant, code generation, debugging, optimization, programming languages, development tools"
             canonical="https://ziontechgroup.com/ai-code-assistant-pro"
+=======
+            title="Zion AI Code Assistant Pro - AI-Powered Development Tool"
+            description="Revolutionize your development workflow with AI-powered code generation, intelligent debugging, and optimization across 50+ programming languages."
+            keywords="AI code assistant, code generation, debugging, programming, development tools, Zion Tech Group"
+            canonicalUrl="https://ziontechgroup.com/ai-code-assistant-pro"
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
           />
           <StructuredData data={structuredData} />
           
           <main className="min-h-screen">
             {/* Hero Section */}
+<<<<<<< HEAD
             <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
               <div className="absolute inset-0 overflow-hidden">
                 <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -420,6 +494,49 @@ export default function AiCodeAssistantProPage() {
                   </div>
                 </div>
               </ResponsiveContainer>
+=======
+            <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+              <div className="max-w-7xl mx-auto">
+                <div className="text-center relative z-10">
+                  <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
+                    <Brain className="w-4 h-4 text-blue-400 mr-2" />
+                    <span className="text-blue-400 text-sm font-medium">AI-Powered Development Tool</span>
+                  </div>
+                  
+                  <FuturisticTextEnhanced
+                    variant="display"
+                    size="5xl"
+                    gradient={true}
+                    glow={true}
+                    className="mb-6 leading-tight">
+                    Zion AI Code Assistant Pro
+                  </FuturisticTextEnhanced>
+                  
+                  <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
+                    Revolutionize your development workflow with AI-powered code generation, intelligent debugging, 
+                    and optimization across 50+ programming languages.
+                  </p>
+                  
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+                    <FuturisticButtonEnhanced
+                      href="/contact"
+                      variant="primary"
+                      size="lg"
+                      icon={ArrowRight}
+                      iconPosition="right">
+                      Start Free Trial
+                    </FuturisticButtonEnhanced>
+                    <Link 
+                      to="/demo" 
+                      className="inline-flex items-center px-8 py-4 border border-cyan-500/30 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500/10 transition-all duration-300"
+                    >
+                      View Demo
+                      <Target className="w-5 h-5 ml-2" />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
             </section>
 
             {/* Features Section */}
@@ -454,8 +571,10 @@ export default function AiCodeAssistantProPage() {
                   ))}
                 </div>
               </ResponsiveContainer>
+      </section>
             </section>
 
+<<<<<<< HEAD
             {/* Pricing Section */}
             <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
               <div className="max-w-7xl mx-auto">
@@ -513,8 +632,10 @@ export default function AiCodeAssistantProPage() {
             </section>
 <<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
             {/* Testimonials Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8">
+            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
               <div className="max-w-7xl mx-auto">
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -524,28 +645,35 @@ export default function AiCodeAssistantProPage() {
                     See what developers are saying about Zion AI Code Assistant Pro
                   </p>
                 </div>
+                
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {testimonials.map((testimonial, index) => (
-                    <div
-                      key={index}
-                      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden">
-                      <div className="flex items-center mb-4">
+                    <FuturisticCardEnhanced key={index} className="text-center">
+                      <div className="flex justify-center mb-4">
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                         ))}
                       </div>
-                      <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
-                      <div>
-                        <div className="font-semibold text-white">{testimonial.name}</div>
-                        <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                      <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
+                      <div className="flex items-center justify-center">
+                        <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                          {testimonial.avatar}
+                        </div>
+                        <div>
+                          <div className="font-semibold text-white">{testimonial.name}</div>
+                          <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                        </div>
                       </div>
-                    </div>
+                    </FuturisticCardEnhanced>
                   ))}
                 </div>
               </div>
             </section>
+<<<<<<< HEAD
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
             {/* CTA Section */}
             <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-purple-900/30">
@@ -585,6 +713,7 @@ export default function AiCodeAssistantProPage() {
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default AICodeAssistantProZionTechGroup;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
@@ -749,3 +878,6 @@ export default AICodeAssistantProZionTechGroup;
 export default function AiCodeAssistantProPage() {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default AICodeAssistantProZionTechGroup;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

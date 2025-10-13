@@ -139,6 +139,7 @@ const DataCenterServicesPage = () => {
   const dataCenterServices = [
     {
       icon: <Server className="w-8 h-8" />,
+<<<<<<< HEAD
       title: "Data Center Management",
       description: "Comprehensive data center management and monitoring services",
       color: "from-blue-500 to-cyan-500"
@@ -160,6 +161,27 @@ const DataCenterServicesPage = () => {
       title: "Disaster Recovery",
       description: "Comprehensive disaster recovery and business continuity solutions",
       color: "from-orange-500 to-red-500"
+=======
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud infrastructure with zero downtime and data loss",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      title: "Disaster Recovery",
+      description: "Comprehensive backup and disaster recovery solutions to protect your data",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+    },
+    {
+      title: "24/7 Monitoring",
+      description: "Round-the-clock monitoring and support to ensure optimal performance",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 <<<<<<< HEAD
@@ -652,6 +674,7 @@ export default function PagePage() {
   );
 };
 
+<<<<<<< HEAD
 export default DataCenterServicesPage;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
@@ -661,3 +684,6 @@ export default DataCenterServicesPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

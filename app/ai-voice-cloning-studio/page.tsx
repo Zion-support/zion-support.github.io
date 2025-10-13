@@ -125,6 +125,7 @@ import { Mic } from 'lucide-react';  Globe  } from 'lucide-react';
 
 const AIVoiceCloningStudioPage = () => {
   const features = [
+<<<<<<< HEAD
     {,
     title: "Real-time Voice Cloning",
         description: "Clone any voice with just 3 seconds of audio sample using advanced neural networks",
@@ -148,6 +149,31 @@ const AIVoiceCloningStudioPage = () => {
         description: "Studio-quality audio output up to 48kHz sample rate",
         icon: <Volume2 className="w-8 h-8" />,
         color: "from-orange-500 to-red-500"
+=======
+    {
+      title: "Real-time Voice Cloning",
+      description: "Clone any voice with just 3 seconds of audio sample using advanced neural networks",
+      icon: <Mic className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+    },
+    {
+      title: "Multi-Language Support",
+      description: "Support for 50+ languages with native accent preservation",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      title: "Emotion Control",
+      description: "Add emotions like happiness, sadness, excitement to cloned voices",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      title: "High-Quality Output",
+      description: "Studio-quality audio output up to 48kHz sample rate",
+      icon: <Volume2 className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -336,6 +362,7 @@ const AIVoiceCloningStudioPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Pricing Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
@@ -394,6 +421,7 @@ const AIVoiceCloningStudioPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -425,6 +453,7 @@ const AIVoiceCloningStudioPage = () => {
             ))}
           </div>
         </ResponsiveContainer>
+      </section>
       </section>
 
       {/* CTA Section */}

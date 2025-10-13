@@ -46,6 +46,7 @@ export default function Page() {
   ];
 
   const benefits = [
+<<<<<<< HEAD
     {,
     icon: <Play className="w-8 h-8 text-cyan-400" />,
         title: "Interactive Demos",
@@ -65,6 +66,27 @@ export default function Page() {
     icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
         title: "Data-Driven",
         description: "Make informed decisions with data"
+=======
+    {
+      icon: <Play className="w-8 h-8 text-cyan-400" />,
+      title: "Interactive Demos",
+      description: "Hands-on experience with our solutions",
+    },
+    {
+      icon: <Users className="w-8 h-8 text-green-400" />,
+      title: "Expert Guidance",
+      description: "Learn from our experienced team",
+    },
+    {
+      icon: <Award className="w-8 h-8 text-purple-400" />,
+      title: "Proven Results",
+      description: "See real-world success stories",
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
+      title: "Data-Driven",
+      description: "Make informed decisions with data",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 

@@ -156,6 +156,7 @@ const AISentimentAnalysisProPage = () => {
 
   const features = [
     {
+<<<<<<< HEAD
       icon: <Heart className="w-8 h-8" />,
       title: "Emotion Detection",
       description: "Advanced AI algorithms detect emotions and sentiment in text with 95% accuracy",
@@ -178,6 +179,30 @@ const AISentimentAnalysisProPage = () => {
       title: "Trend Analysis",
       description: "Track sentiment trends over time and identify patterns in customer feedback",
       color: "from-purple-500 to-pink-500"
+=======
+      title: "Real-time Sentiment Tracking",
+      description: "Monitor customer sentiment across all channels in real-time",
+      icon: <TrendingUp className="w-6 h-6" />,
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      title: "Multi-language Support",
+      description: "Analyze sentiment in 50+ languages with high accuracy",
+      icon: <Globe className="w-6 h-6" />,
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      title: "Emotion Detection",
+      description: "Detect emotions like joy, anger, fear, and sadness in text",
+      icon: <MessageSquare className="w-6 h-6" />,
+      color: "from-purple-500 to-pink-500",
+    },
+    {
+      title: "Trend Analysis",
+      description: "Identify sentiment trends and patterns over time",
+      icon: <BarChart3 className="w-6 h-6" />,
+      color: "from-orange-500 to-red-500",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -498,6 +523,7 @@ const AISentimentAnalysisProPage = () => {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AISentimentAnalysisProPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
@@ -507,3 +533,6 @@ export default AISentimentAnalysisProPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

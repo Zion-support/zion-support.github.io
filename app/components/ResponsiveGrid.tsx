@@ -107,6 +107,7 @@ export default function Responsivegrid({ className = '', children, ...props }: R
   );
 };
 
+<<<<<<< HEAD
 export default ResponsiveGrid;
   );
 }
@@ -126,3 +127,6 @@ export default ResponsiveGrid;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

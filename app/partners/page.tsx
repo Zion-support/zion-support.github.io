@@ -29,6 +29,7 @@ import { Cloud } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 export default function Partners() {
+<<<<<<< HEAD
   // const partners = [
   //   {
   //     name: "Microsoft",
@@ -73,6 +74,52 @@ export default function Partners() {
   //     tier: "Silver"
   //   }
   // ];
+=======
+  const partners = [
+    {
+      name: "Microsoft",
+      logo: "/images/partners/microsoft.png",
+      description: "Leading cloud and productivity solutions",
+      category: "Technology Partner",
+      tier: "Platinum",
+    },
+    {
+      name: "Amazon Web Services",
+      logo: "/images/partners/aws.png",
+      description: "Comprehensive cloud computing platform",
+      category: "Cloud Partner",
+      tier: "Platinum",
+    },
+    {
+      name: "Google Cloud",
+      logo: "/images/partners/google-cloud.png",
+      description: "AI and machine learning cloud services",
+      category: "AI Partner",
+      tier: "Gold",
+    },
+    {
+      name: "Salesforce",
+      logo: "/images/partners/salesforce.png",
+      description: "Customer relationship management platform",
+      category: "CRM Partner",
+      tier: "Gold",
+    },
+    {
+      name: "IBM",
+      logo: "/images/partners/ibm.png",
+      description: "Enterprise AI and hybrid cloud solutions",
+      category: "Enterprise Partner",
+      tier: "Silver",
+    },
+    {
+      name: "Oracle",
+      logo: "/images/partners/oracle.png",
+      description: "Database and enterprise software solutions",
+      category: "Database Partner",
+      tier: "Silver",
+    }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
 <<<<<<< HEAD
   const partnerTiers = [

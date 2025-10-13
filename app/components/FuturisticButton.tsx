@@ -170,6 +170,7 @@ export default function FuturisticButton({ className = '', children, ...props }:
   );
 };
 
+<<<<<<< HEAD
 export default FuturisticButton;
   );
 }
@@ -177,3 +178,6 @@ export default FuturisticButton;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

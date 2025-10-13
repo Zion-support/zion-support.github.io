@@ -196,6 +196,7 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
+<<<<<<< HEAD
 export default FuturisticButtonEnhanced;
   );
 }
@@ -208,3 +209,6 @@ export default FuturisticButtonEnhanced;
 export default function Futuristicbuttonenhanced({ className = '', children, ...props }: FuturisticbuttonenhancedProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

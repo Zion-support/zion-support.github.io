@@ -78,6 +78,7 @@ export default function Breadcrumb({ className = '', children, ...props }: Bread
 };
 =======
 
+<<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
@@ -96,3 +97,6 @@ export default Breadcrumb;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default Breadcrumb;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

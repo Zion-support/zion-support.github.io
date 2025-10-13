@@ -107,7 +107,11 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 import { ArrowRight, CheckCircle, Star, Building, Calendar, Users } from 'lucide-react';
 
 export default function CaseStudies() {
+<<<<<<< HEAD
   const caseStudies = [
+=======
+  const _caseStudies = [
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     {
       id: 1,
       title: "E-commerce Platform AI Transformation",

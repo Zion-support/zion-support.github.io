@@ -172,16 +172,23 @@ const AIImageRecognitionProPage = () => {
       icon: <Eye className="w-8 h-8" />,
       title: "Object Detection",
 <<<<<<< HEAD
+<<<<<<< HEAD
       description: "Advanced AI algorithms detect and classify objects in images with 99% accuracy",
 =======
       description: "Identify and locate objects in images with high accuracy using advanced AI models",
       icon: <Eye className="w-8 h-8" />,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       color: "from-blue-500 to-cyan-500"
+=======
+      description: "Identify and classify objects in images with high accuracy",
+      icon: <Eye className="w-6 h-6" />,
+      color: "from-blue-500 to-cyan-500",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     },
     {
       icon: <Brain className="w-8 h-8" />,
       title: "Facial Recognition",
+<<<<<<< HEAD
 <<<<<<< HEAD
       description: "State-of-the-art facial recognition technology for security and identification",
       color: "from-green-500 to-emerald-500"
@@ -213,6 +220,23 @@ const AIImageRecognitionProPage = () => {
       icon: <Shield className="w-8 h-8" />,
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
       color: "from-orange-500 to-red-500"
+=======
+      description: "Advanced facial recognition and analysis capabilities",
+      icon: <Users className="w-6 h-6" />,
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      title: "Text Extraction",
+      description: "Extract text from images using OCR technology",
+      icon: <Scan className="w-6 h-6" />,
+      color: "from-purple-500 to-pink-500",
+    },
+    {
+      title: "Scene Analysis",
+      description: "Understand and analyze complex scenes and contexts",
+      icon: <Image className="w-6 h-6" />,
+      color: "from-orange-500 to-red-500",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -714,6 +738,7 @@ const AIImageRecognitionProPage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AIImageRecognitionProPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
@@ -726,3 +751,6 @@ export default AIImageRecognitionProPage;
 =======
 export default AIImageRecognitionProZionTechGroup;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

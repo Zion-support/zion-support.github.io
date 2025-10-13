@@ -88,6 +88,7 @@ export default function AnalyticsProvider({ className = '', children, ...props }
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AnalyticsProvider;
   );
 }
@@ -104,3 +105,6 @@ export default AnalyticsProvider;
 export default function Analyticsprovider({ className = '', children, ...props }: AnalyticsproviderProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default AnalyticsProvider;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

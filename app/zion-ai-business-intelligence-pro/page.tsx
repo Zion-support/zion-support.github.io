@@ -47,7 +47,7 @@ const ZionAiBusinessIntelligencePro = () => {
         "30-day data retention"
       ],
       popular: false,
-      cta: "Start Free Trial"
+      cta: "Start Free Trial",
     },
     {
       name: "Enterprise",
@@ -68,7 +68,7 @@ const ZionAiBusinessIntelligencePro = () => {
         "Dedicated analyst"
       ],
       popular: true,
-      cta: "Start Free Trial"
+      cta: "Start Free Trial",
     },
     {
       name: "Enterprise Plus",
@@ -89,7 +89,7 @@ const ZionAiBusinessIntelligencePro = () => {
         "Dedicated account manager"
       ],
       popular: false,
-      cta: "Contact Sales"
+      cta: "Contact Sales",
     }
   ];
 
@@ -263,8 +263,7 @@ export default function ZionaibusinessintelligenceproPage() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -300,10 +299,10 @@ export default function ZionaibusinessintelligenceproPage() {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -342,10 +341,10 @@ export default function ZionaibusinessintelligenceproPage() {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -402,10 +401,10 @@ export default function ZionaibusinessintelligenceproPage() {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -444,10 +443,10 @@ export default function ZionaibusinessintelligenceproPage() {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
-        </section>
+      <section$1>
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -474,10 +473,12 @@ export default function ZionaibusinessintelligenceproPage() {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default ZionAiBusinessIntelligencePro;
   );
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
@@ -508,3 +509,6 @@ export default function Page() {
 export default function ZionAiBusinessIntelligenceProPage() {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

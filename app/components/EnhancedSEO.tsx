@@ -58,6 +58,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
+<<<<<<< HEAD
 export default EnhancedSEO;
   );
 }
@@ -70,3 +71,6 @@ export default EnhancedSEO;
 export default function Enhancedseo({ className = '', children, ...props }: EnhancedseoProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

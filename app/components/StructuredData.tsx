@@ -151,6 +151,7 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
+<<<<<<< HEAD
 export default StructuredData;
   );
 }
@@ -351,3 +352,6 @@ export default function StructuredData({ type, data }: StructuredDataProps) {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-61d5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

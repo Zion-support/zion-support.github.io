@@ -119,32 +119,32 @@ const AIVoiceAssistantProPage = () => {
     {
       icon: <Mic className="w-8 h-8" />,
       title: "Voice Recognition",
-      description: "Advanced speech-to-text with 99% accuracy in multiple languages."
+      description: "Advanced speech-to-text with 99% accuracy in multiple languages.",
     },
     {
       icon: <Brain className="w-8 h-8" />,
       title: "Natural Language Processing",
-      description: "Understand context and intent for more natural conversations."
+      description: "Understand context and intent for more natural conversations.",
     },
     {
       icon: <Volume2 className="w-8 h-8" />,
       title: "Text-to-Speech",
-      description: "High-quality voice synthesis with customizable voices."
+      description: "High-quality voice synthesis with customizable voices.",
     },
     {
       icon: <MessageSquare className="w-8 h-8" />,
       title: "Conversational AI",
-      description: "Engage in natural, context-aware conversations."
+      description: "Engage in natural, context-aware conversations.",
     },
     {
       icon: <Settings className="w-8 h-8" />,
       title: "Customizable Commands",
-      description: "Create custom voice commands for your specific needs."
+      description: "Create custom voice commands for your specific needs.",
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Privacy & Security",
-      description: "Enterprise-grade security with data encryption and privacy controls."
+      description: "Enterprise-grade security with data encryption and privacy controls.",
     }
   ];
 
@@ -525,8 +525,12 @@ const AIVoiceAssistantProPage = () => {
   );
 };
 
+<<<<<<< HEAD
 export default AIVoiceAssistantProPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

@@ -146,6 +146,7 @@ export default function PerformanceOptimizer({ className = '', children, ...prop
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default PerformanceOptimizer;
   );
 }
@@ -156,3 +157,6 @@ export default PerformanceOptimizer;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default PerformanceOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

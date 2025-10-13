@@ -120,32 +120,32 @@ const AIHRRecruitmentProPage = () => {
     {
       icon: <UserCheck className="w-8 h-8" />,
       title: "Smart Candidate Matching",
-      description: "AI-powered matching algorithm that finds the perfect candidates for your roles."
+      description: "AI-powered matching algorithm that finds the perfect candidates for your roles.",
     },
     {
       icon: <FileText className="w-8 h-8" />,
       title: "Automated Screening",
-      description: "Intelligent resume screening and initial candidate assessment."
+      description: "Intelligent resume screening and initial candidate assessment.",
     },
     {
       icon: <Calendar className="w-8 h-8" />,
       title: "Interview Scheduling",
-      description: "Automated interview scheduling and calendar management."
+      description: "Automated interview scheduling and calendar management.",
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "Performance Analytics",
-      description: "Track recruitment metrics and optimize your hiring process."
+      description: "Track recruitment metrics and optimize your hiring process.",
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Compliance Management",
-      description: "Ensure compliance with employment laws and regulations."
+      description: "Ensure compliance with employment laws and regulations.",
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Real-time Updates",
-      description: "Get instant notifications and updates on candidate progress."
+      description: "Get instant notifications and updates on candidate progress.",
     }
   ];
 
@@ -789,6 +789,7 @@ const AIHRRecruitmentProZionTechGroup = () => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default AIHRRecruitmentProPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
@@ -797,3 +798,6 @@ export default AIHRRecruitmentProPage;
 =======
 export default AIHRRecruitmentProZionTechGroup;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-d081
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

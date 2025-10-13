@@ -68,7 +68,7 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
     default: "bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20",
     glass: "bg-white/5 backdrop-blur-md border border-cyan-500/30 hover:bg-white/10",
     neon: "bg-slate-800/50 border border-cyan-400/50 hover:border-cyan-400 shadow-lg shadow-cyan-500/10",
-    hologram: "bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-cyan-400/30 hover:from-cyan-500/20 hover:to-purple-500/20"
+    hologram: "bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-cyan-400/30 hover:from-cyan-500/20 hover:to-purple-500/20",
   };
 
 =======
@@ -95,6 +95,7 @@ export default function Futuristiccard({ className = '', children, ...props }: F
   );
 };
 
+<<<<<<< HEAD
 export default FuturisticCard;
   );
 }
@@ -114,3 +115,6 @@ export default FuturisticCard;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

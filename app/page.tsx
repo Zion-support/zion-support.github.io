@@ -11,6 +11,7 @@
 <<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
@@ -23,6 +24,11 @@ import { Home, Shield, Zap, Brain, Globe, Code, BarChart3, Mic, Cloud } from 'lu
 =======
 import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+import { Link } from "react-router-dom";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, BarChart3, Cloud, Sparkles, Mail, Monitor, Target } from "lucide-react";
+import FuturisticButton from "./components/FuturisticButton";
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
 const HomePage = () => {
   const services = [
@@ -202,12 +208,79 @@ export default function Page() {
               Advanced technology integration and optimization.
             </p>
           </div>
+<<<<<<< HEAD
           
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-900 mb-4">Feature 3</h3>
             <p className="text-gray-600">
               Scalable and secure implementation.
             </p>
+=======
+        </section>
+
+        {/* Services Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Technology Solutions
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive technology services designed to accelerate your digital transformation and drive business growth.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <FuturisticButton
+                  variant="primary"
+                  size="lg"
+                  className="px-8 py-4"
+                  onClick={() => window.location.href = '/contact'}
+                >
+                  Start Your Project
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </FuturisticButton>
+                <FuturisticButton
+                  variant="outline"
+                  size="lg"
+                  className="px-8 py-4"
+                  onClick={() => window.location.href = '/consultation'}
+                >
+                  <Mail className="w-5 h-5" />
+                  Schedule Consultation
+                </FuturisticButton>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to={service.link}
+                    className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 font-semibold transition-colors group-hover:gap-3"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
           </div>
 =======
 import { Helmet } from 'react-helmet-async';

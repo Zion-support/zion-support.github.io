@@ -41,6 +41,7 @@ const Services: React.FC<ServicesProps> = ({ className = "" }) => {
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
+<<<<<<< HEAD
 export default Services;
   );
 }
@@ -53,3 +54,6 @@ export default Services;
 export default function Services({ className = '', children, ...props }: ServicesProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

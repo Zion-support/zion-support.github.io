@@ -84,6 +84,7 @@ export default function Responsivecontainer({ className = '', children, ...props
   );
 };
 
+<<<<<<< HEAD
 export default ResponsiveContainer;
   );
 }
@@ -103,3 +104,6 @@ export default ResponsiveContainer;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

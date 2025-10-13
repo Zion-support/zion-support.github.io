@@ -252,6 +252,7 @@ export const _useErrorHandler = () => {
   };
 };
 
+<<<<<<< HEAD
 export default ImprovedErrorBoundary;
   );
 }
@@ -273,3 +274,6 @@ export default function Improvederrorboundary({ className = '', children, ...pro
 export default function Improvederrorboundary({ className = '', children, ...props }: ImprovederrorboundaryProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

@@ -15,6 +15,7 @@ import { Receipt } from 'lucide-react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
 =======
 const SmartExpenseCategorizerPage = () => {
+<<<<<<< HEAD
   const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
@@ -25,6 +26,40 @@ export default function smartExpenseCategorizer() {
   const benefits: string[] = [];
 
   const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+=======
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      title: "AI-Powered Categorization",
+      description: "Advanced machine learning automatically categorizes expenses with 98% accuracy, learning from your patterns and preferences.",
+    },
+    {
+      icon: <Target className="w-8 h-8 text-purple-400" />,
+      title: "Smart Receipt Processing",
+      description: "Automatically extract data from receipts, invoices, and bills using OCR technology and AI-powered data extraction.",
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+      title: "Real-time Analytics",
+      description: "Comprehensive expense analytics with spending trends, budget tracking, and financial insights to optimize your finances.",
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: "Bank Integration",
+      description: "Securely connect with your bank accounts and credit cards for automatic transaction import and categorization.",
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: "Automated Workflows",
+      description: "Set up automated rules for expense approval, reimbursement, and reporting to streamline your financial processes.",
+    },
+    {
+      icon: <Users className="w-8 h-8 text-blue-400" />,
+      title: "Team Management",
+      description: "Manage team expenses with role-based permissions, approval workflows, and centralized expense reporting.",
+    }
+  ];
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
 
   const pricingPlans = [
     {
@@ -542,6 +577,7 @@ import React from 'react';
   );
 };
 
+<<<<<<< HEAD
 export default SmartExpenseCategorizerPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 =======
@@ -573,3 +609,6 @@ export default SmartExpenseCategorizerPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

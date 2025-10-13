@@ -97,6 +97,7 @@ const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
+<<<<<<< HEAD
 export default EnhancedLoading;
   );
 }
@@ -109,3 +110,6 @@ export default EnhancedLoading;
 export default function Enhancedloading({ className = '', children, ...props }: EnhancedloadingProps) {
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

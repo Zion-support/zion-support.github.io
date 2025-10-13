@@ -156,6 +156,7 @@ const AIPoweredEmailAnalyzerPage = () => {
     {
       icon: <Brain className="w-8 h-8" />,
       title: "AI-Powered Analysis",
+<<<<<<< HEAD
       description: "Advanced machine learning algorithms analyze email content, sentiment, and intent with 99.5% accuracy",
       color: "from-blue-500 to-cyan-500"
     },
@@ -170,12 +171,29 @@ const AIPoweredEmailAnalyzerPage = () => {
       title: "Analytics & Insights",
       description: "Comprehensive analytics dashboard with detailed insights into email performance and trends",
       color: "from-purple-500 to-pink-500"
+=======
+      description: "Advanced machine learning algorithms analyze email content, sentiment, and intent with 99.5% accuracy.",
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Security Detection",
+      description: "Automatically detect phishing attempts, spam, and malicious content to protect your organization.",
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Analytics Dashboard",
+      description: "Comprehensive analytics and reporting to track email performance and communication trends.",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     },
     {
       icon: <Zap className="w-8 h-8" />,
       title: "Real-time Processing",
+<<<<<<< HEAD
       description: "Process and analyze emails in real-time for instant insights and automated responses",
       color: "from-orange-500 to-red-500"
+=======
+      description: "Process and analyze emails in real-time with instant notifications and alerts.",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -522,6 +540,7 @@ import { Helmet } from 'react-helmet-async';
   );
 };
 
+<<<<<<< HEAD
 export default AIPoweredEmailAnalyzerPage;
 =======
 
@@ -592,3 +611,6 @@ export default function AiPoweredEmailAnalyzerPage() {
 
 }}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

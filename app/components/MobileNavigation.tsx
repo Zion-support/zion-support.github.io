@@ -307,6 +307,7 @@ const MobileNavigation: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default MobileNavigation;
   );
 }
@@ -319,3 +320,6 @@ export default MobileNavigation;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+export default $1;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847

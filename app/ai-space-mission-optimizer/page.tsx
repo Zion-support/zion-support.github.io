@@ -124,6 +124,7 @@ import { Activity } from 'lucide-react';  Gauge  } from 'lucide-react';
 
 const AISpaceMissionOptimizerPage = () => {
   const features = [
+<<<<<<< HEAD
     {,
     title: "Mission Planning AI",
         description: "AI-powered mission planning with optimal trajectory calculations and resource allocation",
@@ -147,6 +148,31 @@ const AISpaceMissionOptimizerPage = () => {
         description: "Advanced risk analysis for space missions with collision avoidance",
         icon: <Target className="w-8 h-8" />,
         color: "from-orange-500 to-red-500"
+=======
+    {
+      title: "Mission Planning AI",
+      description: "AI-powered mission planning with optimal trajectory calculations and resource allocation",
+      icon: <Rocket className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      title: "Real-Time Optimization",
+      description: "Continuous mission optimization based on real-time data and changing conditions",
+      icon: <Activity className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+    },
+    {
+      title: "Satellite Management",
+      description: "Comprehensive satellite constellation management and coordination",
+      icon: <Satellite className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+    },
+    {
+      title: "Risk Assessment",
+      description: "Advanced risk analysis for space missions with collision avoidance",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-f847
     }
   ];
 
@@ -362,6 +388,7 @@ const AISpaceMissionOptimizerPage = () => {
           </div>
         </ResponsiveContainer>
       </section>
+      </section>
 
       {/* Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
@@ -396,6 +423,7 @@ const AISpaceMissionOptimizerPage = () => {
             ))}
           </div>
         </ResponsiveContainer>
+      </section>
       </section>
 
       {/* Pricing Section */}
@@ -454,6 +482,7 @@ const AISpaceMissionOptimizerPage = () => {
             ))}
           </div>
         </ResponsiveContainer>
+      </section>
       </section>
 
       {/* CTA Section */}

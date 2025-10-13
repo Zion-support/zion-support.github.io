@@ -44,7 +44,7 @@ const FuturisticText: React.FC<FuturisticTextProps> = ({
 //     body: "text-base md:text-lg text-gray-300 leading-relaxed",
 //     caption: "text-sm text-gray-400",
 //     neon: "text-cyan-400 font-semibold drop-shadow-lg",
-//     gradient: "text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 font-semibold"
+//     gradient: "text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 font-semibold",
   };
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
