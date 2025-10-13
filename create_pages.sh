@@ -1,3 +1,30 @@
+#!/bin/bash
+
+# List of missing zion-ai pages
+pages=(
+  "zion-ai-customer-insights"
+  "zion-ai-customer-sentiment-tracker"
+  "zion-ai-voice-assistant-pro"
+  "zion-ai-code-reviewer"
+  "zion-ai-social-media-manager"
+  "zion-ai-contract-analyzer"
+  "zion-ai-performance-optimizer"
+  "zion-ai-customer-churn-predictor"
+  "zion-ai-supply-chain-optimizer"
+  "zion-ai-financial-forecaster"
+  "zion-ai-content-moderator"
+  "zion-ai-translator-pro"
+  "zion-ai-data-cleaner"
+  "zion-ai-task-scheduler"
+  "zion-ai-customer-support-pro"
+)
+
+# Create directories and basic page files
+for page in "${pages[@]}"; do
+  mkdir -p "/workspace/app/$page"
+  
+  # Create a basic page.tsx file
+  cat > "/workspace/app/$page/page.tsx" << PAGE_EOF
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, ArrowRight, Sparkles } from 'lucide-react';
@@ -6,15 +33,15 @@ import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAICustomerInsightsPage = () => {
+const ${page^}Page = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <EnhancedSEO
-        title="Zion-ai-customer-insights - AI-Powered Business Solution | Zion Tech Group"
-        description="AI-powered zion-ai-customer-insights solution for modern businesses."
-        keywords="AI solution, business automation, zion-ai-customer-insights"
-        canonical="https://ziontechgroup.com/zion-ai-customer-insights"
+        title="${page^} - AI-Powered Business Solution | Zion Tech Group"
+        description="AI-powered ${page} solution for modern businesses."
+        keywords="AI solution, business automation, ${page}"
+        canonical="https://ziontechgroup.com/${page}"
       />
 
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -26,12 +53,12 @@ const ZionAICustomerInsightsPage = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion-ai-customer-insights
+              ${page^}
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            AI-powered zion-ai-customer-insights solution for modern businesses.
+            AI-powered ${page} solution for modern businesses.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -58,4 +85,10 @@ const ZionAICustomerInsightsPage = () => {
   );
 };
 
-export default ZionAICustomerInsightsPage;
+export default ${page^}Page;
+PAGE_EOF
+
+  echo "Created $page"
+done
+
+echo "All pages created successfully!"
