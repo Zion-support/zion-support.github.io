@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-=======
-import React from 'react'.
-import { Helmet } from 'react-helmet-async'.
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Zap, Bot, Settings, Workflow } from 'lucide-react'.
+import React, { Helmet } from 'react-helmet-async';
+import React, { CheckCircle, TrendingUp, Phone, Mail, MapPin, Zap, Bot, Settings, Workflow } from 'lucide-react';
 const AIAutomationSuitePage: React.FC = () => {
   const automationServices = [
     {
@@ -111,7 +107,7 @@ const AIAutomationSuitePage: React.FC = () => {
       ],
       marketPrice: '$1,200-3,500/month',
       category: 'Customer Service',
-      technologies: ['NLP', 'Chatbots', 'Knowledge Graphs', 'Sentiment Analysis', 'CRM Integration'],
+      technologies: ['NLP', 'Chatbots', 'Knowledge Graphs', 'Sentiment Analysis', 'CRM Integration']
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -138,7 +134,7 @@ const AIAutomationSuitePage: React.FC = () => {
       ],
       marketPrice: '$1,500-4,000/month',
       category: 'Sales Automation',
-      technologies: ['Machine Learning', 'CRM APIs', 'Email Automation', 'Lead Scoring', 'Analytics'],
+      technologies: ['Machine Learning', 'CRM APIs', 'Email Automation', 'Lead Scoring', 'Analytics']
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -165,7 +161,7 @@ const AIAutomationSuitePage: React.FC = () => {
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'Marketing Automation',
-      technologies: ['Machine Learning', 'Personalization', 'A/B Testing', 'Marketing APIs', 'Analytics'],
+      technologies: ['Machine Learning', 'Personalization', 'A/B Testing', 'Marketing APIs', 'Analytics']
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -192,7 +188,7 @@ const AIAutomationSuitePage: React.FC = () => {
       ],
       marketPrice: '$800-2,500/month',
       category: 'HR Automation',
-      technologies: ['NLP', 'Machine Learning', 'HR APIs', 'Scheduling Systems', 'Compliance Tools'],
+      technologies: ['NLP', 'Machine Learning', 'HR APIs', 'Scheduling Systems', 'Compliance Tools']
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -219,7 +215,7 @@ const AIAutomationSuitePage: React.FC = () => {
       ],
       marketPrice: '$1,200-3,500/month',
       category: 'Financial Automation',
-      technologies: ['OCR', 'Machine Learning', 'Financial APIs', 'Compliance Tools', 'Analytics'],
+      technologies: ['OCR', 'Machine Learning', 'Financial APIs', 'Compliance Tools', 'Analytics']
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -246,7 +242,7 @@ const AIAutomationSuitePage: React.FC = () => {
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'Inventory Automation',
-      technologies: ['Time Series Analysis', 'Machine Learning', 'Supply Chain APIs', 'IoT Integration'],
+      technologies: ['Time Series Analysis', 'Machine Learning', 'Supply Chain APIs', 'IoT Integration']
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -273,26 +269,12 @@ const AIAutomationSuitePage: React.FC = () => {
       ],
       marketPrice: '$1,500-4,000/month',
       category: 'Quality Assurance',
-      technologies: ['Test Automation', 'Machine Learning', 'CI/CD', 'Performance Testing', 'Security Tools'],
+      technologies: ['Test Automation', 'Machine Learning', 'CI/CD', 'Performance Testing', 'Security Tools']
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
 
-export default function PagePage() {
   return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Page</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
-}
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Automation Suite - Zion Tech Group</title>
@@ -304,7 +286,7 @@ export default function PagePage() {
       <section className="pt-24 pb-16 px-4">"
         <div className="max-w-7xl mx-auto text-center">"
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Automation Suite.
+            AI Automation Suite;
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
             Transform your business operations with intelligent automation that learns, adapts, and scales with your needs.
@@ -354,7 +336,7 @@ export default function PagePage() {
       <section className="py-16 px-4">"
         <div className="max-w-7xl mx-auto">"
           <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Automation Solution.
+            Choose Your Automation Solution;
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {automationServices.map((service, index) => (
@@ -386,7 +368,7 @@ export default function PagePage() {
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features.
+                        +{service.features.length - 4} more features;
                       </li>
                     )}
                   </ul>
@@ -420,7 +402,7 @@ export default function PagePage() {
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started Now.
+                    Get Started Now;
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
                     {service.contactInfo}
@@ -446,21 +428,20 @@ export default function PagePage() {
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              Call (302) 464-0950.
+              Call (302) 464-0950;
             </a>
             <a
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us.
+              Email Us;
             </a>
           </div>
         </div>
       </section>
     </div>
-  ).
-  ).
+  );
+  );
 };
 
-export default AIAutomationSuitePage.
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
+export default AIAutomationSuitePage;
