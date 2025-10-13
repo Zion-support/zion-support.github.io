@@ -32,27 +32,10 @@ class ErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
     console.error('ErrorBoundary caught an error:', error, errorInfo);
     
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
-=======
-    this.setState({
-      error,
-      errorInfo
-    });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a service like Sentry
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
     }
   }
 
@@ -82,11 +65,7 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
               We're sorry, but something unexpected happened. Please try refreshing the page.
-=======
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
