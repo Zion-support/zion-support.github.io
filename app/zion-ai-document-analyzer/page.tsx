@@ -1,32 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  FileText, 
-  Brain, 
-  Shield, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Award, 
-  BarChart3,
-  Clock,
-  DollarSign,
-  Target,
-  Sparkles,
-  Eye,
-  Search,
-  Download,
-  Upload,
-  FileCheck,
-  AlertTriangle,
-  TrendingUp,
-  Globe,
-  Lock,
-  Smartphone,
-  Monitor
-} from 'lucide-react';
+import { FileText, Brain, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Award, BarChart3, Clock, DollarSign, Target, Sparkles, Eye, Search, Download, Upload, FileCheck, AlertTriangle, TrendingUp, Globe, Lock, Smartphone, Monitor } from "lucide-react";
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';

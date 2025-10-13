@@ -1,47 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { 
-  ArrowRight, 
-  Shield, 
-  Brain, 
-  CheckCircle, 
-  Star, 
-  Users, 
-  Award, 
-  Zap, 
-  Cloud, 
-  Smartphone, 
-  Globe, 
-  Mail, 
-  Phone, 
-  TrendingUp,
-  Database,
-  Settings,
-  Monitor,
-  Lock,
-  Server,
-  Cpu,
-  Network,
-  HardDrive,
-  Headphones,
-  Sparkles,
-  Target,
-  Calendar,
-  FileText,
-  Code,
-  Bot,
-  Wifi,
-  Heart,
-  Receipt,
-  Package,
-  Clock,
-  AlertTriangle,
-  Eye,
-  Key,
-  Fingerprint,
-  Search,
-  Activity
-} from "lucide-react";
+import { ArrowRight, Shield, Brain, CheckCircle, Star, Users, Award, Zap, Cloud, Smartphone, Globe, Mail, Phone, TrendingUp, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Headphones, Sparkles, Target, Calendar, FileText, Code, Bot, Wifi, Heart, Receipt, Package, Clock, AlertTriangle, Eye, Key, Fingerprint, Search, Activity } from "lucide-react";
 
 export default function ZionSecurityShieldPro() {
   const features = [

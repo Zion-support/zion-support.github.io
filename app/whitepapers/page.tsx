@@ -1,20 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
-  FileText, 
-  Download, 
-  Users, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Brain,
-  Globe,
-  Settings,
-  Shield,
-  BookOpen
-} from 'lucide-react';
+import { FileText, Download, Users, ArrowRight, Sparkles, CheckCircle, Target, Brain, Globe, Settings, Shield, BookOpen } from "lucide-react";
 
 const WhitepapersPage = () => {
   const whitepapers = [
