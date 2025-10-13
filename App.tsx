@@ -11,16 +11,13 @@ import { LoadingPage } from "./app/components/LoadingStates";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
-import ErrorHandler from "./app/components/ErrorHandler";
 import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
 
 // Lazy load pages for better performance
@@ -33,7 +30,6 @@ const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
 const CareersPage = React.lazy(() => import("./app/careers/page"));
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
-const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
@@ -213,10 +209,8 @@ function App() {
   });
 
   return (
-    <ErrorHandler>
-      <EnhancedErrorBoundary>
-        <HelmetProvider>
-          <AccessibilityEnhancer>
+    <EnhancedErrorBoundary>
+      <HelmetProvider>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground>
@@ -237,7 +231,6 @@ function App() {
                   <Route path="/it-services" element={<ServicesPage />} />
                   <Route path="/micro-saas" element={<ServicesPage />} />
                   <Route path="/tutorials" element={<TutorialsPage />} />
-                  <Route path="/consultation" element={<ConsultationPage />} />
                   <Route path="/demo" element={<DemoPage />} />
                   <Route path="/support" element={<SupportPage />} />
                   <Route path="/privacy" element={<PrivacyPage />} />
@@ -465,7 +458,6 @@ function App() {
                 </FuturisticBackground>
                 <AnalyticsProvider>
                   <div>
-                    <PerformanceMonitor />
                     <WebVitalsTracker />
                     <PerformanceEnhancer />
                     <SEOOptimizer />
@@ -474,10 +466,8 @@ function App() {
                 </AnalyticsProvider>
               </div>
             </Router>
-          </AccessibilityEnhancer>
         </HelmetProvider>
       </EnhancedErrorBoundary>
-    </ErrorHandler>
   );
 }
 
