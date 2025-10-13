@@ -4,66 +4,56 @@ import re
 import glob
 
 def clean_merge_conflicts(file_path):
-    """Clean merge conflict markers from a file, keeping our version (after =======)"""
+    """Clean merge conflicts from a file"""
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-        # Pattern to match merge conflict markers
-        # Keep everything before <<<<<<< HEAD and after =======
-        # Remove everything between <<<<<<< HEAD and =======
-        # Remove everything after >>>>>>> until end of conflict
-        pattern = r'<<<<<<< HEAD.*?=======(.*?)>>>>>>>.*?(?=<<<<<<< HEAD|$)'
+        # Remove merge conflict markers and keep the HEAD version
+        # Pattern to match merge conflicts and keep the content between <<<<<<< HEAD and =======
+        pattern = r'<<<<<<< HEAD\n(.*?)\n=======.*?>>>>>>> [^\n]+\n'
+        cleaned_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
         
-        # Replace with just our version (what's after =======)
-        cleaned = re.sub(pattern, r'\1', content, flags=re.DOTALL)
+        # Remove any remaining merge conflict markers
+        cleaned_content = re.sub(r'<<<<<<< HEAD\n?', '', cleaned_content)
+        cleaned_content = re.sub(r'=======\n?', '', cleaned_content)
+        cleaned_content = re.sub(r'>>>>>>> [^\n]+\n?', '', cleaned_content)
         
-        # Also handle cases where there's no ======= (just remove the conflict markers)
-        cleaned = re.sub(r'<<<<<<< HEAD.*?>>>>>>>.*?(?=<<<<<<< HEAD|$)', '', cleaned, flags=re.DOTALL)
+        # Clean up multiple empty lines
+        cleaned_content = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned_content)
         
-        # Clean up any remaining conflict markers
-        cleaned = re.sub(r'<<<<<<< HEAD.*?=======.*?>>>>>>>.*?(?=<<<<<<< HEAD|$)', '', cleaned, flags=re.DOTALL)
-        cleaned = re.sub(r'<<<<<<< HEAD.*?>>>>>>>.*?(?=<<<<<<< HEAD|$)', '', cleaned, flags=re.DOTALL)
-        
-        # Remove any remaining individual conflict markers
-        cleaned = re.sub(r'<<<<<<< HEAD.*', '', cleaned)
-        cleaned = re.sub(r'=======.*', '', cleaned)
-        cleaned = re.sub(r'>>>>>>>.*', '', cleaned)
-        
-        # Clean up extra whitespace
-        cleaned = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned)
-        
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(cleaned)
-        
-        print(f"Cleaned: {file_path}")
-        return True
+        if content != cleaned_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(cleaned_content)
+            print(f"Cleaned merge conflicts in: {file_path}")
+            return True
+        return False
     except Exception as e:
-        print(f"Error cleaning {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
     # Find all TypeScript and JavaScript files
     patterns = [
-        '**/*.tsx',
-        '**/*.ts', 
-        '**/*.js',
-        '**/*.jsx'
+        'app/**/*.tsx',
+        'app/**/*.ts',
+        '*.tsx',
+        '*.ts',
+        '*.js'
     ]
     
-    files_to_clean = []
+    files_processed = 0
+    files_cleaned = 0
+    
     for pattern in patterns:
-        files_to_clean.extend(glob.glob(pattern, recursive=True))
+        for file_path in glob.glob(pattern, recursive=True):
+            if os.path.isfile(file_path) and not file_path.startswith('node_modules'):
+                files_processed += 1
+                if clean_merge_conflicts(file_path):
+                    files_cleaned += 1
     
-    # Filter out node_modules
-    files_to_clean = [f for f in files_to_clean if 'node_modules' not in f]
-    
-    cleaned_count = 0
-    for file_path in files_to_clean:
-        if clean_merge_conflicts(file_path):
-            cleaned_count += 1
-    
-    print(f"Cleaned {cleaned_count} files")
+    print(f"\nProcessed {files_processed} files")
+    print(f"Cleaned merge conflicts in {files_cleaned} files")
 
 if __name__ == "__main__":
     main()

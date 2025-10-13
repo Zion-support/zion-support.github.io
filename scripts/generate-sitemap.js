@@ -38,6 +38,6 @@ const publicDir = path.join(__dirname, '../public')
   if (!fs.existsSync(publicDir)) {
     fs.mkdirSync(publicDir, { recursive: true })
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)
-  console.log('Sitemap generated successfully!')
-  console.log(`Found ${routes.length} routes`);
+  // console.log('Sitemap generated successfully!')
+  // console.log(`Found ${routes.length} routes`);
 generateSitemap();

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import fs from "fs";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -42,79 +42,102 @@ export default function ${pageName}() {
 // Function to generate a valid function name from directory name
 function generateValidFunctionName(dirName) {
   // Handle special cases for numbers at the start
-  if (dirName.startsWith('5g-')) {
-    return 'FiveG' + dirName.substring(3).split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join('') + 'Page';
+  if (dirName.startsWith("5g-")) {
+    return (
+      "FiveG" +
+      dirName
+        .substring(3)
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join("") +
+      "Page"
+    );
   }
-  
+
   // Handle other cases
-  return dirName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join('') + 'Page';
+  return (
+    dirName
+      .split("-")
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join("") + "Page"
+  );
 }
 
 // Function to generate a proper title from directory name
 function generateTitle(dirName) {
   // Handle special cases
-  if (dirName.startsWith('5g-')) {
-    return '5G ' + dirName.substring(3).split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join(' ');
+  if (dirName.startsWith("5g-")) {
+    return (
+      "5G " +
+      dirName
+        .substring(3)
+        .split("-")
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ")
+    );
   }
-  
-  return dirName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
+
+  return dirName
+    .split("-")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
 }
 
 // Function to process a single file
 function processFile(filePath) {
   try {
     // Extract page name from file path
-    const pathParts = filePath.split('/');
+    const pathParts = filePath.split("/");
     const fileName = pathParts[pathParts.length - 2]; // Get directory name
     const pageName = generateValidFunctionName(fileName);
     const title = generateTitle(fileName);
     const description = `Professional ${title.toLowerCase()} services by Zion Tech Group. Transform your business with our expert solutions.`;
-    
-    console.log(`Replacing file: ${filePath} with function name: ${pageName}`);
+
+    // console.log(`Replacing file: ${filePath} with function name: ${pageName}`);
     const newContent = createProperPageStructure(pageName, title, description);
     fs.writeFileSync(filePath, newContent);
-    console.log(`Fixed: ${filePath}`);
+    // console.log(`Fixed: ${filePath}`);
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
   }
 }
 
 // Function to recursively find all .tsx files
 function findTsxFiles(dir) {
   const files = [];
-  
+
   function traverse(currentDir) {
     const items = fs.readdirSync(currentDir);
-    
+
     for (const item of items) {
       const fullPath = path.join(currentDir, item);
       const stat = fs.statSync(fullPath);
-      
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+
+      if (
+        stat.isDirectory() &&
+        !item.startsWith(".") &&
+        item !== "node_modules"
+      ) {
         traverse(fullPath);
-      } else if (item.endsWith('.tsx') && !item.includes('.original') && !item.includes('test')) {
+      } else if (
+        item.endsWith(".tsx") &&
+        !item.includes(".original") &&
+        !item.includes("test")
+      ) {
         files.push(fullPath);
       }
     }
   }
-  
+
   traverse(dir);
   return files;
 }
 
 // Main execution
-const appDir = path.join(__dirname, 'app');
+const appDir = path.join(__dirname, "app");
 const tsxFiles = findTsxFiles(appDir);
 
-console.log(`Found ${tsxFiles.length} .tsx files to process`);
+// console.log(`Found ${tsxFiles.length} .tsx files to process`);
 
 let fixedCount = 0;
 for (const file of tsxFiles) {
@@ -122,4 +145,4 @@ for (const file of tsxFiles) {
   fixedCount++;
 }
 
-console.log(`Processed ${fixedCount} files`);
+// console.log(`Processed ${fixedCount} files`);

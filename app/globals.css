@@ -2,411 +2,116 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Accessibility and Performance Enhancements */
-
-/* Focus management */
-.using-mouse *:focus {
-  outline: none;
-}
-
-.using-mouse *:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* High contrast mode */
-.high-contrast {
-  filter: contrast(150%);
-}
-
-.high-contrast * {
-  border-color: currentColor !important;
-}
-
-/* Reduced motion */
-.reduce-motion *,
-.reduce-motion *::before,
-.reduce-motion *::after {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-  scroll-behavior: auto !important;
-}
-
-/* Screen reader only content */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.sr-only:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  padding: inherit;
-  margin: inherit;
-  overflow: visible;
-  clip: auto;
-  white-space: normal;
-}
-
-/* Skip link */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #2563eb;
-  color: white;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 4px;
-  z-index: 1000;
-  transition: top 0.3s;
-}
-
-.skip-link:focus {
-  top: 6px;
-}
-
-/* Loading states */
-.loading {
-  position: relative;
-  pointer-events: none;
-}
-
-.loading::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
-  margin: -10px 0 0 -10px;
-  border: 2px solid #f3f3f3;
-  border-top: 2px solid #3498db;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
-/* Enhanced focus indicators */
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* Improved contrast for interactive elements */
-button:not(:disabled):hover,
-a:hover {
-  opacity: 0.9;
-}
-
-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
-
-/* Better text contrast */
-.text-low-contrast {
-  color: #6b7280;
-}
-
-/* Responsive typography */
-@media (max-width: 640px) {
-  .text-responsive {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-  }
-}
-
-/* Performance optimizations */
-.will-change-transform {
-  will-change: transform;
-}
-
-.will-change-opacity {
-  will-change: opacity;
-}
-
-/* Smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Improved form accessibility */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="tel"],
-input[type="url"],
-textarea,
-select {
-  border: 2px solid #e5e7eb;
-  border-radius: 6px;
-  padding: 8px 12px;
-  font-size: 16px; /* Prevents zoom on mobile */
-}
-
-input:focus,
-textarea:focus,
-select:focus {
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-}
-
-/* Error states */
-.input-error {
-  border-color: #ef4444;
-}
-
-.input-error:focus {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
-}
-
-/* Success states */
-.input-success {
-  border-color: #10b981;
-}
-
-.input-success:focus {
-  border-color: #10b981;
-  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
-}
-
-/* Loading button states */
-.btn-loading {
-  position: relative;
-  color: transparent;
-}
-
-.btn-loading::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 16px;
-  height: 16px;
-  margin: -8px 0 0 -8px;
-  border: 2px solid transparent;
-  border-top: 2px solid currentColor;
-  border-radius: 50%;
-  animation: spin 1s linear infinite;
-}
-
-/* Dark mode improvements */
-@media (prefers-color-scheme: dark) {
-  .auto-dark {
-    background-color: #1f2937;
-    color: #f9fafb;
-  }
-}
-
-/* Print styles */
-@media print {
-  .no-print {
-    display: none !important;
-  }
-  
-  .print-only {
-    display: block !important;
-  }
-  
-  a[href]:after {
-    content: " (" attr(href) ")";
-  }
-  
-  .page-break {
-    page-break-before: always;
-  }
-}
-
-/* Accessibility Enhancements */
+/* Base styles */
 @layer base {
-  /* High contrast mode */
-  @media (prefers-contrast: high) {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+}
+
+/* Accessibility enhancements */
+@layer utilities {
   .high-contrast {
     --tw-bg-opacity: 1;
     --tw-text-opacity: 1;
   }
   
   .high-contrast * {
-    border-color: currentColor !important;
-  }
-  }
-}
-
-/* Reduced motion support */
-@layer components {
-  /* Button focus states */
-  .btn-focus:focus {
-    @apply ring-2 ring-blue-500 ring-offset-2;
+    background-color: white !important;
+    color: black !important;
+    border-color: black !important;
   }
   
-  /* Card hover states with better contrast */
-  .card-hover {
-    @apply transition-all duration-300 hover:shadow-lg hover:scale-105;
+  .large-text {
+    font-size: 1.125rem;
   }
   
-  .card-hover:focus {
-    @apply ring-2 ring-blue-500 ring-offset-2;
+  .large-text h1 {
+    font-size: 2.5rem;
   }
   
-  /* Form input focus states */
-  .input-focus:focus {
-    @apply ring-2 ring-blue-500 border-blue-500;
+  .large-text h2 {
+    font-size: 2rem;
   }
   
-  /* Link focus states */
-  .link-focus:focus {
-    @apply underline ring-2 ring-blue-500 ring-offset-2;
-  }
-}
-
-@layer utilities {
-  /* Custom utilities for accessibility */
-  .focus-visible {
-    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  .large-text h3 {
+    font-size: 1.75rem;
   }
   
-  .text-balance {
-    text-wrap: balance;
-  }
-  
-  .text-pretty {
-    text-wrap: pretty;
-  }
-}
-
-/* Performance optimizations */
-@layer base {
-  /* Optimize font loading */
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 300 800;
-    font-display: swap;
-    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-  }
-  
-  /* Optimize image loading */
-  img {
-    content-visibility: auto;
-  }
-  
-  /* Optimize layout shifts */
-  .aspect-ratio {
-    aspect-ratio: 16 / 9;
-  }
-  
-  /* Optimize animations for performance */
-  .animate-optimized {
-    will-change: transform, opacity;
-  }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .dark-mode-auto {
-    @apply dark:bg-gray-900 dark:text-white;
-  }
-  .high-contrast .bg-white\/10 {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-  
-  .high-contrast .text-gray-300 {
-    color: rgb(255, 255, 255);
-  }
-  
-  .high-contrast .text-gray-400 {
-    color: rgb(200, 200, 200);
-  }
-}
-
-/* Reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  .reduced-motion * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
   }
 }
 
-/* Focus management */
-.focus-trap {
-  position: relative;
+/* Custom components */
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+  
+  .btn-secondary {
+    @apply bg-gray-600 text-white px-4 py-2 rounded-md hover:bg-gray-700 transition-colors focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900;
+  }
 }
 
-.focus-trap:focus-within {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
+/* Focus styles for accessibility */
+@layer utilities {
+  .focus-visible {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
 }
 
-/* Skip links */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 1000;
-  border-radius: 4px;
+/* Loading animations */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
-.skip-link:focus {
-  top: 6px;
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
-/* Screen reader only content */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+.animate-spin {
+  animation: spin 1s linear infinite;
 }
 
-::-webkit-scrollbar-track {
-  background: #1e293b;
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #8b5cf6;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #7c3aed;
+.animate-bounce {
+  animation: bounce 1s infinite;
 }
 
 /* Print styles */
@@ -415,71 +120,8 @@ select:focus {
     display: none !important;
   }
   
-  .print-only {
-    display: block !important;
-  }
-  
-  * {
-    background: white !important;
-    color: black !important;
-  }
   body {
     background: white !important;
     color: black !important;
   }
-  
-  .bg-gradient-to-br {
-    background: white !important;
-  }
-}
-
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --tw-bg-opacity: 1;
-  }
-}
-
-/* Performance optimizations */
-.gpu-accelerated {
-  transform: translateZ(0);
-  will-change: transform;
-}
-
-/* Text selection */
-::selection {
-  background-color: #8b5cf6;
-  color: white;
-}
-
-::-moz-selection {
-  background-color: #8b5cf6;
-  color: white;
-}
-
-/* Focus visible for better keyboard navigation */
-.focus-visible:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-}
-
-/* Improved form styles */
-input:focus,
-textarea:focus,
-select:focus {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
-  border-color: #3b82f6;
-}
-
-/* Error states */
-.error {
-  border-color: #ef4444;
-  box-shadow: 0 0 0 1px #ef4444;
-}
-
-/* Success states */
-.success {
-  border-color: #10b981;
-  box-shadow: 0 0 0 1px #10b981;
 }

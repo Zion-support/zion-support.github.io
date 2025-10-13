@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
 
 const aiPageTemplate = `import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -34,29 +34,39 @@ export default function {PAGE_NAME}() {
 
 // Get all AI service directories
 function getAIServiceDirectories() {
-  const appDir = './app';
+  const appDir = "./app";
   const directories = [];
-  
+
   try {
     const items = fs.readdirSync(appDir);
     for (const item of items) {
       const itemPath = path.join(appDir, item);
-      if (fs.statSync(itemPath).isDirectory() && item.startsWith('ai-')) {
-        const pagePath = path.join(itemPath, 'page.tsx');
+      if (fs.statSync(itemPath).isDirectory() && item.startsWith("ai-")) {
+        const pagePath = path.join(itemPath, "page.tsx");
         if (fs.existsSync(pagePath)) {
           directories.push({
             path: pagePath,
-            name: item.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('') + 'Page',
-            title: item.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '),
-            description: `Advanced ${item.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')} solutions powered by AI.`
+            name:
+              item
+                .split("-")
+                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+                .join("") + "Page",
+            title: item
+              .split("-")
+              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(" "),
+            description: `Advanced ${item
+              .split("-")
+              .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(" ")} solutions powered by AI.`,
           });
         }
       }
     }
   } catch (error) {
-    console.error('Error reading directories:', error.message);
+    // console.error("Error reading directories:", error.message);
   }
-  
+
   return directories;
 }
 
@@ -65,17 +75,17 @@ function fixAIPage(pageInfo) {
     .replace(/{PAGE_NAME}/g, pageInfo.name)
     .replace(/{PAGE_TITLE}/g, pageInfo.title)
     .replace(/{PAGE_DESCRIPTION}/g, pageInfo.description);
-  
+
   try {
-    fs.writeFileSync(pageInfo.path, content, 'utf8');
-    console.log(`Fixed: ${pageInfo.path}`);
+    fs.writeFileSync(pageInfo.path, content, "utf8");
+    // console.log(`Fixed: ${pageInfo.path}`);
   } catch (error) {
-    console.error(`Error fixing ${pageInfo.path}:`, error.message);
+    // console.error(`Error fixing ${pageInfo.path}:`, error.message);
   }
 }
 
-console.log('Fixing AI service pages...');
+// console.log("Fixing AI service pages...");
 const aiPages = getAIServiceDirectories();
-console.log(`Found ${aiPages.length} AI service pages`);
+// console.log(`Found ${aiPages.length} AI service pages`);
 aiPages.forEach(fixAIPage);
-console.log('Done!');
+// console.log("Done!");

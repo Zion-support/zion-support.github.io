@@ -1,80 +1,56 @@
-import fs from 'fs';
-import path from 'path';
-// Get all TypeScript/TSX files;
-  let files = [];
-  const items = fs.readdirSync(dir);
-  for (const item, of, items) {
-    const fullPath = path.join(dir, item);
-const stat = fs.statSync(fullPath);
-    if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
-      files = files.concat(getFiles(fullPath, extensions));
- item.endsWith(ext))) {
-      files.push(fullPath);
-  return files;
-};
-// Fix unused imports in a file;
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    let modified = false;
-    // Find all import statements;
-    const importRegex = /import\s+{([^}]+)}\s+from\s+['"]([^'"]+)['"]/g;
-const imports = [];
-    let match;
-    while ((match = importRegex.exec(content)) !== null) {;
-      const importStatement = match[0];
- item.trim());
-      const source = match[2];
-      imports.push({
-        fullMatch: match[0],
-        start: match.index,
-        end: match.index + match[0].length,
-        importedItems,
-        source;
-      });
-    // Check which imports are actually used;
-    for (const importInfo, of, imports) {
-      const usedItems = [];
-      for (const item of importInfo.importedItems) {
-        // Check if the item is used in the file (excluding the import, statement, itself)
-        const beforeImport = content.substring(0, importInfo.start);
-const afterImport = content.substring(importInfo.end);
-        const contentWithoutImport = beforeImport + afterImport;
-        // Simple check - look for the item name in JSX or as a variable;
-        const itemName = item.replace(/\s+as\s+\w+/, '').trim();
-const usageRegex = new RegExp(`\\b${itemName}\\b`, 'g');
-        if (usageRegex.test(contentWithoutImport)) {
-          usedItems.push(item);
-      // If some items are used but not all, replace the import;
-      if (usedItems.length > 0 && usedItems.length < importInfo.importedItems.length) {
-        const newImport = `import { ${usedItems.join(', ')} } from '${importInfo.source}'`;
-        content = content.replace(importInfo.fullMatch, newImport);
-        modified = true;
-      } else if (usedItems.length = == 0) {;
-        // If no items are used, remove the entire import;
-        content = content.replace(importInfo.fullMatch + '\n', '');
-        modified = true;
-    // Remove unused Helmet imports specifically;
-    if (content.includes("import { Helmet } from 'react-helmet-async'") && !content.includes('<Helmet>')) {
-      content = content.replace(/import { Helmet } from 'react-helmet-async'\n?/g, '');
+#!/usr/bin/env node
+
+import fs from "fs";
+import { glob } from "glob";
+
+function fixUnusedImports(filePath) {
+  let content = fs.readFileSync(filePath, "utf8");
+  let modified = false;
+
+  // Find all lucide-react imports
+  const lucideImportRegex =
+    /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
+  let match;
+
+  while ((match = lucideImportRegex.exec(content)) !== null) {
+    const importStatement = match[0];
+    const importedIcons = match[1].split(",").map((icon) => icon.trim());
+
+    // Check which icons are actually used in the file
+    const usedIcons = importedIcons.filter((icon) => {
+      // Create a regex to find the icon usage (not in the import statement)
+      const iconRegex = new RegExp(`\\b${icon}\\b`, "g");
+      const allMatches = content.match(iconRegex) || [];
+      // Count matches outside of import statements
+      const importMatches = (importStatement.match(iconRegex) || []).length;
+      return allMatches.length > importMatches;
+    });
+
+    if (usedIcons.length !== importedIcons.length) {
+      if (usedIcons.length > 0) {
+        const newImport = `import { ${usedIcons.join(", ")} } from 'lucide-react';`;
+        content = content.replace(importStatement, newImport);
+      } else {
+        // Remove the entire import line if no icons are used
+        content = content.replace(importStatement + "\n", "");
+      }
       modified = true;
-    if (modified) {
-      fs.writeFileSync(filePath, content);
-      console.log(`Fixed unused imports in: ${filePath}`);
-      return true;
-    return false;
-  } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
-    return false;
-};
-// Main execution;
-const appDir = path.join(process.cwd(), 'app');
-const files = getFiles(appDir);
-console.log(`Found ${files.length} TypeScript files to process`);
-let fixedCount = 0;
-for (const file, of, files) {
-  try {
-    if (fixUnusedImports(file)) {
-      fixedCount++;
-  } catch (error) {
-    console.error(`Error processing ${file}:`, error.message);
-console.log(`Fixed unused imports in ${fixedCount} files`);
+    }
+  }
+
+  if (modified) {
+    fs.writeFileSync(filePath, content);
+    console.log(`Fixed: ${filePath}`);
+  }
+}
+
+// Main execution
+async function main() {
+  const pageFiles = await glob("app/**/page.tsx");
+  console.log(`Found ${pageFiles.length} page files to fix...`);
+
+  pageFiles.forEach(fixUnusedImports);
+  console.log("All unused imports fix completed!");
+}
+
+main().catch(console.error);

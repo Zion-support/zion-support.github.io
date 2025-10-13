@@ -19,7 +19,11 @@
     "targetExponentialFactor": 10,
     "autonomousEnabled": true
   },
-  "specializations": ["workflow-automation", "process-optimization", "intelligent-automation"],
+  "specializations": [
+    "workflow-automation",
+    "process-optimization",
+    "intelligent-automation"
+  ],
   "autonomousCapabilities": {
     "selfReplication": true,
     "intelligentEvolution": true,

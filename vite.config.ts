@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import { resolve } from 'path'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -9,30 +9,78 @@ export default defineConfig({
       // Enable React Fast Refresh
       fastRefresh: true,
       // Enable JSX runtime
-      jsxRuntime: 'automatic',
-    })
+      jsxRuntime: "automatic",
+    }),
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './app'),
-      '@/components': resolve(__dirname, './app/components'),
-      '@/pages': resolve(__dirname, './app'),
-      '@/utils': resolve(__dirname, './utils'),
-      '@/types': resolve(__dirname, './types'),
-      '@/hooks': resolve(__dirname, './hooks'),
-      '@/config': resolve(__dirname, './config'),
-      '@/data': resolve(__dirname, './data'),
-      '@/content': resolve(__dirname, './content'),
+      "@": resolve(__dirname, "./app"),
+      "@/components": resolve(__dirname, "./app/components"),
+      "@/pages": resolve(__dirname, "./app"),
+      "@/utils": resolve(__dirname, "./utils"),
+      "@/types": resolve(__dirname, "./types"),
+      "@/hooks": resolve(__dirname, "./hooks"),
+      "@/config": resolve(__dirname, "./config"),
+      "@/data": resolve(__dirname, "./data"),
+      "@/content": resolve(__dirname, "./content"),
     },
   },
   build: {
-    outDir: 'dist',
+    outDir: "dist",
     sourcemap: false,
-    minify: 'esbuild',
-    target: 'es2020',
+    minify: "esbuild",
+    target: "es2020",
     cssCodeSplit: true,
-    
+    modulePreload: {
+      polyfill: false,
+    },
+    // Performance optimizations
+    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
+    // Enable compression
+    reportCompressedSize: true,
+    // Optimize for production
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 3, // More passes for better optimization
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        conditionals: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        loops: true,
+        sequences: true,
+        side_effects: false,
+        unused: true,
+      },
+      mangle: {
+        safari10: true, // Better Safari compatibility
+        toplevel: true,
+        properties: {
+          regex: /^_/
+        }
+      },
+      format: {
+        comments: false,
+        ascii_only: true
+      }
+    },
+    // Enhanced build optimizations
     rollupOptions: {
+      treeshake: {
+        moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        tryCatchDeoptimization: false,
+      },
       output: {
         manualChunks: (id) => {
           // Core React libraries
@@ -66,20 +114,48 @@ export default defineConfig({
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // AI service pages
-          if (id.includes('/app/ai-') && id.includes('/page.tsx')) {
-            return 'ai-pages'
+          // Error handling
+          if (id.includes('react-error-boundary')) {
+            return 'error-handling'
           }
-          // IT service pages
-          if (id.includes('/app/') && (id.includes('cloud-') || id.includes('cybersecurity-') || id.includes('web-development') || id.includes('mobile-development')) && id.includes('/page.tsx')) {
-            return 'it-pages'
+          // AI service pages - group by category
+          if (id.includes('/ai-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/ai-')[1]?.split('/')[0];
+            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+              return 'ai-analytics'
+            }
+            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
+              return 'ai-content'
+            }
+            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
+              return 'ai-security'
+            }
+            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
+              return 'ai-customer'
+            }
+            return 'ai-other'
           }
-          // Micro SAAS pages
-          if (id.includes('/app/zion-') && id.includes('/page.tsx')) {
-            return 'saas-pages'
+          // Zion service pages - group by category
+          if (id.includes('/zion-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/zion-')[1]?.split('/')[0];
+            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+              return 'zion-analytics'
+            }
+            if (serviceName?.includes('ai-')) {
+              return 'zion-ai'
+            }
+            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
+              return 'zion-security'
+            }
+            return 'zion-other'
           }
-          // Other pages
-          if (id.includes('/app/') && id.includes('/page.tsx')) {
+          // 5G service pages
+          if (id.includes('/5g-') && id.includes('/page.tsx')) {
+            return '5g-services'
+          }
+          // Other service pages
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
             return 'pages'
           }
           // Default chunk for other modules
@@ -90,12 +166,8 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Optimize bundle size
-    chunkSizeWarningLimit: 1000,
     // Enable tree shaking
     treeshake: true,
-    // Enable compression
-    reportCompressedSize: true,
   },
   server: {
     port: 3000,
@@ -114,16 +186,16 @@ export default defineConfig({
   // Optimize dependencies
   optimizeDeps: {
     include: [
-      'react',
-      'react-dom',
-      'react-router-dom',
-      'react-helmet-async',
-      'framer-motion',
-      'lucide-react',
+      "react",
+      "react-dom",
+      "react-router-dom",
+      "react-helmet-async",
+      "framer-motion",
+      "lucide-react",
     ],
   },
   // CSS optimization
   css: {
     devSourcemap: true,
   },
-})
+});

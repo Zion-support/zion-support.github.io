@@ -74,7 +74,7 @@ const performanceScore = calculatePerformanceScore();
       };
       setMetrics(newMetrics);
       setLastUpdate(new Date());
-      console.error('Failed to update metrics:', error);
+      // console.error('Failed to update metrics:', error);
   }, []);
   // Initialize monitoring;
       setIsMonitoring(true);

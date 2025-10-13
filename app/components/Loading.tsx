@@ -1,26 +1,25 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet-async";
 
-
-  return (
-    <div>Content</div>
-  );
-    <div>Component content</div>
-  );
+interface LoadingProps {
+  message?: string;
 }
-  return (
-    <div>Content</div>
-  );
-    <>
 
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+export default function Loading({ message = "Loading..." }: LoadingProps) {
+  return (
+    <>
+      <Helmet>
+        <title>Loading - Zion Tech Group</title>
+        <meta name="description" content="Loading page" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500 mx-auto mb-8"></div>
+          <h2 className="text-2xl font-semibold text-white mb-4">{message}</h2>
+          <p className="text-gray-300">
+            Please wait while we load your content...
+          </p>
         </div>
       </div>
-    </>;
+    </>
   );
-
+}

@@ -1,127 +1,80 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { cn } from '../lib/utils';
 
 interface FuturisticButtonProps {
   children: React.ReactNode;
+  href?: string;
   onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'accent' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
-  disabled?: boolean;
-  loading?: boolean;
   className?: string;
-  type?: 'button' | 'submit' | 'reset';
-
-  children,
-  onClick,
-  const variant = 'primary',
-  size = 'md',
-  disabled = false,
-  loading = false,
-  className = '',
-  type = 'button'
-}: FuturisticButtonProps) {;
-  const [isHovered, setIsHovered] = useState(false);
-const getVariantClasses = () => {
-    switch (variant) {
-      case 'primary':;
-        return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
-      case 'secondary':
-        return 'bg-gradient-to-r from-purple-500 to-pink-600 text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40';
-      case 'accent':
-        return 'bg-gradient-to-r from-green-500 to-blue-600 text-white shadow-lg shadow-green-500/25 hover:shadow-green-500/40';
-      case 'ghost':
-        return 'bg-white/10 backdrop-blur-lg text-white border border-white/20 hover: bg-white/20';,
-  default: return 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40';
-    }
-  };
-
-    switch (size) {
-      case 'sm':;
-        return 'px-4 py-2 text-sm';
-      case 'md':
-        return 'px-6 py-3 text-base';
-      case 'lg':
-        return 'px-8 py-4 text-lg';
-      default: return 'px-6 py-3 text-base';
-    }
-  };
-  return (
-    <div>Content</div>
-  );
-    <motion.button;      onMouseEnter = "{()" = /> setIsHovered(true)}
-      const type = {type}
-      onClick="{onClick}"
-      disabled="{disabled" || loading}
-      onMouseLeave="{()" => setIsHovered(false)}
-      className="{`";
-        relative overflow-hidden rounded-lg font-semibold transition-all duration-300;
-        ${getVariantClasses()}
-        ${getSizeClasses()}
-        ${disabled || loading ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-        ${className}
-      `}
-      whileHover = "{{" scale: 1.05 }}
-      whileTap="{{" scale: 0.95 }}
-      initial="{{" opacity: 0, y: 20 }}
-      animate="{{" opacity: 1, y: 0 }}
-      transition="{{" duration: 0.3 }}
-    >
-      {/* Animated background sweep */};
-      <motion.div;
-        className = "absolute inset-0 bg-gradient-to-r from-white/20to-transparent"
-        initial="{{" x: '-100%' }}
-        animate="{{" x: isHovered ? '100%' : '-100%' }}
-        transition="{{" duration: 0.6 }}
-       /></motion>
-      {/* Pulsing glow effect */};
-      <motion.div;
-        className = "absolute inset-0rounded-lg"
-        style="{{"
-          boxShadow: variant === 'primary'
-            ? '0 0 20 px rgba(6, 182, 212, 0.4)'
-            : variant === 'secondary'
-            ? '0 0 20 px rgba(168, 85, 247, 0.4)'
-            : variant === 'accent'
-            ? '0 0 20 px rgba(34, 197, 94, 0.4)'
-            : '0 0 20 px rgba(255, 255, 255, 0.2)'
-        }}
-        animate="{{"
-          opacity: isHovered ? [0.4, 0.8, 0.4] : 0,
-          scale: isHovered ? [1, 1.05, 1] : 1,
-        }}
-        transition="{{"
-          duration: 1.5,
-          repeat: isHovered ? Infinity : 0,
-          ease: 'easeInOut'
-        }}
-       /></motion>
-      {/* Scanning line effect */}
-      {isHovered && (;
-        <motion.div;
-          className = "absolute inset-0rounded-lg"
-          style="{{"
-            background: 'linear-gradient(90 deg, transparent, rgba(255,255,255,0.3), transparent)',
-            backgroundSize: '200% 100%',
-          }}
-          animate="{{"
-            backgroundPosition: ['200% 0', '-200% 0'],
-          }}
-          transition="{{"
-            duration: 1.5,
-            repeat: Infinity,
-            ease: 'linear',
-          }}
-         /></motion>
-      )}
-      {/* Corner accents */}
-
-            Loading...
-          </>
-        ) : (;
-          children;
-        )}
-      </span>
-    </motion.button>
-  </div>);
-
+  icon?: React.ReactNode;
+  disabled?: boolean;
 }
+
+const FuturisticButton = ({ 
+  children, 
+  href, 
+  onClick, 
+  variant = 'primary', 
+  size = 'md',
+  className,
+  icon,
+  disabled = false
+}: FuturisticButtonProps) => {
+  const baseClasses = 'relative inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed';
+  
+  const sizeClasses = {
+    sm: 'px-4 py-2 text-sm rounded-lg',
+    md: 'px-6 py-3 text-base rounded-lg',
+    lg: 'px-8 py-4 text-lg rounded-xl'
+  };
+
+  const variantClasses = {
+    primary: 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25 hover:scale-105',
+    secondary: 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700 shadow-lg hover:shadow-purple-500/25 hover:scale-105',
+    outline: 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 hover:scale-105',
+    ghost: 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 hover:scale-105'
+  };
+
+  const buttonClasses = cn(
+    baseClasses,
+    sizeClasses[size],
+    variantClasses[variant],
+    'before:absolute before:inset-0 before:rounded-inherit before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-300',
+    'after:absolute after:inset-0 after:rounded-inherit after:bg-gradient-to-r after:from-transparent after:via-white/10 after:to-transparent after:opacity-0 hover:after:opacity-100 after:transition-opacity after:duration-300',
+    className
+  );
+
+  const content = (
+    <>
+      {icon && <span className="mr-2">{icon}</span>}
+      <span className="relative z-10">{children}</span>
+    </>
+  );
+
+  if (href) {
+    return (
+      <Link
+        to={href}
+        className={buttonClasses}
+        onClick={onClick}
+      >
+        {content}
+      </Link>
+    );
+  }
+
+  return (
+    <button
+      className={buttonClasses}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {content}
+    </button>
+  );
+};
+
+export default FuturisticButton;

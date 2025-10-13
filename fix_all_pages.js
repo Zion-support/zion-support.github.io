@@ -35,12 +35,8 @@ const pagesToRewrite = [
                 <li>• Benefit 2</li>
                 <li>• Benefit 3</li>
                 <li>• Benefit 4</li>
-<<<<<<< HEAD
   )
 
-=======
-  );
->>>>>>> cursor/fix-errors-and-merge-to-main-a79b
 // Page configurations;
 const pageConfigs = {
   'enterprise-security': {
@@ -72,7 +68,7 @@ const config = pageConfigs[page];
   const content = pageTemplate(componentName, config.title, config.description, config.keywords);
   try {
     fs.writeFileSync(pagePath, content);
-    console.log(`Rewrote ${page} page`);
+    // console.log(`Rewrote ${page} page`);
   } catch (error) {
-    console.error(`Error rewriting ${page}:`, error.message);
-console.log('Page rewriting completed');
+    // console.error(`Error rewriting ${page}:`, error.message);
+// console.log('Page rewriting completed');

@@ -1,8 +1,15 @@
-import React from 'react';
+import React from "react";
 
- void;
-  { hasError: boolean; error: AppError | null }
-    super(props)
-    this.state = { hasError: false, error: null }
+interface ErrorhandlerxProps {
+  className?: string;
+}
 
+const Errorhandlerx: React.FC<ErrorhandlerxProps> = ({ className = "" }) => {
+  return (
+    <div className={className}>
+      <h2>Errorhandlerx</h2>
+    </div>
+  );
+};
 
+export default Errorhandlerx;

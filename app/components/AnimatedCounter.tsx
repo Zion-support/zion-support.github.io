@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 interface AnimatedCounterProps {
   end: number;
@@ -11,17 +11,10 @@ interface AnimatedCounterProps {
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
   end,
   duration = 2000,
-  className = '',
-  prefix = '',
-  suffix = ''
+  className = "",
+  prefix = "",
+  suffix = "",
 }) => {
-export default function AnimatedCounter({ 
-  end, 
-  duration = 2000, 
-  className = '',
-  prefix = '',
-  suffix = ''
-}: AnimatedCounterProps) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -31,7 +24,7 @@ export default function AnimatedCounter({
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime;
       const progress = Math.min((currentTime - startTime) / duration, 1);
-      
+
       const easeOutQuart = 1 - Math.pow(1 - progress, 4);
       setCount(Math.floor(easeOutQuart * end));
 
@@ -51,7 +44,9 @@ export default function AnimatedCounter({
 
   return (
     <span className={className}>
-      {prefix}{count.toLocaleString()}{suffix}
+      {prefix}
+      {count.toLocaleString()}
+      {suffix}
     </span>
   );
 };

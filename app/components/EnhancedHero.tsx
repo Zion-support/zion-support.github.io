@@ -1,130 +1,169 @@
-import React from 'react';
+import React from "react";
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Custom implementation and training';
-  ];
-const contactInfo = [
+interface EnhancedHeroProps {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  primaryCta?: {
+    text: string;
+    href: string;
+  };
+  secondaryCta?: {
+    text: string;
+    href: string;
+  };
+  benefits?: string[];
+  backgroundImage?: string;
+  className?: string;
+}
+
+const EnhancedHero: React.FC<EnhancedHeroProps> = ({
+  title = "Transform Your Business with AI",
+  subtitle = "Leading Provider of AI Solutions",
+  description = "Revolutionize your operations with cutting-edge artificial intelligence technology. Our advanced solutions deliver measurable results and drive unprecedented growth.",
+  primaryCta = {
+    text: "Get Started",
+    href: "/contact",
+  },
+  secondaryCta = {
+    text: "Learn More",
+    href: "/about",
+  },
+  benefits = [
+    "Advanced AI technology integration",
+    "Real-time processing and analytics",
+    "Enterprise-grade security and compliance",
+    "Scalable and flexible solutions",
+    "24/7 technical support",
+    "Custom implementation and training",
+  ],
+  backgroundImage = "/api/placeholder/1920/1080",
+  className = "",
+}) => {
+  const contactInfo = [
     {
       icon: Phone,
-      title: 'Call Us',
-      details: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9 AM-6 PM PST'
+      title: "Call Us",
+      details: "+1 (555) 123-4567",
+      description: "Mon-Fri 9 AM-6 PM PST",
     },
     {
       icon: Mail,
-      title: 'Email Us',
-      details: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
+      title: "Email Us",
+      details: "info@ziontechgroup.com",
+      description: "We respond within 24 hours",
     },
     {
       icon: MapPin,
-      title: 'Visit Us',
-      details: 'San Francisco, CA',
-      description: 'Schedule a meeting'
-    };
+      title: "Visit Us",
+      details: "123 Tech Street, San Francisco, CA",
+      description: "Schedule a meeting",
+    },
   ];
+
   return (
-    <div>Content</div>
-  );
-    <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      {/* Background Effects */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-      <div className="absolute inset-0bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)]animate-pulse" style="{{" animationDelay: '1 s' }}  /></div>
-      {/* Main Content */}
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-        {/* Left Content */}
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            <h1 className="w-5h-5ml-2" /></h1>
-              Transform Your Business with{' '};
-              <span className="w-5h-5ml-2" />AI & IT Solutions;
-              </span>
-            </h1>
-            <p className="w-5h-5ml-2">Harness the power of cutting-edge artificial intelligence and information technology;
-              to drive innovation, efficiency, and growth in your organization.
-            </p>
-            {/* Benefits List */}
-            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <h3 className="text-lgfont-semiboldtext-whitemb-4"  >Why Choose Us?</h3>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                {benefits.map((benefit, index) => (
-                  <div key={index} className="flex items-center text-gray-300" /></div>
-                    <CheckCircle className="w-5h-5ml-2" /></CheckCircle>
-                    <span className="text-sm"  >{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            {/* CTA Buttons */}
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <button className="w-5h-5ml-2" /></button>;
-                Get Started;
-                <ArrowRight className = "w-5h-5ml-2" /></ArrowRight>
-              </button>;
-              <button className="w-5h-5ml-2">Learn More;
-              </button>
+    <div
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}
+    >
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {backgroundImage && (
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+          />
+        )}
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column */}
+          <div className="space-y-8">
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                {title}
+              </h1>
+              <p className="text-xl text-cyan-400 mb-4 font-semibold">
+                {subtitle}
+              </p>
+              <p className="text-lg text-gray-300 mb-8">{description}</p>
             </div>
-            {/* Contact Info */}
-            <div className = "min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              {contactInfo.map((contact, index) => (
-                <div key={index} className="flex items-center text-gray-300" /></div>
-                  <contact.icon className="h-5w-5tex t-c yan-400mr-3flex-shrink-0"  /></contact>
-                  <div /></div>
-                    <div className="text-smfont-medium text-white"  >{contact.title}</div>
-                    <div className="text-xs text-gray-400"  >{contact.details}</div>
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to={primaryCta.href}
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                {primaryCta.text}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to={secondaryCta.href}
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                {secondaryCta.text}
+              </Link>
+            </div>
+
+            {/* Benefits */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              {benefits.slice(0, 4).map((benefit, index) => (
+                <div key={index} className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-sm">{benefit}</span>
                 </div>
               ))}
             </div>
-        </div>
-        {/* Right Content - Visual Elements */}
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-            {/* Floating Cards */}
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Brain className="w-5h-5ml-2" /></Brain>
-                <h3 className="text-lgfont-bold text-whitemb-2"  >AI Solutions</h3>
-                <p className="text-sm text-gray-300">Machine Learning & Analytics</p>
-              </div>
-            <div className="absolute top-20 right-0 w-64 h-40 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-2 xl backdrop-blur-sm borderborder-purple-500/30animate-float" style="{{" animationDelay: '1 s' }} /></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Shield className="w-5h-5ml-2" /></Shield>
-                <h3 className="text-lgfont-bold text-whitemb-2"  >Security</h3>
-                <p className="text-sm text-gray-300">Cybersecurity & Compliance</p>
-              </div>
-            <div className="absolute top-40 left-1/2 transform -translate-x-1/2 w-64 h-40 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-2 xl backdrop-blur-sm borderborder-green-500/30animate-float" style="{{" animationDelay: '2 s' }} /></div>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20"></div>
-                <Globe className="w-5h-5ml-2" /></Globe>
-                <h3 className="text-lgfont-bold text-whitemb-2"  >Cloud Services</h3>
-                <p className="text-sm text-gray-300">Infrastructure & Migration</p>
-              </div>
           </div>
-      </div>
-  )
 
-  return (
-    <div>Content</div>
-  );
-    <div>Component content</div>;
-  );
-}
-  return (
-    <div>Content</div>
-  );
-    <>
+          {/* Right Column - Contact Info */}
+          <div className="space-y-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-6 text-center">
+                Get in Touch
+              </h3>
+              <div className="space-y-4">
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <info.icon className="w-6 h-6 text-cyan-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium">{info.title}</h4>
+                      <p className="text-gray-300">{info.details}</p>
+                      <p className="text-gray-400 text-sm">
+                        {info.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
 
-            to="/contact"
-            className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">500+</div>
+                <div className="text-gray-400 text-sm">Happy Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">99.9%</div>
+                <div className="text-gray-400 text-sm">Uptime</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">24/7</div>
+                <div className="text-gray-400 text-sm">Support</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </>;
+    </div>
   );
-}
+};
 
+export default EnhancedHero;

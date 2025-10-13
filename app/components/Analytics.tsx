@@ -1,91 +1,203 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
+    dataLayer: any[];
   }
 }
 
-const Analytics: React.FC = () => {
+interface AnalyticsProps {
+  measurementId?: string;
+  enabled?: boolean;
+}
+
+const Analytics: React.FC<AnalyticsProps> = ({
+  measurementId = 'G-XXXXXXXXXX', // Replace with actual GA4 measurement ID
+  enabled = process.env.NODE_ENV === 'production'
+}) => {
+  const location = useLocation();
+
   useEffect(() => {
-    const initAnalytics = () => {
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('config', 'GA_MEASUREMENT_ID', {
-          page_title: document.title,
+    if (!enabled || typeof window === 'undefined') return;
+
+    // Initialize Google Analytics
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
+    document.head.appendChild(script);
+
+    // Initialize dataLayer
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function() {
+      window.dataLayer.push(arguments);
+    };
+
+    window.gtag('js', new Date());
+    window.gtag('config', measurementId, {
+      page_title: document.title,
+      page_location: window.location.href,
+    });
+
+    return () => {
+      // Cleanup if needed
+      const existingScript = document.querySelector(`script[src*="${measurementId}"]`);
+      if (existingScript) {
+        existingScript.remove();
+      }
+    };
+  }, [measurementId, enabled]);
+
+  // Track page views on route changes
+  useEffect(() => {
+    if (!enabled || typeof window === 'undefined' || !window.gtag) return;
+
+    window.gtag('config', measurementId, {
+      page_title: document.title,
+      page_location: window.location.href,
+    });
+  }, [location, measurementId, enabled]);
+
+  // Track Core Web Vitals
+  useEffect(() => {
+    if (!enabled || typeof window === 'undefined') return;
+
+    const trackWebVitals = () => {
+      // Track LCP
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (entry.entryType === 'largest-contentful-paint') {
+            window.gtag('event', 'web_vitals', {
+              name: 'LCP',
+              value: Math.round(entry.startTime),
+              event_category: 'Web Vitals',
+              event_label: 'Largest Contentful Paint',
+            });
+          }
+        }
+      }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+      // Track FID
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (entry.entryType === 'first-input') {
+            window.gtag('event', 'web_vitals', {
+              name: 'FID',
+              value: Math.round(entry.processingStart - entry.startTime),
+              event_category: 'Web Vitals',
+              event_label: 'First Input Delay',
+            });
+          }
+        }
+      }).observe({ entryTypes: ['first-input'] });
+
+      // Track CLS
+      let clsValue = 0;
+      new PerformanceObserver((entryList) => {
+        for (const entry of entryList.getEntries()) {
+          if (!(entry as any).hadRecentInput) {
+            clsValue += (entry as any).value;
+          }
+        }
+        window.gtag('event', 'web_vitals', {
+          name: 'CLS',
+          value: Math.round(clsValue * 1000),
+          event_category: 'Web Vitals',
+          event_label: 'Cumulative Layout Shift',
+        });
+      }).observe({ entryTypes: ['layout-shift'] });
+    };
+
+    // Wait for page to be fully loaded
+    if (document.readyState === 'complete') {
+      trackWebVitals();
+    } else {
+      window.addEventListener('load', trackWebVitals);
+    }
+
+    return () => {
+      window.removeEventListener('load', trackWebVitals);
+    };
+  }, [enabled]);
+
+  // Track custom events
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+    if (!enabled || typeof window === 'undefined' || !window.gtag) return;
+    
+    window.gtag('event', eventName, parameters);
+  };
+
+  // Track button clicks
+  useEffect(() => {
+    if (!enabled) return;
+
+    const handleClick = (event: Event) => {
+      const target = event.target as HTMLElement;
+      const button = target.closest('button, a, [role="button"]');
+      
+      if (button) {
+        const buttonText = button.textContent?.trim() || 'Unknown';
+        const buttonId = button.id || button.className;
+        
+        trackEvent('button_click', {
+          button_text: buttonText,
+          button_id: buttonId,
           page_location: window.location.href,
         });
       }
     };
-    initAnalytics();
-  }, []);
 
-  return null; // Analytics component doesn't render anything
-};
+    document.addEventListener('click', handleClick);
+    return () => document.removeEventListener('click', handleClick);
+  }, [enabled]);
 
-export default Analytics;
-import React from 'react';
-import { BarChart3, TrendingUp, Users, DollarSign } from 'lucide-react';
+  // Track form submissions
+  useEffect(() => {
+    if (!enabled) return;
 
-interface AnalyticsProps {
-  className?: string;
-}
+    const handleSubmit = (event: Event) => {
+      const form = event.target as HTMLFormElement;
+      const formId = form.id || form.className;
+      
+      trackEvent('form_submit', {
+        form_id: formId,
+        page_location: window.location.href,
+      });
+    };
 
-export default function Analytics({ className = '' }: AnalyticsProps) {
-  const stats = [
-    {
-      icon: <Users className="w-8 h-8 text-cyan-400" />,
-      label: 'Active Users',
-      value: '12,345',
-      change: '+12%',
-      changeType: 'positive' as const
-    },
-    {
-      icon: <DollarSign className="w-8 h-8 text-green-400" />,
-      label: 'Revenue',
-      value: '$45,678',
-      change: '+8%',
-      changeType: 'positive' as const
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8 text-purple-400" />,
-      label: 'Growth Rate',
-      value: '23.5%',
-      change: '+2.1%',
-      changeType: 'positive' as const
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
-      label: 'Conversion',
-      value: '3.2%',
-      change: '-0.5%',
-      changeType: 'negative' as const
-    }
-  ];
+    document.addEventListener('submit', handleSubmit);
+    return () => document.removeEventListener('submit', handleSubmit);
+  }, [enabled]);
 
-  return (
-    <div className={`analytics-dashboard ${className}`}>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {stats.map((stat, index) => (
-          <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-400 transition-colors">
-            <div className="flex items-center justify-between mb-4">
-              {stat.icon}
-              <span className={`text-sm font-medium ${
-                stat.changeType === 'positive' ? 'text-green-400' : 'text-red-400'
-              }`}>
-                {stat.change}
-              </span>
-            </div>
-            <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-            <div className="text-gray-400 text-sm">{stat.label}</div>
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-}
-  return (
-    <div>Analytics Component</div>
-  );
+  // Track scroll depth
+  useEffect(() => {
+    if (!enabled) return;
+
+    let maxScroll = 0;
+    const trackScroll = () => {
+      const scrollPercent = Math.round(
+        (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
+      );
+      
+      if (scrollPercent > maxScroll) {
+        maxScroll = scrollPercent;
+        
+        // Track at 25%, 50%, 75%, and 100%
+        if ([25, 50, 75, 100].includes(scrollPercent)) {
+          trackEvent('scroll_depth', {
+            scroll_percent: scrollPercent,
+            page_location: window.location.href,
+          });
+        }
+      }
+    };
+
+    window.addEventListener('scroll', trackScroll, { passive: true });
+    return () => window.removeEventListener('scroll', trackScroll);
+  }, [enabled]);
+
+  return null; // This component doesn't render anything
 };
 
 export default Analytics;

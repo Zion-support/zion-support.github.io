@@ -31,11 +31,11 @@ function processFile(filePath) {
 const fixedContent = fixComprehensiveJSX(content);
     if (content !== fixedContent) {
       fs.writeFileSync(filePath, fixedContent, 'utf8');
-      console.log(`Fixed comprehensive JSX: ${filePath}`);
+      // console.log(`Fixed comprehensive JSX: ${filePath}`);
       return true;
     return false;
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    // console.error(`Error processing ${filePath}:`, error.message);
     return false;
 // Function to recursively find and process TSX files;
 function processDirectory(dirPath) {
@@ -53,6 +53,6 @@ const stat = fs.statSync(fullPath);
   walkDir(dirPath);
   return processedCount;
 // Main execution;
-console.log('Starting comprehensive JSX fixes...');
+// console.log('Starting comprehensive JSX fixes...');
 const processedCount = processDirectory('./app');
-console.log(`Processed ${processedCount} files.`);
+// console.log(`Processed ${processedCount} files.`);
