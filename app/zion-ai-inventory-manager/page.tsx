@@ -1,25 +1,5 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-import { BarChart3, Package, TrendingUp, AlertTriangle, Zap, ArrowRight, CheckCircle, Star, Smartphone, Globe } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { Zap, ArrowRight, CheckCircle, CheckCircle, ArrowRight } from 'lucide-react';
-=======
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Package } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
 const ZionAIInventoryManager = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
@@ -42,7 +22,7 @@ const ZionAIInventoryManager = () => {
         "Mobile app access",
         "Basic reporting"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -59,7 +39,7 @@ const ZionAIInventoryManager = () => {
         "API access",
         "Custom integrations"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -76,13 +56,13 @@ const ZionAIInventoryManager = () => {
         "White-label options",
         "Dedicated account manager"
       ],
-      popular: false
+      popular: false;
     }
   ];
-
+export default function PagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
+      <EnhancedSEO;
         title="Zion AI Inventory Manager - AI-Powered Inventory Management | Zion Tech Group"
         description="Revolutionary AI-powered inventory management system with demand forecasting, real-time tracking, and automated reorder points. Reduce stockouts by 60% and save costs."
         keywords="AI inventory management, demand forecasting, inventory tracking, stock management, supply chain optimization, business automation"
@@ -100,7 +80,7 @@ const ZionAIInventoryManager = () => {
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Inventory Manager
+                Zion AI Inventory Manager;
               </span>
             </h1>
             
@@ -110,18 +90,18 @@ const ZionAIInventoryManager = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
+              <Link;
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Start Free Trial;
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Watch Demo
+                Watch Demo;
               </Link>
             </div>
 
@@ -146,17 +126,17 @@ const ZionAIInventoryManager = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Powerful AI-Driven Features
+              Powerful AI-Driven Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge artificial intelligence to optimize your inventory management 
+              Leverage cutting-edge artificial intelligence to optimize your inventory management;
               and reduce costs while improving customer satisfaction.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div
+              <div;
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
@@ -184,20 +164,20 @@ const ZionAIInventoryManager = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Simple, Transparent Pricing
+              Simple, Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your business needs. All plans include our core AI features 
+              Choose the plan that fits your business needs. All plans include our core AI features;
               and come with a 30-day free trial.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div
+              <div;
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
-                  plan.popular 
+                  plan.popular;
                     ? 'border-cyan-400 shadow-2xl shadow-cyan-500/25' 
                     : 'border-white/20 hover:border-cyan-400/50'
                 }`}
@@ -205,7 +185,7 @@ const ZionAIInventoryManager = () => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -228,15 +208,15 @@ const ZionAIInventoryManager = () => {
                   ))}
                 </ul>
                 
-                <Link
+                <Link;
                   to="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                   }`}
                 >
-                  Start Free Trial
+                  Start Free Trial;
                 </Link>
               </div>
             ))}
@@ -249,7 +229,7 @@ const ZionAIInventoryManager = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Trusted by Industry Leaders
+              Trusted by Industry Leaders;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See how businesses are transforming their inventory management with our AI-powered solution.
@@ -258,7 +238,7 @@ const ZionAIInventoryManager = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div
+              <div;
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
@@ -295,18 +275,18 @@ const ZionAIInventoryManager = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Start Free Trial
+              Start Free Trial;
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link
+            <Link;
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-              Schedule Demo
+              Schedule Demo;
             </Link>
           </div>
         </div>
@@ -316,3 +296,4 @@ const ZionAIInventoryManager = () => {
 };
 
 export default ZionAIInventoryManager;
+}

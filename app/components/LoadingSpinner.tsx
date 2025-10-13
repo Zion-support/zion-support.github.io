@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface LoadingspinnerProps {
   className?: string;
@@ -6,9 +5,4 @@ interface LoadingspinnerProps {
 }
 
 export default function Loadingspinner({ className = '', children, ...props }: LoadingspinnerProps) {
-  return (
-    <div className={`loadingspinner-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

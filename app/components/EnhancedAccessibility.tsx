@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -15,9 +6,9 @@ interface AccessibilityEnhancerProps {
 
 const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
-    // Add keyboard navigation enhancements
+    // Add keyboard navigation enhancements;
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
+      // Skip to main content;
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const mainContent = document.querySelector('main');
         if (mainContent) {
@@ -27,7 +18,7 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     };
 
-    // Add focus management
+    // Add focus management;
     const handleFocusIn = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       if (target) {
@@ -42,7 +33,7 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     };
 
-    // Add ARIA landmarks
+    // Add ARIA landmarks;
     const addLandmarks = () => {
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
@@ -60,7 +51,7 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       }
     };
 
-    // Add skip links
+    // Add skip links;
     const addSkipLinks = () => {
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';
@@ -73,26 +64,23 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-    // Initialize accessibility features
+    // Initialize accessibility features;
     addLandmarks();
     addSkipLinks();
 
-    // Add event listeners
+    // Add event listeners;
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
 
-    // Cleanup
-    return () => {
+    // Cleanup;
+export default function EnhancedaccessibilityPage() {
+  return () => {
       document.removeEventListener('keydown', handleKeyDown);
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
     };
   }, []);
-
-  return (
-    <div className="accessibility-enhanced">
-      {children}
-    </div>
-  );
 }
+
+}}

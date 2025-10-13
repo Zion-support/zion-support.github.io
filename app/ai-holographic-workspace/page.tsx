@@ -1,26 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import { Link } from 'react-router-dom';
-import { Monitor, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Hand } from 'lucide-react';
 
 const AIHolographicWorkspace = () => {
   const features = [
@@ -79,7 +56,7 @@ const AIHolographicWorkspace = () => {
         "Email support",
         "10GB holographic storage"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Holographic Professional",
@@ -96,7 +73,7 @@ const AIHolographicWorkspace = () => {
         "API access",
         "Custom workspace templates"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Holographic Enterprise",
@@ -113,7 +90,7 @@ const AIHolographicWorkspace = () => {
         "Advanced security protocols",
         "SLA guarantee"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -152,47 +129,4 @@ const AIHolographicWorkspace = () => {
   ];
 
 export default function AiHolographicWorkspacePage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Holographic Workspace - Zion Tech Group</title>
-        <meta name="description" content="Ai Holographic Workspace solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Holographic Workspace</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai holographic workspace solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-
 }

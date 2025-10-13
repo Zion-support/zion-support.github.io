@@ -1,8 +1,6 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { 
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
   FileText, 
   Brain, 
   Shield, 
@@ -16,7 +14,7 @@ import {
   DollarSign, 
   Globe, 
   Smartphone,
-  Monitor
+  Monitor  } from 'lucide-react';
 } from 'lucide-react';
 
 const features = [
@@ -57,7 +55,7 @@ const pricingPlans = [
       "Email support",
       "Standard templates"
     ],
-    popular: false
+    popular: false;
   },
   {
     name: "Professional",
@@ -70,7 +68,7 @@ const pricingPlans = [
       "Custom templates",
       "API access"
     ],
-    popular: true
+    popular: true;
   },
   {
     name: "Enterprise",
@@ -83,7 +81,7 @@ const pricingPlans = [
       "White-label options",
       "Custom integrations"
     ],
-    popular: false
+    popular: false;
   }
 ];
 
@@ -108,17 +106,7 @@ const useCases = [
     description: "Research paper analysis, student document processing, and academic assessment",
     icon: <Award className="w-6 h-6" />
   }
-];
-=======
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
-export default function ZionAIDocumentAnalyzer() {
-=======
-
-export default function ZionAiDocumentAnalyzerPage() {
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-  return (
+];  return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Zion Ai Document Analyzer - Zion Tech Group</title>

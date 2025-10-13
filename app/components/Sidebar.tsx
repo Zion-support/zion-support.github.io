@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import React, { useState, useCallback, useMemo } from 'react';
-<<<<<<< HEAD
-import { Link, useLocation } from 'react-router-dom';
-import {
+import { Link } from 'react-router-dom';
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
   X, 
   ChevronDown, 
   ChevronRight,
@@ -20,35 +18,8 @@ import {
   ArrowRight,
   Phone,
   Mail,
-  MapPin
-} from 'lucide-react';
-=======
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Home } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React, { useMemo, useCallback, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { X, ChevronDown, ChevronRight, Home, Users, Settings, BarChart3, Shield, Cloud, Code, Brain, Zap, Database, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+  MapPin  } from 'lucide-react';
+} from 'lucide-react';import { Link  } from 'react-router-dom';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -121,76 +92,4 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   ], []);
 
   if (!isOpen) return null;
-
-  return (
-    <div className="fixed inset-0 z-50 overflow-hidden">
-      <div className="absolute inset-0 bg-black bg-opacity-50" onClick={onClose} />
-      <div className="relative flex h-full">
-        <div className="w-80 bg-slate-900 shadow-xl">
-          <div className="flex items-center justify-between p-4 border-b border-gray-700">
-            <h2 className="text-xl font-bold text-white">Navigation</h2>
-            <button
-              onClick={onClose}
-              className="text-gray-400 hover:text-white transition-colors"
-            >
-              <X className="w-6 h-6" />
-            </button>
-          </div>
-          
-          <nav className="p-4 space-y-2">
-            {menuItems.map((item) => (
-              <div key={item.name}>
-                <div className="flex items-center">
-                  <Link
-                    to={item.path}
-                    className={`flex items-center space-x-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors w-full ${
-                      isActive(item.path)
-                        ? 'text-cyan-400 bg-cyan-400/10'
-                        : 'text-gray-300 hover:text-white hover:bg-gray-800'
-                    }`}
-                    onClick={onClose}
-                  >
-                    {item.icon}
-                    <span>{item.name}</span>
-                  </Link>
-                  
-                  {item.children.length > 0 && (
-                    <button
-                      onClick={() => toggleExpanded(item.name)}
-                      className="ml-auto p-1 text-gray-400 hover:text-white transition-colors"
-                    >
-                      {expandedItems.includes(item.name) ? (
-                        <ChevronDown className="w-4 h-4" />
-                      ) : (
-                        <ChevronRight className="w-4 h-4" />
-                      )}
-                    </button>
-                  )}
-                </div>
-                
-                {item.children.length > 0 && expandedItems.includes(item.name) && (
-                  <div className="ml-6 mt-2 space-y-1">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.name}
-                        to={child.path}
-                        className={`block px-3 py-2 rounded-lg text-sm transition-colors ${
-                          isActive(child.path)
-                            ? 'text-cyan-400 bg-cyan-400/10'
-                            : 'text-gray-400 hover:text-white hover:bg-gray-800'
-                        }`}
-                        onClick={onClose}
-                      >
-                        {child.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
-        </div>
-      </div>
-    </div>
-  );
 }

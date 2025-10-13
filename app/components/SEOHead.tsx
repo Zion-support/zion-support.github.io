@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface SeoheadProps {
   className?: string;
@@ -6,9 +5,4 @@ interface SeoheadProps {
 }
 
 export default function Seohead({ className = '', children, ...props }: SeoheadProps) {
-  return (
-    <div className={`seohead-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

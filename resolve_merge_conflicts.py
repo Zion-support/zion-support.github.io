@@ -13,18 +13,15 @@ def resolve_merge_conflicts(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
+        if '            return False
         
         print(f"Resolving merge conflicts in: {file_path}")
         
         # Split by merge conflict markers
-        parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
-        
+        parts = re.split(r'        
         if len(parts) < 3:
             # Try alternative pattern for nested conflicts
-            parts = re.split(r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n=======\n(.*?)\n>>>>>>> [^\n]+', content, flags=re.DOTALL)
-        
+            parts = re.split(r'        
         if len(parts) < 3:
             print(f"Could not parse merge conflicts in {file_path}")
             return False
@@ -46,9 +43,7 @@ def resolve_merge_conflicts(file_path):
                 resolved_content += parts[i]
         
         # Clean up any remaining conflict markers
-        resolved_content = re.sub(r'<<<<<<< HEAD.*?>>>>>>> [^\n]+', '', resolved_content, flags=re.DOTALL)
-        resolved_content = re.sub(r'=======.*?>>>>>>> [^\n]+', '', resolved_content, flags=re.DOTALL)
-        
+        resolved_content = re.sub(r'        resolved_content = re.sub(r'.*?        
         # Write the resolved content
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(resolved_content)

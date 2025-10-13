@@ -11,11 +11,10 @@ i = 0
 while i < len(lines):
     line = lines[i]
     
-    if line.startswith('<<<<<<< HEAD'):
-        in_conflict = True
+    if line.startswith('        in_conflict = True
         i += 1
         continue
-    elif line.startswith('=======') and in_conflict:
+    elif line.startswith('') and in_conflict:
         skip = True
         i += 1
         continue

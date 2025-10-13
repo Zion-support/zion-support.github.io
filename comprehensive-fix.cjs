@@ -14,8 +14,7 @@ function fixSyntaxErrors(filePath) {
     const patterns = [
       // Fix merge conflict markers
       {
-        pattern: /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> cursor[^\n]*\n/g,
-        replacement: "",
+        pattern: /        replacement: "",
       },
       // Fix incomplete JSX tags
       {

@@ -169,8 +169,7 @@ function fixPageFile(filePath) {
 
     // Remove merge conflict markers
     content = content.replace(
-      /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g,
-      "",
+      /      "",
     );
 
     // Fix the common pattern: missing function declaration and stray array
@@ -206,8 +205,7 @@ function fixPageFile(filePath) {
 
     // Remove any remaining merge conflict markers
     content = content.replace(
-      /<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]*/g,
-      "",
+      /      "",
     );
 
     fs.writeFileSync(filePath, content);

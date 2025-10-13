@@ -1,26 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Users, ArrowRight, Sparkles, CheckCircle, Star, Target, TrendingUp, Zap, BarChart3, Mail, Phone, MapPin, Play, Watch, Video } from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Mic } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
 const ZionAICRMProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -79,7 +56,7 @@ const ZionAICRMProPage = () => {
         'Email support',
         'Basic analytics'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -96,7 +73,7 @@ const ZionAICRMProPage = () => {
         'API access',
         'Custom fields'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -115,7 +92,7 @@ const ZionAICRMProPage = () => {
         'Custom training',
         'SLA guarantee'
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -133,48 +110,4 @@ const ZionAICRMProPage = () => {
     { name: 'Zapier', logo: 'ZP', category: 'Automation' },
     { name: 'Salesforce', logo: 'SF', category: 'CRM' }
   ];
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
-export default function ZionAiCrmProPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Zion Ai Crm Pro - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Crm Pro solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Zion Ai Crm Pro</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive zion ai crm pro solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
 }

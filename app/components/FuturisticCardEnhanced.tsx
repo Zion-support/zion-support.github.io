@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface FuturisticcardenhancedProps {
   className?: string;
@@ -6,9 +5,4 @@ interface FuturisticcardenhancedProps {
 }
 
 export default function Futuristiccardenhanced({ className = '', children, ...props }: FuturisticcardenhancedProps) {
-  return (
-    <div className={`futuristiccardenhanced-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

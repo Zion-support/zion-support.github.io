@@ -1,9 +1,6 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
   Heart, 
   Zap, 
   BarChart3, 
@@ -13,33 +10,15 @@ import {
   Target, 
   Brain, 
   Users, 
-  CheckCircle,
-=======
-import { 
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-  ArrowRight,
+  CheckCircle,  ArrowRight,
   Users,
   Star,
   CheckCircle,
   Zap,
   Brain,
   Globe,
-<<<<<<< HEAD
   AlertCircle,
-  Clock
-=======
-  Monitor,
-  Target,
-  BarChart3,
-  Heart,
-  AlertCircle,
-  TrendingUp
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-} from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+  Clock } from 'lucide-react';
 
 const AICustomerSentimentTrackerPage = () => {
   const stats = [
@@ -145,7 +124,7 @@ const AICustomerSentimentTrackerPage = () => {
         "Email support",
         "3 team members"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -161,7 +140,7 @@ const AICustomerSentimentTrackerPage = () => {
         "10 team members",
         "API access"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -177,11 +156,10 @@ const AICustomerSentimentTrackerPage = () => {
         "Unlimited team members",
         "Custom integrations"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
-<<<<<<< HEAD
   const stats = [
     { number: "95%", label: "Accuracy Rate" },
     { number: "2.5M+", label: "Mentions Analyzed" },
@@ -211,10 +189,7 @@ const AICustomerSentimentTrackerPage = () => {
       description: "Enable seamless collaboration across teams with shared insights and task management"
     }
   ];
-
-=======
-export default function AiCustomerSentimentTrackerPage() {
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+export default function PagePage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -255,6 +230,4 @@ export default function AiCustomerSentimentTrackerPage() {
       </div>
     </div>
   );
-}
-
 }

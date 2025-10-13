@@ -1,9 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { 
+import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+
   Video, 
   Play, 
   Download, 
@@ -22,40 +20,12 @@ import {
   BarChart3,
   Shield,
   Award,
-  TrendingUp
-} from 'lucide-react';
-=======
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Edit } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Headphones } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+  TrendingUp  } from 'lucide-react';
+} from 'lucide-react';import { Link  } from 'react-router-dom';
 
 const ZionAIVideoGeneratorPage = () => {
   // const [selectedPlan, setSelectedPlan] = useState('pro');
   // const [selectedPlan, setSelectedPlan] = useState('pro');
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 const ZionAIVideoGeneratorPage: React.FC = () => {
   const features = [
@@ -84,7 +54,7 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
         "5 voice options",
         "Email support"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -100,7 +70,7 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
         "Priority support",
         "Analytics dashboard"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -117,7 +87,7 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
         "Advanced analytics",
         "API access"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -154,9 +124,8 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
     { number: "25+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
     { number: "4.9/5", label: "User Rating", icon: <Star className="w-6 h-6" /> }
   ];
-
+export default function PagePage() {
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Zion AI Video Generator - Create Professional Videos with AI | Zion Tech Group</title>
@@ -174,7 +143,7 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
-              Zion AI Video Generator
+              Zion AI Video Generator;
             </span>
           </h1>
           
@@ -184,18 +153,18 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Link
+            <Link;
               to="/contact"
               className="group bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-purple-500/25 hover:scale-105"
             >
-              Start Free Trial
+              Start Free Trial;
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link
+            <Link;
               to="/demo"
               className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
             >
-              Watch Demo
+              Watch Demo;
             </Link>
           </div>
 
@@ -219,16 +188,16 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful AI Features
+              Powerful AI Features;
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our advanced AI technology handles every aspect of video creation, from script writing to final production
+              Our advanced AI technology handles every aspect of video creation, from script writing to final production;
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div
+              <div;
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10"
               >
@@ -247,7 +216,7 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
+              Simple, Transparent Pricing;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Choose the plan that fits your video creation needs. All plans include our core AI features.
@@ -256,10 +225,10 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div
+              <div;
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                  plan.popular 
+                  plan.popular;
                     ? 'border-purple-500/50 ring-2 ring-purple-500/20' 
                     : 'border-white/20 hover:border-purple-500/30'
                 }`}
@@ -267,7 +236,7 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                      Most Popular
+                      Most Popular;
                     </span>
                   </div>
                 )}
@@ -290,15 +259,15 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
                   ))}
                 </ul>
                 
-                <Link
+                <Link;
                   to="/contact"
                   className={`block w-full text-center py-3 px-4 rounded-lg font-semibold transition-all duration-300 ${
-                    plan.popular
+                    plan.popular;
                       ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:from-purple-600 hover:to-pink-700'
                       : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
                   }`}
                 >
-                  Get Started
+                  Get Started;
                 </Link>
               </div>
             ))}
@@ -311,16 +280,16 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Content Creators Worldwide
+              Trusted by Content Creators Worldwide;
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how professionals are using our AI video generator to create amazing content
+              See how professionals are using our AI video generator to create amazing content;
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div
+              <div;
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10"
               >
@@ -354,7 +323,7 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
             Ready to Create Amazing Videos?
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Join thousands of content creators who are already using our AI video generator to produce 
+            Join thousands of content creators who are already using our AI video generator to produce;
             professional-quality videos in minutes, not hours.
           </p>
           
@@ -384,62 +353,23 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+            <Link;
               to="/contact"
               className="group bg-gradient-to-r from-purple-500 to-pink-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-600 hover:to-pink-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-purple-500/25 hover:scale-105"
             >
-              Start Your Free Trial
+              Start Your Free Trial;
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link
+            <Link;
               to="/demo"
               className="border border-purple-400 text-purple-400 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
             >
-              Schedule Demo
+              Schedule Demo;
             </Link>
           </div>
         </div>
-      </section>
-=======
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Zion Ai Video Generator - Zion Tech Group</title>
-        <meta name="description" content="Zion Ai Video Generator solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Zion Ai Video Generator</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive zion ai video generator solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-    </div>
+      </section>    </div>
   );
 };
 
+}

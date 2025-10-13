@@ -1,114 +1,79 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight, Users, BarChart3, TrendingUp, Target, Eye, Heart, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Cloud, Settings, Headphones, DollarSign, CreditCard, TrendingDown, Play, Zap, ShoppingCart, Store } from 'lucide-react';
-=======
-import React, { useState } from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React, { useState } from 'react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Headphones } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import { Heart } from 'lucide-react';
 
 const ZionAICustomerInsightsPage = () => {
-<<<<<<< HEAD
-=======
-  // const [selectedPlan, setSelectedPlan] = useState('pro');
-  // const [selectedPlan, setSelectedPlan] = useState('pro');
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
   const features = [
     {
       title: 'Behavioral Analytics',
       description: 'Track customer behavior patterns and engagement across all touchpoints',
       icon: <Eye className="w-6 h-6" />,
-      included: true
+      included: true;
     },
     {
       title: 'Churn Prediction',
       description: 'Predict customer churn with machine learning models and early warning systems',
       icon: <TrendingDown className="w-6 h-6" />,
-      included: true
+      included: true;
     },
     {
       title: 'Personalized Recommendations',
       description: 'Generate AI-powered product and content recommendations for each customer',
       icon: <Target className="w-6 h-6" />,
-      included: true
+      included: true;
     },
     {
       title: 'Customer Segmentation',
       description: 'Automatically segment customers based on behavior, value, and preferences',
       icon: <Users className="w-6 h-6" />,
-      included: true
+      included: true;
     },
     {
       title: 'Real-time Insights',
       description: 'Get instant insights and alerts about customer behavior and trends',
       icon: <Zap className="w-6 h-6" />,
-      included: true
+      included: true;
     },
     {
       title: 'ROI Tracking',
       description: 'Measure the return on investment of your customer engagement strategies',
       icon: <DollarSign className="w-6 h-6" />,
-      included: true
+      included: true;
     },
     {
       title: 'Sentiment Analysis',
       description: 'Analyze customer sentiment from reviews, feedback, and social media',
       icon: <Heart className="w-6 h-6" />,
-      included: true
+      included: true;
     },
     {
       title: 'Lifetime Value Prediction',
       description: 'Predict customer lifetime value and optimize acquisition strategies',
       icon: <TrendingUp className="w-6 h-6" />,
-      included: true
+      included: true;
     },
     {
       title: 'Cross-channel Analytics',
       description: 'Unify customer data from all channels for complete customer view',
       icon: <Globe className="w-6 h-6" />,
-      included: true
+      included: true;
     },
     {
       title: 'Automated Reports',
       description: 'Generate comprehensive customer insight reports automatically',
       icon: <BarChart3 className="w-6 h-6" />,
-      included: true
+      included: true;
     },
     {
       title: 'API Integration',
       description: 'Integrate with your existing CRM, marketing, and analytics tools',
       icon: <Settings className="w-6 h-6" />,
-      included: true
+      included: true;
     },
     {
       title: 'Priority Support',
       description: '24/7 priority support with dedicated customer success manager',
       icon: <Headphones className="w-6 h-6" />,
-      included: true
+      included: true;
     }
   ];
 
@@ -195,7 +160,7 @@ const ZionAICustomerInsightsPage = () => {
       examples: ['Risk assessment', 'Cross-selling opportunities', 'Customer lifetime value', 'Fraud detection']
     }
   ];
-
+export default function PagePage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -237,4 +202,4 @@ const ZionAICustomerInsightsPage = () => {
     </div>
   );
 };
-
+}

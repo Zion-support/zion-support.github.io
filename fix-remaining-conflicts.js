@@ -99,4 +99,3 @@ for (const file of filesToFix) {
     } catch (error) {
     }
 }
-

@@ -50,10 +50,8 @@ def fix_file_issues(file_path):
                     content = f"{import_line}\n{content}"
         
         # Remove any remaining merge conflict markers
-        content = re.sub(r'<<<<<<< HEAD\n?', '', content)
-        content = re.sub(r'=======\n?', '', content)
-        content = re.sub(r'>>>>>>> [^\n]+\n?', '', content)
-        
+        content = re.sub(r'        content = re.sub(r'\n?', '', content)
+        content = re.sub(r'        
         # Clean up multiple empty lines
         content = re.sub(r'\n\n\n+', '\n\n', content)
         

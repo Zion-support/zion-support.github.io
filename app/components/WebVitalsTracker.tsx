@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface WebvitalstrackerProps {
   className?: string;
@@ -6,9 +5,4 @@ interface WebvitalstrackerProps {
 }
 
 export default function Webvitalstracker({ className = '', children, ...props }: WebvitalstrackerProps) {
-  return (
-    <div className={`webvitalstracker-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

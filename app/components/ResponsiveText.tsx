@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface ResponsivetextProps {
   className?: string;
@@ -6,9 +5,4 @@ interface ResponsivetextProps {
 }
 
 export default function Responsivetext({ className = '', children, ...props }: ResponsivetextProps) {
-  return (
-    <div className={`responsivetext-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

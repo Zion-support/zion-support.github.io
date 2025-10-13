@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Cpu, Brain, Atom, Users, Award, Globe, Lock, TrendingUp, Monitor, MessageSquare, Phone } from 'lucide-react';
-import { Link } from "react-router-dom";
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
-import React from "react";
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-import SEOOptimizer from "../../components/SEOOptimizer";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
-import { Phone } from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Atom, ArrowRight, Monitor, Cpu, Users, Award, CheckCircle, MessageSquare, Phone, Globe, Star } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function AIQuantumComputingPage() {
   const testimonials = [
@@ -69,7 +36,7 @@ export default function AIQuantumComputingPage() {
         "5 user accounts",
         "Standard quantum gates"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Enterprise",
@@ -88,7 +55,7 @@ export default function AIQuantumComputingPage() {
         "Quantum error correction",
         "Dedicated quantum resources"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Quantum Lab",
@@ -109,7 +76,7 @@ export default function AIQuantumComputingPage() {
         "White-label quantum solutions",
         "On-premise quantum deployment"
       ],
-      popular: false
+      popular: false;
     }
   ];
 
@@ -140,47 +107,6 @@ export default function AIQuantumComputingPage() {
     }
   ];
 
-export default function AiQuantumComputingPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Quantum Computing - Zion Tech Group</title>
-        <meta name="description" content="Ai Quantum Computing solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Quantum Computing</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai quantum computing solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
 }
 
 }

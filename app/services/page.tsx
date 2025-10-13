@@ -1,47 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Search } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Server } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Wifi } from 'lucide-react';
-import { Headphones } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { Hand } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React from 'react';
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
 
 export default function Services() {
   const services = [
@@ -55,7 +12,7 @@ export default function Services() {
       originalPrice: "$599/month",
       features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Mobile App", "White-label Options"],
       category: "AI Analytics",
-      popular: true
+      popular: true;
     },
     {
       title: "AI Customer Support Automation Suite",
@@ -67,7 +24,7 @@ export default function Services() {
       originalPrice: "$399/month",
       features: ["Multi-language Support", "Sentiment Analysis", "CRM Integration", "Live Chat Handoff", "Voice Recognition", "Custom Training"],
       category: "AI Customer Service",
-      popular: true
+      popular: true;
     },
     {
       title: "AI Content Generation Studio",
@@ -90,7 +47,7 @@ export default function Services() {
       originalPrice: "$799/month",
       features: ["Threat Detection", "Automated Response", "Compliance Reports", "24/7 Monitoring", "Incident Response", "Security Training"],
       category: "Cybersecurity",
-      popular: true
+      popular: true;
     },
     {
       title: "5G Network Infrastructure Solutions",
@@ -233,7 +190,7 @@ export default function Services() {
       originalPrice: "$599/month",
       features: ["Database Optimization", "Backup & Recovery", "Performance Monitoring", "Security Hardening", "Scalability Planning", "Migration Services"],
       category: "Database Services",
-      popular: true
+      popular: true;
     },
     {
       title: "IT Infrastructure Monitoring Suite",
@@ -380,47 +337,6 @@ export default function Services() {
     }
   ];
 
-export default function ServicesPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Services solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Services</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive services solutions designed to meet your business needs.
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
 }
 
 }

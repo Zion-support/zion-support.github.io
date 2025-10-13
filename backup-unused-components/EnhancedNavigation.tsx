@@ -243,7 +243,6 @@ const EnhancedNavigation = () =>
                         {dropdownItem.label}
                       </Link>
 
-                    
                       <Link
                         to={item.href}
                         className="block text-sm text-cyan-400 hover:text-cyan-300 transition-colors duration-300 py-1 font-medium"

@@ -11,15 +11,10 @@ from pathlib import Path
 def clean_merge_conflicts(content):
     """Remove all merge conflict markers and choose appropriate content."""
     # Remove all merge conflict markers
-    content = re.sub(r'<<<<<<< HEAD\n.*?\n=======\n.*?\n>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
-    content = re.sub(r'<<<<<<< HEAD\n.*?\n>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
-    content = re.sub(r'=======\n.*?\n>>>>>>> [^\n]+\n?', '', content, flags=re.DOTALL)
-    
+    content = re.sub(r'    content = re.sub(r'    content = re.sub(r'\n.*?\n    
     # Clean up any remaining conflict markers
-    content = re.sub(r'^<<<<<<< HEAD.*?\n', '', content, flags=re.MULTILINE)
-    content = re.sub(r'^=======.*?\n', '', content, flags=re.MULTILINE)
-    content = re.sub(r'^>>>>>>> .*?\n', '', content, flags=re.MULTILINE)
-    
+    content = re.sub(r'^    content = re.sub(r'^.*?\n', '', content, flags=re.MULTILINE)
+    content = re.sub(r'^    
     return content
 
 def fix_jsx_syntax(content):

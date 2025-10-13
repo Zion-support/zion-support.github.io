@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface AccessibilityenhancerProps {
   className?: string;
@@ -6,9 +5,4 @@ interface AccessibilityenhancerProps {
 }
 
 export default function Accessibilityenhancer({ className = '', children, ...props }: AccessibilityenhancerProps) {
-  return (
-    <div className={`accessibilityenhancer-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

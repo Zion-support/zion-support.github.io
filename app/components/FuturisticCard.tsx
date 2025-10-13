@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface FuturisticcardProps {
   className?: string;
@@ -6,9 +5,4 @@ interface FuturisticcardProps {
 }
 
 export default function Futuristiccard({ className = '', children, ...props }: FuturisticcardProps) {
-  return (
-    <div className={`futuristiccard-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
 }

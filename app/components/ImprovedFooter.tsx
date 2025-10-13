@@ -1,28 +1,3 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, Mail, Phone, MapPin, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, CheckCircle } from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import { Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Users, Award, Zap, Shield } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 interface ImprovedfooterProps {
   className?: string;
@@ -32,7 +7,6 @@ interface ImprovedfooterProps {
 export default function ImprovedFooter({ className = '', children, ...props }: ImprovedfooterProps) {
   const currentYear = new Date().getFullYear();
 
-<<<<<<< HEAD
   const serviceCategories = [
     {
       title: 'AI Services',
@@ -134,66 +108,4 @@ export default function ImprovedFooter({ className = '', children, ...props }: I
       ]
     }
   ];
-
-=======
-  const companyLinks = [
-    { label: 'About Us', href: '/about' },
-    { label: 'Our Team', href: '/team' },
-    { label: 'Careers', href: '/careers' },
-    { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'News', href: '/news' },
-    { label: 'Press', href: '/press' },
-    { label: 'Partners', href: '/partners' }
-  ];
-
-  const resourceLinks = [
-    { label: 'Pricing', href: '/pricing' },
-    { label: 'Demo', href: '/demo' },
-    { label: 'Support', href: '/support' },
-    { label: 'Documentation', href: '/docs' },
-    { label: 'API Reference', href: '/api' },
-    { label: 'Tutorials', href: '/tutorials' },
-    { label: 'Webinars', href: '/webinars' },
-    { label: 'Whitepapers', href: '/whitepapers' }
-  ];
-
-  const legalLinks = [
-    { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Terms of Service', href: '/terms' },
-    { label: 'Cookie Policy', href: '/cookies' },
-    { label: 'Sitemap', href: '/sitemap' },
-    { label: 'Accessibility', href: '/accessibility' },
-    { label: 'Security', href: '/security' }
-  ];
-
-  const socialLinks = [
-    { label: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-    { label: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
-    { label: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> },
-    { label: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
-    { label: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
-    { label: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: <Youtube className="w-5 h-5" /> }
-  ];
-
-  const stats = [
-    { number: '10,000+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Uptime SLA', icon: <Award className="w-6 h-6" /> },
-    { number: '60+', label: 'Micro SAAS Solutions', icon: <Zap className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Shield className="w-6 h-6" /> }
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709'
-  };
-
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-  return (
-    <div className={`improvedfooter-component ${className}`} {...props}>
-      {children}
-    </div>
-  );
-};
-
+}
