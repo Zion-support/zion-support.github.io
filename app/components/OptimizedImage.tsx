@@ -25,6 +25,10 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false,
   placeholder = 'empty',
   blurDataURL = '',
+<<<<<<< HEAD
+=======
+  // quality = 75, // Currently unused but kept for future implementation
+>>>>>>> cursor/fix-errors-and-merge-to-main-c9c1
   sizes = '100vw',
   loading = 'lazy',
   onLoad,
