@@ -11,7 +11,8 @@ export default function Services() {
       path: "/ai-business-intelligence",
       color: "from-blue-500 to-cyan-500",
       price: "Starting at $299/month",
-      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"]
+      features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration"],
+      category: "AI Services"
     },
     {
       title: "AI Customer Support Automation",
@@ -20,7 +21,8 @@ export default function Services() {
       path: "/ai-customer-support",
       color: "from-green-500 to-emerald-500",
       price: "Starting at $199/month",
-      features: ["Multi-language Support", "Sentiment Analysis", "CRM Integration", "Live Chat Handoff"]
+      features: ["Multi-language Support", "Sentiment Analysis", "CRM Integration", "Live Chat Handoff"],
+      category: "AI Services"
     },
     {
       title: "AI Content Generation Suite",
@@ -29,7 +31,8 @@ export default function Services() {
       path: "/ai-content-generation",
       color: "from-purple-500 to-pink-500",
       price: "Starting at $149/month",
-      features: ["SEO Optimization", "Brand Voice Training", "Multi-format Output", "Plagiarism Detection"]
+      features: ["SEO Optimization", "Brand Voice Training", "Multi-format Output", "Plagiarism Detection"],
+      category: "AI Services"
     },
     {
       title: "AI Cybersecurity Monitor",
@@ -38,7 +41,8 @@ export default function Services() {
       path: "/ai-cybersecurity",
       color: "from-red-500 to-orange-500",
       price: "Starting at $399/month",
-      features: ["Threat Detection", "Automated Response", "Compliance Reports", "24/7 Monitoring"]
+      features: ["Threat Detection", "Automated Response", "Compliance Reports", "24/7 Monitoring"],
+      category: "AI Services"
     },
     {
       title: "5G Network Infrastructure",
@@ -47,7 +51,8 @@ export default function Services() {
       path: "/5g-solutions",
       color: "from-cyan-500 to-blue-500",
       price: "Custom Pricing",
-      features: ["Network Planning", "Edge Computing", "IoT Integration", "Performance Monitoring"]
+      features: ["Network Planning", "Edge Computing", "IoT Integration", "Performance Monitoring"],
+      category: "5G Solutions"
     },
     {
       title: "Cloud Infrastructure Management",
@@ -56,7 +61,8 @@ export default function Services() {
       path: "/cloud-infrastructure",
       color: "from-indigo-500 to-purple-500",
       price: "Starting at $249/month",
-      features: ["Auto-scaling", "Disaster Recovery", "Cost Optimization", "Security Hardening"]
+      features: ["Auto-scaling", "Disaster Recovery", "Cost Optimization", "Security Hardening"],
+      category: "IT Services"
     },
     {
       title: "AI-Powered Data Analytics",
@@ -65,7 +71,8 @@ export default function Services() {
       path: "/ai-data-analytics",
       color: "from-teal-500 to-cyan-500",
       price: "Starting at $179/month",
-      features: ["ML Models", "Interactive Dashboards", "Data Pipeline", "Real-time Processing"]
+      features: ["ML Models", "Interactive Dashboards", "Data Pipeline", "Real-time Processing"],
+      category: "AI Services"
     },
     {
       title: "AI Code Assistant Pro",
@@ -74,7 +81,8 @@ export default function Services() {
       path: "/ai-code-assistant",
       color: "from-yellow-500 to-orange-500",
       price: "Starting at $129/month",
-      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Documentation"]
+      features: ["Code Generation", "Bug Detection", "Performance Optimization", "Documentation"],
+      category: "AI Services"
     },
     {
       title: "AI Marketing Automation",
@@ -83,7 +91,8 @@ export default function Services() {
       path: "/ai-marketing-automation",
       color: "from-pink-500 to-rose-500",
       price: "Starting at $199/month",
-      features: ["Email Automation", "Social Media", "Lead Scoring", "A/B Testing"]
+      features: ["Email Automation", "Social Media", "Lead Scoring", "A/B Testing"],
+      category: "AI Services"
     },
     {
       title: "AI Document Processing",
@@ -92,7 +101,8 @@ export default function Services() {
       path: "/ai-document-processing",
       color: "from-emerald-500 to-green-500",
       price: "Starting at $159/month",
-      features: ["OCR Technology", "Form Recognition", "Data Extraction", "Workflow Automation"]
+      features: ["OCR Technology", "Form Recognition", "Data Extraction", "Workflow Automation"],
+      category: "AI Services"
     },
     {
       title: "AI Sales CRM Assistant",
@@ -101,7 +111,8 @@ export default function Services() {
       path: "/ai-crm-assistant",
       color: "from-violet-500 to-purple-500",
       price: "Starting at $229/month",
-      features: ["Lead Scoring", "Sales Forecasting", "Automated Follow-ups", "CRM Integration"]
+      features: ["Lead Scoring", "Sales Forecasting", "Automated Follow-ups", "CRM Integration"],
+      category: "AI Services"
     },
     {
       title: "AI Financial Analytics",
@@ -110,9 +121,102 @@ export default function Services() {
       path: "/ai-financial-analytics",
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
-      features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+      features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"],
+      category: "AI Services"
+    },
+    {
+      title: "Enterprise Web Development",
+      description: "Custom web applications and websites built with modern technologies. Responsive design, SEO optimization, and performance optimization.",
+      icon: <Code className="w-8 h-8" />,
+      path: "/web-development",
+      color: "from-blue-600 to-indigo-600",
+      price: "Starting at $5,000/project",
+      features: ["Custom Development", "Responsive Design", "SEO Optimization", "Performance Tuning"],
+      category: "IT Services"
+    },
+    {
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile applications for iOS and Android. User experience design and app store optimization.",
+      icon: <Smartphone className="w-8 h-8" />,
+      path: "/mobile-development",
+      color: "from-green-600 to-teal-600",
+      price: "Starting at $8,000/project",
+      features: ["iOS & Android", "Cross-platform", "UX/UI Design", "App Store Optimization"],
+      category: "IT Services"
+    },
+    {
+      title: "Database Management & Migration",
+      description: "Database design, optimization, and migration services. Performance tuning, backup strategies, and data security.",
+      icon: <Database className="w-8 h-8" />,
+      path: "/database-management",
+      color: "from-purple-600 to-violet-600",
+      price: "Starting at $150/hour",
+      features: ["Database Design", "Performance Tuning", "Migration Services", "Backup & Recovery"],
+      category: "IT Services"
+    },
+    {
+      title: "Cybersecurity Solutions",
+      description: "Comprehensive security assessment, implementation, and monitoring. Penetration testing, compliance, and incident response.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/cybersecurity-solutions",
+      color: "from-red-600 to-orange-600",
+      price: "Starting at $299/month",
+      features: ["Security Assessment", "Penetration Testing", "Compliance", "Incident Response"],
+      category: "IT Services"
+    },
+    {
+      title: "Network Infrastructure",
+      description: "Network design, implementation, and management. Wireless solutions, VPN setup, and network monitoring.",
+      icon: <Wifi className="w-8 h-8" />,
+      path: "/network-infrastructure",
+      color: "from-cyan-600 to-blue-600",
+      price: "Starting at $199/month",
+      features: ["Network Design", "Wireless Solutions", "VPN Setup", "Network Monitoring"],
+      category: "IT Services"
+    },
+    {
+      title: "IT Consulting & Strategy",
+      description: "Technology strategy and digital transformation consulting. IT assessment, planning, and implementation guidance.",
+      icon: <Users className="w-8 h-8" />,
+      path: "/it-consulting",
+      color: "from-slate-600 to-gray-600",
+      price: "Starting at $200/hour",
+      features: ["Technology Strategy", "Digital Transformation", "IT Assessment", "Implementation Planning"],
+      category: "IT Services"
+    },
+    {
+      title: "DevOps & CI/CD",
+      description: "DevOps implementation, CI/CD pipeline setup, and infrastructure automation. Containerization and cloud deployment.",
+      icon: <Code className="w-8 h-8" />,
+      path: "/devops-services",
+      color: "from-orange-600 to-red-600",
+      price: "Starting at $179/month",
+      features: ["CI/CD Pipelines", "Containerization", "Infrastructure Automation", "Cloud Deployment"],
+      category: "IT Services"
+    },
+    {
+      title: "Data Backup & Recovery",
+      description: "Comprehensive backup solutions and disaster recovery planning. Data protection and business continuity services.",
+      icon: <Cloud className="w-8 h-8" />,
+      path: "/backup-recovery",
+      color: "from-indigo-600 to-purple-600",
+      price: "Starting at $99/month",
+      features: ["Automated Backups", "Disaster Recovery", "Data Protection", "Business Continuity"],
+      category: "IT Services"
+    },
+    {
+      title: "IT Support & Maintenance",
+      description: "24/7 IT support and maintenance services. Help desk, remote support, and proactive monitoring.",
+      icon: <Users className="w-8 h-8" />,
+      path: "/it-support",
+      color: "from-emerald-600 to-green-600",
+      price: "Starting at $149/month",
+      features: ["24/7 Support", "Help Desk", "Remote Support", "Proactive Monitoring"],
+      category: "IT Services"
     }
   ];
+
+  const categories = [...new Set(services.map(service => service.category))];
 
   return (
     <>
@@ -167,6 +271,25 @@ export default function Services() {
           </div>
         </section>
 
+        {/* Categories Filter */}
+        <section className="py-8 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-wrap gap-4 justify-center">
+              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
+                All Services
+              </button>
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  className="px-6 py-3 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 border border-white/20"
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -190,36 +313,41 @@ export default function Services() {
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   
                   <div className="relative z-10">
-                    <div
-                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                    >
-                      {service.icon}
+                    <div className="flex items-center justify-between mb-4">
+                      <div
+                        className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      >
+                        {service.icon}
+                      </div>
+                      <div className="text-right">
+                        <div className="text-cyan-400 font-bold text-lg">{service.price}</div>
+                        <div className="text-xs text-gray-400">{service.category}</div>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
+                    
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                    <p className="text-gray-300 mb-4 leading-relaxed text-sm">
                       {service.description}
                     </p>
                     
-                    {/* Price and Features */}
-                    <div className="space-y-3">
-                      <div className="text-center">
-                        <span className="text-cyan-400 font-bold text-lg">{service.price}</span>
-                      </div>
-                      <div className="flex flex-wrap gap-2 justify-center">
-                        {service.features.map((feature, idx) => (
-                          <span
-                            key={idx}
-                            className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30"
-                          >
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
+                    {/* Features */}
+                    <div className="space-y-2 mb-4">
+                      {service.features.slice(0, 3).map((feature, idx) => (
+                        <div key={idx} className="flex items-center space-x-2">
+                          <div className="w-2 h-2 bg-cyan-400 rounded-full flex-shrink-0"></div>
+                          <span className="text-xs text-gray-300">{feature}</span>
+                        </div>
+                      ))}
+                      {service.features.length > 3 && (
+                        <div className="text-xs text-cyan-400">
+                          +{service.features.length - 3} more features
+                        </div>
+                      )}
                     </div>
                     
-                    <div className="mt-4 text-center">
+                    <div className="flex items-center justify-between">
                       <Link
                         to={service.path}
                         className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
@@ -227,6 +355,9 @@ export default function Services() {
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-1" />
                       </Link>
+                      <div className="text-xs text-gray-400">
+                        {service.category}
+                      </div>
                     </div>
                   </div>
                 </div>

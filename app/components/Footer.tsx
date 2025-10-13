@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin, Twitter, Github, Mail, Smartphone, Globe, MapPin } from "lucide-react";
 
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
@@ -27,19 +27,43 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm max-w-md">
-              Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
+              Leading provider of AI-powered solutions, micro SAAS, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3 text-sm text-gray-400">
+                <Mail className="w-4 h-4 text-cyan-400" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-400 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-400">
+                <Smartphone className="w-4 h-4 text-cyan-400" />
+                <a href="tel:+13024640950" className="hover:text-cyan-400 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-start space-x-3 text-sm text-gray-400">
+                <MapPin className="w-4 h-4 text-cyan-400 mt-0.5" />
+                <div>
+                  <div>364 E Main St STE 1008</div>
+                  <div>Middletown DE 19709</div>
+                </div>
+              </div>
+            </div>
+            
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -47,7 +71,7 @@ const Footer = React.memo(() => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
                   aria-label={link.name}
                 >
                   {link.icon}
