@@ -1,23 +1,17 @@
 // accessibilityUtils utility functions
 
-export interface accessibilityUtilsConfig {
+export interface AccessibilityUtilsConfig {
   enabled: boolean;
 }
 
-export class accessibilityUtils {
-  private config: accessibilityUtilsConfig;
+export class AccessibilityUtils {
+  private config: AccessibilityUtilsConfig;
 
-  constructor(config: Partial<accessibilityUtilsConfig> = {}) {
+  constructor(config: Partial<AccessibilityUtilsConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// accessibilityUtils utility
-export const accessibilityUtils = {
-  // Utility implementation,
-    init: () => {
-    console.log('accessibilityUtils initialized');
   }
 
   init(): void {
@@ -27,10 +21,5 @@ export const accessibilityUtils = {
   }
 }
 
-export const accessibilityutils = new accessibilityUtils();
-export default accessibilityutils;
-// accessibilityUtils
-export const accessibilityUtils = () => {
-  // Utility function implementation
-  return null;
-};
+export const accessibilityUtils = new AccessibilityUtils();
+export default accessibilityUtils;

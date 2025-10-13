@@ -1,23 +1,17 @@
 // advancedAnalytics utility functions
 
-export interface advancedAnalyticsConfig {
+export interface AdvancedAnalyticsConfig {
   enabled: boolean;
 }
 
-export class advancedAnalytics {
-  private config: advancedAnalyticsConfig;
+export class AdvancedAnalytics {
+  private config: AdvancedAnalyticsConfig;
 
-  constructor(config: Partial<advancedAnalyticsConfig> = {}) {
+  constructor(config: Partial<AdvancedAnalyticsConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// advancedAnalytics utility
-export const advancedAnalytics = {
-  // Utility implementation,
-    init: () => {
-    console.log('advancedAnalytics initialized');
   }
 
   init(): void {
@@ -27,10 +21,5 @@ export const advancedAnalytics = {
   }
 }
 
-export const advancedanalytics = new advancedAnalytics();
-export default advancedanalytics;
-// advancedAnalytics
-export const advancedAnalytics = () => {
-  // Utility function implementation
-  return null;
-};
+export const advancedAnalytics = new AdvancedAnalytics();
+export default advancedAnalytics;

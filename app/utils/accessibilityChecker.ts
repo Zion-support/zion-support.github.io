@@ -1,23 +1,17 @@
 // accessibilityChecker utility functions
 
-export interface accessibilityCheckerConfig {
+export interface AccessibilityCheckerConfig {
   enabled: boolean;
 }
 
-export class accessibilityChecker {
-  private config: accessibilityCheckerConfig;
+export class AccessibilityChecker {
+  private config: AccessibilityCheckerConfig;
 
-  constructor(config: Partial<accessibilityCheckerConfig> = {}) {
+  constructor(config: Partial<AccessibilityCheckerConfig> = {}) {
     this.config = {
       enabled: true,
       ...config
     };
-
-// accessibilityChecker utility
-export const accessibilityChecker = {
-  // Utility implementation,
-    init: () => {
-    console.log('accessibilityChecker initialized');
   }
 
   init(): void {
@@ -27,10 +21,5 @@ export const accessibilityChecker = {
   }
 }
 
-export const accessibilitychecker = new accessibilityChecker();
-export default accessibilitychecker;
-// accessibilityChecker
-export const accessibilityChecker = () => {
-  // Utility function implementation
-  return null;
-};
+export const accessibilityChecker = new AccessibilityChecker();
+export default accessibilityChecker;

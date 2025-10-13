@@ -1,19 +1,5 @@
 // logger utility functions
 
-export interface loggerConfig {
-  enabled: boolean;
-}
-
-export class logger {
-  private config: loggerConfig;
-
-  constructor(config: Partial<loggerConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-const LOG_LEVELS = {
 interface LogLevel {
   ERROR: 'error';
   WARN: 'warn';
@@ -27,24 +13,20 @@ const LOG_LEVELS: LogLevel = {
   INFO: 'info',
   DEBUG: 'debug',
 } as const;
-const LOG_LEVELS: LogLevel = {,
-    ERROR: 'error',
-    WARN: 'warn',
-    INFO: 'info',
-    DEBUG: 'debug',
-};
 
 type LogLevelType = typeof LOG_LEVELS[keyof typeof LOG_LEVELS];
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('logger initialized');
-    }
-  }
-}
+export class Logger {
+  private isProduction: boolean;
 
-export const loggerInstance = new logger();
-export default loggerInstance;
+  constructor() {
+    this.isProduction = process.env.NODE_ENV === 'production';
+  }
+
+  private log(level: LogLevelType, message: string, ...args: any[]): void {
+    if (this.isProduction && level === 'debug') {
+      return; // Don't log debug messages in production
+    }
 
     switch (level) {
       case 'error':
@@ -76,9 +58,9 @@ export default loggerInstance;
         level,
         message,
         args,
-          timestamp: new Date().toISOString(),
-          url: window.location.href,
-          userAgent: navigator.userAgent,
+        timestamp: new Date().toISOString(),
+        url: window.location.href,
+        userAgent: navigator.userAgent,
       });
 
       // Keep only the last 100 logs
@@ -123,29 +105,5 @@ export default loggerInstance;
   }
 }
 
-const loggerInstance = new Logger();
-export default loggerInstance;
 const logger = new Logger();
-const logger = new Logger();
-
-export const logger = {
-  // Logger implementation,
-    info: (message: string) => {
-    console.log(`[INFO] ${message}`);
-  },
-    error: (message: string) => {
-    console.error(`[ERROR] ${message}`);
-  },
-    warn: (message: string) => {
-    console.warn(`[WARN] ${message}`);
-  }
-};
-
-export { logger };
-// Logger utility
-export function logger(message: string, level: 'info' | 'warn' | 'error' = 'info') {
-  console[level](message);
-}
-
-export default logger;
 export default logger;
