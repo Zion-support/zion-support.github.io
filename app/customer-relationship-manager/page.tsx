@@ -3,13 +3,13 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Code, Cloud, Shield, Zap, Users, Award, BarChart3 } from 'lucide-react';
 
-const ItSupportPage = () => {
+const CustomerRelationshipManagerPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
-        <title>It Support - Zion Tech Group | Professional Technology Solutions</title>
-        <meta name="description" content="Professional it support services and solutions. Expert implementation and support for your business needs." />
-        <meta name="keywords" content="it support, professional services, business solutions, technology consulting" />
+        <title>Customer Relationship Manager - Zion Tech Group | Professional Technology Solutions</title>
+        <meta name="description" content="Professional customer relationship manager services and solutions. Expert implementation and support for your business needs." />
+        <meta name="keywords" content="customer relationship manager, professional services, business solutions, technology consulting" />
       </Helmet>
 
       {/* Hero Section */}
@@ -17,11 +17,11 @@ const ItSupportPage = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              It Support
+              Customer Relationship Manager
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Professional it support services and solutions. Expert implementation and support for your business needs.
+            Professional customer relationship manager services and solutions. Expert implementation and support for your business needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -42,7 +42,7 @@ const ItSupportPage = () => {
             {[
               {
                 title: "Professional Service",
-                description: "Expert it support solutions tailored to your business needs.",
+                description: "Expert customer relationship manager solutions tailored to your business needs.",
                 icon: <Code className="w-8 h-8" />,
                 color: "from-blue-500 to-cyan-500"
               },
@@ -81,7 +81,7 @@ const ItSupportPage = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Contact our expert team to discuss your it support requirements and get a customized solution.
+            Contact our expert team to discuss your customer relationship manager requirements and get a customized solution.
           </p>
           <Link
             to="/contact"
@@ -96,4 +96,4 @@ const ItSupportPage = () => {
   );
 };
 
-export default ItSupportPage;
+export default CustomerRelationshipManagerPage;

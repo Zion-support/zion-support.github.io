@@ -1,70 +1,78 @@
 import React from 'react';
+import { Loader2, CheckCircle, AlertCircle, RefreshCw } from 'lucide-react';
 
-interface EnhancedLoadingProps {
+interface LoadingStateProps {
+  type?: 'loading' | 'success' | 'error' | 'retry';
   message?: string;
-  showProgress?: boolean;
-  progress?: number;
+  size?: 'sm' | 'md' | 'lg';
+  showSpinner?: boolean;
+  onRetry?: () => void;
 }
 
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
-  message = "Loading...",
-  showProgress = false,
-  progress = 0
+const LoadingState: React.FC<LoadingStateProps> = ({
+  type = 'loading',
+  message,
+  size = 'md',
+  showSpinner = true,
+  onRetry
 }) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  };
+
+  const containerClasses = {
+    sm: 'p-2',
+    md: 'p-4',
+    lg: 'p-8'
+  };
+
+  const getIcon = () => {
+    switch (type) {
+      case 'success':
+        return <CheckCircle className={`${sizeClasses[size]} text-green-500`} />;
+      case 'error':
+        return <AlertCircle className={`${sizeClasses[size]} text-red-500`} />;
+      case 'retry':
+        return <RefreshCw className={`${sizeClasses[size]} text-blue-500`} />;
+      default:
+        return showSpinner ? (
+          <Loader2 className={`${sizeClasses[size]} text-cyan-500 animate-spin`} />
+        ) : null;
+    }
+  };
+
+  const getMessage = () => {
+    if (message) return message;
+    
+    switch (type) {
+      case 'success':
+        return 'Success!';
+      case 'error':
+        return 'Something went wrong. Please try again.';
+      case 'retry':
+        return 'Retrying...';
+      default:
+        return 'Loading...';
+    }
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        {/* Animated Logo/Icon */}
-        <div className="mb-8">
-          <div className="w-20 h-20 mx-auto relative">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 animate-spin"></div>
-            <div className="absolute inset-2 rounded-full bg-slate-900 flex items-center justify-center">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse"></div>
-            </div>
-          </div>
-        </div>
-
-        {/* Loading Message */}
-        <h2 className="text-2xl font-bold text-white mb-4 animate-pulse">
-          {message}
-        </h2>
-
-        {/* Progress Bar */}
-        {showProgress && (
-          <div className="w-64 mx-auto mb-4">
-            <div className="bg-slate-700 rounded-full h-2 overflow-hidden">
-              <div 
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
-                style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-              ></div>
-            </div>
-            <p className="text-sm text-gray-400 mt-2">
-              {Math.round(progress)}% Complete
-            </p>
-          </div>
-        )}
-
-        {/* Loading Animation */}
-        <div className="flex justify-center space-x-2">
-          {[...Array(3)].map((_, i) => (
-            <div
-              key={i}
-              className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-bounce"
-              style={{
-                animationDelay: `${i * 0.1}s`,
-                animationDuration: '1s'
-              }}
-            ></div>
-          ))}
-        </div>
-
-        {/* Additional Info */}
-        <p className="text-gray-400 text-sm mt-6 max-w-md mx-auto">
-          Preparing your experience with cutting-edge technology...
-        </p>
-      </div>
+    <div className={`flex flex-col items-center justify-center ${containerClasses[size]} bg-white/5 backdrop-blur-sm rounded-lg border border-white/10`}>
+      {getIcon()}
+      <p className="mt-2 text-sm text-gray-300 text-center">{getMessage()}</p>
+      {type === 'error' && onRetry && (
+        <button
+          onClick={onRetry}
+          className="mt-3 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 text-white text-sm rounded-lg transition-colors flex items-center gap-2"
+        >
+          <RefreshCw className="w-4 h-4" />
+          Try Again
+        </button>
+      )}
     </div>
   );
 };
 
-export default EnhancedLoading;
+export default LoadingState;

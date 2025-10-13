@@ -1,5 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 interface Props {
   children: ReactNode;
@@ -11,26 +12,23 @@ interface State {
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
-  retryCount: number;
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
-  private retryTimeoutId: NodeJS.Timeout | null = null;
-
   constructor(props: Props) {
     super(props);
     this.state = {
       hasError: false,
       error: null,
-      errorInfo: null,
-      retryCount: 0
+      errorInfo: null
     };
   }
 
-  static getDerivedStateFromError(error: Error): Partial<State> {
+  static getDerivedStateFromError(error: Error): State {
     return {
       hasError: true,
-      error
+      error,
+      errorInfo: null
     };
   }
 
@@ -50,61 +48,24 @@ class EnhancedErrorBoundary extends Component<Props, State> {
       this.props.onError(error, errorInfo);
     }
 
-    // Send error to monitoring service in production
+    // Log error to external service in production
     if (process.env.NODE_ENV === 'production') {
-      this.logErrorToService(error, errorInfo);
+      // Here you would typically send the error to a service like Sentry
+      console.error('Production error:', error, errorInfo);
     }
   }
 
-  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
-    // In a real application, you would send this to your error monitoring service
-    // like Sentry, LogRocket, or Bugsnag
-    try {
-      const errorData = {
-        message: error.message,
-        stack: error.stack,
-        componentStack: errorInfo.componentStack,
-        timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href,
-        retryCount: this.state.retryCount
-      };
-
-      // Example: Send to monitoring service
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'exception', {
-          description: error.message,
-          fatal: true,
-          custom_map: errorData
-        });
-      }
-    } catch (loggingError) {
-      console.error('Failed to log error to service:', loggingError);
-    }
-  };
-
-  private handleRetry = () => {
-    this.setState(prevState => ({
+  handleRetry = () => {
+    this.setState({
       hasError: false,
       error: null,
-      errorInfo: null,
-      retryCount: prevState.retryCount + 1
-    }));
+      errorInfo: null
+    });
   };
 
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleReload = () => {
+  handleReload = () => {
     window.location.reload();
   };
-
-  componentWillUnmount() {
-    if (this.retryTimeoutId) {
-      clearTimeout(this.retryTimeoutId);
-    }
-  }
 
   render() {
     if (this.state.hasError) {
@@ -115,8 +76,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
 
       return (
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-8 text-center">
-            <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
             
@@ -124,56 +85,63 @@ class EnhancedErrorBoundary extends Component<Props, State> {
               Oops! Something went wrong
             </h1>
             
-            <p className="text-gray-300 mb-6 leading-relaxed">
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
-                <h3 className="text-red-400 font-semibold mb-2 flex items-center">
-                  <Bug className="w-4 h-4 mr-2" />
-                  Error Details (Development Only)
-                </h3>
-                <pre className="text-xs text-red-300 overflow-auto max-h-32">
-                  {this.state.error.message}
-                  {'\n\n'}
-                  {this.state.error.stack}
-                </pre>
-              </div>
+              <details className="mb-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
+                  Error Details (Development)
+                </summary>
+                <div className="bg-red-900/20 border border-red-500/20 rounded p-3 text-xs text-red-300 font-mono overflow-auto max-h-32">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  {this.state.error.stack && (
+                    <div>
+                      <strong>Stack:</strong>
+                      <pre className="whitespace-pre-wrap mt-1">{this.state.error.stack}</pre>
+                    </div>
+                  )}
+                </div>
+              </details>
             )}
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3">
               <button
                 onClick={this.handleRetry}
-                className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+                className="flex-1 bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
               >
-                <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform duration-500" />
+                <RefreshCw className="w-4 h-4" />
                 Try Again
               </button>
               
               <button
-                onClick={this.handleGoHome}
-                className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 group"
-              >
-                <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Go Home
-              </button>
-              
-              <button
                 onClick={this.handleReload}
-                className="flex items-center justify-center px-6 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 group"
+                className="flex-1 bg-purple-500 hover:bg-purple-600 text-white px-4 py-3 rounded-lg font-medium transition-colors flex items-center justify-center gap-2"
               >
-                <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform duration-500" />
+                <RefreshCw className="w-4 h-4" />
                 Reload Page
               </button>
             </div>
 
-            <div className="mt-6 text-sm text-gray-400">
-              <p>If this problem persists, please contact our support team.</p>
-              <p className="mt-2">
-                Error ID: {Date.now().toString(36)}-{Math.random().toString(36).substr(2, 9)}
-              </p>
+            <div className="mt-6 pt-6 border-t border-white/10">
+              <Link
+                to="/"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium gap-2"
+              >
+                <Home className="w-4 h-4" />
+                Go Home
+              </Link>
             </div>
+
+            {process.env.NODE_ENV === 'development' && (
+              <div className="mt-4 text-xs text-gray-500">
+                <Bug className="w-3 h-3 inline mr-1" />
+                Development Mode - Error details shown above
+              </div>
+            )}
           </div>
         </div>
       );
