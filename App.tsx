@@ -10,7 +10,7 @@ import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/utils/accessibilityEnhancer";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
@@ -76,12 +76,12 @@ function App() {
     <EnhancedErrorBoundary>
       <HelmetProvider>
         <AnalyticsProvider>
-          <PerformanceMonitor className="performance-monitor">
-            <WebVitalsTracker className="web-vitals-tracker">
-              <EnhancedAccessibility className="enhanced-accessibility">
-                <AccessibilityEnhancer>
-                  <CoreWebVitals className="core-web-vitals">
-                    <Router>
+          <PerformanceMonitor className="performance-monitor" />
+          <WebVitalsTracker className="web-vitals-tracker" />
+          <EnhancedAccessibility className="enhanced-accessibility" />
+          <AccessibilityEnhancer>
+            <CoreWebVitals className="core-web-vitals" />
+            <Router>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         <FuturisticBackground>
                           <PerformanceOptimizer>
@@ -141,11 +141,7 @@ function App() {
                         </FuturisticBackground>
                       </div>
                     </Router>
-                  </CoreWebVitals>
-                </AccessibilityEnhancer>
-              </EnhancedAccessibility>
-            </WebVitalsTracker>
-          </PerformanceMonitor>
+            </AccessibilityEnhancer>
         </AnalyticsProvider>
       </HelmetProvider>
     </EnhancedErrorBoundary>
