@@ -1,86 +1,84 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Cpu, Brain, Zap, Atom, Sparkles, Users, Award, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award as AwardIcon, Rocket, Wifi, Battery, Camera, Headphones, Mic, Video, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Video, Play, Zap, Brain, Sparkles, Users, Award, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award as AwardIcon, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
-export default function AiQuantumComputing() {
+export default function ZionAiVideoGenerator() {
   const features = [
-    "Quantum machine learning algorithms for complex optimization",
-    "Quantum simulation for drug discovery and materials science",
-    "Quantum cryptography for ultra-secure communications",
-    "Quantum annealing for combinatorial optimization problems",
-    "Quantum neural networks for pattern recognition",
-    "Quantum error correction and fault tolerance",
-    "Hybrid quantum-classical computing workflows",
-    "Quantum cloud access with real quantum hardware",
-    "Advanced quantum algorithm development",
-    "Quantum state preparation and manipulation",
-    "Quantum entanglement and teleportation protocols",
-    "Custom quantum circuit design and optimization"
+    "AI-powered video generation from text prompts",
+    "Multiple video styles and templates (1000+ options)",
+    "4K and HD video output quality",
+    "Voice synthesis with 50+ languages",
+    "Automatic subtitle generation",
+    "Background music library (5000+ tracks)",
+    "Custom branding and watermarking",
+    "Batch video processing",
+    "Social media optimization",
+    "Real-time preview and editing",
+    "Cloud storage integration",
+    "Team collaboration tools"
   ];
 
   const benefits = [
-    "Solve problems 1000x faster than classical computers",
-    "Breakthrough discoveries in science and medicine",
-    "Unbreakable quantum encryption for data security",
-    "Revolutionary optimization for complex systems"
+    "Create professional videos 10x faster",
+    "Reduce video production costs by 80%",
+    "No technical skills required",
+    "Scale video content production"
   ];
 
   const pricingPlans = [
     {
-      name: "Research",
-      price: "$2,999",
+      name: "Starter",
+      price: "$29",
       period: "/month",
-      description: "Perfect for academic research and small-scale quantum experiments",
+      description: "Perfect for small businesses and content creators",
       features: [
-        "Up to 100 quantum circuit executions",
-        "Basic quantum algorithms library",
-        "Quantum simulator access",
-        "Email support",
-        "Basic documentation",
-        "5 user accounts",
-        "Standard quantum gates"
+        "10 videos per month",
+        "HD quality output",
+        "Basic templates (100+)",
+        "5-minute max video length",
+        "Standard voice synthesis",
+        "Basic branding options",
+        "Email support"
       ],
       popular: false
     },
     {
-      name: "Enterprise",
-      price: "$9,999",
+      name: "Professional",
+      price: "$79",
       period: "/month",
-      description: "Ideal for large organizations and commercial quantum applications",
+      description: "Ideal for marketing teams and agencies",
       features: [
-        "Up to 1,000 quantum circuit executions",
-        "Advanced quantum algorithms library",
-        "Real quantum hardware access",
+        "50 videos per month",
+        "4K quality output",
+        "Premium templates (500+)",
+        "15-minute max video length",
+        "Advanced voice synthesis",
+        "Custom branding & watermarks",
         "Priority support",
-        "Advanced documentation",
-        "25 user accounts",
-        "Custom quantum gates",
-        "API access",
-        "Quantum error correction",
-        "Dedicated quantum resources"
+        "Team collaboration (5 users)",
+        "API access"
       ],
       popular: true
     },
     {
-      name: "Quantum Lab",
-      price: "$29,999",
+      name: "Enterprise",
+      price: "$199",
       period: "/month",
-      description: "For quantum research institutions and cutting-edge applications",
+      description: "For large organizations and video production companies",
       features: [
-        "Unlimited quantum circuit executions",
-        "Complete quantum algorithms library",
-        "Exclusive quantum hardware access",
+        "Unlimited videos",
+        "4K & 8K quality output",
+        "All templates (1000+)",
+        "Unlimited video length",
+        "Premium voice synthesis",
+        "White-label solution",
         "24/7 dedicated support",
-        "Custom quantum development",
-        "Unlimited user accounts",
-        "Custom quantum processors",
+        "Unlimited team members",
         "Advanced API access",
-        "Quantum entanglement protocols",
-        "Dedicated quantum scientists",
-        "White-label quantum solutions",
-        "On-premise quantum deployment"
+        "Custom integrations",
+        "Dedicated account manager"
       ],
       popular: false
     }
@@ -88,54 +86,54 @@ export default function AiQuantumComputing() {
 
   const testimonials = [
     {
-      name: "Dr. Sarah Chen",
-      company: "Quantum Research Institute",
-      role: "Chief Quantum Scientist",
-      content: "Zion's quantum computing platform has accelerated our research by years. We've made breakthrough discoveries in quantum chemistry that would have been impossible with classical computers.",
+      name: "Sarah Chen",
+      company: "Digital Marketing Pro",
+      role: "Content Director",
+      content: "Zion AI Video Generator has revolutionized our content creation. We're producing 5x more video content with better quality and engagement rates.",
       rating: 5,
       avatar: "SC"
     },
     {
       name: "Michael Rodriguez",
-      company: "Pharmaceutical Corp",
-      role: "Head of R&D",
-      content: "The quantum simulation capabilities are extraordinary. We've discovered new drug compounds and optimized molecular structures in weeks instead of years.",
+      company: "E-learning Solutions",
+      role: "CEO",
+      content: "The AI video generation is incredibly intuitive. We've created hundreds of training videos in just weeks, saving us months of production time.",
       rating: 5,
       avatar: "MR"
     },
     {
-      name: "Dr. Emily Watson",
-      company: "Financial Services",
-      role: "Quantitative Analyst",
-      content: "Quantum optimization has revolutionized our portfolio management. We're achieving returns that were theoretically impossible with classical algorithms.",
+      name: "Emily Watson",
+      company: "Social Media Agency",
+      role: "Creative Director",
+      content: "Our clients love the quality and speed of video production. The AI understands our brand voice perfectly and creates stunning visuals every time.",
       rating: 5,
       avatar: "EW"
     }
   ];
 
-  const applications = [
+  const useCases = [
     {
-      title: "Drug Discovery",
-      description: "Simulate molecular interactions and discover new pharmaceutical compounds",
-      icon: <Atom className="w-8 h-8" />,
+      title: "Marketing Videos",
+      description: "Create compelling product demos, promotional videos, and social media content",
+      icon: <Target className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Financial Optimization",
-      description: "Optimize complex portfolios and risk management strategies",
-      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Educational Content",
+      description: "Generate training videos, tutorials, and educational materials",
+      icon: <BookOpen className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Cryptography",
-      description: "Develop unbreakable quantum encryption and secure communications",
-      icon: <Lock className="w-8 h-8" />,
+      title: "Social Media",
+      description: "Create engaging content for Instagram, TikTok, YouTube, and other platforms",
+      icon: <Share className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Machine Learning",
-      description: "Train quantum neural networks for advanced pattern recognition",
-      icon: <Brain className="w-8 h-8" />,
+      title: "Corporate Communications",
+      description: "Generate internal training, announcements, and company updates",
+      icon: <Users className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -143,20 +141,20 @@ export default function AiQuantumComputing() {
   return (
     <>
       <Helmet>
-        <title>AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group</title>
+        <title>Zion AI Video Generator - AI-Powered Video Creation | Zion Tech Group</title>
         <meta
           name="description"
-          content="Harness the power of quantum computing with AI. Zion's quantum platform offers quantum machine learning, simulation, and optimization for breakthrough discoveries and solutions."
+          content="Create professional videos instantly with AI. Zion AI Video Generator transforms text into stunning videos with voice synthesis, templates, and 4K quality. Start your free trial today!"
         />
         <meta
           name="keywords"
-          content="quantum computing, quantum AI, quantum machine learning, quantum simulation, quantum optimization, quantum cryptography, quantum algorithms"
+          content="AI video generator, video creation, automated video, AI video maker, video production, content creation, video templates, voice synthesis"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-generator" />
       </Helmet>
       <SEOOptimizer
-        title="AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group"
-        description="Harness the power of quantum computing with AI. Zion's quantum platform offers quantum machine learning, simulation, and optimization for breakthrough discoveries and solutions."
+        title="Zion AI Video Generator - AI-Powered Video Creation | Zion Tech Group"
+        description="Create professional videos instantly with AI. Zion AI Video Generator transforms text into stunning videos with voice synthesis, templates, and 4K quality. Start your free trial today!"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -167,20 +165,20 @@ export default function AiQuantumComputing() {
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Atom className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Next-Generation Quantum Computing</span>
+              <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Creation</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI
+              Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Quantum Computing
+                {" "}Video Generator
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Unlock the power of quantum computing with AI. Solve impossible problems, 
-              discover breakthrough solutions, and revolutionize your industry with quantum technology.
+              Transform text into stunning professional videos with AI. Create marketing content, 
+              educational videos, and social media content in minutes, not hours.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -188,15 +186,15 @@ export default function AiQuantumComputing() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Explore Quantum Solutions
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Quantum Demo
-                <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                Watch Demo
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
             
@@ -204,31 +202,31 @@ export default function AiQuantumComputing() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Cpu className="w-8 h-8 text-cyan-400" />
+                  <Video className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">1000x</div>
-                <div className="text-gray-300 text-sm">Faster Processing</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">10,000+</div>
+                <div className="text-gray-300 text-sm">Videos Created</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Atom className="w-8 h-8 text-cyan-400" />
+                  <Zap className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Quantum Algorithms</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">90%</div>
+                <div className="text-gray-300 text-sm">Time Saved</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">500+</div>
-                <div className="text-gray-300 text-sm">Quantum Researchers</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">5,000+</div>
+                <div className="text-gray-300 text-sm">Happy Users</div>
               </div>
               <div className="text-center group">
                 <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Award className="w-8 h-8 text-cyan-400" />
                 </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">99.9%</div>
-                <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">4.9/5</div>
+                <div className="text-gray-300 text-sm">User Rating</div>
               </div>
             </div>
           </div>
@@ -239,11 +237,11 @@ export default function AiQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Revolutionary Quantum Computing Features
+                Powerful AI Video Creation Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Harness the power of quantum mechanics to solve problems that are impossible 
-                for classical computers. From quantum machine learning to quantum simulation.
+                Everything you need to create professional videos with AI. From text-to-video generation 
+                to advanced editing tools, we've got you covered.
               </p>
             </div>
             
@@ -263,35 +261,35 @@ export default function AiQuantumComputing() {
           </div>
         </section>
 
-        {/* Applications */}
+        {/* Use Cases */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Applications
+                Perfect for Every Use Case
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover how quantum computing is revolutionizing industries and solving 
-                previously impossible problems.
+                Whether you're creating marketing content, educational videos, or social media posts, 
+                our AI video generator adapts to your needs.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {applications.map((application, index) => (
+              {useCases.map((useCase, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${application.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                   >
-                    {application.icon}
+                    {useCase.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {application.title}
+                    {useCase.title}
                   </h3>
                   <p className="text-gray-300 leading-relaxed">
-                    {application.description}
+                    {useCase.description}
                   </p>
                 </div>
               ))}
@@ -304,10 +302,10 @@ export default function AiQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Computing Plans
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Access cutting-edge quantum computing resources. Choose the plan that fits your research needs.
+                Choose the plan that fits your video creation needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -367,10 +365,10 @@ export default function AiQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Quantum Success Stories
+                What Our Customers Say
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how leading researchers and organizations are using our quantum computing platform.
+                Join thousands of content creators, marketers, and businesses using our AI video generator.
               </p>
             </div>
             
@@ -405,11 +403,11 @@ export default function AiQuantumComputing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Explore Quantum Computing?
+              Ready to Create Amazing Videos with AI?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join the quantum revolution and discover solutions that were previously impossible. 
-              Contact our quantum experts to get started.
+              Start your free trial today and experience the future of video creation. 
+              No credit card required. Cancel anytime.
             </p>
             
             {/* Contact Information */}
@@ -442,15 +440,15 @@ export default function AiQuantumComputing() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Contact Quantum Experts
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Quantum Demo
-                <Monitor className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                Watch Demo
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>

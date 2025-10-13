@@ -35,23 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
-    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
-=======
-    chunkSizeWarningLimit: 150, // Reduced warning threshold
-    assetsInlineLimit: 1024, // Reduced for better caching
->>>>>>> origin/main
-=======
-    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
-    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
-    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
-    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
+    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -133,25 +118,59 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - split into smaller chunks
+          // AI service pages - group by category
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
-            return `ai-${serviceName || 'services'}`
+<<<<<<< HEAD
+            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+              return 'ai-analytics'
+            }
+            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
+              return 'ai-content'
+            }
+            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
+              return 'ai-security'
+            }
+            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
+              return 'ai-customer'
+            }
+            return 'ai-other'
           }
-          // Zion service pages
+          // Zion service pages - group by category
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/zion-')[1]?.split('/')[0];
-            return `zion-${serviceName || 'services'}`
+            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+              return 'zion-analytics'
+            }
+            if (serviceName?.includes('ai-')) {
+              return 'zion-ai'
+            }
+            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
+              return 'zion-security'
+            }
+            return 'zion-other'
+=======
+            if (serviceName && ['analytics', 'automation', 'business-intelligence', 'content-generation'].includes(serviceName)) {
+              return 'ai-core'
+            }
+            if (serviceName && ['healthcare', 'marketing', 'sales', 'customer-service'].includes(serviceName)) {
+              return 'ai-business'
+            }
+            return 'ai-other'
           }
-          // 5G service pages
+          // Zion service pages - group together
+          if (id.includes('/zion-') && id.includes('/page.tsx')) {
+            return 'zion-services'
+>>>>>>> cursor/analyze-improve-and-deploy-application-2b18
+          }
+          // 5G service pages - group together
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/5g-')[1]?.split('/')[0];
-            return `5g-${serviceName || 'services'}`
+            return '5g-services'
           }
-          // Other service pages
+          // Main pages
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
-            return 'pages'
+            return 'main-pages'
           }
           // Default chunk for other modules
           return 'vendor'
