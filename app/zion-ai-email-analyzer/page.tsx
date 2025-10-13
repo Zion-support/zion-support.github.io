@@ -1,207 +1,349 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Mail, BarChart3, CheckCircle, Star, Users, Clock, Zap, Brain, TrendingUp, Target, MessageSquare, Heart, ThumbsUp, Award, Globe, Smartphone, Monitor, Headphones, Mic, Camera, Edit, Palette, Layers, Filter, RotateCcw, PlayCircle, Pause, Stop, SkipBack, SkipForward, Volume2, VolumeX, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow, Mail as MailIcon, Phone, MapPin, Award as AwardIcon, TrendingUp as TrendingUpIcon, Shield, Cloud, Database, Code, Settings, Monitor as MonitorIcon, Laptop, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone as PhoneIcon, Voicemail, Headset, Speaker, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, RotateCcw as RotateCcwIcon, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize as MaximizeIcon, Minimize as MinimizeIcon, Square as SquareIcon, Circle as CircleIcon, Triangle as TriangleIcon, Hexagon as HexagonIcon, Octagon as OctagonIcon, Diamond as DiamondIcon, Star as StarIconIcon, Moon as MoonIcon, Sun as SunIcon, Sunrise as SunriseIcon, Sunset as SunsetIcon, CloudRain as CloudRainIcon, CloudSnow as CloudSnowIcon, CloudLightning as CloudLightningIcon, Wind as WindIcon, Droplets as DropletsIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Timer as TimerIcon, Stopwatch as StopwatchIcon, Hourglass as HourglassIcon, Clock3 as Clock3Icon, Clock4 as Clock4Icon, Clock5 as Clock5Icon, Clock6 as Clock6Icon, Clock7 as Clock7Icon, Clock8 as Clock8Icon, Clock9 as Clock9Icon, Clock10 as Clock10Icon, Clock11 as Clock11Icon, Clock12 as Clock12Icon, Calendar as CalendarIconIcon, CalendarDays as CalendarDaysIcon, CalendarCheck as CalendarCheckIcon, CalendarX as CalendarXIcon, CalendarPlus as CalendarPlusIcon, CalendarMinus as CalendarMinusIcon, CalendarRange as CalendarRangeIcon, CalendarSearch as CalendarSearchIcon, CalendarHeart as CalendarHeartIcon, CalendarStar as CalendarStarIcon, CalendarClock as CalendarClockIcon, CalendarUser as CalendarUserIcon, CalendarEdit as CalendarEditIcon, CalendarTrash as CalendarTrashIcon, CalendarSettings as CalendarSettingsIcon, CalendarImport as CalendarImportIcon, CalendarExport as CalendarExportIcon, CalendarShare as CalendarShareIcon, CalendarLock as CalendarLockIcon, CalendarUnlock as CalendarUnlockIcon, CalendarKey as CalendarKeyIcon, CalendarShield as CalendarShieldIcon, CalendarAlert as CalendarAlertIcon, CalendarBell as CalendarBellIcon, CalendarZap as CalendarZapIcon, CalendarSparkles as CalendarSparklesIcon, CalendarGift as CalendarGiftIcon, CalendarAward as CalendarAwardIcon, CalendarTrophy as CalendarTrophyIcon, CalendarMedal as CalendarMedalIcon, CalendarCrown as CalendarCrownIcon, CalendarGem as CalendarGemIcon, CalendarDiamond as CalendarDiamondIcon, CalendarPearl as CalendarPearlIcon, CalendarRuby as CalendarRubyIcon, CalendarSapphire as CalendarSapphireIcon, CalendarEmerald as CalendarEmeraldIcon, CalendarTopaz as CalendarTopazIcon, CalendarAmethyst as CalendarAmethystIcon, CalendarQuartz as CalendarQuartzIcon, CalendarCrystal as CalendarCrystalIcon, CalendarJewel as CalendarJewelIcon, CalendarTreasure as CalendarTreasureIcon, CalendarGold as CalendarGoldIcon, CalendarSilver as CalendarSilverIcon, CalendarBronze as CalendarBronzeIcon, CalendarPlatinum as CalendarPlatinumIcon, CalendarTitanium as CalendarTitaniumIcon, CalendarSteel as CalendarSteelIcon, CalendarIron as CalendarIronIcon, CalendarCopper as CalendarCopperIcon, CalendarAluminum as CalendarAluminumIcon, CalendarZinc as CalendarZincIcon, CalendarTin as CalendarTinIcon, CalendarLead as CalendarLeadIcon, CalendarMercury as CalendarMercuryIcon, CalendarUranium as CalendarUraniumIcon, CalendarPlutonium as CalendarPlutoniumIcon, CalendarRadium as CalendarRadiumIcon, CalendarThorium as CalendarThoriumIcon, CalendarActinium as CalendarActiniumIcon, CalendarProtactinium as CalendarProtactiniumIcon, CalendarNeptunium as CalendarNeptuniumIcon, CalendarAmericium as CalendarAmericiumIcon, CalendarCurium as CalendarCuriumIcon, CalendarBerkelium as CalendarBerkeliumIcon, CalendarCalifornium as CalendarCaliforniumIcon, CalendarEinsteinium as CalendarEinsteiniumIcon, CalendarFermium as CalendarFermiumIcon, CalendarMendelevium as CalendarMendeleviumIcon, CalendarNobelium as CalendarNobeliumIcon, CalendarLawrencium as CalendarLawrenciumIcon, CalendarRutherfordium as CalendarRutherfordiumIcon, CalendarDubnium as CalendarDubniumIcon, CalendarSeaborgium as CalendarSeaborgiumIcon, CalendarBohrium as CalendarBohriumIcon, CalendarHassium as CalendarHassiumIcon, CalendarMeitnerium as CalendarMeitneriumIcon, CalendarDarmstadtium as CalendarDarmstadtiumIcon, CalendarRoentgenium as CalendarRoentgeniumIcon, CalendarCopernicium as CalendarCoperniciumIcon, CalendarNihonium as CalendarNihoniumIcon, CalendarFlerovium as CalendarFleroviumIcon, CalendarMoscovium as CalendarMoscoviumIcon, CalendarLivermorium as CalendarLivermoriumIcon, CalendarTennessine as CalendarTennessineIcon, CalendarOganesson as CalendarOganessonIcon, Package as PackageIcon, Receipt as ReceiptIcon, ClipboardList as ClipboardListIcon, Workflow as WorkflowIcon } from 'lucide-react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticBackground from '../components/FuturisticBackground';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+import { 
+  ArrowRight, 
+  Mail, 
+  Brain, 
+  Shield, 
+  Eye, 
+  Heart, 
+  MessageSquare, 
+  Star, 
+  CheckCircle, 
+  Sparkles, 
+  Smartphone, 
+  Globe, 
+  Award, 
+  Lock, 
+  Cloud, 
+  Database, 
+  Settings, 
+  Headphones, 
+  ExternalLink, 
+  ChevronRight, 
+  RefreshCw, 
+  RotateCcw, 
+  Save, 
+  Trash2, 
+  Plus, 
+  Minus, 
+  X, 
+  Menu, 
+  MoreHorizontal, 
+  MoreVertical, 
+  Grid, 
+  List, 
+  Layout, 
+  Maximize, 
+  Minimize, 
+  Move, 
+  Copy, 
+  Scissors, 
+  Clipboard, 
+  Bookmark, 
+  Tag, 
+  Flag, 
+  Bell, 
+  BellOff, 
+  Volume2, 
+  VolumeX, 
+  Mic, 
+  MicOff, 
+  Camera, 
+  CameraOff, 
+  Wifi, 
+  WifiOff, 
+  Battery, 
+  BatteryLow, 
+  Signal, 
+  SignalLow, 
+  SignalZero, 
+  SignalHigh, 
+  SignalMedium,
+  DollarSign,
+  CreditCard,
+  Receipt,
+  Calculator,
+  PieChart,
+  LineChart,
+  BarChart,
+  TrendingDown,
+  AlertCircle,
+  Info,
+  HelpCircle,
+  Play,
+  Pause,
+  Stop,
+  ThumbsUp,
+  Share,
+  Download,
+  Upload,
+  Edit,
+  Zap,
+  Clock,
+  Target,
+  Users,
+  BarChart3,
+  TrendingUp
+} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
-const ZionAIEmailAnalyzerPage: React.FC = () => {
+const ZionAIEmailAnalyzerPage = () => {
+  const [selectedPlan, setSelectedPlan] = useState('pro');
+
   const features = [
     {
-      title: "Email Performance Analytics",
-      description: "Analyze open rates, click-through rates, and engagement metrics across all email campaigns",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      title: 'Sentiment Analysis',
+      description: 'Analyze email sentiment and emotional tone to understand customer mood and satisfaction',
+      icon: <Heart className="w-6 h-6" />,
+      included: true
     },
     {
-      title: "Subject Line Optimization",
-      description: "AI-powered suggestions to improve subject line performance and increase open rates",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      title: 'Spam Detection',
+      description: 'Advanced AI-powered spam detection with 99.9% accuracy to protect your inbox',
+      icon: <Shield className="w-6 h-6" />,
+      included: true
     },
     {
-      title: "Spam Score Analysis",
-      description: "Identify and fix issues that could land your emails in spam folders",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      title: 'Auto Response',
+      description: 'Generate intelligent email responses based on content analysis and context',
+      icon: <MessageSquare className="w-6 h-6" />,
+      included: true
     },
     {
-      title: "A/B Testing Automation",
-      description: "Automatically test different email variations and optimize for better performance",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      title: 'Email Classification',
+      description: 'Automatically categorize emails by type, priority, and department',
+      icon: <Target className="w-6 h-6" />,
+      included: true
     },
     {
-      title: "Deliverability Monitoring",
-      description: "Track email deliverability across different ISPs and identify delivery issues",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-indigo-500 to-violet-500"
+      title: 'Priority Scoring',
+      description: 'AI-powered priority scoring to help you focus on the most important emails',
+      icon: <Star className="w-6 h-6" />,
+      included: true
     },
     {
-      title: "Content Analysis",
-      description: "Analyze email content for readability, tone, and engagement potential",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "from-teal-500 to-cyan-500"
+      title: 'Team Collaboration',
+      description: 'Share insights and collaborate with team members on email analysis',
+      icon: <Users className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Language Detection',
+      description: 'Automatically detect email language and provide translation suggestions',
+      icon: <Globe className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Attachment Analysis',
+      description: 'Analyze email attachments for security threats and content relevance',
+      icon: <FileText className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Email Threading',
+      description: 'Intelligently group related emails into conversation threads',
+      icon: <MessageSquare className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Analytics Dashboard',
+      description: 'Comprehensive analytics on email patterns, response times, and engagement',
+      icon: <BarChart3 className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'API Integration',
+      description: 'Integrate with Gmail, Outlook, and other email providers',
+      icon: <Settings className="w-6 h-6" />,
+      included: true
+    },
+    {
+      title: 'Priority Support',
+      description: '24/7 priority support with dedicated account manager',
+      icon: <Headphones className="w-6 h-6" />,
+      included: true
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$29",
-      period: "per month",
-      description: "Perfect for small businesses and individual marketers",
+      name: 'Starter',
+      price: '$149',
+      originalPrice: '$299',
+      period: '/month',
+      description: 'Perfect for individuals and small teams',
       features: [
-        "Up to 10,000 emails/month",
-        "Basic analytics dashboard",
-        "Subject line optimization",
-        "Email support",
-        "Spam score analysis",
-        "Basic A/B testing"
+        '1,000 emails per month',
+        'Basic sentiment analysis',
+        'Email support',
+        'Standard reports',
+        '5GB storage'
       ],
       popular: false,
-      color: "from-gray-500 to-gray-600"
+      color: 'from-gray-500 to-gray-600'
     },
     {
-      name: "Professional",
-      price: "$79",
-      period: "per month",
-      description: "Ideal for growing businesses with advanced email needs",
+      name: 'Pro',
+      price: '$299',
+      originalPrice: '$599',
+      period: '/month',
+      description: 'Ideal for growing businesses and teams',
       features: [
-        "Up to 100,000 emails/month",
-        "Advanced analytics & reporting",
-        "AI-powered optimization",
-        "Priority support",
-        "Deliverability monitoring",
-        "Advanced A/B testing",
-        "Content analysis",
-        "API access"
+        '10,000 emails per month',
+        'Advanced sentiment analysis',
+        'Priority support',
+        'Custom reports',
+        '25GB storage',
+        'Team collaboration',
+        'API integration'
       ],
       popular: true,
-      color: "from-cyan-500 to-blue-500"
+      color: 'from-orange-500 to-red-500'
     },
     {
-      name: "Enterprise",
-      price: "$199",
-      period: "per month",
-      description: "For large organizations with high-volume email campaigns",
+      name: 'Enterprise',
+      price: '$599',
+      originalPrice: '$1,199',
+      period: '/month',
+      description: 'For large organizations and enterprises',
       features: [
-        "Unlimited emails",
-        "Custom analytics dashboard",
-        "White-label solution",
-        "24/7 phone support",
-        "Advanced deliverability tools",
-        "Custom integrations",
-        "Dedicated account manager",
-        "SLA guarantee"
+        'Unlimited emails',
+        'Full analytics suite',
+        '24/7 support',
+        'Advanced reporting',
+        'Unlimited storage',
+        'Custom models',
+        'API access',
+        'Team collaboration',
+        'Dedicated manager'
       ],
       popular: false,
-      color: "from-purple-500 to-pink-500"
+      color: 'from-cyan-500 to-blue-500'
+    }
+  ];
+
+  const useCases = [
+    {
+      title: 'Customer Support',
+      description: 'Improve response times and customer satisfaction with intelligent email analysis',
+      icon: <Headphones className="w-8 h-8" />,
+      examples: ['Sentiment tracking', 'Priority routing', 'Auto responses', 'Quality monitoring']
+    },
+    {
+      title: 'Sales Teams',
+      description: 'Optimize email outreach and follow-up strategies with AI insights',
+      icon: <Target className="w-8 h-8" />,
+      examples: ['Lead scoring', 'Response optimization', 'Follow-up timing', 'Engagement tracking']
+    },
+    {
+      title: 'Marketing',
+      description: 'Analyze campaign performance and optimize email marketing strategies',
+      icon: <BarChart3 className="w-8 h-8" />,
+      examples: ['Campaign analysis', 'A/B testing', 'Engagement metrics', 'Content optimization']
+    },
+    {
+      title: 'Legal & Compliance',
+      description: 'Ensure email compliance and detect potential legal issues',
+      icon: <Shield className="w-8 h-8" />,
+      examples: ['Compliance monitoring', 'Risk detection', 'Audit trails', 'Legal review']
     }
   ];
 
   const testimonials = [
     {
-      name: "Jennifer Lee",
-      company: "Digital Marketing Agency",
-      role: "Email Marketing Manager",
-      content: "Zion AI Email Analyzer has improved our email performance by 45%. The subject line optimization alone increased our open rates by 30%.",
+      name: 'Amanda Foster',
+      company: 'Customer Support Team',
+      role: 'Support Manager',
+      content: 'Zion AI Email Analyzer has revolutionized our customer support. We can now respond to urgent emails 3x faster and with better context.',
       rating: 5,
-      avatar: "JL"
+      avatar: 'AF'
     },
     {
-      name: "Robert Kim",
-      company: "E-commerce Store",
-      role: "Marketing Director",
-      content: "The spam score analysis saved us from major deliverability issues. Our emails now reach the inbox consistently and our ROI has improved significantly.",
+      name: 'Carlos Rodriguez',
+      company: 'Sales Agency',
+      role: 'Sales Director',
+      content: 'The sentiment analysis helps us understand our prospects better. We\'ve increased our response rates by 40% and closed more deals.',
       rating: 5,
-      avatar: "RK"
+      avatar: 'CR'
     },
     {
-      name: "Amanda White",
-      company: "SaaS Company",
-      role: "Growth Marketing Lead",
-      content: "The A/B testing automation is incredible. We can now test multiple variations simultaneously and let AI optimize our campaigns automatically.",
+      name: 'Jennifer Lee',
+      company: 'Marketing Firm',
+      role: 'Email Marketing Manager',
+      content: 'The analytics dashboard gives us incredible insights into our email campaigns. We can now optimize our content for maximum engagement.',
       rating: 5,
-      avatar: "AW"
+      avatar: 'JL'
     }
   ];
 
   const stats = [
-    { number: "45%", label: "Performance Improvement", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "30%", label: "Open Rate Increase", icon: <Target className="w-6 h-6" /> },
-    { number: "99.5%", label: "Deliverability Rate", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "Monitoring", icon: <Clock className="w-6 h-6" /> }
+    { number: '99.9%', label: 'Spam Detection Accuracy', icon: <Shield className="w-6 h-6" /> },
+    { number: '3x', label: 'Faster Response Times', icon: <Zap className="w-6 h-6" /> },
+    { number: '40%', label: 'Increase in Engagement', icon: <TrendingUp className="w-6 h-6" /> },
+    { number: '24/7', label: 'Support Available', icon: <Headphones className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Email Analyzer - Email Marketing Analytics & Optimization | Zion Tech Group</title>
+        <title>Zion AI Email Analyzer Pro - Intelligent Email Analysis with AI | Zion Tech Group</title>
         <meta
           name="description"
-          content="Optimize your email marketing with Zion AI Email Analyzer. Performance analytics, subject line optimization, spam score analysis, and A/B testing automation. Start your free trial today!"
+          content="Intelligent email analysis with sentiment detection, spam filtering, and automated response suggestions for better communication. Starting at $149/month."
         />
         <meta
           name="keywords"
-          content="email analyzer, email marketing analytics, subject line optimization, spam score analysis, email deliverability, A/B testing, email performance"
+          content="AI email analyzer, email sentiment analysis, spam detection, email automation, email management, communication AI"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-email-analyzer" />
       </Helmet>
-      <EnhancedSEO
-        title="Zion AI Email Analyzer - Email Marketing Analytics & Optimization"
-        description="Optimize your email marketing with Zion AI Email Analyzer. Performance analytics, subject line optimization, spam score analysis, and A/B testing automation."
-        keywords="email analyzer, email marketing analytics, subject line optimization, spam score analysis, email deliverability"
-        canonical="https://ziontechgroup.com/zion-ai-email-analyzer"
-      />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        <FuturisticBackground />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-orange-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-red-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(249,115,22,0.3),transparent_50%)]"></div>
         
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mail className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Email Marketing Intelligence</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 border border-orange-500/30 mb-6">
+              <Sparkles className="w-4 h-4 text-orange-400 mr-2" />
+              <span className="text-orange-400 text-sm font-medium">AI-Powered Email Intelligence</span>
             </div>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Email Analyzer
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-red-400 to-pink-400">
+                Zion AI Email Analyzer Pro
               </span>
             </h1>
             
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Optimize your email marketing campaigns with AI-powered analytics, subject line optimization, and deliverability monitoring. Maximize your email ROI with intelligent insights.
+            <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Intelligent email analysis with sentiment detection, spam filtering, and automated response suggestions. 
+              Transform your email communication and improve productivity with AI-powered insights.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<Mail className="w-5 h-5" />}
+              <Link
+                to="/contact"
+                className="group bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-orange-500/25 hover:scale-105"
               >
-                Start Free Trial
-              </FuturisticButton>
-              <FuturisticButton
-                href="/demo"
-                variant="outline"
-                size="lg"
-                icon={<BarChart3 className="w-5 h-5" />}
+                Start Analyzing Emails
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-              </FuturisticButton>
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              </Link>
             </div>
             
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center group">
-                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
                   <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
@@ -216,59 +358,111 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Email Marketing Intelligence
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+                  Intelligent Email Features
+                </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Transform your email marketing with AI-powered analytics and optimization tools.
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Everything you need to analyze, understand, and optimize your email communication with AI-powered intelligence.
               </p>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <FuturisticCard
+                <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10 relative overflow-hidden"
                 >
-                  <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                  >
-                    {feature.icon}
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  <div className="relative z-10">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      {feature.icon}
+                    </div>
+                    
+                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-orange-300 transition-colors">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {feature.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
-                    {feature.title}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Use Cases Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-orange-800/50 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Perfect for Every Team
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                From customer support to sales teams, our AI email analyzer adapts to your needs.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {useCases.map((useCase, index) => (
+                <div
+                  key={index}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10 relative overflow-hidden"
+                >
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                    {useCase.icon}
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-orange-300 transition-colors">
+                    {useCase.title}
                   </h3>
-                  <p className="text-gray-300 text-center leading-relaxed">
-                    {feature.description}
+                  <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                    {useCase.description}
                   </p>
-                </FuturisticCard>
+                  
+                  <div className="space-y-2">
+                    {useCase.examples.map((example, idx) => (
+                      <div key={idx} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-orange-400 mr-2 flex-shrink-0" />
+                        <span>{example}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options to fit your email marketing needs
+                Flexible pricing plans designed to scale with your email volume and team size.
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
-                    plan.popular ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20' : 'border-white/20'
-                  } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
+                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+                    plan.popular
+                      ? 'border-orange-500/50 hover:shadow-orange-500/25'
+                      : 'border-white/20 hover:bg-white/20'
+                  }`}
                 >
                   {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                        Most Popular
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        MOST POPULAR
                       </span>
                     </div>
                   )}
@@ -276,30 +470,34 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-cyan-400">{plan.price}</span>
-                      <span className="text-gray-300 ml-2">{plan.period}</span>
+                    <div className="flex items-center justify-center space-x-2 mb-4">
+                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400">{plan.period}</span>
                     </div>
+                    {plan.originalPrice && (
+                      <span className="text-gray-500 line-through text-lg">{plan.originalPrice}{plan.period}</span>
+                    )}
                   </div>
                   
-                  <ul className="space-y-4 mb-8">
+                  <div className="space-y-4 mb-8">
                     {plan.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <div key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-orange-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
-                      </li>
+                      </div>
                     ))}
-                  </ul>
+                  </div>
                   
-                  <FuturisticButton
-                    href="/contact"
-                    variant={plan.popular ? "primary" : "outline"}
-                    size="lg"
-                    className="w-full"
-                    icon={<ArrowRight className="w-5 h-5" />}
+                  <Link
+                    to="/contact"
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600'
+                        : 'border border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-slate-900'
+                    }`}
                   >
                     Get Started
-                  </FuturisticButton>
+                  </Link>
                 </div>
               ))}
             </div>
@@ -311,17 +509,18 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Email Marketing Professionals
+                Trusted by Teams Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our users say about Zion AI Email Analyzer
+                See what our customers say about Zion AI Email Analyzer Pro
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/10 relative overflow-hidden"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
@@ -330,7 +529,7 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
+                    <div className="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -344,58 +543,58 @@ const ZionAIEmailAnalyzerPage: React.FC = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
+        {/* Contact Information Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Optimize Your Email Marketing?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of marketers using Zion AI Email Analyzer to maximize their email marketing ROI.
-            </p>
-            
-            {/* Contact Information */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Mail className="w-6 h-6 text-white" />
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Analyze Your Emails?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of teams already using Zion AI Email Analyzer Pro. 
+                Contact us today for a personalized demo.
+              </p>
+              
+              {/* Contact Details */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Email</h3>
+                  <p className="text-orange-400">kleber@ziontechgroup.com</p>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Email</h3>
-                <p className="text-cyan-400">kleber@ziontechgroup.com</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Phone className="w-6 h-6 text-white" />
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Smartphone className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Phone</h3>
+                  <p className="text-orange-400">+1 302 464 0950</p>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Phone</h3>
-                <p className="text-cyan-400">+1 302 464 0950</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <MapPin className="w-6 h-6 text-white" />
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                    <Globe className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-white font-semibold mb-2">Address</h3>
+                  <p className="text-orange-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
                 </div>
-                <h3 className="text-white font-semibold mb-2">Address</h3>
-                <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
               </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
-                Start Free Trial
-              </FuturisticButton>
-              <FuturisticButton
-                href="/services"
-                variant="outline"
-                size="lg"
-                icon={<BarChart3 className="w-5 h-5" />}
-              >
-                View All Services
-              </FuturisticButton>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="group bg-gradient-to-r from-orange-500 to-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-orange-600 hover:to-red-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-orange-500/25 hover:scale-105"
+                >
+                  Start Analyzing Emails
+                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  to="/demo"
+                  className="border border-orange-400 text-orange-400 px-8 py-4 rounded-lg font-semibold hover:bg-orange-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+                >
+                  Watch Demo
+                </Link>
+              </div>
             </div>
           </div>
         </section>
