@@ -1,43 +1,47 @@
-import fs from 'fs';
-import path from 'path';
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-// Get all page routes;
-function getAllRoutes() {
-  const routes = []
-  const appDir = path.join(__dirname, '../app')
-  function scanDirectory(dir, basePath = '') {
-    const items = fs.readdirSync(dir)
-    for (const item, of, items) {
-      const fullPath = path.join(dir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory()) {;
-        // Skip node_modules and other non-page directories;
-        if (!['node_modules', '.git', 'components', 'utils', 'types'].includes(item)) {
-          scanDirectory(fullPath, basePath + '/' + item)
-      } else if (item = == 'page.tsx') {;
-        // Found a page;
-        const route = basePath || '/'
-        routes.push(route)
-  scanDirectory(appDir);
-  return routes;
-// Generate sitemap;
-function generateSitemap() {
-  const routes = getAllRoutes()
-  const baseUrl = 'https://ziontechgroup.com'
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
- `
-    <loc>${baseUrl}${route}</loc>
-    <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>`).join('')}
-</urlset>`;
-  // Write to public directory;
-const publicDir = path.join(__dirname, '../public')
-  if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true })
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap)
-  // console.log('Sitemap generated successfully!')
-  // console.log(`Found ${routes.length} routes`);
-generateSitemap();
+const fs = require('fs');
+const path = require('path');
+
+// Define all the routes
+const routes = [
+  { url: '/', priority: '1.0', changefreq: 'daily' },
+  { url: '/about', priority: '0.8', changefreq: 'monthly' },
+  { url: '/services', priority: '0.9', changefreq: 'weekly' },
+  { url: '/ai-services', priority: '0.9', changefreq: 'weekly' },
+  { url: '/contact', priority: '0.7', changefreq: 'monthly' },
+  { url: '/blog', priority: '0.8', changefreq: 'weekly' },
+  { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
+  { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
+  { url: '/terms', priority: '0.3', changefreq: 'yearly' },
+  { url: '/cookies', priority: '0.3', changefreq: 'yearly' },
+  { url: '/sitemap', priority: '0.4', changefreq: 'monthly' }
+];
+
+// Generate sitemap XML
+const generateSitemap = () => {
+  const baseUrl = 'https://ziontechgroup.com';
+  const currentDate = new Date().toISOString();
+  
+  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
+  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+  
+  routes.forEach(route => {
+    sitemap += '  <url>\n';
+    sitemap += `    <loc>${baseUrl}${route.url}</loc>\n`;
+    sitemap += `    <lastmod>${currentDate}</lastmod>\n`;
+    sitemap += `    <changefreq>${route.changefreq}</changefreq>\n`;
+    sitemap += `    <priority>${route.priority}</priority>\n`;
+    sitemap += '  </url>\n';
+  });
+  
+  sitemap += '</urlset>';
+  
+  return sitemap;
+};
+
+// Write sitemap to public directory
+const sitemap = generateSitemap();
+const publicDir = path.join(__dirname, '..', 'public');
+const sitemapPath = path.join(publicDir, 'sitemap.xml');
+
+fs.writeFileSync(sitemapPath, sitemap);
+console.log('Sitemap generated successfully at:', sitemapPath);

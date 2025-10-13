@@ -7,6 +7,9 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
+import NotFoundPage from "./app/not-found/page";
+import LoadingSpinner from "./app/components/LoadingSpinner";
+import ErrorBoundary from "./app/components/ErrorBoundary";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -580,24 +583,27 @@ function App() {
                   <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                   <Breadcrumb />
                   <main id="main-content" role="main">
-                    <Suspense fallback={<LoadingPage />}>
-                      <Routes>
-                        <Route path="/" element={<HomePage />} />
-                        <Route path="/about" element={<AboutPage />} />
-                        <Route path="/contact" element={<ContactPage />} />
-                        <Route path="/services" element={<ServicesPage />} />
-                        <Route path="/pricing" element={<PricingPage />} />
-                        <Route path="/blog" element={<BlogPage />} />
-                        <Route path="/ai-services" element={<AIServicesPage />} />
-                        <Route path="/tutorials" element={<TutorialsPage />} />
-                        <Route path="/demo" element={<DemoPage />} />
-                        <Route path="/support" element={<SupportPage />} />
-                        <Route path="/privacy" element={<PrivacyPage />} />
-                        <Route path="/terms" element={<TermsPage />} />
-                        <Route path="/cookies" element={<CookiesPage />} />
-                        <Route path="/sitemap" element={<SitemapPage />} />
-                      </Routes>
-                    </Suspense>
+                    <ErrorBoundary>
+                      <Suspense fallback={<LoadingSpinner size="lg" text="Loading page..." />}>
+                        <Routes>
+                          <Route path="/" element={<HomePage />} />
+                          <Route path="/about" element={<AboutPage />} />
+                          <Route path="/contact" element={<ContactPage />} />
+                          <Route path="/services" element={<ServicesPage />} />
+                          <Route path="/pricing" element={<PricingPage />} />
+                          <Route path="/blog" element={<BlogPage />} />
+                          <Route path="/ai-services" element={<AIServicesPage />} />
+                          <Route path="/tutorials" element={<TutorialsPage />} />
+                          <Route path="/demo" element={<DemoPage />} />
+                          <Route path="/support" element={<SupportPage />} />
+                          <Route path="/privacy" element={<PrivacyPage />} />
+                          <Route path="/terms" element={<TermsPage />} />
+                          <Route path="/cookies" element={<CookiesPage />} />
+                          <Route path="/sitemap" element={<SitemapPage />} />
+                          <Route path="*" element={<NotFoundPage />} />
+                        </Routes>
+                      </Suspense>
+                    </ErrorBoundary>
                   </main>
                   <Footer />
                   <EnhancedAccessibility>
