@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
+import ImageOptimizer from "./components/ImageOptimizer";
 
 const HomePage = () => {
   const features = [
