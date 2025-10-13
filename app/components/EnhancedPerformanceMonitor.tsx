@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Star } from 'lucide-react';
+import React from 'react';
 
 interface EnhancedperformancemonitorProps {
   className?: string;
