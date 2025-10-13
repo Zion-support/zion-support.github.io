@@ -1,18 +1,6 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import EnhancedSEO from "./components/EnhancedSEO";
-=======
-import AdvancedSEO from "./components/AdvancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
-=======
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
-=======
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-a546
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
@@ -103,6 +91,30 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "AI Business Intelligence Pro",
+      description: "Advanced AI-powered business intelligence with real-time analytics and predictive insights",
+      price: "From $199/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/ai-business-intelligence-pro",
+      featured: true
+    },
+    {
+      name: "AI Cybersecurity Monitor Pro",
+      description: "AI-powered cybersecurity monitoring with real-time threat detection and automated response",
+      price: "From $299/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/ai-cybersecurity-monitor-pro",
+      featured: true
+    },
+    {
+      name: "AI Content Generation Pro",
+      description: "Advanced AI content creation platform for blogs, social media, and marketing content",
+      price: "From $99/month",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/ai-content-generation-pro",
+      featured: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
@@ -124,30 +136,6 @@ const HomePage = () => {
       price: "From $99/month",
       icon: <Cloud className="w-6 h-6" />,
       link: "/zion-cloud-vault",
-      featured: true
-    },
-    {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
       featured: true
     }
   ];
@@ -185,26 +173,8 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      <FuturisticBackground />
->>>>>>> cursor/analyze-improve-and-deploy-application-da10
-      <EnhancedSEO
-=======
-      <FuturisticBackground />
-      <AdvancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
-=======
       <FuturisticBackground />
       <EnhancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
-=======
-      <FuturisticBackground />
-      <EnhancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-a546
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"

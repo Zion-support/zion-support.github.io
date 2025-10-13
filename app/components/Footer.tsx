@@ -6,7 +6,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900/95 backdrop-blur-sm border-t border-cyan-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-2 mb-4">
@@ -28,13 +28,41 @@ const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div>
-            <h3 className="text-lg font-semibold text-white mb-4">Services</h3>
+            <h3 className="text-lg font-semibold text-white mb-4">AI Services</h3>
             <ul className="space-y-2">
               <li><Link to="/ai-services" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Solutions</Link></li>
-              <li><Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Services</Link></li>
-              <li><Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors">Micro SAAS</Link></li>
+              <li><Link to="/ai-business-intelligence-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Business Intelligence Pro</Link></li>
+              <li><Link to="/ai-content-generation-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Content Generation Pro</Link></li>
+              <li><Link to="/ai-cybersecurity-monitor-pro" className="text-gray-300 hover:text-cyan-400 transition-colors">Cybersecurity Monitor Pro</Link></li>
+              <li><Link to="/ai-analytics" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Analytics</Link></li>
+              <li><Link to="/ai-automation" className="text-gray-300 hover:text-cyan-400 transition-colors">AI Automation</Link></li>
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
+            <ul className="space-y-2">
+              <li><Link to="/services" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Solutions</Link></li>
+              <li><Link to="/cloud-migration" className="text-gray-300 hover:text-cyan-400 transition-colors">Cloud Migration</Link></li>
+              <li><Link to="/network-security" className="text-gray-300 hover:text-cyan-400 transition-colors">Network Security</Link></li>
+              <li><Link to="/web-development" className="text-gray-300 hover:text-cyan-400 transition-colors">Web Development</Link></li>
+              <li><Link to="/it-consulting" className="text-gray-300 hover:text-cyan-400 transition-colors">IT Consulting</Link></li>
+              <li><Link to="/system-integration" className="text-gray-300 hover:text-cyan-400 transition-colors">System Integration</Link></li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">Micro SAAS</h3>
+            <ul className="space-y-2">
+              <li><Link to="/micro-saas" className="text-gray-300 hover:text-cyan-400 transition-colors">Micro SAAS Solutions</Link></li>
+              <li><Link to="/ai-powered-email-analyzer" className="text-gray-300 hover:text-cyan-400 transition-colors">Email Analyzer</Link></li>
+              <li><Link to="/smart-inventory-optimizer" className="text-gray-300 hover:text-cyan-400 transition-colors">Inventory Optimizer</Link></li>
+              <li><Link to="/ai-customer-sentiment-tracker" className="text-gray-300 hover:text-cyan-400 transition-colors">Sentiment Tracker</Link></li>
+              <li><Link to="/smart-expense-categorizer" className="text-gray-300 hover:text-cyan-400 transition-colors">Expense Categorizer</Link></li>
               <li><Link to="/5g-solutions" className="text-gray-300 hover:text-cyan-400 transition-colors">5G Solutions</Link></li>
             </ul>
           </div>
