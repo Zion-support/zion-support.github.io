@@ -14,11 +14,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       const criticalResources = [
         '/fonts/inter-var.woff2',
         '/images/hero-bg.jpg',
-<<<<<<< HEAD
-        '/images/logo.svg'
-=======
         '/icons/sprite.svg'
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
       ];
 
       criticalResources.forEach(resource => {
@@ -26,17 +22,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         link.rel = 'preload';
         link.href = resource;
         link.as = resource.endsWith('.woff2') ? 'font' : 'image';
-<<<<<<< HEAD
         if (resource.endsWith('.woff2')) {
           link.crossOrigin = 'anonymous';
         }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
         document.head.appendChild(link);
       });
 
       // Optimize images
-<<<<<<< HEAD
       const images = document.querySelectorAll('img');
       images.forEach(img => {
         if (!img.loading) {
@@ -44,6 +36,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         }
         if (!img.decoding) {
           img.decoding = 'async';
+        }
+      });
+
+      // Handle lazy loading for data-src images
+      const lazyImages = document.querySelectorAll('img[data-src]');
+      lazyImages.forEach(img => {
+        const imageElement = img as HTMLImageElement;
+        if (imageElement.dataset.src) {
+          imageElement.src = imageElement.dataset.src;
+          imageElement.removeAttribute('data-src');
         }
       });
 
@@ -58,15 +60,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           });
         });
         observer.observe({ entryTypes: ['navigation', 'paint'] });
-=======
-      const images = document.querySelectorAll('img[data-src]');
-      images.forEach(img => {
-        const imageElement = img as HTMLImageElement;
-        if (imageElement.dataset.src) {
-          imageElement.src = imageElement.dataset.src;
-          imageElement.removeAttribute('data-src');
-        }
-      });
+      }
 
       // Enable service worker for caching
       if ('serviceWorker' in navigator) {
@@ -77,17 +71,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           .catch(error => {
             console.log('Service Worker registration failed:', error);
           });
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
       }
 
       setIsOptimized(true);
     };
 
-<<<<<<< HEAD
-    // Run optimization after component mounts
-=======
     // Run optimization after component mount
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
     const timer = setTimeout(optimizePerformance, 100);
     return () => clearTimeout(timer);
   }, []);
@@ -96,14 +85,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     <div className="performance-optimizer">
       {children}
       {isOptimized && (
-<<<<<<< HEAD
         <div className="hidden" aria-hidden="true">
-          Performance optimization active
-=======
-        <div className="hidden">
           {/* Performance monitoring indicators */}
           <div id="performance-indicator" data-optimized="true" />
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
         </div>
       )}
     </div>
