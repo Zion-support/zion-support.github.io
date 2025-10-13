@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -12,6 +13,11 @@ import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Globe as GlobeIcon } from 'lucide-react';
 
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Star, Globe, Phone } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function AboutPage() {
 
@@ -36,6 +42,13 @@ export default function AboutPage() {
       title: "Excellence",
       description: "We strive for excellence in every project, ensuring the highest quality deliverables."
     }
+  ];
+
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
   ];
 
   return (
@@ -98,7 +111,7 @@ export default function AboutPage() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                    {stat.number}
+                    {stat.value}
                   </div>
                   <div className="text-gray-300 text-sm md:text-base">
                     {stat.label}
@@ -234,7 +247,7 @@ export default function AboutPage() {
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <GlobeIcon className="w-6 h-6 text-white" />
+                    <Globe className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
                   <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>

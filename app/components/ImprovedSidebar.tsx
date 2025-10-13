@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Home } from 'lucide-react';
@@ -26,6 +27,10 @@ import { Phone } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+=======
+import { Link, useLocation } from 'react-router-dom';
+import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play, Mic, Code, Network } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 interface SidebarProps {
   isOpen: boolean;

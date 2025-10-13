@@ -1,4 +1,5 @@
 import React from 'react';
+import { Users, ArrowRight, CheckCircle, Star, Globe, Shield, Zap, Brain, BarChart3, Target, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -13,6 +14,13 @@ import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 
 const AIPoweredEmailAnalyzerPage = () => {
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
+
   const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,

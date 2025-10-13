@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -17,6 +18,11 @@ import { Package } from 'lucide-react';
 import { Heart } from 'lucide-react';
 import { Receipt } from 'lucide-react';
 
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Code, Globe as WebIcon, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon, Star, Mic, Filter, WebIcon } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function MicroSaasServices() {
   const microSaasServices = [

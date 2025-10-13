@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { Star } from 'lucide-react';
+<<<<<<< HEAD
 import { Monitor } from 'lucide-react';
+=======
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 interface PerformanceMetrics {
   loadTime: number;

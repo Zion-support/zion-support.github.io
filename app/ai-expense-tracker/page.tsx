@@ -11,6 +11,12 @@ import { DollarSign } from 'lucide-react';
 import { Receipt } from 'lucide-react';
 
 "use client";
+<<<<<<< HEAD
+=======
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { Receipt, Bot, Brain, Shield, CheckCircle, Star, BarChart3, TrendingUp, DollarSign, Users } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function AIExpenseTracker() {
   const features = [

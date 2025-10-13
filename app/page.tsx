@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import { Link } from "react-router-dom";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, TrendingUp, Mic, Phone, Code } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";

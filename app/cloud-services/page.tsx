@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
@@ -8,6 +9,9 @@ import { Zap } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+=======
+import { Cloud, Shield, Zap, Globe, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings, Star } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 const CloudServicesPage: React.FC = () => {
   const services = [
@@ -40,6 +44,29 @@ const CloudServicesPage: React.FC = () => {
       title: "Database Services",
       description: "Managed database services with automated backups, scaling, and performance optimization.",
       icon: <Database className="w-6 h-6" />
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Scalability",
+      description: "Scale your infrastructure up or down based on demand with cloud elasticity.",
+      icon: <BarChart3 className="w-8 h-8" />
+    },
+    {
+      title: "Security",
+      description: "Enterprise-grade security with encryption, access controls, and compliance.",
+      icon: <Shield className="w-8 h-8" />
+    },
+    {
+      title: "Cost Efficiency",
+      description: "Pay only for what you use with flexible pricing models and cost optimization.",
+      icon: <Zap className="w-8 h-8" />
+    },
+    {
+      title: "Reliability",
+      description: "High availability and disaster recovery solutions for business continuity.",
+      icon: <CheckCircle className="w-8 h-8" />
     }
   ];
 

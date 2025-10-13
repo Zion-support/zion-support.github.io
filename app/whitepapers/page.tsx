@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Download } from 'lucide-react';
 import { Shield } from 'lucide-react';
@@ -12,6 +13,9 @@ import { Target } from 'lucide-react';
 import { Filter } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+=======
+import { Download, ArrowRight, Sparkles, Target, Brain, Globe, Settings, Shield, BookOpen, Mic, Filter } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 const WhitepapersPage = () => {
   const whitepapers = [

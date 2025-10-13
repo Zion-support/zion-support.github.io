@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Home } from 'lucide-react';
@@ -28,6 +29,10 @@ import { Cloud } from 'lucide-react';
 import { Package } from 'lucide-react';
 import { Heart } from 'lucide-react';
 import { Receipt } from 'lucide-react';
+=======
+import { Link, useLocation } from 'react-router-dom';
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Phone, MapPin, Code, Database, ChevronDown, Menu, X, Package, Heart, Receipt, TrendingUp, Cpu, Network, FileText, Clock, Mic } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 interface NavigationProps {
   onSidebarToggle: () => void;

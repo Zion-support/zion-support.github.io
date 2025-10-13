@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Clock } from 'lucide-react';
@@ -17,6 +18,10 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+=======
+import { Link } from "react-router-dom";
+import { Linkedin, Twitter, Github, Mail, Phone, MapPin, Clock, ArrowRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Code, Database, Users, Award, Star, Mic } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();

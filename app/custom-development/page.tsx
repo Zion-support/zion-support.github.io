@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -11,6 +12,11 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 
+=======
+import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail, Smartphone as Phone, Star, Phone } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function CustomDevelopment() {
   const services = [

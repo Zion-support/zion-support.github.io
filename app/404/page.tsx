@@ -1,4 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Link } from 'react-router-dom';
+import { Home, ArrowLeft, Search, AlertTriangle, Mic } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';

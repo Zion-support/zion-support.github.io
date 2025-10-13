@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -16,6 +17,11 @@ import { Hand } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
+=======
+import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, Globe, Star, Mic, Hand, Calendar, Phone } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function Pricing() {
   const aiServicesPricing = [

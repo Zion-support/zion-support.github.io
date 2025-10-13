@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Award } from 'lucide-react';
@@ -15,6 +16,9 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+=======
+import { ArrowRight, Mail, Phone, MapPin, Globe, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, Award, Users, Shield, Zap, Brain, Cloud, CheckCircle, Mic, Code, Network } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();

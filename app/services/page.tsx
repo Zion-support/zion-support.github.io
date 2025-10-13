@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -29,6 +30,11 @@ import { FileText } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
+=======
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones, Star, Hand, Search, Calendar, Phone } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+>>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function Services() {
   const services = [
