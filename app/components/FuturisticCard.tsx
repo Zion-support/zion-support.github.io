@@ -1,26 +1,21 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface FuturisticCardProps {
-  children: React.ReactNode;
+  children: ReactNode;
   className?: string;
-  variant?: 'default' | 'glow' | 'border';
+  hover?: boolean;
 }
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, 
   className = '', 
-  variant = 'default' 
+  hover = true 
 }) => {
-  const baseClasses = 'bg-slate-800/50 backdrop-blur-md rounded-2xl p-6 transition-all duration-300';
+  const baseClasses = 'bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 transition-all duration-300';
+  const hoverClasses = hover ? 'hover:bg-white/20 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10' : '';
   
-  const variantClasses = {
-    default: 'border border-cyan-500/20 hover:border-cyan-500/40',
-    glow: 'border border-cyan-500/20 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/20',
-    border: 'border-2 border-cyan-500/30 hover:border-cyan-500/60'
-  };
-
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
+    <div className={`${baseClasses} ${hoverClasses} ${className}`}>
       {children}
     </div>
   );
