@@ -181,6 +181,131 @@ export default function Services() {
       originalPrice: "$399/month",
       features: ["Energy Optimization", "Renewable Integration", "Predictive Maintenance", "Smart Grid", "Cost Analysis", "Carbon Tracking"],
       category: "Energy Management"
+    },
+    {
+      title: "Blockchain Development Services",
+      description: "Complete blockchain solutions including smart contracts, DeFi applications, NFT marketplaces, and enterprise blockchain integration.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/blockchain-development",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $5,000/month",
+      originalPrice: "$10,000/month",
+      features: ["Smart Contract Development", "DeFi Applications", "NFT Marketplaces", "Enterprise Integration", "Security Audits", "Token Economics"],
+      category: "Blockchain",
+      popular: true
+    },
+    {
+      title: "IoT Solutions & Integration",
+      description: "Comprehensive IoT platform with device management, data analytics, edge computing, and real-time monitoring for smart cities and industries.",
+      icon: <Wifi className="w-8 h-8" />,
+      path: "/iot-solutions",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $3,500/month",
+      originalPrice: "$7,000/month",
+      features: ["Device Management", "Edge Computing", "Real-time Analytics", "Smart City Solutions", "Industrial IoT", "Data Visualization"],
+      category: "IoT Solutions"
+    },
+    {
+      title: "AR/VR Development Services",
+      description: "Immersive AR/VR applications for training, marketing, entertainment, and enterprise solutions with cutting-edge technology.",
+      icon: <Monitor className="w-8 h-8" />,
+      path: "/ar-vr-development",
+      color: "from-pink-500 to-rose-500",
+      price: "Starting at $4,000/month",
+      originalPrice: "$8,000/month",
+      features: ["AR Applications", "VR Experiences", "Mixed Reality", "Training Simulations", "Marketing Solutions", "Enterprise Integration"],
+      category: "AR/VR Development"
+    },
+    {
+      title: "DevOps & CI/CD Solutions",
+      description: "Complete DevOps transformation with automated deployment, infrastructure as code, monitoring, and continuous integration pipelines.",
+      icon: <Settings className="w-8 h-8" />,
+      path: "/devops-solutions",
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $2,500/month",
+      originalPrice: "$5,000/month",
+      features: ["CI/CD Pipelines", "Infrastructure as Code", "Container Orchestration", "Monitoring & Logging", "Security Automation", "Performance Optimization"],
+      category: "DevOps",
+      popular: true
+    },
+    {
+      title: "Database Design & Optimization",
+      description: "Advanced database solutions with performance optimization, data migration, backup strategies, and cloud database management.",
+      icon: <Database className="w-8 h-8" />,
+      path: "/database-solutions",
+      color: "from-emerald-500 to-green-500",
+      price: "Starting at $1,800/month",
+      originalPrice: "$3,600/month",
+      features: ["Database Design", "Performance Tuning", "Data Migration", "Backup & Recovery", "Cloud Databases", "Security Hardening"],
+      category: "Database Services"
+    },
+    {
+      title: "API Development & Management",
+      description: "Comprehensive API solutions including RESTful APIs, GraphQL, microservices architecture, and API gateway management.",
+      icon: <Code className="w-8 h-8" />,
+      path: "/api-development",
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $2,200/month",
+      originalPrice: "$4,400/month",
+      features: ["RESTful APIs", "GraphQL APIs", "Microservices", "API Gateway", "Documentation", "Rate Limiting"],
+      category: "API Development"
+    },
+    {
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile applications for iOS and Android with modern UI/UX design and backend integration.",
+      icon: <Smartphone className="w-8 h-8" />,
+      path: "/mobile-development",
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $3,000/month",
+      originalPrice: "$6,000/month",
+      features: ["Native iOS/Android", "Cross-platform", "UI/UX Design", "Backend Integration", "App Store Optimization", "Performance Tuning"],
+      category: "Mobile Development",
+      popular: true
+    },
+    {
+      title: "E-commerce Platform Development",
+      description: "Complete e-commerce solutions with payment integration, inventory management, order processing, and customer analytics.",
+      icon: <ShoppingCart className="w-8 h-8" />,
+      path: "/ecommerce-development",
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $4,500/month",
+      originalPrice: "$9,000/month",
+      features: ["Online Store", "Payment Gateway", "Inventory Management", "Order Processing", "Customer Analytics", "SEO Optimization"],
+      category: "E-commerce Development"
+    },
+    {
+      title: "Cybersecurity Consulting",
+      description: "Comprehensive cybersecurity services including vulnerability assessments, penetration testing, security audits, and compliance consulting.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/cybersecurity-consulting",
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $3,500/month",
+      originalPrice: "$7,000/month",
+      features: ["Vulnerability Assessment", "Penetration Testing", "Security Audits", "Compliance Consulting", "Incident Response", "Security Training"],
+      category: "Cybersecurity",
+      popular: true
+    },
+    {
+      title: "Cloud Migration Services",
+      description: "Seamless cloud migration with AWS, Azure, and Google Cloud Platform including data migration, application modernization, and cost optimization.",
+      icon: <Cloud className="w-8 h-8" />,
+      path: "/cloud-migration",
+      color: "from-sky-500 to-blue-500",
+      price: "Starting at $5,500/month",
+      originalPrice: "$11,000/month",
+      features: ["AWS Migration", "Azure Migration", "GCP Migration", "Data Migration", "Application Modernization", "Cost Optimization"],
+      category: "Cloud Migration"
+    },
+    {
+      title: "Legacy System Modernization",
+      description: "Transform legacy systems with modern architecture, microservices, cloud-native solutions, and improved performance and scalability.",
+      icon: <Settings className="w-8 h-8" />,
+      path: "/legacy-modernization",
+      color: "from-gray-500 to-slate-500",
+      price: "Starting at $6,000/month",
+      originalPrice: "$12,000/month",
+      features: ["System Analysis", "Architecture Redesign", "Microservices", "Cloud Migration", "Performance Optimization", "Data Migration"],
+      category: "System Modernization"
     }
   ];
 

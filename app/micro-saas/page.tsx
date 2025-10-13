@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, Workflow, FileSignature, Bot } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -377,6 +377,347 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "zion-inventory-manager-pro",
+      name: "Zion Inventory Manager Pro",
+      description: "AI-powered inventory management with demand forecasting, automated reordering, and real-time tracking",
+      price: "From $35/month",
+      originalPrice: "$60/month",
+      discount: "42% OFF",
+      icon: <Package className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      features: [
+        "AI demand forecasting",
+        "Automated reorder points",
+        "Multi-location tracking",
+        "Barcode scanning",
+        "Supplier management",
+        "Cost optimization",
+        "Real-time alerts",
+        "Integration with POS systems"
+      ],
+      benefits: [
+        "Reduce stockouts by 60%",
+        "Lower inventory costs by 25%",
+        "Improve cash flow",
+        "Eliminate manual counting"
+      ],
+      category: "Inventory",
+      rating: 4.7,
+      reviews: 892,
+      link: "/zion-inventory-manager-pro",
+      featured: true
+    },
+    {
+      id: "zion-hr-management-suite",
+      name: "Zion HR Management Suite",
+      description: "Complete HR solution with employee onboarding, time tracking, payroll integration, and performance management",
+      price: "From $45/month",
+      originalPrice: "$75/month",
+      discount: "40% OFF",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-emerald-500 to-teal-500",
+      features: [
+        "Employee onboarding automation",
+        "Time & attendance tracking",
+        "Payroll integration",
+        "Performance reviews",
+        "Leave management",
+        "Document storage",
+        "Compliance tracking",
+        "Employee self-service portal"
+      ],
+      benefits: [
+        "Reduce HR admin time by 70%",
+        "Improve employee satisfaction",
+        "Ensure compliance",
+        "Streamline payroll processes"
+      ],
+      category: "HR Management",
+      rating: 4.6,
+      reviews: 1156,
+      link: "/zion-hr-management-suite",
+      featured: true
+    },
+    {
+      id: "zion-ecommerce-optimizer",
+      name: "Zion E-commerce Optimizer",
+      description: "AI-powered e-commerce platform with conversion optimization, abandoned cart recovery, and customer analytics",
+      price: "From $55/month",
+      originalPrice: "$90/month",
+      discount: "39% OFF",
+      icon: <ShoppingCart className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "Conversion rate optimization",
+        "Abandoned cart recovery",
+        "Customer behavior analytics",
+        "A/B testing automation",
+        "Product recommendation engine",
+        "Inventory synchronization",
+        "Multi-channel selling",
+        "Mobile optimization"
+      ],
+      benefits: [
+        "Increase conversions by 35%",
+        "Recover 25% of abandoned carts",
+        "Boost average order value",
+        "Improve customer retention"
+      ],
+      category: "E-commerce",
+      rating: 4.8,
+      reviews: 1347,
+      link: "/zion-ecommerce-optimizer",
+      featured: true
+    },
+    {
+      id: "zion-expense-tracker-pro",
+      name: "Zion Expense Tracker Pro",
+      description: "Intelligent expense management with receipt scanning, categorization, and automated reporting",
+      price: "From $25/month",
+      originalPrice: "$40/month",
+      discount: "38% OFF",
+      icon: <Receipt className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Receipt scanning & OCR",
+        "Automatic categorization",
+        "Expense policy compliance",
+        "Multi-currency support",
+        "Approval workflows",
+        "Tax preparation",
+        "Integration with accounting",
+        "Mobile expense capture"
+      ],
+      benefits: [
+        "Reduce expense processing time by 80%",
+        "Improve accuracy by 95%",
+        "Ensure policy compliance",
+        "Simplify tax preparation"
+      ],
+      category: "Finance",
+      rating: 4.5,
+      reviews: 978,
+      link: "/zion-expense-tracker-pro",
+      featured: false
+    },
+    {
+      id: "zion-customer-feedback-pro",
+      name: "Zion Customer Feedback Pro",
+      description: "Advanced feedback collection and analysis with sentiment analysis, NPS tracking, and action planning",
+      price: "From $30/month",
+      originalPrice: "$50/month",
+      discount: "40% OFF",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      features: [
+        "Multi-channel feedback collection",
+        "AI sentiment analysis",
+        "NPS & CSAT tracking",
+        "Automated surveys",
+        "Response analysis",
+        "Action planning tools",
+        "Team notifications",
+        "Custom reporting"
+      ],
+      benefits: [
+        "Increase response rates by 50%",
+        "Improve customer satisfaction",
+        "Identify improvement opportunities",
+        "Track customer loyalty trends"
+      ],
+      category: "Customer Experience",
+      rating: 4.7,
+      reviews: 756,
+      link: "/zion-customer-feedback-pro",
+      featured: false
+    },
+    {
+      id: "zion-task-automation-pro",
+      name: "Zion Task Automation Pro",
+      description: "Visual workflow automation with AI optimization, custom triggers, and team collaboration",
+      price: "From $40/month",
+      originalPrice: "$65/month",
+      discount: "38% OFF",
+      icon: <Workflow className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "Visual workflow builder",
+        "AI process optimization",
+        "Custom triggers & conditions",
+        "Team collaboration tools",
+        "Error handling & retries",
+        "Performance analytics",
+        "Integration marketplace",
+        "Custom API endpoints"
+      ],
+      benefits: [
+        "Automate 85% of repetitive tasks",
+        "Reduce errors by 90%",
+        "Save 25+ hours weekly",
+        "Improve team productivity"
+      ],
+      category: "Automation",
+      rating: 4.6,
+      reviews: 1023,
+      link: "/zion-task-automation-pro",
+      featured: false
+    },
+    {
+      id: "zion-document-signer-pro",
+      name: "Zion Document Signer Pro",
+      description: "Electronic signature solution with document templates, approval workflows, and compliance tracking",
+      price: "From $20/month",
+      originalPrice: "$35/month",
+      discount: "43% OFF",
+      icon: <FileSignature className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "Electronic signatures",
+        "Document templates",
+        "Approval workflows",
+        "Compliance tracking",
+        "Audit trails",
+        "Mobile signing",
+        "Integration APIs",
+        "Bulk document processing"
+      ],
+      benefits: [
+        "Reduce document processing time by 75%",
+        "Eliminate paper waste",
+        "Improve compliance",
+        "Accelerate contract execution"
+      ],
+      category: "Document Management",
+      rating: 4.8,
+      reviews: 1456,
+      link: "/zion-document-signer-pro",
+      featured: false
+    },
+    {
+      id: "zion-team-collaboration-pro",
+      name: "Zion Team Collaboration Pro",
+      description: "Advanced team collaboration platform with project management, communication tools, and productivity analytics",
+      price: "From $35/month",
+      originalPrice: "$55/month",
+      discount: "36% OFF",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "Project management boards",
+        "Real-time messaging",
+        "Video conferencing",
+        "File sharing & storage",
+        "Task assignment & tracking",
+        "Time tracking",
+        "Productivity analytics",
+        "Integration with popular tools"
+      ],
+      benefits: [
+        "Improve team productivity by 40%",
+        "Reduce meeting time by 30%",
+        "Enhance communication",
+        "Streamline project delivery"
+      ],
+      category: "Collaboration",
+      rating: 4.7,
+      reviews: 1892,
+      link: "/zion-team-collaboration-pro",
+      featured: false
+    },
+    {
+      id: "zion-ai-chatbot-builder",
+      name: "Zion AI Chatbot Builder",
+      description: "No-code chatbot builder with AI training, multi-channel deployment, and analytics dashboard",
+      price: "From $50/month",
+      originalPrice: "$80/month",
+      discount: "38% OFF",
+      icon: <Bot className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "No-code chatbot builder",
+        "AI training & learning",
+        "Multi-channel deployment",
+        "Natural language processing",
+        "Analytics dashboard",
+        "Custom integrations",
+        "A/B testing",
+        "Live chat handoff"
+      ],
+      benefits: [
+        "Reduce support costs by 60%",
+        "Handle 90% of queries automatically",
+        "Improve response time",
+        "Scale customer support"
+      ],
+      category: "Customer Support",
+      rating: 4.8,
+      reviews: 1678,
+      link: "/zion-ai-chatbot-builder",
+      featured: true
+    },
+    {
+      id: "zion-api-manager-pro",
+      name: "Zion API Manager Pro",
+      description: "Comprehensive API management platform with monitoring, security, and developer portal",
+      price: "From $60/month",
+      originalPrice: "$100/month",
+      discount: "40% OFF",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      features: [
+        "API gateway & routing",
+        "Rate limiting & throttling",
+        "Security & authentication",
+        "Monitoring & analytics",
+        "Developer portal",
+        "Documentation generation",
+        "Version management",
+        "Load balancing"
+      ],
+      benefits: [
+        "Improve API performance by 50%",
+        "Enhance security posture",
+        "Reduce development time",
+        "Scale API infrastructure"
+      ],
+      category: "API Management",
+      rating: 4.6,
+      reviews: 743,
+      link: "/zion-api-manager-pro",
+      featured: false
+    },
+    {
+      id: "zion-data-backup-pro",
+      name: "Zion Data Backup Pro",
+      description: "Automated cloud backup solution with encryption, versioning, and disaster recovery",
+      price: "From $15/month",
+      originalPrice: "$25/month",
+      discount: "40% OFF",
+      icon: <Cloud className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Automated backups",
+        "End-to-end encryption",
+        "Version control",
+        "Disaster recovery",
+        "Cross-platform sync",
+        "Bandwidth optimization",
+        "Compliance reporting",
+        "24/7 monitoring"
+      ],
+      benefits: [
+        "Protect critical data",
+        "Reduce backup costs by 60%",
+        "Ensure business continuity",
+        "Meet compliance requirements"
+      ],
+      category: "Data Protection",
+      rating: 4.9,
+      reviews: 2134,
+      link: "/zion-data-backup-pro",
+      featured: false
     }
   ];
 
@@ -393,12 +734,20 @@ export default function MicroSaas() {
     { name: "Support", count: microSaasServices.filter(s => s.category === "Support").length, active: false },
     { name: "Automation", count: microSaasServices.filter(s => s.category === "Automation").length, active: false },
     { name: "Finance", count: microSaasServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false }
+    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false },
+    { name: "Inventory", count: microSaasServices.filter(s => s.category === "Inventory").length, active: false },
+    { name: "HR Management", count: microSaasServices.filter(s => s.category === "HR Management").length, active: false },
+    { name: "E-commerce", count: microSaasServices.filter(s => s.category === "E-commerce").length, active: false },
+    { name: "Customer Experience", count: microSaasServices.filter(s => s.category === "Customer Experience").length, active: false },
+    { name: "Document Management", count: microSaasServices.filter(s => s.category === "Document Management").length, active: false },
+    { name: "Collaboration", count: microSaasServices.filter(s => s.category === "Collaboration").length, active: false },
+    { name: "API Management", count: microSaasServices.filter(s => s.category === "API Management").length, active: false },
+    { name: "Data Protection", count: microSaasServices.filter(s => s.category === "Data Protection").length, active: false }
   ];
 
   const stats = [
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
@@ -468,7 +817,7 @@ export default function MicroSaas() {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Powerful, AI-driven micro SAAS tools designed to transform your business operations. 
-                Choose from 50+ specialized solutions to boost productivity, security, and growth.
+                Choose from 60+ specialized solutions to boost productivity, security, and growth.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">

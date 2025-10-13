@@ -353,6 +353,267 @@ export default function AIServices() {
       reviews: 432,
       link: "/ai-supply-chain-optimizer",
       featured: false
+    },
+    {
+      id: "ai-voice-assistant-pro",
+      name: "AI Voice Assistant Pro",
+      description: "Advanced voice AI with natural language understanding, multi-language support, and enterprise integration",
+      price: "From $1,800/month",
+      icon: <Mic className="w-8 h-8" />,
+      color: "from-purple-500 to-indigo-500",
+      features: [
+        "Natural language processing",
+        "Multi-language support (50+ languages)",
+        "Voice command automation",
+        "Integration with business systems",
+        "Custom voice training",
+        "Real-time transcription",
+        "Voice analytics & insights",
+        "Mobile & desktop apps"
+      ],
+      benefits: [
+        "Improve accessibility by 60%",
+        "Reduce manual input by 70%",
+        "Enhance user experience",
+        "Scale voice interactions"
+      ],
+      category: "Voice AI",
+      rating: 4.8,
+      reviews: 1123,
+      link: "/ai-voice-assistant-pro",
+      featured: true
+    },
+    {
+      id: "ai-image-recognition-pro",
+      name: "AI Image Recognition Pro",
+      description: "Advanced computer vision with object detection, facial recognition, and automated image analysis",
+      price: "From $2,200/month",
+      icon: <Eye className="w-8 h-8" />,
+      color: "from-green-500 to-teal-500",
+      features: [
+        "Object detection & classification",
+        "Facial recognition & verification",
+        "OCR & text extraction",
+        "Quality control automation",
+        "Medical image analysis",
+        "Security surveillance",
+        "Custom model training",
+        "Real-time processing"
+      ],
+      benefits: [
+        "Automate visual inspections",
+        "Improve accuracy by 95%",
+        "Reduce processing time by 80%",
+        "Enable new use cases"
+      ],
+      category: "Computer Vision",
+      rating: 4.9,
+      reviews: 1876,
+      link: "/ai-image-recognition-pro",
+      featured: true
+    },
+    {
+      id: "ai-predictive-maintenance",
+      name: "AI Predictive Maintenance",
+      description: "Intelligent equipment monitoring with failure prediction, maintenance scheduling, and cost optimization",
+      price: "From $2,600/month",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "Equipment failure prediction",
+        "Maintenance scheduling optimization",
+        "Sensor data analysis",
+        "Cost-benefit analysis",
+        "Real-time monitoring",
+        "Alert & notification system",
+        "Integration with IoT devices",
+        "Custom maintenance models"
+      ],
+      benefits: [
+        "Reduce downtime by 50%",
+        "Lower maintenance costs by 30%",
+        "Extend equipment lifespan",
+        "Improve operational efficiency"
+      ],
+      category: "Industrial AI",
+      rating: 4.7,
+      reviews: 654,
+      link: "/ai-predictive-maintenance",
+      featured: false
+    },
+    {
+      id: "ai-personalization-engine",
+      name: "AI Personalization Engine",
+      description: "Advanced personalization platform with recommendation systems, behavioral analysis, and dynamic content",
+      price: "From $2,100/month",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      features: [
+        "Real-time personalization",
+        "Recommendation algorithms",
+        "Behavioral pattern analysis",
+        "A/B testing automation",
+        "Multi-channel personalization",
+        "Customer journey mapping",
+        "Dynamic content generation",
+        "Performance optimization"
+      ],
+      benefits: [
+        "Increase engagement by 45%",
+        "Boost conversion rates by 35%",
+        "Improve customer satisfaction",
+        "Maximize revenue potential"
+      ],
+      category: "Personalization",
+      rating: 4.8,
+      reviews: 1345,
+      link: "/ai-personalization-engine",
+      featured: false
+    },
+    {
+      id: "ai-language-translation-pro",
+      name: "AI Language Translation Pro",
+      description: "Advanced translation platform with real-time processing, context understanding, and industry-specific models",
+      price: "From $1,600/month",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Real-time translation (100+ languages)",
+        "Context-aware translation",
+        "Industry-specific models",
+        "Document translation",
+        "Voice translation",
+        "Quality assessment",
+        "Custom terminology",
+        "API integration"
+      ],
+      benefits: [
+        "Break language barriers",
+        "Improve global communication",
+        "Reduce translation costs by 60%",
+        "Maintain brand consistency"
+      ],
+      category: "Language AI",
+      rating: 4.6,
+      reviews: 987,
+      link: "/ai-language-translation-pro",
+      featured: false
+    },
+    {
+      id: "ai-emotion-analysis",
+      name: "AI Emotion Analysis",
+      description: "Advanced emotion detection and sentiment analysis for customer experience optimization and market research",
+      price: "From $1,900/month",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500",
+      features: [
+        "Facial emotion recognition",
+        "Voice emotion analysis",
+        "Text sentiment analysis",
+        "Real-time emotion tracking",
+        "Customer experience insights",
+        "Market research analytics",
+        "Emotion-based automation",
+        "Custom emotion models"
+      ],
+      benefits: [
+        "Understand customer emotions",
+        "Improve customer experience",
+        "Optimize product development",
+        "Enhance market research"
+      ],
+      category: "Emotion AI",
+      rating: 4.7,
+      reviews: 756,
+      link: "/ai-emotion-analysis",
+      featured: false
+    },
+    {
+      id: "ai-fraud-detection-pro",
+      name: "AI Fraud Detection Pro",
+      description: "Advanced fraud detection system with real-time monitoring, pattern recognition, and automated response",
+      price: "From $2,800/month",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      features: [
+        "Real-time fraud detection",
+        "Pattern recognition algorithms",
+        "Behavioral analysis",
+        "Risk scoring & assessment",
+        "Automated response actions",
+        "Multi-channel monitoring",
+        "Machine learning models",
+        "Compliance reporting"
+      ],
+      benefits: [
+        "Detect fraud with 99.5% accuracy",
+        "Reduce false positives by 70%",
+        "Save millions in losses",
+        "Ensure regulatory compliance"
+      ],
+      category: "Security AI",
+      rating: 4.9,
+      reviews: 1123,
+      link: "/ai-fraud-detection-pro",
+      featured: true
+    },
+    {
+      id: "ai-recommendation-engine",
+      name: "AI Recommendation Engine",
+      description: "Intelligent recommendation system with collaborative filtering, content-based filtering, and hybrid approaches",
+      price: "From $1,700/month",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      features: [
+        "Collaborative filtering",
+        "Content-based filtering",
+        "Hybrid recommendation models",
+        "Real-time recommendations",
+        "A/B testing framework",
+        "Performance analytics",
+        "Cold start problem solving",
+        "Scalable architecture"
+      ],
+      benefits: [
+        "Increase sales by 25%",
+        "Improve user engagement",
+        "Reduce churn rate",
+        "Maximize customer lifetime value"
+      ],
+      category: "Recommendation AI",
+      rating: 4.8,
+      reviews: 1456,
+      link: "/ai-recommendation-engine",
+      featured: false
+    },
+    {
+      id: "ai-chatbot-enterprise",
+      name: "AI Chatbot Enterprise",
+      description: "Enterprise-grade conversational AI with advanced NLP, multi-channel deployment, and custom integrations",
+      price: "From $3,500/month",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "Advanced NLP capabilities",
+        "Multi-channel deployment",
+        "Custom integrations",
+        "Enterprise security",
+        "Scalable architecture",
+        "Custom training & fine-tuning",
+        "Analytics & reporting",
+        "24/7 support"
+      ],
+      benefits: [
+        "Handle complex conversations",
+        "Scale to millions of users",
+        "Integrate with enterprise systems",
+        "Reduce support costs by 80%"
+      ],
+      category: "Conversational AI",
+      rating: 4.9,
+      reviews: 892,
+      link: "/ai-chatbot-enterprise",
+      featured: true
     }
   ];
 
@@ -369,12 +630,21 @@ export default function AIServices() {
     { name: "Marketing", count: aiServices.filter(s => s.category === "Marketing").length, active: false },
     { name: "HR & Recruitment", count: aiServices.filter(s => s.category === "HR & Recruitment").length, active: false },
     { name: "Finance", count: aiServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false }
+    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false },
+    { name: "Voice AI", count: aiServices.filter(s => s.category === "Voice AI").length, active: false },
+    { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length, active: false },
+    { name: "Industrial AI", count: aiServices.filter(s => s.category === "Industrial AI").length, active: false },
+    { name: "Personalization", count: aiServices.filter(s => s.category === "Personalization").length, active: false },
+    { name: "Language AI", count: aiServices.filter(s => s.category === "Language AI").length, active: false },
+    { name: "Emotion AI", count: aiServices.filter(s => s.category === "Emotion AI").length, active: false },
+    { name: "Security AI", count: aiServices.filter(s => s.category === "Security AI").length, active: false },
+    { name: "Recommendation AI", count: aiServices.filter(s => s.category === "Recommendation AI").length, active: false },
+    { name: "Conversational AI", count: aiServices.filter(s => s.category === "Conversational AI").length, active: false }
   ];
 
   const stats = [
-    { number: "25+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
-    { number: "15,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
+    { number: "35+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
+    { number: "20,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
     { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
@@ -488,7 +758,7 @@ export default function AIServices() {
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">25+ AI services</span>
+                  <span className="text-sm">35+ AI services</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
