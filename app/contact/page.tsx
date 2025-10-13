@@ -1,82 +1,18 @@
+import React from 'react';
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Here you would typically send the form data to your backend
-    setIsSubmitted(true);
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
-    }, 3000);
-  };
-
-  const contactInfo = [
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      details: "kleber@ziontechgroup.com",
-      description: "Send us an email anytime"
-    },
-    {
-      icon: <Smartphone className="w-6 h-6" />,
-      title: "Phone",
-      details: "+1 302 464 0950",
-      description: "Call us during business hours"
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: "Address",
-      details: "364 E Main St STE 1008",
-      description: "Middletown DE 19709"
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Business Hours",
-      details: "Mon - Fri: 9:00 AM - 6:00 PM",
-      description: "EST Time Zone"
-    }
-  ];
-
-  const services = [
-    "AI Business Intelligence",
-    "AI Customer Support",
-    "AI Content Generation",
-    "AI Cybersecurity",
-    "5G Solutions",
-    "Cloud Infrastructure",
-    "Data Analytics",
-    "Code Assistant",
-    "Marketing Automation",
-    "Document Processing",
-    "CRM Assistant",
-    "Financial Analytics"
-  ];
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 }
-

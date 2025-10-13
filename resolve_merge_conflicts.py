@@ -15,24 +15,17 @@ def resolve_merge_conflicts(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
-        
-        # Remove merge conflict markers and keep the newer version (after =======)
+        if ')
         lines = content.split('\n')
         resolved_lines = []
         in_conflict = False
         conflict_start = False
         
         for line in lines:
-            if line.strip() == '<<<<<<< HEAD':
-                in_conflict = True
-                conflict_start = True
-                continue
-            elif line.strip() == '=======':
+            if line.strip() == '':
                 conflict_start = False
                 continue
-            elif line.strip() == '>>>>>>> cursor/fix-errors-and-merge-to-main-b119':
+            elif line.strip() == '
                 in_conflict = False
                 continue
             elif in_conflict and conflict_start:

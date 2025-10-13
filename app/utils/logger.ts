@@ -1,8 +1,7 @@
-// Logger utility functions
-
-export function logger() {
-  // Implementation here
-  return null;
-}
-
-export default logger;
+// logger utility
+export const logger = {
+  // Utility implementation
+  init: () => {
+    console.log('logger initialized');
+  }
+};

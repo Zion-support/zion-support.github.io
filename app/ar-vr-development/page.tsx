@@ -1,81 +1,18 @@
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-
-const ARVRDevelopmentPage = () => {
-  const benefits = [
-    {
-      title: "Expert Team",
-      description: "Our team of AI and technology experts delivers exceptional results.",
-      icon: <Users className="w-8 h-8" />
-    },
-    {
-      title: "Proven Results",
-      description: "We have a track record of successful projects and satisfied clients.",
-      icon: <CheckCircle className="w-8 h-8" />
-    },
-    {
-      title: "24/7 Support",
-      description: "Round-the-clock support to ensure your success.",
-      icon: <Clock className="w-8 h-8" />
-    },
-    {
-      title: "Innovation",
-      description: "Cutting-edge solutions that keep you ahead of the competition.",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-
-  const features = [
-    {
-      title: "Immersive AR Experiences",
-      description: "Create stunning augmented reality applications that blend digital content with the real world",
-      icon: <Eye className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Virtual Reality Worlds",
-      description: "Build immersive VR environments and experiences for training, entertainment, and business",
-      icon: <Box className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Mixed Reality Solutions",
-      description: "Combine AR and VR technologies for next-generation mixed reality experiences",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Cross-Platform Development",
-      description: "Deploy across all major AR/VR platforms including Meta, Apple, and Microsoft",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
+import React from 'react';
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
-      </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
-        </h1>
-        <p className="text-lg text-gray-300 mb-8">
-          Professional services coming soon.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
-        </Link>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
       </div>
     </div>
   );
-}
-
 }

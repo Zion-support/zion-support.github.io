@@ -1,100 +1,18 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 
-const WhitepapersPage = () => {
-  const whitepapers = [
-    {
-      title: "The Future of AI in Business",
-      description: "Comprehensive analysis of AI adoption trends and business impact",
-      category: "Artificial Intelligence",
-      pages: "24 pages",
-      downloads: "5,200+",
-      icon: <Brain className="w-6 h-6" />
-    },
-    {
-      title: "Cybersecurity Best Practices 2024",
-      description: "Essential security strategies for modern businesses",
-      category: "Cybersecurity",
-      pages: "18 pages",
-      downloads: "3,800+",
-      icon: <Shield className="w-6 h-6" />
-    },
-    {
-      title: "Cloud Migration Guide",
-      description: "Step-by-step guide to successful cloud transformation",
-      category: "Cloud Technology",
-      pages: "32 pages",
-      downloads: "4,500+",
-      icon: <Globe className="w-6 h-6" />
-    },
-    {
-      title: "5G Technology Impact",
-      description: "How 5G will transform industries and business operations",
-      category: "5G Technology",
-      pages: "28 pages",
-      downloads: "2,900+",
-      icon: <Settings className="w-6 h-6" />
-    },
-    {
-      title: "Micro SAAS Market Analysis",
-      description: "Market trends and opportunities in micro SAAS solutions",
-      category: "Business Strategy",
-      pages: "20 pages",
-      downloads: "3,200+",
-      icon: <Target className="w-6 h-6" />
-    },
-    {
-      title: "Digital Transformation Roadmap",
-      description: "Complete guide to digital transformation success",
-      category: "Digital Transformation",
-      pages: "35 pages",
-      downloads: "6,100+",
-      icon: <BookOpen className="w-6 h-6" />
-    }
-  ];
-
-export default function WhitepapersPage() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Whitepapers - Zion Tech Group</title>
-        <meta name="description" content="Whitepapers solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Whitepapers</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive whitepapers solutions designed to meet your business needs.
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
-            </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   );
-}
-
 }

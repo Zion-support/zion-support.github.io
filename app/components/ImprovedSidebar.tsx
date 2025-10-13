@@ -1,43 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Home } from 'lucide-react';
-import { Search } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play, Mic, Code, Network } from 'lucide-react';
+import React from 'react';
 
-interface ImprovedsidebarProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Improvedsidebar({ className = '', children, ...props }: ImprovedsidebarProps) {
+export default function ImprovedSidebar() {
   return (
-    <div className={`improvedsidebar-component ${className}`} {...props}>
-      {children}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            ImprovedSidebar
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This component is under development. Please check back later.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

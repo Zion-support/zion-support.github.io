@@ -1,8 +1,7 @@
-// Accessibilitychecker utility functions
-
-export function accessibilitychecker() {
-  // Implementation here
-  return null;
-}
-
-export default accessibilitychecker;
+// accessibilityChecker utility
+export const accessibilityChecker = {
+  // Utility implementation
+  init: () => {
+    console.log('accessibilityChecker initialized');
+  }
+};

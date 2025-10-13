@@ -1,8 +1,13 @@
-interface LogLevel {
-  ERROR: 'error';
-  WARN: 'warn';
-  INFO: 'info';
-  DEBUG: 'debug';
-}
-
-export default logger;
+// Logger utility
+export const logger = {
+  // Logger implementation
+  info: (message: string) => {
+    console.log(`[INFO] ${message}`);
+  },
+  error: (message: string) => {
+    console.error(`[ERROR] ${message}`);
+  },
+  warn: (message: string) => {
+    console.warn(`[WARN] ${message}`);
+  }
+};

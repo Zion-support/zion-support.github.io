@@ -3,22 +3,9 @@
 echo "🔧 Resolving all merge conflicts systematically..."
 
 # Find all files with merge conflicts
-conflicted_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null | head -50)
-
-echo "Found $(echo "$conflicted_files" | wc -l) files with conflicts"
-
-# Resolve conflicts by accepting our version (HEAD) for most files
-for file in $conflicted_files; do
-    echo "Resolving conflicts in $file..."
-    
-    # Use git checkout to accept our version
-    git checkout --ours "$file" 2>/dev/null || {
-        # If that fails, try to clean up the file manually
-        echo "Manual cleanup for $file..."
-        
-        # Remove conflict markers and keep content after =======
-        sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null
-        sed -i '/>>>>>>> /d' "$file" 2>/dev/null
+conflicted_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "
+        sed -i '//d' "$file" 2>/dev/null
+        sed -i '/
         
         # If file is completely broken, create a simple working version
         if ! grep -q "export default" "$file" 2>/dev/null; then

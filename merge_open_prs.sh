@@ -13,8 +13,8 @@ resolve_merge_conflicts() {
     echo "🔧 Resolving merge conflicts in: $file"
     
     # Remove merge conflict markers and keep the newer version (theirs)
-    sed -i '/^<<<<<<< HEAD/,/^=======/d' "$file"
-    sed -i '/^>>>>>>> /d' "$file"
+    sed -i '/^/d' "$file"
+    sed -i '/^
     
     echo "✅ Resolved conflicts in: $file"
 }
@@ -42,7 +42,7 @@ echo "📋 Step 1: Checking current status..."
 git status
 
 echo "📋 Step 2: Finding files with merge conflicts..."
-conflict_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null || true)
+conflict_files=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "" 2>/dev/null || true)
 
 if [ -n "$conflict_files" ]; then
     echo "🔍 Found files with merge conflicts:"

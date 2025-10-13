@@ -1,8 +1,7 @@
-// Apiclient utility functions
-
-export function apiclient() {
-  // Implementation here
-  return null;
-}
-
-export default apiclient;
+// apiClient utility
+export const apiClient = {
+  // Utility implementation
+  init: () => {
+    console.log('apiClient initialized');
+  }
+};

@@ -1,8 +1,7 @@
-// Performanceoptimizations utility functions
-
-export function performanceoptimizations() {
-  // Implementation here
-  return null;
-}
-
-export default performanceoptimizations;
+// performanceOptimizations utility
+export const performanceOptimizations = {
+  // Utility implementation
+  init: () => {
+    console.log('performanceOptimizations initialized');
+  }
+};

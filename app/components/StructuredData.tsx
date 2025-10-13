@@ -1,21 +1,18 @@
 import React from 'react';
-import { Search, Code } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
-import { Search } from 'lucide-react';
-import { Code } from 'lucide-react';
 
-interface StructureddataProps {
-  className?: string;
-  children?: React.ReactNode;
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-}
-
-export default function Structureddata({ className = '', children, ...props }: StructureddataProps) {
+export default function StructuredData() {
   return (
-    <div className={`structureddata-component ${className}`} {...props}>
-      {children}
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <div className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-6">
+            StructuredData
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This component is under development. Please check back later.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

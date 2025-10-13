@@ -1,9 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ChevronRight, Home } from 'lucide-react';
-import { Link } from 'react-router-dom';
-=======
+
 import { Home } from 'lucide-react';
 
 interface BreadcrumbProps {

@@ -1,8 +1,7 @@
-// Datavalidator utility functions
-
-export function datavalidator() {
-  // Implementation here
-  return null;
-}
-
-export default datavalidator;
+// dataValidator utility
+export const dataValidator = {
+  // Utility implementation
+  init: () => {
+    console.log('dataValidator initialized');
+  }
+};

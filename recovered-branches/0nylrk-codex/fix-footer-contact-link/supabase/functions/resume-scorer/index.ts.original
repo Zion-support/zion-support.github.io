@@ -5,12 +5,9 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
-<<<<<<< HEAD
-  "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
-=======
+
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
->>>>>>> origin/auto/autonomy-17186719616
 
 serve(async (req) => {
   // Handle CORS preflight requests
@@ -125,12 +122,10 @@ serve(async (req) => {
       method: "POST",
       headers: {
         "Authorization": `Bearer ${openAiKey}`,
-<<<<<<< HEAD
-        "Content-Type": "application/json"},
-=======
+
         "Content-Type": "application/json",
       },
->>>>>>> origin/auto/autonomy-17186719616
+
       body: JSON.stringify({
         model: "gpt-4o-mini",
         messages: [
@@ -180,13 +175,10 @@ serve(async (req) => {
             }`
           }
         ],
-<<<<<<< HEAD
-        temperature: 0.5})});
-=======
+
         temperature: 0.5,
       }),
     });
->>>>>>> origin/auto/autonomy-17186719616
 
     if (!openAIResponse.ok) {
       const errorData = await openAIResponse.json();

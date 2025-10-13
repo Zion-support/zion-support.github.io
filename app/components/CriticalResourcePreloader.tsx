@@ -1,9 +1,4 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client'
-import { useEffect } from 'react';
-=======
 
 'use client'
 
