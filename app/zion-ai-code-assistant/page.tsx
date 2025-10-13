@@ -1,86 +1,88 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Star, Sparkles, Brain, Mail, Globe, TrendingUp } from 'lucide-react';
+import { Code, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Star, Sparkles, Brain, Database, Globe, GitBranch } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const ZionAIMarketingAutomationPage = () => {
+const ZionAICodeAssistantPage = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Campaign Optimization",
-      description: "Automatically optimize marketing campaigns for maximum ROI using machine learning"
+      title: "AI Code Generation",
+      description: "Generate code from natural language descriptions using advanced AI models"
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Smart Audience Targeting",
-      description: "AI-powered audience segmentation and personalized targeting strategies"
+      icon: <Code className="w-6 h-6" />,
+      title: "Multi-Language Support",
+      description: "Support for 50+ programming languages including Python, JavaScript, Java, C++, and more"
     },
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email Marketing Automation",
-      description: "Create and send personalized email campaigns with AI-generated content"
+      icon: <GitBranch className="w-6 h-6" />,
+      title: "Code Review & Optimization",
+      description: "Automated code review, bug detection, and performance optimization suggestions"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive marketing analytics with predictive insights and recommendations"
+      title: "Development Analytics",
+      description: "Track coding patterns, productivity metrics, and code quality improvements"
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Channel Management",
-      description: "Manage social media, email, and advertising campaigns from one platform"
+      title: "Documentation Generation",
+      description: "Automatically generate comprehensive documentation and comments for your code"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Compliance & Security",
-      description: "GDPR compliant with enterprise-grade security and data protection"
+      title: "Security Analysis",
+      description: "Identify security vulnerabilities and suggest secure coding practices"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$79",
+      name: "Developer",
+      price: "$49",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individual developers",
       features: [
-        "Up to 10,000 contacts",
-        "Basic AI optimization",
-        "Email marketing automation",
-        "Social media scheduling",
-        "Basic analytics",
-        "Email support"
+        "Up to 1,000 code generations/month",
+        "Basic AI models",
+        "10 programming languages",
+        "Email support",
+        "Basic documentation generation",
+        "Standard security analysis"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$199",
+      name: "Team",
+      price: "$149",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for development teams",
       features: [
-        "Up to 50,000 contacts",
-        "Advanced AI optimization",
-        "Multi-channel campaigns",
-        "Advanced analytics",
-        "A/B testing",
+        "Up to 10,000 code generations/month",
+        "Advanced AI models",
+        "All programming languages",
         "Priority support",
+        "Advanced documentation",
+        "Comprehensive security analysis",
+        "Team collaboration tools",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$499",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited contacts",
+        "Unlimited code generations",
         "Custom AI models",
+        "All programming languages",
+        "24/7 dedicated support",
+        "Custom integrations",
+        "Advanced security scanning",
         "White-label solution",
-        "Advanced integrations",
-        "Dedicated account manager",
-        "Custom development",
         "SLA guarantee"
       ],
       popular: false
@@ -89,24 +91,24 @@ const ZionAIMarketingAutomationPage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "E-commerce Brand",
-      role: "Marketing Director",
-      content: "Zion AI Marketing Automation increased our conversion rates by 150% and reduced our marketing costs by 40%. The AI optimization is incredible.",
+      name: "James Wilson",
+      company: "Tech Startup",
+      role: "Lead Developer",
+      content: "Zion AI Code Assistant has increased our development speed by 300%. The code quality is excellent and it learns our coding patterns perfectly.",
       rating: 5
     },
     {
-      name: "Robert Kim",
-      company: "SaaS Startup",
-      role: "Growth Manager",
-      content: "The audience targeting is spot-on. We're reaching the right people at the right time with the right message. ROI has never been better.",
+      name: "Sarah Chen",
+      company: "Software Agency",
+      role: "CTO",
+      content: "The security analysis feature has helped us identify and fix vulnerabilities before they become issues. It's like having a senior developer on the team.",
       rating: 5
     },
     {
-      name: "Lisa Thompson",
-      company: "Digital Agency",
-      role: "CEO",
-      content: "This platform has transformed how we manage client campaigns. The automation saves us hours every day and delivers better results.",
+      name: "Michael Rodriguez",
+      company: "Enterprise Corp",
+      role: "DevOps Engineer",
+      content: "The documentation generation is incredible. It saves us hours of work and produces better docs than we could write manually.",
       rating: 5
     }
   ];
@@ -114,10 +116,10 @@ const ZionAIMarketingAutomationPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="Zion AI Marketing Automation - AI-Powered Marketing Platform | Zion Tech Group"
-        description="Automate and optimize your marketing with AI. Smart targeting, email automation, multi-channel campaigns. Boost ROI with intelligent marketing automation."
-        keywords="AI marketing automation, marketing automation platform, email marketing, social media automation, marketing AI, campaign optimization"
-        canonical="https://ziontechgroup.com/zion-ai-marketing-automation"
+        title="Zion AI Code Assistant - AI-Powered Code Generation & Review | Zion Tech Group"
+        description="Generate, review, and optimize code with AI. Support for 50+ languages, security analysis, documentation generation. Boost developer productivity!"
+        keywords="AI code assistant, code generation, AI programming, code review, developer tools, programming assistant, code optimization"
+        canonical="https://ziontechgroup.com/zion-ai-code-assistant"
       />
 
       {/* Hero Section */}
@@ -130,20 +132,20 @@ const ZionAIMarketingAutomationPage = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 AI Marketing Platform 2024</span>
+            <span className="text-cyan-400 text-sm font-medium">#1 AI Code Assistant 2024</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI-Powered
+            Code Faster with
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
               {" "}
-              Marketing Automation
+              AI Assistant
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Automate and optimize your marketing campaigns with AI. Smart targeting, personalized content, 
-            and multi-channel automation that drives real results and maximizes ROI.
+            Boost your development productivity with AI-powered code generation, review, and optimization. 
+            Support for 50+ programming languages with intelligent suggestions and security analysis.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -170,10 +172,10 @@ const ZionAIMarketingAutomationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Intelligent Marketing Features
+              Powerful Development Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to create, manage, and optimize high-performing marketing campaigns.
+              Everything you need to accelerate your development workflow and write better code.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -202,10 +204,10 @@ const ZionAIMarketingAutomationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Marketing-Focused Pricing
+              Developer-Focused Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Scale your marketing with plans designed for businesses of all sizes.
+              Choose the plan that fits your development needs and team size.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -262,10 +264,10 @@ const ZionAIMarketingAutomationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Marketing Teams
+              Trusted by Developers Worldwide
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what marketing professionals say about Zion AI Marketing Automation
+              See what developers say about Zion AI Code Assistant
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -294,10 +296,10 @@ const ZionAIMarketingAutomationPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Transform Your Marketing Today
+            Ready to Code with AI?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses using AI to automate and optimize their marketing campaigns for maximum ROI.
+            Join thousands of developers using AI to write better code faster and more efficiently.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -321,4 +323,4 @@ const ZionAIMarketingAutomationPage = () => {
   );
 };
 
-export default ZionAIMarketingAutomationPage;
+export default ZionAICodeAssistantPage;

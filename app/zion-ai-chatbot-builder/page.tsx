@@ -1,85 +1,84 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Star, Sparkles, Brain, Mail, Globe, TrendingUp } from 'lucide-react';
+import { Bot, MessageSquare, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Star, Sparkles, Brain, Code, Database, Globe } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const ZionAIMarketingAutomationPage = () => {
+const ZionAIChatbotBuilderPage = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Campaign Optimization",
-      description: "Automatically optimize marketing campaigns for maximum ROI using machine learning"
+      title: "AI-Powered Conversations",
+      description: "Advanced natural language processing for human-like interactions"
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Smart Audience Targeting",
-      description: "AI-powered audience segmentation and personalized targeting strategies"
+      icon: <Code className="w-6 h-6" />,
+      title: "No-Code Builder",
+      description: "Drag-and-drop interface for easy chatbot creation"
     },
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email Marketing Automation",
-      description: "Create and send personalized email campaigns with AI-generated content"
+      icon: <Database className="w-6 h-6" />,
+      title: "Knowledge Base Integration",
+      description: "Connect to your existing documentation and FAQs"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive marketing analytics with predictive insights and recommendations"
+      title: "Analytics Dashboard",
+      description: "Track conversations, user satisfaction, and performance metrics"
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Channel Management",
-      description: "Manage social media, email, and advertising campaigns from one platform"
+      title: "Multi-Language Support",
+      description: "Support for 50+ languages with automatic translation"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Compliance & Security",
-      description: "GDPR compliant with enterprise-grade security and data protection"
+      title: "Enterprise Security",
+      description: "SOC 2 compliant with end-to-end encryption"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$79",
+      price: "$29",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 10,000 contacts",
-        "Basic AI optimization",
-        "Email marketing automation",
-        "Social media scheduling",
-        "Basic analytics",
-        "Email support"
+        "Up to 1,000 conversations/month",
+        "Basic AI responses",
+        "Email support",
+        "Standard templates",
+        "Basic analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$199",
+      price: "$79",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 50,000 contacts",
-        "Advanced AI optimization",
-        "Multi-channel campaigns",
-        "Advanced analytics",
-        "A/B testing",
+        "Up to 10,000 conversations/month",
+        "Advanced AI with custom training",
         "Priority support",
-        "API access"
+        "Custom branding",
+        "Advanced analytics",
+        "API access",
+        "Multi-language support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$499",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited contacts",
+        "Unlimited conversations",
         "Custom AI models",
+        "24/7 dedicated support",
         "White-label solution",
         "Advanced integrations",
-        "Dedicated account manager",
         "Custom development",
         "SLA guarantee"
       ],
@@ -89,24 +88,24 @@ const ZionAIMarketingAutomationPage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "E-commerce Brand",
-      role: "Marketing Director",
-      content: "Zion AI Marketing Automation increased our conversion rates by 150% and reduced our marketing costs by 40%. The AI optimization is incredible.",
+      name: "Sarah Chen",
+      company: "TechStart Inc.",
+      role: "Customer Success Manager",
+      content: "Zion AI Chatbot Builder reduced our support tickets by 70% and improved customer satisfaction significantly.",
       rating: 5
     },
     {
-      name: "Robert Kim",
-      company: "SaaS Startup",
-      role: "Growth Manager",
-      content: "The audience targeting is spot-on. We're reaching the right people at the right time with the right message. ROI has never been better.",
+      name: "Michael Rodriguez",
+      company: "E-commerce Solutions",
+      role: "Operations Director",
+      content: "The no-code interface made it incredibly easy to create sophisticated chatbots. Our team was up and running in hours.",
       rating: 5
     },
     {
-      name: "Lisa Thompson",
+      name: "Emily Johnson",
       company: "Digital Agency",
       role: "CEO",
-      content: "This platform has transformed how we manage client campaigns. The automation saves us hours every day and delivers better results.",
+      content: "The analytics dashboard provides incredible insights into customer behavior. Highly recommended!",
       rating: 5
     }
   ];
@@ -114,10 +113,10 @@ const ZionAIMarketingAutomationPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="Zion AI Marketing Automation - AI-Powered Marketing Platform | Zion Tech Group"
-        description="Automate and optimize your marketing with AI. Smart targeting, email automation, multi-channel campaigns. Boost ROI with intelligent marketing automation."
-        keywords="AI marketing automation, marketing automation platform, email marketing, social media automation, marketing AI, campaign optimization"
-        canonical="https://ziontechgroup.com/zion-ai-marketing-automation"
+        title="Zion AI Chatbot Builder - No-Code AI Chatbot Platform | Zion Tech Group"
+        description="Build intelligent chatbots without coding. AI-powered conversations, no-code builder, analytics dashboard. Start free trial today!"
+        keywords="AI chatbot builder, no-code chatbot, conversational AI, customer support automation, chatbot platform, AI assistant"
+        canonical="https://ziontechgroup.com/zion-ai-chatbot-builder"
       />
 
       {/* Hero Section */}
@@ -130,20 +129,20 @@ const ZionAIMarketingAutomationPage = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 AI Marketing Platform 2024</span>
+            <span className="text-cyan-400 text-sm font-medium">#1 AI Chatbot Platform 2024</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI-Powered
+            Build AI Chatbots
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
               {" "}
-              Marketing Automation
+              Without Coding
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Automate and optimize your marketing campaigns with AI. Smart targeting, personalized content, 
-            and multi-channel automation that drives real results and maximizes ROI.
+            Create intelligent, conversational AI chatbots in minutes with our no-code platform. 
+            Boost customer engagement, reduce support costs, and scale your business with AI.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -170,10 +169,10 @@ const ZionAIMarketingAutomationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Intelligent Marketing Features
+              Powerful Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to create, manage, and optimize high-performing marketing campaigns.
+              Everything you need to build, deploy, and manage intelligent chatbots that deliver exceptional customer experiences.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -202,10 +201,10 @@ const ZionAIMarketingAutomationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Marketing-Focused Pricing
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Scale your marketing with plans designed for businesses of all sizes.
+              Choose the plan that fits your business needs. All plans include our core features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -262,10 +261,10 @@ const ZionAIMarketingAutomationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Marketing Teams
+              Trusted by 10,000+ Businesses
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what marketing professionals say about Zion AI Marketing Automation
+              See what our customers say about Zion AI Chatbot Builder
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -294,10 +293,10 @@ const ZionAIMarketingAutomationPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Transform Your Marketing Today
+            Ready to Build Your AI Chatbot?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses using AI to automate and optimize their marketing campaigns for maximum ROI.
+            Join thousands of businesses using Zion AI Chatbot Builder to enhance customer experience and reduce support costs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -311,7 +310,7 @@ const ZionAIMarketingAutomationPage = () => {
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-              Watch Demo
+              Schedule Demo
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
@@ -321,4 +320,4 @@ const ZionAIMarketingAutomationPage = () => {
   );
 };
 
-export default ZionAIMarketingAutomationPage;
+export default ZionAIChatbotBuilderPage;

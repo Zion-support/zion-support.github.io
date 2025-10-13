@@ -175,6 +175,20 @@ const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
 
+// New Micro SAAS Pages
+const ZionAIChatbotBuilderPage = React.lazy(
+  () => import("./app/zion-ai-chatbot-builder/page"),
+);
+const ZionAIVideoGeneratorPage = React.lazy(
+  () => import("./app/zion-ai-video-generator/page"),
+);
+const ZionAICodeAssistantPage = React.lazy(
+  () => import("./app/zion-ai-code-assistant/page"),
+);
+const ZionAIMarketingAutomationPage = React.lazy(
+  () => import("./app/zion-ai-marketing-automation/page"),
+);
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
   () => import("./app/5g-data-analytics/page"),
@@ -408,6 +422,24 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-chatbot-builder"
+                    element={<ZionAIChatbotBuilderPage />}
+                  />
+                  <Route
+                    path="/zion-ai-video-generator"
+                    element={<ZionAIVideoGeneratorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-code-assistant"
+                    element={<ZionAICodeAssistantPage />}
+                  />
+                  <Route
+                    path="/zion-ai-marketing-automation"
+                    element={<ZionAIMarketingAutomationPage />}
                   />
 
                   {/* 5G Solutions Routes */}

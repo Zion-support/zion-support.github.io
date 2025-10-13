@@ -1,87 +1,87 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Target, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Star, Sparkles, Brain, Mail, Globe, TrendingUp } from 'lucide-react';
+import { Video, Play, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Star, Sparkles, Brain, Code, Database, Globe } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const ZionAIMarketingAutomationPage = () => {
+const ZionAIVideoGeneratorPage = () => {
   const features = [
     {
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Campaign Optimization",
-      description: "Automatically optimize marketing campaigns for maximum ROI using machine learning"
+      title: "AI Video Creation",
+      description: "Generate professional videos from text prompts using advanced AI"
     },
     {
-      icon: <Target className="w-6 h-6" />,
-      title: "Smart Audience Targeting",
-      description: "AI-powered audience segmentation and personalized targeting strategies"
+      icon: <Play className="w-6 h-6" />,
+      title: "Multiple Formats",
+      description: "Create videos in various formats: social media, marketing, training, and more"
     },
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email Marketing Automation",
-      description: "Create and send personalized email campaigns with AI-generated content"
+      icon: <Code className="w-6 h-6" />,
+      title: "No Technical Skills",
+      description: "Simple drag-and-drop interface for easy video creation"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive marketing analytics with predictive insights and recommendations"
+      title: "Performance Analytics",
+      description: "Track video performance and engagement metrics"
     },
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "Multi-Channel Management",
-      description: "Manage social media, email, and advertising campaigns from one platform"
+      title: "Multi-Language Support",
+      description: "Generate videos in 30+ languages with voice synthesis"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Compliance & Security",
-      description: "GDPR compliant with enterprise-grade security and data protection"
+      title: "Commercial License",
+      description: "Full commercial rights for all generated content"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$79",
+      name: "Creator",
+      price: "$39",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for content creators",
       features: [
-        "Up to 10,000 contacts",
-        "Basic AI optimization",
-        "Email marketing automation",
-        "Social media scheduling",
-        "Basic analytics",
-        "Email support"
+        "Up to 50 videos/month",
+        "HD quality (1080p)",
+        "Basic templates",
+        "Standard voice synthesis",
+        "Email support",
+        "Watermark removal"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$199",
+      name: "Business",
+      price: "$99",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for businesses",
       features: [
-        "Up to 50,000 contacts",
-        "Advanced AI optimization",
-        "Multi-channel campaigns",
-        "Advanced analytics",
-        "A/B testing",
+        "Up to 200 videos/month",
+        "4K quality available",
+        "Premium templates",
+        "Advanced voice synthesis",
         "Priority support",
+        "Custom branding",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$499",
+      price: "$299",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited contacts",
-        "Custom AI models",
+        "Unlimited videos",
+        "4K quality included",
+        "Custom templates",
+        "Premium voice synthesis",
+        "24/7 dedicated support",
         "White-label solution",
-        "Advanced integrations",
-        "Dedicated account manager",
-        "Custom development",
-        "SLA guarantee"
+        "Custom development"
       ],
       popular: false
     }
@@ -89,24 +89,24 @@ const ZionAIMarketingAutomationPage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "E-commerce Brand",
-      role: "Marketing Director",
-      content: "Zion AI Marketing Automation increased our conversion rates by 150% and reduced our marketing costs by 40%. The AI optimization is incredible.",
+      name: "Alex Thompson",
+      company: "Marketing Agency",
+      role: "Creative Director",
+      content: "Zion AI Video Generator has revolutionized our content creation process. We can now produce high-quality videos in minutes instead of hours.",
       rating: 5
     },
     {
-      name: "Robert Kim",
-      company: "SaaS Startup",
-      role: "Growth Manager",
-      content: "The audience targeting is spot-on. We're reaching the right people at the right time with the right message. ROI has never been better.",
+      name: "Maria Garcia",
+      company: "E-learning Platform",
+      role: "Content Manager",
+      content: "The AI-generated videos are incredibly realistic and engaging. Our students love the interactive content we create.",
       rating: 5
     },
     {
-      name: "Lisa Thompson",
-      company: "Digital Agency",
+      name: "David Kim",
+      company: "Social Media Agency",
       role: "CEO",
-      content: "This platform has transformed how we manage client campaigns. The automation saves us hours every day and delivers better results.",
+      content: "This tool has increased our video production capacity by 500%. The quality is outstanding and the interface is intuitive.",
       rating: 5
     }
   ];
@@ -114,10 +114,10 @@ const ZionAIMarketingAutomationPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="Zion AI Marketing Automation - AI-Powered Marketing Platform | Zion Tech Group"
-        description="Automate and optimize your marketing with AI. Smart targeting, email automation, multi-channel campaigns. Boost ROI with intelligent marketing automation."
-        keywords="AI marketing automation, marketing automation platform, email marketing, social media automation, marketing AI, campaign optimization"
-        canonical="https://ziontechgroup.com/zion-ai-marketing-automation"
+        title="Zion AI Video Generator - Create Professional Videos with AI | Zion Tech Group"
+        description="Generate professional videos from text using AI. Multiple formats, 4K quality, commercial license. Start creating today!"
+        keywords="AI video generator, video creation, AI video maker, automated video production, video marketing, content creation"
+        canonical="https://ziontechgroup.com/zion-ai-video-generator"
       />
 
       {/* Hero Section */}
@@ -130,20 +130,20 @@ const ZionAIMarketingAutomationPage = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 AI Marketing Platform 2024</span>
+            <span className="text-cyan-400 text-sm font-medium">#1 AI Video Platform 2024</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI-Powered
+            Create Professional Videos
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
               {" "}
-              Marketing Automation
+              with AI
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Automate and optimize your marketing campaigns with AI. Smart targeting, personalized content, 
-            and multi-channel automation that drives real results and maximizes ROI.
+            Transform your ideas into stunning videos instantly. Our AI-powered platform creates professional-quality videos 
+            from text prompts, perfect for marketing, training, and social media.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -151,7 +151,7 @@ const ZionAIMarketingAutomationPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Start Free Trial
+              Start Creating Videos
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -170,10 +170,10 @@ const ZionAIMarketingAutomationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Intelligent Marketing Features
+              Powerful Video Creation Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to create, manage, and optimize high-performing marketing campaigns.
+              Everything you need to create professional videos that engage your audience and drive results.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -202,10 +202,10 @@ const ZionAIMarketingAutomationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Marketing-Focused Pricing
+              Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Scale your marketing with plans designed for businesses of all sizes.
+              Flexible pricing options to fit your video creation needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -262,10 +262,10 @@ const ZionAIMarketingAutomationPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Marketing Teams
+              Loved by Content Creators
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what marketing professionals say about Zion AI Marketing Automation
+              See what our users say about Zion AI Video Generator
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -294,10 +294,10 @@ const ZionAIMarketingAutomationPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Transform Your Marketing Today
+            Start Creating Amazing Videos Today
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses using AI to automate and optimize their marketing campaigns for maximum ROI.
+            Join thousands of creators and businesses using AI to produce professional videos at scale.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -321,4 +321,4 @@ const ZionAIMarketingAutomationPage = () => {
   );
 };
 
-export default ZionAIMarketingAutomationPage;
+export default ZionAIVideoGeneratorPage;
