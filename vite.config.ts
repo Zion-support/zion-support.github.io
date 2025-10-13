@@ -83,15 +83,18 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          // Core React libraries - split into smaller chunks
+          if (id.includes('react') && !id.includes('react-dom')) {
+            return 'react-core'
+          }
+          if (id.includes('react-dom')) {
+            return 'react-dom'
           }
           // Router
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - split animations and icons
           if (id.includes('framer-motion')) {
             return 'animations'
           }
@@ -118,7 +121,7 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - group by category
+          // AI service pages - more granular splitting
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
@@ -133,9 +136,15 @@ export default defineConfig({
             if (serviceName?.includes('customer') || serviceName?.includes('support')) {
               return 'ai-customer'
             }
+            if (serviceName?.includes('voice') || serviceName?.includes('assistant')) {
+              return 'ai-voice'
+            }
+            if (serviceName?.includes('marketing') || serviceName?.includes('automation')) {
+              return 'ai-marketing'
+            }
             return 'ai-other'
           }
-          // Zion service pages - group by category
+          // Zion service pages - more granular splitting
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/zion-')[1]?.split('/')[0];
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
@@ -147,15 +156,24 @@ export default defineConfig({
             if (serviceName?.includes('security') || serviceName?.includes('shield')) {
               return 'zion-security'
             }
+            if (serviceName?.includes('video') || serviceName?.includes('content')) {
+              return 'zion-content'
+            }
+            if (serviceName?.includes('finance') || serviceName?.includes('invoice')) {
+              return 'zion-finance'
+            }
             return 'zion-other'
           }
           // 5G service pages - group together
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
-          // Main pages
+          // Main pages - split by importance
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+            if (id.includes('/about') || id.includes('/contact')) {
+              return 'main-important'
+            }
             return 'main-pages'
           }
           // Default chunk for other modules

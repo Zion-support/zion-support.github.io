@@ -1,40 +1,14 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T09:02:12.194Z",
-=======
-  "timestamp": "2025-10-13T09:23:16.492Z",
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
+  "timestamp": "2025-10-13T10:06:14.321Z",
   "buildStats": {
-    "totalFiles": 20,
-    "totalSize": 590033,
-    "jsFiles": 14,
-<<<<<<< HEAD
-    "jsSize": 522390,
-=======
-  "timestamp": "2025-10-13T09:04:40.055Z",
-  "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 576758,
-    "jsFiles": 14,
-    "jsSize": 555173,
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
-=======
-  "timestamp": "2025-10-13T09:11:05.548Z",
-  "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 621614,
-    "jsFiles": 14,
-    "jsSize": 600029,
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
-=======
-    "jsSize": 564892,
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
+    "totalFiles": 24,
+    "totalSize": 660229,
+    "jsFiles": 19,
+    "jsSize": 634917,
     "cssFiles": 1,
     "cssSize": 1811,
-    "imageFiles": 1,
-    "imageSize": 392
+    "imageFiles": 0,
+    "imageSize": 0
   },
   "recommendations": [
     {

@@ -17,6 +17,7 @@ import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
+import RealTimePerformanceMonitor from "./app/components/RealTimePerformanceMonitor";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -114,6 +115,32 @@ function App() {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
       console.log('Zion Tech Group App initialized');
+      
+      // Register service worker for PWA functionality
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('Service Worker registered successfully:', registration);
+          })
+          .catch((error) => {
+            console.log('Service Worker registration failed:', error);
+          });
+      }
+      
+      // Add PWA install prompt
+      let deferredPrompt;
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        // You can show a custom install button here
+        console.log('PWA install prompt available');
+      });
+      
+      // Track PWA install
+      window.addEventListener('appinstalled', () => {
+        console.log('PWA was installed');
+        // Track installation event
+      });
     }
   }, []);
 
@@ -230,6 +257,9 @@ function App() {
                           
                           <Footer />
                         </FuturisticBackground>
+                        
+                        {/* Real-time Performance Monitor - only in development */}
+                        {process.env.NODE_ENV === 'development' && <RealTimePerformanceMonitor />}
                       </div>
                     </Router>
                   </AccessibilityEnhancer>
