@@ -701,6 +701,557 @@ export default function AIServices() {
       reviews: 1123,
       link: "/ai-nlp-text-analysis",
       featured: false
+    },
+    {
+      id: "ai-voice-synthesis",
+      name: "AI Voice Synthesis",
+      description: "Advanced text-to-speech with natural voice generation, emotion control, and multi-language support",
+      price: "From $1,200/month",
+      icon: <Mic className="w-8 h-8" />,
+      color: "from-cyan-500 to-teal-500",
+      features: [
+        "Natural voice generation",
+        "Emotion & tone control",
+        "Multi-language support (100+ languages)",
+        "Custom voice cloning",
+        "Real-time synthesis",
+        "Batch processing",
+        "API integration",
+        "Voice customization"
+      ],
+      benefits: [
+        "Create natural-sounding voices",
+        "Reduce voice production costs",
+        "Scale voice content",
+        "Improve accessibility"
+      ],
+      category: "Voice AI",
+      rating: 4.8,
+      reviews: 987,
+      link: "/ai-voice-synthesis",
+      featured: false
+    },
+    {
+      id: "ai-predictive-maintenance-advanced",
+      name: "AI Predictive Maintenance Advanced",
+      description: "Next-generation equipment monitoring with IoT integration, failure prediction, and maintenance optimization",
+      price: "From $2,800/month",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500",
+      features: [
+        "IoT sensor integration",
+        "Advanced failure prediction",
+        "Maintenance scheduling optimization",
+        "Cost-benefit analysis",
+        "Real-time monitoring",
+        "Predictive analytics",
+        "Equipment health scoring",
+        "Integration with ERP systems"
+      ],
+      benefits: [
+        "Reduce downtime by 70%",
+        "Lower maintenance costs by 50%",
+        "Extend equipment lifespan",
+        "Optimize resource allocation"
+      ],
+      category: "IoT & Maintenance",
+      rating: 4.9,
+      reviews: 543,
+      link: "/ai-predictive-maintenance-advanced",
+      featured: false
+    },
+    {
+      id: "ai-customer-churn-prediction",
+      name: "AI Customer Churn Prediction",
+      description: "Advanced churn prediction with behavioral analysis, risk scoring, and retention strategies",
+      price: "From $1,800/month",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Behavioral pattern analysis",
+        "Churn risk scoring",
+        "Retention strategy recommendations",
+        "Real-time monitoring",
+        "Customer segmentation",
+        "Lifetime value prediction",
+        "Intervention triggers",
+        "ROI tracking"
+      ],
+      benefits: [
+        "Reduce churn by 45%",
+        "Increase customer lifetime value",
+        "Improve retention strategies",
+        "Optimize customer experience"
+      ],
+      category: "Analytics",
+      rating: 4.7,
+      reviews: 1234,
+      link: "/ai-customer-churn-prediction",
+      featured: false
+    },
+    {
+      id: "ai-content-moderation",
+      name: "AI Content Moderation",
+      description: "Automated content moderation with image, text, and video analysis for platform safety",
+      price: "From $1,500/month",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Multi-modal content analysis",
+        "Real-time moderation",
+        "Custom policy enforcement",
+        "False positive reduction",
+        "Bulk content processing",
+        "API integration",
+        "Custom model training",
+        "Compliance reporting"
+      ],
+      benefits: [
+        "Scale content moderation",
+        "Reduce manual review time",
+        "Improve platform safety",
+        "Ensure compliance"
+      ],
+      category: "Content",
+      rating: 4.8,
+      reviews: 876,
+      link: "/ai-content-moderation",
+      featured: false
+    },
+    {
+      id: "ai-demand-forecasting",
+      name: "AI Demand Forecasting",
+      description: "Intelligent demand prediction with seasonal analysis, trend detection, and inventory optimization",
+      price: "From $2,200/month",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-blue-500 to-indigo-500",
+      features: [
+        "Advanced forecasting models",
+        "Seasonal pattern recognition",
+        "External factor integration",
+        "Inventory optimization",
+        "Demand planning",
+        "Scenario analysis",
+        "Real-time updates",
+        "Integration with ERP"
+      ],
+      benefits: [
+        "Improve forecast accuracy by 60%",
+        "Reduce inventory costs",
+        "Optimize supply chain",
+        "Increase customer satisfaction"
+      ],
+      category: "Supply Chain",
+      rating: 4.8,
+      reviews: 654,
+      link: "/ai-demand-forecasting",
+      featured: false
+    },
+    {
+      id: "ai-personalization-engine",
+      name: "AI Personalization Engine",
+      description: "Advanced personalization with real-time recommendations, A/B testing, and behavioral analysis",
+      price: "From $2,100/month",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "Real-time personalization",
+        "Behavioral analysis",
+        "A/B testing automation",
+        "Multi-channel consistency",
+        "Dynamic content generation",
+        "Performance optimization",
+        "Custom algorithms",
+        "Analytics dashboard"
+      ],
+      benefits: [
+        "Increase conversion rates by 50%",
+        "Improve user engagement",
+        "Boost customer satisfaction",
+        "Scale personalization efforts"
+      ],
+      category: "Personalization",
+      rating: 4.9,
+      reviews: 1456,
+      link: "/ai-personalization-engine",
+      featured: false
+    },
+    {
+      id: "ai-quality-assurance",
+      name: "AI Quality Assurance",
+      description: "Automated quality testing with defect detection, performance analysis, and compliance checking",
+      price: "From $1,700/month",
+      icon: <CheckCircle className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "Automated defect detection",
+        "Performance analysis",
+        "Compliance checking",
+        "Visual testing",
+        "API testing",
+        "Load testing",
+        "Security scanning",
+        "Regression testing"
+      ],
+      benefits: [
+        "Reduce testing time by 80%",
+        "Improve product quality",
+        "Catch defects early",
+        "Ensure compliance"
+      ],
+      category: "Development",
+      rating: 4.7,
+      reviews: 1123,
+      link: "/ai-quality-assurance",
+      featured: false
+    },
+    {
+      id: "ai-energy-optimization",
+      name: "AI Energy Optimization",
+      description: "Smart energy management with consumption optimization, renewable integration, and cost reduction",
+      price: "From $2,300/month",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      features: [
+        "Energy consumption optimization",
+        "Renewable energy integration",
+        "Cost reduction analysis",
+        "Predictive maintenance",
+        "Smart grid integration",
+        "Carbon footprint tracking",
+        "Real-time monitoring",
+        "Custom optimization models"
+      ],
+      benefits: [
+        "Reduce energy costs by 30%",
+        "Improve sustainability",
+        "Optimize energy usage",
+        "Meet environmental goals"
+      ],
+      category: "Energy Management",
+      rating: 4.8,
+      reviews: 432,
+      link: "/ai-energy-optimization",
+      featured: false
+    },
+    {
+      id: "ai-logistics-optimization",
+      name: "AI Logistics Optimization",
+      description: "Intelligent logistics with route optimization, delivery prediction, and supply chain efficiency",
+      price: "From $2,500/month",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "Route optimization",
+        "Delivery time prediction",
+        "Fleet management",
+        "Warehouse optimization",
+        "Last-mile delivery",
+        "Cost optimization",
+        "Real-time tracking",
+        "Integration with logistics systems"
+      ],
+      benefits: [
+        "Reduce delivery costs by 25%",
+        "Improve delivery times",
+        "Optimize fleet utilization",
+        "Enhance customer satisfaction"
+      ],
+      category: "Supply Chain",
+      rating: 4.7,
+      reviews: 789,
+      link: "/ai-logistics-optimization",
+      featured: false
+    },
+    {
+      id: "ai-cyber-threat-intelligence",
+      name: "AI Cyber Threat Intelligence",
+      description: "Advanced threat intelligence with real-time monitoring, attack prediction, and response automation",
+      price: "From $3,500/month",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Real-time threat monitoring",
+        "Attack prediction",
+        "Threat intelligence feeds",
+        "Automated response",
+        "Vulnerability assessment",
+        "Incident analysis",
+        "Threat hunting",
+        "Compliance reporting"
+      ],
+      benefits: [
+        "Prevent 99% of cyber attacks",
+        "Reduce response time by 90%",
+        "Improve security posture",
+        "Ensure compliance"
+      ],
+      category: "Security",
+      rating: 4.9,
+      reviews: 567,
+      link: "/ai-cyber-threat-intelligence",
+      featured: false
+    },
+    {
+      id: "ai-customer-lifetime-value",
+      name: "AI Customer Lifetime Value",
+      description: "Predictive customer value analysis with segmentation, retention strategies, and revenue optimization",
+      price: "From $1,900/month",
+      icon: <DollarSign className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Customer value prediction",
+        "Segmentation analysis",
+        "Retention strategies",
+        "Revenue optimization",
+        "Churn prevention",
+        "Upselling opportunities",
+        "Customer journey mapping",
+        "ROI analysis"
+      ],
+      benefits: [
+        "Increase customer value by 40%",
+        "Improve retention rates",
+        "Optimize marketing spend",
+        "Boost revenue growth"
+      ],
+      category: "Analytics",
+      rating: 4.8,
+      reviews: 876,
+      link: "/ai-customer-lifetime-value",
+      featured: false
+    },
+    {
+      id: "ai-automated-testing",
+      name: "AI Automated Testing",
+      description: "Intelligent test automation with self-healing tests, smart test generation, and continuous testing",
+      price: "From $1,600/month",
+      icon: <CheckCircle className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "Self-healing test automation",
+        "Smart test generation",
+        "Continuous testing",
+        "Cross-browser testing",
+        "API testing",
+        "Performance testing",
+        "Visual regression testing",
+        "CI/CD integration"
+      ],
+      benefits: [
+        "Reduce testing time by 70%",
+        "Improve test coverage",
+        "Catch bugs early",
+        "Ensure quality releases"
+      ],
+      category: "Development",
+      rating: 4.7,
+      reviews: 1234,
+      link: "/ai-automated-testing",
+      featured: false
+    },
+    {
+      id: "ai-conversation-analytics",
+      name: "AI Conversation Analytics",
+      description: "Advanced conversation analysis with sentiment tracking, topic extraction, and performance insights",
+      price: "From $1,400/month",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500",
+      features: [
+        "Sentiment analysis",
+        "Topic extraction",
+        "Conversation flow analysis",
+        "Performance metrics",
+        "Agent insights",
+        "Customer satisfaction tracking",
+        "Trend identification",
+        "Real-time analytics"
+      ],
+      benefits: [
+        "Improve conversation quality",
+        "Increase customer satisfaction",
+        "Optimize agent performance",
+        "Identify improvement opportunities"
+      ],
+      category: "Customer Service",
+      rating: 4.6,
+      reviews: 987,
+      link: "/ai-conversation-analytics",
+      featured: false
+    },
+    {
+      id: "ai-predictive-analytics",
+      name: "AI Predictive Analytics",
+      description: "Comprehensive predictive modeling with forecasting, trend analysis, and strategic insights",
+      price: "From $2,400/month",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "Advanced forecasting models",
+        "Trend analysis",
+        "Scenario planning",
+        "Risk assessment",
+        "Strategic insights",
+        "Real-time predictions",
+        "Custom model development",
+        "Integration capabilities"
+      ],
+      benefits: [
+        "Make data-driven decisions",
+        "Predict future trends",
+        "Reduce business risks",
+        "Optimize strategies"
+      ],
+      category: "Analytics",
+      rating: 4.8,
+      reviews: 1123,
+      link: "/ai-predictive-analytics",
+      featured: false
+    },
+    {
+      id: "ai-workflow-intelligence",
+      name: "AI Workflow Intelligence",
+      description: "Intelligent workflow optimization with process analysis, automation recommendations, and efficiency improvements",
+      price: "From $1,800/month",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500",
+      features: [
+        "Process analysis",
+        "Automation recommendations",
+        "Bottleneck identification",
+        "Efficiency optimization",
+        "Workflow visualization",
+        "Performance monitoring",
+        "Custom automation",
+        "Integration management"
+      ],
+      benefits: [
+        "Improve workflow efficiency by 50%",
+        "Reduce manual work",
+        "Identify optimization opportunities",
+        "Scale business processes"
+      ],
+      category: "Automation",
+      rating: 4.7,
+      reviews: 654,
+      link: "/ai-workflow-intelligence",
+      featured: false
+    },
+    {
+      id: "ai-emotion-recognition",
+      name: "AI Emotion Recognition",
+      description: "Advanced emotion detection with facial analysis, voice emotion, and behavioral pattern recognition",
+      price: "From $1,500/month",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500",
+      features: [
+        "Facial emotion recognition",
+        "Voice emotion analysis",
+        "Behavioral pattern recognition",
+        "Real-time processing",
+        "Multi-modal analysis",
+        "Custom emotion models",
+        "API integration",
+        "Privacy compliance"
+      ],
+      benefits: [
+        "Understand customer emotions",
+        "Improve user experience",
+        "Enhance personalization",
+        "Optimize interactions"
+      ],
+      category: "Computer Vision",
+      rating: 4.6,
+      reviews: 789,
+      link: "/ai-emotion-recognition",
+      featured: false
+    },
+    {
+      id: "ai-knowledge-graph",
+      name: "AI Knowledge Graph",
+      description: "Intelligent knowledge management with entity relationships, semantic search, and knowledge discovery",
+      price: "From $2,000/month",
+      icon: <Database className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      features: [
+        "Entity relationship mapping",
+        "Semantic search",
+        "Knowledge discovery",
+        "Graph visualization",
+        "Query optimization",
+        "Real-time updates",
+        "API access",
+        "Custom ontologies"
+      ],
+      benefits: [
+        "Organize complex information",
+        "Improve search capabilities",
+        "Discover hidden insights",
+        "Enhance decision making"
+      ],
+      category: "Data Analytics",
+      rating: 4.8,
+      reviews: 432,
+      link: "/ai-knowledge-graph",
+      featured: false
+    },
+    {
+      id: "ai-anomaly-detection",
+      name: "AI Anomaly Detection",
+      description: "Advanced anomaly detection with real-time monitoring, pattern recognition, and alert systems",
+      price: "From $1,700/month",
+      icon: <Activity className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Real-time anomaly detection",
+        "Pattern recognition",
+        "Alert systems",
+        "False positive reduction",
+        "Custom detection models",
+        "Historical analysis",
+        "Integration capabilities",
+        "Dashboard visualization"
+      ],
+      benefits: [
+        "Detect anomalies instantly",
+        "Prevent issues early",
+        "Reduce false alarms",
+        "Improve system reliability"
+      ],
+      category: "Monitoring",
+      rating: 4.7,
+      reviews: 876,
+      link: "/ai-anomaly-detection",
+      featured: false
+    },
+    {
+      id: "ai-content-optimization",
+      name: "AI Content Optimization",
+      description: "Intelligent content optimization with SEO analysis, readability improvement, and engagement enhancement",
+      price: "From $1,300/month",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "SEO optimization analysis",
+        "Readability improvement",
+        "Engagement enhancement",
+        "A/B testing",
+        "Content scoring",
+        "Optimization suggestions",
+        "Performance tracking",
+        "Multi-language support"
+      ],
+      benefits: [
+        "Improve content performance",
+        "Increase engagement rates",
+        "Boost SEO rankings",
+        "Optimize content strategy"
+      ],
+      category: "Content",
+      rating: 4.6,
+      reviews: 1123,
+      link: "/ai-content-optimization",
+      featured: false
     }
   ];
 
@@ -722,12 +1273,14 @@ export default function AIServices() {
     { name: "Computer Vision", count: aiServices.filter(s => s.category === "Computer Vision").length, active: false },
     { name: "IoT & Maintenance", count: aiServices.filter(s => s.category === "IoT & Maintenance").length, active: false },
     { name: "Personalization", count: aiServices.filter(s => s.category === "Personalization").length, active: false },
-    { name: "Language Processing", count: aiServices.filter(s => s.category === "Language Processing").length, active: false }
+    { name: "Language Processing", count: aiServices.filter(s => s.category === "Language Processing").length, active: false },
+    { name: "Energy Management", count: aiServices.filter(s => s.category === "Energy Management").length, active: false },
+    { name: "Monitoring", count: aiServices.filter(s => s.category === "Monitoring").length, active: false }
   ];
 
   const stats = [
-    { number: "35+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
-    { number: "20,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
+    { number: "50+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
+    { number: "30,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
     { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
@@ -841,11 +1394,11 @@ export default function AIServices() {
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">35+ AI services</span>
+                  <span className="text-sm">50+ AI services</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">20,000+ models trained</span>
+                  <span className="text-sm">30,000+ models trained</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />

@@ -997,6 +997,657 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "zion-ai-video-editor",
+      name: "Zion AI Video Editor",
+      description: "AI-powered video editing with automatic cuts, transitions, and content optimization",
+      price: "From $67/month",
+      originalPrice: "$112/month",
+      discount: "40% OFF",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI automatic video editing",
+        "Smart cut detection",
+        "Auto-transition generation",
+        "Background music matching",
+        "Text overlay automation",
+        "Color correction AI",
+        "Multi-format export",
+        "Cloud rendering"
+      ],
+      benefits: [
+        "Edit videos 10x faster",
+        "Professional quality output",
+        "No editing skills required",
+        "Scale video production"
+      ],
+      category: "Content Creation",
+      rating: 4.8,
+      reviews: 892,
+      link: "/zion-ai-video-editor",
+      featured: true
+    },
+    {
+      id: "zion-ai-email-writer",
+      name: "Zion AI Email Writer",
+      description: "Intelligent email composition with tone optimization, A/B testing, and performance tracking",
+      price: "From $29/month",
+      originalPrice: "$48/month",
+      discount: "40% OFF",
+      icon: <Mail className="w-8 h-8" />,
+      color: "from-blue-500 to-indigo-500",
+      features: [
+        "AI email composition",
+        "Tone optimization",
+        "A/B testing automation",
+        "Performance tracking",
+        "Template library",
+        "Personalization engine",
+        "Spam score optimization",
+        "CRM integration"
+      ],
+      benefits: [
+        "Increase open rates by 50%",
+        "Save 8+ hours weekly",
+        "Improve email performance",
+        "Scale email campaigns"
+      ],
+      category: "Marketing",
+      rating: 4.7,
+      reviews: 1456,
+      link: "/zion-ai-email-writer",
+      featured: false
+    },
+    {
+      id: "zion-ai-customer-feedback",
+      name: "Zion AI Customer Feedback",
+      description: "Automated feedback collection, analysis, and actionable insights generation",
+      price: "From $35/month",
+      originalPrice: "$58/month",
+      discount: "40% OFF",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500",
+      features: [
+        "Automated feedback collection",
+        "Sentiment analysis",
+        "Actionable insights generation",
+        "Multi-channel integration",
+        "Real-time notifications",
+        "Trend analysis",
+        "Custom survey creation",
+        "ROI tracking"
+      ],
+      benefits: [
+        "Collect 5x more feedback",
+        "Identify issues instantly",
+        "Improve customer satisfaction",
+        "Make data-driven decisions"
+      ],
+      category: "Customer Experience",
+      rating: 4.6,
+      reviews: 678,
+      link: "/zion-ai-customer-feedback",
+      featured: false
+    },
+    {
+      id: "zion-ai-invoice-generator",
+      name: "Zion AI Invoice Generator",
+      description: "Smart invoice creation with automated calculations, payment tracking, and tax compliance",
+      price: "From $22/month",
+      originalPrice: "$37/month",
+      discount: "41% OFF",
+      icon: <Receipt className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "AI invoice generation",
+        "Automated calculations",
+        "Payment tracking",
+        "Tax compliance checking",
+        "Multi-currency support",
+        "Recurring billing",
+        "Client portal",
+        "Accounting integration"
+      ],
+      benefits: [
+        "Create invoices 5x faster",
+        "Reduce billing errors",
+        "Improve cash flow",
+        "Ensure tax compliance"
+      ],
+      category: "Finance",
+      rating: 4.8,
+      reviews: 1123,
+      link: "/zion-ai-invoice-generator",
+      featured: false
+    },
+    {
+      id: "zion-ai-appointment-scheduler",
+      name: "Zion AI Appointment Scheduler",
+      description: "Intelligent scheduling with conflict resolution, time zone handling, and automated reminders",
+      price: "From $31/month",
+      originalPrice: "$52/month",
+      discount: "40% OFF",
+      icon: <Calendar className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "AI conflict resolution",
+        "Time zone automation",
+        "Automated reminders",
+        "Calendar integration",
+        "Buffer time management",
+        "Recurring appointments",
+        "Client self-booking",
+        "Analytics dashboard"
+      ],
+      benefits: [
+        "Reduce no-shows by 60%",
+        "Save 6+ hours weekly",
+        "Improve scheduling efficiency",
+        "Enhance client experience"
+      ],
+      category: "Scheduling",
+      rating: 4.7,
+      reviews: 987,
+      link: "/zion-ai-appointment-scheduler",
+      featured: false
+    },
+    {
+      id: "zion-ai-competitor-tracker",
+      name: "Zion AI Competitor Tracker",
+      description: "Advanced competitor monitoring with price tracking, feature analysis, and market insights",
+      price: "From $45/month",
+      originalPrice: "$75/month",
+      discount: "40% OFF",
+      icon: <Eye className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500",
+      features: [
+        "Price tracking automation",
+        "Feature analysis",
+        "Market trend monitoring",
+        "Alert system",
+        "Competitive intelligence",
+        "SWOT analysis generation",
+        "Market share tracking",
+        "Custom reports"
+      ],
+      benefits: [
+        "Stay ahead of competitors",
+        "Identify market opportunities",
+        "Optimize pricing strategy",
+        "Make informed decisions"
+      ],
+      category: "Market Intelligence",
+      rating: 4.8,
+      reviews: 756,
+      link: "/zion-ai-competitor-tracker",
+      featured: false
+    },
+    {
+      id: "zion-ai-contract-analyzer",
+      name: "Zion AI Contract Analyzer",
+      description: "Intelligent contract analysis with risk assessment, clause extraction, and compliance checking",
+      price: "From $58/month",
+      originalPrice: "$97/month",
+      discount: "40% OFF",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "Contract risk assessment",
+        "Clause extraction",
+        "Compliance checking",
+        "Legal term analysis",
+        "Automated summaries",
+        "Version comparison",
+        "Deadline tracking",
+        "Integration with legal tools"
+      ],
+      benefits: [
+        "Reduce contract review time",
+        "Identify risks early",
+        "Ensure compliance",
+        "Improve contract quality"
+      ],
+      category: "Legal Tech",
+      rating: 4.9,
+      reviews: 432,
+      link: "/zion-ai-contract-analyzer",
+      featured: false
+    },
+    {
+      id: "zion-ai-team-collaboration",
+      name: "Zion AI Team Collaboration",
+      description: "AI-enhanced team workspace with smart task assignment, progress tracking, and communication optimization",
+      price: "From $38/month",
+      originalPrice: "$63/month",
+      discount: "40% OFF",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "Smart task assignment",
+        "Progress tracking AI",
+        "Communication optimization",
+        "Meeting insights",
+        "Workload balancing",
+        "Deadline prediction",
+        "Team performance analytics",
+        "Integration ecosystem"
+      ],
+      benefits: [
+        "Improve team productivity by 35%",
+        "Reduce project delays",
+        "Optimize resource allocation",
+        "Enhance collaboration"
+      ],
+      category: "Productivity",
+      rating: 4.6,
+      reviews: 1234,
+      link: "/zion-ai-team-collaboration",
+      featured: false
+    },
+    {
+      id: "zion-ai-customer-onboarding",
+      name: "Zion AI Customer Onboarding",
+      description: "Automated customer onboarding with personalized journeys, progress tracking, and success metrics",
+      price: "From $42/month",
+      originalPrice: "$70/month",
+      discount: "40% OFF",
+      icon: <Rocket className="w-8 h-8" />,
+      color: "from-cyan-500 to-teal-500",
+      features: [
+        "Personalized onboarding journeys",
+        "Progress tracking",
+        "Success metrics monitoring",
+        "Automated follow-ups",
+        "Interactive tutorials",
+        "Milestone celebrations",
+        "Churn prediction",
+        "Custom workflow builder"
+      ],
+      benefits: [
+        "Increase activation rates by 50%",
+        "Reduce churn by 40%",
+        "Improve customer satisfaction",
+        "Scale onboarding processes"
+      ],
+      category: "Customer Success",
+      rating: 4.8,
+      reviews: 876,
+      link: "/zion-ai-customer-onboarding",
+      featured: false
+    },
+    {
+      id: "zion-ai-seo-auditor",
+      name: "Zion AI SEO Auditor",
+      description: "Comprehensive SEO analysis with technical audits, content optimization, and ranking improvement",
+      price: "From $39/month",
+      originalPrice: "$65/month",
+      discount: "40% OFF",
+      icon: <Search className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Technical SEO audits",
+        "Content optimization suggestions",
+        "Keyword research & analysis",
+        "Competitor gap analysis",
+        "Ranking tracking",
+        "Site speed optimization",
+        "Mobile optimization check",
+        "Link building opportunities"
+      ],
+      benefits: [
+        "Improve search rankings by 60%",
+        "Increase organic traffic",
+        "Identify SEO opportunities",
+        "Save 15+ hours monthly"
+      ],
+      category: "SEO",
+      rating: 4.7,
+      reviews: 1456,
+      link: "/zion-ai-seo-auditor",
+      featured: false
+    },
+    {
+      id: "zion-ai-data-backup",
+      name: "Zion AI Data Backup",
+      description: "Intelligent data backup with automated scheduling, version control, and disaster recovery",
+      price: "From $25/month",
+      originalPrice: "$42/month",
+      discount: "40% OFF",
+      icon: <HardDrive className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      features: [
+        "Automated backup scheduling",
+        "Version control & history",
+        "Disaster recovery planning",
+        "Cross-platform sync",
+        "Encryption & security",
+        "Cloud storage integration",
+        "Restore testing",
+        "Compliance monitoring"
+      ],
+      benefits: [
+        "Protect critical data",
+        "Automate backup processes",
+        "Ensure business continuity",
+        "Meet compliance requirements"
+      ],
+      category: "Data Protection",
+      rating: 4.8,
+      reviews: 892,
+      link: "/zion-ai-data-backup",
+      featured: false
+    },
+    {
+      id: "zion-ai-performance-monitor",
+      name: "Zion AI Performance Monitor",
+      description: "Real-time performance monitoring with AI insights, anomaly detection, and optimization recommendations",
+      price: "From $47/month",
+      originalPrice: "$78/month",
+      discount: "40% OFF",
+      icon: <Monitor className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Real-time monitoring",
+        "AI anomaly detection",
+        "Performance optimization",
+        "Alert system",
+        "Historical analysis",
+        "Capacity planning",
+        "Root cause analysis",
+        "Custom dashboards"
+      ],
+      benefits: [
+        "Prevent downtime by 90%",
+        "Optimize system performance",
+        "Reduce maintenance costs",
+        "Improve user experience"
+      ],
+      category: "Monitoring",
+      rating: 4.9,
+      reviews: 1123,
+      link: "/zion-ai-performance-monitor",
+      featured: false
+    },
+    {
+      id: "zion-ai-email-verifier",
+      name: "Zion AI Email Verifier",
+      description: "Advanced email validation with deliverability optimization, bounce prevention, and list cleaning",
+      price: "From $19/month",
+      originalPrice: "$32/month",
+      discount: "41% OFF",
+      icon: <Mail className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "Email validation & verification",
+        "Deliverability optimization",
+        "Bounce prevention",
+        "List cleaning automation",
+        "Domain reputation checking",
+        "Spam trap detection",
+        "Bulk verification",
+        "API integration"
+      ],
+      benefits: [
+        "Improve deliverability by 40%",
+        "Reduce bounce rates",
+        "Protect sender reputation",
+        "Save on email costs"
+      ],
+      category: "Email Marketing",
+      rating: 4.6,
+      reviews: 678,
+      link: "/zion-ai-email-verifier",
+      featured: false
+    },
+    {
+      id: "zion-ai-content-calendar",
+      name: "Zion AI Content Calendar",
+      description: "Intelligent content planning with AI suggestions, optimal timing, and performance tracking",
+      price: "From $28/month",
+      originalPrice: "$47/month",
+      discount: "40% OFF",
+      icon: <Calendar className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI content suggestions",
+        "Optimal timing recommendations",
+        "Performance tracking",
+        "Multi-platform scheduling",
+        "Content gap analysis",
+        "Trend identification",
+        "Team collaboration",
+        "Analytics dashboard"
+      ],
+      benefits: [
+        "Plan content 5x faster",
+        "Improve engagement rates",
+        "Maintain consistent posting",
+        "Scale content production"
+      ],
+      category: "Content Management",
+      rating: 4.7,
+      reviews: 987,
+      link: "/zion-ai-content-calendar",
+      featured: false
+    },
+    {
+      id: "zion-ai-customer-segmentation",
+      name: "Zion AI Customer Segmentation",
+      description: "Intelligent customer segmentation with behavioral analysis, persona creation, and targeted campaigns",
+      price: "From $44/month",
+      originalPrice: "$73/month",
+      discount: "40% OFF",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "Behavioral analysis",
+        "Persona creation",
+        "Segmentation automation",
+        "Targeted campaign suggestions",
+        "Customer lifetime value prediction",
+        "Churn risk assessment",
+        "Personalization engine",
+        "ROI tracking"
+      ],
+      benefits: [
+        "Improve targeting by 60%",
+        "Increase conversion rates",
+        "Reduce marketing waste",
+        "Enhance customer experience"
+      ],
+      category: "Marketing",
+      rating: 4.8,
+      reviews: 1234,
+      link: "/zion-ai-customer-segmentation",
+      featured: false
+    },
+    {
+      id: "zion-ai-api-documentation",
+      name: "Zion AI API Documentation",
+      description: "Automated API documentation generation with interactive examples, testing tools, and version management",
+      price: "From $35/month",
+      originalPrice: "$58/month",
+      discount: "40% OFF",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      features: [
+        "Automated documentation generation",
+        "Interactive API explorer",
+        "Code examples generation",
+        "Version management",
+        "Testing tools integration",
+        "Developer portal",
+        "SDK generation",
+        "Analytics & insights"
+      ],
+      benefits: [
+        "Create docs 10x faster",
+        "Improve developer experience",
+        "Reduce support tickets",
+        "Increase API adoption"
+      ],
+      category: "Development",
+      rating: 4.7,
+      reviews: 567,
+      link: "/zion-ai-api-documentation",
+      featured: false
+    },
+    {
+      id: "zion-ai-inventory-optimizer",
+      name: "Zion AI Inventory Optimizer",
+      description: "Smart inventory management with demand forecasting, reorder optimization, and cost reduction",
+      price: "From $52/month",
+      originalPrice: "$87/month",
+      discount: "40% OFF",
+      icon: <Package className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "Demand forecasting",
+        "Reorder point optimization",
+        "Cost reduction analysis",
+        "Supplier performance tracking",
+        "Seasonal adjustment",
+        "Multi-location management",
+        "Integration with POS/ERP",
+        "Real-time alerts"
+      ],
+      benefits: [
+        "Reduce inventory costs by 30%",
+        "Prevent stockouts",
+        "Optimize cash flow",
+        "Improve supplier relationships"
+      ],
+      category: "Inventory Management",
+      rating: 4.8,
+      reviews: 876,
+      link: "/zion-ai-inventory-optimizer",
+      featured: false
+    },
+    {
+      id: "zion-ai-social-listening",
+      name: "Zion AI Social Listening",
+      description: "Advanced social media monitoring with sentiment analysis, trend detection, and brand reputation tracking",
+      price: "From $41/month",
+      originalPrice: "$68/month",
+      discount: "40% OFF",
+      icon: <Share className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      features: [
+        "Multi-platform monitoring",
+        "Sentiment analysis",
+        "Trend detection",
+        "Brand mention tracking",
+        "Crisis management alerts",
+        "Competitor analysis",
+        "Influencer identification",
+        "Custom reporting"
+      ],
+      benefits: [
+        "Monitor brand reputation 24/7",
+        "Identify trending topics",
+        "Catch issues early",
+        "Improve social strategy"
+      ],
+      category: "Social Media",
+      rating: 4.6,
+      reviews: 1123,
+      link: "/zion-ai-social-listening",
+      featured: false
+    },
+    {
+      id: "zion-ai-password-manager",
+      name: "Zion AI Password Manager",
+      description: "Secure password management with AI-powered security analysis, breach monitoring, and team sharing",
+      price: "From $15/month",
+      originalPrice: "$25/month",
+      discount: "40% OFF",
+      icon: <Lock className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Secure password storage",
+        "AI security analysis",
+        "Breach monitoring",
+        "Team password sharing",
+        "Auto-fill capabilities",
+        "Password generation",
+        "Multi-device sync",
+        "Compliance reporting"
+      ],
+      benefits: [
+        "Enhance security posture",
+        "Reduce password-related risks",
+        "Simplify team management",
+        "Ensure compliance"
+      ],
+      category: "Security",
+      rating: 4.9,
+      reviews: 2156,
+      link: "/zion-ai-password-manager",
+      featured: false
+    },
+    {
+      id: "zion-ai-time-tracker",
+      name: "Zion AI Time Tracker",
+      description: "Intelligent time tracking with automatic categorization, productivity insights, and project billing",
+      price: "From $24/month",
+      originalPrice: "$40/month",
+      discount: "40% OFF",
+      icon: <Clock className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500",
+      features: [
+        "Automatic time tracking",
+        "AI categorization",
+        "Productivity insights",
+        "Project billing automation",
+        "Team time management",
+        "Overtime alerts",
+        "Reporting & analytics",
+        "Integration ecosystem"
+      ],
+      benefits: [
+        "Track time automatically",
+        "Improve productivity by 25%",
+        "Accurate project billing",
+        "Optimize team efficiency"
+      ],
+      category: "Time Management",
+      rating: 4.7,
+      reviews: 1456,
+      link: "/zion-ai-time-tracker",
+      featured: false
+    },
+    {
+      id: "zion-ai-customer-support-analytics",
+      name: "Zion AI Customer Support Analytics",
+      description: "Advanced support analytics with ticket analysis, agent performance, and customer satisfaction insights",
+      price: "From $38/month",
+      originalPrice: "$63/month",
+      discount: "40% OFF",
+      icon: <Headphones className="w-8 h-8" />,
+      color: "from-cyan-500 to-teal-500",
+      features: [
+        "Ticket analysis & categorization",
+        "Agent performance tracking",
+        "Customer satisfaction insights",
+        "Response time optimization",
+        "Knowledge base analytics",
+        "Trend identification",
+        "Predictive analytics",
+        "Custom dashboards"
+      ],
+      benefits: [
+        "Improve support efficiency by 40%",
+        "Increase customer satisfaction",
+        "Identify training needs",
+        "Optimize support processes"
+      ],
+      category: "Customer Support",
+      rating: 4.8,
+      reviews: 892,
+      link: "/zion-ai-customer-support-analytics",
+      featured: false
     }
   ];
 
@@ -1020,12 +1671,25 @@ export default function MicroSaas() {
     { name: "Sales", count: microSaasServices.filter(s => s.category === "Sales").length, active: false },
     { name: "Research", count: microSaasServices.filter(s => s.category === "Research").length, active: false },
     { name: "SEO", count: microSaasServices.filter(s => s.category === "SEO").length, active: false },
-    { name: "Development", count: microSaasServices.filter(s => s.category === "Development").length, active: false }
+    { name: "Development", count: microSaasServices.filter(s => s.category === "Development").length, active: false },
+    { name: "Content Creation", count: microSaasServices.filter(s => s.category === "Content Creation").length, active: false },
+    { name: "Customer Experience", count: microSaasServices.filter(s => s.category === "Customer Experience").length, active: false },
+    { name: "Scheduling", count: microSaasServices.filter(s => s.category === "Scheduling").length, active: false },
+    { name: "Market Intelligence", count: microSaasServices.filter(s => s.category === "Market Intelligence").length, active: false },
+    { name: "Legal Tech", count: microSaasServices.filter(s => s.category === "Legal Tech").length, active: false },
+    { name: "Customer Success", count: microSaasServices.filter(s => s.category === "Customer Success").length, active: false },
+    { name: "Data Protection", count: microSaasServices.filter(s => s.category === "Data Protection").length, active: false },
+    { name: "Monitoring", count: microSaasServices.filter(s => s.category === "Monitoring").length, active: false },
+    { name: "Email Marketing", count: microSaasServices.filter(s => s.category === "Email Marketing").length, active: false },
+    { name: "Content Management", count: microSaasServices.filter(s => s.category === "Content Management").length, active: false },
+    { name: "Inventory Management", count: microSaasServices.filter(s => s.category === "Inventory Management").length, active: false },
+    { name: "Time Management", count: microSaasServices.filter(s => s.category === "Time Management").length, active: false },
+    { name: "Customer Support", count: microSaasServices.filter(s => s.category === "Customer Support").length, active: false }
   ];
 
   const stats = [
-    { number: "25+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
@@ -1095,7 +1759,7 @@ export default function MicroSaas() {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Powerful, AI-driven micro SAAS tools designed to transform your business operations. 
-                Choose from 25+ specialized solutions to boost productivity, security, and growth.
+                Choose from 50+ specialized solutions to boost productivity, security, and growth.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">
