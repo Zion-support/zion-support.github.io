@@ -1,60 +1,116 @@
-'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Service } from '../data/services';
 
-export default function Page() {
+interface FuturisticServiceCardProps {
+  service: Service;
+  index?: number;
+}
+
+const FuturisticServiceCard: React.FC<FuturisticServiceCardProps> = ({ service, index = 0 }) => {
+  const animationDelay = index * 0.1;
+
   return (
-    <div className="min-h-screen bg-white">
-      <Helmet>
-        <title>FuturisticServiceCard - Zion Tech Group</title>
-        <meta name="description" content="Professional futuristicservicecard services by Zion Tech Group." />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            FuturisticServiceCard
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            Professional futuristicservicecard solutions tailored to your business needs.
-          </p>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                Expert Solutions
-              </h3>
-              <p className="text-blue-700">
-                Our team of experts delivers cutting-edge futuristicservicecard solutions.
-              </p>
-            </div>
-            
-            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-green-900 mb-2">
-                Custom Implementation
-              </h3>
-              <p className="text-green-700">
-                Tailored futuristicservicecard implementations for your specific requirements.
-              </p>
-            </div>
-            
-            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                24/7 Support
-              </h3>
-              <p className="text-purple-700">
-                Round-the-clock support for all your futuristicservicecard needs.
-              </p>
+    <div 
+      className="group relative"
+      style={{ animationDelay: `${animationDelay}s` }}
+    >
+      <div className="holographic-card glass-morphism rounded-xl p-6 h-full transform transition-all duration-500 hover:scale-105 hover:rotate-1">
+        {/* Glow Effect */}
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        {/* Content */}
+        <div className="relative z-10">
+          {/* Header */}
+          <div className="flex items-start justify-between mb-4">
+            <div className="flex items-center space-x-3">
+              <div className="text-3xl neon-flicker">{service.icon}</div>
+              <div>
+                <h3 className="text-xl font-bold text-white group-hover:neon-text transition-all duration-300">
+                  {service.name}
+                </h3>
+                {service.popular && (
+                  <span className="inline-block px-2 py-1 text-xs font-semibold bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full neon-glow">
+                    Popular
+                  </span>
+                )}
+                {service.new && (
+                  <span className="inline-block px-2 py-1 text-xs font-semibold bg-gradient-to-r from-pink-500 to-purple-500 text-white rounded-full neon-glow-pink">
+                    New
+                  </span>
+                )}
+              </div>
             </div>
           </div>
-          
-          <div className="mt-12">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-              Get Started Today
-            </button>
+
+          {/* Description */}
+          <p className="text-gray-300 text-sm mb-4 line-clamp-3 group-hover:text-gray-200 transition-colors duration-300">
+            {service.description}
+          </p>
+
+          {/* Features */}
+          <div className="mb-6">
+            <h4 className="text-sm font-semibold text-cyan-400 mb-2 neon-text">Key Features:</h4>
+            <ul className="space-y-1">
+              {service.features.slice(0, 3).map((feature, idx) => (
+                <li key={idx} className="text-xs text-gray-400 flex items-center">
+                  <span className="w-1 h-1 bg-cyan-400 rounded-full mr-2 neon-glow"></span>
+                  {feature}
+                </li>
+              ))}
+              {service.features.length > 3 && (
+                <li className="text-xs text-gray-500">
+                  +{service.features.length - 3} more features
+                </li>
+              )}
+            </ul>
+          </div>
+
+          {/* Pricing */}
+          <div className="mb-6">
+            <h4 className="text-sm font-semibold text-purple-400 mb-2 neon-text-purple">Pricing:</h4>
+            <div className="grid grid-cols-3 gap-2 text-xs">
+              <div className="text-center">
+                <div className="text-gray-400">Basic</div>
+                <div className="font-bold text-white">${service.pricing.basic}/mo</div>
+              </div>
+              <div className="text-center">
+                <div className="text-gray-400">Pro</div>
+                <div className="font-bold text-white">${service.pricing.pro}/mo</div>
+              </div>
+              <div className="text-center">
+                <div className="text-gray-400">Enterprise</div>
+                <div className="font-bold text-white">${service.pricing.enterprise}/mo</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Action Button */}
+          <div className="flex space-x-2">
+            <Link
+              to={service.link}
+              className="flex-1 cyber-button text-center py-2 px-4 rounded-lg text-sm font-semibold transition-all duration-300 hover:neon-glow"
+            >
+              Learn More
+            </Link>
+            <Link
+              to="/contact"
+              className="px-4 py-2 border border-cyan-400 text-cyan-400 rounded-lg text-sm font-semibold hover:bg-cyan-400 hover:text-white transition-all duration-300 hover:neon-glow"
+            >
+              Contact
+            </Link>
           </div>
         </div>
+
+        {/* Holographic Scan Line */}
+        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        {/* Corner Accents */}
+        <div className="absolute top-2 right-2 w-2 h-2 border-t border-r border-cyan-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute bottom-2 left-2 w-2 h-2 border-b border-l border-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
       </div>
     </div>
   );
-}
+};
+
+export default FuturisticServiceCard;
