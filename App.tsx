@@ -3,27 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
+import "./app/styles/futuristic-advanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-<<<<<<< HEAD
-<<<<<<< HEAD
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-=======
-import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import Breadcrumb from "./app/components/Breadcrumb";
-import FuturisticBackground from "./app/components/FuturisticBackground";
->>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
-=======
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
@@ -32,7 +16,8 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import EnhancedSEO from "./app/components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -65,6 +50,13 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+
+// New Micro SAAS Services
+const AiSalesPredictorPage = React.lazy(() => import("./app/ai-sales-predictor/page"));
+const AiCustomerChurnPredictorPage = React.lazy(() => import("./app/ai-customer-churn-predictor/page"));
+const AiInventoryOptimizerPage = React.lazy(() => import("./app/ai-inventory-optimizer/page"));
+const AiPricingOptimizerPage = React.lazy(() => import("./app/ai-pricing-optimizer/page"));
+const AiSocialMediaManagerPage = React.lazy(() => import("./app/ai-social-media-manager/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -366,7 +358,6 @@ const AiSmartContractAuditorPage = React.lazy(() => import("./app/ai-smart-contr
 const AiSmartHomeControllerPage = React.lazy(() => import("./app/ai-smart-home-controller/page"));
 const AiSmartInvoicePage = React.lazy(() => import("./app/ai-smart-invoice/page"));
 const AiSmartSchedulerPage = React.lazy(() => import("./app/ai-smart-scheduler/page"));
-const AiSocialMediaManagerPage = React.lazy(() => import("./app/ai-social-media-manager/page"));
 const AiSocialMediaSchedulerPage = React.lazy(() => import("./app/ai-social-media-scheduler/page"));
 const AiSocialSchedulerPage = React.lazy(() => import("./app/ai-social-scheduler/page"));
 const AiSolutionsPage = React.lazy(() => import("./app/ai-solutions/page"));
@@ -615,6 +606,13 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        
+                        {/* New Micro SAAS Services */}
+                        <Route path="/ai-sales-predictor" element={<AiSalesPredictorPage />} />
+                        <Route path="/ai-customer-churn-predictor" element={<AiCustomerChurnPredictorPage />} />
+                        <Route path="/ai-inventory-optimizer" element={<AiInventoryOptimizerPage />} />
+                        <Route path="/ai-pricing-optimizer" element={<AiPricingOptimizerPage />} />
+                        <Route path="/ai-social-media-manager" element={<AiSocialMediaManagerPage />} />
                       </Routes>
                     </Suspense>
                   </main>
@@ -623,30 +621,16 @@ function App() {
                     <div></div>
                   </EnhancedAccessibility>
                 </FuturisticBackground>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
                 <PerformanceMonitor />
                 <EnhancedSEO 
                   title="Zion Tech Group - Advanced AI and IT Solutions"
                   description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
                   keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
                 />
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
               </div>
-              <EnhancedAccessibility>
-                <div></div>
-              </EnhancedAccessibility>
               <AnalyticsProvider>
                 <div>
-                  <PerformanceMonitor />
                   <WebVitalsTracker />
-                  <PerformanceEnhancer />
-                  <SEOOptimizer />
-                  <EnhancedSEO />
-                  <EnhancedSEOOptimizer />
                 </div>
               </AnalyticsProvider>
             </Router>

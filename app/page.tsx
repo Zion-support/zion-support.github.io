@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
-import SEOOptimizer from "./components/SEOOptimizer";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, TrendingUp, Package, DollarSign, Share2 } from "lucide-react";
+import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
@@ -9,10 +8,6 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
-=======
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
 
 const HomePage = () => {
   const structuredData = {
@@ -149,14 +144,9 @@ const HomePage = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
-      <SEOOptimizer
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
@@ -167,8 +157,11 @@ const HomePage = () => {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="cyber-grid"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl floating"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl floating" style={{animationDelay: '1s'}}></div>
+          <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-pink-500/10 rounded-full blur-2xl floating" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-green-500/10 rounded-full blur-3xl floating" style={{animationDelay: '3s'}}></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
@@ -189,7 +182,7 @@ const HomePage = () => {
               text="Zion Tech Group" 
               delay={1000} 
               speed={150} 
-              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"
+              className="gradient-text neon-glow"
             />
           </ResponsiveText>
           
@@ -234,6 +227,134 @@ const HomePage = () => {
                 <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             ))}
+          </ResponsiveGrid>
+        </ResponsiveContainer>
+      </section>
+
+      {/* New Micro SAAS Services Section */}
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900/50 to-purple-900/50">
+        <ResponsiveContainer>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 mb-6">
+              <Zap className="w-4 h-4 text-green-400 mr-2" />
+              <span className="text-green-400 text-sm font-medium">New Micro SAAS Services</span>
+            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+              <span className="gradient-text">AI-Powered Micro SAAS Solutions</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Discover our innovative micro SAAS services designed to transform your business operations with cutting-edge AI technology.
+            </p>
+          </div>
+
+          <ResponsiveGrid columns={{ base: 1, md: 2, lg: 3 }} gap={8}>
+            <FuturisticCard className="p-6 hover-lift hover-glow">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">AI Sales Predictor</h3>
+                <p className="text-gray-300 mb-4">Boost sales with 95% accurate predictions and automated lead scoring.</p>
+                <div className="text-2xl font-bold text-cyan-400 mb-2">From $99/month</div>
+                <FuturisticButton
+                  href="/ai-sales-predictor"
+                  className="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </FuturisticButton>
+              </div>
+            </FuturisticCard>
+
+            <FuturisticCard className="p-6 hover-lift hover-glow">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">AI Churn Predictor</h3>
+                <p className="text-gray-300 mb-4">Reduce churn by 35% with AI-powered customer retention strategies.</p>
+                <div className="text-2xl font-bold text-red-400 mb-2">From $149/month</div>
+                <FuturisticButton
+                  href="/ai-customer-churn-predictor"
+                  className="w-full bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </FuturisticButton>
+              </div>
+            </FuturisticCard>
+
+            <FuturisticCard className="p-6 hover-lift hover-glow">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Package className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">AI Inventory Optimizer</h3>
+                <p className="text-gray-300 mb-4">Optimize inventory with 94% accurate demand forecasting.</p>
+                <div className="text-2xl font-bold text-green-400 mb-2">From $199/month</div>
+                <FuturisticButton
+                  href="/ai-inventory-optimizer"
+                  className="w-full bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </FuturisticButton>
+              </div>
+            </FuturisticCard>
+
+            <FuturisticCard className="p-6 hover-lift hover-glow">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <DollarSign className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">AI Pricing Optimizer</h3>
+                <p className="text-gray-300 mb-4">Increase revenue by 23% with dynamic AI-powered pricing strategies.</p>
+                <div className="text-2xl font-bold text-yellow-400 mb-2">From $299/month</div>
+                <FuturisticButton
+                  href="/ai-pricing-optimizer"
+                  className="w-full bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </FuturisticButton>
+              </div>
+            </FuturisticCard>
+
+            <FuturisticCard className="p-6 hover-lift hover-glow">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Share2 className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">AI Social Media Manager</h3>
+                <p className="text-gray-300 mb-4">Boost engagement by 65% with AI-powered social media automation.</p>
+                <div className="text-2xl font-bold text-pink-400 mb-2">From $149/month</div>
+                <FuturisticButton
+                  href="/ai-social-media-manager"
+                  className="w-full bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                >
+                  Learn More
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </FuturisticButton>
+              </div>
+            </FuturisticCard>
+
+            <FuturisticCard className="p-6 hover-lift hover-glow">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Brain className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">More AI Services</h3>
+                <p className="text-gray-300 mb-4">Explore our full range of AI-powered solutions and micro SAAS services.</p>
+                <div className="text-2xl font-bold text-indigo-400 mb-2">Custom Pricing</div>
+                <FuturisticButton
+                  href="/ai-services"
+                  className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300"
+                >
+                  View All Services
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </FuturisticButton>
+              </div>
+            </FuturisticCard>
           </ResponsiveGrid>
         </ResponsiveContainer>
       </section>
@@ -379,27 +500,33 @@ const HomePage = () => {
           
           {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <Mail className="w-6 h-6 text-white" />
+            <FuturisticCard className="p-6 text-center hover-lift hover-glow">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 neon-glow">
+                <Mail className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-white font-semibold mb-2">Email</h3>
-              <p className="text-cyan-400">kleber@ziontechgroup.com</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <Smartphone className="w-6 h-6 text-white" />
+              <h3 className="text-white font-semibold mb-2 text-lg">Email Us</h3>
+              <p className="text-cyan-400 font-medium">kleber@ziontechgroup.com</p>
+              <p className="text-gray-300 text-sm mt-2">24/7 Support Available</p>
+            </FuturisticCard>
+            
+            <FuturisticCard className="p-6 text-center hover-lift hover-glow">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 neon-glow">
+                <Smartphone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-white font-semibold mb-2">Phone</h3>
-              <p className="text-cyan-400">+1 302 464 0950</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                <Globe className="w-6 h-6 text-white" />
+              <h3 className="text-white font-semibold mb-2 text-lg">Call Now</h3>
+              <p className="text-green-400 font-medium text-xl">+1 302 464 0950</p>
+              <p className="text-gray-300 text-sm mt-2">Mon-Fri 9AM-6PM EST</p>
+            </FuturisticCard>
+            
+            <FuturisticCard className="p-6 text-center hover-lift hover-glow">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4 neon-glow">
+                <Globe className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-            </div>
+              <h3 className="text-white font-semibold mb-2 text-lg">Visit Us</h3>
+              <p className="text-purple-400 font-medium">364 E Main St STE 1008</p>
+              <p className="text-purple-400 font-medium">Middletown, DE 19709</p>
+              <p className="text-gray-300 text-sm mt-2">United States</p>
+            </FuturisticCard>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -420,8 +547,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      </div>
-    </>
+    </div>
   );
 };
 

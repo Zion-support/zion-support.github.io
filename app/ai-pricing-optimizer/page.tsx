@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Share2, 
+  DollarSign, 
   TrendingUp, 
   Target, 
   BarChart3, 
@@ -16,62 +16,62 @@ import {
   Smartphone,
   Mail,
   Phone,
-  Camera,
-  MessageCircle,
-  Users,
-  Heart,
-  RefreshCw
+  Calculator,
+  AlertCircle,
+  RefreshCw,
+  Award
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const AISocialMediaManagerPage = () => {
+const AIPricingOptimizerPage = () => {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-pink-400" />,
-      title: "AI Content Generation",
-      description: "Generate engaging posts, captions, and hashtags using advanced AI that understands your brand voice"
+      icon: <Brain className="w-8 h-8 text-yellow-400" />,
+      title: "Dynamic Pricing AI",
+      description: "AI-powered dynamic pricing that adjusts in real-time based on demand, competition, and market conditions"
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-green-400" />,
-      title: "Optimal Posting Times",
-      description: "AI analyzes your audience behavior to determine the best times to post for maximum engagement"
+      icon: <Calculator className="w-8 h-8 text-green-400" />,
+      title: "Price Elasticity Analysis",
+      description: "Understand how price changes affect demand and optimize for maximum revenue and profit margins"
     },
     {
-      icon: <Target className="w-8 h-8 text-blue-400" />,
-      title: "Audience Targeting",
-      description: "Intelligent audience segmentation and targeting to reach the right people with the right content"
+      icon: <TrendingUp className="w-8 h-8 text-blue-400" />,
+      title: "Revenue Optimization",
+      description: "Maximize revenue with intelligent pricing strategies that balance volume and margin optimization"
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
-      title: "Performance Analytics",
-      description: "Comprehensive analytics and insights to track engagement, reach, and ROI across all platforms"
+      title: "Competitive Intelligence",
+      description: "Monitor competitor pricing and market trends to stay competitive while maximizing profitability"
     },
     {
-      icon: <Camera className="w-8 h-8 text-cyan-400" />,
-      title: "Visual Content Creation",
-      description: "AI-powered image and video generation to create stunning visual content for your social media"
+      icon: <Target className="w-8 h-8 text-cyan-400" />,
+      title: "Segmented Pricing",
+      description: "Personalized pricing strategies for different customer segments and market conditions"
     },
     {
-      icon: <MessageCircle className="w-8 h-8 text-orange-400" />,
-      title: "Automated Engagement",
-      description: "AI-powered responses to comments and messages to maintain active engagement with your audience"
+      icon: <Award className="w-8 h-8 text-orange-400" />,
+      title: "A/B Testing",
+      description: "Automated price testing and optimization to find the most effective pricing strategies"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$149",
+      price: "$299",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 3 social accounts",
-        "Basic content generation",
-        "Scheduled posting",
-        "Basic analytics",
+        "Up to 100 products",
+        "Basic dynamic pricing",
+        "Price elasticity analysis",
+        "Email alerts",
+        "Standard reporting",
         "1 user account",
         "Email support"
       ],
@@ -79,28 +79,28 @@ const AISocialMediaManagerPage = () => {
     },
     {
       name: "Professional",
-      price: "$399",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing brands",
+      description: "Ideal for growing companies",
       features: [
-        "Up to 10 social accounts",
-        "Advanced AI content",
-        "Optimal timing analysis",
-        "Advanced analytics",
-        "Up to 3 user accounts",
+        "Up to 1,000 products",
+        "Advanced AI pricing",
+        "Real-time optimization",
+        "Custom dashboards",
+        "Up to 5 user accounts",
         "API access",
-        "Visual content creation",
+        "Competitive intelligence",
         "Priority support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$999",
+      price: "$1,999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited social accounts",
+        "Unlimited products",
         "Custom AI models",
         "24/7 dedicated support",
         "White-label solution",
@@ -116,67 +116,67 @@ const AISocialMediaManagerPage = () => {
 
   const testimonials = [
     {
-      name: "Jessica Park",
-      role: "Marketing Director, FashionBrand",
-      content: "AI Social Media Manager increased our engagement by 65% and saved us 20 hours per week. The content quality is amazing.",
+      name: "Alex Thompson",
+      role: "Revenue Manager, E-commercePro",
+      content: "AI Pricing Optimizer increased our revenue by 23% and improved profit margins by 15%. The dynamic pricing is incredibly effective.",
       rating: 5
     },
     {
-      name: "Marcus Johnson",
-      role: "Social Media Manager, TechStartup",
-      content: "The optimal posting times feature is a game-changer. Our reach increased by 40% and engagement by 55%.",
+      name: "Sarah Davis",
+      role: "Pricing Director, RetailChain",
+      content: "We optimized pricing across 200+ stores. The system helped us stay competitive while increasing margins by 18%.",
       rating: 5
     },
     {
-      name: "Lisa Chen",
-      role: "CEO, E-commerceStore",
-      content: "We went from 2K to 50K followers in 6 months. The AI content generation and audience targeting are incredible.",
+      name: "Michael Rodriguez",
+      role: "CEO, SaaSStartup",
+      content: "The segmented pricing strategies transformed our business. We increased conversion rates by 35% and revenue by 40%.",
       rating: 5
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-yellow-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <EnhancedSEO
-        title="AI Social Media Manager - Increase Engagement by 65% | Zion Tech Group"
-        description="Automate social media with AI-powered content generation, optimal posting times, and audience targeting. Increase engagement by 65% and save 20 hours per week."
-        keywords="AI social media manager, social media automation, content generation, social media analytics, audience targeting, social media optimization"
-        canonical="https://ziontechgroup.com/ai-social-media-manager"
+        title="AI Pricing Optimizer - Increase Revenue by 23% | Zion Tech Group"
+        description="Optimize pricing with AI-powered dynamic pricing and revenue optimization. Increase revenue by 23% and improve profit margins by 15%."
+        keywords="AI pricing optimization, dynamic pricing, revenue optimization, price elasticity, competitive pricing, ML pricing strategy"
+        canonical="https://ziontechgroup.com/ai-pricing-optimizer"
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto">
           <div className="text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-pink-500/10 border border-pink-500/20 mb-6">
-              <Share2 className="w-5 h-5 text-pink-400 mr-2" />
-              <span className="text-pink-400 font-medium">AI-Powered Social Media Automation</span>
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-6">
+              <DollarSign className="w-5 h-5 text-yellow-400 mr-2" />
+              <span className="text-yellow-400 font-medium">AI-Powered Revenue Optimization</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Social Media Manager
-              <span className="block bg-gradient-to-r from-pink-400 to-purple-400 bg-clip-text text-transparent">
-                Create. Engage. Grow.
+              AI Pricing Optimizer
+              <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                Optimize. Price. Profit.
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your social media presence with AI-powered content generation, optimal posting times, 
-              and intelligent audience targeting. Increase engagement by 65% and save 20 hours per week.
+              Maximize revenue with AI-powered dynamic pricing and optimization strategies. 
+              Increase revenue by 23% and improve profit margins by 15% with intelligent pricing decisions.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <FuturisticButton
                 href="#pricing"
-                className="bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+                className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
               >
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </FuturisticButton>
               <FuturisticButton
                 href="#demo"
-                className="border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+                className="border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
               >
                 Watch Demo
               </FuturisticButton>
@@ -185,20 +185,20 @@ const AISocialMediaManagerPage = () => {
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">65%</div>
-                <div className="text-gray-300">Engagement Increase</div>
+                <div className="text-3xl font-bold text-yellow-400 mb-2">23%</div>
+                <div className="text-gray-300">Revenue Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">20h</div>
-                <div className="text-gray-300">Time Saved/Week</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">15%</div>
+                <div className="text-gray-300">Margin Improvement</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">40%</div>
-                <div className="text-gray-300">Reach Increase</div>
+                <div className="text-3xl font-bold text-blue-400 mb-2">35%</div>
+                <div className="text-gray-300">Conversion Boost</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">55%</div>
-                <div className="text-gray-300">Engagement Boost</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">18%</div>
+                <div className="text-gray-300">Competitive Edge</div>
               </div>
             </div>
           </div>
@@ -210,10 +210,10 @@ const AISocialMediaManagerPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Social Media Intelligence
+              Advanced Pricing Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage AI to create engaging content, optimize posting times, and grow your social media presence.
+              Leverage AI to optimize pricing strategies, maximize revenue, and stay competitive in dynamic markets.
             </p>
           </div>
 
@@ -237,33 +237,33 @@ const AISocialMediaManagerPage = () => {
               How It Works
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI analyzes your audience, creates engaging content, and optimizes your social media strategy.
+              Our AI analyzes market conditions, competitor pricing, and customer behavior to optimize your pricing strategy.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Brain className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">1. Content Creation</h3>
-              <p className="text-gray-300">AI generates engaging posts, captions, and hashtags tailored to your brand and audience.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Target className="w-8 h-8 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-3">2. Optimization</h3>
-              <p className="text-gray-300">AI determines optimal posting times and audience targeting for maximum engagement.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">1. Market Analysis</h3>
+              <p className="text-gray-300">AI analyzes market conditions, competitor pricing, and customer behavior patterns.</p>
             </div>
             
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Calculator className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">2. Price Optimization</h3>
+              <p className="text-gray-300">Calculate optimal prices based on elasticity, demand, and profit maximization goals.</p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <RefreshCw className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-3">3. Automation</h3>
-              <p className="text-gray-300">Automatically schedule posts, respond to comments, and engage with your audience.</p>
+              <h3 className="text-xl font-semibold text-white mb-3">3. Dynamic Updates</h3>
+              <p className="text-gray-300">Automatically adjust prices in real-time based on changing market conditions.</p>
             </div>
           </div>
         </div>
@@ -285,11 +285,11 @@ const AISocialMediaManagerPage = () => {
             {pricingPlans.map((plan, index) => (
               <FuturisticCard 
                 key={index} 
-                className={`p-8 relative ${plan.popular ? 'ring-2 ring-pink-400 scale-105' : ''}`}
+                className={`p-8 relative ${plan.popular ? 'ring-2 ring-yellow-400 scale-105' : ''}`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-yellow-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -298,7 +298,7 @@ const AISocialMediaManagerPage = () => {
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-pink-400">{plan.price}</span>
+                    <span className="text-4xl font-bold text-yellow-400">{plan.price}</span>
                     <span className="text-gray-400 ml-1">{plan.period}</span>
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
@@ -317,8 +317,8 @@ const AISocialMediaManagerPage = () => {
                   href="#contact"
                   className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white'
-                      : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-white'
+                      ? 'bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700 text-white'
+                      : 'border border-yellow-400 text-yellow-400 hover:bg-yellow-400 hover:text-white'
                   }`}
                 >
                   Start Free Trial
@@ -334,10 +334,10 @@ const AISocialMediaManagerPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Marketing Teams
+              Trusted by Revenue Teams
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how AI Social Media Manager is helping brands grow their social media presence.
+              See how AI Pricing Optimizer is helping companies maximize revenue and profitability.
             </p>
           </div>
 
@@ -352,7 +352,7 @@ const AISocialMediaManagerPage = () => {
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-pink-400 text-sm">{testimonial.role}</div>
+                  <div className="text-yellow-400 text-sm">{testimonial.role}</div>
                 </div>
               </FuturisticCard>
             ))}
@@ -361,33 +361,33 @@ const AISocialMediaManagerPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-pink-600 to-purple-700">
+      <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-yellow-600 to-orange-700">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Social Media?
+            Ready to Optimize Your Pricing?
           </h2>
-          <p className="text-xl text-pink-100 mb-8">
-            Join hundreds of brands using AI Social Media Manager to grow their presence and engagement.
+          <p className="text-xl text-yellow-100 mb-8">
+            Join hundreds of companies using AI Pricing Optimizer to maximize revenue and profitability.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <FuturisticButton
               href="tel:+13024640950"
-              className="bg-white text-pink-600 hover:bg-pink-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
+              className="bg-white text-yellow-600 hover:bg-yellow-50 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105"
             >
               <Phone className="w-5 h-5 mr-2" />
               Call Now: +1 302 464 0950
             </FuturisticButton>
             <FuturisticButton
               href="mailto:kleber@ziontechgroup.com"
-              className="border border-white text-white hover:bg-white hover:text-pink-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
+              className="border border-white text-white hover:bg-white hover:text-yellow-600 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300"
             >
               <Mail className="w-5 h-5 mr-2" />
               Email Us
             </FuturisticButton>
           </div>
 
-          <div className="text-pink-100 text-sm">
+          <div className="text-yellow-100 text-sm">
             <p>📍 364 E Main St STE 1008, Middletown, DE 19709</p>
             <p>🌐 <a href="https://ziontechgroup.com" className="underline hover:text-white">ziontechgroup.com</a></p>
           </div>
@@ -397,4 +397,4 @@ const AISocialMediaManagerPage = () => {
   );
 };
 
-export default AISocialMediaManagerPage;
+export default AIPricingOptimizerPage;
