@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Users, Star, Activity, Database, FileText } from 'lucide-react';
 =======
 import React from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -26,13 +25,33 @@ import { FileText } from 'lucide-react';
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const CybersecuritySolutions = () => {
-  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
 
-  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
-
-  const capabilities: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
-
-  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
 
   const services = [
     {
@@ -120,52 +139,75 @@ const CybersecuritySolutions = () => {
       cta: "Contact Sales"
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { ArrowRight, Shield, CheckCircle } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
-export default function CybersecuritySolutionsPage() {
   const capabilities = [
     {
       title: "AI-Powered Security",
-      description: "Advanced threat detection and prevention using artificial intelligence",
-      icon: <Shield className="w-8 h-8" />
+      description: "Advanced AI algorithms detect and prevent sophisticated cyber threats before they cause damage",
+      icon: <Brain className="w-6 h-6" />,
+      stats: "99.9% threat detection"
     },
     {
-      title: "Real-time Monitoring",
-      description: "24/7 security monitoring and incident response",
-      icon: <CheckCircle className="w-8 h-8" />
+      title: "Zero Trust Architecture",
+      description: "Implement zero trust security model with continuous verification and least privilege access",
+      icon: <Lock className="w-6 h-6" />,
+      stats: "100% coverage"
+    },
+    {
+      title: "24/7 Monitoring",
+      description: "Round-the-clock security monitoring and incident response to protect your business",
+      icon: <Activity className="w-6 h-6" />,
+      stats: "Sub-minute response"
+    },
+    {
+      title: "Compliance Ready",
+      description: "Meet industry compliance requirements including GDPR, HIPAA, SOX, and PCI DSS",
+      icon: <FileText className="w-6 h-6" />,
+      stats: "50+ frameworks"
     }
   ];
 
+export default function CybersecuritySolutionsPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Cybersecurity Solutions - Zion Tech Group</title>
-        <meta name="description" content="Professional cybersecurity solutions for businesses" />
+        <meta name="description" content="Cybersecurity Solutions solutions by Zion Tech Group" />
       </Helmet>
       
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Cybersecurity Solutions
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional cybersecurity solutions coming soon.
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Cybersecurity Solutions</h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-xl text-gray-300 mb-8">
+            Discover our comprehensive cybersecurity solutions solutions designed to meet your business needs.
           </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
+              <p className="text-gray-300">
+                Our team of experts delivers tailored solutions for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
+              <p className="text-gray-300">
+                We use the latest technologies and best practices to ensure optimal performance.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-300">
+                Get round-the-clock support from our dedicated team of professionals.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
+}
+
 }

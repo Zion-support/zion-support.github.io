@@ -1,19 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-=======
 import React from 'react';
 import { 
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
   Mic, 
   Play, 
+  Pause, 
+  Download, 
+  Upload, 
   Settings, 
+  Star, 
   Users, 
   Zap, 
+  Shield, 
   CheckCircle, 
+  ArrowRight,
   Brain,
   Volume2,
   FileAudio,
+  Clock,
   Globe
 } from 'lucide-react';
 =======
@@ -185,7 +188,6 @@ export default function AiVoiceCloningStudioPage() {
       </div>
     </div>
   );
-};
-
+}
 
 }

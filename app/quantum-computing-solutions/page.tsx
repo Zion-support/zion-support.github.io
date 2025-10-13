@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-=======
 import React from 'react';
 import { 
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
@@ -11,8 +7,15 @@ import {
   Brain, 
   Target, 
   CheckCircle, 
+  ArrowRight,
   Globe,
+  Clock,
+  Users,
+  Award,
+  Star,
   Activity,
+  PieChart,
+  Database,
   Lock,
   Gauge
 } from 'lucide-react';
@@ -200,7 +203,6 @@ export default function QuantumComputingSolutionsPage() {
       </div>
     </div>
   );
-};
-
+}
 
 }

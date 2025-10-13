@@ -1,11 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-import EnhancedSEO from '../components/EnhancedSEO';
-=======
 import { Helmet } from 'react-helmet-async';
 >>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 

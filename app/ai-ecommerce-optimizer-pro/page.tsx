@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Search } from 'lucide-react';
@@ -141,10 +140,6 @@ export default function AIEcommerceOptimizerPro() {
       popular: false,
     },
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function AiEcommerceOptimizerProPage() {
   return (
@@ -187,4 +182,6 @@ export default function AiEcommerceOptimizerProPage() {
       </div>
     </div>
   );
+}
+
 }

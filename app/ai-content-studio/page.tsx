@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from 'lucide-react';
-=======
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -20,31 +16,24 @@ import { Sparkles } from 'lucide-react';
 import { FileText } from 'lucide-react';
 
 const AIContentStudioZionTechGroup = () => {
-<<<<<<< HEAD
   const testimonials = [
     {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
       name: "Sarah Johnson",
-      company: "Creative Marketing Co",
-      role: "Content Director",
-      content: "Zion's AI Content Studio has transformed our content creation process. We're producing 5x more content with higher quality than ever before.",
-      rating: 5,
-      avatar: "SJ"
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
     },
     {
-      name: "Michael Chen",
-      company: "Digital Agency Pro",
-      role: "Creative Lead",
-      content: "The AI understands brand voice perfectly and creates content that resonates with our audience. It's like having a team of expert writers.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "E-commerce Solutions",
-      role: "Marketing Manager",
-      content: "From product descriptions to social media posts, the AI generates exactly what we need. It's saved us countless hours and improved our engagement.",
-      rating: 5,
-      avatar: "ER"
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
     }
   ];
 
@@ -73,8 +62,6 @@ const AIContentStudioZionTechGroup = () => {
       "url": "https://ziontechgroup.com"
     }
   };
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
   const features = [
     {
@@ -152,33 +139,6 @@ const AIContentStudioZionTechGroup = () => {
         "On-premise deployment"
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Lisa Wang",
-      role: "Content Manager",
-      company: "Creative Agency",
-      content: "Zion AI Content Studio has transformed our content creation process. We can now produce high-quality content at scale like never before.",
-      rating: 5,
-      avatar: "LW"
-    },
-    {
-      name: "David Kim",
-      role: "Marketing Director",
-      company: "TechStart Inc",
-      content: "The AI-powered video generation is incredible. We've reduced our video production time by 80% while maintaining quality.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Maria Garcia",
-      role: "Creative Director",
-      company: "Design Studio",
-      content: "The design automation features are game-changing. We can create professional visuals in minutes instead of hours.",
-      rating: 5,
-      avatar: "MG"
     }
   ];
 

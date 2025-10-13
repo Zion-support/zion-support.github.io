@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { Cloud, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Activity, Lock } from 'lucide-react';
 =======
 import React from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -24,16 +23,35 @@ import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const CloudInfrastructure = () => {
-  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
 
-  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
-
-  const capabilities: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
-
-  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
 
   const services = [
     {
@@ -63,50 +81,6 @@ const CloudInfrastructure = () => {
       icon: <Activity className="w-8 h-8" />,
       features: ["Automatic scaling", "Cost optimization", "Performance monitoring", "Load balancing"],
       price: "From $999/month"
-    }
-  ];
-
-  const stats = [
-    {
-      number: "99.99%",
-      label: "Uptime Guarantee",
-      icon: <CheckCircle className="w-6 h-6 text-green-400" />
-    },
-    {
-      number: "40%",
-      label: "Cost Reduction",
-      icon: <BarChart3 className="w-6 h-6 text-blue-400" />
-    },
-    {
-      number: "0",
-      label: "Security Incidents",
-      icon: <Shield className="w-6 h-6 text-red-400" />
-    },
-    {
-      number: "<1s",
-      label: "Response Time",
-      icon: <Activity className="w-6 h-6 text-purple-400" />
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CTO, TechCorp",
-      content: "Zion Tech Group transformed our cloud infrastructure. We achieved 40% cost savings while improving performance.",
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      role: "VP Engineering, DataFlow",
-      content: "Their cloud migration expertise saved us months of work. Zero downtime and seamless transition.",
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Head of IT, InnovateLab",
-      content: "The security implementation was flawless. We now have enterprise-grade protection at a fraction of the cost.",
-      avatar: "ER"
     }
   ];
 
@@ -165,61 +139,75 @@ const CloudInfrastructure = () => {
       cta: "Contact Sales"
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { ArrowRight, Activity, BarChart3, CheckCircle } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
-export default function CloudInfrastructurePage() {
-  const stats = [
-    { label: "Uptime", value: "99.9%", icon: <Activity className="w-6 h-6" /> },
-    { label: "Cost Savings", value: "40%", icon: <BarChart3 className="w-6 h-6" /> },
-    { label: "Performance", value: "3x Faster", icon: <CheckCircle className="w-6 h-6" /> }
-  ];
 
   const capabilities = [
-    "Multi-cloud deployment and management",
-    "Automated scaling and load balancing",
-    "High availability and disaster recovery",
-    "Security and compliance monitoring"
-  ];
-
-  const testimonials = [
-    { 
-      name: "Sarah Johnson", 
-      role: "CTO", 
-      company: "TechCorp", 
-      content: "Zion's cloud infrastructure transformed our business operations." 
+    {
+      title: "Multi-Cloud Strategy",
+      description: "Design and implement hybrid and multi-cloud architectures for maximum flexibility and redundancy",
+      icon: <Globe className="w-6 h-6" />,
+      stats: "99.99% uptime"
+    },
+    {
+      title: "Cost Optimization",
+      description: "Reduce cloud costs by up to 40% through intelligent resource management and optimization",
+      icon: <BarChart3 className="w-6 h-6" />,
+      stats: "40% cost reduction"
+    },
+    {
+      title: "Security First",
+      description: "Implement enterprise-grade security measures to protect your cloud infrastructure",
+      icon: <Lock className="w-6 h-6" />,
+      stats: "Zero security incidents"
+    },
+    {
+      title: "24/7 Monitoring",
+      description: "Continuous monitoring and alerting to ensure optimal performance and availability",
+      icon: <Activity className="w-6 h-6" />,
+      stats: "Sub-second response"
     }
   ];
 
+export default function CloudInfrastructurePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+    <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
         <title>Cloud Infrastructure - Zion Tech Group</title>
-        <meta name="description" content="Professional cloud infrastructure services for businesses" />
+        <meta name="description" content="Cloud Infrastructure solutions by Zion Tech Group" />
       </Helmet>
       
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Cloud Infrastructure
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional cloud infrastructure services coming soon.
+      <div className="container mx-auto px-4 py-20">
+        <h1 className="text-4xl font-bold mb-8">Cloud Infrastructure</h1>
+        <div className="prose prose-invert max-w-none">
+          <p className="text-xl text-gray-300 mb-8">
+            Discover our comprehensive cloud infrastructure solutions designed to meet your business needs.
           </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
+              <p className="text-gray-300">
+                Our team of experts delivers tailored solutions for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
+              <p className="text-gray-300">
+                We use the latest technologies and best practices to ensure optimal performance.
+              </p>
+            </div>
+            
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
+              <p className="text-gray-300">
+                Get round-the-clock support from our dedicated team of professionals.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   );
+}
+
 }

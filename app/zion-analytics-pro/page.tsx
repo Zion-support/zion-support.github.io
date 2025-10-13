@@ -1,20 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import React from "react";
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React from "react";
-import { ArrowRight, CheckCircle, BarChart3, DollarSign } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -38,15 +22,6 @@ export default function ZionAnalyticsPro() {
     "Mobile app access",
     "API integration",
     "Custom metrics & KPIs"
-  ];
-
-  const _benefits = [
-    "Increase revenue by 25%",
-    "Reduce reporting time by 80%",
-    "Make data-driven decisions",
-    "Scale with your business",
-    "Improve operational efficiency",
-    "Identify growth opportunities"
   ];
 
   const pricing = [

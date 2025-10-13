@@ -1,24 +1,29 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { FileText } from 'lucide-react';
 
 const AIHRRecruitmentProPage = () => {
   const benefits = [
-    "Reduce hiring time by 70%",
-    "Increase candidate quality by 50%",
-    "Eliminate bias in screening",
-    "Automate 80% of recruitment tasks",
-    "Improve retention rates by 30%",
-    "Scale recruitment processes efficiently"
+    {
+      title: "Expert Team",
+      description: "Our team of AI and technology experts delivers exceptional results.",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Proven Results",
+      description: "We have a track record of successful projects and satisfied clients.",
+      icon: <CheckCircle className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your success.",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Innovation",
+      description: "Cutting-edge solutions that keep you ahead of the competition.",
+      icon: <Zap className="w-8 h-8" />
+    }
   ];
 
   const features = [
@@ -53,17 +58,6 @@ const AIHRRecruitmentProPage = () => {
       description: "Get instant notifications and updates on candidate progress."
     }
   ];
-
-  const benefits = [
-    "50% faster time-to-hire",
-    "90% reduction in manual screening",
-    "Improved candidate quality",
-    "Automated compliance tracking",
-    "Real-time analytics dashboard",
-    "Seamless integration with existing systems"
-  ];
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function AiHrRecruitmentProPage() {
   return (
@@ -106,4 +100,6 @@ export default function AiHrRecruitmentProPage() {
       </div>
     </div>
   );
+}
+
 }

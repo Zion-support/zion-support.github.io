@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-=======
 import React from 'react';
 import { 
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
@@ -11,9 +7,17 @@ import {
   Zap, 
   Target, 
   CheckCircle, 
+  ArrowRight,
+  Cpu,
   Globe,
+  Clock,
+  Users,
+  Award,
+  Star,
   Activity,
+  PieChart,
   Navigation,
+  MapPin,
   Gauge
 } from 'lucide-react';
 =======
@@ -198,7 +202,6 @@ export default function AiSpaceMissionOptimizerPage() {
       </div>
     </div>
   );
-};
-
+}
 
 }

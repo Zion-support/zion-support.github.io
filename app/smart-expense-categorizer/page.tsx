@@ -1,9 +1,6 @@
 import React from 'react';
+import { Users, ArrowRight, CheckCircle, Star, Globe, Shield, Zap, Brain, BarChart3, Target, Receipt } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Receipt, Shield, Zap, BarChart3, Users, CheckCircle, ArrowRight, Brain, Target, Globe } from 'lucide-react';
-=======
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -18,11 +15,68 @@ import { Receipt } from 'lucide-react';
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const SmartExpenseCategorizerPage = () => {
-  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+  const benefits = [
+    {
+      title: "Expert Team",
+      description: "Our team of AI and technology experts delivers exceptional results.",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Proven Results",
+      description: "We have a track record of successful projects and satisfied clients.",
+      icon: <CheckCircle className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your success.",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Innovation",
+      description: "Cutting-edge solutions that keep you ahead of the competition.",
+      icon: <Zap className="w-8 h-8" />
+    }
+  ];
 
-  const benefits: string[] = [];
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
 
-  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+  const features = [
+    {
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      title: "AI-Powered Categorization",
+      description: "Advanced machine learning automatically categorizes expenses with 98% accuracy, learning from your patterns and preferences."
+    },
+    {
+      icon: <Target className="w-8 h-8 text-purple-400" />,
+      title: "Smart Receipt Processing",
+      description: "Automatically extract data from receipts, invoices, and bills using OCR technology and AI-powered data extraction."
+    },
+    {
+      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
+      title: "Real-time Analytics",
+      description: "Comprehensive expense analytics with spending trends, budget tracking, and financial insights to optimize your finances."
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: "Bank Integration",
+      description: "Securely connect with your bank accounts and credit cards for automatic transaction import and categorization."
+    },
+    {
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: "Automated Workflows",
+      description: "Set up automated rules for expense approval, reimbursement, and reporting to streamline your financial processes."
+    },
+    {
+      icon: <Users className="w-8 h-8 text-blue-400" />,
+      title: "Team Management",
+      description: "Manage team expenses with role-based permissions, approval workflows, and centralized expense reporting."
+    }
+  ];
 
   const pricingPlans = [
     {
@@ -73,8 +127,6 @@ const SmartExpenseCategorizerPage = () => {
       popular: false
     }
   ];
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function SmartExpenseCategorizerPage() {
   return (
@@ -117,4 +169,6 @@ export default function SmartExpenseCategorizerPage() {
       </div>
     </div>
   );
+}
+
 }

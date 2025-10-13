@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Cpu, Brain, Atom, Users, Award, Globe, Lock, TrendingUp, Monitor, MessageSquare, Phone } from 'lucide-react';
-import { Link } from "react-router-dom";
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import React from "react";
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import SEOOptimizer from "../../components/SEOOptimizer";
@@ -27,33 +16,23 @@ import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
 import { Phone } from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Atom, ArrowRight, Monitor, Cpu, Users, Award, CheckCircle, MessageSquare, Phone, Globe, Star } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
-export default function AIQuantumComputingPage() {
-  const testimonials = [
-    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5, avatar: "/api/placeholder/64/64" }
-  ];
+export default function AiQuantumComputing() {
   const features = [
-    "Quantum Algorithm Development",
-    "Quantum Circuit Optimization",
-    "Quantum Error Correction",
-    "Quantum Machine Learning",
-    "Quantum Cryptography",
-    "Quantum Simulation"
+    "Quantum machine learning algorithms for complex optimization",
+    "Quantum simulation for drug discovery and materials science",
+    "Quantum cryptography for ultra-secure communications",
+    "Quantum annealing for combinatorial optimization problems",
+    "Quantum neural networks for pattern recognition",
+    "Quantum error correction and fault tolerance",
+    "Hybrid quantum-classical computing workflows",
+    "Quantum cloud access with real quantum hardware",
+    "Advanced quantum algorithm development",
+    "Quantum state preparation and manipulation",
+    "Quantum entanglement and teleportation protocols",
+    "Custom quantum circuit design and optimization"
   ];
 
-  const applications = [
-    "Drug Discovery & Molecular Simulation",
-    "Financial Modeling & Risk Analysis",
-    "Cryptography & Security",
-    "Optimization Problems",
-    "Machine Learning & AI",
-    "Climate Modeling"
-  ];
-  
   const pricingPlans = [
     {
       name: "Research",

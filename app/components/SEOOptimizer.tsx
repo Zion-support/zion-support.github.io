@@ -1,4 +1,5 @@
-<<<<<<< HEAD
+import React, { useEffect } from 'react';
+import { Code } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 const services = [
@@ -21,12 +22,6 @@ const services = [
 =======
 import { Code } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-interface SEOOptimizerProps {
-  children: React.ReactNode;
-=======
-import React from 'react';
 
 interface SeooptimizerProps {
   className?: string;

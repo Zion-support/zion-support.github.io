@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { BarChart3, TrendingUp, Brain, Zap, CheckCircle, ArrowRight, Activity, Users, Globe, Star, Database, Eye } from 'lucide-react';
 =======
 import React from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -27,7 +26,164 @@ import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { Plus } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
+
+const ZionAiBusinessIntelligencePro = () => {
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
+
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
+
+  const features = [
+    {
+      title: "AI-Powered Insights",
+      description: "Automatically generate actionable business insights using advanced machine learning and natural language processing",
+      icon: <Brain className="w-6 h-6" />,
+      stats: "95% accuracy"
+    },
+    {
+      title: "Real-Time Analytics",
+      description: "Monitor key performance indicators and business metrics in real-time with instant updates and alerts",
+      icon: <Activity className="w-6 h-6" />,
+      stats: "Sub-second response"
+    },
+    {
+      title: "Predictive Analytics",
+      description: "Forecast future trends, customer behavior, and business outcomes with AI-powered predictive models",
+      icon: <TrendingUp className="w-6 h-6" />,
+      stats: "85% prediction accuracy"
+    },
+    {
+      title: "Natural Language Queries",
+      description: "Ask questions about your data in plain English and get instant answers with visualizations",
+      icon: <Zap className="w-6 h-6" />,
+      stats: "50+ languages"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Professional",
+      price: "$199",
+      period: "/month",
+      description: "Perfect for growing businesses with advanced analytics needs",
+      features: [
+        "Up to 10 data sources",
+        "AI-powered insights",
+        "Real-time dashboards",
+        "Basic predictive analytics",
+        "Standard visualizations",
+        "Email support",
+        "5 user licenses",
+        "30-day data retention"
+      ],
+      popular: false,
+      cta: "Start Free Trial"
+    },
+    {
+      name: "Enterprise",
+      price: "$499",
+      period: "/month",
+      description: "Comprehensive BI solution for large organizations",
+      features: [
+        "Up to 50 data sources",
+        "Advanced AI analytics",
+        "Custom dashboards",
+        "Full predictive analytics",
+        "Advanced visualizations",
+        "Priority support",
+        "25 user licenses",
+        "90-day data retention",
+        "API access",
+        "Custom integrations",
+        "Dedicated analyst"
+      ],
+      popular: true,
+      cta: "Start Free Trial"
+    },
+    {
+      name: "Enterprise Plus",
+      price: "$1,299",
+      period: "/month",
+      description: "Maximum analytics power for enterprise organizations",
+      features: [
+        "Unlimited data sources",
+        "AI-powered insights engine",
+        "White-label dashboards",
+        "Custom AI models",
+        "Unlimited visualizations",
+        "24/7 phone support",
+        "Unlimited user licenses",
+        "Unlimited data retention",
+        "Full API access",
+        "On-premise deployment",
+        "Dedicated account manager"
+      ],
+      popular: false,
+      cta: "Contact Sales"
+    }
+  ];
+
+  const capabilities = [
+    {
+      title: "Data Integration",
+      description: "Connect and integrate data from 100+ sources including databases, cloud services, and APIs",
+      icon: <Database className="w-8 h-8" />,
+      features: ["100+ connectors", "Real-time sync", "Data transformation", "Quality monitoring"]
+    },
+    {
+      title: "Advanced Visualizations",
+      description: "Create stunning, interactive dashboards and reports with drag-and-drop simplicity",
+      icon: <BarChart3 className="w-8 h-8" />,
+      features: ["50+ chart types", "Interactive dashboards", "Mobile responsive", "Custom themes"]
+    },
+    {
+      title: "AI-Powered Forecasting",
+      description: "Predict future trends and outcomes using machine learning and statistical models",
+      icon: <TrendingUp className="w-8 h-8" />,
+      features: ["Time series forecasting", "Anomaly detection", "Scenario planning", "Confidence intervals"]
+    },
+    {
+      title: "Natural Language Processing",
+      description: "Ask questions about your data in plain English and get instant, intelligent answers",
+      icon: <Brain className="w-8 h-8" />,
+      features: ["Voice queries", "Smart suggestions", "Auto-generated insights", "Multi-language support"]
+    },
+    {
+      title: "Collaborative Analytics",
+      description: "Share insights and collaborate with team members through comments, annotations, and alerts",
+      icon: <Users className="w-8 h-8" />,
+      features: ["Team collaboration", "Comment system", "Alert management", "Role-based access"]
+    },
+    {
+      title: "Mobile Analytics",
+      description: "Access your analytics anywhere with native mobile apps and responsive web interface",
+      icon: <Globe className="w-8 h-8" />,
+      features: ["Native mobile apps", "Offline access", "Push notifications", "Touch-optimized"]
+    }
+  ];
 
 export default function ZionAiBusinessIntelligenceProPage() {
   return (
@@ -70,4 +226,6 @@ export default function ZionAiBusinessIntelligenceProPage() {
       </div>
     </div>
   );
+}
+
 }

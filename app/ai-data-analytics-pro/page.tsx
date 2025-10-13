@@ -1,17 +1,7 @@
-<<<<<<< HEAD
+import React from 'react';
+import { TrendingUp, Sparkles, ArrowRight, CheckCircle, Star, Zap, Brain, PieChart } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { 
-  TrendingUp, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Zap,
-  Brain,
-  PieChart
-} from 'lucide-react';
-=======
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { PieChart } from 'lucide-react';
@@ -23,7 +13,28 @@ import { Sparkles } from 'lucide-react';
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const AIDataAnalyticsProPage = () => {
-  const benefits: string[] = [];
+  const benefits = [
+    {
+      title: "Expert Team",
+      description: "Our team of AI and technology experts delivers exceptional results.",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Proven Results",
+      description: "We have a track record of successful projects and satisfied clients.",
+      icon: <CheckCircle className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your success.",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Innovation",
+      description: "Cutting-edge solutions that keep you ahead of the competition.",
+      icon: <Zap className="w-8 h-8" />
+    }
+  ];
 
   const features = [
     {
@@ -51,21 +62,6 @@ const AIDataAnalyticsProPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-
-  const benefits = [
-    "Increase data processing speed by 10x",
-    "Reduce analysis time by 80%",
-    "Improve prediction accuracy by 95%",
-    "Automate reporting and insights",
-    "Scale to handle any data volume",
-    "Integrate with existing systems"
-  ];
-=======
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { TrendingUp, Zap, Brain, PieChart, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function AiDataAnalyticsProPage() {
   return (
@@ -108,4 +104,6 @@ export default function AiDataAnalyticsProPage() {
       </div>
     </div>
   );
+}
+
 }

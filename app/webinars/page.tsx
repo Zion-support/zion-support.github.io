@@ -1,19 +1,61 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
 
 const WebinarsPage = () => {
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+  const upcomingWebinars = [
+    {
+      title: "AI-Powered Business Transformation",
+      date: "2024-01-15",
+      time: "2:00 PM EST",
+      duration: "60 minutes",
+      speaker: "Dr. Sarah Johnson",
+      description: "Learn how AI can transform your business operations and drive growth",
+      icon: <Brain className="w-6 h-6" />
+    },
+    {
+      title: "Cybersecurity Best Practices 2024",
+      date: "2024-01-22",
+      time: "3:00 PM EST",
+      duration: "45 minutes",
+      speaker: "Michael Chen",
+      description: "Essential cybersecurity strategies to protect your business",
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      title: "Cloud Migration Strategies",
+      date: "2024-01-29",
+      time: "1:00 PM EST",
+      duration: "90 minutes",
+      speaker: "Emily Rodriguez",
+      description: "Step-by-step guide to successful cloud migration",
+      icon: <Globe className="w-6 h-6" />
+    }
+  ];
+
+  const pastWebinars = [
+    {
+      title: "Introduction to AI Analytics",
+      date: "2023-12-15",
+      duration: "45 minutes",
+      views: "2,500+",
+      icon: <Play className="w-6 h-6" />
+    },
+    {
+      title: "5G Technology Overview",
+      date: "2023-12-08",
+      duration: "60 minutes",
+      views: "1,800+",
+      icon: <Play className="w-6 h-6" />
+    },
+    {
+      title: "Micro SAAS Solutions",
+      date: "2023-12-01",
+      duration: "50 minutes",
+      views: "3,200+",
+      icon: <Play className="w-6 h-6" />
+    }
+  ];
 
 export default function WebinarsPage() {
   return (
@@ -56,4 +98,6 @@ export default function WebinarsPage() {
       </div>
     </div>
   );
+}
+
 }

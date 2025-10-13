@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
-=======
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
@@ -23,31 +19,24 @@ import { Globe } from 'lucide-react';
 import { Code } from 'lucide-react';
 
 const AICodeAssistantProZionTechGroup = () => {
-<<<<<<< HEAD
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "TechStart Inc",
-      role: "Lead Developer",
-      content: "Zion's AI Code Assistant has revolutionized our development process. It's like having a senior developer available 24/7.",
-      rating: 5,
-      avatar: "AT"
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
     },
     {
-      name: "Maria Garcia",
-      company: "CloudScale Solutions",
-      role: "CTO",
-      content: "The code generation quality is exceptional. It understands context and produces production-ready code consistently.",
-      rating: 5,
-      avatar: "MG"
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
     },
     {
-      name: "David Kim",
-      company: "DataFlow Systems",
-      role: "Senior Engineer",
-      content: "The debugging capabilities are incredible. It finds issues I would have spent hours tracking down manually.",
-      rating: 5,
-      avatar: "DK"
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
     }
   ];
 
@@ -76,8 +65,6 @@ const AICodeAssistantProZionTechGroup = () => {
       "url": "https://ziontechgroup.com"
     }
   };
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
   const features = [
     {
@@ -152,33 +139,6 @@ const AICodeAssistantProZionTechGroup = () => {
         "Advanced analytics"
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Chen",
-      role: "Senior Developer",
-      company: "TechCorp",
-      content: "Zion AI Code Assistant Pro has revolutionized our development workflow. The code generation is incredibly accurate and saves us hours every day.",
-      rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "Michael Rodriguez",
-      role: "Lead Engineer",
-      company: "InnovateLabs",
-      content: "The debugging capabilities are outstanding. It catches issues we would have missed and provides clear explanations for fixes.",
-      rating: 5,
-      avatar: "MR"
-    },
-    {
-      name: "Emily Johnson",
-      role: "Full Stack Developer",
-      company: "DataFlow Inc",
-      content: "Multi-language support is fantastic. We can work across different tech stacks seamlessly with this tool.",
-      rating: 5,
-      avatar: "EJ"
     }
   ];
 

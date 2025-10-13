@@ -22,11 +22,72 @@ import { Receipt } from 'lucide-react';
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const ZionAIAccountingSuite = () => {
-  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
 
-  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
 
-  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+  const features = [
+    {
+      title: "AI-Powered Invoice Processing",
+      description: "Automatically extract data from invoices, receipts, and documents with 99.5% accuracy using OCR and machine learning",
+      icon: <Receipt className="w-6 h-6" />,
+      benefit: "Save 90% data entry time"
+    },
+    {
+      title: "Intelligent Expense Categorization",
+      description: "Automatically categorize expenses and transactions using AI pattern recognition and learning algorithms",
+      icon: <PieChart className="w-6 h-6" />,
+      benefit: "95% auto-categorization"
+    },
+    {
+      title: "Real-Time Financial Analytics",
+      description: "Get instant insights into cash flow, profitability, and financial health with AI-driven analytics",
+      icon: <BarChart3 className="w-6 h-6" />,
+      benefit: "Real-time insights"
+    },
+    {
+      title: "Automated Tax Preparation",
+      description: "AI-powered tax calculations, deductions optimization, and compliance monitoring for all tax jurisdictions",
+      icon: <Calculator className="w-6 h-6" />,
+      benefit: "Reduce tax prep time by 80%"
+    },
+    {
+      title: "Smart Cash Flow Forecasting",
+      description: "Predict future cash flow with 95% accuracy using machine learning and historical data analysis",
+      icon: <TrendingUp className="w-6 h-6" />,
+      benefit: "95% forecast accuracy"
+    },
+    {
+      title: "Fraud Detection & Prevention",
+      description: "Advanced AI algorithms detect suspicious transactions and potential fraud in real-time",
+      icon: <Shield className="w-6 h-6" />,
+      benefit: "99.9% fraud detection"
+    }
+  ];
 
   const pricingPlans = [
     {
@@ -107,10 +168,6 @@ const ZionAIAccountingSuite = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function ZionAiAccountingSuitePage() {
   return (
@@ -153,4 +210,6 @@ export default function ZionAiAccountingSuitePage() {
       </div>
     </div>
   );
+}
+
 }

@@ -1,19 +1,6 @@
-<<<<<<< HEAD
+import React from 'react';
+import { Users, ArrowRight, CheckCircle, Star, Globe, Shield, Zap, Brain, BarChart3, Target, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { 
-  Mail, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  CheckCircle,
-  ArrowRight,
-  Brain,
-  Target,
-  Globe
-} from 'lucide-react';
-=======
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -29,10 +16,10 @@ import { Mail } from 'lucide-react';
 
 const AIPoweredEmailAnalyzerPage = () => {
   const stats = [
-    { label: "Emails Analyzed", value: "1M+", icon: <Mail className="w-6 h-6" /> },
-    { label: "Accuracy Rate", value: "99.5%", icon: <Target className="w-6 h-6" /> },
-    { label: "Time Saved", value: "80%", icon: <Clock className="w-6 h-6" /> },
-    { label: "Cost Reduction", value: "60%", icon: <TrendingUp className="w-6 h-6" /> }
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
   ];
 
   const features = [
@@ -107,11 +94,6 @@ const AIPoweredEmailAnalyzerPage = () => {
       popular: false
     }
   ];
-=======
-import React from 'react';
-import { Mail, TrendingUp, Shield, Zap, BarChart3, Target, Brain, Sparkles } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function AiPoweredEmailAnalyzerPage() {
   return (
@@ -154,4 +136,6 @@ export default function AiPoweredEmailAnalyzerPage() {
       </div>
     </div>
   );
+}
+
 }

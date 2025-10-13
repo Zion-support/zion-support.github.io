@@ -1,17 +1,30 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Box } from 'lucide-react';
-import { Mic } from 'lucide-react';
 
 const ARVRDevelopmentPage = () => {
+  const benefits = [
+    {
+      title: "Expert Team",
+      description: "Our team of AI and technology experts delivers exceptional results.",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Proven Results",
+      description: "We have a track record of successful projects and satisfied clients.",
+      icon: <CheckCircle className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your success.",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Innovation",
+      description: "Cutting-edge solutions that keep you ahead of the competition.",
+      icon: <Zap className="w-8 h-8" />
+    }
+  ];
+
   const features = [
     {
       title: "Immersive AR Experiences",
@@ -38,7 +51,6 @@ const ARVRDevelopmentPage = () => {
       color: "from-orange-500 to-red-500"
     }
   ];
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 export default function Page() {
   return (
@@ -64,4 +76,6 @@ export default function Page() {
       </div>
     </div>
   );
+}
+
 }

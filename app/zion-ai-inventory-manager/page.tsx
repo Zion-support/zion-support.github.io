@@ -22,11 +22,72 @@ import { Package } from 'lucide-react';
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const ZionAIInventoryManager = () => {
-  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
 
-  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
 
-  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+  const features = [
+    {
+      title: "AI-Powered Demand Forecasting",
+      description: "Predict inventory needs with 95% accuracy using machine learning algorithms",
+      icon: <TrendingUp className="w-6 h-6" />,
+      benefit: "Reduce stockouts by 60%"
+    },
+    {
+      title: "Real-Time Inventory Tracking",
+      description: "Monitor stock levels across multiple locations with live updates",
+      icon: <Package className="w-6 h-6" />,
+      benefit: "99.9% accuracy"
+    },
+    {
+      title: "Automated Reorder Points",
+      description: "Set intelligent reorder triggers based on sales velocity and lead times",
+      icon: <AlertTriangle className="w-6 h-6" />,
+      benefit: "Never run out of stock"
+    },
+    {
+      title: "Multi-Channel Integration",
+      description: "Sync inventory across e-commerce, retail, and warehouse systems",
+      icon: <Globe className="w-6 h-6" />,
+      benefit: "Unified inventory view"
+    },
+    {
+      title: "Advanced Analytics Dashboard",
+      description: "Comprehensive reports on inventory turnover, costs, and performance",
+      icon: <BarChart3 className="w-6 h-6" />,
+      benefit: "Data-driven decisions"
+    },
+    {
+      title: "Mobile App Access",
+      description: "Manage inventory on-the-go with our intuitive mobile application",
+      icon: <Smartphone className="w-6 h-6" />,
+      benefit: "24/7 access"
+    }
+  ];
 
   const pricingPlans = [
     {
@@ -313,6 +374,6 @@ const ZionAIInventoryManager = () => {
       </section>
     </div>
   );
-};
+}
 
-export default ZionAIInventoryManager;
+}

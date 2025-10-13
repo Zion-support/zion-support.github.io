@@ -73,3 +73,4 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (
 ;
 export default ContentNewsletterSignup;
 </ContentNewsletterSignupProps>
+</input>

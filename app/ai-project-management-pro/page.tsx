@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Clock } from 'lucide-react';
@@ -10,48 +9,8 @@ import { BarChart3 } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 "use client";
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-import { CheckCircle, Star, Brain, Clock, Target, BarChart3 } from 'lucide-react';
-=======
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 export default function AIProjectManagementPro() {
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechFlow Solutions",
-      role: "Project Director",
-      content: "AI Project Management Pro has transformed how we handle complex projects. The AI predictions are incredibly accurate and help us stay on track.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Digital Agency Pro",
-      role: "Operations Manager",
-      content: "The automated resource allocation and risk prediction features have saved us countless hours and prevented multiple project delays.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Enterprise Solutions",
-      role: "Program Manager",
-      content: "Our team productivity has increased by 40% since implementing this AI-powered project management system. Highly recommended!",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,

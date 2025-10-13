@@ -1,61 +1,35 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-import {
-  Heart, 
-  Zap, 
-  BarChart3, 
-  TrendingUp, 
-  Zap, 
-  Shield, 
-  Target, 
-  Brain, 
-  Users, 
-  CheckCircle,
-=======
-import { 
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-  ArrowRight,
-  Users,
-  Star,
-  CheckCircle,
-  Zap,
-  Brain,
-  Globe,
-<<<<<<< HEAD
-  AlertCircle,
-  Clock
-=======
-  Monitor,
-  Target,
-  BarChart3,
-  Heart,
-  AlertCircle,
-  TrendingUp
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-} from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Heart, Zap, BarChart3, TrendingUp, Shield, Target, Brain, Users, CheckCircle, ArrowRight, Globe, AlertCircle, Clock } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 const AICustomerSentimentTrackerPage = () => {
-  const stats = [
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "10M+", label: "Reviews Analyzed" },
-    { number: "50+", label: "Languages Supported" },
-    { number: "24/7", label: "Real-time Monitoring" }
+  const benefits = [
+    {
+      title: "Expert Team",
+      description: "Our team of AI and technology experts delivers exceptional results.",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Proven Results",
+      description: "We have a track record of successful projects and satisfied clients.",
+      icon: <CheckCircle className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your success.",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Innovation",
+      description: "Cutting-edge solutions that keep you ahead of the competition.",
+      icon: <Zap className="w-8 h-8" />
+    }
   ];
 
-  const benefits = [
-    "Real-time sentiment analysis across all channels",
-    "Automated alert system for negative sentiment spikes",
-    "Comprehensive reporting and trend analysis",
-    "Integration with popular CRM and support tools",
-    "Customizable sentiment scoring and categorization",
-    "Historical data analysis and trend prediction"
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
   ];
 
   const features = [
@@ -88,46 +62,6 @@ const AICustomerSentimentTrackerPage = () => {
       icon: <Users className="w-8 h-8 text-blue-400" />,
       title: "Team Collaboration",
       description: "Share insights across teams, assign tasks, and track resolution progress for better customer experience."
-    }
-  ];
-
-  const stats = [
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "2.5s", label: "Response Time" },
-    { number: "50+", label: "Languages" },
-    { number: "24/7", label: "Monitoring" }
-  ];
-
-  const benefits = [
-    {
-      icon: <Target className="w-8 h-8 text-green-400" />,
-      title: "Increase customer satisfaction by 40%",
-      description: "Our AI-powered sentiment analysis helps you understand and improve customer satisfaction levels."
-    },
-    {
-      icon: <Clock className="w-8 h-8 text-blue-400" />,
-      title: "Reduce response time by 60%",
-      description: "Get instant insights and automated responses to customer feedback and concerns."
-    },
-    {
-      icon: <AlertCircle className="w-8 h-8 text-yellow-400" />,
-      title: "Identify issues before they escalate",
-      description: "Proactive monitoring helps you catch and resolve issues before they become major problems."
-    },
-    {
-      icon: <Heart className="w-8 h-8 text-red-400" />,
-      title: "Improve brand reputation",
-      description: "Monitor and manage your brand reputation across all channels with real-time insights."
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
-      title: "Make data-driven decisions",
-      description: "Comprehensive analytics and reporting help you make informed business decisions."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-cyan-400" />,
-      title: "Scale customer support efficiently",
-      description: "Handle more customer interactions with the same resources through intelligent automation."
     }
   ];
 

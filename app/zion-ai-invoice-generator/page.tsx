@@ -1,40 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  FileText, 
-  Download, 
-  Upload, 
-  Sparkles, 
-  Clock, 
-  Users, 
-  Star, 
-  CheckCircle, 
-  ArrowRight,
-  Mail,
-  Smartphone,
-  Globe,
-  Zap,
-  Target,
-  BarChart3,
-  Shield,
-  Award,
-  TrendingUp,
-  Calculator,
-  CreditCard,
-  Receipt,
-  DollarSign,
-  Calendar,
-  Send,
-  Eye,
-  Edit,
-  Trash2,
-  Copy,
-  Share
-} from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -63,9 +26,35 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIInvoiceGeneratorPage = () => {
-  // const [selectedPlan, setSelectedPlan] = useState('pro');
-  // const [selectedPlan, setSelectedPlan] = useState('pro');
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
+
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
+
+  const [selectedPlan, setSelectedPlan] = useState('pro');
 
 const ZionAIInvoiceGeneratorPage: React.FC = () => {
   const features = [
@@ -508,5 +497,4 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
 >>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
     </div>
   );
-};
-
+}

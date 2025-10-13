@@ -6,10 +6,6 @@ import { useEffect } from 'react';
 =======
 
 'use client'
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-'use client'
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 interface CriticalresourcepreloaderProps {
   className?: string;

@@ -41,3 +41,5 @@ export default function NewsletterSignup()
       </div>
     </>
   );
+
+</input>

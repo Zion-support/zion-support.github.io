@@ -1,6 +1,6 @@
 import React from 'react';
+import { TrendingUp, Sparkles, ArrowRight, CheckCircle, Star, Shield, PieChart, Activity } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import { TrendingUp, ArrowRight, Sparkles, CheckCircle, PieChart, Activity, Shield } from 'lucide-react';
@@ -17,12 +17,26 @@ import { Activity } from 'lucide-react';
 
 const AIFinancialAnalysisPage = () => {
   const benefits = [
-    "Increase investment returns by 25%",
-    "Reduce financial risk by 60%",
-    "Automate 90% of analysis tasks",
-    "Real-time market monitoring",
-    "Advanced fraud detection",
-    "Comprehensive compliance reporting"
+    {
+      title: "Expert Team",
+      description: "Our team of AI and technology experts delivers exceptional results.",
+      icon: <Users className="w-8 h-8" />
+    },
+    {
+      title: "Proven Results",
+      description: "We have a track record of successful projects and satisfied clients.",
+      icon: <CheckCircle className="w-8 h-8" />
+    },
+    {
+      title: "24/7 Support",
+      description: "Round-the-clock support to ensure your success.",
+      icon: <Clock className="w-8 h-8" />
+    },
+    {
+      title: "Innovation",
+      description: "Cutting-edge solutions that keep you ahead of the competition.",
+      icon: <Zap className="w-8 h-8" />
+    }
   ];
 
   const features = [
@@ -57,17 +71,6 @@ const AIFinancialAnalysisPage = () => {
       description: "AI-generated insights and recommendations based on your financial data and market conditions."
     }
   ];
-
-  const benefits = [
-    "95% accuracy in financial predictions",
-    "Real-time market analysis and alerts",
-    "Automated portfolio optimization",
-    "Comprehensive risk assessment",
-    "Personalized investment recommendations",
-    "Advanced fraud detection and prevention"
-  ];
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export default function AiFinancialAnalysisPage() {
   return (
@@ -110,4 +113,6 @@ export default function AiFinancialAnalysisPage() {
       </div>
     </div>
   );
+}
+
 }

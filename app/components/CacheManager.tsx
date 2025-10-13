@@ -7,9 +7,10 @@ interface CachemanagerProps {
   children?: React.ReactNode;
 }
 
-const CacheManager: React.FC<CacheManagerProps> = ({ children }) => {
-  return <>{children}</>;
-};
-
-export default CacheManager;
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+export default function Cachemanager({ className = '', children, ...props }: CachemanagerProps) {
+  return (
+    <div className={`cachemanager-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}

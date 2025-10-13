@@ -1,18 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Cloud, Shield, Zap, Globe, ArrowRight, BarChart3, Database } from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const CloudServicesPage: React.FC = () => {
   const benefits = [
@@ -38,35 +25,29 @@ const CloudServicesPage: React.FC = () => {
     }
   ];
 
-  const services = [
-    { name: "Cloud Migration", path: "/cloud-migration" },
-    { name: "Cloud Security", path: "/cloud-security" },
-    { name: "Cloud Monitoring", path: "/cloud-monitoring" },
-    { name: "Cloud Optimization", path: "/cloud-optimization" }
-  ];
-
   const benefits = [
-    "Scalable infrastructure",
-    "Cost-effective solutions",
-    "Enhanced security",
-    "24/7 monitoring",
-    "Global availability",
-    "Automated backups"
+    {
+      title: "Scalability",
+      description: "Scale your infrastructure up or down based on demand with cloud elasticity.",
+      icon: <BarChart3 className="w-8 h-8" />
+    },
+    {
+      title: "Security",
+      description: "Enterprise-grade security with encryption, access controls, and compliance.",
+      icon: <Shield className="w-8 h-8" />
+    },
+    {
+      title: "Cost Efficiency",
+      description: "Pay only for what you use with flexible pricing models and cost optimization.",
+      icon: <Zap className="w-8 h-8" />
+    },
+    {
+      title: "Reliability",
+      description: "High availability and disaster recovery solutions for business continuity.",
+      icon: <CheckCircle className="w-8 h-8" />
+    }
   ];
 
-  const benefits = [
-    "Reduce infrastructure costs by up to 50%",
-    "Improve scalability and flexibility",
-    "Enhanced security and compliance",
-    "24/7 monitoring and support",
-    "Faster time to market",
-    "Disaster recovery and backup"
-  ];
-=======
-import { Helmet } from 'react-helmet-async';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
-export default function CloudServicesPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

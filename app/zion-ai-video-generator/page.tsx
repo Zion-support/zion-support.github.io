@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  Video, 
-  Play, 
-  Download, 
-  Upload, 
-  Sparkles, 
-  Clock, 
-  Users, 
-  Star, 
-  CheckCircle, 
-  ArrowRight,
-  Mail,
-  Smartphone,
-  Globe,
-  Zap,
-  Target,
-  BarChart3,
-  Shield,
-  Award,
-  TrendingUp
-} from 'lucide-react';
-=======
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -53,9 +26,35 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIVideoGeneratorPage = () => {
-  // const [selectedPlan, setSelectedPlan] = useState('pro');
-  // const [selectedPlan, setSelectedPlan] = useState('pro');
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
+
+  const stats = [
+    { label: "Projects Completed", value: "500+" },
+    { label: "Happy Clients", value: "200+" },
+    { label: "Years Experience", value: "5+" },
+    { label: "Team Members", value: "50+" }
+  ];
+
+  const [selectedPlan, setSelectedPlan] = useState('pro');
 
 const ZionAIVideoGeneratorPage: React.FC = () => {
   const features = [
@@ -146,13 +145,6 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
       rating: 5,
       avatar: "EJ"
     }
-  ];
-
-  const stats = [
-    { number: "10,000+", label: "Videos Generated", icon: <Video className="w-6 h-6" /> },
-    { number: "95%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
-    { number: "25+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "4.9/5", label: "User Rating", icon: <Star className="w-6 h-6" /> }
   ];
 
   return (
@@ -441,5 +433,4 @@ const ZionAIVideoGeneratorPage: React.FC = () => {
 >>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
     </div>
   );
-};
-
+}

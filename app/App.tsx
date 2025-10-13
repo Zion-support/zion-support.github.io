@@ -1,4 +1,4 @@
-"use client";
+import React from 'react';
 
 <<<<<<< HEAD
 import { Suspense, lazy } from 'react';
@@ -58,13 +58,7 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
-<<<<<<< HEAD
-          <PerformanceMonitor showDetails={false}>
-            <div>Performance monitoring active</div>
-          </PerformanceMonitor>
-=======
           <PerformanceMonitor />
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
           <AccessibilityEnhancer>
             <CriticalResourcePreloader />
             <CacheManager />
@@ -127,4 +121,10 @@ function App() {
   );
 }
 
-export default App;
+export default function App({ className = '', children, ...props }: AppProps) {
+  return (
+    <div className={`app-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}

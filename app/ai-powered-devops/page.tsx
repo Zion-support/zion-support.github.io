@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
-import { Link } from "react-router-dom";
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import React from "react";
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import SEOOptimizer from "../../components/SEOOptimizer";
@@ -29,33 +18,23 @@ import { Plus } from 'lucide-react';
 import { DollarSign } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Brain, ArrowRight, Monitor, Zap, CheckCircle, Award, DollarSign, MessageSquare, Phone, Globe, Star } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
-export default function AIPoweredDevOpsPage() {
-  const testimonials = [
-    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5, avatar: "/api/placeholder/64/64" }
-  ];
+export default function AiPoweredDevops() {
   const features = [
-    "Automated CI/CD Pipeline Setup",
-    "Intelligent Monitoring & Alerting",
-    "Auto-scaling Infrastructure",
-    "Security Vulnerability Scanning",
-    "Performance Optimization",
-    "Cost Optimization"
+    "AI-powered automated testing and quality assurance",
+    "Intelligent deployment orchestration and rollback",
+    "Predictive infrastructure scaling and optimization",
+    "Automated security vulnerability detection and patching",
+    "AI-driven performance monitoring and alerting",
+    "Intelligent log analysis and anomaly detection",
+    "Automated code review and optimization suggestions",
+    "Smart resource allocation and cost optimization",
+    "AI-powered incident response and resolution",
+    "Automated compliance checking and reporting",
+    "Intelligent capacity planning and forecasting",
+    "AI-driven continuous integration and deployment"
   ];
 
-  const capabilities = [
-    "Automated CI/CD pipeline setup",
-    "Intelligent monitoring and alerting",
-    "Auto-scaling infrastructure management",
-    "Security vulnerability scanning",
-    "Performance optimization",
-    "Cost optimization recommendations"
-  ];
-  
   const pricingPlans = [
     {
       name: "Startup",

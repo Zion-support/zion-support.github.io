@@ -1,16 +1,10 @@
-<<<<<<< HEAD
+import React from 'react';
+import { Search, Code } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 =======
 import { Search } from 'lucide-react';
 import { Code } from 'lucide-react';
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
-  data: any;
-=======
-import React from 'react';
 
 interface StructureddataProps {
   className?: string;

@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React from 'react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-import { Calendar, Brain, Users, Zap, CheckCircle, Star, Award, BarChart3, Target, Sparkles, TrendingUp, Monitor, FileText, MessageSquare, Workflow, Shield, Lightbulb, GitBranch, Timer } from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -29,9 +21,65 @@ import { MessageSquare } from 'lucide-react';
 import { FileText } from 'lucide-react';
 
 const ZionAIProjectManagerProPage = () => {
-  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+  const testimonials = [
+    {
+      name: "John Smith",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our business with their AI solutions.",
+      avatar: "/images/testimonials/john-smith.jpg"
+    },
+    {
+      name: "Sarah Johnson",
+      role: "CTO, InnovateLabs",
+      content: "The team's expertise in AI and automation is unmatched.",
+      avatar: "/images/testimonials/sarah-johnson.jpg"
+    },
+    {
+      name: "Mike Chen",
+      role: "Founder, StartupXYZ",
+      content: "We saw immediate results after implementing their solutions.",
+      avatar: "/images/testimonials/mike-chen.jpg"
+    }
+  ];
 
-  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+  const features = [
+    {
+      title: "AI-Powered Task Management",
+      description: "Intelligent task prioritization, automatic scheduling, and smart resource allocation based on team capacity and project requirements",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Predictive Analytics",
+      description: "Forecast project completion dates, identify potential bottlenecks, and predict resource needs with advanced AI algorithms",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Smart Resource Allocation",
+      description: "Automatically assign tasks to the right team members based on skills, availability, and workload optimization",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Real-time Collaboration",
+      description: "Seamless team communication, file sharing, and collaborative workspace with AI-powered meeting summaries",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate comprehensive project reports, status updates, and stakeholder communications automatically",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      title: "Risk Management",
+      description: "AI-powered risk assessment, early warning systems, and automated mitigation strategies",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500"
+    }
+  ];
 
   const pricingPlans = [
     {
@@ -211,7 +259,6 @@ export default function ZionAiProjectManagerProPage() {
       </div>
     </div>
   );
-};
-
+}
 
 }

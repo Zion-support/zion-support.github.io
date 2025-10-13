@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-=======
 import React from 'react';
 import { 
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
@@ -13,8 +9,13 @@ import {
   DollarSign, 
   Target, 
   CheckCircle, 
+  ArrowRight,
   Cpu,
   Globe,
+  Clock,
+  Users,
+  Award,
+  Star,
   Activity,
   PieChart
 } from 'lucide-react';
@@ -203,7 +204,6 @@ export default function AiQuantumFinancialOraclePage() {
       </div>
     </div>
   );
-};
-
+}
 
 }
