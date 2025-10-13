@@ -105,33 +105,6 @@ const ZionAIProjectManagerProPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "David Kim",
-      company: "TechStart Solutions",
-      role: "Project Director",
-      content: "Zion AI Project Manager Pro has transformed how we manage projects. The AI predictions are incredibly accurate, and we've improved delivery times by 40%.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Martinez",
-      company: "Creative Agency Co.",
-      role: "Operations Manager",
-      content: "The smart resource allocation feature is a game-changer. It automatically assigns tasks to the right people, saving us hours of manual planning every week.",
-      rating: 5,
-      avatar: "LM"
-    },
-    {
-      name: "James Wilson",
-      company: "Enterprise Corp",
-      role: "VP of Engineering",
-      content: "The predictive analytics help us identify risks before they become problems. We've reduced project overruns by 60% since implementing this tool.",
-      rating: 5,
-      avatar: "JW"
-    }
-  ];
-
   const useCases = [
     {
       title: "Software Development",

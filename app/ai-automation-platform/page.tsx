@@ -4,12 +4,18 @@ import { Link } from 'react-router-dom';
 import { 
   BarChart3, 
   Cloud, 
+<<<<<<< HEAD
   Users, 
   ArrowRight,
   Sparkles,
   CheckCircle,
   TrendingUp,
   Settings,
+=======
+  ArrowRight,
+  Sparkles,
+  CheckCircle,
+>>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
   Workflow,
   Target
 } from 'lucide-react';
@@ -40,15 +46,6 @@ const AIAutomationPlatformPage = () => {
       icon: <Settings className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
-  const benefits = [
-    "Reduce manual work by up to 80%",
-    "Improve process efficiency by 60%",
-    "Eliminate human errors in repetitive tasks",
-    "Scale operations without proportional staff increases",
-    "24/7 automated monitoring and execution",
-    "Real-time process optimization"
   ];
 
   const useCases = [

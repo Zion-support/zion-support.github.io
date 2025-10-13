@@ -20,7 +20,10 @@ export default function AiQuantumComputing() {
     "Custom quantum circuit design and optimization"
   ];
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
   const pricingPlans = [
     {
       name: "Research",
@@ -77,33 +80,6 @@ export default function AiQuantumComputing() {
         "On-premise quantum deployment"
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Dr. Sarah Chen",
-      company: "Quantum Research Institute",
-      role: "Chief Quantum Scientist",
-      content: "Zion's quantum computing platform has accelerated our research by years. We've made breakthrough discoveries in quantum chemistry that would have been impossible with classical computers.",
-      rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Pharmaceutical Corp",
-      role: "Head of R&D",
-      content: "The quantum simulation capabilities are extraordinary. We've discovered new drug compounds and optimized molecular structures in weeks instead of years.",
-      rating: 5,
-      avatar: "MR"
-    },
-    {
-      name: "Dr. Emily Watson",
-      company: "Financial Services",
-      role: "Quantitative Analyst",
-      content: "Quantum optimization has revolutionized our portfolio management. We're achieving returns that were theoretically impossible with classical algorithms.",
-      rating: 5,
-      avatar: "EW"
     }
   ];
 

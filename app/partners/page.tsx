@@ -49,29 +49,6 @@ export default function Partners() {
     }
   ];
 
-  const benefits = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Joint Marketing",
-      description: "Collaborative marketing campaigns and co-branded content"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global Reach",
-      description: "Access to our worldwide network of clients and opportunities"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Technical Support",
-      description: "Dedicated technical resources and training programs"
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Innovation Labs",
-      description: "Joint innovation initiatives and R&D projects"
-    }
-  ];
-
   const tiers = [
     {
       name: "Platinum",

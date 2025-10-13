@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Server, Shield, ArrowRight, Sparkles, CheckCircle, Globe, Settings } from 'lucide-react';
+=======
+import { Server, Shield, Zap, ArrowRight, Sparkles, CheckCircle, Target, Brain, Users, Globe, Settings } from 'lucide-react';
+>>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
 
 const DataCenterServicesPage = () => {
   const features = [
@@ -29,15 +33,6 @@ const DataCenterServicesPage = () => {
       icon: <Settings className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
-  const benefits = [
-    "99.99% uptime guarantee",
-    "Reduce infrastructure costs by 40%",
-    "Scale resources instantly",
-    "Enhanced security and compliance",
-    "24/7 expert support",
-    "Future-proof infrastructure"
   ];
 
   return (

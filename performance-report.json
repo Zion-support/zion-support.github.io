@@ -1,10 +1,19 @@
 {
+<<<<<<< HEAD
   "timestamp": "2025-10-13T10:55:09.432Z",
   "buildStats": {
     "totalFiles": 85,
     "totalSize": 834040,
     "jsFiles": 82,
     "jsSize": 824857,
+=======
+  "timestamp": "2025-10-13T11:08:12.768Z",
+  "buildStats": {
+    "totalFiles": 85,
+    "totalSize": 674570,
+    "jsFiles": 82,
+    "jsSize": 665467,
+>>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 0,

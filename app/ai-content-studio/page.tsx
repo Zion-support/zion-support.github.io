@@ -115,30 +115,6 @@ const AIContentStudioZionTechGroup = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Jessica Martinez",
-      company: "Content Marketing Agency",
-      role: "Creative Director",
-      content: "Zion AI Content Studio Pro has transformed our content production. We've increased output by 300% while maintaining quality.",
-      rating: 5
-    },
-    {
-      name: "David Kim",
-      company: "Digital Media Co.",
-      role: "Content Manager",
-      content: "The AI video generation is incredible. We can now create professional videos in minutes instead of hours.",
-      rating: 5
-    },
-    {
-      name: "Lisa Thompson",
-      company: "E-commerce Brand",
-      role: "Marketing Director",
-      content: "Best content creation tool we've used. The AI writing and image generation features are game-changers.",
-      rating: 5
-    }
-  ];
-
   return (
     <PerformanceOptimizer>
       <EnhancedAccessibility>
@@ -171,11 +147,8 @@ const AIContentStudioZionTechGroup = () => {
                   variant="display"
                   size="5xl"
                   gradient={true}
-                  animated={true}
                   glow={true}
-                  neon={true}
-                  className="mb-6 leading-tight"
-                >
+                  className="mb-6 leading-tight">
                   Zion AI Content Studio Pro
                 </FuturisticTextEnhanced>
                 
@@ -190,11 +163,7 @@ const AIContentStudioZionTechGroup = () => {
                     variant="primary"
                     size="lg"
                     icon={Sparkles}
-                    iconPosition="left"
-                    glowColor="purple"
-                    neon={true}
-                    animated={true}
-                  >
+                    iconPosition="left">
                     Start Free Trial
                   </FuturisticButtonEnhanced>
                   <FuturisticButtonEnhanced
@@ -202,11 +171,7 @@ const AIContentStudioZionTechGroup = () => {
                     variant="outline"
                     size="lg"
                     icon={ArrowRight}
-                    iconPosition="left"
-                    glowColor="pink"
-                    neon={true}
-                    animated={true}
-                  >
+                    iconPosition="left">
                     Watch Demo
                   </FuturisticButtonEnhanced>
                 </div>
@@ -228,16 +193,10 @@ const AIContentStudioZionTechGroup = () => {
                   {features.map((feature, index) => (
                     <FuturisticCardEnhanced
                       key={index}
-                      glowColor={index % 2 === 0 ? 'purple' : 'pink'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
-                      className="text-center"
-                    >
+                      className="text-center">
                       <div
                         className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                        aria-hidden="true"
-                      >
+                        aria-hidden="true">
                         {feature.icon}
                       </div>
                       <h3 className="text-lg md:text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
@@ -267,12 +226,7 @@ const AIContentStudioZionTechGroup = () => {
                   {pricingPlans.map((plan, index) => (
                     <FuturisticCardEnhanced
                       key={index}
-                      glowColor={plan.popular ? 'purple' : 'pink'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
-                      className={`relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}
-                    >
+                      className={`relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}>
                       {plan.popular && (
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                           <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -301,11 +255,7 @@ const AIContentStudioZionTechGroup = () => {
                         size="lg"
                         icon={ArrowRight}
                         iconPosition="right"
-                        glowColor={plan.popular ? "purple" : "pink"}
-                        neon={true}
-                        animated={true}
-                        className="w-full"
-                      >
+                        className="w-full">
                         Get Started
                       </FuturisticButtonEnhanced>
                     </FuturisticCardEnhanced>
@@ -329,8 +279,7 @@ const AIContentStudioZionTechGroup = () => {
                   {testimonials.map((testimonial, index) => (
                     <div
                       key={index}
-                      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden"
-                    >
+                      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden">
                       <div className="flex items-center mb-4">
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -364,11 +313,7 @@ const AIContentStudioZionTechGroup = () => {
                     variant="primary"
                     size="lg"
                     icon={ArrowRight}
-                    iconPosition="right"
-                    glowColor="purple"
-                    neon={true}
-                    animated={true}
-                  >
+                    iconPosition="right">
                     Start Free Trial
                   </FuturisticButtonEnhanced>
                   <FuturisticButtonEnhanced
@@ -376,11 +321,7 @@ const AIContentStudioZionTechGroup = () => {
                     variant="outline"
                     size="lg"
                     icon={Sparkles}
-                    iconPosition="right"
-                    glowColor="pink"
-                    neon={true}
-                    animated={true}
-                  >
+                    iconPosition="right">
                     Schedule Demo
                   </FuturisticButtonEnhanced>
                 </div>

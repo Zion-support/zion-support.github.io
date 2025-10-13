@@ -1,6 +1,10 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import { ArrowRight, Cloud, Shield, CheckCircle, Star, Users, Award, Smartphone, Globe, Mail, Phone, Database, Lock, Headphones, Sparkles, Clock, Archive } from 'lucide-react';
+=======
+import { ArrowRight, Cloud, Shield, CheckCircle, Star, Users, Award, Zap, Smartphone, Globe, Mail, Phone, TrendingUp, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Headphones, Sparkles, Target, Calendar, FileText, Code, Bot, Wifi, Heart, Receipt, Package, Clock, Upload, Download, Folder, Archive, Search, Share2, Eye } from 'lucide-react';
+>>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
 
 export default function ZionCloudVaultPro() {
   const features = [
@@ -98,33 +102,6 @@ export default function ZionCloudVaultPro() {
         "On-premise deployment"
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Jennifer Lee",
-      company: "Creative Agency",
-      role: "Creative Director",
-      content: "Zion Cloud Vault Pro has revolutionized how we manage our creative assets. The unlimited storage and seamless sync across all our devices is incredible.",
-      rating: 5,
-      avatar: "JL"
-    },
-    {
-      name: "Mark Wilson",
-      company: "Legal Firm",
-      role: "Managing Partner",
-      content: "The security features give us complete confidence in storing sensitive client documents. The encryption and access controls are top-notch.",
-      rating: 5,
-      avatar: "MW"
-    },
-    {
-      name: "Sarah Davis",
-      company: "Tech Startup",
-      role: "CTO",
-      content: "The team collaboration features have improved our productivity significantly. Being able to share and collaborate on files securely is a game-changer.",
-      rating: 5,
-      avatar: "SD"
     }
   ];
 

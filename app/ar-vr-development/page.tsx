@@ -31,15 +31,6 @@ const ARVRDevelopmentPage = () => {
     }
   ];
 
-  const benefits = [
-    "Increase user engagement by 300%",
-    "Reduce training costs by 70%",
-    "Improve learning retention by 80%",
-    "Create unique brand experiences",
-    "Scale across multiple platforms",
-    "Future-proof your technology"
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

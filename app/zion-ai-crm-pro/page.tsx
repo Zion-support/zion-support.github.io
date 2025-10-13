@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Users, ArrowRight, Sparkles, CheckCircle, Star, Target, TrendingUp, Zap, BarChart3, Mail, Phone, MapPin, Play, Watch, Video } from 'lucide-react';
+=======
+import { Users, ArrowRight, Sparkles, CheckCircle, Star, Brain, Target, TrendingUp, Shield, Clock, Zap, BarChart3, Award, Globe, Smartphone, Monitor, Mail, Phone, MapPin, Play, Download, Share, Settings, PieChart, LineChart, Activity, Database, Cloud, Lock, Eye, Filter, Search, RefreshCw, Maximize, Minimize, RotateCcw, RotateCw, ZoomIn, ZoomOut, Move, Copy, Scissors, Save, Folder, File, Archive, Tag, Flag, Bookmark, Bell, AlertCircle, Info, HelpCircle, X, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, MoreHorizontal, MoreVertical, Grid, List, Layout, Sidebar, Navigation, Compass, Map, Home, Building, Store, Factory, Warehouse, School, Hospital, Car, Plane, Train, Ship, Bike, Bus, Package, Box, Gift, ShoppingBag, CreditCard, Wallet, Coins, note, Receipt, Calculator, Percent, TrendingDown, Thermometer, Gauge, Battery, Wifi, Bluetooth, Radio, Tv, Laptop, Tablet, Watch, Headphones, Speaker, Mic, Camera, Video, Image, Music, Film, Book, Newspaper, FileText, Folder as FolderIcon, Archive as ArchiveIcon, HardDrive, Server, Cpu, MemoryStick, Disc } from 'lucide-react';
+>>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
 
 const ZionAICRMProPage = () => {
   const features = [
@@ -94,36 +98,6 @@ const ZionAICRMProPage = () => {
         'SLA guarantee'
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Michael Chen',
-      company: 'E-commerce Solutions',
-      role: 'CTO',
-      content: 'The AI CRM system is incredible. Our sales team productivity increased by 60% with automated lead scoring.',
-      rating: 5,
-      avatar: 'MC',
-      results: '60% increase in sales productivity'
-    },
-    {
-      name: 'Sarah Johnson',
-      company: 'TechStart Inc.',
-      role: 'Sales Director',
-      content: 'The predictive analytics helped us identify high-value prospects and increased our conversion rate by 45%.',
-      rating: 5,
-      avatar: 'SJ',
-      results: '45% increase in conversion rate'
-    },
-    {
-      name: 'David Rodriguez',
-      company: 'Marketing Agency',
-      role: 'CEO',
-      content: 'Automated follow-ups saved us 20 hours per week. The AI knows exactly when to reach out to prospects.',
-      rating: 5,
-      avatar: 'DR',
-      results: '20 hours saved per week'
     }
   ];
 

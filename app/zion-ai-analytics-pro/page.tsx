@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { BarChart3, ArrowRight, Sparkles, CheckCircle, Star, Users, Brain, Target, Mail, Phone, MapPin, Play, Settings, Database, Cloud, Watch, FileText } from 'lucide-react';
+=======
+import { BarChart3, ArrowRight, Sparkles, CheckCircle, Star, Users, TrendingUp, Shield, Clock, Zap, Brain, Target, Award, Globe, Smartphone, Monitor, Mail, Phone, MapPin, Play, Download, Share, Settings, PieChart, LineChart, Activity, Database, Cloud, Lock, Eye, Filter, Search, RefreshCw, Maximize, Minimize, RotateCcw, RotateCw, ZoomIn, ZoomOut, Move, Copy, Scissors, Save, Folder, File, Archive, Tag, Flag, Bookmark, Bell, AlertCircle, Info, HelpCircle, X, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Menu, MoreHorizontal, MoreVertical, Grid, List, Layout, Sidebar, Navigation, Compass, Map, Home, Building, Store, Factory, Warehouse, School, Hospital, Car, Plane, Train, Ship, Bike, Bus, Package, Box, Gift, ShoppingBag, CreditCard, Wallet, Coins, note, Receipt, Calculator, Percent, TrendingDown, Thermometer, Gauge, Battery, Wifi, Bluetooth, Radio, Tv, Laptop, Tablet, Watch, Headphones, Speaker, Mic, Camera, Video, Image, Music, Film, Book, Newspaper, FileText, Folder as FolderIcon, Archive as ArchiveIcon, HardDrive, Server, Cpu, MemoryStick, Disc } from 'lucide-react';
+>>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
 
 const ZionAIAnalyticsProPage = () => {
   const features = [
@@ -94,36 +98,6 @@ const ZionAIAnalyticsProPage = () => {
         'SLA guarantee'
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechStart Inc.',
-      role: 'CEO',
-      content: 'Zion AI Analytics Pro transformed our data insights. We increased our conversion rate by 40% in just 3 months.',
-      rating: 5,
-      avatar: 'SJ',
-      results: '40% increase in conversion rate'
-    },
-    {
-      name: 'Michael Chen',
-      company: 'E-commerce Solutions',
-      role: 'CTO',
-      content: 'The predictive analytics feature helped us optimize our inventory and reduce costs by 25%.',
-      rating: 5,
-      avatar: 'MC',
-      results: '25% reduction in inventory costs'
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'Digital Marketing Agency',
-      role: 'Operations Director',
-      content: 'The automated reporting saves us 15 hours per week. The AI insights are incredibly accurate.',
-      rating: 5,
-      avatar: 'ER',
-      results: '15 hours saved per week'
     }
   ];
 

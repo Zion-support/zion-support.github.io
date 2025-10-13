@@ -55,16 +55,6 @@ const WhitepapersPage = () => {
     }
   ];
 
-  const categories = [
-    "All Categories",
-    "Artificial Intelligence",
-    "Cybersecurity",
-    "Cloud Technology",
-    "5G Technology",
-    "Business Strategy",
-    "Digital Transformation"
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

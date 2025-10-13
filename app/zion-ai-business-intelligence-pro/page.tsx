@@ -1,6 +1,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { BarChart3, TrendingUp, Brain, Zap, CheckCircle, ArrowRight, Activity, Users, Globe, Clock, Award, Star, Database, Eye } from 'lucide-react';
+=======
+import { BarChart3, TrendingUp, Brain, Target, Zap, CheckCircle, ArrowRight, PieChart, LineChart, Activity, Users, DollarSign, Globe, Clock, Award, Star, Database, Eye } from 'lucide-react';
+>>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -133,40 +137,6 @@ const ZionAiBusinessIntelligencePro = () => {
       icon: <Globe className="w-8 h-8" />,
       features: ["Native mobile apps", "Offline access", "Push notifications", "Touch-optimized"]
     }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Retail Analytics Corp",
-      role: "VP of Analytics",
-      content: "Zion AI Business Intelligence Pro has revolutionized how we analyze data. The AI insights have helped us identify opportunities worth millions in additional revenue.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Financial Services Group",
-      role: "Chief Data Officer",
-      content: "The predictive analytics capabilities are outstanding. We can now forecast market trends with 85% accuracy, giving us a significant competitive advantage.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Manufacturing Solutions",
-      role: "Operations Director",
-      content: "This platform has transformed our decision-making process. The real-time dashboards and AI insights help us optimize operations and reduce costs by 25%.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
-  const stats = [
-    { number: "500+", label: "Enterprise Customers", icon: <Users className="w-6 h-6" /> },
-    { number: "1B+", label: "Data Points Processed", icon: <Database className="w-6 h-6" /> },
-    { number: "95%", label: "Insight Accuracy", icon: <Award className="w-6 h-6" /> },
-    { number: "50%", label: "Faster Decision Making", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (

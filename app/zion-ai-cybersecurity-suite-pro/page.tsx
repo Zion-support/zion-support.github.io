@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Shield, Brain, Lock, Zap, CheckCircle, Star, Award, BarChart3, Sparkles, Globe, Smartphone, Monitor, AlertTriangle, Eye, Network, Shield as FileShield, Key, Bug, Cloud, Users } from 'lucide-react';
+=======
+import { Shield, Brain, Lock, Zap, ArrowRight, CheckCircle, Star, Award, BarChart3, Clock, Target, Sparkles, TrendingUp, Globe, Smartphone, Monitor, AlertTriangle, Eye, Search, Database, Network, Shield as FileShield, Key, Bug, Activity, Server, Wifi, HardDrive, Cloud, Settings, Users, Bell, FileText, Download } from 'lucide-react';
+>>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -104,33 +108,6 @@ const ZionAICybersecuritySuiteProPage = () => {
       ],
       popular: false,
       color: "from-purple-500 to-pink-500"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Robert Chen",
-      company: "Financial Services Inc.",
-      role: "CISO",
-      content: "Zion AI Cybersecurity Suite Pro has been a game-changer for our security posture. The AI threat detection caught several sophisticated attacks that traditional systems missed.",
-      rating: 5,
-      avatar: "RC"
-    },
-    {
-      name: "Maria Rodriguez",
-      company: "Healthcare Group",
-      role: "IT Security Director",
-      content: "The automated incident response saved us hours of manual work during a recent breach. The system contained the threat and provided detailed forensics automatically.",
-      rating: 5,
-      avatar: "MR"
-    },
-    {
-      name: "James Thompson",
-      company: "E-commerce Platform",
-      role: "Security Manager",
-      content: "The compliance management features helped us pass our SOC 2 audit with flying colors. The automated reporting and monitoring made everything so much easier.",
-      rating: 5,
-      avatar: "JT"
     }
   ];
 

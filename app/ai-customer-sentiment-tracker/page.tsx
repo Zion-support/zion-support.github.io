@@ -3,8 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
   Heart, 
-  TrendingUp, 
-  MessageSquare, 
   Zap, 
   BarChart3, 
   Users, 
@@ -13,7 +11,6 @@ import {
   Brain,
   Target,
   Globe,
-  Smile,
   AlertCircle
 } from 'lucide-react';
 
@@ -99,36 +96,6 @@ const AICustomerSentimentTrackerPage = () => {
       ],
       popular: false
     }
-  ];
-
-  const benefits = [
-    {
-      icon: <Smile className="w-12 h-12 text-green-400" />,
-      title: "Improve Customer Satisfaction",
-      description: "Increase customer satisfaction scores by 35% with proactive sentiment monitoring and quick response times."
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-blue-400" />,
-      title: "Boost Brand Reputation",
-      description: "Protect and enhance your brand reputation by quickly addressing negative sentiment and amplifying positive feedback."
-    },
-    {
-      icon: <MessageSquare className="w-12 h-12 text-purple-400" />,
-      title: "Reduce Customer Churn",
-      description: "Identify at-risk customers early and take proactive steps to retain them, reducing churn by up to 40%."
-    },
-    {
-      icon: <Heart className="w-12 h-12 text-red-400" />,
-      title: "Increase Customer Loyalty",
-      description: "Build stronger customer relationships through better understanding of their needs and emotions."
-    }
-  ];
-
-  const stats = [
-    { number: "35%", label: "Satisfaction Increase" },
-    { number: "40%", label: "Churn Reduction" },
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "2.5x", label: "Faster Response" }
   ];
 
   return (

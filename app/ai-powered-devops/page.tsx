@@ -20,7 +20,10 @@ export default function AiPoweredDevops() {
     "AI-driven continuous integration and deployment"
   ];
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3a0c14507e7fb2ceadeeae23292a951fd32ccfd0
   const pricingPlans = [
     {
       name: "Startup",
@@ -77,33 +80,6 @@ export default function AiPoweredDevops() {
         "On-premise deployment"
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "Jennifer Martinez",
-      company: "Tech Startup",
-      role: "CTO",
-      content: "AI-powered DevOps has transformed our development process. We've reduced deployment time by 85% and our system uptime is now 99.9%. The AI predictions are incredibly accurate.",
-      rating: 5,
-      avatar: "JM"
-    },
-    {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Head of Engineering",
-      content: "The automated testing and deployment features are game-changing. We can now deploy multiple times per day with confidence, and our bug rate has dropped by 90%.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Financial Services",
-      role: "DevOps Director",
-      content: "The AI-driven security monitoring and compliance checking have been invaluable. We've achieved 100% compliance and our security incidents have dropped to zero.",
-      rating: 5,
-      avatar: "LT"
     }
   ];
 

@@ -3,12 +3,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone } from 'lucide-react';
 
 export default function AboutPage() {
-  const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "100+", label: "Happy Clients" },
-    { number: "50+", label: "AI Solutions" },
-    { number: "24/7", label: "Support" }
-  ];
 
   const values = [
     {

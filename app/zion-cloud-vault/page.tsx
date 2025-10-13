@@ -101,30 +101,6 @@ export default function ZionCloudVault() {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Jennifer Adams",
-      company: "Creative Agency",
-      role: "Creative Director",
-      content: "Zion Cloud Vault has revolutionized our file management. The collaboration features are incredible and our team productivity has increased by 60%.",
-      rating: 5
-    },
-    {
-      name: "Robert Kim",
-      company: "Tech Startup",
-      role: "CTO",
-      content: "The security features give us peace of mind. We can safely store sensitive client data knowing it's protected with military-grade encryption.",
-      rating: 5
-    },
-    {
-      name: "Maria Garcia",
-      company: "Consulting Firm",
-      role: "Operations Manager",
-      content: "The sync speed is amazing. Files are available instantly across all our devices. It's like having a personal cloud that just works.",
-      rating: 5
-    }
-  ];
-
   return (
     <>
       <Helmet>

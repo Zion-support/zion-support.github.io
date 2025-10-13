@@ -102,30 +102,6 @@ export default function ZionSecurityShield() {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "David Martinez",
-      company: "Financial Services Corp",
-      role: "CISO",
-      content: "Zion Security Shield has been a game-changer for our security posture. We've seen a 90% reduction in security incidents since implementation.",
-      rating: 5
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Healthcare Solutions",
-      role: "IT Director",
-      content: "The AI threat detection is incredibly accurate. It caught several sophisticated attacks that other systems missed.",
-      rating: 5
-    },
-    {
-      name: "James Wilson",
-      company: "E-commerce Platform",
-      role: "Security Manager",
-      content: "Outstanding support and comprehensive security features. Our compliance audit passed with flying colors.",
-      rating: 5
-    }
-  ];
-
   return (
     <>
       <Helmet>

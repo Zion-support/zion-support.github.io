@@ -31,15 +31,6 @@ const AIVoiceAssistantProPage = () => {
     }
   ];
 
-  const benefits = [
-    "Reduce customer service costs by 60%",
-    "Handle 1000+ conversations simultaneously",
-    "Available 24/7 in multiple languages",
-    "Improve customer satisfaction by 40%",
-    "Integrate with any business system",
-    "Scale customer support instantly"
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
