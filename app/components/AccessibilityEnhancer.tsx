@@ -120,15 +120,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         })
       }
 
-<<<<<<< HEAD
       // Apply focus trap to modals and dropdowns
-      const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
-      const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
-=======
+      const modalElements = document.querySelectorAll('[role="dialog"], [role="menu"]');
+      const cleanupFunctions = Array.from(modalElements).map(modal => trapFocus(modal as HTMLElement));
+
       // Initialize all enhancements
       enhanceFocusManagement()
       enhanceKeyboardNavigation()
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 
       // Re-run enhancements when DOM changes
       const observer = new MutationObserver(() => {
@@ -143,8 +141,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
       // Cleanup function
       return () => {
-<<<<<<< HEAD
         cleanupFunctions.forEach(cleanup => cleanup());
+        observer.disconnect();
       };
     };
 
@@ -270,117 +268,15 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       root.classList.add('large-text');
     } else {
       root.classList.remove('large-text');
-=======
-        observer.disconnect()
-        skipLink.remove()
-      }
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
     }
 
     // Initialize accessibility features
     const cleanup = initAccessibility()
 
-    // Cleanup on unmount
-    return cleanup
-  }, [])
+      // Cleanup on unmount
+      return cleanup;
+    }, []);
 
   return <>{children}</>
 }
 
-<<<<<<< HEAD
-  const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
-    const newSettings = { ...settings, [key]: value };
-    setSettings(newSettings);
-    applyAccessibilitySettings(newSettings);
-  };
-
-  const resetSettings = () => {
-    const defaultSettings: AccessibilitySettings = {
-      highContrast: false,
-      largeText: false,
-      reducedMotion: false,
-      screenReader: false,
-      focusVisible: true
-    };
-    setSettings(defaultSettings);
-    applyAccessibilitySettings(defaultSettings);
-  };
-
-  // Removed unused functions - functionality is handled by updateSetting directly
-  return (
-    <>
-      {children}
-      <style>{`
-        /* Keyboard navigation styles */
-        .keyboard-navigation *:focus {
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px;
-        }
-
-        /* Screen reader only content */
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-
-        .sr-only:focus {
-          position: static;
-          width: auto;
-          height: auto;
-          padding: inherit;
-          margin: inherit;
-          overflow: visible;
-          clip: auto;
-          white-space: normal;
-        }
-
-        /* High contrast mode */
-        .high-contrast {
-          filter: contrast(150%) brightness(110%);
-        }
-
-        .high-contrast * {
-          border-color: currentColor !important;
-        }
-
-        /* Focus indicators */
-        .focus-visible:focus-visible {
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px;
-        }
-
-        /* Reduced motion */
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-
-        /* Large text mode */
-        .large-text {
-          font-size: 1.2em;
-          line-height: 1.6;
-        }
-
-        .large-text h1 { font-size: 2.5em; }
-        .large-text h2 { font-size: 2em; }
-        .large-text h3 { font-size: 1.75em; }
-        .large-text h4 { font-size: 1.5em; }
-        .large-text h5 { font-size: 1.25em; }
-        .large-text h6 { font-size: 1.1em; }
-      `}</style>
-    </>
-  );
-};
-
-export default AccessibilityEnhancer;
-=======
-export default AccessibilityEnhancer
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18

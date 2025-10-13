@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -17,15 +16,6 @@ export default function Blog() {
   ];
 
   const posts = [
-=======
-import React from 'react'
-import { Link } from 'react-router-dom'
-import { ArrowRight, Calendar, User, Tag, Search } from 'lucide-react'
-import EnhancedSEO from '../components/EnhancedSEO'
-
-const BlogPage: React.FC = () => {
-  const blogPosts = [
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
     {
       id: 1,
       title: "The Future of AI in Business: 2024 Trends and Predictions",
@@ -34,36 +24,23 @@ const BlogPage: React.FC = () => {
       date: "2024-01-15",
       category: "AI & Machine Learning",
       readTime: "5 min read",
-<<<<<<< HEAD
       image: "/images/blog/ai-business-2024.jpg",
       featured: true
-=======
-      image: "/images/blog/ai-trends-2024.jpg",
-      slug: "future-ai-business-2024-trends"
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
     },
     {
       id: 2,
       title: "Cybersecurity Best Practices for Small Businesses",
-<<<<<<< HEAD
       excerpt: "Essential cybersecurity measures every small business should implement to protect their data and operations.",
       content: "Small businesses are increasingly targeted by cybercriminals...",
       author: "Michael Chen",
       date: "2024-01-12",
       category: "cybersecurity",
-=======
-      excerpt: "Learn essential cybersecurity measures that every small business should implement to protect their digital assets and customer data.",
-      author: "Zion Tech Group",
-      date: "2024-01-10",
-      category: "Cybersecurity",
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
       readTime: "7 min read",
       image: "/images/blog/cybersecurity-small-business.jpg",
       slug: "cybersecurity-best-practices-small-businesses"
     },
     {
       id: 3,
-<<<<<<< HEAD
       title: "Cloud Migration: A Step-by-Step Guide",
       excerpt: "Learn how to successfully migrate your business to the cloud with our comprehensive guide.",
       content: "Cloud migration can seem daunting, but with proper planning...",
@@ -240,261 +217,8 @@ const BlogPage: React.FC = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
-        {/* Categories */}
-        <section className="py-8 bg-slate-800/50">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex flex-wrap justify-center gap-4">
-              {categories.map((category) => (
-                <button
-                  key={category.id}
-                  onClick={() => setSelectedCategory(category.id)}
-                  className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                    selectedCategory === category.id
-                      ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white"
-                      : "bg-white/10 text-gray-300 hover:bg-white/20"
-                  }`}
-                >
-                  {category.name} ({category.count})
-                </button>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Featured Posts */}
-        {selectedCategory === "all" && (
-          <section className="py-16 px-4">
-            <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Featured Articles</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {featuredPosts.map((post) => (
-                  <article key={post.id} className="group bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                    <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 relative overflow-hidden">
-                      <img
-                        src={post.image}
-                        alt={post.title}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                      />
-                      <div className="absolute top-4 left-4">
-                        <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                          Featured
-                        </span>
-                      </div>
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-center text-sm text-gray-400 mb-3">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        {post.date}
-                        <Clock className="w-4 h-4 ml-4 mr-2" />
-                        {post.readTime}
-                      </div>
-                      <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                        {post.title}
-                      </h3>
-                      <p className="text-gray-300 mb-4 line-clamp-3">
-                        {post.excerpt}
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center text-sm text-gray-400">
-                          <User className="w-4 h-4 mr-2" />
-                          {post.author}
-                        </div>
-                        <Link
-                          to={`/blog/${post.id}`}
-                          className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
-                        >
-                          Read More
-                          <ArrowRight className="w-4 h-4 ml-1" />
-                        </Link>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {/* All Posts */}
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8">
-              {selectedCategory === "all" ? "All Articles" : categories.find(c => c.id === selectedCategory)?.name}
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <article key={post.id} className="group bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                  <div className="aspect-video bg-gradient-to-br from-cyan-500/20 to-purple-500/20 relative overflow-hidden">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <div className="flex items-center text-sm text-gray-400 mb-3">
-                      <Calendar className="w-4 h-4 mr-2" />
-                      {post.date}
-                      <Clock className="w-4 h-4 ml-4 mr-2" />
-                      {post.readTime}
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4 line-clamp-3">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center text-sm text-gray-400">
-                        <User className="w-4 h-4 mr-2" />
-                        {post.author}
-                      </div>
-                      <Link
-                        to={`/blog/${post.id}`}
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-all duration-300"
-                      >
-                        Read More
-                        <ArrowRight className="w-4 h-4 ml-1" />
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              ))}
-            </div>
-            
-            {filteredPosts.length === 0 && (
-              <div className="text-center py-16">
-                <BookOpen className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">No articles found</h3>
-                <p className="text-gray-400">Try adjusting your search or category filter.</p>
-              </div>
-            )}
-          </div>
-        </section>
-
-        {/* Newsletter Signup */}
-        <section className="py-16 px-4 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-4">Stay Updated</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Get the latest tech insights and industry updates delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-=======
-      {/* Categories Filter */}
-      <section className="pb-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-wrap justify-center gap-2">
-            {categories.map((category) => (
-              <button
-                key={category}
-                className="px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white hover:bg-white/20 transition-all duration-300 hover:scale-105"
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Blog Posts Grid */}
-      <section className="pb-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
-              <article
-                key={post.id}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 overflow-hidden"
-              >
-                <div className="aspect-w-16 aspect-h-9 bg-gradient-to-br from-cyan-500/20 to-purple-500/20">
-                  <div className="w-full h-48 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 flex items-center justify-center">
-                    <div className="text-6xl text-cyan-400/50">📝</div>
-                  </div>
-                </div>
-                
-                <div className="p-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full">
-                      {post.category}
-                    </span>
-                    <span className="text-gray-400 text-xs">{post.readTime}</span>
-                  </div>
-                  
-                  <h2 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {post.title}
-                  </h2>
-                  
-                  <p className="text-gray-300 text-sm mb-4 leading-relaxed">
-                    {post.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between text-xs text-gray-400 mb-4">
-                    <div className="flex items-center gap-1">
-                      <User className="w-3 h-3" />
-                      <span>{post.author}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Calendar className="w-3 h-3" />
-                      <span>{new Date(post.date).toLocaleDateString()}</span>
-                    </div>
-                  </div>
-                  
-                  <Link
-                    to={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors group-hover:translate-x-1 transform duration-300"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Newsletter Signup */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Stay Updated
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Subscribe to our newsletter for the latest technology insights and industry updates.
-          </p>
-          
-          <div className="max-w-md mx-auto">
-            <div className="flex gap-2">
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
               <input
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
-<<<<<<< HEAD
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center">
-                Subscribe
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </button>
-            </div>
-          </div>
-        </section>
-      </div>
-    </>
-  );
-}
-=======
-              <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 hover:scale-105">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  )
-}
-
-export default BlogPage
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
