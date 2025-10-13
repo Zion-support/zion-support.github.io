@@ -149,13 +149,22 @@ const EnhancedNavigation = () => {
 
   return (
     <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
+      {/* Animated background effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-purple-500/5 animate-pulse"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-white group">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:from-cyan-300 group-hover:to-purple-300 transition-all duration-300">
+          <Link to="/" className="text-2xl font-bold text-white group relative">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:from-cyan-300 group-hover:to-purple-300 transition-all duration-300 relative z-10">
               Zion Tech Group
             </span>
+            {/* Glowing effect behind logo */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+            {/* Animated corner accents */}
+            <div className="absolute -top-1 -left-1 w-2 h-2 border-t border-l border-cyan-400/50 rounded-tl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute -top-1 -right-1 w-2 h-2 border-t border-r border-purple-400/50 rounded-tr opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -169,24 +178,33 @@ const EnhancedNavigation = () => {
               >
                 <Link
                   to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                  className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-all duration-300 relative group py-2 px-3 rounded-lg hover:bg-white/5"
                 >
-                  {item.icon}
-                  <span>{item.label}</span>
+                  <span className="group-hover:scale-110 transition-transform duration-300">{item.icon}</span>
+                  <span className="font-medium">{item.label}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+                  {/* Hover glow effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
                 </Link>
                 
                 {/* Dropdown Menu */}
                 {activeDropdown === item.label && (
-                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50">
-                    <div className="py-2">
-                      {item.dropdown.map((dropdownItem) => (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-white/20 rounded-lg shadow-xl z-50 animate-in slide-in-from-top-2 duration-300">
+                    {/* Animated border effect */}
+                    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-500/10 to-purple-500/10 opacity-50"></div>
+                    <div className="relative z-10 py-2">
+                      {item.dropdown.map((dropdownItem, index) => (
                         <Link
                           key={dropdownItem.href}
                           to={dropdownItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors duration-200"
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-all duration-200 group/item relative"
+                          style={{ animationDelay: `${index * 50}ms` }}
                         >
-                          {dropdownItem.label}
+                          <span className="group-hover/item:translate-x-1 transition-transform duration-200">
+                            {dropdownItem.label}
+                          </span>
+                          {/* Hover indicator */}
+                          <div className="absolute left-0 top-1/2 w-1 h-0 bg-gradient-to-b from-cyan-400 to-purple-400 rounded-r-full opacity-0 group-hover/item:opacity-100 group-hover/item:h-4 transition-all duration-200 -translate-y-1/2"></div>
                         </Link>
                       ))}
                     </div>
@@ -211,10 +229,23 @@ const EnhancedNavigation = () => {
             </div>
             <Link
               to="/contact"
-              className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105 flex"
+              className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105 flex relative overflow-hidden"
             >
-              Contact Us
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              {/* Animated background effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-300"></div>
+              {/* Glowing border effect */}
+              <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-cyan-400/20 to-purple-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+              
+              <span className="relative z-10 flex items-center">
+                Contact Us
+                <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              </span>
+              
+              {/* Animated corner accents */}
+              <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-white/30 rounded-tl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-white/30 rounded-tr opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
+              <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-white/30 rounded-bl opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200"></div>
+              <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-white/30 rounded-br opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-300"></div>
             </Link>
           </div>
 

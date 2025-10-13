@@ -1,129 +1,102 @@
 import { Link } from "react-router-dom";
-import { Globe, Mic, Headphones, Zap, ArrowRight, Star, Users, Award, Clock, Shield, Brain, Sparkles } from "lucide-react";
+import { Brain, Code, Zap, CheckCircle, ArrowRight, Star, Users, Award, Clock, Shield, Globe, Sparkles } from "lucide-react";
 import EnhancedSEO from "../components/EnhancedSEO";
 import FuturisticBackground from "../components/FuturisticBackground";
 import FuturisticCard from "../components/FuturisticCard";
 import FuturisticButton from "../components/FuturisticButton";
 import ResponsiveContainer from "../components/ResponsiveContainer";
 
-const ZionAIVoiceAssistantPro = () => {
+const ZionAICodeAssistantPro = () => {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "name": "Zion AI Voice Assistant Pro",
-    "description": "Advanced voice AI with natural language processing, multi-language support, and custom voice training",
-    "url": "https://ziontechgroup.com/zion-ai-voice-assistant-pro",
-    "applicationCategory": "VoiceApplication",
-    "operatingSystem": "Web, iOS, Android, Windows, macOS, Linux",
+    "name": "Zion AI Code Assistant Pro",
+    "description": "AI-powered code generation, debugging, and optimization with support for 50+ programming languages",
+    "url": "https://ziontechgroup.com/zion-ai-code-assistant-pro",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web, Windows, macOS, Linux",
     "offers": {
       "@type": "Offer",
-      "price": "199",
+      "price": "79",
       "priceCurrency": "USD",
       "priceValidUntil": "2025-12-31"
     },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
-      "ratingCount": "1800"
+      "ratingCount": "1250"
     }
   };
 
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities for human-like conversations and understanding",
-      icon: <Brain className="w-8 h-8" />,
+      title: "AI Code Generation",
+      description: "Generate high-quality code in 50+ programming languages using advanced AI models",
+      icon: <Code className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with accurate pronunciation and context understanding",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Smart Debugging",
+      description: "Automatically detect and fix bugs with intelligent error analysis and suggestions",
+      icon: <CheckCircle className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Custom Voice Training",
-      description: "Train the AI to match your brand voice and speaking style",
-      icon: <Mic className="w-8 h-8" />,
+      title: "Code Optimization",
+      description: "Optimize your code for performance, readability, and best practices",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Real-time Processing",
-      description: "Ultra-low latency voice processing for seamless conversations",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Multi-Language Support",
+      description: "Support for Python, JavaScript, Java, C++, Go, Rust, and 40+ more languages",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  const useCases = [
-    {
-      name: "Customer Service",
-      description: "24/7 AI-powered customer support with natural conversations",
-      icon: <Headphones className="w-6 h-6" />,
-      price: "From $0.05/minute"
-    },
-    {
-      name: "Voice Commerce",
-      description: "Voice-activated shopping and transaction processing",
-      icon: <Globe className="w-6 h-6" />,
-      price: "From $0.10/transaction"
-    },
-    {
-      name: "Smart Home Control",
-      description: "Voice control for IoT devices and home automation",
-      icon: <Zap className="w-6 h-6" />,
-      price: "From $0.02/command"
-    },
-    {
-      name: "Voice Analytics",
-      description: "Advanced voice data analysis and insights",
-      icon: <Brain className="w-6 h-6" />,
-      price: "From $0.03/analysis"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$79",
       period: "per month",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for individual developers",
       features: [
-        "10,000 voice interactions/month",
-        "5 languages supported",
-        "Basic voice training",
+        "50,000 code generations/month",
+        "10 programming languages",
+        "Basic debugging assistance",
         "Email support",
-        "Standard voice quality"
+        "API access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$399",
+      price: "$149",
       period: "per month",
-      description: "Ideal for growing businesses and agencies",
+      description: "Ideal for development teams",
       features: [
-        "50,000 voice interactions/month",
-        "25 languages supported",
-        "Advanced voice training",
+        "200,000 code generations/month",
+        "50+ programming languages",
+        "Advanced debugging & optimization",
         "Priority support",
-        "High-quality voice synthesis",
-        "Custom integrations"
+        "Team collaboration tools",
+        "Custom AI model training"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$299",
       period: "per month",
-      description: "For large organizations and enterprises",
+      description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
-        "50+ languages supported",
-        "Custom voice models",
+        "Unlimited code generations",
+        "All programming languages",
+        "Custom AI models",
         "24/7 dedicated support",
-        "Premium voice quality",
-        "White-label solution"
+        "On-premise deployment",
+        "SLA guarantee"
       ],
       popular: false
     }
@@ -131,24 +104,24 @@ const ZionAIVoiceAssistantPro = () => {
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion AI Voice Assistant has transformed our customer service. Response times are 90% faster and customer satisfaction is at an all-time high.",
+      name: "Sarah Chen",
+      company: "TechCorp Solutions",
+      role: "Senior Developer",
+      content: "Zion AI Code Assistant has revolutionized our development process. We've reduced coding time by 60% and improved code quality significantly.",
       rating: 5
     },
     {
-      name: "Maria Rodriguez",
-      company: "E-commerce Solutions",
-      role: "Operations Director",
-      content: "The multi-language support is incredible. We can now serve customers in 15 different languages with natural, human-like conversations.",
+      name: "Michael Rodriguez",
+      company: "StartupXYZ",
+      role: "CTO",
+      content: "The AI debugging features are incredible. It catches issues we would have missed and suggests optimizations that save hours of work.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "Smart Home Co.",
-      role: "Product Manager",
-      content: "Voice training capabilities are outstanding. We've created a unique brand voice that customers instantly recognize and trust.",
+      name: "Emily Johnson",
+      company: "DevTeam Inc.",
+      role: "Lead Engineer",
+      content: "Multi-language support is fantastic. Our team uses Python, JavaScript, and Go, and the AI understands context across all languages perfectly.",
       rating: 5
     }
   ];
@@ -157,38 +130,38 @@ const ZionAIVoiceAssistantPro = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <EnhancedSEO
-        title="Zion AI Voice Assistant Pro - Advanced Voice AI & NLP | Zion Tech Group"
-        description="Advanced voice AI with natural language processing, multi-language support, and custom voice training. Build intelligent voice experiences. Start from $199/month."
-        keywords="AI voice assistant, voice AI, natural language processing, voice recognition, voice synthesis, conversational AI, voice commerce"
-        canonical="https://ziontechgroup.com/zion-ai-voice-assistant-pro"
+        title="Zion AI Code Assistant Pro - AI-Powered Code Generation & Debugging | Zion Tech Group"
+        description="Advanced AI code assistant with support for 50+ programming languages. Generate, debug, and optimize code with intelligent AI assistance. Start from $79/month."
+        keywords="AI code assistant, code generation, debugging, programming languages, AI development tools, code optimization, software development"
+        canonical="https://ziontechgroup.com/zion-ai-code-assistant-pro"
         author="Zion Tech Group"
         section="AI Services"
-        tags={["AI", "Voice Assistant", "NLP", "Voice AI", "Conversational AI"]}
+        tags={["AI", "Code Assistant", "Programming", "Development", "Debugging"]}
         readingTime={6}
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 mb-6">
-            <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Advanced Voice AI</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
+            <Brain className="w-4 h-4 text-blue-400 mr-2" />
+            <span className="text-blue-400 text-sm font-medium">AI-Powered Development</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400">
-              Zion AI Voice Assistant Pro
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
+              Zion AI Code Assistant Pro
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
-            Build intelligent voice experiences with advanced natural language processing, 
-            multi-language support, and custom voice training capabilities.
+            Revolutionize your development workflow with AI-powered code generation, intelligent debugging, 
+            and optimization across 50+ programming languages.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -196,7 +169,7 @@ const ZionAIVoiceAssistantPro = () => {
               href="#pricing"
               variant="primary"
               size="lg"
-              icon={<Mic className="w-5 h-5" />}
+              icon={<Code className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -213,32 +186,32 @@ const ZionAIVoiceAssistantPro = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Mic className="w-6 h-6 text-cyan-400" />
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Code className="w-6 h-6 text-blue-400" />
               </div>
               <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300 text-xs md:text-sm">Languages Supported</div>
+              <div className="text-gray-300 text-xs md:text-sm">Programming Languages</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-6 h-6 text-green-400" />
+                <CheckCircle className="w-6 h-6 text-green-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">200ms</div>
-              <div className="text-gray-300 text-xs md:text-sm">Response Time</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">95%</div>
+              <div className="text-gray-300 text-xs md:text-sm">Bug Detection Rate</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Brain className="w-6 h-6 text-purple-400" />
+                <Zap className="w-6 h-6 text-purple-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99.5%</div>
-              <div className="text-gray-300 text-xs md:text-sm">Accuracy Rate</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">60%</div>
+              <div className="text-gray-300 text-xs md:text-sm">Faster Development</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-orange-500/20 to-red-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-6 h-6 text-orange-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">8K+</div>
-              <div className="text-gray-300 text-xs md:text-sm">Active Users</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">10K+</div>
+              <div className="text-gray-300 text-xs md:text-sm">Active Developers</div>
             </div>
           </div>
         </ResponsiveContainer>
@@ -249,10 +222,10 @@ const ZionAIVoiceAssistantPro = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Voice AI Features
+              Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Cutting-edge voice AI technology designed to create natural, intelligent conversations.
+              Advanced AI capabilities designed to accelerate your development workflow and improve code quality.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -278,52 +251,15 @@ const ZionAIVoiceAssistantPro = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Powerful Use Cases
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Deploy voice AI across multiple industries and use cases with flexible pricing.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {useCases.map((useCase, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {useCase.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                      {useCase.name}
-                    </h3>
-                    <p className="text-cyan-400 font-medium text-sm">{useCase.price}</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {useCase.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Voice AI Pricing
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that matches your voice interaction volume and requirements.
+              Choose the plan that fits your development needs. All plans include our core AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -354,7 +290,7 @@ const ZionAIVoiceAssistantPro = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
-                      <Star className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -374,14 +310,14 @@ const ZionAIVoiceAssistantPro = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
+              Trusted by Developers Worldwide
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what businesses say about Zion AI Voice Assistant Pro
+              See what developers say about Zion AI Code Assistant Pro
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -410,11 +346,11 @@ const ZionAIVoiceAssistantPro = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Build Voice Experiences?
+            Ready to Transform Your Development?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses using Zion AI Voice Assistant Pro to create 
-            intelligent, natural voice interactions. Start your free trial today.
+            Join thousands of developers using Zion AI Code Assistant Pro to build better software faster.
+            Start your free trial today.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -422,7 +358,7 @@ const ZionAIVoiceAssistantPro = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Mic className="w-5 h-5" />}
+              icon={<Code className="w-5 h-5" />}
             >
               Start Free Trial
             </FuturisticButton>
@@ -441,4 +377,4 @@ const ZionAIVoiceAssistantPro = () => {
   );
 };
 
-export default ZionAIVoiceAssistantPro;
+export default ZionAICodeAssistantPro;

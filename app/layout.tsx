@@ -45,25 +45,33 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <main>{children}</main>
 
               <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 py-16 relative z-10">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                {/* Animated background effects */}
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-purple-500/5 animate-pulse"></div>
+                <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent"></div>
+                
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
                     {/* Company Info */}
                     <div className="lg:col-span-2 space-y-6">
-                      <h3 className="text-2xl font-bold text-white">
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                      <h3 className="text-2xl font-bold text-white group">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:from-cyan-300 group-hover:to-purple-300 transition-all duration-300 relative">
                           Zion Tech Group
+                          {/* Glowing effect behind logo */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
                         </span>
                       </h3>
                       <p className="text-gray-300 text-sm leading-relaxed max-w-md">
                         Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology.
                       </p>
-                      <div className="flex space-x-4">
-                        <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                          <span className="text-white text-sm font-bold">Z</span>
+                      <div className="flex space-x-4 group">
+                        <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                          <span className="text-white text-sm font-bold relative z-10">Z</span>
+                          {/* Animated background effect */}
+                          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-pulse transition-opacity duration-300"></div>
                         </div>
                         <div className="flex flex-col justify-center">
-                          <span className="text-white text-sm font-semibold">Trusted by 10,000+</span>
-                          <span className="text-gray-400 text-xs">Businesses Worldwide</span>
+                          <span className="text-white text-sm font-semibold group-hover:text-cyan-400 transition-colors duration-300">Trusted by 10,000+</span>
+                          <span className="text-gray-400 text-xs group-hover:text-gray-300 transition-colors duration-300">Businesses Worldwide</span>
                         </div>
                       </div>
                     </div>

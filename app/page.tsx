@@ -1,22 +1,6 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import EnhancedSEO from "./components/EnhancedSEO";
-=======
-import AdvancedSEO from "./components/AdvancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
-=======
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
-=======
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-a546
-=======
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
@@ -153,6 +137,54 @@ const HomePage = () => {
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
       featured: true
+    },
+    {
+      name: "Zion AI Code Assistant Pro",
+      description: "AI-powered code generation, debugging, and optimization with support for 50+ programming languages",
+      price: "From $79/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-code-assistant-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Content Studio Pro",
+      description: "AI-powered content creation platform with automated writing, editing, and SEO optimization",
+      price: "From $129/month",
+      icon: <Sparkles className="w-6 h-6" />,
+      link: "/zion-ai-content-studio-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Voice Assistant Pro",
+      description: "Advanced voice AI with natural language processing, multi-language support, and custom voice training",
+      price: "From $199/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-voice-assistant-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Image Recognition Pro",
+      description: "Computer vision platform with object detection, facial recognition, and automated image analysis",
+      price: "From $149/month",
+      icon: <Monitor className="w-6 h-6" />,
+      link: "/zion-ai-image-recognition-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Fraud Detection Pro",
+      description: "Real-time fraud prevention with machine learning algorithms and behavioral analysis",
+      price: "From $399/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-ai-fraud-detection-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Inventory Manager Pro",
+      description: "Smart inventory management with demand forecasting, automated reordering, and supply chain optimization",
+      price: "From $179/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-inventory-manager-pro",
+      featured: true
     }
   ];
 
@@ -189,31 +221,8 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      <FuturisticBackground />
->>>>>>> cursor/analyze-improve-and-deploy-application-da10
-      <EnhancedSEO
-=======
-      <FuturisticBackground />
-      <AdvancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-0571
-=======
       <FuturisticBackground />
       <EnhancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-8b3d
-=======
-      <FuturisticBackground />
-      <EnhancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-a546
-=======
-      <FuturisticBackground />
-      <EnhancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
