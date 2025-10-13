@@ -14,18 +14,18 @@ const AIDataAnalyticsPage: React.FC = () => {
         'Custom KPI tracking',
         'Data visualization tools',
         'API integrations',
-        'Mobile app access']
+        'Mobile app access'
       ],
       benefits: [
         'Increase decision speed by 60%',
         'Reduce manual reporting by 85%',
         'Identify trends 3x faster',
-        'Improve forecast accuracy by 40%']
+        'Improve forecast accuracy by 40%'
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'Business Intelligence',
-      technologies: ['Python', 'TensorFlow', 'React', 'PostgreSQL', 'Redis', 'Apache Kafka'],'
-      useCases: ['Retail Analytics', 'Financial Forecasting', 'Supply Chain Optimization', 'Customer Behavior Analysis'],'
+      technologies: ['Python', 'TensorFlow', 'React', 'PostgreSQL', 'Redis', 'Apache Kafka'],
+      useCases: ['Retail Analytics', 'Financial Forecasting', 'Supply Chain Optimization', 'Customer Behavior Analysis']
     },
     {
       title: 'AI-Powered Customer Analytics Suite',
@@ -40,18 +40,18 @@ const AIDataAnalyticsPage: React.FC = () => {
         'Personalization engine',
         'A/B testing framework',
         'Cohort analysis',
-        'ROI tracking']
+        'ROI tracking'
       ],
       benefits: [
         'Increase customer retention by 35%',
         'Boost conversion rates by 45%',
         'Reduce churn by 50%',
-        'Improve customer satisfaction']
+        'Improve customer satisfaction'
       ],
       marketPrice: '$1,500-3,000/month',
       category: 'Customer Analytics',
-      technologies: ['Machine Learning', 'Python', 'Scikit-learn', 'Pandas', 'React', 'MongoDB'],'
-      useCases: ['E-commerce', 'SaaS Companies', 'Financial Services', 'Healthcare'],'
+      technologies: ['Machine Learning', 'Python', 'Scikit-learn', 'Pandas', 'React', 'MongoDB'],
+      useCases: ['E-commerce', 'SaaS Companies', 'Financial Services', 'Healthcare'],
     },
     {
       title: 'Predictive Maintenance Analytics',
@@ -66,18 +66,18 @@ const AIDataAnalyticsPage: React.FC = () => {
         'Alert management system',
         'Performance benchmarking',
         'Historical trend analysis',
-        'Integration with IoT sensors']
+        'Integration with IoT sensors'
       ],
       benefits: [
         'Reduce unplanned downtime by 70%',
         'Lower maintenance costs by 40%',
         'Extend equipment lifespan by 25%',
-        'Improve operational efficiency']
+        'Improve operational efficiency'
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'Industrial Analytics',
-      technologies: ['Time Series Analysis', 'LSTM Networks', 'Python', 'TensorFlow', 'InfluxDB', 'Grafana'],'
-      useCases: ['Manufacturing', 'Oil & Gas', 'Utilities', 'Transportation'],'
+      technologies: ['Time Series Analysis', 'LSTM Networks', 'Python', 'TensorFlow', 'InfluxDB', 'Grafana'],
+      useCases: ['Manufacturing', 'Oil & Gas', 'Utilities', 'Transportation'],
     },
     {
       title: 'Financial Risk Analytics Platform',
@@ -92,18 +92,18 @@ const AIDataAnalyticsPage: React.FC = () => {
         'Transaction pattern analysis',
         'Risk scoring algorithms',
         'Alert management',
-        'Comprehensive reporting']
+        'Comprehensive reporting'
       ],
       benefits: [
         'Detect fraud with 99.5% accuracy',
         'Reduce false positives by 60%',
         'Comply with regulations automatically',
-        'Save millions in prevented losses']
+        'Save millions in prevented losses'
       ],
       marketPrice: '$3,000-6,000/month',
       category: 'Financial Analytics',
-      technologies: ['Deep Learning', 'Anomaly Detection', 'Python', 'PyTorch', 'Apache Spark', 'Kafka'],'
-      useCases: ['Banks', 'Credit Unions', 'Fintech', 'Insurance Companies'],'
+      technologies: ['Deep Learning', 'Anomaly Detection', 'Python', 'PyTorch', 'Apache Spark', 'Kafka'],
+      useCases: ['Banks', 'Credit Unions', 'Fintech', 'Insurance Companies'],
     },
     {
       title: 'AI Marketing Attribution Platform',
@@ -118,18 +118,18 @@ const AIDataAnalyticsPage: React.FC = () => {
         'Cross-channel analytics',
         'Budget allocation recommendations',
         'Competitive analysis',
-        'Real-time reporting']
+        'Real-time reporting'
       ],
       benefits: [
         'Improve marketing ROI by 50%',
         'Optimize budget allocation',
         'Identify high-value channels',
-        'Reduce customer acquisition costs']
+        'Reduce customer acquisition costs'
       ],
       marketPrice: '$2,000-4,000/month',
       category: 'Marketing Analytics',
-      technologies: ['Attribution Modeling', 'Python', 'R', 'Google Analytics API', 'Facebook API', 'React'],'
-      useCases: ['E-commerce', 'SaaS', 'Retail', 'Digital Agencies'],'
+      technologies: ['Attribution Modeling', 'Python', 'R', 'Google Analytics API', 'Facebook API', 'React'],
+      useCases: ['E-commerce', 'SaaS', 'Retail', 'Digital Agencies'],
     },
     {
       title: 'Supply Chain Intelligence Suite',
@@ -144,18 +144,18 @@ const AIDataAnalyticsPage: React.FC = () => {
         'Cost optimization analysis',
         'Lead time prediction',
         'Quality metrics tracking',
-        'Sustainability reporting']
+        'Sustainability reporting'
       ],
       benefits: [
         'Reduce inventory costs by 30%',
         'Improve forecast accuracy by 45%',
         'Minimize stockouts by 80%',
-        'Optimize supplier relationships']
+        'Optimize supplier relationships'
       ],
       marketPrice: '$2,500-5,000/month',
       category: 'Supply Chain Analytics',
-      technologies: ['Time Series Forecasting', 'Optimization Algorithms', 'Python', 'OR-Tools', 'PostgreSQL', 'React'],'
-      useCases: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'],'
+      technologies: ['Time Series Forecasting', 'Optimization Algorithms', 'Python', 'OR-Tools', 'PostgreSQL', 'React'],
+      useCases: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'],
     }
   ];
   const additionalFeatures = [
@@ -314,7 +314,6 @@ const AIDataAnalyticsPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
   );
 };
 export default AIDataAnalyticsPage;

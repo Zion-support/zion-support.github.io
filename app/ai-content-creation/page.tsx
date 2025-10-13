@@ -15,18 +15,18 @@ const AIContentCreationPage: React.FC = () => {
         'SEO Optimization',
         'Plagiarism Detection',
         'Tone & Style Customization',
-        'Multi-language Support']
+        'Multi-language Support'
       ],
       benefits: [
         'Create 50+ articles per day',
         'Reduce writing time by 80%',
         'Improve SEO rankings by 40%',
         'Maintain consistent brand voice',
-        'Scale content production 10x']
+        'Scale content production 10x'
       ],
       marketPrice: '$500-1,500/month',
       category: 'Content Writing',
-      technologies: ['OpenAI GPT-4', 'Claude', 'Custom NLP Models', 'SEO Tools', 'Plagiarism Detection'],'
+      technologies: ['OpenAI GPT-4', 'Claude', 'Custom NLP Models', 'SEO Tools', 'Plagiarism Detection'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -42,18 +42,18 @@ const AIContentCreationPage: React.FC = () => {
         'Logo Creation',
         'Social Media Graphics',
         'Product Photography',
-        'Brand Consistency']
+        'Brand Consistency'
       ],
       benefits: [
         'Generate 100+ images daily',
         'Reduce design costs by 70%',
         'Create unique visuals instantly',
         'Maintain brand consistency',
-        'No stock photo licensing fees']
+        'No stock photo licensing fees'
       ],
       marketPrice: '$800-2,500/month',
       category: 'Image Generation',
-      technologies: ['DALL-E', 'Midjourney', 'Stable Diffusion', 'Custom GANs', 'Image Processing'],'
+      technologies: ['DALL-E', 'Midjourney', 'Stable Diffusion', 'Custom GANs', 'Image Processing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -69,18 +69,18 @@ const AIContentCreationPage: React.FC = () => {
         'Subtitle Generation',
         'Thumbnail Creation',
         'Social Media Optimization',
-        'Multi-format Export']
+        'Multi-format Export'
       ],
       benefits: [
         'Create videos in minutes',
         'Reduce production costs by 80%',
         'Generate 20+ videos daily',
         'Professional quality output',
-        'Scale video marketing']
+        'Scale video marketing'
       ],
       marketPrice: '$1,500-5,000/month',
       category: 'Video Production',
-      technologies: ['Runway ML', 'Synthesia', 'Custom Video AI', 'FFmpeg', 'Motion Graphics'],'
+      technologies: ['Runway ML', 'Synthesia', 'Custom Video AI', 'FFmpeg', 'Motion Graphics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -96,18 +96,18 @@ const AIContentCreationPage: React.FC = () => {
         'Trend Monitoring',
         'Influencer Identification',
         'Crisis Management',
-        'Performance Analytics']
+        'Performance Analytics'
       ],
       benefits: [
         'Increase engagement by 60%',
         'Save 10+ hours weekly',
         'Optimize posting times',
         'Identify viral content',
-        'Manage multiple platforms']
+        'Manage multiple platforms'
       ],
       marketPrice: '$800-2,000/month',
       category: 'Social Media',
-      technologies: ['Social Media APIs', 'NLP', 'Sentiment Analysis', 'Custom Analytics', 'Automation Tools'],'
+      technologies: ['Social Media APIs', 'NLP', 'Sentiment Analysis', 'Custom Analytics', 'Automation Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -123,18 +123,18 @@ const AIContentCreationPage: React.FC = () => {
         'A/B Testing',
         'Deliverability Monitoring',
         'List Segmentation',
-        'Performance Analytics']
+        'Performance Analytics'
       ],
       benefits: [
         'Increase open rates by 45%',
         'Boost click-through rates by 60%',
         'Reduce unsubscribe rates by 30%',
         'Automate personalization',
-        'Optimize send times']
+        'Optimize send times'
       ],
       marketPrice: '$600-1,800/month',
       category: 'Email Marketing',
-      technologies: ['Email APIs', 'NLP', 'Machine Learning', 'A/B Testing', 'Analytics'],'
+      technologies: ['Email APIs', 'NLP', 'Machine Learning', 'A/B Testing', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -150,18 +150,18 @@ const AIContentCreationPage: React.FC = () => {
         'Music Generation',
         'Transcription Services',
         'Show Notes Generation',
-        'Distribution Automation']
+        'Distribution Automation'
       ],
       benefits: [
         'Create podcasts in hours',
         'Reduce production costs by 90%',
         'Generate weekly episodes',
         'Maintain consistent quality',
-        'Scale podcast production']
+        'Scale podcast production'
       ],
       marketPrice: '$1,200-3,500/month',
       category: 'Podcast Production',
-      technologies: ['Text-to-Speech', 'Audio Processing', 'Podcast APIs', 'Custom Voice Models', 'Audio Editing'],'
+      technologies: ['Text-to-Speech', 'Audio Processing', 'Podcast APIs', 'Custom Voice Models', 'Audio Editing'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -177,18 +177,18 @@ const AIContentCreationPage: React.FC = () => {
         'Color Scheme Selection',
         'Font Pairing',
         'Image Integration',
-        'Code Generation']
+        'Code Generation'
       ],
       benefits: [
         'Create websites in minutes',
         'Reduce design costs by 80%',
         'Generate unique designs',
         'Optimize for conversions',
-        'Mobile-first approach']
+        'Mobile-first approach'
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'Web Design',
-      technologies: ['Design AI', 'CSS Generation', 'Responsive Design', 'SEO Tools', 'Code Generation'],'
+      technologies: ['Design AI', 'CSS Generation', 'Responsive Design', 'SEO Tools', 'Code Generation'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -204,18 +204,18 @@ const AIContentCreationPage: React.FC = () => {
         'Template Library',
         'Brand Integration',
         'Animation Effects',
-        'Export Options']
+        'Export Options'
       ],
       benefits: [
         'Create presentations in minutes',
         'Professional quality output',
         'Consistent branding',
         'Reduce preparation time by 70%',
-        'Engage audiences better']
+        'Engage audiences better'
       ],
       marketPrice: '$400-1,200/month',
       category: 'Presentation Design',
-      technologies: ['Presentation APIs', 'Design AI', 'Chart Generation', 'Animation Tools', 'Export Libraries'],'
+      technologies: ['Presentation APIs', 'Design AI', 'Chart Generation', 'Animation Tools', 'Export Libraries'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
@@ -386,7 +386,6 @@ const AIContentCreationPage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
   );
 };
 

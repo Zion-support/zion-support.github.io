@@ -10,35 +10,35 @@ const AidataminingproPage = () => {
     {
       title: "AI-Powered Intelligence",
       description: "Advanced artificial intelligence algorithms that learn and adapt to your business needs",
-      icon: <Brain className="w-8 h-8" />,"
+      icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Real-time Processing",
       description: "Process data and make decisions in real-time with lightning-fast performance",
-      icon: <Zap className="w-8 h-8" />,"
+      icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Advanced Analytics",
       description: "Comprehensive analytics and reporting to track performance and optimize results",
-      icon: <BarChart3 className="w-8 h-8" />,"
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Enterprise Security",
       description: "Bank-level security with role-based access control and audit trails",
-      icon: <Shield className="w-8 h-8" />,"
+      icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const benefits = [
-    "Increase efficiency by up to 80%","
-    "Reduce operational costs significantly","
-    "Improve accuracy and reliability","
-    "Scale with your business growth","
-    "Integrate with existing systems","
+    "Increase efficiency by up to 80%",
+    "Reduce operational costs significantly",
+    "Improve accuracy and reliability",
+    "Scale with your business growth",
+    "Integrate with existing systems",
     "24/7 monitoring and support"
   ];
 
@@ -107,7 +107,7 @@ const AidataminingproPage = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <div;
+              <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
@@ -129,9 +129,9 @@ const AidataminingproPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">"
-        <div className="max-w-7xl mx-auto">"
-          <div className="text-center mb-16">"
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our Solution?
             </h2>
@@ -141,11 +141,11 @@ const AidataminingproPage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <div;
+              <div
                 key={index}
                 className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300"
               >
-                <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />"
+                <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
                 <span className="text-gray-300 text-lg">{benefit}</span>
               </div>
             ))}
@@ -185,9 +185,6 @@ const AidataminingproPage = () => {
       </section>
     </div>
   );
-  );
 };
 
-
-export default AidataminingproPage;
 export default AidataminingproPage;

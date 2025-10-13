@@ -15,18 +15,18 @@ const AIAutomationSuitePage: React.FC = () => {
         'Exception Handling',
         'Performance Monitoring',
         'Custom Integrations',
-        'Scalable Architecture']
+        'Scalable Architecture'
       ],
       benefits: [
         'Automate 80% of repetitive tasks',
         'Reduce processing time by 70%',
         'Improve accuracy to 99.9%',
         'Free up staff for strategic work',
-        'Scale operations efficiently']
+        'Scale operations efficiently'
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'Workflow Automation',
-      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'Workflow Engines'],'
+      technologies: ['UiPath', 'Automation Anywhere', 'Blue Prism', 'Python', 'APIs', 'Workflow Engines'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -42,18 +42,18 @@ const AIAutomationSuitePage: React.FC = () => {
         'Follow-up Automation',
         'Template Management',
         'Spam Detection',
-        'Analytics Dashboard']
+        'Analytics Dashboard'
       ],
       benefits: [
         'Process 10,000+ emails daily',
         'Reduce response time by 80%',
         'Improve customer satisfaction',
         'Eliminate manual sorting',
-        'Scale email operations']
+        'Scale email operations'
       ],
       marketPrice: '$500-1,500/month',
       category: 'Email Automation',
-      technologies: ['NLP', 'Machine Learning', 'Email APIs', 'Sentiment Analysis', 'Template Engine'],'
+      technologies: ['NLP', 'Machine Learning', 'Email APIs', 'Sentiment Analysis', 'Template Engine'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -69,18 +69,18 @@ const AIAutomationSuitePage: React.FC = () => {
         'Quality Validation',
         'Batch Processing',
         'Custom Templates',
-        'Error Handling']
+        'Error Handling'
       ],
       benefits: [
         'Process 5,000+ documents daily',
         'Reduce data entry by 90%',
         'Improve accuracy to 99.5%',
         'Eliminate manual processing',
-        'Accelerate workflows']
+        'Accelerate workflows'
       ],
       marketPrice: '$800-2,500/month',
       category: 'Document Processing',
-      technologies: ['OCR', 'Computer Vision', 'NLP', 'Machine Learning', 'Document APIs', 'Data Extraction'],'
+      technologies: ['OCR', 'Computer Vision', 'NLP', 'Machine Learning', 'Document APIs', 'Data Extraction'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -96,18 +96,18 @@ const AIAutomationSuitePage: React.FC = () => {
         'Sentiment Analysis',
         'Escalation Management',
         'Performance Analytics',
-        'Multi-channel Support']
+        'Multi-channel Support'
       ],
       benefits: [
         'Handle 80% of customer queries',
         'Reduce response time to seconds',
         'Improve customer satisfaction by 50%',
         'Reduce support costs by 60%',
-        'Available 24/7/365']
+        'Available 24/7/365'
       ],
       marketPrice: '$1,200-3,500/month',
       category: 'Customer Service',
-      technologies: ['NLP', 'Chatbots', 'Knowledge Graphs', 'Sentiment Analysis', 'CRM Integration'],'
+      technologies: ['NLP', 'Chatbots', 'Knowledge Graphs', 'Sentiment Analysis', 'CRM Integration'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -123,18 +123,18 @@ const AIAutomationSuitePage: React.FC = () => {
         'Meeting Scheduling',
         'Proposal Generation',
         'Performance Analytics',
-        'CRM Integration']
+        'CRM Integration'
       ],
       benefits: [
         'Increase conversion rates by 40%',
         'Reduce sales cycle by 30%',
         'Improve lead quality',
         'Automate follow-ups',
-        'Scale sales operations']
+        'Scale sales operations'
       ],
       marketPrice: '$1,500-4,000/month',
       category: 'Sales Automation',
-      technologies: ['Machine Learning', 'CRM APIs', 'Email Automation', 'Lead Scoring', 'Analytics'],'
+      technologies: ['Machine Learning', 'CRM APIs', 'Email Automation', 'Lead Scoring', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -150,18 +150,18 @@ const AIAutomationSuitePage: React.FC = () => {
         'Content Generation',
         'Performance Optimization',
         'Multi-channel Campaigns',
-        'ROI Analytics']
+        'ROI Analytics'
       ],
       benefits: [
         'Increase engagement by 60%',
         'Improve conversion rates by 35%',
         'Reduce marketing costs by 40%',
         'Personalize at scale',
-        'Optimize campaigns automatically']
+        'Optimize campaigns automatically'
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'Marketing Automation',
-      technologies: ['Machine Learning', 'Personalization', 'A/B Testing', 'Marketing APIs', 'Analytics'],'
+      technologies: ['Machine Learning', 'Personalization', 'A/B Testing', 'Marketing APIs', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -177,18 +177,18 @@ const AIAutomationSuitePage: React.FC = () => {
         'Performance Tracking',
         'Leave Management',
         'Compliance Monitoring',
-        'Analytics Dashboard']
+        'Analytics Dashboard'
       ],
       benefits: [
         'Reduce hiring time by 50%',
         'Improve candidate quality',
         'Automate routine tasks',
         'Ensure compliance',
-        'Enhance employee experience']
+        'Enhance employee experience'
       ],
       marketPrice: '$800-2,500/month',
       category: 'HR Automation',
-      technologies: ['NLP', 'Machine Learning', 'HR APIs', 'Scheduling Systems', 'Compliance Tools'],'
+      technologies: ['NLP', 'Machine Learning', 'HR APIs', 'Scheduling Systems', 'Compliance Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -204,18 +204,18 @@ const AIAutomationSuitePage: React.FC = () => {
         'Fraud Detection',
         'Compliance Checking',
         'Audit Trail',
-        'Real-time Analytics']
+        'Real-time Analytics'
       ],
       benefits: [
         'Reduce processing time by 70%',
         'Improve accuracy to 99.9%',
         'Ensure compliance',
         'Detect fraud early',
-        'Streamline financial operations']
+        'Streamline financial operations'
       ],
       marketPrice: '$1,200-3,500/month',
       category: 'Financial Automation',
-      technologies: ['OCR', 'Machine Learning', 'Financial APIs', 'Compliance Tools', 'Analytics'],'
+      technologies: ['OCR', 'Machine Learning', 'Financial APIs', 'Compliance Tools', 'Analytics'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -231,18 +231,18 @@ const AIAutomationSuitePage: React.FC = () => {
         'Quality Control',
         'Waste Reduction',
         'Cost Optimization',
-        'Real-time Monitoring']
+        'Real-time Monitoring'
       ],
       benefits: [
         'Reduce inventory costs by 30%',
         'Eliminate stockouts by 90%',
         'Reduce waste by 50%',
         'Optimize supplier relationships',
-        'Improve cash flow']
+        'Improve cash flow'
       ],
       marketPrice: '$1,000-3,000/month',
       category: 'Inventory Automation',
-      technologies: ['Time Series Analysis', 'Machine Learning', 'Supply Chain APIs', 'IoT Integration'],'
+      technologies: ['Time Series Analysis', 'Machine Learning', 'Supply Chain APIs', 'IoT Integration'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     },
     {
@@ -258,18 +258,18 @@ const AIAutomationSuitePage: React.FC = () => {
         'Security Testing',
         'Regression Testing',
         'Test Reporting',
-        'Continuous Integration']
+        'Continuous Integration'
       ],
       benefits: [
         'Reduce testing time by 80%',
         'Improve test coverage by 90%',
         'Detect bugs early',
         'Ensure quality standards',
-        'Accelerate releases']
+        'Accelerate releases'
       ],
       marketPrice: '$1,500-4,000/month',
       category: 'Quality Assurance',
-      technologies: ['Test Automation', 'Machine Learning', 'CI/CD', 'Performance Testing', 'Security Tools'],'
+      technologies: ['Test Automation', 'Machine Learning', 'CI/CD', 'Performance Testing', 'Security Tools'],
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
@@ -440,7 +440,6 @@ const AIAutomationSuitePage: React.FC = () => {
         </div>
       </section>
     </div>
-  );
   );
 };
 
