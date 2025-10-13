@@ -50,15 +50,8 @@ const ContactForm: React.FC = () => {
         message: "",
         service: "",
       });
-<<<<<<< HEAD
-    } catch {
-      // Handle error silently
-=======
     } catch (error) {
       console.error('Failed to submit contact form:', error);
-
-
->>>>>>> cursor/fix-errors-and-merge-to-main-f2e0
     } finally {
       setIsSubmitting(false);
     }
