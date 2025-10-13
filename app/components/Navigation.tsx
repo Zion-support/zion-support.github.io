@@ -71,6 +71,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   ], [])
 >>>>>>> cursor/website-audit-and-update-with-deployment-3531
   const itServices = useMemo(() => [
+    { name: 'Cloud Infrastructure Management', path: '/cloud-infrastructure-management', icon: <Cloud className="w-4 h-4" />, featured: true },
     { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
     { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
