@@ -60,6 +60,16 @@ const CustomDevelopmentPage = React.lazy(() => import("./app/custom-software/pag
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
 const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
+
+// New Micro SAAS Services
+const AISmartContractAuditorPage = React.lazy(() => import("./app/ai-smart-contract-auditor/page"));
+const AIMusicCompositionPage = React.lazy(() => import("./app/ai-music-composition/page"));
+const AIPasswordManagerPage = React.lazy(() => import("./app/ai-password-manager/page"));
+const AISentimentAnalyzerPage = React.lazy(() => import("./app/ai-sentiment-analyzer/page"));
+
+// New AI Services
+const AIRecruitmentAssistantPage = React.lazy(() => import("./app/ai-recruitment-assistant/page"));
+const AIPredictiveModelingPage = React.lazy(() => import("./app/ai-predictive-modeling/page"));
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
@@ -139,6 +149,10 @@ function App() {
                         
                         {/* New Micro SAAS Services */}
                         <Route path="/zion-ai-neural-interface" element={<ZionAINeuralInterfacePage />} />
+                        <Route path="/ai-smart-contract-auditor" element={<AISmartContractAuditorPage />} />
+                        <Route path="/ai-music-composition" element={<AIMusicCompositionPage />} />
+                        <Route path="/ai-password-manager" element={<AIPasswordManagerPage />} />
+                        <Route path="/ai-sentiment-analyzer" element={<AISentimentAnalyzerPage />} />
                         
                         {/* Additional Service Pages */}
                         <Route path="/it-services" element={<ItServicesPage />} />
@@ -175,6 +189,10 @@ function App() {
                         <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                         <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                         <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                        
+                        {/* New AI Services */}
+                        <Route path="/ai-recruitment-assistant" element={<AIRecruitmentAssistantPage />} />
+                        <Route path="/ai-predictive-modeling" element={<AIPredictiveModelingPage />} />
                       </Routes>
                     </Suspense>
                   </main>

@@ -65,14 +65,14 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   ], [])
 
   const microSaasServices = useMemo(() => [
-    { name: 'Zion AI Neural Interface', path: '/zion-ai-neural-interface', icon: <Brain className="w-4 h-4" />, featured: true },
-    { name: 'AI Voice Cloning Studio', path: '/ai-voice-cloning-studio', icon: <Monitor className="w-4 h-4" />, featured: true },
-    { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', icon: <BarChart3 className="w-4 h-4" />, featured: true },
-    { name: 'AI Space Mission Optimizer', path: '/ai-space-mission-optimizer', icon: <Globe className="w-4 h-4" />, featured: true },
-    { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: false },
-    { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: false },
-    { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: false },
-    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" />, featured: false }
+    { name: 'AI Smart Contract Auditor', path: '/ai-smart-contract-auditor', icon: <Shield className="w-4 h-4" />, featured: true },
+    { name: 'AI Music Composition', path: '/ai-music-composition', icon: <Monitor className="w-4 h-4" />, featured: true },
+    { name: 'AI Password Manager', path: '/ai-password-manager', icon: <Shield className="w-4 h-4" />, featured: true },
+    { name: 'AI Sentiment Analyzer', path: '/ai-sentiment-analyzer', icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Neural Interface', path: '/zion-ai-neural-interface', icon: <Brain className="w-4 h-4" />, featured: false },
+    { name: 'AI Voice Cloning Studio', path: '/ai-voice-cloning-studio', icon: <Monitor className="w-4 h-4" />, featured: false },
+    { name: 'AI Quantum Financial Oracle', path: '/ai-quantum-financial-oracle', icon: <BarChart3 className="w-4 h-4" />, featured: false },
+    { name: 'AI Space Mission Optimizer', path: '/ai-space-mission-optimizer', icon: <Globe className="w-4 h-4" />, featured: false }
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -93,9 +93,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
       path: '/ai-services',
       icon: <Brain className="w-4 h-4" />,
       services: [
-        { name: 'AI Voice Cloning', path: '/ai-voice-cloning-studio' },
-        { name: 'AI Quantum Financial', path: '/ai-quantum-financial-oracle' },
-        { name: 'AI Space Mission', path: '/ai-space-mission-optimizer' },
+        { name: 'AI Recruitment Assistant', path: '/ai-recruitment-assistant' },
+        { name: 'AI Predictive Modeling', path: '/ai-predictive-modeling' },
+        { name: 'AI Sentiment Analyzer', path: '/ai-sentiment-analyzer' },
         { name: 'AI Analytics', path: '/ai-analytics' },
         { name: 'AI Automation', path: '/ai-automation' },
         { name: 'AI Content Generation', path: '/ai-content-generation' }
