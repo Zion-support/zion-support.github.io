@@ -1,36 +1,24 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
 import { render, screen, waitFor, act } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5186
 
-// Mock component for testing
-const OptimizedImage = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
+const defaultProps = {
+  src: 'test-image.jpg',
+  alt: 'Test image',
+  width: 300,
+  height: 200,
 };
 
 describe('OptimizedImage Component', () => {
   it('renders with default props', () => {
-    const { container } = render(<OptimizedImage />);
+    const { container } = render(<OptimizedImage {...defaultProps} />);
     expect(container.firstChild).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
-    const { container } = render(<OptimizedImage className="test-class" />);
+    const { container } = render(<OptimizedImage {...defaultProps} className="test-class" />);
     expect(container.firstChild).toHaveClass('test-class');
   });
-
-  it('renders children', () => {
-    render(<OptimizedImage>Test content</OptimizedImage>);
-    expect(screen.getByText('Test content')).toBeInTheDocument();
-  });
-<<<<<<< HEAD
-=======
 
   it('shows loading skeleton initially', () => {
     render(<OptimizedImage {...defaultProps} />);
@@ -80,4 +68,3 @@ describe('OptimizedImage Component', () => {
     expect(img).toHaveAttribute('loading', 'lazy');
   });
 });
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-5186
