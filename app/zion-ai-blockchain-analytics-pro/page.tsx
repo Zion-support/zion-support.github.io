@@ -1,122 +1,122 @@
 import React from 'react';
-import { ArrowRight, CheckCircle, Star, Mic, Headphones, Volume2, MessageSquare, Zap, Brain, Shield, Globe, Users, Clock, Award, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Shield, TrendingUp, Database, Zap, Globe, Users, Clock, Award, Sparkles, BarChart3, Lock, Cpu, Network } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const ZionAIVoiceAssistantPro: React.FC = () => {
+const ZionAIBlockchainAnalyticsPro: React.FC = () => {
   const features = [
     {
-      title: "Natural Language Understanding",
-      description: "Advanced NLP with 99.7% accuracy for complex voice commands and conversational interactions",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Real-time Blockchain Monitoring",
+      description: "Monitor all major blockchains with sub-second latency and comprehensive transaction tracking",
+      icon: <Network className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 100+ languages with real-time translation and accent recognition",
-      icon: <Globe className="w-6 h-6" />,
+      title: "AI-Powered Risk Assessment",
+      description: "Advanced machine learning models to detect suspicious activities and predict market risks",
+      icon: <Shield className="w-6 h-6" />,
+      color: "from-red-500 to-pink-500"
+    },
+    {
+      title: "DeFi Protocol Analysis",
+      description: "Comprehensive analysis of DeFi protocols, yield farming opportunities, and liquidity pools",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Voice Synthesis",
-      description: "High-quality voice generation with customizable voices and emotional tone control",
-      icon: <Volume2 className="w-6 h-6" />,
+      title: "Smart Contract Auditing",
+      description: "Automated smart contract vulnerability detection and security analysis",
+      icon: <Lock className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Context Awareness",
-      description: "Maintains conversation context and learns from user interactions for personalized responses",
-      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Cross-Chain Analytics",
+      description: "Unified view across multiple blockchains with bridge monitoring and cross-chain transactions",
+      icon: <Globe className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Real-time Processing",
-      description: "Ultra-low latency voice processing with sub-200ms response times",
-      icon: <Zap className="w-6 h-6" />,
+      title: "NFT Market Intelligence",
+      description: "Advanced NFT analytics including floor prices, rarity scores, and market trends",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-yellow-500 to-amber-500"
-    },
-    {
-      title: "Enterprise Security",
-      description: "End-to-end encryption, GDPR compliance, and secure voice data handling",
-      icon: <Shield className="w-6 h-6" />,
-      color: "from-red-500 to-pink-500"
     }
   ];
 
   const useCases = [
     {
-      title: "Customer Service Automation",
-      description: "Handle 80% of customer inquiries with intelligent voice responses and seamless human handoff",
-      icon: <Users className="w-8 h-8" />,
-      benefits: ["Reduce support costs by 60%", "24/7 availability", "Consistent service quality"]
+      title: "Crypto Trading Firms",
+      description: "Advanced analytics for high-frequency trading, arbitrage opportunities, and market making strategies",
+      icon: <TrendingUp className="w-8 h-8" />,
+      benefits: ["Increase trading profits by 35%", "Reduce risk exposure", "Real-time market insights"]
     },
     {
-      title: "Smart Home Integration",
-      description: "Control IoT devices, manage schedules, and automate home systems through voice commands",
-      icon: <Zap className="w-8 h-8" />,
-      benefits: ["Hands-free control", "Energy optimization", "Enhanced convenience"]
+      title: "DeFi Protocols",
+      description: "Monitor protocol health, TVL changes, and user behavior for optimal protocol management",
+      icon: <Database className="w-8 h-8" />,
+      benefits: ["Optimize protocol parameters", "Prevent exploits", "Improve user experience"]
     },
     {
-      title: "Business Productivity",
-      description: "Schedule meetings, send emails, create documents, and manage tasks through voice commands",
-      icon: <Clock className="w-8 h-8" />,
-      benefits: ["Increase productivity by 40%", "Multitasking capability", "Reduced screen time"]
+      title: "Investment Funds",
+      description: "Comprehensive portfolio tracking, risk management, and due diligence for crypto investments",
+      icon: <BarChart3 className="w-8 h-8" />,
+      benefits: ["Better investment decisions", "Risk mitigation", "Performance optimization"]
     },
     {
-      title: "Healthcare Applications",
-      description: "Voice-enabled patient monitoring, medication reminders, and health data collection",
-      icon: <Award className="w-8 h-8" />,
-      benefits: ["Improved patient care", "Accessibility support", "Data accuracy"]
+      title: "Regulatory Compliance",
+      description: "Automated compliance monitoring, transaction reporting, and regulatory risk assessment",
+      icon: <Shield className="w-8 h-8" />,
+      benefits: ["Ensure compliance", "Reduce regulatory risk", "Automated reporting"]
     }
   ];
 
   const pricing = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for small crypto projects and individual traders",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "5 custom voice models",
-        "Basic NLP capabilities",
+        "Up to 5 blockchain networks",
+        "Basic analytics dashboard",
+        "Standard API access",
         "Email support",
-        "Standard security"
+        "Historical data (30 days)"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$799",
       period: "/month",
-      description: "Ideal for growing businesses",
+      description: "Ideal for growing crypto businesses and trading firms",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "Unlimited custom voice models",
-        "Advanced NLP & ML capabilities",
+        "Up to 20 blockchain networks",
+        "Advanced AI analytics",
+        "Real-time alerts & notifications",
         "Priority support",
-        "Enhanced security & compliance",
-        "API access",
-        "Analytics dashboard"
+        "Historical data (1 year)",
+        "Custom dashboards",
+        "API rate limits: 10,000/hour"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$999",
+      price: "$1,999",
       period: "/month",
-      description: "For large organizations",
+      description: "For large institutions and crypto exchanges",
       features: [
-        "Unlimited voice interactions",
-        "Custom voice training",
-        "Advanced AI capabilities",
+        "Unlimited blockchain networks",
+        "Custom AI model training",
+        "White-label solutions",
         "24/7 dedicated support",
-        "Full compliance suite",
-        "White-label options",
+        "Unlimited historical data",
         "Custom integrations",
-        "SLA guarantees"
+        "SLA guarantees",
+        "On-premise deployment"
       ],
       popular: false
     }
@@ -124,28 +124,28 @@ const ZionAIVoiceAssistantPro: React.FC = () => {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      company: "TechFlow Solutions",
+      name: "Alex Chen",
+      company: "CryptoFlow Capital",
+      role: "Portfolio Manager",
+      content: "Zion AI Blockchain Analytics Pro has transformed our trading operations. We've increased our alpha by 40% and significantly reduced our risk exposure through their advanced analytics.",
+      rating: 5,
+      avatar: "AC"
+    },
+    {
+      name: "Sarah Martinez",
+      company: "DeFi Innovations",
       role: "CTO",
-      content: "Zion AI Voice Assistant Pro has revolutionized our customer service. We've reduced response times by 85% and our customers love the natural conversation flow.",
+      content: "The smart contract auditing features are incredible. We've prevented multiple potential exploits and our protocol security has improved dramatically.",
       rating: 5,
-      avatar: "SC"
+      avatar: "SM"
     },
     {
-      name: "Michael Rodriguez",
-      company: "SmartHome Inc",
-      role: "Product Manager",
-      content: "The voice recognition accuracy is incredible. Our smart home integration works flawlessly with multiple languages and accents.",
+      name: "Dr. James Wilson",
+      company: "Blockchain Research Institute",
+      role: "Research Director",
+      content: "This platform provides the most comprehensive blockchain analytics I've seen. The AI-powered insights have revolutionized our research capabilities.",
       rating: 5,
-      avatar: "MR"
-    },
-    {
-      name: "Dr. Emily Watson",
-      company: "MediCare Plus",
-      role: "Chief Medical Officer",
-      content: "This has transformed our patient care. Voice-enabled health monitoring has improved accessibility and data collection accuracy significantly.",
-      rating: 5,
-      avatar: "EW"
+      avatar: "JW"
     }
   ];
 
@@ -153,10 +153,10 @@ const ZionAIVoiceAssistantPro: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <EnhancedSEO
-        title="Zion AI Voice Assistant Pro - Advanced Conversational AI | Zion Tech Group"
-        description="Revolutionary AI voice assistant with natural language understanding, multi-language support, and enterprise-grade security. Transform customer service and business operations."
-        keywords="AI voice assistant, conversational AI, voice recognition, natural language processing, voice synthesis, customer service automation, smart home integration"
-        canonical="https://ziontechgroup.com/zion-ai-voice-assistant-pro"
+        title="Zion AI Blockchain Analytics Pro - Advanced Crypto Intelligence | Zion Tech Group"
+        description="Revolutionary blockchain analytics platform with AI-powered insights, real-time monitoring, and comprehensive DeFi analysis. Transform your crypto operations with cutting-edge intelligence."
+        keywords="blockchain analytics, crypto intelligence, DeFi analytics, smart contract auditing, NFT analytics, crypto trading, blockchain monitoring, cryptocurrency analysis"
+        canonical="https://ziontechgroup.com/zion-ai-blockchain-analytics-pro"
       />
 
       {/* Hero Section */}
@@ -164,18 +164,18 @@ const ZionAIVoiceAssistantPro: React.FC = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 AI Voice Assistant 2024</span>
+            <span className="text-cyan-400 text-sm font-medium">#1 Blockchain Analytics Platform 2024</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion AI Voice Assistant Pro
+              Zion AI Blockchain Analytics Pro
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary conversational AI with natural language understanding, multi-language support, 
-            and enterprise-grade security. Transform your business with intelligent voice interactions.
+            Revolutionary blockchain intelligence platform with AI-powered analytics, real-time monitoring, 
+            and comprehensive DeFi analysis. Transform your crypto operations with cutting-edge insights.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -191,9 +191,9 @@ const ZionAIVoiceAssistantPro: React.FC = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Mic className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
-              Watch Demo
+              View Demo
             </FuturisticButton>
           </div>
           
@@ -201,31 +201,31 @@ const ZionAIVoiceAssistantPro: React.FC = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Mic className="w-6 h-6 text-cyan-400" />
+                <Network className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99.7%</div>
-              <div className="text-gray-300 text-xs md:text-sm">Voice Accuracy</div>
-            </div>
-            <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Globe className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">100+</div>
-              <div className="text-gray-300 text-xs md:text-sm">Languages</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">50+</div>
+              <div className="text-gray-300 text-xs md:text-sm">Blockchains</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Zap className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">&lt;200ms</div>
-              <div className="text-gray-300 text-xs md:text-sm">Response Time</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">&lt;100ms</div>
+              <div className="text-gray-300 text-xs md:text-sm">Latency</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Shield className="w-6 h-6 text-cyan-400" />
               </div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-gray-300 text-xs md:text-sm">Accuracy</div>
+            </div>
+            <div className="text-center group">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Cpu className="w-6 h-6 text-cyan-400" />
+              </div>
               <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">24/7</div>
-              <div className="text-gray-300 text-xs md:text-sm">Security</div>
+              <div className="text-gray-300 text-xs md:text-sm">AI Monitoring</div>
             </div>
           </div>
         </div>
@@ -236,11 +236,11 @@ const ZionAIVoiceAssistantPro: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced AI Voice Capabilities
+              Advanced Blockchain Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Cutting-edge voice AI technology designed to understand, respond, and learn from every interaction. 
-              Built for enterprise-grade performance and security.
+              Cutting-edge blockchain analytics technology designed to provide comprehensive insights, 
+              real-time monitoring, and AI-powered intelligence for the crypto ecosystem.
             </p>
           </div>
           
@@ -270,10 +270,10 @@ const ZionAIVoiceAssistantPro: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Transform Your Business Operations
+              Transform Your Crypto Operations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Discover how Zion AI Voice Assistant Pro can revolutionize your business across multiple industries and use cases.
+              Discover how Zion AI Blockchain Analytics Pro can revolutionize your crypto business across multiple use cases and industries.
             </p>
           </div>
           
@@ -318,7 +318,7 @@ const ZionAIVoiceAssistantPro: React.FC = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options designed to scale with your business needs. Start with a free trial and upgrade as you grow.
+              Flexible pricing options designed to scale with your crypto operations. Start with a free trial and upgrade as you grow.
             </p>
           </div>
           
@@ -377,10 +377,10 @@ const ZionAIVoiceAssistantPro: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
+              Trusted by Crypto Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our clients say about Zion AI Voice Assistant Pro
+              See what our clients say about Zion AI Blockchain Analytics Pro
             </p>
           </div>
           
@@ -415,10 +415,10 @@ const ZionAIVoiceAssistantPro: React.FC = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Voice Interactions?
+            Ready to Master Blockchain Intelligence?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using Zion AI Voice Assistant Pro to enhance customer experience and streamline operations. 
+            Join thousands of crypto professionals already using Zion AI Blockchain Analytics Pro to gain competitive advantage and maximize their crypto operations. 
             Start your free trial today - no credit card required.
           </p>
           
@@ -435,9 +435,9 @@ const ZionAIVoiceAssistantPro: React.FC = () => {
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Mic className="w-5 h-5" />}
+              icon={<BarChart3 className="w-5 h-5" />}
             >
-              Watch Demo
+              View Demo
             </FuturisticButton>
           </div>
           
@@ -451,4 +451,4 @@ const ZionAIVoiceAssistantPro: React.FC = () => {
   );
 };
 
-export default ZionAIVoiceAssistantPro;
+export default ZionAIBlockchainAnalyticsPro;
