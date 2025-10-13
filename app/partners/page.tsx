@@ -1,138 +1,133 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
+import React from "react";
+import { ArrowRight, CheckCircle, Globe, Shield, Zap } from "lucide-react";
+import EnhancedSEO from "../components/EnhancedSEO";
 
-export default function Partners() {
+const PartnersPage = () => {
   const partners = [
     {
       name: "Microsoft",
-      logo: "/images/partners/microsoft.png",
-      description: "Leading cloud and productivity solutions",
-      category: "Technology Partner",
-      tier: "Platinum"
+      logo: "/partners/microsoft.svg",
+      description: "Cloud infrastructure and AI solutions",
+      category: "Cloud & AI"
     },
     {
       name: "Amazon Web Services",
-      logo: "/images/partners/aws.png",
-      description: "Comprehensive cloud computing platform",
-      category: "Cloud Partner",
-      tier: "Platinum"
+      logo: "/partners/aws.svg", 
+      description: "Cloud computing and storage solutions",
+      category: "Cloud"
     },
     {
       name: "Google Cloud",
-      logo: "/images/partners/google-cloud.png",
-      description: "AI and machine learning cloud services",
-      category: "AI Partner",
-      tier: "Gold"
-    },
-    {
-      name: "Salesforce",
-      logo: "/images/partners/salesforce.png",
-      description: "Customer relationship management platform",
-      category: "CRM Partner",
-      tier: "Gold"
+      logo: "/partners/google-cloud.svg",
+      description: "Machine learning and data analytics",
+      category: "AI & Analytics"
     },
     {
       name: "IBM",
-      logo: "/images/partners/ibm.png",
-      description: "Enterprise AI and hybrid cloud solutions",
-      category: "Enterprise Partner",
-      tier: "Silver"
-    },
-    {
-      name: "Oracle",
-      logo: "/images/partners/oracle.png",
-      description: "Database and enterprise software solutions",
-      category: "Database Partner",
-      tier: "Silver"
+      logo: "/partners/ibm.svg",
+      description: "Enterprise AI and blockchain solutions",
+      category: "Enterprise AI"
     }
   ];
 
   const benefits = [
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Joint Marketing",
-      description: "Collaborative marketing campaigns and co-branded content"
-    },
-    {
       icon: <Globe className="w-8 h-8" />,
       title: "Global Reach",
-      description: "Access to our worldwide network of clients and opportunities"
+      description: "Access to worldwide markets and customers through our partner network"
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Technical Support",
-      description: "Dedicated technical resources and training programs"
+      title: "Security & Compliance",
+      description: "Enterprise-grade security and compliance standards"
     },
     {
       icon: <Zap className="w-8 h-8" />,
-      title: "Innovation Labs",
-      description: "Joint innovation initiatives and R&D projects"
-    }
-  ];
-
-  const tiers = [
-    {
-      name: "Platinum",
-      color: "from-gray-400 to-gray-600",
-      requirements: "Strategic partnership with significant revenue commitment",
-      benefits: ["Highest priority support", "Dedicated account manager", "Custom solutions", "Joint go-to-market"]
-    },
-    {
-      name: "Gold",
-      color: "from-yellow-400 to-yellow-600",
-      requirements: "Strong partnership with regular collaboration",
-      benefits: ["Priority support", "Training programs", "Marketing support", "Technical resources"]
-    },
-    {
-      name: "Silver",
-      color: "from-gray-300 to-gray-500",
-      requirements: "Partnership with mutual business opportunities",
-      benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
+      title: "Innovation",
+      description: "Cutting-edge technology and continuous innovation"
     }
   ];
 
   return (
-    <>
-      <Helmet>
-        <title>Partners - Zion Tech Group | Strategic Partnerships</title>
-        <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
-        <meta name="keywords" content="partners, partnerships, technology partners, cloud partners, strategic alliances" />
-      </Helmet>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Our Partners
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Strategic partnerships that drive innovation and deliver exceptional value to our clients.
-            </p>
-          </div>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Our Partners</h1>
-          <p className="text-gray-300 text-center mb-12">Strategic partnerships that drive innovation and growth.</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <h1 className="text-4xl font-bold text-white text-center mb-8">Our Partners</h1>
-          <p className="text-xl text-gray-300 text-center mb-12">
-            Strategic partnerships that drive innovation and growth
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <EnhancedSEO
+        title="Partners - Zion Tech Group | Strategic Technology Partnerships"
+        description="Discover our strategic partnerships with leading technology companies to deliver world-class solutions."
+        keywords="technology partners, strategic partnerships, cloud partners, AI partners"
+        canonical="/partners"
+      />
+
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our Strategic Partners
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            We collaborate with industry leaders to deliver cutting-edge solutions and exceptional value to our clients.
           </p>
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
+        </div>
+
+        {/* Partners Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {partners.map((partner, index) => (
+            <div
+              key={index}
+              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group"
+            >
+              <div className="w-16 h-16 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Globe className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">{partner.name}</h3>
+              <p className="text-gray-300 text-sm mb-3">{partner.description}</p>
+              <span className="inline-block bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-medium">
+                {partner.category}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Benefits Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-12">
+            Why Partner with Us?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="text-center group"
+              >
+                <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                  {benefit.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
+                <p className="text-gray-300">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-xl p-8 text-center border border-white/20">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Ready to Partner with Us?
+          </h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Join our network of strategic partners and help us deliver innovative solutions to clients worldwide.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center space-x-2 group">
+              <span>Become a Partner</span>
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300">
+              Learn More
+            </button>
+          </div>
         </div>
       </div>
-=======
->>>>>>> origin/main
-    </>
+    </div>
   );
-}
+};
+
+export default PartnersPage;
