@@ -11,18 +11,24 @@ interface ImageOptimizerProps {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4df1
 export default function ImageOptimizer({ 
   src, 
   alt, 
   className = '', 
   quality = 80,
   format = 'webp',
+<<<<<<< HEAD
 =======
 export default function ImageOptimizer({
   src,
   alt,
   className = '',
 >>>>>>> cursor/fix-errors-and-merge-to-main-82b8
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4df1
   lazy = true,
   placeholder
 }: ImageOptimizerProps) {

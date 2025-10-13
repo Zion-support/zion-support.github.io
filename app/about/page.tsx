@@ -4,7 +4,10 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Users, Award } from 'lucide-react';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4df1
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-82b8
 export default function AboutPage() {

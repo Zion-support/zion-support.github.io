@@ -16,6 +16,7 @@ export class PerformanceUtils {
 
   measureLoadTime() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface PerformanceConfig {
   enabled: boolean;
@@ -26,6 +27,8 @@ interface PerformanceConfig {
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-82b8
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4df1
     if (typeof window !== 'undefined' && window.performance) {
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;

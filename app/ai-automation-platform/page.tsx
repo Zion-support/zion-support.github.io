@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function PageTsxPage() {
@@ -35,6 +36,8 @@ export default function PageTsxPage() {
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-82b8
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4df1
 export default function AiAutomationPlatform() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -73,6 +76,7 @@ export default function AiAutomationPlatform() {
             </div>
           </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -80,6 +84,8 @@ export default function AiAutomationPlatform() {
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-82b8
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4df1
         </div>
       </div>
     </div>

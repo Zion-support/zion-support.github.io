@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 export default function PagePage() {
@@ -32,31 +33,56 @@ export default function MicroSAASPage() {
       <Helmet>
         <title>Micro SaaS Services - Zion Tech Group</title>
         <meta name="description" content="Micro SaaS solutions by Zion Tech Group" />
+=======
+export default function MicroSaasServices() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Micro SAAS Services - Zion Tech Group</title>
+        <meta name="description" content="Micro SAAS services and solutions by Zion Tech Group" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-4df1
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
+<<<<<<< HEAD
             Micro SaaS Services
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Scalable micro SaaS solutions for your business.
+=======
+            Micro SAAS Services
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Micro SAAS services and solutions by Zion Tech Group
+>>>>>>> cursor/fix-errors-and-merge-to-main-4df1
           </p>
         </div>
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-md p-8">
             <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
             <p className="text-gray-600">
+<<<<<<< HEAD
               Micro SaaS services will be detailed here.
             </p>
           </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-82b8
+=======
+              Our micro SAAS services page is under development. Please check back later for updates.
+            </p>
+          </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-4df1
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 }
 
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-82b8
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-4df1

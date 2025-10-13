@@ -3,6 +3,9 @@ export interface SEOConfig {
   description: string;
   keywords: string[];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-4df1
   canonicalUrl: string;
 =======
   canonicalUrl?: string;
