@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-import React from 'react;
-import { useEffect, Node } from 'react;
-interface EnhancedAccessibilityProps {
-  children: Node;
-=======
-import React, { useEffect, useState } from 'react';
 
-interface AccessibilitySettings {
-  highContrast: boolean;
-  fontSize: 'small' | 'normal' | 'large' | 'extra-large';
-  reducedMotion: boolean;
-  screenReader: boolean;
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 }
 
 const EnhancedAccessibility: React.FC = () => {
@@ -25,74 +12,6 @@ const EnhancedAccessibility: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-<<<<<<< HEAD
-    // Enhanced accessibility features;
-    const addSkipLinks = () => {
-      const skipLink = document.createElement('a');
-      skipLink.href = '#main-content';
-      skipLink.textContent = 'Skip to main content';
-      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
-      document.body.insertBefore(skipLink, document.body.firstChild);
-    };
-
-    const enhanceFocusManagement = () => {
-      // Add focus indicators;
-      const style = document.createElement('style');
-      style.textContent = `;
-        *:focus {
-          outline: 2px solid #06b6d4 !important;
-          outline-offset: 2px !important;
-        }
-        .sr-only {
-          position: absolute;
-          width: 1px;
-          height: 1px;
-          padding: 0;
-          margin: -1px;
-          overflow: hidden;
-          clip: rect(0, 0, 0, 0);
-          white-space: nowrap;
-          border: 0;
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    const addAriaLabels = () => {
-      // Add ARIA labels to interactive elements;
-      const buttons = document.querySelectorAll('button:not([aria-label])');
-      buttons.forEach((button) => {
-        if (!button.textContent?.trim()) {
-          button.setAttribute('aria-label', 'Button');
-        }
-      });
-=======
-    // Load saved settings from localStorage
-    const savedSettings = localStorage.getItem('accessibility-settings');
-    if (savedSettings) {
-      setSettings(JSON.parse(savedSettings));
-    }
-
-    // Detect screen reader usage
-    const detectScreenReader = () => {
-      const isScreenReader = window.speechSynthesis || 
-        (window as any).speechSynthesis ||
-        navigator.userAgent.includes('NVDA') ||
-        navigator.userAgent.includes('JAWS') ||
-        navigator.userAgent.includes('VoiceOver');
-      
-      setSettings(prev => ({ ...prev, screenReader: !!isScreenReader }));
-    };
-
-    // Detect reduced motion preference
-    const detectReducedMotion = () => {
-      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      setSettings(prev => ({ ...prev, reducedMotion: prefersReducedMotion }));
-    };
-
-    detectScreenReader();
-    detectReducedMotion();
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
 
     // Apply accessibility settings
     applyAccessibilitySettings(settings);
@@ -104,33 +23,6 @@ const EnhancedAccessibility: React.FC = () => {
     };
     mediaQuery.addEventListener('change', handleChange);
 
-<<<<<<< HEAD
-    const setupKeyboardNavigation = () => {
-      // Enhanced keyboard navigation;
-      document.addEventListener('keydown', (e) => {';
-        if (e.key === 'Tab') {';
-          document.body.classList.add('keyboard-navigation');
-        }
-      });
-
-      document.addEventListener('mousedown', () => {';
-        document.body.classList.remove('keyboard-navigation');
-      });
-    };
-
-    // Initialize accessibility enhancements;
-    addSkipLinks();
-    enhanceFocusManagement();
-    addAriaLabels();
-    setupKeyboardNavigation();
-
-    // Cleanup;
-    return () => {
-      // Cleanup if needed;
-=======
-    return () => {
-      mediaQuery.removeEventListener('change', handleChange);
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
     };
   }, []);
 
