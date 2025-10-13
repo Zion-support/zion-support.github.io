@@ -1,37 +1,37 @@
 {
-  "timestamp": "2025-10-10T07:28:42.185Z",
+  "timestamp": "2025-10-13T03:48:45.045Z",
   "baseUrl": "https://ziontechgroup.com",
   "summary": {
-    "totalLinks": 1,
-    "workingLinks": 1,
+    "totalPagesVisited": 1,
+    "validLinks": 1,
     "brokenLinks": 0,
-    "missingPages": 0,
-    "errors": []
+    "externalLinks": 0
   },
-  "workingLinks": [
+  "brokenLinks": [],
+  "validLinks": [
     {
       "url": "https://ziontechgroup.com",
-      "statusCode": 200,
+      "status": 200,
       "depth": 0
     }
   ],
-  "brokenLinks": [],
-  "missingPages": [],
-  "errors": []
-  "timestamp": "2025-10-09T17:00:53.717Z",
-  "baseUrl": "https://ziontechgroup.com",
-  "statistics": {
-    "totalPages": 1,
-    "totalLinks": 0,
-    "brokenLinks": 0
-  },
-  "brokenLinks": [],
-  "pages": [
+  "externalLinks": [],
+  "recommendations": [
     {
-      "url": "https://ziontechgroup.com",
-      "title": "Zion Tech Group - Technology Solutions",
-      "linkCount": 0,
-      "links": []
+      "type": "warning",
+      "message": "Missing common pages: /about, /contact, /services, /pricing, /blog, /privacy, /terms, /sitemap, /careers, /case-studies",
+      "details": [
+        "/about",
+        "/contact",
+        "/services",
+        "/pricing",
+        "/blog",
+        "/privacy",
+        "/terms",
+        "/sitemap",
+        "/careers",
+        "/case-studies"
+      ]
     }
   ]
 }

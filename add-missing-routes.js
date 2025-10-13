@@ -1,96 +1,74 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
 
-// Read the analysis file
-const analysis = JSON.parse(fs.readFileSync('/workspace/missing-routes-analysis.json', 'utf8'));
-
-// Read the current App.tsx file
+// Read the existing App.tsx
 const appTsxPath = '/workspace/App.tsx';
 let appContent = fs.readFileSync(appTsxPath, 'utf8');
 
-// Generate component names for routes
-const generateComponentName = (route) => {
-  let componentName = route.split('/').map(part => 
-    part.split('-').map(word => 
+// Read the missing routes
+const missingRoutes = fs.readFileSync('/workspace/missing_routes.txt', 'utf8').trim().split('\n');
+
+console.log(`Found ${missingRoutes.length} missing routes to add`);
+
+// Generate lazy imports for missing routes
+const lazyImports = [];
+const routeElements = [];
+
+missingRoutes.forEach((route, index) => {
+  // Handle routes that start with numbers by prefixing with 'Page'
+  let componentName;
+  if (/^\d/.test(route)) {
+    componentName = 'Page' + route.split('-').map(word => 
       word.charAt(0).toUpperCase() + word.slice(1)
-    ).join('')
-  ).join('');
-  
-  // Handle routes starting with numbers
-  if (/^\d/.test(componentName)) {
-    componentName = 'FiveG' + componentName.substring(1);
+    ).join('') + 'Page';
+  } else {
+    componentName = route.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('') + 'Page';
   }
   
-  return componentName + 'Page';
-};
-
-// Generate lazy imports for a category
-const generateLazyImports = (routes, category) => {
-  if (routes.length === 0) return '';
+  const importPath = `./app/${route}/page`;
   
-  let result = `\n// ${category} Routes\n`;
-  routes.forEach(route => {
-    const componentName = generateComponentName(route);
-    result += `const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`;
-  });
+  // Add lazy import
+  lazyImports.push(`const ${componentName} = React.lazy(() => import("${importPath}"));`);
   
-  return result;
-};
-
-// Generate route elements for a category
-const generateRouteElements = (routes) => {
-  if (routes.length === 0) return '';
-  
-  let result = '';
-  routes.forEach(route => {
-    const componentName = generateComponentName(route);
-    result += `                  <Route path="/${route}" element={<${componentName} />} />\n`;
-  });
-  
-  return result;
-};
-
-// Generate all lazy imports
-const allLazyImports = 
-  generateLazyImports(analysis.categorized.aiServices, 'AI Service') +
-  generateLazyImports(analysis.categorized.microSaas, 'Micro SAAS') +
-  generateLazyImports(analysis.categorized.itServices, 'IT Service') +
-  generateLazyImports(analysis.categorized.fiveGServices, '5G Service') +
-  generateLazyImports(analysis.categorized.otherPages, 'Other');
-
-// Generate all route elements
-const allRouteElements = 
-  generateRouteElements(analysis.categorized.aiServices) +
-  generateRouteElements(analysis.categorized.microSaas) +
-  generateRouteElements(analysis.categorized.itServices) +
-  generateRouteElements(analysis.categorized.fiveGServices) +
-  generateRouteElements(analysis.categorized.otherPages);
+  // Add route element
+  routeElements.push(`                  <Route path="/${route}" element={<${componentName} />} />`);
+});
 
 // Find the position to insert lazy imports (after the existing lazy imports)
-const lazyImportEndPattern = /const SitemapPage = React\.lazy\(\(\) => import\("\.\/app\/sitemap\/page"\)\);/;
-const lazyImportEndMatch = appContent.match(lazyImportEndPattern);
+const existingLazyImportsEnd = appContent.lastIndexOf('const SitemapPage = React.lazy(() => import("./app/sitemap/page"));');
+const insertPosition = existingLazyImportsEnd + appContent.substring(existingLazyImportsEnd).indexOf(';') + 1;
 
-if (lazyImportEndMatch) {
-  const insertPosition = lazyImportEndMatch.index + lazyImportEndMatch[0].length;
-  appContent = appContent.slice(0, insertPosition) + allLazyImports + appContent.slice(insertPosition);
-}
+// Insert new lazy imports
+const newLazyImports = '\n\n// Additional AI Service Pages\n' + lazyImports.join('\n');
+appContent = appContent.slice(0, insertPosition) + newLazyImports + appContent.slice(insertPosition);
 
-// Find the position to insert route elements (before the closing </Routes> tag)
-const routesEndPattern = /<\/Routes>/;
-const routesEndMatch = appContent.match(routesEndPattern);
+// Find the position to insert route elements (before the closing </Routes>)
+const routesEndPosition = appContent.lastIndexOf('                  </Routes>');
+const insertRoutesPosition = routesEndPosition;
 
-if (routesEndMatch) {
-  const insertPosition = routesEndMatch.index;
-  appContent = appContent.slice(0, insertPosition) + allRouteElements + appContent.slice(insertPosition);
-}
+// Insert new route elements
+const newRouteElements = '\n                  ' + routeElements.join('\n') + '\n';
+appContent = appContent.slice(0, insertRoutesPosition) + newRouteElements + appContent.slice(insertRoutesPosition);
 
-// Write the updated App.tsx file
+// Write the updated App.tsx
 fs.writeFileSync(appTsxPath, appContent);
 
 console.log('Successfully added all missing routes to App.tsx');
-console.log(`Added ${analysis.missingRoutes} missing routes`);
-console.log(`- AI Services: ${analysis.categorized.aiServices.length}`);
-console.log(`- Micro SAAS: ${analysis.categorized.microSaas.length}`);
-console.log(`- IT Services: ${analysis.categorized.itServices.length}`);
-console.log(`- 5G Services: ${analysis.categorized.fiveGServices.length}`);
-console.log(`- Other Pages: ${analysis.categorized.otherPages.length}`);
+console.log(`Added ${lazyImports.length} lazy imports`);
+console.log(`Added ${routeElements.length} route elements`);
+
+// Create a summary report
+const report = {
+  timestamp: new Date().toISOString(),
+  totalMissingRoutes: missingRoutes.length,
+  addedLazyImports: lazyImports.length,
+  addedRouteElements: routeElements.length,
+  routes: missingRoutes
+};
+
+fs.writeFileSync('/workspace/route-addition-report.json', JSON.stringify(report, null, 2));
+console.log('Route addition report saved to route-addition-report.json');

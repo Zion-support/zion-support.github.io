@@ -1,165 +1,116 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
-import path from 'path';
 
-// Read the analysis file
-const analysis = JSON.parse(fs.readFileSync('/workspace/missing-routes-analysis.json', 'utf8'));
-
-// Read the current App.tsx file
+// Read the existing App.tsx
 const appTsxPath = '/workspace/App.tsx';
 let appContent = fs.readFileSync(appTsxPath, 'utf8');
 
-// Generate component names for routes
-const generateComponentName = (route) => {
-  let componentName = route.split('/').map(part => 
-    part.split('-').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1)
-    ).join('')
-  ).join('');
-  
-  // Handle routes starting with numbers
-  if (/^\d/.test(componentName)) {
-    componentName = 'FiveG' + componentName.substring(1);
+// Read the missing routes
+const missingRoutes = fs.readFileSync('/workspace/missing_routes.txt', 'utf8').trim().split('\n');
+
+// Get existing component names to avoid duplicates
+const existingComponents = new Set();
+const existingRoutes = new Set();
+
+// Extract existing component names and routes from App.tsx
+const componentRegex = /const\s+(\w+)\s*=\s*React\.lazy/g;
+const routeRegex = /path="([^"]+)"/g;
+
+let match;
+while ((match = componentRegex.exec(appContent)) !== null) {
+  existingComponents.add(match[1]);
+}
+
+while ((match = routeRegex.exec(appContent)) !== null) {
+  existingRoutes.add(match[1]);
+}
+
+console.log(`Found ${existingComponents.size} existing components`);
+console.log(`Found ${existingRoutes.size} existing routes`);
+
+// Generate valid component names and routes
+const newComponents = [];
+const newRoutes = [];
+
+missingRoutes.forEach((route) => {
+  // Skip if route already exists
+  if (existingRoutes.has(`/${route}`)) {
+    return;
   }
-  
-  // Handle invalid characters in component names
+
+  // Generate valid component name
+  let componentName;
+  if (/^\d/.test(route)) {
+    // Routes starting with numbers
+    componentName = 'Page' + route.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('');
+  } else {
+    componentName = route.split('-').map(word => 
+      word.charAt(0).toUpperCase() + word.slice(1)
+    ).join('');
+  }
+
+  // Handle special characters and ensure uniqueness
   componentName = componentName.replace(/[^a-zA-Z0-9]/g, '');
   
-  // Ensure it starts with a letter
-  if (!/^[a-zA-Z]/.test(componentName)) {
-    componentName = 'Page' + componentName;
+  // Ensure uniqueness
+  let finalComponentName = componentName;
+  let counter = 1;
+  while (existingComponents.has(finalComponentName) || newComponents.some(c => c.name === finalComponentName)) {
+    finalComponentName = `${componentName}${counter}`;
+    counter++;
   }
+
+  const importPath = `./app/${route}/page`;
   
-  return componentName + 'Page';
-};
-
-// Get existing component names from App.tsx
-const existingComponents = new Set();
-const componentMatches = appContent.match(/const \w+Page = React\.lazy/g) || [];
-componentMatches.forEach(match => {
-  const componentName = match.match(/const (\w+Page)/)[1];
-  existingComponents.add(componentName);
-});
-
-// Filter out routes that would create duplicate component names
-const uniqueRoutes = [];
-const usedComponentNames = new Set(existingComponents);
-
-analysis.missingRoutesList.forEach(route => {
-  const componentName = generateComponentName(route);
-  if (!usedComponentNames.has(componentName)) {
-    uniqueRoutes.push(route);
-    usedComponentNames.add(componentName);
-  }
-});
-
-console.log(`Filtered out ${analysis.missingRoutesList.length - uniqueRoutes.length} duplicate component names`);
-console.log(`Adding ${uniqueRoutes.length} unique routes`);
-
-// Categorize unique routes
-const aiServices = uniqueRoutes.filter(route => route.startsWith('ai-'));
-const microSaas = uniqueRoutes.filter(route => route.startsWith('micro-saas') || route.startsWith('zion-'));
-const itServices = uniqueRoutes.filter(route => 
-  route.includes('cloud') || 
-  route.includes('cybersecurity') || 
-  route.includes('web-development') || 
-  route.includes('mobile-development') || 
-  route.includes('database') || 
-  route.includes('network') || 
-  route.includes('blockchain') ||
-  route.includes('data-') ||
-  route.includes('iot') ||
-  route.includes('devops') ||
-  route.includes('security') ||
-  route.includes('infrastructure') ||
-  route.includes('automation') ||
-  route.includes('integration') ||
-  route.includes('performance') ||
-  route.includes('compliance') ||
-  route.includes('disaster-recovery') ||
-  route.includes('machine-learning-ops') ||
-  route.includes('enterprise-integration') ||
-  route.includes('workflow-automation') ||
-  route.includes('cloud-native') ||
-  route.includes('cloud-migration') ||
-  route.includes('cloud-cost-optimization') ||
-  route.includes('security-automation') ||
-  route.includes('data-visualization')
-);
-const fiveGServices = uniqueRoutes.filter(route => route.startsWith('5g-'));
-const otherPages = uniqueRoutes.filter(route => 
-  !aiServices.includes(route) && 
-  !microSaas.includes(route) && 
-  !itServices.includes(route) && 
-  !fiveGServices.includes(route)
-);
-
-// Generate lazy imports for a category
-const generateLazyImports = (routes, category) => {
-  if (routes.length === 0) return '';
-  
-  let result = `\n// ${category} Routes\n`;
-  routes.forEach(route => {
-    const componentName = generateComponentName(route);
-    result += `const ${componentName} = React.lazy(() => import("./app/${route}/page"));\n`;
+  newComponents.push({
+    name: finalComponentName,
+    path: importPath
   });
   
-  return result;
-};
-
-// Generate route elements for a category
-const generateRouteElements = (routes) => {
-  if (routes.length === 0) return '';
-  
-  let result = '';
-  routes.forEach(route => {
-    const componentName = generateComponentName(route);
-    result += `                  <Route path="/${route}" element={<${componentName} />} />\n`;
+  newRoutes.push({
+    path: `/${route}`,
+    component: finalComponentName
   });
-  
-  return result;
-};
+});
 
-// Generate all lazy imports
-const allLazyImports = 
-  generateLazyImports(aiServices, 'AI Service') +
-  generateLazyImports(microSaas, 'Micro SAAS') +
-  generateLazyImports(itServices, 'IT Service') +
-  generateLazyImports(fiveGServices, '5G Service') +
-  generateLazyImports(otherPages, 'Other');
+console.log(`Generated ${newComponents.length} new components`);
+console.log(`Generated ${newRoutes.length} new routes`);
 
-// Generate all route elements
-const allRouteElements = 
-  generateRouteElements(aiServices) +
-  generateRouteElements(microSaas) +
-  generateRouteElements(itServices) +
-  generateRouteElements(fiveGServices) +
-  generateRouteElements(otherPages);
+// Find insertion points
+const lazyImportsEnd = appContent.lastIndexOf('const SitemapPage = React.lazy(() => import("./app/sitemap/page"));');
+const insertImportsPosition = lazyImportsEnd + appContent.substring(lazyImportsEnd).indexOf(';') + 1;
 
-// Find the position to insert lazy imports (after the existing lazy imports)
-const lazyImportEndPattern = /const SitemapPage = React\.lazy\(\(\) => import\("\.\/app\/sitemap\/page"\)\);/;
-const lazyImportEndMatch = appContent.match(lazyImportEndPattern);
+const routesEnd = appContent.lastIndexOf('                  </Routes>');
+const insertRoutesPosition = routesEnd;
 
-if (lazyImportEndMatch) {
-  const insertPosition = lazyImportEndMatch.index + lazyImportEndMatch[0].length;
-  appContent = appContent.slice(0, insertPosition) + allLazyImports + appContent.slice(insertPosition);
-}
+// Generate new content
+const newLazyImports = '\n\n// Additional Pages\n' + 
+  newComponents.map(comp => `const ${comp.name} = React.lazy(() => import("${comp.path}"));`).join('\n');
 
-// Find the position to insert route elements (before the closing </Routes> tag)
-const routesEndPattern = /<\/Routes>/;
-const routesEndMatch = appContent.match(routesEndPattern);
+const newRouteElements = '\n                  ' + 
+  newRoutes.map(route => `<Route path="${route.path}" element={<${route.component} />} />`).join('\n') + '\n';
 
-if (routesEndMatch) {
-  const insertPosition = routesEndMatch.index;
-  appContent = appContent.slice(0, insertPosition) + allRouteElements + appContent.slice(insertPosition);
-}
+// Insert new content
+appContent = appContent.slice(0, insertImportsPosition) + newLazyImports + appContent.slice(insertImportsPosition);
+appContent = appContent.slice(0, insertRoutesPosition) + newRouteElements + appContent.slice(insertRoutesPosition);
 
-// Write the updated App.tsx file
+// Write the updated App.tsx
 fs.writeFileSync(appTsxPath, appContent);
 
 console.log('Successfully added all missing routes to App.tsx');
-console.log(`Added ${uniqueRoutes.length} unique routes`);
-console.log(`- AI Services: ${aiServices.length}`);
-console.log(`- Micro SAAS: ${microSaas.length}`);
-console.log(`- IT Services: ${itServices.length}`);
-console.log(`- 5G Services: ${fiveGServices.length}`);
-console.log(`- Other Pages: ${otherPages.length}`);
+
+// Create a summary report
+const report = {
+  timestamp: new Date().toISOString(),
+  totalMissingRoutes: missingRoutes.length,
+  addedComponents: newComponents.length,
+  addedRoutes: newRoutes.length,
+  components: newComponents,
+  routes: newRoutes
+};
+
+fs.writeFileSync('/workspace/route-addition-report-v2.json', JSON.stringify(report, null, 2));
+console.log('Route addition report saved to route-addition-report-v2.json');

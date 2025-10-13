@@ -1,0 +1,2962 @@
+{
+  "timestamp": "2025-10-13T03:54:29.653Z",
+  "totalMissingRoutes": 453,
+  "addedComponents": 369,
+  "addedRoutes": 369,
+  "components": [
+    {
+      "name": "Page5gIotSolutions",
+      "path": "./app/5g-iot-solutions/page"
+    },
+    {
+      "name": "Accessibility",
+      "path": "./app/accessibility/page"
+    },
+    {
+      "name": "AccessibilityPage",
+      "path": "./app/accessibility-page/page"
+    },
+    {
+      "name": "AdvancedSecuritySuite",
+      "path": "./app/advanced-security-suite/page"
+    },
+    {
+      "name": "Ai3dGeneration",
+      "path": "./app/ai-3d-generation/page"
+    },
+    {
+      "name": "AiAccountingAssistant",
+      "path": "./app/ai-accounting-assistant/page"
+    },
+    {
+      "name": "AiAgriculturalIntelligencePro",
+      "path": "./app/ai-agricultural-intelligence-pro/page"
+    },
+    {
+      "name": "AiAnalyticsDashboard",
+      "path": "./app/ai-analytics-dashboard/page"
+    },
+    {
+      "name": "AiAnalyticsDashboardPro",
+      "path": "./app/ai-analytics-dashboard-pro/page"
+    },
+    {
+      "name": "AiApiManagement",
+      "path": "./app/ai-api-management/page"
+    },
+    {
+      "name": "AiApiManager",
+      "path": "./app/ai-api-manager/page"
+    },
+    {
+      "name": "AiAutomatedReporting",
+      "path": "./app/ai-automated-reporting/page"
+    },
+    {
+      "name": "AiAutomatedTesting",
+      "path": "./app/ai-automated-testing/page"
+    },
+    {
+      "name": "AiAutonomousSystems",
+      "path": "./app/ai-autonomous-systems/page"
+    },
+    {
+      "name": "AiBlockchainAnalytics",
+      "path": "./app/ai-blockchain-analytics/page"
+    },
+    {
+      "name": "AiBlockchainSolutions",
+      "path": "./app/ai-blockchain-solutions/page"
+    },
+    {
+      "name": "AiBusinessIntelligencePro",
+      "path": "./app/ai-business-intelligence-pro/page"
+    },
+    {
+      "name": "AiChatbotBuilder",
+      "path": "./app/ai-chatbot-builder/page"
+    },
+    {
+      "name": "AiChatbotEnterprise",
+      "path": "./app/ai-chatbot-enterprise/page"
+    },
+    {
+      "name": "AiClimatePredictionEngine",
+      "path": "./app/ai-climate-prediction-engine/page"
+    },
+    {
+      "name": "AiClimateSolutionsPro",
+      "path": "./app/ai-climate-solutions-pro/page"
+    },
+    {
+      "name": "AiCloudInfrastructure",
+      "path": "./app/ai-cloud-infrastructure/page"
+    },
+    {
+      "name": "AiCodeAssistant",
+      "path": "./app/ai-code-assistant/page"
+    },
+    {
+      "name": "AiCodeAssistantPro",
+      "path": "./app/ai-code-assistant-pro/page"
+    },
+    {
+      "name": "AiCodeGeneration",
+      "path": "./app/ai-code-generation/page"
+    },
+    {
+      "name": "AiCodeSecurityAuditor",
+      "path": "./app/ai-code-security-auditor/page"
+    },
+    {
+      "name": "AiComputerVision",
+      "path": "./app/ai-computer-vision/page"
+    },
+    {
+      "name": "AiContentDeliveryNetwork",
+      "path": "./app/ai-content-delivery-network/page"
+    },
+    {
+      "name": "AiContentGenerationPro",
+      "path": "./app/ai-content-generation-pro/page"
+    },
+    {
+      "name": "AiContentGenerator",
+      "path": "./app/ai-content-generator/page"
+    },
+    {
+      "name": "AiContentManagement",
+      "path": "./app/ai-content-management/page"
+    },
+    {
+      "name": "AiContentModeration",
+      "path": "./app/ai-content-moderation/page"
+    },
+    {
+      "name": "AiContentModerationPro",
+      "path": "./app/ai-content-moderation-pro/page"
+    },
+    {
+      "name": "AiContentStudio",
+      "path": "./app/ai-content-studio/page"
+    },
+    {
+      "name": "AiContentWriter",
+      "path": "./app/ai-content-writer/page"
+    },
+    {
+      "name": "AiConversationalAi",
+      "path": "./app/ai-conversational-ai/page"
+    },
+    {
+      "name": "AiConversationAnalytics",
+      "path": "./app/ai-conversation-analytics/page"
+    },
+    {
+      "name": "AiCrm",
+      "path": "./app/ai-crm/page"
+    },
+    {
+      "name": "AiCrmAssistant",
+      "path": "./app/ai-crm-assistant/page"
+    },
+    {
+      "name": "AiCustomerChurn",
+      "path": "./app/ai-customer-churn/page"
+    },
+    {
+      "name": "AiCustomerInsights",
+      "path": "./app/ai-customer-insights/page"
+    },
+    {
+      "name": "AiCustomerSupport",
+      "path": "./app/ai-customer-support/page"
+    },
+    {
+      "name": "AiCustomerSupportBot",
+      "path": "./app/ai-customer-support-bot/page"
+    },
+    {
+      "name": "AiCustomerSupportChatbot",
+      "path": "./app/ai-customer-support-chatbot/page"
+    },
+    {
+      "name": "AiCyberDefenseMatrix",
+      "path": "./app/ai-cyber-defense-matrix/page"
+    },
+    {
+      "name": "AiCybersecurity",
+      "path": "./app/ai-cybersecurity/page"
+    },
+    {
+      "name": "AiCybersecurityMonitor",
+      "path": "./app/ai-cybersecurity-monitor/page"
+    },
+    {
+      "name": "AiCybersecurityMonitorPro",
+      "path": "./app/ai-cybersecurity-monitor-pro/page"
+    },
+    {
+      "name": "AiCybersecuritySuite",
+      "path": "./app/ai-cybersecurity-suite/page"
+    },
+    {
+      "name": "AiCybersecuritySuitePro",
+      "path": "./app/ai-cybersecurity-suite-pro/page"
+    },
+    {
+      "name": "AiDataVisualization",
+      "path": "./app/ai-data-visualization/page"
+    },
+    {
+      "name": "AiDesignStudio",
+      "path": "./app/ai-design-studio/page"
+    },
+    {
+      "name": "AiDevopsAutomation",
+      "path": "./app/ai-devops-automation/page"
+    },
+    {
+      "name": "AiDocumentIntelligence",
+      "path": "./app/ai-document-intelligence/page"
+    },
+    {
+      "name": "AiDocumentProcessing",
+      "path": "./app/ai-document-processing/page"
+    },
+    {
+      "name": "AiDocumentProcessor",
+      "path": "./app/ai-document-processor/page"
+    },
+    {
+      "name": "AiDocumentScanner",
+      "path": "./app/ai-document-scanner/page"
+    },
+    {
+      "name": "AiDrugDiscoveryPro",
+      "path": "./app/ai-drug-discovery-pro/page"
+    },
+    {
+      "name": "AiEcommerceAssistant",
+      "path": "./app/ai-ecommerce-assistant/page"
+    },
+    {
+      "name": "AiEcommerceOptimizer",
+      "path": "./app/ai-ecommerce-optimizer/page"
+    },
+    {
+      "name": "AiEcommerceOptimizerPro",
+      "path": "./app/ai-ecommerce-optimizer-pro/page"
+    },
+    {
+      "name": "AiEcommerceSolutions",
+      "path": "./app/ai-ecommerce-solutions/page"
+    },
+    {
+      "name": "AiEdgeComputing",
+      "path": "./app/ai-edge-computing/page"
+    },
+    {
+      "name": "AiEducation",
+      "path": "./app/ai-education/page"
+    },
+    {
+      "name": "AiEmailAssistant",
+      "path": "./app/ai-email-assistant/page"
+    },
+    {
+      "name": "AiEmailMarketing",
+      "path": "./app/ai-email-marketing/page"
+    },
+    {
+      "name": "AiEmailMarketingAutomation",
+      "path": "./app/ai-email-marketing-automation/page"
+    },
+    {
+      "name": "AiEnergy",
+      "path": "./app/ai-energy/page"
+    },
+    {
+      "name": "AiEnergyGridManagementPro",
+      "path": "./app/ai-energy-grid-management-pro/page"
+    },
+    {
+      "name": "AiEnterpriseSolutions",
+      "path": "./app/ai-enterprise-solutions/page"
+    },
+    {
+      "name": "AiExpenseTracker",
+      "path": "./app/ai-expense-tracker/page"
+    },
+    {
+      "name": "AiExpenseTrackerPro",
+      "path": "./app/ai-expense-tracker-pro/page"
+    },
+    {
+      "name": "AiFashionDesign",
+      "path": "./app/ai-fashion-design/page"
+    },
+    {
+      "name": "AiFinancialAdvisor",
+      "path": "./app/ai-financial-advisor/page"
+    },
+    {
+      "name": "AiFinancialAnalyticsPro",
+      "path": "./app/ai-financial-analytics-pro/page"
+    },
+    {
+      "name": "AiFinancialAnalyzer",
+      "path": "./app/ai-financial-analyzer/page"
+    },
+    {
+      "name": "AiFinancialCrimeDetectionPro",
+      "path": "./app/ai-financial-crime-detection-pro/page"
+    },
+    {
+      "name": "AiFinancialForecasting",
+      "path": "./app/ai-financial-forecasting/page"
+    },
+    {
+      "name": "AiFinancialPlanner",
+      "path": "./app/ai-financial-planner/page"
+    },
+    {
+      "name": "AiFinancialServices",
+      "path": "./app/ai-financial-services/page"
+    },
+    {
+      "name": "AiFintech",
+      "path": "./app/ai-fintech/page"
+    },
+    {
+      "name": "AiFitnessCoach",
+      "path": "./app/ai-fitness-coach/page"
+    },
+    {
+      "name": "AiHealthcareDiagnostics",
+      "path": "./app/ai-healthcare-diagnostics/page"
+    },
+    {
+      "name": "AiHealthcareSolutions",
+      "path": "./app/ai-healthcare-solutions/page"
+    },
+    {
+      "name": "AiHealthTracker",
+      "path": "./app/ai-health-tracker/page"
+    },
+    {
+      "name": "AiHolographicWorkspace",
+      "path": "./app/ai-holographic-workspace/page"
+    },
+    {
+      "name": "AiHr",
+      "path": "./app/ai-hr/page"
+    },
+    {
+      "name": "AiHrAssistant",
+      "path": "./app/ai-hr-assistant/page"
+    },
+    {
+      "name": "AiHrSolutions",
+      "path": "./app/ai-hr-solutions/page"
+    },
+    {
+      "name": "AiImageRecognition",
+      "path": "./app/ai-image-recognition/page"
+    },
+    {
+      "name": "AiInfrastructureMonitoring",
+      "path": "./app/ai-infrastructure-monitoring/page"
+    },
+    {
+      "name": "AiInsurance",
+      "path": "./app/ai-insurance/page"
+    },
+    {
+      "name": "AiIntegrationServices",
+      "path": "./app/ai-integration-services/page"
+    },
+    {
+      "name": "AiInventoryManagement",
+      "path": "./app/ai-inventory-management/page"
+    },
+    {
+      "name": "AiInventoryManager",
+      "path": "./app/ai-inventory-manager/page"
+    },
+    {
+      "name": "AiInvestmentOptimizer",
+      "path": "./app/ai-investment-optimizer/page"
+    },
+    {
+      "name": "AiInvoiceGenerator",
+      "path": "./app/ai-invoice-generator/page"
+    },
+    {
+      "name": "AiIotAnalytics",
+      "path": "./app/ai-iot-analytics/page"
+    },
+    {
+      "name": "AiKnowledgeManagement",
+      "path": "./app/ai-knowledge-management/page"
+    },
+    {
+      "name": "AiLeadGeneration",
+      "path": "./app/ai-lead-generation/page"
+    },
+    {
+      "name": "AiLeadScoring",
+      "path": "./app/ai-lead-scoring/page"
+    },
+    {
+      "name": "AiLearningPlatform",
+      "path": "./app/ai-learning-platform/page"
+    },
+    {
+      "name": "AiLegal",
+      "path": "./app/ai-legal/page"
+    },
+    {
+      "name": "AiLegalAssistant",
+      "path": "./app/ai-legal-assistant/page"
+    },
+    {
+      "name": "AiLegalResearchPro",
+      "path": "./app/ai-legal-research-pro/page"
+    },
+    {
+      "name": "AiLoadTesting",
+      "path": "./app/ai-load-testing/page"
+    },
+    {
+      "name": "AiLogoDesigner",
+      "path": "./app/ai-logo-designer/page"
+    },
+    {
+      "name": "AiManufacturing",
+      "path": "./app/ai-manufacturing/page"
+    },
+    {
+      "name": "AiMeetingAssistant",
+      "path": "./app/ai-meeting-assistant/page"
+    },
+    {
+      "name": "AiMeetingTranscriber",
+      "path": "./app/ai-meeting-transcriber/page"
+    },
+    {
+      "name": "AiMentalHealthCompanion",
+      "path": "./app/ai-mental-health-companion/page"
+    },
+    {
+      "name": "AiMl",
+      "path": "./app/ai-ml/page"
+    },
+    {
+      "name": "AiMlPlatform",
+      "path": "./app/ai-ml-platform/page"
+    },
+    {
+      "name": "AiMobileAppBuilder",
+      "path": "./app/ai-mobile-app-builder/page"
+    },
+    {
+      "name": "AiMobileAppDevelopment",
+      "path": "./app/ai-mobile-app-development/page"
+    },
+    {
+      "name": "AiMobileBuilder",
+      "path": "./app/ai-mobile-builder/page"
+    },
+    {
+      "name": "AiMusicComposition",
+      "path": "./app/ai-music-composition/page"
+    },
+    {
+      "name": "AiNeuralInterface",
+      "path": "./app/ai-neural-interface/page"
+    },
+    {
+      "name": "AiNeuralMemoryAssistant",
+      "path": "./app/ai-neural-memory-assistant/page"
+    },
+    {
+      "name": "AiNlp",
+      "path": "./app/ai-nlp/page"
+    },
+    {
+      "name": "AiOps",
+      "path": "./app/ai-ops/page"
+    },
+    {
+      "name": "AiPasswordManager",
+      "path": "./app/ai-password-manager/page"
+    },
+    {
+      "name": "AiPredictiveMaintenance",
+      "path": "./app/ai-predictive-maintenance/page"
+    },
+    {
+      "name": "AiPredictiveModeling",
+      "path": "./app/ai-predictive-modeling/page"
+    },
+    {
+      "name": "AiProjectManagementPro",
+      "path": "./app/ai-project-management-pro/page"
+    },
+    {
+      "name": "AiProjectManager",
+      "path": "./app/ai-project-manager/page"
+    },
+    {
+      "name": "AiQualityAssurance",
+      "path": "./app/ai-quality-assurance/page"
+    },
+    {
+      "name": "AiQuantumComputing",
+      "path": "./app/ai-quantum-computing/page"
+    },
+    {
+      "name": "AiQuantumComputingSimulator",
+      "path": "./app/ai-quantum-computing-simulator/page"
+    },
+    {
+      "name": "AiQuantumFinancialOracle",
+      "path": "./app/ai-quantum-financial-oracle/page"
+    },
+    {
+      "name": "AiQuantumOptimization",
+      "path": "./app/ai-quantum-optimization/page"
+    },
+    {
+      "name": "AiQuantumTaskOptimizer",
+      "path": "./app/ai-quantum-task-optimizer/page"
+    },
+    {
+      "name": "AiRealEstate",
+      "path": "./app/ai-real-estate/page"
+    },
+    {
+      "name": "AiRecruitmentAssistant",
+      "path": "./app/ai-recruitment-assistant/page"
+    },
+    {
+      "name": "AiRobotics",
+      "path": "./app/ai-robotics/page"
+    },
+    {
+      "name": "AiScheduler",
+      "path": "./app/ai-scheduler/page"
+    },
+    {
+      "name": "AiSecurityMonitor",
+      "path": "./app/ai-security-monitor/page"
+    },
+    {
+      "name": "AiSentimentAnalysis",
+      "path": "./app/ai-sentiment-analysis/page"
+    },
+    {
+      "name": "AiSentimentAnalyzer",
+      "path": "./app/ai-sentiment-analyzer/page"
+    },
+    {
+      "name": "AiSeoOptimizer",
+      "path": "./app/ai-seo-optimizer/page"
+    },
+    {
+      "name": "AiServicesbusinessIntelligence",
+      "path": "./app/ai-services/business-intelligence/page"
+    },
+    {
+      "name": "AiServicescontentGeneration",
+      "path": "./app/ai-services/content-generation/page"
+    },
+    {
+      "name": "AiServicescustomerExperience",
+      "path": "./app/ai-services/customer-experience/page"
+    },
+    {
+      "name": "AiServicesdocumentProcessing",
+      "path": "./app/ai-services/document-processing/page"
+    },
+    {
+      "name": "AiServicesenergyManagement",
+      "path": "./app/ai-services/energy-management/page"
+    },
+    {
+      "name": "AiServicesfraudDetection",
+      "path": "./app/ai-services/fraud-detection/page"
+    },
+    {
+      "name": "AiServiceshrAnalytics",
+      "path": "./app/ai-services/hr-analytics/page"
+    },
+    {
+      "name": "AiServicesmarketingAutomation",
+      "path": "./app/ai-services/marketing-automation/page"
+    },
+    {
+      "name": "AiServicespredictiveMaintenance",
+      "path": "./app/ai-services/predictive-maintenance/page"
+    },
+    {
+      "name": "AiServicesprocessAutomation",
+      "path": "./app/ai-services/process-automation/page"
+    },
+    {
+      "name": "AiServicesqualityAssurance",
+      "path": "./app/ai-services/quality-assurance/page"
+    },
+    {
+      "name": "AiServicessupplyChain",
+      "path": "./app/ai-services/supply-chain/page"
+    },
+    {
+      "name": "AiSmartCalendar",
+      "path": "./app/ai-smart-calendar/page"
+    },
+    {
+      "name": "AiSmartCitySolutions",
+      "path": "./app/ai-smart-city-solutions/page"
+    },
+    {
+      "name": "AiSmartContractAuditor",
+      "path": "./app/ai-smart-contract-auditor/page"
+    },
+    {
+      "name": "AiSmartHomeController",
+      "path": "./app/ai-smart-home-controller/page"
+    },
+    {
+      "name": "AiSmartInvoice",
+      "path": "./app/ai-smart-invoice/page"
+    },
+    {
+      "name": "AiSmartScheduler",
+      "path": "./app/ai-smart-scheduler/page"
+    },
+    {
+      "name": "AiSocialMediaManager",
+      "path": "./app/ai-social-media-manager/page"
+    },
+    {
+      "name": "AiSocialMediaScheduler",
+      "path": "./app/ai-social-media-scheduler/page"
+    },
+    {
+      "name": "AiSocialScheduler",
+      "path": "./app/ai-social-scheduler/page"
+    },
+    {
+      "name": "AiSolutions",
+      "path": "./app/ai-solutions/page"
+    },
+    {
+      "name": "AiSpaceMissionOptimizer",
+      "path": "./app/ai-space-mission-optimizer/page"
+    },
+    {
+      "name": "AiSpaceTechnology",
+      "path": "./app/ai-space-technology/page"
+    },
+    {
+      "name": "AiSpaceTechnologyPro",
+      "path": "./app/ai-space-technology-pro/page"
+    },
+    {
+      "name": "AiSpeechSynthesis",
+      "path": "./app/ai-speech-synthesis/page"
+    },
+    {
+      "name": "AiStockPortfolioManager",
+      "path": "./app/ai-stock-portfolio-manager/page"
+    },
+    {
+      "name": "AiSupplyChain",
+      "path": "./app/ai-supply-chain/page"
+    },
+    {
+      "name": "AiSupplyChainAi",
+      "path": "./app/ai-supply-chain-ai/page"
+    },
+    {
+      "name": "AiSupplyChainOptimizationPro",
+      "path": "./app/ai-supply-chain-optimization-pro/page"
+    },
+    {
+      "name": "AiSupplyChainOptimizer",
+      "path": "./app/ai-supply-chain-optimizer/page"
+    },
+    {
+      "name": "AiTaskManager",
+      "path": "./app/ai-task-manager/page"
+    },
+    {
+      "name": "AiTelepathicInterface",
+      "path": "./app/ai-telepathic-interface/page"
+    },
+    {
+      "name": "AiTimeTracker",
+      "path": "./app/ai-time-tracker/page"
+    },
+    {
+      "name": "AiTranslationService",
+      "path": "./app/ai-translation-service/page"
+    },
+    {
+      "name": "AiTranslationServices",
+      "path": "./app/ai-translation-services/page"
+    },
+    {
+      "name": "AiTransportation",
+      "path": "./app/ai-transportation/page"
+    },
+    {
+      "name": "AiVideoAnalysis",
+      "path": "./app/ai-video-analysis/page"
+    },
+    {
+      "name": "AiVideoEditor",
+      "path": "./app/ai-video-editor/page"
+    },
+    {
+      "name": "AiVideoGeneration",
+      "path": "./app/ai-video-generation/page"
+    },
+    {
+      "name": "AiVideoGenerator",
+      "path": "./app/ai-video-generator/page"
+    },
+    {
+      "name": "AiVision",
+      "path": "./app/ai-vision/page"
+    },
+    {
+      "name": "AiVoiceAssistant",
+      "path": "./app/ai-voice-assistant/page"
+    },
+    {
+      "name": "AiVoiceCloning",
+      "path": "./app/ai-voice-cloning/page"
+    },
+    {
+      "name": "AiVoiceCloningStudio",
+      "path": "./app/ai-voice-cloning-studio/page"
+    },
+    {
+      "name": "AiVoiceProcessing",
+      "path": "./app/ai-voice-processing/page"
+    },
+    {
+      "name": "AiVoiceSolutions",
+      "path": "./app/ai-voice-solutions/page"
+    },
+    {
+      "name": "AiVoiceSynthesis",
+      "path": "./app/ai-voice-synthesis/page"
+    },
+    {
+      "name": "AiWebsiteBuilder",
+      "path": "./app/ai-website-builder/page"
+    },
+    {
+      "name": "AiWritingAssistant",
+      "path": "./app/ai-writing-assistant/page"
+    },
+    {
+      "name": "Analytics",
+      "path": "./app/analytics/page"
+    },
+    {
+      "name": "AnalyticsTools",
+      "path": "./app/analytics-tools/page"
+    },
+    {
+      "name": "Api",
+      "path": "./app/api/page"
+    },
+    {
+      "name": "ApiDevelopment",
+      "path": "./app/api-development/page"
+    },
+    {
+      "name": "ApiDevelopmentAdvanced",
+      "path": "./app/api-development-advanced/page"
+    },
+    {
+      "name": "ApiDocs",
+      "path": "./app/api-docs/page"
+    },
+    {
+      "name": "ArVrPlatform",
+      "path": "./app/ar-vr-platform/page"
+    },
+    {
+      "name": "ArVrSolutions",
+      "path": "./app/ar-vr-solutions/page"
+    },
+    {
+      "name": "Automation",
+      "path": "./app/automation/page"
+    },
+    {
+      "name": "AutonomousSystems",
+      "path": "./app/autonomous-systems/page"
+    },
+    {
+      "name": "BackupRecovery",
+      "path": "./app/backup-recovery/page"
+    },
+    {
+      "name": "Blockchain",
+      "path": "./app/blockchain/page"
+    },
+    {
+      "name": "BlockchainIntegrationServices",
+      "path": "./app/blockchain-integration-services/page"
+    },
+    {
+      "name": "BlockchainWeb3",
+      "path": "./app/blockchain-web3/page"
+    },
+    {
+      "name": "BusinessApps",
+      "path": "./app/business-apps/page"
+    },
+    {
+      "name": "BusinessIntelligence",
+      "path": "./app/business-intelligence/page"
+    },
+    {
+      "name": "CloudInfrastructureManagement",
+      "path": "./app/cloud-infrastructure-management/page"
+    },
+    {
+      "name": "CloudInfrastructureManager",
+      "path": "./app/cloud-infrastructure-manager/page"
+    },
+    {
+      "name": "CloudMigration",
+      "path": "./app/cloud-migration/page"
+    },
+    {
+      "name": "CloudMigrationPro",
+      "path": "./app/cloud-migration-pro/page"
+    },
+    {
+      "name": "CloudMigrationServices",
+      "path": "./app/cloud-migration-services/page"
+    },
+    {
+      "name": "CloudSecurity",
+      "path": "./app/cloud-security/page"
+    },
+    {
+      "name": "CloudServices",
+      "path": "./app/cloud-services/page"
+    },
+    {
+      "name": "Community",
+      "path": "./app/community/page"
+    },
+    {
+      "name": "Compliance",
+      "path": "./app/compliance/page"
+    },
+    {
+      "name": "ComputerVision",
+      "path": "./app/computer-vision/page"
+    },
+    {
+      "name": "CookiePolicy",
+      "path": "./app/cookie-policy/page"
+    },
+    {
+      "name": "CrmLite",
+      "path": "./app/crm-lite/page"
+    },
+    {
+      "name": "CustomDevelopment",
+      "path": "./app/custom-development/page"
+    },
+    {
+      "name": "Cybersecurity",
+      "path": "./app/cybersecurity/page"
+    },
+    {
+      "name": "CybersecurityConsulting",
+      "path": "./app/cybersecurity-consulting/page"
+    },
+    {
+      "name": "CybersecuritySuite",
+      "path": "./app/cybersecurity-suite/page"
+    },
+    {
+      "name": "DataAnalyticsBi",
+      "path": "./app/data-analytics-bi/page"
+    },
+    {
+      "name": "Database",
+      "path": "./app/database/page"
+    },
+    {
+      "name": "DatabaseServices",
+      "path": "./app/database-services/page"
+    },
+    {
+      "name": "DataCenter",
+      "path": "./app/data-center/page"
+    },
+    {
+      "name": "DataProtection",
+      "path": "./app/data-protection/page"
+    },
+    {
+      "name": "DeveloperTools",
+      "path": "./app/developer-tools/page"
+    },
+    {
+      "name": "Devops",
+      "path": "./app/devops/page"
+    },
+    {
+      "name": "DevopsAdvanced",
+      "path": "./app/devops-advanced/page"
+    },
+    {
+      "name": "DevopsCicd",
+      "path": "./app/devops-cicd/page"
+    },
+    {
+      "name": "DigitalTransformation",
+      "path": "./app/digital-transformation/page"
+    },
+    {
+      "name": "DigitalTwinPlatform",
+      "path": "./app/digital-twin-platform/page"
+    },
+    {
+      "name": "Docs",
+      "path": "./app/docs/page"
+    },
+    {
+      "name": "EdgeComputing",
+      "path": "./app/edge-computing/page"
+    },
+    {
+      "name": "EmailMarketingAutomation",
+      "path": "./app/email-marketing-automation/page"
+    },
+    {
+      "name": "EmailOptimizer",
+      "path": "./app/email-optimizer/page"
+    },
+    {
+      "name": "Enterprise",
+      "path": "./app/enterprise/page"
+    },
+    {
+      "name": "EnterpriseSecurity",
+      "path": "./app/enterprise-security/page"
+    },
+    {
+      "name": "EnterpriseSolutions",
+      "path": "./app/enterprise-solutions/page"
+    },
+    {
+      "name": "ExpenseTracker",
+      "path": "./app/expense-tracker/page"
+    },
+    {
+      "name": "Faq",
+      "path": "./app/faq/page"
+    },
+    {
+      "name": "FinancialIt",
+      "path": "./app/financial-it/page"
+    },
+    {
+      "name": "Gdpr",
+      "path": "./app/gdpr/page"
+    },
+    {
+      "name": "GdprCompliance",
+      "path": "./app/gdpr-compliance/page"
+    },
+    {
+      "name": "Health",
+      "path": "./app/health/page"
+    },
+    {
+      "name": "HealthcareIt",
+      "path": "./app/healthcare-it/page"
+    },
+    {
+      "name": "Help",
+      "path": "./app/help/page"
+    },
+    {
+      "name": "InfrastructureManagement",
+      "path": "./app/infrastructure-management/page"
+    },
+    {
+      "name": "InnovationLabs",
+      "path": "./app/innovation-labs/page"
+    },
+    {
+      "name": "IntelligentDatabaseMigration",
+      "path": "./app/intelligent-database-migration/page"
+    },
+    {
+      "name": "IntelligentEmailInfrastructure",
+      "path": "./app/intelligent-email-infrastructure/page"
+    },
+    {
+      "name": "Investors",
+      "path": "./app/investors/page"
+    },
+    {
+      "name": "Iot",
+      "path": "./app/iot/page"
+    },
+    {
+      "name": "IotDevelopment",
+      "path": "./app/iot-development/page"
+    },
+    {
+      "name": "IotEdge",
+      "path": "./app/iot-edge/page"
+    },
+    {
+      "name": "IotEdgeComputing",
+      "path": "./app/iot-edge-computing/page"
+    },
+    {
+      "name": "IotIntegration",
+      "path": "./app/iot-integration/page"
+    },
+    {
+      "name": "IotPlatform",
+      "path": "./app/iot-platform/page"
+    },
+    {
+      "name": "ItAssetManagement",
+      "path": "./app/it-asset-management/page"
+    },
+    {
+      "name": "ItConsulting",
+      "path": "./app/it-consulting/page"
+    },
+    {
+      "name": "ItInfrastructure",
+      "path": "./app/it-infrastructure/page"
+    },
+    {
+      "name": "ItInfrastructureDesign",
+      "path": "./app/it-infrastructure-design/page"
+    },
+    {
+      "name": "ItInfrastructureSolutions",
+      "path": "./app/it-infrastructure-solutions/page"
+    },
+    {
+      "name": "ItPerformance",
+      "path": "./app/it-performance/page"
+    },
+    {
+      "name": "ItProjectManagement",
+      "path": "./app/it-project-management/page"
+    },
+    {
+      "name": "ItSecurityServices",
+      "path": "./app/it-security-services/page"
+    },
+    {
+      "name": "ItServicescloudMigration",
+      "path": "./app/it-services/cloud-migration/page"
+    },
+    {
+      "name": "ItServicescybersecurityAudit",
+      "path": "./app/it-services/cybersecurity-audit/page"
+    },
+    {
+      "name": "ItSupport",
+      "path": "./app/it-support/page"
+    },
+    {
+      "name": "ItTraining",
+      "path": "./app/it-training/page"
+    },
+    {
+      "name": "LandingPageBuilder",
+      "path": "./app/landing-page-builder/page"
+    },
+    {
+      "name": "ManagedIt",
+      "path": "./app/managed-it/page"
+    },
+    {
+      "name": "MarketingTools",
+      "path": "./app/marketing-tools/page"
+    },
+    {
+      "name": "MicroSaasaiContentWriter",
+      "path": "./app/micro-saas/ai-content-writer/page"
+    },
+    {
+      "name": "MicroSaasaiContentWriterPro",
+      "path": "./app/micro-saas/ai-content-writer-pro/page"
+    },
+    {
+      "name": "MicroSaasaiCustomerSupportChatbot",
+      "path": "./app/micro-saas/ai-customer-support-chatbot/page"
+    },
+    {
+      "name": "MicroSaasaiEmailMarketingAutomation",
+      "path": "./app/micro-saas/ai-email-marketing-automation/page"
+    },
+    {
+      "name": "MicroSaasaiExpenseTracker",
+      "path": "./app/micro-saas/ai-expense-tracker/page"
+    },
+    {
+      "name": "MicroSaasaiInventoryManager",
+      "path": "./app/micro-saas/ai-inventory-manager/page"
+    },
+    {
+      "name": "MicroSaasaiProjectManager",
+      "path": "./app/micro-saas/ai-project-manager/page"
+    },
+    {
+      "name": "MicroSaasaiSocialMediaScheduler",
+      "path": "./app/micro-saas/ai-social-media-scheduler/page"
+    },
+    {
+      "name": "MicroSaasanalyticsDashboard",
+      "path": "./app/micro-saas/analytics-dashboard/page"
+    },
+    {
+      "name": "MicroSaasappointmentScheduler",
+      "path": "./app/micro-saas/appointment-scheduler/page"
+    },
+    {
+      "name": "MicroSaaschatAnalytics",
+      "path": "./app/micro-saas/chat-analytics/page"
+    },
+    {
+      "name": "MicroSaascontentGenerator",
+      "path": "./app/micro-saas/content-generator/page"
+    },
+    {
+      "name": "MicroSaascontractManager",
+      "path": "./app/micro-saas/contract-manager/page"
+    },
+    {
+      "name": "MicroSaasdocumentProcessor",
+      "path": "./app/micro-saas/document-processor/page"
+    },
+    {
+      "name": "MicroSaasemailMarketing",
+      "path": "./app/micro-saas/email-marketing/page"
+    },
+    {
+      "name": "MicroSaasemailSignature",
+      "path": "./app/micro-saas/email-signature/page"
+    },
+    {
+      "name": "MicroSaasemployeeDirectory",
+      "path": "./app/micro-saas/employee-directory/page"
+    },
+    {
+      "name": "MicroSaasexpenseTracker",
+      "path": "./app/micro-saas/expense-tracker/page"
+    },
+    {
+      "name": "MicroSaasinventoryManagement",
+      "path": "./app/micro-saas/inventory-management/page"
+    },
+    {
+      "name": "MicroSaasleadScoring",
+      "path": "./app/micro-saas/lead-scoring/page"
+    },
+    {
+      "name": "MicroSaasseoOptimizer",
+      "path": "./app/micro-saas/seo-optimizer/page"
+    },
+    {
+      "name": "MicroSaasServices",
+      "path": "./app/micro-saas-services/page"
+    },
+    {
+      "name": "MicroSaasServicesaiAnalyticsDashboard",
+      "path": "./app/micro-saas-services/ai-analytics-dashboard/page"
+    },
+    {
+      "name": "MicroSaasServicesaiChatbotBuilder",
+      "path": "./app/micro-saas-services/ai-chatbot-builder/page"
+    },
+    {
+      "name": "MicroSaasServicesaiContentGenerator",
+      "path": "./app/micro-saas-services/ai-content-generator/page"
+    },
+    {
+      "name": "MicroSaasServicesaiEmailAssistant",
+      "path": "./app/micro-saas-services/ai-email-assistant/page"
+    },
+    {
+      "name": "MicroSaasServicesaiLeadGeneration",
+      "path": "./app/micro-saas-services/ai-lead-generation/page"
+    },
+    {
+      "name": "MicroSaassocialManager",
+      "path": "./app/micro-saas/social-manager/page"
+    },
+    {
+      "name": "MicroSaassupportBot",
+      "path": "./app/micro-saas/support-bot/page"
+    },
+    {
+      "name": "MobileAppDevelopment",
+      "path": "./app/mobile-app-development/page"
+    },
+    {
+      "name": "NetworkDesign",
+      "path": "./app/network-design/page"
+    },
+    {
+      "name": "NetworkSecurity",
+      "path": "./app/network-security/page"
+    },
+    {
+      "name": "NetworkSolutions",
+      "path": "./app/network-solutions/page"
+    },
+    {
+      "name": "News",
+      "path": "./app/news/page"
+    },
+    {
+      "name": "Nlp",
+      "path": "./app/nlp/page"
+    },
+    {
+      "name": "NotFound",
+      "path": "./app/not-found/page"
+    },
+    {
+      "name": "Offline",
+      "path": "./app/offline/page"
+    },
+    {
+      "name": "Pagetsx",
+      "path": "./app/page.tsx/page"
+    },
+    {
+      "name": "Partners",
+      "path": "./app/partners/page"
+    },
+    {
+      "name": "PenetrationTesting",
+      "path": "./app/penetration-testing/page"
+    },
+    {
+      "name": "Press",
+      "path": "./app/press/page"
+    },
+    {
+      "name": "PrivacyPolicy",
+      "path": "./app/privacy-policy/page"
+    },
+    {
+      "name": "ProcessAutomation",
+      "path": "./app/process-automation/page"
+    },
+    {
+      "name": "Productivity",
+      "path": "./app/productivity/page"
+    },
+    {
+      "name": "ProjectManagementPro",
+      "path": "./app/project-management-pro/page"
+    },
+    {
+      "name": "QuantumAi",
+      "path": "./app/quantum-ai/page"
+    },
+    {
+      "name": "QuantumComputingSolutions",
+      "path": "./app/quantum-computing-solutions/page"
+    },
+    {
+      "name": "Resources",
+      "path": "./app/resources/page"
+    },
+    {
+      "name": "RoboticsIntegration",
+      "path": "./app/robotics-integration/page"
+    },
+    {
+      "name": "Search",
+      "path": "./app/search/page"
+    },
+    {
+      "name": "Security",
+      "path": "./app/security/page"
+    },
+    {
+      "name": "SecurityMonitoring",
+      "path": "./app/security-monitoring/page"
+    },
+    {
+      "name": "SecurityMonitoringSuite",
+      "path": "./app/security-monitoring-suite/page"
+    },
+    {
+      "name": "SeoOptimizer",
+      "path": "./app/seo-optimizer/page"
+    },
+    {
+      "name": "ServerManagement",
+      "path": "./app/server-management/page"
+    },
+    {
+      "name": "ServicesAdvertising",
+      "path": "./app/services-advertising/page"
+    },
+    {
+      "name": "Sitemapxml",
+      "path": "./app/sitemap.xml/page"
+    },
+    {
+      "name": "Sla",
+      "path": "./app/sla/page"
+    },
+    {
+      "name": "SmartAnalytics",
+      "path": "./app/smart-analytics/page"
+    },
+    {
+      "name": "SmartCities",
+      "path": "./app/smart-cities/page"
+    },
+    {
+      "name": "SmartCityInfrastructure",
+      "path": "./app/smart-city-infrastructure/page"
+    },
+    {
+      "name": "SmartContractSecurityAudit",
+      "path": "./app/smart-contract-security-audit/page"
+    },
+    {
+      "name": "SpecializedServices",
+      "path": "./app/specialized-services/page"
+    },
+    {
+      "name": "Status",
+      "path": "./app/status/page"
+    },
+    {
+      "name": "SystemAdmin",
+      "path": "./app/system-admin/page"
+    },
+    {
+      "name": "SystemAdministration",
+      "path": "./app/system-administration/page"
+    },
+    {
+      "name": "SystemIntegration",
+      "path": "./app/system-integration/page"
+    },
+    {
+      "name": "SystemStatus",
+      "path": "./app/system-status/page"
+    },
+    {
+      "name": "TaskManagerPro",
+      "path": "./app/task-manager-pro/page"
+    },
+    {
+      "name": "Team",
+      "path": "./app/team/page"
+    },
+    {
+      "name": "TermsOfService",
+      "path": "./app/terms-of-service/page"
+    },
+    {
+      "name": "TestSimple",
+      "path": "./app/test-simple/page"
+    },
+    {
+      "name": "Training",
+      "path": "./app/training/page"
+    },
+    {
+      "name": "ZionAiAccountingAssistant",
+      "path": "./app/zion-ai-accounting-assistant/page"
+    },
+    {
+      "name": "ZionAiCodeReviewer",
+      "path": "./app/zion-ai-code-reviewer/page"
+    },
+    {
+      "name": "ZionAiContentModeration",
+      "path": "./app/zion-ai-content-moderation/page"
+    },
+    {
+      "name": "ZionAiContractAnalyzer",
+      "path": "./app/zion-ai-contract-analyzer/page"
+    },
+    {
+      "name": "ZionAiCustomerServicePro",
+      "path": "./app/zion-ai-customer-service-pro/page"
+    },
+    {
+      "name": "ZionAiDataCleaner",
+      "path": "./app/zion-ai-data-cleaner/page"
+    },
+    {
+      "name": "ZionAiDocumentAi",
+      "path": "./app/zion-ai-document-ai/page"
+    },
+    {
+      "name": "ZionAiEmailAssistant",
+      "path": "./app/zion-ai-email-assistant/page"
+    },
+    {
+      "name": "ZionAiEnergyManager",
+      "path": "./app/zion-ai-energy-manager/page"
+    },
+    {
+      "name": "ZionAiFraudDetector",
+      "path": "./app/zion-ai-fraud-detector/page"
+    },
+    {
+      "name": "ZionAiMarketingAutomation",
+      "path": "./app/zion-ai-marketing-automation/page"
+    },
+    {
+      "name": "ZionAiMeetingAssistant",
+      "path": "./app/zion-ai-meeting-assistant/page"
+    },
+    {
+      "name": "ZionAiPredictiveMaintenance",
+      "path": "./app/zion-ai-predictive-maintenance/page"
+    },
+    {
+      "name": "ZionAiRecruitmentPro",
+      "path": "./app/zion-ai-recruitment-pro/page"
+    },
+    {
+      "name": "ZionAiSeoOptimizer",
+      "path": "./app/zion-ai-seo-optimizer/page"
+    },
+    {
+      "name": "ZionAiSupplyChainOptimizer",
+      "path": "./app/zion-ai-supply-chain-optimizer/page"
+    },
+    {
+      "name": "ZionAiSurveyBuilder",
+      "path": "./app/zion-ai-survey-builder/page"
+    },
+    {
+      "name": "ZionAiTranslatorPro",
+      "path": "./app/zion-ai-translator-pro/page"
+    },
+    {
+      "name": "ZionAiVideoEditor",
+      "path": "./app/zion-ai-video-editor/page"
+    },
+    {
+      "name": "ZionChatAi",
+      "path": "./app/zion-chat-ai/page"
+    },
+    {
+      "name": "ZionCrmIntelligence",
+      "path": "./app/zion-crm-intelligence/page"
+    },
+    {
+      "name": "ZionCustomerInsights",
+      "path": "./app/zion-customer-insights/page"
+    }
+  ],
+  "routes": [
+    {
+      "path": "/5g-iot-solutions",
+      "component": "Page5gIotSolutions"
+    },
+    {
+      "path": "/accessibility",
+      "component": "Accessibility"
+    },
+    {
+      "path": "/accessibility-page",
+      "component": "AccessibilityPage"
+    },
+    {
+      "path": "/advanced-security-suite",
+      "component": "AdvancedSecuritySuite"
+    },
+    {
+      "path": "/ai-3d-generation",
+      "component": "Ai3dGeneration"
+    },
+    {
+      "path": "/ai-accounting-assistant",
+      "component": "AiAccountingAssistant"
+    },
+    {
+      "path": "/ai-agricultural-intelligence-pro",
+      "component": "AiAgriculturalIntelligencePro"
+    },
+    {
+      "path": "/ai-analytics-dashboard",
+      "component": "AiAnalyticsDashboard"
+    },
+    {
+      "path": "/ai-analytics-dashboard-pro",
+      "component": "AiAnalyticsDashboardPro"
+    },
+    {
+      "path": "/ai-api-management",
+      "component": "AiApiManagement"
+    },
+    {
+      "path": "/ai-api-manager",
+      "component": "AiApiManager"
+    },
+    {
+      "path": "/ai-automated-reporting",
+      "component": "AiAutomatedReporting"
+    },
+    {
+      "path": "/ai-automated-testing",
+      "component": "AiAutomatedTesting"
+    },
+    {
+      "path": "/ai-autonomous-systems",
+      "component": "AiAutonomousSystems"
+    },
+    {
+      "path": "/ai-blockchain-analytics",
+      "component": "AiBlockchainAnalytics"
+    },
+    {
+      "path": "/ai-blockchain-solutions",
+      "component": "AiBlockchainSolutions"
+    },
+    {
+      "path": "/ai-business-intelligence-pro",
+      "component": "AiBusinessIntelligencePro"
+    },
+    {
+      "path": "/ai-chatbot-builder",
+      "component": "AiChatbotBuilder"
+    },
+    {
+      "path": "/ai-chatbot-enterprise",
+      "component": "AiChatbotEnterprise"
+    },
+    {
+      "path": "/ai-climate-prediction-engine",
+      "component": "AiClimatePredictionEngine"
+    },
+    {
+      "path": "/ai-climate-solutions-pro",
+      "component": "AiClimateSolutionsPro"
+    },
+    {
+      "path": "/ai-cloud-infrastructure",
+      "component": "AiCloudInfrastructure"
+    },
+    {
+      "path": "/ai-code-assistant",
+      "component": "AiCodeAssistant"
+    },
+    {
+      "path": "/ai-code-assistant-pro",
+      "component": "AiCodeAssistantPro"
+    },
+    {
+      "path": "/ai-code-generation",
+      "component": "AiCodeGeneration"
+    },
+    {
+      "path": "/ai-code-security-auditor",
+      "component": "AiCodeSecurityAuditor"
+    },
+    {
+      "path": "/ai-computer-vision",
+      "component": "AiComputerVision"
+    },
+    {
+      "path": "/ai-content-delivery-network",
+      "component": "AiContentDeliveryNetwork"
+    },
+    {
+      "path": "/ai-content-generation-pro",
+      "component": "AiContentGenerationPro"
+    },
+    {
+      "path": "/ai-content-generator",
+      "component": "AiContentGenerator"
+    },
+    {
+      "path": "/ai-content-management",
+      "component": "AiContentManagement"
+    },
+    {
+      "path": "/ai-content-moderation",
+      "component": "AiContentModeration"
+    },
+    {
+      "path": "/ai-content-moderation-pro",
+      "component": "AiContentModerationPro"
+    },
+    {
+      "path": "/ai-content-studio",
+      "component": "AiContentStudio"
+    },
+    {
+      "path": "/ai-content-writer",
+      "component": "AiContentWriter"
+    },
+    {
+      "path": "/ai-conversational-ai",
+      "component": "AiConversationalAi"
+    },
+    {
+      "path": "/ai-conversation-analytics",
+      "component": "AiConversationAnalytics"
+    },
+    {
+      "path": "/ai-crm",
+      "component": "AiCrm"
+    },
+    {
+      "path": "/ai-crm-assistant",
+      "component": "AiCrmAssistant"
+    },
+    {
+      "path": "/ai-customer-churn",
+      "component": "AiCustomerChurn"
+    },
+    {
+      "path": "/ai-customer-insights",
+      "component": "AiCustomerInsights"
+    },
+    {
+      "path": "/ai-customer-support",
+      "component": "AiCustomerSupport"
+    },
+    {
+      "path": "/ai-customer-support-bot",
+      "component": "AiCustomerSupportBot"
+    },
+    {
+      "path": "/ai-customer-support-chatbot",
+      "component": "AiCustomerSupportChatbot"
+    },
+    {
+      "path": "/ai-cyber-defense-matrix",
+      "component": "AiCyberDefenseMatrix"
+    },
+    {
+      "path": "/ai-cybersecurity",
+      "component": "AiCybersecurity"
+    },
+    {
+      "path": "/ai-cybersecurity-monitor",
+      "component": "AiCybersecurityMonitor"
+    },
+    {
+      "path": "/ai-cybersecurity-monitor-pro",
+      "component": "AiCybersecurityMonitorPro"
+    },
+    {
+      "path": "/ai-cybersecurity-suite",
+      "component": "AiCybersecuritySuite"
+    },
+    {
+      "path": "/ai-cybersecurity-suite-pro",
+      "component": "AiCybersecuritySuitePro"
+    },
+    {
+      "path": "/ai-data-visualization",
+      "component": "AiDataVisualization"
+    },
+    {
+      "path": "/ai-design-studio",
+      "component": "AiDesignStudio"
+    },
+    {
+      "path": "/ai-devops-automation",
+      "component": "AiDevopsAutomation"
+    },
+    {
+      "path": "/ai-document-intelligence",
+      "component": "AiDocumentIntelligence"
+    },
+    {
+      "path": "/ai-document-processing",
+      "component": "AiDocumentProcessing"
+    },
+    {
+      "path": "/ai-document-processor",
+      "component": "AiDocumentProcessor"
+    },
+    {
+      "path": "/ai-document-scanner",
+      "component": "AiDocumentScanner"
+    },
+    {
+      "path": "/ai-drug-discovery-pro",
+      "component": "AiDrugDiscoveryPro"
+    },
+    {
+      "path": "/ai-ecommerce-assistant",
+      "component": "AiEcommerceAssistant"
+    },
+    {
+      "path": "/ai-ecommerce-optimizer",
+      "component": "AiEcommerceOptimizer"
+    },
+    {
+      "path": "/ai-ecommerce-optimizer-pro",
+      "component": "AiEcommerceOptimizerPro"
+    },
+    {
+      "path": "/ai-ecommerce-solutions",
+      "component": "AiEcommerceSolutions"
+    },
+    {
+      "path": "/ai-edge-computing",
+      "component": "AiEdgeComputing"
+    },
+    {
+      "path": "/ai-education",
+      "component": "AiEducation"
+    },
+    {
+      "path": "/ai-email-assistant",
+      "component": "AiEmailAssistant"
+    },
+    {
+      "path": "/ai-email-marketing",
+      "component": "AiEmailMarketing"
+    },
+    {
+      "path": "/ai-email-marketing-automation",
+      "component": "AiEmailMarketingAutomation"
+    },
+    {
+      "path": "/ai-energy",
+      "component": "AiEnergy"
+    },
+    {
+      "path": "/ai-energy-grid-management-pro",
+      "component": "AiEnergyGridManagementPro"
+    },
+    {
+      "path": "/ai-enterprise-solutions",
+      "component": "AiEnterpriseSolutions"
+    },
+    {
+      "path": "/ai-expense-tracker",
+      "component": "AiExpenseTracker"
+    },
+    {
+      "path": "/ai-expense-tracker-pro",
+      "component": "AiExpenseTrackerPro"
+    },
+    {
+      "path": "/ai-fashion-design",
+      "component": "AiFashionDesign"
+    },
+    {
+      "path": "/ai-financial-advisor",
+      "component": "AiFinancialAdvisor"
+    },
+    {
+      "path": "/ai-financial-analytics-pro",
+      "component": "AiFinancialAnalyticsPro"
+    },
+    {
+      "path": "/ai-financial-analyzer",
+      "component": "AiFinancialAnalyzer"
+    },
+    {
+      "path": "/ai-financial-crime-detection-pro",
+      "component": "AiFinancialCrimeDetectionPro"
+    },
+    {
+      "path": "/ai-financial-forecasting",
+      "component": "AiFinancialForecasting"
+    },
+    {
+      "path": "/ai-financial-planner",
+      "component": "AiFinancialPlanner"
+    },
+    {
+      "path": "/ai-financial-services",
+      "component": "AiFinancialServices"
+    },
+    {
+      "path": "/ai-fintech",
+      "component": "AiFintech"
+    },
+    {
+      "path": "/ai-fitness-coach",
+      "component": "AiFitnessCoach"
+    },
+    {
+      "path": "/ai-healthcare-diagnostics",
+      "component": "AiHealthcareDiagnostics"
+    },
+    {
+      "path": "/ai-healthcare-solutions",
+      "component": "AiHealthcareSolutions"
+    },
+    {
+      "path": "/ai-health-tracker",
+      "component": "AiHealthTracker"
+    },
+    {
+      "path": "/ai-holographic-workspace",
+      "component": "AiHolographicWorkspace"
+    },
+    {
+      "path": "/ai-hr",
+      "component": "AiHr"
+    },
+    {
+      "path": "/ai-hr-assistant",
+      "component": "AiHrAssistant"
+    },
+    {
+      "path": "/ai-hr-solutions",
+      "component": "AiHrSolutions"
+    },
+    {
+      "path": "/ai-image-recognition",
+      "component": "AiImageRecognition"
+    },
+    {
+      "path": "/ai-infrastructure-monitoring",
+      "component": "AiInfrastructureMonitoring"
+    },
+    {
+      "path": "/ai-insurance",
+      "component": "AiInsurance"
+    },
+    {
+      "path": "/ai-integration-services",
+      "component": "AiIntegrationServices"
+    },
+    {
+      "path": "/ai-inventory-management",
+      "component": "AiInventoryManagement"
+    },
+    {
+      "path": "/ai-inventory-manager",
+      "component": "AiInventoryManager"
+    },
+    {
+      "path": "/ai-investment-optimizer",
+      "component": "AiInvestmentOptimizer"
+    },
+    {
+      "path": "/ai-invoice-generator",
+      "component": "AiInvoiceGenerator"
+    },
+    {
+      "path": "/ai-iot-analytics",
+      "component": "AiIotAnalytics"
+    },
+    {
+      "path": "/ai-knowledge-management",
+      "component": "AiKnowledgeManagement"
+    },
+    {
+      "path": "/ai-lead-generation",
+      "component": "AiLeadGeneration"
+    },
+    {
+      "path": "/ai-lead-scoring",
+      "component": "AiLeadScoring"
+    },
+    {
+      "path": "/ai-learning-platform",
+      "component": "AiLearningPlatform"
+    },
+    {
+      "path": "/ai-legal",
+      "component": "AiLegal"
+    },
+    {
+      "path": "/ai-legal-assistant",
+      "component": "AiLegalAssistant"
+    },
+    {
+      "path": "/ai-legal-research-pro",
+      "component": "AiLegalResearchPro"
+    },
+    {
+      "path": "/ai-load-testing",
+      "component": "AiLoadTesting"
+    },
+    {
+      "path": "/ai-logo-designer",
+      "component": "AiLogoDesigner"
+    },
+    {
+      "path": "/ai-manufacturing",
+      "component": "AiManufacturing"
+    },
+    {
+      "path": "/ai-meeting-assistant",
+      "component": "AiMeetingAssistant"
+    },
+    {
+      "path": "/ai-meeting-transcriber",
+      "component": "AiMeetingTranscriber"
+    },
+    {
+      "path": "/ai-mental-health-companion",
+      "component": "AiMentalHealthCompanion"
+    },
+    {
+      "path": "/ai-ml",
+      "component": "AiMl"
+    },
+    {
+      "path": "/ai-ml-platform",
+      "component": "AiMlPlatform"
+    },
+    {
+      "path": "/ai-mobile-app-builder",
+      "component": "AiMobileAppBuilder"
+    },
+    {
+      "path": "/ai-mobile-app-development",
+      "component": "AiMobileAppDevelopment"
+    },
+    {
+      "path": "/ai-mobile-builder",
+      "component": "AiMobileBuilder"
+    },
+    {
+      "path": "/ai-music-composition",
+      "component": "AiMusicComposition"
+    },
+    {
+      "path": "/ai-neural-interface",
+      "component": "AiNeuralInterface"
+    },
+    {
+      "path": "/ai-neural-memory-assistant",
+      "component": "AiNeuralMemoryAssistant"
+    },
+    {
+      "path": "/ai-nlp",
+      "component": "AiNlp"
+    },
+    {
+      "path": "/ai-ops",
+      "component": "AiOps"
+    },
+    {
+      "path": "/ai-password-manager",
+      "component": "AiPasswordManager"
+    },
+    {
+      "path": "/ai-predictive-maintenance",
+      "component": "AiPredictiveMaintenance"
+    },
+    {
+      "path": "/ai-predictive-modeling",
+      "component": "AiPredictiveModeling"
+    },
+    {
+      "path": "/ai-project-management-pro",
+      "component": "AiProjectManagementPro"
+    },
+    {
+      "path": "/ai-project-manager",
+      "component": "AiProjectManager"
+    },
+    {
+      "path": "/ai-quality-assurance",
+      "component": "AiQualityAssurance"
+    },
+    {
+      "path": "/ai-quantum-computing",
+      "component": "AiQuantumComputing"
+    },
+    {
+      "path": "/ai-quantum-computing-simulator",
+      "component": "AiQuantumComputingSimulator"
+    },
+    {
+      "path": "/ai-quantum-financial-oracle",
+      "component": "AiQuantumFinancialOracle"
+    },
+    {
+      "path": "/ai-quantum-optimization",
+      "component": "AiQuantumOptimization"
+    },
+    {
+      "path": "/ai-quantum-task-optimizer",
+      "component": "AiQuantumTaskOptimizer"
+    },
+    {
+      "path": "/ai-real-estate",
+      "component": "AiRealEstate"
+    },
+    {
+      "path": "/ai-recruitment-assistant",
+      "component": "AiRecruitmentAssistant"
+    },
+    {
+      "path": "/ai-robotics",
+      "component": "AiRobotics"
+    },
+    {
+      "path": "/ai-scheduler",
+      "component": "AiScheduler"
+    },
+    {
+      "path": "/ai-security-monitor",
+      "component": "AiSecurityMonitor"
+    },
+    {
+      "path": "/ai-sentiment-analysis",
+      "component": "AiSentimentAnalysis"
+    },
+    {
+      "path": "/ai-sentiment-analyzer",
+      "component": "AiSentimentAnalyzer"
+    },
+    {
+      "path": "/ai-seo-optimizer",
+      "component": "AiSeoOptimizer"
+    },
+    {
+      "path": "/ai-services/business-intelligence",
+      "component": "AiServicesbusinessIntelligence"
+    },
+    {
+      "path": "/ai-services/content-generation",
+      "component": "AiServicescontentGeneration"
+    },
+    {
+      "path": "/ai-services/customer-experience",
+      "component": "AiServicescustomerExperience"
+    },
+    {
+      "path": "/ai-services/document-processing",
+      "component": "AiServicesdocumentProcessing"
+    },
+    {
+      "path": "/ai-services/energy-management",
+      "component": "AiServicesenergyManagement"
+    },
+    {
+      "path": "/ai-services/fraud-detection",
+      "component": "AiServicesfraudDetection"
+    },
+    {
+      "path": "/ai-services/hr-analytics",
+      "component": "AiServiceshrAnalytics"
+    },
+    {
+      "path": "/ai-services/marketing-automation",
+      "component": "AiServicesmarketingAutomation"
+    },
+    {
+      "path": "/ai-services/predictive-maintenance",
+      "component": "AiServicespredictiveMaintenance"
+    },
+    {
+      "path": "/ai-services/process-automation",
+      "component": "AiServicesprocessAutomation"
+    },
+    {
+      "path": "/ai-services/quality-assurance",
+      "component": "AiServicesqualityAssurance"
+    },
+    {
+      "path": "/ai-services/supply-chain",
+      "component": "AiServicessupplyChain"
+    },
+    {
+      "path": "/ai-smart-calendar",
+      "component": "AiSmartCalendar"
+    },
+    {
+      "path": "/ai-smart-city-solutions",
+      "component": "AiSmartCitySolutions"
+    },
+    {
+      "path": "/ai-smart-contract-auditor",
+      "component": "AiSmartContractAuditor"
+    },
+    {
+      "path": "/ai-smart-home-controller",
+      "component": "AiSmartHomeController"
+    },
+    {
+      "path": "/ai-smart-invoice",
+      "component": "AiSmartInvoice"
+    },
+    {
+      "path": "/ai-smart-scheduler",
+      "component": "AiSmartScheduler"
+    },
+    {
+      "path": "/ai-social-media-manager",
+      "component": "AiSocialMediaManager"
+    },
+    {
+      "path": "/ai-social-media-scheduler",
+      "component": "AiSocialMediaScheduler"
+    },
+    {
+      "path": "/ai-social-scheduler",
+      "component": "AiSocialScheduler"
+    },
+    {
+      "path": "/ai-solutions",
+      "component": "AiSolutions"
+    },
+    {
+      "path": "/ai-space-mission-optimizer",
+      "component": "AiSpaceMissionOptimizer"
+    },
+    {
+      "path": "/ai-space-technology",
+      "component": "AiSpaceTechnology"
+    },
+    {
+      "path": "/ai-space-technology-pro",
+      "component": "AiSpaceTechnologyPro"
+    },
+    {
+      "path": "/ai-speech-synthesis",
+      "component": "AiSpeechSynthesis"
+    },
+    {
+      "path": "/ai-stock-portfolio-manager",
+      "component": "AiStockPortfolioManager"
+    },
+    {
+      "path": "/ai-supply-chain",
+      "component": "AiSupplyChain"
+    },
+    {
+      "path": "/ai-supply-chain-ai",
+      "component": "AiSupplyChainAi"
+    },
+    {
+      "path": "/ai-supply-chain-optimization-pro",
+      "component": "AiSupplyChainOptimizationPro"
+    },
+    {
+      "path": "/ai-supply-chain-optimizer",
+      "component": "AiSupplyChainOptimizer"
+    },
+    {
+      "path": "/ai-task-manager",
+      "component": "AiTaskManager"
+    },
+    {
+      "path": "/ai-telepathic-interface",
+      "component": "AiTelepathicInterface"
+    },
+    {
+      "path": "/ai-time-tracker",
+      "component": "AiTimeTracker"
+    },
+    {
+      "path": "/ai-translation-service",
+      "component": "AiTranslationService"
+    },
+    {
+      "path": "/ai-translation-services",
+      "component": "AiTranslationServices"
+    },
+    {
+      "path": "/ai-transportation",
+      "component": "AiTransportation"
+    },
+    {
+      "path": "/ai-video-analysis",
+      "component": "AiVideoAnalysis"
+    },
+    {
+      "path": "/ai-video-editor",
+      "component": "AiVideoEditor"
+    },
+    {
+      "path": "/ai-video-generation",
+      "component": "AiVideoGeneration"
+    },
+    {
+      "path": "/ai-video-generator",
+      "component": "AiVideoGenerator"
+    },
+    {
+      "path": "/ai-vision",
+      "component": "AiVision"
+    },
+    {
+      "path": "/ai-voice-assistant",
+      "component": "AiVoiceAssistant"
+    },
+    {
+      "path": "/ai-voice-cloning",
+      "component": "AiVoiceCloning"
+    },
+    {
+      "path": "/ai-voice-cloning-studio",
+      "component": "AiVoiceCloningStudio"
+    },
+    {
+      "path": "/ai-voice-processing",
+      "component": "AiVoiceProcessing"
+    },
+    {
+      "path": "/ai-voice-solutions",
+      "component": "AiVoiceSolutions"
+    },
+    {
+      "path": "/ai-voice-synthesis",
+      "component": "AiVoiceSynthesis"
+    },
+    {
+      "path": "/ai-website-builder",
+      "component": "AiWebsiteBuilder"
+    },
+    {
+      "path": "/ai-writing-assistant",
+      "component": "AiWritingAssistant"
+    },
+    {
+      "path": "/analytics",
+      "component": "Analytics"
+    },
+    {
+      "path": "/analytics-tools",
+      "component": "AnalyticsTools"
+    },
+    {
+      "path": "/api",
+      "component": "Api"
+    },
+    {
+      "path": "/api-development",
+      "component": "ApiDevelopment"
+    },
+    {
+      "path": "/api-development-advanced",
+      "component": "ApiDevelopmentAdvanced"
+    },
+    {
+      "path": "/api-docs",
+      "component": "ApiDocs"
+    },
+    {
+      "path": "/ar-vr-platform",
+      "component": "ArVrPlatform"
+    },
+    {
+      "path": "/ar-vr-solutions",
+      "component": "ArVrSolutions"
+    },
+    {
+      "path": "/automation",
+      "component": "Automation"
+    },
+    {
+      "path": "/autonomous-systems",
+      "component": "AutonomousSystems"
+    },
+    {
+      "path": "/backup-recovery",
+      "component": "BackupRecovery"
+    },
+    {
+      "path": "/blockchain",
+      "component": "Blockchain"
+    },
+    {
+      "path": "/blockchain-integration-services",
+      "component": "BlockchainIntegrationServices"
+    },
+    {
+      "path": "/blockchain-web3",
+      "component": "BlockchainWeb3"
+    },
+    {
+      "path": "/business-apps",
+      "component": "BusinessApps"
+    },
+    {
+      "path": "/business-intelligence",
+      "component": "BusinessIntelligence"
+    },
+    {
+      "path": "/cloud-infrastructure-management",
+      "component": "CloudInfrastructureManagement"
+    },
+    {
+      "path": "/cloud-infrastructure-manager",
+      "component": "CloudInfrastructureManager"
+    },
+    {
+      "path": "/cloud-migration",
+      "component": "CloudMigration"
+    },
+    {
+      "path": "/cloud-migration-pro",
+      "component": "CloudMigrationPro"
+    },
+    {
+      "path": "/cloud-migration-services",
+      "component": "CloudMigrationServices"
+    },
+    {
+      "path": "/cloud-security",
+      "component": "CloudSecurity"
+    },
+    {
+      "path": "/cloud-services",
+      "component": "CloudServices"
+    },
+    {
+      "path": "/community",
+      "component": "Community"
+    },
+    {
+      "path": "/compliance",
+      "component": "Compliance"
+    },
+    {
+      "path": "/computer-vision",
+      "component": "ComputerVision"
+    },
+    {
+      "path": "/cookie-policy",
+      "component": "CookiePolicy"
+    },
+    {
+      "path": "/crm-lite",
+      "component": "CrmLite"
+    },
+    {
+      "path": "/custom-development",
+      "component": "CustomDevelopment"
+    },
+    {
+      "path": "/cybersecurity",
+      "component": "Cybersecurity"
+    },
+    {
+      "path": "/cybersecurity-consulting",
+      "component": "CybersecurityConsulting"
+    },
+    {
+      "path": "/cybersecurity-suite",
+      "component": "CybersecuritySuite"
+    },
+    {
+      "path": "/data-analytics-bi",
+      "component": "DataAnalyticsBi"
+    },
+    {
+      "path": "/database",
+      "component": "Database"
+    },
+    {
+      "path": "/database-services",
+      "component": "DatabaseServices"
+    },
+    {
+      "path": "/data-center",
+      "component": "DataCenter"
+    },
+    {
+      "path": "/data-protection",
+      "component": "DataProtection"
+    },
+    {
+      "path": "/developer-tools",
+      "component": "DeveloperTools"
+    },
+    {
+      "path": "/devops",
+      "component": "Devops"
+    },
+    {
+      "path": "/devops-advanced",
+      "component": "DevopsAdvanced"
+    },
+    {
+      "path": "/devops-cicd",
+      "component": "DevopsCicd"
+    },
+    {
+      "path": "/digital-transformation",
+      "component": "DigitalTransformation"
+    },
+    {
+      "path": "/digital-twin-platform",
+      "component": "DigitalTwinPlatform"
+    },
+    {
+      "path": "/docs",
+      "component": "Docs"
+    },
+    {
+      "path": "/edge-computing",
+      "component": "EdgeComputing"
+    },
+    {
+      "path": "/email-marketing-automation",
+      "component": "EmailMarketingAutomation"
+    },
+    {
+      "path": "/email-optimizer",
+      "component": "EmailOptimizer"
+    },
+    {
+      "path": "/enterprise",
+      "component": "Enterprise"
+    },
+    {
+      "path": "/enterprise-security",
+      "component": "EnterpriseSecurity"
+    },
+    {
+      "path": "/enterprise-solutions",
+      "component": "EnterpriseSolutions"
+    },
+    {
+      "path": "/expense-tracker",
+      "component": "ExpenseTracker"
+    },
+    {
+      "path": "/faq",
+      "component": "Faq"
+    },
+    {
+      "path": "/financial-it",
+      "component": "FinancialIt"
+    },
+    {
+      "path": "/gdpr",
+      "component": "Gdpr"
+    },
+    {
+      "path": "/gdpr-compliance",
+      "component": "GdprCompliance"
+    },
+    {
+      "path": "/health",
+      "component": "Health"
+    },
+    {
+      "path": "/healthcare-it",
+      "component": "HealthcareIt"
+    },
+    {
+      "path": "/help",
+      "component": "Help"
+    },
+    {
+      "path": "/infrastructure-management",
+      "component": "InfrastructureManagement"
+    },
+    {
+      "path": "/innovation-labs",
+      "component": "InnovationLabs"
+    },
+    {
+      "path": "/intelligent-database-migration",
+      "component": "IntelligentDatabaseMigration"
+    },
+    {
+      "path": "/intelligent-email-infrastructure",
+      "component": "IntelligentEmailInfrastructure"
+    },
+    {
+      "path": "/investors",
+      "component": "Investors"
+    },
+    {
+      "path": "/iot",
+      "component": "Iot"
+    },
+    {
+      "path": "/iot-development",
+      "component": "IotDevelopment"
+    },
+    {
+      "path": "/iot-edge",
+      "component": "IotEdge"
+    },
+    {
+      "path": "/iot-edge-computing",
+      "component": "IotEdgeComputing"
+    },
+    {
+      "path": "/iot-integration",
+      "component": "IotIntegration"
+    },
+    {
+      "path": "/iot-platform",
+      "component": "IotPlatform"
+    },
+    {
+      "path": "/it-asset-management",
+      "component": "ItAssetManagement"
+    },
+    {
+      "path": "/it-consulting",
+      "component": "ItConsulting"
+    },
+    {
+      "path": "/it-infrastructure",
+      "component": "ItInfrastructure"
+    },
+    {
+      "path": "/it-infrastructure-design",
+      "component": "ItInfrastructureDesign"
+    },
+    {
+      "path": "/it-infrastructure-solutions",
+      "component": "ItInfrastructureSolutions"
+    },
+    {
+      "path": "/it-performance",
+      "component": "ItPerformance"
+    },
+    {
+      "path": "/it-project-management",
+      "component": "ItProjectManagement"
+    },
+    {
+      "path": "/it-security-services",
+      "component": "ItSecurityServices"
+    },
+    {
+      "path": "/it-services/cloud-migration",
+      "component": "ItServicescloudMigration"
+    },
+    {
+      "path": "/it-services/cybersecurity-audit",
+      "component": "ItServicescybersecurityAudit"
+    },
+    {
+      "path": "/it-support",
+      "component": "ItSupport"
+    },
+    {
+      "path": "/it-training",
+      "component": "ItTraining"
+    },
+    {
+      "path": "/landing-page-builder",
+      "component": "LandingPageBuilder"
+    },
+    {
+      "path": "/managed-it",
+      "component": "ManagedIt"
+    },
+    {
+      "path": "/marketing-tools",
+      "component": "MarketingTools"
+    },
+    {
+      "path": "/micro-saas/ai-content-writer",
+      "component": "MicroSaasaiContentWriter"
+    },
+    {
+      "path": "/micro-saas/ai-content-writer-pro",
+      "component": "MicroSaasaiContentWriterPro"
+    },
+    {
+      "path": "/micro-saas/ai-customer-support-chatbot",
+      "component": "MicroSaasaiCustomerSupportChatbot"
+    },
+    {
+      "path": "/micro-saas/ai-email-marketing-automation",
+      "component": "MicroSaasaiEmailMarketingAutomation"
+    },
+    {
+      "path": "/micro-saas/ai-expense-tracker",
+      "component": "MicroSaasaiExpenseTracker"
+    },
+    {
+      "path": "/micro-saas/ai-inventory-manager",
+      "component": "MicroSaasaiInventoryManager"
+    },
+    {
+      "path": "/micro-saas/ai-project-manager",
+      "component": "MicroSaasaiProjectManager"
+    },
+    {
+      "path": "/micro-saas/ai-social-media-scheduler",
+      "component": "MicroSaasaiSocialMediaScheduler"
+    },
+    {
+      "path": "/micro-saas/analytics-dashboard",
+      "component": "MicroSaasanalyticsDashboard"
+    },
+    {
+      "path": "/micro-saas/appointment-scheduler",
+      "component": "MicroSaasappointmentScheduler"
+    },
+    {
+      "path": "/micro-saas/chat-analytics",
+      "component": "MicroSaaschatAnalytics"
+    },
+    {
+      "path": "/micro-saas/content-generator",
+      "component": "MicroSaascontentGenerator"
+    },
+    {
+      "path": "/micro-saas/contract-manager",
+      "component": "MicroSaascontractManager"
+    },
+    {
+      "path": "/micro-saas/document-processor",
+      "component": "MicroSaasdocumentProcessor"
+    },
+    {
+      "path": "/micro-saas/email-marketing",
+      "component": "MicroSaasemailMarketing"
+    },
+    {
+      "path": "/micro-saas/email-signature",
+      "component": "MicroSaasemailSignature"
+    },
+    {
+      "path": "/micro-saas/employee-directory",
+      "component": "MicroSaasemployeeDirectory"
+    },
+    {
+      "path": "/micro-saas/expense-tracker",
+      "component": "MicroSaasexpenseTracker"
+    },
+    {
+      "path": "/micro-saas/inventory-management",
+      "component": "MicroSaasinventoryManagement"
+    },
+    {
+      "path": "/micro-saas/lead-scoring",
+      "component": "MicroSaasleadScoring"
+    },
+    {
+      "path": "/micro-saas/seo-optimizer",
+      "component": "MicroSaasseoOptimizer"
+    },
+    {
+      "path": "/micro-saas-services",
+      "component": "MicroSaasServices"
+    },
+    {
+      "path": "/micro-saas-services/ai-analytics-dashboard",
+      "component": "MicroSaasServicesaiAnalyticsDashboard"
+    },
+    {
+      "path": "/micro-saas-services/ai-chatbot-builder",
+      "component": "MicroSaasServicesaiChatbotBuilder"
+    },
+    {
+      "path": "/micro-saas-services/ai-content-generator",
+      "component": "MicroSaasServicesaiContentGenerator"
+    },
+    {
+      "path": "/micro-saas-services/ai-email-assistant",
+      "component": "MicroSaasServicesaiEmailAssistant"
+    },
+    {
+      "path": "/micro-saas-services/ai-lead-generation",
+      "component": "MicroSaasServicesaiLeadGeneration"
+    },
+    {
+      "path": "/micro-saas/social-manager",
+      "component": "MicroSaassocialManager"
+    },
+    {
+      "path": "/micro-saas/support-bot",
+      "component": "MicroSaassupportBot"
+    },
+    {
+      "path": "/mobile-app-development",
+      "component": "MobileAppDevelopment"
+    },
+    {
+      "path": "/network-design",
+      "component": "NetworkDesign"
+    },
+    {
+      "path": "/network-security",
+      "component": "NetworkSecurity"
+    },
+    {
+      "path": "/network-solutions",
+      "component": "NetworkSolutions"
+    },
+    {
+      "path": "/news",
+      "component": "News"
+    },
+    {
+      "path": "/nlp",
+      "component": "Nlp"
+    },
+    {
+      "path": "/not-found",
+      "component": "NotFound"
+    },
+    {
+      "path": "/offline",
+      "component": "Offline"
+    },
+    {
+      "path": "/page.tsx",
+      "component": "Pagetsx"
+    },
+    {
+      "path": "/partners",
+      "component": "Partners"
+    },
+    {
+      "path": "/penetration-testing",
+      "component": "PenetrationTesting"
+    },
+    {
+      "path": "/press",
+      "component": "Press"
+    },
+    {
+      "path": "/privacy-policy",
+      "component": "PrivacyPolicy"
+    },
+    {
+      "path": "/process-automation",
+      "component": "ProcessAutomation"
+    },
+    {
+      "path": "/productivity",
+      "component": "Productivity"
+    },
+    {
+      "path": "/project-management-pro",
+      "component": "ProjectManagementPro"
+    },
+    {
+      "path": "/quantum-ai",
+      "component": "QuantumAi"
+    },
+    {
+      "path": "/quantum-computing-solutions",
+      "component": "QuantumComputingSolutions"
+    },
+    {
+      "path": "/resources",
+      "component": "Resources"
+    },
+    {
+      "path": "/robotics-integration",
+      "component": "RoboticsIntegration"
+    },
+    {
+      "path": "/search",
+      "component": "Search"
+    },
+    {
+      "path": "/security",
+      "component": "Security"
+    },
+    {
+      "path": "/security-monitoring",
+      "component": "SecurityMonitoring"
+    },
+    {
+      "path": "/security-monitoring-suite",
+      "component": "SecurityMonitoringSuite"
+    },
+    {
+      "path": "/seo-optimizer",
+      "component": "SeoOptimizer"
+    },
+    {
+      "path": "/server-management",
+      "component": "ServerManagement"
+    },
+    {
+      "path": "/services-advertising",
+      "component": "ServicesAdvertising"
+    },
+    {
+      "path": "/sitemap.xml",
+      "component": "Sitemapxml"
+    },
+    {
+      "path": "/sla",
+      "component": "Sla"
+    },
+    {
+      "path": "/smart-analytics",
+      "component": "SmartAnalytics"
+    },
+    {
+      "path": "/smart-cities",
+      "component": "SmartCities"
+    },
+    {
+      "path": "/smart-city-infrastructure",
+      "component": "SmartCityInfrastructure"
+    },
+    {
+      "path": "/smart-contract-security-audit",
+      "component": "SmartContractSecurityAudit"
+    },
+    {
+      "path": "/specialized-services",
+      "component": "SpecializedServices"
+    },
+    {
+      "path": "/status",
+      "component": "Status"
+    },
+    {
+      "path": "/system-admin",
+      "component": "SystemAdmin"
+    },
+    {
+      "path": "/system-administration",
+      "component": "SystemAdministration"
+    },
+    {
+      "path": "/system-integration",
+      "component": "SystemIntegration"
+    },
+    {
+      "path": "/system-status",
+      "component": "SystemStatus"
+    },
+    {
+      "path": "/task-manager-pro",
+      "component": "TaskManagerPro"
+    },
+    {
+      "path": "/team",
+      "component": "Team"
+    },
+    {
+      "path": "/terms-of-service",
+      "component": "TermsOfService"
+    },
+    {
+      "path": "/test-simple",
+      "component": "TestSimple"
+    },
+    {
+      "path": "/training",
+      "component": "Training"
+    },
+    {
+      "path": "/zion-ai-accounting-assistant",
+      "component": "ZionAiAccountingAssistant"
+    },
+    {
+      "path": "/zion-ai-code-reviewer",
+      "component": "ZionAiCodeReviewer"
+    },
+    {
+      "path": "/zion-ai-content-moderation",
+      "component": "ZionAiContentModeration"
+    },
+    {
+      "path": "/zion-ai-contract-analyzer",
+      "component": "ZionAiContractAnalyzer"
+    },
+    {
+      "path": "/zion-ai-customer-service-pro",
+      "component": "ZionAiCustomerServicePro"
+    },
+    {
+      "path": "/zion-ai-data-cleaner",
+      "component": "ZionAiDataCleaner"
+    },
+    {
+      "path": "/zion-ai-document-ai",
+      "component": "ZionAiDocumentAi"
+    },
+    {
+      "path": "/zion-ai-email-assistant",
+      "component": "ZionAiEmailAssistant"
+    },
+    {
+      "path": "/zion-ai-energy-manager",
+      "component": "ZionAiEnergyManager"
+    },
+    {
+      "path": "/zion-ai-fraud-detector",
+      "component": "ZionAiFraudDetector"
+    },
+    {
+      "path": "/zion-ai-marketing-automation",
+      "component": "ZionAiMarketingAutomation"
+    },
+    {
+      "path": "/zion-ai-meeting-assistant",
+      "component": "ZionAiMeetingAssistant"
+    },
+    {
+      "path": "/zion-ai-predictive-maintenance",
+      "component": "ZionAiPredictiveMaintenance"
+    },
+    {
+      "path": "/zion-ai-recruitment-pro",
+      "component": "ZionAiRecruitmentPro"
+    },
+    {
+      "path": "/zion-ai-seo-optimizer",
+      "component": "ZionAiSeoOptimizer"
+    },
+    {
+      "path": "/zion-ai-supply-chain-optimizer",
+      "component": "ZionAiSupplyChainOptimizer"
+    },
+    {
+      "path": "/zion-ai-survey-builder",
+      "component": "ZionAiSurveyBuilder"
+    },
+    {
+      "path": "/zion-ai-translator-pro",
+      "component": "ZionAiTranslatorPro"
+    },
+    {
+      "path": "/zion-ai-video-editor",
+      "component": "ZionAiVideoEditor"
+    },
+    {
+      "path": "/zion-chat-ai",
+      "component": "ZionChatAi"
+    },
+    {
+      "path": "/zion-crm-intelligence",
+      "component": "ZionCrmIntelligence"
+    },
+    {
+      "path": "/zion-customer-insights",
+      "component": "ZionCustomerInsights"
+    }
+  ]
+}
