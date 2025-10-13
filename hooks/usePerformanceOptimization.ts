@@ -14,7 +14,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enablePreloading = true,
     enableImageOptimization = true,
 
+<<<<<<< HEAD
     // enableCodeSplitting = true,
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-4c61
 
     enableCaching = true,
   } = options;
