@@ -59,3 +59,7 @@ export default function handler(req, res) {
     }));
   } catch (_error) {
     // console.error('Error saving subscriber:', error);
+<<<<<<< HEAD
+=======
+}}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0

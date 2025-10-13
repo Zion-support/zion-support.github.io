@@ -40,3 +40,7 @@ export default async function handler(req, res) {
     }));
   } catch (_error) {
     // console.error('Quote submission error:', error);
+<<<<<<< HEAD
+=======
+}}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0

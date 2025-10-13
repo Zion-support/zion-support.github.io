@@ -52,3 +52,7 @@ export default function handler(req, res) {
       id: newRate.id
     }));
   } catch (_error) {
+<<<<<<< HEAD
+=======
+}}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0

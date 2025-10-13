@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export default async function handler(req, res) {
 
 // Simple email validation function (currently unused but kept for future use)
@@ -7,6 +8,17 @@ export default async function handler(req, res) {
 // };
 
 export default async function handler(req, res) {
+=======
+// Simple email validation function
+const isValidEmail = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+};
+async function handler(req, res) {
+
+export default async function handler(req, res) {
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -53,8 +65,14 @@ export default async function handler(req, res) {
       details: process.env.NODE_ENV === 'development' ? error.message : undefined
     }));
   }
+<<<<<<< HEAD
 }
 
 export default handler;
 
 }
+=======
+
+
+}}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0

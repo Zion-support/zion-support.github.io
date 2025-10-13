@@ -49,4 +49,8 @@ const handler = async (req, res) => {
   }
 };
 
+<<<<<<< HEAD
 export default withErrorLogging(handler);
+=======
+export default withErrorLogging(handler);
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0

@@ -60,3 +60,7 @@ export default function handler(req, res) {
     }));
   } catch (_error) {
     // console.error('Error saving wallet:', error);
+<<<<<<< HEAD
+=======
+}}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0

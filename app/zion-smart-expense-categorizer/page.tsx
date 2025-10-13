@@ -1,6 +1,10 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 export default function ZionSmartExpenseCategorizer() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -15,12 +19,18 @@ export default function ZionSmartExpenseCategorizer() {
             Zion Smart Expense Categorizer <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+<<<<<<< HEAD
             Advanced AI-powered expense categorization and management solutions for modern businesses.
+=======
+            Advanced AI-powered expense categorization solutions for modern businesses.
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
           </p>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+<<<<<<< HEAD
             <h3 className="text-xl font-semibold text-white mb-4">Auto Categorization</h3>
             <p className="text-gray-300 mb-4">
               Automatic expense categorization and classification using AI.
@@ -29,10 +39,21 @@ export default function ZionSmartExpenseCategorizer() {
               <li>• Smart classification</li>
               <li>• Rule-based sorting</li>
               <li>• Learning algorithms</li>
+=======
+            <h3 className="text-xl font-semibold text-white mb-4">Smart Categorization</h3>
+            <p className="text-gray-300 mb-4">
+              AI-powered automatic expense categorization.
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Receipt scanning</li>
+              <li>• Pattern recognition</li>
+              <li>• Rule-based sorting</li>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
             </ul>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+<<<<<<< HEAD
             <h3 className="text-xl font-semibold text-white mb-4">Receipt Processing</h3>
             <p className="text-gray-300 mb-4">
               OCR and AI-powered receipt processing and data extraction.
@@ -41,10 +62,21 @@ export default function ZionSmartExpenseCategorizer() {
               <li>• Text extraction</li>
               <li>• Data validation</li>
               <li>• Duplicate detection</li>
+=======
+            <h3 className="text-xl font-semibold text-white mb-4">Expense Tracking</h3>
+            <p className="text-gray-300 mb-4">
+              Comprehensive expense tracking and monitoring.
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Real-time tracking</li>
+              <li>• Budget alerts</li>
+              <li>• Spending analysis</li>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
             </ul>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+<<<<<<< HEAD
             <h3 className="text-xl font-semibold text-white mb-4">Reporting</h3>
             <p className="text-gray-300 mb-4">
               Comprehensive expense reporting and analytics.
@@ -52,6 +84,15 @@ export default function ZionSmartExpenseCategorizer() {
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Expense reports</li>
               <li>• Budget tracking</li>
+=======
+            <h3 className="text-xl font-semibold text-white mb-4">Financial Reporting</h3>
+            <p className="text-gray-300 mb-4">
+              Detailed financial reporting and insights.
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Expense reports</li>
+              <li>• Trend analysis</li>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
               <li>• Tax preparation</li>
             </ul>
           </div>
@@ -61,7 +102,11 @@ export default function ZionSmartExpenseCategorizer() {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Expense Management?</h2>
             <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
               Our AI experts are ready to help you optimize your expense categorization process.
+=======
+              Our zion smart expense categorizer experts are ready to help you optimize your operations.
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
             </p>
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
               Get Started Today
@@ -71,3 +116,7 @@ export default function ZionSmartExpenseCategorizer() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0

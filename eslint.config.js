@@ -74,7 +74,17 @@ export default [
         document: 'readonly',
         console: 'readonly',
         process: 'readonly',
+<<<<<<< HEAD
         global: 'readonly'},
+=======
+        global: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        setInterval: 'readonly',
+        clearInterval: 'readonly',
+      }
+    },
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
     plugins: {
       '@typescript-eslint': typescript,
       'react': react,

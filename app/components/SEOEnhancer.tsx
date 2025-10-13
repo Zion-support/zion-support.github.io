@@ -109,3 +109,7 @@ export const defaultStructuredData = {
     "addressCountry": "US"
   }
 };
+<<<<<<< HEAD
+=======
+export default SEOEnhancer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0

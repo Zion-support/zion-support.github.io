@@ -33,6 +33,7 @@ async function handler(req, res) {
       currency,
       status: 'requires_payment_method',
       created: Math.floor(Date.now() / 1000)
+<<<<<<< HEAD
     };
     
     res.statusCode = 200;
@@ -41,3 +42,6 @@ async function handler(req, res) {
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
 }
+=======
+}}}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0

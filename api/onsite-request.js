@@ -42,6 +42,10 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
       message: 'Onsite request submitted successfully',
       id: newRequest.id
     }));

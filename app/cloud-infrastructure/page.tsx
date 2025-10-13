@@ -72,3 +72,7 @@ export default function CloudInfrastructure() {
       </div>
     </div>
   );
+<<<<<<< HEAD
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0

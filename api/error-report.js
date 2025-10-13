@@ -29,3 +29,8 @@ export default function handler(req, res) {
     res.status(500).json({ error: 'Failed to process error report' });
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
