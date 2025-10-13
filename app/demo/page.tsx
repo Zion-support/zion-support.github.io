@@ -16,7 +16,7 @@ const DemoPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
-      demo: &apos;Live Demo&apos;
+      demo: 'Live Demo'
     },
     {
 <<<<<<< HEAD
@@ -26,7 +26,7 @@ const DemoPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Advanced Security',
       description: 'Experience our enterprise-grade security features',
-      demo: &apos;Demo&apos;
+      demo: 'Demo'
     },
     {
 <<<<<<< HEAD
@@ -36,7 +36,7 @@ const DemoPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Business Intelligence',
       description: 'Explore our comprehensive BI dashboard',
-      demo: &apos;BI Demo&apos;
+      demo: 'BI Demo'
     },
     {
 <<<<<<< HEAD
@@ -46,7 +46,7 @@ const DemoPage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Team Collaboration',
       description: 'See how teams work together seamlessly',
-      demo: &apos;Collaboration Demo&apos;
+      demo: 'Collaboration Demo'
     }
   ];
 

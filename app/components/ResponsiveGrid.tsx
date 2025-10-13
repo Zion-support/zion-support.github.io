@@ -71,7 +71,7 @@ const ResponsiveGrid: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our responsive grid 
+            Let's discuss how our responsive grid 
             services can help you achieve your goals.
           </p>
           <a

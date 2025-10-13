@@ -7,7 +7,7 @@ interface FuturisticButtonProps {
   size?: 'sm' | 'md' | 'lg';
   icon?: React.ReactNode;
   onClick?: () => void;
-  type?: &apos;button&apos; | &apos;submit&apos; | &apos;reset&apos;;
+  type?: 'button' | 'submit' | 'reset';
 }
 
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({ 
@@ -19,18 +19,18 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   onClick,
   type = 'button'
 }) => {
-  const baseClasses = &apos;inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2&apos;;
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2';
   
   const variantClasses = {
-    primary: &apos;bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 focus:ring-blue-500&apos;,
-    secondary: &apos;bg-white/10 text-white border border-white/20 hover:bg-white/20 focus:ring-white/50&apos;,
-    outline: &apos;border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white focus:ring-blue-500&apos;
+    primary: 'bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:from-blue-600 hover:to-purple-600 focus:ring-blue-500',
+    secondary: 'bg-white/10 text-white border border-white/20 hover:bg-white/20 focus:ring-white/50',
+    outline: 'border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white focus:ring-blue-500'
   };
 
   const sizeClasses = {
-    sm: &apos;px-4 py-2 text-sm&apos;,
-    md: &apos;px-6 py-3 text-base&apos;,
-    lg: &apos;px-8 py-4 text-lg&apos;
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg'
   };
 
   return (
