@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 // UsePerformanceMonitor utility
 export function UsePerformanceMonitor() {
   // Implementation coming soon
   return null;
 }
-=======
 import { useState, useEffect, useRef, useCallback } from 'react';
 
 interface PerformanceMetrics {
@@ -178,4 +176,3 @@ export function usePerformanceMonitor(): UsePerformanceMonitorReturn {
 }
 
 export default usePerformanceMonitor;
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1

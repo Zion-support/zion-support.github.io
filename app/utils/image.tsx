@@ -1,37 +1,10 @@
 import React from 'react';
-<<<<<<< HEAD
 
-interface ImageProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Image({ className = '', children }: ImageProps) {
+export default function Image() {
   return (
-    <div className={`${className}`}>
-      {children}
-=======
-import { Helmet } from 'react-helmet-async';
-
-export default function ImagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Image - Zion Tech Group</title>
-        <meta name="description" content="Advanced Image solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Image
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
+    <div className="component">
+      <h2>Image</h2>
+      <p>This component is under development.</p>
     </div>
   );
 }

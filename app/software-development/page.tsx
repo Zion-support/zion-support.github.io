@@ -1,33 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function Page() {
-=======
-export default function PagePage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
+export default function softwareDevelopment() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta name="description" content="Page solutions by Zion Tech Group" />
-=======
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
+        <title>Software Development - Zion Tech Group</title>
+        <meta name="description" content="Advanced Software Development solutions by Zion Tech Group" />
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-<<<<<<< HEAD
-          <h1 className="text-4xl font-bold mb-8">Page</h1>
-          <p className="text-xl text-gray-300 mb-8">
-=======
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
+            Software Development
           </h1>
           <p className="text-xl text-gray-600 mb-8">
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
             This page is under development. Please check back later.
           </p>
           <div className="mt-8">

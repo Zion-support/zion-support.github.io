@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 // UseEnhancedPerformance utility
 export function UseEnhancedPerformance() {
   // Implementation coming soon
   return null;
 }
-=======
 import { useState, useEffect, useCallback } from 'react';
 
 interface PerformanceData {
@@ -76,4 +74,3 @@ export function useEnhancedPerformance(): UseEnhancedPerformanceReturn {
 }
 
 export default useEnhancedPerformance;
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1

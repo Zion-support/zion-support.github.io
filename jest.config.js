@@ -23,8 +23,5 @@ export default {
   transformIgnorePatterns: [
     "node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))",
   ],
-<<<<<<< HEAD
 };
-=======
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-1dc1
