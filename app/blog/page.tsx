@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import { useState } from "react";
-import { ArrowRight, Calendar, User } from "lucide-react";
-=======
 import React, { useState } from "react";
 import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -21,42 +16,6 @@ export default function Blog() {
 
   const blogPosts = [
     {
-<<<<<<< HEAD
-      id: '1',
-      title: 'The Future of AI in Enterprise Solutions',
-      excerpt: 'Exploring how artificial intelligence is transforming business operations and decision-making processes.',
-      content: 'Full article content...',
-      author: 'Zion Tech Team',
-      date: '2024-01-15',
-      category: 'AI',
-      featured: true,
-      image: '/images/blog/ai-enterprise.jpg',
-      readTime: '5 min read'
-    },
-    {
-      id: '2',
-      title: 'Cloud Migration Best Practices',
-      excerpt: 'A comprehensive guide to successfully migrating your infrastructure to the cloud.',
-      content: 'Full article content...',
-      author: 'Cloud Team',
-      date: '2024-01-10',
-      category: 'Cloud',
-      featured: false,
-      image: '/images/blog/cloud-migration.jpg',
-      readTime: '7 min read'
-    },
-    {
-      id: '3',
-      title: 'Cybersecurity Trends for 2024',
-      excerpt: 'Stay ahead of emerging threats with the latest cybersecurity trends and strategies.',
-      content: 'Full article content...',
-      author: 'Security Team',
-      date: '2024-01-05',
-      category: 'Security',
-      featured: false,
-      image: '/images/blog/cybersecurity.jpg',
-      readTime: '6 min read'
-=======
       id: 1,
       title: "The Future of AI in Business: 2024 Trends and Predictions",
       excerpt: "Discover how artificial intelligence is revolutionizing business operations and what to expect in 2024.",
@@ -103,7 +62,6 @@ export default function Blog() {
       image: "/images/blog/digital-transformation.jpg",
       readTime: "9 min read",
       tags: ["Digital Transformation", "Strategy", "Business", "Technology"]
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
     }
   ];
 
@@ -120,11 +78,6 @@ export default function Blog() {
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Blog - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Stay updated with the latest insights on AI, cybersecurity, cloud computing, and technology trends." />
-        <meta name="description" content="Latest insights and updates from Zion Tech Group" />
-=======
         <title>Blog - Zion Tech Group</title>
         <meta
           name="description"
@@ -134,7 +87,6 @@ export default function Blog() {
           name="keywords"
           content="AI blog, technology insights, business innovation, artificial intelligence articles, tech trends, digital transformation, cybersecurity, cloud computing"
         />
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -152,13 +104,8 @@ export default function Blog() {
           </div>
         </section>
 
-<<<<<<< HEAD
-        {/* Search and Filter */}
-        <section className="py-8 bg-white/10 backdrop-blur-sm">
-=======
         {/* Search and Filter Section */}
-        <section className="py-8 bg-white dark:bg-gray-800 shadow-sm">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
+        <section className="py-8 bg-white/10 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
               <div className="relative flex-1 max-w-md">
@@ -167,11 +114,7 @@ export default function Blog() {
                   placeholder="Search articles..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-<<<<<<< HEAD
-                  className="w-full px-4 py-2 border border-cyan-400/30 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-300"
-=======
-                  className="w-full px-4 py-2 pl-10 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
+                  className="w-full px-4 py-2 pl-10 border border-cyan-400/30 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent bg-white/10 text-white placeholder-gray-300"
                 />
                 <Search className="absolute left-3 top-2.5 h-5 w-5 text-gray-400" />
               </div>
@@ -198,12 +141,8 @@ export default function Blog() {
         {featuredPost && (
           <section className="py-16 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
               <h2 className="text-3xl font-bold text-white mb-8">Featured Article</h2>
               <div className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden border border-white/20">
-=======
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
                 <div className="md:flex">
                   <div className="md:w-1/2">
                     <img
@@ -213,7 +152,6 @@ export default function Blog() {
                     />
                   </div>
                   <div className="md:w-1/2 p-8">
-<<<<<<< HEAD
                     <div className="flex items-center gap-4 mb-4">
                       <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
                         {featuredPost.category}
@@ -246,32 +184,7 @@ export default function Blog() {
                         Read More
                         <ArrowRight className="ml-2 w-4 h-4" />
                       </Link>
-=======
-                    <div className="flex items-center mb-4">
-                      <span className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium">
-                        Featured
-                      </span>
                     </div>
-                    <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                      {featuredPost.title}
-                    </h2>
-                    <p className="text-gray-600 dark:text-gray-300 mb-6 text-lg">
-                      {featuredPost.excerpt}
-                    </p>
-                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-6">
-                      <User className="h-4 w-4 mr-2" />
-                      <span className="mr-4">{featuredPost.author}</span>
-                      <Calendar className="h-4 w-4 mr-2" />
-                      <span>{featuredPost.date}</span>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
-                    </div>
-                    <Link
-                      to={`/blog/${featuredPost.id}`}
-                      className="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-800 dark:hover:text-blue-300"
-                    >
-                      Read More
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
                   </div>
                 </div>
               </div>
@@ -280,57 +193,6 @@ export default function Blog() {
         )}
 
         {/* Blog Posts Grid */}
-<<<<<<< HEAD
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-3xl font-bold text-white mb-8">Latest Articles</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {regularPosts.map(post => (
-                <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-white/20 hover:border-cyan-400/50">
-                  <img
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-6">
-                    <div className="flex items-center gap-4 mb-3">
-                      <span className="bg-white/10 text-gray-300 px-3 py-1 rounded-full text-sm font-medium">
-                        {post.category}
-                      </span>
-                      <span className="text-gray-400 text-sm">
-                        {post.readTime}
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-3">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4">
-                      {post.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-4 text-sm text-gray-400">
-                        <div className="flex items-center gap-1">
-                          <User className="w-4 h-4" />
-                          {post.author}
-                        </div>
-                        <div className="flex items-center gap-1">
-                          <Calendar className="w-4 h-4" />
-                          {new Date(post.date).toLocaleDateString()}
-                        </div>
-                      </div>
-                      <Link
-                        to={`/blog/${post.id}`}
-                        className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium"
-                      >
-                        Read More
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Link>
-                    </div>
-                  </div>
-                </article>
-              ))}
-
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -345,7 +207,7 @@ export default function Blog() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {regularPosts.map((post) => (
-                <article key={post.id} className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                <article key={post.id} className="bg-white/10 backdrop-blur-sm rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group border border-white/20">
                   <div className="relative overflow-hidden">
                     <img
                       src={post.image}
@@ -353,13 +215,13 @@ export default function Blog() {
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                     <div className="absolute top-4 left-4">
-                      <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                      <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-sm font-medium">
                         {post.category}
                       </span>
                     </div>
                   </div>
                   <div className="p-6">
-                    <div className="flex items-center text-sm text-gray-500 dark:text-gray-400 mb-3">
+                    <div className="flex items-center text-sm text-gray-400 mb-3">
                       <User className="h-4 w-4 mr-2" />
                       <span className="mr-4">{post.author}</span>
                       <Calendar className="h-4 w-4 mr-2" />
@@ -367,17 +229,17 @@ export default function Blog() {
                       <Clock className="h-4 w-4 mr-1" />
                       <span>{post.readTime}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                       {post.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4 line-clamp-3">
+                    <p className="text-gray-300 mb-4 line-clamp-3">
                       {post.excerpt}
                     </p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {post.tags.slice(0, 3).map((tag) => (
                         <span
                           key={tag}
-                          className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-1 rounded text-xs"
+                          className="bg-white/10 text-gray-300 px-2 py-1 rounded text-xs"
                         >
                           {tag}
                         </span>
@@ -385,7 +247,7 @@ export default function Blog() {
                     </div>
                     <Link
                       to={`/blog/${post.id}`}
-                      className="inline-flex items-center text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-800 dark:hover:text-blue-300 group-hover:translate-x-1 transition-transform"
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-semibold group-hover:translate-x-1 transition-transform"
                     >
                       Read More
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -398,7 +260,7 @@ export default function Blog() {
         </section>
 
         {/* Newsletter Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-600 to-purple-600">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -418,15 +280,10 @@ export default function Blog() {
                   <Zap className="w-4 h-4 ml-2" />
                 </button>
               </div>
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3
             </div>
           </div>
         </section>
       </div>
     </>
   );
-<<<<<<< HEAD
 };
-=======
-};
->>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-cbe3

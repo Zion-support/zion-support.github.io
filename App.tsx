@@ -70,23 +70,6 @@ function App() {
               </FuturisticBackground>
             </div>
           </Router>
-                  <EnhancedAccessibility>
-                    <div></div>
-                  </EnhancedAccessibility>
-                </FuturisticBackground>
-                <AnalyticsProvider>
-                  <div>
-                    <PerformanceMonitor />
-                    <WebVitalsTracker />
-                    <PerformanceEnhancer />
-                    <SEOOptimizer />
-                    <EnhancedSEO />
-                    <EnhancedSEOOptimizer />
-                  </div>
-                </AnalyticsProvider>
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>

@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 200, // Reduced warning threshold
-    assetsInlineLimit: 2048, // Reduced for better caching
+    chunkSizeWarningLimit: 150, // Further reduced warning threshold
+    assetsInlineLimit: 1024, // Reduced for better caching
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -133,9 +133,14 @@ export default defineConfig({
             const serviceName = id.split('/5g-')[1]?.split('/')[0];
             return `5g-${serviceName || 'services'}`
           }
+          // Blog and content pages
+          if (id.includes('/blog') || id.includes('/about') || id.includes('/contact')) {
+            return 'content'
+          }
           // Other service pages
           if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
+              !id.includes('/blog') && !id.includes('/about') && !id.includes('/contact')) {
             return 'pages'
           }
           // Default chunk for other modules
