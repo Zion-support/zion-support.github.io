@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 import FuturisticBackground from "./components/FuturisticBackground";
@@ -9,10 +8,6 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
-=======
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
 
 const HomePage = () => {
   const structuredData = {
@@ -95,25 +90,46 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "AI Crypto Trading Bot",
+      description: "Automated cryptocurrency trading with AI algorithms",
+      price: "From $99/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/ai-crypto-trading-bot"
+    },
+    {
+      name: "AI Smart Home Automation",
+      description: "Intelligent home control with voice commands",
+      price: "From $199/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/ai-smart-home-automation"
+    },
+    {
+      name: "AI Voice Cloning Studio",
+      description: "Create realistic voice replicas with AI",
+      price: "From $29/month",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/ai-voice-cloning-studio"
+    },
+    {
+      name: "AI Healthcare Diagnostics",
+      description: "Advanced medical AI with 99.2% accuracy",
+      price: "From $999/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/ai-healthcare-diagnostics"
+    },
+    {
+      name: "AI Quantum Computing Simulator",
+      description: "Simulate quantum circuits with up to 50 qubits",
+      price: "From $199/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/ai-quantum-computing-simulator"
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $299/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro"
-    },
-    {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection",
-      price: "From $499/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield"
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $99/month",
       icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
+      link: "/zion-analytics-pro"
     }
   ];
 
@@ -149,14 +165,9 @@ const HomePage = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <SEOOptimizer
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
@@ -169,6 +180,8 @@ const HomePage = () => {
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-spin-slow"></div>
+          <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-pink-500/15 to-cyan-500/15 rounded-full blur-2xl animate-bounce-slow"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
@@ -177,21 +190,17 @@ const HomePage = () => {
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <ResponsiveText
-            as="h1"
-            size="7xl"
-            weight="bold"
-            color="white"
-            className="mb-6 leading-tight"
-          >
-            <FuturisticText text="Welcome to " delay={0} speed={100} />
-            <FuturisticText 
-              text="Zion Tech Group" 
-              delay={1000} 
-              speed={150} 
-              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"
-            />
-          </ResponsiveText>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="font-orbitron">
+              <FuturisticText text="Welcome to " delay={0} speed={100} />
+              <FuturisticText 
+                text="Zion Tech Group" 
+                delay={1000} 
+                speed={150} 
+                className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 cyberpunk-text"
+              />
+            </span>
+          </h1>
           
           <ResponsiveText
             as="p"
@@ -205,22 +214,20 @@ const HomePage = () => {
           </ResponsiveText>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
+            <Link
+              to="/contact"
+              className="futuristic-btn inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg group hover:scale-105 transition-all duration-300"
             >
+              <Sparkles className="w-5 h-5 mr-2" />
               Get Started Today
-            </FuturisticButton>
-            <FuturisticButton
-              href="/demo"
-              variant="outline"
-              size="lg"
-              icon={<Monitor className="w-5 h-5" />}
+            </Link>
+            <Link
+              to="/demo"
+              className="inline-flex items-center px-8 py-4 text-lg font-semibold rounded-lg border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
+              <Monitor className="w-5 h-5 mr-2" />
               Watch Demo
-            </FuturisticButton>
+            </Link>
           </div>
           
           {/* Stats */}
@@ -297,12 +304,12 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
@@ -420,8 +427,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      </div>
-    </>
+    </div>
   );
 };
 

@@ -7,15 +7,6 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
-<<<<<<< HEAD
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
-=======
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
@@ -24,7 +15,9 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import EnhancedSEO from "./app/components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import CoreWebVitals from "./app/components/CoreWebVitals";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -566,6 +559,9 @@ const ZionChatAiPage = React.lazy(() => import("./app/zion-chat-ai/page"));
 const ZionCrmIntelligencePage = React.lazy(() => import("./app/zion-crm-intelligence/page"));
 const ZionCustomerInsightsPage = React.lazy(() => import("./app/zion-customer-insights/page"));
 
+// New AI Services
+const AiCryptoTradingBotPage = React.lazy(() => import("./app/ai-crypto-trading-bot/page"));
+const AiSmartHomeAutomationPage = React.lazy(() => import("./app/ai-smart-home-automation/page"));
 
 // Main App Component
 function App() {
@@ -607,6 +603,12 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        {/* New AI Services Routes */}
+                        <Route path="/ai-crypto-trading-bot" element={<AiCryptoTradingBotPage />} />
+                        <Route path="/ai-smart-home-automation" element={<AiSmartHomeAutomationPage />} />
+                        <Route path="/ai-healthcare-diagnostics" element={<AiHealthcareDiagnosticsPage />} />
+                        <Route path="/ai-voice-cloning-studio" element={<AiVoiceCloningStudioPage />} />
+                        <Route path="/ai-quantum-computing-simulator" element={<AiQuantumComputingSimulatorPage />} />
                       </Routes>
                     </Suspense>
                   </main>
@@ -615,15 +617,12 @@ function App() {
                     <div></div>
                   </EnhancedAccessibility>
                 </FuturisticBackground>
-<<<<<<< HEAD
-=======
                 <PerformanceMonitor />
                 <EnhancedSEO 
                   title="Zion Tech Group - Advanced AI and IT Solutions"
                   description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
                   keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
                 />
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
               </div>
               <EnhancedAccessibility>
                 <div></div>

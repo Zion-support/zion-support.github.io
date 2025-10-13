@@ -221,8 +221,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
-<<<<<<< HEAD
-=======
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
@@ -266,9 +264,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       focusVisible: true
     };
     setSettings(defaultSettings);
-    applyAccessibilitySettings(defaultSettings);
-  };
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
+      applyAccessibilitySettings(defaultSettings);
+    };
   return (
     <>
       {children}

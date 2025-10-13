@@ -1,112 +1,112 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Atom, Zap, Brain, Shield, Cpu, Globe, Users, CheckCircle, Star, Activity } from "lucide-react";
+import { Home, Zap, Shield, Brain, Smartphone, Wifi, Thermometer, Lightbulb, Camera, Lock } from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer";
 import FuturisticCard from "../components/FuturisticCard";
 import FuturisticButton from "../components/FuturisticButton";
 
-const AiQuantumComputingSimulatorPage = () => {
+const AiSmartHomeAutomationPage = () => {
   const features = [
     {
-      title: "Quantum Circuit Simulation",
-      description: "Simulate quantum circuits with up to 50 qubits using advanced algorithms and optimization",
-      icon: <Atom className="w-6 h-6" />,
+      title: "AI Voice Control",
+      description: "Natural language processing for intuitive voice commands and smart home control",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "AI-Powered Optimization",
-      description: "Machine learning algorithms optimize quantum circuits for maximum efficiency and performance",
-      icon: <Brain className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Real-time Visualization",
-      description: "Interactive 3D visualization of quantum states, gates, and circuit operations",
-      icon: <Activity className="w-6 h-6" />,
+      title: "Energy Optimization",
+      description: "Intelligent energy management that learns your patterns and reduces costs by up to 30%",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Cloud Processing",
-      description: "Leverage powerful cloud infrastructure for complex quantum simulations and calculations",
-      icon: <Cpu className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
+      title: "Security Integration",
+      description: "Advanced security monitoring with AI-powered threat detection and automated responses",
+      icon: <Shield className="w-6 h-6" />,
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      title: "Mobile Control",
+      description: "Complete home control from anywhere with our intuitive mobile app",
+      icon: <Smartphone className="w-6 h-6" />,
+      color: "from-purple-500 to-pink-500"
     }
   ];
 
-  const applications = [
+  const smartDevices = [
     {
-      title: "Cryptography",
-      description: "Develop and test quantum-resistant encryption algorithms",
-      icon: <Shield className="w-8 h-8" />,
-      price: "From $199/month"
+      name: "Smart Lighting",
+      icon: <Lightbulb className="w-8 h-8" />,
+      description: "AI-controlled lighting that adapts to your schedule and mood",
+      price: "From $29/month"
     },
     {
-      title: "Drug Discovery",
-      description: "Simulate molecular interactions for pharmaceutical research",
-      icon: <Atom className="w-8 h-8" />,
-      price: "From $399/month"
+      name: "Climate Control",
+      icon: <Thermometer className="w-8 h-8" />,
+      description: "Intelligent temperature and humidity management",
+      price: "From $39/month"
     },
     {
-      title: "Financial Modeling",
-      description: "Quantum algorithms for portfolio optimization and risk analysis",
-      icon: <Globe className="w-8 h-8" />,
-      price: "From $299/month"
+      name: "Security System",
+      icon: <Camera className="w-8 h-8" />,
+      description: "AI-powered surveillance with facial recognition",
+      price: "From $49/month"
     },
     {
-      title: "Machine Learning",
-      description: "Quantum machine learning algorithms and neural networks",
-      icon: <Brain className="w-8 h-8" />,
-      price: "From $249/month"
+      name: "Smart Locks",
+      icon: <Lock className="w-8 h-8" />,
+      description: "Keyless entry with biometric and app control",
+      price: "From $19/month"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Researcher",
+      name: "Starter Home",
       price: "$199",
       period: "month",
-      description: "Perfect for academic research",
+      description: "Perfect for apartments and small homes",
       features: [
-        "Up to 20 qubits simulation",
-        "Basic quantum gates",
-        "Standard algorithms",
+        "Up to 20 smart devices",
+        "Basic AI automation",
+        "Mobile app control",
+        "Energy monitoring",
         "Email support",
-        "Documentation access",
-        "Community forum"
+        "Basic security features"
       ],
       popular: false
     },
     {
-      name: "Developer",
-      price: "$499",
+      name: "Smart Home Pro",
+      price: "$399",
       period: "month",
-      description: "Most popular for developers",
+      description: "Most popular for medium homes",
       features: [
-        "Up to 50 qubits simulation",
-        "All quantum gates",
-        "Advanced algorithms",
+        "Up to 50 smart devices",
+        "Advanced AI learning",
+        "Voice control integration",
+        "Energy optimization",
         "Priority support",
-        "API access",
-        "Custom circuits",
-        "Real-time visualization",
-        "Cloud processing"
+        "Advanced security",
+        "Custom automation rules",
+        "Remote monitoring"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$1,999",
+      name: "Luxury Estate",
+      price: "$799",
       period: "month",
-      description: "For large organizations",
+      description: "For large homes and estates",
       features: [
-        "Unlimited qubits",
-        "Custom quantum hardware",
-        "Dedicated support",
-        "White-label solution",
+        "Unlimited smart devices",
+        "Premium AI algorithms",
         "Custom integrations",
-        "Training programs",
-        "SLA guarantees",
-        "On-premise deployment"
+        "Dedicated support",
+        "Advanced analytics",
+        "Professional installation",
+        "24/7 monitoring",
+        "White-label options"
       ],
       popular: false
     }
@@ -114,61 +114,54 @@ const AiQuantumComputingSimulatorPage = () => {
 
   const benefits = [
     {
-      title: "10,000x Faster",
-      description: "Quantum simulation speeds compared to classical computers",
+      title: "30% Energy Savings",
+      description: "AI optimization reduces your energy bills significantly",
       icon: <Zap className="w-6 h-6" />
     },
     {
-      title: "50 Qubits",
-      description: "Simulate up to 50 qubits with high fidelity",
-      icon: <Atom className="w-6 h-6" />
+      title: "Enhanced Security",
+      description: "24/7 AI monitoring protects your home and family",
+      icon: <Shield className="w-6 h-6" />
     },
     {
-      title: "99.9% Accuracy",
-      description: "Industry-leading simulation accuracy and reliability",
-      icon: <CheckCircle className="w-6 h-6" />
+      title: "Convenience",
+      description: "Control everything from one app with voice commands",
+      icon: <Smartphone className="w-6 h-6" />
     },
     {
-      title: "Global Access",
-      description: "Access quantum computing from anywhere in the world",
-      icon: <Globe className="w-6 h-6" />
+      title: "Future-Proof",
+      description: "Regular updates keep your system cutting-edge",
+      icon: <Wifi className="w-6 h-6" />
     }
-  ];
-
-  const stats = [
-    { number: "10K+", label: "Quantum Circuits Simulated", icon: <Atom className="w-6 h-6" /> },
-    { number: "50", label: "Maximum Qubits", icon: <Cpu className="w-6 h-6" /> },
-    { number: "99.9%", label: "Simulation Accuracy", icon: <CheckCircle className="w-6 h-6" /> },
-    { number: "5,000+", label: "Active Researchers", icon: <Users className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <SEOOptimizer
-        title="AI Quantum Computing Simulator - Advanced Quantum Simulation Platform | Zion Tech Group"
-        description="Revolutionary AI-powered quantum computing simulator with up to 50 qubits. Advanced quantum circuit simulation, optimization, and real-time visualization for research and development."
-        keywords="quantum computing simulator, quantum simulation, quantum circuits, quantum algorithms, quantum machine learning, quantum cryptography, quantum research"
-        canonical="https://ziontechgroup.com/ai-quantum-computing-simulator"
+        title="AI Smart Home Automation - Intelligent Home Control System | Zion Tech Group"
+        description="Transform your home with AI-powered smart home automation. Voice control, energy optimization, security integration, and intelligent device management for the modern home."
+        keywords="AI smart home automation, home automation, smart home, voice control, energy optimization, home security, IoT devices"
+        canonical="https://ziontechgroup.com/ai-smart-home-automation"
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Atom className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Quantum Computing Future</span>
+            <Home className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">Smart Home Revolution</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Quantum Computing Simulator
+              AI Smart Home Automation
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Experience the power of quantum computing with our advanced AI-powered simulator. 
-            Simulate up to 50 qubits, optimize quantum circuits, and explore quantum algorithms 
-            with real-time visualization and cloud processing capabilities.
+            Transform your home into an intelligent ecosystem with our AI-powered automation system. 
+            Control lighting, climate, security, and more with voice commands and smart algorithms 
+            that learn your preferences and optimize your living space.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -176,31 +169,18 @@ const AiQuantumComputingSimulatorPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Atom className="w-5 h-5" />}
+              icon={<Home className="w-5 h-5" />}
             >
-              Start Simulating
+              Get Started Today
             </FuturisticButton>
             <FuturisticButton
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<Activity className="w-5 h-5" />}
+              icon={<Smartphone className="w-5 h-5" />}
             >
-              View Demo
+              Watch Demo
             </FuturisticButton>
-          </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
-                </div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -210,10 +190,10 @@ const AiQuantumComputingSimulatorPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced Quantum Simulation Features
+              Intelligent Home Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Cutting-edge technology for quantum computing research and development
+              Our AI technology makes your home smarter, safer, and more efficient
             </p>
           </div>
           
@@ -243,34 +223,34 @@ const AiQuantumComputingSimulatorPage = () => {
         </div>
       </section>
 
-      {/* Applications Section */}
+      {/* Smart Devices Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Quantum Computing Applications
+              Smart Device Integration
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Explore the vast potential of quantum computing across industries
+              Connect and control all your smart devices from one unified platform
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {applications.map((application, index) => (
+            {smartDevices.map((device, index) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                  {application.icon}
+                  {device.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-400 transition-colors">
-                  {application.title}
+                  {device.name}
                 </h3>
                 <p className="text-gray-300 text-sm mb-3 leading-relaxed">
-                  {application.description}
+                  {device.description}
                 </p>
-                <p className="text-cyan-400 font-medium text-sm">{application.price}</p>
+                <p className="text-cyan-400 font-medium text-sm">{device.price}</p>
               </div>
             ))}
           </div>
@@ -282,10 +262,10 @@ const AiQuantumComputingSimulatorPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Why Choose Our Quantum Simulator?
+              Why Choose Our Smart Home System?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Industry-leading quantum computing simulation technology
+              Experience the benefits of truly intelligent home automation
             </p>
           </div>
           
@@ -308,10 +288,10 @@ const AiQuantumComputingSimulatorPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Quantum Computing Plans
+              Smart Home Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your quantum computing needs
+              Choose the perfect automation level for your home
             </p>
           </div>
           
@@ -345,7 +325,7 @@ const AiQuantumComputingSimulatorPage = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                      <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
                       <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
@@ -369,11 +349,11 @@ const AiQuantumComputingSimulatorPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Explore Quantum Computing?
+            Ready to Transform Your Home?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join leading researchers, developers, and organizations using our quantum computing simulator. 
-            Start exploring the future of computing today.
+            Join thousands of homeowners who have already made their homes smarter, safer, and more efficient. 
+            Start your smart home journey today with a free consultation.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -381,15 +361,15 @@ const AiQuantumComputingSimulatorPage = () => {
               href="/contact"
               variant="primary"
               size="lg"
-              icon={<Atom className="w-5 h-5" />}
+              icon={<Home className="w-5 h-5" />}
             >
-              Start Free Trial
+              Schedule Consultation
             </FuturisticButton>
             <FuturisticButton
               href="/demo"
               variant="outline"
               size="lg"
-              icon={<Activity className="w-5 h-5" />}
+              icon={<Smartphone className="w-5 h-5" />}
             >
               View Demo
             </FuturisticButton>
@@ -400,4 +380,4 @@ const AiQuantumComputingSimulatorPage = () => {
   );
 };
 
-export default AiQuantumComputingSimulatorPage;
+export default AiSmartHomeAutomationPage;
