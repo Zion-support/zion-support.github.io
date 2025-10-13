@@ -60,19 +60,35 @@ const Footer: React.FC = () => {
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
     { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
+    { name: "AI Data Analytics", path: "/ai-data-analytics" },
+    { name: "AI Workflow Automation", path: "/ai-workflow-automation" },
+    { name: "AI Document Processing", path: "/ai-document-processing" },
+    { name: "AI Marketing Automation", path: "/ai-marketing-automation" },
+    { name: "AI Predictive Analytics", path: "/ai-predictive-analytics" },
+    { name: "AI Voice Assistant", path: "/ai-voice-assistant" },
+  ];
+
+  const microSaasServices = [
+    { name: "Zion AI Video Generator", path: "/zion-ai-video-generator" },
+    { name: "Zion AI Invoice Generator", path: "/zion-ai-invoice-generator" },
+    { name: "Zion AI Customer Insights", path: "/zion-ai-customer-insights" },
+    { name: "Zion AI Email Analyzer", path: "/zion-ai-email-analyzer" },
+    { name: "Zion Smart Inventory Optimizer", path: "/zion-smart-inventory-optimizer" },
+    { name: "Zion AI Customer Sentiment Tracker", path: "/zion-ai-customer-sentiment-tracker" },
+    { name: "Zion Smart Expense Categorizer", path: "/zion-smart-expense-categorizer" },
+    { name: "Zion AI Voice Assistant Pro", path: "/zion-ai-voice-assistant-pro" },
+    { name: "Zion AI Code Reviewer", path: "/zion-ai-code-reviewer" },
+    { name: "Zion AI Social Media Manager", path: "/zion-ai-social-media-manager" },
+  ];
+
+  const itServices = [
     { name: "Cloud Migration", path: "/cloud-migration" },
     { name: "Web Development", path: "/web-development" },
     { name: "DevOps", path: "/devops" },
     { name: "IT Consulting", path: "/it-consulting" },
-  ];
-
-  const microSaasServices = [
-    { name: "Zion Analytics Pro", path: "/zion-analytics-pro" },
-    { name: "Zion Security Shield", path: "/zion-security-shield-pro" },
-    { name: "Zion AI CRM Pro", path: "/zion-ai-crm-pro" },
-    { name: "Zion Cloud Vault", path: "/zion-cloud-vault-pro" },
-    { name: "Zion AI Marketing", path: "/zion-ai-marketing-automation" },
-    { name: "Zion AI Video Generator", path: "/zion-ai-video-generator" },
+    { name: "Network Security", path: "/network-security" },
+    { name: "Custom Software", path: "/custom-software" },
+    { name: "System Integration", path: "/system-integration" },
   ];
 
   const fiveGServices = [
@@ -107,7 +123,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -158,6 +174,24 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold text-white mb-4">AI Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
+            <ul className="space-y-2">
+              {itServices.map((service) => (
                 <li key={service.name}>
                   <Link
                     to={service.path}

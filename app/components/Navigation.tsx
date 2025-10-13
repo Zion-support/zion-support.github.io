@@ -6,14 +6,9 @@ import {
   Brain, 
   Shield, 
   Zap, 
-<<<<<<< HEAD
-  Globe,
-  ChevronDown,
-=======
   Globe, 
   ChevronDown,
   ChevronUp
->>>>>>> cursor/analyze-improve-and-deploy-application-9610
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -87,32 +82,38 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     {
       name: 'AI Analytics',
       path: '/ai-analytics',
-      description: 'Advanced data analytics and insights'
+      description: 'Advanced data analytics and insights',
+      icon: <Brain className="w-4 h-4" />
     },
     {
       name: 'AI Cybersecurity',
       path: '/ai-cybersecurity',
-      description: 'AI-powered security solutions'
+      description: 'AI-powered security solutions',
+      icon: <Shield className="w-4 h-4" />
     },
     {
       name: 'Cloud Migration',
       path: '/cloud-migration',
-      description: 'Seamless cloud transition'
+      description: 'Seamless cloud transition',
+      icon: <Globe className="w-4 h-4" />
     },
     {
       name: 'Web Development',
       path: '/web-development',
-      description: 'Custom web applications'
+      description: 'Custom web applications',
+      icon: <Code className="w-4 h-4" />
     },
     {
       name: 'DevOps',
       path: '/devops',
-      description: 'CI/CD and automation'
+      description: 'CI/CD and automation',
+      icon: <Zap className="w-4 h-4" />
     },
     {
       name: 'IT Consulting',
       path: '/it-consulting',
-      description: 'Strategic technology guidance'
+      description: 'Strategic technology guidance',
+      icon: <Brain className="w-4 h-4" />
     }
   ];
 
@@ -153,31 +154,45 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                 
                 {/* Services Dropdown */}
                 {item.hasDropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                    <div className="p-4">
-                      <h3 className="text-white font-semibold mb-3 text-sm">Popular Services</h3>
-                      <div className="grid grid-cols-1 gap-2">
+                  <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-xl shadow-2xl shadow-cyan-500/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                    <div className="p-6">
+                      <div className="flex items-center mb-4">
+                        <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mr-3">
+                          <Shield className="w-4 h-4 text-white" />
+                        </div>
+                        <h3 className="text-white font-semibold text-lg">Our Services</h3>
+                      </div>
+                      <div className="grid grid-cols-1 gap-3">
                         {serviceDropdownItems.map((service) => (
                           <Link
                             key={service.name}
                             to={service.path}
-                            className="block p-3 rounded-lg hover:bg-cyan-500/10 transition-colors group"
+                            className="group flex items-center p-4 rounded-lg hover:bg-gradient-to-r hover:from-cyan-500/10 hover:to-purple-500/10 transition-all duration-300 hover:scale-105"
                           >
-                            <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
-                              {service.name}
+                            <div className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mr-4 group-hover:scale-110 transition-transform">
+                              {service.icon}
                             </div>
-                            <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
-                              {service.description}
+                            <div className="flex-1">
+                              <div className="font-medium text-white group-hover:text-cyan-400 transition-colors">
+                                {service.name}
+                              </div>
+                              <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">
+                                {service.description}
+                              </div>
                             </div>
+                            <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 group-hover:translate-x-1 transition-all" />
                           </Link>
                         ))}
                       </div>
-                      <div className="mt-3 pt-3 border-t border-cyan-500/20">
+                      <div className="mt-4 pt-4 border-t border-cyan-500/20">
                         <Link
                           to="/services"
-                          className="block text-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
+                          className="group flex items-center justify-center w-full py-3 px-4 bg-gradient-to-r from-cyan-500/10 to-purple-500/10 rounded-lg hover:from-cyan-500/20 hover:to-purple-500/20 transition-all duration-300"
                         >
-                          View All Services →
+                          <span className="text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors">
+                            View All Services
+                          </span>
+                          <ArrowRight className="w-4 h-4 ml-2 text-cyan-400 group-hover:translate-x-1 transition-transform" />
                         </Link>
                       </div>
                     </div>
