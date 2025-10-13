@@ -1,4 +1,3 @@
-import React, { createContext, useContext, useEffect } from 'react';
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
@@ -16,34 +15,28 @@ export const useAnalytics = () => {
 };
 
 interface AnalyticsProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
 
-const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
+    // Initialize analytics
+    console.log('Analytics initialized');
+  }, []);
+
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
-      // Event tracking would go here
-      console.log('Event tracked:', eventName, properties);
-    }
+    console.log('Analytics Event:', eventName, properties);
+    // Add your analytics tracking logic here
   };
 
   const trackPageView = (pageName: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined') {
-      // Page view tracking would go here
-      console.log('Page view tracked:', pageName, properties);
-    }
+    console.log('Page View:', pageName, properties);
+    // Add your page view tracking logic here
   };
-
-  useEffect(() => {
-    // Initialize analytics on mount
-    if (typeof window !== 'undefined') {
-      console.log('Analytics provider initialized');
-    }
-  }, []);
 
   const value = {
     trackEvent,
-    trackPageView
+    trackPageView,
   };
 
   return (

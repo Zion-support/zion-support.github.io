@@ -1,11 +1,15 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
+import { ArrowRight } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function AiTimeTrackerZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AiTimeTracker - Zion Tech Group</title>
       </Helmet>
@@ -24,6 +28,6 @@ export default function AiTimeTrackerZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

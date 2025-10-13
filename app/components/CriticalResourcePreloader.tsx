@@ -1,5 +1,9 @@
+import { Link } from 'react-router-dom';
 'use client'
-import { useEffect } from 'react'
+<<<<<<< HEAD
+=======
+import { useEffect } from 'react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 const CriticalResourcePreloader = () => {
   useEffect(() => {

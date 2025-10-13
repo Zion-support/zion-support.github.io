@@ -1,8 +1,15 @@
 import React from "react";
-import { ArrowRight, Star, Shield, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Clock, Settings, Zap, BarChart3, Award, Target, HardDrive, Minimize, Star as StarIcon } from 'lucide-react';
+<<<<<<< HEAD
+import { ArrowRight, Star, Shield, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Settings, Zap, BarChart3, Target, HardDrive, Minimize } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import SEOOptimizer from "../components/SEOOptimizer";
+import { Cloud, Shield, Network, Database, Code, Headphones, Smartphone, Monitor, Target, HardDrive, Settings, ArrowRight, Star, ArrowRight, ArrowRight } from 'lucide-react';
 
 export default function ITServices() {
   const itServices = [
@@ -356,55 +363,6 @@ export default function ITServices() {
     }
   ];
 
-  const categories = [
-    { name: "All", count: itServices.length, active: true },
-    { name: "Infrastructure", count: itServices.filter(s => s.category === "Infrastructure").length, active: false },
-    { name: "Security", count: itServices.filter(s => s.category === "Security").length, active: false },
-    { name: "Networking", count: itServices.filter(s => s.category === "Networking").length, active: false },
-    { name: "Database", count: itServices.filter(s => s.category === "Database").length, active: false },
-    { name: "DevOps", count: itServices.filter(s => s.category === "DevOps").length, active: false },
-    { name: "Support", count: itServices.filter(s => s.category === "Support").length, active: false },
-    { name: "Development", count: itServices.filter(s => s.category === "Development").length, active: false },
-    { name: "Analytics", count: itServices.filter(s => s.category === "Analytics").length, active: false },
-    { name: "Consulting", count: itServices.filter(s => s.category === "Consulting").length, active: false },
-    { name: "Backup", count: itServices.filter(s => s.category === "Backup").length, active: false },
-    { name: "Managed Services", count: itServices.filter(s => s.category === "Managed Services").length, active: false }
-  ];
-
-  const stats = [
-    { number: "500+", label: "Projects Completed", icon: <Award className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> },
-    { number: "15+", label: "Years Experience", icon: <Clock className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "David Thompson",
-      company: "Global Manufacturing Corp",
-      role: "CTO",
-      content: "Zion Tech Group transformed our entire IT infrastructure. Their cloud migration services reduced our costs by 45% while improving performance significantly.",
-      rating: 5,
-      avatar: "DT"
-    },
-    {
-      name: "Lisa Martinez",
-      company: "Financial Services Inc",
-      role: "IT Director",
-      content: "The cybersecurity suite has been a game-changer. We've had zero security incidents since implementation, and our compliance audit was flawless.",
-      rating: 5,
-      avatar: "LM"
-    },
-    {
-      name: "Robert Kim",
-      company: "E-commerce Solutions",
-      role: "CEO",
-      content: "Their DevOps automation services helped us deploy 10x faster with zero downtime. The team is incredibly knowledgeable and responsive.",
-      rating: 5,
-      avatar: "RK"
-    }
-  ];
-
   const processSteps = [
     {
       step: "01",
@@ -433,7 +391,7 @@ export default function ITServices() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>IT Services - Zion Tech Group | Professional IT Solutions</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, software development, and system integration. Expert solutions for modern businesses." />
@@ -441,9 +399,8 @@ export default function ITServices() {
         <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Helmet>
       
-      <SEOOptimizer />
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer></SEOOptimizer>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 overflow-hidden">
@@ -584,6 +541,6 @@ export default function ITServices() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

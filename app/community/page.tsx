@@ -1,9 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe, Star } from 'lucide-react';
+import { ArrowRight, Users, MessageCircle, Calendar, Award, Globe } from 'lucide-react';
 
 export default function Community() {
+  const stats = [
+    { number: "10K+", label: "Active Members", icon: <Users className="w-8 h-8" /> },
+    { number: "500+", label: "Events Hosted", icon: <Calendar className="w-8 h-8" /> },
+    { number: "50+", label: "Countries", icon: <Globe className="w-8 h-8" /> },
+    { number: "24/7", label: "Support", icon: <MessageCircle className="w-8 h-8" /> }
+  ];
+
   const events = [
     {
       title: "AI Innovation Summit 2024",
@@ -58,15 +65,8 @@ export default function Community() {
     }
   ];
 
-  const stats = [
-    { number: "5,000+", label: "Community Members", icon: <Users className="w-6 h-6" /> },
-    { number: "50+", label: "Events Hosted", icon: <Calendar className="w-6 h-6" /> },
-    { number: "100+", label: "Open Source Projects", icon: <Globe className="w-6 h-6" /> },
-    { number: "95%", label: "Member Satisfaction", icon: <Star className="w-6 h-6" /> }
-  ];
-
   return (
-    <>
+    <div>
       <Helmet>
         <title>Community - Zion Tech Group | Tech Community & Events</title>
         <meta
@@ -208,7 +208,7 @@ export default function Community() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }
 

@@ -1,10 +1,14 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+<<<<<<< HEAD
+import { ArrowRight } from 'lucide-react';
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function Zionaidevopsautomationpro() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Ai Devops Automation Pro - Zion Tech Group</title>
         <meta
@@ -29,6 +33,6 @@ export default function Zionaidevopsautomationpro() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

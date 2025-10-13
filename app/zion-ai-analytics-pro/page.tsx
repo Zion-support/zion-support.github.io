@@ -1,9 +1,12 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { BarChart3, ArrowRight, Sparkles, CheckCircle, Star, Users, Brain, Target, Mail, Phone, MapPin, Play, Settings, Database, Cloud, Watch, FileText } from 'lucide-react';
 
 const ZionAIAnalyticsProPage = () => {
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const benefits: string[] = [];
+
   const features = [
     {
       title: 'Real-time Data Visualization',
@@ -94,36 +97,6 @@ const ZionAIAnalyticsProPage = () => {
         'SLA guarantee'
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechStart Inc.',
-      role: 'CEO',
-      content: 'Zion AI Analytics Pro transformed our data insights. We increased our conversion rate by 40% in just 3 months.',
-      rating: 5,
-      avatar: 'SJ',
-      results: '40% increase in conversion rate'
-    },
-    {
-      name: 'Michael Chen',
-      company: 'E-commerce Solutions',
-      role: 'CTO',
-      content: 'The predictive analytics feature helped us optimize our inventory and reduce costs by 25%.',
-      rating: 5,
-      avatar: 'MC',
-      results: '25% reduction in inventory costs'
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'Digital Marketing Agency',
-      role: 'Operations Director',
-      content: 'The automated reporting saves us 15 hours per week. The AI insights are incredibly accurate.',
-      rating: 5,
-      avatar: 'ER',
-      results: '15 hours saved per week'
     }
   ];
 
@@ -312,7 +285,7 @@ const ZionAIAnalyticsProPage = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>
@@ -348,7 +321,7 @@ const ZionAIAnalyticsProPage = () => {
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.avatar}
+                    {`/avatars/avatar-${index + 1}.jpg`}
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>

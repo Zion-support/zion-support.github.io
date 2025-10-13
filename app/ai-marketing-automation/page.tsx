@@ -1,8 +1,47 @@
-import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Mail as Email, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+const benefits = [
+    "Advanced AI algorithms for accurate predictions",
+    "Real-time risk assessment and monitoring",
+    "Automated report generation and insights",
+    "Seamless integration with existing systems",
+    "24/7 monitoring and alert system",
+    "Scalable cloud-based infrastructure"
+  ];
+const features = [
+    {
+      title: "Predictive Analytics",
+      description: "Advanced machine learning models for accurate financial forecasting",
+      icon: "Brain"
+    },
+    {
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis and mitigation strategies",
+      icon: "Shield"
+    },
+    {
+      title: "Real-time Monitoring",
+      description: "Continuous monitoring of financial metrics and KPIs",
+      icon: "Activity"
+    },
+    {
+      title: "Automated Reporting",
+      description: "Generate detailed reports automatically",
+      icon: "FileText"
+    }
+  ];
+export default function Page() {
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2"
+  ];
+=======
+import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Mail as Email, Smartphone, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function AIMarketingAutomation() {
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
   const features = [
     {
       title: "Email Marketing Automation",
@@ -96,7 +135,7 @@ export default function AIMarketingAutomation() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Marketing Automation - Zion Tech Group | Advanced Marketing Solutions</title>
         <meta
@@ -320,6 +359,6 @@ export default function AIMarketingAutomation() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

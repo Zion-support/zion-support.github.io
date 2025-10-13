@@ -1,5 +1,3 @@
-// Performanceutils utility functions
-
 export const Performanceutils = {
   init: () => {
     },

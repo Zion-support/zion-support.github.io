@@ -1,180 +1,121 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FileText, Brain, Shield, Zap, CheckCircle, Star, Users, BarChart3, DollarSign, Target, Sparkles, Search, FileCheck, AlertTriangle, TrendingUp, Globe, Monitor } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
+import { Helmet } from 'react-helmet-async';
+import { 
+  FileText, 
+  Brain, 
+  Shield, 
+  Zap, 
+  ArrowRight, 
+  CheckCircle, 
+  Star, 
+  Users, 
+  Award, 
+  Clock, 
+  DollarSign, 
+  Globe, 
+  Smartphone,
+  Monitor
+} from 'lucide-react';
 
-const ZionAIDocumentAnalyzerPage = () => {
-  const features = [
-    {
-      title: "AI-Powered Document Processing",
-      description: "Advanced OCR and NLP technology to extract, analyze, and understand content from any document format",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Multi-Format Support",
-      description: "Process PDFs, Word docs, images, scanned documents, and more with 99.9% accuracy",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Intelligent Data Extraction",
-      description: "Automatically extract key information, dates, names, amounts, and structured data",
-      icon: <Search className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Document Classification",
-      description: "Automatically categorize and tag documents by type, importance, and content",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Compliance Monitoring",
-      description: "Ensure documents meet regulatory requirements and flag potential compliance issues",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Real-time Analytics",
-      description: "Get insights and analytics on document processing patterns and trends",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
+const features = [
+  {
+    title: "AI-Powered Document Processing",
+    description: "Advanced OCR and NLP technology to extract, analyze, and understand content from any document format",
+    icon: <Brain className="w-8 h-8" />,
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    title: "Intelligent Data Extraction",
+    description: "Automatically extract structured data from unstructured documents with 99% accuracy",
+    icon: <FileText className="w-8 h-8" />,
+    color: "from-green-500 to-emerald-500"
+  },
+  {
+    title: "Advanced Security",
+    description: "Enterprise-grade security with end-to-end encryption and compliance with industry standards",
+    icon: <Shield className="w-8 h-8" />,
+    color: "from-red-500 to-orange-500"
+  },
+  {
+    title: "Real-time Processing",
+    description: "Process documents in real-time with lightning-fast AI algorithms and cloud infrastructure",
+    icon: <Zap className="w-8 h-8" />,
+    color: "from-purple-500 to-pink-500"
+  }
+];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "per month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 1,000 documents/month",
-        "Basic OCR and text extraction",
-        "5 user accounts",
-        "Email support",
-        "Standard templates",
-        "Basic analytics"
-      ],
-      popular: false,
-      color: "from-gray-500 to-gray-600"
-    },
-    {
-      name: "Professional",
-      price: "$99",
-      period: "per month",
-      description: "Most popular for growing teams",
-      features: [
-        "Up to 10,000 documents/month",
-        "Advanced AI analysis",
-        "25 user accounts",
-        "Priority support",
-        "Custom templates",
-        "Advanced analytics",
-        "API access",
-        "Integration tools"
-      ],
-      popular: true,
-      color: "from-cyan-500 to-purple-600"
-    },
-    {
-      name: "Enterprise",
-      price: "$299",
-      period: "per month",
-      description: "For large organizations",
-      features: [
-        "Unlimited documents",
-        "Full AI suite",
-        "Unlimited users",
-        "24/7 phone support",
-        "Custom development",
-        "Advanced security",
-        "White-label options",
-        "Dedicated account manager"
-      ],
-      popular: false,
-      color: "from-purple-500 to-pink-500"
-    }
-  ];
+const pricingPlans = [
+  {
+    name: "Starter",
+    price: "$29",
+    period: "month",
+    features: [
+      "Up to 1,000 documents/month",
+      "Basic AI analysis",
+      "Email support",
+      "Standard templates"
+    ],
+    popular: false
+  },
+  {
+    name: "Professional",
+    price: "$79",
+    period: "month",
+    features: [
+      "Up to 10,000 documents/month",
+      "Advanced AI analysis",
+      "Priority support",
+      "Custom templates",
+      "API access"
+    ],
+    popular: true
+  },
+  {
+    name: "Enterprise",
+    price: "$199",
+    period: "month",
+    features: [
+      "Unlimited documents",
+      "Full AI capabilities",
+      "24/7 support",
+      "White-label options",
+      "Custom integrations"
+    ],
+    popular: false
+  }
+];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Legal Firm Inc.",
-      role: "Managing Partner",
-      content: "Zion AI Document Analyzer has revolutionized our document processing. We've reduced manual review time by 80% and improved accuracy significantly.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Financial Services Co.",
-      role: "Operations Director",
-      content: "The compliance monitoring feature has been a game-changer. We catch potential issues before they become problems, saving us thousands in fines.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Healthcare Group",
-      role: "IT Director",
-      content: "Processing medical records has never been easier. The AI understands complex medical terminology and extracts exactly what we need.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
+const useCases = [
+  {
+    industry: "Legal",
+    description: "Contract analysis, legal document review, and compliance checking",
+    icon: <FileText className="w-6 h-6" />
+  },
+  {
+    industry: "Finance",
+    description: "Invoice processing, financial report analysis, and audit documentation",
+    icon: <DollarSign className="w-6 h-6" />
+  },
+  {
+    industry: "Healthcare",
+    description: "Medical record analysis, insurance claim processing, and patient documentation",
+    icon: <Users className="w-6 h-6" />
+  },
+  {
+    industry: "Education",
+    description: "Research paper analysis, student document processing, and academic assessment",
+    icon: <Award className="w-6 h-6" />
+  }
+];
 
-  const useCases = [
-    {
-      title: "Legal Document Review",
-      description: "Automatically analyze contracts, agreements, and legal documents for key terms and potential risks",
-      icon: <FileCheck className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Financial Document Processing",
-      description: "Extract data from invoices, receipts, and financial statements for accounting and reporting",
-      icon: <DollarSign className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Medical Record Analysis",
-      description: "Process patient records, lab reports, and medical documents with healthcare-specific AI models",
-      icon: <Shield className="w-6 h-6" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Insurance Claims Processing",
-      description: "Automatically analyze insurance claims, damage reports, and supporting documentation",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Research Document Analysis",
-      description: "Process academic papers, research reports, and scientific documents for data extraction",
-      icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Compliance Auditing",
-      description: "Ensure documents meet regulatory requirements and identify compliance gaps automatically",
-      icon: <CheckCircle className="w-6 h-6" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
+export default function ZionAIDocumentAnalyzer() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="Zion AI Document Analyzer - Intelligent Document Processing & Analysis | Zion Tech Group"
-        description="Transform document processing with AI-powered analysis, OCR, data extraction, and compliance monitoring. Process any document format with 99.9% accuracy. Starting at $29/month."
-        keywords="AI document analyzer, document processing, OCR, data extraction, document analysis, compliance monitoring, intelligent document processing, automated document review"
-        canonical="https://ziontechgroup.com/zion-ai-document-analyzer"
-      />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <Helmet>
+        <title>Zion AI Document Analyzer - Zion Tech Group</title>
+        <meta name="description" content="Advanced AI-powered document analysis and processing platform with OCR, NLP, and intelligent data extraction capabilities." />
+        <meta name="keywords" content="AI document analysis, OCR, NLP, document processing, data extraction, Zion Tech Group" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-document-analyzer" />
+      </Helmet>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -183,10 +124,10 @@ const ZionAIDocumentAnalyzerPage = () => {
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
-        <ResponsiveContainer className="text-center relative z-10">
+        <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Document Intelligence</span>
+            <Brain className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI Document Analysis</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
@@ -196,78 +137,39 @@ const ZionAIDocumentAnalyzerPage = () => {
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your document processing with AI-powered analysis, intelligent data extraction, 
-            and automated compliance monitoring. Process any document format with 99.9% accuracy.
+            Transform any document into actionable insights with our advanced AI-powered document analysis platform. 
+            Extract, analyze, and understand content with unprecedented accuracy and speed.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
-            >
-              Start Free Trial
-            </FuturisticButton>
-            <FuturisticButton
-              href="#demo"
-              variant="outline"
-              size="lg"
-              icon={<Monitor className="w-5 h-5" />}
-            >
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105">
               Watch Demo
-            </FuturisticButton>
+              <Star className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+            </button>
           </div>
-          
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <FileText className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-gray-300 text-xs md:text-sm">Accuracy Rate</div>
-            </div>
-            <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">80%</div>
-              <div className="text-gray-300 text-xs md:text-sm">Time Saved</div>
-            </div>
-            <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Globe className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-300 text-xs md:text-sm">File Formats</div>
-            </div>
-            <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Users className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">10,000+</div>
-              <div className="text-gray-300 text-xs md:text-sm">Happy Users</div>
-            </div>
-          </div>
-        </ResponsiveContainer>
+        </div>
       </section>
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful AI Document Processing
+              Powerful Document Analysis Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our advanced AI technology can understand, analyze, and extract information from any document type 
-              with unprecedented accuracy and speed.
+              Our AI document analyzer combines cutting-edge OCR, NLP, and machine learning technologies 
+              to deliver unprecedented document processing capabilities.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <FuturisticCard
+              <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
@@ -279,182 +181,73 @@ const ZionAIDocumentAnalyzerPage = () => {
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
+                <p className="text-gray-300 text-center leading-relaxed text-sm md:text-base">
                   {feature.description}
                 </p>
-              </FuturisticCard>
+              </div>
             ))}
           </div>
-        </ResponsiveContainer>
+        </div>
       </section>
 
       {/* Use Cases Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Perfect for Every Industry
+              Industry Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From legal firms to healthcare organizations, our AI document analyzer adapts to your specific needs.
+              See how our AI document analyzer transforms document processing across different industries
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {useCases.map((useCase, index) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
-                <div
-                  className={`w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-                >
-                  {useCase.icon}
+                <div className="flex items-center mb-4">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                    {useCase.icon}
+                  </div>
+                  <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                    {useCase.industry}
+                  </h3>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                  {useCase.title}
-                </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {useCase.description}
                 </p>
               </div>
             ))}
           </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your document processing needs. All plans include our core AI features.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
-                  plan.popular 
-                    ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20' 
-                    : 'border-white/20'
-                } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center">
-                    <span className="text-4xl font-bold text-white">{plan.price}</span>
-                    <span className="text-gray-300 ml-2">{plan.period}</span>
-                  </div>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <FuturisticButton
-                  href="/contact"
-                  variant={plan.popular ? "primary" : "outline"}
-                  size="lg"
-                  className="w-full"
-                >
-                  Get Started
-                </FuturisticButton>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Industry Leaders
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our clients say about Zion AI Document Analyzer
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
-                <div className="flex items-center">
-                  <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    {testimonial.avatar}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
+        </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Document Processing?
-            </h2>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of businesses already using Zion AI Document Analyzer to streamline their document workflows. 
-              Start your free trial today and experience the power of AI-driven document processing.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<Sparkles className="w-5 h-5" />}
-              >
-                Start Free Trial
-              </FuturisticButton>
-              <FuturisticButton
-                href="/demo"
-                variant="outline"
-                size="lg"
-                icon={<Monitor className="w-5 h-5" />}
-              >
-                Schedule Demo
-              </FuturisticButton>
-            </div>
-            <p className="text-gray-400 text-sm mt-6">
-              No credit card required • 14-day free trial • Cancel anytime
-            </p>
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            Ready to Transform Your Document Processing?
+          </h2>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Join thousands of businesses using our AI document analyzer to streamline their document workflows. 
+            Start your document transformation journey today.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105">
+              Start Analysis Today
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105">
+              Schedule Demo
+              <Star className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+            </button>
           </div>
-        </ResponsiveContainer>
+        </div>
       </section>
     </div>
   );
-};
-
-export default ZionAIDocumentAnalyzerPage;
+}

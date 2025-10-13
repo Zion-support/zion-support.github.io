@@ -1,8 +1,5 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft, Search, AlertTriangle } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-
 const NotFoundPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">

@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, FileText, Download, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mail, Smartphone, Globe, Shield, Database, BarChart3, Target, Headphones, Layout, CreditCard, Calculator, Play } from 'lucide-react';
+import { ArrowRight, FileText, Download, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mail, Smartphone, Globe, Database, BarChart3, Target, Headphones, Layout, CreditCard, Calculator, Play } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIInvoiceGeneratorPage = () => {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
+<<<<<<< HEAD
+  // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+<<<<<<< HEAD
+  // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+>>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
   const features = [
     {
@@ -80,6 +85,7 @@ const ZionAIInvoiceGeneratorPage = () => {
       included: true
     }
   ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
   const pricingPlans = [
     {
@@ -165,42 +171,8 @@ const ZionAIInvoiceGeneratorPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'David Martinez',
-      company: 'Freelance Consultant',
-      role: 'Independent Contractor',
-      content: 'Zion AI Invoice Generator has saved me hours every week. The automatic data extraction and categorization is incredibly accurate.',
-      rating: 5,
-      avatar: 'DM'
-    },
-    {
-      name: 'Lisa Thompson',
-      company: 'Digital Agency',
-      role: 'Operations Manager',
-      content: 'The accounting integration is seamless. We can now process invoices 5x faster and with zero errors.',
-      rating: 5,
-      avatar: 'LT'
-    },
-    {
-      name: 'James Wilson',
-      company: 'E-commerce Store',
-      role: 'Finance Director',
-      content: 'Managing high-volume invoicing has never been easier. The AI automatically handles categorization and tax calculations.',
-      rating: 5,
-      avatar: 'JW'
-    }
-  ];
-
-  const stats = [
-    { number: '50,000+', label: 'Invoices Generated', icon: <FileText className="w-6 h-6" /> },
-    { number: '99.9%', label: 'Accuracy Rate', icon: <Shield className="w-6 h-6" /> },
-    { number: '30+', label: 'Accounting Integrations', icon: <Database className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Headphones className="w-6 h-6" /> }
-  ];
-
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Invoice Generator - Automated Invoice Creation with AI | Zion Tech Group</title>
         <meta
@@ -398,7 +370,7 @@ const ZionAIInvoiceGeneratorPage = () => {
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <span>{feature.title}</span>
                       </div>
                     ))}
                   </div>
@@ -445,7 +417,7 @@ const ZionAIInvoiceGeneratorPage = () => {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -514,7 +486,7 @@ const ZionAIInvoiceGeneratorPage = () => {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 };
 

@@ -1,5 +1,3 @@
-// Analyticstracker utility functions
-
 export const Analyticstracker = {
   init: () => {
     },

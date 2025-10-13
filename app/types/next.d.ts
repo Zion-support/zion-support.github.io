@@ -1,5 +1,3 @@
-// Next.js type definitions
-
 declare module "next" {
   export interface NextPageProps {
     params: { [key: string]: string };
@@ -35,4 +33,6 @@ declare module "*.gif" {
 declare module "*.webp" {
   const content: string;
   export default content;
+
+</SVGElement>
 }

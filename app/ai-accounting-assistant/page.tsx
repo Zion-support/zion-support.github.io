@@ -1,10 +1,14 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+<<<<<<< HEAD
+import { ArrowRight } from 'lucide-react';
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function AIAccountingAssistantZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Accounting Assistant - Zion Tech Group</title>
       </Helmet>
@@ -25,6 +29,6 @@ export default function AIAccountingAssistantZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

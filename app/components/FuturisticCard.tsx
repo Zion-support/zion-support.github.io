@@ -1,9 +1,7 @@
-import React from 'react';
-
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
-  variant?: 'default' | 'glow' | 'border';
+  variant?: 'default' | 'glass' | 'neon' | 'hologram';
 }
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
@@ -11,12 +9,13 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   className = '', 
   variant = 'default' 
 }) => {
-  const baseClasses = 'bg-slate-800/50 backdrop-blur-md rounded-2xl p-6 transition-all duration-300';
+  const baseClasses = "rounded-xl p-6 transition-all duration-300";
   
   const variantClasses = {
-    default: 'border border-cyan-500/20 hover:border-cyan-500/40',
-    glow: 'border border-cyan-500/20 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/20',
-    border: 'border-2 border-cyan-500/30 hover:border-cyan-500/60'
+    default: "bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20",
+    glass: "bg-white/5 backdrop-blur-md border border-cyan-500/30 hover:bg-white/10",
+    neon: "bg-slate-800/50 border border-cyan-400/50 hover:border-cyan-400 shadow-lg shadow-cyan-500/10",
+    hologram: "bg-gradient-to-br from-cyan-500/10 to-purple-500/10 border border-cyan-400/30 hover:from-cyan-500/20 hover:to-purple-500/20"
   };
 
   return (

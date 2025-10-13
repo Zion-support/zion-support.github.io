@@ -13,7 +13,6 @@ function fixMergeConflicts(filePath) {
     fs.writeFileSync(filePath, content, 'utf8');
     return true;
   } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
     return false;
   }
 }
@@ -43,4 +42,3 @@ function fixAllMergeConflicts(dir) {
 const appDir = './app';
 const fixedCount = fixAllMergeConflicts(appDir);
 
-console.log(`Fixed merge conflicts in ${fixedCount} files`);

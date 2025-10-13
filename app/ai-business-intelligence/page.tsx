@@ -1,12 +1,16 @@
-import { ArrowRight } from "lucide-react";
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
+import { ArrowRight } from 'lucide-react';
 
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
 
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function AIBusinessIntelligenceZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Business Intelligence - Zion Tech Group</title>
       </Helmet>
@@ -27,6 +31,6 @@ export default function AIBusinessIntelligenceZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

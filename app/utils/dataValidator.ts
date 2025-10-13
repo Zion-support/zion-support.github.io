@@ -1,5 +1,3 @@
-// Datavalidator utility functions
-
 export const Datavalidator = {
   init: () => {
     },

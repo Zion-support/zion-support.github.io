@@ -1,3 +1,5 @@
+const CACHE_NAME = 'zion-tech-group-v2';
+const urlsToCache = [
   '/',
   '/about',
   '/contact',
@@ -6,6 +8,8 @@
   '/micro-saas',
   '/5g-solutions',
   '/manifest.json',
+  '/favicon.svg',
+  '/robots.txt'
 ];
 
 // Install event - cache static assets

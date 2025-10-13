@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Users, Brain, Clock, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Calendar, Heart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
@@ -94,40 +93,6 @@ const ZionHRAssistantPro = () => {
       ],
       popular: false
     }
-  ];
-
-  const testimonials = [
-    {
-      name: "Jennifer Martinez",
-      company: "TechStart Solutions",
-      role: "HR Director",
-      content: "Zion HR Assistant Pro reduced our time-to-hire by 65% and improved candidate quality significantly. The AI screening is incredibly accurate.",
-      rating: 5,
-      savings: "65% faster hiring"
-    },
-    {
-      name: "David Thompson",
-      company: "Global Enterprises",
-      role: "VP of People",
-      content: "The performance analytics have given us insights we never had before. We can now make data-driven decisions about our workforce.",
-      rating: 5,
-      savings: "40% better retention"
-    },
-    {
-      name: "Lisa Wang",
-      company: "Innovation Labs",
-      role: "Head of Talent",
-      content: "The automated onboarding process is seamless. New employees are productive from day one, and our HR team can focus on strategic initiatives.",
-      rating: 5,
-      savings: "50% faster onboarding"
-    }
-  ];
-
-  const stats = [
-    { number: "65%", label: "Faster Hiring", icon: <Clock className="w-6 h-6" /> },
-    { number: "95%", label: "Screening Accuracy", icon: <Brain className="w-6 h-6" /> },
-    { number: "50%", label: "Faster Onboarding", icon: <Users className="w-6 h-6" /> },
-    { number: "40%", label: "Better Retention", icon: <TrendingUp className="w-6 h-6" /> }
   ];
 
   const hrProcesses = [
@@ -334,7 +299,7 @@ const ZionHRAssistantPro = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>

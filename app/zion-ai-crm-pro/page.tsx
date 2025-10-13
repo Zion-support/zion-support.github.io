@@ -1,9 +1,12 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Users, ArrowRight, Sparkles, CheckCircle, Star, Target, TrendingUp, Zap, BarChart3, Mail, Phone, MapPin, Play, Watch, Video } from 'lucide-react';
 
 const ZionAICRMProPage = () => {
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const benefits: string[] = [];
+
   const features = [
     {
       title: 'AI Lead Scoring',
@@ -94,36 +97,6 @@ const ZionAICRMProPage = () => {
         'SLA guarantee'
       ],
       popular: false
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: 'Michael Chen',
-      company: 'E-commerce Solutions',
-      role: 'CTO',
-      content: 'The AI CRM system is incredible. Our sales team productivity increased by 60% with automated lead scoring.',
-      rating: 5,
-      avatar: 'MC',
-      results: '60% increase in sales productivity'
-    },
-    {
-      name: 'Sarah Johnson',
-      company: 'TechStart Inc.',
-      role: 'Sales Director',
-      content: 'The predictive analytics helped us identify high-value prospects and increased our conversion rate by 45%.',
-      rating: 5,
-      avatar: 'SJ',
-      results: '45% increase in conversion rate'
-    },
-    {
-      name: 'David Rodriguez',
-      company: 'Marketing Agency',
-      role: 'CEO',
-      content: 'Automated follow-ups saved us 20 hours per week. The AI knows exactly when to reach out to prospects.',
-      rating: 5,
-      avatar: 'DR',
-      results: '20 hours saved per week'
     }
   ];
 
@@ -312,7 +285,7 @@ const ZionAICRMProPage = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>
@@ -348,7 +321,7 @@ const ZionAICRMProPage = () => {
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
-                    {testimonial.avatar}
+                    {`/avatars/avatar-${index + 1}.jpg`}
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>

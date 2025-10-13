@@ -116,7 +116,5 @@ const config = pageConfigs[page];
   const content = pageTemplate(componentName, config.title, config.description, config.keywords);
   try {
     fs.writeFileSync(pagePath, content);
-    console.log(`Fixed ${page} page`);
-  } catch (error) {
-    console.error(`Error fixing ${page}:`, error.message);
-console.log('Page fixing completed');
+    } catch (error) {
+    

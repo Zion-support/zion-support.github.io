@@ -1,5 +1,8 @@
-import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
 import { Link, useLocation } from 'react-router-dom';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles, Search, User, Settings, HelpCircle, Phone, Mail, MapPin, Star, TrendingUp, Users, Award, Clock, CheckCircle, DollarSign, Play } from 'lucide-react';
 
 const ImprovedNavigation = () => {
@@ -537,19 +540,6 @@ const ImprovedNavigation = () => {
     }
   ];
 
-  const quickLinks = [
-    { label: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
-    { label: 'Demo', href: '/demo', icon: <Play className="w-4 h-4" /> },
-    { label: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
-    { label: 'Consultation', href: '/consultation', icon: <Users className="w-4 h-4" /> }
-  ];
-
-  const contactInfo = {
-    phone: '+1 302 464 0950',
-    email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008, Middletown DE 19709'
-  };
-
   const Sidebar = () => (
     <div className={`fixed inset-0 z-50 lg:hidden ${isSidebarOpen ? 'block' : 'hidden'}`}>
       <div className="fixed inset-0 bg-black/50" onClick={() => setIsSidebarOpen(false)} />
@@ -642,7 +632,7 @@ const ImprovedNavigation = () => {
   );
 
   return (
-    <>
+    <div>
       <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -807,7 +797,7 @@ const ImprovedNavigation = () => {
 
       {/* Sidebar */}
       <Sidebar />
-    </>
+</div>
   );
 };
 

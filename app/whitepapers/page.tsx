@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Download, ArrowRight, Sparkles, Target, Brain, Globe, Settings, Shield, BookOpen } from 'lucide-react';
@@ -53,16 +52,6 @@ const WhitepapersPage = () => {
       downloads: "6,100+",
       icon: <BookOpen className="w-6 h-6" />
     }
-  ];
-
-  const categories = [
-    "All Categories",
-    "Artificial Intelligence",
-    "Cybersecurity",
-    "Cloud Technology",
-    "5G Technology",
-    "Business Strategy",
-    "Digital Transformation"
   ];
 
   return (

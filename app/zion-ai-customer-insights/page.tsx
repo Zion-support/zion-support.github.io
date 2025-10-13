@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Users, BarChart3, TrendingUp, Target, Eye, Heart, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Cloud, Settings, Headphones, DollarSign, CreditCard, TrendingDown, Play, Zap } from 'lucide-react';
+import { ArrowRight, Users, BarChart3, TrendingUp, Target, Eye, Heart, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Cloud, Settings, Headphones, DollarSign, CreditCard, TrendingDown, Play, Zap, ShoppingCart, Store } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAICustomerInsightsPage = () => {
-  const [selectedPlan, setSelectedPlan] = useState('pro');
+<<<<<<< HEAD
+  // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+<<<<<<< HEAD
+  // const [selectedPlan, setSelectedPlan] = useState('pro');
+=======
+>>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
 
   const features = [
     {
@@ -80,6 +85,7 @@ const ZionAICustomerInsightsPage = () => {
       included: true
     }
   ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
   const pricingPlans = [
     {
@@ -165,42 +171,8 @@ const ZionAICustomerInsightsPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Jennifer Adams',
-      company: 'E-commerce Platform',
-      role: 'Head of Marketing',
-      content: 'Zion AI Customer Insights has transformed our understanding of customer behavior. We\'ve increased retention by 40% and revenue by 25%.',
-      rating: 5,
-      avatar: 'JA'
-    },
-    {
-      name: 'Robert Kim',
-      company: 'SaaS Startup',
-      role: 'CEO',
-      content: 'The churn prediction feature is incredibly accurate. We can now intervene before customers leave and save thousands in revenue.',
-      rating: 5,
-      avatar: 'RK'
-    },
-    {
-      name: 'Maria Garcia',
-      company: 'Retail Chain',
-      role: 'Customer Experience Director',
-      content: 'The personalized recommendations have increased our average order value by 35%. Our customers love the relevant suggestions.',
-      rating: 5,
-      avatar: 'MG'
-    }
-  ];
-
-  const stats = [
-    { number: '40%', label: 'Average Retention Increase', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '95%', label: 'Prediction Accuracy', icon: <Target className="w-6 h-6" /> },
-    { number: '25%', label: 'Revenue Growth', icon: <DollarSign className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Headphones className="w-6 h-6" /> }
-  ];
-
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Customer Insights Pro - Advanced Customer Analytics with AI | Zion Tech Group</title>
         <meta
@@ -398,7 +370,7 @@ const ZionAICustomerInsightsPage = () => {
                     {plan.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
+                        <span>{feature.title}</span>
                       </div>
                     ))}
                   </div>
@@ -445,7 +417,7 @@ const ZionAICustomerInsightsPage = () => {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                      {testimonial.avatar}
+                      {`/avatars/avatar-${index + 1}.jpg`}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
@@ -514,7 +486,7 @@ const ZionAICustomerInsightsPage = () => {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 };
 

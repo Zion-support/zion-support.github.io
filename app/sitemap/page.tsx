@@ -1,9 +1,12 @@
-import React from "react";
+<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 export default function Sitemap() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Sitemap - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Sitemap for Zion Tech Group website." />
@@ -14,6 +17,6 @@ export default function Sitemap() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+</div>
   );
 }

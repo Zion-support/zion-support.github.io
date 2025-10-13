@@ -1,11 +1,15 @@
-import { ArrowRight } from "lucide-react";
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
+import { ArrowRight } from 'lucide-react';
 
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 export default function DatabaseManagementZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>DatabaseManagement - Zion Tech Group</title>
       </Helmet>
@@ -26,6 +30,6 @@ export default function DatabaseManagementZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

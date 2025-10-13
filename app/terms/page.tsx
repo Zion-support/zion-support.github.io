@@ -1,9 +1,12 @@
-import React from "react";
+<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
+=======
+import { Helmet } from 'react-helmet-async';
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
 
 export default function Terms() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Terms of Service - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Terms of service for Zion Tech Group." />
@@ -14,6 +17,6 @@ export default function Terms() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+</div>
   );
 }

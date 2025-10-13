@@ -1,6 +1,50 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { Brain, Mail, Phone, MapPin, Clock, Shield, Zap, Globe, Twitter, Linkedin, Github, Users, Award } from 'lucide-react';
+import { Link } from 'react-router-dom';
+<<<<<<< HEAD
+const services = [
+    {
+      title: "Cloud Migration",
+      description: "Seamless migration to cloud infrastructure",
+      icon: "Cloud"
+    },
+    {
+      title: "Security Solutions",
+      description: "Advanced security and compliance",
+      icon: "Shield"
+    },
+    {
+      title: "Performance Optimization",
+      description: "Optimize your cloud performance",
+      icon: "Zap"
+    }
+  ];
+const socialLinks = [
+    { name: "Twitter", href: "#", icon: "Twitter" },
+    { name: "LinkedIn", href: "#", icon: "Linkedin" },
+    { name: "GitHub", href: "#", icon: "Github" }
+  ];
+const microSaasServices = [
+    { name: "AI Analytics", href: "/ai-services" },
+    { name: "Cloud Solutions", href: "/cloud-services" },
+    { name: "DevOps", href: "/devops" }
+  ];
+  Brain, 
+=======
+import {
+  Linkedin, 
+  Twitter, 
+  Github, 
+>>>>>>> cursor/fix-errors-and-merge-to-main-9087
+  Mail, 
+  Phone, 
+  MapPin,
+  ArrowRight,
+  Twitter,
+  Linkedin,
+  Github,
+  Award,
+  Users
+} from "lucide-react";
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -31,12 +75,7 @@ const Footer: React.FC = () => {
         { name: "AI Content Generation", href: "/ai-content-generation" },
         { name: "AI Customer Support", href: "/ai-customer-support" },
         { name: "AI Cybersecurity", href: "/ai-cybersecurity" },
-        { name: "AI Data Analytics", href: "/ai-data-analytics" },
-        { name: "AI Document Processing", href: "/ai-document-processing" },
-        { name: "AI Marketing Automation", href: "/ai-marketing-automation" },
-        { name: "AI Predictive Analytics", href: "/ai-predictive-analytics" },
-        { name: "AI Voice Assistant", href: "/ai-voice-assistant" },
-        { name: "AI Workflow Automation", href: "/ai-workflow-automation" }
+        { name: "AI Data Analytics", href: "/ai-data-analytics" }
       ]
     },
     {
@@ -46,9 +85,17 @@ const Footer: React.FC = () => {
         { name: "DevOps Services", href: "/devops" },
         { name: "IT Consulting", href: "/it-consulting" },
         { name: "Network Security", href: "/network-security" },
-        { name: "Custom Software", href: "/custom-software" },
-        { name: "System Integration", href: "/system-integration" },
-        { name: "Web Development", href: "/web-development" }
+        { name: "Custom Software", href: "/custom-software" }
+      ]
+    },
+    {
+      title: "Micro SAAS",
+      services: [
+        { name: "Zion Analytics Pro", href: "/zion-ai-analytics-pro" },
+        { name: "Zion AI CRM Pro", href: "/zion-ai-crm-pro" },
+        { name: "Zion AI Video Generator", href: "/zion-ai-video-generator" },
+        { name: "Zion AI Invoice Generator", href: "/zion-ai-invoice-generator" },
+        { name: "Zion AI Marketing", href: "/zion-ai-marketing-automation" }
       ]
     },
     {
@@ -57,26 +104,8 @@ const Footer: React.FC = () => {
         { name: "5G Network Infrastructure", href: "/5g-network-infrastructure" },
         { name: "5G Edge Computing", href: "/5g-edge-computing" },
         { name: "5G IoT Solutions", href: "/5g-iot-solutions" },
-        { name: "5G Smart City Solutions", href: "/5g-smart-city-solutions" },
-        { name: "5G Private Networks", href: "/5g-private-networks" },
-        { name: "5G Mobile Applications", href: "/5g-mobile-applications" },
-        { name: "5G Data Analytics", href: "/5g-data-analytics" },
-        { name: "5G Implementation", href: "/5g-implementation" }
-      ]
-    },
-    {
-      title: "Micro SAAS",
-      services: [
-        { name: "Zion Content Studio", href: "/zion-content-studio" },
-        { name: "Project Management Pro", href: "/project-management-pro" },
-        { name: "Zion AI CRM Pro", href: "/zion-ai-crm-pro" },
-        { name: "Zion Inventory Smart", href: "/zion-inventory-smart" },
-        { name: "AI Financial Analytics Pro", href: "/ai-financial-analytics-pro" },
-        { name: "Zion Performance Monitor", href: "/zion-performance-monitor" },
-        { name: "Zion AI Marketing Automation", href: "/zion-ai-marketing-automation" },
-        { name: "Zion Email Automation", href: "/zion-email-automation" },
-        { name: "Data Analytics", href: "/data-analytics" },
-        { name: "AI Workflow Automation", href: "/ai-workflow-automation" }
+        { name: "5G Smart Cities", href: "/5g-smart-city-solutions" },
+        { name: "5G Private Networks", href: "/5g-private-networks" }
       ]
     }
   ];
@@ -89,29 +118,18 @@ const Footer: React.FC = () => {
     { name: "Micro SAAS", path: "/micro-saas" },
     { name: "5G Solutions", path: "/5g-solutions" },
     { name: "Contact", path: "/contact" },
-    { name: "Blog", path: "/blog" }
-  ];
-
-  const companyLinks = [
-    { name: "About Us", href: "/about" },
-    { name: "Our Team", href: "/team" },
-    { name: "Careers", href: "/careers" },
-    { name: "Press", href: "/press" },
-    { name: "Blog", href: "/blog" }
-  ];
-
-  const supportLinks = [
-    { name: "Contact Support", href: "/support" },
-    { name: "Documentation", href: "/docs" },
-    { name: "API Reference", href: "/api-docs" },
-    { name: "Status Page", href: "/status" },
-    { name: "System Status", href: "/system-status" }
+    { name: "Blog", path: "/blog" },
+    { name: "Tutorials", path: "/tutorials" },
+    { name: "Demo", path: "/demo" },
+    { name: "Consultation", path: "/consultation" },
+    { name: "Support", path: "/support" },
   ];
 
   const legalLinks = [
     { name: "Privacy Policy", path: "/privacy" },
     { name: "Terms of Service", path: "/terms" },
-    { name: "Cookie Policy", path: "/cookies" }
+    { name: "Cookie Policy", path: "/cookies" },
+    { name: "GDPR", path: "/gdpr" },
   ];
 
   const stats = [
@@ -132,32 +150,47 @@ const Footer: React.FC = () => {
       <div className="relative z-10">
         {/* Stats Section */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="flex justify-center mb-2">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center mx-auto mb-3">
                   {stat.icon}
                 </div>
-                <div className="text-3xl font-bold text-purple-400 mb-1">{stat.number}</div>
-                <div className="text-sm text-gray-300">{stat.label}</div>
+                <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
+                <div className="text-gray-300 text-sm">{stat.label}</div>
               </div>
             ))}
           </div>
-        </div>
 
-        {/* Main Footer Content */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Main Content */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
             {/* Company Info */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
-                <Brain className="w-8 h-8 text-purple-400" />
-                <span className="text-xl font-bold">Zion Tech Group</span>
+            <div className="lg:col-span-2">
+              <div className="flex items-center space-x-2 mb-4">
+                <Brain className="w-8 h-8 text-cyan-400" />
+                <span className="text-2xl font-bold text-white">Zion Tech Group</span>
               </div>
-              <p className="text-gray-300 text-sm leading-relaxed">
-                Leading provider of AI-powered solutions, IT services, and innovative micro SAAS applications. 
-                Transforming businesses through cutting-edge technology.
+              <p className="text-gray-300 mb-6 max-w-md">
+                Leading provider of AI-powered enterprise solutions, quantum computing, and digital transformation services.
               </p>
+              
+              {/* Contact Info */}
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center space-x-3">
+                  <Phone className="w-5 h-5 text-cyan-400" />
+                  <span>+1 302 464 0950</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Mail className="w-5 h-5 text-cyan-400" />
+                  <span>kleber@ziontechgroup.com</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MapPin className="w-5 h-5 text-cyan-400" />
+                  <span>364 E Main St STE 1008, Middletown DE 19709</span>
+                </div>
+              </div>
+
+              {/* Social Links */}
               <div className="flex space-x-4">
                 {socialLinks.map((link) => (
                   <a
@@ -165,7 +198,7 @@ const Footer: React.FC = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+                    className="text-gray-400 hover:text-cyan-400 transition-colors duration-200"
                     aria-label={link.name}
                   >
                     {link.icon}
@@ -174,35 +207,32 @@ const Footer: React.FC = () => {
               </div>
             </div>
 
-            {/* Services */}
-            <div>
-              <h4 className="font-semibold text-purple-400 mb-4">Our Services</h4>
-              <div className="space-y-3">
-                {serviceCategories.map((category) => (
-                  <div key={category.title}>
-                    <h5 className="text-white font-medium text-sm mb-2">{category.title}</h5>
-                    <ul className="space-y-1">
-                      {category.services.slice(0, 3).map((service) => (
-                        <li key={service.name}>
-                          <Link
-                            to={service.href}
-                            className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-                          >
-                            {service.name}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+            {/* Service Categories */}
+            {serviceCategories.map((category, index) => (
+              <div key={index}>
+                <h3 className="text-cyan-400 font-semibold mb-4">{category.title}</h3>
+                <ul className="space-y-2">
+                  {category.services.map((service) => (
+                    <li key={service.name}>
+                      <Link
+                        to={service.href}
+                        className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 text-sm"
+                      >
+                        {service.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            </div>
+            ))}
+          </div>
 
-            {/* Quick Links */}
+          {/* Additional Links */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/10">
             <div>
-              <h4 className="font-semibold text-purple-400 mb-4">Quick Links</h4>
+              <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
               <ul className="space-y-2">
-                {quickLinks.map((link) => (
+                {quickLinks.slice(0, 4).map((link) => (
                   <li key={link.name}>
                     <Link
                       to={link.path}
@@ -214,74 +244,13 @@ const Footer: React.FC = () => {
                 ))}
               </ul>
             </div>
-
-            {/* Contact Info */}
             <div>
-              <h4 className="font-semibold text-purple-400 mb-4">Contact Info</h4>
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <Mail className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-gray-300 text-sm">Email</p>
-                    <a 
-                      href="mailto:info@ziontechgroup.com" 
-                      className="text-white hover:text-purple-400 transition-colors duration-200 text-sm"
-                    >
-                      info@ziontechgroup.com
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <Phone className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-gray-300 text-sm">Phone</p>
-                    <a 
-                      href="tel:+1-555-0123" 
-                      className="text-white hover:text-purple-400 transition-colors duration-200 text-sm"
-                    >
-                      +1 (555) 012-3456
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <MapPin className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="text-gray-300 text-sm">Address</p>
-                    <p className="text-white text-sm">
-                      123 Tech Street<br />
-                      Innovation District<br />
-                      San Francisco, CA 94105
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Additional Links */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12 pt-8 border-t border-white/10">
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Company</h4>
+              <h4 className="text-lg font-semibold text-white mb-4">More Links</h4>
               <ul className="space-y-2">
-                {companyLinks.map((link) => (
+                {quickLinks.slice(4).map((link) => (
                   <li key={link.name}>
                     <Link
-                      to={link.href}
-                      className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
-                    >
-                      {link.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Support</h4>
-              <ul className="space-y-2">
-                {supportLinks.map((link) => (
-                  <li key={link.name}>
-                    <Link
-                      to={link.href}
+                      to={link.path}
                       className="text-gray-300 hover:text-white transition-colors duration-200 text-sm"
                     >
                       {link.name}
@@ -311,22 +280,15 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <div className="text-gray-400 text-sm">
+            <div className="flex flex-col md:flex-row justify-between items-center">
+              <div className="text-gray-400 text-sm mb-4 md:mb-0">
                 © {currentYear} Zion Tech Group. All rights reserved.
               </div>
-              <div className="flex items-center space-x-6">
-                <div className="flex items-center space-x-2 text-sm text-gray-400">
-                  <Shield className="w-4 h-4" />
-                  <span>Secure & Trusted</span>
-                </div>
-                <div className="flex items-center space-x-2 text-sm text-gray-400">
-                  <Zap className="w-4 h-4" />
-                  <span>Powered by AI</span>
-                </div>
-                <div className="flex items-center space-x-2 text-sm text-gray-400">
-                  <Globe className="w-4 h-4" />
-                  <span>Global Reach</span>
+              <div className="flex items-center space-x-6 text-sm text-gray-400">
+                <span>Built with ❤️ for innovation</span>
+                <div className="flex items-center">
+                  <Clock className="w-4 h-4 mr-1" />
+                  <span>24/7 Support Available</span>
                 </div>
               </div>
             </div>
