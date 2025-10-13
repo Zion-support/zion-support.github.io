@@ -1,6 +1,6 @@
 
-export default function NetworkInfrastructure5GPage() {
-  return (
+export default function NetworkInfrastructure5GPage() {}
+  return ()
     <>
       <Helmet>
         <title>5G Network Infrastructure - Zion Tech Group</title>
@@ -29,6 +29,6 @@ export default function NetworkInfrastructure5GPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

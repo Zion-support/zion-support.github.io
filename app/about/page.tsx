@@ -1,35 +1,13 @@
 
-export default function AboutPage() {
+export default function AboutPage() {}
     { number: "500+", label: "Projects Completed" },
     { number: "100+", label: "Happy Clients" },
     { number: "50+", label: "AI Solutions" },
     { number: "24/7", label: "Support" }
   ];
 
-  const values = [
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "Innovation",
-      description: "We constantly push the boundaries of technology to deliver cutting-edge solutions."
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Security",
-      description: "Your data and systems are protected with enterprise-grade security measures."
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Collaboration",
-      description: "We work closely with our clients to understand their unique needs and challenges."
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Excellence",
-      description: "We strive for excellence in every project, ensuring the highest quality deliverables."
-    }
-  ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>About - Zion Tech Group | AI & IT Solutions</title>
@@ -45,7 +23,7 @@ export default function AboutPage() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>)
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
         
         {/* Hero Section */}
@@ -86,7 +64,7 @@ export default function AboutPage() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+              {stats.map((stat, index) => (}
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
                     {stat.number}
@@ -94,7 +72,7 @@ export default function AboutPage() {
                   <div className="text-gray-300 text-sm md:text-base">
                     {stat.label}
                   </div>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -173,7 +151,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {values.map((value, index) => (
+              {values.map((value, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
@@ -190,7 +168,7 @@ export default function AboutPage() {
                       {value.description}
                     </p>
                   </div>
-                </div>
+                </div>)
               ))}
             </div>
           </div>

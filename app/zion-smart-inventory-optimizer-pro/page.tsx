@@ -1,6 +1,6 @@
 
-export default function Zionsmartinventoryoptimizerpro() {
-  return (
+export default function Zionsmartinventoryoptimizerpro() {}
+  return ()
     <>
       <Helmet>
         <title>Zion Smart Inventory Optimizer Pro - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Zionsmartinventoryoptimizerpro() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

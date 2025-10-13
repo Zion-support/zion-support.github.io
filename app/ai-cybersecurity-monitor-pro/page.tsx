@@ -1,6 +1,6 @@
 
-export default function AiCybersecurityMonitorProZionTechGroup() {
-  return (
+export default function AiCybersecurityMonitorProZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiCybersecurityMonitorPro - Zion Tech Group</title>
@@ -22,6 +22,6 @@ export default function AiCybersecurityMonitorProZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

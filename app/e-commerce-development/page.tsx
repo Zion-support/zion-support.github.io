@@ -1,7 +1,7 @@
 
 
-export default function ECommerceDevelopmentZionTechGroup() {
-  return (
+export default function ECommerceDevelopmentZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ECommerceDevelopment - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ECommerceDevelopmentZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

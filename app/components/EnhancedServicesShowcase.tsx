@@ -1,5 +1,5 @@
 import React from "react";
-import {
+import {}
   Brain,
   Shield,
   Zap,
@@ -8,59 +8,9 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const EnhancedServicesShowcase: React.FC = () => {
-  const services = [
-    {
-      icon: Brain,
-      title: "AI Solutions",
-      description:
-        "Cutting-edge artificial intelligence solutions to automate and optimize your business processes.",
-      features: [
-        "Machine Learning",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Predictive Analytics",
-      ],
-    },
-    {
-      icon: Shield,
-      title: "Cybersecurity",
-      description:
-        "Comprehensive security solutions to protect your business from cyber threats and data breaches.",
-      features: [
-        "Security Audits",
-        "Threat Detection",
-        "Data Protection",
-        "Compliance Management",
-      ],
-    },
-    {
-      icon: Zap,
-      title: "Cloud Infrastructure",
-      description:
-        "Scalable and secure cloud solutions to modernize your infrastructure and reduce costs.",
-      features: [
-        "Cloud Migration",
-        "Infrastructure as Code",
-        "Auto-scaling",
-        "Disaster Recovery",
-      ],
-    },
-    {
-      icon: Globe,
-      title: "Digital Transformation",
-      description:
-        "Complete digital transformation services to modernize your business and stay competitive.",
-      features: [
-        "Strategy Development",
-        "Technology Integration",
-        "Change Management",
-        "Training & Support",
-      ],
-    },
-  ];
+const EnhancedServicesShowcase: React.FC = () => {}
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-20">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -73,8 +23,8 @@ const EnhancedServicesShowcase: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
+          {services.map((service, index) => (}
             <div
               key={index}
               className="cyber-card p-8 group hover:scale-105 transition-transform"
@@ -90,15 +40,15 @@ const EnhancedServicesShowcase: React.FC = () => {
                 <h4 className="text-sm font-semibold text-cyan-400 mb-3">
                   Key Features
                 </h4>
-                <ul className="space-y-2">
-                  {service.features.map((feature, featureIndex) => (
+                <ul className="space-y-2">)
+                  {service.features.map((feature, featureIndex) => (}
                     <li
                       key={featureIndex}
                       className="flex items-center text-sm text-gray-300"
                     >
                       <CheckCircle className="w-4 h-4 mr-2 text-green-400" />
                       {feature}
-                    </li>
+                    </li>)
                   ))}
                 </ul>
               </div>

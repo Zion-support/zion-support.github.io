@@ -1,15 +1,15 @@
 import React from "react";
 
-interface LazyWrapperProps {
+interface LazyWrapperProps {}
   children: React.ReactNode;
   className?: string;
 }
 
-export default function LazyWrapper({
+export default function LazyWrapper({)}
   children,
-  className = "",
+  className = "",)
 }: LazyWrapperProps) {
-  return (
+  return ()
     <>
       <div className={`lazy-wrapper ${className}`}>
         {children}
@@ -21,6 +21,6 @@ export default function LazyWrapper({
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
-    </>
+    </>)
   );
 }

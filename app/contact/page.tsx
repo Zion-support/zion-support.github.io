@@ -1,86 +1,46 @@
 import { useState } from "react";
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
+export default function Contact() {}
+  const [formData, setFormData] = useState({)}
     name: '',
     email: '',
     company: '',
     phone: '',
     service: '',
-    message: ''
+    message: '')
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {}
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData(prev => ({)}
       ...prev,
-      [name]: value
+      [name]: value)
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {}
     e.preventDefault();
     // Here you would typically send the form data to your backend
     setIsSubmitted(true);
     // Reset form after 3 seconds
-    setTimeout(() => {
+    setTimeout(() => {}
       setIsSubmitted(false);
-      setFormData({
+      setFormData({)}
         name: '',
         email: '',
         company: '',
         phone: '',
         service: '',
-        message: ''
+        message: '')
       });
     }, 3000);
   };
 
-  const contactInfo = [
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: "Email",
-      details: "kleber@ziontechgroup.com",
-      description: "Send us an email anytime"
-    },
-    {
-      icon: <Smartphone className="w-6 h-6" />,
-      title: "Phone",
-      details: "+1 302 464 0950",
-      description: "Call us during business hours"
-    },
-    {
-      icon: <MapPin className="w-6 h-6" />,
-      title: "Address",
-      details: "364 E Main St STE 1008",
-      description: "Middletown DE 19709"
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Business Hours",
-      details: "Mon - Fri: 9:00 AM - 6:00 PM",
-      description: "EST Time Zone"
-    }
-  ];
 
-  const services = [
-    "AI Business Intelligence",
-    "AI Customer Support",
-    "AI Content Generation",
-    "AI Cybersecurity",
-    "5G Solutions",
-    "Cloud Infrastructure",
-    "Data Analytics",
-    "Code Assistant",
-    "Marketing Automation",
-    "Document Processing",
-    "CRM Assistant",
-    "Financial Analytics"
-  ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>Contact - Zion Tech Group | AI & IT Solutions</title>
@@ -96,7 +56,7 @@ export default function Contact() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>)
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
         
         {/* Hero Section */}
@@ -122,7 +82,7 @@ export default function Contact() {
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-              {contactInfo.map((info, index) => (
+              {contactInfo.map((info, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
@@ -138,7 +98,7 @@ export default function Contact() {
                     <p className="text-cyan-400 font-medium mb-1">{info.details}</p>
                     <p className="text-gray-300 text-sm">{info.description}</p>
                   </div>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -156,14 +116,14 @@ export default function Contact() {
                   </span>
                 </h2>
                 
-                {isSubmitted ? (
+                {isSubmitted ? ()}
                   <div className="text-center py-8">
                     <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
                       <CheckCircle className="w-8 h-8 text-white" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2">Message Sent!</h3>
                     <p className="text-gray-300">We'll get back to you within 24 hours.</p>
-                  </div>
+                  </div>)
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -224,7 +184,7 @@ export default function Contact() {
                           name="phone"
                           value={formData.phone}
                           onChange={handleInputChange}
-                          className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                          className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent")
                           placeholder="+1 (555) 123-4567"
                         />
                       </div>
@@ -242,10 +202,10 @@ export default function Contact() {
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                       >
                         <option value="">Select a service</option>
-                        {services.map((service, index) => (
+                        {services.map((service, index) => (}
                           <option key={index} value={service} className="bg-slate-800">
                             {service}
-                          </option>
+                          </option>)
                         ))}
                       </select>
                     </div>

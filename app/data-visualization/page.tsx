@@ -1,7 +1,7 @@
 
 
-export default function DataVisualizationZionTechGroup() {
-  return (
+export default function DataVisualizationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>DataVisualization - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function DataVisualizationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

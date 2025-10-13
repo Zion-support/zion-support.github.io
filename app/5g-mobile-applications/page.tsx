@@ -1,6 +1,6 @@
 
-export default function MobileApplications5GPage() {
-  return (
+export default function MobileApplications5GPage() {}
+  return ()
     <>
       <Helmet>
         <title>5G Mobile Applications - Zion Tech Group</title>
@@ -29,6 +29,6 @@ export default function MobileApplications5GPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,8 +1,13 @@
+import { Link } from "react-router-dom";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticButton from "./components/FuturisticButton";
 import ResponsiveContainer from "./components/ResponsiveContainer";
+import ResponsiveGrid from "./components/ResponsiveGrid";
+import ResponsiveText from "./components/ResponsiveText";
 
 const HomePage = () => {
+  const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -45,6 +50,8 @@ const HomePage = () => {
       }
     ]
   };
+
+  const features = [
     {
       title: "AI-Powered Solutions",
       description: "Cutting-edge artificial intelligence to transform your business operations with machine learning, natural language processing, and predictive analytics",
@@ -130,12 +137,14 @@ const HomePage = () => {
     }
   ];
 
+  const stats = [
     { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
     { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
+  const testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechStart Inc.",

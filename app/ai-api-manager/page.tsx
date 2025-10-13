@@ -1,6 +1,6 @@
 
-export default function AIAPIManagerZionTechGroup() {
-  return (
+export default function AIAPIManagerZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI API Manager - Zion Tech Group</title>
@@ -20,6 +20,6 @@ export default function AIAPIManagerZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

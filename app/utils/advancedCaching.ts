@@ -1,14 +1,14 @@
 // Advancedcaching utility functions
 
-export const Advancedcaching = {
-  init: () => {
+export const Advancedcaching = {}
+  init: () => {}
     },
 
-  process: (data: any) => {
+  process: (data: any) => {}
     return data;
   },
 
-  cleanup: () => {
+  cleanup: () => {}
     },
 };
 

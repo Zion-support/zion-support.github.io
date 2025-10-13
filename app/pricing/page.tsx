@@ -1,174 +1,10 @@
 
-export default function Pricing() {
-  const aiServicesPricing = [
-    {
-      name: "AI Analytics Dashboard",
-      price: "$299",
-      period: "/month",
-      description: "Advanced business intelligence with AI insights",
-      features: [
-        "Real-time Analytics Dashboard",
-        "Predictive Analytics",
-        "Custom Reports",
-        "API Integration",
-        "Email Support",
-        "Up to 5 data sources"
-      ],
-      popular: false,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      name: "AI Customer Support",
-      price: "$199",
-      period: "/month",
-      description: "Intelligent chatbots and automation",
-      features: [
-        "Multi-language Support",
-        "Sentiment Analysis",
-        "CRM Integration",
-        "Live Chat Handoff",
-        "Priority Support",
-        "Up to 10,000 conversations"
-      ],
-      popular: true,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      name: "AI Content Generation",
-      price: "$149",
-      period: "/month",
-      description: "AI-powered content creation at scale",
-      features: [
-        "SEO Optimization",
-        "Brand Voice Training",
-        "Multi-format Output",
-        "Plagiarism Detection",
-        "Content Calendar",
-        "Up to 1,000 articles/month"
-      ],
-      popular: false,
-      color: "from-purple-500 to-pink-500"
-    }
-  ];
+export default function Pricing() {}
 
-  const microSaasPricing = [
-    {
-      name: "Zion Analytics Pro",
-      price: "$29",
-      period: "/month",
-      description: "Business intelligence platform",
-      features: [
-        "Real-time Dashboards",
-        "Predictive Analytics",
-        "Custom Reports",
-        "API Access",
-        "Email Support",
-        "Up to 5 data sources"
-      ],
-      popular: false,
-      color: "from-cyan-500 to-blue-500"
-    },
-    {
-      name: "Zion Security Shield",
-      price: "$49",
-      period: "/month",
-      description: "Advanced cybersecurity protection",
-      features: [
-        "Threat Detection",
-        "Real-time Monitoring",
-        "Vulnerability Scanning",
-        "Incident Response",
-        "Priority Support",
-        "Up to 10 users"
-      ],
-      popular: true,
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      name: "Zion Cloud Vault",
-      price: "$9",
-      period: "/month",
-      description: "Secure cloud storage solution",
-      features: [
-        "1TB Storage",
-        "End-to-end Encryption",
-        "File Synchronization",
-        "Mobile Apps",
-        "Email Support",
-        "Up to 5 devices"
-      ],
-      popular: false,
-      color: "from-blue-500 to-cyan-500"
-    }
-  ];
 
-  const enterprisePricing = [
-    {
-      name: "AI Solutions Suite",
-      price: "Custom",
-      period: "",
-      description: "Complete AI transformation package",
-      features: [
-        "All AI Services Included",
-        "Custom Development",
-        "Dedicated Support Team",
-        "White-label Solutions",
-        "24/7 Phone Support",
-        "Unlimited Usage",
-        "Custom Integrations",
-        "SLA Guarantee"
-      ],
-      popular: false,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      name: "IT Infrastructure",
-      price: "Custom",
-      period: "",
-      description: "Complete IT infrastructure management",
-      features: [
-        "Cloud Infrastructure",
-        "Cybersecurity Solutions",
-        "5G Implementation",
-        "Data Analytics",
-        "24/7 Monitoring",
-        "Disaster Recovery",
-        "Compliance Management",
-        "Custom SLA"
-      ],
-      popular: true,
-      color: "from-indigo-500 to-purple-500"
-    }
-  ];
 
-  const faqs = [
-    {
-      question: "Do you offer free trials?",
-      answer: "Yes! All our services come with a 14-day free trial. No credit card required to get started."
-    },
-    {
-      question: "Can I change my plan anytime?",
-      answer: "Absolutely! You can upgrade or downgrade your plan at any time. Changes take effect immediately."
-    },
-    {
-      question: "What payment methods do you accept?",
-      answer: "We accept all major credit cards, PayPal, and bank transfers for enterprise customers."
-    },
-    {
-      question: "Is there a setup fee?",
-      answer: "No setup fees for any of our services. You only pay the monthly subscription fee."
-    },
-    {
-      question: "Do you offer discounts for annual billing?",
-      answer: "Yes! Save 20% when you pay annually. Contact us for custom enterprise pricing."
-    },
-    {
-      question: "What happens if I exceed my plan limits?",
-      answer: "We'll notify you before you reach your limits and offer options to upgrade or purchase additional capacity."
-    }
-  ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>Pricing - Zion Tech Group | AI & IT Solutions</title>
@@ -184,7 +20,7 @@ export default function Pricing() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>)
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
         
         {/* Hero Section */}
@@ -237,21 +73,21 @@ export default function Pricing() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {aiServicesPricing.map((plan, index) => (
+              {aiServicesPricing.map((plan, index) => (}
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${}
                     plan.popular
                       ? 'border-cyan-400 bg-gradient-to-br from-cyan-500/10 to-purple-500/10'
                       : 'border-white/20 hover:border-cyan-400'
                   }`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   <div className="text-center mb-8">
                     <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${plan.color} flex items-center justify-center mx-auto mb-4`}>
@@ -265,16 +101,16 @@ export default function Pricing() {
                     </div>
                   </div>
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
@@ -302,21 +138,21 @@ export default function Pricing() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {microSaasPricing.map((plan, index) => (
+              {microSaasPricing.map((plan, index) => (}
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${}
                     plan.popular
                       ? 'border-purple-400 bg-gradient-to-br from-purple-500/10 to-cyan-500/10'
                       : 'border-white/20 hover:border-purple-400'
                   }`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-purple-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   <div className="text-center mb-8">
                     <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${plan.color} flex items-center justify-center mx-auto mb-4`}>
@@ -330,16 +166,16 @@ export default function Pricing() {
                     </div>
                   </div>
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                       plan.popular
                         ? 'bg-gradient-to-r from-purple-500 to-cyan-600 text-white hover:from-purple-600 hover:to-cyan-700'
                         : 'border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-slate-900'
@@ -367,21 +203,21 @@ export default function Pricing() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {enterprisePricing.map((plan, index) => (
+              {enterprisePricing.map((plan, index) => (}
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${}
                     plan.popular
                       ? 'border-cyan-400 bg-gradient-to-br from-cyan-500/10 to-purple-500/10'
                       : 'border-white/20 hover:border-cyan-400'
                   }`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   <div className="text-center mb-8">
                     <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${plan.color} flex items-center justify-center mx-auto mb-4`}>
@@ -395,16 +231,16 @@ export default function Pricing() {
                     </div>
                   </div>
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
@@ -430,14 +266,14 @@ export default function Pricing() {
               </p>
             </div>
             <div className="space-y-6">
-              {faqs.map((faq, index) => (
+              {faqs.map((faq, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
                   <h3 className="text-lg font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
-                </div>
+                </div>)
               ))}
             </div>
           </div>

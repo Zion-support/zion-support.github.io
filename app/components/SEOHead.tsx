@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface SEOHeadProps {
+interface SEOHeadProps {}
   title?: string;
   description?: string;
   keywords?: string;
@@ -14,7 +14,7 @@ interface SEOHeadProps {
   tags?: string[];
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
+const SEOHead: React.FC<SEOHeadProps> = ({)}
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
   description = 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
   keywords = 'AI solutions, IT services, digital transformation, business automation, technology consulting',
@@ -25,7 +25,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   publishedTime,
   modifiedTime,
   section,
-  tags = []
+  tags = [])
 }) => {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -33,18 +33,18 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     url: 'https://ziontechgroup.com',
     logo: 'https://ziontechgroup.com/logo.png',
     description: 'Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.',
-    address: {
+    address: {}
       '@type': 'PostalAddress',
       addressCountry: 'US'
     },
-    sameAs: [
+    sameAs: []
       'https://twitter.com/ziontechgroup',
       'https://linkedin.com/company/ziontechgroup',
-      'https://github.com/ziontechgroup'
+      'https://github.com/ziontechgroup']
     ]
   };
 
-  return (
+  return ()
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -78,9 +78,9 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {/* Article specific meta tags */}
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
-      {section && <meta property="article:section" content={section} />}
-      {tags.length > 0 && tags.map((tag, index) => (
-        <meta key={index} property="article:tag" content={tag} />
+      {section && <meta property="article:section" content={section} />})
+      {tags.length > 0 && tags.map((tag, index) => (}
+        <meta key={index} property="article:tag" content={tag} />)
       ))}
       
       {/* Structured Data */}

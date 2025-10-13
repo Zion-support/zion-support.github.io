@@ -1,4 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { 
   Brain, 
   Shield, 
@@ -49,15 +50,19 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     setIsOpen(!isOpen);
   }, [isOpen]);
 
+  const toggleServices = useCallback(() => {
     setIsServicesOpen(!isServicesOpen);
   }, [isServicesOpen]);
 
+  const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen);
   }, [isMicroSaasOpen]);
 
+  const toggleItServices = useCallback(() => {
     setIsItServicesOpen(!isItServicesOpen);
   }, [isItServicesOpen]);
 
+  const toggle5GServices = useCallback(() => {
     setIs5GServicesOpen(!is5GServicesOpen);
   }, [is5GServicesOpen]);
 

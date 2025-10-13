@@ -1,6 +1,6 @@
 
-const HealthPage = () => {
-  return (
+const HealthPage = () => {}
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Health Tech | Zion Tech Group</title>
@@ -37,7 +37,7 @@ const HealthPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div>)
   );
 };
 

@@ -1,8 +1,8 @@
 
 
 
-export default function AIDocumentProcessorZionTechGroup() {
-  return (
+export default function AIDocumentProcessorZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Document Processor - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function AIDocumentProcessorZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

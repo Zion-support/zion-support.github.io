@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Header() {
-  return (
+export default function Header() {}
+  return ()
     <>
       <Helmet>
         <title>Components - Zion Tech Group</title>
@@ -25,6 +25,6 @@ export default function Header() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

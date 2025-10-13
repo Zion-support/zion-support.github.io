@@ -1,8 +1,8 @@
 
 
 
-export default function AIDocumentScannerZionTechGroup() {
-  return (
+export default function AIDocumentScannerZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Document Scanner - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function AIDocumentScannerZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

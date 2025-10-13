@@ -1,7 +1,7 @@
 
 
-export default function StatusZionTechGroup() {
-  return (
+export default function StatusZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>Status - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function StatusZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 
-const MobileNavigation: React.FC = () => {
+const MobileNavigation: React.FC = () => {}
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleMenu = () => {
+  const toggleMenu = () => {}
     setIsOpen(!isOpen);
   };
 
-  const closeMenu = () => {
+  const closeMenu = () => {}
     setIsOpen(false);
   };
 
-  return (
+  return ()
     <>
       {/* Mobile menu button */}
       <button
@@ -24,7 +24,7 @@ const MobileNavigation: React.FC = () => {
       </button>
 
       {/* Mobile menu overlay */}
-      {isOpen && (
+      {isOpen && ()}
         <div className="fixed inset-0 z-50 md:hidden">
           {/* Backdrop */}
           <div 
@@ -120,7 +120,7 @@ const MobileNavigation: React.FC = () => {
               </Link>
             </div>
           </div>
-        </div>
+        </div>)
       )}
     </>
   );

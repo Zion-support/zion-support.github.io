@@ -1,7 +1,7 @@
 "use client";
 
-export default function AiEmailMarketingAutomationZionTechGroup() {
-  return (
+export default function AiEmailMarketingAutomationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiEmailMarketingAutomation - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function AiEmailMarketingAutomationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

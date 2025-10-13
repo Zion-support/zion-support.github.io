@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface SEOEnhancerProps {
+interface SEOEnhancerProps {}
   title?: string;
   description?: string;
   keywords?: string;
@@ -13,7 +13,7 @@ interface SEOEnhancerProps {
   noFollow?: boolean;
 }
 
-const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
+const SEOEnhancer: React.FC<SEOEnhancerProps> = ({)}
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of AI-powered solutions, cybersecurity, cloud infrastructure, and digital transformation services. Transform your business with cutting-edge technology.",
   keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group",
@@ -23,16 +23,16 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   twitterCard = "summary_large_image",
   structuredData,
   noIndex = false,
-  noFollow = false
+  noFollow = false)
 }) => {
-  const defaultStructuredData = {
+  const defaultStructuredData = {}
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": "https://ziontechgroup.com",
     "logo": "https://ziontechgroup.com/logo.svg",
     "description": description,
-    "address": {
+    "address": {}
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -40,38 +40,38 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "contactPoint": {
+    "contactPoint": {}
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
     },
-    "sameAs": [
+    "sameAs": []
       "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
+      "https://linkedin.com/company/ziontechgroup"]
     ],
-    "offers": [
-      {
+    "offers": []
+      {}
         "@type": "Offer",
         "name": "AI Solutions",
         "description": "Artificial intelligence and machine learning services"
       },
-      {
+      {}
         "@type": "Offer", 
         "name": "Cybersecurity",
         "description": "Advanced cybersecurity solutions and protection"
       },
-      {
+      {}
         "@type": "Offer",
         "name": "Cloud Infrastructure", 
         "description": "Cloud computing and infrastructure services"
-      }
+      }]
     ]
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
-  return (
+  return ()
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{title}</title>
@@ -126,7 +126,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
       
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json">)
         {JSON.stringify(finalStructuredData)}
       </script>
       

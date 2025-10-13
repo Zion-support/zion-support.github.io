@@ -1,6 +1,6 @@
 
-export default function OptimizedLoading() {
-  return (
+export default function OptimizedLoading() {}
+  return ()
     <div className="optimized-loading-container">
       <div className="loading-content">
         <div className="spinner"></div>
@@ -13,6 +13,6 @@ export default function OptimizedLoading() {
         Contact Us
         <ArrowRight className="w-5 h-5 ml-2" />
       </Link>
-    </div>
+    </div>)
   );
 }

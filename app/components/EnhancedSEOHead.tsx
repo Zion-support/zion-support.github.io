@@ -1,6 +1,6 @@
 import React from "react";
 
-interface SEOHeadProps {
+interface SEOHeadProps {}
   title?: string;
   description?: string;
   keywords?: string;
@@ -13,7 +13,7 @@ interface SEOHeadProps {
   nofollow?: boolean;
 }
 
-const SEOHead: React.FC<SEOHeadProps> = ({
+const SEOHead: React.FC<SEOHeadProps> = ({)}
   title = "Zion Tech Group - Advanced AI & IT Solutions",
   description = "Leading technology company providing cutting-edge AI solutions, cloud infrastructure, cybersecurity, and custom software development services.",
   keywords = "AI solutions, cloud computing, cybersecurity, software development, IT services, business automation, data analytics, machine learning, artificial intelligence",
@@ -23,29 +23,29 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   twitterCard = "summary_large_image",
   structuredData,
   noindex = false,
-  nofollow = false,
+  nofollow = false,)
 }) => {
-  const defaultStructuredData = {
+  const defaultStructuredData = {}
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Zion Tech Group",
     url: "https://ziontechgroup.com",
     logo: "https://ziontechgroup.com/logo.png",
     description: description,
-    address: {
+    address: {}
       "@type": "PostalAddress",
       addressCountry: "US",
       addressRegion: "Delaware",
     },
-    sameAs: [
+    sameAs: []
       "https://linkedin.com/company/ziontechgroup",
-      "https://twitter.com/ziontechgroup",
+      "https://twitter.com/ziontechgroup",]
     ],
   };
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
-  return (
+  return ()
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
@@ -73,7 +73,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       {nofollow && <meta name="robots" content="nofollow" />}
 
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json">)
         {JSON.stringify(finalStructuredData)}
       </script>
 
@@ -85,16 +85,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       />
 
       <script type="application/ld+json">
-        {JSON.stringify({
+        {JSON.stringify({)}
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "Zion Tech Group",
           url: "https://ziontechgroup.com",
-          potentialAction: {
+          potentialAction: {}
             "@type": "SearchAction",
             target: "https://ziontechgroup.com/search?q={search_term_string}",
             "query-input": "required name=search_term_string",
-          },
+          },)
         })}
       </script>
       <meta httpEquiv="X-Frame-Options" content="DENY" />

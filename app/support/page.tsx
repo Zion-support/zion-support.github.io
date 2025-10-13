@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Support() {
-  return (
+export default function Support() {}
+  return ()
     <>
       <Helmet>
         <title>Support - Zion Tech Group | AI & IT Solutions</title>
@@ -13,6 +13,6 @@ export default function Support() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+    </>)
   );
 }

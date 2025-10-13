@@ -1,14 +1,14 @@
 import React from 'react';
-import { 
-  ArrowRight, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe, 
-  Twitter, 
-  Linkedin, 
-  Github, 
-  Facebook, 
+import { }
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Twitter,
+  Linkedin,
+  Github,
+  Facebook,
   Instagram,
   Youtube,
   Star,
@@ -26,15 +26,13 @@ import {
   TrendingUp,
   Clock
 } from 'lucide-react';
-
-const ImprovedFooter = () => {
+const ImprovedFooter = () => {}
   const currentYear = new Date().getFullYear();
-
-    {
+    {}
       title: 'AI Services',
       icon: <Brain className="w-5 h-5" />,
       color: 'from-blue-500 to-cyan-500',
-      links: [
+      links: []
         { label: 'AI Analytics Dashboard Pro', href: '/ai-analytics-dashboard-pro' },
         { label: 'AI Cybersecurity Suite Pro', href: '/ai-cybersecurity-suite-pro' },
         { label: 'AI Content Generation Pro', href: '/ai-content-generation-pro' },
@@ -59,14 +57,14 @@ const ImprovedFooter = () => {
         { label: 'AI Video Analysis', href: '/ai-video-analysis' },
         { label: 'AI Time Series Forecasting', href: '/ai-time-series-forecasting' },
         { label: 'AI NLP Text Analysis', href: '/ai-nlp-text-analysis' },
-        { label: 'View All AI Services', href: '/ai-services', featured: true }
+        { label: 'View All AI Services', href: '/ai-services', featured: true }]
       ]
     },
-    {
+    {}
       title: 'IT Services',
       icon: <Shield className="w-5 h-5" />,
       color: 'from-green-500 to-emerald-500',
-      links: [
+      links: []
         { label: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
         { label: 'Blockchain Development', href: '/blockchain-development' },
         { label: 'IoT Solutions', href: '/iot-solutions' },
@@ -80,14 +78,14 @@ const ImprovedFooter = () => {
         { label: 'Cybersecurity Audit', href: '/cybersecurity-audit' },
         { label: 'Data Center Services', href: '/data-center-services' },
         { label: 'Asset Management', href: '/asset-management' },
-        { label: 'View All IT Services', href: '/services', featured: true }
+        { label: 'View All IT Services', href: '/services', featured: true }]
       ]
     },
-    {
+    {}
       title: 'Micro SAAS',
       icon: <Zap className="w-5 h-5" />,
       color: 'from-purple-500 to-pink-500',
-      links: [
+      links: []
         { label: 'Zion Analytics Pro', href: '/zion-analytics-pro' },
         { label: 'Zion Security Shield', href: '/zion-security-shield' },
         { label: 'Zion Cloud Vault', href: '/zion-cloud-vault' },
@@ -111,14 +109,14 @@ const ImprovedFooter = () => {
         { label: 'Zion AI API Manager', href: '/zion-ai-api-manager' },
         { label: 'Zion AI Backup Manager', href: '/zion-ai-backup-manager' },
         { label: 'Zion AI Testing Automation', href: '/zion-ai-testing-automation' },
-        { label: 'View All Micro SAAS', href: '/micro-saas', featured: true }
+        { label: 'View All Micro SAAS', href: '/micro-saas', featured: true }]
       ]
     },
-    {
+    {}
       title: '5G Solutions',
       icon: <Globe className="w-5 h-5" />,
       color: 'from-orange-500 to-red-500',
-      links: [
+      links: []
         { label: '5G Data Analytics', href: '/5g-data-analytics' },
         { label: '5G Edge Computing', href: '/5g-edge-computing' },
         { label: '5G Implementation', href: '/5g-implementation' },
@@ -126,83 +124,39 @@ const ImprovedFooter = () => {
         { label: '5G Network Infrastructure', href: '/5g-network-infrastructure' },
         { label: '5G Private Networks', href: '/5g-private-networks' },
         { label: '5G Smart City Solutions', href: '/5g-smart-city-solutions' },
-        { label: 'View All 5G Solutions', href: '/5g-solutions', featured: true }
+        { label: 'View All 5G Solutions', href: '/5g-solutions', featured: true }]
       ]
     }
   ];
-
-  const companyLinks = [
-    { label: 'About Us', href: '/about' },
-    { label: 'Our Team', href: '/team' },
-    { label: 'Careers', href: '/careers' },
-    { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Blog', href: '/blog' },
-    { label: 'News', href: '/news' },
-    { label: 'Press', href: '/press' },
-    { label: 'Partners', href: '/partners' }
-  ];
-
-  const resourceLinks = [
-    { label: 'Pricing', href: '/pricing' },
-    { label: 'Demo', href: '/demo' },
-    { label: 'Support', href: '/support' },
-    { label: 'Documentation', href: '/docs' },
-    { label: 'API Reference', href: '/api' },
-    { label: 'Tutorials', href: '/tutorials' },
-    { label: 'Webinars', href: '/webinars' },
-    { label: 'White Papers', href: '/whitepapers' }
-  ];
-
-  const legalLinks = [
-    { label: 'Privacy Policy', href: '/privacy' },
-    { label: 'Terms of Service', href: '/terms' },
-    { label: 'Cookie Policy', href: '/cookies' },
-    { label: 'Sitemap', href: '/sitemap' },
-    { label: 'Accessibility', href: '/accessibility' },
-    { label: 'Security', href: '/security' }
-  ];
-
-  const socialLinks = [
-    { label: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5" /> },
-    { label: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5" /> },
-    { label: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5" /> },
-    { label: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5" /> },
-    { label: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5" /> },
-    { label: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: <Youtube className="w-5 h-5" /> }
-  ];
-
     { number: '10,000+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
     { number: '99.9%', label: 'Uptime SLA', icon: <Award className="w-6 h-6" /> },
     { number: '60+', label: 'Micro SAAS Solutions', icon: <Zap className="w-6 h-6" /> },
     { number: '24/7', label: 'Support Available', icon: <Shield className="w-6 h-6" /> }
   ];
-
-  const contactInfo = {
+  const contactInfo = {}
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008, Middletown DE 19709'
   };
-
-  return (
+  return ()
     <footer className="bg-black/20 backdrop-blur-sm border-t border-white/10 relative z-10">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Stats Section */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">)
+          {stats.map((stat, index) => (}
             <div key={index} className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 {stat.icon}
               </div>
               <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-            </div>
+            </div>)
           ))}
         </div>
-
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-16">
-          {serviceCategories.map((category, index) => (
+          {serviceCategories.map((category, index) => (}
             <div key={index} className="space-y-6">
               <div className="flex items-center space-x-3">
                 <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
@@ -210,12 +164,12 @@ const ImprovedFooter = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-white">{category.title}</h3>
               </div>
-              <div className="space-y-3">
-                {category.links.slice(0, 8).map((link, linkIndex) => (
+              <div className="space-y-3">)
+                {category.links.slice(0, 8).map((link, linkIndex) => (}
                   <Link
                     key={linkIndex}
                     to={link.href}
-                    className={`block text-sm transition-colors duration-300 group ${
+                    className={`block text-sm transition-colors duration-300 group ${}
                       link.featured 
                         ? 'text-cyan-400 hover:text-cyan-300 font-medium' 
                         : 'text-gray-300 hover:text-cyan-400'
@@ -225,10 +179,10 @@ const ImprovedFooter = () => {
                       <span>{link.label}</span>
                       {link.featured && <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />}
                     </div>
-                  </Link>
+                  </Link>)
                 ))}
-                {category.links.length > 8 && (
-                  <Link
+                {category.links.length > 8 && ()}
+                  <Link)
                     to={category.links.find(l => l.featured)?.href || '#'}
                     className="block text-sm text-cyan-400 hover:text-cyan-300 font-medium transition-colors duration-300 group"
                   >
@@ -242,7 +196,6 @@ const ImprovedFooter = () => {
             </div>
           ))}
         </div>
-
         {/* Company Info & Links */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           {/* Company Info */}
@@ -257,12 +210,11 @@ const ImprovedFooter = () => {
                 Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology.
               </p>
             </div>
-            
             {/* Social Links */}
             <div>
               <h4 className="text-white font-semibold mb-4">Follow Us</h4>
               <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
+                {socialLinks.map((social, index) => (}
                   <a
                     key={index}
                     href={social.href}
@@ -272,44 +224,41 @@ const ImprovedFooter = () => {
                     aria-label={social.label}
                   >
                     {social.icon}
-                  </a>
+                  </a>)
                 ))}
               </div>
             </div>
           </div>
-
           {/* Company Links */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Company</h4>
             <div className="space-y-3">
-              {companyLinks.map((link, index) => (
+              {companyLinks.map((link, index) => (}
                 <Link
                   key={index}
                   to={link.href}
                   className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
                 >
                   {link.label}
-                </Link>
+                </Link>)
               ))}
             </div>
           </div>
-
           {/* Resources */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Resources</h4>
             <div className="space-y-3">
-              {resourceLinks.map((link, index) => (
+              {resourceLinks.map((link, index) => (}
                 <Link
                   key={index}
                   to={link.href}
                   className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
                 >
                   {link.label}
-                </Link>
+                </Link>)
               ))}
             </div>
           </div>
-
           {/* Contact Info */}
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-white">Contact</h4>
@@ -338,7 +287,6 @@ const ImprovedFooter = () => {
             </div>
           </div>
         </div>
-
         {/* Newsletter Signup */}
         <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-xl p-8 mb-12">
           <div className="max-w-2xl mx-auto text-center">
@@ -359,7 +307,6 @@ const ImprovedFooter = () => {
             </div>
           </div>
         </div>
-
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
@@ -368,14 +315,14 @@ const ImprovedFooter = () => {
                 © {currentYear} Zion Tech Group. All rights reserved.
               </p>
               <div className="flex flex-wrap gap-6">
-                {legalLinks.map((link, index) => (
+                {legalLinks.map((link, index) => (}
                   <Link
                     key={index}
                     to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
                     {link.label}
-                  </Link>
+                  </Link>)
                 ))}
               </div>
             </div>
@@ -395,5 +342,4 @@ const ImprovedFooter = () => {
     </footer>
   );
 };
-
 export default ImprovedFooter;

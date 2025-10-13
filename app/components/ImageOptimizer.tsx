@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 
-interface ImageOptimizerProps {
+interface ImageOptimizerProps {}
   src: string;
   alt: string;
   className?: string;
@@ -16,7 +16,7 @@ interface ImageOptimizerProps {
   onError?: () => void;
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+const ImageOptimizer: React.FC<ImageOptimizerProps> = ({)}
   src,
   alt,
   className = '',
@@ -27,30 +27,30 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   effect = 'blur',
   threshold = 100,
   onLoad,
-  onError
+  onError)
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
   const imgRef = useRef<HTMLImageElement>(null);
 
-  const handleLoad = () => {
+  const handleLoad = () => {}
     setIsLoaded(true);
     onLoad?.();
   };
 
-  const handleError = () => {
+  const handleError = () => {}
     setHasError(true);
     onError?.();
   };
 
   // Generate optimized src with WebP support
-  const getOptimizedSrc = (originalSrc: string) => {
-    if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {
+  const getOptimizedSrc = (originalSrc: string) => {}
+    if (originalSrc.startsWith('http') || originalSrc.startsWith('/')) {}
       return originalSrc;
     }
     
     // Add WebP support if supported
-    if (typeof window !== 'undefined' && 'WebP' in window) {
+    if (typeof window !== 'undefined' && 'WebP' in window) {}
       const webpSrc = originalSrc.replace(/\.(jpg|jpeg|png)$/i, '.webp');
       return webpSrc;
     }
@@ -59,13 +59,13 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   };
 
   // Generate responsive srcset
-  const generateSrcSet = (baseSrc: string) => {
-    if (baseSrc.startsWith('http') || baseSrc.startsWith('/')) {
+  const generateSrcSet = (baseSrc: string) => {}
+    if (baseSrc.startsWith('http') || baseSrc.startsWith('/')) {}
       return baseSrc;
     }
 
     const sizes = [320, 640, 768, 1024, 1280, 1920];
-    const srcSet = sizes
+const srcSet = sizes;
       .map(size => `${baseSrc}?w=${size} ${size}w`)
       .join(', ');
     
@@ -75,19 +75,19 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const optimizedSrc = getOptimizedSrc(src);
   const srcSet = generateSrcSet(src);
 
-  if (hasError) {
-    return (
+  if (hasError) {}
+    return ()
       <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
       >
         <span className="text-gray-500 text-sm">Image failed to load</span>
-      </div>
+      </div>)
     );
   }
 
-  if (priority) {
-    return (
+  if (priority) {}
+    return ()
       <img
         ref={imgRef}
         src={optimizedSrc}
@@ -100,11 +100,11 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         onError={handleError}
         loading="eager"
         decoding="async"
-      />
+      />)
     );
   }
 
-  return (
+  return ()
     <LazyLoadImage
       src={optimizedSrc}
       srcSet={srcSet}
@@ -119,7 +119,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       onError={handleError}
       loading="lazy"
       decoding="async"
-    />
+    />)
   );
 };
 

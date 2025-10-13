@@ -1,7 +1,7 @@
 
 
-export default function DataEngineeringZionTechGroup() {
-  return (
+export default function DataEngineeringZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>DataEngineering - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function DataEngineeringZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

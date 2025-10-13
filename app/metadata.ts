@@ -1,6 +1,6 @@
 // Metadata configuration for Zion Tech Group
 
-export const siteMetadata = {
+export const siteMetadata = {}
   title: "Zion Tech Group - Advanced AI and IT Solutions",
   description:
     "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
@@ -13,18 +13,18 @@ export const siteMetadata = {
   linkedin: "https://linkedin.com/company/ziontechgroup",
 };
 
-export const defaultMetadata = {
+export const defaultMetadata = {}
   title: siteMetadata.title,
   description: siteMetadata.description,
   keywords: siteMetadata.keywords,
-  openGraph: {
+  openGraph: {}
     title: siteMetadata.title,
     description: siteMetadata.description,
     url: siteMetadata.url,
     image: siteMetadata.image,
     type: "website",
   },
-  twitter: {
+  twitter: {}
     card: "summary_large_image",
     title: siteMetadata.title,
     description: siteMetadata.description,

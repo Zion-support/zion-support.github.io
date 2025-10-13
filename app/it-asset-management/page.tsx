@@ -1,7 +1,7 @@
 
 
-export default function ItAssetManagementZionTechGroup() {
-  return (
+export default function ItAssetManagementZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ItAssetManagement - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ItAssetManagementZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

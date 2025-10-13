@@ -1,6 +1,6 @@
 
-export default function AiAutomation() {
-  return (
+export default function AiAutomation() {}
+  return ()
     <>
       <Helmet>
         <title>AI Automation - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function AiAutomation() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

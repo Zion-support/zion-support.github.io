@@ -1,7 +1,7 @@
 
 
-export default function ZionInventorySmartZionTechGroup() {
-  return (
+export default function ZionInventorySmartZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionInventorySmart - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionInventorySmartZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

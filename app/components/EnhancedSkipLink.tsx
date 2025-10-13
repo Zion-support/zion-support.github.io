@@ -1,6 +1,6 @@
 
-export default function EnhancedSkipLink() {
-  return (
+export default function EnhancedSkipLink() {}
+  return ()
     <div className="skip-link-container">
       <Link
         to="/contact"
@@ -9,6 +9,6 @@ export default function EnhancedSkipLink() {
         Contact Us
         <ArrowRight className="w-5 h-5 ml-2" />
       </Link>
-    </div>
+    </div>)
   );
 }

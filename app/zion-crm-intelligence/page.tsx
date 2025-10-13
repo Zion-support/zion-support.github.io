@@ -1,7 +1,7 @@
 
 
-export default function ZionCrmIntelligenceZionTechGroup() {
-  return (
+export default function ZionCrmIntelligenceZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionCrmIntelligence - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionCrmIntelligenceZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

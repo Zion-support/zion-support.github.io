@@ -1,8 +1,8 @@
 
 
 
-export default function AICRMAssistantZionTechGroup() {
-  return (
+export default function AICRMAssistantZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI CRM Assistant - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function AICRMAssistantZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

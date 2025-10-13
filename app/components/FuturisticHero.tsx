@@ -1,6 +1,6 @@
 
-export default function FuturisticHero() {
-  return (
+export default function FuturisticHero() {}
+  return ()
     <>
       <div className="futuristic-hero-container">
         <Link
@@ -11,6 +11,6 @@ export default function FuturisticHero() {
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
-    </>
+    </>)
   );
 }

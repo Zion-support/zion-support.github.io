@@ -1,7 +1,7 @@
 
 
-export default function AiContentModerationZionTechGroup() {
-  return (
+export default function AiContentModerationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiContentModeration - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function AiContentModerationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

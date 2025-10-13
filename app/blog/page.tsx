@@ -2,75 +2,7 @@ import React from 'react';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const Blog = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "The Future of AI in Business: Trends and Predictions for 2024",
-      excerpt: "Explore the latest AI trends shaping the business landscape and how companies can leverage these technologies for competitive advantage.",
-      author: "Zion Tech Team",
-      date: "2024-01-15",
-      readTime: "5 min read",
-      category: "AI & Technology",
-      image: "/api/placeholder/400/250",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Cybersecurity Best Practices for Modern Enterprises",
-      excerpt: "Learn essential cybersecurity strategies to protect your organization from evolving threats in the digital age.",
-      author: "Security Team",
-      date: "2024-01-10",
-      readTime: "7 min read",
-      category: "Cybersecurity",
-      image: "/api/placeholder/400/250",
-      featured: false
-    },
-    {
-      id: 3,
-      title: "Cloud Migration Strategies: A Complete Guide",
-      excerpt: "Discover proven strategies for successful cloud migration and how to avoid common pitfalls during the transition.",
-      author: "Cloud Solutions Team",
-      date: "2024-01-05",
-      readTime: "6 min read",
-      category: "Cloud Computing",
-      image: "/api/placeholder/400/250",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "5G Technology: Transforming Industries and Creating New Opportunities",
-      excerpt: "Understand how 5G technology is revolutionizing various industries and creating new business opportunities.",
-      author: "5G Solutions Team",
-      date: "2024-01-01",
-      readTime: "8 min read",
-      category: "5G Technology",
-      image: "/api/placeholder/400/250",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Micro SAAS Solutions: Building Scalable Business Applications",
-      excerpt: "Learn how micro SAAS solutions can help businesses scale efficiently while maintaining cost-effectiveness.",
-      author: "Product Team",
-      date: "2023-12-28",
-      readTime: "4 min read",
-      category: "Micro SAAS",
-      image: "/api/placeholder/400/250",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Data Analytics: Turning Information into Business Intelligence",
-      excerpt: "Discover how advanced data analytics can transform raw data into actionable business insights.",
-      author: "Analytics Team",
-      date: "2023-12-25",
-      readTime: "6 min read",
-      category: "Data Analytics",
-      image: "/api/placeholder/400/250",
-      featured: false
-    }
-  ];
+const Blog = () => {}
 
     "All Posts",
     "AI & Technology",
@@ -81,7 +13,7 @@ const Blog = () => {
     "Data Analytics"
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Blog - Zion Tech Group | AI & Technology Insights</title>
@@ -119,18 +51,18 @@ const Blog = () => {
       {/* Categories Filter */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
-          <div className="flex flex-wrap justify-center gap-4">
-            {categories.map((category, index) => (
+          <div className="flex flex-wrap justify-center gap-4">)
+            {categories.map((category, index) => (}
               <button
                 key={index}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
+                className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${}
                   index === 0
                     ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
                     : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
                 }`}
               >
                 {category}
-              </button>
+              </button>)
             ))}
           </div>
         </ResponsiveContainer>
@@ -141,7 +73,7 @@ const Blog = () => {
         <ResponsiveContainer>
           <div className="mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">Featured Article</h2>
-            {blogPosts.filter(post => post.featured).map((post) => (
+            {blogPosts.filter(post => post.featured).map((post) => (}
               <FuturisticCard key={post.id} className="group hover:scale-105 transition-all duration-300">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div className="relative overflow-hidden rounded-lg">
@@ -163,7 +95,7 @@ const Blog = () => {
                         {post.author}
                       </div>
                       <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-1" />
+                        <Calendar className="w-4 h-4 mr-1" />)
                         {new Date(post.date).toLocaleDateString()}
                       </div>
                       <span>{post.readTime}</span>
@@ -198,7 +130,7 @@ const Blog = () => {
         <ResponsiveContainer>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">Latest Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.filter(post => !post.featured).map((post) => (
+            {blogPosts.filter(post => !post.featured).map((post) => (}
               <FuturisticCard key={post.id} className="group hover:scale-105 transition-all duration-300">
                 <div className="relative overflow-hidden rounded-lg mb-4">
                   <img
@@ -224,7 +156,7 @@ const Blog = () => {
                       {post.author}
                     </div>
                     <div className="flex items-center text-sm text-gray-400">
-                      <Calendar className="w-4 h-4 mr-1" />
+                      <Calendar className="w-4 h-4 mr-1" />)
                       {new Date(post.date).toLocaleDateString()}
                     </div>
                   </div>

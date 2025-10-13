@@ -1,14 +1,14 @@
 // Apiclient utility functions
 
-export const Apiclient = {
-  init: () => {
+export const Apiclient = {}
+  init: () => {}
     },
 
-  process: (data: any) => {
+  process: (data: any) => {}
     return data;
   },
 
-  cleanup: () => {
+  cleanup: () => {}
     },
 };
 

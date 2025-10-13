@@ -1,6 +1,6 @@
 
-export default function EdgeComputing5GPage() {
-  return (
+export default function EdgeComputing5GPage() {}
+  return ()
     <>
       <Helmet>
         <title>5G Edge Computing - Zion Tech Group</title>
@@ -28,6 +28,6 @@ export default function EdgeComputing5GPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,7 +1,7 @@
 
 
-export default function ZionAiFraudDetectorZionTechGroup() {
-  return (
+export default function ZionAiFraudDetectorZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionAiFraudDetector - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionAiFraudDetectorZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

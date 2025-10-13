@@ -1,6 +1,6 @@
 
-export default function Taskautomationworkflow() {
-  return (
+export default function Taskautomationworkflow() {}
+  return ()
     <>
       <Helmet>
         <title>Task Automation Workflow - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Taskautomationworkflow() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

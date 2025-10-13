@@ -1,6 +1,6 @@
 
-export default function IoT5GPage() {
-  return (
+export default function IoT5GPage() {}
+  return ()
     <>
       <Helmet>
         <title>5G IoT Solutions - Zion Tech Group</title>
@@ -28,6 +28,6 @@ export default function IoT5GPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

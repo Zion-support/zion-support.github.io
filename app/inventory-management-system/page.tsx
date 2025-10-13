@@ -1,6 +1,6 @@
 
-export default function Inventorymanagementsystem() {
-  return (
+export default function Inventorymanagementsystem() {}
+  return ()
     <>
       <Helmet>
         <title>Inventory Management System - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Inventorymanagementsystem() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

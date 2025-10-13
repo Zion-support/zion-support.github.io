@@ -1,16 +1,16 @@
-export const Icon = ({
+export const Icon = ({)}
   name,
   className = "",
   ...props
 }: {
   name: string;
   className?: string;
-  [key: string]: any;
+  [key: string]: any;)
 }) => {
-  return (
+  return ()
     <span className={`icon ${className}`} {...props}>
       {name}
-    </span>
+    </span>)
   );
 };
 

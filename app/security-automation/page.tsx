@@ -1,7 +1,7 @@
 
 
-export default function SecurityAutomationZionTechGroup() {
-  return (
+export default function SecurityAutomationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>SecurityAutomation - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function SecurityAutomationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

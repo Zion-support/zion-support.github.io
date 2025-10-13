@@ -1,4 +1,4 @@
-import {
+import {}
   Cloud,
   Shield,
   TrendingUp,
@@ -8,38 +8,38 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-export default function CloudInfrastructureManagement() {
-    {
+export default function CloudInfrastructureManagement() {}
+    {}
       icon: <Cloud className="w-6 h-6 text-cyan-400" />,
       title: "Multi-Cloud Management",
       description:
         "Seamlessly manage infrastructure across AWS, Azure, Google Cloud, and private clouds",
     },
-    {
+    {}
       icon: <Shield className="w-6 h-6 text-purple-400" />,
       title: "Security & Compliance",
       description:
         "Enterprise-grade security with automated compliance monitoring and threat detection",
     },
-    {
+    {}
       icon: <TrendingUp className="w-6 h-6 text-yellow-400" />,
       title: "Cost Optimization",
       description:
         "Reduce cloud costs by up to 40% with intelligent resource optimization and right-sizing",
     },
-    {
+    {}
       icon: <Server className="w-6 h-6 text-green-400" />,
       title: "24/7 Monitoring",
       description:
         "Proactive monitoring with automated scaling, performance optimization, and incident response",
     },
-    {
+    {}
       icon: <Zap className="w-6 h-6 text-orange-400" />,
       title: "Auto-Scaling",
       description:
         "Automatically scale resources based on demand to ensure optimal performance and cost efficiency",
     },
-    {
+    {}
       icon: <BarChart3 className="w-6 h-6 text-pink-400" />,
       title: "Analytics & Insights",
       description:
@@ -47,21 +47,21 @@ export default function CloudInfrastructureManagement() {
     },
   ];
 
-    {
+    {}
       title: "Infrastructure Monitoring",
       description: "Real-time monitoring and alerting for all cloud resources"
     },
-    {
+    {}
       title: "Cost Optimization",
       description: "Automated cost analysis and optimization recommendations"
     },
-    {
+    {}
       title: "Security Management",
       description: "Comprehensive security monitoring and compliance management"
     }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
@@ -73,6 +73,6 @@ export default function CloudInfrastructureManagement() {
           </p>
         </div>
       </div>
-    </div>
+    </div>)
   );
 }

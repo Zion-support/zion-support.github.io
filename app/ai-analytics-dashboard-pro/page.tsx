@@ -1,6 +1,6 @@
 
-export default function AIAnalyticsDashboardProZionTechGroup() {
-  return (
+export default function AIAnalyticsDashboardProZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Analytics Dashboard Pro - Zion Tech Group</title>
@@ -22,6 +22,6 @@ export default function AIAnalyticsDashboardProZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

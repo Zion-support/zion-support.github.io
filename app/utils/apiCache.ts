@@ -1,14 +1,14 @@
 // Apicache utility functions
 
-export const Apicache = {
-  init: () => {
+export const Apicache = {}
+  init: () => {}
     },
 
-  process: (data: any) => {
+  process: (data: any) => {}
     return data;
   },
 
-  cleanup: () => {
+  cleanup: () => {}
     },
 };
 

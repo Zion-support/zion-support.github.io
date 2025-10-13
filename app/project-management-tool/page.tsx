@@ -1,6 +1,6 @@
 
-export default function Projectmanagementtool() {
-  return (
+export default function Projectmanagementtool() {}
+  return ()
     <>
       <Helmet>
         <title>Project Management Tool - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Projectmanagementtool() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

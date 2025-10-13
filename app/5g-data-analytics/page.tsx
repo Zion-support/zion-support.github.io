@@ -1,6 +1,6 @@
 
-export default function DataAnalytics5GPage() {
-  return (
+export default function DataAnalytics5GPage() {}
+  return ()
     <>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
@@ -28,6 +28,6 @@ export default function DataAnalytics5GPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

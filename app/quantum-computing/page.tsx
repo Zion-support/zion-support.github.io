@@ -1,7 +1,7 @@
 
 
-export default function QuantumComputingZionTechGroup() {
-  return (
+export default function QuantumComputingZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>QuantumComputing - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function QuantumComputingZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

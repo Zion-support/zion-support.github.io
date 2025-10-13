@@ -1,7 +1,7 @@
 
 
-export default function DevopsAdvancedZionTechGroup() {
-  return (
+export default function DevopsAdvancedZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>DevopsAdvanced - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function DevopsAdvancedZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

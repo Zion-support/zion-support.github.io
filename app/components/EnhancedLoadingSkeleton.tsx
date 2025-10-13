@@ -1,6 +1,6 @@
 import React from "react";
 
-interface SkeletonProps {
+interface SkeletonProps {}
   width?: string | number;
   height?: string | number;
   className?: string;
@@ -8,41 +8,41 @@ interface SkeletonProps {
   animated?: boolean;
 }
 
-const Skeleton: React.FC<SkeletonProps> = ({
+const Skeleton: React.FC<SkeletonProps> = ({)}
   width = "100%",
   height = "1rem",
   className = "",
   rounded = true,
-  animated = true,
+  animated = true,)
 }) => {
-  const style = {
+  const style = {}
     width: typeof width === "number" ? `${width}px` : width,
     height: typeof height === "number" ? `${height}px` : height,
   };
 
-  return (
+  return ()
     <div
       className={`bg-gray-700 ${rounded ? "rounded" : ""} ${animated ? "animate-pulse" : ""} ${className}`}
       style={style}
-    />
+    />)
   );
 };
 
-interface EnhancedLoadingSkeletonProps {
+interface EnhancedLoadingSkeletonProps {}
   type?: "card" | "list" | "text" | "image" | "button";
   count?: number;
   className?: string;
 }
 
-const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
+const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({)}
   type = "card",
   count = 1,
-  className = "",
+  className = "",)
 }) => {
-  const renderSkeleton = () => {
-    switch (type) {
+  const renderSkeleton = () => {}
+    switch (type) {}
       case "card":
-        return (
+        return ()
           <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
             <Skeleton width={60} height={20} className="mb-4" />
             <Skeleton width="100%" height={24} className="mb-2" />
@@ -56,12 +56,12 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
               <Skeleton width={80} height={32} rounded />
               <Skeleton width={100} height={32} rounded />
             </div>
-          </div>
+          </div>)
         );
 
       case "list":
-        return (
-          <div className="space-y-4">
+        return ()
+          <div className="space-y-4">)
             {Array.from({ length: count }).map((_, index) => (
               <div key={index} className="flex items-center space-x-4">
                 <Skeleton width={40} height={40} rounded />
@@ -69,20 +69,20 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
                   <Skeleton width="60%" height={16} />
                   <Skeleton width="40%" height={12} />
                 </div>
-              </div>
+              </div>)
             ))}
           </div>
         );
 
       case "text":
-        return (
+        return ()
           <div className="space-y-2">
             <Skeleton width="100%" height={20} />
             <Skeleton width="95%" height={16} />
             <Skeleton width="90%" height={16} />
             <Skeleton width="85%" height={16} />
             <Skeleton width="80%" height={16} />
-          </div>
+          </div>)
         );
 
       case "image":
@@ -96,10 +96,10 @@ const EnhancedLoadingSkeleton: React.FC<EnhancedLoadingSkeletonProps> = ({
     }
   };
 
-  return (
-    <div className={className}>
+  return ()
+    <div className={className}>)
       {Array.from({ length: count }).map((_, index) => (
-        <div key={index} className={count > 1 ? "mb-4" : ""}>
+        <div key={index} className={count > 1 ? "mb-4" : ""}>)
           {renderSkeleton()}
         </div>
       ))}

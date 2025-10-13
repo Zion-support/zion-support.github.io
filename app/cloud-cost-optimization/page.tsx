@@ -1,7 +1,7 @@
 
 
-export default function CloudCostOptimizationZionTechGroup() {
-  return (
+export default function CloudCostOptimizationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>CloudCostOptimization - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function CloudCostOptimizationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

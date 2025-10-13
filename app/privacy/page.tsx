@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Privacy() {
-  return (
+export default function Privacy() {}
+  return ()
     <>
       <Helmet>
         <title>Privacy Policy - Zion Tech Group | AI & IT Solutions</title>
@@ -13,6 +13,6 @@ export default function Privacy() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+    </>)
   );
 }

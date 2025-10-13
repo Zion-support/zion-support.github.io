@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-interface FormData {
+interface FormData {}
   name: string;
   email: string;
   phone: string;
@@ -9,45 +9,45 @@ interface FormData {
   service: string;
 }
 
-const ContactForm: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
+const ContactForm: React.FC = () => {}
+  const [formData, setFormData] = useState<FormData>({)}
     name: "",
     email: "",
     phone: "",
     company: "",
     message: "",
-    service: "",
+    service: "",)
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (
+const handleChange = (;)
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
-    >,
-  ) => {
+    >,)
+  ) => {}
     const { name, value } = e.target;
-    setFormData((prev) => ({
+    setFormData((prev) => ({}
       ...prev,
-      [name]: value,
+      [name]: value,)
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault();
     setIsSubmitting(true);
 
-    try {
+    try {}
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setIsSubmitted(true);
-      setFormData({
+      setFormData({)}
         name: "",
         email: "",
         phone: "",
         company: "",
         message: "",
-        service: "",
+        service: "",)
       });
 
     } catch (error) {
@@ -57,19 +57,19 @@ const ContactForm: React.FC = () => {
     }
   };
 
-  if (isSubmitted) {
-    return (
+  if (isSubmitted) {}
+    return ()
       <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center">
         <MessageSquare className="w-8 h-8 mx-auto mb-2" />
         <h3 className="text-lg font-semibold mb-2">Thank you!</h3>
         <p>
           Your message has been sent successfully. We'll get back to you soon.
         </p>
-      </div>
+      </div>)
     );
   }
 
-  return (
+  return ()
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
@@ -194,7 +194,7 @@ const ContactForm: React.FC = () => {
       >
         {isSubmitting ? "Sending..." : "Send Message"}
       </button>
-    </form>
+    </form>)
   );
 };
 

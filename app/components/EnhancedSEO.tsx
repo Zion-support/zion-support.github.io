@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface EnhancedSEOProps {
+interface EnhancedSEOProps {}
   title: string;
   description: string;
   keywords?: string;
@@ -22,7 +22,7 @@ interface EnhancedSEOProps {
   tags?: string[];
 }
 
-const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
+const EnhancedSEO: React.FC<EnhancedSEOProps> = ({)}
   title,
   description,
   keywords,
@@ -41,7 +41,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   publishedTime,
   modifiedTime,
   section,
-  tags = []
+  tags = [])
 }) => {
   const siteUrl = "https://ziontechgroup.com";
   const defaultImage = `${siteUrl}/api/placeholder/1200/630`;
@@ -50,14 +50,14 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   const fullDescription = description || "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.";
   const fullKeywords = keywords || "AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology";
   
-  const defaultStructuredData = {
+  const defaultStructuredData = {}
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
     "url": siteUrl,
     "logo": `${siteUrl}/logo.svg`,
     "description": fullDescription,
-    "address": {
+    "address": {}
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -65,31 +65,31 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "contactPoint": {
+    "contactPoint": {}
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
     },
-    "sameAs": [
+    "sameAs": []
       "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
+      "https://linkedin.com/company/ziontechgroup"]
     ]
   };
 
-  const articleStructuredData = publishedTime ? {
+  const articleStructuredData = publishedTime ? {}
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": title,
     "description": fullDescription,
-    "author": {
+    "author": {}
       "@type": "Organization",
       "name": author
     },
-    "publisher": {
+    "publisher": {}
       "@type": "Organization",
       "name": "Zion Tech Group",
-      "logo": {
+      "logo": {}
         "@type": "ImageObject",
         "url": `${siteUrl}/logo.svg`
       }
@@ -98,7 +98,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     "dateModified": modifiedTime || publishedTime,
     "image": ogImage || defaultImage,
     "url": canonical || ogUrl,
-    "mainEntityOfPage": {
+    "mainEntityOfPage": {}
       "@type": "WebPage",
       "@id": canonical || ogUrl
     },
@@ -108,7 +108,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 
   const finalStructuredData = structuredData || articleStructuredData || defaultStructuredData;
 
-  return (
+  return ()
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -138,14 +138,14 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta name="twitter:creator" content="@ziontechgroup" />
       
       {/* Article Specific Meta Tags */}
-      {publishedTime && (
+      {publishedTime && ()}
         <>
           <meta property="article:published_time" content={publishedTime} />
           {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
           <meta property="article:author" content={author} />
-          {section && <meta property="article:section" content={section} />}
-          {tags.map((tag, index) => (
-            <meta key={index} property="article:tag" content={tag} />
+          {section && <meta property="article:section" content={section} />})
+          {tags.map((tag, index) => (}
+            <meta key={index} property="article:tag" content={tag} />)
           ))}
         </>
       )}

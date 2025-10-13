@@ -1,6 +1,6 @@
 
-export default function MobileOptimizer() {
-  return (
+export default function MobileOptimizer() {}
+  return ()
     <>
       <Helmet>
         <title>Mobile Optimizer - Zion Tech Group</title>
@@ -18,6 +18,6 @@ export default function MobileOptimizer() {
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,7 +1,7 @@
 
 
-export default function ArVrSolutionsZionTechGroup() {
-  return (
+export default function ArVrSolutionsZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ArVrSolutions - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function ArVrSolutionsZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

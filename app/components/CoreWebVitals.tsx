@@ -1,6 +1,6 @@
 import React, { useEffect, useCallback } from 'react';
 
-interface WebVitalsData {
+interface WebVitalsData {}
   name: string;
   value: number;
   delta: number;
@@ -8,12 +8,12 @@ interface WebVitalsData {
   navigationType: string;
 }
 
-const CoreWebVitals: React.FC = () => {
-  const reportWebVitals = useCallback((data: WebVitalsData) => {
+const CoreWebVitals: React.FC = () => {}
+  const reportWebVitals = useCallback((data: WebVitalsData) => {}
     // Send to Google Analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'web_vitals', {
-        metric_name: data.name,
+    if (typeof window !== 'undefined' && (window as any).gtag) {}
+      (window as any).gtag('event', 'web_vitals', {}
+        metric_name: data.name,)
         metric_value: Math.round(data.value),
         metric_delta: Math.round(data.delta),
         metric_id: data.id,
@@ -22,23 +22,23 @@ const CoreWebVitals: React.FC = () => {
     }
 
     // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development') {}
       console.log('Web Vital:', data);
     }
   }, []);
 
-  useEffect(() => {
+  useEffect(() => {}
     // Track Cumulative Layout Shift (CLS)
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
+    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {}
+      try {}
+        const observer = new PerformanceObserver((list) => {}
+          for (const entry of list.getEntries()) {}
+            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {}
               const clsValue = (entry as any).value;
-              reportWebVitals({
+              reportWebVitals({)}
                 name: 'CLS',
                 value: clsValue,
-                delta: clsValue,
+                delta: clsValue,)
                 id: 'cls-' + Date.now(),
                 navigationType: 'navigate',
               });
@@ -48,7 +48,7 @@ const CoreWebVitals: React.FC = () => {
 
         observer.observe({ entryTypes: ['layout-shift'] });
 
-        return () => {
+        return () => {}
           observer.disconnect();
         };
       } catch (error) {

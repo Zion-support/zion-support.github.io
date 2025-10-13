@@ -1,7 +1,7 @@
 
 
-export default function ContractManagerZionTechGroup() {
-  return (
+export default function ContractManagerZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ContractManager - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ContractManagerZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

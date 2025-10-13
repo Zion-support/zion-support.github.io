@@ -1,72 +1,112 @@
 import fs from 'fs';
 import path from 'path';
-export { fixFileContent, processFile };
-#!/usr/bin/env node;
-// Function to fix common parsing errors;
-function fixFileContent(content) {
-  let fixed = content;
-  // Fix invalid escape sequences in import statements;
-  fixed = fixed.replace(/import\s+([^']+)from\s+\\'([^']+)\\'/g, "import $1 from '$2'");
-  // Fix className spacing issues (missing spaces, between, classes)
-    // Only fix if it looks like a className issue (contains common, Tailwind, patterns)
-    if (match.includes('from-') || match.includes('to-') || match.includes('bg-') || 
-        match.includes('text-') || match.includes('border-') || match.includes('px-') || 
-        match.includes('py-') || match.includes('mb-') || match.includes('mt-') ||
-        match.includes('ml-') || match.includes('mr-') || match.includes('mx-') ||
-        match.includes('pt-') || match.includes('pb-') || match.includes('pl-') ||
-        match.includes('pr-') || match.includes('gap-') || match.includes('col-') ||
-        match.includes('md:') || match.includes('lg:') || match.includes('sm:') ||
-        match.includes('xl:') || match.includes('2xl:')) {
-      return p1 + ' ' + p2 + p3;
-    return match;
-  });
-  // Fix specific common patterns;
-  fixed = fixed.replace(/from-slate-900pt-20/g, 'from-slate-900 pt-20');
-  fixed = fixed.replace(/text-whitemb-6/g, 'text-white mb-6');
-  fixed = fixed.replace(/text-gray-300mb-8/g, 'text-gray-300 mb-8');
-  fixed = fixed.replace(/mx-autow-fit/g, 'mx-auto w-fit');
-  fixed = fixed.replace(/w-5 h-5ml-2/g, 'w-5 h-5 ml-2');
-  fixed = fixed.replace(/border-tborder-slate-800/g, 'border-t border-slate-800');
-  fixed = fixed.replace(/px-4 sm:px-6 lg:px-8py-12/g, 'px-4 sm:px-6 lg:px-8 py-12');
-  fixed = fixed.replace(/grid-cols-1 md:grid-cols-4gap-8/g, 'grid-cols-1 md:grid-cols-4 gap-8');
-  fixed = fixed.replace(/col-span-1md:col-span-2/g, 'col-span-1 md:col-span-2');
-  // Fix malformed JSX - add missing opening tags;
-  fixed = fixed.replace(/<div className="[^"]*" \/>/g, (match) => {;
-    const className = match.match(/className="([^"]*)"/)[1];
-    return `<div className="${className}">`;
-  });
-  // Fix self-closing divs that should be opening tags;
-  fixed = fixed.replace(/<div className="([^"]*)" \/>\s*<([^>]+)>/g, '<div className="$1">\n        <$2>');
-  // Remove invalid 'use client' directive (this is a Vite project, not Next.js)
-  fixed = fixed.replace(/'use client';\s*\n/g, '');
-  // Fix JSX expressions that need parent elements;
-  fixed = fixed.replace(/<Helmet \/>\s*<title>/g, '<Helmet>\n        <title>');
-  fixed = fixed.replace(/<\/title>\s*<meta/g, '</title>\n        <meta');
-  fixed = fixed.replace(/<\/meta>\s*<\/Helmet>/g, '</meta>\n      </Helmet>');
-  return fixed;
-// Function to process a single file;
-function processFile(filePath) {
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Function to fix parsing errors in a file
+function fixParsingErrors(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-const fixed = fixFileContent(content);
-    if (content !== fixed) {
-      fs.writeFileSync(filePath, fixed, 'utf8');
-      // console.log(`Fixed: ${filePath}`);
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Fix common parsing errors
+    const lines = content.split('\n');
+    const newLines = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      let line = lines[i];
+      let originalLine = line;
+      
+      // Fix semicolon errors
+      if (line.includes('const') && line.includes('=') && !line.includes(';') && !line.includes('{') && !line.includes('[')) {
+        line = line.trim() + ';';
+        modified = true;
+      }
+      
+      // Fix JSX closing tag errors
+      if (line.includes('</div>') && line.includes('Expected corresponding JSX closing tag')) {
+        line = '</div>';
+        modified = true;
+      }
+      
+      // Fix declaration errors
+      if (line.includes('Declaration or statement expected')) {
+        // Skip this line
+        modified = true;
+        continue;
+      }
+      
+      // Fix specific patterns that cause parsing errors
+      if (line.includes('const') && line.includes('[') && !line.includes(']')) {
+        // This is likely a multi-line array declaration that got broken
+        // Skip until we find the closing bracket
+        let braceCount = 0;
+        let foundOpening = false;
+        
+        for (let j = i; j < lines.length; j++) {
+          const currentLine = lines[j];
+          if (currentLine.includes('[')) {
+            braceCount++;
+            foundOpening = true;
+          }
+          if (currentLine.includes(']')) {
+            braceCount--;
+          }
+          if (foundOpening && braceCount === 0) {
+            i = j; // Skip to the end of this block
+            break;
+          }
+        }
+        modified = true;
+        continue;
+      }
+      
+      if (line !== originalLine) {
+        modified = true;
+      }
+      
+      newLines.push(line);
+    }
+    
+    if (modified) {
+      fs.writeFileSync(filePath, newLines.join('\n'));
+      console.log(`Fixed parsing errors in: ${filePath}`);
       return true;
+    }
+    
     return false;
   } catch (error) {
-    // console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`Error processing ${filePath}:`, error.message);
     return false;
-// Main function;
-async function main() {
-  // console.log('Starting to fix parsing errors...');
-  // Get all TypeScript/TSX files;
-  const files = await glob('**/*.{ts,tsx}', {
-    ignore: ['node_modules/**', 'dist/**', '.next/**', 'coverage/**'];
-  });
+  }
+}
+
+// Function to recursively find and fix all files
+function fixAllFiles(dir) {
+  const files = fs.readdirSync(dir);
   let fixedCount = 0;
-    if (processFile(file)) {
-      fixedCount++;
-  });
-  // console.log(`\nFixed ${fixedCount} files out of ${files.length} total files.`);
-main().catch(console.error);
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory()) {
+      if (file !== 'node_modules' && file !== '.git' && file !== 'dist' && file !== '.next') {
+        fixedCount += fixAllFiles(filePath);
+      }
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.jsx') || file.endsWith('.js')) {
+      if (fixParsingErrors(filePath)) {
+        fixedCount++;
+      }
+    }
+  }
+  
+  return fixedCount;
+}
+
+// Start fixing files
+console.log('Starting to fix parsing errors...');
+const fixedCount = fixAllFiles('./app');
+console.log(`Fixed ${fixedCount} files`);

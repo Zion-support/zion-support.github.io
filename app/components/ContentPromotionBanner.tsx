@@ -1,6 +1,6 @@
 import React from "react";
 
-interface ContentPromotionBannerProps {
+interface ContentPromotionBannerProps {}
   title?: string;
   description?: string;
   ctaText?: string;
@@ -9,16 +9,16 @@ interface ContentPromotionBannerProps {
   className?: string;
 }
 
-const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
+const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({)}
   title = "Transform Your Business with AI",
   description = "Discover how our cutting-edge AI solutions can revolutionize your operations and drive unprecedented growth.",
   ctaText = "Get Started Today",
   ctaLink = "/contact",
   variant = "primary",
-  className = "",
+  className = "",)
 }) => {
-  const getVariantStyles = () => {
-    switch (variant) {
+  const getVariantStyles = () => {}
+    switch (variant) {}
       case "primary":
         return "bg-gradient-to-r from-cyan-500 to-purple-600";
       case "secondary":
@@ -30,8 +30,8 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
     }
   };
 
-  const getIcon = () => {
-    switch (variant) {
+  const getIcon = () => {}
+    switch (variant) {}
       case "primary":
         return <Zap className="w-6 h-6" />;
       case "secondary":
@@ -43,8 +43,8 @@ const ContentPromotionBanner: React.FC<ContentPromotionBannerProps> = ({
     }
   };
 
-  return (
-    <div
+  return ()
+    <div)
       className={`relative overflow-hidden rounded-lg p-8 text-white ${getVariantStyles()} ${className}`}
     >
       <div className="relative z-10">

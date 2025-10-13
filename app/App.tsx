@@ -27,23 +27,23 @@ const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
 const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"));
 const FiveGImplementationPage = lazy(() => import("./5g-implementation/page"));
 const FiveGIoTSolutionsPage = lazy(() => import("./5g-iot-solutions/page"));
-const FiveGMobileApplicationsPage = lazy(
+const FiveGMobileApplicationsPage = lazy(;)
   () => import("./5g-mobile-applications/page"),
 );
-const FiveGNetworkInfrastructurePage = lazy(
+const FiveGNetworkInfrastructurePage = lazy(;)
   () => import("./5g-network-infrastructure/page"),
 );
-const FiveGPrivateNetworksPage = lazy(
+const FiveGPrivateNetworksPage = lazy(;)
   () => import("./5g-private-networks/page"),
 );
-const FiveGSmartCitySolutionsPage = lazy(
+const FiveGSmartCitySolutionsPage = lazy(;)
   () => import("./5g-smart-city-solutions/page"),
 );
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
 // Main App Component
-function App() {
-  return (
+function App() {}
+  return ()
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
@@ -106,7 +106,7 @@ function App() {
           </AccessibilityEnhancer>
         </ErrorBoundary>
       </BrowserRouter>
-    </HelmetProvider>
+    </HelmetProvider>)
   );
 }
 

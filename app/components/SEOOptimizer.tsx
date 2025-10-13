@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface SEOOptimizerProps {
+interface SEOOptimizerProps {}
   title?: string;
   description?: string;
   keywords?: string;
@@ -16,7 +16,7 @@ interface SEOOptimizerProps {
   noIndex?: boolean;
 }
 
-const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
+const SEOOptimizer: React.FC<SEOOptimizerProps> = ({)}
   title = "Zion Tech Group - Advanced AI and IT Solutions",
   description = "Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses.",
   keywords = "AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology",
@@ -29,7 +29,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   twitterDescription,
   twitterImage = "https://ziontechgroup.com/twitter-image.jpg",
   structuredData,
-  noIndex = false
+  noIndex = false)
 }) => {
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
@@ -43,20 +43,20 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   const defaultKeywords = 'AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, Zion Tech Group';
   const finalKeywords = keywords ? `${keywords}, ${defaultKeywords}` : defaultKeywords;
 
-  const defaultStructuredData = {
+  const defaultStructuredData = {}
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": siteName,
     "url": siteUrl,
     "logo": `${siteUrl}/logo.svg`,
     "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
-    "contactPoint": {
+    "contactPoint": {}
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com"
     },
-    "address": {
+    "address": {}
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -64,15 +64,15 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "sameAs": [
+    "sameAs": []
       "https://twitter.com/ziontechgroup",
-      "https://linkedin.com/company/ziontechgroup"
+      "https://linkedin.com/company/ziontechgroup"]
     ]
   };
 
   const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
 
-  return (
+  return ()
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -111,7 +111,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="msapplication-TileColor" content="#8b5cf6" />
       
       {/* Structured Data */}
-      <script type="application/ld+json">
+      <script type="application/ld+json">)
         {JSON.stringify(mergedStructuredData)}
       </script>
       

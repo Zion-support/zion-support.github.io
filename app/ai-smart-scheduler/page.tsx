@@ -1,92 +1,46 @@
 
-export default function AISmartScheduler() {
-    {
+export default function AISmartScheduler() {}
+    {}
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: "AI-Powered Scheduling",
       description:
         "Intelligent scheduling that learns from your patterns and preferences",
     },
-    {
+    {}
       icon: <Users className="w-6 h-6 text-purple-400" />,
       title: "Team Coordination",
       description:
         "Seamlessly coordinate meetings across multiple time zones and schedules",
     },
-    {
+    {}
       icon: <Zap className="w-6 h-6 text-yellow-400" />,
       title: "Auto-Optimization",
       description:
         "Automatically finds the best meeting times for maximum productivity",
     },
-    {
+    {}
       icon: <Globe className="w-6 h-6 text-green-400" />,
       title: "Global Integration",
       description: "Works with all major calendar platforms and time zones",
     },
   ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for individuals and small teams",
-      features: [
-        "Up to 5 team members",
-        "Basic AI scheduling",
-        "Calendar integration",
-        "Email notifications",
-        "Mobile app access",
-      ],
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 25 team members",
-        "Advanced AI optimization",
-        "Custom meeting templates",
-        "Analytics dashboard",
-        "Priority support",
-        "API access",
-      ],
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited team members",
-        "Custom AI training",
-        "White-label options",
-        "Advanced analytics",
-        "Dedicated support",
-        "Custom integrations",
-      ],
-      popular: false,
-    },
-  ];
 
-    {
+    {}
       name: "Sarah Chen",
       company: "TechStart Inc.",
       content:
         "This AI scheduler saved us 10+ hours per week. The intelligent optimization is incredible.",
       rating: 5,
     },
-    {
+    {}
       name: "Michael Rodriguez",
       company: "Global Consulting",
       content:
         "Finally, a scheduling tool that actually understands our complex team dynamics.",
       rating: 5,
     },
-    {
+    {}
       name: "Emily Watson",
       company: "RemoteFirst Co.",
       content:
@@ -95,7 +49,7 @@ export default function AISmartScheduler() {
     },
   ];
 
-  return (
+  return ()
     <Layout>
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 min-h-screen flex items-center">
@@ -138,8 +92,8 @@ export default function AISmartScheduler() {
               Powered by advanced AI to make scheduling effortless and efficient
             </p>
           </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">)
+            {features.map((feature, index) => (}
               <div key={index} className="bg-gray-800 p-6 rounded-lg">
                 <div className="flex items-center mb-4">
                   {feature.icon}
@@ -148,7 +102,7 @@ export default function AISmartScheduler() {
                   </h3>
                 </div>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
+              </div>)
             ))}
           </div>
         </div>
@@ -166,17 +120,17 @@ export default function AISmartScheduler() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (}
               <div
                 key={index}
                 className={`bg-gray-900 p-8 rounded-lg relative ${plan.popular ? "ring-2 ring-cyan-400" : ""}`}
               >
-                {plan.popular && (
+                {plan.popular && ()}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-cyan-400 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
-                  </div>
+                  </div>)
                 )}
                 <h3 className="text-2xl font-bold text-white mb-2">
                   {plan.name}
@@ -189,19 +143,19 @@ export default function AISmartScheduler() {
                   <span className="text-gray-400">{plan.period}</span>
                 </div>
                 <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li
                       key={featureIndex}
                       className="flex items-center text-gray-300"
                     >
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
                       {feature}
-                    </li>
+                    </li>)
                   ))}
                 </ul>
                 <Link
                   to="/contact"
-                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     plan.popular
                       ? "bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700"
                       : "border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10"
@@ -227,11 +181,11 @@ export default function AISmartScheduler() {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index) => (}
               <div key={index} className="bg-gray-800 p-6 rounded-lg">
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Clock key={i} className="w-5 h-5 text-yellow-400" />
+                <div className="flex mb-4">)
+                  {[...Array(testimonial.rating)].map((_, i) => (}
+                    <Clock key={i} className="w-5 h-5 text-yellow-400" />)
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4">"{testimonial.content}"</p>

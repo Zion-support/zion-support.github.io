@@ -1,6 +1,6 @@
 
-export default function AiAutomatedReporting() {
-  return (
+export default function AiAutomatedReporting() {}
+  return ()
     <>
       <Helmet>
         <title>AiAutomatedReporting - Zion Tech Group</title>
@@ -22,6 +22,6 @@ export default function AiAutomatedReporting() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

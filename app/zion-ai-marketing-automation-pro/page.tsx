@@ -1,36 +1,36 @@
 
-export default function ZionAiMarketingAutomationPro() {
-    {
+export default function ZionAiMarketingAutomationPro() {}
+    {}
       title: "AI-Powered Campaign Optimization",
       description: "Automatically optimize your marketing campaigns using machine learning algorithms that analyze performance data and adjust targeting, timing, and content in real-time.",
       icon: <Target className="w-6 h-6" />,
       benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction", "ROI maximization"]
     },
-    {
+    {}
       title: "Intelligent Audience Segmentation",
       description: "AI-driven audience segmentation that automatically groups customers based on behavior, preferences, and engagement patterns for highly targeted campaigns.",
       icon: <Users className="w-6 h-6" />,
       benefits: ["Behavioral segmentation", "Predictive modeling", "Dynamic audience updates", "Personalization at scale"]
     },
-    {
+    {}
       title: "Multi-Channel Campaign Orchestration",
       description: "Seamlessly coordinate campaigns across email, social media, SMS, push notifications, and web with unified messaging and timing.",
       icon: <MessageSquare className="w-6 h-6" />,
       benefits: ["Cross-channel consistency", "Unified customer journey", "Automated scheduling", "Performance tracking"]
     },
-    {
+    {}
       title: "Predictive Content Generation",
       description: "AI-powered content creation that generates personalized marketing messages, subject lines, and creative assets based on audience data and preferences.",
       icon: <Brain className="w-6 h-6" />,
       benefits: ["Personalized content", "A/B testing automation", "Brand voice consistency", "Performance optimization"]
     },
-    {
+    {}
       title: "Advanced Analytics & Insights",
       description: "Comprehensive analytics dashboard with AI-powered insights, attribution modeling, and predictive analytics for data-driven marketing decisions.",
       icon: <BarChart3 className="w-6 h-6" />,
       benefits: ["Attribution modeling", "Predictive analytics", "Custom dashboards", "Real-time reporting"]
     },
-    {
+    {}
       title: "Automated Lead Nurturing",
       description: "Intelligent lead nurturing workflows that automatically guide prospects through the sales funnel with personalized content and timing.",
       icon: <Zap className="w-6 h-6" />,
@@ -38,60 +38,8 @@ export default function ZionAiMarketingAutomationPro() {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$149",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 5,000 contacts",
-        "Basic AI features",
-        "Email campaigns",
-        "Social media integration",
-        "Email support",
-        "Basic analytics",
-        "5 users included"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Most popular for growing businesses",
-      features: [
-        "Up to 25,000 contacts",
-        "Advanced AI features",
-        "Multi-channel campaigns",
-        "Priority support",
-        "Advanced analytics",
-        "Custom workflows",
-        "15 users included",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$599",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited contacts",
-        "AI-powered insights",
-        "Custom integrations",
-        "24/7 phone support",
-        "Advanced security",
-        "White-label options",
-        "Unlimited users",
-        "Dedicated account manager"
-      ],
-      popular: false
-    }
-  ];
 
-    {
+    {}
       name: "Jessica Chen",
       company: "Digital Marketing Agency",
       role: "Marketing Director",
@@ -99,7 +47,7 @@ export default function ZionAiMarketingAutomationPro() {
       rating: 5,
       avatar: "JC"
     },
-    {
+    {}
       name: "David Park",
       company: "E-commerce Solutions",
       role: "Head of Marketing",
@@ -107,7 +55,7 @@ export default function ZionAiMarketingAutomationPro() {
       rating: 5,
       avatar: "DP"
     },
-    {
+    {}
       name: "Maria Santos",
       company: "SaaS Platform",
       role: "VP of Growth",
@@ -123,7 +71,7 @@ export default function ZionAiMarketingAutomationPro() {
     { number: "10x", label: "Content Generation Speed", icon: <Zap className="w-6 h-6" /> }
   ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>Zion AI Marketing Automation Pro - AI-Powered Marketing Platform | Zion Tech Group</title>
@@ -139,7 +87,7 @@ export default function ZionAiMarketingAutomationPro() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-indigo-500/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-indigo-500/10 animate-pulse"></div>)
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3),transparent_50%)]"></div>
         
         {/* Hero Section */}
@@ -183,14 +131,14 @@ export default function ZionAiMarketingAutomationPro() {
                 
                 {/* Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  {stats.map((stat, index) => (
+                  {stats.map((stat, index) => (}
                     <div key={index} className="text-center group">
                       <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         {stat.icon}
                       </div>
                       <div className="text-xl font-bold text-white mb-1">{stat.number}</div>
                       <div className="text-gray-300 text-sm">{stat.label}</div>
-                    </div>
+                    </div>)
                   ))}
                 </div>
               </div>
@@ -252,7 +200,7 @@ export default function ZionAiMarketingAutomationPro() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10"
@@ -266,12 +214,12 @@ export default function ZionAiMarketingAutomationPro() {
                   <p className="text-gray-300 text-center mb-4 leading-relaxed">
                     {feature.description}
                   </p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
+                  <div className="space-y-2">)
+                    {feature.benefits.map((benefit, idx) => (}
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         <span>{benefit}</span>
-                      </div>
+                      </div>)
                     ))}
                   </div>
                 </div>
@@ -293,21 +241,21 @@ export default function ZionAiMarketingAutomationPro() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (}
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${}
                     plan.popular 
                       ? 'border-pink-500/50 shadow-2xl shadow-pink-500/25' 
                       : 'border-white/20 hover:border-pink-500/30'
                   }`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   
                   <div className="text-center mb-6">
@@ -320,17 +268,17 @@ export default function ZionAiMarketingAutomationPro() {
                   </div>
                   
                   <div className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
+                    {plan.features.map((feature, idx) => (}
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
-                      </div>
+                      </div>)
                     ))}
                   </div>
                   
                   <Link
                     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${}
                       plan.popular
                         ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-pink-500/25'
                         : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
@@ -358,14 +306,14 @@ export default function ZionAiMarketingAutomationPro() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <div className="flex items-center mb-4">)
+                    {[...Array(testimonial.rating)].map((_, i) => (}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>

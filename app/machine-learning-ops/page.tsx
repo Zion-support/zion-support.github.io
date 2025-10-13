@@ -1,7 +1,7 @@
 
 
-export default function MachineLearningOpsZionTechGroup() {
-  return (
+export default function MachineLearningOpsZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>MachineLearningOps - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function MachineLearningOpsZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

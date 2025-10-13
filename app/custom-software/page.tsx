@@ -1,7 +1,7 @@
 
 
-export default function CustomSoftwareZionTechGroup() {
-  return (
+export default function CustomSoftwareZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>CustomSoftware - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function CustomSoftwareZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

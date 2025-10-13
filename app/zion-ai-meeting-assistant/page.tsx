@@ -1,7 +1,7 @@
 
 
-export default function ZionAiMeetingAssistantZionTechGroup() {
-  return (
+export default function ZionAiMeetingAssistantZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionAiMeetingAssistant - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionAiMeetingAssistantZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

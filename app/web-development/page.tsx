@@ -1,82 +1,10 @@
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const WebDevelopmentPage = () => {
-  const services = [
-    {
-      id: 'frontend-development',
-      title: 'Frontend Development',
-      description: 'Modern, responsive web applications using React, Vue, and Angular.',
-      icon: Code,
-      features: ['React Applications', 'Vue.js Development', 'Angular Solutions', 'Progressive Web Apps'],
-      price: 'Starting at $2,500'
-    },
-    {
-      id: 'backend-development',
-      title: 'Backend Development',
-      description: 'Robust server-side applications and APIs for your business needs.',
-      icon: Database,
-      features: ['Node.js APIs', 'Python/Django', 'PHP/Laravel', 'Microservices'],
-      price: 'Starting at $3,000'
-    },
-    {
-      id: 'full-stack-development',
-      title: 'Full-Stack Development',
-      description: 'Complete web solutions from frontend to backend and everything in between.',
-      icon: Globe,
-      features: ['End-to-End Solutions', 'Database Design', 'API Integration', 'Deployment'],
-      price: 'Starting at $5,000'
-    },
-    {
-      id: 'mobile-web-apps',
-      title: 'Mobile Web Apps',
-      description: 'Cross-platform mobile applications that work on all devices.',
-      icon: Smartphone,
-      features: ['Responsive Design', 'Mobile Optimization', 'Touch Interfaces', 'Offline Support'],
-      price: 'Starting at $3,500'
-    },
-    {
-      id: 'e-commerce-solutions',
-      title: 'E-commerce Solutions',
-      description: 'Complete online stores with payment processing and inventory management.',
-      icon: Shield,
-      features: ['Payment Integration', 'Inventory Management', 'Order Processing', 'Security'],
-      price: 'Starting at $4,500'
-    },
-    {
-      id: 'web-optimization',
-      title: 'Web Optimization',
-      description: 'Performance optimization and SEO improvements for existing websites.',
-      icon: Zap,
-      features: ['Speed Optimization', 'SEO Enhancement', 'Security Updates', 'Analytics'],
-      price: 'Starting at $1,500'
-    }
-  ];
+const WebDevelopmentPage = () => {}
 
-  const process = [
-    {
-      step: '01',
-      title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a detailed project plan.'
-    },
-    {
-      step: '02',
-      title: 'Design & Prototyping',
-      description: 'We create wireframes and prototypes to visualize your project.'
-    },
-    {
-      step: '03',
-      title: 'Development',
-      description: 'Our team builds your application using the latest technologies.'
-    },
-    {
-      step: '04',
-      title: 'Testing & Launch',
-      description: 'We thoroughly test your application and deploy it to production.'
-    }
-  ];
 
-  return (
+  return ()
     <div className="min-h-screen">
       <EnhancedSEO 
         title="Web Development Services - Zion Tech Group"
@@ -110,10 +38,10 @@ const WebDevelopmentPage = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {services.map((service) => {
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">)
+          {services.map((service) => {}
             const IconComponent = service.icon;
-            return (
+            return ()
               <div key={service.id} className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 hover:border-blue-500 transition-colors p-6">
                 <div className="flex items-center justify-between mb-4">
                   <IconComponent className="w-12 h-12 text-blue-400" />
@@ -129,12 +57,12 @@ const WebDevelopmentPage = () => {
                 <h3 className="text-xl font-bold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300 mb-4">{service.description}</p>
                 
-                <ul className="space-y-2 mb-6">
-                  {service.features.map((feature, index) => (
+                <ul className="space-y-2 mb-6">)
+                  {service.features.map((feature, index) => (}
                     <li key={index} className="flex items-center text-sm text-gray-400">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {feature}
-                    </li>
+                    </li>)
                   ))}
                 </ul>
                 
@@ -161,14 +89,14 @@ const WebDevelopmentPage = () => {
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-white text-center mb-12">Our Development Process</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {process.map((step, index) => (
+            {process.map((step, index) => (}
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-2xl font-bold text-white">{step.step}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                 <p className="text-gray-300">{step.description}</p>
-              </div>
+              </div>)
             ))}
           </div>
         </div>

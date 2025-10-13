@@ -1,5 +1,5 @@
 "use client";
-import {
+import {}
   Receipt,
   Bot,
   Brain,
@@ -11,26 +11,26 @@ import {
   DollarSign,
 } from "lucide-react";
 
-export default function AIExpenseTracker() {
-    {
+export default function AIExpenseTracker() {}
+    {}
       icon: <Brain className="w-12 h-12 text-cyan-400" />,
       title: "AI-Powered Analysis",
       description:
         "Advanced AI algorithms analyze your spending patterns and provide intelligent insights.",
     },
-    {
+    {}
       icon: <TrendingUp className="w-12 h-12 text-purple-400" />,
       title: "Real-time Tracking",
       description:
         "Track your expenses in real-time with automatic categorization and smart notifications.",
     },
-    {
+    {}
       icon: <Shield className="w-12 h-12 text-green-400" />,
       title: "Secure & Private",
       description:
         "Bank-level security ensures your financial data is protected and private.",
     },
-    {
+    {}
       icon: <BarChart3 className="w-12 h-12 text-yellow-400" />,
       title: "Smart Reports",
       description:
@@ -38,98 +38,23 @@ export default function AIExpenseTracker() {
     },
   ];
 
-  const capabilities = [
-    {
-      title: "Automatic Categorization",
-      description:
-        "AI automatically categorizes your expenses into predefined categories like food, transportation, entertainment, etc.",
-      icon: <Bot className="w-8 h-8 text-blue-400" />,
-    },
-    {
-      title: "Receipt Scanning",
-      description:
-        "Simply take a photo of your receipt and let AI extract all the relevant information automatically.",
-      icon: <Receipt className="w-8 h-8 text-green-400" />,
-    },
-    {
-      title: "Budget Management",
-      description:
-        "Set budgets for different categories and get alerts when you're approaching your limits.",
-      icon: <DollarSign className="w-8 h-8 text-yellow-400" />,
-    },
-    {
-      title: "Expense Insights",
-      description:
-        "Get personalized insights and recommendations to help you save money and manage finances better.",
-      icon: <Brain className="w-8 h-8 text-purple-400" />,
-    },
-  ];
 
-  const pricingPlans = [
-    {
-      name: "Basic",
-      price: "$9.99",
-      period: "/month",
-      description: "Perfect for personal use",
-      features: [
-        "Unlimited expense tracking",
-        "Basic AI categorization",
-        "Receipt scanning (50/month)",
-        "Basic reports",
-        "Mobile app access",
-        "Email support",
-      ],
-      popular: false,
-    },
-    {
-      name: "Pro",
-      price: "$19.99",
-      period: "/month",
-      description: "Ideal for professionals",
-      features: [
-        "Everything in Basic",
-        "Advanced AI insights",
-        "Unlimited receipt scanning",
-        "Advanced analytics",
-        "Budget management",
-        "Priority support",
-        "API access",
-      ],
-      popular: true,
-    },
-    {
-      name: "Business",
-      price: "$49.99",
-      period: "/month",
-      description: "For small businesses",
-      features: [
-        "Everything in Pro",
-        "Team collaboration",
-        "Multi-user accounts",
-        "Advanced reporting",
-        "Integration with accounting software",
-        "Dedicated support",
-        "Custom categories",
-      ],
-      popular: false,
-    },
-  ];
 
-    {
+    {}
       name: "Sarah Johnson",
       company: "Freelance Designer",
       content:
         "AI Expense Tracker has completely transformed how I manage my finances. The automatic categorization saves me hours every week.",
       rating: 5,
     },
-    {
+    {}
       name: "Michael Chen",
       company: "Small Business Owner",
       content:
         "The receipt scanning feature is incredible. I just take a photo and everything is automatically entered and categorized.",
       rating: 5,
     },
-    {
+    {}
       name: "Emily Rodriguez",
       company: "Marketing Manager",
       content:
@@ -138,7 +63,7 @@ export default function AIExpenseTracker() {
     },
   ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>AI Expense Tracker - Zion Tech Group</title>
@@ -177,8 +102,8 @@ export default function AIExpenseTracker() {
           </div>
 
           {/* Features Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">)
+            {features.map((feature, index) => (}
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
@@ -188,7 +113,7 @@ export default function AIExpenseTracker() {
                   {feature.title}
                 </h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
+              </div>)
             ))}
           </div>
 
@@ -198,7 +123,7 @@ export default function AIExpenseTracker() {
               Key Capabilities
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {capabilities.map((capability, index) => (
+              {capabilities.map((capability, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
@@ -210,7 +135,7 @@ export default function AIExpenseTracker() {
                     {capability.title}
                   </h3>
                   <p className="text-gray-300">{capability.description}</p>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -221,17 +146,17 @@ export default function AIExpenseTracker() {
               Pricing Plans
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (}
                 <div
                   key={index}
                   className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? "ring-2 ring-cyan-500" : ""}`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">
@@ -246,19 +171,19 @@ export default function AIExpenseTracker() {
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li
                         key={featureIndex}
                         className="text-gray-300 flex items-center"
                       >
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${}
                       plan.popular
                         ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600"
                         : "border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10"
@@ -277,17 +202,17 @@ export default function AIExpenseTracker() {
               What Our Users Say
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">)
+                    {[...Array(testimonial.rating)].map((_, i) => (}
                       <Star
                         className="w-5 h-5 text-yellow-400 fill-current"
                         key={i}
-                      />
+                      />)
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">

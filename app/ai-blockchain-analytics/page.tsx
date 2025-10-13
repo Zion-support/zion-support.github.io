@@ -1,6 +1,6 @@
 
-export default function AiBlockchainAnalyticsZionTechGroup() {
-  return (
+export default function AiBlockchainAnalyticsZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiBlockchainAnalytics - Zion Tech Group</title>
@@ -22,6 +22,6 @@ export default function AiBlockchainAnalyticsZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

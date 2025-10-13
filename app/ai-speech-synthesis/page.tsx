@@ -1,7 +1,7 @@
 
 
-export default function AiSpeechSynthesisZionTechGroup() {
-  return (
+export default function AiSpeechSynthesisZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiSpeechSynthesis - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function AiSpeechSynthesisZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,14 +1,14 @@
 // Securitymanager utility functions
 
-export const Securitymanager = {
-  init: () => {
+export const Securitymanager = {}
+  init: () => {}
     },
 
-  process: (data: any) => {
+  process: (data: any) => {}
     return data;
   },
 
-  cleanup: () => {
+  cleanup: () => {}
     },
 };
 

@@ -1,7 +1,7 @@
 
 
-export default function AiPredictiveAnalyticsZionTechGroup() {
-  return (
+export default function AiPredictiveAnalyticsZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiPredictiveAnalytics - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function AiPredictiveAnalyticsZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

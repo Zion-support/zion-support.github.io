@@ -1,7 +1,7 @@
 
 
-export default function FaqZionTechGroup() {
-  return (
+export default function FaqZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>Faq - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function FaqZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

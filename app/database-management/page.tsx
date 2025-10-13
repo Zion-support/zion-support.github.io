@@ -1,7 +1,7 @@
 
 
-export default function DatabaseManagementZionTechGroup() {
-  return (
+export default function DatabaseManagementZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>DatabaseManagement - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function DatabaseManagementZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

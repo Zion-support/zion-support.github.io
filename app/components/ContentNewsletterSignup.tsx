@@ -1,21 +1,21 @@
 import React, { useState } from "react";
 
-interface ContentNewsletterSignupProps {
+interface ContentNewsletterSignupProps {}
   className?: string;
 }
 
-const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
-  className = "",
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({)}
+  className = "",)
 }) => {
   const [email, setEmail] = useState("");
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {}
     e.preventDefault();
     setIsLoading(true);
 
-    try {
+    try {}
       // Simulate API call
       await new Promise((resolve) => setTimeout(resolve, 1000));
       setIsSubscribed(true);
@@ -28,8 +28,8 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
     }
   };
 
-  if (isSubscribed) {
-    return (
+  if (isSubscribed) {}
+    return ()
       <div
         className={`bg-green-100 border border-green-400 text-green-700 px-6 py-4 rounded-lg text-center ${className}`}
       >
@@ -38,11 +38,11 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
           Thank you for subscribing!
         </h3>
         <p>You'll receive our latest updates and exclusive content.</p>
-      </div>
+      </div>)
     );
   }
 
-  return (
+  return ()
     <div
       className={`bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 ${className}`}
     >
@@ -58,7 +58,7 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
         <div>
           <input
             type="email"
-            value={email}
+            value={email})
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
             required

@@ -1,6 +1,6 @@
 
-export default function PrivateNetworks5GPage() {
-  return (
+export default function PrivateNetworks5GPage() {}
+  return ()
     <>
       <Helmet>
         <title>5G Private Networks - Zion Tech Group</title>
@@ -29,6 +29,6 @@ export default function PrivateNetworks5GPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

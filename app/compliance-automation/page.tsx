@@ -1,7 +1,7 @@
 
 
-export default function ComplianceAutomationZionTechGroup() {
-  return (
+export default function ComplianceAutomationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ComplianceAutomation - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ComplianceAutomationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

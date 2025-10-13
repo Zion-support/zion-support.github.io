@@ -1,8 +1,8 @@
 
 
 
-export default function AICloudInfrastructureZionTechGroup() {
-  return (
+export default function AICloudInfrastructureZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Cloud Infrastructure - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function AICloudInfrastructureZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,25 +1,25 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
-declare global {
-  interface Window {
+declare global {}
+  interface Window {}
     gtag: (...args: any[]) => void;
     dataLayer: any[];
   }
 }
 
-interface AnalyticsProps {
+interface AnalyticsProps {}
   measurementId?: string;
   enabled?: boolean;
 }
 
-const Analytics: React.FC<AnalyticsProps> = ({
+const Analytics: React.FC<AnalyticsProps> = ({)}
   measurementId = 'G-XXXXXXXXXX', // Replace with actual GA4 measurement ID
-  enabled = process.env.NODE_ENV === 'production'
+  enabled = process.env.NODE_ENV === 'production')
 }) => {
   const location = useLocation();
 
-  useEffect(() => {
+  useEffect(() => {}
     if (!enabled || typeof window === 'undefined') return;
 
     // Initialize Google Analytics
@@ -30,46 +30,46 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     // Initialize dataLayer
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
+    window.gtag = function() {}
       window.dataLayer.push(arguments);
     };
 
     window.gtag('js', new Date());
-    window.gtag('config', measurementId, {
+    window.gtag('config', measurementId, {)}
       page_title: document.title,
-      page_location: window.location.href,
+      page_location: window.location.href,)
     });
 
-    return () => {
+    return () => {}
       // Cleanup if needed
       const existingScript = document.querySelector(`script[src*="${measurementId}"]`);
-      if (existingScript) {
+      if (existingScript) {}
         existingScript.remove();
       }
     };
   }, [measurementId, enabled]);
 
   // Track page views on route changes
-  useEffect(() => {
+  useEffect(() => {}
     if (!enabled || typeof window === 'undefined' || !window.gtag) return;
 
-    window.gtag('config', measurementId, {
+    window.gtag('config', measurementId, {)}
       page_title: document.title,
-      page_location: window.location.href,
+      page_location: window.location.href,)
     });
   }, [location, measurementId, enabled]);
 
   // Track Core Web Vitals
-  useEffect(() => {
+  useEffect(() => {}
     if (!enabled || typeof window === 'undefined') return;
 
-    const trackWebVitals = () => {
+    const trackWebVitals = () => {}
       // Track LCP
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (entry.entryType === 'largest-contentful-paint') {
-            window.gtag('event', 'web_vitals', {
-              name: 'LCP',
+      new PerformanceObserver((entryList) => {}
+        for (const entry of entryList.getEntries()) {}
+          if (entry.entryType === 'largest-contentful-paint') {}
+            window.gtag('event', 'web_vitals', {)}
+              name: 'LCP',)
               value: Math.round(entry.startTime),
               event_category: 'Web Vitals',
               event_label: 'Largest Contentful Paint',
@@ -79,11 +79,11 @@ const Analytics: React.FC<AnalyticsProps> = ({
       }).observe({ entryTypes: ['largest-contentful-paint'] });
 
       // Track FID
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (entry.entryType === 'first-input') {
-            window.gtag('event', 'web_vitals', {
-              name: 'FID',
+      new PerformanceObserver((entryList) => {}
+        for (const entry of entryList.getEntries()) {}
+          if (entry.entryType === 'first-input') {}
+            window.gtag('event', 'web_vitals', {)}
+              name: 'FID',)
               value: Math.round(entry.processingStart - entry.startTime),
               event_category: 'Web Vitals',
               event_label: 'First Input Delay',
@@ -94,14 +94,14 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
       // Track CLS
       let clsValue = 0;
-      new PerformanceObserver((entryList) => {
-        for (const entry of entryList.getEntries()) {
-          if (!(entry as any).hadRecentInput) {
+      new PerformanceObserver((entryList) => {}
+        for (const entry of entryList.getEntries()) {}
+          if (!(entry as any).hadRecentInput) {}
             clsValue += (entry as any).value;
           }
         }
-        window.gtag('event', 'web_vitals', {
-          name: 'CLS',
+        window.gtag('event', 'web_vitals', {)}
+          name: 'CLS',)
           value: Math.round(clsValue * 1000),
           event_category: 'Web Vitals',
           event_label: 'Cumulative Layout Shift',
@@ -110,40 +110,40 @@ const Analytics: React.FC<AnalyticsProps> = ({
     };
 
     // Wait for page to be fully loaded
-    if (document.readyState === 'complete') {
+    if (document.readyState === 'complete') {}
       trackWebVitals();
     } else {
       window.addEventListener('load', trackWebVitals);
     }
 
-    return () => {
+    return () => {}
       window.removeEventListener('load', trackWebVitals);
     };
   }, [enabled]);
 
   // Track custom events
-  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {}
     if (!enabled || typeof window === 'undefined' || !window.gtag) return;
     
     window.gtag('event', eventName, parameters);
   };
 
   // Track button clicks
-  useEffect(() => {
+  useEffect(() => {}
     if (!enabled) return;
 
-    const handleClick = (event: Event) => {
+    const handleClick = (event: Event) => {}
       const target = event.target as HTMLElement;
       const button = target.closest('button, a, [role="button"]');
       
-      if (button) {
+      if (button) {}
         const buttonText = button.textContent?.trim() || 'Unknown';
         const buttonId = button.id || button.className;
         
-        trackEvent('button_click', {
+        trackEvent('button_click', {)}
           button_text: buttonText,
           button_id: buttonId,
-          page_location: window.location.href,
+          page_location: window.location.href,)
         });
       }
     };
@@ -153,16 +153,16 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, [enabled]);
 
   // Track form submissions
-  useEffect(() => {
+  useEffect(() => {}
     if (!enabled) return;
 
-    const handleSubmit = (event: Event) => {
+    const handleSubmit = (event: Event) => {}
       const form = event.target as HTMLFormElement;
       const formId = form.id || form.className;
       
-      trackEvent('form_submit', {
+      trackEvent('form_submit', {)}
         form_id: formId,
-        page_location: window.location.href,
+        page_location: window.location.href,)
       });
     };
 
@@ -171,23 +171,23 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, [enabled]);
 
   // Track scroll depth
-  useEffect(() => {
+  useEffect(() => {}
     if (!enabled) return;
 
     let maxScroll = 0;
-    const trackScroll = () => {
-      const scrollPercent = Math.round(
+    const trackScroll = () => {}
+const scrollPercent = Math.round(;)
         (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100
       );
       
-      if (scrollPercent > maxScroll) {
+      if (scrollPercent > maxScroll) {}
         maxScroll = scrollPercent;
         
         // Track at 25%, 50%, 75%, and 100%
-        if ([25, 50, 75, 100].includes(scrollPercent)) {
-          trackEvent('scroll_depth', {
+        if ([25, 50, 75, 100].includes(scrollPercent)) {}
+          trackEvent('scroll_depth', {)}
             scroll_percent: scrollPercent,
-            page_location: window.location.href,
+            page_location: window.location.href,)
           });
         }
       }

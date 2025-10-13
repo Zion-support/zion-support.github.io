@@ -1,7 +1,7 @@
 
 
-export default function IotDevelopmentZionTechGroup() {
-  return (
+export default function IotDevelopmentZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>IotDevelopment - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function IotDevelopmentZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

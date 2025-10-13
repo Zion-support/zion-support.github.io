@@ -1,6 +1,6 @@
 
-export default function AdvancedSecuritySuiteZionTechGroup() {
-  return (
+export default function AdvancedSecuritySuiteZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>Advanced Security Suite - Zion Tech Group</title>
@@ -22,6 +22,6 @@ export default function AdvancedSecuritySuiteZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

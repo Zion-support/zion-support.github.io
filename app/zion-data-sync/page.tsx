@@ -1,7 +1,7 @@
 
 
-export default function ZionDataSyncZionTechGroup() {
-  return (
+export default function ZionDataSyncZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionDataSync - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function ZionDataSyncZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

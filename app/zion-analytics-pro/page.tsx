@@ -1,7 +1,7 @@
 import React from "react";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function ZionAnalyticsPro() {
+export default function ZionAnalyticsPro() {}
     "Real-time dashboard analytics",
     "Predictive business insights",
     "Automated report generation",
@@ -24,34 +24,8 @@ export default function ZionAnalyticsPro() {
     "Identify growth opportunities"
   ];
 
-  const pricing = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "month",
-      description: "Perfect for small businesses",
-      features: ["Up to 5 data sources", "Basic dashboards", "Email support", "1 user"],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "month",
-      description: "Ideal for growing companies",
-      features: ["Up to 20 data sources", "Advanced analytics", "Priority support", "5 users", "Custom reports"],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$199",
-      period: "month",
-      description: "For large organizations",
-      features: ["Unlimited data sources", "AI insights", "24/7 support", "Unlimited users", "White-label options"],
-      popular: false
-    }
-  ];
 
-    {
+    {}
       name: "Sarah Johnson",
       company: "TechStart Inc.",
       role: "CEO",
@@ -59,7 +33,7 @@ export default function ZionAnalyticsPro() {
       rating: 5,
       avatar: "SJ"
     },
-    {
+    {}
       name: "Michael Chen",
       company: "E-commerce Solutions",
       role: "CTO",
@@ -67,7 +41,7 @@ export default function ZionAnalyticsPro() {
       rating: 5,
       avatar: "MC"
     },
-    {
+    {}
       name: "Emily Rodriguez",
       company: "Digital Marketing Agency",
       role: "Operations Director",
@@ -77,7 +51,7 @@ export default function ZionAnalyticsPro() {
     }
   ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group</title>
@@ -98,7 +72,7 @@ export default function ZionAnalyticsPro() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>)
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
         
         {/* Hero Section */}
@@ -174,7 +148,7 @@ export default function ZionAnalyticsPro() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
@@ -185,7 +159,7 @@ export default function ZionAnalyticsPro() {
                       {feature}
                     </h3>
                   </div>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -204,21 +178,21 @@ export default function ZionAnalyticsPro() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
+              {pricing.map((plan, index) => (}
                 <div
                   key={index}
-                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border ${
+                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border ${}
                     plan.popular 
                       ? 'border-cyan-400 shadow-2xl shadow-cyan-500/20' 
                       : 'border-white/20'
                   } hover:border-white/40 transition-all duration-300 hover:scale-105`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   
                   <div className="text-center mb-8">
@@ -231,17 +205,17 @@ export default function ZionAnalyticsPro() {
                   </div>
                   
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                   
                   <Link
                     to="/contact"
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600'
                         : 'border border-white/20 text-white hover:bg-white/10'
@@ -269,7 +243,7 @@ export default function ZionAnalyticsPro() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (}
                 <div
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
@@ -284,9 +258,9 @@ export default function ZionAnalyticsPro() {
                     </div>
                   </div>
                   
-                  <div className="flex items-center mb-3">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
+                  <div className="flex items-center mb-3">)
+                    {[...Array(testimonial.rating)].map((_, i) => (}
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />)
                     ))}
                   </div>
                   

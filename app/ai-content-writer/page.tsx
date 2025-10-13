@@ -1,8 +1,8 @@
 
 
 
-export default function AIContentWriterZionTechGroup() {
-  return (
+export default function AIContentWriterZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Content Writer - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function AIContentWriterZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

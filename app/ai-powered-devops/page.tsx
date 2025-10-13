@@ -1,7 +1,7 @@
 import React from "react";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
-export default function AiPoweredDevops() {
+export default function AiPoweredDevops() {}
     "AI-powered automated testing and quality assurance",
     "Intelligent deployment orchestration and rollback",
     "Predictive infrastructure scaling and optimization",
@@ -22,66 +22,8 @@ export default function AiPoweredDevops() {
     "Cut infrastructure costs by 40%"
   ];
 
-  const pricingPlans = [
-    {
-      name: "Startup",
-      price: "$499",
-      period: "/month",
-      description: "Perfect for small development teams and startups",
-      features: [
-        "Up to 10 applications",
-        "Basic AI automation",
-        "Standard monitoring",
-        "Email support",
-        "Basic reporting",
-        "5 team members",
-        "Cloud deployment only"
-      ],
-      popular: false
-    },
-    {
-      name: "Enterprise",
-      price: "$1,999",
-      period: "/month",
-      description: "Ideal for growing companies and development teams",
-      features: [
-        "Up to 100 applications",
-        "Advanced AI automation",
-        "Comprehensive monitoring",
-        "Priority support",
-        "Advanced analytics",
-        "25 team members",
-        "Multi-cloud deployment",
-        "API access",
-        "Custom integrations",
-        "24/7 monitoring"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise Plus",
-      price: "$4,999",
-      period: "/month",
-      description: "For large organizations with complex DevOps needs",
-      features: [
-        "Unlimited applications",
-        "Full AI automation suite",
-        "Enterprise monitoring",
-        "24/7 dedicated support",
-        "Custom analytics",
-        "Unlimited team members",
-        "Hybrid cloud deployment",
-        "Advanced API access",
-        "Custom AI model training",
-        "Dedicated DevOps engineers",
-        "White-label solution",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
 
-    {
+    {}
       name: "Jennifer Martinez",
       company: "Tech Startup",
       role: "CTO",
@@ -89,7 +31,7 @@ export default function AiPoweredDevops() {
       rating: 5,
       avatar: "JM"
     },
-    {
+    {}
       name: "David Kim",
       company: "E-commerce Platform",
       role: "Head of Engineering",
@@ -97,7 +39,7 @@ export default function AiPoweredDevops() {
       rating: 5,
       avatar: "DK"
     },
-    {
+    {}
       name: "Lisa Thompson",
       company: "Financial Services",
       role: "DevOps Director",
@@ -107,34 +49,8 @@ export default function AiPoweredDevops() {
     }
   ];
 
-  const capabilities = [
-    {
-      title: "Automated Testing",
-      description: "AI generates and executes comprehensive test suites automatically",
-      icon: <CheckCircle className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Smart Deployment",
-      description: "Intelligent deployment strategies with automatic rollback capabilities",
-      icon: <Rocket className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Predictive Scaling",
-      description: "AI predicts traffic patterns and scales infrastructure proactively",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Intelligent Monitoring",
-      description: "AI-powered monitoring with anomaly detection and alerting",
-      icon: <Eye className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group</title>
@@ -156,7 +72,7 @@ export default function AiPoweredDevops() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>)
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -242,7 +158,7 @@ export default function AiPoweredDevops() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
@@ -251,7 +167,7 @@ export default function AiPoweredDevops() {
                     <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
                     <span className="text-white font-medium">{feature}</span>
                   </div>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -270,7 +186,7 @@ export default function AiPoweredDevops() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {capabilities.map((capability, index) => (
+              {capabilities.map((capability, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
@@ -286,7 +202,7 @@ export default function AiPoweredDevops() {
                   <p className="text-gray-300 leading-relaxed">
                     {capability.description}
                   </p>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -305,19 +221,19 @@ export default function AiPoweredDevops() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (}
                 <div
                   key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${
+                  className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${}
                     plan.popular ? 'ring-2 ring-cyan-400' : ''
                   }`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   
                   <div className="text-center mb-6">
@@ -330,17 +246,17 @@ export default function AiPoweredDevops() {
                   </div>
                   
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                   
                   <Link
                     to="/contact"
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
@@ -368,14 +284,14 @@ export default function AiPoweredDevops() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <div className="flex items-center mb-4">)
+                    {[...Array(testimonial.rating)].map((_, i) => (}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>

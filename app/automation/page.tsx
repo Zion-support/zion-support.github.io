@@ -1,7 +1,7 @@
 
 
-export default function PageZionTechGroup() {
-  return (
+export default function PageZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>Page - Zion Tech Group</title>
@@ -27,6 +27,6 @@ export default function PageZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

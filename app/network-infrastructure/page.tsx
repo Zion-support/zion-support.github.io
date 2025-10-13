@@ -1,7 +1,7 @@
 
 
-export default function NetworkInfrastructureZionTechGroup() {
-  return (
+export default function NetworkInfrastructureZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>NetworkInfrastructure - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function NetworkInfrastructureZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -26,7 +26,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           <p className="text-gray-300">Sidebar content goes here</p>
         </div>
       </div>
-    </div>
+    </div>)
   );
 };
 

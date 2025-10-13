@@ -1,6 +1,6 @@
 
-export default function AICodeAssistantProZionTechGroup() {
-  return (
+export default function AICodeAssistantProZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Code Assistant Pro - Zion Tech Group</title>
@@ -22,6 +22,6 @@ export default function AICodeAssistantProZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

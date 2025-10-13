@@ -1,7 +1,7 @@
 
 
-export default function CloudMigrationAdvancedZionTechGroup() {
-  return (
+export default function CloudMigrationAdvancedZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>CloudMigrationAdvanced - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function CloudMigrationAdvancedZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

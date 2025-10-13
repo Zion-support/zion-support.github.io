@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Terms() {
-  return (
+export default function Terms() {}
+  return ()
     <>
       <Helmet>
         <title>Terms of Service - Zion Tech Group | AI & IT Solutions</title>
@@ -13,6 +13,6 @@ export default function Terms() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+    </>)
   );
 }

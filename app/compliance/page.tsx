@@ -1,67 +1,7 @@
 import React from 'react';
 
-export default function Compliance() {
-  const complianceFrameworks = [
-    {
-      name: "SOC 2 Type II",
-      description: "Security, availability, and confidentiality controls for service organizations",
-      status: "Certified",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      name: "ISO 27001",
-      description: "Information security management system certification",
-      status: "Certified",
-      icon: <Lock className="w-8 h-8" />
-    },
-    {
-      name: "GDPR",
-      description: "General Data Protection Regulation compliance for EU data",
-      status: "Compliant",
-      icon: <Globe className="w-8 h-8" />
-    },
-    {
-      name: "HIPAA",
-      description: "Health Insurance Portability and Accountability Act compliance",
-      status: "Compliant",
-      icon: <FileText className="w-8 h-8" />
-    },
-    {
-      name: "PCI DSS",
-      description: "Payment Card Industry Data Security Standard compliance",
-      status: "Compliant",
-      icon: <Award className="w-8 h-8" />
-    },
-    {
-      name: "CCPA",
-      description: "California Consumer Privacy Act compliance",
-      status: "Compliant",
-      icon: <Users className="w-8 h-8" />
-    }
-  ];
+export default function Compliance() {}
 
-  const services = [
-    {
-      title: "Compliance Assessment",
-      description: "Comprehensive evaluation of your current compliance posture and gap analysis",
-      features: ["Risk Assessment", "Gap Analysis", "Remediation Planning", "Documentation Review"]
-    },
-    {
-      title: "Policy Development",
-      description: "Custom policies and procedures tailored to your industry and regulatory requirements",
-      features: ["Policy Creation", "Procedure Documentation", "Training Materials", "Implementation Support"]
-    },
-    {
-      title: "Audit Support",
-      description: "Expert guidance and support throughout the audit process",
-      features: ["Pre-Audit Preparation", "Audit Management", "Evidence Collection", "Remediation Support"]
-    },
-    {
-      title: "Ongoing Monitoring",
-      description: "Continuous monitoring and maintenance of compliance programs",
-      features: ["Regular Assessments", "Policy Updates", "Training Programs", "Incident Response"]
-    }
-  ];
 
     { icon: <Shield className="w-6 h-6" />, title: 'Risk Mitigation', description: 'Reduce regulatory and security risks with comprehensive compliance programs' },
     { icon: <CheckCircle className="w-6 h-6" />, title: 'Audit Readiness', description: 'Stay prepared for audits with ongoing monitoring and documentation' },
@@ -69,7 +9,7 @@ export default function Compliance() {
     { icon: <Clock className="w-6 h-6" />, title: 'Time Savings', description: 'Streamline compliance processes with expert guidance and automation' }
   ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>Compliance Services - Zion Tech Group | Regulatory Compliance & Security</title>
@@ -124,8 +64,8 @@ export default function Compliance() {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {complianceFrameworks.map((framework, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">)
+              {complianceFrameworks.map((framework, index) => (}
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-cyan-400">
@@ -137,7 +77,7 @@ export default function Compliance() {
                   </div>
                   <h3 className="text-xl font-semibold mb-3">{framework.name}</h3>
                   <p className="text-gray-300">{framework.description}</p>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -154,16 +94,16 @@ export default function Compliance() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {services.map((service, index) => (
+              {services.map((service, index) => (}
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
                   <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
                   <p className="text-gray-300 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
+                  <ul className="space-y-2">)
+                    {service.features.map((feature, idx) => (}
                       <li key={idx} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                         {feature}
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                 </div>
@@ -183,14 +123,14 @@ export default function Compliance() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
+              {benefits.map((benefit, index) => (}
                 <div key={index} className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
-                </div>
+                </div>)
               ))}
             </div>
           </div>

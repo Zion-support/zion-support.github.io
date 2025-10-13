@@ -1,6 +1,6 @@
 
-export default function Implementation5GPage() {
-  return (
+export default function Implementation5GPage() {}
+  return ()
     <>
       <Helmet>
         <title>5G Implementation - Zion Tech Group</title>
@@ -28,6 +28,6 @@ export default function Implementation5GPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,7 +1,7 @@
 
 
-export default function DisasterRecoveryAdvancedZionTechGroup() {
-  return (
+export default function DisasterRecoveryAdvancedZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>DisasterRecoveryAdvanced - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function DisasterRecoveryAdvancedZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

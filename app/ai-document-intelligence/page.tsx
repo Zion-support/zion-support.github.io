@@ -1,7 +1,7 @@
 
 
-export default function AiDocumentIntelligenceZionTechGroup() {
-  return (
+export default function AiDocumentIntelligenceZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiDocumentIntelligence - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function AiDocumentIntelligenceZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

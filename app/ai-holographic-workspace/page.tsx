@@ -1,7 +1,7 @@
 
 
-export default function AiHolographicWorkspaceZionTechGroup() {
-  return (
+export default function AiHolographicWorkspaceZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiHolographicWorkspace - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function AiHolographicWorkspaceZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

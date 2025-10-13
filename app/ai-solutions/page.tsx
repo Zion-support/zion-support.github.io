@@ -1,7 +1,7 @@
 
 
-export default function GDataAnalyticsZionTechGroupPage() {
-  return (
+export default function GDataAnalyticsZionTechGroupPage() {}
+  return ()
     <>
       <Helmet>
         <title>5G Data Analytics - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

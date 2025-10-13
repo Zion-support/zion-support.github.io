@@ -1,6 +1,6 @@
 
-export default function ZionChatAiZionTechGroup() {
-  return (
+export default function ZionChatAiZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionChatAi - Zion Tech Group</title>
@@ -20,6 +20,6 @@ export default function ZionChatAiZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

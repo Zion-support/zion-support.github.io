@@ -1,6 +1,6 @@
 
-export default function DevOpsServices() {
-  return (
+export default function DevOpsServices() {}
+  return ()
     <>
       <Helmet>
         <title>DevOps Services - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function DevOpsServices() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

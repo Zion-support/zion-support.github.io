@@ -1,7 +1,7 @@
 import React from "react";
 import SEOOptimizer from "../../components/SEOOptimizer";
 
-export default function AiQuantumComputing() {
+export default function AiQuantumComputing() {}
     "Quantum machine learning algorithms for complex optimization",
     "Quantum simulation for drug discovery and materials science",
     "Quantum cryptography for ultra-secure communications",
@@ -22,66 +22,8 @@ export default function AiQuantumComputing() {
     "Revolutionary optimization for complex systems"
   ];
 
-  const pricingPlans = [
-    {
-      name: "Research",
-      price: "$2,999",
-      period: "/month",
-      description: "Perfect for academic research and small-scale quantum experiments",
-      features: [
-        "Up to 100 quantum circuit executions",
-        "Basic quantum algorithms library",
-        "Quantum simulator access",
-        "Email support",
-        "Basic documentation",
-        "5 user accounts",
-        "Standard quantum gates"
-      ],
-      popular: false
-    },
-    {
-      name: "Enterprise",
-      price: "$9,999",
-      period: "/month",
-      description: "Ideal for large organizations and commercial quantum applications",
-      features: [
-        "Up to 1,000 quantum circuit executions",
-        "Advanced quantum algorithms library",
-        "Real quantum hardware access",
-        "Priority support",
-        "Advanced documentation",
-        "25 user accounts",
-        "Custom quantum gates",
-        "API access",
-        "Quantum error correction",
-        "Dedicated quantum resources"
-      ],
-      popular: true
-    },
-    {
-      name: "Quantum Lab",
-      price: "$29,999",
-      period: "/month",
-      description: "For quantum research institutions and cutting-edge applications",
-      features: [
-        "Unlimited quantum circuit executions",
-        "Complete quantum algorithms library",
-        "Exclusive quantum hardware access",
-        "24/7 dedicated support",
-        "Custom quantum development",
-        "Unlimited user accounts",
-        "Custom quantum processors",
-        "Advanced API access",
-        "Quantum entanglement protocols",
-        "Dedicated quantum scientists",
-        "White-label quantum solutions",
-        "On-premise quantum deployment"
-      ],
-      popular: false
-    }
-  ];
 
-    {
+    {}
       name: "Dr. Sarah Chen",
       company: "Quantum Research Institute",
       role: "Chief Quantum Scientist",
@@ -89,7 +31,7 @@ export default function AiQuantumComputing() {
       rating: 5,
       avatar: "SC"
     },
-    {
+    {}
       name: "Michael Rodriguez",
       company: "Pharmaceutical Corp",
       role: "Head of R&D",
@@ -97,7 +39,7 @@ export default function AiQuantumComputing() {
       rating: 5,
       avatar: "MR"
     },
-    {
+    {}
       name: "Dr. Emily Watson",
       company: "Financial Services",
       role: "Quantitative Analyst",
@@ -107,34 +49,8 @@ export default function AiQuantumComputing() {
     }
   ];
 
-  const applications = [
-    {
-      title: "Drug Discovery",
-      description: "Simulate molecular interactions and discover new pharmaceutical compounds",
-      icon: <Atom className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Financial Optimization",
-      description: "Optimize complex portfolios and risk management strategies",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Cryptography",
-      description: "Develop unbreakable quantum encryption and secure communications",
-      icon: <Lock className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Machine Learning",
-      description: "Train quantum neural networks for advanced pattern recognition",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group</title>
@@ -156,7 +72,7 @@ export default function AiQuantumComputing() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>)
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -242,7 +158,7 @@ export default function AiQuantumComputing() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
@@ -251,7 +167,7 @@ export default function AiQuantumComputing() {
                     <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
                     <span className="text-white font-medium">{feature}</span>
                   </div>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -271,7 +187,7 @@ export default function AiQuantumComputing() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {applications.map((application, index) => (
+              {applications.map((application, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
@@ -287,7 +203,7 @@ export default function AiQuantumComputing() {
                   <p className="text-gray-300 leading-relaxed">
                     {application.description}
                   </p>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -306,19 +222,19 @@ export default function AiQuantumComputing() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (}
                 <div
                   key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${
+                  className={`group bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative ${}
                     plan.popular ? 'ring-2 ring-cyan-400' : ''
                   }`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   
                   <div className="text-center mb-6">
@@ -331,17 +247,17 @@ export default function AiQuantumComputing() {
                   </div>
                   
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                   
                   <Link
                     to="/contact"
-                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${}
                       plan.popular
                         ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
@@ -369,14 +285,14 @@ export default function AiQuantumComputing() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <div className="flex items-center mb-4">)
+                    {[...Array(testimonial.rating)].map((_, i) => (}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>

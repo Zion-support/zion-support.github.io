@@ -1,6 +1,6 @@
 
-export default function Zionaicontentstudiopro() {
-  return (
+export default function Zionaicontentstudiopro() {}
+  return ()
     <>
       <Helmet>
         <title>Zion Ai Content Studio Pro - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Zionaicontentstudiopro() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

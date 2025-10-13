@@ -1,6 +1,6 @@
 
-export default function Zionsmartexpensecategorizerpro() {
-  return (
+export default function Zionsmartexpensecategorizerpro() {}
+  return ()
     <>
       <Helmet>
         <title>Zion Smart Expense Categorizer Pro - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Zionsmartexpensecategorizerpro() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

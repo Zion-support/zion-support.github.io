@@ -1,6 +1,6 @@
 
-export default function Zionaicustomersentimenttrackerpro() {
-  return (
+export default function Zionaicustomersentimenttrackerpro() {}
+  return ()
     <>
       <Helmet>
         <title>Zion Ai Customer Sentiment Tracker Pro - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Zionaicustomersentimenttrackerpro() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

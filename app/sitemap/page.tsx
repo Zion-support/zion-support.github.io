@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Sitemap() {
-  return (
+export default function Sitemap() {}
+  return ()
     <>
       <Helmet>
         <title>Sitemap - Zion Tech Group | AI & IT Solutions</title>
@@ -13,6 +13,6 @@ export default function Sitemap() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,7 +1,7 @@
 
 
-export default function AiVideoAnalysisZionTechGroup() {
-  return (
+export default function AiVideoAnalysisZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiVideoAnalysis - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function AiVideoAnalysisZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

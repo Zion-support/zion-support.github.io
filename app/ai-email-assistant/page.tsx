@@ -1,5 +1,5 @@
 "use client";
-import {
+import {}
   MessageSquare,
   Brain,
   Shield,
@@ -11,26 +11,26 @@ import {
   Users,
 } from "lucide-react";
 
-export default function AIEmailAssistant() {
-    {
+export default function AIEmailAssistant() {}
+    {}
       icon: <Mail className="w-6 h-6 text-cyan-400" />,
       title: "Smart Classification",
       description:
         "Automatically categorize and prioritize emails based on content and sender.",
     },
-    {
+    {}
       icon: <MessageSquare className="w-6 h-6 text-purple-400" />,
       title: "Auto-Responses",
       description:
         "Generate intelligent responses using AI to handle common inquiries.",
     },
-    {
+    {}
       icon: <Brain className="w-6 h-6 text-yellow-400" />,
       title: "Sentiment Analysis",
       description:
         "Analyze email tone and sentiment to provide better customer service.",
     },
-    {
+    {}
       icon: <Settings className="w-6 h-6 text-green-400" />,
       title: "Workflow Automation",
       description:
@@ -38,98 +38,23 @@ export default function AIEmailAssistant() {
     },
   ];
 
-  const useCases = [
-    {
-      title: "Customer Support",
-      description:
-        "Handle customer inquiries efficiently with AI-powered responses and routing.",
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-    },
-    {
-      title: "Sales Outreach",
-      description:
-        "Generate personalized sales emails and follow-up sequences automatically.",
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-    },
-    {
-      title: "Email Marketing",
-      description:
-        "Create compelling marketing campaigns with AI-generated content and optimization.",
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-    },
-    {
-      title: "Internal Communications",
-      description:
-        "Streamline internal email processes and improve team collaboration.",
-      icon: <Shield className="w-8 h-8 text-purple-400" />,
-    },
-  ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$29",
-      period: "/month",
-      description: "Perfect for small teams",
-      features: [
-        "Up to 1,000 emails/month",
-        "Basic AI features",
-        "Email classification",
-        "Auto-responses",
-        "Email support",
-        "Basic analytics",
-      ],
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$79",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 emails/month",
-        "Advanced AI features",
-        "Sentiment analysis",
-        "Workflow automation",
-        "Priority support",
-        "Advanced analytics",
-        "API access",
-      ],
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited emails",
-        "Custom AI training",
-        "White-label solution",
-        "Dedicated support",
-        "Custom integrations",
-        "Advanced security",
-        "SLA guarantee",
-      ],
-      popular: false,
-    },
-  ];
 
-    {
+    {}
       name: "Jennifer Smith",
       company: "Customer Service Manager",
       content:
         "AI Email Assistant reduced our response time by 60% and improved customer satisfaction significantly.",
       rating: 5,
     },
-    {
+    {}
       name: "Michael Chen",
       company: "Sales Director",
       content:
         "The automated email generation has increased our outreach efficiency by 3x while maintaining personalization.",
       rating: 5,
     },
-    {
+    {}
       name: "Sarah Wilson",
       company: "Marketing Manager",
       content:
@@ -138,7 +63,7 @@ export default function AIEmailAssistant() {
     },
   ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>AI Email Assistant - Zion Tech Group</title>
@@ -177,8 +102,8 @@ export default function AIEmailAssistant() {
           </div>
 
           {/* Features Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">)
+            {features.map((feature, index) => (}
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
@@ -188,7 +113,7 @@ export default function AIEmailAssistant() {
                   {feature.title}
                 </h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
+              </div>)
             ))}
           </div>
 
@@ -198,7 +123,7 @@ export default function AIEmailAssistant() {
               Use Cases
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+              {useCases.map((useCase, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
@@ -208,7 +133,7 @@ export default function AIEmailAssistant() {
                     {useCase.title}
                   </h3>
                   <p className="text-gray-300">{useCase.description}</p>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -219,17 +144,17 @@ export default function AIEmailAssistant() {
               Pricing Plans
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (}
                 <div
                   key={index}
                   className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? "ring-2 ring-cyan-500" : ""}`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">
@@ -244,19 +169,19 @@ export default function AIEmailAssistant() {
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li
                         key={featureIndex}
                         className="text-gray-300 flex items-center"
                       >
                         <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${}
                       plan.popular
                         ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600"
                         : "border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10"
@@ -275,17 +200,17 @@ export default function AIEmailAssistant() {
               What Our Clients Say
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">)
+                    {[...Array(testimonial.rating)].map((_, i) => (}
                       <Star
                         key={i}
                         className="w-5 h-5 text-yellow-400 fill-current"
-                      />
+                      />)
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">

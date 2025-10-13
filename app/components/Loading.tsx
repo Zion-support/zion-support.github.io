@@ -1,10 +1,10 @@
 
-interface LoadingProps {
+interface LoadingProps {}
   message?: string;
 }
 
 export default function Loading({ message = "Loading..." }: LoadingProps) {
-  return (
+  return ()
     <>
       <Helmet>
         <title>Loading - Zion Tech Group</title>
@@ -19,6 +19,6 @@ export default function Loading({ message = "Loading..." }: LoadingProps) {
           </p>
         </div>
       </div>
-    </>
+    </>)
   );
 }

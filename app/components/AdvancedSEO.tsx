@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface AdvancedSEOProps {
+interface AdvancedSEOProps {}
   title: string;
   description: string;
   keywords?: string;
@@ -26,7 +26,7 @@ interface AdvancedSEOProps {
   readingTime?: number;
 }
 
-const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
+const AdvancedSEO: React.FC<AdvancedSEOProps> = ({)}
   title,
   description,
   keywords,
@@ -49,7 +49,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   modifiedTime,
   section = 'Technology',
   tags = [],
-  readingTime
+  readingTime)
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullOgTitle = ogTitle || fullTitle;
@@ -61,7 +61,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
 
   // Default structured data for organization
-  const defaultStructuredData = {
+  const defaultStructuredData = {}
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -69,7 +69,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
     "logo": "https://ziontechgroup.com/logo.svg",
     "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
     "foundingDate": "2020",
-    "address": {
+    "address": {}
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
       "addressLocality": "Middletown",
@@ -77,63 +77,63 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       "postalCode": "19709",
       "addressCountry": "US"
     },
-    "contactPoint": {
+    "contactPoint": {}
       "@type": "ContactPoint",
       "telephone": "+1-302-464-0950",
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com",
       "availableLanguage": ["English"]
     },
-    "sameAs": [
+    "sameAs": []
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup",
-      "https://github.com/ziontechgroup"
+      "https://github.com/ziontechgroup"]
     ],
-    "offers": [
-      {
+    "offers": []
+      {}
         "@type": "Offer",
         "name": "AI Solutions",
         "description": "Artificial intelligence and machine learning services",
         "category": "Technology Services"
       },
-      {
+      {}
         "@type": "Offer",
         "name": "IT Services",
         "description": "Information technology consulting and implementation",
         "category": "Technology Services"
       },
-      {
+      {}
         "@type": "Offer",
         "name": "Micro SAAS",
         "description": "Ready-to-use software solutions",
         "category": "Software"
-      }
+      }]
     ]
   };
 
   // Article structured data if publishedTime is provided
-  const articleStructuredData = publishedTime ? {
+  const articleStructuredData = publishedTime ? {}
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": fullTitle,
     "description": description,
     "image": fullOgImage,
-    "author": {
+    "author": {}
       "@type": "Organization",
       "name": author,
       "url": "https://ziontechgroup.com"
     },
-    "publisher": {
+    "publisher": {}
       "@type": "Organization",
       "name": "Zion Tech Group",
-      "logo": {
+      "logo": {}
         "@type": "ImageObject",
         "url": "https://ziontechgroup.com/logo.svg"
       }
     },
     "datePublished": publishedTime,
     "dateModified": modifiedTime || publishedTime,
-    "mainEntityOfPage": {
+    "mainEntityOfPage": {}
       "@type": "WebPage",
       "@id": fullCanonical
     },
@@ -142,7 +142,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
     "wordCount": readingTime ? readingTime * 200 : undefined
   } : null;
 
-  return (
+  return ()
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
@@ -156,7 +156,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       <meta name="author" content={author} />
       {publishedTime && <meta name="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta name="article:modified_time" content={modifiedTime} />}
-      {section && <meta name="article:section" content={section} />}
+      {section && <meta name="article:section" content={section} />})
       {tags.length > 0 && <meta name="article:tag" content={tags.join(', ')} />}
       {readingTime && <meta name="twitter:label1" content="Reading time" />}
       {readingTime && <meta name="twitter:data1" content={`${readingTime} min read`} />}
@@ -172,8 +172,8 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       {publishedTime && <meta property="article:published_time" content={publishedTime} />}
       {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
       {section && <meta property="article:section" content={section} />}
-      {tags.length > 0 && tags.map(tag => (
-        <meta key={tag} property="article:tag" content={tag} />
+      {tags.length > 0 && tags.map(tag => ()}
+        <meta key={tag} property="article:tag" content={tag} />)
       ))}
 
       {/* Twitter Card Meta Tags */}
@@ -222,31 +222,31 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       </script>
 
       {/* Article structured data if applicable */}
-      {articleStructuredData && (
-        <script type="application/ld+json">
+      {articleStructuredData && ()}
+        <script type="application/ld+json">)
           {JSON.stringify(articleStructuredData)}
         </script>
       )}
 
       {/* Breadcrumb structured data */}
       <script type="application/ld+json">
-        {JSON.stringify({
+        {JSON.stringify({)}
           "@context": "https://schema.org",
           "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
+          "itemListElement": []
+            {}
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
               "item": "https://ziontechgroup.com"
             },
-            {
+            {}
               "@type": "ListItem",
               "position": 2,
               "name": title,
               "item": fullCanonical
-            }
-          ]
+            }]
+          ])
         })}
       </script>
     </Helmet>

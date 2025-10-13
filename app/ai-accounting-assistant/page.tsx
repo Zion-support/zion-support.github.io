@@ -1,6 +1,6 @@
 
-export default function AIAccountingAssistantZionTechGroup() {
-  return (
+export default function AIAccountingAssistantZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Accounting Assistant - Zion Tech Group</title>
@@ -22,6 +22,6 @@ export default function AIAccountingAssistantZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

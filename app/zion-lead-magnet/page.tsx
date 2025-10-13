@@ -1,7 +1,7 @@
 
 
-export default function ZionLeadMagnetZionTechGroup() {
-  return (
+export default function ZionLeadMagnetZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionLeadMagnet - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function ZionLeadMagnetZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -7,14 +7,14 @@ import ErrorFallback from "./components/ErrorFallback";
 import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";
 
-interface LayoutProps {
+interface LayoutProps {}
   children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  return (
+  return ()
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <HelmetProvider>
         <BrowserRouter>
@@ -34,7 +34,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
             <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
               {/* Animated Background */}
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>)
               <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
               
               <ImprovedNavigation />

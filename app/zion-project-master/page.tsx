@@ -1,7 +1,7 @@
 
 
-export default function ZionProjectMasterZionTechGroup() {
-  return (
+export default function ZionProjectMasterZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionProjectMaster - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionProjectMasterZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,6 +1,6 @@
 
-export default function Ai3DGenerationZionTechGroup() {
-  return (
+export default function Ai3DGenerationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>Ai3DGeneration - Zion Tech Group</title>
@@ -20,6 +20,6 @@ export default function Ai3DGenerationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

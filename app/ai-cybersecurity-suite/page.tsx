@@ -1,8 +1,8 @@
 
 
 
-export default function AICybersecuritySuiteZionTechGroup() {
-  return (
+export default function AICybersecuritySuiteZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Cybersecurity Suite - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function AICybersecuritySuiteZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

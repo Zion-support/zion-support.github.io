@@ -1,7 +1,7 @@
 "use client";
 
-export default function AiInvoiceGeneratorZionTechGroup() {
-  return (
+export default function AiInvoiceGeneratorZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiInvoiceGenerator - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function AiInvoiceGeneratorZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

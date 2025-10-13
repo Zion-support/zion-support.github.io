@@ -1,7 +1,7 @@
 
 
-export default function ZionComplianceManagerZionTechGroup() {
-  return (
+export default function ZionComplianceManagerZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionComplianceManager - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionComplianceManagerZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

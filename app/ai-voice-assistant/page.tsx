@@ -1,6 +1,6 @@
 
-export default function AIVoiceAssistant() {
-  return (
+export default function AIVoiceAssistant() {}
+  return ()
     <>
       <Helmet>
         <title>AI Voice Assistant - Zion Tech Group</title>
@@ -22,6 +22,6 @@ export default function AIVoiceAssistant() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

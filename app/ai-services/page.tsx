@@ -1,14 +1,14 @@
 import React from 'react';
-import { 
-  Brain, 
-  Zap, 
-  Shield, 
-  BarChart3, 
-  Users, 
-  Target, 
-  Globe, 
-  ArrowRight, 
-  Star, 
+import { }
+  Brain,
+  Zap,
+  Shield,
+  BarChart3,
+  Users,
+  Target,
+  Globe,
+  ArrowRight,
+  Star,
   CheckCircle,
   Video,
   MessageSquare,
@@ -21,111 +21,8 @@ import {
 } from 'lucide-react';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-
-const AIServices = () => {
-  const aiServices = [
-    {
-      title: "AI Video Generation",
-      description: "Create professional videos in minutes with AI-powered script generation, voice synthesis, and smart editing",
-      icon: <Video className="w-8 h-8" />,
-      price: "From $29/month",
-      link: "/zion-ai-video-generator",
-      features: ["Script generation", "Voice synthesis", "Auto editing", "50+ languages"],
-      featured: true
-    },
-    {
-      title: "AI Customer Insights",
-      description: "Transform customer data into actionable insights with AI-powered analytics and predictive behavior modeling",
-      icon: <Brain className="w-8 h-8" />,
-      price: "From $49/month",
-      link: "/zion-ai-customer-insights",
-      features: ["Sentiment analysis", "Predictive analytics", "Real-time insights", "Multi-channel integration"],
-      featured: true
-    },
-    {
-      title: "AI Cybersecurity Suite",
-      description: "Enterprise-grade AI-powered cybersecurity with advanced threat detection and automated incident response",
-      icon: <Shield className="w-8 h-8" />,
-      price: "From $299/month",
-      link: "/zion-ai-cybersecurity-suite-pro",
-      features: ["Threat detection", "Zero-trust architecture", "Automated response", "Compliance automation"],
-      featured: true
-    },
-    {
-      title: "AI Business Intelligence",
-      description: "AI-powered business intelligence platform with predictive analytics and natural language queries",
-      icon: <BarChart3 className="w-8 h-8" />,
-      price: "From $199/month",
-      link: "/zion-ai-business-intelligence-pro",
-      features: ["Predictive analytics", "Real-time dashboards", "Natural language queries", "Custom AI models"],
-      featured: true
-    },
-    {
-      title: "AI Content Generation",
-      description: "Generate high-quality content for blogs, social media, and marketing campaigns using advanced AI",
-      icon: <MessageSquare className="w-8 h-8" />,
-      price: "From $99/month",
-      link: "/ai-content-generation",
-      features: ["Blog posts", "Social media", "Email campaigns", "SEO optimization"],
-      featured: false
-    },
-    {
-      title: "AI Marketing Automation",
-      description: "Automate your marketing campaigns with AI-powered personalization and multi-channel orchestration",
-      icon: <Target className="w-8 h-8" />,
-      price: "From $149/month",
-      link: "/ai-marketing-automation",
-      features: ["Campaign automation", "Personalization", "A/B testing", "Performance analytics"],
-      featured: false
-    },
-    {
-      title: "AI Customer Support",
-      description: "Deploy intelligent chatbots and virtual assistants for 24/7 customer support and engagement",
-      icon: <Users className="w-8 h-8" />,
-      price: "From $79/month",
-      link: "/ai-customer-support",
-      features: ["Intelligent chatbots", "Multi-language support", "Sentiment analysis", "Escalation management"],
-      featured: false
-    },
-    {
-      title: "AI Data Analytics",
-      description: "Advanced data analytics and insights powered by machine learning and artificial intelligence",
-      icon: <TrendingUp className="w-8 h-8" />,
-      price: "From $199/month",
-      link: "/ai-data-analytics",
-      features: ["Predictive modeling", "Anomaly detection", "Automated reporting", "Data visualization"],
-      featured: false
-    }
-  ];
-
-  const capabilities = [
-    {
-      title: "Machine Learning",
-      description: "Advanced ML algorithms for predictive modeling, pattern recognition, and automated decision making",
-      icon: <Brain className="w-6 h-6" />,
-      stats: "95% accuracy"
-    },
-    {
-      title: "Natural Language Processing",
-      description: "Understand and process human language for chatbots, content analysis, and automated responses",
-      icon: <MessageSquare className="w-6 h-6" />,
-      stats: "50+ languages"
-    },
-    {
-      title: "Computer Vision",
-      description: "Analyze and understand visual content for image recognition, object detection, and visual insights",
-      icon: <Eye className="w-6 h-6" />,
-      stats: "99.2% accuracy"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast future trends and outcomes using advanced statistical models and AI algorithms",
-      icon: <TrendingUp className="w-6 h-6" />,
-      stats: "85% prediction accuracy"
-    }
-  ];
-
-    {
+const AIServices = () => {}
+    {}
       name: "Sarah Chen",
       company: "TechStart Inc.",
       role: "CEO",
@@ -133,7 +30,7 @@ const AIServices = () => {
       rating: 5,
       avatar: "SC"
     },
-    {
+    {}
       name: "Michael Rodriguez",
       company: "E-commerce Solutions",
       role: "CTO",
@@ -141,7 +38,7 @@ const AIServices = () => {
       rating: 5,
       avatar: "MR"
     },
-    {
+    {}
       name: "Emily Johnson",
       company: "Digital Marketing Agency",
       role: "Operations Director",
@@ -150,14 +47,12 @@ const AIServices = () => {
       avatar: "EJ"
     }
   ];
-
     { number: "500+", label: "AI Models Deployed", icon: <Brain className="w-6 h-6" /> },
     { number: "10,000+", label: "Businesses Transformed", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
     { number: "50%", label: "Average Cost Reduction", icon: <TrendingUp className="w-6 h-6" /> }
   ];
-
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Services - Advanced Artificial Intelligence Solutions | Zion Tech Group</title>
@@ -165,31 +60,26 @@ const AIServices = () => {
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, NLP, computer vision, predictive analytics, AI automation, business intelligence" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-services" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 mb-6">
             <Brain className="w-4 h-4 text-purple-400 mr-2" />
             <span className="text-purple-400 text-sm font-medium">Advanced AI Solutions</span>
           </div>
-          
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400">
               AI Services
             </span>
           </h1>
-          
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Transform your business with our comprehensive AI services. From machine learning and natural language processing 
             to computer vision and predictive analytics, we provide cutting-edge AI solutions that drive real results.
           </p>
-          
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <FuturisticButton
               href="#services"
@@ -208,22 +98,20 @@ const AIServices = () => {
               Get Consultation
             </FuturisticButton>
           </div>
-
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">)
+            {stats.map((stat, index) => (}
               <div key={index} className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   {stat.icon}
                 </div>
                 <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-              </div>
+              </div>)
             ))}
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* AI Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -235,9 +123,8 @@ const AIServices = () => {
               Our advanced AI technologies power intelligent solutions across every aspect of your business
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {capabilities.map((capability, index) => (
+            {capabilities.map((capability, index) => (}
               <FuturisticCard
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
@@ -256,12 +143,11 @@ const AIServices = () => {
                     {capability.stats}
                   </span>
                 </div>
-              </FuturisticCard>
+              </FuturisticCard>)
             ))}
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* AI Services Section */}
       <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
@@ -273,23 +159,21 @@ const AIServices = () => {
               Comprehensive AI solutions designed to transform your business operations and drive growth
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {aiServices.map((service, index) => (
+            {aiServices.map((service, index) => (}
               <FuturisticCard
                 key={index}
-                className={`group hover:scale-105 transition-all duration-300 ${
+                className={`group hover:scale-105 transition-all duration-300 ${}
                   service.featured ? 'ring-2 ring-purple-500' : ''
                 }`}
               >
-                {service.featured && (
+                {service.featured && ()}
                   <div className="absolute -top-2 -right-2">
                     <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                       Featured
                     </span>
-                  </div>
+                  </div>)
                 )}
-                
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {service.icon}
                 </div>
@@ -300,11 +184,11 @@ const AIServices = () => {
                   {service.description}
                 </p>
                 <div className="space-y-2 mb-6">
-                  {service.features.map((feature, idx) => (
+                  {service.features.map((feature, idx) => (}
                     <div key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                       {feature}
-                    </div>
+                    </div>)
                   ))}
                 </div>
                 <div className="text-center mb-4">
@@ -323,7 +207,6 @@ const AIServices = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* Testimonials Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
@@ -335,16 +218,15 @@ const AIServices = () => {
               See how organizations are using our AI services to transform their business operations
             </p>
           </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index) => (}
               <FuturisticCard
                 key={index}
                 className="group hover:scale-105 transition-all duration-300"
               >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                <div className="flex items-center mb-4">)
+                  {[...Array(testimonial.rating)].map((_, i) => (}
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)
                   ))}
                 </div>
                 <p className="text-gray-300 mb-6 italic leading-relaxed">
@@ -364,7 +246,6 @@ const AIServices = () => {
           </div>
         </ResponsiveContainer>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
         <ResponsiveContainer>
@@ -375,7 +256,6 @@ const AIServices = () => {
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Join hundreds of organizations using our AI services to automate processes, gain insights, and drive innovation.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
                 href="/contact"
@@ -394,7 +274,6 @@ const AIServices = () => {
                 Schedule Demo
               </FuturisticButton>
             </div>
-            
             <div className="mt-8 text-sm text-gray-400">
               <p>Free consultation • Custom AI solutions • 24/7 support</p>
             </div>
@@ -404,5 +283,4 @@ const AIServices = () => {
     </div>
   );
 };
-
 export default AIServices;

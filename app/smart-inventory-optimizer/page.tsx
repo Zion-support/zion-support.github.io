@@ -1,13 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Package, 
-  TrendingUp, 
-  AlertTriangle, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Clock, 
+import { }
+  Package,
+  TrendingUp,
+  AlertTriangle,
+  Zap,
+  BarChart3,
+  Users,
+  Clock,
   CheckCircle,
   Star,
   ArrowRight,
@@ -18,126 +18,71 @@ import {
   Truck,
   Shield
 } from 'lucide-react';
-
-const SmartInventoryOptimizerPage = () => {
-    {
+const SmartInventoryOptimizerPage = () => {}
+    {}
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: "AI-Powered Demand Forecasting",
       description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."
     },
-    {
+    {}
       icon: <Target className="w-8 h-8 text-purple-400" />,
       title: "Smart Reorder Points",
       description: "Automatically calculate optimal reorder points based on lead times, demand variability, and supplier reliability."
     },
-    {
+    {}
       icon: <BarChart3 className="w-8 h-8 text-green-400" />,
       title: "Real-time Analytics Dashboard",
       description: "Comprehensive analytics and reporting with real-time insights into inventory performance, turnover rates, and cost optimization."
     },
-    {
+    {}
       icon: <Shield className="w-8 h-8 text-red-400" />,
       title: "Multi-location Management",
       description: "Seamlessly manage inventory across multiple warehouses, stores, and distribution centers with centralized control."
     },
-    {
+    {}
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
       title: "Automated Alerts & Notifications",
       description: "Get instant alerts for low stock, overstock, expiring items, and unusual demand patterns to prevent costly mistakes."
     },
-    {
+    {}
       icon: <Users className="w-8 h-8 text-blue-400" />,
       title: "Supplier Integration",
       description: "Connect with suppliers for automated ordering, real-time stock updates, and seamless supply chain management."
     }
   ];
-
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$49",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 1,000 SKUs",
-        "Basic demand forecasting",
-        "Reorder point alerts",
-        "Basic analytics",
-        "Email support",
-        "1 warehouse location"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 SKUs",
-        "Advanced AI forecasting",
-        "Multi-location support",
-        "Advanced analytics",
-        "Priority support",
-        "API access",
-        "Supplier integration"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited SKUs",
-        "Custom AI models",
-        "White-label solution",
-        "Advanced security",
-        "Dedicated support",
-        "Custom integrations",
-        "On-premise deployment"
-      ],
-      popular: false
-    }
-  ];
-
-    {
+    {}
       icon: <DollarSign className="w-12 h-12 text-green-400" />,
       title: "Reduce Inventory Costs",
       description: "Save up to 30% on inventory costs through optimized stock levels and reduced carrying costs."
     },
-    {
+    {}
       icon: <Truck className="w-12 h-12 text-blue-400" />,
       title: "Improve Order Fulfillment",
       description: "Increase order fulfillment rates by 25% with better stock availability and demand prediction."
     },
-    {
+    {}
       icon: <AlertTriangle className="w-12 h-12 text-yellow-400" />,
       title: "Prevent Stockouts",
       description: "Eliminate stockouts and lost sales with intelligent demand forecasting and automated reordering."
     },
-    {
+    {}
       icon: <TrendingUp className="w-12 h-12 text-purple-400" />,
       title: "Increase Profitability",
       description: "Boost profit margins by 15-20% through optimized inventory management and reduced waste."
     }
   ];
-
     { number: "30%", label: "Cost Reduction" },
     { number: "95%", label: "Forecast Accuracy" },
     { number: "25%", label: "Faster Fulfillment" },
     { number: "50%", label: "Less Waste" }
   ];
-
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Smart Inventory Optimizer | Zion Tech Group</title>
         <meta name="description" content="Revolutionize your inventory management with AI-powered demand forecasting, smart reorder points, and real-time analytics." />
         <meta name="keywords" content="inventory management, demand forecasting, supply chain, inventory optimization, AI inventory" />
       </Helmet>
-
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -151,17 +96,14 @@ const SmartInventoryOptimizerPage = () => {
               <Package className="w-5 h-5 text-cyan-400 mr-2" />
               <span className="text-cyan-300 font-medium">AI-Powered Inventory Intelligence</span>
             </div>
-            
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Optimize Your
               <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent"> Inventory Management</span>
             </h1>
-            
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your inventory operations with AI-powered demand forecasting, smart reorder points, 
               and real-time analytics that reduce costs and improve efficiency.
             </p>
-
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -182,12 +124,11 @@ const SmartInventoryOptimizerPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Stats Section */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">)
+            {stats.map((stat, index) => (}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -201,12 +142,11 @@ const SmartInventoryOptimizerPage = () => {
                 <div className="text-gray-400 font-medium">
                   {stat.label}
                 </div>
-              </motion.div>
+              </motion.div>)
             ))}
           </div>
         </div>
       </section>
-
       {/* Benefits Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -224,9 +164,8 @@ const SmartInventoryOptimizerPage = () => {
               and operational efficiency.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
+            {benefits.map((benefit, index) => (}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -243,12 +182,11 @@ const SmartInventoryOptimizerPage = () => {
                 <p className="text-gray-300 leading-relaxed">
                   {benefit.description}
                 </p>
-              </motion.div>
+              </motion.div>)
             ))}
           </div>
         </div>
       </section>
-
       {/* Features Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -265,9 +203,8 @@ const SmartInventoryOptimizerPage = () => {
               Leverage cutting-edge artificial intelligence to optimize every aspect of your inventory management.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -284,12 +221,11 @@ const SmartInventoryOptimizerPage = () => {
                 <p className="text-gray-300 leading-relaxed">
                   {feature.description}
                 </p>
-              </motion.div>
+              </motion.div>)
             ))}
           </div>
         </div>
       </section>
-
       {/* Pricing Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -307,28 +243,26 @@ const SmartInventoryOptimizerPage = () => {
               All plans include our core AI features with no setup fees.
             </p>
           </motion.div>
-
           <div className="grid md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (}
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${
+                className={`relative bg-white/5 backdrop-blur-sm border rounded-xl p-8 ${}
                   plan.popular 
                     ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-transparent' 
                     : 'border-white/10'
                 }`}
               >
-                {plan.popular && (
+                {plan.popular && ()}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </div>
-                  </div>
+                  </div>)
                 )}
-
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <p className="text-gray-400 mb-4">{plan.description}</p>
@@ -337,20 +271,18 @@ const SmartInventoryOptimizerPage = () => {
                     <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
                 </div>
-
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
-                    </li>
+                    </li>)
                   ))}
                 </ul>
-
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                  className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:shadow-lg hover:shadow-cyan-500/25'
                       : 'border border-gray-600 text-white hover:bg-white/10'
@@ -363,7 +295,6 @@ const SmartInventoryOptimizerPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -400,7 +331,6 @@ const SmartInventoryOptimizerPage = () => {
           </motion.div>
         </div>
       </section>
-
       {/* Contact Information */}
       <section className="py-16 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto text-center">
@@ -423,5 +353,4 @@ const SmartInventoryOptimizerPage = () => {
     </div>
   );
 };
-
 export default SmartInventoryOptimizerPage;

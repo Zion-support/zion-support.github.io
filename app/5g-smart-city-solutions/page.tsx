@@ -1,6 +1,6 @@
 
-export default function SmartCitySolutions5GPage() {
-  return (
+export default function SmartCitySolutions5GPage() {}
+  return ()
     <>
       <Helmet>
         <title>5G Smart City Solutions - Zion Tech Group</title>
@@ -29,6 +29,6 @@ export default function SmartCitySolutions5GPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

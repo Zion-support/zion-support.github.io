@@ -1,20 +1,20 @@
 import React from "react";
 
-interface ServiceTemplateProps {
+interface ServiceTemplateProps {}
   title: string;
   description: string;
-  features: Array<{
+  features: Array<{}
     title: string;
     description: string;
   }>;
 }
 
-const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
+const ServiceTemplate: React.FC<ServiceTemplateProps> = ({)}
   title,
   description,
-  features,
+  features,)
 }) => {
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>{title} | Zion Tech Group</title>
@@ -51,8 +51,8 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
 
       <div className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
+            {features.map((feature, index) => (}
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
@@ -61,7 +61,7 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
                   {feature.title}
                 </h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
+              </div>)
             ))}
           </div>
         </div>

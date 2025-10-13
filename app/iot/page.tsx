@@ -1,6 +1,6 @@
 
-const IoTPage = () => {
-  return (
+const IoTPage = () => {}
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>IoT Solutions | Zion Tech Group</title>
@@ -37,7 +37,7 @@ const IoTPage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div>)
   );
 };
 

@@ -1,7 +1,7 @@
 
 
-export default function ZionPerformanceMonitorZionTechGroup() {
-  return (
+export default function ZionPerformanceMonitorZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionPerformanceMonitor - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionPerformanceMonitorZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

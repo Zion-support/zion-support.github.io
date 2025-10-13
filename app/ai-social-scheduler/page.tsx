@@ -1,7 +1,7 @@
 
 
-export default function AiSocialSchedulerZionTechGroup() {
-  return (
+export default function AiSocialSchedulerZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiSocialScheduler - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function AiSocialSchedulerZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

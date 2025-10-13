@@ -1,24 +1,24 @@
 
-export default function AIHealthcareDiagnostics() {
-    {
+export default function AIHealthcareDiagnostics() {}
+    {}
       title: "Medical Imaging Analysis",
       description: "Advanced AI algorithms analyze X-rays, MRIs, CT scans, and ultrasounds with 99.2% accuracy",
       icon: <Brain className="w-6 h-6" />,
       benefits: ["Early Disease Detection", "Reduced False Positives", "Faster Diagnosis", "Cost Savings"]
     },
-    {
+    {}
       title: "Symptom Assessment Engine",
       description: "Intelligent symptom analysis with differential diagnosis and treatment recommendations",
       icon: <Users className="w-6 h-6" />,
       benefits: ["Comprehensive Analysis", "Risk Stratification", "Treatment Guidance", "Patient Education"]
     },
-    {
+    {}
       title: "Drug Interaction Checker",
       description: "Real-time medication interaction analysis and allergy detection for patient safety",
       icon: <Shield className="w-6 h-6" />,
       benefits: ["Safety Alerts", "Allergy Detection", "Dosage Optimization", "Compliance Tracking"]
     },
-    {
+    {}
       title: "Predictive Analytics",
       description: "Machine learning models predict disease progression and treatment outcomes",
       icon: <BarChart3 className="w-6 h-6" />,
@@ -26,54 +26,9 @@ export default function AIHealthcareDiagnostics() {
     }
   ];
 
-  const useCases = [
-    {
-      title: "Radiology Departments",
-      description: "Accelerate image analysis and improve diagnostic accuracy in radiology departments",
-      impact: "40% faster diagnosis, 30% reduction in misdiagnosis"
-    },
-    {
-      title: "Emergency Rooms",
-      description: "Rapid triage and critical condition identification in emergency settings",
-      impact: "50% faster triage, 25% improvement in critical case detection"
-    },
-    {
-      title: "Primary Care",
-      description: "Support general practitioners with comprehensive diagnostic assistance",
-      impact: "60% more accurate initial diagnoses, 35% reduction in referrals"
-    },
-    {
-      title: "Specialist Clinics",
-      description: "Enhance specialist care with AI-powered diagnostic support and monitoring",
-      impact: "45% improvement in treatment outcomes, 20% cost reduction"
-    }
-  ];
 
-  const pricing = [
-    {
-      plan: "Starter",
-      price: "$499/month",
-      description: "Perfect for small clinics and private practices",
-      features: ["Up to 100 patients/month", "Basic imaging analysis", "Symptom assessment", "Email support"],
-      popular: false
-    },
-    {
-      plan: "Professional",
-      price: "$999/month",
-      description: "Ideal for medium-sized hospitals and medical centers",
-      features: ["Up to 500 patients/month", "Advanced imaging analysis", "Drug interaction checking", "Predictive analytics", "Priority support"],
-      popular: true
-    },
-    {
-      plan: "Enterprise",
-      price: "Custom Pricing",
-      description: "Comprehensive solution for large healthcare systems",
-      features: ["Unlimited patients", "Full AI suite", "Custom integrations", "Dedicated support", "Training & consultation"],
-      popular: false
-    }
-  ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>AI Healthcare Diagnostics - Zion Tech Group | Medical AI Solutions</title>
@@ -147,8 +102,8 @@ export default function AIHealthcareDiagnostics() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">)
+              {features.map((feature, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-rose-500/10 relative overflow-hidden"
@@ -164,12 +119,12 @@ export default function AIHealthcareDiagnostics() {
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         {feature.description}
                       </p>
-                      <div className="space-y-2">
-                        {feature.benefits.map((benefit, idx) => (
+                      <div className="space-y-2">)
+                        {feature.benefits.map((benefit, idx) => (}
                           <div key={idx} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             <span>{benefit}</span>
-                          </div>
+                          </div>)
                         ))}
                       </div>
                     </div>
@@ -193,7 +148,7 @@ export default function AIHealthcareDiagnostics() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+              {useCases.map((useCase, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-rose-500/10 relative overflow-hidden"
@@ -207,7 +162,7 @@ export default function AIHealthcareDiagnostics() {
                   <div className="text-rose-400 text-sm font-medium">
                     {useCase.impact}
                   </div>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -226,21 +181,21 @@ export default function AIHealthcareDiagnostics() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
+              {pricing.map((plan, index) => (}
                 <div
                   key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-rose-500/10 relative overflow-hidden ${
+                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-rose-500/10 relative overflow-hidden ${}
                     plan.popular 
                       ? 'border-rose-500/50 bg-gradient-to-br from-rose-500/10 to-pink-500/10' 
                       : 'border-white/20 hover:bg-white/20'
                   }`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute top-4 right-4">
                       <span className="bg-gradient-to-r from-rose-400 to-pink-500 text-white text-xs font-bold px-2 py-1 rounded-full">
                         POPULAR
                       </span>
-                    </div>
+                    </div>)
                   )}
                   
                   <div className="text-center mb-6">
@@ -250,18 +205,18 @@ export default function AIHealthcareDiagnostics() {
                   </div>
                   
                   <div className="space-y-3 mb-6">
-                    {plan.features.map((feature, idx) => (
+                    {plan.features.map((feature, idx) => (}
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         <span>{feature}</span>
-                      </div>
+                      </div>)
                     ))}
                   </div>
                   
                   <div className="text-center">
                     <Link
                       to="/contact"
-                      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 group ${
+                      className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 group ${}
                         plan.popular
                           ? 'bg-gradient-to-r from-rose-500 to-pink-600 text-white hover:from-rose-600 hover:to-pink-700 shadow-lg hover:shadow-rose-500/25'
                           : 'border border-rose-400 text-rose-400 hover:bg-rose-400 hover:text-slate-900'

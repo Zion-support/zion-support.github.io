@@ -1,6 +1,6 @@
 
-export default function AiChatbotBuilder() {
-  return (
+export default function AiChatbotBuilder() {}
+  return ()
     <>
       <Helmet>
         <title>AI Chatbot Builder - Zion Tech Group</title>
@@ -28,6 +28,6 @@ export default function AiChatbotBuilder() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

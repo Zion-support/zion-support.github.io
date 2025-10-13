@@ -1,118 +1,54 @@
 
-export default function ZionSecurityShield() {
-    {
+export default function ZionSecurityShield() {}
+    {}
       icon: <Shield className="w-6 h-6" />,
       title: "Advanced Threat Detection",
       description: "AI-powered threat detection with 99.9% accuracy using machine learning algorithms"
     },
-    {
+    {}
       icon: <Lock className="w-6 h-6" />,
       title: "Zero-Trust Architecture",
       description: "Implement zero-trust security model with continuous verification and monitoring"
     },
-    {
+    {}
       icon: <Eye className="w-6 h-6" />,
       title: "Real-time Monitoring",
       description: "24/7 security monitoring with instant alerts and automated response systems"
     },
-    {
+    {}
       icon: <AlertTriangle className="w-6 h-6" />,
       title: "Vulnerability Assessment",
       description: "Comprehensive security audits and vulnerability scanning for all your assets"
     },
-    {
+    {}
       icon: <Zap className="w-6 h-6" />,
       title: "Automated Incident Response",
       description: "AI-driven incident response with automated containment and recovery procedures"
     },
-    {
+    {}
       icon: <Brain className="w-6 h-6" />,
       title: "Behavioral Analytics",
       description: "Advanced user behavior analysis to detect insider threats and anomalies"
     }
   ];
 
-  const securityFeatures = [
-    "Multi-factor Authentication (MFA)",
-    "End-to-end Encryption",
-    "DDoS Protection",
-    "Web Application Firewall (WAF)",
-    "Intrusion Detection System (IDS)",
-    "Security Information and Event Management (SIEM)",
-    "Penetration Testing",
-    "Compliance Reporting (SOC 2, ISO 27001, GDPR)",
-    "Data Loss Prevention (DLP)",
-    "Mobile Device Management (MDM)",
-    "Email Security Gateway",
-    "Cloud Security Posture Management"
-  ];
 
-  const pricingPlans = [
-    {
-      name: "Essential",
-      price: "$49",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Basic threat detection",
-        "Email security",
-        "Firewall protection",
-        "Monthly security reports",
-        "Email support",
-        "Up to 10 users"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$149",
-      period: "/month",
-      description: "Most popular for growing businesses",
-      features: [
-        "Advanced threat detection",
-        "Real-time monitoring",
-        "Vulnerability scanning",
-        "Incident response",
-        "Priority support",
-        "Up to 50 users",
-        "Compliance reporting"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "AI-powered security",
-        "24/7 SOC monitoring",
-        "Custom security policies",
-        "Dedicated security team",
-        "White-label reporting",
-        "Unlimited users",
-        "Advanced compliance",
-        "Custom integrations"
-      ],
-      popular: false
-    }
-  ];
 
-    {
+    {}
       name: "David Martinez",
       company: "Financial Services Corp",
       role: "CISO",
       content: "Zion Security Shield has been a game-changer for our security posture. We've seen a 90% reduction in security incidents since implementation.",
       rating: 5
     },
-    {
+    {}
       name: "Lisa Thompson",
       company: "Healthcare Solutions",
       role: "IT Director",
       content: "The AI threat detection is incredibly accurate. It caught several sophisticated attacks that other systems missed.",
       rating: 5
     },
-    {
+    {}
       name: "James Wilson",
       company: "E-commerce Platform",
       role: "Security Manager",
@@ -121,7 +57,7 @@ export default function ZionSecurityShield() {
     }
   ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>Zion Security Shield - Advanced Cybersecurity Platform | Zion Tech Group</title>
@@ -197,8 +133,8 @@ export default function ZionSecurityShield() {
                 Everything you need to protect your business from modern cyber threats.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
+              {features.map((feature, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
@@ -212,7 +148,7 @@ export default function ZionSecurityShield() {
                   <p className="text-gray-300">
                     {feature.description}
                   </p>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -230,14 +166,14 @@ export default function ZionSecurityShield() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {securityFeatures.map((feature, index) => (
+              {securityFeatures.map((feature, index) => (}
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span className="text-gray-300">{feature}</span>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -255,21 +191,21 @@ export default function ZionSecurityShield() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (}
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${}
                     plan.popular
                       ? 'border-red-400 bg-gradient-to-br from-red-500/10 to-orange-500/10'
                       : 'border-white/20 hover:border-red-400'
                   }`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-red-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -280,16 +216,16 @@ export default function ZionSecurityShield() {
                     </div>
                   </div>
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                       plan.popular
                         ? 'bg-gradient-to-r from-red-500 to-orange-600 text-white hover:from-red-600 hover:to-orange-700'
                         : 'border border-red-400 text-red-400 hover:bg-red-400 hover:text-slate-900'
@@ -315,14 +251,14 @@ export default function ZionSecurityShield() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <div className="flex items-center mb-4">)
+                    {[...Array(testimonial.rating)].map((_, i) => (}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>

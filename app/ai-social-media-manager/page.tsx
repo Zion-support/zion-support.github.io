@@ -1,7 +1,7 @@
 "use client";
 
-export default function AiSocialMediaManagerZionTechGroup() {
-  return (
+export default function AiSocialMediaManagerZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiSocialMediaManager - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function AiSocialMediaManagerZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-export default function NewsletterSignup() {
+export default function NewsletterSignup() {}
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {}
     e.preventDefault();
     // Handle newsletter signup
     };
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>Newsletter Signup - Zion Tech Group</title>
@@ -22,7 +22,7 @@ export default function NewsletterSignup() {
               <Mail className="w-5 h-5" />
               <input
                 type="email"
-                value={email}
+                value={email})
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email"
                 required

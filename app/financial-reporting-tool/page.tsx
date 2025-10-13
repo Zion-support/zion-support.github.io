@@ -1,6 +1,6 @@
 
-export default function Financialreportingtool() {
-  return (
+export default function Financialreportingtool() {}
+  return ()
     <>
       <Helmet>
         <title>Financial Reporting Tool - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Financialreportingtool() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

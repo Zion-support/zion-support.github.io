@@ -1,7 +1,7 @@
 
 
-export default function ZionAiSurveyBuilderZionTechGroup() {
-  return (
+export default function ZionAiSurveyBuilderZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionAiSurveyBuilder - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionAiSurveyBuilderZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

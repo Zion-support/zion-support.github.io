@@ -1,7 +1,7 @@
 
 
-export default function PerformanceOptimizationZionTechGroup() {
-  return (
+export default function PerformanceOptimizationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>PerformanceOptimization - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function PerformanceOptimizationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

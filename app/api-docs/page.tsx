@@ -1,7 +1,7 @@
 
 
-export default function ApiDocsZionTechGroup() {
-  return (
+export default function ApiDocsZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ApiDocs - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function ApiDocsZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

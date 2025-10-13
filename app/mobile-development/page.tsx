@@ -1,6 +1,6 @@
 
-export default function MobileDevelopmentZionTechGroup() {
-  return (
+export default function MobileDevelopmentZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>MobileDevelopment - Zion Tech Group</title>
@@ -22,6 +22,6 @@ export default function MobileDevelopmentZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

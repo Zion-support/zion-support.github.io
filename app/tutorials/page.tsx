@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Tutorials() {
-  return (
+export default function Tutorials() {}
+  return ()
     <>
       <Helmet>
         <title>Tutorials - Zion Tech Group | AI & IT Solutions</title>
@@ -13,6 +13,6 @@ export default function Tutorials() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+    </>)
   );
 }

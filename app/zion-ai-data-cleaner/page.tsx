@@ -1,7 +1,7 @@
 
 
-export default function ZionAiDataCleanerZionTechGroup() {
-  return (
+export default function ZionAiDataCleanerZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionAiDataCleaner - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionAiDataCleanerZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

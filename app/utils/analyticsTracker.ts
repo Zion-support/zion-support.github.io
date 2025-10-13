@@ -1,14 +1,14 @@
 // Analyticstracker utility functions
 
-export const Analyticstracker = {
-  init: () => {
+export const Analyticstracker = {}
+  init: () => {}
     },
 
-  process: (data: any) => {
+  process: (data: any) => {}
     return data;
   },
 
-  cleanup: () => {
+  cleanup: () => {}
     },
 };
 

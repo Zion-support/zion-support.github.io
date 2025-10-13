@@ -1,41 +1,41 @@
 
-export default function AIMarketingAutomation() {
-    {
+export default function AIMarketingAutomation() {}
+    {}
       title: "Email Marketing Automation",
       description: "Intelligent email campaigns with personalized content, automated sequences, and advanced segmentation based on user behavior and preferences.",
       icon: <Mail className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
       benefits: ["Personalized Content", "Behavioral Triggers", "A/B Testing", "Analytics Dashboard"]
     },
-    {
+    {}
       title: "Social Media Management",
       description: "Automated social media posting, content scheduling, and engagement tracking across all major platforms with AI-powered content optimization.",
       icon: <Share2 className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
       benefits: ["Multi-platform Posting", "Content Optimization", "Engagement Tracking", "Hashtag Research"]
     },
-    {
+    {}
       title: "Lead Scoring & Nurturing",
       description: "AI-powered lead qualification and automated nurturing sequences that identify high-value prospects and guide them through the sales funnel.",
       icon: <Target className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
       benefits: ["Lead Scoring", "Nurturing Sequences", "Behavioral Tracking", "Conversion Optimization"]
     },
-    {
+    {}
       title: "Campaign Analytics",
       description: "Comprehensive analytics and reporting with real-time insights, ROI tracking, and predictive analytics for campaign optimization.",
       icon: <BarChart3 className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
       benefits: ["Real-time Analytics", "ROI Tracking", "Predictive Insights", "Custom Reports"]
     },
-    {
+    {}
       title: "Customer Segmentation",
       description: "Advanced customer segmentation using AI to create highly targeted audiences based on demographics, behavior, and preferences.",
       icon: <Users className="w-8 h-8" />,
       color: "from-indigo-500 to-purple-500",
       benefits: ["Dynamic Segmentation", "Behavioral Analysis", "Personalization", "Audience Insights"]
     },
-    {
+    {}
       title: "Workflow Automation",
       description: "Automated marketing workflows that trigger based on customer actions, ensuring timely and relevant communication throughout the customer journey.",
       icon: <Zap className="w-8 h-8" />,
@@ -44,54 +44,8 @@ export default function AIMarketingAutomation() {
     }
   ];
 
-  const pricing = [
-    {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small businesses getting started with marketing automation",
-      features: [
-        "Up to 1,000 contacts",
-        "Email automation",
-        "Basic analytics",
-        "Social media posting",
-        "Email support"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$399",
-      period: "/month",
-      description: "Ideal for growing businesses with advanced automation needs",
-      features: [
-        "Up to 10,000 contacts",
-        "Advanced email automation",
-        "Lead scoring",
-        "A/B testing",
-        "Advanced analytics",
-        "Priority support"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$799",
-      period: "/month",
-      description: "Complete solution for large organizations with complex requirements",
-      features: [
-        "Unlimited contacts",
-        "Custom workflows",
-        "Advanced segmentation",
-        "API access",
-        "Custom integrations",
-        "Dedicated support"
-      ],
-      popular: false
-    }
-  ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>AI Marketing Automation - Zion Tech Group | Advanced Marketing Solutions</title>
@@ -107,7 +61,7 @@ export default function AIMarketingAutomation() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-cyan-500/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-cyan-500/10 animate-pulse"></div>)
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3),transparent_50%)]"></div>
         
         {/* Hero Section */}
@@ -158,7 +112,7 @@ export default function AIMarketingAutomation() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 relative overflow-hidden"
@@ -180,12 +134,12 @@ export default function AIMarketingAutomation() {
                     </p>
                     
                     {/* Benefits */}
-                    <div className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
+                    <div className="space-y-2">)
+                      {feature.benefits.map((benefit, idx) => (}
                         <div key={idx} className="flex items-center text-sm text-gray-300">
                           <div className="w-2 h-2 bg-pink-400 rounded-full mr-3"></div>
                           {benefit}
-                        </div>
+                        </div>)
                       ))}
                     </div>
                   </div>
@@ -209,19 +163,19 @@ export default function AIMarketingAutomation() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricing.map((plan, index) => (
+              {pricing.map((plan, index) => (}
                 <div
                   key={index}
-                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
+                  className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${}
                     plan.popular 
                       ? 'border-pink-400 hover:shadow-pink-500/25' 
                       : 'border-white/20 hover:shadow-pink-500/10'
                   }`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-2 text-sm font-semibold">
                       Most Popular
-                    </div>
+                    </div>)
                   )}
                   
                   <div className={`${plan.popular ? 'pt-8' : ''}`}>
@@ -234,19 +188,19 @@ export default function AIMarketingAutomation() {
                     </div>
                     
                     <ul className="space-y-3 mb-8">
-                      {plan.features.map((feature, idx) => (
+                      {plan.features.map((feature, idx) => (}
                         <li key={idx} className="flex items-center text-gray-300">
                           <div className="w-5 h-5 bg-pink-400 rounded-full flex items-center justify-center mr-3">
                             <div className="w-2 h-2 bg-white rounded-full"></div>
                           </div>
                           {feature}
-                        </li>
+                        </li>)
                       ))}
                     </ul>
                     
                     <Link
                       to="/contact"
-                      className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
+                      className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${}
                         plan.popular
                           ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
                           : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'

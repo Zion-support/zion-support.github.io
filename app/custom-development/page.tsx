@@ -1,63 +1,7 @@
 
-export default function CustomDevelopment() {
-  const services = [
-    {
-      title: "Custom Software Development",
-      description: "Tailored software solutions built to meet your specific business requirements. From concept to deployment, we create applications that drive your business forward.",
-      icon: <Code className="w-8 h-8" />,
-      path: "/custom-software",
-      color: "from-blue-500 to-cyan-500",
-      price: "Starting at $5,000",
-      features: ["Custom Applications", "API Development", "Database Design", "Quality Assurance"]
-    },
-    {
-      title: "Web Development",
-      description: "Modern, responsive web applications built with cutting-edge technologies. From simple websites to complex web platforms, we deliver exceptional user experiences.",
-      icon: <Globe className="w-8 h-8" />,
-      path: "/web-development",
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $2,500",
-      features: ["Responsive Design", "SEO Optimization", "Performance Tuning", "Security Hardening"]
-    },
-    {
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications for iOS and Android. User-friendly interfaces with seamless performance across all devices.",
-      icon: <Smartphone className="w-8 h-8" />,
-      path: "/mobile-development",
-      color: "from-purple-500 to-pink-500",
-      price: "Starting at $8,000",
-      features: ["iOS & Android", "Cross-platform", "App Store Optimization", "Push Notifications"]
-    },
-    {
-      title: "E-commerce Development",
-      description: "Complete e-commerce solutions with payment integration, inventory management, and customer relationship management features.",
-      icon: <Zap className="w-8 h-8" />,
-      path: "/e-commerce-development",
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $4,000",
-      features: ["Payment Integration", "Inventory Management", "Order Processing", "Customer Portal"]
-    },
-    {
-      title: "Database Development",
-      description: "Custom database solutions with optimized performance, data integrity, and scalability. From design to implementation and maintenance.",
-      icon: <Database className="w-8 h-8" />,
-      path: "/database-management",
-      color: "from-indigo-500 to-purple-500",
-      price: "Starting at $3,000",
-      features: ["Database Design", "Performance Optimization", "Data Migration", "Backup & Recovery"]
-    },
-    {
-      title: "API Development",
-      description: "RESTful and GraphQL APIs for seamless integration between systems. Scalable, secure, and well-documented API solutions.",
-      icon: <BarChart3 className="w-8 h-8" />,
-      path: "/api-development",
-      color: "from-teal-500 to-cyan-500",
-      price: "Starting at $2,000",
-      features: ["RESTful APIs", "GraphQL", "API Documentation", "Rate Limiting"]
-    }
-  ];
+export default function CustomDevelopment() {}
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>Custom Development Services - Zion Tech Group | Software Development Solutions</title>
@@ -73,7 +17,7 @@ export default function CustomDevelopment() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>)
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
         
         {/* Hero Section */}
@@ -124,7 +68,7 @@ export default function CustomDevelopment() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {services.map((service, index) => (
+              {services.map((service, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
@@ -150,14 +94,14 @@ export default function CustomDevelopment() {
                       <div className="text-center">
                         <span className="text-cyan-400 font-bold text-lg">{service.price}</span>
                       </div>
-                      <div className="flex flex-wrap gap-2 justify-center">
-                        {service.features.map((feature, idx) => (
+                      <div className="flex flex-wrap gap-2 justify-center">)
+                        {service.features.map((feature, idx) => (}
                           <span
                             key={idx}
                             className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30"
                           >
                             {feature}
-                          </span>
+                          </span>)
                         ))}
                       </div>
                     </div>

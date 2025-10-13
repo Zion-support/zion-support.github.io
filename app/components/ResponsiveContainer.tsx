@@ -1,17 +1,17 @@
 import React from 'react';
 
-interface ResponsiveContainerProps {
+interface ResponsiveContainerProps {}
   children: React.ReactNode;
   className?: string;
   maxWidth?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '4xl' | '6xl' | '7xl';
 }
 
-const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
+const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({)}
   children,
   className = '',
-  maxWidth = '7xl'
+  maxWidth = '7xl')
 }) => {
-  const maxWidthClasses = {
+  const maxWidthClasses = {}
     sm: 'max-w-sm',
     md: 'max-w-md',
     lg: 'max-w-lg',
@@ -22,10 +22,10 @@ const ResponsiveContainer: React.FC<ResponsiveContainerProps> = ({
     '7xl': 'max-w-7xl'
   };
 
-  return (
+  return ()
     <div className={`mx-auto px-4 sm:px-6 lg:px-8 ${maxWidthClasses[maxWidth]} ${className}`}>
       {children}
-    </div>
+    </div>)
   );
 };
 

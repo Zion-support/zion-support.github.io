@@ -1,6 +1,6 @@
 
-const DatabasePage = () => {
-  return (
+const DatabasePage = () => {}
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Database Solutions | Zion Tech Group</title>
@@ -37,7 +37,7 @@ const DatabasePage = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div>)
   );
 };
 

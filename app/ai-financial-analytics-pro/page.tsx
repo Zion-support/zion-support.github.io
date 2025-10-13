@@ -1,5 +1,5 @@
 "use client";
-import {
+import {}
   Brain,
   Shield,
   CheckCircle,
@@ -8,168 +8,74 @@ import {
   BarChart3,
 } from "lucide-react";
 
-export default function AiFinancialAnalyticsProPage() {
-    {
+export default function AiFinancialAnalyticsProPage() {}
+    {}
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: "AI-Powered Insights",
       description:
         "Advanced machine learning algorithms analyze your financial data to provide actionable insights",
-      benefits: [
+      benefits: []
         "Predictive analytics",
         "Risk assessment",
         "Trend identification",
-        "Anomaly detection",
+        "Anomaly detection",]
       ],
     },
-    {
+    {}
       icon: <BarChart3 className="w-8 h-8 text-green-400" />,
       title: "Real-time Analytics",
       description:
         "Monitor your financial performance in real-time with comprehensive dashboards and reports",
-      benefits: [
+      benefits: []
         "Live data updates",
         "Custom dashboards",
         "Interactive charts",
-        "Export capabilities",
+        "Export capabilities",]
       ],
     },
-    {
+    {}
       icon: <Shield className="w-8 h-8 text-purple-400" />,
       title: "Risk Management",
       description:
         "Identify and mitigate financial risks with advanced risk assessment and monitoring tools",
-      benefits: [
+      benefits: []
         "Risk scoring",
         "Early warning systems",
         "Compliance monitoring",
-        "Audit trails",
+        "Audit trails",]
       ],
     },
-    {
+    {}
       icon: <Target className="w-8 h-8 text-yellow-400" />,
       title: "Goal Tracking",
       description:
         "Set and track financial goals with intelligent recommendations and progress monitoring",
-      benefits: [
+      benefits: []
         "Goal setting",
         "Progress tracking",
         "Smart recommendations",
-        "Achievement rewards",
+        "Achievement rewards",]
       ],
     },
   ];
 
-  const analyticsFeatures = [
-    {
-      category: "Financial Analysis",
-      items: [
-        "Revenue Analysis",
-        "Cost Analysis",
-        "Profitability Analysis",
-        "Cash Flow Analysis",
-        "Budget Variance",
-        "Financial Ratios",
-      ],
-    },
-    {
-      category: "Predictive Analytics",
-      items: [
-        "Revenue Forecasting",
-        "Expense Prediction",
-        "Market Analysis",
-        "Customer Behavior",
-        "Risk Assessment",
-        "Trend Analysis",
-      ],
-    },
-    {
-      category: "Reporting & Visualization",
-      items: [
-        "Custom Reports",
-        "Interactive Dashboards",
-        "Data Visualization",
-        "Export Options",
-        "Scheduled Reports",
-        "Real-time Updates",
-      ],
-    },
-    {
-      category: "Integration & Security",
-      items: [
-        "API Integration",
-        "Data Security",
-        "Compliance Tools",
-        "Audit Logs",
-        "User Management",
-        "Backup & Recovery",
-      ],
-    },
-  ];
 
-  const pricingPlans = [
-    {
-      name: "Professional",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for growing businesses",
-      features: [
-        "Up to 10 data sources",
-        "Advanced analytics",
-        "Custom dashboards",
-        "Email support",
-        "Basic reporting",
-        "API access",
-      ],
-      popular: false,
-    },
-    {
-      name: "Enterprise",
-      price: "$499",
-      period: "/month",
-      description: "Ideal for large organizations",
-      features: [
-        "Unlimited data sources",
-        "AI-powered insights",
-        "Custom development",
-        "Priority support",
-        "Advanced security",
-        "White-label solution",
-        "Dedicated account manager",
-      ],
-      popular: true,
-    },
-    {
-      name: "Custom",
-      price: "Contact Us",
-      period: "",
-      description: "Tailored solutions",
-      features: [
-        "Custom features",
-        "On-premise deployment",
-        "24/7 support",
-        "Training & consulting",
-        "Custom integrations",
-        "SLA guarantee",
-      ],
-      popular: false,
-    },
-  ];
 
-    {
+    {}
       name: "David Chen",
       company: "CFO, TechCorp",
       content:
         "AI Financial Analytics Pro has revolutionized our financial planning. The predictive insights have helped us make better decisions and increase profitability by 25%.",
       rating: 5,
     },
-    {
+    {}
       name: "Sarah Martinez",
       company: "Finance Director, Global Inc",
       content:
         "The real-time analytics and risk management features are exceptional. We can now identify potential issues before they become problems.",
       rating: 5,
     },
-    {
+    {}
       name: "Michael Johnson",
       company: "CEO, StartupXYZ",
       content:
@@ -178,7 +84,7 @@ export default function AiFinancialAnalyticsProPage() {
     },
   ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>AI Financial Analytics Pro - Zion Tech Group</title>
@@ -217,8 +123,8 @@ export default function AiFinancialAnalyticsProPage() {
           </div>
 
           {/* Features Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">)
+            {features.map((feature, index) => (}
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
@@ -228,15 +134,15 @@ export default function AiFinancialAnalyticsProPage() {
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-1">
-                  {feature.benefits.map((benefit, benefitIndex) => (
+                <ul className="space-y-1">)
+                  {feature.benefits.map((benefit, benefitIndex) => (}
                     <li
                       key={benefitIndex}
                       className="text-gray-400 text-sm flex items-center"
                     >
                       <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                       {benefit}
-                    </li>
+                    </li>)
                   ))}
                 </ul>
               </div>
@@ -249,7 +155,7 @@ export default function AiFinancialAnalyticsProPage() {
               Analytics Features
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {analyticsFeatures.map((category, index) => (
+              {analyticsFeatures.map((category, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
@@ -257,15 +163,15 @@ export default function AiFinancialAnalyticsProPage() {
                   <h3 className="text-xl font-semibold text-white mb-4">
                     {category.category}
                   </h3>
-                  <ul className="space-y-2">
-                    {category.items.map((item, itemIndex) => (
+                  <ul className="space-y-2">)
+                    {category.items.map((item, itemIndex) => (}
                       <li
                         key={itemIndex}
                         className="text-gray-300 flex items-center"
                       >
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {item}
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                 </div>
@@ -279,17 +185,17 @@ export default function AiFinancialAnalyticsProPage() {
               Pricing Plans
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (}
                 <div
                   key={index}
                   className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? "ring-2 ring-cyan-500" : ""}`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">
@@ -304,19 +210,19 @@ export default function AiFinancialAnalyticsProPage() {
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li
                         key={featureIndex}
                         className="text-gray-300 flex items-center"
                       >
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${}
                       plan.popular
                         ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600"
                         : "border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10"
@@ -335,17 +241,17 @@ export default function AiFinancialAnalyticsProPage() {
               What Our Clients Say
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">)
+                    {[...Array(testimonial.rating)].map((_, i) => (}
                       <Star
                         className="w-5 h-5 text-yellow-400 fill-current"
                         key={i}
-                      />
+                      />)
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">

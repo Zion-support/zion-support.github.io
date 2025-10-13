@@ -1,16 +1,16 @@
 import React from "react";
 
-interface MicrosaasservicesProps {
+interface MicrosaasservicesProps {}
   className?: string;
 }
 
-const Microsaasservices: React.FC<MicrosaasservicesProps> = ({
-  className = "",
+const Microsaasservices: React.FC<MicrosaasservicesProps> = ({)}
+  className = "",)
 }) => {
-  return (
+  return ()
     <div className={className}>
       <h2>Microsaasservices</h2>
-    </div>
+    </div>)
   );
 };
 

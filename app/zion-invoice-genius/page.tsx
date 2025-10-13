@@ -1,7 +1,7 @@
 
 
-export default function ZionInvoiceGeniusZionTechGroup() {
-  return (
+export default function ZionInvoiceGeniusZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionInvoiceGenius - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionInvoiceGeniusZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

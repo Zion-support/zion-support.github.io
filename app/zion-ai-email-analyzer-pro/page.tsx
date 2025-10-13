@@ -1,6 +1,6 @@
 
-export default function Zionaiemailanalyzerpro() {
-  return (
+export default function Zionaiemailanalyzerpro() {}
+  return ()
     <>
       <Helmet>
         <title>Zion Ai Email Analyzer Pro - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Zionaiemailanalyzerpro() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

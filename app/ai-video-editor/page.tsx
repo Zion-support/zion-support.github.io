@@ -1,7 +1,7 @@
 "use client";
 
-export default function AiVideoEditorZionTechGroup() {
-  return (
+export default function AiVideoEditorZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiVideoEditor - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function AiVideoEditorZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

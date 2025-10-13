@@ -1,6 +1,6 @@
 
-export default function AccessibilityZionTechGroup() {
-  return (
+export default function AccessibilityZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
@@ -20,6 +20,6 @@ export default function AccessibilityZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

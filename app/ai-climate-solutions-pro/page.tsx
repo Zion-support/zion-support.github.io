@@ -1,8 +1,8 @@
 
 
 
-export default function AIClimateSolutionsProZionTechGroup() {
-  return (
+export default function AIClimateSolutionsProZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Climate Solutions Pro - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function AIClimateSolutionsProZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,8 +1,8 @@
 
 
 
-export default function AICybersecurityMonitorZionTechGroup() {
-  return (
+export default function AICybersecurityMonitorZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Cybersecurity Monitor - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function AICybersecurityMonitorZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

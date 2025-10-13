@@ -1,117 +1,54 @@
 
-export default function ZionCloudVault() {
-    {
+export default function ZionCloudVault() {}
+    {}
       icon: <Cloud className="w-6 h-6" />,
       title: "Secure Cloud Storage",
       description: "Enterprise-grade cloud storage with 99.999999999% durability and 99.9% availability"
     },
-    {
+    {}
       icon: <Lock className="w-6 h-6" />,
       title: "End-to-End Encryption",
       description: "Military-grade AES-256 encryption for data at rest and in transit"
     },
-    {
+    {}
       icon: <Shield className="w-6 h-6" />,
       title: "Advanced Security",
       description: "Multi-factor authentication, zero-knowledge architecture, and SOC 2 compliance"
     },
-    {
+    {}
       icon: <Zap className="w-6 h-6" />,
       title: "Lightning Fast Sync",
       description: "Real-time file synchronization across all your devices with intelligent caching"
     },
-    {
+    {}
       icon: <Globe className="w-6 h-6" />,
       title: "Global CDN",
       description: "Worldwide content delivery network for fast access from anywhere"
     },
-    {
+    {}
       icon: <Database className="w-6 h-6" />,
       title: "Unlimited Storage",
       description: "Scale from GB to PB with no storage limits and automatic scaling"
     }
   ];
 
-  const storageFeatures = [
-    "File Versioning & History",
-    "Collaborative Workspaces",
-    "Advanced Search & Filtering",
-    "Mobile & Desktop Apps",
-    "API & SDK Access",
-    "Custom Branding",
-    "Audit Logs & Reporting",
-    "Backup & Recovery",
-    "Compliance Tools (GDPR, HIPAA)",
-    "Team Management",
-    "Share Links & Permissions",
-    "Integration with 100+ Apps"
-  ];
 
-  const pricingPlans = [
-    {
-      name: "Personal",
-      price: "$9",
-      period: "/month",
-      description: "Perfect for individuals",
-      features: [
-        "1TB storage",
-        "5 devices",
-        "Basic encryption",
-        "Email support",
-        "Mobile apps",
-        "File sharing"
-      ],
-      popular: false
-    },
-    {
-      name: "Business",
-      price: "$25",
-      period: "/month",
-      description: "Most popular for teams",
-      features: [
-        "5TB storage",
-        "Unlimited devices",
-        "Advanced encryption",
-        "Priority support",
-        "Team collaboration",
-        "Admin dashboard",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$99",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited storage",
-        "Advanced security",
-        "Custom integrations",
-        "24/7 phone support",
-        "White-label solution",
-        "Compliance tools",
-        "Dedicated account manager"
-      ],
-      popular: false
-    }
-  ];
 
-    {
+    {}
       name: "Jennifer Adams",
       company: "Creative Agency",
       role: "Creative Director",
       content: "Zion Cloud Vault has revolutionized our file management. The collaboration features are incredible and our team productivity has increased by 60%.",
       rating: 5
     },
-    {
+    {}
       name: "Robert Kim",
       company: "Tech Startup",
       role: "CTO",
       content: "The security features give us peace of mind. We can safely store sensitive client data knowing it's protected with military-grade encryption.",
       rating: 5
     },
-    {
+    {}
       name: "Maria Garcia",
       company: "Consulting Firm",
       role: "Operations Manager",
@@ -120,7 +57,7 @@ export default function ZionCloudVault() {
     }
   ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>Zion Cloud Vault - Secure Cloud Storage Platform | Zion Tech Group</title>
@@ -196,8 +133,8 @@ export default function ZionCloudVault() {
                 Everything you need to store, sync, and secure your data in the cloud.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">)
+              {features.map((feature, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
@@ -211,7 +148,7 @@ export default function ZionCloudVault() {
                   <p className="text-gray-300">
                     {feature.description}
                   </p>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -229,14 +166,14 @@ export default function ZionCloudVault() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {storageFeatures.map((feature, index) => (
+              {storageFeatures.map((feature, index) => (}
                 <div
                   key={index}
                   className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
                 >
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                   <span className="text-gray-300">{feature}</span>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -254,21 +191,21 @@ export default function ZionCloudVault() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (}
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${}
                     plan.popular
                       ? 'border-blue-400 bg-gradient-to-br from-blue-500/10 to-cyan-500/10'
                       : 'border-white/20 hover:border-blue-400'
                   }`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -279,16 +216,16 @@ export default function ZionCloudVault() {
                     </div>
                   </div>
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li key={featureIndex} className="flex items-center">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span className="text-gray-300">{feature}</span>
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${}
                       plan.popular
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
                         : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
@@ -314,14 +251,14 @@ export default function ZionCloudVault() {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <div className="flex items-center mb-4">)
+                    {[...Array(testimonial.rating)].map((_, i) => (}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>

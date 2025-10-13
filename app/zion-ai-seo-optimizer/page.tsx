@@ -1,7 +1,7 @@
 
 
-export default function ZionAiSeoOptimizerZionTechGroup() {
-  return (
+export default function ZionAiSeoOptimizerZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionAiSeoOptimizer - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionAiSeoOptimizerZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

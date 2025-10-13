@@ -1,7 +1,7 @@
 
 
-export default function CloudNativeDevelopmentZionTechGroup() {
-  return (
+export default function CloudNativeDevelopmentZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>CloudNativeDevelopment - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function CloudNativeDevelopmentZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

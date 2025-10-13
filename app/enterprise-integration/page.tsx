@@ -1,7 +1,7 @@
 
 
-export default function EnterpriseIntegrationZionTechGroup() {
-  return (
+export default function EnterpriseIntegrationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>EnterpriseIntegration - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function EnterpriseIntegrationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

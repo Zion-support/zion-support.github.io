@@ -4,16 +4,16 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 
-const root = ReactDOM.createRoot(
+const root = ReactDOM.createRoot(;)
   document.getElementById("root") as HTMLElement,
 );
 
-root.render(
+root.render()
   <React.StrictMode>
     <HelmetProvider>
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </HelmetProvider>
-  </React.StrictMode>,
+  </React.StrictMode>,)
 );

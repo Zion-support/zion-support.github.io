@@ -1,6 +1,6 @@
 
-export default function Customerrelationshipmanager() {
-  return (
+export default function Customerrelationshipmanager() {}
+  return ()
     <>
       <Helmet>
         <title>Customer Relationship Manager - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Customerrelationshipmanager() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

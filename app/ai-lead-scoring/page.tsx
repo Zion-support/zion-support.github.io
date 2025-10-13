@@ -1,7 +1,7 @@
 
 
-export default function AiLeadScoringZionTechGroup() {
-  return (
+export default function AiLeadScoringZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiLeadScoring - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function AiLeadScoringZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

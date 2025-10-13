@@ -1,6 +1,6 @@
 
-export default function FuturisticLoader() {
-  return (
+export default function FuturisticLoader() {}
+  return ()
     <div className="futuristic-loader-container">
       <Link
         to="/contact"
@@ -9,6 +9,6 @@ export default function FuturisticLoader() {
         Contact Us
         <ArrowRight className="w-5 h-5 ml-2" />
       </Link>
-    </div>
+    </div>)
   );
 }

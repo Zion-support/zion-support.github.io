@@ -1,8 +1,8 @@
 
 
 
-export default function AIDataVisualizationZionTechGroup() {
-  return (
+export default function AIDataVisualizationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Data Visualization - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function AIDataVisualizationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

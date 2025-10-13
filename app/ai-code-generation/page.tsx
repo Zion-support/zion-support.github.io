@@ -1,8 +1,8 @@
 
 
 
-export default function AICodeGenerationZionTechGroup() {
-  return (
+export default function AICodeGenerationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Code Generation - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function AICodeGenerationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

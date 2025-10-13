@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-interface PerformanceMetrics {
+interface PerformanceMetrics {}
   fcp: number;
   lcp: number;
   fid: number;
@@ -8,38 +8,38 @@ interface PerformanceMetrics {
   ttfb: number;
 }
 
-const PerformanceMonitor: React.FC = () => {
+const PerformanceMonitor: React.FC = () => {}
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
+  useEffect(() => {}
     // Only run in development or when explicitly enabled
-    if (process.env.NODE_ENV !== 'development' && !localStorage.getItem('debug-performance')) {
+    if (process.env.NODE_ENV !== 'development' && !localStorage.getItem('debug-performance')) {}
       return;
     }
 
-    const measurePerformance = () => {
+    const measurePerformance = () => {}
       // Get Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
+      const observer = new PerformanceObserver((list) => {}
+        for (const entry of list.getEntries()) {}
+          if (entry.entryType === 'paint') {}
+            if (entry.name === 'first-contentful-paint') {}
               setMetrics(prev => ({ ...prev, fcp: entry.startTime } as PerformanceMetrics));
             }
           }
           
-          if (entry.entryType === 'largest-contentful-paint') {
+          if (entry.entryType === 'largest-contentful-paint') {}
             setMetrics(prev => ({ ...prev, lcp: entry.startTime } as PerformanceMetrics));
           }
           
-          if (entry.entryType === 'first-input') {
+          if (entry.entryType === 'first-input') {}
             setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime } as PerformanceMetrics));
           }
           
-          if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              setMetrics(prev => ({ 
-                ...prev, 
+          if (entry.entryType === 'layout-shift') {}
+            if (!(entry as any).hadRecentInput) {}
+              setMetrics(prev => ({ )}
+                ...prev, )
                 cls: (prev?.cls || 0) + (entry as any).value 
               } as PerformanceMetrics));
             }
@@ -51,19 +51,19 @@ const PerformanceMonitor: React.FC = () => {
 
       // Measure TTFB
       const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ 
+      if (navigationEntry) {}
+        setMetrics(prev => ({ )}
           ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
+          ttfb: navigationEntry.responseStart - navigationEntry.requestStart )
         } as PerformanceMetrics));
       }
 
       // Show performance monitor after 3 seconds
-      setTimeout(() => {
+      setTimeout(() => {}
         setIsVisible(true);
       }, 3000);
 
-      return () => {
+      return () => {}
         observer.disconnect();
       };
     };
@@ -72,7 +72,7 @@ const PerformanceMonitor: React.FC = () => {
     return cleanup;
   }, []);
 
-  if (!isVisible || !metrics) {
+  if (!isVisible || !metrics) {}
     return null;
   }
 
@@ -88,11 +88,11 @@ const PerformanceMonitor: React.FC = () => {
     return 'Poor';
   };
 
-  return (
+  return ()
     <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white text-xs font-mono z-50 max-w-xs">
       <div className="flex items-center justify-between mb-2">
         <h3 className="text-cyan-400 font-semibold">Performance Monitor</h3>
-        <button
+        <button)
           onClick={() => setIsVisible(false)}
           className="text-gray-400 hover:text-white transition-colors"
           aria-label="Close performance monitor"

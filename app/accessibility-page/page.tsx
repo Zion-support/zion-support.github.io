@@ -1,6 +1,6 @@
 
-export default function AccessibilityPage() {
-  return (
+export default function AccessibilityPage() {}
+  return ()
     <>
       <Helmet>
         <title>Accessibility - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function AccessibilityPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,6 +1,6 @@
 
-export default function Websiteanalyticstool() {
-  return (
+export default function Websiteanalyticstool() {}
+  return ()
     <>
       <Helmet>
         <title>Website Analytics Tool - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Websiteanalyticstool() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

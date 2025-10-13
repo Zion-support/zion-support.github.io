@@ -1,7 +1,7 @@
 
 
-export default function EmailSignatureZionTechGroup() {
-  return (
+export default function EmailSignatureZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>EmailSignature - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function EmailSignatureZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

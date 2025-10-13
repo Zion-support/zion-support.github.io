@@ -1,7 +1,7 @@
 
 
-export default function EmployeeDirectoryZionTechGroup() {
-  return (
+export default function EmployeeDirectoryZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>EmployeeDirectory - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function EmployeeDirectoryZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

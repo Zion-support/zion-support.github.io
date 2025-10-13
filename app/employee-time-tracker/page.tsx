@@ -1,6 +1,6 @@
 
-export default function Employeetimetracker() {
-  return (
+export default function Employeetimetracker() {}
+  return ()
     <>
       <Helmet>
         <title>Employee Time Tracker - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Employeetimetracker() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

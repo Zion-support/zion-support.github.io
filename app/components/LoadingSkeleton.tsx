@@ -1,6 +1,6 @@
 
-export default function LoadingSkeleton() {
-  return (
+export default function LoadingSkeleton() {}
+  return ()
     <>
       <Helmet>
         <title>Loading Skeleton - Zion Tech Group</title>
@@ -19,6 +19,6 @@ export default function LoadingSkeleton() {
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
-    </>
+    </>)
   );
 }

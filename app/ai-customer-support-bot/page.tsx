@@ -1,8 +1,8 @@
 
 
 
-export default function AICustomerSupportBotZionTechGroup() {
-  return (
+export default function AICustomerSupportBotZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Customer Support Bot - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function AICustomerSupportBotZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,6 +1,6 @@
 
-export default function CloudMigration() {
-  return (
+export default function CloudMigration() {}
+  return ()
     <>
       <Helmet>
         <title>Cloud Migration - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function CloudMigration() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

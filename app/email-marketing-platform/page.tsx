@@ -1,6 +1,6 @@
 
-export default function Emailmarketingplatform() {
-  return (
+export default function Emailmarketingplatform() {}
+  return ()
     <>
       <Helmet>
         <title>Email Marketing Platform - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Emailmarketingplatform() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

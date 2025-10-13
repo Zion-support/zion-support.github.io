@@ -1,7 +1,7 @@
 
 
-export default function AiTimeTrackerZionTechGroup() {
-  return (
+export default function AiTimeTrackerZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AiTimeTracker - Zion Tech Group</title>
@@ -21,6 +21,6 @@ export default function AiTimeTrackerZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

@@ -1,5 +1,5 @@
 "use client";
-import {
+import {}
   Brain,
   Zap,
   CheckCircle,
@@ -8,26 +8,26 @@ import {
   TrendingUp,
 } from "lucide-react";
 
-export default function AIEcommerceOptimizerPro() {
-    {
+export default function AIEcommerceOptimizerPro() {}
+    {}
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: "AI-Powered Optimization",
       description:
         "Advanced machine learning algorithms analyze customer behavior and optimize your store automatically",
     },
-    {
+    {}
       icon: <TrendingUp className="w-6 h-6 text-green-400" />,
       title: "Conversion Rate Optimization",
       description:
         "Increase your conversion rates by up to 40% with intelligent product recommendations and layout optimization",
     },
-    {
+    {}
       icon: <BarChart3 className="w-6 h-6 text-purple-400" />,
       title: "Real-time Analytics",
       description:
         "Get detailed insights into customer behavior, sales patterns, and performance metrics",
     },
-    {
+    {}
       icon: <Zap className="w-6 h-6 text-yellow-400" />,
       title: "Automated A/B Testing",
       description:
@@ -35,118 +35,23 @@ export default function AIEcommerceOptimizerPro() {
     },
   ];
 
-  const optimizationFeatures = [
-    {
-      category: "Product Optimization",
-      items: [
-        "Smart Product Recommendations",
-        "Dynamic Pricing",
-        "Inventory Management",
-        "Product Search Optimization",
-        "Cross-selling & Upselling",
-        "Product Image Enhancement",
-      ],
-    },
-    {
-      category: "Customer Experience",
-      items: [
-        "Personalized Shopping Experience",
-        "Chatbot Integration",
-        "Customer Journey Mapping",
-        "Mobile Optimization",
-        "Page Speed Optimization",
-        "User Interface Enhancement",
-      ],
-    },
-    {
-      category: "Marketing Automation",
-      items: [
-        "Email Campaign Optimization",
-        "Social Media Integration",
-        "Retargeting Campaigns",
-        "SEO Enhancement",
-        "Content Personalization",
-        "Customer Segmentation",
-      ],
-    },
-    {
-      category: "Analytics & Reporting",
-      items: [
-        "Sales Performance Tracking",
-        "Customer Behavior Analysis",
-        "Revenue Optimization",
-        "ROI Measurement",
-        "Predictive Analytics",
-        "Custom Dashboards",
-      ],
-    },
-  ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for small e-commerce stores",
-      features: [
-        "Up to 1,000 products",
-        "Basic AI optimization",
-        "Standard analytics",
-        "Email support",
-        "Mobile optimization",
-        "Basic A/B testing",
-      ],
-      popular: false,
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 products",
-        "Advanced AI features",
-        "Real-time analytics",
-        "Priority support",
-        "Advanced A/B testing",
-        "API access",
-        "Custom integrations",
-      ],
-      popular: true,
-    },
-    {
-      name: "Enterprise",
-      price: "$799",
-      period: "/month",
-      description: "For large e-commerce operations",
-      features: [
-        "Unlimited products",
-        "Custom AI training",
-        "White-label solution",
-        "Dedicated support",
-        "Advanced analytics",
-        "Custom development",
-        "SLA guarantee",
-      ],
-      popular: false,
-    },
-  ];
 
-    {
+    {}
       name: "Maria Rodriguez",
       company: "Fashion Store",
       content:
         "AI E-commerce Optimizer Pro increased our conversion rate by 35% and boosted revenue by 50% in just 3 months.",
       rating: 5,
     },
-    {
+    {}
       name: "David Kim",
       company: "Electronics Retailer",
       content:
         "The automated optimization features saved us hours of manual work while significantly improving our store performance.",
       rating: 5,
     },
-    {
+    {}
       name: "Sarah Johnson",
       company: "Home & Garden Store",
       content:
@@ -155,7 +60,7 @@ export default function AIEcommerceOptimizerPro() {
     },
   ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>AI E-commerce Optimizer Pro - Zion Tech Group</title>
@@ -194,8 +99,8 @@ export default function AIEcommerceOptimizerPro() {
           </div>
 
           {/* Features Section */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-            {features.map((feature, index) => (
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">)
+            {features.map((feature, index) => (}
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
@@ -205,7 +110,7 @@ export default function AIEcommerceOptimizerPro() {
                   {feature.title}
                 </h3>
                 <p className="text-gray-300">{feature.description}</p>
-              </div>
+              </div>)
             ))}
           </div>
 
@@ -215,7 +120,7 @@ export default function AIEcommerceOptimizerPro() {
               Optimization Features
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {optimizationFeatures.map((category, index) => (
+              {optimizationFeatures.map((category, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
@@ -223,15 +128,15 @@ export default function AIEcommerceOptimizerPro() {
                   <h3 className="text-xl font-semibold text-white mb-4">
                     {category.category}
                   </h3>
-                  <ul className="space-y-2">
-                    {category.items.map((item, itemIndex) => (
+                  <ul className="space-y-2">)
+                    {category.items.map((item, itemIndex) => (}
                       <li
                         key={itemIndex}
                         className="text-gray-300 flex items-center"
                       >
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {item}
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                 </div>
@@ -245,17 +150,17 @@ export default function AIEcommerceOptimizerPro() {
               Pricing Plans
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (}
                 <div
                   key={index}
                   className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 relative ${plan.popular ? "ring-2 ring-cyan-500" : ""}`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-cyan-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">
@@ -270,19 +175,19 @@ export default function AIEcommerceOptimizerPro() {
                     <p className="text-gray-300">{plan.description}</p>
                   </div>
                   <ul className="space-y-3 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature, featureIndex) => (}
                       <li
                         key={featureIndex}
                         className="text-gray-300 flex items-center"
                       >
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
-                      </li>
+                      </li>)
                     ))}
                   </ul>
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full block text-center py-3 rounded-lg font-semibold transition-all duration-300 ${}
                       plan.popular
                         ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600"
                         : "border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10"
@@ -301,17 +206,17 @@ export default function AIEcommerceOptimizerPro() {
               What Our Clients Say
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                  <div className="flex items-center mb-4">)
+                    {[...Array(testimonial.rating)].map((_, i) => (}
                       <Star
                         key={i}
                         className="w-5 h-5 text-yellow-400 fill-current"
-                      />
+                      />)
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic">

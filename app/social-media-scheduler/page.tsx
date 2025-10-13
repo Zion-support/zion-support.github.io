@@ -1,6 +1,6 @@
 
-export default function Socialmediascheduler() {
-  return (
+export default function Socialmediascheduler() {}
+  return ()
     <>
       <Helmet>
         <title>Social Media Scheduler - Zion Tech Group</title>
@@ -26,6 +26,6 @@ export default function Socialmediascheduler() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

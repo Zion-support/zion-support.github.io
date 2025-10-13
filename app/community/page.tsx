@@ -1,59 +1,7 @@
 import React from 'react';
 
-export default function Community() {
-  const events = [
-    {
-      title: "AI Innovation Summit 2024",
-      date: "March 15, 2024",
-      time: "9:00 AM - 5:00 PM",
-      location: "Virtual Event",
-      description: "Join industry leaders as we explore the latest trends in artificial intelligence and machine learning.",
-      attendees: 500
-    },
-    {
-      title: "Tech Talk: Cloud Security Best Practices",
-      date: "March 22, 2024",
-      time: "2:00 PM - 3:00 PM",
-      location: "Online Webinar",
-      description: "Learn about the latest cloud security strategies and how to protect your digital assets.",
-      attendees: 150
-    },
-    {
-      title: "Developer Workshop: React & TypeScript",
-      date: "March 29, 2024",
-      time: "10:00 AM - 4:00 PM",
-      location: "Zion Tech Office",
-      description: "Hands-on workshop covering advanced React patterns and TypeScript best practices.",
-      attendees: 25
-    }
-  ];
+export default function Community() {}
 
-  const initiatives = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Tech Mentorship Program",
-      description: "Connect with experienced professionals and get guidance on your career journey.",
-      participants: "200+ mentees"
-    },
-    {
-      icon: <MessageCircle className="w-8 h-8" />,
-      title: "Developer Forums",
-      description: "Join our active community forums to discuss technology trends and share knowledge.",
-      participants: "1,500+ members"
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Innovation Challenges",
-      description: "Participate in hackathons and coding challenges to showcase your skills.",
-      participants: "500+ participants"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Open Source Projects",
-      description: "Contribute to our open source initiatives and make a global impact.",
-      participants: "100+ contributors"
-    }
-  ];
 
     { number: "5,000+", label: "Community Members", icon: <Users className="w-6 h-6" /> },
     { number: "50+", label: "Events Hosted", icon: <Calendar className="w-6 h-6" /> },
@@ -61,7 +9,7 @@ export default function Community() {
     { number: "95%", label: "Member Satisfaction", icon: <Star className="w-6 h-6" /> }
   ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>Community - Zion Tech Group | Tech Community & Events</title>
@@ -109,15 +57,15 @@ export default function Community() {
         {/* Stats Section */}
         <section className="py-16 px-4 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {stats.map((stat, index) => (
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">)
+              {stats.map((stat, index) => (}
                 <div key={index} className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
                     {stat.icon}
                   </div>
                   <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.number}</div>
                   <div className="text-gray-300">{stat.label}</div>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -134,7 +82,7 @@ export default function Community() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {events.map((event, index) => (
+              {events.map((event, index) => (}
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
                   <div className="flex items-center justify-between mb-4">
                     <Calendar className="w-5 h-5 text-cyan-400" />
@@ -156,7 +104,7 @@ export default function Community() {
                       {event.attendees} attendees
                     </div>
                   </div>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -173,7 +121,7 @@ export default function Community() {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {initiatives.map((initiative, index) => (
+              {initiatives.map((initiative, index) => (}
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300 text-center">
                   <div className="text-cyan-400 mb-4 flex justify-center">
                     {initiative.icon}
@@ -181,7 +129,7 @@ export default function Community() {
                   <h3 className="text-xl font-semibold mb-3">{initiative.title}</h3>
                   <p className="text-gray-300 mb-4">{initiative.description}</p>
                   <div className="text-cyan-400 font-semibold">{initiative.participants}</div>
-                </div>
+                </div>)
               ))}
             </div>
           </div>

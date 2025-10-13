@@ -1,8 +1,8 @@
 
 
 
-export default function AIDrugDiscoveryProZionTechGroup() {
-  return (
+export default function AIDrugDiscoveryProZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>AI Drug Discovery Pro - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function AIDrugDiscoveryProZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

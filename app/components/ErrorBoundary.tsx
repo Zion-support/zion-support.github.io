@@ -1,51 +1,51 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props {
+interface Props {}
   children: ReactNode;
   fallback?: ReactNode;
 }
 
-interface State {
+interface State {}
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
 }
 
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class ErrorBoundary extends Component<Props, State> {}
+  constructor(props: Props) {}
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): State {}
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
+    this.setState({)}
       error,
-      errorInfo
+      errorInfo)
     });
 
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development') {}
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
     // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'production') {}
       // Here you would typically send the error to a logging service
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
   }
 
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
+  render() {}
+    if (this.state.hasError) {}
+      if (this.props.fallback) {}
         return this.props.fallback;
       }
 
-      return (
+      return ()
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
             <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
@@ -63,7 +63,7 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
             
             <div className="space-y-4">
-              <button
+              <button)
                 onClick={() => window.location.reload()}
                 className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
@@ -78,15 +78,15 @@ class ErrorBoundary extends Component<Props, State> {
               </button>
             </div>
             
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            {process.env.NODE_ENV === 'development' && this.state.error && ()}
               <details className="mt-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
+                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">)
                   Error Details (Development)
                 </summary>
                 <div className="mt-2 p-4 bg-slate-800/50 rounded text-xs text-gray-300 overflow-auto">
                   <pre>{this.state.error.toString()}</pre>
-                  {this.state.errorInfo && (
-                    <pre className="mt-2">{this.state.errorInfo.componentStack}</pre>
+                  {this.state.errorInfo && ()}
+                    <pre className="mt-2">{this.state.errorInfo.componentStack}</pre>)
                   )}
                 </div>
               </details>

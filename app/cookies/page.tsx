@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function Cookies() {
-  return (
+export default function Cookies() {}
+  return ()
     <>
       <Helmet>
         <title>Cookie Policy - Zion Tech Group | AI & IT Solutions</title>
@@ -13,6 +13,6 @@ export default function Cookies() {
           <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </>
+    </>)
   );
 }

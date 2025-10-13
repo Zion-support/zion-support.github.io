@@ -1,7 +1,7 @@
 
 
-export default function ZionEmailAutomationZionTechGroup() {
-  return (
+export default function ZionEmailAutomationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionEmailAutomation - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionEmailAutomationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

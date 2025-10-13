@@ -1,8 +1,8 @@
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const CareersPage = () => {
-  return (
+const CareersPage = () => {}
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Careers - Zion Tech Group | Join Our Team"
@@ -21,7 +21,7 @@ const CareersPage = () => {
           </p>
         </div>
       </div>
-    </div>
+    </div>)
   );
 };
 

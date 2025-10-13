@@ -1,7 +1,7 @@
 
 
-export default function BlockchainDevelopmentZionTechGroup() {
-  return (
+export default function BlockchainDevelopmentZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>BlockchainDevelopment - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function BlockchainDevelopmentZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

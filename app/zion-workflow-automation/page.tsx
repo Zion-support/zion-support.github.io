@@ -1,7 +1,7 @@
 
 
-export default function ZionWorkflowAutomationZionTechGroup() {
-  return (
+export default function ZionWorkflowAutomationZionTechGroup() {}
+  return ()
     <>
       <Helmet>
         <title>ZionWorkflowAutomation - Zion Tech Group</title>
@@ -23,6 +23,6 @@ export default function ZionWorkflowAutomationZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

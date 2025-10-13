@@ -1,6 +1,6 @@
 
-export default function ComponentsPage() {
-  return (
+export default function ComponentsPage() {}
+  return ()
     <>
       <Helmet>
         <title>Components - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function ComponentsPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

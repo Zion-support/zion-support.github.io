@@ -1,95 +1,31 @@
 import React from 'react';
 
-export default function Partners() {
-  const partners = [
-    {
-      name: "Microsoft",
-      logo: "/images/partners/microsoft.png",
-      description: "Leading cloud and productivity solutions",
-      category: "Technology Partner",
-      tier: "Platinum"
-    },
-    {
-      name: "Amazon Web Services",
-      logo: "/images/partners/aws.png",
-      description: "Comprehensive cloud computing platform",
-      category: "Cloud Partner",
-      tier: "Platinum"
-    },
-    {
-      name: "Google Cloud",
-      logo: "/images/partners/google-cloud.png",
-      description: "AI and machine learning cloud services",
-      category: "AI Partner",
-      tier: "Gold"
-    },
-    {
-      name: "Salesforce",
-      logo: "/images/partners/salesforce.png",
-      description: "Customer relationship management platform",
-      category: "CRM Partner",
-      tier: "Gold"
-    },
-    {
-      name: "IBM",
-      logo: "/images/partners/ibm.png",
-      description: "Enterprise AI and hybrid cloud solutions",
-      category: "Enterprise Partner",
-      tier: "Silver"
-    },
-    {
-      name: "Oracle",
-      logo: "/images/partners/oracle.png",
-      description: "Database and enterprise software solutions",
-      category: "Database Partner",
-      tier: "Silver"
-    }
-  ];
+export default function Partners() {}
 
-    {
+    {}
       icon: <Users className="w-8 h-8" />,
       title: "Joint Marketing",
       description: "Collaborative marketing campaigns and co-branded content"
     },
-    {
+    {}
       icon: <Globe className="w-8 h-8" />,
       title: "Global Reach",
       description: "Access to our worldwide network of clients and opportunities"
     },
-    {
+    {}
       icon: <Shield className="w-8 h-8" />,
       title: "Technical Support",
       description: "Dedicated technical resources and training programs"
     },
-    {
+    {}
       icon: <Zap className="w-8 h-8" />,
       title: "Innovation Labs",
       description: "Joint innovation initiatives and R&D projects"
     }
   ];
 
-  const tiers = [
-    {
-      name: "Platinum",
-      color: "from-gray-400 to-gray-600",
-      requirements: "Strategic partnership with significant revenue commitment",
-      benefits: ["Highest priority support", "Dedicated account manager", "Custom solutions", "Joint go-to-market"]
-    },
-    {
-      name: "Gold",
-      color: "from-yellow-400 to-yellow-600",
-      requirements: "Strong partnership with regular collaboration",
-      benefits: ["Priority support", "Training programs", "Marketing support", "Technical resources"]
-    },
-    {
-      name: "Silver",
-      color: "from-gray-300 to-gray-500",
-      requirements: "Partnership with mutual business opportunities",
-      benefits: ["Standard support", "Partner portal access", "Co-marketing opportunities", "Technical documentation"]
-    }
-  ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>
@@ -110,6 +46,6 @@ export default function Partners() {
           </div>
         </div>
       </div>
-    </>
+    </>)
   );
 }

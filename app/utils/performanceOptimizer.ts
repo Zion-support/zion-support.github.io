@@ -1,14 +1,14 @@
 // Performanceoptimizer utility functions
 
-export const Performanceoptimizer = {
-  init: () => {
+export const Performanceoptimizer = {}
+  init: () => {}
     },
 
-  process: (data: any) => {
+  process: (data: any) => {}
     return data;
   },
 
-  cleanup: () => {
+  cleanup: () => {}
     },
 };
 

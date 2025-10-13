@@ -1,40 +1,40 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
-interface Props {
+interface Props {}
   children: ReactNode;
 }
 
-interface State {
+interface State {}
   hasError: boolean;
   error?: Error;
 }
 
-class GlobalErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
+class GlobalErrorBoundary extends Component<Props, State> {}
+  constructor(props: Props) {}
     super(props);
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): State {}
     return { hasError: true, error };
   }
 
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {}
     // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
+    if (process.env.NODE_ENV === 'development') {}
       console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
     }
 
     // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
+    if (process.env.NODE_ENV === 'production') {}
       // Here you would typically send the error to a logging service
       console.error('GlobalErrorBoundary caught an error:', error, errorInfo);
     }
   }
 
-  render() {
-    if (this.state.hasError) {
-      return (
+  render() {}
+    if (this.state.hasError) {}
+      return ()
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-lg p-8 text-center border border-white/20">
             <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
@@ -51,7 +51,7 @@ class GlobalErrorBoundary extends Component<Props, State> {
               We're experiencing technical difficulties. Please try again later.
             </p>
             
-            <button
+            <button)
               onClick={() => window.location.reload()}
               className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
             >

@@ -1,6 +1,6 @@
 
-export default function UtilsPage() {
-  return (
+export default function UtilsPage() {}
+  return ()
     <>
       <Helmet>
         <title>Utils - Zion Tech Group</title>
@@ -24,6 +24,6 @@ export default function UtilsPage() {
           </Link>
         </div>
       </div>
-    </>
+    </>)
   );
 }

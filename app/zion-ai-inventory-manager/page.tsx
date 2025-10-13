@@ -1,38 +1,38 @@
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const ZionAIInventoryManager = () => {
-    {
+const ZionAIInventoryManager = () => {}
+    {}
       title: "AI-Powered Demand Forecasting",
       description: "Predict inventory needs with 95% accuracy using machine learning algorithms",
       icon: <TrendingUp className="w-6 h-6" />,
       benefit: "Reduce stockouts by 60%"
     },
-    {
+    {}
       title: "Real-Time Inventory Tracking",
       description: "Monitor stock levels across multiple locations with live updates",
       icon: <Package className="w-6 h-6" />,
       benefit: "99.9% accuracy"
     },
-    {
+    {}
       title: "Automated Reorder Points",
       description: "Set intelligent reorder triggers based on sales velocity and lead times",
       icon: <AlertTriangle className="w-6 h-6" />,
       benefit: "Never run out of stock"
     },
-    {
+    {}
       title: "Multi-Channel Integration",
       description: "Sync inventory across e-commerce, retail, and warehouse systems",
       icon: <Globe className="w-6 h-6" />,
       benefit: "Unified inventory view"
     },
-    {
+    {}
       title: "Advanced Analytics Dashboard",
       description: "Comprehensive reports on inventory turnover, costs, and performance",
       icon: <BarChart3 className="w-6 h-6" />,
       benefit: "Data-driven decisions"
     },
-    {
+    {}
       title: "Mobile App Access",
       description: "Manage inventory on-the-go with our intuitive mobile application",
       icon: <Smartphone className="w-6 h-6" />,
@@ -40,59 +40,8 @@ const ZionAIInventoryManager = () => {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: "Starter",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for small businesses",
-      features: [
-        "Up to 1,000 products",
-        "Basic AI forecasting",
-        "2 user accounts",
-        "Email support",
-        "Mobile app access",
-        "Basic reporting"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Ideal for growing businesses",
-      features: [
-        "Up to 10,000 products",
-        "Advanced AI forecasting",
-        "10 user accounts",
-        "Priority support",
-        "Multi-location support",
-        "Advanced analytics",
-        "API access",
-        "Custom integrations"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$599",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited products",
-        "Premium AI forecasting",
-        "Unlimited users",
-        "24/7 phone support",
-        "Multi-warehouse support",
-        "Custom reporting",
-        "White-label options",
-        "Dedicated account manager"
-      ],
-      popular: false
-    }
-  ];
 
-    {
+    {}
       name: "Sarah Johnson",
       company: "TechGear Solutions",
       role: "Operations Manager",
@@ -100,7 +49,7 @@ const ZionAIInventoryManager = () => {
       rating: 5,
       savings: "$50,000 saved"
     },
-    {
+    {}
       name: "Michael Chen",
       company: "RetailMax Inc",
       role: "CEO",
@@ -108,7 +57,7 @@ const ZionAIInventoryManager = () => {
       rating: 5,
       savings: "60% fewer stockouts"
     },
-    {
+    {}
       name: "Emily Rodriguez",
       company: "Fashion Forward",
       role: "Inventory Director",
@@ -124,7 +73,7 @@ const ZionAIInventoryManager = () => {
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
   ];
 
-  return (
+  return ()
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
         title="Zion AI Inventory Manager - AI-Powered Inventory Management | Zion Tech Group"
@@ -170,15 +119,15 @@ const ZionAIInventoryManager = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              {stats.map((stat, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">)
+              {stats.map((stat, index) => (}
                 <div key={index} className="text-center group">
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
                   <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-300 text-sm">{stat.label}</div>
-                </div>
+                </div>)
               ))}
             </div>
           </div>
@@ -199,7 +148,7 @@ const ZionAIInventoryManager = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
+            {features.map((feature, index) => (}
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
@@ -217,7 +166,7 @@ const ZionAIInventoryManager = () => {
                   <CheckCircle className="w-4 h-4 mr-2" />
                   {feature.benefit}
                 </div>
-              </div>
+              </div>)
             ))}
           </div>
         </div>
@@ -237,21 +186,21 @@ const ZionAIInventoryManager = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
+            {pricingPlans.map((plan, index) => (}
               <div
                 key={index}
-                className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${}
                   plan.popular 
                     ? 'border-cyan-400 shadow-2xl shadow-cyan-500/25' 
                     : 'border-white/20 hover:border-cyan-400/50'
                 }`}
               >
-                {plan.popular && (
+                {plan.popular && ()}
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
-                  </div>
+                  </div>)
                 )}
                 
                 <div className="text-center mb-8">
@@ -264,17 +213,17 @@ const ZionAIInventoryManager = () => {
                 </div>
                 
                 <ul className="space-y-4 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
+                  {plan.features.map((feature, featureIndex) => (}
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
                       {feature}
-                    </li>
+                    </li>)
                   ))}
                 </ul>
                 
                 <Link
                   to="/contact"
-                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                  className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${}
                     plan.popular
                       ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
                       : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
@@ -301,14 +250,14 @@ const ZionAIInventoryManager = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial, index) => (}
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
-                <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                <div className="flex items-center mb-4">)
+                  {[...Array(testimonial.rating)].map((_, i) => (}
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>

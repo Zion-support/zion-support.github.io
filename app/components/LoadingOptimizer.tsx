@@ -1,6 +1,6 @@
 
-export default function LoadingOptimizer() {
-  return (
+export default function LoadingOptimizer() {}
+  return ()
     <>
       <Helmet>
         <title>Loading Optimizer - Zion Tech Group</title>
@@ -17,6 +17,6 @@ export default function LoadingOptimizer() {
           <ArrowRight className="w-5 h-5 ml-2" />
         </Link>
       </div>
-    </>
+    </>)
   );
 }

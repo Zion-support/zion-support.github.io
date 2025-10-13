@@ -1,36 +1,36 @@
 
-export default function ZionAiProjectManagerPro() {
-    {
+export default function ZionAiProjectManagerPro() {}
+    {}
       title: "AI-Powered Task Prioritization",
       description: "Automatically prioritize tasks using machine learning algorithms that analyze deadlines, dependencies, team capacity, and project impact to optimize workflow efficiency.",
       icon: <Target className="w-6 h-6" />,
       benefits: ["Smart task ranking", "Dependency analysis", "Resource optimization", "Deadline management"]
     },
-    {
+    {}
       title: "Intelligent Resource Allocation",
       description: "AI-driven resource management that automatically assigns team members to tasks based on skills, availability, workload, and project requirements.",
       icon: <Users className="w-6 h-6" />,
       benefits: ["Skill-based matching", "Workload balancing", "Availability tracking", "Performance optimization"]
     },
-    {
+    {}
       title: "Predictive Project Analytics",
       description: "Advanced analytics and forecasting that predict project completion times, identify potential risks, and suggest optimizations using historical data and AI models.",
       icon: <BarChart3 className="w-6 h-6" />,
       benefits: ["Completion forecasting", "Risk identification", "Performance insights", "Optimization suggestions"]
     },
-    {
+    {}
       title: "Automated Progress Tracking",
       description: "Real-time project monitoring with AI-powered progress tracking, milestone detection, and automatic status updates across all project components.",
       icon: <TrendingUp className="w-6 h-6" />,
       benefits: ["Real-time monitoring", "Milestone tracking", "Status automation", "Progress visualization"]
     },
-    {
+    {}
       title: "Smart Collaboration Tools",
       description: "AI-enhanced collaboration features including intelligent meeting scheduling, automated follow-ups, and context-aware communication suggestions.",
       icon: <Calendar className="w-6 h-6" />,
       benefits: ["Smart scheduling", "Auto follow-ups", "Context awareness", "Team coordination"]
     },
-    {
+    {}
       title: "Intelligent Risk Management",
       description: "Proactive risk identification and mitigation using AI algorithms that analyze project patterns, team performance, and external factors to prevent issues before they occur.",
       icon: <Shield className="w-6 h-6" />,
@@ -38,60 +38,8 @@ export default function ZionAiProjectManagerPro() {
     }
   ];
 
-  const pricingPlans = [
-    {
-      name: "Team",
-      price: "$99",
-      period: "/month",
-      description: "Perfect for small teams",
-      features: [
-        "Up to 10 team members",
-        "Basic AI features",
-        "Project templates",
-        "Basic reporting",
-        "Email support",
-        "5GB storage",
-        "Mobile app access"
-      ],
-      popular: false
-    },
-    {
-      name: "Professional",
-      price: "$199",
-      period: "/month",
-      description: "Most popular for growing teams",
-      features: [
-        "Up to 50 team members",
-        "Advanced AI features",
-        "Custom workflows",
-        "Advanced analytics",
-        "Priority support",
-        "50GB storage",
-        "API access",
-        "Integrations"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$399",
-      period: "/month",
-      description: "For large organizations",
-      features: [
-        "Unlimited team members",
-        "AI-powered insights",
-        "Custom integrations",
-        "24/7 phone support",
-        "Advanced security",
-        "Unlimited storage",
-        "White-label options",
-        "Dedicated account manager"
-      ],
-      popular: false
-    }
-  ];
 
-    {
+    {}
       name: "Rachel Kim",
       company: "Software Development Co.",
       role: "Project Director",
@@ -99,7 +47,7 @@ export default function ZionAiProjectManagerPro() {
       rating: 5,
       avatar: "RK"
     },
-    {
+    {}
       name: "James Wilson",
       company: "Consulting Firm",
       role: "Operations Manager",
@@ -107,7 +55,7 @@ export default function ZionAiProjectManagerPro() {
       rating: 5,
       avatar: "JW"
     },
-    {
+    {}
       name: "Lisa Martinez",
       company: "Marketing Agency",
       role: "Project Manager",
@@ -123,7 +71,7 @@ export default function ZionAiProjectManagerPro() {
     { number: "70%", label: "Reduced Delays", icon: <Clock className="w-6 h-6" /> }
   ];
 
-  return (
+  return ()
     <>
       <Helmet>
         <title>Zion AI Project Manager Pro - AI-Powered Project Management | Zion Tech Group</title>
@@ -139,7 +87,7 @@ export default function ZionAiProjectManagerPro() {
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 animate-pulse"></div>)
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.3),transparent_50%)]"></div>
         
         {/* Hero Section */}
@@ -183,14 +131,14 @@ export default function ZionAiProjectManagerPro() {
                 
                 {/* Stats */}
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  {stats.map((stat, index) => (
+                  {stats.map((stat, index) => (}
                     <div key={index} className="text-center group">
                       <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                         {stat.icon}
                       </div>
                       <div className="text-xl font-bold text-white mb-1">{stat.number}</div>
                       <div className="text-gray-300 text-sm">{stat.label}</div>
-                    </div>
+                    </div>)
                   ))}
                 </div>
               </div>
@@ -252,7 +200,7 @@ export default function ZionAiProjectManagerPro() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+              {features.map((feature, index) => (}
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/10"
@@ -266,12 +214,12 @@ export default function ZionAiProjectManagerPro() {
                   <p className="text-gray-300 text-center mb-4 leading-relaxed">
                     {feature.description}
                   </p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
+                  <div className="space-y-2">)
+                    {feature.benefits.map((benefit, idx) => (}
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                         <span>{benefit}</span>
-                      </div>
+                      </div>)
                     ))}
                   </div>
                 </div>
@@ -293,21 +241,21 @@ export default function ZionAiProjectManagerPro() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingPlans.map((plan, index) => (
+              {pricingPlans.map((plan, index) => (}
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${}
                     plan.popular 
                       ? 'border-emerald-500/50 shadow-2xl shadow-emerald-500/25' 
                       : 'border-white/20 hover:border-emerald-500/30'
                   }`}
                 >
-                  {plan.popular && (
+                  {plan.popular && ()}
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
-                    </div>
+                    </div>)
                   )}
                   
                   <div className="text-center mb-6">
@@ -320,17 +268,17 @@ export default function ZionAiProjectManagerPro() {
                   </div>
                   
                   <div className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
+                    {plan.features.map((feature, idx) => (}
                       <div key={idx} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
-                      </div>
+                      </div>)
                     ))}
                   </div>
                   
                   <Link
                     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${}
                       plan.popular
                         ? 'bg-gradient-to-r from-emerald-500 to-teal-600 text-white hover:from-emerald-600 hover:to-teal-700 shadow-lg hover:shadow-emerald-500/25'
                         : 'border border-emerald-400 text-emerald-400 hover:bg-emerald-400 hover:text-slate-900'
@@ -358,14 +306,14 @@ export default function ZionAiProjectManagerPro() {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, index) => (
+              {testimonials.map((testimonial, index) => (}
                 <div
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                  <div className="flex items-center mb-4">)
+                    {[...Array(testimonial.rating)].map((_, i) => (}
+                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />)
                     ))}
                   </div>
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
