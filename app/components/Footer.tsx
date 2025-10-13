@@ -27,7 +27,7 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -40,6 +40,11 @@ const Footer = React.memo(() => {
               Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            <div className="space-y-2 text-sm text-gray-400">
+              <p><strong className="text-white">Email:</strong> kleber@ziontechgroup.com</p>
+              <p><strong className="text-white">Phone:</strong> +1 302 464 0950</p>
+              <p><strong className="text-white">Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -70,18 +75,18 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/services"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cloud Solutions
+                  IT Services
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/cybersecurity"
+                  to="/micro-saas"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cybersecurity
+                  Micro SAAS
                 </Link>
               </li>
               <li>
@@ -94,26 +99,81 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  to="/cloud-infrastructure"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Data Analytics
+                  Cloud Infrastructure
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/web-development"
+                  to="/cybersecurity-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Web Development
+                  Cybersecurity
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Solutions */}
+          {/* Micro SAAS Solutions */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+            <h4 className="text-lg font-semibold mb-4">Micro SAAS</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/zion-analytics-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Analytics Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-sales-optimizer"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Sales Optimizer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-smart-inventory"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Smart Inventory
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-content-studio"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Content Studio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-security-shield"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Security Shield
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-cloud-vault"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cloud Vault
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* AI Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">AI Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -136,7 +196,7 @@ const Footer = React.memo(() => {
                   to="/ai-content-generation"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Content Generation
+                  Content Generation
                 </Link>
               </li>
               <li>
@@ -144,7 +204,7 @@ const Footer = React.memo(() => {
                   to="/ai-customer-service"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Customer Service
+                  Customer Service
                 </Link>
               </li>
               <li>
@@ -157,18 +217,10 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  to="/ai-business-intelligence"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/custom-development"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Custom Development
+                  Business Intelligence
                 </Link>
               </li>
             </ul>

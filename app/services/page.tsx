@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Package, Workflow } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -111,6 +111,51 @@ export default function Services() {
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
       features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+    },
+    {
+      title: "Zion AI Sales Optimizer",
+      description: "AI-powered sales intelligence platform with lead scoring, forecasting, and revenue optimization for modern sales teams.",
+      icon: <TrendingUp className="w-8 h-8" />,
+      path: "/zion-ai-sales-optimizer",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $79/month",
+      features: ["Lead Scoring", "Sales Forecasting", "Revenue Optimization", "Customer Journey Mapping"]
+    },
+    {
+      title: "Zion Smart Inventory",
+      description: "AI-powered inventory management with demand forecasting, automated reordering, and real-time optimization.",
+      icon: <Package className="w-8 h-8" />,
+      path: "/zion-smart-inventory",
+      color: "from-orange-500 to-amber-500",
+      price: "Starting at $49/month",
+      features: ["Demand Forecasting", "Auto Reordering", "Stock Optimization", "Multi-location Tracking"]
+    },
+    {
+      title: "Zion AI Content Studio",
+      description: "AI-powered content creation platform for generating text, images, videos, and multi-format content at scale.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/zion-ai-content-studio",
+      color: "from-pink-500 to-purple-500",
+      price: "Starting at $29/month",
+      features: ["Content Generation", "Image Creation", "Video Production", "Brand Voice Training"]
+    },
+    {
+      title: "Zion AI Customer Insights",
+      description: "Advanced customer analytics with AI-powered segmentation, behavioral analysis, and predictive insights.",
+      icon: <Users className="w-8 h-8" />,
+      path: "/zion-ai-customer-insights",
+      color: "from-indigo-500 to-blue-500",
+      price: "Starting at $99/month",
+      features: ["Customer Segmentation", "Behavioral Analytics", "Churn Prediction", "Personalization Engine"]
+    },
+    {
+      title: "Zion AI Workflow Automation",
+      description: "Intelligent workflow automation with AI-powered process discovery, smart task routing, and performance analytics.",
+      icon: <Workflow className="w-8 h-8" />,
+      path: "/zion-ai-workflow-automation",
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $79/month",
+      features: ["Process Discovery", "Smart Automation", "Task Routing", "Performance Analytics"]
     }
   ];
 
