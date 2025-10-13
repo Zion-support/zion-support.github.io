@@ -1,275 +1,47 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-'use client';
-
-=======
-'use client';
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { 
-  CpuChipIcon,
-  ShieldCheckIcon,
-  CloudIcon,
-  ChartBarIcon,
-  GlobeAltIcon,
-  RocketLaunchIcon,
-  ArrowRightIcon,
-  CheckCircleIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  CurrencyDollarIcon,
-  ClockIcon,
-  UserGroupIcon,
-  CogIcon,
-  ServerIcon,
-  WrenchScrewdriverIcon,
-  DocumentTextIcon,
-  LightBulbIcon,
-  WifiIcon,
-  CircleStackIcon
-} from '@heroicons/react/24/outline';
-
-export default function ITSolutionsPage()   {
-  const itServices = [
-    {
-      title: "IT Infrastructure Management",
-      description: "Comprehensive IT infrastructure management including servers, networks, storage, and data center operations.",
-      icon: ServerIcon,
-      features: [
-        "Server management & monitoring",
-        "Network infrastructure",
-        "Storage solutions",
-        "Data center operations",
-        "Performance optimization",
-        "Disaster recovery planning"
-      ],
-      color: "from-blue-500 to-indigo-500",
-      price: "Starting at $2,500/month",
-      benefits: ["99.9% uptime", "24/7 monitoring", "Proactive maintenance"],
-      useCases: ["Enterprise infrastructure", "Data center management", "Server optimization"],
-      href: "/it-infrastructure"
-    },
-    {
-      title: "Cloud Migration & Management",
-      description: "Seamless cloud migration services and ongoing cloud infrastructure management for optimal performance.",
-      icon: CloudIcon,
-      features: [
-        "Cloud migration planning",
-        "Multi-cloud strategies",
-        "Cost optimization",
-        "Security implementation",
-        "Performance monitoring",
-        "Backup & recovery"
-      ],
-      color: "from-cyan-500 to-blue-500",
-      price: "Starting at $3,000/month",
-      benefits: ["50% cost reduction", "Scalable infrastructure", "Enhanced security"],
-      useCases: ["AWS migration", "Azure deployment", "Google Cloud setup"],
-      href: "/cloud-migration"
-    },
-    {
-      title: "Cybersecurity Solutions",
-      description: "Comprehensive cybersecurity services to protect your digital assets and ensure compliance.",
-      icon: ShieldCheckIcon,
-      features: [
-        "Security assessments",
-        "Threat monitoring",
-        "Incident response",
-        "Compliance management",
-        "Security training",
-        "Penetration testing"
-      ],
-      color: "from-red-500 to-orange-500",
-      price: "Starting at $2,200/month",
-      benefits: ["Zero breach guarantee", "24/7 monitoring", "SOC 2 compliance"],
-      useCases: ["Security audits", "Compliance", "Threat protection"],
-      href: "/cybersecurity-solutions"
-    },
-    {
-      title: "Database Management",
-      description: "Expert database administration, optimization, and management services for all major database systems.",
-      icon: CircleStackIcon,
-      features: [
-        "Database design & optimization",
-        "Performance tuning",
-        "Backup & recovery",
-        "Security implementation",
-        "Migration services",
-        "24/7 monitoring"
-      ],
-      color: "from-green-500 to-emerald-500",
-      price: "Starting at $1,800/month",
-      benefits: ["Optimized performance", "Zero data loss", "Automated backups"],
-      useCases: ["MySQL optimization", "PostgreSQL management", "MongoDB administration"],
-      href: "/database-management"
-    },
-    {
-      title: "Network Security & Monitoring",
-      description: "Advanced network security solutions with real-time monitoring and threat detection capabilities.",
-      icon: WifiIcon,
-      features: [
-        "Network monitoring",
-        "Firewall management",
-        "Intrusion detection",
-        "VPN solutions",
-        "Traffic analysis",
-        "Security policies"
-      ],
-      color: "from-purple-500 to-pink-500",
-      price: "Starting at $1,500/month",
-      benefits: ["Real-time monitoring", "Threat prevention", "Network optimization"],
-      useCases: ["Network security", "VPN management", "Traffic monitoring"],
-      href: "/network-security"
-    },
-    {
-      title: "IT Support & Helpdesk",
-      description: "Comprehensive IT support services with 24/7 helpdesk and technical assistance for all IT needs.",
-      icon: PhoneIcon,
-      features: [
-        "24/7 technical support",
-        "Remote assistance",
-        "Hardware maintenance",
-        "Software installation",
-        "User training",
-        "Issue resolution"
-      ],
-      color: "from-teal-500 to-green-500",
-      price: "Starting at $1,200/month",
-      benefits: ["24/7 availability", "Quick response", "Expert technicians"],
-      useCases: ["Technical support", "Helpdesk services", "User assistance"],
-      href: "/it-support"
-    },
-    {
-      title: "Software Development",
-      description: "Custom software development services for web applications, mobile apps, and enterprise solutions.",
-      icon: CogIcon,
-      features: [
-        "Custom web applications",
-        "Mobile app development",
-        "API development",
-        "Legacy system modernization",
-        "Quality assurance",
-        "Maintenance & support"
-      ],
-      color: "from-orange-500 to-red-500",
-      price: "Starting at $4,000/month",
-      benefits: ["Custom solutions", "Modern technology", "Ongoing support"],
-      useCases: ["Web development", "Mobile apps", "API development"],
-      href: "/software-development"
-    },
-    {
-      title: "IT Consulting & Strategy",
-      description: "Strategic IT consulting services to align technology with business objectives and drive digital transformation.",
-      icon: LightBulbIcon,
-      features: [
-        "IT strategy planning",
-        "Technology assessment",
-        "Digital transformation",
-        "Process optimization",
-        "Vendor management",
-        "ROI analysis"
-      ],
-      color: "from-yellow-500 to-orange-500",
-      price: "Starting at $2,000/month",
-      benefits: ["Strategic guidance", "Cost optimization", "Technology alignment"],
-      useCases: ["IT strategy", "Digital transformation", "Technology planning"],
-      href: "/it-consulting"
-    },
-    {
-      title: "Data Backup & Recovery",
-      description: "Comprehensive data backup and disaster recovery solutions to ensure business continuity and data protection.",
-      icon: DocumentTextIcon,
-      features: [
-        "Automated backups",
-        "Disaster recovery planning",
-        "Data encryption",
-        "Offsite storage",
-        "Recovery testing",
-        "Compliance support"
-      ],
-      color: "from-indigo-500 to-purple-500",
-      price: "Starting at $800/month",
-      benefits: ["Zero data loss", "Quick recovery", "Automated backups"],
-      useCases: ["Data protection", "Disaster recovery", "Compliance"],
-      href: "/data-backup-recovery"
-    },
-    {
-      title: "IT Asset Management",
-      description: "Complete IT asset management services including inventory, lifecycle management, and cost optimization.",
-      icon: WrenchScrewdriverIcon,
-      features: [
-        "Asset inventory",
-        "Lifecycle management",
-        "Cost tracking",
-        "License management",
-        "Depreciation tracking",
-        "Procurement support"
-      ],
-      color: "from-rose-500 to-pink-500",
-      price: "Starting at $1,000/month",
-      benefits: ["Cost optimization", "Asset tracking", "License compliance"],
-      useCases: ["Asset tracking", "Cost management", "License compliance"],
-      href: "/it-asset-management"
-    },
-    {
-      title: "Remote Work Solutions",
-      description: "Complete remote work infrastructure including VPN, collaboration tools, and security solutions.",
-      icon: UserGroupIcon,
-      features: [
-        "VPN setup & management",
-        "Collaboration tools",
-        "Security solutions",
-        "Device management",
-        "Training & support",
-        "Performance monitoring"
-      ],
-      color: "from-violet-500 to-purple-500",
-      price: "Starting at $1,500/month",
-      benefits: ["Secure remote access", "Productivity tools", "Seamless collaboration"],
-      useCases: ["Remote work setup", "VPN management", "Collaboration tools"],
-      href: "/remote-work-solutions"
-    },
-    {
-      title: "IT Compliance & Governance",
-      description: "Comprehensive IT compliance and governance services to ensure regulatory compliance and best practices.",
-      icon: ShieldCheckIcon,
-      features: [
-        "Compliance auditing",
-        "Policy development",
-        "Risk assessment",
-        "Regulatory reporting",
-        "Training programs",
-        "Documentation"
-      ],
-      color: "from-emerald-500 to-teal-500",
-      price: "Starting at $2,800/month",
-      benefits: ["Full compliance", "Risk mitigation", "Audit readiness"],
-      useCases: ["SOX compliance", "GDPR compliance", "HIPAA compliance"],
-      href: "/it-compliance"
-    }
-  ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 
 const ITSolutionsPage: React.FC = () => {
   return (
     <>
       <Helmet>
         <title>IT Solutions - Zion Tech Group</title>
-        <meta name="description" content="IT solutions from Zion Tech Group" />
+        <meta name="description" content="Comprehensive IT solutions and services" />
       </Helmet>
-      <div className="min-h-screen bg-slate-900 text-white p-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">IT Solutions</h1>
-          <p className="text-lg text-gray-300">
-            Discover our IT solutions and services.
-          </p>
-        </div>
+
+      <div className="min-h-screen bg-slate-900 text-white">
+        <section className="relative py-20 lg:py-32">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-5xl lg:text-7xl font-bold mb-8 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                IT Solutions
+              </h1>
+              <p className="text-xl lg:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+                Comprehensive IT solutions and services
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105">
+                  Get Started
+                </button>
+                <button className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300">
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-20 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
+              Coming Soon
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We're working on bringing you amazing content for this page. Check back soon!
+            </p>
+          </div>
+        </section>
       </div>
     </>
   );
