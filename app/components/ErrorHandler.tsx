@@ -67,6 +67,13 @@ class ErrorHandler extends Component<Props, State> {
         userAgent: navigator.userAgent,
         url: window.location.href,
       };
+<<<<<<< HEAD
+=======
+      // Send to your error reporting service here
+    } catch (reportingError) {
+      console.warn('Error reporting failed:', reportingError);
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
 
       console.error('Production error logged:', errorData);
       

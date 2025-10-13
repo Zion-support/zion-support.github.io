@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
@@ -9,6 +10,12 @@ import { Link } from 'react-router-dom';
   Clock
 } from 'lucide-react';
 import FuturisticButton from './FuturisticButton';
+=======
+import React, { useState, useCallback, useMemo } from 'react'
+import { Link } from 'react-router-dom'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon } from 'lucide-react'
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
 interface NavigationProps {
   onSidebarToggle: () => void;
 }

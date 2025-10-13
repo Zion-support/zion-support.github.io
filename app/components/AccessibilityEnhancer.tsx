@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 'use client;
 
@@ -59,8 +60,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   const [isReducedMotion, setIsReducedMotion] = useState(false);
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [fontSize, setFontSize] = useState(16);
+=======
+import React, { useEffect } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
 
+const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
+<<<<<<< HEAD
     // Check for reduced motion preference
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const handleChange = (e: MediaQueryListEvent) => {
@@ -138,32 +144,87 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
           existingLiveRegion.remove();
         }
       };
+=======
+    // Add keyboard navigation improvements
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Skip to main content with Tab
+      if (event.key === 'Tab' && !event.shiftKey) {
+        const skipLink = document.querySelector('.skip-link');
+        if (skipLink && document.activeElement === document.body) {
+          (skipLink as HTMLElement).focus();
+        }
+      }
+
+      // Close modals with Escape
+      if (event.key === 'Escape') {
+        const modals = document.querySelectorAll('[role="dialog"]');
+        modals.forEach(modal => {
+          if (modal.getAttribute('aria-hidden') === 'false') {
+            const closeButton = modal.querySelector('[aria-label*="close"], [aria-label*="Close"]') as HTMLElement;
+            if (closeButton) {
+              closeButton.click();
+            }
+          }
+        });
+      }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
     };
 
-    checkPreferences();
+    // Add focus management for dropdowns
+    const handleFocusIn = (event: FocusEvent) => {
+      const target = event.target as HTMLElement;
+      
+      // Ensure dropdowns are properly managed
+      if (target.hasAttribute('aria-expanded')) {
+        const isExpanded = target.getAttribute('aria-expanded') === 'true';
+        const menu = target.nextElementSibling as HTMLElement;
+        
+        if (menu && menu.hasAttribute('role')) {
+          menu.setAttribute('aria-hidden', (!isExpanded).toString());
+        }
+      }
+    };
 
-    // Listen for changes in preferences
-    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
-    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    // Add ARIA live region for dynamic content
+    const addLiveRegion = () => {
+      if (!document.getElementById('aria-live-region')) {
+        const liveRegion = document.createElement('div');
+        liveRegion.id = 'aria-live-region';
+        liveRegion.setAttribute('aria-live', 'polite');
+        liveRegion.setAttribute('aria-atomic', 'true');
+        liveRegion.className = 'sr-only';
+        document.body.appendChild(liveRegion);
+      }
+    };
 
-    const handleHighContrastChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, highContrast: e.matches }));
-      if (e.matches) {
+    // Announce page changes
+    const announcePageChange = () => {
+      const liveRegion = document.getElementById('aria-live-region');
+      if (liveRegion) {
+        const pageTitle = document.title;
+        liveRegion.textContent = `Page loaded: ${pageTitle}`;
+      }
+    };
+
+    // Add high contrast mode detection
+    const handleHighContrastChange = () => {
+      if (window.matchMedia('(prefers-contrast: high)').matches) {
         document.documentElement.classList.add('high-contrast');
       } else {
         document.documentElement.classList.remove('high-contrast');
       }
     };
 
-    const handleReducedMotionChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
-      if (e.matches) {
+    // Add reduced motion detection
+    const handleReducedMotionChange = () => {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         document.documentElement.classList.add('reduced-motion');
       } else {
         document.documentElement.classList.remove('reduced-motion');
       }
     };
 
+<<<<<<< HEAD
     highContrastQuery.addEventListener('change', handleHighContrastChange);
     reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
 
@@ -340,6 +401,33 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
         if (skipLink.parentNode) {
           skipLink.parentNode.removeChild(skipLink);
         }
+=======
+    // Initialize accessibility features
+    addLiveRegion();
+    handleHighContrastChange();
+    handleReducedMotionChange();
+    announcePageChange();
+
+    // Add event listeners
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('focusin', handleFocusIn);
+    
+    const highContrastMedia = window.matchMedia('(prefers-contrast: high)');
+    const reducedMotionMedia = window.matchMedia('(prefers-reduced-motion: reduce)');
+    
+    highContrastMedia.addEventListener('change', handleHighContrastChange);
+    reducedMotionMedia.addEventListener('change', handleReducedMotionChange);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('focusin', handleFocusIn);
+      highContrastMedia.removeEventListener('change', handleHighContrastChange);
+      reducedMotionMedia.removeEventListener('change', handleReducedMotionChange);
+    };
+  }, []);
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
   return <>{children}</>;
 };
 

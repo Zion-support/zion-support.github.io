@@ -159,6 +159,7 @@ const HomePage = () => {
           <h1 className="text-6xl font-bold text-white mb-6">
             Welcome to Zion Tech Group
           </h1>
+<<<<<<< HEAD
           <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             We are a cutting-edge technology company specializing in AI solutions, 
             cloud infrastructure, and innovative IT services that transform businesses.
@@ -179,6 +180,47 @@ const HomePage = () => {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced quantum-particles neural-connections">
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
         {/* Navigation */}
+=======
+          
+          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+            Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
+            Transform your operations with cutting-edge technology and innovative solutions.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <Link
+              to="/contact"
+              className="btn-primary touch-target mobile-optimized flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              aria-label="Get started with Zion Tech Group services"
+            >
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
+            </Link>
+            <Link
+              to="/demo"
+              className="btn-secondary touch-target mobile-optimized group hover:scale-105"
+              aria-label="Watch a demo of our services"
+            >
+              Watch Demo
+              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" aria-hidden="true" />
+            </Link>
+          </div>
+          
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  {stat.icon}
+                </div>
+                <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-gray-300 text-sm">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
 
 <<<<<<< HEAD
         <Navigation />
