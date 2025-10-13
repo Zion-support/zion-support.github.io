@@ -128,7 +128,7 @@ export default function AIProjectManagementPro() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Project Management Pro - Zion Tech Group</title>
         <meta
@@ -328,6 +328,6 @@ export default function AIProjectManagementPro() {
           </div>
         </div>
       </div>
-    </>
+</div>
   );
 }

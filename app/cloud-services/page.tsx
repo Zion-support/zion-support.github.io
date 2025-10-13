@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Cloud, Shield, Zap, Globe, ArrowRight, BarChart3, Database } from 'lucide-react';
+
 const CloudServicesPage: React.FC = () => {
   const services = [
     { name: "Cloud Migration", path: "/cloud-migration" },

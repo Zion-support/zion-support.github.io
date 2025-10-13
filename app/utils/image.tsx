@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function UtilsPage() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Utils - Zion Tech Group</title>
         <meta
@@ -28,6 +28,6 @@ export default function UtilsPage() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

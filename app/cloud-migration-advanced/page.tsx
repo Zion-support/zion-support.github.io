@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function CloudMigrationAdvancedZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>CloudMigrationAdvanced - Zion Tech Group</title>
       </Helmet>
@@ -27,6 +27,6 @@ export default function CloudMigrationAdvancedZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

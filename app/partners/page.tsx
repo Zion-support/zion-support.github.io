@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function Partners() {
@@ -69,7 +68,7 @@ export default function Partners() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Partners - Zion Tech Group | Strategic Partnerships</title>
         <meta name="description" content="Join our partner ecosystem and unlock new opportunities for growth. Strategic partnerships with leading technology companies." />
@@ -89,6 +88,6 @@ export default function Partners() {
           </div>
         </div>
       </div>
-    </>
+</div>
   );
 }

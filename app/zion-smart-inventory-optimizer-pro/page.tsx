@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Zionsmartinventoryoptimizerpro() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Smart Inventory Optimizer Pro - Zion Tech Group</title>
         <meta
@@ -30,6 +30,6 @@ export default function Zionsmartinventoryoptimizerpro() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

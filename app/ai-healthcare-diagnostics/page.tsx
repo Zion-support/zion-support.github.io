@@ -83,7 +83,7 @@ export default function page() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Healthcare Diagnostics - Zion Tech Group | Medical AI Solutions</title>
         <meta
@@ -341,6 +341,6 @@ export default function page() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

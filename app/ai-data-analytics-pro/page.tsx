@@ -10,6 +10,15 @@ import {
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { 
+  TrendingUp, 
+  ArrowRight,
+  Sparkles,
+  CheckCircle,
+  Zap,
+  Brain,
+  PieChart
+} from 'lucide-react';
 
 const AIDataAnalyticsProPage = () => {
   const benefits: string[] = [];

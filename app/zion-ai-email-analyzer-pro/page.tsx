@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Zionaiemailanalyzerpro() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Ai Email Analyzer Pro - Zion Tech Group</title>
         <meta
@@ -30,6 +30,6 @@ export default function Zionaiemailanalyzerpro() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

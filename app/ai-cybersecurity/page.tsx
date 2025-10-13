@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function AiCybersecurityZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AiCybersecurity - Zion Tech Group</title>
       </Helmet>
@@ -27,6 +27,6 @@ export default function AiCybersecurityZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

@@ -109,7 +109,7 @@ export default function AIEmailAssistant() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Email Assistant - Zion Tech Group</title>
         <meta
@@ -300,6 +300,6 @@ export default function AIEmailAssistant() {
           </div>
         </div>
       </div>
-    </>
+</div>
   );
 }

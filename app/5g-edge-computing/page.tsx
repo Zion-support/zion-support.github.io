@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function EdgeComputing5GPage() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>5G Edge Computing - Zion Tech Group</title>
         <meta
@@ -32,6 +32,6 @@ export default function EdgeComputing5GPage() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

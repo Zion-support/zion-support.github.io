@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AiAutomatedReporting() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AiAutomatedReporting - Zion Tech Group</title>
       </Helmet>
@@ -26,6 +26,6 @@ export default function AiAutomatedReporting() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

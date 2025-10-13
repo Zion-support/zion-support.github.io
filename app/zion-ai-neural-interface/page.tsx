@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, ArrowRight, CheckCircle, Star, Zap, Users, Target, Cpu, Globe, Eye, Hand } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';

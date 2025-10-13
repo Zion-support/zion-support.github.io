@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from 'lucide-react';
 
 export default function ConsultationPage() {
   const benefits = [
@@ -85,7 +86,7 @@ export default function ConsultationPage() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Free Consultation - Zion Tech Group | AI & IT Strategy Planning</title>
         <meta
@@ -433,6 +434,6 @@ export default function ConsultationPage() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

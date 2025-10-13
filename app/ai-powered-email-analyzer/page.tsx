@@ -15,7 +15,18 @@ import {
   Globe
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
+import { 
+  Mail, 
+  Shield, 
+  Zap, 
+  BarChart3, 
+  Users, 
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Target,
+  Globe
+} from 'lucide-react';
 
 const AIPoweredEmailAnalyzerPage = () => {
   const stats = [

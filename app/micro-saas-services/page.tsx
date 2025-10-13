@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Award, Rocket, Sparkles, TrendingUp, Heart, Receipt, Package, Code, Globe as WebIcon, Calendar as ScheduleIcon, Cloud as CloudIcon, Shield as ProtectionIcon } from 'lucide-react';
+import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Sparkles, Heart, Receipt, Package, Code } from 'lucide-react';
 
 export default function page() {
   const stats = [
@@ -334,7 +334,7 @@ export default function page() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Micro SAAS Services - Zion Tech Group | AI-Powered Business Solutions</title>
         <meta
@@ -594,6 +594,6 @@ export default function page() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

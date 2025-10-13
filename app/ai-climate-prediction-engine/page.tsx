@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 export default function AIClimatePredictionEngineZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Climate Prediction Engine - Zion Tech Group</title>
       </Helmet>
@@ -28,6 +28,6 @@ export default function AIClimatePredictionEngineZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

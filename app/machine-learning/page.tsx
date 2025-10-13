@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function MachineLearningZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>MachineLearning - Zion Tech Group</title>
       </Helmet>
@@ -27,6 +27,6 @@ export default function MachineLearningZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

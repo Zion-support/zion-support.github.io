@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowRight, ChevronDown, Menu, X, Brain, Shield, Zap, Globe, BarChart3, Cloud, Sparkles, Search, User, Settings, HelpCircle, Phone, Mail, MapPin, Star, TrendingUp, Users, Award, Clock, CheckCircle, DollarSign, Play } from 'lucide-react';
 
 const ImprovedNavigation = () => {
@@ -629,7 +628,7 @@ const ImprovedNavigation = () => {
   );
 
   return (
-    <>
+    <div>
       <header className="bg-black/20 backdrop-blur-sm border-b border-white/10 relative z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
@@ -794,7 +793,7 @@ const ImprovedNavigation = () => {
 
       {/* Sidebar */}
       <Sidebar />
-    </>
+</div>
   );
 };
 

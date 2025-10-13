@@ -1,4 +1,5 @@
 import React from "react";
+import { ArrowRight, Star, Shield, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Settings, Zap, BarChart3, Target, HardDrive, Minimize } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
@@ -386,7 +387,7 @@ export default function ITServices() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>IT Services - Zion Tech Group | Professional IT Solutions</title>
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, software development, and system integration. Expert solutions for modern businesses." />
@@ -537,6 +538,6 @@ export default function ITServices() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

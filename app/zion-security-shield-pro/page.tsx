@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { ArrowRight, Shield, Brain, CheckCircle, Star, Award, Zap, Globe, Mail, Phone, Sparkles, FileText, Eye, Fingerprint, Search } from 'lucide-react';
 
 export default function page() {
   const benefits = [
@@ -104,7 +105,7 @@ export default function page() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Security Shield Pro - Advanced AI Cybersecurity Platform | Zion Tech Group</title>
         <meta
@@ -426,6 +427,6 @@ export default function page() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

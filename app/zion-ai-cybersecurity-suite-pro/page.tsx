@@ -10,7 +10,6 @@ const ZionAICybersecuritySuiteProPage = () => {
 
   const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 
-  
   const pricingPlans = [
     {
       name: "Essential",

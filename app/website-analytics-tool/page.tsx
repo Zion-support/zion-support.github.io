@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Websiteanalyticstool() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Website Analytics Tool - Zion Tech Group</title>
         <meta
@@ -30,6 +30,6 @@ export default function Websiteanalyticstool() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

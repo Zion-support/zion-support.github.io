@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function AiTimeTrackerZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AiTimeTracker - Zion Tech Group</title>
       </Helmet>
@@ -25,6 +25,6 @@ export default function AiTimeTrackerZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

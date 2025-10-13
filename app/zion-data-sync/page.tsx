@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function ZionDataSyncZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>ZionDataSync - Zion Tech Group</title>
       </Helmet>
@@ -25,6 +25,6 @@ export default function ZionDataSyncZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

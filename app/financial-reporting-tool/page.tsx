@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Financialreportingtool() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Financial Reporting Tool - Zion Tech Group</title>
         <meta
@@ -30,6 +30,6 @@ export default function Financialreportingtool() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

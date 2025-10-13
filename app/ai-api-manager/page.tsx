@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AIAPIManagerZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI API Manager - Zion Tech Group</title>
       </Helmet>
@@ -24,6 +24,6 @@ export default function AIAPIManagerZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

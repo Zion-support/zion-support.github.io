@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { ArrowRight, Cloud, Shield, CheckCircle, Star, Users, Award, Smartphone, Globe, Mail, Phone, Database, Lock, Headphones, Sparkles, Clock, Archive } from 'lucide-react';
 
 export default function page() {
   const benefits = [
@@ -106,7 +107,7 @@ export default function page() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion Cloud Vault Pro - Secure Cloud Storage Platform | Zion Tech Group</title>
         <meta
@@ -428,6 +429,6 @@ export default function page() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

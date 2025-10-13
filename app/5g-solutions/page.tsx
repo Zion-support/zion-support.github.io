@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function FiveGSolutionsPage() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>5G Solutions - Zion Tech Group</title>
         <meta
@@ -31,6 +31,6 @@ export default function FiveGSolutionsPage() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

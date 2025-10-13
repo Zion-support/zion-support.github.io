@@ -1,4 +1,3 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { Mic, ArrowRight, Sparkles, CheckCircle, MessageSquare, Settings, Globe } from 'lucide-react';

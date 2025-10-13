@@ -109,7 +109,7 @@ export default function AIExpenseTracker() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Expense Tracker - Zion Tech Group</title>
         <meta
@@ -302,6 +302,6 @@ export default function AIExpenseTracker() {
           </div>
         </div>
       </div>
-    </>
+</div>
   );
 }

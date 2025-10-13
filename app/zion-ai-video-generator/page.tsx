@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Video, Play, Edit, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mic, Palette, Share, Mail, Smartphone, Globe, Cloud, BarChart3, Target, Headphones, Layout } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIVideoGeneratorPage = () => {
@@ -165,7 +165,7 @@ const ZionAIVideoGeneratorPage = () => {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Video Generator Pro - Create Professional Videos with AI | Zion Tech Group</title>
         <meta
@@ -479,7 +479,7 @@ const ZionAIVideoGeneratorPage = () => {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 };
 

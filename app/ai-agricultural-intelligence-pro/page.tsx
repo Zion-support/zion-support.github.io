@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AIAgriculturalIntelligenceProZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
       </Helmet>
@@ -26,6 +26,6 @@ export default function AIAgriculturalIntelligenceProZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

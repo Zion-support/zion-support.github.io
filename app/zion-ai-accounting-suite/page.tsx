@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Calculator, Brain, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Receipt, BarChart3, CreditCard, PieChart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';

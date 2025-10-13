@@ -1,6 +1,6 @@
-import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Users, ArrowRight, Sparkles, CheckCircle, Star, Target, TrendingUp, Zap, BarChart3, Mail, Phone, MapPin, Play, Watch, Video } from 'lucide-react';
 
 const ZionAICRMProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];

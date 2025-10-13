@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useMemo } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { 
   X, 
   ChevronDown, 
@@ -96,7 +96,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null
 
   return (
-    <>
+    <div>
       {/* Overlay */}
       <div 
         className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
@@ -288,7 +288,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>
         </div>
       </div>
-    </>
+</div>
   )
 }
 

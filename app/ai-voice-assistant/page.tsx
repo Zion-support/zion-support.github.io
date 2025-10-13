@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 export default function AIVoiceAssistant() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Voice Assistant - Zion Tech Group</title>
       </Helmet>
@@ -26,6 +26,6 @@ export default function AIVoiceAssistant() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

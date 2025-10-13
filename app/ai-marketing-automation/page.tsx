@@ -101,7 +101,7 @@ export default function page() {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>AI Marketing Automation - Zion Tech Group | Advanced Marketing Solutions</title>
         <meta
@@ -325,6 +325,6 @@ export default function page() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

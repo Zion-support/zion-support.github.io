@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar } from 'lucide-react';
 
 export default function page() {
   const stats = [
@@ -95,7 +95,7 @@ export default function page() {
   };
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Live Demos - Zion Tech Group | Interactive AI & IT Solutions</title>
         <meta
@@ -347,6 +347,6 @@ export default function page() {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 }

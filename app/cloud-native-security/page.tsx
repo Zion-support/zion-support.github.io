@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export default function CloudNativeSecurityZionTechGroup() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>CloudNativeSecurity - Zion Tech Group</title>
       </Helmet>
@@ -27,6 +27,6 @@ export default function CloudNativeSecurityZionTechGroup() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Projectmanagementtool() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Project Management Tool - Zion Tech Group</title>
         <meta
@@ -30,6 +30,6 @@ export default function Projectmanagementtool() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }

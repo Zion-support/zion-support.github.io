@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { BarChart3, Package, TrendingUp, AlertTriangle, Zap, ArrowRight, CheckCircle, Star, Smartphone, Globe } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';

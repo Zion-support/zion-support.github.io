@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, ArrowRight, CheckCircle, Lock, Award, Globe, Eye, Key } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';

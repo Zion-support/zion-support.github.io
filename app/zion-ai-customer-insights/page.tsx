@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Users, BarChart3, TrendingUp, Target, Eye, Heart, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Cloud, Settings, Headphones, DollarSign, CreditCard, TrendingDown, Play, Zap } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAICustomerInsightsPage = () => {
@@ -90,7 +90,7 @@ const ZionAICustomerInsightsPage = () => {
   ];
 
   return (
-    <>
+    <div>
       <Helmet>
         <title>Zion AI Customer Insights Pro - Advanced Customer Analytics with AI | Zion Tech Group</title>
         <meta
@@ -404,7 +404,7 @@ const ZionAICustomerInsightsPage = () => {
           </div>
         </section>
       </div>
-    </>
+</div>
   );
 };
 

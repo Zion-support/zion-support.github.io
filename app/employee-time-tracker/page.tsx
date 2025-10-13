@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function Employeetimetracker() {
   return (
-    <>
+    <div>
       <Helmet>
         <title>Employee Time Tracker - Zion Tech Group</title>
         <meta
@@ -30,6 +30,6 @@ export default function Employeetimetracker() {
           </Link>
         </div>
       </div>
-    </>
+</div>
   );
 }
