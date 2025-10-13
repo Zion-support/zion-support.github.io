@@ -1,58 +1,60 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
-  Mic, 
-  Volume2, 
-  Brain, 
-  Zap, 
+  Share2, 
+  Calendar, 
+  BarChart3, 
+  Users, 
+  Hash, 
+  Image, 
   ArrowRight, 
   Star, 
-  CheckCircle,
-  Smartphone,
-  Globe,
-  Shield,
-  Clock,
-  Users,
+  Zap, 
+  Brain,
   MessageSquare,
-  Settings
+  TrendingUp,
+  Target,
+  Clock,
+  CheckCircle,
+  Heart
 } from "lucide-react";
 
-export default function AIVoiceAssistant() {
+export default function ZionAISocialMediaManager() {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities for understanding context, intent, and complex queries",
+      title: "AI Content Generation",
+      description: "Generate engaging posts, captions, and hashtags using advanced AI algorithms",
       icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with real-time translation and localization",
-      icon: <Globe className="w-6 h-6" />,
+      title: "Smart Scheduling",
+      description: "AI-powered optimal posting times based on your audience engagement patterns",
+      icon: <Calendar className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Voice Recognition",
-      description: "99.9% accuracy voice recognition with noise cancellation and speaker identification",
-      icon: <Mic className="w-6 h-6" />,
+      title: "Multi-Platform Management",
+      description: "Manage Facebook, Instagram, Twitter, LinkedIn, and TikTok from one dashboard",
+      icon: <Share2 className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Text-to-Speech",
-      description: "Natural-sounding voice synthesis with multiple voice options and emotional tones",
-      icon: <Volume2 className="w-6 h-6" />,
+      title: "Analytics & Insights",
+      description: "Comprehensive analytics with AI-driven insights and performance recommendations",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Smart Integrations",
-      description: "Seamless integration with CRM, ERP, and business applications",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Hashtag Optimization",
+      description: "AI-powered hashtag research and optimization for maximum reach and engagement",
+      icon: <Hash className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Enterprise Security",
-      description: "Bank-level security with encryption, compliance, and audit trails",
-      icon: <Shield className="w-6 h-6" />,
+      title: "Visual Content Creation",
+      description: "AI-generated images, graphics, and video content for your social media posts",
+      icon: <Image className="w-6 h-6" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
@@ -60,45 +62,45 @@ export default function AIVoiceAssistant() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$19",
       period: "per month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individuals",
       features: [
-        "Up to 1,000 interactions/month",
-        "Basic voice recognition",
-        "Standard integrations",
-        "Email support",
-        "Basic analytics"
+        "3 social media accounts",
+        "30 posts per month",
+        "Basic AI content generation",
+        "Analytics dashboard",
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$49",
       period: "per month",
-      description: "Most popular for growing companies",
+      description: "Most popular for businesses",
       features: [
-        "Up to 10,000 interactions/month",
+        "10 social media accounts",
+        "Unlimited posts",
         "Advanced AI features",
-        "Custom integrations",
+        "Team collaboration",
         "Priority support",
-        "Advanced analytics",
-        "Multi-language support"
+        "Custom branding"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$149",
       period: "per month",
-      description: "For large organizations",
+      description: "For agencies and large teams",
       features: [
-        "Unlimited interactions",
-        "Custom AI training",
+        "Unlimited accounts",
         "White-label options",
-        "Dedicated support",
         "API access",
-        "Custom security features"
+        "Custom integrations",
+        "Dedicated support",
+        "Advanced analytics"
       ],
       popular: false
     }
@@ -106,24 +108,24 @@ export default function AIVoiceAssistant() {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      role: "Customer Service Director",
-      company: "RetailCorp",
-      content: "Zion AI Voice Assistant has revolutionized our customer service. Response times are 80% faster and customer satisfaction has increased dramatically.",
+      name: "Maria Garcia",
+      role: "Marketing Director",
+      company: "Creative Agency",
+      content: "Zion AI Social Media Manager has revolutionized our social media strategy. The AI content generation saves us hours and the engagement rates have increased by 300%.",
       rating: 5
     },
     {
-      name: "Robert Chen",
-      role: "CTO",
-      company: "TechStart",
-      content: "The natural language processing is incredibly sophisticated. It understands complex queries and provides accurate responses every time.",
+      name: "Tom Anderson",
+      role: "Small Business Owner",
+      company: "Local Restaurant",
+      content: "As a small business owner, I never had time for social media. This tool does everything for me - content creation, scheduling, and analytics. Game changer!",
       rating: 5
     },
     {
-      name: "Amanda Foster",
-      role: "Operations Manager",
-      company: "ServicePro",
-      content: "The multi-language support has been a game-changer for our international operations. Our global team can now communicate seamlessly.",
+      name: "Sarah Johnson",
+      role: "Content Creator",
+      company: "Influencer",
+      content: "The AI hashtag optimization and optimal posting times have dramatically increased my reach. My follower growth has been incredible since using this platform.",
       rating: 5
     }
   ];
@@ -131,16 +133,16 @@ export default function AIVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Intelligent Conversational AI | Zion Tech Group</title>
+        <title>Zion AI Social Media Manager - Automated Social Media Marketing | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform customer interactions with our advanced AI voice assistant. Natural language processing, multi-language support, and enterprise-grade security for seamless voice experiences."
+          content="Transform your social media presence with AI-powered content generation, smart scheduling, multi-platform management, and advanced analytics. Grow your audience and engagement effortlessly."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, conversational AI, voice recognition, text-to-speech, natural language processing, customer service automation, voice AI"
+          content="AI social media manager, social media automation, content generation, social media scheduling, social media analytics, hashtag optimization, multi-platform management"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-social-media-manager" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -154,19 +156,19 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Advanced Conversational AI</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Social Media Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI
+              Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Voice Assistant
+                {" "}Social Media Manager
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform customer interactions with our advanced AI voice assistant. Natural language processing, 
-              multi-language support, and enterprise-grade security for seamless voice experiences.
+              Transform your social media presence with AI-powered content generation, smart scheduling, 
+              multi-platform management, and advanced analytics. Grow your audience and engagement effortlessly.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -174,7 +176,7 @@ export default function AIVoiceAssistant() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Get Started
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -182,7 +184,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Share2 className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>
@@ -193,10 +195,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Voice AI Capabilities
+                Complete Social Media Solution
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to create intelligent voice experiences for your customers and users
+                Everything you need to dominate social media with AI-powered automation and intelligence
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -227,10 +229,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Enterprise-Grade Pricing
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice AI needs. All plans include our core features.
+                Choose the plan that fits your social media needs. All plans include our core AI features.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -287,10 +289,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                Trusted by Marketers Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about our AI Voice Assistant
+                See what our customers say about Zion AI Social Media Manager
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -319,10 +321,10 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Voice Interactions?
+              Ready to Dominate Social Media?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join industry leaders already using our AI Voice Assistant to enhance customer experiences and streamline operations.
+              Join thousands of marketers already using Zion AI Social Media Manager to grow their audience and boost engagement.
             </p>
             
             {/* Contact Information */}
@@ -336,14 +338,14 @@ export default function AIVoiceAssistant() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Settings className="w-6 h-6 text-white" />
+                  <Heart className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
                 <p className="text-cyan-400">+1 302 464 0950</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Users className="w-6 h-6 text-white" />
+                  <Target className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -355,7 +357,7 @@ export default function AIVoiceAssistant() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Get Started
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -363,7 +365,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Schedule Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Share2 className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>
