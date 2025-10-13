@@ -2,8 +2,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function Page() {
+export default function NotFoundPage() {
   return (
+    <>
       <Helmet>
         <title>404 - Zion Tech Group</title>
         <meta name="description" content="Professional 404 services by Zion Tech Group." />
@@ -50,6 +51,4 @@ export default function Page() {
       </div>
     </>
   );
-};
-
-export default NotFoundPage;
+}

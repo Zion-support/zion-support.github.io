@@ -2,48 +2,48 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-export default function Page() {
+export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional page services by Zion Tech Group." />
+        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
+        <meta name="description" content="Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation." />
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-8">
-            Page
+            Welcome to Zion Tech Group
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Professional page solutions tailored to your business needs.
+            Advanced AI and IT solutions tailored to your business needs.
           </p>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-blue-900 mb-2">
-                Expert Solutions
+                AI Solutions
               </h3>
               <p className="text-blue-700">
-                Our team of experts delivers cutting-edge page solutions.
+                Cutting-edge artificial intelligence solutions for modern businesses.
               </p>
             </div>
             
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-green-900 mb-2">
-                Custom Implementation
+                Cloud Computing
               </h3>
               <p className="text-green-700">
-                Tailored page implementations for your specific requirements.
+                Scalable cloud infrastructure and migration services.
               </p>
             </div>
             
             <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
               <h3 className="text-lg font-semibold text-purple-900 mb-2">
-                24/7 Support
+                Cybersecurity
               </h3>
               <p className="text-purple-700">
-                Round-the-clock support for all your page needs.
+                Comprehensive security solutions to protect your digital assets.
               </p>
             </div>
           </div>
