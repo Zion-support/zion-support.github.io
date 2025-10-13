@@ -55,6 +55,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const itServices = useMemo(() => [
     { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Advanced Cybersecurity Suite', path: '/advanced-cybersecurity-suite', icon: <Shield className="w-4 h-4" /> },
     { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
     { name: 'Mobile Development', path: '/mobile-development', icon: <Code className="w-4 h-4" /> },
     { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },

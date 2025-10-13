@@ -1,63 +1,63 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, ArrowRight, CheckCircle, Star, Zap, Brain, Lock, Cloud, Users, AlertTriangle, Eye, Key, Mail, Smartphone, Globe } from 'lucide-react';
+import { Shield, ArrowRight, CheckCircle, Star, Zap, Brain, Lock, Eye, AlertTriangle, Key, Mail, Smartphone, Globe } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const ZionSecurityShield = () => {
+const AdvancedCybersecuritySuite = () => {
   const features = [
-    'AI-Powered Threat Detection & Response',
-    'Real-time Security Monitoring 24/7',
-    'Advanced Firewall & Intrusion Prevention',
-    'Automated Incident Response System',
-    'Multi-layer Endpoint Protection',
-    'Email Security & Phishing Prevention',
-    'Network Traffic Analysis',
-    'Vulnerability Assessment & Scanning',
-    'Compliance Reporting & Auditing',
-    'Security Awareness Training',
-    'Dark Web Monitoring',
-    'Zero-Trust Architecture Implementation'
+    'AI-Powered Threat Detection',
+    'Zero-Trust Security Architecture',
+    'Advanced Endpoint Protection',
+    'Real-time Security Monitoring',
+    'Automated Incident Response',
+    'Quantum-Safe Cryptography',
+    'Behavioral Analytics',
+    'Threat Intelligence Integration',
+    'Compliance Automation',
+    'Security Orchestration',
+    'Penetration Testing Services',
+    '24/7 Security Operations Center'
   ];
 
-  const securityThreats = [
+  const securityCapabilities = [
     {
-      name: 'Ransomware Protection',
-      description: 'Advanced AI algorithms detect and prevent ransomware attacks before they can encrypt your data',
+      name: 'Advanced Threat Protection',
+      description: 'AI-driven detection and prevention of sophisticated cyber attacks including APTs, zero-day exploits, and ransomware',
       icon: <Shield className="w-8 h-8" />,
-      protection: '99.8%'
-    },
-    {
-      name: 'Phishing Prevention',
-      description: 'AI-powered email analysis identifies and blocks sophisticated phishing attempts',
-      icon: <Eye className="w-8 h-8" />,
       protection: '99.9%'
     },
     {
-      name: 'Malware Detection',
-      description: 'Behavioral analysis and machine learning detect zero-day malware and advanced persistent threats',
-      icon: <AlertTriangle className="w-8 h-8" />,
-      protection: '99.7%'
+      name: 'Quantum-Safe Security',
+      description: 'Future-proof cryptography resistant to quantum computing attacks and post-quantum threats',
+      icon: <Key className="w-8 h-8" />,
+      protection: 'Quantum-Ready'
     },
     {
-      name: 'DDoS Mitigation',
-      description: 'Real-time traffic analysis and automated mitigation protect against distributed denial of service attacks',
-      icon: <Cloud className="w-8 h-8" />,
-      protection: '99.9%'
+      name: 'Zero-Trust Architecture',
+      description: 'Comprehensive zero-trust implementation with continuous verification and least-privilege access',
+      icon: <Lock className="w-8 h-8" />,
+      protection: '100% Secure'
+    },
+    {
+      name: 'AI Security Analytics',
+      description: 'Machine learning-powered security analytics for predictive threat detection and automated response',
+      icon: <Brain className="w-8 h-8" />,
+      protection: 'Predictive'
     }
   ];
 
   const pricingPlans = [
     {
-      name: 'Essential',
-      price: '$499',
+      name: 'Essential Security',
+      price: '$999',
       period: '/month',
-      originalPrice: '$999',
+      originalPrice: '$1,999',
       description: 'Perfect for small businesses',
       features: [
-        'Up to 50 Endpoints',
+        'Up to 100 Endpoints',
         'Basic Threat Detection',
         'Email Security',
-        'Firewall Protection',
+        'Firewall Management',
         '24/7 Monitoring',
         'Email Support',
         'Monthly Reports',
@@ -66,40 +66,42 @@ const ZionSecurityShield = () => {
       popular: false
     },
     {
-      name: 'Professional',
-      price: '$999',
+      name: 'Professional Security',
+      price: '$2,999',
       period: '/month',
-      originalPrice: '$1,999',
-      description: 'Ideal for growing companies',
+      originalPrice: '$5,999',
+      description: 'Ideal for mid-size companies',
       features: [
-        'Up to 200 Endpoints',
+        'Up to 500 Endpoints',
         'Advanced AI Detection',
+        'Zero-Trust Implementation',
         'Automated Response',
-        'Network Analysis',
         'Priority Support',
         'Real-time Alerts',
-        'Compliance Reports',
+        'Compliance Automation',
         'Security Training',
-        'Dark Web Monitoring'
+        'Threat Intelligence',
+        'Custom Integrations'
       ],
       popular: true
     },
     {
-      name: 'Enterprise',
-      price: '$1,999',
+      name: 'Enterprise Security',
+      price: '$9,999',
       period: '/month',
-      originalPrice: '$3,999',
+      originalPrice: '$19,999',
       description: 'For large organizations',
       features: [
         'Unlimited Endpoints',
-        'Full AI Suite',
-        'Custom Response Rules',
-        'Zero-Trust Implementation',
+        'Full AI Security Suite',
+        'Quantum-Safe Cryptography',
         'Dedicated Security Team',
-        'Custom Integrations',
-        'Advanced Analytics',
-        'Executive Training',
-        'SLA Guarantee'
+        'Custom Security Solutions',
+        '24/7 SOC Support',
+        'White-label Solutions',
+        'Executive Reporting',
+        'SLA Guarantee',
+        'Custom Development'
       ],
       popular: false
     }
@@ -107,26 +109,26 @@ const ZionSecurityShield = () => {
 
   const testimonials = [
     {
-      name: 'David Martinez',
-      company: 'Financial Services Corp',
+      name: 'James Wilson',
+      company: 'Fortune 500 Bank',
       role: 'CISO',
-      content: 'Zion Security Shield prevented 3 major cyber attacks in the first month alone. The AI detection is incredibly accurate and fast.',
+      content: 'Zion Tech Group\'s cybersecurity suite prevented multiple sophisticated attacks. The AI detection is incredibly accurate and the response time is unmatched.',
       rating: 5,
-      avatar: 'DM'
+      avatar: 'JW'
     },
     {
-      name: 'Lisa Thompson',
-      company: 'Healthcare Solutions',
-      role: 'IT Director',
-      content: 'Compliance reporting became effortless with Zion Security Shield. We passed our security audit with flying colors.',
+      name: 'Dr. Maria Garcia',
+      company: 'Healthcare Systems',
+      role: 'Security Director',
+      content: 'The zero-trust implementation and compliance automation saved us months of work. We passed our security audit with flying colors.',
       rating: 5,
-      avatar: 'LT'
+      avatar: 'MG'
     },
     {
       name: 'Robert Kim',
-      company: 'E-commerce Platform',
+      company: 'Government Agency',
       role: 'Security Manager',
-      content: 'The automated response system saved us countless hours. Threats are neutralized before they can cause damage.',
+      content: 'The quantum-safe cryptography gives us confidence for the future. This is the most advanced security solution we\'ve ever implemented.',
       rating: 5,
       avatar: 'RK'
     }
@@ -135,10 +137,10 @@ const ZionSecurityShield = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Zion Security Shield - AI-Powered Cybersecurity Platform | Zion Tech Group"
-        description="Advanced AI-powered cybersecurity platform with real-time threat detection, automated response, and 24/7 monitoring. Protect your business with 99.9% threat prevention accuracy."
-        keywords="cybersecurity, AI security, threat detection, automated response, network security, endpoint protection, compliance, security monitoring"
-        canonical="https://ziontechgroup.com/zion-security-shield"
+        title="Advanced Cybersecurity Suite - Zion Tech Group | Next-Gen Security Solutions"
+        description="Revolutionary cybersecurity suite with AI-powered threat detection, zero-trust architecture, and quantum-safe cryptography. Protect your business with 99.9% threat prevention."
+        keywords="cybersecurity, AI security, threat detection, zero-trust, quantum-safe cryptography, security automation, compliance, SOC"
+        canonical="https://ziontechgroup.com/advanced-cybersecurity-suite"
       />
 
       {/* Hero Section */}
@@ -146,18 +148,18 @@ const ZionSecurityShield = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 border border-red-500/30 mb-6">
             <Shield className="w-4 h-4 text-red-400 mr-2" />
-            <span className="text-red-400 text-sm font-medium">Advanced Security Solution</span>
+            <span className="text-red-400 text-sm font-medium">Next-Generation Security</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-orange-400 to-yellow-400">
-              Zion Security Shield
+              Advanced Cybersecurity Suite
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Advanced AI-powered cybersecurity platform that protects your business 24/7 with real-time threat detection, 
-            automated response, and comprehensive security monitoring. Stay ahead of cyber threats with 99.9% accuracy.
+            Revolutionary cybersecurity suite powered by AI, quantum-safe cryptography, and zero-trust architecture. 
+            Protect your business from the most sophisticated cyber threats with 99.9% accuracy and automated response.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -183,12 +185,12 @@ const ZionSecurityShield = () => {
               <div className="text-gray-300 text-sm">Threat Prevention</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">24/7</div>
-              <div className="text-gray-300 text-sm">Monitoring</div>
+              <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">&lt;1s</div>
+              <div className="text-gray-300 text-sm">Response Time</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">&lt;1s</div>
-              <div className="text-gray-300 text-sm">Response Time</div>
+              <div className="text-3xl md:text-4xl font-bold text-yellow-400 mb-2">24/7</div>
+              <div className="text-gray-300 text-sm">SOC Monitoring</div>
             </div>
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">100%</div>
@@ -198,36 +200,36 @@ const ZionSecurityShield = () => {
         </div>
       </section>
 
-      {/* Threat Protection Section */}
+      {/* Security Capabilities Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Advanced Threat Protection
+              Advanced Security Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              AI-powered security that adapts and evolves to protect against the latest cyber threats
+              Comprehensive security solutions powered by cutting-edge technology
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {securityThreats.map((threat, index) => (
+            {securityCapabilities.map((capability, index) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
               >
                 <div className="flex items-start space-x-6">
                   <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    {threat.icon}
+                    {capability.icon}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center justify-between mb-3">
                       <h3 className="text-xl font-semibold text-white group-hover:text-red-300 transition-colors">
-                        {threat.name}
+                        {capability.name}
                       </h3>
-                      <span className="text-2xl font-bold text-green-400">{threat.protection}</span>
+                      <span className="text-lg font-bold text-green-400">{capability.protection}</span>
                     </div>
-                    <p className="text-gray-300 leading-relaxed">{threat.description}</p>
+                    <p className="text-gray-300 leading-relaxed">{capability.description}</p>
                   </div>
                 </div>
               </div>
@@ -278,7 +280,7 @@ const ZionSecurityShield = () => {
               Choose Your Security Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible security solutions designed to protect businesses of all sizes
+              Flexible security solutions for businesses of all sizes
             </p>
           </div>
           
@@ -344,10 +346,10 @@ const ZionSecurityShield = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Trusted by Security Professionals
+              Trusted by Security Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what security experts say about Zion Security Shield
+              See what security professionals say about our advanced cybersecurity suite
             </p>
           </div>
           
@@ -382,11 +384,11 @@ const ZionSecurityShield = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-red-900/30 to-orange-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Secure Your Business Today
+            Secure Your Future Today
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Don't wait for a cyber attack to happen. Protect your business with Zion Security Shield 
-            and sleep peacefully knowing your data is secure 24/7.
+            Don't wait for a cyber attack to happen. Protect your business with our advanced cybersecurity suite 
+            and stay ahead of evolving threats with cutting-edge technology.
           </p>
           
           {/* Contact Information */}
@@ -435,4 +437,4 @@ const ZionSecurityShield = () => {
   );
 };
 
-export default ZionSecurityShield;
+export default AdvancedCybersecuritySuite;

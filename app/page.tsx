@@ -136,13 +136,29 @@ const HomePage = () => {
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
       featured: false
+    },
+    {
+      name: "Zion Cloud Vault",
+      description: "Secure cloud storage with end-to-end encryption, team collaboration, and automated backup",
+      price: "From $29/month",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/zion-cloud-vault",
+      featured: false
+    },
+    {
+      name: "Zion Content Studio",
+      description: "AI-powered content creation platform with multi-format support and SEO optimization",
+      price: "From $149/month",
+      icon: <Monitor className="w-6 h-6" />,
+      link: "/zion-content-studio",
+      featured: false
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "80+", label: "Solutions Available", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
