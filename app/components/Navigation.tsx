@@ -6,9 +6,6 @@ export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   
-  const toggleMenu = () => {
-    setIsOpen(!isOpen)
-  }
 
   const toggleServices = () => {
     setIsServicesOpen(!isServicesOpen)
@@ -44,6 +41,7 @@ export default function Navigation() {
             <div className="relative">
               <button
                 onClick={toggleServices}
+<<<<<<< HEAD
                 className="flex items-center space-x-1 hover:text-blue-400 transition-colors"
               >
                 <span>Services</span>
@@ -61,11 +59,31 @@ export default function Navigation() {
                     >
                       {service.icon}
                       <span>{service.name}</span>
+=======
+                className="text-white hover:text-purple-300 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+              >
+                Services
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </button>
+              
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white/95 backdrop-blur-lg rounded-lg shadow-lg border border-white/20 py-2 z-50">
+                  {services.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.path}
+                      className="flex items-center px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
+                      onClick={() => setIsServicesOpen(false)}
+                    >
+                      {service.icon}
+                      <span className="ml-3 text-sm font-medium">{service.name}</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-dcd8
                     </Link>
                   ))}
                 </div>
               )}
             </div>
+<<<<<<< HEAD
 
             <Link to="/case-studies" className="hover:text-blue-400 transition-colors">
               Case Studies
@@ -75,6 +93,11 @@ export default function Navigation() {
             </Link>
             <Link to="/contact" className="hover:text-blue-400 transition-colors">
               Contact
+=======
+            
+            <Link to="/ai-services" className="hover:text-blue-400 transition-colors">
+              AI Services
+>>>>>>> cursor/fix-errors-and-merge-to-main-dcd8
             </Link>
             <Link
               to="/consultation"
@@ -97,6 +120,7 @@ export default function Navigation() {
 
         {/* Mobile menu */}
         {isOpen && (
+<<<<<<< HEAD
           <div className="md:hidden py-4 border-t border-gray-700">
             <div className="flex flex-col space-y-4">
               <Link
@@ -163,6 +187,39 @@ export default function Navigation() {
                 className="hover:text-blue-400 transition-colors"
                 onClick={toggleMenu}
               >
+=======
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/10 backdrop-blur-lg border-t border-white/20">
+              <Link to="/" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+                Home
+              </Link>
+              <Link to="/about" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+                About
+              </Link>
+              
+              {/* Mobile Services Section */}
+              <div className="px-3 py-2">
+                <div className="text-white font-medium text-base mb-2">Services</div>
+                <div className="pl-4 space-y-1">
+                  {services.map((service, index) => (
+                    <Link
+                      key={index}
+                      to={service.path}
+                      className="flex items-center text-gray-300 hover:text-purple-300 block px-3 py-2 rounded-md text-sm transition-colors"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {service.icon}
+                      <span className="ml-3">{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+              
+              <Link to="/ai-services" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+                AI Services
+              </Link>
+              <Link to="/contact" className="text-white hover:text-purple-300 block px-3 py-2 rounded-md text-base font-medium" onClick={() => setIsOpen(false)}>
+>>>>>>> cursor/fix-errors-and-merge-to-main-dcd8
                 Contact
               </Link>
               <Link
@@ -177,5 +234,9 @@ export default function Navigation() {
         )}
       </div>
     </nav>
+<<<<<<< HEAD
   )
+=======
+  );
+>>>>>>> cursor/fix-errors-and-merge-to-main-dcd8
 }
