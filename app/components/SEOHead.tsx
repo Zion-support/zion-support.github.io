@@ -1,33 +1,28 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface EnhancedSEOProps {
+interface SEOHeadProps {
   title: string;
   description: string;
   keywords?: string;
   canonical?: string;
-  structuredData?: any;
   ogImage?: string;
   ogType?: string;
-  twitterCard?: string;
 }
 
-const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
+const SEOHead: React.FC<SEOHeadProps> = ({
   title,
   description,
   keywords = '',
   canonical = '',
-  structuredData,
   ogImage = '/og-image.jpg',
-  ogType = 'website',
-  twitterCard = 'summary_large_image'
+  ogType = 'website'
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullCanonical = canonical || `https://ziontechgroup.com${window.location.pathname}`;
 
   return (
     <Helmet>
-      {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
@@ -42,7 +37,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <meta property="og:site_name" content="Zion Tech Group" />
       
       {/* Twitter Card Tags */}
-      <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
@@ -50,16 +45,8 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       {/* Additional SEO Tags */}
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Zion Tech Group" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      
-      {/* Structured Data */}
-      {structuredData && (
-        <script type="application/ld+json">
-          {JSON.stringify(structuredData)}
-        </script>
-      )}
     </Helmet>
   );
 };
 
-export default EnhancedSEO;
+export default SEOHead;

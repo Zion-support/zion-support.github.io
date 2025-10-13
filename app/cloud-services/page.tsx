@@ -27,6 +27,33 @@ export default function CloudServices() {
     }
   ];
 
+  const cloudServices = [
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Migration",
+      description: "Seamlessly migrate your applications and data to the cloud",
+      features: ["Zero-downtime migration", "Data integrity assurance", "Cost optimization"]
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: "Cloud Security",
+      description: "Comprehensive security solutions for your cloud infrastructure",
+      features: ["Identity management", "Data encryption", "Threat monitoring"]
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: "Cloud Storage",
+      description: "Scalable and secure cloud storage solutions",
+      features: ["Unlimited scalability", "Data redundancy", "Fast retrieval"]
+    },
+    {
+      icon: <Server className="w-8 h-8" />,
+      title: "Cloud Infrastructure",
+      description: "Managed cloud infrastructure services",
+      features: ["Auto-scaling", "Load balancing", "Monitoring"]
+    }
+  ];
+
   return (
     <>
       <Helmet>
@@ -62,7 +89,7 @@ export default function CloudServices() {
               </Link>
             </div>
           </div>
-        </section>
+        </div>
 
         {/* Key Benefits */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
@@ -76,7 +103,7 @@ export default function CloudServices() {
               </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {services.map((service, index) => (
                 <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
@@ -92,27 +119,70 @@ export default function CloudServices() {
               ))}
             </div>
           </div>
-        </div>
+        </section>
 
-              <p className="text-xl text-gray-300 mb-8">
-                Let our cloud experts help you migrate, optimize, and secure your infrastructure.
+        {/* Cloud Services */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Our Cloud Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive cloud solutions tailored to your business needs
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105"
-                >
-                  Start Your Cloud Journey
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  to="/pricing"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 border border-white/20"
-                >
-                  View Pricing
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {cloudServices.map((service, index) => (
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-6">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-2xl font-semibold text-white mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2">
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Transform Your Business with Cloud?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let our cloud experts help you migrate, optimize, and secure your infrastructure.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105"
+              >
+                Start Your Cloud Journey
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+              <Link
+                to="/pricing"
+                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 border border-white/20"
+              >
+                View Pricing
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </div>
         </section>
