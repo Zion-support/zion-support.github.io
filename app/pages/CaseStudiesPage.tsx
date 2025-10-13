@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react;
+import { ArrowRight, TrendingUp, Users, Clock, DollarSign } from 'lucide-react';
 const CaseStudiesPage: React.FC = () => {
   const caseStudies = [{
       title: 'E-commerce Platform AI Optimization',';

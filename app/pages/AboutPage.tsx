@@ -1,27 +1,17 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';import { 
-  CheckCircleIcon,
-  UserGroupIcon,
-  LightBulbIcon,
-  ShieldCheckIcon,
-  RocketLaunchIcon,
-  HeartIcon,
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  CheckCircleIcon, 
   ArrowRightIcon,
-  StarIcon,
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon
+  UserGroupIcon,
+  CpuChipIcon,
+  ShieldCheckIcon,
+  CloudIcon,
+  RocketLaunchIcon
 } from '@heroicons/react/24/outline';
 
-export default function AboutPage()    {
-return (    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission and team" />
-      </Helmet>
-    }
-  ];
-
+const AboutPage: React.FC = () => {
   const stats = [
     { number: '50+', label: 'Projects Completed' },
     { number: '25+', label: 'Happy Clients' },
@@ -29,198 +19,210 @@ return (    <>
     { number: '4+', label: 'Years Experience' }
   ];
 
+  const values = [
+    {
+      icon: CpuChipIcon,
+      title: 'Innovation',
+      description: 'We stay at the forefront of technology, constantly exploring new solutions and methodologies.'
+    },
+    {
+      icon: ShieldCheckIcon,
+      title: 'Security',
+      description: 'Security is paramount in everything we do, ensuring your data and systems are always protected.'
+    },
+    {
+      icon: CloudIcon,
+      title: 'Scalability',
+      description: 'Our solutions are designed to grow with your business, adapting to your changing needs.'
+    },
+    {
+      icon: RocketLaunchIcon,
+      title: 'Performance',
+      description: 'We optimize for speed and efficiency, delivering solutions that perform at the highest level.'
+    }
+  ];
+
+  const team = [
+    {
+      name: 'Kleber Santos',
+      role: 'CEO & Founder',
+      description: 'Technology visionary with 15+ years in AI and enterprise solutions.',
+      image: '/api/placeholder/300/300'
+    },
+    {
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      description: 'Expert in cloud architecture and cybersecurity solutions.',
+      image: '/api/placeholder/300/300'
+    },
+    {
+      name: 'Michael Chen',
+      role: 'Lead AI Engineer',
+      description: 'Machine learning specialist with expertise in deep learning and NLP.',
+      image: '/api/placeholder/300/300'
+    }
+  ];
+
   return (
     <>
-<SEO 
-        title="About Us - Zion Tech Group"
-        description="Learn about Zion Tech Group's mission, values, and team. We're passionate about delivering cutting-edge AI and IT solutions."
-        keywords="about us, team, mission, values, AI company, IT solutions"
-        url="/about"
-      />
+      <Helmet>
+        <title>About Us - Zion Tech Group</title>
+        <meta name="description" content="Learn about Zion Tech Group's mission, values, and team of experts dedicated to delivering cutting-edge AI and IT solutions." />
+        <meta name="keywords" content="about us, team, mission, values, Zion Tech Group, AI experts, IT professionals" />
+      </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-              About Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-Empowering businesses through innovative technology solutions
-            </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Founded in 2020, we've been at the forefront of digital transformation, 
-              helping companies leverage the power of artificial intelligence, cybersecurity, 
-              and cloud technologies to achieve unprecedented growth.            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto">
-<div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  To democratize access to advanced AI and IT solutions, enabling businesses of all sizes 
-                  to compete and thrive in the digital economy.
-                </p>
-                <h3 className="text-3xl font-bold text-white mb-6">Our Vision</h3>
-                <p className="text-lg text-gray-300 leading-relaxed">
-                  To be the leading provider of innovative technology solutions that transform how 
-                  businesses operate and create value in an increasingly connected world.
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-purple-800/20 to-cyan-800/20 p-8 rounded-2xl border border-purple-500/20">
-                <div className="text-center">
-                  <HeartIcon className="w-16 h-16 text-purple-400 mx-auto mb-6" />
-                  <h3 className="text-2xl font-bold text-white mb-4">Why We Do What We Do</h3>
-                  <p className="text-gray-300">
-                    We believe technology should be accessible, powerful, and transformative. 
-                    Every solution we create is designed to make a real difference in our clients' success.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Values Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Our Core Values
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The principles that guide everything we do and shape our company culture
-            </p>
-          </div>
-          
-<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {values.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
-                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">{value.title}</h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {value.description}
-                  </p>
-                </div>
-              );
-            })}
-</div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our Impact
-              </h2>
-              <p className="text-xl text-gray-300">
-                Numbers that reflect our commitment to excellence
+      <div className="min-h-screen bg-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="relative py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <h1 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                About Zion Tech Group
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                We are a team of passionate technologists dedicated to transforming businesses 
+                through innovative AI and IT solutions.
               </p>
             </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          </div>
+        </section>
+
+        {/* Mission Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-4xl font-bold mb-6">Our Mission</h2>
+                <p className="text-lg text-gray-300 mb-6">
+                  To empower businesses with cutting-edge technology solutions that drive innovation, 
+                  enhance security, and accelerate growth in the digital age.
+                </p>
+                <p className="text-lg text-gray-300 mb-8">
+                  We believe that technology should be accessible, secure, and transformative. 
+                  Our mission is to bridge the gap between complex technology and practical business solutions.
+                </p>
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+                >
+                  Get in Touch
+                  <ArrowRightIcon className="w-5 h-5 ml-2" />
+                </Link>
+              </div>
+              <div className="bg-slate-800 rounded-xl p-8">
+                <h3 className="text-2xl font-bold mb-6">Our Vision</h3>
+                <p className="text-gray-300 mb-6">
+                  To be the leading provider of AI-powered solutions that transform how businesses 
+                  operate, compete, and succeed in the global marketplace.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <CheckCircleIcon className="w-6 h-6 text-green-400" />
+                    <span className="text-gray-300">Innovation-driven approach</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircleIcon className="w-6 h-6 text-green-400" />
+                    <span className="text-gray-300">Client-focused solutions</span>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <CheckCircleIcon className="w-6 h-6 text-green-400" />
+                    <span className="text-gray-300">Sustainable growth</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-20 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4">Our Impact</h2>
+              <p className="text-xl text-gray-300">Numbers that speak to our success and commitment</p>
+            </div>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl md:text-5xl font-bold text-purple-400 mb-2">
+                  <div className="text-4xl lg:text-5xl font-bold text-purple-400 mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-gray-300 text-lg">
-                    {stat.label}
-                  </div>
+                  <div className="text-gray-300 text-lg">{stat.label}</div>
                 </div>
               ))}
             </div>
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              Meet Our Team
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              The passionate professionals behind our success
-            </p>
           </div>
-          
-<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {team.map((member, index) => (
-              <div key={index} className="group bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
-                <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-white font-bold text-2xl">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
-                </div>
-<h3 className="text-xl font-bold text-white mb-2 text-center">
-                  {member.name}
-                </h3>
-                <p className="text-purple-400 text-center mb-4">
-                  {member.role}
-                </p>
-                <p className="text-gray-300 text-sm text-center leading-relaxed">
-                  {member.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
-              Ready to Work With Us?
-            </h2>
-            <p className="text-xl text-gray-300 mb-12">
-Let's discuss how we can help transform your business with our innovative solutions
+        {/* Values Section */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4">Our Values</h2>
+              <p className="text-xl text-gray-300">The principles that guide everything we do</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {values.map((value, index) => (
+                <div key={index} className="bg-slate-800 rounded-xl p-8 text-center hover:bg-slate-700 transition-colors">
+                  <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-6">
+                    <value.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-4">{value.title}</h3>
+                  <p className="text-gray-300">{value.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Team Section */}
+        <section className="py-20 bg-slate-800/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-4">Meet Our Team</h2>
+              <p className="text-xl text-gray-300">The experts behind our innovative solutions</p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {team.map((member, index) => (
+                <div key={index} className="bg-slate-800 rounded-xl p-8 text-center">
+                  <div className="w-24 h-24 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <UserGroupIcon className="w-12 h-12 text-white" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{member.name}</h3>
+                  <p className="text-purple-400 mb-4">{member.role}</p>
+                  <p className="text-gray-300">{member.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-4xl font-bold mb-6">Ready to Work With Us?</h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's discuss how our team can help transform your business with innovative technology solutions.
             </p>
-            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                to="/contact" 
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
               >
-                Get In Touch
-                <ArrowRightIcon className="w-5 h-5" />
+                Start a Project
               </Link>
-              <Link 
-                to="/services" 
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+              <Link
+                to="/careers"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-slate-900 transition-all duration-300"
               >
-                View Our Services
-                <ArrowRightIcon className="w-5 h-5" />
+                Join Our Team
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-      <div className="min-h-screen bg-slate-900 text-white p-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-8">About Zion Tech Group</h1>
-          <p className="text-lg text-gray-300">
-            We are a leading technology company specializing in AI solutions, cybersecurity, and digital transformation.
-          </p>
-        </div>
+        </section>
       </div>
     </>
   );
-}
+};
+
 export default AboutPage;
