@@ -93,7 +93,7 @@
     "check:performance": "pnpm run build && du -sh dist",
     "build:optimized": "NODE_OPTIONS=\"--max-old-space-size=4096\" vite build",
     "build:fast": "NODE_OPTIONS=\"--max-old-space-size=2048\" vite build --mode production --minify esbuild",
-    "optimize:enhanced": "npm run optimize:performance && npm run build:optimized",
+    "optimize:enhanced": "node scripts/enhanced-performance-optimizer.cjs",
     "deploy:production": "npm run optimize:enhanced && npm run build:check && echo 'Ready for production deployment'",
     "generate:sitemap": "node scripts/generate-sitemap.cjs",
     "optimize:performance": "node scripts/performance-optimizer.cjs",
