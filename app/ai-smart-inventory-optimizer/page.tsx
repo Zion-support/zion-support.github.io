@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Mic, 
-  Volume2, 
-  Headphones, 
+  Package, 
+  BarChart3, 
+  TrendingUp, 
   Star, 
   CheckCircle, 
   ArrowRight, 
@@ -41,7 +41,7 @@ import {
   Globe,
   Smartphone,
   Monitor,
-  Headphones as HeadphonesIcon,
+  Headphones,
   Search,
   Filter,
   Download,
@@ -49,7 +49,9 @@ import {
   Share,
   Bell,
   BellOff,
+  Volume2,
   VolumeX,
+  Mic,
   MicOff,
   Camera,
   CameraOff,
@@ -92,105 +94,99 @@ import {
   Clipboard,
   Bookmark,
   Tag,
-  Flag,
-  Play,
-  Pause,
-  Stop,
-  RefreshCw,
-  RotateCcw,
-  Save
+  Flag
 } from 'lucide-react';
 
-const AIVoiceAssistantPro = () => {
+const AISmartInventoryOptimizer = () => {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities for understanding complex commands and conversations",
-      icon: <Brain className="w-6 h-6" />,
-      details: ["Context awareness", "Intent recognition", "Entity extraction", "Conversation memory"]
+      title: "Demand Forecasting",
+      description: "Predict future demand with 95% accuracy using advanced machine learning algorithms",
+      icon: <TrendingUp className="w-6 h-6" />,
+      details: ["Seasonal analysis", "Trend prediction", "External factor integration", "Confidence intervals"]
     },
     {
-      title: "Multi-language Support",
-      description: "Support for 50+ languages with accurate pronunciation and accent recognition",
-      icon: <Globe className="w-6 h-6" />,
-      details: ["50+ languages", "Accent recognition", "Real-time translation", "Cultural adaptation"]
+      title: "Auto Reordering",
+      description: "Automatically generate purchase orders when inventory reaches optimal levels",
+      icon: <Package className="w-6 h-6" />,
+      details: ["Smart reorder points", "Supplier integration", "Lead time optimization", "Bulk order discounts"]
     },
     {
-      title: "Custom Voice Training",
-      description: "Train the assistant with your brand voice and specific terminology",
-      icon: <Mic className="w-6 h-6" />,
-      details: ["Brand voice training", "Custom terminology", "Voice cloning", "Personality customization"]
+      title: "Cost Optimization",
+      description: "Minimize inventory costs while maintaining service levels with AI optimization",
+      icon: <DollarSign className="w-6 h-6" />,
+      details: ["Holding cost analysis", "Order cost optimization", "ABC analysis", "Dead stock prevention"]
     },
     {
-      title: "API Integration",
-      description: "Seamlessly integrate with your existing systems and applications",
-      icon: <Settings className="w-6 h-6" />,
-      details: ["REST API", "Webhook support", "SDK libraries", "Third-party integrations"]
+      title: "Multi-location Management",
+      description: "Manage inventory across multiple warehouses and locations seamlessly",
+      icon: <Warehouse className="w-6 h-6" />,
+      details: ["Location tracking", "Transfer optimization", "Centralized control", "Local demand analysis"]
     },
     {
-      title: "Voice Commands",
-      description: "Execute complex business processes through simple voice commands",
-      icon: <Zap className="w-6 h-6" />,
-      details: ["Custom commands", "Workflow automation", "Task execution", "System control"]
+      title: "Supplier Management",
+      description: "Optimize supplier relationships and performance with integrated analytics",
+      icon: <Truck className="w-6 h-6" />,
+      details: ["Supplier scoring", "Performance tracking", "Contract management", "Risk assessment"]
     },
     {
       title: "Analytics Dashboard",
-      description: "Comprehensive analytics and insights about voice interactions",
+      description: "Comprehensive analytics and reporting for data-driven inventory decisions",
       icon: <BarChart3 className="w-6 h-6" />,
-      details: ["Usage analytics", "Performance metrics", "User insights", "Custom reports"]
+      details: ["Real-time dashboards", "Custom reports", "KPI tracking", "Trend analysis"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$249",
       period: "/month",
-      originalPrice: "$399",
-      description: "Perfect for small businesses and startups",
+      originalPrice: "$499",
+      description: "Perfect for small retail businesses",
       features: [
-        "Up to 1,000 interactions/month",
-        "Basic voice recognition",
-        "5 languages supported",
+        "Up to 1,000 SKUs",
+        "Basic forecasting",
+        "Single location",
         "Email support",
-        "Standard analytics",
+        "Standard reports",
         "API access"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$399",
+      price: "$499",
       period: "/month",
-      originalPrice: "$799",
-      description: "Ideal for growing businesses and agencies",
+      originalPrice: "$999",
+      description: "Ideal for growing e-commerce businesses",
       features: [
-        "Up to 10,000 interactions/month",
-        "Advanced NLP",
-        "20 languages supported",
+        "Up to 10,000 SKUs",
+        "Advanced forecasting",
+        "Multi-location support",
         "Priority support",
-        "Advanced analytics",
-        "Custom voice training",
+        "Custom reports",
+        "Supplier integration",
         "Team collaboration",
-        "Webhook integration"
+        "Advanced analytics"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$999",
       period: "/month",
-      originalPrice: "$1599",
-      description: "For large organizations with complex needs",
+      originalPrice: "$1999",
+      description: "For large enterprises with complex supply chains",
       features: [
-        "Unlimited interactions",
-        "Premium NLP capabilities",
-        "50+ languages supported",
+        "Unlimited SKUs",
+        "AI-powered optimization",
+        "Global multi-location",
         "24/7 dedicated support",
-        "Custom analytics",
-        "Advanced voice training",
+        "Custom dashboards",
+        "Full ERP integration",
         "White-label options",
-        "Custom integrations",
+        "Custom algorithms",
         "SLA guarantee",
         "Training & onboarding"
       ],
@@ -200,70 +196,70 @@ const AIVoiceAssistantPro = () => {
 
   const benefits = [
     {
-      title: "Improve Efficiency",
-      description: "Reduce task completion time by 70% with voice automation",
-      icon: <Clock className="w-8 h-8" />,
-      stat: "70% faster"
+      title: "Reduce Costs",
+      description: "Lower inventory costs by up to 30% with optimized stock levels",
+      icon: <DollarSign className="w-8 h-8" />,
+      stat: "30% cost reduction"
     },
     {
-      title: "Enhance Accessibility",
-      description: "Make your services accessible to users with disabilities",
-      icon: <Users className="w-8 h-8" />,
-      stat: "100% accessible"
-    },
-    {
-      title: "Boost Productivity",
-      description: "Enable hands-free operation for multitasking and efficiency",
+      title: "Improve Service",
+      description: "Increase stock availability to 99.5% with better demand prediction",
       icon: <Target className="w-8 h-8" />,
-      stat: "3x productivity"
+      stat: "99.5% availability"
+    },
+    {
+      title: "Save Time",
+      description: "Automate 90% of inventory management tasks with AI optimization",
+      icon: <Clock className="w-8 h-8" />,
+      stat: "90% automation"
     }
   ];
 
   const useCases = [
     {
-      title: "Customer Service",
-      description: "Provide 24/7 voice support for customer inquiries and support",
-      icon: <Headphones className="w-8 h-8" />,
-      examples: ["Call center automation", "FAQ responses", "Order tracking", "Technical support"]
+      title: "E-commerce",
+      description: "Optimize inventory for online retailers with seasonal demand patterns",
+      icon: <ShoppingCart className="w-8 h-8" />,
+      examples: ["Seasonal forecasting", "Multi-channel inventory", "Dropshipping optimization", "Returns management"]
     },
     {
-      title: "Healthcare",
-      description: "Assist healthcare providers with patient management and documentation",
-      icon: <Heart className="w-8 h-8" />,
-      examples: ["Patient scheduling", "Medical records", "Prescription management", "Appointment reminders"]
+      title: "Retail",
+      description: "Manage inventory across multiple store locations and channels",
+      icon: <Store className="w-8 h-8" />,
+      examples: ["Store-level optimization", "Omnichannel inventory", "Visual merchandising", "Promotion planning"]
     },
     {
-      title: "Smart Home",
-      description: "Control smart home devices and automation through voice commands",
-      icon: <Home className="w-8 h-8" />,
-      examples: ["Device control", "Automation triggers", "Security systems", "Energy management"]
-    },
-    {
-      title: "Business Operations",
-      description: "Streamline business processes with voice-activated workflows",
+      title: "Manufacturing",
+      description: "Optimize raw materials and finished goods inventory for production",
       icon: <Settings className="w-8 h-8" />,
-      examples: ["Meeting scheduling", "Data entry", "Report generation", "Task management"]
+      examples: ["Raw material planning", "Production scheduling", "Quality control", "Supplier coordination"]
+    },
+    {
+      title: "Distribution",
+      description: "Streamline inventory management for wholesale and distribution companies",
+      icon: <Truck className="w-8 h-8" />,
+      examples: ["Warehouse optimization", "Route planning", "Cross-docking", "Fulfillment centers"]
     }
   ];
 
   const stats = [
-    { number: "1M+", label: "Voice Interactions", icon: <Mic className="w-6 h-6" /> },
-    { number: "99.9%", label: "Accuracy Rate", icon: <Shield className="w-6 h-6" /> },
-    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
+    { number: "500+", label: "Companies Optimized", icon: <Package className="w-6 h-6" /> },
+    { number: "30%", label: "Average Cost Reduction", icon: <DollarSign className="w-6 h-6" /> },
+    { number: "95%", label: "Forecast Accuracy", icon: <TrendingUp className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant Pro - Zion Tech Group | Advanced Voice AI Solutions</title>
+        <title>AI Smart Inventory Optimizer - Zion Tech Group | Intelligent Inventory Management</title>
         <meta
           name="description"
-          content="Deploy advanced AI voice assistants with natural language processing, multi-language support, and custom voice training. Perfect for customer service, healthcare, and business automation."
+          content="Optimize inventory management with AI Smart Inventory Optimizer. Demand forecasting, auto reordering, cost optimization, and multi-location management for retail and e-commerce."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, natural language processing, voice recognition, voice automation, customer service AI, voice technology"
+          content="inventory management, demand forecasting, auto reordering, cost optimization, supply chain, retail optimization, e-commerce inventory"
         />
       </Helmet>
 
@@ -277,18 +273,18 @@ const AIVoiceAssistantPro = () => {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Voice Technology</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Optimization</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Voice Assistant Pro
+                AI Smart Inventory Optimizer
               </span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Deploy advanced AI voice assistants with natural language processing, multi-language support, 
-              and custom voice training. Perfect for customer service, healthcare, and business automation.
+              Optimize inventory management with AI-powered demand forecasting, auto reordering, and cost optimization. 
+              Reduce costs by 30% while improving service levels to 99.5%.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -304,7 +300,7 @@ const AIVoiceAssistantPro = () => {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Package className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
             
@@ -329,11 +325,11 @@ const AIVoiceAssistantPro = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Why Choose AI Voice Assistant Pro?
+                  Why Choose AI Smart Inventory Optimizer?
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your business with intelligent voice automation and natural language processing.
+                Transform your inventory management with AI-powered optimization and automation.
               </p>
             </div>
             
@@ -343,7 +339,7 @@ const AIVoiceAssistantPro = () => {
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
@@ -367,7 +363,7 @@ const AIVoiceAssistantPro = () => {
                 Powerful Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to deploy and manage intelligent voice assistants.
+                Everything you need to optimize your inventory management and reduce costs.
               </p>
             </div>
             
@@ -377,7 +373,7 @@ const AIVoiceAssistantPro = () => {
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
@@ -405,10 +401,10 @@ const AIVoiceAssistantPro = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect for Every Industry
+                Perfect for Every Business Type
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From healthcare to customer service, our voice assistant adapts to your needs.
+                From e-commerce to manufacturing, our inventory optimizer adapts to your industry.
               </p>
             </div>
             
@@ -448,7 +444,7 @@ const AIVoiceAssistantPro = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice assistant needs. All plans include our core features.
+                Choose the plan that fits your inventory management needs. All plans include our core features.
               </p>
             </div>
             
@@ -513,10 +509,10 @@ const AIVoiceAssistantPro = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Deploy Voice AI?
+                Ready to Optimize Your Inventory?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join hundreds of companies using AI Voice Assistant Pro to enhance customer experience and automate operations. 
+                Join hundreds of companies using AI Smart Inventory Optimizer to reduce costs and improve service levels. 
                 Start your free trial today.
               </p>
               
@@ -568,4 +564,4 @@ const AIVoiceAssistantPro = () => {
   );
 };
 
-export default AIVoiceAssistantPro;
+export default AISmartInventoryOptimizer;

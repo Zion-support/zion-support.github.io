@@ -2,9 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Mic, 
-  Volume2, 
-  Headphones, 
+  Video, 
+  Play, 
+  Download, 
+  Share, 
   Star, 
   CheckCircle, 
   ArrowRight, 
@@ -13,131 +14,73 @@ import {
   Clock,
   Users,
   Award,
+  BarChart3,
+  Palette,
+  Mic,
+  Camera,
+  Edit,
+  Layers,
+  Globe,
+  Smartphone,
+  Monitor,
+  Headphones,
+  Settings,
   Target,
+  TrendingUp,
   Shield,
   Cloud,
   Database,
-  Settings,
+  Code,
+  FileText,
+  Image,
+  Music,
+  Volume2,
   Eye,
   Heart,
   ThumbsUp,
   MessageSquare,
   Mail,
   Phone,
-  MapPin,
-  PieChart,
-  LineChart,
-  Calendar,
-  AlertCircle,
-  CheckSquare,
-  FileCheck,
-  Banknote,
-  Coins,
-  Wallet,
-  TrendingDown,
-  Percent,
-  Activity,
-  Brain,
-  Globe,
-  Smartphone,
-  Monitor,
-  Headphones as HeadphonesIcon,
-  Search,
-  Filter,
-  Download,
-  Upload,
-  Share,
-  Bell,
-  BellOff,
-  VolumeX,
-  MicOff,
-  Camera,
-  CameraOff,
-  Wifi,
-  WifiOff,
-  Battery,
-  BatteryLow,
-  Signal,
-  SignalLow,
-  SignalZero,
-  SignalHigh,
-  SignalMedium,
-  Truck,
-  Warehouse,
-  ShoppingCart,
-  Store,
-  CreditCard,
-  DollarSign,
-  Calculator,
-  Receipt,
-  FileText,
-  Download as DownloadIcon,
-  Send,
-  Edit,
-  Trash2,
-  Plus,
-  Minus,
-  X,
-  Menu,
-  MoreHorizontal,
-  MoreVertical,
-  Grid,
-  List,
-  Layout,
-  Maximize,
-  Minimize,
-  Move,
-  Copy,
-  Scissors,
-  Clipboard,
-  Bookmark,
-  Tag,
-  Flag,
-  Play,
-  Pause,
-  Stop,
-  RefreshCw,
-  RotateCcw,
-  Save
+  MapPin
 } from 'lucide-react';
 
-const AIVoiceAssistantPro = () => {
+const AIVideoGeneratorPro = () => {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities for understanding complex commands and conversations",
-      icon: <Brain className="w-6 h-6" />,
-      details: ["Context awareness", "Intent recognition", "Entity extraction", "Conversation memory"]
+      title: "AI Video Creation",
+      description: "Generate professional videos from text prompts using advanced AI models",
+      icon: <Video className="w-6 h-6" />,
+      details: ["Text-to-video generation", "Scene composition", "Character animation", "Background generation"]
     },
     {
-      title: "Multi-language Support",
-      description: "Support for 50+ languages with accurate pronunciation and accent recognition",
-      icon: <Globe className="w-6 h-6" />,
-      details: ["50+ languages", "Accent recognition", "Real-time translation", "Cultural adaptation"]
-    },
-    {
-      title: "Custom Voice Training",
-      description: "Train the assistant with your brand voice and specific terminology",
+      title: "Voice Synthesis",
+      description: "Convert text to natural-sounding speech in multiple languages",
       icon: <Mic className="w-6 h-6" />,
-      details: ["Brand voice training", "Custom terminology", "Voice cloning", "Personality customization"]
+      details: ["100+ voice options", "Emotion control", "Speed adjustment", "Accent customization"]
     },
     {
-      title: "API Integration",
-      description: "Seamlessly integrate with your existing systems and applications",
-      icon: <Settings className="w-6 h-6" />,
-      details: ["REST API", "Webhook support", "SDK libraries", "Third-party integrations"]
+      title: "Auto Editing",
+      description: "Intelligent video editing with automatic cuts, transitions, and effects",
+      icon: <Edit className="w-6 h-6" />,
+      details: ["Smart cuts", "Auto transitions", "Color correction", "Stabilization"]
     },
     {
-      title: "Voice Commands",
-      description: "Execute complex business processes through simple voice commands",
-      icon: <Zap className="w-6 h-6" />,
-      details: ["Custom commands", "Workflow automation", "Task execution", "System control"]
+      title: "Template Library",
+      description: "Extensive collection of professional video templates",
+      icon: <Layers className="w-6 h-6" />,
+      details: ["500+ templates", "Industry-specific designs", "Customizable layouts", "Brand integration"]
     },
     {
-      title: "Analytics Dashboard",
-      description: "Comprehensive analytics and insights about voice interactions",
-      icon: <BarChart3 className="w-6 h-6" />,
-      details: ["Usage analytics", "Performance metrics", "User insights", "Custom reports"]
+      title: "HD Export",
+      description: "Export videos in multiple formats up to 4K resolution",
+      icon: <Download className="w-6 h-6" />,
+      details: ["4K/8K support", "Multiple formats", "Compression options", "Batch processing"]
+    },
+    {
+      title: "Brand Integration",
+      description: "Seamlessly integrate your brand elements into videos",
+      icon: <Palette className="w-6 h-6" />,
+      details: ["Logo placement", "Color schemes", "Font matching", "Style consistency"]
     }
   ];
 
@@ -147,14 +90,14 @@ const AIVoiceAssistantPro = () => {
       price: "$199",
       period: "/month",
       originalPrice: "$399",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for small businesses and content creators",
       features: [
-        "Up to 1,000 interactions/month",
-        "Basic voice recognition",
-        "5 languages supported",
-        "Email support",
-        "Standard analytics",
-        "API access"
+        "10 hours of video generation per month",
+        "HD export (1080p)",
+        "50 voice options",
+        "100+ templates",
+        "Basic brand integration",
+        "Email support"
       ],
       popular: false
     },
@@ -163,16 +106,16 @@ const AIVoiceAssistantPro = () => {
       price: "$399",
       period: "/month",
       originalPrice: "$799",
-      description: "Ideal for growing businesses and agencies",
+      description: "Ideal for marketing agencies and growing businesses",
       features: [
-        "Up to 10,000 interactions/month",
-        "Advanced NLP",
-        "20 languages supported",
+        "50 hours of video generation per month",
+        "4K export support",
+        "100+ voice options",
+        "500+ templates",
+        "Advanced brand integration",
         "Priority support",
-        "Advanced analytics",
-        "Custom voice training",
-        "Team collaboration",
-        "Webhook integration"
+        "API access",
+        "Team collaboration"
       ],
       popular: true
     },
@@ -181,74 +124,53 @@ const AIVoiceAssistantPro = () => {
       price: "$799",
       period: "/month",
       originalPrice: "$1599",
-      description: "For large organizations with complex needs",
+      description: "For large organizations with high-volume needs",
       features: [
-        "Unlimited interactions",
-        "Premium NLP capabilities",
-        "50+ languages supported",
+        "Unlimited video generation",
+        "8K export support",
+        "All voice options",
+        "Unlimited templates",
+        "Custom brand integration",
         "24/7 dedicated support",
-        "Custom analytics",
-        "Advanced voice training",
-        "White-label options",
-        "Custom integrations",
-        "SLA guarantee",
-        "Training & onboarding"
+        "Full API access",
+        "Advanced analytics",
+        "Custom training",
+        "SLA guarantee"
       ],
       popular: false
     }
   ];
 
-  const benefits = [
-    {
-      title: "Improve Efficiency",
-      description: "Reduce task completion time by 70% with voice automation",
-      icon: <Clock className="w-8 h-8" />,
-      stat: "70% faster"
-    },
-    {
-      title: "Enhance Accessibility",
-      description: "Make your services accessible to users with disabilities",
-      icon: <Users className="w-8 h-8" />,
-      stat: "100% accessible"
-    },
-    {
-      title: "Boost Productivity",
-      description: "Enable hands-free operation for multitasking and efficiency",
-      icon: <Target className="w-8 h-8" />,
-      stat: "3x productivity"
-    }
-  ];
-
   const useCases = [
     {
-      title: "Customer Service",
-      description: "Provide 24/7 voice support for customer inquiries and support",
-      icon: <Headphones className="w-8 h-8" />,
-      examples: ["Call center automation", "FAQ responses", "Order tracking", "Technical support"]
+      title: "Marketing Videos",
+      description: "Create compelling promotional content for social media, websites, and advertising campaigns",
+      icon: <Target className="w-8 h-8" />,
+      examples: ["Product demos", "Social media ads", "Website banners", "Email campaigns"]
     },
     {
-      title: "Healthcare",
-      description: "Assist healthcare providers with patient management and documentation",
-      icon: <Heart className="w-8 h-8" />,
-      examples: ["Patient scheduling", "Medical records", "Prescription management", "Appointment reminders"]
+      title: "Training Content",
+      description: "Develop educational videos for employee training, tutorials, and onboarding",
+      icon: <Users className="w-8 h-8" />,
+      examples: ["Employee onboarding", "Software tutorials", "Safety training", "Compliance videos"]
     },
     {
-      title: "Smart Home",
-      description: "Control smart home devices and automation through voice commands",
-      icon: <Home className="w-8 h-8" />,
-      examples: ["Device control", "Automation triggers", "Security systems", "Energy management"]
+      title: "Social Media",
+      description: "Generate engaging content for TikTok, Instagram, YouTube, and other platforms",
+      icon: <Share className="w-8 h-8" />,
+      examples: ["TikTok videos", "Instagram stories", "YouTube shorts", "LinkedIn content"]
     },
     {
-      title: "Business Operations",
-      description: "Streamline business processes with voice-activated workflows",
-      icon: <Settings className="w-8 h-8" />,
-      examples: ["Meeting scheduling", "Data entry", "Report generation", "Task management"]
+      title: "E-learning",
+      description: "Create interactive educational content for online courses and training programs",
+      icon: <Monitor className="w-8 h-8" />,
+      examples: ["Online courses", "Webinars", "Tutorials", "Educational content"]
     }
   ];
 
   const stats = [
-    { number: "1M+", label: "Voice Interactions", icon: <Mic className="w-6 h-6" /> },
-    { number: "99.9%", label: "Accuracy Rate", icon: <Shield className="w-6 h-6" /> },
+    { number: "10,000+", label: "Videos Created", icon: <Video className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
@@ -256,14 +178,14 @@ const AIVoiceAssistantPro = () => {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant Pro - Zion Tech Group | Advanced Voice AI Solutions</title>
+        <title>AI Video Generator Pro - Zion Tech Group | Create Professional Videos with AI</title>
         <meta
           name="description"
-          content="Deploy advanced AI voice assistants with natural language processing, multi-language support, and custom voice training. Perfect for customer service, healthcare, and business automation."
+          content="Transform text into professional videos with our AI Video Generator Pro. Create marketing content, training videos, and social media content with voice synthesis and auto-editing."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, natural language processing, voice recognition, voice automation, customer service AI, voice technology"
+          content="AI video generator, video creation, text to video, voice synthesis, video editing, marketing videos, social media content, training videos"
         />
       </Helmet>
 
@@ -277,18 +199,18 @@ const AIVoiceAssistantPro = () => {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Voice Technology</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Video Creation</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Voice Assistant Pro
+                AI Video Generator Pro
               </span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Deploy advanced AI voice assistants with natural language processing, multi-language support, 
-              and custom voice training. Perfect for customer service, healthcare, and business automation.
+              Create professional videos from text prompts using advanced AI technology. 
+              Generate marketing content, training videos, and social media content with voice synthesis and automated editing.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -323,51 +245,17 @@ const AIVoiceAssistantPro = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Why Choose AI Voice Assistant Pro?
+                  Powerful Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your business with intelligent voice automation and natural language processing.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {benefit.description}
-                  </p>
-                  <div className="text-2xl font-bold text-cyan-400">{benefit.stat}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to deploy and manage intelligent voice assistants.
+                Everything you need to create professional videos with AI-powered tools and automation.
               </p>
             </div>
             
@@ -377,7 +265,7 @@ const AIVoiceAssistantPro = () => {
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
@@ -401,14 +289,14 @@ const AIVoiceAssistantPro = () => {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect for Every Industry
+                Perfect for Every Use Case
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From healthcare to customer service, our voice assistant adapts to your needs.
+                From marketing to education, our AI video generator adapts to your needs.
               </p>
             </div>
             
@@ -448,7 +336,7 @@ const AIVoiceAssistantPro = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice assistant needs. All plans include our core features.
+                Choose the plan that fits your video creation needs. All plans include our core features.
               </p>
             </div>
             
@@ -513,10 +401,10 @@ const AIVoiceAssistantPro = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Deploy Voice AI?
+                Ready to Create Amazing Videos?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join hundreds of companies using AI Voice Assistant Pro to enhance customer experience and automate operations. 
+                Join thousands of creators and businesses using AI Video Generator Pro to create professional content. 
                 Start your free trial today.
               </p>
               
@@ -568,4 +456,4 @@ const AIVoiceAssistantPro = () => {
   );
 };
 
-export default AIVoiceAssistantPro;
+export default AIVideoGeneratorPro;

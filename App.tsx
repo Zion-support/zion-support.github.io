@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Navigation from "./app/components/Navigation";
 import Sidebar from "./app/components/Sidebar";
-import Footer from "./app/components/Footer";
+import ImprovedFooter from "./app/components/ImprovedFooter";
 import LoadingPage from "./app/components/Loading";
 import HomePage from "./app/page";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
@@ -228,7 +228,7 @@ function App() {
                         </Suspense>
                           </main>
                           
-                          <Footer />
+                          <ImprovedFooter />
                         </FuturisticBackground>
                       </div>
                     </Router>

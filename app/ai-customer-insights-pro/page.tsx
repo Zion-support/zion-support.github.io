@@ -2,16 +2,15 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Mic, 
-  Volume2, 
-  Headphones, 
+  Users, 
+  BarChart3, 
+  TrendingUp, 
   Star, 
   CheckCircle, 
   ArrowRight, 
   Sparkles,
   Zap,
   Clock,
-  Users,
   Award,
   Target,
   Shield,
@@ -41,7 +40,7 @@ import {
   Globe,
   Smartphone,
   Monitor,
-  Headphones as HeadphonesIcon,
+  Headphones,
   Search,
   Filter,
   Download,
@@ -49,7 +48,9 @@ import {
   Share,
   Bell,
   BellOff,
+  Volume2,
   VolumeX,
+  Mic,
   MicOff,
   Camera,
   CameraOff,
@@ -61,138 +62,101 @@ import {
   SignalLow,
   SignalZero,
   SignalHigh,
-  SignalMedium,
-  Truck,
-  Warehouse,
-  ShoppingCart,
-  Store,
-  CreditCard,
-  DollarSign,
-  Calculator,
-  Receipt,
-  FileText,
-  Download as DownloadIcon,
-  Send,
-  Edit,
-  Trash2,
-  Plus,
-  Minus,
-  X,
-  Menu,
-  MoreHorizontal,
-  MoreVertical,
-  Grid,
-  List,
-  Layout,
-  Maximize,
-  Minimize,
-  Move,
-  Copy,
-  Scissors,
-  Clipboard,
-  Bookmark,
-  Tag,
-  Flag,
-  Play,
-  Pause,
-  Stop,
-  RefreshCw,
-  RotateCcw,
-  Save
+  SignalMedium
 } from 'lucide-react';
 
-const AIVoiceAssistantPro = () => {
+const AICustomerInsightsPro = () => {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities for understanding complex commands and conversations",
-      icon: <Brain className="w-6 h-6" />,
-      details: ["Context awareness", "Intent recognition", "Entity extraction", "Conversation memory"]
-    },
-    {
-      title: "Multi-language Support",
-      description: "Support for 50+ languages with accurate pronunciation and accent recognition",
-      icon: <Globe className="w-6 h-6" />,
-      details: ["50+ languages", "Accent recognition", "Real-time translation", "Cultural adaptation"]
-    },
-    {
-      title: "Custom Voice Training",
-      description: "Train the assistant with your brand voice and specific terminology",
-      icon: <Mic className="w-6 h-6" />,
-      details: ["Brand voice training", "Custom terminology", "Voice cloning", "Personality customization"]
-    },
-    {
-      title: "API Integration",
-      description: "Seamlessly integrate with your existing systems and applications",
-      icon: <Settings className="w-6 h-6" />,
-      details: ["REST API", "Webhook support", "SDK libraries", "Third-party integrations"]
-    },
-    {
-      title: "Voice Commands",
-      description: "Execute complex business processes through simple voice commands",
-      icon: <Zap className="w-6 h-6" />,
-      details: ["Custom commands", "Workflow automation", "Task execution", "System control"]
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Comprehensive analytics and insights about voice interactions",
+      title: "Behavioral Analytics",
+      description: "Track customer behavior patterns across all touchpoints with advanced AI analysis",
       icon: <BarChart3 className="w-6 h-6" />,
-      details: ["Usage analytics", "Performance metrics", "User insights", "Custom reports"]
+      details: ["User journey mapping", "Engagement tracking", "Behavioral segmentation", "Predictive modeling"]
+    },
+    {
+      title: "Churn Prediction",
+      description: "Identify customers at risk of churning with machine learning algorithms",
+      icon: <TrendingDown className="w-6 h-6" />,
+      details: ["Risk scoring", "Early warning alerts", "Retention campaigns", "Success probability"]
+    },
+    {
+      title: "Personalized Recommendations",
+      description: "Deliver hyper-personalized product and content recommendations",
+      icon: <Target className="w-6 h-6" />,
+      details: ["Product recommendations", "Content personalization", "Cross-sell opportunities", "Upsell strategies"]
+    },
+    {
+      title: "Customer Segmentation",
+      description: "Automatically segment customers based on behavior, value, and preferences",
+      icon: <Users className="w-6 h-6" />,
+      details: ["Dynamic segmentation", "RFM analysis", "Cohort analysis", "Lifetime value prediction"]
+    },
+    {
+      title: "Real-time Insights",
+      description: "Get instant insights and alerts about customer behavior changes",
+      icon: <Activity className="w-6 h-6" />,
+      details: ["Live dashboards", "Real-time alerts", "Instant notifications", "Mobile access"]
+    },
+    {
+      title: "ROI Tracking",
+      description: "Measure the impact of customer insights on revenue and retention",
+      icon: <TrendingUp className="w-6 h-6" />,
+      details: ["Revenue attribution", "Campaign effectiveness", "ROI measurement", "Performance analytics"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$299",
       period: "/month",
-      originalPrice: "$399",
+      originalPrice: "$599",
       description: "Perfect for small businesses and startups",
       features: [
-        "Up to 1,000 interactions/month",
-        "Basic voice recognition",
-        "5 languages supported",
+        "Up to 10,000 customers",
+        "Basic analytics",
         "Email support",
-        "Standard analytics",
-        "API access"
+        "Standard reports",
+        "API access",
+        "Mobile app"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$399",
+      price: "$599",
       period: "/month",
-      originalPrice: "$799",
+      originalPrice: "$1199",
       description: "Ideal for growing businesses and agencies",
       features: [
-        "Up to 10,000 interactions/month",
-        "Advanced NLP",
-        "20 languages supported",
-        "Priority support",
+        "Up to 100,000 customers",
         "Advanced analytics",
-        "Custom voice training",
+        "Priority support",
+        "Custom reports",
+        "Full API access",
         "Team collaboration",
-        "Webhook integration"
+        "Advanced segmentation",
+        "Real-time insights"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$1199",
       period: "/month",
-      originalPrice: "$1599",
+      originalPrice: "$2399",
       description: "For large organizations with complex needs",
       features: [
-        "Unlimited interactions",
-        "Premium NLP capabilities",
-        "50+ languages supported",
+        "Unlimited customers",
+        "Premium analytics",
         "24/7 dedicated support",
-        "Custom analytics",
-        "Advanced voice training",
+        "Custom dashboards",
         "White-label options",
-        "Custom integrations",
+        "Advanced integrations",
+        "Custom models",
         "SLA guarantee",
-        "Training & onboarding"
+        "Training & onboarding",
+        "Data export"
       ],
       popular: false
     }
@@ -200,70 +164,70 @@ const AIVoiceAssistantPro = () => {
 
   const benefits = [
     {
-      title: "Improve Efficiency",
-      description: "Reduce task completion time by 70% with voice automation",
+      title: "Increase Retention",
+      description: "Reduce customer churn by up to 40% with predictive insights",
+      icon: <Heart className="w-8 h-8" />,
+      stat: "40% less churn"
+    },
+    {
+      title: "Boost Revenue",
+      description: "Increase average order value by 25% with personalized recommendations",
+      icon: <TrendingUp className="w-8 h-8" />,
+      stat: "25% higher AOV"
+    },
+    {
+      title: "Save Time",
+      description: "Automate customer analysis and reduce manual work by 80%",
       icon: <Clock className="w-8 h-8" />,
-      stat: "70% faster"
-    },
-    {
-      title: "Enhance Accessibility",
-      description: "Make your services accessible to users with disabilities",
-      icon: <Users className="w-8 h-8" />,
-      stat: "100% accessible"
-    },
-    {
-      title: "Boost Productivity",
-      description: "Enable hands-free operation for multitasking and efficiency",
-      icon: <Target className="w-8 h-8" />,
-      stat: "3x productivity"
+      stat: "80% time saved"
     }
   ];
 
   const useCases = [
     {
-      title: "Customer Service",
-      description: "Provide 24/7 voice support for customer inquiries and support",
-      icon: <Headphones className="w-8 h-8" />,
-      examples: ["Call center automation", "FAQ responses", "Order tracking", "Technical support"]
+      title: "E-commerce",
+      description: "Optimize product recommendations and reduce cart abandonment",
+      icon: <ShoppingCart className="w-8 h-8" />,
+      examples: ["Product recommendations", "Cart abandonment recovery", "Personalized emails", "Cross-selling"]
     },
     {
-      title: "Healthcare",
-      description: "Assist healthcare providers with patient management and documentation",
-      icon: <Heart className="w-8 h-8" />,
-      examples: ["Patient scheduling", "Medical records", "Prescription management", "Appointment reminders"]
+      title: "SaaS",
+      description: "Improve user engagement and reduce churn for software companies",
+      icon: <Monitor className="w-8 h-8" />,
+      examples: ["Usage analytics", "Feature adoption", "Churn prediction", "User onboarding"]
     },
     {
-      title: "Smart Home",
-      description: "Control smart home devices and automation through voice commands",
-      icon: <Home className="w-8 h-8" />,
-      examples: ["Device control", "Automation triggers", "Security systems", "Energy management"]
+      title: "Retail",
+      description: "Enhance customer experience and increase loyalty in retail",
+      icon: <Store className="w-8 h-8" />,
+      examples: ["Customer journey mapping", "Loyalty programs", "Inventory optimization", "Store analytics"]
     },
     {
-      title: "Business Operations",
-      description: "Streamline business processes with voice-activated workflows",
-      icon: <Settings className="w-8 h-8" />,
-      examples: ["Meeting scheduling", "Data entry", "Report generation", "Task management"]
+      title: "Financial Services",
+      description: "Improve customer satisfaction and reduce risk in banking",
+      icon: <Banknote className="w-8 h-8" />,
+      examples: ["Risk assessment", "Product recommendations", "Fraud detection", "Customer lifetime value"]
     }
   ];
 
   const stats = [
-    { number: "1M+", label: "Voice Interactions", icon: <Mic className="w-6 h-6" /> },
-    { number: "99.9%", label: "Accuracy Rate", icon: <Shield className="w-6 h-6" /> },
-    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
+    { number: "500+", label: "Companies Using", icon: <Users className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
+    { number: "40%", label: "Churn Reduction", icon: <TrendingDown className="w-6 h-6" /> },
+    { number: "25%", label: "Revenue Increase", icon: <TrendingUp className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant Pro - Zion Tech Group | Advanced Voice AI Solutions</title>
+        <title>AI Customer Insights Pro - Zion Tech Group | Advanced Customer Analytics</title>
         <meta
           name="description"
-          content="Deploy advanced AI voice assistants with natural language processing, multi-language support, and custom voice training. Perfect for customer service, healthcare, and business automation."
+          content="Transform customer data into actionable insights with AI Customer Insights Pro. Behavioral analytics, churn prediction, and personalized recommendations for better customer retention."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, natural language processing, voice recognition, voice automation, customer service AI, voice technology"
+          content="customer insights, behavioral analytics, churn prediction, customer segmentation, personalization, customer retention, customer analytics"
         />
       </Helmet>
 
@@ -277,18 +241,18 @@ const AIVoiceAssistantPro = () => {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Voice Technology</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Customer Analytics</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Voice Assistant Pro
+                AI Customer Insights Pro
               </span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Deploy advanced AI voice assistants with natural language processing, multi-language support, 
-              and custom voice training. Perfect for customer service, healthcare, and business automation.
+              Transform customer data into actionable insights with advanced AI analytics. 
+              Predict churn, personalize experiences, and boost customer retention with behavioral analytics.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -304,7 +268,7 @@ const AIVoiceAssistantPro = () => {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <BarChart3 className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
             
@@ -329,11 +293,11 @@ const AIVoiceAssistantPro = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Why Choose AI Voice Assistant Pro?
+                  Why Choose AI Customer Insights Pro?
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your business with intelligent voice automation and natural language processing.
+                Transform your customer data into competitive advantages with AI-powered insights.
               </p>
             </div>
             
@@ -343,7 +307,7 @@ const AIVoiceAssistantPro = () => {
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
@@ -367,7 +331,7 @@ const AIVoiceAssistantPro = () => {
                 Powerful Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to deploy and manage intelligent voice assistants.
+                Everything you need to understand and engage your customers better.
               </p>
             </div>
             
@@ -377,7 +341,7 @@ const AIVoiceAssistantPro = () => {
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
@@ -408,7 +372,7 @@ const AIVoiceAssistantPro = () => {
                 Perfect for Every Industry
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From healthcare to customer service, our voice assistant adapts to your needs.
+                From e-commerce to SaaS, our customer insights adapt to your business model.
               </p>
             </div>
             
@@ -448,7 +412,7 @@ const AIVoiceAssistantPro = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice assistant needs. All plans include our core features.
+                Choose the plan that fits your customer analytics needs. All plans include our core features.
               </p>
             </div>
             
@@ -513,10 +477,10 @@ const AIVoiceAssistantPro = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Deploy Voice AI?
+                Ready to Understand Your Customers Better?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join hundreds of companies using AI Voice Assistant Pro to enhance customer experience and automate operations. 
+                Join hundreds of companies using AI Customer Insights Pro to boost retention and revenue. 
                 Start your free trial today.
               </p>
               
@@ -568,4 +532,4 @@ const AIVoiceAssistantPro = () => {
   );
 };
 
-export default AIVoiceAssistantPro;
+export default AICustomerInsightsPro;

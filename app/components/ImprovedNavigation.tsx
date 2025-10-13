@@ -27,7 +27,10 @@ import {
   Clock,
   CheckCircle,
   DollarSign,
-  Play
+  Play,
+  Video,
+  FileText,
+  Package
 } from 'lucide-react';
 
 const ImprovedNavigation = () => {
@@ -416,6 +419,30 @@ const ImprovedNavigation = () => {
           href: '/zion-ai-data-warehouse',
           description: 'Data storage solution',
           icon: <Cloud className="w-4 h-4" />
+        },
+        { 
+          label: 'AI Video Generator Pro', 
+          href: '/ai-video-generator-pro',
+          description: 'Create professional videos with AI',
+          icon: <Video className="w-4 h-4" />
+        },
+        { 
+          label: 'AI Invoice Generator Pro', 
+          href: '/ai-invoice-generator-pro',
+          description: 'Automated invoice creation',
+          icon: <FileText className="w-4 h-4" />
+        },
+        { 
+          label: 'AI Customer Insights Pro', 
+          href: '/ai-customer-insights-pro',
+          description: 'Advanced customer analytics',
+          icon: <Users className="w-4 h-4" />
+        },
+        { 
+          label: 'AI Smart Inventory Optimizer', 
+          href: '/ai-smart-inventory-optimizer',
+          description: 'Intelligent inventory management',
+          icon: <Package className="w-4 h-4" />
         },
         { 
           label: 'Zion AI Mobile App Builder', 

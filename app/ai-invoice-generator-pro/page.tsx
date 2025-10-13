@@ -2,9 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Mic, 
-  Volume2, 
-  Headphones, 
+  FileText, 
+  Download, 
+  Send, 
   Star, 
   CheckCircle, 
   ArrowRight, 
@@ -13,16 +13,24 @@ import {
   Clock,
   Users,
   Award,
-  Target,
+  BarChart3,
+  DollarSign,
+  CreditCard,
+  Receipt,
+  Calculator,
+  Mail,
+  Smartphone,
+  Globe,
   Shield,
   Cloud,
   Database,
   Settings,
+  Target,
+  TrendingUp,
   Eye,
   Heart,
   ThumbsUp,
   MessageSquare,
-  Mail,
   Phone,
   MapPin,
   PieChart,
@@ -36,163 +44,101 @@ import {
   Wallet,
   TrendingDown,
   Percent,
-  Activity,
-  Brain,
-  Globe,
-  Smartphone,
-  Monitor,
-  Headphones as HeadphonesIcon,
-  Search,
-  Filter,
-  Download,
-  Upload,
-  Share,
-  Bell,
-  BellOff,
-  VolumeX,
-  MicOff,
-  Camera,
-  CameraOff,
-  Wifi,
-  WifiOff,
-  Battery,
-  BatteryLow,
-  Signal,
-  SignalLow,
-  SignalZero,
-  SignalHigh,
-  SignalMedium,
-  Truck,
-  Warehouse,
-  ShoppingCart,
-  Store,
-  CreditCard,
-  DollarSign,
-  Calculator,
-  Receipt,
-  FileText,
-  Download as DownloadIcon,
-  Send,
-  Edit,
-  Trash2,
-  Plus,
-  Minus,
-  X,
-  Menu,
-  MoreHorizontal,
-  MoreVertical,
-  Grid,
-  List,
-  Layout,
-  Maximize,
-  Minimize,
-  Move,
-  Copy,
-  Scissors,
-  Clipboard,
-  Bookmark,
-  Tag,
-  Flag,
-  Play,
-  Pause,
-  Stop,
-  RefreshCw,
-  RotateCcw,
-  Save
+  Activity
 } from 'lucide-react';
 
-const AIVoiceAssistantPro = () => {
+const AIInvoiceGeneratorPro = () => {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities for understanding complex commands and conversations",
-      icon: <Brain className="w-6 h-6" />,
-      details: ["Context awareness", "Intent recognition", "Entity extraction", "Conversation memory"]
+      title: "Auto Invoice Creation",
+      description: "Generate professional invoices automatically from project data and time tracking",
+      icon: <FileText className="w-6 h-6" />,
+      details: ["Smart data extraction", "Template customization", "Brand integration", "Multi-currency support"]
     },
     {
-      title: "Multi-language Support",
-      description: "Support for 50+ languages with accurate pronunciation and accent recognition",
+      title: "Data Extraction",
+      description: "Extract billing information from emails, contracts, and project management tools",
+      icon: <Database className="w-6 h-6" />,
+      details: ["Email parsing", "Contract analysis", "Time tracking integration", "Expense categorization"]
+    },
+    {
+      title: "Smart Categorization",
+      description: "AI-powered categorization of expenses and billable items for accurate invoicing",
+      icon: <Target className="w-6 h-6" />,
+      details: ["Expense classification", "Tax code assignment", "Project allocation", "Cost center mapping"]
+    },
+    {
+      title: "Accounting Integration",
+      description: "Seamless integration with QuickBooks, Xero, and other accounting platforms",
+      icon: <Calculator className="w-6 h-6" />,
+      details: ["QuickBooks sync", "Xero integration", "Sage compatibility", "Custom API connections"]
+    },
+    {
+      title: "Multi-currency Support",
+      description: "Handle international clients with automatic currency conversion and tax calculations",
       icon: <Globe className="w-6 h-6" />,
-      details: ["50+ languages", "Accent recognition", "Real-time translation", "Cultural adaptation"]
+      details: ["150+ currencies", "Real-time rates", "Tax calculations", "Compliance reporting"]
     },
     {
-      title: "Custom Voice Training",
-      description: "Train the assistant with your brand voice and specific terminology",
-      icon: <Mic className="w-6 h-6" />,
-      details: ["Brand voice training", "Custom terminology", "Voice cloning", "Personality customization"]
-    },
-    {
-      title: "API Integration",
-      description: "Seamlessly integrate with your existing systems and applications",
-      icon: <Settings className="w-6 h-6" />,
-      details: ["REST API", "Webhook support", "SDK libraries", "Third-party integrations"]
-    },
-    {
-      title: "Voice Commands",
-      description: "Execute complex business processes through simple voice commands",
-      icon: <Zap className="w-6 h-6" />,
-      details: ["Custom commands", "Workflow automation", "Task execution", "System control"]
-    },
-    {
-      title: "Analytics Dashboard",
-      description: "Comprehensive analytics and insights about voice interactions",
-      icon: <BarChart3 className="w-6 h-6" />,
-      details: ["Usage analytics", "Performance metrics", "User insights", "Custom reports"]
+      title: "PDF Export",
+      description: "Generate professional PDF invoices with customizable templates and branding",
+      icon: <Download className="w-6 h-6" />,
+      details: ["Custom templates", "Brand integration", "Digital signatures", "Batch processing"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$99",
       period: "/month",
-      originalPrice: "$399",
-      description: "Perfect for small businesses and startups",
+      originalPrice: "$199",
+      description: "Perfect for freelancers and small businesses",
       features: [
-        "Up to 1,000 interactions/month",
-        "Basic voice recognition",
-        "5 languages supported",
-        "Email support",
-        "Standard analytics",
-        "API access"
+        "50 invoices per month",
+        "Basic templates",
+        "Email integration",
+        "PDF export",
+        "Basic reporting",
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$399",
+      price: "$199",
       period: "/month",
-      originalPrice: "$799",
+      originalPrice: "$399",
       description: "Ideal for growing businesses and agencies",
       features: [
-        "Up to 10,000 interactions/month",
-        "Advanced NLP",
-        "20 languages supported",
+        "500 invoices per month",
+        "Premium templates",
+        "Accounting integration",
+        "Multi-currency support",
+        "Advanced reporting",
         "Priority support",
-        "Advanced analytics",
-        "Custom voice training",
-        "Team collaboration",
-        "Webhook integration"
+        "API access",
+        "Team collaboration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$399",
       period: "/month",
-      originalPrice: "$1599",
-      description: "For large organizations with complex needs",
+      originalPrice: "$799",
+      description: "For large organizations with complex billing needs",
       features: [
-        "Unlimited interactions",
-        "Premium NLP capabilities",
-        "50+ languages supported",
+        "Unlimited invoices",
+        "Custom templates",
+        "Full accounting suite",
+        "Advanced automation",
+        "Custom reporting",
         "24/7 dedicated support",
-        "Custom analytics",
-        "Advanced voice training",
+        "Full API access",
         "White-label options",
         "Custom integrations",
-        "SLA guarantee",
-        "Training & onboarding"
+        "SLA guarantee"
       ],
       popular: false
     }
@@ -200,70 +146,70 @@ const AIVoiceAssistantPro = () => {
 
   const benefits = [
     {
-      title: "Improve Efficiency",
-      description: "Reduce task completion time by 70% with voice automation",
+      title: "Save Time",
+      description: "Reduce invoice creation time by 90% with automated generation",
       icon: <Clock className="w-8 h-8" />,
-      stat: "70% faster"
+      stat: "90% time saved"
     },
     {
-      title: "Enhance Accessibility",
-      description: "Make your services accessible to users with disabilities",
-      icon: <Users className="w-8 h-8" />,
-      stat: "100% accessible"
+      title: "Reduce Errors",
+      description: "Eliminate manual data entry errors with AI-powered extraction",
+      icon: <Shield className="w-8 h-8" />,
+      stat: "99% accuracy"
     },
     {
-      title: "Boost Productivity",
-      description: "Enable hands-free operation for multitasking and efficiency",
-      icon: <Target className="w-8 h-8" />,
-      stat: "3x productivity"
+      title: "Get Paid Faster",
+      description: "Professional invoices lead to faster payments and better cash flow",
+      icon: <TrendingUp className="w-8 h-8" />,
+      stat: "40% faster payments"
     }
   ];
 
   const useCases = [
     {
-      title: "Customer Service",
-      description: "Provide 24/7 voice support for customer inquiries and support",
-      icon: <Headphones className="w-8 h-8" />,
-      examples: ["Call center automation", "FAQ responses", "Order tracking", "Technical support"]
+      title: "Freelancers",
+      description: "Streamline invoicing for individual contractors and consultants",
+      icon: <Users className="w-8 h-8" />,
+      examples: ["Time tracking", "Project billing", "Expense management", "Client communication"]
     },
     {
-      title: "Healthcare",
-      description: "Assist healthcare providers with patient management and documentation",
-      icon: <Heart className="w-8 h-8" />,
-      examples: ["Patient scheduling", "Medical records", "Prescription management", "Appointment reminders"]
+      title: "Small Businesses",
+      description: "Automate billing processes for service-based companies",
+      icon: <BarChart3 className="w-8 h-8" />,
+      examples: ["Recurring billing", "Multi-client management", "Tax compliance", "Financial reporting"]
     },
     {
-      title: "Smart Home",
-      description: "Control smart home devices and automation through voice commands",
-      icon: <Home className="w-8 h-8" />,
-      examples: ["Device control", "Automation triggers", "Security systems", "Energy management"]
+      title: "Agencies",
+      description: "Handle complex billing for marketing and creative agencies",
+      icon: <Target className="w-8 h-8" />,
+      examples: ["Project-based billing", "Retainer management", "Team time tracking", "Client portals"]
     },
     {
-      title: "Business Operations",
-      description: "Streamline business processes with voice-activated workflows",
-      icon: <Settings className="w-8 h-8" />,
-      examples: ["Meeting scheduling", "Data entry", "Report generation", "Task management"]
+      title: "Consultants",
+      description: "Professional invoicing for management and IT consultants",
+      icon: <Award className="w-8 h-8" />,
+      examples: ["Hourly billing", "Fixed-price projects", "Expense reimbursement", "Travel billing"]
     }
   ];
 
   const stats = [
-    { number: "1M+", label: "Voice Interactions", icon: <Mic className="w-6 h-6" /> },
+    { number: "50,000+", label: "Invoices Generated", icon: <FileText className="w-6 h-6" /> },
     { number: "99.9%", label: "Accuracy Rate", icon: <Shield className="w-6 h-6" /> },
-    { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
+    { number: "90%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <MessageSquare className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant Pro - Zion Tech Group | Advanced Voice AI Solutions</title>
+        <title>AI Invoice Generator Pro - Zion Tech Group | Automated Invoice Creation</title>
         <meta
           name="description"
-          content="Deploy advanced AI voice assistants with natural language processing, multi-language support, and custom voice training. Perfect for customer service, healthcare, and business automation."
+          content="Automate invoice creation with AI Invoice Generator Pro. Extract billing data, generate professional invoices, and integrate with accounting platforms for seamless financial management."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, natural language processing, voice recognition, voice automation, customer service AI, voice technology"
+          content="AI invoice generator, automated invoicing, invoice creation, accounting integration, billing automation, financial management, invoice templates"
         />
       </Helmet>
 
@@ -277,18 +223,18 @@ const AIVoiceAssistantPro = () => {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Voice Technology</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Invoice Automation</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                AI Voice Assistant Pro
+                AI Invoice Generator Pro
               </span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Deploy advanced AI voice assistants with natural language processing, multi-language support, 
-              and custom voice training. Perfect for customer service, healthcare, and business automation.
+              Automate invoice creation with AI-powered data extraction and smart categorization. 
+              Generate professional invoices, integrate with accounting platforms, and get paid faster.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -304,7 +250,7 @@ const AIVoiceAssistantPro = () => {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
             
@@ -329,11 +275,11 @@ const AIVoiceAssistantPro = () => {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Why Choose AI Voice Assistant Pro?
+                  Why Choose AI Invoice Generator Pro?
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Transform your business with intelligent voice automation and natural language processing.
+                Transform your billing process with intelligent automation and professional results.
               </p>
             </div>
             
@@ -343,7 +289,7 @@ const AIVoiceAssistantPro = () => {
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     {benefit.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
@@ -367,7 +313,7 @@ const AIVoiceAssistantPro = () => {
                 Powerful Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to deploy and manage intelligent voice assistants.
+                Everything you need to automate and streamline your invoicing process.
               </p>
             </div>
             
@@ -377,7 +323,7 @@ const AIVoiceAssistantPro = () => {
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
-                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
@@ -405,10 +351,10 @@ const AIVoiceAssistantPro = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Perfect for Every Industry
+                Perfect for Every Business Type
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From healthcare to customer service, our voice assistant adapts to your needs.
+                From freelancers to enterprises, our AI invoice generator adapts to your needs.
               </p>
             </div>
             
@@ -448,7 +394,7 @@ const AIVoiceAssistantPro = () => {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice assistant needs. All plans include our core features.
+                Choose the plan that fits your invoicing needs. All plans include our core features.
               </p>
             </div>
             
@@ -513,10 +459,10 @@ const AIVoiceAssistantPro = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Deploy Voice AI?
+                Ready to Automate Your Invoicing?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join hundreds of companies using AI Voice Assistant Pro to enhance customer experience and automate operations. 
+                Join thousands of businesses using AI Invoice Generator Pro to streamline their billing process. 
                 Start your free trial today.
               </p>
               
@@ -568,4 +514,4 @@ const AIVoiceAssistantPro = () => {
   );
 };
 
-export default AIVoiceAssistantPro;
+export default AIInvoiceGeneratorPro;
