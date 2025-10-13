@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -110,11 +110,11 @@ export default function ServicesPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive AI and IT services including cybersecurity, cloud infrastructure, digital transformation, and more." />
-        <meta name="keywords" content="AI services, cybersecurity, cloud computing, digital transformation, micro SaaS, 5G solutions, IT services" />
-      </Helmet>
+      <SEOHead 
+        title="Our Services - Zion Tech Group"
+        description="Explore our comprehensive AI and IT services including cybersecurity, cloud infrastructure, digital transformation, and more."
+        keywords="AI services, cybersecurity, cloud computing, digital transformation, micro SaaS, 5G solutions, IT services"
+      />
       
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
