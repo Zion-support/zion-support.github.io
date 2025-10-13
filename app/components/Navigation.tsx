@@ -103,12 +103,12 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
 
   return (
     <nav 
-      className="bg-gradient-to-r from-slate-900/95 via-purple-900/95 to-slate-900/95 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md sticky top-0 z-50"
+      className="nav-cyberpunk-ultra text-white shadow-2xl sticky top-0 z-50"
       role="navigation"
       aria-label="Main navigation"
     >
       {/* Contact Bar */}
-      <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-b border-white/10">
+      <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-b border-cyan-500/30 plasma-energy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between py-2 text-sm">
             <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6">
@@ -146,7 +146,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
         <div className="flex justify-between items-center py-4">
           <Link 
             to="/" 
-            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+            className="text-2xl font-bold text-cyberpunk-ultra neon-ultra hover:brightness-110 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
             aria-label="Zion Tech Group - Go to homepage"
           >
             Zion Tech Group
@@ -166,7 +166,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="relative group hover:text-cyan-400 transition-all duration-300 font-medium"
+                className="nav-link relative group hover:text-cyan-400 transition-all duration-300 font-medium"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
@@ -299,7 +299,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
 
             <Link
               to="/consultation"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
+              className="btn-quantum-ultra hover-quantum-ultra flex items-center space-x-2 font-semibold group"
             >
               <span>Get Started</span>
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
@@ -446,7 +446,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
 
               <Link
                 to="/consultation"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-4 py-3 rounded-lg transition-all duration-300 text-center font-semibold mt-4 flex items-center justify-center space-x-2"
+                className="btn-quantum-ultra hover-quantum-ultra text-center font-semibold mt-4 flex items-center justify-center space-x-2"
                 onClick={toggleMenu}
               >
                 <span>Get Started</span>

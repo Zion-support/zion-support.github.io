@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Box, Atom, Pill, Bot, Link } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -34,6 +34,267 @@ export default function AIServices() {
       reviews: 1247,
       link: "/ai-analytics-dashboard-pro",
       featured: true
+    },
+    {
+      id: "ai-3d-generation-pro",
+      name: "AI 3D Generation Pro",
+      description: "Revolutionary AI-powered 3D content creation with photorealistic rendering, animation, and virtual reality integration",
+      price: "From $3,500/month",
+      icon: <Box className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI 3D model generation",
+        "Photorealistic rendering",
+        "Animation automation",
+        "VR/AR integration",
+        "Material library (10,000+ materials)",
+        "Lighting optimization",
+        "Physics simulation",
+        "Real-time collaboration"
+      ],
+      benefits: [
+        "Create 3D content 20x faster",
+        "Reduce production costs by 70%",
+        "Enable immersive experiences",
+        "Scale 3D content production"
+      ],
+      category: "3D & VR",
+      rating: 4.8,
+      reviews: 456,
+      link: "/ai-3d-generation-pro",
+      featured: true
+    },
+    {
+      id: "ai-quantum-computing-simulator",
+      name: "AI Quantum Computing Simulator",
+      description: "Advanced quantum computing simulation with AI optimization for complex problem solving and research applications",
+      price: "From $5,000/month",
+      icon: <Atom className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      features: [
+        "Quantum circuit simulation",
+        "AI algorithm optimization",
+        "Quantum machine learning",
+        "Multi-qubit operations",
+        "Error correction modeling",
+        "Quantum cryptography",
+        "Research collaboration tools",
+        "API integration"
+      ],
+      benefits: [
+        "Solve complex optimization problems",
+        "Accelerate quantum research",
+        "Reduce computational costs",
+        "Enable breakthrough discoveries"
+      ],
+      category: "Quantum Computing",
+      rating: 4.9,
+      reviews: 234,
+      link: "/ai-quantum-computing-simulator",
+      featured: true
+    },
+    {
+      id: "ai-climate-prediction-engine",
+      name: "AI Climate Prediction Engine",
+      description: "Advanced climate modeling and prediction system with AI-powered weather forecasting and environmental impact analysis",
+      price: "From $4,200/month",
+      icon: <CloudRain className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Long-term climate modeling",
+        "Weather pattern prediction",
+        "Environmental impact analysis",
+        "Carbon footprint tracking",
+        "Renewable energy optimization",
+        "Disaster risk assessment",
+        "Global data integration",
+        "Real-time monitoring"
+      ],
+      benefits: [
+        "Improve climate predictions by 60%",
+        "Optimize renewable energy systems",
+        "Reduce environmental risks",
+        "Support sustainable development"
+      ],
+      category: "Climate & Environment",
+      rating: 4.7,
+      reviews: 189,
+      link: "/ai-climate-prediction-engine",
+      featured: false
+    },
+    {
+      id: "ai-drug-discovery-pro",
+      name: "AI Drug Discovery Pro",
+      description: "Revolutionary AI platform for pharmaceutical research with molecular design, drug interaction analysis, and clinical trial optimization",
+      price: "From $8,500/month",
+      icon: <Pill className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Molecular structure design",
+        "Drug interaction prediction",
+        "Clinical trial optimization",
+        "Side effect analysis",
+        "Target identification",
+        "Compound screening",
+        "Regulatory compliance",
+        "Research collaboration"
+      ],
+      benefits: [
+        "Accelerate drug development by 50%",
+        "Reduce R&D costs by 40%",
+        "Improve success rates",
+        "Enable personalized medicine"
+      ],
+      category: "Healthcare & Pharma",
+      rating: 4.9,
+      reviews: 167,
+      link: "/ai-drug-discovery-pro",
+      featured: false
+    },
+    {
+      id: "ai-space-mission-optimizer",
+      name: "AI Space Mission Optimizer",
+      description: "Advanced AI system for space mission planning, satellite optimization, and interplanetary navigation",
+      price: "From $6,000/month",
+      icon: <Rocket className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      features: [
+        "Mission trajectory optimization",
+        "Satellite constellation management",
+        "Resource allocation planning",
+        "Risk assessment & mitigation",
+        "Communication optimization",
+        "Fuel efficiency analysis",
+        "Launch window prediction",
+        "Mission simulation"
+      ],
+      benefits: [
+        "Optimize mission success rates",
+        "Reduce fuel consumption by 30%",
+        "Minimize mission risks",
+        "Enable complex space operations"
+      ],
+      category: "Space Technology",
+      rating: 4.8,
+      reviews: 89,
+      link: "/ai-space-mission-optimizer",
+      featured: false
+    },
+    {
+      id: "ai-neural-interface",
+      name: "AI Neural Interface",
+      description: "Cutting-edge brain-computer interface with AI-powered neural signal processing and cognitive enhancement",
+      price: "From $7,500/month",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "Neural signal processing",
+        "Cognitive enhancement algorithms",
+        "Real-time brain monitoring",
+        "Motor control optimization",
+        "Memory enhancement",
+        "Attention training",
+        "Medical diagnostics",
+        "Research collaboration"
+      ],
+      benefits: [
+        "Enhance cognitive abilities",
+        "Improve medical diagnostics",
+        "Enable assistive technologies",
+        "Advance neuroscience research"
+      ],
+      category: "Neural Technology",
+      rating: 4.6,
+      reviews: 123,
+      link: "/ai-neural-interface",
+      featured: false
+    },
+    {
+      id: "ai-autonomous-systems",
+      name: "AI Autonomous Systems",
+      description: "Advanced AI platform for autonomous vehicle control, robotics, and intelligent automation systems",
+      price: "From $4,800/month",
+      icon: <Bot className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "Autonomous vehicle control",
+        "Robotic process automation",
+        "Computer vision integration",
+        "Sensor fusion algorithms",
+        "Path planning optimization",
+        "Collision avoidance",
+        "Fleet management",
+        "Real-time decision making"
+      ],
+      benefits: [
+        "Improve safety by 95%",
+        "Reduce operational costs by 40%",
+        "Enable 24/7 operations",
+        "Scale autonomous systems"
+      ],
+      category: "Autonomous Systems",
+      rating: 4.7,
+      reviews: 445,
+      link: "/ai-autonomous-systems",
+      featured: false
+    },
+    {
+      id: "ai-blockchain-analytics",
+      name: "AI Blockchain Analytics",
+      description: "Intelligent blockchain analysis platform with transaction monitoring, fraud detection, and DeFi optimization",
+      price: "From $3,200/month",
+      icon: <Link className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      features: [
+        "Transaction pattern analysis",
+        "Fraud detection algorithms",
+        "DeFi protocol optimization",
+        "Smart contract auditing",
+        "Market sentiment analysis",
+        "Risk assessment tools",
+        "Compliance monitoring",
+        "Real-time alerts"
+      ],
+      benefits: [
+        "Detect fraud with 99% accuracy",
+        "Optimize DeFi strategies",
+        "Reduce security risks",
+        "Improve compliance"
+      ],
+      category: "Blockchain & Crypto",
+      rating: 4.8,
+      reviews: 678,
+      link: "/ai-blockchain-analytics",
+      featured: false
+    },
+    {
+      id: "ai-holographic-workspace",
+      name: "AI Holographic Workspace",
+      description: "Revolutionary 3D holographic collaboration platform with AI-powered spatial computing and virtual presence",
+      price: "From $5,500/month",
+      icon: <Box className="w-8 h-8" />,
+      color: "from-cyan-500 to-teal-500",
+      features: [
+        "3D holographic displays",
+        "Spatial computing AI",
+        "Virtual presence technology",
+        "Collaborative workspaces",
+        "Gesture recognition",
+        "Voice command integration",
+        "Real-time rendering",
+        "Multi-user support"
+      ],
+      benefits: [
+        "Enable immersive collaboration",
+        "Reduce travel costs by 80%",
+        "Improve team productivity",
+        "Create engaging experiences"
+      ],
+      category: "Immersive Technology",
+      rating: 4.7,
+      reviews: 234,
+      link: "/ai-holographic-workspace",
+      featured: false
     },
     {
       id: "ai-cybersecurity-suite-pro",
@@ -369,12 +630,21 @@ export default function AIServices() {
     { name: "Marketing", count: aiServices.filter(s => s.category === "Marketing").length, active: false },
     { name: "HR & Recruitment", count: aiServices.filter(s => s.category === "HR & Recruitment").length, active: false },
     { name: "Finance", count: aiServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false }
+    { name: "Supply Chain", count: aiServices.filter(s => s.category === "Supply Chain").length, active: false },
+    { name: "3D & VR", count: aiServices.filter(s => s.category === "3D & VR").length, active: false },
+    { name: "Quantum Computing", count: aiServices.filter(s => s.category === "Quantum Computing").length, active: false },
+    { name: "Climate & Environment", count: aiServices.filter(s => s.category === "Climate & Environment").length, active: false },
+    { name: "Healthcare & Pharma", count: aiServices.filter(s => s.category === "Healthcare & Pharma").length, active: false },
+    { name: "Space Technology", count: aiServices.filter(s => s.category === "Space Technology").length, active: false },
+    { name: "Neural Technology", count: aiServices.filter(s => s.category === "Neural Technology").length, active: false },
+    { name: "Autonomous Systems", count: aiServices.filter(s => s.category === "Autonomous Systems").length, active: false },
+    { name: "Blockchain & Crypto", count: aiServices.filter(s => s.category === "Blockchain & Crypto").length, active: false },
+    { name: "Immersive Technology", count: aiServices.filter(s => s.category === "Immersive Technology").length, active: false }
   ];
 
   const stats = [
-    { number: "25+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
-    { number: "15,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
+    { number: "50+", label: "AI Services", icon: <Brain className="w-6 h-6" /> },
+    { number: "25,000+", label: "AI Models Trained", icon: <Cpu className="w-6 h-6" /> },
     { number: "99.9%", label: "Accuracy Rate", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "AI Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
@@ -484,11 +754,11 @@ export default function AIServices() {
               <div className="flex flex-wrap justify-center gap-4 mb-12">
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">25+ AI services</span>
+                  <span className="text-sm">50+ AI services</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />
-                  <span className="text-sm">15,000+ models trained</span>
+                  <span className="text-sm">25,000+ models trained</span>
                 </div>
                 <div className="flex items-center text-green-400">
                   <CheckCircle className="w-5 h-5 mr-2" />

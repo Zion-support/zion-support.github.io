@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
@@ -36,6 +36,347 @@ export default function MicroSaas() {
       reviews: 1247,
       link: "/zion-analytics-pro",
       featured: true
+    },
+    {
+      id: "zion-ai-invoice-genius",
+      name: "Zion AI Invoice Genius",
+      description: "Intelligent invoice generation and management with automated billing, payment tracking, and financial insights",
+      price: "From $15/month",
+      originalPrice: "$25/month",
+      discount: "40% OFF",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-emerald-500 to-teal-500",
+      features: [
+        "AI-powered invoice generation",
+        "Automated payment reminders",
+        "Multi-currency support",
+        "Tax calculation & compliance",
+        "Client portal access",
+        "Payment tracking & analytics",
+        "Recurring billing automation",
+        "Custom branding & templates"
+      ],
+      benefits: [
+        "Reduce billing time by 90%",
+        "Improve payment collection by 35%",
+        "Eliminate manual invoice errors",
+        "Streamline financial workflows"
+      ],
+      category: "Finance",
+      rating: 4.8,
+      reviews: 856,
+      link: "/zion-ai-invoice-genius",
+      featured: true
+    },
+    {
+      id: "zion-inventory-smart",
+      name: "Zion Inventory Smart",
+      description: "AI-driven inventory management with demand forecasting, automated reordering, and real-time tracking",
+      price: "From $22/month",
+      originalPrice: "$35/month",
+      discount: "37% OFF",
+      icon: <Package className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "AI demand forecasting",
+        "Automated reorder points",
+        "Multi-location tracking",
+        "Barcode scanning integration",
+        "Supplier management",
+        "Cost optimization analytics",
+        "Low stock alerts",
+        "Mobile inventory app"
+      ],
+      benefits: [
+        "Reduce stockouts by 60%",
+        "Lower inventory costs by 25%",
+        "Improve cash flow management",
+        "Optimize warehouse operations"
+      ],
+      category: "Inventory",
+      rating: 4.7,
+      reviews: 634,
+      link: "/zion-inventory-smart",
+      featured: true
+    },
+    {
+      id: "zion-compliance-manager",
+      name: "Zion Compliance Manager",
+      description: "Automated compliance monitoring for GDPR, HIPAA, SOX, and other regulatory requirements with real-time alerts",
+      price: "From $45/month",
+      originalPrice: "$75/month",
+      discount: "40% OFF",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-purple-500 to-indigo-500",
+      features: [
+        "Multi-regulation compliance",
+        "Automated risk assessment",
+        "Real-time compliance monitoring",
+        "Audit trail generation",
+        "Policy management system",
+        "Employee training tracking",
+        "Incident reporting",
+        "Regulatory updates alerts"
+      ],
+      benefits: [
+        "Ensure 100% compliance",
+        "Reduce audit preparation time by 70%",
+        "Minimize compliance risks",
+        "Save on legal costs"
+      ],
+      category: "Compliance",
+      rating: 4.9,
+      reviews: 423,
+      link: "/zion-compliance-manager",
+      featured: false
+    },
+    {
+      id: "zion-performance-monitor",
+      name: "Zion Performance Monitor",
+      description: "Real-time application and infrastructure monitoring with AI-powered insights and automated alerting",
+      price: "From $18/month",
+      originalPrice: "$30/month",
+      discount: "40% OFF",
+      icon: <Monitor className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Real-time performance monitoring",
+        "AI-powered anomaly detection",
+        "Automated alerting system",
+        "Custom dashboard creation",
+        "Historical data analysis",
+        "API monitoring",
+        "Database performance tracking",
+        "Mobile app monitoring"
+      ],
+      benefits: [
+        "Prevent 95% of downtime",
+        "Improve system performance by 40%",
+        "Reduce incident response time",
+        "Optimize resource utilization"
+      ],
+      category: "Monitoring",
+      rating: 4.6,
+      reviews: 789,
+      link: "/zion-performance-monitor",
+      featured: false
+    },
+    {
+      id: "zion-lead-magnet",
+      name: "Zion Lead Magnet",
+      description: "AI-powered lead generation and nurturing platform with automated follow-ups and conversion optimization",
+      price: "From $25/month",
+      originalPrice: "$40/month",
+      discount: "38% OFF",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      features: [
+        "AI lead scoring",
+        "Automated email sequences",
+        "Landing page builder",
+        "A/B testing automation",
+        "CRM integration",
+        "Lead source tracking",
+        "Conversion analytics",
+        "Personalized content delivery"
+      ],
+      benefits: [
+        "Increase lead quality by 50%",
+        "Boost conversion rates by 35%",
+        "Automate 80% of lead nurturing",
+        "Scale lead generation efforts"
+      ],
+      category: "Marketing",
+      rating: 4.8,
+      reviews: 1123,
+      link: "/zion-lead-magnet",
+      featured: false
+    },
+    {
+      id: "zion-social-scheduler",
+      name: "Zion Social Scheduler",
+      description: "AI-powered social media management with content optimization, scheduling, and performance analytics",
+      price: "From $18/month",
+      originalPrice: "$30/month",
+      discount: "40% OFF",
+      icon: <Share className="w-8 h-8" />,
+      color: "from-sky-500 to-blue-500",
+      features: [
+        "Multi-platform posting",
+        "AI content optimization",
+        "Optimal timing suggestions",
+        "Hashtag research & generation",
+        "Content calendar management",
+        "Performance analytics",
+        "Competitor analysis",
+        "Team collaboration tools"
+      ],
+      benefits: [
+        "Increase engagement by 40%",
+        "Save 10+ hours weekly",
+        "Improve content performance",
+        "Grow social media presence"
+      ],
+      category: "Social Media",
+      rating: 4.5,
+      reviews: 1234,
+      link: "/zion-social-scheduler",
+      featured: false
+    },
+    {
+      id: "zion-ai-expense-tracker",
+      name: "Zion AI Expense Tracker",
+      description: "Intelligent expense management with receipt scanning, categorization, and automated reporting",
+      price: "From $12/month",
+      originalPrice: "$20/month",
+      discount: "40% OFF",
+      icon: <CreditCard className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Receipt scanning & OCR",
+        "AI expense categorization",
+        "Automated mileage tracking",
+        "Policy compliance checking",
+        "Multi-currency support",
+        "Expense approval workflows",
+        "Tax preparation integration",
+        "Mobile expense capture"
+      ],
+      benefits: [
+        "Reduce expense processing time by 85%",
+        "Eliminate manual data entry",
+        "Improve expense accuracy",
+        "Streamline reimbursement process"
+      ],
+      category: "Finance",
+      rating: 4.7,
+      reviews: 967,
+      link: "/zion-ai-expense-tracker",
+      featured: false
+    },
+    {
+      id: "zion-ai-meeting-assistant",
+      name: "Zion AI Meeting Assistant",
+      description: "Intelligent meeting management with transcription, action items, and follow-up automation",
+      price: "From $20/month",
+      originalPrice: "$35/month",
+      discount: "43% OFF",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "AI meeting transcription",
+        "Action item extraction",
+        "Meeting summary generation",
+        "Calendar integration",
+        "Follow-up automation",
+        "Meeting analytics",
+        "Multi-language support",
+        "Team collaboration tools"
+      ],
+      benefits: [
+        "Save 5+ hours per week",
+        "Improve meeting productivity",
+        "Never miss action items",
+        "Enhance team collaboration"
+      ],
+      category: "Productivity",
+      rating: 4.8,
+      reviews: 1456,
+      link: "/zion-ai-meeting-assistant",
+      featured: false
+    },
+    {
+      id: "zion-ai-survey-builder",
+      name: "Zion AI Survey Builder",
+      description: "Intelligent survey creation with AI-powered question suggestions, analytics, and automated insights",
+      price: "From $16/month",
+      originalPrice: "$25/month",
+      discount: "36% OFF",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500",
+      features: [
+        "AI question suggestions",
+        "Smart survey logic",
+        "Real-time analytics",
+        "Response visualization",
+        "Automated insights",
+        "Multi-channel distribution",
+        "Custom branding",
+        "API integration"
+      ],
+      benefits: [
+        "Create surveys 3x faster",
+        "Improve response rates by 45%",
+        "Get actionable insights",
+        "Streamline data collection"
+      ],
+      category: "Research",
+      rating: 4.6,
+      reviews: 723,
+      link: "/zion-ai-survey-builder",
+      featured: false
+    },
+    {
+      id: "zion-ai-translator-pro",
+      name: "Zion AI Translator Pro",
+      description: "Advanced AI translation service with 100+ languages, context awareness, and real-time translation",
+      price: "From $14/month",
+      originalPrice: "$22/month",
+      discount: "36% OFF",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "100+ language support",
+        "Context-aware translation",
+        "Real-time translation",
+        "Document translation",
+        "Voice translation",
+        "Translation memory",
+        "Quality assurance",
+        "API integration"
+      ],
+      benefits: [
+        "Break language barriers",
+        "Improve global communication",
+        "Reduce translation costs by 60%",
+        "Maintain translation consistency"
+      ],
+      category: "Communication",
+      rating: 4.7,
+      reviews: 1892,
+      link: "/zion-ai-translator-pro",
+      featured: false
+    },
+    {
+      id: "zion-ai-video-editor",
+      name: "Zion AI Video Editor",
+      description: "AI-powered video editing with automatic cuts, transitions, and content optimization",
+      price: "From $28/month",
+      originalPrice: "$45/month",
+      discount: "38% OFF",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "AI automatic editing",
+        "Smart transitions",
+        "Auto color correction",
+        "Background removal",
+        "Text-to-speech",
+        "Music synchronization",
+        "Export in multiple formats",
+        "Cloud storage integration"
+      ],
+      benefits: [
+        "Create professional videos 10x faster",
+        "Reduce editing time by 80%",
+        "Improve video quality",
+        "Scale video production"
+      ],
+      category: "Content",
+      rating: 4.8,
+      reviews: 1156,
+      link: "/zion-ai-video-editor",
+      featured: false
     },
     {
       id: "zion-security-shield",
@@ -393,12 +734,17 @@ export default function MicroSaas() {
     { name: "Support", count: microSaasServices.filter(s => s.category === "Support").length, active: false },
     { name: "Automation", count: microSaasServices.filter(s => s.category === "Automation").length, active: false },
     { name: "Finance", count: microSaasServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false }
+    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false },
+    { name: "Inventory", count: microSaasServices.filter(s => s.category === "Inventory").length, active: false },
+    { name: "Compliance", count: microSaasServices.filter(s => s.category === "Compliance").length, active: false },
+    { name: "Monitoring", count: microSaasServices.filter(s => s.category === "Monitoring").length, active: false },
+    { name: "Research", count: microSaasServices.filter(s => s.category === "Research").length, active: false },
+    { name: "Communication", count: microSaasServices.filter(s => s.category === "Communication").length, active: false }
   ];
 
   const stats = [
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "75+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
@@ -463,7 +809,7 @@ export default function MicroSaas() {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Powerful, AI-driven micro SAAS tools designed to transform your business operations. 
-                Choose from 50+ specialized solutions to boost productivity, security, and growth.
+                Choose from 75+ specialized solutions to boost productivity, security, and growth.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">

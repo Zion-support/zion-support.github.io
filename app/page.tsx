@@ -144,8 +144,8 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <FuturisticBackground />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden quantum-field-ultra holographic-grid-ultra">
+        <FuturisticBackground />
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -179,7 +179,7 @@ const HomePage = () => {
               text="Zion Tech Group" 
               delay={1000} 
               speed={150} 
-              className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"
+              className="text-cyberpunk-ultra neon-ultra"
             />
           </ResponsiveText>
           
@@ -200,6 +200,7 @@ const HomePage = () => {
               variant="primary"
               size="lg"
               icon={<Sparkles className="w-5 h-5" />}
+              className="btn-quantum-ultra hover-quantum-ultra"
             >
               Get Started Today
             </FuturisticButton>
@@ -208,6 +209,7 @@ const HomePage = () => {
               variant="outline"
               size="lg"
               icon={<Monitor className="w-5 h-5" />}
+              className="btn-quantum-ultra hover-plasma-ultra"
             >
               Watch Demo
             </FuturisticButton>
@@ -244,7 +246,7 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <FuturisticCard
                 key={index}
-                className="group cursor-pointer"
+                className="group cursor-pointer holographic-card-ultra hover-quantum-ultra"
                 glowColor={feature.color.includes('blue') ? 'cyan' : feature.color.includes('green') ? 'green' : feature.color.includes('purple') ? 'purple' : 'pink'}
               >
                 <Link
@@ -277,7 +279,7 @@ const HomePage = () => {
       </section>
 
       {/* Micro SAAS Highlights */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 plasma-energy data-stream-ultra">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -292,7 +294,7 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className="group holographic-card-ultra hover-quantum-ultra"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
@@ -338,7 +340,7 @@ const HomePage = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group holographic-card-ultra hover-quantum-ultra"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -357,7 +359,7 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 quantum-field-ultra">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Transform Your Business?
@@ -395,14 +397,14 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              className="btn-quantum-ultra hover-quantum-ultra flex items-center justify-center group"
             >
               Start Your Journey
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="btn-quantum-ultra hover-plasma-ultra flex items-center justify-center group"
             >
               Explore Services
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
@@ -410,8 +412,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      </div>
-    </>
+    </div>
   );
 };
 
