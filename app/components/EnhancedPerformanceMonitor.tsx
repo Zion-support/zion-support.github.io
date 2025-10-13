@@ -13,6 +13,7 @@ export default function EnhancedPerformanceMonitor({ className = '', children }:
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -25,3 +26,5 @@ export default function EnhancedPerformanceMonitor({ className = '', children, .
       );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

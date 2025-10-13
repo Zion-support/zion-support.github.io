@@ -1,13 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 import React, { useState } from "react";
 import { ArrowRight, Mail, Smartphone, Globe, Clock, MapPin, Send, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 
 export default function contact() {
   return (
@@ -67,6 +73,7 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 <<<<<<< HEAD
@@ -76,3 +83,6 @@ export default function ContactPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

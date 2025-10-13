@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface AppProps {
@@ -16,6 +17,8 @@ export default function App({ className = '', children }: AppProps) {
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-018c
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 import React, { lazy, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
@@ -35,6 +38,7 @@ const PricingPage = lazy(() => import("./pricing/page"));
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 // Loading component
@@ -46,11 +50,14 @@ const Loading = () => (
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-018c
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 // Main App Component
 export default function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <ErrorBoundary>
           <Suspense fallback={<LoadingSpinner />}>
@@ -58,6 +65,10 @@ export default function App() {
         <div className="min-h-screen bg-gray-50">
           <Suspense fallback={<Loading />}>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+        <ErrorBoundary>
+          <Suspense fallback={<LoadingSpinner />}>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -68,13 +79,17 @@ export default function App() {
           </Suspense>
 <<<<<<< HEAD
         </ErrorBoundary>
+<<<<<<< HEAD
 =======
         </div>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
       </BrowserRouter>
     </HelmetProvider>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 }
@@ -84,3 +99,6 @@ export default function App() {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -12,6 +13,9 @@ interface notfoundProps {
 }
 
 export default function notfound({ className = '', children }: notfoundProps) {
+=======
+const NotFoundPage = () => {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
   return (
 <<<<<<< HEAD
     <div className={`${className}`}>
@@ -42,11 +46,18 @@ export default function NotFound() {
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-6">
+<<<<<<< HEAD
             404 - Page Not Found
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             The page you are looking for could not be found.
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+            Page Not Found
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            The page you're looking for doesn't exist.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
@@ -74,15 +85,19 @@ export default function NotFound() {
         </div>
       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
     </div>
   );
 }
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default NotFoundPage;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
@@ -101,3 +116,6 @@ export default function NotFoundPage() {
   );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+export default NotFoundPage;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

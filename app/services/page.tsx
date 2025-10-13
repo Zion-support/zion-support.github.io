@@ -6,7 +6,10 @@ import { Helmet } from 'react-helmet-async';
 import { Brain, Shield, Globe, Code, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Laptop, Headphones, Phone } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 
 export default function services() {
   return (
@@ -65,6 +68,7 @@ export default function ServicesPage() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 <<<<<<< HEAD
@@ -74,3 +78,6 @@ export default function ServicesPage() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+  );
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

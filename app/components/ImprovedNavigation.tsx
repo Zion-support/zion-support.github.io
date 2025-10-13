@@ -785,10 +785,13 @@ const ImprovedNavigation = () => {
       <Sidebar />
     </>
 import React, { useState, useEffect } from 'react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 
 interface ImprovedNavigationProps {
   className?: string;
@@ -803,6 +806,7 @@ export default function ImprovedNavigation({ className = '', children }: Improve
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -815,3 +819,5 @@ export default function ImprovedNavigation({ className = '', children, ...props 
       );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

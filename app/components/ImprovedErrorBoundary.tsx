@@ -41,7 +41,10 @@ import { Home } from 'lucide-react';
 import { AlertTriangle } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Hand } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 
 <<<<<<< HEAD
 interface ImprovedErrorBoundaryProps {
@@ -59,8 +62,11 @@ export default function ImprovedErrorBoundary({ className = '', children }: Impr
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

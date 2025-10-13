@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 =======
 import React, { useState, useRef, useEffect } from 'react';
@@ -9,12 +10,17 @@ import React, { useState, useCallback } from 'react';
 =======
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 
 interface OptimizedImageProps {
   className?: string;
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default function OptimizedImage({ className = '', children }: OptimizedImageProps) {
@@ -24,6 +30,9 @@ export default function OptimizedImage({ className = '', children }: OptimizedIm
 =======
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
 export default function OptimizedImage({
+=======
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
   src,
   alt,
   width,
@@ -70,6 +79,7 @@ export default function OptimizedImage({
     setHasError(true);
     onError?.();
   };
+<<<<<<< HEAD
 }: OptimizedImageProps) {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -83,13 +93,19 @@ export default function OptimizedImage({
     setHasError(true);
     onError?.();
   }, [onError]);
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 
   if (hasError) {
     return (
       <div 
         className={`bg-gray-200 flex items-center justify-center ${className}`}
+<<<<<<< HEAD
         style={{ width, height }}
         style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}
+=======
+style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
       >
         <span className="text-gray-500 text-sm">Failed to load image</span>
       </div>
@@ -97,7 +113,11 @@ export default function OptimizedImage({
   }
 
   return (
+<<<<<<< HEAD
     <div ref={imgRef} className={`relative ${className}`} style={{ width, height }}>
+=======
+<div ref={imgRef} className={`relative ${className}`} style={{ width, height }}>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
       {!isLoaded && isInView && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded"></div>
       )}
@@ -116,6 +136,7 @@ export default function OptimizedImage({
           className="w-full h-full object-cover"
         />
       )}
+<<<<<<< HEAD
     <div className={`relative ${className}`} style={{ width: width ? `${width}px` : 'auto', height: height ? `${height}px` : 'auto' }}>
       {!isLoaded && (
         <div className="absolute inset-0 bg-gray-200 animate-pulse rounded" />
@@ -131,6 +152,8 @@ export default function OptimizedImage({
         className={`transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
       />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
     </div>
   );
 }

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -53,6 +54,10 @@ export default function HomePage() {
 =======
 export default function Page() {
   return (
+=======
+export default function Page() {
+  return (
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
     <div className="min-h-screen bg-gray-50">
       <div className="max-w-4xl mx-auto text-center py-20">
         <h1 className="text-4xl font-bold text-gray-900 mb-6">
@@ -61,6 +66,7 @@ export default function Page() {
         <p className="text-xl text-gray-600 mb-8">
           Advanced AI and IT Solutions for Modern Businesses
         </p>
+<<<<<<< HEAD
         <div className="mt-8">
           <a 
             href="/services" 
@@ -107,3 +113,9 @@ export default function Page() {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

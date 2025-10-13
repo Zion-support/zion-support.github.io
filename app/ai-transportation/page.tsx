@@ -25,12 +25,17 @@ export default function AiTransportationPage() {
           <p className="text-xl text-gray-300 mb-8">
 =======
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
+<<<<<<< HEAD
             Ai Transportation
+=======
+            AI Transportation
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
           </h1>
           <p className="text-xl text-gray-600 mb-8">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
             This page is under development. Please check back later.
           </p>
+<<<<<<< HEAD
 =======
 
 export default function AitransportationPage() {
@@ -72,6 +77,8 @@ export default function AitransportationPage() {
             Get Started
           </button>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
         </div>
       </div>
     </div>

@@ -9,11 +9,14 @@ interface ImageOptimizerProps {
   width?: number;
   height?: number;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
   className?: string;
   children?: React.ReactNode;
 }
@@ -84,6 +87,7 @@ export default function ImageOptimizer({
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 export default function ImageOptimizer({ className = '', children, ...props }: ImageOptimizerProps) {
@@ -94,3 +98,8 @@ export default function ImageOptimizer({ className = '', children, ...props }: I
       );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+};
+
+export default ImageOptimizer;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

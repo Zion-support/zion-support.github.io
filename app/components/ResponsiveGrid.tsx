@@ -2,6 +2,7 @@ import React from 'react';
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ResponsiveGridProps {
 =======
 interface ResponsivegridProps {
@@ -19,11 +20,21 @@ export default function ResponsiveGrid({ className = '', children }: ResponsiveG
 =======
 export default function Responsivegrid({ className = '', children, ...props }: ResponsivegridProps) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
+=======
+interface ResponsiveGridProps {
+  children: React.ReactNode;
+  className?: string;
+  [key: string]: any;
+}
+
+export default function ResponsiveGrid({ children, className = '', ...props }: ResponsiveGridProps) {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
   return (
     <div className={`${className}`}>
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 export default function ResponsiveGrid({ className = '', children, ...props }: ResponsiveGridProps) {
@@ -34,3 +45,6 @@ export default function ResponsiveGrid({ className = '', children, ...props }: R
       );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

@@ -17,7 +17,10 @@ export default function LoadingSpinner({ className = '', children }: LoadingSpin
       {text && (
         <p className="mt-2 text-sm text-gray-600">{text}</p>
       )}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
     </div>
   );
 }

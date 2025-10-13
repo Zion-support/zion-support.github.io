@@ -24,6 +24,7 @@ export default function Performanceoptimizer({ className = '', children, ...prop
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
 =======
 export default function PerformanceOptimizer({ className = '', children, ...props }: PerformanceOptimizerProps) {
@@ -34,3 +35,5 @@ export default function PerformanceOptimizer({ className = '', children, ...prop
       );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

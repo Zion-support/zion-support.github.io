@@ -11,6 +11,7 @@ export function usePerformanceMonitor() {
     console.log('Performance monitor initialized');
   }, []);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   return {
     metrics: metricsRef.current,
@@ -54,3 +55,5 @@ export const usePerformanceMonitor = () => {
   return null;
 };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

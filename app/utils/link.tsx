@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface linkProps {
@@ -9,6 +10,8 @@ interface linkProps {
 }
 
 export default function link({ className = '', children }: linkProps) {
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
   return (
     <div className={`${className}`}>
       {children}

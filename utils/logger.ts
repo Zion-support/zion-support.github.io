@@ -116,10 +116,13 @@ export default loggerInstance;
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const loggerInstance = new Logger();
 export default loggerInstance;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 =======
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 const logger = new Logger();
 export const logger = {
   // Logger implementation
@@ -133,6 +136,7 @@ export const logger = {
     console.warn(`[WARN] ${message}`);
   }
 };
+<<<<<<< HEAD
 
 export { logger };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
@@ -144,3 +148,5 @@ export function logger(message: string, level: 'info' | 'warn' | 'error' = 'info
 
 export default logger;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

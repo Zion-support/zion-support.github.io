@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 export default function Pricing() {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -128,7 +132,10 @@ export default function pricing() {
   ];
 
 export default function Page() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -189,9 +196,12 @@ export default function PricingPage() {
   );
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

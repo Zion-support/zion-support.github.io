@@ -10,6 +10,7 @@ interface CriticalResourcePreloaderProps {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export default function CriticalResourcePreloader({ className = '', children }: CriticalResourcePreloaderProps) {
   return (
@@ -33,3 +34,5 @@ export default function CriticalResourcePreloader({ className = '', children, ..
       );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6

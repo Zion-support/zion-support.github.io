@@ -313,6 +313,7 @@ export default Footer;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-ef50
 =======
 
+<<<<<<< HEAD
 interface FooterProps {
   className?: string;
   children?: React.ReactNode;
@@ -326,3 +327,5 @@ export default function Footer({ className = '', children, ...props }: FooterPro
       );
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-5a44
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-a9f6
