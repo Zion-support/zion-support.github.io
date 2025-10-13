@@ -1,53 +1,9 @@
-<<<<<<< HEAD
-import React, { useState, useRef, useEffect } from 'react';
-=======
 import React, { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
-<<<<<<< HEAD
-  width?: number;
-  height?: number;
-  className?: string;
-  priority?: boolean;
-  onLoad?: () => void;
-  onError?: () => void;
-  children?: React.ReactNode;
-}
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
-  src,
-  alt,
-  width,
-  height,
-  className = '',
-  priority = false,
-  onLoad,
-  onError,
-  children,
-}) => {
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [hasError, setHasError] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-
-  useEffect(() => {
-    if (imgRef.current?.complete) {
-      setIsLoaded(true);
-    }
-  }, []);
-
-  const handleLoad = () => {
-    setIsLoaded(true);
-    onLoad?.();
-  };
-
-  const handleError = () => {
-    setHasError(true);
-    onError?.();
-=======
   className?: string;
   width?: number;
   height?: number;
@@ -82,7 +38,6 @@ export default function OptimizedImage({
   const containerStyle: React.CSSProperties = {
     width: width ? `${width}px` : undefined,
     height: height ? `${height}px` : undefined,
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
   };
 
   if (hasError) {
