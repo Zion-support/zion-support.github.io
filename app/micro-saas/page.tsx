@@ -377,6 +377,347 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "zion-ai-accounting-assistant",
+      name: "Zion AI Accounting Assistant",
+      description: "Intelligent accounting automation with expense tracking, invoice processing, and financial insights",
+      price: "From $30/month",
+      originalPrice: "$50/month",
+      discount: "40% OFF",
+      icon: <Calculator className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "Automated expense tracking",
+        "Invoice processing & OCR",
+        "Financial reporting",
+        "Tax preparation assistance",
+        "Receipt scanning & categorization",
+        "Bank reconciliation",
+        "Budget planning & forecasting",
+        "Compliance monitoring"
+      ],
+      benefits: [
+        "Reduce accounting time by 70%",
+        "Eliminate manual data entry",
+        "Improve financial accuracy",
+        "Ensure tax compliance"
+      ],
+      category: "Finance",
+      rating: 4.8,
+      reviews: 987,
+      link: "/zion-ai-accounting-assistant",
+      featured: false
+    },
+    {
+      id: "zion-ai-crm-intelligence",
+      name: "Zion AI CRM Intelligence",
+      description: "AI-enhanced CRM with predictive analytics, lead scoring, and automated follow-ups",
+      price: "From $35/month",
+      originalPrice: "$55/month",
+      discount: "36% OFF",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "AI lead scoring",
+        "Predictive analytics",
+        "Automated follow-ups",
+        "Sales forecasting",
+        "Customer journey mapping",
+        "Pipeline management",
+        "Performance dashboards",
+        "Mobile CRM access"
+      ],
+      benefits: [
+        "Increase sales by 35%",
+        "Improve lead quality by 50%",
+        "Reduce follow-up time by 70%",
+        "Boost customer retention"
+      ],
+      category: "CRM",
+      rating: 4.9,
+      reviews: 1892,
+      link: "/zion-crm-intelligence",
+      featured: false
+    },
+    {
+      id: "zion-ai-customer-service-pro",
+      name: "Zion AI Customer Service Pro",
+      description: "Intelligent customer service automation with multilingual support and sentiment analysis",
+      price: "From $45/month",
+      originalPrice: "$70/month",
+      discount: "36% OFF",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500",
+      features: [
+        "AI-powered chatbots",
+        "Multilingual support (50+ languages)",
+        "Sentiment analysis",
+        "Ticket routing automation",
+        "Knowledge base integration",
+        "Live chat handoff",
+        "Performance analytics",
+        "Custom AI training"
+      ],
+      benefits: [
+        "Reduce response time by 80%",
+        "Handle 90% of queries automatically",
+        "Improve customer satisfaction",
+        "Scale support operations"
+      ],
+      category: "Support",
+      rating: 4.7,
+      reviews: 1654,
+      link: "/zion-ai-customer-service-pro",
+      featured: false
+    },
+    {
+      id: "zion-workflow-automation",
+      name: "Zion Workflow Automation",
+      description: "Visual workflow builder with AI optimization and integration capabilities for business processes",
+      price: "From $22/month",
+      originalPrice: "$35/month",
+      discount: "37% OFF",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500",
+      features: [
+        "Visual workflow builder",
+        "AI process optimization",
+        "500+ app integrations",
+        "Conditional logic & triggers",
+        "Error handling & retries",
+        "Workflow analytics",
+        "Team collaboration",
+        "Custom API endpoints"
+      ],
+      benefits: [
+        "Automate 80% of repetitive tasks",
+        "Reduce errors by 95%",
+        "Save 20+ hours weekly",
+        "Improve process efficiency"
+      ],
+      category: "Automation",
+      rating: 4.6,
+      reviews: 1347,
+      link: "/zion-workflow-automation",
+      featured: false
+    },
+    {
+      id: "zion-ai-invoice-genius",
+      name: "Zion AI Invoice Genius",
+      description: "Smart invoice generation and management with automated billing and payment tracking",
+      price: "From $15/month",
+      originalPrice: "$25/month",
+      discount: "40% OFF",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "AI invoice generation",
+        "Automated billing cycles",
+        "Payment tracking & reminders",
+        "Multi-currency support",
+        "Tax calculation",
+        "Client portal access",
+        "Payment gateway integration",
+        "Financial reporting"
+      ],
+      benefits: [
+        "Reduce billing time by 85%",
+        "Improve payment collection",
+        "Eliminate billing errors",
+        "Streamline financial processes"
+      ],
+      category: "Finance",
+      rating: 4.7,
+      reviews: 1123,
+      link: "/zion-ai-invoice-genius",
+      featured: false
+    },
+    {
+      id: "zion-ai-inventory-smart",
+      name: "Zion AI Inventory Smart",
+      description: "Intelligent inventory management with demand forecasting and automated reordering",
+      price: "From $25/month",
+      originalPrice: "$40/month",
+      discount: "38% OFF",
+      icon: <Package className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "AI demand forecasting",
+        "Automated reordering",
+        "Multi-location tracking",
+        "Barcode scanning",
+        "Supplier management",
+        "Cost optimization",
+        "Real-time alerts",
+        "Analytics dashboard"
+      ],
+      benefits: [
+        "Reduce stockouts by 60%",
+        "Lower inventory costs by 25%",
+        "Improve cash flow",
+        "Optimize supply chain"
+      ],
+      category: "Inventory",
+      rating: 4.8,
+      reviews: 1456,
+      link: "/zion-ai-inventory-smart",
+      featured: false
+    },
+    {
+      id: "zion-ai-compliance-manager",
+      name: "Zion AI Compliance Manager",
+      description: "Automated compliance monitoring and reporting for various industry regulations",
+      price: "From $40/month",
+      originalPrice: "$65/month",
+      discount: "38% OFF",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      features: [
+        "Multi-regulation compliance",
+        "Automated monitoring",
+        "Risk assessment",
+        "Compliance reporting",
+        "Audit trail management",
+        "Policy management",
+        "Training tracking",
+        "Alert system"
+      ],
+      benefits: [
+        "Ensure 100% compliance",
+        "Reduce audit preparation time",
+        "Minimize compliance risks",
+        "Streamline reporting"
+      ],
+      category: "Compliance",
+      rating: 4.9,
+      reviews: 876,
+      link: "/zion-ai-compliance-manager",
+      featured: false
+    },
+    {
+      id: "zion-ai-performance-monitor",
+      name: "Zion AI Performance Monitor",
+      description: "Advanced performance monitoring with AI-powered insights and optimization recommendations",
+      price: "From $35/month",
+      originalPrice: "$55/month",
+      discount: "36% OFF",
+      icon: <Activity className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "Real-time monitoring",
+        "AI performance insights",
+        "Automated optimization",
+        "Custom dashboards",
+        "Alert management",
+        "Historical analysis",
+        "Capacity planning",
+        "Cost optimization"
+      ],
+      benefits: [
+        "Improve performance by 40%",
+        "Reduce downtime by 90%",
+        "Optimize resource usage",
+        "Prevent issues proactively"
+      ],
+      category: "Monitoring",
+      rating: 4.8,
+      reviews: 1234,
+      link: "/zion-ai-performance-monitor",
+      featured: false
+    },
+    {
+      id: "zion-ai-lead-magnet",
+      name: "Zion AI Lead Magnet",
+      description: "AI-powered lead generation and nurturing with automated campaigns and scoring",
+      price: "From $20/month",
+      originalPrice: "$35/month",
+      discount: "43% OFF",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI lead scoring",
+        "Automated nurturing campaigns",
+        "Multi-channel lead capture",
+        "Behavioral tracking",
+        "Personalized content",
+        "CRM integration",
+        "A/B testing",
+        "ROI analytics"
+      ],
+      benefits: [
+        "Increase lead quality by 50%",
+        "Boost conversion rates by 35%",
+        "Automate lead nurturing",
+        "Scale lead generation"
+      ],
+      category: "Marketing",
+      rating: 4.6,
+      reviews: 1567,
+      link: "/zion-ai-lead-magnet",
+      featured: false
+    },
+    {
+      id: "zion-ai-project-master",
+      name: "Zion AI Project Master",
+      description: "Comprehensive project management with AI-powered insights, resource optimization, and team collaboration",
+      price: "From $25/month",
+      originalPrice: "$40/month",
+      discount: "38% OFF",
+      icon: <Code className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "AI-powered project insights",
+        "Resource optimization",
+        "Team collaboration tools",
+        "Gantt charts & timelines",
+        "Budget tracking & forecasting",
+        "Risk assessment & mitigation",
+        "Time tracking & reporting",
+        "Integration with 100+ tools"
+      ],
+      benefits: [
+        "Complete projects 25% faster",
+        "Reduce project costs by 20%",
+        "Improve team productivity",
+        "Minimize project risks"
+      ],
+      category: "Productivity",
+      rating: 4.8,
+      reviews: 1123,
+      link: "/zion-project-master",
+      featured: false
+    },
+    {
+      id: "zion-ai-email-automation",
+      name: "Zion AI Email Automation",
+      description: "Advanced email marketing automation with AI-powered personalization and behavioral triggers",
+      price: "From $12/month",
+      originalPrice: "$20/month",
+      discount: "40% OFF",
+      icon: <Mail className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "AI-powered personalization",
+        "Behavioral trigger campaigns",
+        "A/B testing automation",
+        "Advanced segmentation",
+        "Email template library",
+        "Deliverability optimization",
+        "Performance analytics",
+        "CRM integration"
+      ],
+      benefits: [
+        "Increase open rates by 45%",
+        "Boost conversion rates by 30%",
+        "Reduce manual work by 90%",
+        "Scale email marketing efforts"
+      ],
+      category: "Marketing",
+      rating: 4.7,
+      reviews: 1456,
+      link: "/zion-email-automation",
+      featured: false
     }
   ];
 
@@ -393,7 +734,10 @@ export default function MicroSaas() {
     { name: "Support", count: microSaasServices.filter(s => s.category === "Support").length, active: false },
     { name: "Automation", count: microSaasServices.filter(s => s.category === "Automation").length, active: false },
     { name: "Finance", count: microSaasServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false }
+    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false },
+    { name: "Inventory", count: microSaasServices.filter(s => s.category === "Inventory").length, active: false },
+    { name: "Compliance", count: microSaasServices.filter(s => s.category === "Compliance").length, active: false },
+    { name: "Monitoring", count: microSaasServices.filter(s => s.category === "Monitoring").length, active: false }
   ];
 
   const stats = [

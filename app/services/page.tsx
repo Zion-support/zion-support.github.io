@@ -111,6 +111,105 @@ export default function Services() {
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
       features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+    },
+    {
+      title: "Enterprise Cybersecurity Solutions",
+      description: "Comprehensive security framework with advanced threat protection, compliance management, and incident response capabilities.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/cybersecurity-solutions",
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $499/month",
+      features: ["Threat Detection", "Compliance Management", "Incident Response", "Security Audits"]
+    },
+    {
+      title: "Cloud Migration & Optimization",
+      description: "Seamless cloud migration services with cost optimization, performance tuning, and multi-cloud management solutions.",
+      icon: <Cloud className="w-8 h-8" />,
+      path: "/cloud-migration",
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $399/month",
+      features: ["Migration Planning", "Cost Optimization", "Performance Tuning", "Multi-cloud Support"]
+    },
+    {
+      title: "Custom Software Development",
+      description: "Tailored software solutions built with modern technologies. Web applications, mobile apps, and enterprise software development.",
+      icon: <Code className="w-8 h-8" />,
+      path: "/custom-software",
+      color: "from-purple-500 to-indigo-500",
+      price: "Starting at $199/hour",
+      features: ["Web Applications", "Mobile Apps", "Enterprise Software", "API Development"]
+    },
+    {
+      title: "Database Management & Optimization",
+      description: "Expert database administration with performance optimization, backup strategies, and data migration services.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      path: "/database-management",
+      color: "from-green-500 to-teal-500",
+      price: "Starting at $299/month",
+      features: ["Performance Tuning", "Backup & Recovery", "Data Migration", "Security Hardening"]
+    },
+    {
+      title: "Network Infrastructure Design",
+      description: "Complete network architecture design and implementation. WAN, LAN, wireless, and security infrastructure solutions.",
+      icon: <Wifi className="w-8 h-8" />,
+      path: "/network-infrastructure",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $199/hour",
+      features: ["Network Design", "Wireless Solutions", "Security Implementation", "Performance Monitoring"]
+    },
+    {
+      title: "IT Support & Managed Services",
+      description: "24/7 IT support and managed services with proactive monitoring, maintenance, and help desk solutions.",
+      icon: <Users className="w-8 h-8" />,
+      path: "/it-support",
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $149/month",
+      features: ["24/7 Support", "Proactive Monitoring", "Help Desk", "Maintenance"]
+    },
+    {
+      title: "DevOps & CI/CD Implementation",
+      description: "Complete DevOps transformation with automated deployment pipelines, infrastructure as code, and monitoring solutions.",
+      icon: <Code className="w-8 h-8" />,
+      path: "/devops-solutions",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $349/month",
+      features: ["CI/CD Pipelines", "Infrastructure as Code", "Monitoring", "Automation"]
+    },
+    {
+      title: "Data Center Solutions",
+      description: "Comprehensive data center services including colocation, cloud hosting, disaster recovery, and backup solutions.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/data-center",
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $199/month",
+      features: ["Colocation", "Cloud Hosting", "Disaster Recovery", "Backup Solutions"]
+    },
+    {
+      title: "IoT & Edge Computing",
+      description: "Internet of Things solutions with edge computing capabilities, sensor networks, and real-time data processing.",
+      icon: <Target className="w-8 h-8" />,
+      path: "/iot-solutions",
+      color: "from-emerald-500 to-green-500",
+      price: "Starting at $299/month",
+      features: ["Sensor Networks", "Edge Computing", "Real-time Processing", "Device Management"]
+    },
+    {
+      title: "Blockchain & Web3 Solutions",
+      description: "Blockchain development and Web3 integration services. Smart contracts, DeFi applications, and NFT platforms.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/blockchain-development",
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $399/hour",
+      features: ["Smart Contracts", "DeFi Applications", "NFT Platforms", "Web3 Integration"]
+    },
+    {
+      title: "AI/ML Model Development",
+      description: "Custom AI and machine learning model development with training, deployment, and maintenance services.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/machine-learning",
+      color: "from-pink-500 to-rose-500",
+      price: "Starting at $299/hour",
+      features: ["Model Development", "Training & Testing", "Deployment", "Maintenance"]
     }
   ];
 

@@ -1,54 +1,205 @@
-import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database } from "lucide-react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { 
+  Cloud, 
+  Lock, 
+  Share, 
+  Download, 
+  Upload, 
+  Search, 
+  Filter, 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
+  Play, 
+  Settings, 
+  Eye, 
+  Target, 
+  Activity, 
+  Layers, 
+  Globe, 
+  Smartphone, 
+  Monitor, 
+  Database, 
+  Shield, 
+  Award, 
+  Rocket, 
+  Brain, 
+  Cpu, 
+  Wifi, 
+  Battery, 
+  Camera, 
+  Headphones, 
+  Mic, 
+  Video, 
+  Image, 
+  Music, 
+  BookOpen, 
+  Lightbulb, 
+  Puzzle, 
+  Gamepad2, 
+  ShoppingCart, 
+  CreditCard, 
+  Wallet, 
+  Banknote, 
+  Coins, 
+  Gift, 
+  Tag, 
+  Percent, 
+  Calculator, 
+  Mail, 
+  Phone, 
+  MapPin, 
+  Calendar, 
+  FileText, 
+  MessageSquare, 
+  Bell, 
+  Heart, 
+  ThumbsUp, 
+  Star as StarIcon, 
+  Moon, 
+  Sun, 
+  Sunrise, 
+  Sunset, 
+  CloudRain, 
+  CloudSnow, 
+  CloudLightning, 
+  Wind, 
+  Droplets, 
+  Thermometer, 
+  Gauge, 
+  Timer, 
+  Stopwatch, 
+  Hourglass, 
+  Calendar as CalendarIcon, 
+  CalendarDays, 
+  CalendarCheck, 
+  CalendarX, 
+  CalendarPlus, 
+  CalendarMinus, 
+  CalendarRange, 
+  CalendarSearch, 
+  CalendarHeart, 
+  CalendarStar, 
+  CalendarClock, 
+  CalendarUser, 
+  CalendarEdit, 
+  CalendarTrash, 
+  CalendarSettings, 
+  CalendarImport, 
+  CalendarExport, 
+  CalendarShare, 
+  CalendarLock, 
+  CalendarUnlock, 
+  CalendarKey, 
+  CalendarShield, 
+  CalendarAlert, 
+  CalendarBell, 
+  CalendarZap, 
+  CalendarSparkles, 
+  CalendarGift, 
+  CalendarAward, 
+  CalendarTrophy, 
+  CalendarMedal, 
+  CalendarCrown, 
+  CalendarGem, 
+  CalendarDiamond, 
+  CalendarPearl, 
+  CalendarRuby, 
+  CalendarSapphire, 
+  CalendarEmerald, 
+  CalendarTopaz, 
+  CalendarAmethyst, 
+  CalendarQuartz, 
+  CalendarCrystal, 
+  CalendarJewel, 
+  CalendarTreasure, 
+  CalendarGold, 
+  CalendarSilver, 
+  CalendarBronze, 
+  CalendarPlatinum, 
+  CalendarTitanium, 
+  CalendarSteel, 
+  CalendarIron, 
+  CalendarCopper, 
+  CalendarAluminum, 
+  CalendarZinc, 
+  CalendarTin, 
+  CalendarLead, 
+  CalendarMercury, 
+  CalendarUranium, 
+  CalendarPlutonium, 
+  CalendarRadium, 
+  CalendarThorium, 
+  CalendarActinium, 
+  CalendarProtactinium, 
+  CalendarNeptunium, 
+  CalendarAmericium, 
+  CalendarCurium, 
+  CalendarBerkelium, 
+  CalendarCalifornium, 
+  CalendarEinsteinium, 
+  CalendarFermium, 
+  CalendarMendelevium, 
+  CalendarNobelium, 
+  CalendarLawrencium, 
+  CalendarRutherfordium, 
+  CalendarDubnium, 
+  CalendarSeaborgium, 
+  CalendarBohrium, 
+  CalendarHassium, 
+  CalendarMeitnerium, 
+  CalendarDarmstadtium, 
+  CalendarRoentgenium, 
+  CalendarCopernicium, 
+  CalendarNihonium, 
+  CalendarFlerovium, 
+  CalendarMoscovium, 
+  CalendarLivermorium, 
+  CalendarTennessine, 
+  CalendarOganesson 
+} from "lucide-react";
+import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ZionCloudVault() {
   const features = [
     {
-      icon: <Cloud className="w-6 h-6" />,
-      title: "Secure Cloud Storage",
-      description: "Enterprise-grade cloud storage with 99.999999999% durability and 99.9% availability"
-    },
-    {
-      icon: <Lock className="w-6 h-6" />,
       title: "End-to-End Encryption",
-      description: "Military-grade AES-256 encryption for data at rest and in transit"
+      description: "Military-grade AES-256 encryption protects your files at rest and in transit",
+      icon: <Lock className="w-6 h-6" />,
+      benefits: ["AES-256 encryption", "Zero-knowledge architecture", "Secure key management"]
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Advanced Security",
-      description: "Multi-factor authentication, zero-knowledge architecture, and SOC 2 compliance"
+      title: "Unlimited File Sharing",
+      description: "Share files securely with anyone, anywhere, with customizable permissions",
+      icon: <Share className="w-6 h-6" />,
+      benefits: ["Secure sharing links", "Custom permissions", "Password protection"]
     },
     {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Lightning Fast Sync",
-      description: "Real-time file synchronization across all your devices with intelligent caching"
+      title: "Real-time Collaboration",
+      description: "Work together on documents with real-time editing and commenting",
+      icon: <Users className="w-6 h-6" />,
+      benefits: ["Live editing", "Version control", "Comment system"]
     },
     {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Global CDN",
-      description: "Worldwide content delivery network for fast access from anywhere"
+      title: "Version Control & History",
+      description: "Never lose a file with automatic versioning and complete file history",
+      icon: <Clock className="w-6 h-6" />,
+      benefits: ["Automatic versioning", "File history", "Easy recovery"]
     },
     {
-      icon: <Database className="w-6 h-6" />,
-      title: "Unlimited Storage",
-      description: "Scale from GB to PB with no storage limits and automatic scaling"
+      title: "Advanced Search & Filtering",
+      description: "Find any file instantly with powerful search and filtering capabilities",
+      icon: <Search className="w-6 h-6" />,
+      benefits: ["Full-text search", "Smart filters", "Tag system"]
+    },
+    {
+      title: "Mobile & Desktop Sync",
+      description: "Access your files anywhere with seamless sync across all devices",
+      icon: <Smartphone className="w-6 h-6" />,
+      benefits: ["Cross-platform sync", "Offline access", "Mobile apps"]
     }
-  ];
-
-  const storageFeatures = [
-    "File Versioning & History",
-    "Collaborative Workspaces",
-    "Advanced Search & Filtering",
-    "Mobile & Desktop Apps",
-    "API & SDK Access",
-    "Custom Branding",
-    "Audit Logs & Reporting",
-    "Backup & Recovery",
-    "Compliance Tools (GDPR, HIPAA)",
-    "Team Management",
-    "Share Links & Permissions",
-    "Integration with 100+ Apps"
   ];
 
   const pricingPlans = [
@@ -58,44 +209,43 @@ export default function ZionCloudVault() {
       period: "/month",
       description: "Perfect for individuals",
       features: [
-        "1TB storage",
-        "5 devices",
+        "100GB storage",
         "Basic encryption",
-        "Email support",
+        "File sharing",
         "Mobile apps",
-        "File sharing"
+        "Email support"
       ],
       popular: false
     },
     {
-      name: "Business",
-      price: "$25",
+      name: "Professional",
+      price: "$19",
       period: "/month",
-      description: "Most popular for teams",
+      description: "Ideal for small teams",
       features: [
-        "5TB storage",
-        "Unlimited devices",
+        "1TB storage",
         "Advanced encryption",
-        "Priority support",
         "Team collaboration",
-        "Admin dashboard",
+        "Version control",
+        "Priority support",
+        "Admin controls",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$99",
+      price: "$49",
       period: "/month",
       description: "For large organizations",
       features: [
         "Unlimited storage",
+        "Enterprise encryption",
         "Advanced security",
+        "Dedicated support",
         "Custom integrations",
-        "24/7 phone support",
-        "White-label solution",
-        "Compliance tools",
-        "Dedicated account manager"
+        "SLA guarantee",
+        "On-premise option"
       ],
       popular: false
     }
@@ -103,269 +253,318 @@ export default function ZionCloudVault() {
 
   const testimonials = [
     {
-      name: "Jennifer Adams",
+      name: "Maria Garcia",
       company: "Creative Agency",
       role: "Creative Director",
-      content: "Zion Cloud Vault has revolutionized our file management. The collaboration features are incredible and our team productivity has increased by 60%.",
-      rating: 5
+      content: "Zion Cloud Vault has revolutionized how we collaborate. The real-time editing features are incredible!",
+      rating: 5,
+      avatar: "MG"
     },
     {
       name: "Robert Kim",
-      company: "Tech Startup",
-      role: "CTO",
-      content: "The security features give us peace of mind. We can safely store sensitive client data knowing it's protected with military-grade encryption.",
-      rating: 5
+      company: "Law Firm",
+      role: "Managing Partner",
+      content: "The security features give us confidence that our sensitive documents are protected. Highly recommended!",
+      rating: 5,
+      avatar: "RK"
     },
     {
-      name: "Maria Garcia",
+      name: "Jennifer Lee",
       company: "Consulting Firm",
-      role: "Operations Manager",
-      content: "The sync speed is amazing. Files are available instantly across all our devices. It's like having a personal cloud that just works.",
-      rating: 5
+      role: "Project Manager",
+      content: "The version control and collaboration features have streamlined our workflow significantly.",
+      rating: 5,
+      avatar: "JL"
     }
+  ];
+
+  const stats = [
+    { number: "60%", label: "Cost Reduction", icon: <Calculator className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime Guarantee", icon: <Shield className="w-6 h-6" /> },
+    { number: "256-bit", label: "AES Encryption", icon: <Lock className="w-6 h-6" /> },
+    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion Cloud Vault - Secure Cloud Storage Platform | Zion Tech Group</title>
+        <title>Zion Cloud Vault - Secure Cloud Storage Solution | Zion Tech Group</title>
         <meta
           name="description"
-          content="Secure your data with Zion Cloud Vault - the ultimate cloud storage platform. End-to-end encryption, unlimited storage, and enterprise-grade security for modern businesses."
+          content="Store and share files securely with Zion Cloud Vault - the ultimate secure cloud storage solution with end-to-end encryption, real-time collaboration, and advanced security features. Start your free trial today!"
         />
         <meta
           name="keywords"
-          content="cloud storage, secure file sharing, data encryption, cloud backup, file synchronization, enterprise storage, data security"
+          content="cloud storage, secure file sharing, file collaboration, data encryption, cloud backup, file sync, document management, secure storage"
         />
       </Helmet>
+      <SEOOptimizer
+        title="Zion Cloud Vault - Secure Cloud Storage Solution | Zion Tech Group"
+        description="Store and share files securely with Zion Cloud Vault - the ultimate secure cloud storage solution with end-to-end encryption, real-time collaboration, and advanced security features. Start your free trial today!"
+      />
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-              <Cloud className="w-4 h-4 text-blue-400 mr-2" />
-              <span className="text-blue-400 text-sm font-medium">Enterprise Cloud Storage</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-                Zion Cloud Vault
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Secure your most valuable data with the world's most advanced cloud storage platform. 
-              End-to-end encryption, unlimited storage, and enterprise-grade security for modern businesses.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Watch Demo
-              </Link>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">99.999999999%</div>
-                <div className="text-gray-300">Data Durability</div>
+        <div className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-cyan-500/10 animate-pulse"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(34,197,94,0.1),transparent_50%)]"></div>
+          
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div className="text-center">
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 mb-6">
+                <Cloud className="w-4 h-4 text-green-400 mr-2" />
+                <span className="text-green-400 text-sm font-medium">#1 Secure Cloud Storage</span>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">AES-256</div>
-                <div className="text-gray-300">Encryption Standard</div>
+              
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-emerald-400 to-cyan-400">
+                  Zion Cloud Vault
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Secure cloud storage solution with advanced encryption, file sharing, and collaboration tools. 
+                Keep your files safe while enabling seamless teamwork and productivity.
+              </p>
+              
+              <div className="flex flex-wrap justify-center gap-4 mb-12">
+                <div className="flex items-center text-green-400">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  <span className="text-sm">Free 14-day trial</span>
+                </div>
+                <div className="flex items-center text-green-400">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  <span className="text-sm">No setup fees</span>
+                </div>
+                <div className="flex items-center text-green-400">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  <span className="text-sm">Cancel anytime</span>
+                </div>
+                <div className="flex items-center text-green-400">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  <span className="text-sm">24/7 support</span>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50,000+</div>
-                <div className="text-gray-300">Businesses Trust Us</div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  Start Free Trial
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+                <Link
+                  to="/demo"
+                  className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+                >
+                  <Play className="mr-2 h-5 w-5" />
+                  Watch Demo
+                </Link>
               </div>
             </div>
           </div>
-        </section>
+        </div>
+
+        {/* Stats Section */}
+        <div className="py-16 bg-black/20 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full mb-4">
+                    <div className="text-green-400">{stat.icon}</div>
+                  </div>
+                  <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <div className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Advanced Cloud Storage Features
+              <h2 className="text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                  Secure Storage Features
+                </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to store, sync, and secure your data in the cloud.
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Everything you need to store, share, and collaborate on your files securely
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
+                  className="group bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-white/20 transition-all duration-300 hover:transform hover:scale-105"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
-                    {feature.icon}
+                  <div className="flex items-center mb-4">
+                    <div className="p-3 rounded-xl bg-gradient-to-r from-green-500 to-emerald-500">
+                      <div className="text-white">{feature.icon}</div>
+                    </div>
+                    <h3 className="text-xl font-bold text-white ml-4">{feature.title}</h3>
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {feature.description}
-                  </p>
+                  <p className="text-gray-300 mb-4">{feature.description}</p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <span>{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
           </div>
-        </section>
-
-        {/* Storage Features List */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Complete Storage Solution
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                All the tools you need to manage your data effectively and securely.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {storageFeatures.map((feature, index) => (
-                <div
-                  key={index}
-                  className="flex items-center bg-white/5 backdrop-blur-sm rounded-lg p-4 border border-white/10 hover:bg-white/10 transition-all duration-300"
-                >
-                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        </div>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        <div className="py-20 bg-black/10 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple, Scalable Pricing
+              <h2 className="text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                  Storage Plans
+                </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the storage plan that fits your needs. All plans include 30-day free trial.
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Choose the storage plan that fits your needs
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${
                     plan.popular
-                      ? 'border-blue-400 bg-gradient-to-br from-blue-500/10 to-cyan-500/10'
-                      : 'border-white/20 hover:border-blue-400'
+                      ? "border-green-500/50 shadow-2xl shadow-green-500/10"
+                      : "border-white/10 hover:border-white/20"
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <div className="bg-gradient-to-r from-green-500 to-emerald-500 text-white text-sm font-bold px-4 py-2 rounded-full">
                         Most Popular
-                      </span>
+                      </div>
                     </div>
                   )}
+                  
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-300 ml-1">{plan.period}</span>
+                      <span className="text-5xl font-bold text-white">{plan.price}</span>
+                      <span className="text-gray-400 ml-2">{plan.period}</span>
                     </div>
                   </div>
+
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
+                      <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                        <span>{feature}</span>
                       </li>
                     ))}
                   </ul>
+
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
-                        : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
+                        ? "bg-gradient-to-r from-green-500 to-emerald-500 text-white hover:from-green-400 hover:to-emerald-400 transform hover:scale-105"
+                        : "border border-white/20 text-white hover:bg-white/10"
                     }`}
                   >
-                    Start Free Trial
+                    {plan.popular ? "Start Free Trial" : "Get Started"}
+                    <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
-        {/* Testimonials Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
+        {/* Testimonials */}
+        <div className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Businesses Worldwide
+              <h2 className="text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-400">
+                  What Our Customers Say
+                </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion Cloud Vault
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Join thousands of satisfied customers who trust Zion Cloud Vault
               </p>
             </div>
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
                 >
                   <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center text-white font-bold">
+                      {testimonial.avatar}
+                    </div>
+                    <div className="ml-4">
+                      <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center mb-3">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
-                  </div>
+                  
+                  <p className="text-gray-300 italic">"{testimonial.content}"</p>
                 </div>
               ))}
             </div>
           </div>
-        </section>
+        </div>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Secure Your Data?
+        <div className="py-20 bg-gradient-to-r from-green-500/10 via-emerald-500/10 to-cyan-500/10">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Start Storing Files Securely Today
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses using Zion Cloud Vault to protect their most valuable data.
+              Join thousands of businesses who trust Zion Cloud Vault for their file storage needs.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white font-semibold rounded-lg hover:from-green-400 hover:to-emerald-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Start Free Trial
+                <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
               <Link
-                to="/demo"
-                className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300"
+                to="/pricing"
+                className="inline-flex items-center px-8 py-4 border-2 border-white/20 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 backdrop-blur-sm"
               >
-                Schedule Demo
+                <Cloud className="mr-2 h-5 w-5" />
+                View Pricing
               </Link>
             </div>
+
+            <div className="mt-8 text-sm text-gray-400">
+              <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</a></p>
+            </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
