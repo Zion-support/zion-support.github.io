@@ -7,8 +7,6 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [isHighContrast, setIsHighContrast] = useState(false);
   const [isLargeText, setIsLargeText] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [focusVisible, setFocusVisible] = useState(false);
 
   useEffect(() => {
     // Check for user preferences
@@ -21,7 +19,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
       // Reduced motion
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        setIsReducedMotion(true);
         document.documentElement.classList.add('reduced-motion');
       }
 
@@ -49,7 +46,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
 
     const handleReducedMotionChange = (e: MediaQueryListEvent) => {
-      setIsReducedMotion(e.matches);
       if (e.matches) {
         document.documentElement.classList.add('reduced-motion');
       } else {
@@ -63,13 +59,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     // Keyboard navigation enhancement
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        setFocusVisible(true);
         document.body.classList.add('keyboard-navigation');
       }
     };
 
     const handleMouseDown = () => {
-      setFocusVisible(false);
       document.body.classList.remove('keyboard-navigation');
     };
 
@@ -152,7 +146,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>
 
       {/* Skip Links Styles */}
-      <style jsx>{`
+      <style>{`
         .skip-links {
           position: absolute;
           top: -40px;
