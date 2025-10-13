@@ -29,7 +29,10 @@ import {
   TrendingUp,
   Cpu,
   Network,
-  Sparkles
+  FileText,
+  Target,
+  Clock,
+  Calendar
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -218,20 +221,24 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                     }`}
                     onClick={item.hasDropdown ? (e) => {
                       e.preventDefault();
-                      toggleServices();
+                      if (item.name === 'Services') {
+                        toggleServices();
+                      } else if (item.name === 'Micro SAAS') {
+                        toggleMicroSaas();
+                      }
                     } : undefined}
                   >
                     <span>{item.icon}</span>
                     <span>{item.name}</span>
                     {item.hasDropdown && (
                       <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${
-                        isServicesOpen ? 'rotate-180' : ''
+                        (item.name === 'Services' && isServicesOpen) || (item.name === 'Micro SAAS' && isMicroSaasOpen) ? 'rotate-180' : ''
                       }`} />
                     )}
                   </Link>
 
                   {/* Dropdown Menu */}
-                  {item.hasDropdown && isServicesOpen && (
+                  {item.hasDropdown && ((item.name === 'Services' && isServicesOpen) || (item.name === 'Micro SAAS' && isMicroSaasOpen)) && (
                     <div className="absolute left-0 mt-2 w-96 bg-black/90 backdrop-blur-md border border-cyan-500/30 rounded-lg shadow-xl z-50">
                       <div className="p-4">
                         {item.dropdownItems?.map((section, sectionIndex) => (
@@ -246,7 +253,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                                   key={subIndex}
                                   to={subItem.path}
                                   className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 rounded-md transition-all duration-300"
-                                  onClick={() => setIsServicesOpen(false)}
+                                  onClick={() => {
+                                    setIsServicesOpen(false);
+                                    setIsMicroSaasOpen(false);
+                                  }}
                                 >
                                   <span>{subItem.icon}</span>
                                   <span>{subItem.name}</span>
