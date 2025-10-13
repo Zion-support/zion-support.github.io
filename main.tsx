@@ -1,15 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { createRoot } from 'react-dom/client;
-import App from './App;
-import './index.css;
-// Ensure scheduler is properly initialized;
-if (typeof window !== 'undefined') {';
-  // Fix for scheduler unstable_now error;
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
@@ -17,10 +6,6 @@ import './index.css';
 // Ensure scheduler is properly initialized
 if (typeof window !== 'undefined') {
   // Fix for scheduler unstable_now error
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
   if (!window.performance || !window.performance.now) {
     window.performance = window.performance || {};
     window.performance.now = window.performance.now || (() => Date.now());

@@ -1,8 +1,4 @@
 import React, { Suspense, lazy } from 'react';
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
@@ -13,18 +9,7 @@ import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
-=======
 import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
-import LoadingSpinner from './app/components/LoadingSpinner';
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
 
 // Page Components
 import HomePage from './app/page';
