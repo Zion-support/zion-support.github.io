@@ -7,11 +7,20 @@ const CacheManager = () => {
     const registerServiceWorker = async () => {
       if ('serviceWorker' in navigator) {
         try {
-          await navigator.serviceWorker.register('/sw.js');
+          const registration = await navigator.serviceWorker.register('/sw.js');
+<<<<<<< HEAD
 
-          // Service Worker registered successfully
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b10
+=======
+          console.log('Service Worker registered:', registration);
+
         } catch (error) {
           console.error('Service Worker registration failed:', error);
+
+
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-4c61
         }
       }
     }
@@ -33,10 +42,19 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
+<<<<<<< HEAD
 
-          // Static assets cached successfully
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-6b10
+=======
+          console.log('Static assets cached successfully');
+
         } catch (error) {
           console.error('Failed to cache static assets:', error);
+
+
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-4c61
         }
       }
 
@@ -51,9 +69,15 @@ const CacheManager = () => {
           }
           
           return response
+<<<<<<< HEAD
+=======
 
         } catch (error) {
           console.error('Cache API error:', error);
+
+
+
+>>>>>>> cursor/website-audit-and-update-with-deployment-4c61
           return fetch(request);
         }
       }
