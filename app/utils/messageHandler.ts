@@ -1,6 +1,6 @@
-// messageHandler utility
+// messageHandler utility;
 export const messageHandler = () => {
-  // Implementation
+  // Implementation;
   return true;
 };
 

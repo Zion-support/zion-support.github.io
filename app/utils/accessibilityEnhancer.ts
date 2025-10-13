@@ -1,6 +1,6 @@
 
 export const utilityFunction = () => {
-  // Utility implementation
+  // Utility implementation;
   return true;
 };
 
