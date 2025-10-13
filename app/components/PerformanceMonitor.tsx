@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
 interface PerformanceMetrics {
   cls: number | null;
@@ -18,7 +16,6 @@ const PerformanceMonitor: React.FC = () => {
     inp: null,
     fcp: null,
     lcp: null,
-<<<<<<< HEAD
     ttfb: null
   });
 
@@ -52,11 +49,16 @@ const PerformanceMonitor: React.FC = () => {
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-4 rounded-lg shadow-lg z-50 max-w-xs">
       <h3 className="font-bold mb-2">Performance Metrics</h3>
       <div className="space-y-1">
         <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
         <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>INP: {metrics.inp ? `${metrics.inp.toFixed(2)}ms` : 'Loading...'}</div>
         <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
         <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
       </div>
@@ -101,9 +103,7 @@ const PerformanceMonitor: React.FC = () => {
       
       <div className="mt-3 pt-2 border-t border-slate-600 text-xs text-gray-400">
         Press Ctrl+Shift+P to toggle
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
       </div>
-=======
     </div>
   );
 };

@@ -33,15 +33,17 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-<<<<<<< HEAD
     
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
+    }
+    
     this.setState({
       error,
       errorInfo
     });
-// Log error to console in development
+
+    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
@@ -79,12 +81,7 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
               We're sorry, but something unexpected happened. Please try refreshing the page.
-=======
-              We're sorry, but something unexpected happened. Please try refreshing the page.
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
             </p>
 
             {process.env.NODE_ENV === 'development' && this.state.error && (

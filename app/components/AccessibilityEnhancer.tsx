@@ -1,6 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const AccessibilityEnhancer: React.FC = () => {
+  const [isHighContrast, setIsHighContrast] = useState(false);
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+  const [fontSize, setFontSize] = useState<'small' | 'normal' | 'large' | 'extra-large'>('normal');
+
   useEffect(() => {
     // Skip to main content functionality
     const addSkipLink = () => {
@@ -12,7 +16,7 @@ const AccessibilityEnhancer: React.FC = () => {
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-// Focus management for keyboard navigation
+    // Focus management for keyboard navigation
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
@@ -23,7 +27,7 @@ const AccessibilityEnhancer: React.FC = () => {
       document.body.classList.remove('keyboard-navigation');
     };
 
-    // Add focus indicators for keyboard navigation
+    // Add focus styles
     const addFocusStyles = () => {
       const style = document.createElement('style');
       style.textContent = `
@@ -31,9 +35,7 @@ const AccessibilityEnhancer: React.FC = () => {
           outline: 2px solid #8b5cf6 !important;
           outline-offset: 2px !important;
         }
-        
         .keyboard-navigation button:focus,
-        .keyboard-navigation a:focus,
         .keyboard-navigation input:focus,
         .keyboard-navigation textarea:focus,
         .keyboard-navigation select:focus {
@@ -49,8 +51,10 @@ const AccessibilityEnhancer: React.FC = () => {
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
       }
+    };
 
     // Reduced motion mode
+    const root = document.documentElement;
     if (isReducedMotion) {
       root.classList.add('reduced-motion');
     } else {
@@ -63,6 +67,21 @@ const AccessibilityEnhancer: React.FC = () => {
       fontSize === 'extra-large' ? '1.4' : 
       fontSize === 'small' ? '0.9' : '1'
     );
+
+    // Initialize accessibility enhancements
+    addSkipLink();
+    addFocusStyles();
+    addAriaLandmarks();
+
+    // Add event listeners
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Cleanup
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
   }, [isHighContrast, isReducedMotion, fontSize]);
 
   // Keyboard navigation enhancement
@@ -74,14 +93,6 @@ const AccessibilityEnhancer: React.FC = () => {
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
           mainContent.focus();
-        }
-      }
-
-      // Escape key to close modals/dropdowns
-      if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
         }
       }
     };
@@ -108,54 +119,46 @@ const AccessibilityEnhancer: React.FC = () => {
 
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
-<<<<<<< HEAD
     return () => {
-<<<<<<< HEAD
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-      const nav = document.querySelector('nav');
-      if (nav && !nav.getAttribute('role')) {
-        nav.setAttribute('role', 'navigation');
-      }
-
-      const footer = document.querySelector('footer');
-      if (footer && !footer.getAttribute('role')) {
-        footer.setAttribute('role', 'contentinfo');
-      }
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
     };
+  }, []);
 
-    // Add alt text to images without alt attributes
+  // ARIA landmarks enhancement
+  useEffect(() => {
+    const nav = document.querySelector('nav');
+    if (nav && !nav.getAttribute('role')) {
+      nav.setAttribute('role', 'navigation');
+    }
+
+    const footer = document.querySelector('footer');
+    if (footer && !footer.getAttribute('role')) {
+      footer.setAttribute('role', 'contentinfo');
+    }
+
+    const main = document.querySelector('main');
+    if (main && !main.getAttribute('role')) {
+      main.setAttribute('role', 'main');
+    }
+  }, []);
+
+  // Add alt text to images without alt attributes
+  useEffect(() => {
     const addAltText = () => {
       const images = document.querySelectorAll('img:not([alt])');
       images.forEach((img, index) => {
         if (!img.getAttribute('alt')) {
           img.setAttribute('alt', `Image ${index + 1}`);
         }
-
       });
     };
 
-    // Initialize accessibility enhancements
-    addSkipLink();
-    addFocusStyles();
-    addAriaLandmarks();
     addAltText();
-
-    // Add event listeners
-    document.addEventListener('keydown', handleKeyDown);
-    document.addEventListener('mousedown', handleMouseDown);
-
-    // Cleanup
-    return () => {
-      document.removeEventListener('keydown', handleKeyDown);
-      document.removeEventListener('mousedown', handleMouseDown);
-    };
   }, []);
 
-return null;
+  return null; // This component doesn't render anything
 };
 
 export default AccessibilityEnhancer;
