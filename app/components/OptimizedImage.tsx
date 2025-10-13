@@ -25,7 +25,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   className = '',
   priority = false,
   placeholder = 'empty',
-  blurDataURL,
+  blurDataURL = '',
   quality = 75,
   sizes = '100vw',
   loading = 'lazy',
@@ -68,10 +68,18 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100 dark:bg-gray-800">
-          <div className="text-center">
-            <Loader2 className="w-6 h-6 animate-spin text-cyan-500 mx-auto mb-2" />
-            <p className="text-xs text-gray-500">Loading...</p>
-          </div>
+          {placeholder === 'blur' && blurDataURL ? (
+            <img 
+              src={blurDataURL} 
+              alt="" 
+              className="w-full h-full object-cover filter blur-sm"
+            />
+          ) : (
+            <div className="text-center">
+              <Loader2 className="w-6 h-6 animate-spin text-cyan-500 mx-auto mb-2" />
+              <p className="text-xs text-gray-500">Loading...</p>
+            </div>
+          )}
         </div>
       )}
 
