@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@100;200;300;400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
 /* Base styles */
 @layer base {
   html {
@@ -9,7 +12,20 @@
   }
   
   body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    font-family: 'Exo 2', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 25%, #16213e 50%, #0f0f23 75%, #1a1a2e 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', 'Exo 2', sans-serif;
+    font-weight: 700;
+  }
+  
+  .futuristic-text {
+    font-family: 'Orbitron', 'Exo 2', sans-serif;
+    font-weight: 600;
   }
 }
 
@@ -66,6 +82,167 @@
   .gradient-bg {
     @apply bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900;
   }
+  
+  /* Futuristic Components */
+  .cyber-card {
+    @apply bg-slate-800/30 backdrop-blur-sm border border-cyan-500/30 rounded-xl p-6 relative overflow-hidden;
+    background: linear-gradient(135deg, rgba(15, 15, 35, 0.8) 0%, rgba(26, 26, 46, 0.6) 50%, rgba(22, 33, 62, 0.8) 100%);
+    box-shadow: 
+      0 8px 32px rgba(0, 255, 255, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  }
+  
+  .cyber-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    animation: cyberScan 3s linear infinite;
+  }
+  
+  .hologram-card {
+    @apply bg-slate-800/20 backdrop-blur-sm border border-purple-500/30 rounded-xl p-6 relative overflow-hidden;
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+    box-shadow: 
+      0 8px 32px rgba(139, 92, 246, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: hologramFlicker 0.1s linear infinite;
+  }
+  
+  .quantum-card {
+    @apply bg-slate-800/40 backdrop-blur-sm border border-green-500/30 rounded-xl p-6 relative overflow-hidden;
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(16, 185, 129, 0.1) 100%);
+    box-shadow: 
+      0 8px 32px rgba(34, 197, 94, 0.2),
+      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: quantumPulse 2s ease-in-out infinite;
+  }
+  
+  .neon-text {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400;
+    text-shadow: 
+      0 0 5px rgba(0, 255, 255, 0.5),
+      0 0 10px rgba(0, 255, 255, 0.3),
+      0 0 15px rgba(0, 255, 255, 0.2);
+    animation: neonGlow 2s ease-in-out infinite;
+  }
+  
+  .cyber-button {
+    @apply relative inline-flex items-center justify-center px-6 py-3 text-sm font-medium text-white bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900;
+    box-shadow: 
+      0 4px 15px rgba(0, 255, 255, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
+  
+  .cyber-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
+    transform: translateX(-100%);
+    transition: transform 0.6s;
+  }
+  
+  .cyber-button:hover::before {
+    transform: translateX(100%);
+  }
+  
+  .data-stream {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .data-stream::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #00ffff, transparent);
+    animation: dataStream 4s linear infinite;
+  }
+  
+  .matrix-bg {
+    position: relative;
+    background: #000;
+    overflow: hidden;
+  }
+  
+  .matrix-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      linear-gradient(90deg, transparent 98%, rgba(0, 255, 0, 0.03) 100%),
+      linear-gradient(0deg, transparent 98%, rgba(0, 255, 0, 0.03) 100%);
+    background-size: 50px 50px;
+    animation: matrixRain 3s linear infinite;
+  }
+  
+  .energy-border {
+    position: relative;
+    border: 2px solid transparent;
+    background: linear-gradient(45deg, #0f0f23, #1a1a2e) padding-box,
+                linear-gradient(45deg, #00ffff, #ff00ff, #00ff00, #ffff00) border-box;
+    animation: energyWave 2s ease-in-out infinite;
+  }
+  
+  .glitch-text {
+    position: relative;
+    color: #00ffff;
+    font-family: 'Orbitron', monospace;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .glitch-text::before,
+  .glitch-text::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .glitch-text::before {
+    animation: glitch-1 0.5s infinite;
+    color: #ff00ff;
+    z-index: -1;
+  }
+  
+  .glitch-text::after {
+    animation: glitch-2 0.5s infinite;
+    color: #00ff00;
+    z-index: -2;
+  }
+  
+  @keyframes glitch-1 {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+  }
+  
+  @keyframes glitch-2 {
+    0%, 100% { transform: translate(0); }
+    20% { transform: translate(2px, 2px); }
+    40% { transform: translate(2px, -2px); }
+    60% { transform: translate(-2px, 2px); }
+    80% { transform: translate(-2px, -2px); }
+  }
 }
 
 /* Focus styles for accessibility */
@@ -75,7 +252,108 @@
   }
 }
 
-/* Loading animations */
+/* Futuristic Animations */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes neonGlow {
+  0%, 100% {
+    text-shadow: 
+      0 0 5px #00ffff,
+      0 0 10px #00ffff,
+      0 0 15px #00ffff,
+      0 0 20px #00ffff;
+  }
+  50% {
+    text-shadow: 
+      0 0 2px #00ffff,
+      0 0 5px #00ffff,
+      0 0 8px #00ffff,
+      0 0 12px #00ffff;
+  }
+}
+
+@keyframes cyberScan {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+@keyframes hologramFlicker {
+  0%, 100% { opacity: 1; }
+  2% { opacity: 0.8; }
+  4% { opacity: 1; }
+  6% { opacity: 0.9; }
+  8% { opacity: 1; }
+  10% { opacity: 0.95; }
+  12% { opacity: 1; }
+}
+
+@keyframes quantumPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 255, 255, 0.6);
+  }
+}
+
+@keyframes dataStream {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes matrixRain {
+  0% {
+    transform: translateY(-100%);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+@keyframes energyWave {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scaleX(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+}
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -102,6 +380,7 @@
   }
 }
 
+/* Animation Classes */
 .animate-spin {
   animation: spin 1s linear infinite;
 }
@@ -112,6 +391,34 @@
 
 .animate-bounce {
   animation: bounce 1s infinite;
+}
+
+.animate-neon-glow {
+  animation: neonGlow 2s ease-in-out infinite;
+}
+
+.animate-cyber-scan {
+  animation: cyberScan 3s linear infinite;
+}
+
+.animate-hologram-flicker {
+  animation: hologramFlicker 0.1s linear infinite;
+}
+
+.animate-quantum-pulse {
+  animation: quantumPulse 2s ease-in-out infinite;
+}
+
+.animate-data-stream {
+  animation: dataStream 4s linear infinite;
+}
+
+.animate-matrix-rain {
+  animation: matrixRain 3s linear infinite;
+}
+
+.animate-energy-wave {
+  animation: energyWave 2s ease-in-out infinite;
 }
 
 /* Print styles */

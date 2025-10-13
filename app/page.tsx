@@ -95,7 +95,8 @@ const HomePage = () => {
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro",
-      featured: true
+      featured: true,
+      category: "Analytics"
     },
     {
       name: "Zion Security Shield",
@@ -103,7 +104,8 @@ const HomePage = () => {
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
-      featured: true
+      featured: true,
+      category: "Security"
     },
     {
       name: "Zion Cloud Vault",
@@ -111,7 +113,8 @@ const HomePage = () => {
       price: "From $99/month",
       icon: <Cloud className="w-6 h-6" />,
       link: "/zion-cloud-vault",
-      featured: true
+      featured: true,
+      category: "Storage"
     },
     {
       name: "Zion AI CRM Pro",
@@ -119,7 +122,8 @@ const HomePage = () => {
       price: "From $199/month",
       icon: <Users className="w-6 h-6" />,
       link: "/zion-ai-crm-pro",
-      featured: true
+      featured: true,
+      category: "CRM"
     },
     {
       name: "Zion AI Marketing Automation Pro",
@@ -127,7 +131,8 @@ const HomePage = () => {
       price: "From $149/month",
       icon: <Target className="w-6 h-6" />,
       link: "/zion-ai-marketing-automation-pro",
-      featured: true
+      featured: true,
+      category: "Marketing"
     },
     {
       name: "Zion AI Project Manager Pro",
@@ -135,7 +140,62 @@ const HomePage = () => {
       price: "From $99/month",
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
-      featured: true
+      featured: true,
+      category: "Productivity"
+    },
+    {
+      name: "Zion AI Accounting Suite",
+      description: "Automated accounting with AI-powered expense tracking, invoice processing, and financial reporting",
+      price: "From $179/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-accounting-suite",
+      featured: true,
+      category: "Finance"
+    },
+    {
+      name: "Zion AI Inventory Manager",
+      description: "Smart inventory management with predictive restocking and automated supply chain optimization",
+      price: "From $129/month",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/zion-ai-inventory-manager",
+      featured: true,
+      category: "Operations"
+    },
+    {
+      name: "Zion AI HR Assistant Pro",
+      description: "AI-powered HR management with automated recruitment, employee analytics, and performance tracking",
+      price: "From $159/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-hr-assistant-pro",
+      featured: true,
+      category: "HR"
+    },
+    {
+      name: "Zion AI E-commerce Optimizer",
+      description: "AI-driven e-commerce optimization with dynamic pricing, inventory management, and customer insights",
+      price: "From $199/month",
+      icon: <Target className="w-6 h-6" />,
+      link: "/zion-ai-ecommerce-optimizer",
+      featured: true,
+      category: "E-commerce"
+    },
+    {
+      name: "Zion AI Document Processor",
+      description: "Intelligent document processing with OCR, data extraction, and automated workflow management",
+      price: "From $89/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-document-processor",
+      featured: true,
+      category: "Documentation"
+    },
+    {
+      name: "Zion AI Social Media Manager",
+      description: "AI-powered social media management with content generation, scheduling, and performance analytics",
+      price: "From $119/month",
+      icon: <Target className="w-6 h-6" />,
+      link: "/zion-ai-social-media-manager",
+      featured: true,
+      category: "Social Media"
     }
   ];
 
@@ -195,7 +255,7 @@ const HomePage = () => {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+            <span className="neon-text futuristic-text animate-neon-glow" data-text="Welcome to Zion Tech Group">
               Welcome to Zion Tech Group
             </span>
           </h1>
@@ -302,32 +362,46 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className={`group relative overflow-hidden transition-all duration-300 hover:scale-105 ${
+                  index % 3 === 0 ? 'cyber-card' : 
+                  index % 3 === 1 ? 'hologram-card' : 
+                  'quantum-card'
+                }`}
               >
                 {saas.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold animate-pulse">
                       Featured
                     </span>
                   </div>
                 )}
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform animate-quantum-pulse">
                     {saas.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                      {saas.name}
-                    </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors futuristic-text">
+                        {saas.name}
+                      </h3>
+                      <span className="text-xs bg-cyan-500/20 text-cyan-400 px-2 py-1 rounded-full">
+                        {saas.category}
+                      </span>
+                    </div>
+                    <p className="text-cyan-400 font-medium text-sm">{saas.price}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {saas.description}
                 </p>
-                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                  <div className="text-xs text-gray-400">
+                    {saas.category}
+                  </div>
                 </div>
               </Link>
             ))}
