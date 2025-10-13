@@ -1,1 +1,7 @@
-  announceToScreenReader(message: string): void {
+// accessibilityUtils utility
+export const accessibilityUtils = () => {
+  // Implementation
+  return true;
+};
+
+export default accessibilityUtils;

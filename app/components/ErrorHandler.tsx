@@ -1,4 +1,0 @@
-      .toISOString()
-      })
-    } catch (reportingError) {
-      }

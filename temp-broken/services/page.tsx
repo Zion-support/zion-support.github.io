@@ -11,4 +11,3 @@ export default function PagePage() {
       </div>
     </div>
   );
->>>>>>> cursor/fix-errors-and-merge-to-main-9706:temp-broken/services/page.tsx

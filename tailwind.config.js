@@ -26,12 +26,3 @@ export default {
       },
     },
   },
-<<<<<<< HEAD
-//   plugins: [],
-  };,
-    plugins: [];
-};
-=======
-  plugins: [],
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-a28c

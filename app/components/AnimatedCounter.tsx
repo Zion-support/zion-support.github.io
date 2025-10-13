@@ -1,1 +1,0 @@
-    const animate = (currentTime: number) => {,

@@ -4,8 +4,6 @@ import OptimizedImage from '../../app/components/OptimizedImage';
 // Mock framer-motion
 jest.mock('framer-motion', () => ({
   motion: {
-    div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
-    img: ({ children, ...props }: any) => <img {...props}>{children}</img>,
   },
 }));
 const mockProps = {
@@ -27,4 +25,3 @@ describe('OptimizedImage Component', () => {
     const wrapper = image.closest('div');
     expect(wrapper).toHaveClass('custom-class');
   });
-});

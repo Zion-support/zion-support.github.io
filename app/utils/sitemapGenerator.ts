@@ -1,6 +1,0 @@
-
-  cleanup: () => {
-    },
-};
-
-export default Sitemapgenerator;

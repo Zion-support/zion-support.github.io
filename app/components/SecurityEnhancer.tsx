@@ -1,89 +1,60 @@
-'use client;
-
-import React, { useEffect } from react;
-
-interface SecurityEnhancerProps {}
-  enableCSP?: boolean;
-
-  enableHSTS?: boolean;
-
-  enableXSSProtection?: boolean;
-
-  enableClickjackingProtection?: boolean;
-
-  enableContentTypeSniffing?: boolean;
-
-}
-
-;
-
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({
-  useEffect(() => {
-    if (typeof window === 'undefined) {
-import React from 'react';
 'use client';
-import React, {useEffect}from 'react';
-interface SecurityEnhancerProps {children: React.ReactNode;,}}}
-const SecurityEnhancer: React.FC<SecurityEnhancerProps> = ({children ,}) => {useEffect(() => {
-    // Security enhancement logic;
-    const enhanceSecurity = (;
-      // Add security headers;
-      const securityHeaders = {
-        'X-Content-Type-Options': 'nosniff',
-        'X-Frame-Options': 'DENY',
-        'X-XSS-Protection': '1; mode=block',) => {
-  return($3;)
-  )}'Referrer-Policy': 'strict-origin-when-cross-origin';}
-      }
-// Add CSP meta tag;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-    }
-
-    // Content Security Policy
-    if ($1) { const cspMeta = document.createElement(meta);;
-
-      cspMeta.httpEquiv = Content-Security-Policy;
-
-    if ($1) { const xssMeta = document.createElement(meta);;
-
-      xssMeta.httpEquiv = X-XSS-Protection;
-
-      xssMeta.content = 1; mode=block;
-
-    if ($1) { const frameOptionsMeta = document.createElement(meta);;
-
-      frameOptionsMeta.httpEquiv = X-Frame-Options;
-
-      frameOptionsMeta.content = DENY;
-
-    if ($1) { const contentTypeMeta = document.createElement(meta);;
-
-      contentTypeMeta.httpEquiv = X-Content-Type-Options;
-
-      contentTypeMeta.content = nosniff;
-
-
-const originalFetch = window.fetch;;
-
-    window.fetch = async (input: RequestInfo | URL, init?: RequestInit) => {;
-
-const headers = new Headers(init?.headers);;
-
-      // Add security headers
-      headers.set('X-Requested-With', XMLHttpRequest);
-
-      headers.set('X-Content-Type-Options', nosniff);
-
-      return originalFetch(input, {
-
-const sanitizeInput = (input: string): string => {;;
-
-
-const inputs = document.querySelectorAll(input, textarea, select);;
-
-    inputs.forEach(input => {
-      input.addEventListener(input, (e) => {;
-
-const target = e.target as HTMLInputElement;;
-
-        if (target.value !== sanitizeInput(target.value)) {
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>SecurityEnhancer - Zion Tech Group</title>
+        <meta name="description" content="Professional securityenhancer services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            SecurityEnhancer
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional securityenhancer solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge securityenhancer solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored securityenhancer implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your securityenhancer needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

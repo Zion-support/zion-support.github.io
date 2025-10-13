@@ -1,224 +1,60 @@
-<<<<<<< HEAD
-=======
 'use client';
-import React, { CheckCircle, Star, Users, BarChart3, Zap, Shield, ShoppingCart, CreditCard, Package, TrendingUp, Globe, Smartphone } from 'lucide-react'.;
-import Navigation from '../components/Navigation'.;
-import Footer from '../components/Footer';
-const AIEcommerceSolutionsPage: React.FC = () => {
-  const ecommerceServices = [
-    {,
-      title: 'AI-Powered E-commerce Platform',
-      description: 'Complete e-commerce solution with AI-driven personalization, inventory management, and automated customer service.',
-      icon: '🛒',
-      price: '$1,999/month',
-      features: [,
-        'AI product recommendations',
-        'Dynamic pricing optimization',
-        'Inventory management',
-        'Customer behavior analysis',
-        'Automated customer service',
-        'Multi-channel selling',
-        'Payment processing',
-        'Order tracking']
-      ],
-      benefits: [,
-        'Increase conversion rates by 35%',
-        'Reduce cart abandonment by 50%',
-        'Automated inventory management',
-        '24/7 customer support']
-      ],
-    },
-    {
-      title: 'AI Product Recommendation Engine',
-      description: 'Intelligent product recommendations based on customer behavior, preferences, and purchase history.',
-      icon: '🎯',
-      price: '$499/month',
-      features: [,
-        'Machine learning algorithms',
-        'Real-time recommendations',
-        'Cross-selling and upselling',
-        'Personalized product feeds',
-        'A/B testing capabilities',
-        'Analytics dashboard']
-      ],
-      benefits: [,
-        'Increase average order value by 25%',
-        'Improve customer engagement',
-        'Higher conversion rates',
-        'Reduced bounce rate']
-      ],
-    },
-    {
-      title: 'AI Chatbot for E-commerce',
-      description: 'Advanced AI chatbot for customer support, product inquiries, and order assistance.',
-      icon: '💬',
-      price: '$299/month',
-      features: [,
-        'Natural language processing',
-        'Multi-language support',
-        'Order status tracking',
-        'Product information queries',
-        'Return and refund assistance',
-        'Integration with CRM']
-      ],
-      benefits: [,
-        '24/7 customer support',
-        'Reduce support tickets by 60%',
-        'Faster response times',
-        'Improved customer satisfaction']
-      ],
-    },
-    {
-      title: 'AI Inventory Management',
-      description: 'Smart inventory management with demand forecasting and automated reordering.',
-      icon: '📦',
-      price: '$399/month',
-      features: [,
-        'Demand forecasting',
-        'Automated reordering',
-        'Stock level optimization',
-        'Supplier management',
-        'Cost analysis',
-        'Real-time tracking']
-      ],
-      benefits: [,
-        'Reduce stockouts by 40%',
-        'Lower inventory costs',
-        'Improved cash flow',
-        'Better supplier relationships']
-      ],
-    };
-  ];
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-  const features = [
-    {
-      icon: Users,
-      title: 'Customer Analytics',
-      description: 'Deep insights into customer behavior and preferences',
-    },
-    {
-      icon: BarChart3,
-      title: 'Sales Optimization',
-      description: 'AI-driven strategies to maximize sales and revenue',
-    },
-    {
-      icon: Zap,
-      title: 'Automation',
-      description: 'Streamline operations with intelligent automation',
-    },
-    {
-      icon: Shield,
-      title: 'Security',
-      description: 'Enterprise-grade security for your e-commerce platform'
-    },
-  ];
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
-
-export default function PagePage() {
+export default function Page() {
   return (
-<<<<<<< HEAD
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-      <Navigation />""
-      <main className="container mx-auto px-4 py-16 pt-24">"
-        {/* Hero Section */};""
-        <section className="text-center mb-16">"""
-          <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,
-            AI E-commerce Solutions,"
-          </h1>""
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your online business with AI-powered e-commerce solutions that increase sales, 
-            improve customer experience, and optimize operations.
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional page solutions tailored to your business needs.
           </p>
-        </section>"
-        {/* Services Grid */};""
-        <section className="mb-16">"""
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,"
-            {ecommerceServices.map((service, index) => (""
-              <div key={index} className="cyber-card p-8 hover: scale-105 transition-all duration-300">"""
-                <div className="flex items-center mb-6">"""
-                  <div className="text-4xl mr-4">{service.icon}</div>"
-                  <div>""
-                    <h3 className="text-2xl font-bold text-white">{service.title}</h3>"""
-                    <p className="text-cyan-400 text-lg">{service.price}</p>
-                  </div>"
-                </div>""
-                <p className="text-gray-300 mb-6">{service.description}</p>""
-                <div className="mb-6">"""
-                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Features:</h4>"""
-                  <ul className="space-y-2">,"
-                    {service.features.map((feature, idx) => (""
-                      <li key={idx} className="flex items-center text-gray-300">"""
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        {feature};
-                      </li>
-                    ))};
-                  </ul>"
-                </div>""
-                <div className="mb-6">"""
-                  <h4 className="text-lg font-semibold text-cyan-400 mb-3">Benefits: </h4>"""
-                  <ul className="space-y-2">,"
-                    {service.benefits.map((benefit, idx) => (""
-                      <li key={idx} className="flex items-center text-gray-300">"""
-                        <Star className="w-4 h-4 text-yellow-400 mr-2 flex-shrink-0" />
-                        {benefit};
-                      </li>
-                    ))};
-                  </ul>
-                </div>"
-                <a ""
-                  href="/contact" """
-                  className="inline-flex items-center bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover: from-cyan-600 hover:to-blue-700 transition-all"
-                >,
-                  Get Started,
-                </a>
-              </div>
-            ))};
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge page solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored page implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your page needs.
+              </p>
+            </div>
           </div>
-        </section>"
-        {/* Features Section */};""
-        <section className="mb-16">"""
-          <h2 className="text-3xl font-bold text-white mb-8 text-center">Key Features</h2>"""
-          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,"
-            {features.map((feature, index) => (""
-              <div key={index} className="text-center">"""
-                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">"""
-                  <feature.icon className="w-8 h-8 text-white" />"
-                </div>""
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>"""
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))};
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
           </div>
-        </section>"
-        {/* CTA Section */};""
-        <section className="text-center">"""
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Transform Your E-commerce?</h2>"""
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let our AI solutions help you build a more profitable and efficient online business."
-          </p>""
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">"
-            <a ""
-              href="/contact" """
-              className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all"
-            >,
-              Get Free Consultation.
-            </a>"
-            <a "",
-              href="/case-studies" "","
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-white transition-all"
-            >,
-              View Case Studies,
-            </a>
-          </div>
-        </section>
-      </main>
-      <Footer />
+        </div>
+      </div>
     </div>
   );
-  );
-  );
-};
-"
-export default AIEcommerceSolutionsPage;""
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
+}

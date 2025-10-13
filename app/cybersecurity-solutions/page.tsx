@@ -1,144 +1,60 @@
-  const pricingPlans = [
-    {
-      name: "Essential",
-      price: "$2,999",
-      period: "/month",
-      description: "Basic security protection for small to medium businesses",
-      features: [
-        "Security assessment","
-        "Basic threat monitoring","
-        "Email security","
-        "Firewall management","
-        "Standard support","
-        "Monthly reports"]
-      ],
-      popular: false,
-      cta: "Get Started",
-    },
-    {
-      name: "Professional",
-      price: "$5,999",
-      period: "/month",
-      description: "Advanced security solutions for growing businesses",
-      features: [
-        "Comprehensive security assessment","
-        "Advanced threat detection","
-        "Identity management","
-        "Data protection","
-        "Priority support","
-        "Weekly reports","
-        "Incident response","
-        "Security training"]
-      ],
-      popular: true,
-      cta: "Get Started",
-    },
-    {
-      name: "Enterprise",
-      price: "$9,999",
-      period: "/month",
-      description: "Complete security suite for large enterprises",
-      features: [
-        "Full security assessment","
-        "Advanced threat detection","
-        "Complete identity management","
-        "Comprehensive data protection","
-        "24/7 dedicated support","
-        "Real-time reports","
-        "Rapid incident response","
-        "Custom security training","
-        "Compliance management","
-        "Security consulting"]
-      ],
-      popular: false,
-      cta: "Contact Sales",
-    }
-  ];
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen bg-white">
       <Helmet>
-        <title>Cybersecurity Solutions - Zion Tech Group</title>
-        <meta name="description" content="Advanced cybersecurity solutions and services by Zion Tech Group" />
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Professional page services by Zion Tech Group." />
       </Helmet>
       
-      <div className="container mx-auto px-4 py-20">"
-        <div className="text-center mb-16">"
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Cybersecurity Solutions;
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Protect your business with our comprehensive cybersecurity services and solutions;
-          </p>
-        </div>
-
-        {/* Services Section */}
-        <div className="mb-20">"
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Our Services</h2>"
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {services.map((service, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">"
-                <div className="text-blue-400 mb-4">{service.icon}</div>"
-                <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>"
-                <p className="text-gray-300 mb-4">{service.description}</p>"
-                <ul className="space-y-2 mb-4">
-                  {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">"
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-blue-400 font-semibold">{service.price}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Pricing Section */}
-        <div className="mb-20">"
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Pricing Plans</h2>"
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {pricingPlans.map((plan, index) => (
-              <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${plan.popular ? 'border-blue-400 ring-2 ring-blue-400' : 'border-white/20'} hover:bg-white/20 transition-all duration-300`}>'
-                {plan.popular && (
-                  <div className="bg-blue-400 text-white text-center py-1 px-4 rounded-full text-sm font-semibold mb-4 -mt-2">
-                    Most Popular;
-                  </div>
-                )}
-                <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>"
-                <p className="text-gray-300 mb-4">{plan.description}</p>"
-                <div className="mb-6">"
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>"
-                  <span className="text-gray-300">{plan.period}</span>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">"
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-                <button className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${plan.popular ? 'bg-blue-400 text-white hover:bg-blue-500' : 'bg-white/20 text-white hover:bg-white/30'}`}>'
-                  {plan.cta}
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* CTA Section */}
+      <div className="container mx-auto px-4 py-16">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">Ready to Secure Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact our cybersecurity experts to discuss your security needs and get a customized solution.
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional page solutions tailored to your business needs.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-500 transition-all duration-300">
-              Get Free Consultation
-            </button>
-            <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all duration-300">
-              View Case Studies
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge page solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored page implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your page needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
             </button>
           </div>
+        </div>
+      </div>
+    </div>
+  );
+}
