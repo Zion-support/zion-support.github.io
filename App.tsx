@@ -20,6 +20,8 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
+import LazyImage from "./app/components/LazyImage";
+import SearchComponent from "./app/components/SearchComponent";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));

@@ -1,11 +1,13 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Search } from 'lucide-react'
+import SearchComponent from './SearchComponent'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -18,6 +20,10 @@ const Navigation = React.memo(() => {
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
+
+  const toggleSearch = useCallback(() => {
+    setIsSearchOpen(!isSearchOpen)
+  }, [isSearchOpen])
 
   const aiServices = useMemo(() => [
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
@@ -151,6 +157,14 @@ const Navigation = React.memo(() => {
               )}
             </div>
 
+            <button
+              onClick={toggleSearch}
+              className="p-2 text-gray-300 hover:text-cyan-400 transition-colors rounded-lg hover:bg-cyan-500/10"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+
             <Link
               to="/consultation"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
@@ -247,6 +261,14 @@ const Navigation = React.memo(() => {
                 )}
               </div>
 
+              <button
+                onClick={toggleSearch}
+                className="w-full px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium flex items-center justify-center space-x-2"
+              >
+                <Search className="w-4 h-4" />
+                <span>Search</span>
+              </button>
+
               <Link
                 to="/consultation"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-4 py-3 rounded-lg transition-all duration-300 text-center font-semibold mt-4 flex items-center justify-center space-x-2"
@@ -259,6 +281,12 @@ const Navigation = React.memo(() => {
           </div>
         )}
       </div>
+
+      {/* Search Component */}
+      <SearchComponent
+        isOpen={isSearchOpen}
+        onClose={() => setIsSearchOpen(false)}
+      />
     </nav>
   )
 })

@@ -1,43 +1,58 @@
-const CACHE_NAME = 'zion-tech-group-v1';
-const STATIC_CACHE = 'static-v1';
-const DYNAMIC_CACHE = 'dynamic-v1';
+// Service Worker for Zion Tech Group PWA
+const CACHE_NAME = 'zion-tech-group-v1.0.0';
+const STATIC_CACHE = 'zion-static-v1.0.0';
+const DYNAMIC_CACHE = 'zion-dynamic-v1.0.0';
 
+// Assets to cache immediately
 const STATIC_ASSETS = [
   '/',
   '/about',
   '/contact',
   '/services',
-  '/manifest.json',
-  '/favicon.svg'
+  '/pricing',
+  '/static/js/bundle.js',
+  '/static/css/main.css',
+  '/manifest.json'
 ];
 
 // Install event - cache static assets
 self.addEventListener('install', (event) => {
+  console.log('Service Worker installing...');
   event.waitUntil(
     caches.open(STATIC_CACHE)
       .then((cache) => {
+        console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
       })
       .then(() => {
+        console.log('Static assets cached successfully');
         return self.skipWaiting();
+      })
+      .catch((error) => {
+        console.error('Failed to cache static assets:', error);
       })
   );
 });
 
 // Activate event - clean up old caches
 self.addEventListener('activate', (event) => {
+  console.log('Service Worker activating...');
   event.waitUntil(
-    caches.keys().then((cacheNames) => {
-      return Promise.all(
-        cacheNames.map((cacheName) => {
-          if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    }).then(() => {
-      return self.clients.claim();
-    })
+    caches.keys()
+      .then((cacheNames) => {
+        return Promise.all(
+          cacheNames.map((cacheName) => {
+            if (cacheName !== STATIC_CACHE && cacheName !== DYNAMIC_CACHE) {
+              console.log('Deleting old cache:', cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+      .then(() => {
+        console.log('Service Worker activated');
+        return self.clients.claim();
+      })
   );
 });
 
@@ -59,13 +74,16 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(request)
       .then((cachedResponse) => {
+        // Return cached version if available
         if (cachedResponse) {
+          console.log('Serving from cache:', request.url);
           return cachedResponse;
         }
 
+        // Otherwise fetch from network
         return fetch(request)
           .then((response) => {
-            // Don't cache if not a valid response
+            // Don't cache non-successful responses
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
@@ -73,7 +91,7 @@ self.addEventListener('fetch', (event) => {
             // Clone the response
             const responseToCache = response.clone();
 
-            // Cache dynamic content
+            // Cache the response
             caches.open(DYNAMIC_CACHE)
               .then((cache) => {
                 cache.put(request, responseToCache);
@@ -81,60 +99,105 @@ self.addEventListener('fetch', (event) => {
 
             return response;
           })
-          .catch(() => {
+          .catch((error) => {
+            console.error('Fetch failed:', error);
+            
             // Return offline page for navigation requests
             if (request.mode === 'navigate') {
-              return caches.match('/');
+              return caches.match('/offline.html');
             }
+            
+            throw error;
           });
       })
   );
 });
 
-// Background sync for form submissions
+// Background sync for offline form submissions
 self.addEventListener('sync', (event) => {
-  if (event.tag === 'contact-form') {
+  if (event.tag === 'contact-form-sync') {
+    event.waitUntil(syncContactForm());
+  }
+});
+
+// Push notification handling
+self.addEventListener('push', (event) => {
+  const options = {
+    body: event.data ? event.data.text() : 'New update from Zion Tech Group',
+    icon: '/icon-192x192.png',
+    badge: '/badge-72x72.png',
+    vibrate: [100, 50, 100],
+    data: {
+      dateOfArrival: Date.now(),
+      primaryKey: 1
+    },
+    actions: [
+      {
+        action: 'explore',
+        title: 'Explore',
+        icon: '/icon-192x192.png'
+      },
+      {
+        action: 'close',
+        title: 'Close',
+        icon: '/icon-192x192.png'
+      }
+    ]
+  };
+
+  event.waitUntil(
+    self.registration.showNotification('Zion Tech Group', options)
+  );
+});
+
+// Notification click handling
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+
+  if (event.action === 'explore') {
     event.waitUntil(
-      // Handle form submission sync
-      handleFormSync()
+      clients.openWindow('/')
     );
   }
 });
 
-async function handleFormSync() {
+// Helper function for contact form sync
+async function syncContactForm() {
   try {
-    // Get pending form data from IndexedDB
-    const pendingForms = await getPendingForms();
+    // Get pending form submissions from IndexedDB
+    const pendingSubmissions = await getPendingSubmissions();
     
-    for (const form of pendingForms) {
+    for (const submission of pendingSubmissions) {
       try {
         const response = await fetch('/api/contact', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(form.data)
+          body: JSON.stringify(submission.data)
         });
 
         if (response.ok) {
-          // Remove from pending forms
-          await removePendingForm(form.id);
+          // Remove from pending submissions
+          await removePendingSubmission(submission.id);
+          console.log('Contact form synced successfully');
         }
       } catch (error) {
-        console.error('Failed to sync form:', error);
+        console.error('Failed to sync contact form:', error);
       }
     }
   } catch (error) {
-    console.error('Form sync failed:', error);
+    console.error('Background sync failed:', error);
   }
 }
 
-// Helper functions for IndexedDB
-async function getPendingForms() {
-  // Implementation would go here
+// IndexedDB helper functions (simplified)
+async function getPendingSubmissions() {
+  // Implementation would use IndexedDB
   return [];
 }
 
-async function removePendingForm(id) {
-  // Implementation would go here
+async function removePendingSubmission(id) {
+  // Implementation would use IndexedDB
+  return true;
 }
