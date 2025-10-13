@@ -1,24 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-// Simple wrapper function to replace withSentry
-// const withSentry = (handler) => handler;
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 
@@ -61,27 +43,9 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       success: true,
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
       message: 'Onsite request submitted successfully',
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
       message: 'Onsite request submitted successfully',
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-=======
-      message: 'Onsite request submitted successfully',
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
       id: newRequest.id
     }));
   } catch {
@@ -90,4 +54,3 @@ export default function handler(req, res) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to save request' }));
   }
-}

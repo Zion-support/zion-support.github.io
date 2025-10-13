@@ -28,9 +28,3 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     </>
   );
 };
-<<<<<<< HEAD
-export default EnhancedSEO;
-=======
-
-export default EnhancedSEO;
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a

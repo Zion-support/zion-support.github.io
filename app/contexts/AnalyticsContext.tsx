@@ -1,75 +1,51 @@
-'use client';
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (pageName: string) => void;
-  setUser: (userId: string, properties?: Record<string, any>) => void;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  isEnabled: boolean;
-<<<<<<< HEAD
-  isEnabled: boolean;
-  isEnabled: boolean;
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-  isEnabled: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
-  isEnabled: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-  isEnabled: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
-  isEnabled: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
-}
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-=======
+  trackPageView: (page: string) => void;
   isEnabled: boolean;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
->>>>>>> cursor/fix-errors-and-merge-to-main-fb5a
-export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const useAnalytics = () => {
+  const context = useContext(AnalyticsContext);
+  if (!context) {
+    throw new Error('useAnalytics must be used within an AnalyticsProvider');
+  }
+  return context;
+};
+
+interface AnalyticsProviderProps {
+  children: React.ReactNode;
+}
+
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   const [isEnabled, setIsEnabled] = useState(false);
-  const [userId, setUserId] = useState<string | null>(null);
 
   useEffect(() => {
-    // Check if analytics is enabled
-    setIsEnabled(true);
+    setIsEnabled(process.env.NODE_ENV === 'production');
   }, []);
 
   const trackEvent = (eventName: string, properties?: Record<string, any>) => {
     if (!isEnabled) return;
-    // Track event logic here
-    console.log('Analytics Event:', eventName, properties);
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, properties);
+    }
   };
 
-  const trackPageView = (pageName: string) => {
+  const trackPageView = (page: string) => {
     if (!isEnabled) return;
-    // Track page view logic here
-    console.log('Page View:', pageName);
-  };
-
-  const setUser = (newUserId: string, properties?: Record<string, any>) => {
-    setUserId(newUserId);
-    console.log('User Set:', newUserId, properties);
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_path: page,
+      });
+    }
   };
 
   const value: AnalyticsContextType = {
     trackEvent,
     trackPageView,
-    setUser,
     isEnabled,
   };
 
@@ -79,5 +55,3 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     </AnalyticsContext.Provider>
   );
 };
-
-export { AnalyticsContext };
