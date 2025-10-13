@@ -9,7 +9,7 @@ function cleanMergeConflicts(filePath) {
     let content = fs.readFileSync(filePath, 'utf8');
     
     // Check if file has merge conflict markers
-    if (!content.includes('<<<<<<<') && !content.includes('=======') && !content.includes('>>>>>>>')) {
+    if (!content.includes('<<<<<<<') && !content.includes('') && !content.includes('>>>>>>>')) {
       return false; // No conflicts to clean
     }
     
@@ -31,7 +31,7 @@ function cleanMergeConflicts(filePath) {
         continue;
       }
       
-      if (line.startsWith('=======')) {
+      if (line.startsWith('')) {
         continue; // Skip separator line
       }
       
@@ -39,12 +39,12 @@ function cleanMergeConflicts(filePath) {
         inConflict = false;
         conflictEnd = i;
         
-        // For now, we'll keep the first version (before =======)
+        // For now, we'll keep the first version (before )
         // In a real scenario, you'd want to manually review these
         if (conflictStart >= 0) {
           // Keep lines from before the conflict
           for (let j = conflictStart; j < i; j++) {
-            if (!lines[j].startsWith('<<<<<<<') && !lines[j].startsWith('=======')) {
+            if (!lines[j].startsWith('<<<<<<<') && !lines[j].startsWith('')) {
               cleanedLines.push(lines[j]);
             }
           }

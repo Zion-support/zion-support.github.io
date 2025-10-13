@@ -35,7 +35,10 @@ export default tseslint.config(
       "backup*/**",
       "backup-problematic*/**",
       "backup-unused-components/**",
+
       "corrupted-src-backup/**",
+
+
       "cleanup-*.cjs",
       "comprehensive-*.cjs",
       "fix-*.cjs",
@@ -46,6 +49,7 @@ export default tseslint.config(
       "src/**",
       "utils/**",
       "*.cjs",
+
       "*.js",
       "*.py",
       "*.sh",
@@ -61,6 +65,9 @@ export default tseslint.config(
       "ci-cd-reports/**",
       "content/**",
       "contracts/**"
+
+      "*.js"
+
     ],
   }
 );
