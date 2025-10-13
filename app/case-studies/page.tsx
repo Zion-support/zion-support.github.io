@@ -23,6 +23,7 @@ import { ArrowLeft, TrendingUp, CheckCircle } from 'lucide-react';
 
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, ExternalLink, CheckCircle, TrendingUp, Users, Award } from 'lucide-react';
@@ -42,6 +43,14 @@ interface CaseStudy {
 
 const CaseStudiesPage: React.FC = () => {
   const caseStudies: CaseStudy[] = [
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight, ExternalLink, Building, Users, TrendingUp } from 'lucide-react';
+
+const CaseStudiesPage: React.FC = () => {
+  const caseStudies = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
     {
       id: '1',
       title: 'AI-Powered Customer Service Transformation',

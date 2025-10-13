@@ -1,4 +1,26 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useState } from 'react';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+
+interface FormData {name: string,}
+  email: string,
+  company: string,
+  phone: string,
+  service: string,
+  message: string,}interface FormStatus {type: 'idle' | 'loading' | 'success' | 'error';,}
+  message: string,}const [formData, setFormData] = useState<FormData>({name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: '',})
+
+  const [status, setStatus] = useState<FormStatus>({type: 'idle',
+    message: '',})
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
     const {name, value}}= e.target;
     setFormData(prev => ({)

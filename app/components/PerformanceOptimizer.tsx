@@ -5,6 +5,11 @@
 import React, { useEffect } from 'react';
 =======
 'use client';
+<<<<<<< HEAD
+=======
+import React, { useEffect, useState, useCallback } from 'react';
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 import React, { useEffect, useState, useCallback } from 'react';
 import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react';

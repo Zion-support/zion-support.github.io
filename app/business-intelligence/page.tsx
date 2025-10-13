@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+<<<<<<< HEAD
 
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
@@ -56,6 +57,43 @@ const BusinessIntelligencePage: React.FC = () => {
               <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
                 Schedule Demo
               </button>
+=======
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react';
+const BusinessIntelligencePage: React.FC = () => {
+  const features = [
+    {}];
+  const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible business intelligence solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
+      <Helmet />
+        <title>Business Intelligence | Zion Tech Group</title>
+        <meta name="description" content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business." />
+      </Helmet>
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-white mb-6">Business Intelligence;</h1>
+  </
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced business intelligence solutions.</p>
+            Powered by cutting-edge AI technology and industry expertise.
+          </p>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our business intelligence solutions deliver unmatched performance, security, and scalability.</p>
+          </p>
+        </div>
+          {features.map((feature, index) => (
+            <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover: bg-white/20 transition-all duration-300">,</div>
+              <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+              <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description</p>}</p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
             </div>
           </div>
         </div>

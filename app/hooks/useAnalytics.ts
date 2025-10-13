@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useContext } from 'react';
 import { AnalyticsContext } from '../contexts/AnalyticsContext';
 
@@ -8,3 +9,29 @@ export const useAnalytics = () => {
   }
   return context;
 };
+=======
+import { useCallback } from 'react';
+interface AnalyticsEvent {event_category: string,}
+  event_label: string,
+  value?: number;}}
+export const useAnalytics = (;
+  const trackEvent = useCallback((eventName: string, parameters: AnalyticsEvent) => {,
+    ) => {
+  return($3;)
+  )}if (typeof window !== 'undefined' && 'gtag' in window) {}(window as Window & {gtag?: (...args: unknown[]) => void ,}).gtag?.('event', eventName, parameters);
+    }
+  }, []);
+const trackPageView = useCallback((pagePath: string, pageTitle: string) => {,
+    if (typeof window !== 'undefined' && 'gtag' in window) {}(window as Window & {gtag?: (...args: unknown[]) => void ,}).gtag?.('config', 'GA_MEASUREMENT_ID', {page_path: pagePath,
+        page_title: pageTitle,}})
+    }
+  }, []);
+const trackConversion = useCallback((conversionId: string, value?: number) => {if (typeof window !== 'undefined' && 'gtag' in window) {}(window as Window & {gtag?: (...args: unknown[]) => void ,}).gtag?.('event', 'conversion', {send_to: conversionId,
+        value: value,}})
+    }
+  }, []);
+return {trackEvent,;}
+    trackPageView,;
+    trackConversion,}}
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232

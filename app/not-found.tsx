@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -38,6 +39,15 @@ const NotFoundPage = () => {
             >
               Learn More
             </Link>
+=======
+import Link from 'next/link';
+import { Home, ArrowLeft, RefreshCw } from 'lucide-react';
+export default function NotFound() {return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4"></div>)
+      <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center"></div>
+        <div className="flex justify-center mb-6"></div>
+          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center"></div>
+            <span className="text-4xl">404</span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
           </div>
         </div>
       </div>

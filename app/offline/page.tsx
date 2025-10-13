@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 /**
  * Offline Page
@@ -31,6 +32,42 @@ const OfflinePage = () => {
                 d='M18.364 5.636a9 9 0 010 12.728m0 0l-2.829-2.829m2.829 2.829L21 21M15.536 8.464a5 5 0 010 7.072m0 0l-2.829-2.829m-4.243 2.829a4.978 4.978 0 01-1.414-2.83m-1.414 5.658a9 9 0 01-2.167-9.238m7.824 2.167a1 1 0 111.414 1.414m-1.414-1.414L3 3m8.293 8.293l1.414 1.414'
               />
             </svg>
+=======
+import { Helmet } from 'react-helmet-async';
+
+  return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
+      <Helmet />
+        <title>Page | Zion Tech Group</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+      {/* Hero Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+        </section>
+        <div className="max-w-7xl mx-auto"></div>
+          <div className="text-center"></div>
+            <h1>
+              <span>Page;</span>
+              </span>
+              <br>
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p>Transform your business with our advanced page solutions.;</p>
+              Powered by cutting-edge AI technology and industry expertise.
+            </p>
+            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+              <button>Get Started;</button>
+                <ArrowRight>
+              </button>
+              <button>Learn More;</button>
+              </button>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
           </div>
           <h1 className='text-4xl font-bold text-gray-900 mb-4'>
             You&apos;re Offline

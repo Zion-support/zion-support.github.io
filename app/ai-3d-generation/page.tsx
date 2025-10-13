@@ -90,8 +90,30 @@ import { Helmet } from 'react-helmet-async';
     {icon: TrendingUp,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
+<<<<<<< HEAD
+<<<<<<< HEAD
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
+<<<<<<< HEAD
     'Gain competitive advantage with advanced technology';
+=======
+  ]
+=======
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+  }
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+];
+=======
+      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+  },
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+const benefits = [
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    'Gain competitive advantage with advanced technology'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   ];
 return(<>)
       <Helmet />

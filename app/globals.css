@@ -361,7 +361,45 @@ body {
   transform: translateY(-2px);
 }
 
+<<<<<<< HEAD
 /* Cyber Navigation */
+=======
+/* Futuristic cards */
+.card-futuristic {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.card-futuristic:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+/* Futuristic backgrounds */
+.bg-cyber-grid {
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.bg-dots {
+  background-image: radial-gradient(circle, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Responsive futuristic elements */
+@media (max-width: 768px) {
+  .neon-text {
+    animation: none;
+    text-shadow: 0 0 5px currentColor;
+/* Advanced Futuristic Effects */
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 .cyber-nav {
   background: rgba(15, 23, 42, 0.95);
   backdrop-filter: blur(20px);
@@ -528,7 +566,10 @@ body {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+<<<<<<< HEAD
     scroll-behavior: auto !important;
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   }
   
   /* Screen reader only content */

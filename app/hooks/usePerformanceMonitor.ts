@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useEffect, useCallback } from react;
 
@@ -505,6 +506,10 @@ export const useResourceTiming = () => {
 
     return () => {
       window.removeEventListener(load, handleLoad);
+=======
+'use client';
+import { useEffect } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 export const usePerformanceMonitor = () => {useEffect(() => {
       // This is a simplified version - in production you'd use the web-vitals library;

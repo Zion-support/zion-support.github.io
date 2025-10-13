@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import {Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe}}from 'lucide-react';
 const EnhancedServicesShowcase: React.FC = () => {,
       stats: '300% ROI'
@@ -8,6 +9,9 @@ import React from "react";
 import { ArrowRight, CheckCircle, Brain, Zap, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
 
+=======
+import { Brain, Cloud, Shield, Zap, ArrowRight, CheckCircle, Star, TrendingUp, Users, Award, Clock, Globe } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [
     {

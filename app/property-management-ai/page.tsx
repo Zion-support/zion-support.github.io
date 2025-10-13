@@ -1,8 +1,15 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import {Helmet}}from 'react-helmet-async';
 import {Home, Users, DollarSign, BarChart, Shield, Zap}}from 'lucide-react';
 const PropertyManagementAIPage: React.FC = () => {,
+=======
+import { Helmet } from 'react-helmet-async';
+import { Home, Users, DollarSign, BarChart, Shield, Zap } from 'lucide-react';
+const PropertyManagementAIPage: React.FC = () => {
+  const features = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
     { icon: Home, title: 'Property Portfolio Management', description: 'Comprehensive management of multiple properties with AI insights.' ,},
     {icon: Users, title: 'Tenant Management', description: 'Automated tenant screening, communication, and relationship management.'},
     {icon: DollarSign, title: 'Rent Optimization', description: 'AI-powered rent pricing and revenue optimization strategies.' ,},

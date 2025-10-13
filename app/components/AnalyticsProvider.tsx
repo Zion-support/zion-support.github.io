@@ -4,6 +4,10 @@ import React, { useEffect, ReactNode } from 'react';
 import { AnalyticsContext } from '../contexts/AnalyticsContext';
 =======
 'use client';
+<<<<<<< HEAD
+=======
+import React, { createContext, useContext, useEffect, ReactNode } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 

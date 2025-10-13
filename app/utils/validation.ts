@@ -184,6 +184,11 @@ export {isValidEmail,;}
   isValidUrl,;
   isRequired,;
   isValidPassword,;
+<<<<<<< HEAD
   sanitizeInput;}} from './validators';
 export {/* TODO: Fix JSX expression */,}}} from './validators';"`;
 } from './validators';"`;
+=======
+  sanitizeInput;} from './validators';
+export {/* TODO: Fix JSX expression */,}} from './validators';"`;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232

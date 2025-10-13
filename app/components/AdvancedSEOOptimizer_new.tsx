@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -47,6 +48,10 @@ const AdvancedSEOOptimizer_newPage: React.FC = () => {
 'use client';
 import React, {useEffect, useState, useCallback}from 'react';
 import {Helmet}}from 'react-helmet-async';
+=======
+import React, { useEffect, useState, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 interface SEOOptimizerProps {title?: string;}
   description?: string;
   keywords?: string;

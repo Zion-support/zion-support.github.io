@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -10,6 +11,97 @@ const Pagebroken2Page = () => {
           name="description"
           content="Professional page broken2 services by Zion Tech Group"
         />
+=======
+'use client';
+import React from 'react';
+'use client';
+import React, { useState, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
+import {Phone,}
+  Mail,
+
+  MapPin,
+
+  Clock,
+
+  Send,
+
+  CheckCircle;} from 'lucide-react'
+const ContactPage: React.FC = () => {
+  const [formData, setFormData] = useState({)
+    name: '',
+    email: '',
+    company: '',
+phone: '',
+    service: '',
+    budget: '',
+    timeline: '',
+    message: '',}})
+const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,}const {name, value}}= e.target;
+    setFormData(prev => ({)
+    ...prev,
+      [name]: value;}}));
+  }, []);
+const handleSubmit = async (e: React.FormEvent) => {,
+    e.preventDefault();
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+try {// Simulate form submission,}
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      setSubmitStatus('success');
+      setFormData({)
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        budget: '',
+        timeline: '',
+        message: '',}})
+    } catch (error) {setSubmitStatus('error')}} finally {setIsSubmitting(false)}}}
+  }
+const services = [
+    'AI Solutions',
+    'Cloud Computing',
+    'Mobile App Development',
+    'Web Development',
+    'Data Analytics',
+
+    'Cybersecurity',
+
+    'DevOps',
+
+    'Consulting',
+
+    'Other'
+  ]
+const contactInfo = [
+    {icon: Phone,
+      title: 'Phone',
+      details: '+1 (302) 464-0950',
+      description: 'Mon-Fri 9AM-6PM EST',},
+    {icon: Mail,
+      title: 'Email',
+      details: 'kleber@ziontechgroup.com',
+      description: 'We respond within 24 hours',},
+    {icon: MapPin,
+      title: 'Address',
+      details: '123 Tech Street, Suite 100\nWilmington, DE 19801',
+      description: 'Visit our office',},
+    {icon: Clock,
+      title: 'Business Hours',
+      details: 'Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM',
+      description: 'Eastern Time',}}
+  ]
+return (
+    <>
+  <Helmet />
+        <title>Contact Us - Zion Tech Group | Get in Touch</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </Helmet>
 
       <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">

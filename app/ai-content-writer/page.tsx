@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { FileText, PenTool, Globe, BarChart, Zap, Users, Target, TrendingUp, Phone } from 'lucide-react';
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { CheckCircle, ArrowRight } from 'lucide-react';

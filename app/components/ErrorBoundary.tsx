@@ -7,6 +7,7 @@
 
 import React, { Component, ErrorInfo, ReactNode } from 'react;
 'use client';
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
 
@@ -24,6 +25,10 @@ interface Props {}
   fallback?: ReactNode;
 
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { AlertTriangle, RefreshCw, Home, Phone } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
   error?: Error;
 

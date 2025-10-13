@@ -2,9 +2,14 @@
 <<<<<<< HEAD
 =======
 import React from 'react';
+<<<<<<< HEAD
 
 interface SEOHeadProps {
   title?: string;
+=======
+import { Helmet } from 'react-helmet-async';
+interface SEOHeadProps {title?: string;}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   description?: string;
   keywords?: string;
   canonical?: string;

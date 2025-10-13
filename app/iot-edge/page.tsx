@@ -1,8 +1,15 @@
 import React from 'react';
+<<<<<<< HEAD
 
 import { CheckCircle, Star, Wifi, Zap, Shield, Cpu, Brain, Target, BarChart, Settings, Globe } from 'lucide-react';
 const IoTEdgePage: React.FC = () => {
   const iotServices = [
+=======
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+const PagePage: React.FC = () => {
+  const features = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive platform for managing, monitoring, and updating IoT devices at scale.',

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -9,6 +10,18 @@ export default function ApiDevelopmentZionTechGroup() {
     <>
       <Helmet>
         <title>ApiDevelopment - Zion Tech Group</title>
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const ApiDevelopmentPage: React.FC = () => {
+  return (
+    <>
+  <Helmet />
+        <title>API Development - Zion Tech Group</title>
+        <meta name="description" content="Professional API development services including RESTful APIs, GraphQL, microservices, and API integration solutions for modern applications." />
+        <meta name="keywords" content="API development, RESTful APIs, GraphQL, microservices, API integration, web services" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">

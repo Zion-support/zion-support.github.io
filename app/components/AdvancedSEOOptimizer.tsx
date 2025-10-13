@@ -1,10 +1,15 @@
 'use client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, {useEffect, useState, useCallback}from 'react';
 import {Helmet}}from 'react-helmet-async';
 =======
 import React, { useState, useEffect, useCallback } from 'react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+import React, { useEffect, useState, useCallback } from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 interface SEOOptimizerProps {title?: string;}
   description?: string;
@@ -12,8 +17,21 @@ interface SEOOptimizerProps {title?: string;}
   canonicalUrl?: string;
         if (_perfData && typeof window !== 'undefined' && 'gtag' in window) {
           (window as unknown as {gtag: (command: string, action: string, parameters: Record<string, unknown>) => void}}).gtag('event', 'page_load_performance', {)
+<<<<<<< HEAD
   return(<>)
       <Helmet />
+=======
+            event_category: 'Performance',
+            event_label: 'Page Load',
+            value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),})
+        }
+      })
+    }
+  }
+  return (
+    <>
+  <Helmet />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
         <title>{title}</title>
         <meta name="description" content={description}/>
         <meta name="keywords" content={keywords}/>

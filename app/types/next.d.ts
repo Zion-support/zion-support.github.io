@@ -51,6 +51,7 @@ export interface Metadata {
   };
 }
 
+<<<<<<< HEAD
 export interface MetadataRoute {
   url: string,
   lastModified?: string | Date;
@@ -289,3 +290,12 @@ const Next.dPage: React.FC = () => {
 
 export default Next.dPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232

@@ -63,7 +63,11 @@ Disallow: /_next/
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Disallow: /node_modules/
+=======
+Disallow: /private/
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 # Allow important pages
 Allow: /ai-services/
@@ -103,6 +107,7 @@ Allow: /
 Allow: /about
 <<<<<<< HEAD
 Allow: /services
+<<<<<<< HEAD
 Allow: /contact
 Allow: /ai-services
 Allow: /micro-saas
@@ -157,3 +162,15 @@ Allow: /blog
 Allow: /case-studies
 Allow: /careers
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+Allow: /pricing
+Allow: /contact
+Allow: /blog
+Allow: /case-studies
+Allow: /careers
+
+# AI Services
+Allow: /ai-*
+Allow: /it-*
+Allow: /micro-saas
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232

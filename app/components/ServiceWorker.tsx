@@ -1,11 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+'use client';
+import React, { useEffect } from 'react';
+
+const ServiceWorker: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   useEffect(() => {
     if (typeof window !== 'undefined' && 'serviceWorker' in navigator) {
       navigator.serviceWorker
         .register('/sw.js')
         .then((registration) => {
+<<<<<<< HEAD
           console.log('Service Worker registered:', registration);
 =======
 'use client'
@@ -205,6 +213,13 @@ const ServiceWorker: React.FC = () => {
       };
 
       registerSW();
+=======
+          console.log('Service Worker registered successfully:', registration);
+        })
+        .catch((error) => {
+          console.log('Service Worker registration failed:', error);
+        });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
     }
   }, []);
 

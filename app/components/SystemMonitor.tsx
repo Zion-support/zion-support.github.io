@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+<<<<<<< HEAD
 
 const SystemMonitorPage: React.FC = () => {
   const features = [
@@ -55,6 +56,14 @@ const SystemMonitorPage: React.FC = () => {
                 SystemMonitor
               </span>
               <br />
+=======
+}
+  ]
+</span>
+              <br>
+              <span className="text-white">Solutions</span>
+            </h1>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
             <p>Transform your business with our advanced systemmonitor solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>

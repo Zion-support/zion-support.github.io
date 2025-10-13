@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -8,6 +9,15 @@ import { MessageCircle, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, 
 import Layout from '../layout'
 
 export default function AICustomerSupportChatbot() {
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+const AiCustomerSupportChatbotPage: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
@@ -30,6 +40,7 @@ export default function AICustomerSupportChatbot() {
       description: 'Track customer satisfaction, response times, and identify improvement opportunities'
     }
   ]
+<<<<<<< HEAD
 
   const chatbotFeatures = [
     {
@@ -247,6 +258,18 @@ export default function AICustomerSupportChatbot() {
 
         {/* Features Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
+=======
+return (
+    <>
+  <Helmet />
+        <title>Ai Customer Support Chatbot - Zion Tech Group</title>
+        <meta name="description" content="AI-powered solution" />
+        <meta name="keywords" content="AI, artificial intelligence, business solutions" />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900"></div>
+        {/* Hero Section */} <section className="py-20 px-4">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">

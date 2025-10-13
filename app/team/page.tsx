@@ -8,6 +8,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
 
 const TeamPage: React.FC = () => {
@@ -15,6 +16,12 @@ const TeamPage: React.FC = () => {
     <>
       <Helmet>
 <<<<<<< HEAD
+=======
+const TeamPage: React.FC = () => {
+  return (
+    <>
+  <Helmet />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
         <title>Our Team - Zion Tech Group</title>
         <meta name="description" content="Our Team services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>

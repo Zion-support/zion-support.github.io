@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
       setEmail('');
     } catch (error) {
       console.error('Subscription failed:', error);
@@ -16,6 +17,15 @@ const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = ({
   className = "",
 }) => {
   const [email, setEmail] = useState("");
+=======
+'use client';
+import React, { useState } from 'react';
+import { Mail, CheckCircle, AlertCircle } from 'lucide-react';
+
+const ContentNewsletterSignup: React.FC = () => {
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 

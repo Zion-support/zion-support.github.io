@@ -54,6 +54,12 @@ import EnhancedSEO from "./app/components/EnhancedSEO";
 // Components
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
+<<<<<<< HEAD
+=======
+import Sidebar from './app/components/Sidebar';
+import HomePage from './app/page';
+import { PageLoader } from './app/components/LoadingStates';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 import ErrorBoundary from './app/components/ErrorBoundary';
 import PerformanceOptimizer from './app/components/PerformanceOptimizer';
 <<<<<<< HEAD
@@ -91,6 +97,7 @@ import { AnalyticsProvider } from './app/components/EnhancedAnalytics';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
 import ServiceWorker from './app/components/ServiceWorker';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+<<<<<<< HEAD
 // Structured data for SEO - moved to SEOHead component
 =======
 import Navigation from './app/components/Navigation';
@@ -113,6 +120,10 @@ import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import SEOHead from './app/components/SEOHead';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+import FuturisticBackground from './app/components/FuturisticBackground';
+import PerformanceOptimizations from './app/components/PerformanceOptimizations';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
 // Lazy load pages for better performance
@@ -222,6 +233,7 @@ const App: React.FC = () => {
           <AppWithPerformanceMonitoring>
             <AnalyticsProvider>
               <PerformanceOptimizer>
+<<<<<<< HEAD
                 <AdvancedPerformanceOptimizer>
                   <EnhancedAccessibility>
                     <AccessibilityEnhancer>
@@ -231,6 +243,19 @@ const App: React.FC = () => {
                       <Navigation />
                       <main className="relative z-10">
                         <Suspense fallback={<LoadingSpinner />}>
+=======
+                <EnhancedAccessibility>
+                  <AccessibilityEnhancer>
+                    <PerformanceMonitor />
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+                      <PerformanceOptimizations />
+                      <FuturisticBackground />
+                      <Navigation />
+                      <Sidebar />
+                      <Breadcrumb />
+                      <main id="main-content" className="flex-1 lg:ml-80" tabIndex={-1}>
+                        <Suspense fallback={<PageLoader />}>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
                           <Routes>
                             <Route path="/" element={<HomePage />} />
                             <Route path="/about" element={<AboutPage />} />

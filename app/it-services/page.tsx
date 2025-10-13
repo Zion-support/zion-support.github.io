@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client;
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
@@ -13,6 +14,37 @@ import SEOOptimizer from "../components/SEOOptimizer";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 import React from 'react;
+=======
+'use client';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import {Cloud,}
+  Shield, 
+  Settings, 
+  Database, 
+  Smartphone, 
+  Globe, 
+  Zap, 
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
+  Users,
+  TrendingUp,
+  Wifi,
+  Server,
+  Code,
+  ShoppingCart,
+  Monitor,
+  Headphones,
+  BarChart;} from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const ItServicesPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 import { Helmet } from 'react-helmet-async;
 
@@ -619,6 +651,7 @@ const ItServicesPage: React.FC = () => {const itServices = [;
   const filteredServices = useMemo(() => {
     let filtered = itServices;
 
+<<<<<<< HEAD
     if (searchTerm) {
       filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -653,6 +686,11 @@ const ItServicesPage: React.FC = () => {const itServices = [;
 
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+  return (
+    <>
+  <Helmet />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
         <title>IT Services - Zion Tech Group</title>
         <meta name="description" content="IT services from Zion Tech Group" />
       </Helmet>

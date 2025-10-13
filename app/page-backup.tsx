@@ -1,10 +1,14 @@
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 'use client';
 import React, {useCallback, useState, useEffect, Suspense, lazy, memo}from 'react';
+=======
+import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
@@ -13,12 +17,25 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
 import StructuredData from './components/StructuredData';
 
-import {Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText}}from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 // Loading skeleton component;
 const ServiceCardSkeleton: React.FC = memo(() => (,
+<<<<<<< HEAD
 const HomePage: React.FC = () => {,
     const [isLoaded, setIsLoaded] = useState(false);
+=======
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-200 rounded mb-2"></div>
+    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+  </div>
+))
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
+
+const HomePage: React.FC = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   customRender(</TestConfig>
     ui: ReactElement)</TestConfig>
     options?: Omit<RenderOptions, 'wrapper'>): RenderResult {}
@@ -19,11 +20,68 @@
     return render(ui, { wrapper: AllTheProviders, ...options })
 // Test result types;
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
+=======
+'use client';
+/**
+ * Comprehensive Test Runner and Testing Utilities;
+ * Provides advanced testing capabilities, mocking, and test automation;
+ */
+import React, { ReactElement, useCallback } from 'react';
+
+export interface PerformanceMetrics {renderTime: number,}
+    memoryUsage: number;,}timestamp: string,}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 }
 export interface CoverageMetrics {/* TODO: Fix JSX expression */}
 }
 // Test configuration interface;
+<<<<<<< HEAD
 export interface TestConfig {/* TODO: Fix JSX expression */}
+=======
+
+export interface TestConfig {enableMocking: boolean,}
+    enableCoverage: boolean,
+  enablePerformance: boolean,
+    enableAccessibility: boolean,
+// Test result types;}export interface PerformanceMetrics {}}import { render, RenderOptions } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+
+// Test result types;
+export interface PerformanceMetrics {renderTime: number;,}
+  memoryUsage: number,
+  timestamp: string;,}enableMocking: boolean;,
+  enableCoverage: boolean;,
+  enablePerformance: boolean;,
+  enableAccessibility: boolean;,
+  enableVisualRegression: boolean;,
+  mockDataPath?: string,
+  coverageThreshold: number,
+    performanceThreshold: number;,
+  accessibilityThreshold: number;,
+  timeout?: number;
+  verbose?: boolean;
+  bail?: boolean,
+  enableMocking: boolean,
+  enableCoverage: boolean,
+  enablePerformance: boolean,
+  enableAccessibility: boolean,
+  enableVisualRegression: boolean,
+  mockDataPath?: string;
+  coverageThreshold: number,
+  performanceThreshold: number,
+  accessibilityThreshold: number,
+  timeout?: number;
+  verbose?: boolean;
+  bail?: boolean;
+  reporter?: 'console' | 'json' | 'html' | 'junit';
+  retries?: number;
+  parallel?: boolean;
+  watch?: boolean;
+  coverage?: boolean;
+  outputDir?: string;
+  includePattern?: string[],
+  excludePattern?: string[]}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 }
 // Default test configuration;
 export const,

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -9,6 +10,18 @@ export default function AiHrSolutionsZionTechGroup() {
     <>
       <Helmet>
         <title>AiHrSolutions - Zion Tech Group</title>
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const AiHrSolutionsPage: React.FC = () => {
+  return (
+    <>
+  <Helmet />
+        <title>AI HR Solutions - Zion Tech Group</title>
+        <meta name="description" content="Transform your HR operations with AI-powered solutions for recruitment, employee management, performance analytics, and workforce optimization." />
+        <meta name="keywords" content="AI HR solutions, HR automation, recruitment AI, employee management, performance analytics, workforce optimization" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">

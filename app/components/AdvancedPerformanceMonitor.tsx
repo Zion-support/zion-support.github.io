@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface AdvancedPerformanceMonitorProps {
   className?: string;
 }
@@ -25,6 +26,19 @@ interface PerformanceMetrics {
 
 const AdvancedPerformanceMonitor = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
+=======
+'use client';
+import React, { useEffect, useState, useCallback } from 'react';
+interface PerformanceMetrics {fcp: number | null;,}
+  lcp: number | null;,
+  fid: number | null;,
+  cls: number | null;,
+  ttfb: number | null,
+  memory: number | null;,}interface PerformanceMonitorProps {onMetricsUpdate?: (metrics: PerformanceMetrics) => void,}
+  enableRealTimeMonitoring?: boolean;}const AdvancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({,
+  onMetricsUpdate,
+  enableRealTimeMonitoring = true,}) => {const [metrics, setMetrics] = useState<PerformanceMetrics>({
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
     fcp: null,
     lcp: null,
     fid: null,

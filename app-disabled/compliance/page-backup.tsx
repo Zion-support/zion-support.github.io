@@ -1,10 +1,20 @@
 'use client';
 import React from 'react';
-import {Helmet}}from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+<<<<<<< HEAD:app-disabled/compliance/page-backup.tsx
 import {CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp}}from 'lucide-react';
 const PageBackupPage: React.FC = () => {,
+=======
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+const PageBackupPage: React.FC = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Analysis',
+      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232:app/compliance/page-backup.tsx
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -16,9 +26,27 @@ const PageBackupPage: React.FC = () => {,
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']}]
+<<<<<<< HEAD:app-disabled/compliance/page-backup.tsx
 return(<>)
       <Helmet />
         <section className="relative py-20 px-4 overflow-hidden">
+=======
+return (
+    <>
+  <Helmet />
+        <title>Page Backup - Zion Tech Group</title>
+        <meta />
+      </Helmet>
+      <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
+        {/* Hero Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+              <p className="text-xl text-gray-300">Section description</p>
+            </div>
+          </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232:app/compliance/page-backup.tsx
         </section>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />

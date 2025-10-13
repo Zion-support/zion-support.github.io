@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 const FuturisticHeroPage: React.FC = () => {,
@@ -13,6 +14,12 @@ import React from 'react';
 'use client'
 import { Helmet } from 'react-helmet-async';
 
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 const FuturisticHeroPage: React.FC = () => {
   const features = [
     {

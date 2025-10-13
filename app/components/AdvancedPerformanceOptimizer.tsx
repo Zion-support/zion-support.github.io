@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const AdvancedPerformanceOptimizerPage: React.FC = () => {
@@ -91,6 +92,9 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
 <<<<<<< HEAD
 'use client';
 import React, {useEffect, useState, useCallback}from 'react';
+=======
+import React, { useEffect, useState, useCallback } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 interface PerformanceOptimizerProps {children: React.ReactNode,}
   enableOptimizations?: boolean;}const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({,
   children,

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -36,6 +37,13 @@ const DevOpsPage = () => {
             >
               Learn More
             </Link>
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+</div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
           </div>
         </div>
       </div>

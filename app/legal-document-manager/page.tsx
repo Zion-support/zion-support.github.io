@@ -1,8 +1,15 @@
 'use client';
 import React from 'react';
+<<<<<<< HEAD
 import {Helmet}}from 'react-helmet-async';
 import {FileText, Search, Shield, Zap, BarChart, CheckCircle}}from 'lucide-react';
 const LegalDocumentManagerPage: React.FC = () => {,
+=======
+import { Helmet } from 'react-helmet-async';
+import { FileText, Search, Shield, Zap, BarChart, CheckCircle } from 'lucide-react';
+const LegalDocumentManagerPage: React.FC = () => {
+  const features = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
     { icon: FileText, title: 'Document Management', description: 'Organized storage and management of legal documents with smart categorization.' ,},
     {icon: Search, title: 'AI Document Search', description: 'Powerful AI-powered search across all legal documents and contracts.' ,},
     {icon: Shield, title: 'Compliance Tracking', description: 'Automated compliance monitoring and regulatory requirement tracking.' ,},

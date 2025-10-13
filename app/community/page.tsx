@@ -1,5 +1,124 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
+=======
+'use client';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Users, MessageCircle, Calendar, Star, ArrowRight, ExternalLink, Mail, Phone, MapPin, Clock, CheckCircle, Award, TrendingUp, Heart } from 'lucide-react';
+
+const CommunityPage: React.FC = () => {
+  const [activeTab, setActiveTab] = useState('overview');
+
+  const communityStats = [
+    { icon: Users, value: '5,000+', label: 'Active Members' ,},
+    {icon: MessageCircle, value: '50+', label: 'Discussions Daily' ,},
+    {icon: Calendar, value: '12', label: 'Events Monthly' ,},
+    {icon: Star, value: '4.9', label: 'Average Rating' ,}];
+  const events = [
+    {title: 'AI Development Workshop',
+      date: '2024-02-15',
+      time: '2:00 PM EST',
+      type: 'Workshop',
+      attendees: 150,
+      description: 'Learn advanced AI development techniques and best practices',},
+    {title: 'Cloud Infrastructure Meetup',
+      date: '2024-02-20',
+      time: '6:00 PM EST',
+      type: 'Meetup',
+      attendees: 75,
+      description: 'Discuss cloud architecture and deployment strategies',},
+    {title: 'SaaS Business Growth Panel',
+      date: '2024-02-25',
+      time: '3:00 PM EST',
+      type: 'Panel',
+      attendees: 200,
+      description: 'Expert panel on scaling SaaS businesses',}];
+  const forums = [
+    {name: 'AI Services',
+      description: 'Discuss AI development, machine learning, and automation',
+      posts: 1250,
+      members: 1800;,},
+    {name: 'IT Services',
+      description: 'Cloud infrastructure, DevOps, and system administration',
+      posts: 980,
+      members: 1200;,},
+    {name: 'Micro SaaS',
+      description: 'Building and scaling micro SaaS applications',
+      posts: 750,
+      members: 900;,},
+    {name: 'General Discussion',
+      description: 'General tech discussions and community updates',
+      posts: 2100,
+      members: 3000;,}];
+  const benefits = [
+    {icon: Users,
+      title: 'Network with Peers',
+      description: 'Connect with like-minded developers and entrepreneurs',},
+    {icon: MessageCircle,
+      title: 'Expert Support',
+      description: 'Get help from our team of experts and community members',},
+    {icon: Calendar,
+      title: 'Exclusive Events',
+      description: 'Access to workshops, webinars, and networking events'},
+    {icon: Award,
+      title: 'Recognition',
+      description: 'Showcase your projects and get community recognition',}]
+
+  return (
+    <>
+  <Helmet />
+        <title>Community - Zion Tech Group</title>
+        <meta name="description" content="Join the Zion Tech Group community. Connect with developers, entrepreneurs, and tech enthusiasts. Learn, share, and grow together." />
+        <meta name="keywords" content="community, developers, tech community, networking, events, forums, AI community" />
+        <link rel="canonical" href="https: //ziontechgroup.com/community" />,
+      </Helmet>
+
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-16 pt-24">{/* Header */</div>} <div className="text-center mb-16">
+            <div className="flex items-center justify-center mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h1 className="text-4xl md: text-5xl font-bold text-white neon-text-enhanced">,</h1>
+                Community;
+              </h1>
+            </div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">Join our vibrant community of developers, entrepreneurs, and tech enthusiasts.</p>
+              Connect, learn, and grow together.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a;
+                href="#join"
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300",
+              >
+                Join Community;
+              </a>
+              <a;
+                href="#events"
+                className="border-2 border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover: bg-cyan-400 hover:text-slate-900 transition-all duration-300",
+              >
+                View Events;
+              </a>
+              <a;
+                href="#forums"
+                className="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover: bg-white hover:text-slate-900 transition-all duration-300",
+              >
+                Browse Forums;
+              </a>
+            </div>
+          </div>
+
+          {/* Stats */} <div className="grid grid-cols-1 md: grid-cols-4 gap-6 mb-16">,</div>
+            {communityStats.map((stat, index) => (
+              <div key={index}className="cyber-card-enhanced p-6 text-center">
+                <stat.icon className="w-8 h-8 text-cyan-400 mx-auto mb-4" />
+                <div className="text-2xl font-bold text-white mb-2">{stat.value</div>}</div>
+                <div className="text-gray-300">{stat.label</div>}</div>
+              </div>
+            ))}
+          </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 export default PagePage;
           {/* Tabs */} <div className="mb-8">

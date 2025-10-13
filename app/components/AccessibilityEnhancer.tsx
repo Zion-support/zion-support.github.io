@@ -13,6 +13,7 @@ import React, { useEffect } from 'react';
 import React, { useEffect } from 'react;
 =======
 'use client';
+<<<<<<< HEAD
 
 import React, { useEffect } from 'react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
@@ -121,6 +122,37 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
         main.setAttribute('role', 'main');
         main.setAttribute('aria-label', 'Main content');
       }
+=======
+import React, { useEffect } from 'react';
+
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
+  children,
+  enableKeyboardNavigation = true,
+  enableScreenReaderSupport = true,
+  enableHighContrast = true,
+  enableFocusManagement = true
+}) => {
+  useEffect(() => {
+    // Add keyboard navigation support
+    if (enableKeyboardNavigation) {
+      const handleKeyDown = (event: KeyboardEvent) => {
+        if (event.key === 'Tab') {
+          document.body.classList.add('keyboard-navigation');
+        }
+      };
+
+      const handleMouseDown = () => {
+        document.body.classList.remove('keyboard-navigation');
+      };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
@@ -176,6 +208,7 @@ const AccessibilityEnhancer: React.FC<{ children: React.ReactNode }> = ({ childr
 
   const applySettings = (newSettings: AccessibilitySettings) => {
       document.addEventListener('keydown', handleKeyDown);
+<<<<<<< HEAD
       return () => document.removeEventListener('keydown', handleKeyDown);
 =======
     // Check for font size preference
@@ -689,10 +722,34 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
   }, []);
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+=======
+      document.addEventListener('mousedown', handleMouseDown);
+
+      return () => {
+        document.removeEventListener('keydown', handleKeyDown);
+        document.removeEventListener('mousedown', handleMouseDown);
+      };
+    }
+  }, [enableKeyboardNavigation]);
+
+  useEffect(() => {
+    // Add screen reader support
+    if (enableScreenReaderSupport) {
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-indigo-600 focus:text-white focus:rounded-md';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+    }
+  }, [enableScreenReaderSupport]);
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   return <>{children}</>;
 };
 
 export default AccessibilityEnhancer;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 export default AccessibilityEnhancer;
@@ -858,3 +915,5 @@ const AccessibilityEnhancer: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232

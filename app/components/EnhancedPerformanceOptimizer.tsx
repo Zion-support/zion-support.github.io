@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-react';
@@ -19,3 +20,52 @@ import { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-
       {children}
     </div>
   );
+=======
+'use client';
+import React, { useEffect, useCallback } from 'react';
+
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enablePreloading?: boolean;
+  enableCodeSplitting?: boolean;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  children,
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true
+}) => {
+  useEffect(() => {
+    if (enableImageOptimization) {
+      // Image optimization logic
+      const images = document.querySelectorAll('img');
+      images.forEach(img => {
+        if (!img.loading) {
+          img.loading = 'lazy';
+        }
+      });
+    }
+  }, [enableImageOptimization]);
+
+  useEffect(() => {
+    if (enablePreloading) {
+      // Preload critical resources
+      const preloadLink = document.createElement('link');
+      preloadLink.rel = 'preload';
+      preloadLink.href = '/fonts/inter.woff2';
+      preloadLink.as = 'font';
+      preloadLink.type = 'font/woff2';
+      preloadLink.crossOrigin = 'anonymous';
+      document.head.appendChild(preloadLink);
+    }
+  }, [enablePreloading]);
+
+  return <>{children}</>;
+};
+
+export default PerformanceOptimizer;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232

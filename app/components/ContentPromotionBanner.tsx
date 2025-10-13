@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Sparkles, ArrowRight, Star } from 'lucide-react';
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -126,6 +127,75 @@ const ContentPromotionBanner: React.FC = () => {
               Powered by cutting-edge AI technology and industry expertise.
 =======
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
+=======
+'use client';
+import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {Zap, Shield, Star, Users, ArrowRight}}from 'lucide-react';
+
+const ContentPromotionBanner: React.FC = () => {,
+=======
+import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
+
+const ContentPromotionBanner: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
+
+const ContentPromotionBanner: React.FC = () => {
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+=======
+import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
+
+const ContentPromotionBanner: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+import { Zap, Shield, Star, Users, ArrowRight } from 'lucide-react';
+
+const ContentPromotionBanner: React.FC = () => {
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+  const features = [
+    {
+      title: 'AI-Powered Solutions',
+      description: 'Leverage cutting-edge AI to automate and optimize your business processes.',
+      icon: Zap;,},
+    {title: 'Enterprise Security',
+      description: 'Bank-level security and compliance to protect your data and operations.',
+      icon: Shield;,},
+    {title: 'Proven Results',
+      description: 'Join 500+ companies that have transformed their operations with our solutions.',
+      icon: Star;,},
+    {title: 'Expert Support',
+      description: '24/7 support from our team of AI and IT specialists.',
+<<<<<<< HEAD
+      icon: Users;,}];
+=======
+      icon: Users
+    }
+  ];
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+=======
+
+  const benefits = [
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+
+<<<<<<< HEAD
+  return(<div className="bg-gradient-to-r from-purple-600 to-blue-600 text-white py-16 px-4">)</div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       <div className="max-w-7xl mx-auto">
         {/* Hero Section */}
         <div className="text-center mb-16">
@@ -148,6 +218,7 @@ const ContentPromotionBanner: React.FC = () => {
           </div>
         </div>
 
+<<<<<<< HEAD
         {/* Stats Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {stats.map((stat, index) => (
@@ -158,10 +229,50 @@ const ContentPromotionBanner: React.FC = () => {
               <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
               <div className="text-gray-500 text-xs mt-1">{stat.description}</div>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+        {/* Features Section */} <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8 mb-12">,</div>
+=======
+        {/* Features Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+          {features.map((feature, index) => (
+            <div key={index}className="text-center">
+              <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <feature.icon className="h-8 w-8 text-white" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+              <p className="text-purple-100 text-sm">{feature.description</p>}</p>
+=======
+              <p className="text-purple-100 text-sm">{feature.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+        {/* Features Section */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          {features.map((feature, index) => (
+            <div key={index} className="text-center">
+              <div className="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                <feature.icon className="w-8 h-8 text-cyan-400" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+              <p className="text-gray-300">{feature.description}</p>
+>>>>>>> cursor/analyze-improve-and-deploy-application-8fa5
+=======
+              <p className="text-purple-100 text-sm">{feature.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-cd7c
+=======
+              <p className="text-purple-100 text-sm">{feature.description}</p>
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
             </div>
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           {features.map((feature, index) => (
@@ -284,3 +395,60 @@ const ContentPromotionBanner: React.FC = () => {
           </div>
         </div>
       </section>
+=======
+<<<<<<< HEAD
+        {/* CTA Section */} <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+=======
+        {/* CTA Section */}
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center">
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Ready to Get Started?
+          </h3>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">Schedule a free consultation with our AI experts and discover how we can transform your business.</p>
+          </p>
+          <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
+            <button className="bg-gradient-to-r from-cyan-500 to-purple-500 hover: from-cyan-600 hover:to-purple-600 text-white px-8 py-3 rounded-lg font-bold transition-all duration-300 flex items-center justify-center gap-2">,</button>
+              Schedule Free Consultation;
+              <ArrowRight className="w-4 h-4" />
+            </button>
+            <button className="border border-white/30 text-white px-8 py-3 rounded-lg font-bold hover: bg-white/10 transition-all duration-300">,</button>
+              Download Case Study;
+            </button>
+          </div>
+        </div>
+=======
+  return (
+    <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 rounded-2xl p-8 mb-16">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-white mb-4">Transform Your Business Today</h2>
+        <p className="text-xl text-gray-300 mb-6">
+          Join thousands of businesses already using our AI and IT solutions
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        {features.map((feature, index) => (
+          <div key={index} className="text-center">
+            <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <feature.icon className="w-8 h-8 text-white" />
+            </div>
+            <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
+            <p className="text-gray-300 text-sm">{feature.description}</p>
+          </div>
+        ))}
+      </div>
+
+      <div className="text-center">
+        <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 inline-flex items-center">
+          Get Started Now
+          <ArrowRight className="w-5 h-5 ml-2" />
+        </button>
+>>>>>>> cursor/website-audit-and-update-with-deployment-a217
+      </div>
+    </div>
+  );
+};
+
+export default ContentPromotionBanner;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232

@@ -2,6 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client;
 
 import React from 'react;
@@ -76,11 +77,18 @@ const DemoPage: React.FC = () => {
       duration: '4 min,
       features: ['Blog posts', 'Social media content', 'Product descriptions]
 import { Play, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart, Users } from 'lucide-react';
+=======
+import { Play, ArrowRight, CheckCircle } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 ;
 
+<<<<<<< HEAD
 const $1Page: React.FC = () => {}
+=======
+const DemoPage: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   const demos = [
 
 const DemoPage: React.FC = () => {}
@@ -112,6 +120,7 @@ const DemoPage: React.FC = () => {}
       features: ['Blog posts', 'Social media content', 'Product descriptions']
     }
 
+<<<<<<< HEAD
   ];
 
 <<<<<<< HEAD
@@ -164,6 +173,14 @@ const DemoPage: React.FC = () => {
       <Helmet>
         <title>Demo - Zion Tech Group</title>
         <meta name="description" content="Zion Tech Group - Demo page" />
+=======
+  return (
+    <>
+  <Helmet />
+        <title>Demo - Zion Tech Group | See Our AI Solutions in Action</title>
+        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
+        <meta name="keywords" content="demo, AI demo, technology demo, interactive demo, AI solutions demo" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <Navigation />

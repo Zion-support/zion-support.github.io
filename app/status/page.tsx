@@ -6,8 +6,13 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 =======
 'use client';
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+import React, { useState, useEffect } from 'react';
+import { CheckCircle, XCircle, AlertTriangle, Clock, RefreshCw, Globe, Server, Database, Cloud, Shield, Zap, Activity, TrendingUp, Users, Eye, BarChart } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009

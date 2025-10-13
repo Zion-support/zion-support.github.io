@@ -2,6 +2,7 @@
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Brain } from "lucide-react";
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -100,6 +101,13 @@ const CybersecuritySolutions = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+=======
+
+const CybersecuritySolutionsPage: React.FC = () => {
+  return (
+    <>
+  <Helmet />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
         <title>Cybersecurity Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced cybersecurity solutions and services by Zion Tech Group" />
       </Helmet>

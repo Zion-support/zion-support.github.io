@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -35,10 +36,19 @@ import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 interface Props {
   children: ReactNode;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+=======
+'use client';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 }
 
 interface State {
   hasError: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -234,10 +244,22 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false };
   }
 
+=======
+  error?: Error;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
   }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
 <<<<<<< HEAD
@@ -250,10 +272,15 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+=======
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Error caught by boundary:', error, errorInfo);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   }
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 <<<<<<< HEAD
@@ -391,15 +418,25 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     }
   }
       return (
+=======
+      return this.props.fallback || (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
         <div className="min-h-screen flex items-center justify-center bg-slate-900">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
             <p className="text-gray-300 mb-4">We're sorry, but something unexpected happened.</p>
             <button
+<<<<<<< HEAD
               onClick={() => this.setState({ hasError: false })}
               className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors"
             >
               Try again
+=======
+              onClick={() => window.location.reload()}
+              className="bg-cyan-500 text-white px-4 py-2 rounded-lg hover:bg-cyan-600 transition-colors"
+            >
+              Reload Page
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
             </button>
 }
 <<<<<<< HEAD

@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
@@ -70,6 +71,392 @@ const CookiesPage: React.FC = () => {
             </p>
           </div>
         </div>
+=======
+'use client';
+import React from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+import {Helmet}}from 'react-helmet-async';
+import {Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info}}from 'lucide-react';
+=======
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+import { Helmet } from 'react-helmet-async';
+import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+import { Helmet } from 'react-helmet-async';
+import { Cookie, Shield, Settings, Eye, Database, CheckCircle, AlertTriangle, Info } from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> cursor/website-audit-and-update-with-deployment-a217
+
+const CookiesPage: React.FC = () => {,
+  const lastUpdated = 'January 1, 2024';
+  
+  const cookieTypes = [
+    {
+      type: 'Essential Cookies',
+      icon: Shield,
+      description: 'These cookies are necessary for the website to function properly and cannot be disabled.',
+      examples: [,
+        'Authentication cookies',
+        'Security cookies',
+        'Load balancing cookies',
+        'User interface customization'
+      ],
+      required: true;,},
+    {type: 'Analytics Cookies',
+      icon: Database,
+      description: 'These cookies help us understand how visitors interact with our website.',
+      examples: [,
+        'Google Analytics',
+        'Page view tracking',
+        'User behavior analysis',
+        'Performance monitoring'
+      ],
+      required: false;,},
+    {type: 'Functional Cookies',
+      icon: Settings,
+      description: 'These cookies enable enhanced functionality and personalization.',
+      examples: [,
+        'Language preferences',
+        'Theme settings',
+        'User preferences',
+        'Form data storage'
+      ],
+      required: false;,},
+    {type: 'Marketing Cookies',
+      icon: Eye,
+      description: 'These cookies are used to deliver relevant advertisements and marketing content.',
+      examples: [,
+        'Advertising targeting',
+        'Social media integration',
+        'Email marketing tracking',
+        'Campaign performance'
+      ],
+      required: false;,}];
+  const purposes = [
+    {title: 'Website Functionality',
+      description: 'Ensure the website works correctly and securely',
+      icon: Shield;,},
+    {title: 'User Experience',
+      description: 'Remember your preferences and settings',
+      icon: Settings;,},
+    {title: 'Analytics',
+      description: 'Understand how users interact with our site',
+      icon: Database;,},
+    {title: 'Marketing',
+      description: 'Deliver relevant content and advertisements',
+      icon: Eye;,}]
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+  return(<>)
+      <Helmet />
+        <title>Cookie Policy - Zion Tech Group</title>
+=======
+
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
+  return (
+    <>
+      <Helmet></Helmet>
+        <title></titl>Cookie Policy - Zion Tech Group</title>
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+                </div>
+              </div>
+            </div>
+          </div>
+=======
+  return (
+    <>
+      <Helmet>
+        <title>Cookie Policy - Zion Tech Group</title>
+        <meta name="description" content="Cookie Policy for Zion Tech Group. Learn about the cookies we use and how to manage your cookie preferences." />
+        <meta name="keywords" content="cookie policy, cookies, tracking, privacy, data collection" />
+        <link rel="canonical" href="https://ziontechgroup.com/cookies" />
+      </Helmet>
+
+      <div className="min-h-screen bg-white">
+        <Navigation />
+        
+        <div className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">
+              Cookie Policy
+            </h1>
+            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+              This policy explains how we use cookies and similar technologies on our website.
+            </p>
+            <div className="flex items-center justify-center text-sm text-blue-200">
+              <Info className="h-4 w-4 mr-2" />
+              Last updated: {lastUpdated}
+            </div>
+          </div>
+        </div>
+        
+        <div className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto space-y-12">
+              {/* What Are Cookies */}
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">What Are Cookies?</h2>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <p className="text-gray-700 leading-relaxed mb-6">
+                      Cookies are small text files that are stored on your device when you visit our website. 
+                      They help us provide you with a better experience by remembering your preferences and 
+                      understanding how you use our site.
+                    </p>
+                    <div className="bg-gray-50 rounded-lg p-6">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Points</h3>
+                      <ul className="space-y-2">
+                        <li className="flex items-center text-gray-700 text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          Cookies are safe and cannot harm your device
+                        </li>
+                        <li className="flex items-center text-gray-700 text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          They help us improve our website and services
+                        </li>
+                        <li className="flex items-center text-gray-700 text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          You can control which cookies you accept
+                        </li>
+                        <li className="flex items-center text-gray-700 text-sm">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                          Some cookies are essential for website functionality
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="bg-blue-50 rounded-lg p-6">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Cookie Categories</h3>
+                    <div className="space-y-4">
+                      {purposes.map((purpose, index) => (
+                        <div key={index} className="flex items-center space-x-3">
+                          <purpose.icon className="w-6 h-6 text-blue-600" />
+                          <div>
+                            <div className="text-gray-900 font-medium">{purpose.title}</div>
+                            <div className="text-gray-600 text-sm">{purpose.description}</div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {/* Types of Cookies */}
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Types of Cookies We Use</h2>
+                <div className="space-y-6">
+                  {cookieTypes.map((cookie, index) => (
+                    <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex items-center space-x-3">
+                          <cookie.icon className="w-8 h-8 text-blue-600" />
+                          <h3 className="text-xl font-semibold text-gray-900">{cookie.type}</h3>
+                        </div>
+                        {cookie.required ? (
+                          <span className="px-3 py-1 bg-red-100 text-red-800 text-xs font-semibold rounded">
+                            Required
+                          </span>
+                        ) : (
+                          <span className="px-3 py-1 bg-yellow-100 text-yellow-800 text-xs font-semibold rounded">
+                            Optional
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-gray-700 mb-4">{cookie.description}</p>
+                      <div>
+                        <h4 className="text-gray-900 font-medium mb-2">Examples:</h4>
+                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                          {cookie.examples.map((example, exampleIndex) => (
+                            <li key={exampleIndex} className="flex items-center text-gray-700 text-sm">
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                              {example}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </section>
+
+              {/* Cookie Management */}
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Managing Your Cookie Preferences</h2>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Browser Settings</h3>
+                    <p className="text-gray-700 mb-4">
+                      You can control cookies through your browser settings. Most browsers allow you to:
+                    </p>
+                    <ul className="space-y-2">
+                      <li className="flex items-center text-gray-700 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        Block all cookies
+                      </li>
+                      <li className="flex items-center text-gray-700 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        Block third-party cookies
+                      </li>
+                      <li className="flex items-center text-gray-700 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        Delete existing cookies
+                      </li>
+                      <li className="flex items-center text-gray-700 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        Get notifications before cookies are set
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4">Cookie Consent</h3>
+                    <p className="text-gray-700 mb-4">
+                      When you first visit our website, you'll see a cookie consent banner where you can:
+                    </p>
+                    <ul className="space-y-2">
+                      <li className="flex items-center text-gray-700 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        Accept all cookies
+                      </li>
+                      <li className="flex items-center text-gray-700 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        Reject non-essential cookies
+                      </li>
+                      <li className="flex items-center text-gray-700 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        Customize your preferences
+                      </li>
+                      <li className="flex items-center text-gray-700 text-sm">
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                        Change your settings anytime
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </section>
+
+              {/* Third-Party Cookies */}
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Third-Party Cookies</h2>
+                <div className="space-y-6">
+                  <p className="text-gray-700">
+                    We may use third-party services that set their own cookies. These services help us provide 
+                    better functionality and analytics. Here are the main third-party cookies we use:
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Google Analytics</h3>
+                      <p className="text-gray-700 text-sm mb-3">
+                        Helps us understand website traffic and user behavior
+                      </p>
+                      <div className="text-xs text-gray-500">
+                        <div>Cookies: _ga, _gid, _gat</div>
+                        <div>Duration: Up to 2 years</div>
+                      </div>
+                    </div>
+                    <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
+                      <h3 className="text-lg font-semibold text-gray-900 mb-3">Social Media</h3>
+                      <p className="text-gray-700 text-sm mb-3">
+                        Enables social media sharing and integration
+                      </p>
+                      <div className="text-xs text-gray-500">
+                        <div>Platforms: LinkedIn, Twitter, Facebook</div>
+                        <div>Duration: Varies by platform</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {/* Impact of Disabling Cookies */}
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Impact of Disabling Cookies</h2>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                      <AlertTriangle className="w-6 h-6 text-yellow-500 mr-2" />
+                      What Happens If You Disable Cookies
+                    </h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-center text-gray-700 text-sm">
+                        <CheckCircle className="w-4 h-4 text-yellow-500 mr-2" />
+                        Some website features may not work properly
+                      </li>
+                      <li className="flex items-center text-gray-700 text-sm">
+                        <CheckCircle className="w-4 h-4 text-yellow-500 mr-2" />
+                        You may need to re-enter information repeatedly
+                      </li>
+                      <li className="flex items-center text-gray-700 text-sm">
+                        <CheckCircle className="w-4 h-4 text-yellow-500 mr-2" />
+                        Personalized content may not be available
+                      </li>
+                      <li className="flex items-center text-gray-700 text-sm">
+                        <CheckCircle className="w-4 h-4 text-yellow-500 mr-2" />
+                        We won't be able to remember your preferences
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                      <Shield className="w-6 h-6 text-green-500 mr-2" />
+                      Essential Cookies Always Active
+                    </h3>
+                    <p className="text-gray-700 mb-4">
+                      Essential cookies are necessary for the website to function properly and cannot be disabled. 
+                      These include authentication, security, and basic functionality cookies.
+                    </p>
+                    <div className="bg-green-50 rounded-lg p-4">
+                      <p className="text-green-800 text-sm">
+                        <strong>Note:</strong> Disabling essential cookies will prevent you from using certain 
+                        features of our website and may affect your overall experience.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              {/* Contact Information */}
+              <section>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Questions About Cookies?</h2>
+                <div className="bg-gray-50 rounded-lg p-8">
+                  <p className="text-gray-700 mb-6">
+                    If you have any questions about our use of cookies or this Cookie Policy, please contact us:
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="flex items-center">
+                      <Database className="h-5 w-5 text-blue-600 mr-3" />
+                      <span className="text-gray-700">privacy@ziontechgroup.com</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Shield className="h-5 w-5 text-blue-600 mr-3" />
+                      <span className="text-gray-700">+1 (302) 464-0950</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Settings className="h-5 w-5 text-blue-600 mr-3" />
+                      <span className="text-gray-700">ziontechgroup.com</span>
+                    </div>
+                    <div className="flex items-center">
+                      <Cookie className="h-5 w-5 text-blue-600 mr-3" />
+                      <span className="text-gray-700">Zion Tech Group Privacy Team</span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        
+        <Footer />
+>>>>>>> cursor/website-audit-and-update-with-deployment-a217
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       </div>
     </>
   )
@@ -140,6 +527,9 @@ const CookiesPage: React.FC = () => {
 
 export default CookiesPage;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232

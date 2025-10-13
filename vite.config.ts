@@ -325,6 +325,15 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: false,
     minify: 'terser',
+<<<<<<< HEAD
+=======
+    target: 'es2020',
+    cssTarget: 'chrome80',
+    reportCompressedSize: true,
+    chunkSizeWarningLimit: 500,
+    emptyOutDir: true,
+    copyPublicDir: true,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
     rollupOptions: {
       output: {
         manualChunks: {

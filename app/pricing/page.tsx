@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 =======
 import { ArrowRight, CheckCircle, Brain, Zap, Globe } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -10,6 +11,11 @@ import { Link } from "react-router-dom";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
 
+=======
+import { Link } from 'react-router-dom';
+import { CheckCircle, Star, ArrowRight, Zap } from 'lucide-react';
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 const PricingPage: React.FC = () => {
   const plans = [
     {
@@ -98,6 +104,7 @@ const PricingPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Advanced pricing solutions by Zion Tech Group" />
         <title>Page - Zion Tech Group</title>
@@ -128,6 +135,11 @@ const PricingPage: React.FC = () => {
                 <li>Basic AI features</li>
                 <li>Email support</li>
                 <li>Standard templates</li>
+=======
+  return (
+    <>
+  <Helmet />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
         <title>Pricing - Zion Tech Group | Transparent AI & IT Pricing</title>
         <meta name="description" content="Transparent pricing for AI and IT solutions. Choose from Starter, Professional, or Enterprise plans. Custom solutions available. Get started today." />
         <meta name="keywords" content="AI pricing, IT services pricing, cloud solutions cost, enterprise AI pricing, custom development pricing" />

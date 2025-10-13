@@ -1,6 +1,17 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+]
+const benefits = [
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 import { CheckCircle, Star, Shield, Lock, Eye, AlertTriangle, Database, Globe } from 'lucide-react';
 const CybersecurityPage: React.FC = () => {

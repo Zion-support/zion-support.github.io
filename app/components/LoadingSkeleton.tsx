@@ -61,6 +61,11 @@ export default function LoadingSkeleton() {
 export default LoadingSkeletonPage;
 =======
 import React from 'react';
+<<<<<<< HEAD
+=======
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 interface SkeletonProps {
   className?: string;

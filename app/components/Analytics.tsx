@@ -1,3 +1,26 @@
+<<<<<<< HEAD
+=======
+'use client';
+import React, { Suspense, lazy } from 'react';
+interface AnalyticsProps {enableGoogleAnalytics?: boolean;}
+  enablePerformanceMonitoring?: boolean;
+  enableErrorTracking?: boolean;
+  enableUserBehaviorTracking?: boolean;}}
+const Analytics: React.FC<AnalyticsProps> = ({,
+    enableGoogleAnalytics = true,
+  enablePerformanceMonitoring = true,
+  enableErrorTracking = true,
+  enableUserBehaviorTracking = true;}}) => {useEffect(() => {
+    if (enableGoogleAnalytics) {
+      initializeGoogleAnalytics()}}
+if (enablePerformanceMonitoring) {initializePerformanceMonitoring()}}
+if (enableErrorTracking) {initializeErrorTracking()}}
+if (enableUserBehaviorTracking) {initializeUserBehaviorTracking()}}
+  }, [enableGoogleAnalytics, enablePerformanceMonitoring, enableErrorTracking, enableUserBehaviorTracking]);
+const initializeGoogleAnalytics = (;
+    // Load Google Analytics;
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
     const script = document.createElement('script');
     script.async = true;
     script['src'] = 'https: //www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';,
@@ -29,3 +52,32 @@ if (tagName === 'a') {
         form_class: form.className,
         form_action: form.action;,}})
     })
+<<<<<<< HEAD
+=======
+  }
+const trackEvent = (;
+    if (typeof window !== 'undefined' && 'gtag' in window) {(window as any).gtag('event', action, {)
+        event_category: category,
+        event_label: typeof value === 'object' ? JSON.stringify(value) : value,) => {
+  return($3;)
+  )}value: typeof value === 'number' ? value : undefined,}
+      })
+    }
+  }
+return null;
+}
+// Extend Window interface for gtag;
+declare global {interface Window {}
+    dataLayer: any[],
+    gtag: (...args: any[]) => void;,}}
+};
+
+export default Analytics;
+// Analytics Provider for context;
+export const AnalyticsProvider: React.FC<{children: React.ReactNode ,}> = ({children}) => {return (
+    <>
+  <Analytics />}{children}
+    </>
+  );
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232

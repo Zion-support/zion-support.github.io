@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { describe, it, expect, beforeEach } from '@jest/globals';
+=======
+import { describe, it, expect } from '@jest/globals';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
 describe('Performance Monitoring', () => {
   it('should be implemented', () => {

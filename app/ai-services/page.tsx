@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
   // const categories = [
@@ -25,6 +26,40 @@ import { ArrowRight, Zap } from "lucide-react";
 const AIServicesPage = () => {
   const aiServices = [
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+'use client';
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import {Brain,}
+  MessageSquare, 
+  Eye, 
+  Zap, 
+  BarChart, 
+  Box, 
+  Mic, 
+  Shield, 
+  CheckCircle, 
+  ArrowRight, 
+  Star, 
+  Clock,
+  Users,
+  TrendingUp,
+  Settings,
+  Target,
+  Heart,
+  FileText,
+  Cpu,
+  Link,
+  Server;} from 'lucide-react';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+
+const AiServicesPage: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState('all');
+
+  const services = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
     {
       name: "Dr. Sarah Johnson",
       company: "MedTech Solutions",
@@ -1527,6 +1562,7 @@ const AIServicesPage: React.FC = () => {
   ];
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 
+<<<<<<< HEAD
   return (
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1567,6 +1603,45 @@ export default AIServicesPage;
 =======
     <>
       <Helmet>
+=======
+  const categories = [
+    {id: 'all', name: 'All Services', count: services.length ,},
+    {id: 'Customer Service', name: 'Customer Service', count: services.filter(s => s.category === 'Customer Service').length ,},
+    {id: 'Content', name: 'Content', count: services.filter(s => s.category === 'Content').length ,},
+    {id: 'Analytics', name: 'Analytics', count: services.filter(s => s.category === 'Analytics').length ,},
+    {id: 'Computer Vision', name: 'Computer Vision', count: services.filter(s => s.category === 'Computer Vision').length ,},
+    {id: 'Voice AI', name: 'Voice AI', count: services.filter(s => s.category === 'Voice AI').length ,},
+    {id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length ,},
+    {id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length ,},
+    {id: 'Industrial AI', name: 'Industrial AI', count: services.filter(s => s.category === 'Industrial AI').length ,},
+    {id: 'Marketing', name: 'Marketing', count: services.filter(s => s.category === 'Marketing').length ,},
+    {id: 'Supply Chain', name: 'Supply Chain', count: services.filter(s => s.category === 'Supply Chain').length ,},
+    {id: 'Healthcare', name: 'Healthcare', count: services.filter(s => s.category === 'Healthcare').length ,},
+    {id: 'Finance', name: 'Finance', count: services.filter(s => s.category === 'Finance').length ,},
+    {id: 'Language Processing', name: 'Language Processing', count: services.filter(s => s.category === 'Language Processing').length ,},
+    {id: 'Customer Analytics', name: 'Customer Analytics', count: services.filter(s => s.category === 'Customer Analytics').length ,},
+    {id: 'Software Testing', name: 'Software Testing', count: services.filter(s => s.category === 'Software Testing').length ,},
+    {id: 'Energy', name: 'Energy', count: services.filter(s => s.category === 'Energy').length ,},
+    {id: 'Human Resources', name: 'Human Resources', count: services.filter(s => s.category === 'Human Resources').length ,},
+    {id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length ,},
+    {id: 'Edge Computing', name: 'Edge Computing', count: services.filter(s => s.category === 'Edge Computing').length ,},
+    {id: 'Personalization', name: 'Personalization', count: services.filter(s => s.category === 'Personalization').length ,},
+    {id: 'Content Moderation', name: 'Content Moderation', count: services.filter(s => s.category === 'Content Moderation').length ,},
+    {id: 'Document Processing', name: 'Document Processing', count: services.filter(s => s.category === 'Document Processing').length ,},
+    {id: 'IoT & Analytics', name: 'IoT & Analytics', count: services.filter(s => s.category === 'IoT & Analytics').length ,},
+    {id: 'Conversational AI', name: 'Conversational AI', count: services.filter(s => s.category === 'Conversational AI').length ,},
+    {id: 'Knowledge Management', name: 'Knowledge Management', count: services.filter(s => s.category === 'Knowledge Management').length ,},
+    {id: 'Reporting & Analytics', name: 'Reporting & Analytics', count: services.filter(s => s.category === 'Reporting & Analytics').length ,},
+    {id: 'Content Generation', name: 'Content Generation', count: services.filter(s => s.category === 'Content Generation').length ,}]
+
+  const filteredServices = services.filter(service =>)
+    selectedCategory === 'all' || service.category === selectedCategory;
+  );
+
+  return (
+    <>
+  <Helmet />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="AI Services services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>

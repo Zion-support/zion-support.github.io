@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
     '/services',
     '/ai-services',
     '/cloud-services',
@@ -21,6 +22,9 @@
   }));
 }
 import {MetadataRoute}}from 'next';
+=======
+import { MetadataRoute } from 'next';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 export default function sitemap(): MetadataRoute.Sitemap {return [;}
 =======
 export default function sitemap() {

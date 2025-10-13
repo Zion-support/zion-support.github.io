@@ -13,10 +13,22 @@
     '^@/content/(.*)$': '<rootDir>/content/$1'
   },
   transform: {
+<<<<<<< HEAD
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: 'tsconfig.jest.json'
     }],
     '^.+\\.(js|jsx)$': 'babel-jest'
+=======
+
+    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
+      presets: [
+        ['@babel/preset-env', { targets: { node: 'current' } }],
+        ['@babel/preset-react', { runtime: 'automatic' }],
+        '@babel/preset-typescript'
+      ]
+    }]
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',

@@ -6,6 +6,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 =======
 import React from 'react';
+<<<<<<< HEAD
 import Link from 'next/link';
 import { ArrowRight, MapPin, Clock, Users, Award, Zap } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
@@ -35,6 +36,44 @@ const CareersPage = () => {
     { id: 'cloud', label: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5" /> },
     { id: 'product', label: 'Product', icon: <Target className="w-5 h-5" /> },
     { id: 'data', label: 'Data & Analytics', icon: <BarChart3 className="w-5 h-5" /> }
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Star, Users, Heart, Award, MapPin, Clock, Briefcase, ArrowRight } from 'lucide-react';
+
+const CareersPage: React.FC = () => {
+  const openPositions = [
+    {
+      title: 'Senior AI Engineer',
+      department: 'AI Solutions',
+      location: 'Remote',
+      type: 'Full-time',
+      experience: '5+ years',
+      description: 'Design and implement cutting-edge AI solutions for enterprise clients.',
+      requirements: ['Python, TensorFlow, PyTorch', '5+ years AI experience', 'Machine Learning expertise']},
+    {title: 'Cloud Architect',
+      department: 'Cloud Services',
+      location: 'New York, NY',
+      type: 'Full-time',
+      experience: '7+ years',
+      description: 'Design and implement scalable cloud infrastructure solutions for enterprise clients.',
+      requirements: ['AWS, Azure, GCP', '7+ years cloud experience', 'Architecture certifications']},
+    {title: 'Data Scientist',
+      department: 'Data Analytics',
+      location: 'San Francisco, CA',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Extract insights from complex datasets to drive business decisions.',
+      requirements: ['Python, R, SQL', '3+ years data science experience', 'Statistical analysis skills']}];
+  const benefits = [
+    'Competitive salary and equity',
+    'Comprehensive health insurance',
+    'Flexible work arrangements',
+    'Professional development budget',
+    'Top-tier equipment and tools',
+    'Team building events',
+    'Career growth opportunities'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   ];
 
   const jobOpenings = [

@@ -1,8 +1,17 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const SEOEnhancerPage: React.FC = () => {
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+
+const SEOEnhancer: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   const features = [
     {
       icon: Brain,
