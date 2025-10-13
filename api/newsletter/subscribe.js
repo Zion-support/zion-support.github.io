@@ -30,21 +30,6 @@ export default async function handler(req, res) {
       res.end(JSON.stringify({ error: 'Invalid email format' }));
       return;
     }
-<<<<<<< HEAD
-    // Save subscription logic here
-    // In a real application, you would:
-    // 1. Save to your database
-    // 2. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
-    // 3. Send confirmation email
-    console.log('Newsletter subscription:', {
-      email: req.body.email,
-      timestamp: new Date().toISOString()
-<<<<<<< HEAD
-    });
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
 =======
 });
     res.statusCode = 200;
@@ -70,31 +55,10 @@ export default async function handler(req, res) {
     console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-<<<<<<< HEAD
-    res.end(JSON.stringify({ 
-      error: 'Failed to subscribe to newsletter',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
-}));
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-
-export default handler;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 }
 
 export default handler;
 
-<<<<<<< HEAD
-}
-=======
-
-
-}}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847

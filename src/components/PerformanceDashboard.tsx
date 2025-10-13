@@ -83,7 +83,7 @@ const PerformanceDashboard: React.FC = () => {
         </div>
       </section>
     </div>;
-);
-};
+)
+}
 
 export default PerformanceDashboard;

@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
 const LazyImage: React.FC = () => {
   return (
@@ -71,7 +71,7 @@ const LazyImage: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our lazy image 
+            Let&apos}s discuss how our lazy image 
             services can help you achieve your goals.
           </p>
           <a
@@ -82,8 +82,8 @@ const LazyImage: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>;
-);
-};
+    </div>}
+)
+}
 
-export default LazyImage;
+export default LazyImage}

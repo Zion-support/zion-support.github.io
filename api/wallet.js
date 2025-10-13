@@ -30,11 +30,6 @@ export default function handler(req, res) {
     }
   } catch (_error) {
     // console.error('Error reading existing wallets:', error);
-<<<<<<< HEAD
-=======
-  } catch (error) {
-    console.error('Error reading existing wallets:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
 =======
 ;
 } catch (error) {
@@ -85,11 +80,6 @@ export default function handler(req, res) {
 }));
   } catch (_error) {
     // console.error('Error saving wallet:', error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
   } catch (error) {
     console.error('Error saving wallet:', error);

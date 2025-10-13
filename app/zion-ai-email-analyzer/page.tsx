@@ -1,10 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 =======
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
 export default function ZionAIEmailAnalyzer() {
@@ -62,10 +58,6 @@ export default function ZionAIEmailAnalyzer() {
             </ul>
           </div>
         </div>
-<<<<<<< HEAD
-        
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Email Management?</h2>
@@ -75,23 +67,7 @@ export default function ZionAIEmailAnalyzer() {
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
               Get Started Today
             </button>
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-          </div>;
-);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 }
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======

@@ -24,39 +24,6 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
             <X className="w-5 h-5" />
           </button>
         </div>
-<<<<<<< HEAD
-        <nav className="p-4">
-          <ul className="space-y-2">
-            {navigationItems.map((item) => (
-              <li key={item.name}>
-                <a
-                  href={item.href}
-                  className="flex items-center space-x-3 p-2 rounded hover:bg-gray-100"
-                  onClick={onClose}
-                >
-                  <item.icon className="w-5 h-5" />
-                  <span>{item.name}</span>
-                </a>
-              </li>
-            ))}
-          </ul>
-=======
-        <nav className="flex-1 px-4 py-6 space-y-2">
-          {navigationItems.map((item) => {
-            const Icon = item.icon;
-            return (
-              <Link
-                key={item.name}
-                to={item.href}
-                className="flex items-center px-4 py-2 text-sm font-medium text-gray-700 rounded-md hover:bg-gray-100 hover:text-gray-900"
-                onClick={onClose}
-              >
-                <Icon className="w-5 h-5 mr-3" />
-                {item.name}
-              </Link>
-            );
-          })}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
         </nav>
       </div>
     </div>

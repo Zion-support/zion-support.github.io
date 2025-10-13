@@ -1,19 +1,16 @@
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
 =======
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
-import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet-async';
+import React, { useEffect } from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
 interface SEOEnhancerProps {
-  title?: string;
-  description?: string;
-  keywords?: string[];
-  image?: string;
-  url?: string;
-  type?: string;
-  structuredData?: any;
+  title?: string}
+  description?: string}
+  keywords?: string[]
+  image?: string}
+  url?: string}
+  type?: string}
+  structuredData?: any}
 }
 
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
@@ -23,23 +20,23 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   image = '/images/og-image.jpg',
   url = typeof window !== 'undefined' ? window.location.href : '',
   type = 'website',
-  structuredData;
+  structuredData}
 }) => {
   useEffect(() => {
     // Add structured data to the page
     if (structuredData) {
-      const script = document.createElement('script');
-      script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
-      document.head.appendChild(script);
+      const script = document.createElement('script')
+      script.type = 'application/ld+json'}
+      script.text = JSON.stringify(structuredData)
+      document.head.appendChild(script)
       return () => {
         if (document.head.contains(script)) {
-          document.head.removeChild(script);
+          document.head.removeChild(script)
         }
-      };
+      }
     }
-    return undefined;
-  }, [structuredData]);
+    return undefined}
+  }, [structuredData])
 
   // Generate meta tags
   const metaTags = [
@@ -64,17 +61,11 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { name: 'theme-color', content: '#0066cc' },
     { name: 'msapplication-TileColor', content: '#0066cc' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
-<<<<<<< HEAD
-=======
-    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
-  ];
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
   return (
     <Helmet>
       <title>{title}</title>
       {metaTags.map((tag, index) => (
-        <meta key={index} {...tag} />;
+        <meta key={index} {...tag} />}
 ))}
       {/* Canonical URL */}
       <link rel="canonical" href={url} />
@@ -89,9 +80,9 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       {/* DNS prefetch for performance */}
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-    </Helmet>;
-);
-};
+    </Helmet>}
+)
+}
 
 // Default structured data for the organization
 export const defaultStructuredData = {
@@ -105,7 +96,7 @@ export const defaultStructuredData = {
     "@type": "ContactPoint",
     "telephone": "+1-555-0123",
     "contactType": "customer service",
-    "availableLanguage": "English";
+    "availableLanguage": "English"}
 },
   "sameAs": [
     "https://www.linkedin.com/company/zion-tech-group",
@@ -118,23 +109,13 @@ export const defaultStructuredData = {
     "addressLocality": "San Francisco",
     "addressRegion": "CA",
     "postalCode": "94105",
-    "addressCountry": "US";
+    "addressCountry": "US"}
 }
-};
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-export default SEOEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+}
 =======
 
-export default SEOEnhancer;
-<<<<<<< HEAD
+export default SEOEnhancer}
 =======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c

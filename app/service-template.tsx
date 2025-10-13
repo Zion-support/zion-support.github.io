@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
 const ServiceTemplate: React.FC = () => {
   return (
@@ -71,7 +71,7 @@ const ServiceTemplate: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our service template 
+            Let&apos}s discuss how our service template 
             services can help you achieve your goals.
           </p>
           <a
@@ -82,8 +82,8 @@ const ServiceTemplate: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>;
-);
-};
+    </div>}
+)
+}
 
-export default ServiceTemplate;
+export default ServiceTemplate}

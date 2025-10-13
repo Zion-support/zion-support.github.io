@@ -1,11 +1,8 @@
-'use client';
-import React from 'react';
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+'use client'}
+import React from 'react'}
 =======
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async'}
 export default function CloudInfrastructure() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -75,25 +72,13 @@ export default function CloudInfrastructure() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
 =======
-    </div>;
-);
+    </div>}
+)
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 =======

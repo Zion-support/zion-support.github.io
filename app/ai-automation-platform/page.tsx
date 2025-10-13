@@ -1,8 +1,8 @@
-import { ArrowRight, Zap, Brain, CheckCircle, TrendingUp, Settings, Workflow } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
+import { ArrowRight, Zap, Brain, CheckCircle, TrendingUp, Settings, Workflow } from 'lucide-react'}
+import EnhancedSEO from '../components/EnhancedSEO'}
+import ResponsiveContainer from '../components/ResponsiveContainer'}
+import FuturisticCard from '../components/FuturisticCard'}
+import FuturisticButton from '../components/FuturisticButton'}
 
 const AIAutomationPlatform = () => {
   const features = [
@@ -30,7 +30,7 @@ const AIAutomationPlatform = () => {
       icon: <Settings className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
+  ]
 
   const benefits = [
     "70% process efficiency gain",
@@ -39,7 +39,7 @@ const AIAutomationPlatform = () => {
     "Real-time optimization",
     "Scalable workflows",
     "Cost reduction"
-  ];
+  ]
 
   return (
     <>
@@ -160,7 +160,7 @@ const AIAutomationPlatform = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default AIAutomationPlatform;
+export default AIAutomationPlatform}

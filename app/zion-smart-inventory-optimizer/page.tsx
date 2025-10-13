@@ -1,15 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
@@ -39,30 +30,10 @@ export default function ZionSmartInventoryOptimizer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <h3 className="text-xl font-semibold text-white mb-4">Optimization Algorithms</h3>
-            <p className="text-gray-300 mb-4">
-              Advanced algorithms for inventory optimization and cost reduction.
-=======
-            <h3 className="text-xl font-semibold text-white mb-4">Smart Optimization</h3>
-            <p className="text-gray-300 mb-4">
-              AI-powered inventory optimization and demand forecasting.
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
             </p>
             <ul className="text-sm text-gray-400 space-y-2">
               <li>• Demand prediction</li>
               <li>• Stock optimization</li>
-<<<<<<< HEAD
-=======
-            <h3 className="text-xl font-semibold text-white mb-4">Inventory Optimization</h3>
-            <p className="text-gray-300 mb-4">
-              AI-powered inventory optimization algorithms.
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Stock level optimization</li>
-              <li>• Demand prediction</li>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
               <li>• Cost reduction</li>
@@ -70,49 +41,10 @@ export default function ZionSmartInventoryOptimizer() {
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <h3 className="text-xl font-semibold text-white mb-4">Real-time Monitoring</h3>
-            <p className="text-gray-300 mb-4">
-              Real-time inventory monitoring and automated alerts.
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Live tracking</li>
-              <li>• Alert system</li>
-              <li>• Performance metrics</li>
-=======
-            <h3 className="text-xl font-semibold text-white mb-4">Supply Chain Management</h3>
-            <p className="text-gray-300 mb-4">
-              Intelligent supply chain management capabilities.
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Vendor coordination</li>
-              <li>• Lead time optimization</li>
-              <li>• Quality control</li>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
             </ul>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-<<<<<<< HEAD
-            <h3 className="text-xl font-semibold text-white mb-4">Integration</h3>
-            <p className="text-gray-300 mb-4">
-              Seamless integration with existing business systems.
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• ERP integration</li>
-              <li>• API connectivity</li>
-              <li>• Data synchronization</li>
-=======
-            <h3 className="text-xl font-semibold text-white mb-4">Real-time Monitoring</h3>
-            <p className="text-gray-300 mb-4">
-              Real-time inventory monitoring and alerts.
-            </p>
-            <ul className="text-sm text-gray-400 space-y-2">
-              <li>• Stock alerts</li>
-              <li>• Movement tracking</li>
-              <li>• Performance metrics</li>
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
             </ul>
           </div>
         </div>
@@ -145,12 +77,6 @@ export default function ZionSmartInventoryOptimizer() {
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Optimize Your Inventory?</h2>
             <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-              Our AI experts are ready to help you optimize your inventory management process.
-=======
-              Our zion smart inventory optimizer experts are ready to help you optimize your operations.
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
               Our AI inventory optimization experts are ready to help you maximize efficiency and reduce costs.
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
@@ -158,24 +84,7 @@ export default function ZionSmartInventoryOptimizer() {
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
               Get Started Today
             </button>
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-          </div>;
-);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======

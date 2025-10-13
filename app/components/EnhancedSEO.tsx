@@ -1,11 +1,11 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 interface EnhancedSEOProps {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  canonical?: string;
-  children?: React.ReactNode;
+  title?: string}
+  description?: string}
+  keywords?: string}
+  canonical?: string}
+  children?: React.ReactNode}
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
@@ -24,16 +24,9 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
         {canonical && <link rel="canonical" href={canonical} />}
       </Helmet>
       {children}
-    </>;
-);
-};
-<<<<<<< HEAD
-=======
-
-export default EnhancedSEO;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+    </>}
+)
+}
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c

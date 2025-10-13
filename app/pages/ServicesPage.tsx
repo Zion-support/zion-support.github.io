@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
 export default function ServicesPage() {
   return (
@@ -19,6 +19,6 @@ export default function ServicesPage() {
           </div>
         </div>
       </div>
-    </>;
-);
+    </>}
+)
 }

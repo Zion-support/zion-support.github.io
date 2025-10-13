@@ -3,39 +3,39 @@ import { Link } from 'react-router-dom';
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 
 const Navigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [servicesOpen, setServicesOpen] = useState(false);
-  const [aiServicesOpen, setAiServicesOpen] = useState(false);
-  const [itServicesOpen, setItServicesOpen] = useState(false);
-  const [microSaasOpen, setMicroSaasOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
+  const [servicesOpen, setServicesOpen] = useState(false)
+  const [aiServicesOpen, setAiServicesOpen] = useState(false)
+  const [itServicesOpen, setItServicesOpen] = useState(false)
+  const [microSaasOpen, setMicroSaasOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 1024) {
-        setIsOpen(false);
+        setIsOpen(false)
       }
-    };
+    }
 
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+      setIsScrolled(window.scrollY > 50)
+    }
 
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize)
+    window.addEventListener('scroll', handleScroll)
     return () => {
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+      window.removeEventListener('resize', handleResize)
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   const closeAllMenus = () => {
-    setServicesOpen(false);
-    setAiServicesOpen(false);
-    setItServicesOpen(false);
-    setMicroSaasOpen(false);
-    setIsOpen(false);
-  };
+    setServicesOpen(false)
+    setAiServicesOpen(false)
+    setItServicesOpen(false)
+    setMicroSaasOpen(false)
+    setIsOpen(false)
+  }
 
   const services = [
     { title: 'AI Services', url: '/ai-services', icon: Brain },
@@ -44,21 +44,21 @@ const Navigation: React.FC = () => {
     { title: 'Cybersecurity', url: '/cybersecurity', icon: Shield },
     { title: 'Data Analytics', url: '/data-analytics', icon: BarChart },
     { title: 'DevOps', url: '/devops', icon: Settings }
-  ];
+  ]
 
   const aiServices = [
     { title: 'AI Marketing', url: '/ai-marketing', icon: TrendingUp },
     { title: 'AI Automation', url: '/ai-automation', icon: Zap },
     { title: 'AI Healthcare', url: '/ai-healthcare', icon: Users },
     { title: 'AI Fintech', url: '/ai-fintech', icon: BarChart }
-  ];
+  ]
 
   const itServices = [
     { title: 'Cloud Services', url: '/cloud-services', icon: Cloud },
     { title: 'Cybersecurity', url: '/cybersecurity', icon: Shield },
     { title: 'Data Analytics', url: '/data-analytics', icon: BarChart },
     { title: 'DevOps', url: '/devops', icon: Settings }
-  ];
+  ]
 
   const microSaas = [
     { title: 'AI Email Analyzer', url: '/zion-ai-email-analyzer', icon: Mail },
@@ -68,7 +68,7 @@ const Navigation: React.FC = () => {
     { title: 'AI Voice Assistant Pro', url: '/zion-ai-voice-assistant-pro', icon: Smartphone },
     { title: 'Smart Expense Categorizer', url: '/zion-smart-expense-categorizer', icon: FileText },
     { title: 'Smart Inventory Optimizer', url: '/zion-smart-inventory-optimizer', icon: Database }
-  ];
+  ]
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -91,190 +91,6 @@ const Navigation: React.FC = () => {
           <div className="hidden lg:flex items-center space-x-8">
             <Link to="/about" className="text-white hover:text-cyan-400 transition-colors font-medium">              
               About
-<<<<<<< HEAD
-            </Link>
-            
-            {/* Services Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium"
-                onMouseEnter={() => setServicesOpen(true)}
-                onMouseLeave={() => setServicesOpen(false)}
-              >
-                <span>Services</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              {servicesOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-xl border border-slate-700/50 py-2"
-                  onMouseEnter={() => setServicesOpen(true)}
-                  onMouseLeave={() => setServicesOpen(false)}
-                >
-                  {services.map((service) => {
-                    const Icon = service.icon;
-                    return (
-                      <Link
-                        key={service.title}
-                        to={service.url}
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <Icon className="w-4 h-4" />
-                        <span>{service.title}</span>
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-
-            {/* AI Services Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium"
-                onMouseEnter={() => setAiServicesOpen(true)}
-                onMouseLeave={() => setAiServicesOpen(false)}
-              >
-                <span>AI Solutions</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              {aiServicesOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-xl border border-slate-700/50 py-2"
-                  onMouseEnter={() => setAiServicesOpen(true)}
-                  onMouseLeave={() => setAiServicesOpen(false)}
-                >
-                  {aiServices.map((service) => {
-                    const Icon = service.icon;
-                    return (
-                      <Link
-                        key={service.title}
-                        to={service.url}
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <Icon className="w-4 h-4" />
-                        <span>{service.title}</span>
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-
-            {/* Micro SAAS Dropdown */}
-            <div className="relative group">
-              <button
-                className="flex items-center space-x-1 text-white hover:text-cyan-400 transition-colors font-medium"
-                onMouseEnter={() => setMicroSaasOpen(true)}
-                onMouseLeave={() => setMicroSaasOpen(false)}
-              >
-                <span>Micro SAAS</span>
-                <ChevronDown className="w-4 h-4" />
-              </button>
-              {microSaasOpen && (
-                <div 
-                  className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm rounded-lg shadow-xl border border-slate-700/50 py-2"
-                  onMouseEnter={() => setMicroSaasOpen(true)}
-                  onMouseLeave={() => setMicroSaasOpen(false)}
-                >
-                  {microSaas.map((service) => {
-                    const Icon = service.icon;
-                    return (
-                      <Link
-                        key={service.title}
-                        to={service.url}
-                        className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-slate-700/50 transition-colors"
-                        onClick={closeAllMenus}
-                      >
-                        <Icon className="w-4 h-4" />
-                        <span>{service.title}</span>
-                      </Link>
-                    );
-                  })}
-                </div>
-              )}
-            </div>
-
-            {/* Contact Info */}
-            <div className="hidden lg:flex items-center space-x-4">
-              <Link 
-                to="/case-studies"
-                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-                onClick={closeAllMenus}
-              >
-                Case Studies
-              </Link>
-              <Link
-                to="/blog"
-                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-                onClick={closeAllMenus}
-              >
-                Blog
-              </Link>
-              <Link
-                to="/contact"
-                className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-                onClick={closeAllMenus}
-              >
-                Contact
-              </Link>
-              {/* CTA Button */}
-              <a
-                href="tel:+13024640950"
-                className="cyber-button inline-flex items-center"
-                onClick={closeAllMenus}
-              >
-                <Phone className="w-4 h-4 mr-2" />
-                (302) 464-0950
-              </a>
-            </div>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="lg:hidden text-white hover:text-cyan-400 transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {isOpen && (
-          <div className="lg:hidden bg-slate-900/95 backdrop-blur-sm border-t border-slate-800/50">
-            <div className="px-2 pt-2 pb-3 space-y-1">
-=======
-                            <Link
-                              to={`/${category.title.toLowerCase().replace(' ', '-')}`}
-                    <Link
-                      to="/services";
-)}
-          {/* Contact Info */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <Link 
-              to="/case-studies"
-            <Link
-              to="/blog"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Blog
-            <Link
-              to="/contact"
-              className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
-              onClick={closeAllMenus}
-            >
-              Contact
-            {/* CTA Button */}
-            <a
-              href="tel:+13024640950"
-              className="cyber-button inline-flex items-center"
-              onClick={closeAllMenus}
-            >
-              <Phone className="w-4 h-4 mr-2" />
-              (302) 464-0950
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
               <Link
                 to="/"
                 className="block px-3 py-2 text-base font-medium text-white hover:text-cyan-400 hover:bg-gray-800 rounded-md"
@@ -312,7 +128,7 @@ const Navigation: React.FC = () => {
                           <Icon className="w-4 h-4" />
                           <span>{service.title}</span>
                         </Link>
-                      );
+                      )
                     })}
                   </div>
                 )}
@@ -324,26 +140,3 @@ const Navigation: React.FC = () => {
                   onClick={closeAllMenus}
                 >
                   <Phone className="w-4 h-4 inline mr-2" />
-<<<<<<< HEAD
-                  (302) 464-0950
-                </a>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
-  );
-};
-
-export default Navigation;
-=======
-                  (302) 464-0950;
-)}
-  );
-};
-
-export default Navigation;
-
-</div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3

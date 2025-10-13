@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet-async';
 interface SEOEnhancerProps {
   title: string;
   description: string;
-  keywords: string[];
+  keywords: string[]
   noIndex?: boolean;
   structuredData?: any;
   children?: ReactNode;
@@ -30,7 +30,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       "telephone": "+1-302-464-0950",
       "contactType": "customer service";
 }
-  };
+  }
 
   const finalStructuredData = structuredData || defaultStructuredData;
 
@@ -69,7 +69,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       </Helmet>
       {children}
     </React.Fragment>
-  );
-};
+  )
+}
 
 export default SEOEnhancer;

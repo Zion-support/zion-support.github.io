@@ -30,11 +30,6 @@ export default async function handler(req, res) {
       status: 'pending'
     };
     // // console.log('Quote request received:', quoteData);
-<<<<<<< HEAD
-=======
-    // console.log('Quote request received:', quoteData);
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
@@ -48,11 +43,6 @@ export default async function handler(req, res) {
 }));
   } catch (_error) {
     // console.error('Quote submission error:', error);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3

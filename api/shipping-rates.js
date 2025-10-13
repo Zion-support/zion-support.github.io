@@ -27,11 +27,6 @@ export default function handler(req, res) {
     }
   } catch (_error) {
     // console.error('Error reading existing rates:', error);
-<<<<<<< HEAD
-=======
-  } catch (error) {
-    console.error('Error reading existing rates:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
 =======
 ;
 } catch (error) {
@@ -64,11 +59,6 @@ export default function handler(req, res) {
       id: newRate.id;
 }));
   } catch (_error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-}}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
   } catch (error) {
     console.error('Error saving shipping rate:', error);

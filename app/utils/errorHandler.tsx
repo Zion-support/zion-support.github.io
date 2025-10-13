@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+'use client'}
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
 const ErrorHandler: React.FC = () => {
   return (
@@ -71,7 +71,7 @@ const ErrorHandler: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let&apos;s discuss how our error handler 
+            Let&apos}s discuss how our error handler 
             services can help you achieve your goals.
           </p>
           <a
@@ -82,8 +82,8 @@ const ErrorHandler: React.FC = () => {
           </a>
         </div>
       </section>
-    </div>;
-);
-};
+    </div>}
+)
+}
 
-export default ErrorHandler;
+export default ErrorHandler}

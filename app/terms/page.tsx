@@ -1,5 +1,5 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
 
 const TermsPage: React.FC = () => {
   return (
@@ -45,7 +45,7 @@ const TermsPage: React.FC = () => {
 
                 <h2 className="text-2xl font-semibold text-white mb-4">Disclaimer</h2>
                 <p className="text-gray-300 mb-6">
-                  The materials on our website are provided on an &apos;as is&apos; basis. Zion Tech Group makes 
+                  The materials on our website are provided on an &apos}as is&apos} basis. Zion Tech Group makes 
                   no warranties, expressed or implied, and hereby disclaims and negates all other warranties.
                 </p>
 
@@ -90,8 +90,8 @@ const TermsPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>;
-);
-};
+    </>}
+)
+}
 
-export default TermsPage;
+export default TermsPage}

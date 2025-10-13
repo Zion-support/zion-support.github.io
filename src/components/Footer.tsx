@@ -11,7 +11,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Cybersecurity', url: '/cybersecurity' },
     { name: 'Data Analytics', url: '/data-analytics' },
     { name: 'DevOps', url: '/devops' }
-  ];
+  ]
 
   const solutions = [
     { name: 'Quantum Computing', url: '/quantum-computing' },
@@ -20,7 +20,7 @@ const Footer: React.FC = memo(() => {
     { name: 'IoT & Edge Computing', url: '/iot-edge-computing' },
     { name: 'Business Intelligence', url: '/business-intelligence' },
     { name: 'Robotics', url: '/robotics' }
-  ];
+  ]
 
   const company = [
     { name: 'About Us', url: '/about' },
@@ -29,7 +29,7 @@ const Footer: React.FC = memo(() => {
     { name: 'News', url: '/news' },
     { name: 'Case Studies', url: '/case-studies' },
     { name: 'Blog', url: '/blog' }
-  ];
+  ]
 
   const support = [
     { name: 'Contact Us', url: '/contact' },
@@ -38,14 +38,14 @@ const Footer: React.FC = memo(() => {
     { name: 'FAQ', url: '/faq' },
     { name: 'Request Demo', url: '/demo' },
     { name: 'Free Consultation', url: '/consultation' }
-  ];
+  ]
 
   const contactInfo = {
     phone: '+1 (302) 464-0950',
     email: 'contact@ziontechgroup.com',
     address: '123 Tech Street, Suite 100, San Francisco, CA 94105',
     hours: 'Monday - Friday: 9:00 AM - 6:00 PM EST'
-  };
+  }
 
   const socialLinks = [
     { name: 'Facebook', url: 'https://facebook.com/ziontechgroup', icon: Facebook },
@@ -54,7 +54,7 @@ const Footer: React.FC = memo(() => {
     { name: 'Instagram', url: 'https://instagram.com/ziontechgroup', icon: Instagram },
     { name: 'YouTube', url: 'https://youtube.com/ziontechgroup', icon: Youtube },
     { name: 'GitHub', url: 'https://github.com/zion-tech-group', icon: Github }
-  ];
+  ]
 
   return (
     <footer className="bg-slate-900/95 backdrop-blur-sm border-t border-slate-800/50">
@@ -86,7 +86,7 @@ const Footer: React.FC = memo(() => {
                   >
                     <Icon className="w-5 h-5" />
                   </a>
-                );
+                )
               })}
             </div>
           </div>
@@ -161,89 +161,3 @@ const Footer: React.FC = memo(() => {
                     to={link.url}
                     className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
-<<<<<<< HEAD
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        {/* Contact Info */}
-        <div className="border-t border-slate-800/50 mt-12 pt-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="flex items-center space-x-3">
-              <Phone className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.phone}</div>
-                <div className="text-gray-400 text-sm">Phone</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Mail className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.email}</div>
-                <div className="text-gray-400 text-sm">Email</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <MapPin className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.address}</div>
-                <div className="text-gray-400 text-sm">Address</div>
-              </div>
-            </div>
-            <div className="flex items-center space-x-3">
-              <Clock className="w-5 h-5 text-cyan-400" />
-              <div>
-                <div className="text-white font-medium">{contactInfo.hours}</div>
-                <div className="text-gray-400 text-sm">Business hours</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="border-t border-slate-800/50 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <div className="text-gray-400 text-sm mb-4 md:mb-0">
-            © 2024 Zion Tech Group. All rights reserved.
-          </div>
-          <div className="flex space-x-6 text-sm">
-            <Link to="/privacy" className="text-gray-400 hover:text-cyan-400 transition-colors">
-              Privacy Policy
-            </Link>
-            <Link to="/terms" className="text-gray-400 hover:text-cyan-400 transition-colors">
-              Terms of Service
-            </Link>
-            <Link to="/cookies" className="text-gray-400 hover:text-cyan-400 transition-colors">
-              Cookie Policy
-            </Link>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-});
-
-Footer.displayName = 'Footer';
-export default Footer;
-=======
-              <li><Link to="/services" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">All Services</Link>
-              <li><Link to="/pricing" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Pricing</Link>
-              <li><Link to="/demo" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Request Demo</Link>
-              <li><Link to="/consultation" className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm">Free Consultation</Link>
-              <Link to="/privacy" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Privacy Policy
-              <Link to="/terms" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Terms of Service
-              <Link to="/cookies" className="text-sm text-gray-400 hover:text-cyan-400 transition-colors">
-                Cookie Policy;
-);
-});
-
-Footer.displayName = 'Footer';
-export default Footer;
-
-</div></div>
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3

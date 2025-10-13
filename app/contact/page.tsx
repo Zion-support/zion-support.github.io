@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import React, { useState } from 'react'}
+import { Helmet } from 'react-helmet-async'}
+import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from 'lucide-react'}
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -10,28 +10,28 @@ export default function ContactPage() {
     phone: '',
     subject: '',
     message: ''
-  });
+  })
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value;
-});
-  };
+      [e.target.name]: e.target.value}
+})
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault()
+    setIsSubmitting(true)
     
     // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000))
     
-    setIsSubmitted(true);
-    setIsSubmitting(false);
-  };
+    setIsSubmitted(true)
+    setIsSubmitting(false)
+  }
 
   const contactInfo = [
     {
@@ -58,7 +58,7 @@ export default function ContactPage() {
       value: 'Monday - Friday',
       description: '9:00 AM - 6:00 PM EST'
     }
-  ];
+  ]
 
   const subjects = [
     'AI Services',
@@ -68,7 +68,7 @@ export default function ContactPage() {
     'Digital Transformation',
     '5G Implementation',
     'Other'
-  ];
+  ]
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -102,7 +102,7 @@ export default function ContactPage() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {contactInfo.map((info, index) => {
-              const Icon = info.icon;
+              const Icon = info.icon}
               return (
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
@@ -111,8 +111,8 @@ export default function ContactPage() {
                   <h3 className="text-lg font-semibold text-white mb-2">{info.title}</h3>
                   <p className="text-cyan-400 font-medium mb-1">{info.value}</p>
                   <p className="text-gray-400 text-sm">{info.description}</p>
-                </div>;
-);
+                </div>}
+)
             })}
           </div>
         </div>
@@ -126,22 +126,6 @@ export default function ContactPage() {
           </h2>
           
           {isSubmitted ? (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            <div className="bg-green-500/10 border border-green-500/20 rounded-2xl p-8 text-center">
-              <CheckCircle className="w-16 h-16 text-green-400 mx-auto mb-4" />
-              <h3 className="text-2xl font-bold text-white mb-2">Message Sent!</h3>
-              <p className="text-gray-300">
-                Thank you for your message. We&apos;ll get back to you within 24 hours.
-              </p>
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
@@ -155,7 +139,7 @@ export default function ContactPage() {
               <button
                 onClick={() => {
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
-                  setIsSubmitted(false);
+                  setIsSubmitted(false)
                   setFormData({
                     name: '',
                     email: '',
@@ -163,15 +147,9 @@ export default function ContactPage() {
                     phone: '',
                     subject: '',
                     message: ''
-                  });
+                  })
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-<<<<<<< HEAD
-<<<<<<< HEAD
-              >
-                Send Another Message
-              </button>
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6">
@@ -185,15 +163,15 @@ export default function ContactPage() {
                 </p>
                 <button
                   onClick={() => {
-                    setIsSubmitted(false);
+                    setIsSubmitted(false)
                     setFormData({
                       name: '',
                       email: '',
                       company: '',
                       phone: '',
                       subject: '',
-                      message: '';
-});
+                      message: ''}
+})
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
 =======
@@ -201,7 +179,7 @@ export default function ContactPage() {
               >
                 Send Another Message
               </button>
-            </div>;
+            </div>}
 ) : (
             <form onSubmit={handleSubmit} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
               <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -282,17 +260,6 @@ export default function ContactPage() {
                   className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                 >
                   <option value="">Select a subject</option>
-<<<<<<< HEAD
-                  {subjects.map((subject) => (
-                    <option key={subject} value={subject}>{subject}</option>
-                  ))}
-=======
-                  {subjects.map((subject, index) => (
-                    <option key={index} value={subject}>
-                      {subject}
-                    </option>;
-))}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
                 </select>
               </div>
 
@@ -322,32 +289,19 @@ export default function ContactPage() {
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
                       Sending...
-                    </>;
+                    </>}
 ) : (
                     <>
                       <Send className="w-5 h-5 mr-2" />
                       Send Message
-<<<<<<< HEAD
-                    </>
-                  )}
-=======
-                      <Send className="w-5 h-5 ml-2 inline" />
-                    </>;
-)}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
                 </button>
               </div>
-            </form>;
+            </form>}
 )}
         </div>
       </section>
-<<<<<<< HEAD
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
-    </div>;
-);
+    </div>}
+)
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3

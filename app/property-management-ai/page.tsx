@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'}
 
 export default function PropertyManagementAiPage() {
   return (
@@ -9,6 +9,6 @@ export default function PropertyManagementAiPage() {
           This page is under development.
         </p>
       </div>
-    </div>;
-);
+    </div>}
+)
 }

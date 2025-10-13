@@ -1,30 +1,27 @@
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
 =======
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'}
 
 // Type definitions for browser APIs
 declare global {
   interface PerformanceObserver {
-    observe(options: { entryTypes: string[] }): void;
-    disconnect(): void;
+    observe(options: { entryTypes: string[] }): void}
+    disconnect(): void}
   }
   const PerformanceObserver: {
-    new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver;
-  };
+    new (callback: (list: { getEntries(): PerformanceEntry[] }) => void): PerformanceObserver}
+  }
 }
 
 // Extend the global PerformanceEntry interface
 declare global {
   interface PerformanceEntry {
 
-    // This extends the built-in PerformanceEntry;
+    // This extends the built-in PerformanceEntry}
 
 } catch (error) {
-  console.error('Error:', error);
-  res.status(500).json({ error: 'Internal server error' });
+  console.error('Error:', error)
+  res.status(500).json({ error: 'Internal server error' })
 }
 }
 =======
@@ -34,66 +31,52 @@ declare global {
 declare global {
   interface PerformanceNavigationTiming extends PerformanceEntry {
 
-    requestStart: number;
-    responseStart: number;
+    requestStart: number}
+    responseStart: number}
   
 } catch (error) {
-  console.error('Error:', error);
-  res.status(500).json({ error: 'Internal server error' });
+  console.error('Error:', error)
+  res.status(500).json({ error: 'Internal server error' })
 }
 }
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'}
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
   interface PerformanceEntry {
 
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;
-<<<<<<< HEAD
-  }
-
-  interface PerformanceNavigationTiming extends PerformanceEntry {
-    requestStart: number;
-    responseStart: number;
-  }
-<<<<<<< HEAD
-}
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
+    name: string}
+    entryType: string}
+    startTime: number}
+    duration: number}
 =======
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
   
 } catch (error) {
-  console.error('Error:', error);
-  res.status(500).json({ error: 'Internal server error' });
+  console.error('Error:', error)
+  res.status(500).json({ error: 'Internal server error' })
 }
 }
   
   interface PerformanceEntry {
 
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;
+    name: string}
+    entryType: string}
+    startTime: number}
+    duration: number}
   
 } catch (error) {
-  console.error('Error:', error);
-  res.status(500).json({ error: 'Internal server error' });
+  console.error('Error:', error)
+  res.status(500).json({ error: 'Internal server error' })
 }
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
 interface PerformanceMetrics {
-  fcp: number | null;
-  lcp: number | null;
-  fid: number | null;
-  cls: number | null;
-  ttfb: number | null;
+  fcp: number | null}
+  lcp: number | null}
+  fid: number | null}
+  cls: number | null}
+  ttfb: number | null}
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -102,15 +85,6 @@ const PerformanceMonitor: React.FC = () => {
     lcp: null,
     fid: null,
     cls: null,
-<<<<<<< HEAD
-    ttfb: null
-  });
-
-<<<<<<< HEAD
-=======
-    ttfb: null,;
-});
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
   useEffect(() => {
@@ -120,91 +94,56 @@ const PerformanceMonitor: React.FC = () => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'paint') {
             if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
+              setMetrics(prev => ({ ...prev, fcp: entry.startTime }))
             }
           } else if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
+            setMetrics(prev => ({ ...prev, lcp: entry.startTime }))
           } else if (entry.entryType === 'first-input') {
-            const inputEntry = entry as any;
-<<<<<<< HEAD
-          } else if (entry.entryType === 'layout-shift') {
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart }));
-          }
-        }
-      });
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
+            const inputEntry = entry as any}
 
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input'] });
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input'] })
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
             if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
+              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }))
             }
           } else if (entry.entryType === 'layout-shift') {
 =======
             if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
+              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }))
             }
 
             if (inputEntry.processingStart && inputEntry.startTime) {
-              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
+              setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }))
             }
-;
+}
 } else if (entry.entryType === 'layout-shift') {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
-            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
+            setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }))
           }
         }
-      });
+      })
 
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-<<<<<<< HEAD
-      
-=======
-
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
+      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] })
       // Monitor TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming}
       if (navigationEntry) {
-        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
+        setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }))
       }
-<<<<<<< HEAD
-      
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
-      return () => observer.disconnect();
+      return () => observer.disconnect()
     }
-    return undefined;
-  }, []);
+    return undefined}
+  }, [])
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
   // Only show in development
   if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV !== 'development') {
-    return null;
+    return null}
   }
-<<<<<<< HEAD
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b847
   return (
     <div className="performance-monitor">
       <h3>Performance Metrics</h3>
@@ -215,16 +154,12 @@ const PerformanceMonitor: React.FC = () => {
         {metrics.cls && <div>CLS: {metrics.cls.toFixed(4)}</div>}
         {metrics.ttfb && <div>TTFB: {metrics.ttfb.toFixed(2)}ms</div>}
       </div>
-    </div>;
-);
-};
+    </div>}
+)
+}
 
-<<<<<<< HEAD
-export default PerformanceMonitor;
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
 =======
-export default PerformanceMonitor;
+export default PerformanceMonitor}
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-6405
@@ -241,13 +176,10 @@ export default PerformanceMonitor;
         <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default PerformanceMonitor;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
+export default PerformanceMonitor}
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c

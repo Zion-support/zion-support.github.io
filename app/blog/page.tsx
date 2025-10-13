@@ -1,6 +1,6 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, Calendar, User, Search, Filter } from 'lucide-react';
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
+import { ArrowRight, Calendar, User, Search, Filter } from 'lucide-react'}
 
 const BlogPage: React.FC = () => {
   const categories = [
@@ -9,7 +9,7 @@ const BlogPage: React.FC = () => {
     { id: "cybersecurity", name: "Cybersecurity", count: 3 },
     { id: "cloud", name: "Cloud Computing", count: 2 },
     { id: "development", name: "Development", count: 2 }
-  ];
+  ]
 
   const blogPosts = [
     {
@@ -72,7 +72,7 @@ const BlogPage: React.FC = () => {
       readTime: "9 min read",
       image: "🛡️"
     }
-  ];
+  ]
 
   return (
     <>
@@ -172,7 +172,7 @@ const BlogPage: React.FC = () => {
         </section>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default BlogPage;
+export default BlogPage}

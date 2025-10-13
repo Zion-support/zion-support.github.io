@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
 =======
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c
 // Next.js type declarations
@@ -21,8 +18,5 @@ export const nextUtil = () => {
 };
 
 export default nextUtil;
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3
 =======
 >>>>>>> 3d33b64448bdb81cd2984819501ea4fc0c6fb47c

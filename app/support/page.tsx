@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Phone, Mail, MapPin, Clock, MessageSquare, BookOpen, HelpCircle, Users, Zap } from 'lucide-react';
+import React from 'react'}
+import { Helmet } from 'react-helmet-async'}
+import { Link } from 'react-router-dom'}
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin, Clock, MessageSquare, BookOpen, HelpCircle, Users, Zap } from 'lucide-react'}
 
 const SupportPage: React.FC = () => {
   const supportOptions = [
@@ -33,7 +33,7 @@ const SupportPage: React.FC = () => {
       action: 'View Docs',
       color: 'from-orange-500 to-red-500'
     }
-  ];
+  ]
 
   const faqs = [
     {
@@ -52,7 +52,7 @@ const SupportPage: React.FC = () => {
       question: 'What if I need custom development?',
       answer: 'We offer custom development services for unique requirements. Contact our team to discuss your specific needs and get a quote.'
     }
-  ];
+  ]
 
   return (
     <>
@@ -86,7 +86,7 @@ const SupportPage: React.FC = () => {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {supportOptions.map((option, index) => {
-                const Icon = option.icon;
+                const Icon = option.icon}
                 return (
                   <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 text-center group">
                     <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${option.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
@@ -98,8 +98,8 @@ const SupportPage: React.FC = () => {
                       {option.action}
                       <ArrowRight className="w-4 h-4 ml-2 inline" />
                     </button>
-                  </div>;
-);
+                  </div>}
+)
               })}
             </div>
           </div>
@@ -116,7 +116,7 @@ const SupportPage: React.FC = () => {
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
                   <h3 className="text-xl font-semibold text-white mb-3">{faq.question}</h3>
                   <p className="text-gray-300">{faq.answer}</p>
-                </div>;
+                </div>}
 ))}
             </div>
           </div>
@@ -151,8 +151,8 @@ const SupportPage: React.FC = () => {
           </div>
         </section>
       </div>
-    </>;
-);
-};
+    </>}
+)
+}
 
-export default SupportPage;
+export default SupportPage}

@@ -1,2 +1,2 @@
-'use client';
-import { Helmet } from 'react-helmet-async';
+'use client'}
+import { Helmet } from 'react-helmet-async'}
