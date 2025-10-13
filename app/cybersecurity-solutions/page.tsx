@@ -4,8 +4,17 @@ import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Brain, Users
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { Helmet } from 'react-helmet-async';
 
 const CybersecuritySolutions = () => {
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+
+  const capabilities: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   const services = [
     {
       title: "Security Assessment",
@@ -126,7 +135,7 @@ const CybersecuritySolutions = () => {
         <title>Cybersecurity Solutions - Advanced Security Services | Zion Tech Group</title>
         <meta name="description" content="Protect your business with our comprehensive cybersecurity solutions. AI-powered threat detection, zero trust architecture, and 24/7 monitoring. Get started today!" />
         <meta name="keywords" content="cybersecurity, security solutions, threat detection, zero trust, data protection, compliance, security audit, penetration testing" />
-        <link rel="canonical" href="https://ziontechgroup.com/cybersecurity-solutions" />
+        <link rel="canonical" />
       </Helmet>
 
       {/* Hero Section */}
@@ -155,19 +164,11 @@ const CybersecuritySolutions = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <FuturisticButton
-              href="#pricing"
-              variant="primary"
-              size="lg"
-              icon={<Shield className="w-5 h-5" />}
-            >
+              >
               Get Protected
             </FuturisticButton>
             <FuturisticButton
-              href="#services"
-              variant="outline"
-              size="lg"
-              icon={<ArrowRight className="w-5 h-5" />}
-            >
+              >
               Explore Solutions
             </FuturisticButton>
           </div>
@@ -256,7 +257,7 @@ const CybersecuritySolutions = () => {
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </div>
                   ))}
                 </div>
@@ -310,7 +311,7 @@ const CybersecuritySolutions = () => {
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>
@@ -318,7 +319,6 @@ const CybersecuritySolutions = () => {
                 <FuturisticButton
                   href={plan.cta === "Contact Sales" ? "/contact" : "#contact"}
                   variant={plan.popular ? "primary" : "outline"}
-                  size="lg"
                   className="w-full"
                 >
                   {plan.cta}
@@ -383,19 +383,11 @@ const CybersecuritySolutions = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<Shield className="w-5 h-5" />}
-              >
+                >
                 Get Protected Now
               </FuturisticButton>
               <FuturisticButton
-                href="/demo"
-                variant="outline"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
+                >
                 Schedule Security Audit
               </FuturisticButton>
             </div>

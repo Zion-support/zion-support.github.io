@@ -97,7 +97,7 @@ const CloudServicesPage: React.FC = () => {
                   {benefit.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
-                  {benefit.title}
+                  {benefit}
                 </h3>
                 <p className="text-gray-300">
                   {benefit.description}

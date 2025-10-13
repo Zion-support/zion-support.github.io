@@ -3,9 +3,15 @@ import { Helmet } from 'react-helmet-async';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { Helmet } from 'react-helmet-async';
 
 const ZionAiBusinessIntelligencePro = () => {
-  
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   const pricingPlans = [
     {
       name: "Professional",
@@ -114,7 +120,7 @@ const ZionAiBusinessIntelligencePro = () => {
         <title>Zion AI Business Intelligence Pro - AI-Powered Analytics Platform | Zion Tech Group</title>
         <meta name="description" content="Transform your data into actionable insights with Zion AI Business Intelligence Pro. AI-powered analytics, predictive modeling, and real-time dashboards for enterprise organizations." />
         <meta name="keywords" content="business intelligence, AI analytics, data visualization, predictive analytics, business intelligence platform, data insights, enterprise analytics" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-business-intelligence-pro" />
+        <link rel="canonical" />
       </Helmet>
 
       {/* Hero Section */}
@@ -143,19 +149,11 @@ const ZionAiBusinessIntelligencePro = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <FuturisticButton
-              href="#pricing"
-              variant="primary"
-              size="lg"
-              icon={<BarChart3 className="w-5 h-5" />}
-            >
+              >
               Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              href="#demo"
-              variant="outline"
-              size="lg"
-              icon={<Eye className="w-5 h-5" />}
-            >
+              >
               View Demo
             </FuturisticButton>
           </div>
@@ -244,7 +242,7 @@ const ZionAiBusinessIntelligencePro = () => {
                   {capability.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </div>
                   ))}
                 </div>
@@ -295,7 +293,7 @@ const ZionAiBusinessIntelligencePro = () => {
                   {plan.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center text-sm text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>
@@ -303,7 +301,6 @@ const ZionAiBusinessIntelligencePro = () => {
                 <FuturisticButton
                   href={plan.cta === "Contact Sales" ? "/contact" : "#signup"}
                   variant={plan.popular ? "primary" : "outline"}
-                  size="lg"
                   className="w-full"
                 >
                   {plan.cta}
@@ -368,19 +365,11 @@ const ZionAiBusinessIntelligencePro = () => {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-                href="#signup"
-                variant="primary"
-                size="lg"
-                icon={<BarChart3 className="w-5 h-5" />}
-              >
+                >
                 Start Free Trial
               </FuturisticButton>
               <FuturisticButton
-                href="/contact"
-                variant="outline"
-                size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
-              >
+                >
                 Contact Sales
               </FuturisticButton>
             </div>

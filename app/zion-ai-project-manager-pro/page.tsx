@@ -6,7 +6,10 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAIProjectManagerProPage = () => {
-  
+  const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
+
+  const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
+
   const pricingPlans = [
     {
       name: "Starter",
@@ -179,19 +182,11 @@ const ZionAIProjectManagerProPage = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
-            >
+              >
               Start Free Trial
             </FuturisticButton>
             <FuturisticButton
-              href="#demo"
-              variant="outline"
-              size="lg"
-              icon={<Monitor className="w-5 h-5" />}
-            >
+              >
               Watch Demo
             </FuturisticButton>
           </div>
@@ -373,14 +368,12 @@ const ZionAIProjectManagerProPage = () => {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
+                      <span className="text-sm">{feature.title}</span>
                     </li>
                   ))}
                 </ul>
                 <FuturisticButton
-                  href="/contact"
                   variant={plan.popular ? "primary" : "outline"}
-                  size="lg"
                   className="w-full"
                 >
                   Get Started
@@ -442,19 +435,11 @@ const ZionAIProjectManagerProPage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
-                href="/contact"
-                variant="primary"
-                size="lg"
-                icon={<Sparkles className="w-5 h-5" />}
-              >
+                >
                 Start Free Trial
               </FuturisticButton>
               <FuturisticButton
-                href="/demo"
-                variant="outline"
-                size="lg"
-                icon={<Monitor className="w-5 h-5" />}
-              >
+                >
                 Schedule Demo
               </FuturisticButton>
             </div>

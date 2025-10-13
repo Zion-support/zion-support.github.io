@@ -177,7 +177,7 @@ export default function AISmartScheduler() {
                       className="flex items-center text-gray-300"
                     >
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                      {feature}
+                      {feature.title}
                     </li>
                   ))}
                 </ul>

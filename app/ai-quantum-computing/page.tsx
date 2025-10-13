@@ -126,7 +126,7 @@ export default function AIQuantumComputingPage() {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group</title>
         <meta
@@ -437,6 +437,6 @@ export default function AIQuantumComputingPage() {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 }

@@ -20,6 +20,15 @@ export default function ZionAnalyticsPro() {
     "Custom metrics & KPIs"
   ];
 
+  const _benefits = [
+    "Increase revenue by 25%",
+    "Reduce reporting time by 80%",
+    "Make data-driven decisions",
+    "Scale with your business",
+    "Improve operational efficiency",
+    "Identify growth opportunities"
+  ];
+
   const pricing = [
     {
       name: "Starter",
@@ -48,7 +57,7 @@ export default function ZionAnalyticsPro() {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group</title>
         <meta
@@ -61,10 +70,6 @@ export default function ZionAnalyticsPro() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/zion-analytics-pro" />
       </Helmet>
-      <SEOOptimizer
-        title="Zion Analytics Pro - AI-Powered Business Intelligence | Zion Tech Group"
-        description="Transform your business with Zion Analytics Pro - AI-powered business intelligence platform with real-time analytics, predictive insights, and automated reporting. Start your free trial today!"
-      />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
@@ -302,6 +307,6 @@ export default function ZionAnalyticsPro() {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 }

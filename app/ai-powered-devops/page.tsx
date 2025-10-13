@@ -126,7 +126,7 @@ export default function AIPoweredDevOpsPage() {
   ];
 
   return (
-    <>
+    <React.Fragment>
       <Helmet>
         <title>AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group</title>
         <meta
@@ -239,7 +239,7 @@ export default function AIPoweredDevOpsPage() {
                 >
                   <div className="flex items-center mb-4">
                     <CheckCircle className="w-6 h-6 text-green-400 mr-3 flex-shrink-0" />
-                    <span className="text-white font-medium">{feature}</span>
+                    <span className="text-white font-medium">{feature.title}</span>
                   </div>
                 </div>
               ))}
@@ -436,6 +436,6 @@ export default function AIPoweredDevOpsPage() {
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 }

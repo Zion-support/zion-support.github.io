@@ -1,16 +1,7 @@
 import React from 'react';
-import { 
-  ArrowRight, 
-  Brain, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Users, 
-  Sparkles,
-  CheckCircle,
-  Star,
-  TrendingUp
-} from 'lucide-react';
+import { ArrowRight, Brain, Shield, Zap, BarChart3, Users, Sparkles, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function page() {
   const benefits = [

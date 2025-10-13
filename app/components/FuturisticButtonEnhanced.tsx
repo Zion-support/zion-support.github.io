@@ -1,4 +1,6 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { Icon, Icon } from 'lucide-react';
 
 interface FuturisticButtonEnhancedProps {
   children: React.ReactNode;
@@ -72,6 +74,15 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
     tap: { 
       scale: 0.95,
       transition: { duration: 0.1 }
+    }
+  };
+
+  const _rippleVariants = {
+    initial: { scale: 0, opacity: 1 },
+    animate: { 
+      scale: 4, 
+      opacity: 0,
+      transition: { duration: 0.6, ease: "easeOut" }
     }
   };
 

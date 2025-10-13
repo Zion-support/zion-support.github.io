@@ -12,6 +12,8 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const AIDataAnalyticsProPage = () => {
+  const benefits: string[] = [];
+
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,

@@ -2,6 +2,8 @@ import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail } f
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import { Code, Globe, Smartphone, Zap, Database, ArrowRight, ArrowRight, Mail, Smartphone, Globe, ArrowRight } from 'lucide-react';
+
 
 export default function page() {
   const features = [
@@ -164,7 +166,7 @@ export default function page() {
                             key={idx}
                             className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30"
                           >
-                            {feature}
+                            {feature.title}
                           </span>
                         ))}
                       </div>
