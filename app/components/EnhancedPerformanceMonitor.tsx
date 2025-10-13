@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -31,27 +31,27 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
         const vitals: Partial<PerformanceMetrics> = {};
 
         // Get FCP
-        getFCP((metric) => {
+        onFCP((metric: any) => {
           vitals.firstContentfulPaint = metric.value;
         });
 
         // Get LCP
-        getLCP((metric) => {
+        onLCP((metric: any) => {
           vitals.largestContentfulPaint = metric.value;
         });
 
-        // Get FID
-        getFID((metric) => {
+        // Get INP (replaces FID)
+        onINP((metric: any) => {
           vitals.firstInputDelay = metric.value;
         });
 
         // Get CLS
-        getCLS((metric) => {
+        onCLS((metric: any) => {
           vitals.cumulativeLayoutShift = metric.value;
         });
 
         // Get TTFB
-        getTTFB((metric) => {
+        onTTFB((metric: any) => {
           vitals.timeToFirstByte = metric.value;
         });
 
