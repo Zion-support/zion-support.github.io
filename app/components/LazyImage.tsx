@@ -1,44 +1,95 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import React, { useState, useRef, useEffect } from 'react';
 
 interface LazyImageProps {
   src: string;
   alt: string;
   className?: string;
-  width?: number;
-  height?: number;
+  placeholder?: React.ReactNode;
+  fallback?: React.ReactNode;
+  onLoad?: () => void;
+  onError?: () => void;
+  loading?: 'lazy' | 'eager';
+  sizes?: string;
+  srcSet?: string;
 }
 
-export default function LazyImage({
+const LazyImage: React.FC<LazyImageProps> = ({
   src,
   alt,
-  className = "",
-  width,
-  height,
-}: LazyImageProps) {
+  className = '',
+  placeholder,
+  fallback,
+  onLoad,
+  onError,
+  loading = 'lazy',
+  sizes,
+  srcSet,
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [isError, setIsError] = useState(false);
+  const [isInView, setIsInView] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsInView(true);
+          observer.disconnect();
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px',
+      }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleLoad = () => {
+    setIsLoaded(true);
+    onLoad?.();
+  };
+
+  const handleError = () => {
+    setIsError(true);
+    onError?.();
+  };
+
+  if (isError && fallback) {
+    return <>{fallback}</>;
+  }
+
   return (
-    <>
-      <Helmet>
-        <title>Lazy Image - Zion Tech Group</title>
-      </Helmet>
-      <div className="lazy-image-container">
+    <div ref={imgRef} className={`relative overflow-hidden ${className}`}>
+      {!isLoaded && !isError && placeholder && (
+        <div className="absolute inset-0 flex items-center justify-center bg-gray-200 dark:bg-gray-700">
+          {placeholder}
+        </div>
+      )}
+      
+      {isInView && (
         <img
           src={src}
           alt={alt}
-          className={className}
-          width={width}
-          height={height}
-          loading="lazy"
+          className={`transition-opacity duration-300 ${
+            isLoaded ? 'opacity-100' : 'opacity-0'
+          } ${className}`}
+          loading={loading}
+          sizes={sizes}
+          srcSet={srcSet}
+          onLoad={handleLoad}
+          onError={handleError}
+          decoding="async"
         />
-        <Link
-          to="/contact"
-          className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto w-fit"
-        >
-          Contact Us
-          <ArrowRight className="w-5 h-5 ml-2" />
-        </Link>
-      </div>
-    </>
+      )}
+    </div>
   );
-}
+};
+
+export default LazyImage;

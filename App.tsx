@@ -10,14 +10,16 @@ import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-import PerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
+import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
+import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
+import ErrorHandler from "./app/components/ErrorHandler";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -38,6 +40,21 @@ const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
 // AI Service Pages
+const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
+const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
+const AiBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
+const AiContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
+const AiCustomerServicePage = React.lazy(() => import("./app/ai-customer-service/page"));
+const AiDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics/page"));
+const AiEmailAutomationPage = React.lazy(() => import("./app/ai-email-automation/page"));
+const AiFraudDetectionPage = React.lazy(() => import("./app/ai-fraud-detection/page"));
+const AiHealthcarePage = React.lazy(() => import("./app/ai-healthcare/page"));
+const AiMarketingPage = React.lazy(() => import("./app/ai-marketing/page"));
+const AiPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
+const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-management/page"));
+const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
+const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
+const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -109,6 +126,12 @@ const WorkflowAutomationPage = React.lazy(
 const CloudNativeSecurityPage = React.lazy(
   () => import("./app/cloud-native-security/page"),
 );
+const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
+const IotSolutionsPage = React.lazy(() => import("./app/iot-solutions/page"));
+const DevopsSolutionsPage = React.lazy(() => import("./app/devops-solutions/page"));
+const MachineLearningPage = React.lazy(() => import("./app/machine-learning/page"));
+const QuantumComputingPage = React.lazy(() => import("./app/quantum-computing/page"));
+const RoboticsPage = React.lazy(() => import("./app/robotics/page"));
 
 // Micro SAAS Pages
 const ZionAnalyticsProPage = React.lazy(
@@ -179,15 +202,18 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 // Main App Component
 function App() {
   return (
-    <ErrorBoundary>
-      <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <FuturisticBackground>
-              <Navigation />
-              <Breadcrumb />
-              <Suspense fallback={<LoadingPage />}>
-                <Routes>
+    <ErrorHandler>
+      <ErrorBoundary>
+        <HelmetProvider>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                <FuturisticBackground>
+                  <Navigation />
+                  <Breadcrumb />
+                  <main id="main-content" role="main">
+                    <Suspense fallback={<LoadingPage />}>
+                      <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
@@ -209,6 +235,21 @@ function App() {
                   <Route path="/sitemap" element={<SitemapPage />} />
 
                   {/* AI Service Routes */}
+                  <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+                  <Route path="/ai-automation" element={<AiAutomationPage />} />
+                  <Route path="/ai-business-intelligence" element={<AiBusinessIntelligencePage />} />
+                  <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
+                  <Route path="/ai-customer-service" element={<AiCustomerServicePage />} />
+                  <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
+                  <Route path="/ai-email-automation" element={<AiEmailAutomationPage />} />
+                  <Route path="/ai-fraud-detection" element={<AiFraudDetectionPage />} />
+                  <Route path="/ai-healthcare" element={<AiHealthcarePage />} />
+                  <Route path="/ai-marketing" element={<AiMarketingPage />} />
+                  <Route path="/ai-predictive-analytics" element={<AiPredictiveAnalyticsPage />} />
+                  <Route path="/ai-project-management" element={<AiProjectManagementPage />} />
+                  <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
+                  <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
+                  <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -303,6 +344,13 @@ function App() {
                     path="/cloud-native-security"
                     element={<CloudNativeSecurityPage />}
                   />
+                  <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                  <Route path="/iot-solutions" element={<IotSolutionsPage />} />
+                  <Route path="/devops-solutions" element={<DevopsSolutionsPage />} />
+                  <Route path="/blockchain-development" element={<BlockchainDevelopmentPage />} />
+                  <Route path="/machine-learning" element={<MachineLearningPage />} />
+                  <Route path="/quantum-computing" element={<QuantumComputingPage />} />
+                  <Route path="/robotics" element={<RoboticsPage />} />
 
                   {/* Micro SAAS Routes */}
                   <Route
@@ -395,26 +443,29 @@ function App() {
                     path="/5g-solutions"
                     element={<FiveGSolutionsPage />}
                   />
-                </Routes>
-              </Suspense>
-              <Footer />
-              <PerformanceOptimizer />
-              <AccessibilityEnhancer />
-              <EnhancedAccessibility>
-                <div></div>
-              </EnhancedAccessibility>
-            </FuturisticBackground>
-            <AnalyticsProvider>
-              <div>
-                <PerformanceMonitor />
-                <PerformanceEnhancer />
-                <SEOOptimizer />
+                      </Routes>
+                    </Suspense>
+                  </main>
+                  <Footer />
+                  <EnhancedPerformanceOptimizer />
+                  <EnhancedAccessibility>
+                    <div></div>
+                  </EnhancedAccessibility>
+                </FuturisticBackground>
+                <AnalyticsProvider>
+                  <div>
+                    <PerformanceMonitor />
+                    <PerformanceEnhancer />
+                    <SEOOptimizer />
+                    <EnhancedSEO />
+                  </div>
+                </AnalyticsProvider>
               </div>
-            </AnalyticsProvider>
-          </div>
-        </Router>
-      </HelmetProvider>
-    </ErrorBoundary>
+            </Router>
+          </AccessibilityEnhancer>
+        </HelmetProvider>
+      </ErrorBoundary>
+    </ErrorHandler>
   );
 }
 

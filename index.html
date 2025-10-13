@@ -160,6 +160,15 @@
     </style>
 
     <!-- Web App Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icon-16x16.png" />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/favicon.ico" />
   </head>
   <body>
     <!-- Skip Navigation Link for Accessibility -->
@@ -176,5 +185,20 @@
       </div>
     </div>
     <script type="module" src="/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+    </script>
   </body>
 </html>

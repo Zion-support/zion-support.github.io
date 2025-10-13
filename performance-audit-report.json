@@ -1,32 +1,11 @@
 {
-  "timestamp": "2025-10-13T01:48:41.806Z",
+  "timestamp": "2025-10-13T02:18:36.334Z",
   "issues": [
     {
       "type": "Potentially Unused Import",
-      "file": "app/components/AccessibilityEnhancer.tsx",
+      "file": "app/components/AdvancedErrorBoundary.tsx",
       "line": 2,
-      "import": "EyeOff",
-      "severity": "low"
-    },
-    {
-      "type": "Potentially Unused Import",
-      "file": "app/components/AccessibilityEnhancer.tsx",
-      "line": 2,
-      "import": "Type",
-      "severity": "low"
-    },
-    {
-      "type": "Potentially Unused Import",
-      "file": "app/components/AccessibilityEnhancer.tsx",
-      "line": 2,
-      "import": "Volume2",
-      "severity": "low"
-    },
-    {
-      "type": "Potentially Unused Import",
-      "file": "app/components/AccessibilityEnhancer.tsx",
-      "line": 2,
-      "import": "VolumeX",
+      "import": "Bug",
       "severity": "low"
     }
   ],
@@ -37,23 +16,13 @@
       "suggestion": "Consider using React.lazy() for this large component"
     },
     {
-      "type": "Lazy Loading",
-      "file": "app/components/Footer.tsx",
-      "suggestion": "Consider using React.lazy() for this large component"
-    },
-    {
-      "type": "Lazy Loading",
-      "file": "app/components/Navigation.tsx",
-      "suggestion": "Consider using React.lazy() for this large component"
-    },
-    {
-      "type": "Lazy Loading",
-      "file": "app/components/SEOHead.tsx",
-      "suggestion": "Consider using React.lazy() for this large component"
+      "type": "Memoization",
+      "file": "app/components/AccessibilityEnhancer.tsx",
+      "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
     },
     {
       "type": "Memoization",
-      "file": "app/components/AccessibilityEnhancer.tsx",
+      "file": "app/components/AdvancedPerformanceMonitor.tsx",
       "suggestion": "Consider using React.memo, useMemo, or useCallback for performance optimization"
     },
     {
@@ -103,10 +72,10 @@
     }
   ],
   "summary": {
-    "totalIssues": 4,
+    "totalIssues": 1,
     "highSeverity": 0,
     "mediumSeverity": 0,
-    "lowSeverity": 4,
-    "totalRecommendations": 14
+    "lowSeverity": 1,
+    "totalRecommendations": 12
   }
 }

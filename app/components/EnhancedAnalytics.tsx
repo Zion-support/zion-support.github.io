@@ -60,8 +60,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
 
       // Custom analytics
-      console.log("Analytics Event:", event, properties);
-    }
+      }
   };
 
   const identify = (userId: string, traits?: Record<string, unknown>) => {
@@ -79,8 +78,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
 
       // Custom analytics
-      console.log("Analytics Identify:", userId, traits);
-    }
+      }
   };
 
   const page = (name: string, properties?: Record<string, unknown>) => {
@@ -99,8 +97,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       }
 
       // Custom analytics
-      console.log("Analytics Page:", name, properties);
-    }
+      }
   };
 
   const value: AnalyticsContextType = {
