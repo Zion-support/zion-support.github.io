@@ -28,30 +28,30 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: false,
-    minify: "esbuild",
+    minify: "terser",
     target: "es2020",
     cssCodeSplit: true,
     modulePreload: {
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 500, // Increased threshold for better chunking
-    assetsInlineLimit: 1024, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 150, // Increased threshold for better chunking
+    assetsInlineLimit: 4096, // Increased for better caching of small assets
     // Enable compression
     reportCompressedSize: true,
-    // Optimize for production
+    // Better compression settings
     terserOptions: {
       compress: {
-        drop_console: true,
+        drop_console: true, // Remove console.log in production
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3, // More passes for better optimization
-        unsafe: true,
-        unsafe_comps: true,
-        unsafe_math: true,
-        unsafe_proto: true,
-        unsafe_regexp: true,
-        unsafe_undefined: true,
+        passes: 2,
+        unsafe: false,
+        unsafe_comps: false,
+        unsafe_math: false,
+        unsafe_proto: false,
+        unsafe_regexp: false,
+        unsafe_undefined: false,
         conditionals: true,
         dead_code: true,
         evaluate: true,
@@ -63,8 +63,8 @@ export default defineConfig({
         unused: true,
       },
       mangle: {
-        safari10: true, // Better Safari compatibility
-        toplevel: true,
+        safari10: true,
+        toplevel: false,
         properties: {
           regex: /^_/
         }
@@ -83,22 +83,22 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries - keep together for better caching
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
-          // Router
+          // Router - separate chunk
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - group by functionality
           if (id.includes('framer-motion')) {
             return 'animations'
           }
           if (id.includes('lucide-react')) {
             return 'icons'
           }
-          // SEO and meta
+          // SEO and meta - lightweight
           if (id.includes('react-helmet')) {
             return 'seo'
           }
@@ -110,7 +110,7 @@ export default defineConfig({
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
-          // Performance monitoring
+          // Performance monitoring - separate for lazy loading
           if (id.includes('web-vitals')) {
             return 'performance'
           }
@@ -118,7 +118,7 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - group by category
+          // AI service pages - more granular splitting
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
@@ -149,14 +149,29 @@ export default defineConfig({
             }
             return 'zion-other'
           }
-          // 5G service pages - group together
+          // 5G service pages
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
-          // Other service pages
+          // Micro SAAS pages
+          if (id.includes('/micro-') && id.includes('/page.tsx')) {
+            return 'micro-saas'
+          }
+          // Main pages - keep core pages together
           if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
-            return 'pages'
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') && !id.includes('/micro-')) {
+            return 'main-pages'
+          }
+          // Large vendor libraries
+          if (id.includes('node_modules')) {
+            // Group large libraries separately
+            if (id.includes('axios') || id.includes('lodash')) {
+              return 'http-utils'
+            }
+            if (id.includes('date-fns') || id.includes('moment')) {
+              return 'date-utils'
+            }
+            return 'vendor'
           }
           // Default chunk for other modules
           return 'vendor'
