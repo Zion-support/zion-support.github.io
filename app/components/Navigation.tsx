@@ -1,13 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Menu, X, ChevronDown } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-af40
 import { Link, useLocation } from 'react-router-dom';
 import { 
   Bars3Icon, 
@@ -23,42 +14,18 @@ import {
   ShieldCheckIcon,
   CurrencyDollarIcon,
   CogIcon,
-  ChevronDownIcon
+  ChevronDownIcon,
+  GlobeAltIcon
 } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
-<<<<<<< HEAD
-  const navigationItems = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { 
-      name: 'Services', 
-      href: '/services',
-      submenu: [
-        { name: 'AI Services', href: '/ai-services' },
-        { name: 'IT Services', href: '/it-services' },
-        { name: 'Solutions', href: '/cloud-infrastructure' },
-        { name: 'Digital Transformation', href: '/digital-transformation' }
-      ]
-    },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }
-=======
-  const navigation = [
-    { name: 'Home', href: '/', icon: HomeIcon },
-    { name: 'About', href: '/about', icon: InformationCircleIcon },
-    { name: 'Services', href: '/services', icon: BriefcaseIcon },
-    { name: 'Micro SaaS', href: '/micro-saas-solutions', icon: GlobeAltIcon },
-=======
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
 
   const navigation = [
     { name: 'Home', href: '/', icon: HomeIcon },
@@ -73,22 +40,16 @@ const Navigation = () => {
         { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
         { name: '5G Solutions', href: '/5g-solutions' },
-        { name: 'Micro SaaS', href: '/micro-saas' }
+        { name: 'Micro SaaS', href: '/micro-saas-solutions' }
       ]
     },
->>>>>>> cursor/website-audit-and-update-with-deployment-af40
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
     { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
-<<<<<<< HEAD
-    { name: 'Contact', href: '/contact', icon: PhoneIcon },
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-=======
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
->>>>>>> cursor/website-audit-and-update-with-deployment-af40
   ];
 
   return (
