@@ -1,27 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-<<<<<<< HEAD
-export default function EnhancedSEOPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>EnhancedSEO - Zion Tech Group</title>
-        <meta name="description" content="Advanced EnhancedSEO solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            EnhancedSEO
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-          </p>
-        </div>
-      </div>
-    </div>
-=======
 interface EnhancedSEOProps {
   title: string;
   description: string;
@@ -54,6 +33,5 @@ export default function EnhancedSEO({
       <meta name="twitter:description" content={description} />
       {image && <meta name="twitter:image" content={image} />}
     </Helmet>
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
   );
 }

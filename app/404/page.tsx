@@ -1,23 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
-          <p className="text-xl text-gray-600 mb-8">
-            This page is under development. Please check back later.
-=======
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { ArrowLeft, Home, Search, AlertTriangle } from 'lucide-react';
@@ -115,7 +96,6 @@ export default function NotFoundPage() {
             <Link to="/contact" className="text-cyan-400 hover:text-cyan-300 transition-colors ml-1">
               Contact our support team
             </Link>
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
           </p>
         </div>
       </div>

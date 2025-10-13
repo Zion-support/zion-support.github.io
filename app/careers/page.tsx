@@ -3,21 +3,12 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-=======
 export default function CareersPagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
         <title>Careers - Zion Tech Group</title>
         <meta name="description" content="Advanced Careers solutions by Zion Tech Group for modern businesses." />
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
       </Helmet>
       
       <div className="container mx-auto px-4 py-16">
@@ -26,10 +17,6 @@ export default function CareersPagePage() {
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-=======
             Advanced Careers solutions by Zion Tech Group for modern businesses.
           </p>
         </div>
@@ -74,7 +61,6 @@ export default function CareersPagePage() {
               </Link>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
         </div>
       </div>
     </div>

@@ -1,16 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-
-interface ImprovedFooterProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function ImprovedFooter({ className = '', children }: ImprovedFooterProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -75,7 +63,6 @@ export default function ComponentsImprovedFooterPage() {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
     </div>
   );
 }

@@ -3,17 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-interface FuturisticBackgroundProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function FuturisticBackground({ className = '', children }: FuturisticBackgroundProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-=======
 export default function ComponentsFuturisticBackgroundPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -74,7 +63,6 @@ export default function ComponentsFuturisticBackgroundPage() {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
     </div>
   );
 }

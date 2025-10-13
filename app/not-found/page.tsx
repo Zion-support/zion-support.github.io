@@ -3,16 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
 export default function NotFoundPagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -21,7 +11,6 @@ export default function NotFoundPagePage() {
         <meta name="description" content="Advanced Not Found solutions by Zion Tech Group for modern businesses." />
       </Helmet>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
@@ -31,8 +20,6 @@ export default function NotFoundPagePage() {
             Advanced Not Found solutions by Zion Tech Group for modern businesses.
           </p>
         </div>
-<<<<<<< HEAD
-=======
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-md p-8">
@@ -75,7 +62,6 @@ export default function NotFoundPagePage() {
             </div>
           </div>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
       </div>
     </div>
   );

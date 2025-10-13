@@ -5,6 +5,8 @@ import React from "react";
 interface EnhancedFooterProps {
   className?: string;
   children?: React.ReactNode;
+}
+
 export default function EnhancedFooter() {
   return (
     <footer className="bg-gray-900 text-white py-8">

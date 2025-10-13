@@ -3,16 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-interface CacheManagerProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function CacheManager({ className = '', children }: CacheManagerProps) {
-=======
 export default function ComponentsCacheManagerPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>

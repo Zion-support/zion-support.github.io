@@ -1,7 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
 import { render, screen, waitFor, act } from '@testing-library/react';
-import OptimizedImage from '../../app/components/OptimizedImage';
+import '@testing-library/jest-dom';
 
 // Mock component for testing
 const OptimizedImage = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
@@ -10,6 +9,13 @@ const OptimizedImage = ({ className = '', children }: { className?: string; chil
       {children}
     </div>
   );
+};
+
+const defaultProps = {
+  src: 'test-image.jpg',
+  alt: 'Test image',
+  width: 300,
+  height: 200,
 };
 
 describe('OptimizedImage Component', () => {
@@ -27,7 +33,6 @@ describe('OptimizedImage Component', () => {
     render(<OptimizedImage>Test content</OptimizedImage>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
-});
 
   it('shows loading skeleton initially', () => {
     render(<OptimizedImage {...defaultProps} />);

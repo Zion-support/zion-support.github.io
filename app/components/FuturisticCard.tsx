@@ -3,17 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-interface FuturisticCardProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function FuturisticCard({ className = '', children }: FuturisticCardProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-=======
 export default function ComponentsFuturisticCardPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -74,7 +63,6 @@ export default function ComponentsFuturisticCardPage() {
           </div>
         </div>
       </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
     </div>
   );
 }

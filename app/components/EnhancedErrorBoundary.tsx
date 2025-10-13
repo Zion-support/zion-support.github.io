@@ -1,20 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-
-export default function EnhancedErrorBoundaryPage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>EnhancedErrorBoundary - Zion Tech Group</title>
-        <meta name="description" content="Advanced EnhancedErrorBoundary solutions by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            EnhancedErrorBoundary
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
@@ -30,14 +15,11 @@ export default function ComponentsEnhancedErrorBoundaryPage() {
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Components
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
           </h1>
           <p className="text-xl text-gray-600 mb-8">
             Advanced Components solutions by Zion Tech Group for modern businesses.
           </p>
         </div>
-<<<<<<< HEAD
-=======
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-white rounded-lg shadow-md p-8">
@@ -80,7 +62,6 @@ export default function ComponentsEnhancedErrorBoundaryPage() {
             </div>
           </div>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
       </div>
     </div>
   );

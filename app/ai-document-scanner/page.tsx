@@ -3,16 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-<<<<<<< HEAD
-export default function PagePage() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced Page solutions by Zion Tech Group" />
-      </Helmet>
-      
-=======
 export default function AiDocumentScannerPagePage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
@@ -21,18 +11,12 @@ export default function AiDocumentScannerPagePage() {
         <meta name="description" content="Advanced Ai Document Scanner solutions by Zion Tech Group for modern businesses." />
       </Helmet>
 
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Page
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-<<<<<<< HEAD
-            This page is under development. Please check back later.
-          </p>
-        </div>
-=======
             Advanced Ai Document Scanner solutions by Zion Tech Group for modern businesses.
           </p>
         </div>
@@ -78,7 +62,6 @@ export default function AiDocumentScannerPagePage() {
             </div>
           </div>
         </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-5de4
       </div>
     </div>
   );
