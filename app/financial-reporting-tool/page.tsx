@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-export default function Financialreportingtool() {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function FinancialReportingToolPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -47,7 +42,4 @@ export default function FinancialReportingToolPage() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

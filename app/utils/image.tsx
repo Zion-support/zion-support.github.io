@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-export default function UtilsPage() {
-=======
 import React from 'react';
 
 interface ImageProps {
@@ -10,7 +6,6 @@ interface ImageProps {
 }
 
 export default function Image({ className = '', children, ...props }: ImageProps) {
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
   return (
     <div className={`image-component ${className}`} {...props}>
       {children}

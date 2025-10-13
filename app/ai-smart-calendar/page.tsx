@@ -1,33 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function GDataAnalyticsZionTechGroupPage() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
-      <Helmet>
-        <title>GDataAnalyticsZionTechGroupPage - Zion Tech Group</title>
-        <meta name="description" content="Professional GDataAnalyticsZionTechGroupPage services for businesses" />
-      </Helmet>
-      
-      <div className="flex items-center justify-center min-h-screen">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            GDataAnalyticsZionTechGroupPage
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional GDataAnalyticsZionTechGroupPage services coming soon.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="w-5 h-5 ml-2" />
-          </Link>
-=======
 
 export default function AiSmartCalendarPage() {
   return (
@@ -66,7 +38,6 @@ export default function AiSmartCalendarPage() {
               </p>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
         </div>
       </div>
     </div>

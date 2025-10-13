@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import React from "react";
-import { ArrowRight } from "lucide-react";
-
-import { Helmet } from "react-helmet-async";
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function ZionAiContractAnalyzerPage() {
   return (

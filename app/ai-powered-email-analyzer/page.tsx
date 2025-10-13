@@ -1,19 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { 
-  Mail, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  Target, 
-  Brain, 
-  Sparkles
-} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 import { Helmet } from 'react-helmet-async';
 
 export default function AiPoweredEmailAnalyzerPage() {

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import { clsx } from 'clsx';
-import { twMerge } from "tailwind-merge";
-
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
-=======
 // Utils utility functions
 
 export function utils() {
@@ -13,4 +6,3 @@ export function utils() {
 }
 
 export default utils;
->>>>>>> cursor/fix-errors-and-merge-to-main-b119

@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Brain, Shield, Users, Award, Mail, Smartphone, Globe } from 'lucide-react';
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
 
 export default function AboutPage() {
   return (

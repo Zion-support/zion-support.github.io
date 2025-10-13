@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-export default function AiChatbotBuilder() {
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 export default function AiChatbotBuilderPage() {
->>>>>>> cursor/fix-errors-and-merge-to-main-b119
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
