@@ -172,6 +172,7 @@ const Footer: React.FC = memo(() => {
   ];
 
   const companyLinks = [
+<<<<<<< HEAD
     { name: 'About Us', url: '/about' },
     { name: 'Our Team', url: '/team' },
     { name: 'Careers', url: '/careers' },
@@ -180,6 +181,19 @@ const Footer: React.FC = memo(() => {
     { name: 'News', url: '/news' },
     { name: 'Press Kit', url: '/press' },
     { name: 'Partners', url: '/partners' }
+=======
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Demo', href: '/demo' },
+    { name: 'Consultation', href: '/consultation' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Services', href: '/it-services' }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-091f
   ];
 
   const supportLinks = [

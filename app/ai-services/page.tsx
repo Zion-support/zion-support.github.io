@@ -624,6 +624,7 @@ const AIServicesPage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
+<<<<<<< HEAD
   // const categories = [
   //   { name: 'All', count: aiServices.length },
   //   { name: 'Consulting', count: aiServices.filter(s => s.category === 'Consulting').length },
@@ -639,6 +640,19 @@ const AIServicesPage: React.FC = () => {
   //   { name: 'Speech AI', count: aiServices.filter(s => s.category === 'Speech AI').length },
   //   { name: 'Edge AI', count: aiServices.filter(s => s.category === 'Edge AI').length }
   // ];
+=======
+
+  const categories = ['All', 'Analytics', 'Automation', 'Security', 'Document Processing', 'Customer Experience', 'Content Creation', 'Industrial AI', 'Financial AI', 'Healthcare AI', 'Supply Chain', 'Quantum Computing', 'Advanced AI', 'Immersive Technology', 'Climate Tech', 'Pharmaceutical AI', 'Fashion Tech', 'Creative AI', 'Energy Tech', 'Autonomous Systems', 'Blockchain AI', 'Cognitive AI', 'AI Development', 'Quantum ML', 'Space Technology', 'Scientific AI', 'Data Visualization', 'Quantum Security', 'Neural Interface', 'Quantum Optimization', 'Immersive Learning', 'Quantum AI', 'Immersive Workspace', 'Quantum Finance', 'Immersive Design', 'Immersive Analytics'];
+
+  if (!isLoaded) {
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-white"></div>
+      </div>
+    );
+  }
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-091f
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       {/* Hero Section */}

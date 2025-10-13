@@ -293,6 +293,7 @@ function App() {
               <FuturisticBackground>
                 <PerformanceOptimizer>
                   <Navigation />
+<<<<<<< HEAD
                   <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                   <Breadcrumb items={breadcrumbItems} />
                   
@@ -310,6 +311,33 @@ function App() {
                         <Route path="/demo" element={<DemoPage />} />
                         <Route path="/support" element={<SupportPage />} />
                         <Route path="/blog" element={<BlogPage />} />
+=======
+                  <main id="main-content" className="w-full">
+                    <Suspense fallback={<PageLoader message="Loading Zion Tech Group..." />}>
+                    <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/about" element={<AboutPage />} />
+                      <Route path="/contact" element={<ContactPage />} />
+                      <Route path="/pricing" element={<PricingPage />} />
+                      <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/blog" element={<BlogPage />} />
+                      <Route path="/case-studies" element={<CaseStudiesPage />} />
+                      <Route path="/team" element={<TeamPage />} />
+                      <Route path="/careers" element={<CareersPage />} />
+                      <Route path="/privacy" element={<PrivacyPage />} />
+                      <Route path="/terms" element={<TermsPage />} />
+                      <Route path="/cookies" element={<CookiesPage />} />
+                      <Route path="/docs" element={<DocsPage />} />
+                      <Route path="/api-docs" element={<ApiDocsPage />} />
+                      <Route path="/support" element={<SupportPage />} />
+                      <Route path="/status" element={<StatusPage />} />
+                      <Route path="/demo" element={<DemoPage />} />
+                      <Route path="/consultation" element={<ConsultationPage />} />
+                      <Route path="/health" element={<HealthPage />} />
+                      <Route path="/security" element={<SecurityPage />} />
+                      <Route path="/compliance" element={<CompliancePage />} />
+                      <Route path="/gdpr" element={<GDPRPage />} />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-091f
 
                         {/* AI Services */}
                         <Route path="/ai-services" element={<AIServicesPage />} />

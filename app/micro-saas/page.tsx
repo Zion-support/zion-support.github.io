@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import Navigation from '../components/Navigation';
@@ -284,3 +285,5 @@ const MicroSaasPage: React.FC = () => {
 };
 
 export default MicroSaasPage;
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-091f
