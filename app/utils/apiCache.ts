@@ -12,12 +12,6 @@ export class apiCache {
       enabled: true,
       ...config
     };
-
-// apiCache utility
-export const apiCache = {
-  // Utility implementation,
-    init: () => {
-    console.log('apiCache initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const apiCache = {
 
 export const apicache = new apiCache();
 export default apicache;
-// apiCache
-export const apiCache = () => {
-  // Utility function implementation
-  return null;
-};

@@ -12,12 +12,6 @@ export class analyticsTracker {
       enabled: true,
       ...config
     };
-
-// analyticsTracker utility
-export const analyticsTracker = {
-  // Utility implementation,
-    init: () => {
-    console.log('analyticsTracker initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const analyticsTracker = {
 
 export const analyticstracker = new analyticsTracker();
 export default analyticstracker;
-// analyticsTracker
-export const analyticsTracker = () => {
-  // Utility function implementation
-  return null;
-};

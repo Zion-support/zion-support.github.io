@@ -12,12 +12,6 @@ export class performanceMetrics {
       enabled: true,
       ...config
     };
-
-// performanceMetrics utility
-export const performanceMetrics = {
-  // Utility implementation,
-    init: () => {
-    console.log('performanceMetrics initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const performanceMetrics = {
 
 export const performancemetrics = new performanceMetrics();
 export default performancemetrics;
-// performanceMetrics
-export const performanceMetrics = () => {
-  // Utility function implementation
-  return null;
-};

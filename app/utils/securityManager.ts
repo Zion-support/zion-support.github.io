@@ -12,12 +12,6 @@ export class securityManager {
       enabled: true,
       ...config
     };
-
-// securityManager utility
-export const securityManager = {
-  // Utility implementation,
-    init: () => {
-    console.log('securityManager initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const securityManager = {
 
 export const securitymanager = new securityManager();
 export default securitymanager;
-// securityManager
-export const securityManager = () => {
-  // Utility function implementation
-  return null;
-};

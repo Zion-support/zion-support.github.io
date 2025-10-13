@@ -12,12 +12,6 @@ export class dataValidator {
       enabled: true,
       ...config
     };
-
-// dataValidator utility
-export const dataValidator = {
-  // Utility implementation,
-    init: () => {
-    console.log('dataValidator initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const dataValidator = {
 
 export const datavalidator = new dataValidator();
 export default datavalidator;
-// dataValidator
-export const dataValidator = () => {
-  // Utility function implementation
-  return null;
-};

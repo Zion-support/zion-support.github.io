@@ -12,12 +12,6 @@ export class advancedCaching {
       enabled: true,
       ...config
     };
-
-// advancedCaching utility
-export const advancedCaching = {
-  // Utility implementation,
-    init: () => {
-    console.log('advancedCaching initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const advancedCaching = {
 
 export const advancedcaching = new advancedCaching();
 export default advancedcaching;
-// advancedCaching
-export const advancedCaching = () => {
-  // Utility function implementation
-  return null;
-};

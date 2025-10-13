@@ -12,12 +12,6 @@ export class accessibilityChecker {
       enabled: true,
       ...config
     };
-
-// accessibilityChecker utility
-export const accessibilityChecker = {
-  // Utility implementation,
-    init: () => {
-    console.log('accessibilityChecker initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const accessibilityChecker = {
 
 export const accessibilitychecker = new accessibilityChecker();
 export default accessibilitychecker;
-// accessibilityChecker
-export const accessibilityChecker = () => {
-  // Utility function implementation
-  return null;
-};

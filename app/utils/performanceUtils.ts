@@ -12,12 +12,6 @@ export class performanceUtils {
       enabled: true,
       ...config
     };
-
-// performanceUtils utility
-export const performanceUtils = {
-  // Utility implementation,
-    init: () => {
-    console.log('performanceUtils initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const performanceUtils = {
 
 export const performanceutils = new performanceUtils();
 export default performanceutils;
-// performanceUtils
-export const performanceUtils = () => {
-  // Utility function implementation
-  return null;
-};

@@ -12,12 +12,6 @@ export class performanceMonitoring {
       enabled: true,
       ...config
     };
-
-// performanceMonitoring utility
-export const performanceMonitoring = {
-  // Utility implementation,
-    init: () => {
-    console.log('performanceMonitoring initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const performanceMonitoring = {
 
 export const performancemonitoring = new performanceMonitoring();
 export default performancemonitoring;
-// performanceMonitoring
-export const performanceMonitoring = () => {
-  // Utility function implementation
-  return null;
-};

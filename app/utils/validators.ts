@@ -12,12 +12,6 @@ export class validators {
       enabled: true,
       ...config
     };
-
-// validators utility
-export const validators = {
-  // Utility implementation,
-    init: () => {
-    console.log('validators initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const validators = {
 
 export const validatorsInstance = new validators();
 export default validatorsInstance;
-// validators
-export const validators = () => {
-  // Utility function implementation
-  return null;
-};

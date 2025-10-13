@@ -12,12 +12,6 @@ export class formValidation {
       enabled: true,
       ...config
     };
-
-// formValidation utility
-export const formValidation = {
-  // Utility implementation,
-    init: () => {
-    console.log('formValidation initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const formValidation = {
 
 export const formvalidation = new formValidation();
 export default formvalidation;
-// formValidation
-export const formValidation = () => {
-  // Utility function implementation
-  return null;
-};

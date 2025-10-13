@@ -12,12 +12,6 @@ export class sitemapGenerator {
       enabled: true,
       ...config
     };
-
-// sitemapGenerator utility
-export const sitemapGenerator = {
-  // Utility implementation,
-    init: () => {
-    console.log('sitemapGenerator initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const sitemapGenerator = {
 
 export const sitemapgenerator = new sitemapGenerator();
 export default sitemapgenerator;
-// sitemapGenerator
-export const sitemapGenerator = () => {
-  // Utility function implementation
-  return null;
-};

@@ -12,12 +12,6 @@ export class performanceEnhancer {
       enabled: true,
       ...config
     };
-
-// performanceEnhancer utility
-export const performanceEnhancer = {
-  // Utility implementation,
-    init: () => {
-    console.log('performanceEnhancer initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const performanceEnhancer = {
 
 export const performanceenhancer = new performanceEnhancer();
 export default performanceenhancer;
-// performanceEnhancer
-export const performanceEnhancer = () => {
-  // Utility function implementation
-  return null;
-};

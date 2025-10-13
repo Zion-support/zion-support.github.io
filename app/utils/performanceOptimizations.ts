@@ -12,12 +12,6 @@ export class performanceOptimizations {
       enabled: true,
       ...config
     };
-
-// performanceOptimizations utility
-export const performanceOptimizations = {
-  // Utility implementation,
-    init: () => {
-    console.log('performanceOptimizations initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const performanceOptimizations = {
 
 export const performanceoptimizations = new performanceOptimizations();
 export default performanceoptimizations;
-// performanceOptimizations
-export const performanceOptimizations = () => {
-  // Utility function implementation
-  return null;
-};

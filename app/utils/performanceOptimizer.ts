@@ -12,12 +12,6 @@ export class performanceOptimizer {
       enabled: true,
       ...config
     };
-
-// performanceOptimizer utility
-export const performanceOptimizer = {
-  // Utility implementation,
-    init: () => {
-    console.log('performanceOptimizer initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const performanceOptimizer = {
 
 export const performanceoptimizer = new performanceOptimizer();
 export default performanceoptimizer;
-// performanceOptimizer
-export const performanceOptimizer = () => {
-  // Utility function implementation
-  return null;
-};

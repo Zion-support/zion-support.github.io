@@ -12,13 +12,6 @@ export class accessibilityEnhancer {
       enabled: true,
       ...config
     };
-// accessibilityEnhancer utility;
-export const accessibilityEnhancer = {
-  // Utility implementation;
-  init: () => {
-  // Utility implementation,
-    init: () => {
-    console.log('accessibilityEnhancer initialized');
   }
 
   init(): void {

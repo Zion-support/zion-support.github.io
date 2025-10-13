@@ -12,12 +12,6 @@ export class advancedAnalytics {
       enabled: true,
       ...config
     };
-
-// advancedAnalytics utility
-export const advancedAnalytics = {
-  // Utility implementation,
-    init: () => {
-    console.log('advancedAnalytics initialized');
   }
 
   init(): void {
@@ -29,8 +23,3 @@ export const advancedAnalytics = {
 
 export const advancedanalytics = new advancedAnalytics();
 export default advancedanalytics;
-// advancedAnalytics
-export const advancedAnalytics = () => {
-  // Utility function implementation
-  return null;
-};
