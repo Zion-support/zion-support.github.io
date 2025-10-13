@@ -10,12 +10,16 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import CriticalResourcePreloader from "./components/CriticalResourcePreloader";
 import CacheManager from "./components/CacheManager";
 import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
+import Navigation from "./components/Navigation";
+import Footer from "./components/Footer";
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
 const ContactPage = lazy(() => import("./contact/page"));
 const ServicesPage = lazy(() => import("./services/page"));
+const MicroSaasPage = lazy(() => import("./micro-saas/page"));
+const AiServicesPage = lazy(() => import("./ai-services/page"));
 const PricingPage = lazy(() => import("./pricing/page"));
 const CaseStudiesPage = lazy(() => import("./case-studies/page"));
 const BlogPage = lazy(() => import("./blog/page"));
@@ -55,12 +59,15 @@ function App() {
             <CriticalResourcePreloader />
             <CacheManager />
             <AdvancedPerformanceMonitor />
+            <Navigation />
             <Suspense fallback={<LoadingSpinner />}>
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/micro-saas" element={<MicroSaasPage />} />
+              <Route path="/ai-services" element={<AiServicesPage />} />
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/case-studies" element={<CaseStudiesPage />} />
               <Route path="/blog" element={<BlogPage />} />
@@ -106,6 +113,7 @@ function App() {
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             </Routes>
             </Suspense>
+            <Footer />
           </AccessibilityEnhancer>
         </ErrorBoundary>
       </BrowserRouter>
