@@ -16,18 +16,8 @@ interface EnhancedSEOProps {
   twitterDescription?: string;
   twitterImage?: string;
   structuredData?: object;
-<<<<<<< HEAD
-<<<<<<< HEAD
-  noIndex?: boolean;
-  lang?: string;
-=======
   noindex?: boolean;
   nofollow?: boolean;
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
-=======
-  noindex?: boolean;
-  nofollow?: boolean;
->>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
