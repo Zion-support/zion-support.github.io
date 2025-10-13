@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -660,7 +654,6 @@ const MicroSaasPage = () => {
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-<<<<<<< HEAD
                 View Live Demo
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
@@ -673,34 +666,6 @@ const MicroSaasPage = () => {
 };
 
 export default MicroSaasPage;
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
-=======
-                Watch Demo
-                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-              </Link>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-              {stats.map((stat, index) => (
-                <div key={index} className="text-center group">
-                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
-                  </div>
-                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                  <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Category Filter */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              {categories.map((category, index) => (
                 <button
                   key={index}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -869,6 +834,3 @@ export default MicroSaasPage;
 };
 
 export default MicroSaasPage;
->>>>>>> cursor/enhance-and-expand-ziontechgroup-com-services-and-site-8a97
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-6099
