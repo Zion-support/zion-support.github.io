@@ -1,36 +1,28 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-
-export default function Page() {
-=======
-
-
-
-export default function IotDevelopmentZionTechGroup() {
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <Helmet>
+export default function Page() {,
+  return()
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center" /></div>
+      <Helmet /></Helmet>
         <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Professional services coming soon." />
+        <meta name="description" content="Professional services coming soon." / /></meta>
       </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-6">
-          Coming Soon
+      <div className="text-center" /></div>
+        <h1 className="text-4xl font-bold text-white mb-6" /></h1>
+          Coming Soon;
         </h1>
-        <p className="text-lg text-gray-300 mb-8">
+        <p className="text-lg text-gray-300 mb-8" /></p>
           Professional services coming soon.
         </p>
-        <Link
+        <Link;
           to="/contact"
           className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-        >
-          Contact Us
-          <ArrowRight className="ml-2 h-5 w-5" />
+         /></Link>
+          Contact Us;
+          <ArrowRight className="ml-2 h-5 w-5" / /></ArrowRight>
         </Link>
       </div>
-    </div>
+    </div>)
   );
 }

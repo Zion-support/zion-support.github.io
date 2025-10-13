@@ -1,227 +1,202 @@
-<<<<<<< HEAD
-import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star } from 'lucide-react';
-=======
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-import EnhancedSEO from "../components/EnhancedSEO";
-import StructuredData from "../components/StructuredData";
-import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
-import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
-import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
-import ResponsiveContainer from "../components/ResponsiveContainer";
-import EnhancedAccessibility from "../components/EnhancedAccessibility";
+import { PenTool, Video, Image, FileText, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import PerformanceOptimizer from "../components/PerformanceOptimizer";
-import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
 import { FileText } from 'lucide-react';
-
-const AIContentStudioZionTechGroup = () => {
-<<<<<<< HEAD
+const AIContentStudioZionTechGroup = () => {,
   const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Creative Marketing Co",
-      role: "Content Director",
-      content: "Zion's AI Content Studio has transformed our content creation process. We're producing 5x more content with higher quality than ever before.",
-      rating: 5,
+    {,
+      name: "Sarah Johnson"
+      company: "Creative Marketing Co"
+      role: "Content Director"
+      content: "Zion's AI Content Studio has transformed our content creation process. We're producing 5x more content with higher quality than ever before."
+      rating: 5;
       avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Digital Agency Pro",
-      role: "Creative Lead",
-      content: "The AI understands brand voice perfectly and creates content that resonates with our audience. It's like having a team of expert writers.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "E-commerce Solutions",
-      role: "Marketing Manager",
-      content: "From product descriptions to social media posts, the AI generates exactly what we need. It's saved us countless hours and improved our engagement.",
-      rating: 5,
-      avatar: "ER"
     }
+    {,
+      name: "Michael Chen"
+      company: "Digital Agency Pro"
+      role: "Creative Lead"
+      content: "The AI understands brand voice perfectly and creates content that resonates with our audience. It's like having a team of expert writers."
+      rating: 5;
+      avatar: "MC"
+    }
+    {,
+      name: "Emily Rodriguez"
+      company: "E-commerce Solutions"
+      role: "Marketing Manager"
+      content: "From product descriptions to social media posts, the AI generates exactly what we need. It's saved us countless hours and improved our engagement."
+      rating: 5;
+      avatar: "ER"
+    }]
   ];
-
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Zion AI Content Studio Pro",
-    "description": "AI-powered content creation platform with automated writing, design, and video generation",
-    "url": "https://ziontechgroup.com/ai-content-studio",
-    "applicationCategory": "ContentCreationApplication",
-    "operatingSystem": "Web, Windows, macOS, Linux",
-    "offers": {
-      "@type": "Offer",
-      "price": "149",
-      "priceCurrency": "USD",
-      "priceSpecification": {
-        "@type": "UnitPriceSpecification",
-        "price": "149",
-        "priceCurrency": "USD",
+  const structuredData = {,
+    "@context": "https://schema.org"
+    "@type": "SoftwareApplication"
+    "name": "Zion AI Content Studio Pro"
+    "description": "AI-powered content creation platform with automated writing, design, and video generation"
+    "url": "https://ziontechgroup.com/ai-content-studio"
+    "applicationCategory": "ContentCreationApplication"
+    "operatingSystem": "Web, Windows, macOS, Linux"
+    "offers": {,
+      "@type": "Offer"
+      "price": "149"
+      "priceCurrency": "USD"
+      "priceSpecification": {,
+        "@type": "UnitPriceSpecification"
+        "price": "149"
+        "priceCurrency": "USD"
         "unitText": "MONTH"
       }
-    },
-    "provider": {
-      "@type": "Organization",
-      "name": "Zion Tech Group",
+    }
+    "provider": {,
+      "@type": "Organization"
+      "name": "Zion Tech Group"
       "url": "https://ziontechgroup.com"
     }
   };
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
   const features = [
-    {
-      title: "AI Writing Assistant",
-      description: "Generate high-quality articles, blogs, and marketing copy with advanced AI writing models",
-      icon: <PenTool className="w-8 h-8" />,
+    {,
+      title: "AI Writing Assistant"
+      description: "Generate high-quality articles, blogs, and marketing copy with advanced AI writing models"
+      icon: <PenTool className="w-8 h-8" /></PenTool>
       color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Video Generation",
-      description: "Create professional videos from text prompts with AI-powered video generation technology",
-      icon: <Video className="w-8 h-8" />,
+    }
+    {,
+      title: "Video Generation"
+      description: "Create professional videos from text prompts with AI-powered video generation technology"
+      icon: <Video className="w-8 h-8" /></Video>
       color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Image Creation",
-      description: "Generate stunning visuals, graphics, and artwork using cutting-edge AI image models",
-      icon: <Image className="w-8 h-8" />,
+    }
+    {,
+      title: "Image Creation"
+      description: "Generate stunning visuals, graphics, and artwork using cutting-edge AI image models"
+      icon: <Image className="w-8 h-8" /></Image>
       color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Content Optimization",
-      description: "Optimize content for SEO, engagement, and conversion with AI-powered analysis",
-      icon: <FileText className="w-8 h-8" />,
+    }
+    {,
+      title: "Content Optimization"
+      description: "Optimize content for SEO, engagement, and conversion with AI-powered analysis"
+      icon: <FileText className="w-8 h-8" /></FileText>
       color: "from-orange-500 to-red-500"
-    }
+    }]
   ];
-
   const pricingPlans = [
-    {
-      name: "Creator",
-      price: "$79",
-      period: "month",
-      description: "Perfect for individual content creators",
+    {,
+      name: "Creator"
+      price: "$79"
+      period: "month"
+      description: "Perfect for individual content creators"
       features: [
-        "100 AI-generated articles per month",
-        "50 AI-generated images per month",
-        "10 AI-generated videos per month",
-        "Basic SEO optimization",
-        "Email support",
-        "Standard templates"
-      ],
-      popular: false
-    },
-    {
-      name: "Studio Pro",
-      price: "$149",
-      period: "month",
-      description: "Ideal for content teams and agencies",
+        "100 AI-generated articles per month"
+        "50 AI-generated images per month"
+        "10 AI-generated videos per month"
+        "Basic SEO optimization"
+        "Email support"
+        "Standard templates"]
+      ]
+      popular: false;
+    }
+    {,
+      name: "Studio Pro"
+      price: "$149"
+      period: "month"
+      description: "Ideal for content teams and agencies"
       features: [
-        "Unlimited AI-generated content",
-        "Advanced video generation",
-        "Premium image creation",
-        "Advanced SEO optimization",
-        "Priority support",
-        "Team collaboration",
-        "Custom brand templates",
-        "API access"
-      ],
-      popular: true
-    },
-    {
-      name: "Enterprise",
-      price: "$299",
-      period: "month",
-      description: "For large content operations",
+        "Unlimited AI-generated content"
+        "Advanced video generation"
+        "Premium image creation"
+        "Advanced SEO optimization"
+        "Priority support"
+        "Team collaboration"
+        "Custom brand templates"
+        "API access"]
+      ]
+      popular: true;
+    }
+    {,
+      name: "Enterprise"
+      price: "$299"
+      period: "month"
+      description: "For large content operations"
       features: [
-        "Everything in Studio Pro",
-        "Custom AI model training",
-        "White-label solution",
-        "Dedicated support team",
-        "SLA guarantee",
-        "Custom integrations",
-        "Advanced analytics",
-        "On-premise deployment"
-      ],
-      popular: false
+        "Everything in Studio Pro"
+        "Custom AI model training"
+        "White-label solution"
+        "Dedicated support team"
+        "SLA guarantee"
+        "Custom integrations"
+        "Advanced analytics"
+        "On-premise deployment"]
+      ]
+      popular: false;
     }
   ];
-
   const testimonials = [
-    {
-      name: "Lisa Wang",
-      role: "Content Manager",
-      company: "Creative Agency",
-      content: "Zion AI Content Studio has transformed our content creation process. We can now produce high-quality content at scale like never before.",
-      rating: 5,
+    {,
+      name: "Lisa Wang"
+      role: "Content Manager"
+      company: "Creative Agency"
+      content: "Zion AI Content Studio has transformed our content creation process. We can now produce high-quality content at scale like never before."
+      rating: 5;
       avatar: "LW"
-    },
-    {
-      name: "David Kim",
-      role: "Marketing Director",
-      company: "TechStart Inc",
-      content: "The AI-powered video generation is incredible. We've reduced our video production time by 80% while maintaining quality.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Maria Garcia",
-      role: "Creative Director",
-      company: "Design Studio",
-      content: "The design automation features are game-changing. We can create professional visuals in minutes instead of hours.",
-      rating: 5,
-      avatar: "MG"
     }
+    {,
+      name: "David Kim"
+      role: "Marketing Director"
+      company: "TechStart Inc"
+      content: "The AI-powered video generation is incredible. We've reduced our video production time by 80% while maintaining quality."
+      rating: 5;
+      avatar: "DK"
+    }
+    {,
+      name: "Maria Garcia"
+      role: "Creative Director"
+      company: "Design Studio"
+      content: "The design automation features are game-changing. We can create professional visuals in minutes instead of hours."
+      rating: 5;
+      avatar: "MG"
+    }]
   ];
-
-export default function AiContentStudioPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
+export default function AiContentStudioPage() {,
+  return()
+    <div className="min-h-screen bg-gray-900 text-white" /></div>
+      <Helmet /></Helmet>
         <title>Ai Content Studio - Zion Tech Group</title>
-        <meta name="description" content="Ai Content Studio solutions by Zion Tech Group" />
+        <meta name="description" content="Ai Content Studio solutions by Zion Tech Group" / /></meta>
       </Helmet>
       
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-20" /></div>
         <h1 className="text-4xl font-bold mb-8">Ai Content Studio</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
+        <div className="prose prose-invert max-w-none" /></div>
+          <p className="text-xl text-gray-300 mb-8" /></p>
             Discover our comprehensive ai content studio solutions designed to meet your business needs.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12" /></div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6" /></div>
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300" /></p>
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6" /></div>
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300" /></p>
                 We use the latest technologies and best practices to ensure optimal performance.
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6" /></div>
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300" /></p>
                 Get round-the-clock support from our dedicated team of professionals.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div>)
   );
 }
 

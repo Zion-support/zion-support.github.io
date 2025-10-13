@@ -20,8 +20,8 @@ export default tseslint.config(
       "identify_missing_pages.js",
       "merge-with-conflict-resolution.js",
       "resolve-all-conflicts.js",
-      "fix-unused-imports.cjs",
-    ],
+      "fix-unused-imports.cjs"
+    ]
   },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
@@ -40,5 +40,5 @@ export default tseslint.config(
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "off",
     },
-  },
+  }
 );

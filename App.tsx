@@ -1,5 +1,5 @@
 import React, { Suspense, useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/accessibility-enhanced.css";
@@ -8,20 +8,13 @@ import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-import EnhancedSEO from "./app/components/EnhancedSEO";
 import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
-
-// Lazy load pages for better performance
+// Lazy load pages for better performance;
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
@@ -34,8 +27,7 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
-
-// AI Services Pages
+// AI Services Pages;
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
 const AICustomerSupportPage = React.lazy(() => import("./app/ai-customer-support/page"));
@@ -46,8 +38,7 @@ const AIMarketingAutomationPage = React.lazy(() => import("./app/ai-marketing-au
 const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
 const AIVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
 const AIWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
-
-// IT Services Pages
+// IT Services Pages;
 const CloudMigrationPage = React.lazy(() => import("./app/cloud-migration/page"));
 const DevOpsServicesPage = React.lazy(() => import("./app/devops/page"));
 const ITConsultingPage = React.lazy(() => import("./app/it-consulting/page"));
@@ -55,8 +46,7 @@ const NetworkSecurityPage = React.lazy(() => import("./app/network-security/page
 const SoftwareDevelopmentPage = React.lazy(() => import("./app/custom-software/page"));
 const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/page"));
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
-
-// 5G Services Pages
+// 5G Services Pages;
 const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
 const FiveGIoTSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
@@ -65,8 +55,7 @@ const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-netwo
 const FiveGMobileApplicationsPage = React.lazy(() => import("./app/5g-mobile-applications/page"));
 const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
 const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
-
-// Micro SAAS Services Pages
+// Micro SAAS Services Pages;
 const MicroSaaSServicesPage = React.lazy(() => import("./app/zion-content-studio/page"));
 const ProjectManagementToolPage = React.lazy(() => import("./app/project-management-pro/page"));
 const CustomerRelationshipManagerPage = React.lazy(() => import("./app/zion-ai-crm-pro/page"));
@@ -77,8 +66,7 @@ const SocialMediaSchedulerPage = React.lazy(() => import("./app/zion-ai-marketin
 const EmailMarketingPlatformPage = React.lazy(() => import("./app/zion-email-automation/page"));
 const WebsiteAnalyticsToolPage = React.lazy(() => import("./app/data-analytics/page"));
 const TaskAutomationWorkflowPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
-
-// New Innovative Micro SAAS Services
+// New Innovative Micro SAAS Services;
 const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
 const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
 const ZionAICustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
@@ -99,10 +87,8 @@ const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translato
 const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
-
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
@@ -131,7 +117,6 @@ function App() {
                       <Navigation onSidebarToggle={toggleSidebar} />
                       <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
                       <Breadcrumb />
-                      
                       <main className="relative z-10" id="main-content" role="main">
                         <Suspense fallback={<LoadingPage />}>
                           <Routes>
@@ -216,20 +201,22 @@ function App() {
                                 <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
 
                                 {/* Catch all route */}
-                                <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                                  <div className="text-center">
-                                    <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                                    <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
-                                    <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                      Go Home
-                                    </a>
+                                <Route path="*" element={
+                                  <div className="min-h-screen flex items-center justify-center">
+                                    <div className="text-center">
+                                      <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                                      <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
+                                      <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                        Go Home
+                                      </a>
+                                    </div>
                                   </div>
-                                </div>} />
+                                } />
                               </Routes>
                             </Suspense>
                         </main>
                         
-                        <Footer />
+                        <Footer /></Footer>
                       </FuturisticBackground>
                     </div>
                   </Router>

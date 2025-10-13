@@ -1,111 +1,43 @@
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { 
-  TrendingUp, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Zap,
-  Brain,
-  PieChart
-} from 'lucide-react';
-=======
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { PieChart } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
-const AIDataAnalyticsProPage = () => {
-  const benefits: string[] = [];
-
-  const features = [
-    {
-      icon: <BarChart3 className="w-8 h-8" />,
-      title: "Advanced Analytics",
-      description: "Comprehensive data analysis with machine learning algorithms",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: "Predictive Modeling",
-      description: "Forecast trends and patterns with AI-powered predictions",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: <Database className="w-8 h-8" />,
-      title: "Real-time Processing",
-      description: "Process and analyze data streams in real-time",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: <Brain className="w-8 h-8" />,
-      title: "AI Insights",
-      description: "Get intelligent recommendations and automated insights",
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  const benefits = [
-    "Increase data processing speed by 10x",
-    "Reduce analysis time by 80%",
-    "Improve prediction accuracy by 95%",
-    "Automate reporting and insights",
-    "Scale to handle any data volume",
-    "Integrate with existing systems"
-  ];
-=======
-import React from 'react';
-import { ArrowRight } from 'lucide-react';
-import { TrendingUp, Zap, Brain, PieChart, Sparkles, ArrowRight, CheckCircle } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
-export default function AiDataAnalyticsProPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
+export default function AiDataAnalyticsProPage() {,
+  return()
+    <div className="min-h-screen bg-gray-900 text-white" /></div>
+      <Helmet /></Helmet>
         <title>Ai Data Analytics Pro - Zion Tech Group</title>
-        <meta name="description" content="Ai Data Analytics Pro solutions by Zion Tech Group" />
+        <meta name="description" content="Ai Data Analytics Pro solutions by Zion Tech Group" / /></meta>
       </Helmet>
       
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-20" /></div>
         <h1 className="text-4xl font-bold mb-8">Ai Data Analytics Pro</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
+        <div className="prose prose-invert max-w-none" /></div>
+          <p className="text-xl text-gray-300 mb-8" /></p>
             Discover our comprehensive ai data analytics pro solutions designed to meet your business needs.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12" /></div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6" /></div>
               <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300" /></p>
                 Our team of experts delivers tailored solutions for your specific requirements.
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6" /></div>
               <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300" /></p>
                 We use the latest technologies and best practices to ensure optimal performance.
               </p>
             </div>
             
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6" /></div>
               <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
+              <p className="text-gray-300" /></p>
                 Get round-the-clock support from our dedicated team of professionals.
               </p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div>)
   );
 }

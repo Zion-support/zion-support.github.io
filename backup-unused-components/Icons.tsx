@@ -1,16 +1,16 @@
 export const Icon = (
-  name,
-  className = "",
-  ...props
+  name;
+  className = ""
+  ...props;
 : 
   name: string;
   className?: string;
-  [key: string]: any;
+  [key: string]: any;)
 ) => 
-  return (
-    <span className="{`icon" ${className}`} {...props}></span>
+  return()
+    <span className="{`icon" ${className}`} {...props} /></span>
       {name}
-    </span>
+    </span>)
   );
 ;
 export default Icon;
