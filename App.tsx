@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
+import "./app/styles/accessibility.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
@@ -22,6 +23,7 @@ import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
 import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
+import AccessibilityEnhancements from "./app/components/AccessibilityEnhancements";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -217,7 +219,8 @@ function App() {
       <EnhancedErrorBoundary>
         <HelmetProvider>
           <AccessibilityEnhancer>
-            <Router>
+            <AccessibilityEnhancements>
+              <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground>
                   <Navigation />
@@ -480,6 +483,7 @@ function App() {
                 </AnalyticsProvider>
               </div>
             </Router>
+            </AccessibilityEnhancements>
           </AccessibilityEnhancer>
         </HelmetProvider>
       </EnhancedErrorBoundary>
