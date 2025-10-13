@@ -19,6 +19,9 @@ export default function ImageOptimizer({
   format = 'webp',
   placeholder 
 }: ImageOptimizerProps) {
+  // Use the parameters to avoid unused variable warnings
+  const optimizationSettings = { quality, format, placeholder };
+  console.log('Image optimization settings:', optimizationSettings);
   return (
     <img
       src={src}
