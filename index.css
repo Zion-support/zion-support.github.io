@@ -1,3 +1,6 @@
+/* Import Futuristic Styles */
+@import './app/styles/futuristic.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

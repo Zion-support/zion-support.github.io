@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
@@ -11,216 +11,39 @@ import {
   ArrowRightIcon,
   CheckCircleIcon,
   PhoneIcon,
-  EnvelopeIcon
+  EnvelopeIcon,
+  StarIcon,
+  ClockIcon,
+  CurrencyDollarIcon,
+  SparklesIcon
 } from '@heroicons/react/24/outline';
+import { servicesData, getServicesByCategory, getPopularServices, getNewServices } from '../data/servicesData';
 
 export default function ServicesPage() {
-  const services = [
-    {
-      title: "AI Solutions",
-      description: "Advanced artificial intelligence services including machine learning, natural language processing, and predictive analytics.",
-      icon: CpuChipIcon,
-      features: [
-        "Machine Learning Models",
-        "Natural Language Processing",
-        "Computer Vision",
-        "Predictive Analytics",
-        "AI Chatbots",
-        "Automated Decision Making"
-      ],
-      color: "from-purple-500 to-pink-500",
-      href: "/ai-solutions",
-      price: "Starting at $2,500/month",
-      benefits: ["40% faster decision making", "60% cost reduction", "99.9% accuracy"]
-    },
-    {
-      title: "Cybersecurity",
-      description: "Comprehensive security solutions to protect your digital assets, data, and infrastructure from evolving threats.",
-      icon: ShieldCheckIcon,
-      features: [
-        "Security Audits",
-        "Threat Detection",
-        "Data Encryption",
-        "Access Management",
-        "Incident Response",
-        "Compliance Support"
-      ],
-      color: "from-cyan-500 to-blue-500",
-      href: "/cybersecurity",
-      price: "Starting at $1,800/month",
-      benefits: ["24/7 monitoring", "Zero breach guarantee", "SOC 2 compliance"]
-    },
-    {
-      title: "Cloud Infrastructure",
-      description: "Scalable cloud solutions and infrastructure management to optimize performance and reduce operational costs.",
-      icon: CloudIcon,
-      features: [
-        "Cloud Migration",
-        "Infrastructure as Code",
-        "Auto-scaling",
-        "Disaster Recovery",
-        "Cost Optimization",
-        "Multi-cloud Strategy"
-      ],
-      color: "from-green-500 to-emerald-500",
-      href: "/cloud-solutions",
-      price: "Starting at $1,200/month",
-      benefits: ["50% cost savings", "99.99% uptime", "Auto-scaling"]
-    },
-    {
-      title: "Digital Transformation",
-      description: "Strategic digital transformation services to modernize your business processes and enhance customer experiences.",
-      icon: ChartBarIcon,
-      features: [
-        "Process Automation",
-        "Legacy System Modernization",
-        "Digital Strategy",
-        "Change Management",
-        "Technology Integration",
-        "Performance Optimization"
-      ],
-      color: "from-yellow-500 to-orange-500",
-      href: "/digital-transformation",
-      price: "Starting at $3,000/month",
-      benefits: ["300% ROI increase", "80% process efficiency", "Digital-first approach"]
-    },
-    {
-      title: "Micro SaaS Solutions",
-      description: "Custom micro SaaS solutions designed to solve specific business challenges with scalable, cost-effective applications.",
-      icon: GlobeAltIcon,
-      features: [
-        "Custom Web Applications",
-        "API Development",
-        "Database Design",
-        "User Management",
-        "Payment Integration",
-        "Analytics Dashboard"
-      ],
-      color: "from-pink-500 to-rose-500",
-      href: "/micro-saas",
-      price: "Starting at $500/month",
-      benefits: ["Rapid deployment", "Scalable architecture", "Low maintenance"]
-    },
-    {
-      title: "5G Solutions",
-      description: "Next-generation 5G technology solutions for enhanced connectivity, IoT applications, and ultra-low latency services.",
-      icon: RocketLaunchIcon,
-      features: [
-        "5G Network Planning",
-        "IoT Integration",
-        "Edge Computing",
-        "Real-time Applications",
-        "Network Optimization",
-        "Smart City Solutions"
-      ],
-      color: "from-indigo-500 to-purple-500",
-      href: "/5g-solutions",
-      price: "Starting at $4,000/month",
-      benefits: ["Ultra-low latency", "Massive IoT support", "Enhanced security"]
-    },
-    {
-      title: "AI-Powered Analytics",
-      description: "Advanced analytics solutions powered by AI to extract actionable insights from your data and drive business growth.",
-      icon: ChartBarIcon,
-      features: [
-        "Real-time Analytics",
-        "Predictive Modeling",
-        "Data Visualization",
-        "Business Intelligence",
-        "Custom Dashboards",
-        "Automated Reporting"
-      ],
-      color: "from-emerald-500 to-teal-500",
-      href: "/ai-analytics",
-      price: "Starting at $1,500/month",
-      benefits: ["Real-time insights", "Predictive accuracy", "Automated reports"]
-    },
-    {
-      title: "Blockchain Solutions",
-      description: "Secure blockchain technology solutions for transparent, immutable, and decentralized business processes.",
-      icon: ShieldCheckIcon,
-      features: [
-        "Smart Contracts",
-        "Decentralized Applications",
-        "Cryptocurrency Integration",
-        "Supply Chain Tracking",
-        "Identity Management",
-        "Tokenization"
-      ],
-      color: "from-orange-500 to-red-500",
-      href: "/blockchain-solutions",
-      price: "Starting at $2,200/month",
-      benefits: ["Enhanced security", "Transparency", "Cost reduction"]
-    },
-    {
-      title: "IoT Edge Computing",
-      description: "Internet of Things solutions with edge computing capabilities for real-time data processing and decision making.",
-      icon: CpuChipIcon,
-      features: [
-        "IoT Device Management",
-        "Edge Analytics",
-        "Real-time Processing",
-        "Sensor Integration",
-        "Data Streaming",
-        "Remote Monitoring"
-      ],
-      color: "from-violet-500 to-purple-500",
-      href: "/iot-edge-computing",
-      price: "Starting at $1,800/month",
-      benefits: ["Real-time processing", "Reduced latency", "Cost efficiency"]
-    },
-    {
-      title: "AI Content Generation",
-      description: "AI-powered content creation tools for automated content generation, optimization, and personalization.",
-      icon: GlobeAltIcon,
-      features: [
-        "Automated Content Creation",
-        "SEO Optimization",
-        "Multi-language Support",
-        "Content Personalization",
-        "Brand Voice Consistency",
-        "Performance Analytics"
-      ],
-      color: "from-rose-500 to-pink-500",
-      href: "/ai-content-generation",
-      price: "Starting at $800/month",
-      benefits: ["80% time savings", "Consistent quality", "SEO optimized"]
-    },
-    {
-      title: "AI Customer Support",
-      description: "Intelligent customer support solutions with AI chatbots, sentiment analysis, and automated ticket routing.",
-      icon: PhoneIcon,
-      features: [
-        "AI Chatbots",
-        "Sentiment Analysis",
-        "Automated Routing",
-        "Knowledge Base",
-        "Multi-channel Support",
-        "Performance Analytics"
-      ],
-      color: "from-blue-500 to-indigo-500",
-      href: "/ai-customer-support",
-      price: "Starting at $1,200/month",
-      benefits: ["24/7 availability", "Instant responses", "Customer satisfaction"]
-    },
-    {
-      title: "AI Cybersecurity Suite",
-      description: "Advanced AI-powered cybersecurity solutions for threat detection, prevention, and automated response.",
-      icon: ShieldCheckIcon,
-      features: [
-        "AI Threat Detection",
-        "Behavioral Analysis",
-        "Automated Response",
-        "Vulnerability Assessment",
-        "Compliance Monitoring",
-        "Security Analytics"
-      ],
-      color: "from-red-500 to-orange-500",
-      href: "/ai-cybersecurity-suite",
-      price: "Starting at $2,800/month",
-      benefits: ["Proactive protection", "Zero false positives", "Automated response"]
-    }
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: SparklesIcon },
+    { id: 'ai', name: 'AI Services', icon: CpuChipIcon },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: GlobeAltIcon },
+    { id: 'it', name: 'IT Services', icon: ChartBarIcon },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldCheckIcon },
+    { id: 'cloud', name: 'Cloud Solutions', icon: CloudIcon },
+    { id: '5g', name: '5G Solutions', icon: RocketLaunchIcon },
+    { id: 'blockchain', name: 'Blockchain', icon: ShieldCheckIcon },
+    { id: 'iot', name: 'IoT Solutions', icon: CpuChipIcon }
   ];
+
+  const filteredServices = servicesData.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
+    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         service.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
+
+  const popularServices = getPopularServices();
+  const newServices = getNewServices();
 
   return (
     <>
@@ -230,88 +53,255 @@ export default function ServicesPage() {
         <meta name="keywords" content="AI services, cybersecurity, cloud computing, digital transformation, micro SaaS, 5G solutions, IT services" />
       </Helmet>
       
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      {/* Hero Section with Futuristic Design */}
+      <section className="relative min-h-screen animated-bg particles cyber-grid flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-purple-900/60 to-slate-900/80"></div>
+        
+        <div className="relative z-10 container mx-auto px-4 text-center">
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-6xl md:text-8xl font-bold mb-8 neon-text-purple glitch" data-text="Our Services">
               Our Services
             </h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Comprehensive technology solutions designed to accelerate your business growth
+            <p className="text-2xl md:text-3xl text-gray-300 mb-8 leading-relaxed">
+              Next-Generation Technology Solutions
             </p>
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              From artificial intelligence to cybersecurity, we provide end-to-end technology services 
-              that help businesses thrive in the digital age.
+            <p className="text-lg text-gray-400 mb-12 max-w-4xl mx-auto">
+              From cutting-edge AI to revolutionary 5G, we deliver comprehensive technology services 
+              that transform businesses and drive unprecedented growth in the digital age.
             </p>
+            
+            {/* Search and Filter */}
+            <div className="max-w-2xl mx-auto mb-12">
+              <div className="relative">
+                <input
+                  type="text"
+                  placeholder="Search services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full px-6 py-4 bg-slate-800/50 border border-purple-500/30 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-400 focus:neon-glow-purple backdrop-blur-sm"
+                />
+                <SparklesIcon className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-purple-400" />
+              </div>
+            </div>
           </div>
         </div>
+        
+        {/* Floating Elements */}
+        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse neon-glow-purple"></div>
+        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000 neon-glow-cyan"></div>
+        <div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500 neon-glow-pink"></div>
       </section>
 
-      {/* Services Grid */}
-      <section className="py-20 bg-slate-900">
+      {/* Category Filter */}
+      <section className="py-12 bg-slate-900/50 backdrop-blur-sm">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => {
-              const Icon = service.icon;
+          <div className="flex flex-wrap justify-center gap-4">
+            {categories.map((category) => {
+              const Icon = category.icon;
               return (
-                <div 
-                  key={service.title}
-                  className="group bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105"
+                <button
+                  key={category.id}
+                  onClick={() => setSelectedCategory(category.id)}
+                  className={`flex items-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover-lift ${
+                    selectedCategory === category.id
+                      ? 'bg-gradient-to-r from-purple-600 to-cyan-600 text-white neon-glow-purple'
+                      : 'bg-slate-800/50 text-gray-300 hover:bg-slate-700/50 border border-slate-600'
+                  }`}
                 >
-                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                    <Icon className="w-8 h-8 text-white" />
-                  </div>
-                  
-                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  {/* Pricing */}
-                  <div className="mb-4">
-                    <span className="text-2xl font-bold text-green-400">{service.price}</span>
-                  </div>
-                  
-                  {/* Benefits */}
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {service.benefits.map((benefit, benefitIndex) => (
-                        <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
-                          {benefit}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-sm">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  
-                  <Link 
-                    to={service.href}
-                    className={`inline-flex items-center gap-2 text-${service.color.split(' ')[1].split('-')[1]}-400 hover:text-${service.color.split(' ')[1].split('-')[1]}-300 font-semibold group-hover:gap-3 transition-all`}
-                  >
-                    Learn More <ArrowRightIcon className="w-4 h-4" />
-                  </Link>
-                </div>
+                  <Icon className="w-5 h-5" />
+                  {category.name}
+                </button>
               );
             })}
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+      {/* Popular Services */}
+      {selectedCategory === 'all' && (
+        <section className="py-20 bg-slate-900">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-cyan">
+                Popular Services
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Our most requested and highly-rated technology solutions
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+              {popularServices.map((service) => (
+                <div 
+                  key={service.id}
+                  className="group holographic-card p-8 rounded-xl hover-lift hover-glow transition-all duration-300"
+                >
+                  <div className="flex items-center justify-between mb-6">
+                    <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow`}>
+                      <CpuChipIcon className="w-8 h-8 text-white" />
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <StarIcon className="w-5 h-5 text-yellow-400" />
+                      <span className="text-yellow-400 font-semibold">Popular</span>
+                    </div>
+                  </div>
+                  
+                  <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                  <p className="text-gray-300 mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
+                  
+                  <div className="mb-6">
+                    <div className="flex items-center gap-2 mb-2">
+                      <CurrencyDollarIcon className="w-5 h-5 text-green-400" />
+                      <span className="text-2xl font-bold text-green-400">{service.pricing.starting}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-gray-400">
+                      <ClockIcon className="w-4 h-4" />
+                      <span>{service.implementationTime}</span>
+                    </div>
+                  </div>
+                  
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-3">Key Benefits:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.benefits.slice(0, 3).map((benefit, index) => (
+                        <span key={index} className="text-xs bg-green-900/30 text-green-300 px-3 py-1 rounded-full">
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <Link 
+                    to={service.href}
+                    className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300 font-semibold group-hover:gap-3 transition-all"
+                  >
+                    Learn More <ArrowRightIcon className="w-4 h-4" />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* All Services Grid */}
+      <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              {selectedCategory === 'all' ? 'All Services' : categories.find(c => c.id === selectedCategory)?.name}
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              {filteredServices.length} services found
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {filteredServices.map((service) => (
+              <div 
+                key={service.id}
+                className="group holographic-card p-8 rounded-xl hover-lift hover-glow transition-all duration-300"
+              >
+                <div className="flex items-center justify-between mb-6">
+                  <div className={`w-16 h-16 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform neon-glow`}>
+                    <CpuChipIcon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex items-center gap-2">
+                    {service.isPopular && (
+                      <div className="flex items-center gap-1">
+                        <StarIcon className="w-4 h-4 text-yellow-400" />
+                        <span className="text-xs text-yellow-400">Popular</span>
+                      </div>
+                    )}
+                    {service.isNew && (
+                      <div className="flex items-center gap-1">
+                        <SparklesIcon className="w-4 h-4 text-cyan-400" />
+                        <span className="text-xs text-cyan-400">New</span>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
+                <p className="text-gray-300 mb-6 leading-relaxed">
+                  {service.description}
+                </p>
+                
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-2">
+                    <CurrencyDollarIcon className="w-5 h-5 text-green-400" />
+                    <span className="text-2xl font-bold text-green-400">{service.pricing.starting}</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
+                    <ClockIcon className="w-4 h-4" />
+                    <span>{service.implementationTime}</span>
+                  </div>
+                  <div className="text-sm text-gray-400">
+                    Market Price: {service.marketPrice}
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-3">Key Benefits:</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {service.benefits.slice(0, 3).map((benefit, index) => (
+                      <span key={index} className="text-xs bg-green-900/30 text-green-300 px-3 py-1 rounded-full">
+                        {benefit}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-400 mb-3">Features:</h4>
+                  <ul className="space-y-2">
+                    {service.features.slice(0, 4).map((feature, index) => (
+                      <li key={index} className="flex items-center text-gray-300">
+                        <CheckCircleIcon className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
+                        <span className="text-sm">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="flex flex-col gap-3">
+                  <Link 
+                    to={service.href}
+                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+                  >
+                    Learn More <ArrowRightIcon className="w-4 h-4" />
+                  </Link>
+                  
+                  <div className="flex gap-2">
+                    <a 
+                      href={`tel:${service.contact.phone}`}
+                      className="flex-1 flex items-center justify-center gap-2 bg-slate-800 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 transition-colors"
+                    >
+                      <PhoneIcon className="w-4 h-4" />
+                      Call
+                    </a>
+                    <a 
+                      href={`mailto:${service.contact.email}`}
+                      className="flex-1 flex items-center justify-center gap-2 bg-slate-800 text-gray-300 px-4 py-2 rounded-lg hover:bg-slate-700 transition-colors"
+                    >
+                      <EnvelopeIcon className="w-4 h-4" />
+                      Email
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900 matrix-rain">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 neon-text-cyan">
               Our Process
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -320,9 +310,9 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">1</span>
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform neon-glow-purple">
+                <span className="text-white font-bold text-2xl">1</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Discovery</h3>
               <p className="text-gray-300">
@@ -330,9 +320,9 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">2</span>
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform neon-glow-cyan">
+                <span className="text-white font-bold text-2xl">2</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Strategy</h3>
               <p className="text-gray-300">
@@ -340,9 +330,9 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">3</span>
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform neon-glow-green">
+                <span className="text-white font-bold text-2xl">3</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Implementation</h3>
               <p className="text-gray-300">
@@ -350,9 +340,9 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-white font-bold text-xl">4</span>
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform neon-glow-orange">
+                <span className="text-white font-bold text-2xl">4</span>
               </div>
               <h3 className="text-xl font-bold text-white mb-4">Support</h3>
               <p className="text-gray-300">
@@ -376,8 +366,8 @@ export default function ServicesPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform neon-glow-purple">
                 <CheckCircleIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Proven Expertise</h3>
@@ -386,8 +376,8 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform neon-glow-cyan">
                 <RocketLaunchIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Cutting-Edge Technology</h3>
@@ -396,8 +386,8 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform neon-glow-green">
                 <ChartBarIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Measurable Results</h3>
@@ -406,8 +396,8 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform neon-glow-orange">
                 <ShieldCheckIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Security First</h3>
@@ -416,8 +406,8 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform neon-glow-pink">
                 <GlobeAltIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Scalable Solutions</h3>
@@ -426,8 +416,8 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="text-center">
-              <div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            <div className="text-center group">
+              <div className="w-20 h-20 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform neon-glow-purple">
                 <PhoneIcon className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">24/7 Support</h3>
@@ -440,10 +430,10 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900">
+      <section className="py-20 bg-gradient-to-r from-slate-900 to-purple-900 animated-bg">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-8 neon-text-purple">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
@@ -453,14 +443,14 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Link 
                 to="/contact" 
-                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+                className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2 hover-lift hover-glow"
               >
                 Get Free Consultation
                 <ArrowRightIcon className="w-5 h-5" />
               </Link>
               <Link 
                 to="/demo" 
-                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2"
+                className="border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 hover-lift"
               >
                 Schedule Demo
                 <ArrowRightIcon className="w-5 h-5" />
