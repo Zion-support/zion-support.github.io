@@ -5,6 +5,10 @@ export default function Component() {
     <div>
       <h1>Component</h1>
       <p>This component is under construction.</p>
+<<<<<<< HEAD
     </div>
+=======
+  </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-f13c
   );
 }

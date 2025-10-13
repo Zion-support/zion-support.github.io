@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 
+<<<<<<< HEAD
 // Mock component for testing
 const AdvancedComponent = () => {
   return <div>Advanced Component</div>;
@@ -31,11 +32,14 @@ describe('AdvancedComponents', () => {
   it('renders children', () => {
     render(<AdvancedComponents>Test content</AdvancedComponents>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 // Mock test for advanced components
 describe('Advanced Components', () => {
   it('should render without crashing', () => {
     expect(true).toBe(true);
   });
+<<<<<<< HEAD
 });
 =======
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';';
@@ -96,3 +100,12 @@ const consoleSpy = jest
 =======
 });
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+  it('should have proper test structure', () => {
+    const testComponent = <div>Test Component</div>;
+    render(testComponent);
+    expect(screen.getByText('Test Component')).toBeInTheDocument();
+  });
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-f13c

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import React from "react";
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 interface EnhancedFooterProps {
@@ -323,3 +324,5 @@ export default EnhancedFooter</div></div>;
   );
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f13c

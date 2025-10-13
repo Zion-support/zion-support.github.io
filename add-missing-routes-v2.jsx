@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 import React from 'react';
 
 export default function Component() {
@@ -9,6 +12,7 @@ export default function Component() {
     </div>
   );
 }
+<<<<<<< HEAD
 =======
 import fs from 'fs';';';
 import { fileURLToPath } from 'url';';'
@@ -56,3 +60,5 @@ if (process.env.NODE_ENV === 'development') {'
   console.log('All navigation links should now work properly!')'
 }
 >>>>>>> cursor/delete-records-a75e
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f13c

@@ -18,6 +18,7 @@ export default [;
   // Global ignores
 >>>>>>> cursor/delete-records-a75e
   {
+<<<<<<< HEAD
   // TODO: Add properties
 }
     ignores: [
@@ -26,11 +27,14 @@ export default [;
       ".next",
 =======
   {
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-f13c
     ignores: [
       "dist/**", 
       "node_modules/**", 
       "*.config.js", 
       "*.config.cjs",
+<<<<<<< HEAD
       "add-missing-routes*.jsx",
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
       "backup-problematic/**",
@@ -102,6 +106,28 @@ export default [;
       "fix_syntax_*.js"
     ]
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+      "backup/**",
+      "backup-problematic/**",
+      "backup-problematic-files/**",
+      "backup-problematic-pages/**",
+      "backup-unused-components/**",
+      "corrupted-src-backup/**",
+      "components/**",
+      "contracts/**",
+      "apps/**",
+      "*.cjs",
+      "*.js",
+      "scripts/**",
+      "add-missing-routes*.jsx",
+      "cleanup-*.js",
+      "comprehensive-*.js",
+      "aggressive-*.js",
+      "batch-*.js",
+      "check-*.js",
+      "auto-*.js"
+    ]
+>>>>>>> cursor/fix-errors-and-merge-to-main-f13c
   },
   {
 <<<<<<< HEAD

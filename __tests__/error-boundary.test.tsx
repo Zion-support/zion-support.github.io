@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
@@ -25,11 +26,18 @@ describe('ErrorBoundary Component', () => {
   it('renders children', () => {
     render(<ErrorBoundary>Test content</ErrorBoundary>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
+=======
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 // Mock test for error boundary
 describe('Error Boundary', () => {
   it('should render without crashing', () => {
     expect(true).toBe(true);
   });
+<<<<<<< HEAD
 });
 import { render, screen } from '@testing-library/react';
 import ErrorBoundary from '../app/components/ErrorBoundary';
@@ -152,3 +160,12 @@ describe('ErrorBoundary', () => {
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+
+  it('should have proper test structure', () => {
+    const testComponent = <div>Error Boundary Test</div>;
+    render(testComponent);
+    expect(screen.getByText('Error Boundary Test')).toBeInTheDocument();
+  });
+});
+>>>>>>> cursor/fix-errors-and-merge-to-main-f13c

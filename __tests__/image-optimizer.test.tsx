@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+<<<<<<< HEAD
 import ImageOptimizer from '../app/components/ImageOptimizer';
 
 <<<<<<< HEAD
@@ -45,6 +46,14 @@ describe('Image Optimizer', () => {
   });
 });
 import { render, screen } from '@testing-library/react';
+=======
+import '@testing-library/jest-dom';
+
+// Mock component for testing
+const ImageOptimizer = ({ src, alt }: { src: string; alt: string }) => {
+  return <img src={src} alt={alt} />;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-f13c
 
 // Mock the image loading
 const mockImage = {
