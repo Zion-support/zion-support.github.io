@@ -1,7 +1,14 @@
 import React from 'react';
 
-const CoreWebVitals: React.FC = () => {
-  return null;
-};
+interface CorewebvitalsProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-export default CoreWebVitals;
+export default function Corewebvitals({ className = '', children, ...props }: CorewebvitalsProps) {
+  return (
+    <div className={`corewebvitals-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}

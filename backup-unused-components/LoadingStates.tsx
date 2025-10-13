@@ -1,12 +1,10 @@
 import React from 'react';
-import { Loader2 } from 'lucide-react';
 
-export const LoadingPage: React.FC = () => {
+export default function Component() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="text-center">
-      </div>
+    <div>
+      <h1>Component</h1>
+      <p>This component is under construction.</p>
     </div>
   );
-};
-
+}

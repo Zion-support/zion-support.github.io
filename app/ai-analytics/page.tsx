@@ -1,8 +1,13 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 import {
   ArrowRight, 
+=======
+import { 
+>>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
   BarChart3, 
   TrendingUp, 
   Zap, 
@@ -37,6 +42,7 @@ import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
+<<<<<<< HEAD
 export default function AIAnalytics() {
   const benefits = [
     "Real-time data processing and analysis",
@@ -47,13 +53,19 @@ export default function AIAnalytics() {
     "Advanced data visualization"
   ];
   
+=======
+export default function AIAnalyticsPage() {
+  return (
+    <div>
+      <h1>Page Content</h1>
+    </div>
+  );
+>>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
   const analyticsStats = [
-    {
-      label: "Data Points Processed", value: "2.5M+", icon: <BarChart3 className="w-6 h-6" />
-    },
-    { label: "Real-time Updates", value: "99.9%", icon: <Zap className="w-6 h-6" /> },
-    { label: "Accuracy Rate", value: "98.5%", icon: <CheckCircle className="w-6 h-6" /> },
-    { label: "Processing Speed", value: "50ms", icon: <TrendingUp className="w-6 h-6" /> }
+    { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
+    { number: "85%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
+    { number: "60%", label: "Cost Reduction", icon: <TrendingDown className="w-6 h-6" /> },
+    { number: "24/7", label: "Automated Monitoring", icon: <Monitor className="w-6 h-6" /> }
   ];
 
   const testimonials = [
@@ -80,6 +92,7 @@ export default function AIAnalytics() {
       title: "Real-time Analytics",
       description: "Process and analyze data in real-time with our advanced AI algorithms and machine learning models.",
       icon: <BarChart3 className="w-8 h-8" />,
+<<<<<<< HEAD
       benefits: ["Live data processing", "Instant insights", "Real-time dashboards", "Automated alerts"]
     },
     {
@@ -273,4 +286,10 @@ export default function AIAnalytics() {
       </section>
     </div>
   );
+=======
+      benefits: ["Interactive charts", "Custom dashboards", "Mobile-responsive", "Export capabilities"]
+    }
+  ];
+
+>>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 }

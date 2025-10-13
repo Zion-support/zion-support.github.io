@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 interface EnhancedAnalyticsProps {
   children: React.ReactNode;
 }
@@ -29,4 +32,3 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
   return <>{children}</>;
 };
 
-export default EnhancedAnalytics;

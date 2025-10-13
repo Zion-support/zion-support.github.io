@@ -1,13 +1,8 @@
-export const Validators = {
-  init: () => {
-    },
+// Validators utility functions
 
-  process: (data: any) => {
-    return data;
-  },
+export function validators() {
+  // Implementation here
+  return null;
+}
 
-  cleanup: () => {
-    },
-};
-
-export default Validators;
+export default validators;

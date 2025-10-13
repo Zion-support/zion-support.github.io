@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Monitor } from 'lucide-react';
 
@@ -8,13 +9,13 @@ import { Monitor } from 'lucide-react';
 export const Monitoring = {
   init: () => {
     },
+=======
+// Monitoring utility functions
+>>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
-  process: (data: any) => {
-    return data;
-  },
+export function monitoring() {
+  // Implementation here
+  return null;
+}
 
-  cleanup: () => {
-    },
-};
-
-export default Monitoring;
+export default monitoring;

@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+<<<<<<< HEAD
 import {
   Brain, 
   Shield, 
@@ -48,8 +48,16 @@ import { Package } from 'lucide-react';
 import { Heart } from 'lucide-react';
 import { Receipt } from 'lucide-react';
 >>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
+=======
+import { Link } from 'react-router-dom';
+import { Menu, X, Brain, Shield, Zap, Globe, ChevronDown, ChevronUp } from 'lucide-react';
+>>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
-export default function Navigation() {
+interface NavigationProps {
+  onSidebarToggle?: () => void;
+}
+
+export default function Navigation({ onSidebarToggle }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const location = useLocation();
@@ -58,7 +66,7 @@ export default function Navigation() {
     setIsOpen(!isOpen);
   }, [isOpen]);
 
-  const _toggleServices = useCallback(() => {
+  const toggleServices = useCallback(() => {
     setIsServicesOpen(!isServicesOpen);
   }, [isServicesOpen]);
 
@@ -109,62 +117,34 @@ export default function Navigation() {
     }
   ];
 
-  const aiServices = [
-    { name: 'AI Analytics', path: '/ai-analytics' },
-    { name: 'AI Content Generation', path: '/ai-content-generation' },
-    { name: 'AI Customer Support', path: '/ai-customer-support' },
-    { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-    { name: 'AI Document Processing', path: '/ai-document-processing' },
-    { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
-    { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics' },
-    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Workflow Automation', path: '/ai-workflow-automation' }
+  const serviceDropdownItems = [
+    {
+      title: 'AI Solutions',
+      items: [
+        { name: 'AI Analytics', path: '/ai-analytics' },
+        { name: 'AI Content Generation', path: '/ai-content-generation' },
+        { name: 'AI Customer Support', path: '/ai-customer-support' },
+        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
+        { name: 'AI Data Analytics', path: '/ai-data-analytics' }
+      ]
+    },
+    {
+      title: '5G Solutions',
+      items: [
+        { name: '5G Network Design', path: '/5g-network-design' },
+        { name: '5G Implementation', path: '/5g-implementation' },
+        { name: '5G Private Networks', path: '/5g-private-networks' }
+      ]
+    }
   ];
 
-  const microSaasServices = [
-    { name: 'AI Video Generator', path: '/zion-ai-video-generator' },
-    { name: 'AI Invoice Generator', path: '/zion-ai-invoice-generator' },
-    { name: 'AI Customer Insights', path: '/zion-ai-customer-insights' },
-    { name: 'AI Email Analyzer', path: '/zion-ai-email-analyzer' },
-    { name: 'Smart Inventory Optimizer', path: '/zion-smart-inventory-optimizer' },
-    { name: 'AI Customer Sentiment Tracker', path: '/zion-ai-customer-sentiment-tracker' },
-    { name: 'Smart Expense Categorizer', path: '/zion-smart-expense-categorizer' },
-    { name: 'AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro' },
-    { name: 'AI Code Reviewer', path: '/zion-ai-code-reviewer' },
-    { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' },
-    { name: 'AI Document Analyzer', path: '/zion-ai-document-analyzer' },
-    { name: 'AI Project Manager Pro', path: '/zion-ai-project-manager-pro' },
-    { name: 'AI Cybersecurity Suite Pro', path: '/zion-ai-cybersecurity-suite-pro' }
-  ];
-
-  const itServices = [
-    { name: 'Cloud Migration', path: '/cloud-migration' },
-    { name: 'DevOps Services', path: '/devops' },
-    { name: 'IT Consulting', path: '/it-consulting' },
-    { name: 'Network Security', path: '/network-security' },
-    { name: 'Custom Software', path: '/custom-software' },
-    { name: 'System Integration', path: '/system-integration' },
-    { name: 'Web Development', path: '/web-development' }
-  ];
-
-  const fiveGServices = [
-    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
-    { name: '5G Edge Computing', path: '/5g-edge-computing' },
-    { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
-    { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
-    { name: '5G Private Networks', path: '/5g-private-networks' },
-    { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
-    { name: '5G Data Analytics', path: '/5g-data-analytics' },
-    { name: '5G Implementation', path: '/5g-implementation' }
-  ];
-
+export default function Navigation({ className = '', children, ...props }: NavigationProps) {
   return (
-    <nav className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
+    <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2">
               <Brain className="w-8 h-8 text-cyan-400" />
               <span className="text-xl font-bold text-white">Zion Tech Group</span>
@@ -172,65 +152,110 @@ export default function Navigation() {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:block">
-            <div className="ml-10 flex items-baseline space-x-4">
-              {navigationItems.map((item) => (
+          <div className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item, index) => (
+              <div key={index} className="relative group">
                 <Link
-                  key={item.name}
                   to={item.path}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 flex items-center space-x-1 ${
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
                     isActive(item.path)
-                      ? 'bg-cyan-500/20 text-cyan-400'
-                      : 'text-gray-300 hover:text-white hover:bg-white/10'
+                      ? 'text-cyan-400 bg-cyan-400/10'
+                      : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10'
                   }`}
                 >
                   {item.icon}
                   <span>{item.name}</span>
                 </Link>
-              ))}
-            </div>
+                
+                {/* Dropdown for Services */}
+                {item.name === 'Services' && (
+                  <div className="absolute top-full left-0 mt-2 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="p-4">
+                      {serviceDropdownItems.map((category, categoryIndex) => (
+                        <div key={categoryIndex} className="mb-4 last:mb-0">
+                          <h3 className="text-cyan-400 font-semibold text-sm mb-2">{category.title}</h3>
+                          <ul className="space-y-1">
+                            {category.items.map((service, serviceIndex) => (
+                              <li key={serviceIndex}>
+                                <Link
+                                  to={service.path}
+                                  className="block px-3 py-2 text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10 rounded-md text-sm transition-colors duration-200"
+                                >
+                                  {service.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
 
           {/* Mobile menu button */}
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan-500"
-              aria-expanded="false"
+              className="text-gray-300 hover:text-cyan-400 transition-colors p-2"
+              aria-label="Toggle menu"
             >
-              <span className="sr-only">Open main menu</span>
-              {isOpen ? (
-                <X className="block h-6 w-6" aria-hidden="true" />
-              ) : (
-                <Menu className="block h-6 w-6" aria-hidden="true" />
-              )}
+              {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </div>
-      </div>
 
-      {/* Mobile menu */}
-      {isOpen && (
-        <div className="lg:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900/95 backdrop-blur-md">
-            {navigationItems.map((item) => (
-              <Link
-                key={item.name}
-                to={item.path}
-                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 flex items-center space-x-2 ${
-                  isActive(item.path)
-                    ? 'bg-cyan-500/20 text-cyan-400'
-                    : 'text-gray-300 hover:text-white hover:bg-white/10'
-                }`}
-                onClick={() => setIsOpen(false)}
-              >
-                {item.icon}
-                <span>{item.name}</span>
-              </Link>
-            ))}
+        {/* Mobile Navigation */}
+        {isOpen && (
+          <div className="md:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800/95 backdrop-blur-sm border-t border-cyan-500/20">
+              {navigationItems.map((item, index) => (
+                <div key={index}>
+                  <Link
+                    to={item.path}
+                    className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                      isActive(item.path)
+                        ? 'text-cyan-400 bg-cyan-400/10'
+                        : 'text-gray-300 hover:text-cyan-400 hover:bg-cyan-400/10'
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {item.icon}
+                    <span>{item.name}</span>
+                  </Link>
+                  
+                  {/* Mobile dropdown for Services */}
+                  {item.name === 'Services' && (
+                    <div className="ml-6 mt-2 space-y-1">
+                      {serviceDropdownItems.map((category, categoryIndex) => (
+                        <div key={categoryIndex} className="mb-3">
+                          <h4 className="text-cyan-400 font-semibold text-sm mb-1">{category.title}</h4>
+                          <ul className="space-y-1">
+                            {category.items.map((service, serviceIndex) => (
+                              <li key={serviceIndex}>
+                                <Link
+                                  to={service.path}
+                                  className="block px-3 py-1 text-gray-300 hover:text-cyan-400 text-sm transition-colors duration-200"
+                                  onClick={() => setIsOpen(false)}
+                                >
+                                  {service.name}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
   );
+}
 }
