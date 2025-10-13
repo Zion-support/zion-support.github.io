@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -15,31 +14,27 @@ import {
 } from '@heroicons/react/24/outline';
 
 export default function HomePage() {
-=======
-import { ArrowRight, Brain, Shield, Cloud, Zap, Users, CheckCircle } from 'lucide-react';
-
-export default function HomePage() {
   const services = [
     {
-      icon: Brain,
+      icon: CpuChipIcon,
       title: 'AI Solutions',
       description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
       link: '/ai-services'
     },
     {
-      icon: Shield,
+      icon: ShieldCheckIcon,
       title: 'Cybersecurity',
       description: 'Protect your digital assets with comprehensive security solutions and threat monitoring.',
       link: '/it-services'
     },
     {
-      icon: Cloud,
+      icon: CloudIcon,
       title: 'Cloud Infrastructure',
       description: 'Scale your business with robust, secure, and cost-effective cloud solutions.',
       link: '/cloud-infrastructure'
     },
     {
-      icon: Zap,
+      icon: ChartBarIcon,
       title: 'Digital Transformation',
       description: 'Modernize your operations with innovative digital strategies and automation.',
       link: '/digital-transformation'
@@ -55,12 +50,10 @@ export default function HomePage() {
     'Ongoing Optimization'
   ];
 
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
   return (
     <>
       <Helmet>
         <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-<<<<<<< HEAD
         <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." />
         <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" />
       </Helmet>
@@ -101,24 +94,6 @@ export default function HomePage() {
                 <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
-=======
-        <meta name="description" content="Leading provider of advanced AI and IT solutions for businesses worldwide. Transform your business with cutting-edge technology." />
-        <meta name="keywords" content="AI solutions, IT services, cybersecurity, cloud computing, digital transformation, Zion Tech Group" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center mb-16">
-            <h1 className="text-6xl font-bold text-white mb-6">
-              Transform Your Business with{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-                Advanced AI & IT Solutions
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Leading provider of cutting-edge artificial intelligence, cybersecurity, and cloud infrastructure solutions. 
-              We help businesses innovate, scale, and succeed in the digital age.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
