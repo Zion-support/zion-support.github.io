@@ -9,20 +9,24 @@ const Footer: React.FC = () => {
     services: [
       { name: 'AI Services', href: '/ai-services' },
       { name: 'IT Services', href: '/it-services' },
-      { name: 'Solutions', href: '/cloud-infrastructure' },
-      { name: 'Digital Transformation', href: '/digital-transformation' }
+      { name: 'Micro SaaS', href: '/micro-saas' },
+      { name: 'Cloud Solutions', href: '/cloud-solutions' },
+      { name: 'Cybersecurity', href: '/cybersecurity' },
+      { name: 'Digital Transformation', href: '/digital-transformation' },
+      { name: '5G Solutions', href: '/5g-solutions' }
     ],
     company: [
       { name: 'About Us', href: '/about' },
-      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Solutions', href: '/solutions' },
+      { name: 'Pricing', href: '/pricing' },
       { name: 'Blog', href: '/blog' },
-      { name: 'Careers', href: '/careers' }
+      { name: 'Tutorials', href: '/tutorials' }
     ],
     support: [
       { name: 'Contact', href: '/contact' },
       { name: 'Support', href: '/support' },
-      { name: 'Documentation', href: '/docs' },
-      { name: 'Tutorials', href: '/tutorials' }
+      { name: 'Demo', href: '/demo' },
+      { name: 'Documentation', href: '/docs' }
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy' },
@@ -41,7 +45,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-slate-900 border-t border-slate-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <Link to="/" className="text-2xl font-bold text-white mb-4 block">
@@ -124,13 +128,13 @@ const Footer: React.FC = () => {
             <p className="text-gray-300 mb-4">
               Get the latest insights on AI and IT trends delivered to your inbox.
             </p>
-            <div className="flex">
+            <div className="flex flex-col sm:flex-row gap-2">
               <input
                 type="email"
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-2 bg-slate-800 border border-slate-600 rounded-l-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                className="flex-1 px-4 py-2 bg-slate-800 border border-slate-600 rounded-lg sm:rounded-l-lg sm:rounded-r-none text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
               />
-              <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center">
+              <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg sm:rounded-l-none sm:rounded-r-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
                 Subscribe
                 <ArrowRight className="w-4 h-4 ml-2" />
               </button>
@@ -139,8 +143,8 @@ const Footer: React.FC = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
-          <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
+        <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex flex-wrap gap-4 sm:gap-6 justify-center sm:justify-start">
             {footerLinks.legal.map((link) => (
               <Link key={link.name}
                 to={link.href}
@@ -150,7 +154,7 @@ const Footer: React.FC = () => {
               </Link>
             ))}
           </div>
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-400 text-sm text-center sm:text-right">
             © {currentYear} Zion Tech Group. All rights reserved.
           </p>
         </div>

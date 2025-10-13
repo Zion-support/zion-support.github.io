@@ -90,7 +90,7 @@ export default function HomePage() {
                 Advanced artificial intelligence services including machine learning, 
                 natural language processing, and predictive analytics.
               </p>
-              <Link to="/ai-solutions" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+              <Link to="/ai-services" className="text-purple-400 hover:text-purple-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>

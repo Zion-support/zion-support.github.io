@@ -11,6 +11,13 @@ import HomePage from './app/pages/HomePage';
 import AboutPage from './app/pages/AboutPage';
 import ContactPage from './app/pages/ContactPage';
 import ServicesPage from './app/pages/ServicesPage';
+import AIServicesPage from './app/pages/AIServicesPage';
+import ITServicesPage from './app/pages/ITServicesPage';
+import MicroSaaSPage from './app/pages/MicroSaaSPage';
+import CloudSolutionsPage from './app/pages/CloudSolutionsPage';
+import CybersecurityPage from './app/pages/CybersecurityPage';
+import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
+import FiveGSolutionsPage from './app/pages/FiveGSolutionsPage';
 import BlogPage from './app/pages/BlogPage';
 import TutorialsPage from './app/pages/TutorialsPage';
 import DemoPage from './app/pages/DemoPage';
@@ -35,6 +42,13 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/micro-saas" element={<MicroSaaSPage />} />
+              <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
+              <Route path="/cybersecurity" element={<CybersecurityPage />} />
+              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+              <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/tutorials" element={<TutorialsPage />} />
               <Route path="/demo" element={<DemoPage />} />

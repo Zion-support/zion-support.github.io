@@ -15,12 +15,18 @@ const Navigation: React.FC = () => {
       submenu: [
         { name: 'AI Services', href: '/ai-services' },
         { name: 'IT Services', href: '/it-services' },
-        { name: 'Solutions', href: '/cloud-infrastructure' },
-        { name: 'Digital Transformation', href: '/digital-transformation' }
+        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Cloud Solutions', href: '/cloud-solutions' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'Blog', href: '/blog' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'Support', href: '/support' },
     { name: 'Contact', href: '/contact' }
   ];
 
@@ -51,11 +57,11 @@ const Navigation: React.FC = () => {
                   
                   {/* Dropdown Menu */}
                   {item.submenu && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-48 bg-slate-800 rounded-md shadow-lg py-1 z-50">
+                    <div className="absolute left-0 mt-2 w-64 bg-slate-800 rounded-md shadow-lg py-1 z-50">
                       {item.submenu.map((subItem) => (
                         <Link key={subItem.name}
                           to={subItem.href}
-                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700"
+                          className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
                         >
                           {subItem.name}
                         </Link>
@@ -90,21 +96,22 @@ const Navigation: React.FC = () => {
         {/* Mobile */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/95 backdrop-blur-sm rounded-lg mt-2 border border-slate-700/50">
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <Link to={item.href}
-                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium transition-colors"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
+                    {item.submenu && <ChevronDown className="inline w-4 h-4 ml-1" />}
                   </Link>
                   {item.submenu && (
-                    <div className="ml-4 space-y-1">
+                    <div className="ml-4 space-y-1 mt-2">
                       {item.submenu.map((subItem) => (
                         <Link key={subItem.name}
                           to={subItem.href}
-                          className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm"
+                          className="text-gray-400 hover:text-white block px-3 py-2 rounded-md text-sm transition-colors"
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
@@ -114,9 +121,9 @@ const Navigation: React.FC = () => {
                   )}
                 </div>
               ))}
-              <div className="pt-4">
+              <div className="pt-4 border-t border-slate-700/50">
                 <Link to="/contact"
-                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
+                  className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started

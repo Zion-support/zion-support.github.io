@@ -29,7 +29,7 @@ export default function ServicesPage() {
         "Automated Decision Making"
       ],
       color: "from-purple-500 to-pink-500",
-      href: "/ai-solutions"
+      href: "/ai-services"
     },
     {
       title: "Cybersecurity",
