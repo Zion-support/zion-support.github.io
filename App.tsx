@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import Layout from './app/components/Layout';
 
 // Page Components
 import HomePage from './app/pages/HomePage';
@@ -15,6 +16,18 @@ import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
 import SolutionsPage from './app/pages/SolutionsPage';
+
+// Service Pages
+import AIServicesPage from './app/pages/AIServicesPage';
+import ITServicesPage from './app/pages/ITServicesPage';
+import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
+import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
+
+// Additional Pages
+import CaseStudiesPage from './app/pages/CaseStudiesPage';
+import CareersPage from './app/pages/CareersPage';
+import DocumentationPage from './app/pages/DocumentationPage';
+import CookiePolicyPage from './app/pages/CookiePolicyPage';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -47,9 +60,8 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-        <div className="min-h-screen bg-gray-900">
-          <main className="relative z-10" id="main-content" role="main">
-            <Routes>
+        <Layout>
+          <Routes>
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -64,6 +76,18 @@ function App() {
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/solutions" element={<SolutionsPage />} />
               
+              {/* Service Pages */}
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/it-services" element={<ITServicesPage />} />
+              <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+              
+              {/* Additional Pages */}
+              <Route path="/case-studies" element={<CaseStudiesPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/docs" element={<DocumentationPage />} />
+              <Route path="/cookies" element={<CookiePolicyPage />} />
+              
               {/* Catch all route */}
               <Route path="*" element={
                 <div className="min-h-screen flex items-center justify-center">
@@ -76,9 +100,8 @@ function App() {
                   </div>
                 </div>
               } />
-            </Routes>
-          </main>
-        </div>
+          </Routes>
+        </Layout>
       </Router>
     </HelmetProvider>
   );
