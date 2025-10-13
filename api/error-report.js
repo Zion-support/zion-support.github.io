@@ -5,7 +5,7 @@ export default function handler(req, res) {
   }
 
   try {
-    const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
+    const { error: errorData } = req.body;
 
     // Log error details (in production you would send this to your monitoring service)
     // In a real application, you would:
@@ -14,10 +14,10 @@ export default function handler(req, res) {
     // 3. Send alerts to your team
 
     // console.error removed for production
-    console.log('Error report received:', {
-      error: req.body.error,
-      timestamp: new Date().toISOString()
-    });
+    // console.log('Error report received:', {
+    //   error: errorData,
+    //   timestamp: new Date().toISOString()
+    // });
 
     // For now, just acknowledge receipt
     res.statusCode = 200;
@@ -26,7 +26,7 @@ export default function handler(req, res) {
       success: true, 
       message: 'Error report received' 
     }));
-  } catch (error) {
+  } catch (err) {
     // console.error removed for production
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

@@ -5,7 +5,7 @@ export default function handler(req, res) {
   }
 
   try {
-    const { email, name } = req.body;
+    const { email } = req.body;
 
     // Validate email
     if (!email || !email.includes('@')) {
@@ -20,10 +20,10 @@ export default function handler(req, res) {
     // 5. Add to your email marketing service (Mailchimp, ConvertKit, etc.)
 
     // console.log removed for production
-    console.log('Newsletter subscription:', {
-      email: req.body.email,
-      timestamp: new Date().toISOString()
-    });
+    // console.log('Newsletter subscription:', {
+    //   email: req.body.email,
+    //   timestamp: new Date().toISOString()
+    // });
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -32,8 +32,8 @@ export default function handler(req, res) {
       message: 'Successfully subscribed to newsletter',
       email 
     }));
-  } catch (error) {
-    console.error('Newsletter subscription error:', error);
+  } catch {
+    // console.error('Newsletter subscription error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to subscribe to newsletter' }));

@@ -1,4 +1,4 @@
-const { withSentry } = require('./withSentry.cjs');
+import { withErrorLogging } from './withErrorLogging.cjs';
 
 async function handler(req, res) {
   try {
@@ -37,7 +37,7 @@ async function handler(req, res) {
     };
 
     // Log the request (in production, save to database)
-    console.log('Onsite request received:', onsiteData);
+    // console.log('Onsite request received:', onsiteData);
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
@@ -48,17 +48,16 @@ async function handler(req, res) {
       data: onsiteData
     }));
 
-  } catch (error) {
-    console.error('Onsite request error:', error);
+  } catch {
+    // console.error('Onsite request error:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       error: 'Failed to submit onsite request',
-      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+      details: undefined
     }));
   }
 }
 
-module.exports = withSentry(handler);
-module.exports = handler;
+export default withErrorLogging(handler);
 
