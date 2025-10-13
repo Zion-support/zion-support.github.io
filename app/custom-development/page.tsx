@@ -120,7 +120,7 @@ export default function page() {
         </section>
 
         {/* Services Grid */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -188,7 +188,7 @@ export default function page() {
         </section>
 
         {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -245,4 +245,4 @@ export default function page() {
       </div>
 </div>
   );
-}
+}</section>

@@ -1,47 +1,10 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-const benefits = [
-    "Advanced AI algorithms for accurate predictions",
-    "Real-time risk assessment and monitoring",
-    "Automated report generation and insights",
-    "Seamless integration with existing systems",
-    "24/7 monitoring and alert system",
-    "Scalable cloud-based infrastructure"
-  ];
-const features = [
-    {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
-    }
-  ];
-export default function Page() {
-  const benefits = [
-    "Benefit 1",
-    "Benefit 2"
-  ];
-=======
+
 import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function AIHealthcareDiagnostics() {
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
   const features = [
     {
       title: "Medical Imaging Analysis",
@@ -178,7 +141,7 @@ export default function AIHealthcareDiagnostics() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -224,7 +187,7 @@ export default function AIHealthcareDiagnostics() {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -257,7 +220,7 @@ export default function AIHealthcareDiagnostics() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -321,7 +284,7 @@ export default function AIHealthcareDiagnostics() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-rose-900/30 to-pink-900/30">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-rose-900/30 to-pink-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Healthcare?
@@ -377,4 +340,4 @@ export default function AIHealthcareDiagnostics() {
       </div>
 </div>
   );
-}
+}</section>

@@ -1,10 +1,9 @@
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-=======
+
 import { Link } from 'react-router-dom';
 import {
   ArrowRight, 
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
   BarChart3, 
   TrendingUp, 
   Zap, 
@@ -91,40 +90,6 @@ export default function page() {
     }
   ];
 
-  const analyticsStats = [
-    { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
-    { number: "85%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
-    { number: "60%", label: "Cost Reduction", icon: <TrendingDown className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Monitoring", icon: <Monitor className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Data Scientist",
-      company: "TechCorp",
-      content: "Zion's AI analytics platform has revolutionized how we process and understand our data. The insights are incredible!",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO",
-      company: "InnovateLabs",
-      content: "The predictive analytics capabilities have helped us make better business decisions and reduce costs significantly.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Analytics Director",
-      company: "DataFlow Inc",
-      content: "Outstanding platform with real-time processing and intuitive dashboards. Highly recommended!",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -178,7 +143,7 @@ export default function page() {
   ];
 
   return (
-    <div></div>
+    <div>
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI analytics platform with real-time insights and predictive modeling." />
@@ -188,13 +153,13 @@ export default function page() {
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden"></div>
+        <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto text-center relative z-10"></div>
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"></div>
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Analytics</span>
           </div>
@@ -231,8 +196,8 @@ export default function page() {
 
       {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Powerful Analytics Features
             </h2>
@@ -241,9 +206,9 @@ export default function page() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6"></div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
                 <BarChart3 className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Real-time Analytics</h3>
@@ -252,8 +217,8 @@ export default function page() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6"></div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
                 <Brain className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">AI Predictions</h3>
@@ -262,8 +227,8 @@ export default function page() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300"></div>
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6"></div>
+            <div className="bg-gradient-to-br from-slate-800/50 to-purple-800/20 p-8 rounded-2xl border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center mb-6">
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-xl font-semibold text-white mb-4">Secure & Compliant</h3>
@@ -272,9 +237,9 @@ export default function page() {
               </p>
             </div>
           </div>
-        </section>
-      </div>
-</div>
+        </div>
+      </section>
+    </div>
   );
 };
 

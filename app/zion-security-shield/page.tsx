@@ -1,49 +1,9 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-const features = [
-    {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
-    }
-  ];
-const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "CFO",
-      company: "TechCorp",
-      content: "The AI financial analysis platform has revolutionized our decision-making process.",
-      rating: 5
-    },
-    {
-      name: "Michael Chen",
-      role: "Investment Manager",
-      company: "FinancePro",
-      content: "Incredible accuracy and insights that have improved our portfolio performance.",
-      rating: 5
-    }
-  ];
-=======
+
 import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
 export default function ZionSecurityShield() {
   const features = [
     {
@@ -210,7 +170,7 @@ export default function ZionSecurityShield() {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -242,7 +202,7 @@ export default function ZionSecurityShield() {
         </section>
 
         {/* Security Features List */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -267,7 +227,7 @@ export default function ZionSecurityShield() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -327,7 +287,7 @@ export default function ZionSecurityShield() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -360,7 +320,7 @@ export default function ZionSecurityShield() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Secure Your Business?
@@ -389,3 +349,4 @@ export default function ZionSecurityShield() {
 </div>
   );
 }
+</section>

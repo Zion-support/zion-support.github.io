@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight, Shield, Cloud, Globe, Calendar, Phone, CheckCircle, Sparkles, Heart, Receipt, Package, Code } from 'lucide-react';
-=======
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Phone, CheckCircle, Sparkles, Heart, Receipt, Package } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
 
 export default function Page() {
   const stats = [
@@ -411,7 +407,7 @@ export default function Page() {
         </section>
 
         {/* Categories Filter */}
-        <section className="py-8 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-8 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-8">
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
@@ -439,7 +435,7 @@ export default function Page() {
         </section>
 
         {/* Services Grid */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -545,7 +541,7 @@ export default function Page() {
         </section>
 
         {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -602,4 +598,4 @@ export default function Page() {
       </div>
 </div>
   );
-}
+}</section>

@@ -115,7 +115,7 @@ export default function page() {
         </section>
 
         {/* Compliance Frameworks Section */}
-        <section className="py-20 px-4">
+        </section><section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Our Compliance Certifications</h2>
@@ -144,7 +144,7 @@ export default function page() {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 px-4 bg-gray-800/30">
+        </section><section className="py-20 px-4 bg-gray-800/30">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Our Compliance Services</h2>
@@ -173,7 +173,7 @@ export default function page() {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20 px-4">
+        </section><section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Why Choose Our Compliance Services?</h2>
@@ -197,7 +197,7 @@ export default function page() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 bg-gray-800/30">
+        </section><section className="py-20 px-4 bg-gray-800/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold mb-6">Ready to Achieve Compliance?</h2>
             <p className="text-xl text-gray-300 mb-8">
@@ -217,3 +217,4 @@ export default function page() {
   );
 }
 
+</section>

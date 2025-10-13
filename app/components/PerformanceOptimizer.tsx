@@ -88,6 +88,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         </div>
       )}
     </div>
+</div>
   );
 };
 

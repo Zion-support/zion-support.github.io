@@ -1,47 +1,10 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-const benefits = [
-    "Advanced AI algorithms for accurate predictions",
-    "Real-time risk assessment and monitoring",
-    "Automated report generation and insights",
-    "Seamless integration with existing systems",
-    "24/7 monitoring and alert system",
-    "Scalable cloud-based infrastructure"
-  ];
-const features = [
-    {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
-    }
-  ];
-export default function Page() {
-  const benefits = [
-    "Benefit 1",
-    "Benefit 2"
-  ];
-=======
+
 import { ArrowRight, Target, Mail, Share2, BarChart3, Users, Zap, Mail as Email, Smartphone, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function AIMarketingAutomation() {
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
   const features = [
     {
       title: "Email Marketing Automation",
@@ -188,7 +151,7 @@ export default function AIMarketingAutomation() {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -239,7 +202,7 @@ export default function AIMarketingAutomation() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -305,7 +268,7 @@ export default function AIMarketingAutomation() {
         </section>
 
         {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -361,4 +324,4 @@ export default function AIMarketingAutomation() {
       </div>
 </div>
   );
-}
+}</section>

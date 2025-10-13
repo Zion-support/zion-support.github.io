@@ -1,10 +1,8 @@
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { 
-=======
+
 import { motion } from 'framer-motion';
 import {
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
   Heart, 
   Zap, 
   BarChart3, 
@@ -216,7 +214,7 @@ const AICustomerSentimentTrackerPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -262,7 +260,7 @@ const AICustomerSentimentTrackerPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Ready to Transform Your Analytics?
@@ -284,3 +282,4 @@ const AICustomerSentimentTrackerPage = () => {
 };
 
 export default Page;
+</section>

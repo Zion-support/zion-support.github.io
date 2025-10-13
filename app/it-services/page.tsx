@@ -1,13 +1,8 @@
 import React from "react";
-<<<<<<< HEAD
-import { ArrowRight, Star, Shield, Cloud, Database, Code, Network, Smartphone, Monitor, Headphones, Settings, Zap, BarChart3, Target, HardDrive, Minimize } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-=======
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Cloud, Shield, Network, Database, Code, Headphones, Smartphone, Monitor, Target, HardDrive, Settings, ArrowRight, Star, ArrowRight, ArrowRight } from 'lucide-react';
 
@@ -439,7 +434,7 @@ export default function ITServices() {
         </section>
 
         {/* Services Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -486,7 +481,7 @@ export default function ITServices() {
         </section>
 
         {/* Process Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -513,7 +508,7 @@ export default function ITServices() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your IT Infrastructure?
@@ -544,3 +539,4 @@ export default function ITServices() {
 </div>
   );
 }
+</section>

@@ -1,13 +1,8 @@
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
+
 import { Cloud, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Star, Activity, Lock } from 'lucide-react';
-=======
-<<<<<<< HEAD
-import { Cloud, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Star, Activity, Lock } from 'lucide-react';
-=======
 import { Cloud, Shield, CheckCircle, ArrowRight, Globe, BarChart3, Settings, Activity, Lock } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
+
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -233,7 +228,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -263,7 +258,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      </section><section id="services" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -307,7 +302,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
+      </section><section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -366,7 +361,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -407,7 +402,7 @@ const CloudInfrastructure = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
         <ResponsiveContainer>
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -438,4 +433,4 @@ const CloudInfrastructure = () => {
   );
 };
 
-export default CloudInfrastructure;
+export default CloudInfrastructure;</section>

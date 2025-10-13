@@ -1,56 +1,10 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-const features = [
-    {
-      title: "Predictive Analytics",
-      description: "Advanced machine learning models for accurate financial forecasting",
-      icon: "Brain"
-    },
-    {
-      title: "Risk Assessment",
-      description: "Comprehensive risk analysis and mitigation strategies",
-      icon: "Shield"
-    },
-    {
-      title: "Real-time Monitoring",
-      description: "Continuous monitoring of financial metrics and KPIs",
-      icon: "Activity"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate detailed reports automatically",
-      icon: "FileText"
-    }
-  ];
-const services = [
-    {
-      title: "Cloud Migration",
-      description: "Seamless migration to cloud infrastructure",
-      icon: "Cloud"
-    },
-    {
-      title: "Security Solutions",
-      description: "Advanced security and compliance",
-      icon: "Shield"
-    },
-    {
-      title: "Performance Optimization",
-      description: "Optimize your cloud performance",
-      icon: "Zap"
-    }
-  ];
-export default function Page() {
-  const features = [
-    { title: "Feature 1", description: "Description 1" },
-    { title: "Feature 2", description: "Description 2" }
-  ];
-=======
+
 import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 export default function Pricing() {
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
   const aiServicesPricing = [
     {
       name: "AI Analytics Dashboard",
@@ -275,7 +229,7 @@ export default function Pricing() {
         </section>
 
         {/* AI Services Pricing */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -340,7 +294,7 @@ export default function Pricing() {
         </section>
 
         {/* Micro SAAS Pricing */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -405,7 +359,7 @@ export default function Pricing() {
         </section>
 
         {/* Enterprise Pricing */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -470,7 +424,7 @@ export default function Pricing() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -495,7 +449,7 @@ export default function Pricing() {
         </section>
 
         {/* Contact CTA */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
               Ready to Get Started?
@@ -551,3 +505,4 @@ export default function Pricing() {
 </div>
   );
 }
+</section>

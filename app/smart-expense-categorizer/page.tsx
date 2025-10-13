@@ -112,7 +112,7 @@ const SmartExpenseCategorizerPage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 px-4">
+      </section><section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -136,7 +136,7 @@ const SmartExpenseCategorizerPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4">
+      </section><section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 20 }}
@@ -178,7 +178,7 @@ const SmartExpenseCategorizerPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4">
+      </section><section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 20 }}
@@ -220,7 +220,7 @@ const SmartExpenseCategorizerPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4">
+      </section><section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 20 }}
@@ -294,7 +294,7 @@ const SmartExpenseCategorizerPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4">
+      </section><section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 20 }}
@@ -331,7 +331,7 @@ const SmartExpenseCategorizerPage = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 bg-black/20">
+      </section><section className="py-16 px-4 bg-black/20">
         <div className="max-w-7xl mx-auto text-center">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
           <p className="text-gray-300 mb-6">
@@ -353,4 +353,4 @@ const SmartExpenseCategorizerPage = () => {
   );
 };
 
-export default SmartExpenseCategorizerPage;
+export default SmartExpenseCategorizerPage;</section>

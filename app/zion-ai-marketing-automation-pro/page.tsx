@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, Globe, Play, Address } from 'lucide-react';
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
-import { Target, Users, MessageSquare, Brain, Zap, Target, ArrowRight, Play, CheckCircle, CheckCircle, ArrowRight, Mail, Phone, Globe, ArrowRight } from 'lucide-react';
-=======
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
 
 export default function page() {
   const stats = [
@@ -227,7 +221,7 @@ export default function page() {
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -270,7 +264,7 @@ export default function page() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-pink-800/50">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-pink-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -335,7 +329,7 @@ export default function page() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -374,7 +368,7 @@ export default function page() {
         </section>
 
         {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -430,4 +424,4 @@ export default function page() {
       </div>
 </div>
   );
-}
+}</section>

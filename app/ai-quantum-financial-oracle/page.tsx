@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { 
-=======
+
 import {
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
   Brain, 
   TrendingUp, 
   Shield, 
@@ -14,10 +11,8 @@ import {
   CheckCircle, 
   Cpu,
   Globe,
-<<<<<<< HEAD
-  Clock,
-=======
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
+
+
   Activity,
   PieChart
 } from 'lucide-react';
@@ -210,7 +205,7 @@ const AIQuantumFinancialOraclePage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -244,7 +239,7 @@ const AIQuantumFinancialOraclePage = () => {
       </section>
 
       {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -279,7 +274,7 @@ const AIQuantumFinancialOraclePage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -337,7 +332,7 @@ const AIQuantumFinancialOraclePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-indigo-900/30">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-indigo-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Harness Quantum Financial Power?
@@ -370,4 +365,4 @@ const AIQuantumFinancialOraclePage = () => {
   );
 };
 
-export default AIQuantumFinancialOraclePage;
+export default AIQuantumFinancialOraclePage;</section>

@@ -6,9 +6,6 @@ import FuturisticButton from "./components/FuturisticButton";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 
 const HomePage = () => {
-<<<<<<< HEAD
-  
-=======
   // const structuredData = {
   //   "@context": "https://schema.org",
   //   "@type": "Organization",
@@ -52,7 +49,6 @@ const HomePage = () => {
   //     }
   //   ]
   // };
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
   const features = [
     {
       title: "AI-Powered Solutions",

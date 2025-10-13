@@ -3,14 +3,9 @@ import { ArrowRight, Video, Play, Edit, Settings, Sparkles, CheckCircle, Star, U
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIVideoGeneratorPage = () => {
-<<<<<<< HEAD
+
   // const [selectedPlan, setSelectedPlan] = useState('pro');
-=======
-<<<<<<< HEAD
-  // const [selectedPlan, setSelectedPlan] = useState('pro');
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
+
 
   const features = [
     {
@@ -242,7 +237,7 @@ const ZionAIVideoGeneratorPage = () => {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -282,7 +277,7 @@ const ZionAIVideoGeneratorPage = () => {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -325,7 +320,7 @@ const ZionAIVideoGeneratorPage = () => {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -392,7 +387,7 @@ const ZionAIVideoGeneratorPage = () => {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -431,7 +426,7 @@ const ZionAIVideoGeneratorPage = () => {
         </section>
 
         {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        </section><section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -490,4 +485,4 @@ const ZionAIVideoGeneratorPage = () => {
   );
 };
 
-export default ZionAIVideoGeneratorPage;
+export default ZionAIVideoGeneratorPage;</section>

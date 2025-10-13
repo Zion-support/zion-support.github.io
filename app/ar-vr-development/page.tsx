@@ -58,8 +58,8 @@ const ARVRDevelopmentPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
       <Helmet></Helmet>
         <title>AR/VR Development - Zion Tech Group</title>
-        <meta name="description" content="Professional AR/VR development services creating immersive experiences for training, entertainment, and business applications across all major platforms." /></meta>
-        <meta name="keywords" content="AR development, VR development, mixed reality, immersive experiences, virtual reality, augmented reality" /></meta>
+        <meta name="description" content="Professional AR/VR development services creating immersive experiences for training, entertainment, and business applications across all major platforms." / />
+        <meta name="keywords" content="AR development, VR development, mixed reality, immersive experiences, virtual reality, augmented reality" / />
         <link rel="canonical" href="https://ziontechgroup.com/ar-vr-development" /></link>
       </Helmet>
 
@@ -82,20 +82,18 @@ const ARVRDevelopmentPage = () => {
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"></p>
-            Create immersive AR and VR experiences that captivate users and transform your business. 
-            From training simulations to entertainment, we bring your vision to life.
-          </p>
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">Create immersive AR and VR experiences that captivate users and transform your business. 
+            From training simulations to entertainment, we bring your vision to life.</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16"></div>
-            <Link)
+            <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-            ></Link>
-              Get Started Today)
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
-            </Link>
-            <Link)
+            ><Link>
+            Get Started Today)
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
+          </Link>
+            <Link
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             ></Link>
@@ -107,16 +105,14 @@ const ARVRDevelopmentPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
               Immersive Development Services)
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
-              Our AR/VR development team creates cutting-edge immersive experiences)
-              using the latest technologies and platforms.
-            </p>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">Our AR/VR development team creates cutting-edge immersive experiences)
+              using the latest technologies and platforms.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
@@ -133,9 +129,7 @@ const ARVRDevelopmentPage = () => {
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors"></h3>
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 text-center leading-relaxed text-sm md:text-base"></p>
-                  {feature.description}
-                </p>
+                <p className="text-gray-300 text-center leading-relaxed text-sm md:text-base">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -143,15 +137,13 @@ const ARVRDevelopmentPage = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
               Transform Your Business with Immersive Tech)
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Experience the power of AR/VR technology in your business operations)
-            </p>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of AR/VR technology in your business operations)</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -166,25 +158,23 @@ const ARVRDevelopmentPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></section>
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></section>
         <div className="max-w-4xl mx-auto text-center"></div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
             Ready to Go Immersive?
           </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
-            Join the immersive technology revolution. Let's create amazing AR/VR experiences)
-            that engage your audience and drive business growth.
-          </p>
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">Join the immersive technology revolution. Let's create amazing AR/VR experiences)
+            that engage your audience and drive business growth.</p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link)
+            <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-            ></Link>
-              Start Your Project)
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
-            </Link>
-            <Link)
+            ><Link>
+            Start Your Project)
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
+          </Link>
+            <Link
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             ></Link>
@@ -214,4 +204,4 @@ const ARVRDevelopmentPage = () => {
 </CheckCircle>
 };
 
-export default ARVRDevelopmentPage;
+export default ARVRDevelopmentPage;</section>

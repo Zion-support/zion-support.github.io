@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-=======
+
 "use client";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
 import { Receipt, Bot, Brain, Shield, CheckCircle, Star, BarChart3, TrendingUp, DollarSign } from 'lucide-react';
 
 export default function AIExpenseTracker() {
@@ -167,7 +163,7 @@ export default function AIExpenseTracker() {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -261,3 +257,4 @@ export default function AIExpenseTracker() {
 };
 
 export default Page;
+</section>

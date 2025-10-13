@@ -64,29 +64,6 @@ export default function Page() {
     }
   ];
 
-  const features = [
-    {
-      icon: <CheckCircle className="w-6 h-6" />,
-      title: 'No Setup Required',
-      description: 'Get started immediately with our ready-to-use solutions.'
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: 'Scalable Solutions',
-      description: 'Grow with your business with flexible pricing and features.'
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: 'Enterprise Security',
-      description: 'Bank-level security with data encryption and compliance.'
-    },
-    {
-      icon: <Users className="w-6 h-6" />,
-      title: '24/7 Support',
-      description: 'Round-the-clock support from our expert team.'
-    }
-  ];
-
   const testimonials = [
     {
       name: 'Sarah Johnson',

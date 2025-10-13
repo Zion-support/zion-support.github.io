@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Cloud, Shield, CheckCircle, Star, Users, Award, Smartphone, Globe, Mail, Phone, Database, Lock, Headphones, Sparkles, Clock, Archive } from 'lucide-react';
-=======
+
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
 
 export default function Page() {
   const benefits = [
@@ -112,17 +107,17 @@ export default function Page() {
   ];
 
   return (
-    <div></div>
+    <div>
       <Helmet></Helmet>
         <title>Zion Cloud Vault Pro - Secure Cloud Storage Platform | Zion Tech Group</title>
         <meta)
           name="description"
           content="Secure your data with Zion Cloud Vault Pro - unlimited cloud storage with end-to-end encryption, cross-platform sync, and team collaboration. Starting at $99/month."
-        /></meta>
+        / />
         <meta)
           name="keywords"
           content="cloud storage, secure storage, end-to-end encryption, file sync, team collaboration, unlimited storage, data backup, file sharing"
-        /></meta>
+        / />
         <link rel="canonical" href="https://ziontechgroup.com/zion-cloud-vault-pro" /></link>
       </Helmet>
 
@@ -147,20 +142,18 @@ export default function Page() {
                   </span>
                 </h1>
                 
-                <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed"></p>
-                  Secure your data with unlimited cloud storage featuring end-to-end encryption, 
-                  cross-platform sync, and advanced team collaboration tools.
-                </p>
+                <p className="text-lg md:text-xl text-gray-300 mb-8 leading-relaxed">Secure your data with unlimited cloud storage featuring end-to-end encryption, 
+                  cross-platform sync, and advanced team collaboration tools.</p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8"></div>
-                  <Link)
+                  <Link
                     to="/contact"
                     className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
-                  ></Link>
-                    Start Free Trial)
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
-                  </Link>
-                  <Link)
+                  ><Link>
+            Start Free Trial)
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
+          </Link>
+                  <Link
                     to="/demo"
                     className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                   ></Link>
@@ -213,13 +206,13 @@ export default function Page() {
                   </div>
                   
                   <div className="mt-6"></div>
-                    <Link)
+                    <Link
                       to="/contact"
                       className="w-full bg-gradient-to-r from-blue-500 to-cyan-600 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group"
-                    ></Link>
-                      Get Started Now)
-                      <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
-                    </Link>
+                    ><Link>
+            Get Started Now)
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
+          </Link>
                   </div>
                 </div>
               </div>
@@ -228,7 +221,7 @@ export default function Page() {
         </section>
 
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
@@ -236,9 +229,7 @@ export default function Page() {
                   Secure Storage Features)
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                Everything you need to store, sync, and collaborate on your files securely)
-              </p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Everything you need to store, sync, and collaborate on your files securely)</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
@@ -253,9 +244,7 @@ export default function Page() {
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-300 transition-colors"></h3>
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed"></p>
-                    {feature.description}
-                  </p>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{feature.description}</p>
                   <div className="space-y-2"></div>
                     {feature.benefits.map((benefit, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-300"></div>
@@ -271,7 +260,7 @@ export default function Page() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-blue-800/50"></section>
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-blue-800/50"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
@@ -279,9 +268,7 @@ export default function Page() {
                   Simple Storage Plans)
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                Choose the storage plan that fits your needs and budget)
-              </p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">Choose the storage plan that fits your needs and budget)</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
@@ -320,17 +307,17 @@ export default function Page() {
                     ))}
                   </div>
                   
-                  <Link)
+                  <Link
                     to="/contact"
                     className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center group ${
                       plan.popular)
                         ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
                         : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
                     }`}
-                  ></Link>
-                    Get Started)
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
-                  </Link>
+                  ><Link>
+            Get Started)
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
+          </Link>
                 </div>
               ))}
             </div>
@@ -338,7 +325,7 @@ export default function Page() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>
           <div className="max-w-7xl mx-auto"></div>
             <div className="text-center mb-16"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
@@ -346,9 +333,7 @@ export default function Page() {
                   Trusted by Thousands)
                 </span>
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-                See what our users say about Zion Cloud Vault Pro)
-              </p>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">See what our users say about Zion Cloud Vault Pro)</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8"></div>
@@ -379,16 +364,14 @@ export default function Page() {
         </section>
 
         {/* Contact Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>
+        </section><section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10"></section>
           <div className="max-w-4xl mx-auto text-center"></div>
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"></div>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
                 Ready to Secure Your Data?
               </h2>
-              <p className="text-xl text-gray-300 mb-8"></p>
-                Join thousands of users already protecting their data with Zion Cloud Vault Pro. 
-                Start your free trial today.
-              </p>
+              <p className="text-xl text-gray-300 mb-8">Join thousands of users already protecting their data with Zion Cloud Vault Pro. 
+                Start your free trial today.</p>
               
               {/* Contact Details */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"></div>
@@ -416,14 +399,14 @@ export default function Page() {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-                <Link)
+                <Link
                   to="/contact"
                   className="group bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-blue-500/25 hover:scale-105"
-                ></Link>
-                  Start Free Trial)
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
-                </Link>
-                <Link)
+                ><Link>
+            Start Free Trial)
+            <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
+          </Link>
+                <Link
                   to="/demo"
                   className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 ></Link>
@@ -467,4 +450,4 @@ export default function Page() {
 </Phone>
 </Globe>
 </br>
-}
+}</section>

@@ -1,19 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { 
-  Mail, 
-  TrendingUp, 
-  Shield, 
-  Zap, 
-  BarChart3, 
-  Zap, 
-  Shield, 
-  Target, 
-  Brain, 
-  Sparkles
-} from 'lucide-react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
+
 import { Helmet } from 'react-helmet-async';
 import { 
   Mail, 
@@ -180,7 +166,7 @@ const AIPoweredEmailAnalyzerPage = () => {
           </p>
 
       {/* Stats Section */}
-      <section className="py-16 px-4"></section>
+      </section><section className="py-16 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8"></div>
             {stats.map((stat, index) => (
@@ -204,7 +190,7 @@ const AIPoweredEmailAnalyzerPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 20 }}
@@ -243,7 +229,7 @@ const AIPoweredEmailAnalyzerPage = () => {
           </div>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4"></section>
+      </section><section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 20 }}
@@ -316,7 +302,7 @@ const AIPoweredEmailAnalyzerPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4"></section>
+      </section><section className="py-20 px-4"></section>
         <div className="max-w-7xl mx-auto"></div>
           <motion.div
             initial={{ opacity: 20 }}
@@ -353,7 +339,7 @@ const AIPoweredEmailAnalyzerPage = () => {
       </section>
 
       {/* Contact Information */}
-      <section className="py-16 px-4 bg-black/20"></section>
+      </section><section className="py-16 px-4 bg-black/20"></section>
         <div className="max-w-7xl mx-auto text-center"></div>
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
           <p className="text-gray-300 mb-6">
@@ -373,3 +359,4 @@ const AIPoweredEmailAnalyzerPage = () => {
 };
 
 export default Page;
+</section>

@@ -10,8 +10,7 @@ import EnhancedAccessibility from "../components/EnhancedAccessibility";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AIContentStudioZionTechGroup = () => {
-<<<<<<< HEAD
-=======
+
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -64,7 +63,7 @@ const AIContentStudioZionTechGroup = () => {
       "url": "https://ziontechgroup.com"
     }
   };
->>>>>>> f79fb9e5ca53251693aa9e67e477c500c97551c0
+
 
   const features = [
     {
@@ -225,7 +224,7 @@ const AIContentStudioZionTechGroup = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8"></section>
         <div className="max-w-7xl mx-auto"></div>
           <div className="text-center mb-16"></div>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -284,7 +283,7 @@ const AIContentStudioZionTechGroup = () => {
             </section>
 
             {/* Features Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+            </section><section className="py-20 px-4 sm:px-6 lg:px-8"></section>
               <ResponsiveContainer>
                 <div className="text-center mb-16"></div>
                   <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -317,7 +316,7 @@ const AIContentStudioZionTechGroup = () => {
             </section>
 
             {/* Pricing Section */}
-            <section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
+            </section><section id="pricing" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
               <div className="max-w-7xl mx-auto"></div>
                 <div className="text-center mb-16"></div>
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -373,7 +372,7 @@ const AIContentStudioZionTechGroup = () => {
             </div>
 
             {/* Testimonials Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
+            </section><section className="py-20 px-4 sm:px-6 lg:px-8"></section>
               <div className="max-w-7xl mx-auto"></div>
                 <div className="text-center mb-16"></div>
                   <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -412,7 +411,7 @@ const AIContentStudioZionTechGroup = () => {
       </section>
 
             {/* CTA Section */}
-            <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30"></section>
+            </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30"></section>
               <div className="max-w-4xl mx-auto text-center"></div>
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
                   Ready to Create Amazing Content?
@@ -450,3 +449,4 @@ const AIContentStudioZionTechGroup = () => {
 };
 
 export default Page;
+</section>

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-=======
+
 import { Helmet } from 'react-helmet-async';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
 
 export default function Blog() {
   return (

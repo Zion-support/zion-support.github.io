@@ -15,4 +15,3 @@ export default function AIServices() {
     </div>
   );
 }
-export default AIServicesPage;

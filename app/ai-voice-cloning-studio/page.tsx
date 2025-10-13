@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-import { 
-=======
+
 import {
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
   Mic, 
   Play, 
   Settings, 
@@ -177,7 +174,7 @@ const AIVoiceCloningStudioPage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
@@ -211,7 +208,7 @@ const AIVoiceCloningStudioPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -269,7 +266,7 @@ const AIVoiceCloningStudioPage = () => {
       </section>
 
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -301,7 +298,7 @@ const AIVoiceCloningStudioPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
+      </section><section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/30 to-pink-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
             Ready to Clone Your Voice?
@@ -334,4 +331,4 @@ const AIVoiceCloningStudioPage = () => {
   );
 };
 
-export default AIVoiceCloningStudioPage;
+export default AIVoiceCloningStudioPage;</section>

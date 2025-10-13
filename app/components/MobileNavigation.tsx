@@ -1,7 +1,6 @@
-<<<<<<< HEAD
-=======
+
 import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-9087
+
 import { Menu, X, ArrowRight } from 'lucide-react';
 const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -125,6 +124,7 @@ const MobileNavigation: React.FC = () => {
           </div>
         </div>
       )}
+</div>
 </div>
   );
 };
