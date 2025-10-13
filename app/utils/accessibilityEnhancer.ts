@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+
 interface AccessibilityConfig {
   enabled: boolean;
   highContrast: boolean;
@@ -40,4 +39,4 @@ class AccessibilityEnhancer {
 
 export const accessibilityEnhancer = new AccessibilityEnhancer();
 export default accessibilityEnhancer;
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d
+

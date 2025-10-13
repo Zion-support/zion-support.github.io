@@ -32,33 +32,6 @@ export default tseslint.config(
       "dist", 
       "node_modules", 
       "*.config.js",
-<<<<<<< HEAD
-      "backup/**",
-      "backup-problematic/**",
-      "backup-problematic-files/**",
-      "backup-unused-components/**",
-      "corrupted-src-backup/**",
-      "*.cjs",
-      "*.js",
-      "*.py",
-      "*.sh",
-      "*.md",
-      "*.txt",
-      "*.json",
-      "*.html",
-      "*.original",
-      "*.backup*",
-      "__tests__/**",
-      "api/**",
-      "analysis/**",
-      "ci-cd-reports/**",
-      "content/**",
-      "contracts/**",
-      "scripts/**"
-    ],
-  }
-);
-=======
       "backup*/**",
       "backup-problematic*/**",
       "backup-unused-components/**",
@@ -76,4 +49,3 @@ export default tseslint.config(
     ],
   }
 );
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d

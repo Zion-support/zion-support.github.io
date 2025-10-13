@@ -13,6 +13,9 @@ export class PerformanceUtils {
     fps: 0
   };
 
+  measureLoadTime() {
+    if (typeof window !== 'undefined') {
+      this.metrics.loadTime = performance.now();
     }
   }
 
