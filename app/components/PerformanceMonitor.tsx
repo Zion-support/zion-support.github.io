@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
 interface PerformanceMetrics {
   cls: number | null;
@@ -19,9 +16,11 @@ const PerformanceMonitor: React.FC = () => {
     inp: null,
     fcp: null,
     lcp: null,
-<<<<<<< HEAD
-    ttfb: null
+    ttfb: null,
+    loadTime: null
   });
+
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     // Only run in production
@@ -49,82 +48,26 @@ const PerformanceMonitor: React.FC = () => {
     onFCP(handleMetric);
     onLCP(handleMetric);
     onTTFB(handleMetric);
+
+    // Track page load time
+    const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+    setMetrics(prev => ({ ...prev, loadTime }));
   }, []);
-
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
-      <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
-=======
-
-interface PerformanceMetrics {
-  fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-}
-
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
-  const [isVisible, setIsVisible] = useState(false);
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
     return null;
   }
 
-  useEffect(() => {
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'paint') {
-          if (entry.name === 'first-contentful-paint') {
-            setMetrics(prev => ({ ...prev, fcp: entry.startTime }));
-          }
-        } else if (entry.entryType === 'largest-contentful-paint') {
-          setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
-        } else if (entry.entryType === 'first-input') {
-          setMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
-        } else if (entry.entryType === 'layout-shift') {
-          if (!entry.hadRecentInput) {
-            setMetrics(prev => ({ 
-              ...prev, 
-              cls: (prev.cls || 0) + (entry as any).value 
-            }));
-          }
-        }
-      });
-    });
-
-    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-    // Get TTFB
-    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-    if (navigationEntry) {
-      setMetrics(prev => ({ 
-        ...prev, 
-        ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
-      }));
-    }
-
-    return () => observer.disconnect();
-  }, []);
-
-  const getScore = (value: number | undefined, thresholds: { good: number; poor: number }) => {
-    if (value === undefined) return 'N/A';
+  const getScore = (value: number | null, thresholds: { good: number; poor: number }) => {
+    if (value === null) return 'N/A';
     if (value <= thresholds.good) return 'Good';
     if (value <= thresholds.poor) return 'Needs Improvement';
     return 'Poor';
   };
 
-  const getScoreColor = (value: number | undefined, thresholds: { good: number; poor: number }) => {
-    if (value === undefined) return 'text-gray-400';
+  const getScoreColor = (value: number | null, thresholds: { good: number; poor: number }) => {
+    if (value === null) return 'text-gray-400';
     if (value <= thresholds.good) return 'text-green-400';
     if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
@@ -152,7 +95,6 @@ const PerformanceMonitor: React.FC = () => {
         >
           ✕
         </button>
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       </div>
       
       <div className="space-y-2 text-xs">
@@ -169,9 +111,9 @@ const PerformanceMonitor: React.FC = () => {
           </span>
         </div>
         <div className="flex justify-between">
-          <span>FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, poor: 300 })}>
-            {metrics.fid ? `${Math.round(metrics.fid)}ms` : 'N/A'}
+          <span>INP:</span>
+          <span className={getScoreColor(metrics.inp, { good: 200, poor: 500 })}>
+            {metrics.inp ? `${Math.round(metrics.inp)}ms` : 'N/A'}
           </span>
         </div>
         <div className="flex justify-between">
@@ -186,6 +128,12 @@ const PerformanceMonitor: React.FC = () => {
             {metrics.ttfb ? `${Math.round(metrics.ttfb)}ms` : 'N/A'}
           </span>
         </div>
+        <div className="flex justify-between">
+          <span>Load Time:</span>
+          <span className={getScoreColor(metrics.loadTime, { good: 2000, poor: 4000 })}>
+            {metrics.loadTime ? `${Math.round(metrics.loadTime)}ms` : 'N/A'}
+          </span>
+        </div>
       </div>
       
       <div className="mt-3 pt-2 border-t border-slate-600">
@@ -193,10 +141,6 @@ const PerformanceMonitor: React.FC = () => {
           <div>Good: Green | Needs Improvement: Yellow | Poor: Red</div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
     </div>
   );
 };
