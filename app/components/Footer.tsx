@@ -1,31 +1,6 @@
-<<<<<<< HEAD
-import React from "react";
-import { Link } from "react-router-dom";
-import { 
-  Brain, 
-  Mail, 
-  Phone, 
-<<<<<<< HEAD
-  MapPin, 
-=======
-  MapPin,
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
-  Clock, 
-  ArrowRight,
-  Shield,
-  Zap,
-  Globe,
-  Twitter, 
-  Linkedin, 
-  Github,
-  Users,
-  Award
-} from "lucide-react";
-=======
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Mail, Phone, MapPin, Clock, ArrowRight, Shield, Zap, Globe, Twitter, Linkedin, Github, Users } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-65aa
+import { Brain, Mail, Phone, MapPin, Clock, ArrowRight, Shield, Zap, Globe, Twitter, Linkedin, Github, Users, Award } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
