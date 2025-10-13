@@ -1,10 +1,17 @@
 import { Link } from "react-router-dom";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles } from "lucide-react";
 =======
 import { Brain, Shield, Zap, Globe, ArrowRight, Mail, Smartphone } from "lucide-react";
 >>>>>>> cursor/enhance-app-with-new-services-and-futuristic-design-6c84
 import EnhancedSEO from "./components/EnhancedSEO";
+=======
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, CheckCircle, Users, Award, TrendingUp, BarChart3, Cloud, Lock, Sparkles } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import LazyImage from "./components/LazyImage";
+import SEOOptimizer from "./components/SEOOptimizer";
+>>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
 
 const HomePage = () => {
   const features = [
@@ -98,19 +105,27 @@ const HomePage = () => {
   ];
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
+=======
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <SEOOptimizer
+>>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
         canonical="https://ziontechgroup.com"
       />
+<<<<<<< HEAD
 
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
 
       {/* Hero Section */}
 <<<<<<< HEAD
@@ -232,10 +247,12 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={feature.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                aria-label={`Learn more about ${feature.title}`}
               >
                 <div
                   className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  aria-hidden="true"
                 >
                   {feature.icon}
                 </div>

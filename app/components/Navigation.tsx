@@ -5,7 +5,10 @@ import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartp
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+<<<<<<< HEAD
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false)
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
@@ -16,6 +19,7 @@ const Navigation = React.memo(() => {
     setIsServicesOpen(!isServicesOpen)
   }, [isServicesOpen])
 
+<<<<<<< HEAD
   const toggleSolutions = useCallback(() => {
     setIsSolutionsOpen(!isSolutionsOpen)
   }, [isSolutionsOpen])
@@ -33,6 +37,11 @@ const Navigation = React.memo(() => {
     { name: 'AI Marketing', path: '/ai-marketing', icon: <Globe className="w-4 h-4" /> },
     { name: 'AI Project Management', path: '/ai-project-management', icon: <Smartphone className="w-4 h-4" /> }
   ], [])
+=======
+  const toggleMicroSaas = useCallback(() => {
+    setIsMicroSaasOpen(!isMicroSaasOpen)
+  }, [isMicroSaasOpen])
+>>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
 
   const aiServices = useMemo(() => [
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
@@ -66,10 +75,18 @@ const Navigation = React.memo(() => {
   ], [])
 
   return (
-    <nav className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md">
+    <nav 
+      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
+      role="navigation"
+      aria-label="Main navigation"
+    >
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300">
+          <Link 
+            to="/" 
+            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+            aria-label="Zion Tech Group - Go to homepage"
+          >
             Zion Tech Group
           </Link>
 
@@ -85,6 +102,7 @@ const Navigation = React.memo(() => {
               </Link>
             ))}
             
+<<<<<<< HEAD
             {/* Solutions Dropdown */}
             <div className="relative">
               <button
@@ -112,6 +130,8 @@ const Navigation = React.memo(() => {
               )}
             </div>
             
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
             {/* AI Services Dropdown */}
             <div className="relative">
               <button
@@ -221,6 +241,7 @@ const Navigation = React.memo(() => {
                 </Link>
               ))}
               
+<<<<<<< HEAD
               {/* Mobile Solutions */}
               <div>
                 <button
@@ -251,6 +272,8 @@ const Navigation = React.memo(() => {
                 )}
               </div>
               
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-e9d5
               {/* Mobile AI Services */}
               <div>
                 <button

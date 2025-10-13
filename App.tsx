@@ -205,13 +205,15 @@ function App() {
     <ErrorHandler>
       <ErrorBoundary>
         <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-            <FuturisticBackground>
-              <Navigation />
-              <Breadcrumb />
-              <Suspense fallback={<LoadingPage />}>
-                <Routes>
+          <AccessibilityEnhancer>
+            <Router>
+              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                <FuturisticBackground>
+                  <Navigation />
+                  <Breadcrumb />
+                  <main id="main-content" role="main">
+                    <Suspense fallback={<LoadingPage />}>
+                      <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
@@ -441,27 +443,28 @@ function App() {
                     path="/5g-solutions"
                     element={<FiveGSolutionsPage />}
                   />
-                </Routes>
-              </Suspense>
-              <Footer />
-              <EnhancedPerformanceOptimizer />
-              <AccessibilityEnhancer />
-              <EnhancedAccessibility>
-                <div></div>
-              </EnhancedAccessibility>
-            </FuturisticBackground>
-            <AnalyticsProvider>
-              <div>
-                <PerformanceMonitor />
-                <PerformanceEnhancer />
-                <SEOOptimizer />
-                <EnhancedSEO />
+                      </Routes>
+                    </Suspense>
+                  </main>
+                  <Footer />
+                  <EnhancedPerformanceOptimizer />
+                  <EnhancedAccessibility>
+                    <div></div>
+                  </EnhancedAccessibility>
+                </FuturisticBackground>
+                <AnalyticsProvider>
+                  <div>
+                    <PerformanceMonitor />
+                    <PerformanceEnhancer />
+                    <SEOOptimizer />
+                    <EnhancedSEO />
+                  </div>
+                </AnalyticsProvider>
               </div>
-            </AnalyticsProvider>
-          </div>
-        </Router>
-      </HelmetProvider>
-    </ErrorBoundary>
+            </Router>
+          </AccessibilityEnhancer>
+        </HelmetProvider>
+      </ErrorBoundary>
     </ErrorHandler>
   );
 }
