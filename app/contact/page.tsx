@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from 'lucide-react'
@@ -69,8 +70,15 @@ export default function ContactPage() {
     '5G Implementation',
     'Other'
   ]
+=======
+import React from 'react';
+import SEOHead from '../components/SEOHead';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
 
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>Contact Us - Zion Tech Group</title>
@@ -89,6 +97,25 @@ export default function ContactPage() {
               Ready to transform your business? Get in touch with our experts and let's discuss your project.
             </p>
           </div>
+=======
+    <>
+      <SEOHead
+        title="Contact Zion Tech Group - Get Expert AI and IT Solutions"
+        description="Contact Zion Tech Group for expert AI and IT solutions. Get in touch with our team of specialists for consultation, support, and custom technology solutions."
+        keywords="contact zion tech group, AI consultation, IT support, technology solutions, expert consultation, business transformation"
+        canonical="https://ziontechgroup.com/contact"
+      />
+      <Navigation />
+      <div className='min-h-screen bg-gradient-to-br from-blue-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
+      <div className='max-w-7xl mx-auto'>
+        <div className='text-center mb-12'>
+          <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+            Contact Us
+          </h1>
+          <p className='text-xl text-gray-600'>
+            Get in touch with our team of experts
+          </p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
         </div>
       </section>
 
@@ -232,9 +259,21 @@ export default function ContactPage() {
                 )}
               </button>
             </form>
+<<<<<<< HEAD
           )}
         </div>
       </section>
     </div>
   )
 }
+=======
+        </div>
+      </div>
+      </div>
+      <Footer />
+    </>
+  );
+};
+
+export default ContactPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5

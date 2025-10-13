@@ -4,6 +4,7 @@
 'use client';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 =======
 <<<<<<< HEAD
@@ -43,6 +44,11 @@ import {}
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Users } from 'lucide-react';
 
+=======
+import SEOHead from '../components/SEOHead';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
 
 export default function AboutPage() {
   const teamMembers = [
@@ -151,6 +157,7 @@ const AboutPage: React.FC = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
 =======
     <>
+<<<<<<< HEAD
   </>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
       <Helmet>
@@ -213,6 +220,19 @@ const AboutPage: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 to-purple-600/10"></div>
           <div className="relative max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+=======
+      <SEOHead
+        title="About Zion Tech Group - Leading AI and IT Solutions Provider"
+        description="Learn about Zion Tech Group's mission to transform businesses through cutting-edge AI and IT solutions. Discover our expertise, team, and commitment to innovation."
+        keywords="about zion tech group, AI company, IT solutions provider, enterprise technology, digital transformation, team expertise"
+        canonical="https://ziontechgroup.com/about"
+      />
+      <Navigation />
+      <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-7xl mx-auto'>
+          <div className='text-center mb-12'>
+            <h1 className='text-4xl font-bold text-gray-900 mb-4'>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
               About Zion Tech Group
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -561,7 +581,12 @@ const AboutPage: React.FC = () => {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
     </div>
+=======
+      <Footer />
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
   );
 <<<<<<< HEAD
 <<<<<<< HEAD

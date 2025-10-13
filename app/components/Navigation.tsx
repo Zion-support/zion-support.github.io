@@ -207,6 +207,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-029f
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { 
   ChevronDown, 
   Phone, 
@@ -240,13 +241,19 @@ import {
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Star, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
+=======
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
   const [itServicesOpen, setItServicesOpen] = useState(false);
+<<<<<<< HEAD
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
   const [isScrolled, setIsScrolled] = useState(false);
 
   const handleResize = () => {
@@ -346,6 +353,7 @@ export default function Navigation() {
     setServicesOpen(false);
     setAiServicesOpen(false);
     setItServicesOpen(false);
+<<<<<<< HEAD
     setMicroSaasOpen(false);
   };
 
@@ -388,6 +396,10 @@ export default function Navigation() {
     { name: 'AI Sports', href: '/ai-sports', icon: BarChart, description: 'Sports AI' },
     { name: 'AI Mental Health', href: '/ai-mental-health', icon: Users, description: 'Mental Health AI' }
   ];
+=======
+    setIsOpen(false);
+  };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
 
   const itServices = [
     { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
@@ -647,9 +659,13 @@ export default function Navigation() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-091f
       ]
     }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
   ];
 >>>>>>> origin/cursor/ad-creation-and-management-f267
+=======
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
 
 export default function Navigation() {
   return (
@@ -679,6 +695,7 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
+<<<<<<< HEAD
           <div className="flex items-center">
             <Link to="/" className="flex items-center space-x-2 group">
               <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -977,16 +994,88 @@ export default function Navigation() {
                         <div>
                           <div className="text-white font-medium">{service.name}</div>
                           <div className="text-xs text-gray-400">{service.description}</div>
+=======
+          <Link 
+            to="/" 
+            className="flex items-center space-x-2 text-2xl font-bold"
+            onClick={closeAllMenus}
+          >
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg flex items-center justify-center">
+              <Zap className="w-5 h-5 text-white" />
+            </div>
+            <span className={`transition-colors ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
+              Zion Tech Group
+            </span>
+          </Link>
+
+          {/* Desktop Menu */}
+          <div className="hidden lg:flex items-center space-x-8">
+            <Link
+              to="/"
+              className={`font-medium transition-colors hover:text-purple-600 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
+              }`}
+              onClick={closeAllMenus}
+            >
+              Home
+            </Link>
+            
+            <Link 
+              to="/about" 
+              className={`font-medium transition-colors hover:text-purple-600 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
+              }`}
+              onClick={closeAllMenus}
+            >
+              About
+            </Link>
+
+            {/* Services Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className={`flex items-center space-x-1 font-medium transition-colors hover:text-purple-600 ${
+                  isScrolled ? 'text-gray-700' : 'text-white'
+                }`}
+              >
+                <span>Services</span>
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-200 py-6 z-50">
+                  <div className="grid grid-cols-2 gap-6 px-6">
+                    {serviceCategories.map((category, index) => (
+                      <div key={index} className="space-y-3">
+                        <div className="flex items-center space-x-2 mb-3">
+                          <div className={`w-8 h-8 ${category.bgColor} rounded-lg flex items-center justify-center`}>
+                            <category.icon className={`w-4 h-4 ${category.color}`} />
+                          </div>
+                          <h3 className="font-semibold text-gray-900 text-sm">{category.title}</h3>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
                         </div>
                         <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-cyan-400 ml-auto" />
                       </Link>
                     ))}
                   </div>
+<<<<<<< HEAD
+=======
+                  <div className="border-t border-gray-200 mt-6 pt-4 px-6">
+                    <Link
+                      to="/services"
+                      className="block w-full text-center bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all"
+                      onClick={closeAllMenus}
+                    >
+                      View All Services
+                    </Link>
+                  </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
                 </div>
               )}
             </div>
 <<<<<<< HEAD
 
+<<<<<<< HEAD
             {/* IT Services Dropdown */}
             <div className="relative group">
 =======
@@ -1299,6 +1388,24 @@ export default function Navigation() {
               Pricing
             </Link>
             <Link href="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+=======
+            <Link 
+              to="/case-studies" 
+              className={`font-medium transition-colors hover:text-purple-600 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
+              }`}
+              onClick={closeAllMenus}
+            >
+              Case Studies
+            </Link>
+            <Link
+              to="/blog"
+              className={`font-medium transition-colors hover:text-purple-600 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
+              }`}
+              onClick={closeAllMenus}
+            >
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
               Blog
             </Link>
             <Link href="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
@@ -1316,6 +1423,7 @@ export default function Navigation() {
           <div className="hidden md:block">
             <Link
               to="/contact"
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all duration-300"
             >
@@ -1533,6 +1641,21 @@ export default function Navigation() {
             <Link 
               href="/contact"
               className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-6 py-2 rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-200 font-medium"
+=======
+              className={`font-medium transition-colors hover:text-purple-600 ${
+                isScrolled ? 'text-gray-700' : 'text-white'
+              }`}
+              onClick={closeAllMenus}
+            >
+              Contact
+            </Link>
+            
+            {/* Contact Button */}
+            <Link 
+              to="/contact" 
+              className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all shadow-lg hover:shadow-xl"
+              onClick={closeAllMenus}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
             >
               Get Started
             </Link>
@@ -1540,13 +1663,23 @@ export default function Navigation() {
 
           {/* Mobile Menu Button */}
           <button
+<<<<<<< HEAD
             onClick={toggleMobileMenu}
             className="lg:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+=======
+            onClick={() => setIsOpen(!isOpen)}
+            className={`lg:hidden p-2 rounded-lg transition-colors ${
+              isScrolled 
+                ? 'text-gray-700 hover:bg-gray-100' 
+                : 'text-white hover:bg-white/10'
+            }`}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
           >
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
         {/* Mobile Menu */}
 <<<<<<< HEAD
@@ -2283,11 +2416,95 @@ Navigation.displayName = 'Navigation';
                 <Link
                   to="/contact"
                   className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
+=======
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="lg:hidden border-t border-gray-200 py-6 bg-white">
+            <div className="space-y-6">
+              <Link 
+                to="/" 
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/about" 
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                onClick={closeAllMenus}
+              >
+                About
+              </Link>
+              <Link
+                to="/case-studies"
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Case Studies
+              </Link>
+              <Link
+                to="/blog"
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Blog
+              </Link>
+              <Link
+                to="/contact"
+                className="block text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                onClick={closeAllMenus}
+              >
+                Contact
+              </Link>
+              
+              {/* Mobile Services */}
+              <div>
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="flex items-center justify-between w-full text-lg font-medium text-gray-900 hover:text-purple-600 transition-colors"
+                >
+                  <span>Services</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {servicesOpen && (
+                  <div className="mt-4 space-y-4">
+                    {serviceCategories.map((category, index) => (
+                      <div key={index} className="space-y-2">
+                        <div className="flex items-center space-x-2">
+                          <category.icon className={`w-4 h-4 ${category.color}`} />
+                          <h4 className="font-semibold text-gray-700 text-sm">{category.title}</h4>
+                        </div>
+                        <div className="ml-6 space-y-1">
+                          {category.services.map((service, serviceIndex) => (
+                            <Link
+                              key={serviceIndex}
+                              to={service.path}
+                              className="block text-sm text-gray-600 hover:text-purple-600 transition-colors"
+                              onClick={closeAllMenus}
+                            >
+                              {service.name}
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
+              {/* Mobile CTA */}
+              <div className="pt-4 border-t border-gray-200">
+                <Link
+                  to="/contact"
+                  className="block w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white text-center px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-blue-700 transition-all"
+                  onClick={closeAllMenus}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
                 >
                   Get Started
                 </Link>
               </div>
             </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
 =======
               
@@ -2300,12 +2517,15 @@ Navigation.displayName = 'Navigation';
               </Link>
             </div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
           </div>
         )}
       </div>
     </nav>
   );
 };
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -2330,3 +2550,7 @@ export default Navigation;
 
 export default Navigation;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
+=======
+
+export default Navigation;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5

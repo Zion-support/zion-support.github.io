@@ -2,24 +2,32 @@ User-agent: *
 Allow: /
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sitemap
 =======
 # Sitemaps
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
+=======
+# Sitemap
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Disallow admin and private areas
 =======
 # Disallow admin areas (if any)
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
+=======
+# Disallow admin areas
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
 Disallow: /admin/
-Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 Disallow: /node_modules/
@@ -52,10 +60,14 @@ Disallow: /private/
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
 =======
 Disallow: /dist/
+=======
+Disallow: /private/
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
 
 # Allow important pages
 Allow: /
 Allow: /about
+<<<<<<< HEAD
 Allow: /services
 Allow: /ai-services
 Allow: /micro-saas
@@ -65,3 +77,13 @@ Allow: /contact
 # Host
 Host: https://ziontechgroup.com
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
+=======
+Allow: /contact
+Allow: /services
+Allow: /ai-services
+Allow: /it-services
+Allow: /blog
+Allow: /case-studies
+Allow: /team
+Allow: /enterprise
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ac5
