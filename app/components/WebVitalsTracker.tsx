@@ -45,7 +45,6 @@ const WebVitalsTracker: React.FC = () => {
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
-<<<<<<< HEAD
 
     // Track additional performance metrics
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -77,8 +76,6 @@ const WebVitalsTracker: React.FC = () => {
         });
       }
     }
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
   }, []);
 
   return null;

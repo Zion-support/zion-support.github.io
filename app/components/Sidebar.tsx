@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-import React from 'react';
-import { X } from 'lucide-react';
-=======
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { 
@@ -24,7 +20,6 @@ import {
   Mail,
   MapPin
 } from 'lucide-react'
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 
 interface SidebarProps {
   isOpen: boolean;
@@ -32,32 +27,65 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set());
+  const location = useLocation();
+
+  const toggleSection = useCallback((section: string) => {
+    setExpandedSections(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(section)) {
+        newSet.delete(section);
+      } else {
+        newSet.add(section);
+      }
+      return newSet;
+    });
+  }, []);
+
+  const isActive = useCallback((path: string) => {
+    return location.pathname === path;
+  }, [location.pathname]);
+
+  const mainNavItems = useMemo(() => [
+    { name: 'Home', path: '/', icon: <Home className="w-4 h-4" /> },
+    { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
+    { name: 'Services', path: '/services', icon: <Settings className="w-4 h-4" /> },
+    { name: 'Blog', path: '/blog', icon: <Code className="w-4 h-4" /> },
+    { name: 'Contact', path: '/contact', icon: <Phone className="w-4 h-4" /> }
+  ], []);
+
+  const aiServices = useMemo(() => [
+    { name: 'AI Analytics', path: '/ai-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Content Generation', path: '/ai-content-generation', icon: <Code className="w-4 h-4" /> },
+    { name: 'AI Customer Support', path: '/ai-customer-support', icon: <Users className="w-4 h-4" /> },
+    { name: 'AI Cybersecurity', path: '/ai-cybersecurity', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <Database className="w-4 h-4" /> }
+  ], []);
+
+  const itServices = useMemo(() => [
+    { name: 'Cloud Migration', path: '/cloud-migration', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'DevOps Services', path: '/devops-services', icon: <Code className="w-4 h-4" /> },
+    { name: 'IT Consulting', path: '/it-consulting', icon: <Users className="w-4 h-4" /> },
+    { name: 'Network Security', path: '/network-security', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Software Development', path: '/software-development', icon: <Code className="w-4 h-4" /> }
+  ], []);
+
+  const microSaasServices = useMemo(() => [
+    { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" /> },
+    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Code className="w-4 h-4" /> }
+  ], []);
+
+  const contactInfo = useMemo(() => [
+    { icon: <Mail className="w-4 h-4" />, text: 'contact@ziontechgroup.com' },
+    { icon: <Phone className="w-4 h-4" />, text: '+1 (555) 123-4567' },
+    { icon: <MapPin className="w-4 h-4" />, text: 'New York, NY' }
+  ], []);
+
   if (!isOpen) return null;
 
   return (
-<<<<<<< HEAD
-    <div className="fixed inset-0 z-50 md:hidden">
-      <div className="fixed inset-0 bg-black/50" onClick={onClose} />
-      <div className="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-md border-l border-cyan-500/20">
-        <div className="flex items-center justify-between p-4 border-b border-cyan-500/20">
-          <h2 className="text-lg font-semibold text-white">Menu</h2>
-          <button
-            onClick={onClose}
-            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10"
-          >
-            <X className="w-6 h-6" />
-          </button>
-        </div>
-        <div className="p-4">
-          <p className="text-gray-300">Sidebar content goes here</p>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-export default Sidebar;
-=======
     <>
       {/* Overlay */}
       <div 
@@ -214,9 +242,6 @@ export default Sidebar;
                     {service.icon}
                     <div className="flex-1 flex items-center justify-between">
                       <span className="text-sm">{service.name}</span>
-                      {service.featured && (
-                        <Star className="w-3 h-3 text-yellow-400 fill-current" />
-                      )}
                     </div>
                   </Link>
                 ))}
@@ -240,7 +265,7 @@ export default Sidebar;
           {/* CTA Button */}
           <div className="mt-6">
             <Link
-              to="/consultation"
+              to="/contact"
               className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
               onClick={onClose}
             >
@@ -255,4 +280,3 @@ export default Sidebar;
 }
 
 export default Sidebar
->>>>>>> cursor/analyze-improve-and-deploy-application-c573

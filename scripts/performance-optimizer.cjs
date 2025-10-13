@@ -3,18 +3,6 @@ const path = require('path');
 
 console.log('Starting performance optimization...');
 
-<<<<<<< HEAD
-// Performance optimization script
-const optimizePerformance = () => {
-  try {
-    console.log('Performance optimization completed successfully!');
-  } catch (error) {
-    console.error('Error during performance optimization:', error);
-  }
-};
-
-optimizePerformance();
-=======
 // Optimize images
 console.log('Optimizing images...');
 // This would typically use sharp or imagemin
@@ -150,4 +138,3 @@ fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
 console.log('✓ Manifest.json generated');
 
 console.log('Performance optimization completed successfully!');
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
