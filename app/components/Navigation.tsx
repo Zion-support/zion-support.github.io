@@ -235,8 +235,13 @@ export default function Navigation() {
               Home
             </Link>
             
+<<<<<<< HEAD
             {/* AI Services Dropdown */}
             <div className="relative group">
+=======
+            {/* Solutions Dropdown */}
+            <div className="relative">
+>>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
               <button
                 onClick={() => setAiServicesOpen(!aiServicesOpen)}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"
@@ -267,9 +272,15 @@ export default function Navigation() {
                 </div>
               )}
             </div>
+<<<<<<< HEAD
 
             {/* IT Services Dropdown */}
             <div className="relative group">
+=======
+            
+            {/* AI Services Dropdown */}
+            <div className="relative">
+>>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
               <button
                 onClick={() => setItServicesOpen(!itServicesOpen)}
                 className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium"

@@ -92,6 +92,7 @@ export default function SEOOptimizer({
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta charSet="utf-8" />
       <meta name="author" content="Zion Tech Group" />
+<<<<<<< HEAD
       <meta name="publisher" content="Zion Tech Group" />
       <meta name="language" content="en-US" />
       
@@ -99,6 +100,17 @@ export default function SEOOptimizer({
       {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       
       {/* Open Graph Tags */}
+=======
+      <meta name="robots" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+      <meta name="googlebot" content={noIndex ? "noindex, nofollow" : "index, follow"} />
+      
+      {/* Canonical URL */}
+      <link rel="canonical" href={canonical || "https://ziontechgroup.com"} />
+      
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
+>>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />

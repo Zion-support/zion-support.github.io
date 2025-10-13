@@ -23,7 +23,15 @@ interface AccessibilitySettings {
   focusVisible: boolean;
 }
 
+<<<<<<< HEAD
 export default function AccessibilityEnhancer() {
+=======
+interface AccessibilityEnhancerProps {
+  children?: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+>>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
@@ -33,6 +41,7 @@ export default function AccessibilityEnhancer() {
 
 <<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
+<<<<<<< HEAD
 =======
         // Skip to main content
         if (event.key === 'Tab && event.shiftKey && event.target === document.body) {
@@ -106,6 +115,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
       return () => document.removeEventListener(keydown, handleKeyDown);
 >>>>>>> origin/cursor/ad-creation-and-management-f267
+=======
+>>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
 
   useEffect(() => {
     // Load saved settings from localStorage
@@ -122,7 +133,85 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     applySettings(settings);
   }, [settings]);
 
+<<<<<<< HEAD
   const applySettings = (newSettings: AccessibilitySettings) => {
+=======
+      // Large text preference
+      const savedLargeText = localStorage.getItem('large-text');
+      if (savedLargeText === 'true') {
+        setSettings(prev => ({ ...prev, largeText: true }));
+        document.documentElement.classList.add('large-text');
+      }
+    };
+
+    checkPreferences();
+
+    // Listen for changes in preferences
+    const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    const handleHighContrastChange = (e: MediaQueryListEvent) => {
+      setSettings(prev => ({ ...prev, highContrast: e.matches }));
+      if (e.matches) {
+        document.documentElement.classList.add('high-contrast');
+      } else {
+        document.documentElement.classList.remove('high-contrast');
+      }
+    };
+
+    const handleReducedMotionChange = (e: MediaQueryListEvent) => {
+      setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
+      if (e.matches) {
+        document.documentElement.classList.add('reduced-motion');
+      } else {
+        document.documentElement.classList.remove('reduced-motion');
+      }
+    };
+
+    highContrastQuery.addEventListener('change', handleHighContrastChange);
+    reducedMotionQuery.addEventListener('change', handleReducedMotionChange);
+
+    // Keyboard navigation enhancement
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Tab') {
+        setSettings(prev => ({ ...prev, focusVisible: true }));
+        document.body.classList.add('keyboard-navigation');
+      }
+    };
+
+    const handleMouseDown = () => {
+      setSettings(prev => ({ ...prev, focusVisible: false }));
+      document.body.classList.remove('keyboard-navigation');
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    document.addEventListener('mousedown', handleMouseDown);
+
+    // Add skip links
+    const addSkipLinks = () => {
+      const skipLinks = document.createElement('div');
+      skipLinks.innerHTML = `
+        <a href="#main-content" class="skip-link">Skip to main content</a>
+        <a href="#navigation" class="skip-link">Skip to navigation</a>
+        <a href="#footer" class="skip-link">Skip to footer</a>
+      `;
+      skipLinks.className = 'skip-links';
+      document.body.insertBefore(skipLinks, document.body.firstChild);
+    };
+
+    addSkipLinks();
+
+    // Cleanup
+    return () => {
+      highContrastQuery.removeEventListener('change', handleHighContrastChange);
+      reducedMotionQuery.removeEventListener('change', handleReducedMotionChange);
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('mousedown', handleMouseDown);
+    };
+  }, []);
+
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+>>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
     const root = document.documentElement;
     
     // High contrast
@@ -189,7 +278,11 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         </svg>
       </button>
 
+<<<<<<< HEAD
       {/* Settings Panel */}
+=======
+      {/* Accessibility Panel */}
+>>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
       {isVisible && (
         <div className="fixed top-16 right-4 z-50 bg-white rounded-lg shadow-xl p-6 w-80 max-w-sm">
           <h3 className="text-lg font-semibold text-gray-900 mb-4">
@@ -248,8 +341,41 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       )}
 
       {/* CSS for accessibility features */}
+<<<<<<< HEAD
       <style dangerouslySetInnerHTML={{
         __html: `
+=======
+      <style jsx global>{`
+        .skip-links {
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          z-index: 1000;
+        }
+        
+        .skip-link {
+          position: absolute;
+          top: -40px;
+          left: 6px;
+          background: #000;
+          color: #fff;
+          padding: 8px;
+          text-decoration: none;
+          border-radius: 4px;
+          z-index: 1000;
+          transition: top 0.3s;
+        }
+        
+        .skip-link:focus {
+          top: 6px;
+        }
+        
+        .keyboard-navigation *:focus {
+          outline: 2px solid #3b82f6 !important;
+          outline-offset: 2px !important;
+        }
+        
+>>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
         .high-contrast {
           --tw-bg-opacity: 1;
           --tw-text-opacity: 1;

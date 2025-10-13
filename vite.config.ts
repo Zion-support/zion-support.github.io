@@ -31,6 +31,15 @@ export default defineConfig({
         },
       },
     },
+<<<<<<< HEAD
+=======
+    // Performance optimizations
+    chunkSizeWarningLimit: 500,
+    assetsInlineLimit: 2048,
+    // Enable compression
+    reportCompressedSize: true,
+    // Additional optimizations for production
+>>>>>>> origin/cursor/analyze-and-resolve-javascript-errors-6208
     terserOptions: {
       compress: {
         drop_console: true,
