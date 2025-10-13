@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 200, // Reduced warning threshold
-    assetsInlineLimit: 2048, // Reduced for better caching
+    chunkSizeWarningLimit: 150, // Reduced warning threshold
+    assetsInlineLimit: 1024, // Reduced for better caching
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -83,9 +83,12 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
-          if (id.includes('react') || id.includes('react-dom')) {
-            return 'react-vendor'
+          // Core React libraries - split further
+          if (id.includes('react-dom')) {
+            return 'react-dom'
+          }
+          if (id.includes('react') && !id.includes('react-dom')) {
+            return 'react'
           }
           // Router
           if (id.includes('react-router')) {
@@ -118,25 +121,34 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - split into smaller chunks
-          if (id.includes('/ai-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/ai-')[1]?.split('/')[0];
-            return `ai-${serviceName || 'services'}`
+          // Main pages - split by category
+          if (id.includes('/app/') && id.includes('/page.tsx')) {
+            if (id.includes('/ai-')) {
+              return 'ai-pages'
+            }
+            if (id.includes('/zion-')) {
+              return 'zion-pages'
+            }
+            if (id.includes('/5g-')) {
+              return '5g-pages'
+            }
+            if (id.includes('/about') || id.includes('/contact') || id.includes('/services')) {
+              return 'main-pages'
+            }
+            return 'other-pages'
           }
-          // Zion service pages
-          if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/zion-')[1]?.split('/')[0];
-            return `zion-${serviceName || 'services'}`
-          }
-          // 5G service pages
-          if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/5g-')[1]?.split('/')[0];
-            return `5g-${serviceName || 'services'}`
-          }
-          // Other service pages
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
-            return 'pages'
+          // Components - split by type
+          if (id.includes('/components/')) {
+            if (id.includes('Performance') || id.includes('Analytics')) {
+              return 'performance-components'
+            }
+            if (id.includes('SEO') || id.includes('Accessibility')) {
+              return 'seo-components'
+            }
+            if (id.includes('Loading') || id.includes('Error')) {
+              return 'ui-components'
+            }
+            return 'components'
           }
           // Default chunk for other modules
           return 'vendor'

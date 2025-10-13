@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const fs = require('fs');
 const path = require('path');
 
@@ -5,43 +7,38 @@ function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Remove all merge conflict markers and keep the latest version
-    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    // Remove merge conflict markers and keep the better version (usually the second one)
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)>>>>>>> [^\n]+/g, '$1');
+    
+    // Remove any remaining conflict markers
     content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
     content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
-    // Clean up any remaining conflict markers
-    content = content.replace(/<<<<<<< HEAD/g, '');
-    content = content.replace(/=======/g, '');
-    content = content.replace(/>>>>>>> [^\n]+/g, '');
-    
-    // Remove empty lines that might be left behind
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
-    
-    fs.writeFileSync(filePath, content, 'utf8');
+    fs.writeFileSync(filePath, content);
     console.log(`Fixed merge conflicts in: ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-// Get all files with merge conflicts
-const files = [
-  '/workspace/__tests__/loading-spinner.test.tsx',
-  '/workspace/app/components/ContactForm.tsx',
-  '/workspace/app/components/AdvancedErrorBoundary.tsx',
-  '/workspace/app/components/AdvancedPerformanceMonitor.tsx',
-  '/workspace/app/components/CacheManager.tsx',
-  '/workspace/app/components/ContentNewsletterSignup.tsx',
-  '/workspace/app/consultation/page.tsx',
-  '/workspace/app/case-studies/page.tsx',
-  '/workspace/app/careers/page.tsx',
-  '/workspace/app/partners/page.tsx',
-  '/workspace/app/compliance/page.tsx',
-  '/workspace/app/community/page.tsx',
-  '/workspace/app/cloud-services/page.tsx',
-  '/workspace/app/blog/page.tsx'
-];
+function findAndFixConflicts(dir) {
+  const files = fs.readdirSync(dir);
+  
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
+    
+    if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules') {
+      findAndFixConflicts(filePath);
+    } else if (file.endsWith('.tsx') || file.endsWith('.ts') || file.endsWith('.js') || file.endsWith('.jsx')) {
+      const content = fs.readFileSync(filePath, 'utf8');
+      if (content.includes('<<<<<<< HEAD')) {
+        fixMergeConflicts(filePath);
+      }
+    }
+  }
+}
 
-files.forEach(fixMergeConflicts);
-console.log('All merge conflicts fixed!');
+console.log('Fixing merge conflicts...');
+findAndFixConflicts('.');
+console.log('Done!');

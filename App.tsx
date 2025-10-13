@@ -21,9 +21,12 @@ import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import WebVitalsMonitor from "./app/components/WebVitalsMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
+import SmartLoading from "./app/components/SmartLoading";
+import ServiceWorkerRegistration from "./app/components/ServiceWorkerRegistration";
 import ErrorHandler from "./app/components/ErrorHandler";
 import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
 
@@ -223,18 +226,20 @@ function App() {
   }, []);
 
   return (
-    <ErrorHandler>
-      <EnhancedErrorBoundary>
+    <GlobalErrorBoundary>
+      <ErrorHandler>
+        <EnhancedErrorBoundary>
         <HelmetProvider>
-          <AccessibilityEnhancer>
-            <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <ServiceWorkerRegistration>
+            <AccessibilityEnhancer>
+              <Router>
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground>
                   <Navigation onSidebarToggle={toggleSidebar} />
                   <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
                   <Breadcrumb />
                   <main id="main-content" role="main">
-                    <Suspense fallback={<LoadingPage />}>
+                    <Suspense fallback={<SmartLoading><LoadingPage /></SmartLoading>}>
                       <Routes>
                   <Route path="/" element={<HomePage />} />
                   <Route path="/about" element={<AboutPage />} />
@@ -490,17 +495,19 @@ function App() {
                   <div>
                     <PerformanceMonitor />
                     <WebVitalsTracker />
+                    <WebVitalsMonitor />
                     <PerformanceEnhancer />
                     <SEOOptimizer />
                     <EnhancedSEO />
                   </div>
                 </AnalyticsProvider>
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
+                </div>
+              </Router>
+            </AccessibilityEnhancer>
+          </ServiceWorkerRegistration>
         </HelmetProvider>
-      </EnhancedErrorBoundary>
-    </ErrorHandler>
+        </EnhancedErrorBoundary>
+      </ErrorHandler>
     </GlobalErrorBoundary>
   );
 }
