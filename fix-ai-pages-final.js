@@ -1,4 +1,15 @@
-'use client';
+#!/usr/bin/env node
+
+import fs from 'fs';
+
+const aiPages = [
+  'app/zion-ai-voice-assistant-pro/page.tsx',
+  'app/zion-ai-performance-optimizer/page.tsx',
+  'app/zion-ai-social-media-manager/page.tsx',
+  'app/zion-ai-inventory-manager/page.tsx'
+];
+
+const pageContent = `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -72,4 +83,16 @@ export default function ZionAIVoiceAssistantPro() {
       </div>
     </div>
   );
-}
+}`;
+
+// Fix all AI pages
+aiPages.forEach(pagePath => {
+  try {
+    fs.writeFileSync(pagePath, pageContent);
+    console.log(`Fixed: ${pagePath}`);
+  } catch (error) {
+    console.error(`Error fixing ${pagePath}:`, error.message);
+  }
+});
+
+console.log('AI pages fixed successfully!');

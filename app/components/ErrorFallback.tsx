@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const ErrorFallback: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -82,10 +81,6 @@ const ErrorFallback: React.FC = () => {
           </a>
         </div>
       </section>
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
     </div>
   );
 };
