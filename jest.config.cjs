@@ -1,9 +1,8 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/src/$1',
+    '^@/(.*)$': '<rootDir>/app/$1',
   },
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
@@ -12,11 +11,11 @@ module.exports = {
   },
   testMatch: [
     '<rootDir>/__tests__/**/*.(ts|tsx)',
-    '<rootDir>/src/**/__tests__/**/*.(ts|tsx)',
+    '<rootDir>/app/**/__tests__/**/*.(ts|tsx)',
   ],
   collectCoverageFrom: [
-    'src/**/*.(ts|tsx)',
-    '!src/**/*.d.ts',
+    'app/**/*.(ts|tsx)',
+    '!app/**/*.d.ts',
   ],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
 };
