@@ -15,7 +15,6 @@ def create_clean_page_template(page_name):
     
     return f"""import React from 'react';
 
-<<<<<<< HEAD
 export default function {component_name}Page() {{
   return (
     <div className="min-h-screen bg-gray-50">
@@ -28,81 +27,6 @@ export default function {component_name}Page() {{
             Advanced AI and IT solutions for your business needs.
           </p>
         </div>
-=======
-def fix_jsx_structure(content):
-    """Fix JSX structure issues"""
-    # Fix malformed JSX elements
-    content = re.sub(r'<div([^>]*)></div>', r'<div\1>', content)
-    
-    # Fix unclosed JSX tags
-    content = re.sub(r'<div([^>]*)>\s*$', r'<div\1></div>', content, flags=re.MULTILINE)
-    
-    # Fix JSX fragments
-    content = re.sub(r'<>\s*$', r'<></>', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_jsx_attributes(content):
-    """Fix JSX attribute issues"""
-    # Fix malformed className attributes
-    content = re.sub(r'className\s*=\s*\{[^}]*\s*>\s*\}', lambda m: m.group(0).replace('>', '&gt;'), content)
-    
-    # Fix malformed style attributes
-    content = re.sub(r'style\s*=\s*\{[^}]*\s*>\s*\}', lambda m: m.group(0).replace('>', '&gt;'), content)
-    
-    return content
-
-def fix_jsx_elements(content):
-    """Fix JSX element issues"""
-    # Fix unclosed JSX elements
-    content = re.sub(r'<(\w+)([^>]*)>\s*$', r'<\1\2></\1>', content, flags=re.MULTILINE)
-    
-    # Fix malformed JSX closing tags
-    content = re.sub(r'</\s*(\w+)\s*>\s*$', r'</\1>', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_jsx_syntax_errors(content):
-    """Fix common JSX syntax errors"""
-    # Fix malformed JSX expressions
-    content = re.sub(r'\{[^}]*\s*>\s*\}', lambda m: m.group(0).replace('>', '&gt;'), content)
-    
-    # Fix unclosed JSX tags
-    content = re.sub(r'<div([^>]*)>\s*$', r'<div\1></div>', content, flags=re.MULTILINE)
-    
-    # Fix JSX fragments
-    content = re.sub(r'<>\s*$', r'<></>', content, flags=re.MULTILINE)
-    
-    return content
-
-def fix_common_syntax_errors(content):
-    """Fix common syntax errors"""
-    # Fix missing commas in object literals
-    content = re.sub(r'(\w+)\s*:\s*(\w+)\s*(\w+)\s*:', r'\1: \2,\n  \3:', content)
-    
-    # Fix missing commas in function parameters
-    content = re.sub(r'(\w+)\s+(\w+)\s+(\w+)\s*\)', r'\1, \2, \3)', content)
-    
-    # Fix malformed JSX expressions
-    content = re.sub(r'\{[^}]*\s*>\s*\}', lambda m: m.group(0).replace('>', '&gt;'), content)
-    
-    return content
-
-def fix_merge_conflicts(content):
-    """Fix merge conflict markers"""
-    # Remove merge conflict markers and keep the HEAD version
-    content = re.sub(r'    
-    # Remove any remaining conflict markers
-    content = re.sub(r'    content = re.sub(r'\n', '', content)
-    content = re.sub(r'    
-    return content
-
-def process_file(file_path):
-    """Process a single file to fix all errors"""
-    try:
-        with open(file_path, 'r', encoding='utf-8') as f:
-            content = f.read()
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <div className="bg-white rounded-lg shadow-md p-6">

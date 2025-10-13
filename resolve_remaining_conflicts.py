@@ -13,15 +13,14 @@ def resolve_merge_conflicts_robust(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
+        if '' not in content:
             return False
         
         # More robust regex to handle various conflict patterns
         # This pattern matches the entire conflict block
-        conflict_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
-        
+        conflict_pattern = r'\n(.*?)\n\n(.*?)\n        
         def replace_conflict(match):
-            # Keep the newer version (after =======)
+            # Keep the newer version (after )
             return match.group(2)
         
         # Replace all conflicts
@@ -53,7 +52,7 @@ def main():
     
     for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            if '<<<<<<< HEAD' in open(file_path, 'r', encoding='utf-8').read():
+            if '' in open(file_path, 'r', encoding='utf-8').read():
                 files_processed += 1
                 if resolve_merge_conflicts_robust(file_path):
                     conflicts_resolved += 1

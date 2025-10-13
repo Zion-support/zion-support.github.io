@@ -9,23 +9,12 @@ import re
 import glob
 from pathlib import Path
 
-<<<<<<< HEAD
 def create_clean_page_template(page_name):
     """Create a clean page template based on the page name."""
     # Extract service name from path
     service_name = page_name.replace('app/', '').replace('/page.tsx', '').replace('-', ' ').title()
     
     return f"""import React from 'react';
-=======
-def clean_merge_conflicts(content):
-    """Remove all merge conflict markers and choose appropriate content."""
-    # Remove all merge conflict markers
-    content = re.sub(r'    content = re.sub(r'    content = re.sub(r'\n.*?\n    
-    # Clean up any remaining conflict markers
-    content = re.sub(r'^    content = re.sub(r'^.*?\n', '', content, flags=re.MULTILINE)
-    content = re.sub(r'^    
-    return content
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 export default function {service_name.replace(' ', '')}Page() {{
   return (
@@ -137,8 +126,8 @@ def has_parsing_errors(file_path):
             r'Expression expected',
             r'Unexpected token',
             r'Parsing error',
-            r'<<<<<<< HEAD',
-            r'=======',
+            r'',
+            r'',
             r'>>>>>>>'
         ]
         

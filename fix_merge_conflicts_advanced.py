@@ -13,30 +13,26 @@ def clean_merge_conflicts(content):
     """Clean merge conflicts from content using multiple strategies."""
     
     # Strategy 1: Standard merge conflict pattern
-    pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
-    content = re.sub(pattern1, r'\2', content, flags=re.DOTALL)
+    pattern1 = r'\n(.*?)\n\n(.*?)\n    content = re.sub(pattern1, r'\2', content, flags=re.DOTALL)
     
     # Strategy 2: Alternative pattern with different spacing
-    pattern2 = r'<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n(.*?)\n>>>>>>>\s*[^\n]+'
+    pattern2 = r'\s*\n(.*?)\n\s*\n(.*?)\n>>>>>>>\s*[^\n]+'
     content = re.sub(pattern2, r'\2', content, flags=re.DOTALL)
     
     # Strategy 3: Handle cases where there might be multiple conflicts in one file
-    pattern3 = r'<<<<<<< [^\n]+\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
-    content = re.sub(pattern3, r'\2', content, flags=re.DOTALL)
+    pattern3 = r'<<<<<<< [^\n]+\n(.*?)\n\n(.*?)\n    content = re.sub(pattern3, r'\2', content, flags=re.DOTALL)
     
     # Strategy 4: Handle incomplete merge conflicts
-    pattern4 = r'<<<<<<< [^\n]+\n(.*?)\n======='
+    pattern4 = r'<<<<<<< [^\n]+\n(.*?)\n'
     content = re.sub(pattern4, r'\1', content, flags=re.DOTALL)
     
-    # Strategy 5: Handle remaining ======= markers
-    pattern5 = r'=======\n(.*?)\n>>>>>>> [^\n]+'
-    content = re.sub(pattern5, r'\1', content, flags=re.DOTALL)
+    # Strategy 5: Handle remaining  markers
+    pattern5 = r'\n(.*?)\n    content = re.sub(pattern5, r'\1', content, flags=re.DOTALL)
     
     # Strategy 6: Remove any remaining conflict markers
     content = re.sub(r'<<<<<<< [^\n]+', '', content)
-    content = re.sub(r'=======', '', content)
-    content = re.sub(r'>>>>>>> [^\n]+', '', content)
-    
+    content = re.sub(r'', '', content)
+    content = re.sub(r'    
     # Clean up extra whitespace and empty lines
     content = re.sub(r'\n\s*\n\s*\n+', '\n\n', content)
     content = re.sub(r'^\s*\n+', '', content)
@@ -51,7 +47,7 @@ def fix_merge_conflicts_in_file(file_path):
             content = f.read()
         
         # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content and '<<<<<<<' not in content:
+        if '' not in content and '<<<<<<<' not in content:
             return False
         
         print(f"Fixing merge conflicts in: {file_path}")
@@ -93,7 +89,7 @@ def find_files_with_conflicts():
                     try:
                         with open(file_path, 'r', encoding='utf-8') as f:
                             content = f.read()
-                            if '<<<<<<<' in content or '=======' in content or '>>>>>>>' in content:
+                            if '<<<<<<<' in content or '' in content or '>>>>>>>' in content:
                                 files_with_conflicts.append(file_path)
                     except:
                         continue

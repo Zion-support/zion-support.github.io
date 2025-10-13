@@ -15,7 +15,6 @@ def clean_merge_conflicts(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
-<<<<<<< HEAD
         # Remove merge conflict markers and keep the HEAD version
         # Pattern to match merge conflicts and keep the HEAD version
         pattern = r'.*?\n
@@ -24,14 +23,6 @@ def clean_merge_conflicts(file_path):
         # Remove any remaining merge conflict markers
         cleaned_content = re.sub(r'\n', '', cleaned_content)
         cleaned_content = re.sub(r'
-=======
-        # Remove merge conflict markers and keep the first version (HEAD)
-        # Pattern to match:         pattern = r'        
-        # Replace with just the HEAD version (first capture group)
-        cleaned_content = re.sub(pattern, r'\1', content, flags=re.DOTALL)
-        
-        # Also handle cases where there might be just         pattern2 = r'        cleaned_content = re.sub(pattern2, r'\1', cleaned_content, flags=re.DOTALL)
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         
         # Remove any remaining conflict markers
         cleaned_content = re.sub(r'        cleaned_content = re.sub(r'\s*\n?', '', cleaned_content)
@@ -66,28 +57,12 @@ def main():
         files = glob.glob(str(pattern), recursive=True)
         
         for file_path in files:
-<<<<<<< HEAD
             if os.path.isfile(file_path):
                 # Check if file has merge conflicts
                 with open(file_path, 'r', encoding='utf-8') as f:
                     content = f.read()
                     if '' in content:
                         clean_merge_conflicts(file_path)
-=======
-            # Skip node_modules and other directories
-            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', '.next', 'out']):
-                continue
-                
-            total_files += 1
-            
-            if clean_merge_conflicts(file_path):
-                cleaned_files += 1
-                print(f"Cleaned: {file_path}")
-    
-    print(f"\nCleanup complete!")
-    print(f"Total files processed: {total_files}")
-    print(f"Files cleaned: {cleaned_files}")
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 
 if __name__ == "__main__":
     main()

@@ -13,6 +13,20 @@ export class PerformanceUtils {
     fps: 0
   };
 
+  measureLoadTime() {
+    if (typeof window !== 'undefined' && window.performance) {
+      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+    }
+  }
+
+  measureRenderTime() {
+    if (typeof window !== 'undefined' && window.performance) {
+      const paintEntries = window.performance.getEntriesByType('paint');
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      if (fcp) {
+        this.metrics.renderTime = fcp.startTime;
+      }
     }
   }
 

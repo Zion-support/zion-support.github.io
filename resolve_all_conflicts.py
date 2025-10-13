@@ -38,7 +38,6 @@ def resolve_merge_conflicts(file_path):
             content = f.read()
         
         # Remove merge conflict markers and keep main branch version
-<<<<<<< HEAD
         # Pattern: \n...\n
         pattern = r'.*?\n
         content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
@@ -47,13 +46,6 @@ def resolve_merge_conflicts(file_path):
         content = re.sub(r'\n?', '', content)
         content = re.sub(r'
         
-=======
-        # Pattern:         pattern = r'        content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
-        
-        # Clean up any remaining markers
-        content = re.sub(r'        content = re.sub(r'\n?', '', content)
-        content = re.sub(r'        
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         # Clean up multiple newlines
         content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
         

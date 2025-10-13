@@ -59,13 +59,4 @@ function fixUnusedImports(filePath) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-085b
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-69c0

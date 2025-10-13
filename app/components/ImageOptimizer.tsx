@@ -10,20 +10,12 @@ interface ImageOptimizerProps {
   placeholder?: string;
 }
 
-<<<<<<< HEAD
 export default function ImageOptimizer({ 
   src, 
   alt, 
   className = '', 
-  lazy = true
-=======
-export default function ImageOptimizer({
-  src,
-  alt,
-  className = '',
   lazy = true,
   placeholder
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d
 }: ImageOptimizerProps) {
   return (
     <img
@@ -31,12 +23,9 @@ export default function ImageOptimizer({
       alt={alt}
       className={className}
       loading={lazy ? 'lazy' : 'eager'}
-<<<<<<< HEAD
-=======
       style={{
         backgroundColor: placeholder || '#f3f4f6'
       }}
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d
     />
   );
 }

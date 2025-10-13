@@ -1,13 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
 // Generate sitemap
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -57,7 +50,6 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 
 // Write sitemap to dist folder
 const distDir = path.join(__dirname, '..', 'dist');
-=======
 // Define all the routes
 const routes = [
   // Main pages
@@ -151,25 +143,13 @@ const outputPath = path.join(__dirname, '..', 'dist', 'sitemap.xml');
 
 // Ensure dist directory exists
 const distDir = path.dirname(outputPath);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
 if (!fs.existsSync(distDir)) {
   fs.mkdirSync(distDir, { recursive: true });
 }
 
-<<<<<<< HEAD
 fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
 console.log('Sitemap generated successfully');
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-fs.writeFileSync(outputPath, sitemap);
-console.log('Sitemap generated successfully at:', outputPath);
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-214f
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
-=======
-=======
 // Define all the routes in your application
 const routes = [
   '/',
@@ -303,5 +283,3 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 // Run the generation
 writeSitemap();
 generateRobotsTxt();
->>>>>>> cursor/fix-errors-and-merge-to-main-b18f
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5

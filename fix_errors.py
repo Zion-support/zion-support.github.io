@@ -28,14 +28,7 @@ def resolve_merge_conflicts(content):
     keep_lines = True
     
     for line in lines:
-<<<<<<< HEAD
         if line.strip().startswith(''):
-=======
-        if line.strip().startswith('            in_conflict = True
-            keep_lines = True
-            continue
-        elif line.strip().startswith(''):
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
             keep_lines = False
             continue
         elif line.strip().startswith('>>>>>>>'):

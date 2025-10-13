@@ -1,13 +1,4 @@
 /** @type {import('tailwindcss').Config} */
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-};
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
->>>>>>> cursor/fix-errors-and-merge-to-main-a87d
 export default {
   content: [
     "./index.html",
@@ -39,10 +30,3 @@ export default {
   },
   plugins: [],
 };
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
->>>>>>> cursor/fix-errors-and-merge-to-main-a87d

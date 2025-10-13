@@ -125,8 +125,8 @@ def has_parsing_errors(file_path):
             r'Expression expected',
             r'Unexpected token',
             r'Parsing error',
-            r'<<<<<<< HEAD',
-            r'=======',
+            r'',
+            r'',
             r'>>>>>>>'
         ]
         
