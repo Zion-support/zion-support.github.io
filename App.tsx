@@ -4,6 +4,7 @@ import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
 import "./app/styles/futuristic-advanced.css";
+import "./app/styles/futuristic-ultra.css";
 import "./app/styles/accessibility-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
@@ -49,6 +50,10 @@ const QuantumComputingSolutionsPage = React.lazy(() => import("./app/quantum-com
 
 // New Micro SAAS Services
 const ZionAINeuralInterfacePage = React.lazy(() => import("./app/zion-ai-neural-interface/page"));
+const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
+const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
+const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio/page"));
 
 // Additional service pages
 const ItServicesPage = React.lazy(() => import("./app/it-services/page"));
@@ -139,6 +144,10 @@ function App() {
                         
                         {/* New Micro SAAS Services */}
                         <Route path="/zion-ai-neural-interface" element={<ZionAINeuralInterfacePage />} />
+                        <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                        <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                        <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
+                        <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
                         
                         {/* Additional Service Pages */}
                         <Route path="/it-services" element={<ItServicesPage />} />
