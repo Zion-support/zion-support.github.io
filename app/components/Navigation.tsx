@@ -1,11 +1,33 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Menu, X, ChevronDown } from 'lucide-react';
 
 const Navigation: React.FC = () => {
+=======
+import { Link, useLocation } from 'react-router-dom';
+import { 
+  Bars3Icon, 
+  XMarkIcon,
+  HomeIcon,
+  InformationCircleIcon,
+  BriefcaseIcon,
+  PhoneIcon,
+  DocumentTextIcon,
+  AcademicCapIcon,
+  PlayIcon,
+  QuestionMarkCircleIcon,
+  ShieldCheckIcon,
+  CurrencyDollarIcon,
+  CogIcon
+} from '@heroicons/react/24/outline';
+
+const Navigation = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-3299
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
 
+<<<<<<< HEAD
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -22,6 +44,19 @@ const Navigation: React.FC = () => {
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },
     { name: 'Contact', href: '/contact' }
+=======
+  const navigation = [
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'About', href: '/about', icon: InformationCircleIcon },
+    { name: 'Services', href: '/services', icon: BriefcaseIcon },
+    { name: 'Solutions', href: '/solutions', icon: CogIcon },
+    { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
+    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
+    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+    { name: 'Demo', href: '/demo', icon: PlayIcon },
+    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
+    { name: 'Contact', href: '/contact', icon: PhoneIcon },
+>>>>>>> cursor/fix-errors-and-merge-to-main-3299
   ];
 
   return (
@@ -29,6 +64,7 @@ const Navigation: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
+<<<<<<< HEAD
           <div className="flex-shrink-0">
             <Link to="/" className="text-2xl font-bold text-white">
               Zion Tech Group
@@ -64,13 +100,25 @@ const Navigation: React.FC = () => {
                   )}
                 </div>
               ))}
+=======
+          <Link to="/" className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">Z</span>
+>>>>>>> cursor/fix-errors-and-merge-to-main-3299
             </div>
           </div>
 
           {/* CTA Button */}
+<<<<<<< HEAD
           <div className="hidden md:block">
             <Link to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+=======
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-2 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
+>>>>>>> cursor/fix-errors-and-merge-to-main-3299
             >
               Get Started
             </Link>
@@ -89,14 +137,26 @@ const Navigation: React.FC = () => {
 
         {/* Mobile */}
         {isOpen && (
+<<<<<<< HEAD
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800/50 rounded-lg mt-2">
               {navigationItems.map((item) => (
                 <div key={item.name}>
                   <Link to={item.href}
                     className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+=======
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-slate-800 rounded-lg mt-2">
+              {navigation.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+>>>>>>> cursor/fix-errors-and-merge-to-main-3299
                     onClick={() => setIsOpen(false)}
                   >
+<<<<<<< HEAD
                     {item.name}
                   </Link>
                   {item.submenu && (
@@ -117,6 +177,16 @@ const Navigation: React.FC = () => {
               <div className="pt-4">
                 <Link to="/contact"
                   className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white block px-3 py-2 rounded-md text-base font-medium text-center"
+=======
+                    <Icon className="w-5 h-5" />
+                    <span>{item.name}</span>
+                  </Link>
+                );
+              })}
+              <div className="pt-4 border-t border-slate-700">
+                <Link
+                  to="/contact"
+>>>>>>> cursor/fix-errors-and-merge-to-main-3299
                   onClick={() => setIsOpen(false)}
                 >
                   Get Started
