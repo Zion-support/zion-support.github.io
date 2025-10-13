@@ -80,7 +80,6 @@ const ContentCarousel: React.FC = () => {
   const currentSlideData = slides[currentSlide];
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 px-4">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -166,47 +165,7 @@ const ContentCarousel: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-=======
-    <div className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-4">
-            Why Choose Zion Tech Group?
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover the key features and benefits that make us the preferred choice for AI and IT solutions.
-          </p>
-        </div>
-
-        {/* Carousel */}
-        <div className="relative">
-          <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-8 md:p-12 overflow-hidden">
-            <div className="flex items-center justify-between mb-8">
-              <div className="flex items-center gap-4">
-                <div className="w-16 h-16 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-xl flex items-center justify-center">
-                  {React.createElement(slides[currentSlide].icon, { className: "w-8 h-8 text-slate-900" })}
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    {slides[currentSlide].title}
-                  </h3>
-                  <p className="text-gray-300">
-                    {slides[currentSlide].description}
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {slides[currentSlide].features.map((feature, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                  <span className="text-gray-300">{feature}</span>
-                </div>
-              ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-            </div>
+              </div>            </div>
           </div>
 
           {/* Navigation Buttons */}
@@ -237,7 +196,6 @@ const ContentCarousel: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
         {/* Additional Info */}
         <div className="mt-16 text-center">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -261,22 +219,7 @@ const ContentCarousel: React.FC = () => {
                 <div className="text-2xl font-bold">99.9%</div>
                 <div className="text-gray-400 text-sm">Uptime</div>
               </div>
-            </div>
-=======
-        {/* Benefits Section */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-white mb-8 text-center">
-            Key Benefits
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center gap-3 bg-slate-800/30 backdrop-blur-sm border border-slate-700 rounded-lg p-4">
-                <CheckCircle className="w-5 h-5 text-cyan-400 flex-shrink-0" />
-                <span className="text-gray-300">{benefit}</span>
-              </div>
-            ))}
->>>>>>> cursor/analyze-improve-and-deploy-application-a851
-          </div>
+            </div>          </div>
         </div>
       </div>
     </div>
