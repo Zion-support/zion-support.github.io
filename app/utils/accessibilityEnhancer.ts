@@ -1,11 +1,6 @@
-}
+// accessibilityEnhancer utility functions
+export const accessibilityenhancer = {
+  // Add utility functions here
+};
 
-  init(): void {
-    if (this.config.enabled) {
-      console.log('accessibilityEnhancer initialized');
-    }
-  }
-}
-
-export const accessibilityenhancer = new accessibilityEnhancer();
 export default accessibilityenhancer;

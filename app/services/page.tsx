@@ -1,4 +1,33 @@
-import { ArrowRight, Home, Search, AlertTriangle } from 'lucide-react';
+import { 
+  ArrowRight, 
+  Home, 
+  Search, 
+  AlertTriangle,
+  Brain,
+  Bot,
+  FileText,
+  Shield,
+  Wifi,
+  Cloud,
+  BarChart3,
+  Code,
+  Target,
+  Users,
+  TrendingUp,
+  Globe,
+  Zap,
+  Database,
+  Monitor,
+  Lock,
+  Server,
+  Settings,
+  HardDrive,
+  Phone,
+  Laptop,
+  Headphones,
+  Network,
+  Cpu
+} from 'lucide-react';
 
 export default function Services() {
   const services = [
@@ -337,4 +366,41 @@ export default function Services() {
     }
   ];
 
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-white mb-8">Our Services</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            Comprehensive AI and IT solutions for your business needs
+          </p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((service, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300">
+              <div className="flex items-center mb-4">
+                <div className={`p-2 rounded-lg bg-gradient-to-r ${service.color} mr-4`}>
+                  {service.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white">{service.title}</h3>
+              </div>
+              <p className="text-gray-300 mb-4">{service.description}</p>
+              <div className="flex items-center justify-between mb-4">
+                <span className="text-2xl font-bold text-white">{service.price}</span>
+                {service.originalPrice && (
+                  <span className="text-lg text-gray-400 line-through">{service.originalPrice}</span>
+                )}
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-gray-400">{service.category}</span>
+                {service.popular && (
+                  <span className="bg-yellow-500 text-black px-2 py-1 rounded text-xs font-semibold">Popular</span>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
 }

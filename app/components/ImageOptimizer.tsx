@@ -1,6 +1,13 @@
-className?: string;
-  lazy?: boolean;
-  quality?: number;
-  format?: 'webp' | 'jpeg' | 'png';
-  placeholder?: string;
+import React from 'react';
+
+interface ImageOptimizerProps {
+  className?: string;
+}
+
+export default function ImageOptimizer({ className }: ImageOptimizerProps) {
+  return (
+    <div className={className}>
+      {/* Component content */}
+    </div>
+  );
 }
