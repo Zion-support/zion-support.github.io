@@ -21,10 +21,7 @@ import SupportPage from './app/pages/SupportPage';
 import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
-<<<<<<< HEAD
-=======
-import SolutionsPage from './app/pages/SolutionsPage';
->>>>>>> 539bab9ad9bcba958009bc45d5cd0a0e02c6f6bc
+// import SolutionsPage from './app/pages/SolutionsPage';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (

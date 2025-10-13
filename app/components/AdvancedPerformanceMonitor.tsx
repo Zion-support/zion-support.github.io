@@ -14,12 +14,3 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 };
 
 export default AdvancedPerformanceMonitor;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-0f93
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-29e3

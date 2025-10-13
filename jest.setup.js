@@ -3,6 +3,7 @@ import React from 'react';
 
 jest.mock('react-router-dom', () => {
   const actual = jest.requireActual('react-router-dom');
+  const mockReact = jest.requireActual('react');
   
   return {
     ...actual,
@@ -15,10 +16,10 @@ jest.mock('react-router-dom', () => {
     }),
     useParams: () => ({}),
     Link: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
+      return mockReact.createElement('a', { href: to, ...props }, children);
     },
     NavLink: ({ children, to, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
+      return mockReact.createElement('a', { href: to, ...props }, children);
     },
     BrowserRouter: ({ children }) => children,
     MemoryRouter: ({ children }) => {
@@ -34,7 +35,7 @@ jest.mock('react-router-dom', () => {
         initialIndex: 0
       });
 
-      return React.createElement(RouterProvider, { router });
+      return mockReact.createElement(RouterProvider, { router });
     },
     RouterProvider: ({ router }) => null
   };
