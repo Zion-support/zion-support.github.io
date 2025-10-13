@@ -49,6 +49,14 @@ const QuantumComputingSolutionsPage = React.lazy(() => import("./app/quantum-com
 // New Micro SAAS Services
 const ZionAINeuralInterfacePage = React.lazy(() => import("./app/zion-ai-neural-interface/page"));
 
+// Additional New Services
+const AIQuantumOptimizerPage = React.lazy(() => import("./app/ai-quantum-optimizer/page"));
+const AIHolographicInterfacePage = React.lazy(() => import("./app/ai-holographic-interface/page"));
+const AIEmotionalIntelligenceEnginePage = React.lazy(() => import("./app/ai-emotional-intelligence-engine/page"));
+const QuantumCybersecuritySuitePage = React.lazy(() => import("./app/quantum-cybersecurity-suite/page"));
+const AIBusinessIntelligenceProPage = React.lazy(() => import("./app/ai-business-intelligence-pro/page"));
+const AIContentCreationStudioPage = React.lazy(() => import("./app/ai-content-creation-studio/page"));
+
 // Additional service pages
 const ItServicesPage = React.lazy(() => import("./app/it-services/page"));
 const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
@@ -164,6 +172,14 @@ function App() {
 
                         {/* New Micro SAAS Services */}
                         <Route path="/zion-ai-neural-interface" element={<ZionAINeuralInterfacePage />} />
+
+                        {/* Additional New Services */}
+                        <Route path="/ai-quantum-optimizer" element={<AIQuantumOptimizerPage />} />
+                        <Route path="/ai-holographic-interface" element={<AIHolographicInterfacePage />} />
+                        <Route path="/ai-emotional-intelligence-engine" element={<AIEmotionalIntelligenceEnginePage />} />
+                        <Route path="/quantum-cybersecurity-suite" element={<QuantumCybersecuritySuitePage />} />
+                        <Route path="/ai-business-intelligence-pro" element={<AIBusinessIntelligenceProPage />} />
+                        <Route path="/ai-content-creation-studio" element={<AIContentCreationStudioPage />} />
 
                         {/* Additional Service Pages */}
                         <Route path="/it-services" element={<ItServicesPage />} />

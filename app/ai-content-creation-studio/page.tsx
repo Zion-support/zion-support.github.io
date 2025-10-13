@@ -1,113 +1,113 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Zap, Shield, BarChart3, ArrowRight, Star, CheckCircle, Clock, Users, Award, TrendingUp, Cpu, Database, Globe, Sparkles, PieChart, LineChart, Activity } from 'lucide-react';
+import { Brain, Zap, Shield, BarChart3, ArrowRight, Star, CheckCircle, Clock, Users, Award, TrendingUp, Cpu, Database, Globe, Sparkles, PenTool, Video, Image, FileText } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const AIBusinessIntelligenceProPage = () => {
+const AIContentCreationStudioPage = () => {
   const features = [
     {
-      title: "AI-Powered Analytics",
-      description: "Advanced machine learning algorithms analyze your data to uncover hidden insights and predict future trends",
-      icon: <Brain className="w-6 h-6" />,
-      benefits: ["Predictive analytics", "Pattern recognition", "Automated insights"]
+      title: "AI-Powered Writing",
+      description: "Generate high-quality content for blogs, articles, social media, and marketing materials with advanced AI",
+      icon: <PenTool className="w-6 h-6" />,
+      benefits: ["SEO-optimized content", "Multiple writing styles", "Plagiarism-free"]
     },
     {
-      title: "Real-time Dashboards",
-      description: "Interactive dashboards that update in real-time with live data from all your business systems",
-      icon: <Activity className="w-6 h-6" />,
-      benefits: ["Live data updates", "Customizable views", "Mobile responsive"]
+      title: "Video Generation",
+      description: "Create professional videos from text prompts with AI-generated visuals, voiceovers, and animations",
+      icon: <Video className="w-6 h-6" />,
+      benefits: ["Text-to-video", "Multiple formats", "Professional quality"]
     },
     {
-      title: "Natural Language Queries",
-      description: "Ask questions about your data in plain English and get instant, intelligent answers",
-      icon: <Zap className="w-6 h-6" />,
-      benefits: ["Voice commands", "Natural language", "Instant responses"]
+      title: "Image Creation",
+      description: "Generate stunning images, graphics, and artwork using advanced AI image generation technology",
+      icon: <Image className="w-6 h-6" />,
+      benefits: ["High-resolution output", "Multiple art styles", "Commercial license"]
     },
     {
-      title: "Automated Reporting",
-      description: "Generate comprehensive reports automatically with AI-powered insights and recommendations",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Scheduled reports", "Custom templates", "AI insights"]
+      title: "Content Optimization",
+      description: "Automatically optimize content for SEO, readability, and engagement across all platforms",
+      icon: <TrendingUp className="w-6 h-6" />,
+      benefits: ["SEO scoring", "Readability analysis", "Engagement prediction"]
     }
   ];
 
-  const capabilities = [
+  const contentTypes = [
     {
-      title: "Sales Analytics",
-      description: "Track sales performance, identify opportunities, and predict revenue trends",
-      impact: "Increase revenue by 25%",
-      icon: <TrendingUp className="w-8 h-8" />
+      title: "Blog Posts & Articles",
+      description: "Create engaging blog posts and articles with AI-powered research and writing",
+      impact: "10x faster content creation",
+      icon: <FileText className="w-8 h-8" />
     },
     {
-      title: "Customer Insights",
-      description: "Understand customer behavior, preferences, and lifetime value",
-      impact: "Improve retention by 40%",
-      icon: <Users className="w-8 h-8" />
+      title: "Social Media Content",
+      description: "Generate posts, captions, and stories for all major social media platforms",
+      impact: "Increase engagement by 200%",
+      icon: <Globe className="w-8 h-8" />
     },
     {
-      title: "Financial Forecasting",
-      description: "Predict cash flow, budget performance, and financial outcomes",
-      impact: "Reduce forecasting errors by 60%",
-      icon: <PieChart className="w-8 h-8" />
+      title: "Marketing Materials",
+      description: "Create ads, email campaigns, and promotional content with AI optimization",
+      impact: "Boost conversions by 150%",
+      icon: <BarChart3 className="w-8 h-8" />
     },
     {
-      title: "Operational Efficiency",
-      description: "Identify bottlenecks, optimize processes, and improve productivity",
-      impact: "Boost efficiency by 35%",
-      icon: <Cpu className="w-8 h-8" />
+      title: "Video Content",
+      description: "Produce explainer videos, tutorials, and promotional videos with AI assistance",
+      impact: "Reduce production time by 80%",
+      icon: <Video className="w-8 h-8" />
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199",
+      name: "Creator",
+      price: "$99",
       period: "per month",
-      description: "Perfect for small businesses and startups",
+      description: "Perfect for individual creators and small teams",
       features: [
-        "Up to 5 data sources",
-        "Basic analytics dashboard",
-        "Standard reports",
+        "Up to 50 content pieces/month",
+        "Basic AI writing tools",
+        "Standard image generation",
         "Email support",
-        "Up to 3 users",
-        "Basic AI insights"
+        "Basic templates",
+        "Social media integration"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$599",
+      price: "$299",
       period: "per month",
-      description: "Ideal for growing companies and teams",
+      description: "Ideal for content teams and agencies",
       features: [
-        "Up to 20 data sources",
-        "Advanced analytics dashboard",
-        "Custom reports",
+        "Up to 200 content pieces/month",
+        "Advanced AI writing tools",
+        "Premium image generation",
         "Priority support",
-        "Up to 15 users",
-        "Advanced AI insights",
-        "API access",
-        "Custom integrations"
+        "Custom templates",
+        "Video generation",
+        "Team collaboration",
+        "Analytics dashboard"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,499",
+      price: "$799",
       period: "per month",
-      description: "For large organizations with complex needs",
+      description: "For large organizations with high content needs",
       features: [
-        "Unlimited data sources",
-        "Premium analytics dashboard",
-        "White-label reports",
+        "Unlimited content pieces",
+        "Premium AI writing tools",
+        "Unlimited image generation",
         "24/7 dedicated support",
-        "Unlimited users",
-        "Custom AI models",
-        "Full API access",
-        "On-premise deployment"
+        "Custom AI training",
+        "White-label solutions",
+        "API access",
+        "Custom integrations"
       ],
       popular: false
     }
@@ -115,24 +115,24 @@ const AIBusinessIntelligenceProPage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "RetailMax Solutions",
-      role: "CEO",
-      content: "The AI business intelligence platform has transformed how we make decisions. The predictive analytics helped us increase revenue by 30% in just 6 months.",
+      name: "Lisa Rodriguez",
+      company: "Digital Marketing Agency",
+      role: "Content Director",
+      content: "The AI content creation studio has revolutionized our workflow. We can now produce 10x more content with the same team, and the quality is consistently high.",
       rating: 5
     },
     {
-      name: "David Chen",
-      company: "TechStart Inc.",
-      role: "CFO",
-      content: "The natural language queries are incredible. I can ask complex questions about our financial data and get instant, accurate answers. It's like having a data scientist on demand.",
-      rating: 5
-    },
-    {
-      name: "Sarah Johnson",
+      name: "Mark Thompson",
       company: "E-commerce Solutions",
-      role: "Operations Director",
-      content: "The automated reporting saves us hours every week. The AI insights have helped us identify opportunities we never would have seen otherwise.",
+      role: "Marketing Manager",
+      content: "The video generation feature is incredible. We can create professional product videos in minutes instead of days. It's like having a full production team on demand.",
+      rating: 5
+    },
+    {
+      name: "Sarah Kim",
+      company: "Tech Blog Network",
+      role: "Editor-in-Chief",
+      content: "The AI writing tools have helped us maintain consistent quality across all our publications. The SEO optimization features have also improved our search rankings significantly.",
       rating: 5
     }
   ];
@@ -140,29 +140,29 @@ const AIBusinessIntelligenceProPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="AI Business Intelligence Pro - Advanced Analytics Platform | Zion Tech Group"
-        description="Revolutionary AI-powered business intelligence platform with predictive analytics, real-time dashboards, and natural language queries. Transform your data into actionable insights."
-        keywords="business intelligence, AI analytics, predictive analytics, data visualization, business intelligence platform, AI insights, data analytics"
-        canonical="https://ziontechgroup.com/ai-business-intelligence-pro"
+        title="AI Content Creation Studio - AI-Powered Content Generation | Zion Tech Group"
+        description="Revolutionary AI-powered content creation platform for writing, video generation, image creation, and content optimization. Create professional content 10x faster with AI."
+        keywords="AI content creation, content generation, AI writing, video generation, image creation, content marketing, AI content studio"
+        canonical="https://ziontechgroup.com/ai-content-creation-studio"
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer className="text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">Advanced AI Analytics Platform</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-purple-500/20 border border-green-500/30 mb-6">
+            <Sparkles className="w-4 h-4 text-green-400 mr-2" />
+            <span className="text-green-400 text-sm font-medium">AI-Powered Content Creation</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
-              AI Business Intelligence Pro
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-purple-400 to-pink-400">
+              AI Content Creation Studio
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your data into actionable insights with our revolutionary AI-powered business intelligence platform. 
-            Get predictive analytics, real-time dashboards, and natural language queries in one powerful solution.
+            Create professional content 10x faster with our revolutionary AI-powered content creation platform. 
+            Generate articles, videos, images, and marketing materials with advanced artificial intelligence.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -178,7 +178,7 @@ const AIBusinessIntelligenceProPage = () => {
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<BarChart3 className="w-5 h-5" />}
+              icon={<Video className="w-5 h-5" />}
             >
               View Demo
             </FuturisticButton>
@@ -187,20 +187,20 @@ const AIBusinessIntelligenceProPage = () => {
           {/* Key Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">25%</div>
-              <div className="text-gray-300 text-sm">Revenue increase</div>
+              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">10x</div>
+              <div className="text-gray-300 text-sm">Faster content creation</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">60%</div>
-              <div className="text-gray-300 text-sm">Faster decisions</div>
+              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">200%</div>
+              <div className="text-gray-300 text-sm">Engagement increase</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">Real-time</div>
-              <div className="text-gray-300 text-sm">Data processing</div>
+              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">80%</div>
+              <div className="text-gray-300 text-sm">Time savings</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-green-400 mb-2">99.9%</div>
-              <div className="text-gray-300 text-sm">Accuracy rate</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">50+</div>
+              <div className="text-gray-300 text-sm">Content formats</div>
             </div>
           </div>
         </ResponsiveContainer>
@@ -214,14 +214,14 @@ const AIBusinessIntelligenceProPage = () => {
               Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced artificial intelligence and machine learning capabilities for superior business insights
+              Advanced artificial intelligence capabilities for every type of content creation
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <FuturisticCard key={index} className="p-6">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-purple-500 rounded-lg flex items-center justify-center mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -240,27 +240,27 @@ const AIBusinessIntelligenceProPage = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Capabilities Section */}
+      {/* Content Types Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Comprehensive Business Capabilities
+              Create Any Type of Content
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              End-to-end business intelligence solutions for every aspect of your organization
+              From blog posts to videos, create professional content for every platform and purpose
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {capabilities.map((capability, index) => (
+            {contentTypes.map((contentType, index) => (
               <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  {capability.icon}
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                  {contentType.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{capability.title}</h3>
-                <p className="text-gray-300 mb-4">{capability.description}</p>
-                <div className="text-blue-400 font-semibold">{capability.impact}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{contentType.title}</h3>
+                <p className="text-gray-300 mb-4">{contentType.description}</p>
+                <div className="text-green-400 font-semibold">{contentType.impact}</div>
               </div>
             ))}
           </div>
@@ -275,7 +275,7 @@ const AIBusinessIntelligenceProPage = () => {
               Choose Your Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Flexible pricing options for businesses of all sizes
+              Flexible pricing options for creators and businesses of all sizes
             </p>
           </div>
           
@@ -285,13 +285,13 @@ const AIBusinessIntelligenceProPage = () => {
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular 
-                    ? 'border-blue-500/50 ring-2 ring-blue-500/20' 
+                    ? 'border-green-500/50 ring-2 ring-green-500/20' 
                     : 'border-white/20'
                 } hover:bg-white/20 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-purple-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -299,7 +299,7 @@ const AIBusinessIntelligenceProPage = () => {
                 
                 <div className="text-center mb-6">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="text-4xl font-bold text-blue-400 mb-2">{plan.price}</div>
+                  <div className="text-4xl font-bold text-green-400 mb-2">{plan.price}</div>
                   <div className="text-gray-300">{plan.period}</div>
                   <p className="text-gray-400 text-sm mt-2">{plan.description}</p>
                 </div>
@@ -335,7 +335,7 @@ const AIBusinessIntelligenceProPage = () => {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how AI business intelligence is transforming organizations worldwide
+              See how AI content creation is transforming businesses worldwide
             </p>
           </div>
           
@@ -361,12 +361,12 @@ const AIBusinessIntelligenceProPage = () => {
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
-          <div className="text-center bg-gradient-to-r from-blue-900/30 to-purple-900/30 rounded-2xl p-12">
+          <div className="text-center bg-gradient-to-r from-green-900/30 to-purple-900/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Data?
+              Ready to Create Amazing Content?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Start making data-driven decisions with AI-powered business intelligence
+              Start creating professional content 10x faster with AI-powered tools
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -382,14 +382,14 @@ const AIBusinessIntelligenceProPage = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<BarChart3 className="w-5 h-5" />}
+                icon={<Video className="w-5 h-5" />}
               >
                 Schedule Demo
               </FuturisticButton>
             </div>
             
             <div className="mt-8 text-sm text-gray-400">
-              <p>Contact us: <span className="text-blue-400">kleber@ziontechgroup.com</span> | <span className="text-blue-400">+1 302 464 0950</span></p>
+              <p>Contact us: <span className="text-green-400">kleber@ziontechgroup.com</span> | <span className="text-green-400">+1 302 464 0950</span></p>
             </div>
           </div>
         </ResponsiveContainer>
@@ -398,4 +398,4 @@ const AIBusinessIntelligenceProPage = () => {
   );
 };
 
-export default AIBusinessIntelligenceProPage;
+export default AIContentCreationStudioPage;

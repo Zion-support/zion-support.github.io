@@ -74,25 +74,50 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
           name: 'AI Solutions',
           href: '/ai-services',
           icon: <Brain className="w-4 h-4" />,
-          description: 'Artificial Intelligence & Machine Learning'
+          description: 'Artificial Intelligence & Machine Learning',
+          submenu: [
+            { name: 'AI Quantum Optimizer', href: '/ai-quantum-optimizer' },
+            { name: 'AI Holographic Interface', href: '/ai-holographic-interface' },
+            { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-engine' },
+            { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro' },
+            { name: 'AI Content Creation Studio', href: '/ai-content-creation-studio' }
+          ]
         },
         {
           name: 'IT Services',
           href: '/it-services',
           icon: <Shield className="w-4 h-4" />,
-          description: 'Technology Infrastructure & Support'
+          description: 'Technology Infrastructure & Support',
+          submenu: [
+            { name: 'Quantum Cybersecurity Suite', href: '/quantum-cybersecurity-suite' },
+            { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+            { name: 'Cybersecurity Solutions', href: '/cybersecurity-solutions' },
+            { name: 'Custom Development', href: '/custom-development' }
+          ]
         },
         {
           name: 'Micro SAAS',
           href: '/micro-saas',
           icon: <Package className="w-4 h-4" />,
-          description: 'Ready-to-use Software Solutions'
+          description: 'Ready-to-use Software Solutions',
+          submenu: [
+            { name: 'Zion AI Neural Interface', href: '/zion-ai-neural-interface' },
+            { name: 'AI Voice Cloning Studio', href: '/ai-voice-cloning-studio' },
+            { name: 'AI Quantum Financial Oracle', href: '/ai-quantum-financial-oracle' },
+            { name: 'AI Space Mission Optimizer', href: '/ai-space-mission-optimizer' }
+          ]
         },
         {
           name: '5G Solutions',
           href: '/5g-solutions',
           icon: <Network className="w-4 h-4" />,
-          description: 'Next-generation Connectivity'
+          description: 'Next-generation Connectivity',
+          submenu: [
+            { name: '5G Implementation', href: '/5g-implementation' },
+            { name: '5G Edge Computing', href: '/5g-edge-computing' },
+            { name: '5G IoT Solutions', href: '/5g-iot-solutions' },
+            { name: '5G Smart City Solutions', href: '/5g-smart-city-solutions' }
+          ]
         }
       ]
     },
@@ -134,29 +159,44 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     </button>
                     
                     {activeDropdown === item.name && (
-                      <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-md rounded-xl border border-white/10 shadow-2xl z-50">
+                      <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-md rounded-xl border border-white/10 shadow-2xl z-50">
                         <div className="p-4">
                           <h3 className="text-lg font-semibold text-white mb-3">{item.name}</h3>
                           <div className="grid grid-cols-1 gap-2">
                             {item.dropdown.map((subItem) => (
-                              <Link
-                                key={subItem.name}
-                                to={subItem.href}
-                                onClick={closeDropdowns}
-                                className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors duration-200 group"
-                              >
-                                <div className="w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                                  {subItem.icon}
-                                </div>
-                                <div>
-                                  <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
-                                    {subItem.name}
+                              <div key={subItem.name} className="group">
+                                <Link
+                                  to={subItem.href}
+                                  onClick={closeDropdowns}
+                                  className="flex items-center space-x-3 p-3 rounded-lg hover:bg-white/10 transition-colors duration-200 group"
+                                >
+                                  <div className="w-8 h-8 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    {subItem.icon}
                                   </div>
-                                  <div className="text-sm text-gray-400">
-                                    {subItem.description}
+                                  <div className="flex-1">
+                                    <div className="text-white font-medium group-hover:text-cyan-400 transition-colors">
+                                      {subItem.name}
+                                    </div>
+                                    <div className="text-sm text-gray-400">
+                                      {subItem.description}
+                                    </div>
                                   </div>
-                                </div>
-                              </Link>
+                                </Link>
+                                {subItem.submenu && (
+                                  <div className="ml-11 mt-2 space-y-1">
+                                    {subItem.submenu.map((subSubItem) => (
+                                      <Link
+                                        key={subSubItem.name}
+                                        to={subSubItem.href}
+                                        onClick={closeDropdowns}
+                                        className="block px-3 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors duration-200"
+                                      >
+                                        {subSubItem.name}
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
                             ))}
                           </div>
                         </div>
@@ -246,21 +286,39 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                     {activeDropdown === item.name && (
                       <div className="ml-4 mt-2 space-y-2">
                         {item.dropdown.map((subItem) => (
-                          <Link
-                            key={subItem.name}
-                            to={subItem.href}
-                            onClick={() => {
-                              closeDropdowns()
-                              setIsMenuOpen(false)
-                            }}
-                            className="flex items-center space-x-3 p-3 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
-                          >
-                            {subItem.icon}
-                            <div>
-                              <div className="font-medium">{subItem.name}</div>
-                              <div className="text-sm">{subItem.description}</div>
-                            </div>
-                          </Link>
+                          <div key={subItem.name}>
+                            <Link
+                              to={subItem.href}
+                              onClick={() => {
+                                closeDropdowns()
+                                setIsMenuOpen(false)
+                              }}
+                              className="flex items-center space-x-3 p-3 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors duration-200"
+                            >
+                              {subItem.icon}
+                              <div>
+                                <div className="font-medium">{subItem.name}</div>
+                                <div className="text-sm">{subItem.description}</div>
+                              </div>
+                            </Link>
+                            {subItem.submenu && (
+                              <div className="ml-8 mt-2 space-y-1">
+                                {subItem.submenu.map((subSubItem) => (
+                                  <Link
+                                    key={subSubItem.name}
+                                    to={subSubItem.href}
+                                    onClick={() => {
+                                      closeDropdowns()
+                                      setIsMenuOpen(false)
+                                    }}
+                                    className="block px-3 py-2 text-sm text-gray-500 hover:text-cyan-400 hover:bg-white/5 rounded-lg transition-colors duration-200"
+                                  >
+                                    {subSubItem.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            )}
+                          </div>
                         ))}
                       </div>
                     )}
