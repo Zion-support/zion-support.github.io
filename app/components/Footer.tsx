@@ -308,13 +308,20 @@ export default function Footer() {
     { name: "5G Solutions", path: "/5g-solutions" },
     { name: "Contact", path: "/contact" },
 <<<<<<< HEAD
+<<<<<<< HEAD
     { name: "Demo", path: "/demo" },
     { name: "Consultation", path: "/consultation" },
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
     { name: "Blog", path: "/blog" },
     { name: "Tutorials", path: "/tutorials" },
     { name: "Support", path: "/support" },
+<<<<<<< HEAD
+=======
+    { name: "Consultation", path: "/consultation" },
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
   ];
 <<<<<<< HEAD
     <footer className="bg-gray-900/50 backdrop-blur-lg border-t border-white/10">
@@ -1244,6 +1251,7 @@ export default Footer;
                   <Link
                     to={service.path}
 <<<<<<< HEAD
+<<<<<<< HEAD
                     className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
                   >
                     <ArrowRight className="w-4 h-4 mr-2" />
@@ -1253,6 +1261,8 @@ export default Footer;
         {/* Bottom Section */}
         <div className="border-t border-cyan-500/20 pt-8">
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
                     className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center text-sm"
                   >
                     <ArrowRight className="w-3 h-3 mr-2" />

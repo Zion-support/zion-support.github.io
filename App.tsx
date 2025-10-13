@@ -425,8 +425,12 @@ import PerformanceMonitor from "./app/components/PerformanceMonitor";
 =======
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
+<<<<<<< HEAD
 import MobileOptimizer from "./app/components/MobileOptimizer";
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
+=======
+import RealTimePerformanceMonitor from "./app/components/RealTimePerformanceMonitor";
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -447,8 +451,50 @@ const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
 
+<<<<<<< HEAD
   const toggleSidebar = React.useCallback(() => {
     setIsSidebarOpen(prev => !prev);
+=======
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
+  };
+
+  const closeSidebar = () => {
+    setIsSidebarOpen(false);
+  };
+
+  useEffect(() => {
+    // Initialize performance monitoring
+    if (typeof window !== 'undefined') {
+      console.log('Zion Tech Group App initialized');
+      
+      // Register service worker for PWA functionality
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then((registration) => {
+            console.log('Service Worker registered successfully:', registration);
+          })
+          .catch((error) => {
+            console.log('Service Worker registration failed:', error);
+          });
+      }
+      
+      // Add PWA install prompt
+      let deferredPrompt;
+      window.addEventListener('beforeinstallprompt', (e) => {
+        e.preventDefault();
+        deferredPrompt = e;
+        // You can show a custom install button here
+        console.log('PWA install prompt available');
+      });
+      
+      // Track PWA install
+      window.addEventListener('appinstalled', () => {
+        console.log('PWA was installed');
+        // Track installation event
+      });
+    }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
   }, []);
 
   return (
@@ -603,6 +649,7 @@ function App() {
                             <Route path="*" element={<NotFoundPage />} />
                           </Routes>
                         </Suspense>
+<<<<<<< HEAD
                             </main>
                             
                             <Footer />
@@ -613,6 +660,20 @@ function App() {
                   </WebVitalsTracker>
                 </PerformanceMonitor>
               </MobileOptimizer>
+=======
+                          </main>
+                          
+                          <Footer />
+                        </FuturisticBackground>
+                        
+                        {/* Real-time Performance Monitor - only in development */}
+                        {process.env['NODE_ENV'] === 'development' && <RealTimePerformanceMonitor />}
+                      </div>
+                    </Router>
+                  </AccessibilityEnhancer>
+                </WebVitalsTracker>
+              </PerformanceMonitor>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
             </PerformanceOptimizer>
           </EnhancedAnalytics>
         </AnalyticsProvider>

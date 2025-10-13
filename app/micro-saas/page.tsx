@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
@@ -139,6 +140,181 @@ const MicroSaasPage: React.FC = () => {
   ];
 
   const categories = ['All', 'Analytics', 'CRM', 'Security', 'Infrastructure', 'Marketing', 'Support'];
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { 
+  ArrowRight, 
+  Brain, 
+  Shield, 
+  Zap, 
+  BarChart3, 
+  Users, 
+  Mail, 
+  Smartphone, 
+  Globe, 
+  Star, 
+  CheckCircle, 
+  Sparkles,
+  FileText,
+  Cloud,
+  Database,
+  Headphones,
+  Award,
+  Rocket,
+  TrendingUp,
+  Calendar,
+  Video,
+  Heart,
+  DollarSign,
+  Mic,
+  Code,
+  Share,
+  Package,
+  Play
+} from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+
+const MicroSaasPage = () => {
+  const microSaasServices = [
+    {
+      id: 'zion-ai-video-generator',
+      name: 'Zion AI Video Generator Pro',
+      description: 'Create professional videos with AI-powered editing, voice synthesis, and automated content generation. Perfect for marketing, training, and social media.',
+      icon: <Video className="w-8 h-8" />,
+      price: 'Starting at $199/month',
+      originalPrice: '$399/month',
+      features: ['AI Video Creation', 'Voice Synthesis', 'Auto Editing', 'Template Library', 'HD Export', 'Brand Integration'],
+      category: 'AI Video',
+      popular: true,
+      link: '/zion-ai-video-generator',
+      color: 'from-purple-500 to-pink-500'
+    },
+    {
+      id: 'zion-ai-invoice-generator',
+      name: 'Zion AI Invoice Generator',
+      description: 'Automated invoice generation with AI-powered data extraction, smart categorization, and seamless accounting integration.',
+      icon: <FileText className="w-8 h-8" />,
+      price: 'Starting at $99/month',
+      originalPrice: '$199/month',
+      features: ['Auto Invoice Creation', 'Data Extraction', 'Smart Categorization', 'Accounting Integration', 'Multi-currency', 'PDF Export'],
+      category: 'AI Finance',
+      popular: true,
+      link: '/zion-ai-invoice-generator',
+      color: 'from-green-500 to-emerald-500'
+    },
+    {
+      id: 'zion-ai-customer-insights',
+      name: 'Zion AI Customer Insights Pro',
+      description: 'Advanced customer analytics with behavioral insights, churn prediction, and personalized recommendations for better customer retention.',
+      icon: <Users className="w-8 h-8" />,
+      price: 'Starting at $299/month',
+      originalPrice: '$599/month',
+      features: ['Behavioral Analytics', 'Churn Prediction', 'Personalized Recommendations', 'Customer Segmentation', 'Real-time Insights', 'ROI Tracking'],
+      category: 'AI Analytics',
+      popular: true,
+      link: '/zion-ai-customer-insights',
+      color: 'from-blue-500 to-cyan-500'
+    },
+    {
+      id: 'zion-ai-email-analyzer',
+      name: 'Zion AI Email Analyzer Pro',
+      description: 'Intelligent email analysis with sentiment detection, spam filtering, and automated response suggestions for better communication.',
+      icon: <Mail className="w-8 h-8" />,
+      price: 'Starting at $149/month',
+      originalPrice: '$299/month',
+      features: ['Sentiment Analysis', 'Spam Detection', 'Auto Response', 'Email Classification', 'Priority Scoring', 'Team Collaboration'],
+      category: 'AI Communication',
+      link: '/zion-ai-email-analyzer',
+      color: 'from-orange-500 to-red-500'
+    },
+    {
+      id: 'zion-smart-inventory-optimizer',
+      name: 'Zion Smart Inventory Optimizer',
+      description: 'AI-powered inventory management with demand forecasting, automated reordering, and cost optimization for retail and e-commerce.',
+      icon: <Package className="w-8 h-8" />,
+      price: 'Starting at $249/month',
+      originalPrice: '$499/month',
+      features: ['Demand Forecasting', 'Auto Reordering', 'Cost Optimization', 'Multi-location', 'Supplier Management', 'Analytics Dashboard'],
+      category: 'AI Inventory',
+      popular: true,
+      link: '/zion-smart-inventory-optimizer',
+      color: 'from-indigo-500 to-purple-500'
+    },
+    {
+      id: 'zion-ai-customer-sentiment-tracker',
+      name: 'Zion AI Customer Sentiment Tracker',
+      description: 'Real-time customer sentiment monitoring across all channels with automated alerts and actionable insights for customer success teams.',
+      icon: <Heart className="w-8 h-8" />,
+      price: 'Starting at $179/month',
+      originalPrice: '$359/month',
+      features: ['Real-time Monitoring', 'Multi-channel Analysis', 'Automated Alerts', 'Sentiment Trends', 'Actionable Insights', 'Team Notifications'],
+      category: 'AI Sentiment',
+      link: '/zion-ai-customer-sentiment-tracker',
+      color: 'from-pink-500 to-rose-500'
+    },
+    {
+      id: 'zion-smart-expense-categorizer',
+      name: 'Zion Smart Expense Categorizer',
+      description: 'AI-powered expense categorization and tracking with receipt scanning, tax optimization, and automated reporting for businesses.',
+      icon: <DollarSign className="w-8 h-8" />,
+      price: 'Starting at $129/month',
+      originalPrice: '$259/month',
+      features: ['Receipt Scanning', 'Auto Categorization', 'Tax Optimization', 'Expense Reports', 'Budget Tracking', 'Mobile App'],
+      category: 'AI Finance',
+      link: '/zion-smart-expense-categorizer',
+      color: 'from-emerald-500 to-green-500'
+    },
+    {
+      id: 'zion-ai-voice-assistant-pro',
+      name: 'Zion AI Voice Assistant Pro',
+      description: 'Advanced voice assistant with natural language processing, multi-language support, and custom voice training for business applications.',
+      icon: <Mic className="w-8 h-8" />,
+      price: 'Starting at $199/month',
+      originalPrice: '$399/month',
+      features: ['Natural Language Processing', 'Multi-language Support', 'Custom Voice Training', 'API Integration', 'Voice Commands', 'Analytics'],
+      category: 'AI Voice',
+      popular: true,
+      link: '/zion-ai-voice-assistant-pro',
+      color: 'from-cyan-500 to-blue-500'
+    },
+    {
+      id: 'zion-ai-code-reviewer',
+      name: 'Zion AI Code Reviewer Pro',
+      description: 'Intelligent code review with automated bug detection, security analysis, and performance optimization suggestions for development teams.',
+      icon: <Code className="w-8 h-8" />,
+      price: 'Starting at $159/month',
+      originalPrice: '$319/month',
+      features: ['Automated Code Review', 'Bug Detection', 'Security Analysis', 'Performance Optimization', 'Code Quality Metrics', 'Team Collaboration'],
+      category: 'AI Development',
+      link: '/zion-ai-code-reviewer',
+      color: 'from-yellow-500 to-orange-500'
+    },
+    {
+      id: 'zion-ai-social-media-manager',
+      name: 'Zion AI Social Media Manager',
+      description: 'AI-powered social media management with content generation, optimal posting times, and automated engagement for all major platforms.',
+      icon: <Share className="w-8 h-8" />,
+      price: 'Starting at $179/month',
+      originalPrice: '$359/month',
+      features: ['Content Generation', 'Optimal Posting Times', 'Automated Engagement', 'Multi-platform', 'Analytics Dashboard', 'Brand Voice Training'],
+      category: 'AI Social Media',
+      popular: true,
+      link: '/zion-ai-social-media-manager',
+      color: 'from-violet-500 to-purple-500'
+    }
+  ];
+
+  const categories = [
+    { name: 'All Services', count: microSaasServices.length, color: 'from-cyan-500 to-purple-500' },
+    { name: 'AI Analytics', count: microSaasServices.filter(s => s.category.includes('Analytics')).length, color: 'from-blue-500 to-cyan-500' },
+    { name: 'AI Finance', count: microSaasServices.filter(s => s.category.includes('Finance')).length, color: 'from-green-500 to-emerald-500' },
+    { name: 'AI Video', count: microSaasServices.filter(s => s.category.includes('Video')).length, color: 'from-purple-500 to-pink-500' },
+    { name: 'AI Communication', count: microSaasServices.filter(s => s.category.includes('Communication')).length, color: 'from-orange-500 to-red-500' },
+    { name: 'AI Development', count: microSaasServices.filter(s => s.category.includes('Development')).length, color: 'from-yellow-500 to-orange-500' },
+    { name: 'AI Social Media', count: microSaasServices.filter(s => s.category.includes('Social Media')).length, color: 'from-violet-500 to-purple-500' }
+  ];
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
 
   const stats = [
     {
@@ -253,7 +429,29 @@ import { Helmet } from 'react-helmet-async'
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-12">
               Ready-to-use business tools that solve specific problems. No complex setup, no long-term commitments - just powerful solutions that work.
             </p>
+<<<<<<< HEAD
 
+=======
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+              <Link
+                to="/contact"
+                className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              >
+                Get Started Today
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              >
+                Watch Demo
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+              </Link>
+            </div>
+            
+            {/* Stats */}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
@@ -990,4 +1188,7 @@ export default MicroSaasPage
 };
 
 export default MicroSaasPage;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fe6
