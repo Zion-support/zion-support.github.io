@@ -15,6 +15,16 @@ import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 
+// Missing components
+const GlobalErrorBoundary = ({ children }: { children: React.ReactNode }) => <>{children}</>;
+const EnhancedErrorBoundary = ({ children }: { children: React.ReactNode }) => <>{children}</>;
+const Breadcrumb = () => null;
+const LoadingPage = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-cyan-500"></div>
+  </div>
+);
+
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
@@ -43,6 +53,13 @@ const DatabaseManagementPage = React.lazy(() => import("./app/database-managemen
 const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
 const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
 const CareersPage = React.lazy(() => import("./app/careers/page"));
+
+// Micro SAAS pages
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
+const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
+const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
+const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio/page"));
 
 // Main App Component
 function App() {
@@ -80,13 +97,18 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        
+                        {/* Micro SAAS Routes */}
+                        <Route path="/micro-saas" element={<MicroSaasPage />} />
+                        <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                        <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                        <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
+                        <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
                 </FuturisticBackground>
-                  </div>
-                </AnalyticsProvider>
               </div>
             </Router>
           </AccessibilityEnhancer>
