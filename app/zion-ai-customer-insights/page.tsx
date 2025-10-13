@@ -77,7 +77,7 @@ import {
   HelpCircle,
   Play,
   Pause,
-  Stop,
+  Square,
   ThumbsUp,
   Share,
   Download,

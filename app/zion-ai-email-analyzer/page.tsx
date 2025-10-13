@@ -73,7 +73,7 @@ import {
   HelpCircle,
   Play,
   Pause,
-  Stop,
+  Square,
   ThumbsUp,
   Share,
   Download,
@@ -137,7 +137,7 @@ const ZionAIEmailAnalyzerPage = () => {
     {
       title: 'Attachment Analysis',
       description: 'Analyze email attachments for security threats and content relevance',
-      icon: <FileText className="w-6 h-6" />,
+      icon: <File className="w-6 h-6" />,
       included: true
     },
     {

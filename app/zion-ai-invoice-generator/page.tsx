@@ -81,7 +81,7 @@ import {
   HelpCircle,
   Play,
   Pause,
-  Stop,
+  Square,
   Eye,
   Heart,
   ThumbsUp,

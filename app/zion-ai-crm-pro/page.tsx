@@ -75,17 +75,14 @@ import {
   Store,
   Factory,
   Warehouse,
-  Office,
   School,
   Hospital,
-  Bank,
   Car,
   Plane,
   Train,
   Ship,
   Bike,
   Bus,
-  Taxi,
   Package,
   Box,
   Gift,
@@ -98,7 +95,6 @@ import {
   Calculator,
   Percent,
   TrendingDown,
-  Pulse,
   Thermometer,
   Gauge,
   Battery,
@@ -127,12 +123,7 @@ import {
   Cpu,
   MemoryStick,
   Disc,
-  Cd,
-  Dvd,
-  FloppyDisk,
-  Usb,
-  Hdmi,
-  Ethernet
+  Usb
 } from 'lucide-react';
 
 const ZionAICRMProPage = () => {

@@ -19,7 +19,7 @@ interface AnalyticsProviderProps {
   children: React.ReactNode;
 }
 
-export default function AnalyticsProvider({ children }: AnalyticsProviderProps) {
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics
     console.log('Analytics initialized');
