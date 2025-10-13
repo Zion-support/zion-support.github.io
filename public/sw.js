@@ -1,4 +1,4 @@
-const CACHE_NAME = 'zion-tech-group-v1';
+const CACHE_NAME = 'zion-tech-group-v2';
 const urlsToCache = [
   '/',
   '/about',
@@ -7,8 +7,9 @@ const urlsToCache = [
   '/ai-services',
   '/micro-saas',
   '/5g-solutions',
-  '/static/js/bundle.js',
-  '/static/css/main.css'
+  '/manifest.json',
+  '/favicon.svg',
+  '/robots.txt'
 ];
 
 // Install event

@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-<<<<<<< HEAD
+  const [isOptimized, setIsOptimized] = useState(false);
+
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
@@ -27,71 +28,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
         link.rel = 'preload';
         link.href = src;
         link.as = 'image';
-        document.head.appendChild(link);
-      });
-    };
-
-    preloadCriticalResources();
-  }, []);
-
-  // Optimize scroll performance
-  const handleScroll = useCallback(() => {
-    // Throttle scroll events
-    let ticking = false;
-    
-    const updateScrollPosition = () => {
-      // Add scroll-based optimizations here
-      ticking = false;
-    };
-
-    if (!ticking) {
-      requestAnimationFrame(updateScrollPosition);
-      ticking = true;
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [handleScroll]);
-
-  // Optimize resize performance
-  const handleResize = useCallback(() => {
-    let ticking = false;
-    
-    const updateLayout = () => {
-      // Add resize-based optimizations here
-      ticking = false;
-    };
-
-    if (!ticking) {
-      requestAnimationFrame(updateLayout);
-      ticking = true;
-    }
-  }, []);
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize, { passive: true });
-    return () => window.removeEventListener('resize', handleResize);
-  }, [handleResize]);
-
-  return <>{children}</>;
-=======
-  const [isOptimized, setIsOptimized] = useState(false);
-
-  useEffect(() => {
-    // Preload critical resources
-    const preloadCriticalResources = () => {
-      const criticalImages = [
-        '/api/placeholder/1200/630', // Hero image
-        '/api/placeholder/800/600',  // Service images
-      ];
-
-      criticalImages.forEach(src => {
-        const link = document.createElement('link');
-        link.rel = 'preload';
-        link.as = 'image';
-        link.href = src;
         document.head.appendChild(link);
       });
     };
@@ -155,6 +91,47 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
 
     return () => clearTimeout(timer);
   }, []);
+
+  // Optimize scroll performance
+  const handleScroll = useCallback(() => {
+    // Throttle scroll events
+    let ticking = false;
+    
+    const updateScrollPosition = () => {
+      // Add scroll-based optimizations here
+      ticking = false;
+    };
+
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [handleScroll]);
+
+  // Optimize resize performance
+  const handleResize = useCallback(() => {
+    let ticking = false;
+    
+    const updateLayout = () => {
+      // Add resize-based optimizations here
+      ticking = false;
+    };
+
+    if (!ticking) {
+      requestAnimationFrame(updateLayout);
+      ticking = true;
+    }
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize, { passive: true });
+    return () => window.removeEventListener('resize', handleResize);
+  }, [handleResize]);
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -278,7 +255,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       `}</style>
     </>
   );
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 };
 
 export default PerformanceOptimizer;
