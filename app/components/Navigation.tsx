@@ -31,6 +31,8 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const aiServices = useMemo(() => [
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Autonomous Systems', path: '/ai-autonomous-systems', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'AI Climate Solutions Pro', path: '/ai-climate-solutions-pro', icon: <Zap className="w-4 h-4" />, featured: true },
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
     { name: 'AI Customer Support', path: '/ai-customer-support-chatbot', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },

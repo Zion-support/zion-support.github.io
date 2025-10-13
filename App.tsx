@@ -37,6 +37,10 @@ const ZionAiCustomerInsightsProPage = React.lazy(() => import("./app/zion-ai-cus
 const QuantumComputingSolutionsPage = React.lazy(() => import("./app/quantum-computing-solutions/page"));
 const EdgeComputingSolutionsPage = React.lazy(() => import("./app/edge-computing-solutions/page"));
 
+// New AI Services
+const AiAutonomousSystemsPage = React.lazy(() => import("./app/ai-autonomous-systems/page"));
+const AiClimateSolutionsProPage = React.lazy(() => import("./app/ai-climate-solutions-pro/page"));
+
 // Main App Component
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = React.useState(false);
@@ -81,6 +85,10 @@ function App() {
                       {/* New IT Services */}
                       <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />
                       <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
+                      
+                      {/* New AI Services */}
+                      <Route path="/ai-autonomous-systems" element={<AiAutonomousSystemsPage />} />
+                      <Route path="/ai-climate-solutions-pro" element={<AiClimateSolutionsProPage />} />
                     </Routes>
                   </Suspense>
                 </main>
