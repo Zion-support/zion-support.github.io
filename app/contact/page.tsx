@@ -35,73 +35,27 @@ export default function ContactPage() {
 
   const contactInfo = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: title: '',
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM EST'
-    },
-    {
-      icon: title: 'Email',
-      value: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
-    },
-    {
-      icon: title: 'Address',
-      value: '123 Tech Street, Suite 100',
-      description: 'San Francisco, CA 94105'
-    },
-    {
-      icon: title: 'Business Hours',
-<<<<<<< HEAD
-      value: &apos;Monday - Friday&apos;,
-=======
-      icon: 'Phone',
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM EST'
-    },
-    {
-      icon: 'Email',
-      title: 'Email',
-      value: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
-    },
-    {
-      icon: 'Location',
-      title: 'Address',
-      value: '123 Tech Street, Suite 100',
-      description: 'San Francisco, CA 94105'
-    },
-    {
-      icon: 'Clock',
-=======
       icon: Phone,
       title: 'Phone',
-      value: '+1 (555) 123-4567',
+      value: '+1-302-464-0950',
       description: 'Mon-Fri 9AM-6PM EST'
     },
     {
       icon: Mail,
       title: 'Email',
-      value: 'contact@ziontechgroup.com',
+      value: 'kleber@ziontechgroup.com',
       description: 'We respond within 24 hours'
     },
     {
       icon: MapPin,
       title: 'Address',
-      value: '123 Tech Street, Suite 100',
-      description: 'San Francisco, CA 94105'
+      value: 'Middletown, DE',
+      description: 'United States'
     },
     {
       icon: Clock,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Business Hours',
       value: 'Monday - Friday',
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
-      value: 'Monday - Friday',
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
       description: '9:00 AM - 6:00 PM EST'
     }
   ];
