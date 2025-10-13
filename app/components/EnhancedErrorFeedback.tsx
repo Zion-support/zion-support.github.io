@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
-import { AlertTriangle, X, RefreshCw, Bug, Send } from 'lucide-react';
+import { AlertTriangle, X, RefreshCw, Send } from 'lucide-react';
 
 interface ErrorFeedbackProps {
   error?: Error;
@@ -29,6 +29,7 @@ const EnhancedErrorFeedback: React.FC<ErrorFeedbackProps> = ({
       }, 10000);
       return () => clearTimeout(timer);
     }
+    return undefined;
   }, [error]);
 
   const handleRetry = useCallback(async () => {
