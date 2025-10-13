@@ -111,64 +111,64 @@ const Footer = React.memo(() => {
             </ul>
           </div>
 
-          {/* Solutions */}
+          {/* Micro SAAS */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
+            <h4 className="text-lg font-semibold mb-4">Micro SAAS</h4>
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/ai-analytics"
+                  to="/zion-analytics-pro"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Analytics
+                  Zion Analytics Pro
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-automation"
+                  to="/zion-security-shield"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Automation
+                  Zion Security Shield
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-content-generation"
+                  to="/zion-cloud-vault"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Content Generation
+                  Zion Cloud Vault
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-customer-service"
+                  to="/zion-content-studio"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Customer Service
+                  Zion Content Studio
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/ai-marketing"
+                  to="/zion-lead-magnet"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Marketing
+                  Zion Lead Magnet
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/data-analytics"
+                  to="/zion-workflow-automation"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Data Analytics
+                  Zion Workflow Automation
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/custom-development"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  to="/micro-saas"
+                  className="text-gray-400 hover:text-white transition-colors font-medium"
                 >
-                  Custom Development
+                  View All Solutions →
                 </Link>
               </li>
             </ul>
@@ -252,43 +252,29 @@ const Footer = React.memo(() => {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Resources</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/blog"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/tutorials"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Tutorials
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/demo"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Demo
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/sitemap"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Sitemap
-                </Link>
-              </li>
-            </ul>
+            <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3">
+                <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded flex items-center justify-center">
+                  <span className="text-white text-xs">@</span>
+                </div>
+                <span className="text-gray-400 text-sm">kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded flex items-center justify-center">
+                  <span className="text-white text-xs">📞</span>
+                </div>
+                <span className="text-gray-400 text-sm">+1 302 464 0950</span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <div className="w-5 h-5 bg-gradient-to-r from-cyan-500 to-purple-600 rounded flex items-center justify-center mt-0.5">
+                  <span className="text-white text-xs">📍</span>
+                </div>
+                <span className="text-gray-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</span>
+              </div>
+            </div>
           </div>
         </div>
 
