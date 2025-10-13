@@ -1,13 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-console.log("Starting performance optimization...");
-=======
-console.log('Starting performance optimization...');
->>>>>>> cursor/analyze-improve-and-deploy-application-c69e
 
 // Optimize images
 console.log('Optimizing images...');
@@ -156,11 +149,6 @@ const performanceReport = {
   }
 };
 
-<<<<<<< HEAD
-main();
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
 // Performance optimization script
 const optimizePerformance = () => {
   console.log('Running performance optimizations...');
@@ -198,16 +186,6 @@ const optimizePerformance = () => {
   console.log('Performance optimization completed!');
 };
 
-<<<<<<< HEAD
-// Run optimization
-try {
-  optimizePerformance();
-} catch (error) {
-  console.error('❌ Error during performance optimization:', error);
-  process.exit(1);
-}
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
 const reportPath = path.join(__dirname, '..', 'performance-report.json');
 fs.writeFileSync(reportPath, JSON.stringify(performanceReport, null, 2));
 console.log('✓ Performance report generated at:', reportPath);
@@ -252,6 +230,5 @@ console.log('Performance script created at:', performanceScriptPath);
 
 console.log('Performance optimization completed!');
 >>>>>>> cursor/analyze-improve-and-deploy-application-c69e
-=======
 optimizePerformance();
 >>>>>>> cursor/website-audit-and-update-with-deployment-1ef3

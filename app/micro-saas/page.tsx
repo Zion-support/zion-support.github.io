@@ -15,46 +15,278 @@ import {
   CheckCircle,
   Star,
   Award,
-  Globe
+  Globe,
+  Mail,
+  FileText,
+  Code,
+  Clock
 } from 'lucide-react';
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
     {
       title: 'Zion Analytics Pro',
-      description: 'Advanced analytics dashboard with real-time insights and customizable reports.',
+      description: 'Advanced analytics dashboard with real-time insights, predictive analytics, and customizable reports. Perfect for data-driven businesses.',
       icon: <BarChart3 className="w-8 h-8" />,
       path: '/zion-analytics-pro',
-      features: ['Real-time dashboards', 'Custom reports', 'Data visualization'],
-      price: '$29/month',
-      featured: true
+      features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile app', 'White-label options'],
+      price: 'From $299/month',
+      originalPrice: '$599/month',
+      featured: true,
+      category: 'Analytics'
     },
     {
       title: 'Zion Security Shield',
-      description: 'Comprehensive security monitoring and threat detection for your applications.',
+      description: 'Comprehensive security monitoring and threat detection with AI-powered analysis and automated incident response.',
       icon: <Shield className="w-8 h-8" />,
       path: '/zion-security-shield',
-      features: ['Threat detection', 'Security monitoring', 'Incident response'],
-      price: '$49/month',
-      featured: true
+      features: ['AI threat detection', '24/7 monitoring', 'Automated response', 'Compliance reporting', 'Vulnerability scanning', 'Security training'],
+      price: 'From $499/month',
+      originalPrice: '$999/month',
+      featured: true,
+      category: 'Security'
     },
     {
       title: 'Zion Cloud Vault',
-      description: 'Secure cloud storage solution with advanced encryption and backup features.',
+      description: 'Secure cloud storage solution with end-to-end encryption, automated backups, and advanced file sharing capabilities.',
       icon: <Cloud className="w-8 h-8" />,
       path: '/zion-cloud-vault',
-      features: ['End-to-end encryption', 'Automated backups', 'File sharing'],
-      price: '$19/month',
-      featured: false
+      features: ['End-to-end encryption', 'Automated backups', 'File sharing', 'Version control', 'Access management', 'Compliance tools'],
+      price: 'From $99/month',
+      originalPrice: '$199/month',
+      featured: true,
+      category: 'Storage'
     },
     {
       title: 'Zion Content Studio',
-      description: 'AI-powered content creation and management platform for marketing teams.',
+      description: 'AI-powered content creation and management platform with SEO optimization and team collaboration tools.',
       icon: <Sparkles className="w-8 h-8" />,
       path: '/zion-content-studio',
-      features: ['AI content generation', 'Content calendar', 'Team collaboration'],
-      price: '$39/month',
-      featured: false
+      features: ['AI content generation', 'SEO optimization', 'Content calendar', 'Team collaboration', 'Brand voice training', 'Multi-format output'],
+      price: 'From $149/month',
+      originalPrice: '$299/month',
+      featured: true,
+      category: 'Content'
+    },
+    {
+      title: 'Zion AI Video Generator',
+      description: 'Create professional videos with AI-powered editing, voice synthesis, and automated script generation for marketing and training.',
+      icon: <Users className="w-8 h-8" />,
+      path: '/zion-ai-video-generator',
+      features: ['AI video editing', 'Voice synthesis', 'Auto script generation', 'Template library', 'Brand customization', 'Multi-language support'],
+      price: 'From $199/month',
+      originalPrice: '$399/month',
+      featured: true,
+      category: 'Video'
+    },
+    {
+      title: 'Zion AI Invoice Generator',
+      description: 'Automated invoice generation with AI-powered data extraction, payment tracking, and financial reporting capabilities.',
+      icon: <TrendingUp className="w-8 h-8" />,
+      path: '/zion-ai-invoice-generator',
+      features: ['Auto invoice generation', 'Payment tracking', 'Financial reporting', 'Tax calculations', 'Multi-currency support', 'Integration APIs'],
+      price: 'From $79/month',
+      originalPrice: '$159/month',
+      featured: false,
+      category: 'Finance'
+    },
+    {
+      title: 'Zion AI Customer Insights',
+      description: 'Advanced customer analytics with sentiment analysis, behavior tracking, and personalized recommendation engine.',
+      icon: <Users className="w-8 h-8" />,
+      path: '/zion-ai-customer-insights',
+      features: ['Sentiment analysis', 'Behavior tracking', 'Personalization engine', 'Customer segmentation', 'Churn prediction', 'ROI analytics'],
+      price: 'From $179/month',
+      originalPrice: '$359/month',
+      featured: true,
+      category: 'Customer Analytics'
+    },
+    {
+      title: 'Zion AI Email Analyzer',
+      description: 'Intelligent email analysis with spam detection, sentiment analysis, and automated response suggestions for better communication.',
+      icon: <Mail className="w-8 h-8" />,
+      path: '/zion-ai-email-analyzer',
+      features: ['Spam detection', 'Sentiment analysis', 'Auto responses', 'Email optimization', 'Template suggestions', 'Performance metrics'],
+      price: 'From $59/month',
+      originalPrice: '$119/month',
+      featured: false,
+      category: 'Communication'
+    },
+    {
+      title: 'Zion Smart Inventory Optimizer',
+      description: 'AI-powered inventory management with demand forecasting, automated reordering, and cost optimization for retail and manufacturing.',
+      icon: <Database className="w-8 h-8" />,
+      path: '/zion-smart-inventory-optimizer',
+      features: ['Demand forecasting', 'Auto reordering', 'Cost optimization', 'Stock alerts', 'Supplier management', 'Analytics dashboard'],
+      price: 'From $249/month',
+      originalPrice: '$499/month',
+      featured: true,
+      category: 'Inventory'
+    },
+    {
+      title: 'Zion AI Customer Sentiment Tracker',
+      description: 'Real-time customer sentiment monitoring across all channels with automated alerts and response recommendations.',
+      icon: <Users className="w-8 h-8" />,
+      path: '/zion-ai-customer-sentiment-tracker',
+      features: ['Real-time monitoring', 'Multi-channel tracking', 'Automated alerts', 'Response suggestions', 'Trend analysis', 'Team notifications'],
+      price: 'From $129/month',
+      originalPrice: '$259/month',
+      featured: false,
+      category: 'Customer Service'
+    },
+    {
+      title: 'Zion Smart Expense Categorizer',
+      description: 'Automated expense categorization with receipt scanning, tax optimization, and financial reporting for businesses and individuals.',
+      icon: <TrendingUp className="w-8 h-8" />,
+      path: '/zion-smart-expense-categorizer',
+      features: ['Receipt scanning', 'Auto categorization', 'Tax optimization', 'Financial reports', 'Budget tracking', 'Integration APIs'],
+      price: 'From $49/month',
+      originalPrice: '$99/month',
+      featured: false,
+      category: 'Finance'
+    },
+    {
+      title: 'Zion AI Voice Assistant Pro',
+      description: 'Advanced voice assistant with natural language processing, task automation, and integration with business applications.',
+      icon: <Users className="w-8 h-8" />,
+      path: '/zion-ai-voice-assistant-pro',
+      features: ['Natural language processing', 'Task automation', 'App integration', 'Voice commands', 'Multi-language support', 'Custom training'],
+      price: 'From $199/month',
+      originalPrice: '$399/month',
+      featured: true,
+      category: 'Voice AI'
+    },
+    {
+      title: 'Zion AI Code Reviewer',
+      description: 'Automated code review with bug detection, security analysis, and performance optimization suggestions for development teams.',
+      icon: <Code className="w-8 h-8" />,
+      path: '/zion-ai-code-reviewer',
+      features: ['Bug detection', 'Security analysis', 'Performance optimization', 'Code quality metrics', 'Team collaboration', 'Integration tools'],
+      price: 'From $149/month',
+      originalPrice: '$299/month',
+      featured: true,
+      category: 'Development'
+    },
+    {
+      title: 'Zion AI Social Media Manager',
+      description: 'AI-powered social media management with content scheduling, engagement analysis, and automated posting across platforms.',
+      icon: <Globe className="w-8 h-8" />,
+      path: '/zion-ai-social-media-manager',
+      features: ['Content scheduling', 'Engagement analysis', 'Auto posting', 'Hashtag optimization', 'Performance tracking', 'Multi-platform support'],
+      price: 'From $99/month',
+      originalPrice: '$199/month',
+      featured: false,
+      category: 'Social Media'
+    },
+    {
+      title: 'Zion AI Contract Analyzer',
+      description: 'Intelligent contract analysis with risk assessment, clause extraction, and automated compliance checking for legal teams.',
+      icon: <FileText className="w-8 h-8" />,
+      path: '/zion-ai-contract-analyzer',
+      features: ['Risk assessment', 'Clause extraction', 'Compliance checking', 'Contract comparison', 'Automated alerts', 'Legal database'],
+      price: 'From $299/month',
+      originalPrice: '$599/month',
+      featured: true,
+      category: 'Legal Tech'
+    },
+    {
+      title: 'Zion AI Performance Optimizer',
+      description: 'Website and application performance optimization with automated testing, speed analysis, and improvement recommendations.',
+      icon: <Zap className="w-8 h-8" />,
+      path: '/zion-ai-performance-optimizer',
+      features: ['Speed analysis', 'Automated testing', 'Improvement suggestions', 'Performance monitoring', 'CDN optimization', 'Mobile optimization'],
+      price: 'From $119/month',
+      originalPrice: '$239/month',
+      featured: false,
+      category: 'Performance'
+    },
+    {
+      title: 'Zion AI Customer Churn Predictor',
+      description: 'Predict customer churn with machine learning models, early warning systems, and retention strategy recommendations.',
+      icon: <Users className="w-8 h-8" />,
+      path: '/zion-ai-customer-churn-predictor',
+      features: ['Churn prediction', 'Early warning systems', 'Retention strategies', 'Customer scoring', 'Intervention alerts', 'ROI tracking'],
+      price: 'From $179/month',
+      originalPrice: '$359/month',
+      featured: true,
+      category: 'Customer Analytics'
+    },
+    {
+      title: 'Zion AI Supply Chain Optimizer',
+      description: 'Optimize supply chain operations with demand forecasting, route optimization, and supplier performance analysis.',
+      icon: <Globe className="w-8 h-8" />,
+      path: '/zion-ai-supply-chain-optimizer',
+      features: ['Demand forecasting', 'Route optimization', 'Supplier analysis', 'Cost reduction', 'Risk assessment', 'Performance metrics'],
+      price: 'From $279/month',
+      originalPrice: '$559/month',
+      featured: true,
+      category: 'Supply Chain'
+    },
+    {
+      title: 'Zion AI Financial Forecaster',
+      description: 'Advanced financial forecasting with market analysis, investment recommendations, and risk assessment for financial planning.',
+      icon: <TrendingUp className="w-8 h-8" />,
+      path: '/zion-ai-financial-forecaster',
+      features: ['Financial forecasting', 'Market analysis', 'Investment recommendations', 'Risk assessment', 'Portfolio optimization', 'Tax planning'],
+      price: 'From $349/month',
+      originalPrice: '$699/month',
+      featured: true,
+      category: 'Finance'
+    },
+    {
+      title: 'Zion AI Content Moderator',
+      description: 'Automated content moderation with AI-powered detection of inappropriate content, spam filtering, and community management.',
+      icon: <Shield className="w-8 h-8" />,
+      path: '/zion-ai-content-moderator',
+      features: ['Content detection', 'Spam filtering', 'Community management', 'Automated actions', 'Custom rules', 'Analytics dashboard'],
+      price: 'From $89/month',
+      originalPrice: '$179/month',
+      featured: false,
+      category: 'Content Moderation'
+    },
+    {
+      title: 'Zion AI Translator Pro',
+      description: 'Advanced translation service with real-time translation, document processing, and multi-language support for global businesses.',
+      icon: <Globe className="w-8 h-8" />,
+      path: '/zion-ai-translator-pro',
+      features: ['Real-time translation', 'Document processing', 'Multi-language support', 'Context awareness', 'API integration', 'Quality assurance'],
+      price: 'From $129/month',
+      originalPrice: '$259/month',
+      featured: false,
+      category: 'Translation'
+    },
+    {
+      title: 'Zion AI Data Cleaner',
+      description: 'Automated data cleaning and validation with duplicate detection, format standardization, and data quality reporting.',
+      icon: <Database className="w-8 h-8" />,
+      path: '/zion-ai-data-cleaner',
+      features: ['Duplicate detection', 'Format standardization', 'Data validation', 'Quality reporting', 'Automated cleaning', 'API integration'],
+      price: 'From $79/month',
+      originalPrice: '$159/month',
+      featured: false,
+      category: 'Data Management'
+    },
+    {
+      title: 'Zion AI Task Scheduler',
+      description: 'Intelligent task scheduling with priority optimization, resource allocation, and automated deadline management.',
+      icon: <Clock className="w-8 h-8" />,
+      path: '/zion-ai-task-scheduler',
+      features: ['Priority optimization', 'Resource allocation', 'Deadline management', 'Team coordination', 'Progress tracking', 'Automated reminders'],
+      price: 'From $69/month',
+      originalPrice: '$139/month',
+      featured: false,
+      category: 'Productivity'
+    },
+    {
+      title: 'Zion AI Customer Support Pro',
+      description: 'Advanced customer support automation with ticket routing, response generation, and knowledge base management.',
+      icon: <Users className="w-8 h-8" />,
+      path: '/zion-ai-customer-support-pro',
+      features: ['Ticket routing', 'Response generation', 'Knowledge base', 'Multi-channel support', 'Escalation management', 'Performance analytics'],
+      price: 'From $199/month',
+      originalPrice: '$399/month',
+      featured: true,
+      category: 'Customer Support'
     }
   ];
 
@@ -115,52 +347,66 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product, index) => (
                 <div
                   key={index}
-                  className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/30 transition-all duration-300 group ${
+                  className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-6 hover:border-cyan-500/30 transition-all duration-300 group hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden ${
                     product.featured ? 'border-cyan-500/30' : 'border-white/10'
                   }`}
                 >
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="text-cyan-400 group-hover:scale-110 transition-transform duration-300">
-                      {product.icon}
-                    </div>
-                    {product.featured && (
-                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full flex items-center">
+                  {product.featured && (
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full flex items-center">
                         <Star className="w-3 h-3 mr-1" />
                         Featured
                       </span>
-                    )}
+                    </div>
+                  )}
+                  
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+                      {product.icon}
+                    </div>
+                    <span className="text-xs bg-cyan-500/20 text-cyan-300 px-2 py-1 rounded-full border border-cyan-500/30">
+                      {product.category}
+                    </span>
                   </div>
                   
-                  <h3 className="text-2xl font-semibold text-white mb-4">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {product.title}
                   </h3>
-                  <p className="text-gray-300 mb-6">
+                  <p className="text-gray-300 mb-4 text-sm leading-relaxed">
                     {product.description}
                   </p>
                   
-                  <ul className="space-y-2 mb-6">
-                    {product.features.map((feature, featureIndex) => (
+                  <ul className="space-y-2 mb-4">
+                    {product.features.slice(0, 4).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                        <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
+                    {product.features.length > 4 && (
+                      <li className="text-xs text-cyan-400 text-center">
+                        +{product.features.length - 4} more features
+                      </li>
+                    )}
                   </ul>
                   
-                  <div className="flex items-center justify-between">
-                    <div className="text-2xl font-bold text-cyan-400">
-                      {product.price}
+                  <div className="flex items-center justify-between mb-4">
+                    <div>
+                      <div className="text-cyan-400 font-bold text-lg">{product.price}</div>
+                      {product.originalPrice && (
+                        <div className="text-gray-500 line-through text-sm">{product.originalPrice}</div>
+                      )}
                     </div>
                     <Link
                       to={product.path}
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium"
+                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-medium group-hover:translate-x-1"
                     >
                       Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                   </div>
                 </div>
