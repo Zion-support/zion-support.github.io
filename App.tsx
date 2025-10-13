@@ -47,10 +47,16 @@ const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
 // AI Service Pages
 const AiAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
+const AiAnalyticsDashboardProPage = React.lazy(() => import("./app/ai-analytics-dashboard-pro/page"));
 const AiAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
 const AiBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
+const AiBusinessIntelligenceProPage = React.lazy(() => import("./app/ai-business-intelligence-pro/page"));
+const AiCodeAssistantProPage = React.lazy(() => import("./app/ai-code-assistant-pro/page"));
 const AiContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
+const AiContentGeneratorPage = React.lazy(() => import("./app/ai-content-generator/page"));
 const AiCustomerServicePage = React.lazy(() => import("./app/ai-customer-service/page"));
+const AiCustomerSupportChatbotPage = React.lazy(() => import("./app/ai-customer-support-chatbot/page"));
+const AiCybersecuritySuiteProPage = React.lazy(() => import("./app/ai-cybersecurity-suite-pro/page"));
 const AiDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics/page"));
 const AiEmailAutomationPage = React.lazy(() => import("./app/ai-email-automation/page"));
 const AiFraudDetectionPage = React.lazy(() => import("./app/ai-fraud-detection/page"));
@@ -61,6 +67,52 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+
+// Additional AI Service Pages
+const AccessibilityPage = React.lazy(() => import("./app/accessibility/page"));
+const AiAccountingAssistantPage = React.lazy(() => import("./app/ai-accounting-assistant/page"));
+const AiAgriculturalIntelligenceProPage = React.lazy(() => import("./app/ai-agricultural-intelligence-pro/page"));
+const AiApiManagementPage = React.lazy(() => import("./app/ai-api-management/page"));
+const AiApiManagerPage = React.lazy(() => import("./app/ai-api-manager/page"));
+const AiAutomatedReportingPage = React.lazy(() => import("./app/ai-automated-reporting/page"));
+const AiAutomatedTestingPage = React.lazy(() => import("./app/ai-automated-testing/page"));
+const AiAutonomousSystemsPage = React.lazy(() => import("./app/ai-autonomous-systems/page"));
+const AiBlockchainAnalyticsPage = React.lazy(() => import("./app/ai-blockchain-analytics/page"));
+const AiBlockchainSolutionsPage = React.lazy(() => import("./app/ai-blockchain-solutions/page"));
+const AiChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
+const AiChatbotEnterprisePage = React.lazy(() => import("./app/ai-chatbot-enterprise/page"));
+const AiClimatePredictionEnginePage = React.lazy(() => import("./app/ai-climate-prediction-engine/page"));
+const AiClimateSolutionsProPage = React.lazy(() => import("./app/ai-climate-solutions-pro/page"));
+const AiCloudInfrastructurePage = React.lazy(() => import("./app/ai-cloud-infrastructure/page"));
+const AiCodeAssistantPage = React.lazy(() => import("./app/ai-code-assistant/page"));
+const AiCodeGenerationPage = React.lazy(() => import("./app/ai-code-generation/page"));
+const AiCodeSecurityAuditorPage = React.lazy(() => import("./app/ai-code-security-auditor/page"));
+const AiComputerVisionPage = React.lazy(() => import("./app/ai-computer-vision/page"));
+const AiContentDeliveryNetworkPage = React.lazy(() => import("./app/ai-content-delivery-network/page"));
+const AiContentGenerationProPage = React.lazy(() => import("./app/ai-content-generation-pro/page"));
+const AiContentManagementPage = React.lazy(() => import("./app/ai-content-management/page"));
+const AiContentModerationPage = React.lazy(() => import("./app/ai-content-moderation/page"));
+const AiContentModerationProPage = React.lazy(() => import("./app/ai-content-moderation-pro/page"));
+const AiContentStudioPage = React.lazy(() => import("./app/ai-content-studio/page"));
+const AiContentWriterPage = React.lazy(() => import("./app/ai-content-writer/page"));
+const AiConversationAnalyticsPage = React.lazy(() => import("./app/ai-conversation-analytics/page"));
+const AiConversationalAiPage = React.lazy(() => import("./app/ai-conversational-ai/page"));
+const AiCrmPage = React.lazy(() => import("./app/ai-crm/page"));
+const AiCrmAssistantPage = React.lazy(() => import("./app/ai-crm-assistant/page"));
+const AiCustomerChurnPage = React.lazy(() => import("./app/ai-customer-churn/page"));
+const AiCustomerInsightsPage = React.lazy(() => import("./app/ai-customer-insights/page"));
+const AiCustomerSupportPage = React.lazy(() => import("./app/ai-customer-support/page"));
+const AiCustomerSupportBotPage = React.lazy(() => import("./app/ai-customer-support-bot/page"));
+const AiCyberDefenseMatrixPage = React.lazy(() => import("./app/ai-cyber-defense-matrix/page"));
+const AiCybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
+const AiCybersecurityMonitorPage = React.lazy(() => import("./app/ai-cybersecurity-monitor/page"));
+const AiCybersecurityMonitorProPage = React.lazy(() => import("./app/ai-cybersecurity-monitor-pro/page"));
+const AiCybersecuritySuitePage = React.lazy(() => import("./app/ai-cybersecurity-suite/page"));
+const AiDataVisualizationPage = React.lazy(() => import("./app/ai-data-visualization/page"));
+const AiDesignStudioPage = React.lazy(() => import("./app/ai-design-studio/page"));
+const AiDevopsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
+const AiDocumentIntelligencePage = React.lazy(() => import("./app/ai-document-intelligence/page"));
+const AiDocumentProcessingPage = React.lazy(() => import("./app/ai-document-processing/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -259,10 +311,16 @@ function App() {
 
                   {/* AI Service Routes */}
                   <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+                  <Route path="/ai-analytics-dashboard-pro" element={<AiAnalyticsDashboardProPage />} />
                   <Route path="/ai-automation" element={<AiAutomationPage />} />
                   <Route path="/ai-business-intelligence" element={<AiBusinessIntelligencePage />} />
+                  <Route path="/ai-business-intelligence-pro" element={<AiBusinessIntelligenceProPage />} />
+                  <Route path="/ai-code-assistant-pro" element={<AiCodeAssistantProPage />} />
                   <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
+                  <Route path="/ai-content-generator" element={<AiContentGeneratorPage />} />
                   <Route path="/ai-customer-service" element={<AiCustomerServicePage />} />
+                  <Route path="/ai-customer-support-chatbot" element={<AiCustomerSupportChatbotPage />} />
+                  <Route path="/ai-cybersecurity-suite-pro" element={<AiCybersecuritySuiteProPage />} />
                   <Route path="/ai-data-analytics" element={<AiDataAnalyticsPage />} />
                   <Route path="/ai-email-automation" element={<AiEmailAutomationPage />} />
                   <Route path="/ai-fraud-detection" element={<AiFraudDetectionPage />} />
@@ -273,6 +331,52 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+
+                  {/* Additional AI Service Routes */}
+                  <Route path="/accessibility" element={<AccessibilityPage />} />
+                  <Route path="/ai-accounting-assistant" element={<AiAccountingAssistantPage />} />
+                  <Route path="/ai-agricultural-intelligence-pro" element={<AiAgriculturalIntelligenceProPage />} />
+                  <Route path="/ai-api-management" element={<AiApiManagementPage />} />
+                  <Route path="/ai-api-manager" element={<AiApiManagerPage />} />
+                  <Route path="/ai-automated-reporting" element={<AiAutomatedReportingPage />} />
+                  <Route path="/ai-automated-testing" element={<AiAutomatedTestingPage />} />
+                  <Route path="/ai-autonomous-systems" element={<AiAutonomousSystemsPage />} />
+                  <Route path="/ai-blockchain-analytics" element={<AiBlockchainAnalyticsPage />} />
+                  <Route path="/ai-blockchain-solutions" element={<AiBlockchainSolutionsPage />} />
+                  <Route path="/ai-chatbot-builder" element={<AiChatbotBuilderPage />} />
+                  <Route path="/ai-chatbot-enterprise" element={<AiChatbotEnterprisePage />} />
+                  <Route path="/ai-climate-prediction-engine" element={<AiClimatePredictionEnginePage />} />
+                  <Route path="/ai-climate-solutions-pro" element={<AiClimateSolutionsProPage />} />
+                  <Route path="/ai-cloud-infrastructure" element={<AiCloudInfrastructurePage />} />
+                  <Route path="/ai-code-assistant" element={<AiCodeAssistantPage />} />
+                  <Route path="/ai-code-generation" element={<AiCodeGenerationPage />} />
+                  <Route path="/ai-code-security-auditor" element={<AiCodeSecurityAuditorPage />} />
+                  <Route path="/ai-computer-vision" element={<AiComputerVisionPage />} />
+                  <Route path="/ai-content-delivery-network" element={<AiContentDeliveryNetworkPage />} />
+                  <Route path="/ai-content-generation-pro" element={<AiContentGenerationProPage />} />
+                  <Route path="/ai-content-management" element={<AiContentManagementPage />} />
+                  <Route path="/ai-content-moderation" element={<AiContentModerationPage />} />
+                  <Route path="/ai-content-moderation-pro" element={<AiContentModerationProPage />} />
+                  <Route path="/ai-content-studio" element={<AiContentStudioPage />} />
+                  <Route path="/ai-content-writer" element={<AiContentWriterPage />} />
+                  <Route path="/ai-conversation-analytics" element={<AiConversationAnalyticsPage />} />
+                  <Route path="/ai-conversational-ai" element={<AiConversationalAiPage />} />
+                  <Route path="/ai-crm" element={<AiCrmPage />} />
+                  <Route path="/ai-crm-assistant" element={<AiCrmAssistantPage />} />
+                  <Route path="/ai-customer-churn" element={<AiCustomerChurnPage />} />
+                  <Route path="/ai-customer-insights" element={<AiCustomerInsightsPage />} />
+                  <Route path="/ai-customer-support" element={<AiCustomerSupportPage />} />
+                  <Route path="/ai-customer-support-bot" element={<AiCustomerSupportBotPage />} />
+                  <Route path="/ai-cyber-defense-matrix" element={<AiCyberDefenseMatrixPage />} />
+                  <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                  <Route path="/ai-cybersecurity-monitor" element={<AiCybersecurityMonitorPage />} />
+                  <Route path="/ai-cybersecurity-monitor-pro" element={<AiCybersecurityMonitorProPage />} />
+                  <Route path="/ai-cybersecurity-suite" element={<AiCybersecuritySuitePage />} />
+                  <Route path="/ai-data-visualization" element={<AiDataVisualizationPage />} />
+                  <Route path="/ai-design-studio" element={<AiDesignStudioPage />} />
+                  <Route path="/ai-devops-automation" element={<AiDevopsAutomationPage />} />
+                  <Route path="/ai-document-intelligence" element={<AiDocumentIntelligencePage />} />
+                  <Route path="/ai-document-processing" element={<AiDocumentProcessingPage />} />
 
                   {/* IT Service Routes */}
                   <Route

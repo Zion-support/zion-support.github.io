@@ -75,6 +75,17 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
   ], [])
 
+  const fiveGServices = useMemo(() => [
+    { name: '5G Solutions Overview', path: '/5g-solutions', icon: <Zap className="w-4 h-4" /> },
+    { name: '5G Data Analytics', path: '/5g-data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: '5G Edge Computing', path: '/5g-edge-computing', icon: <Cloud className="w-4 h-4" /> },
+    { name: '5G Implementation', path: '/5g-implementation', icon: <Code className="w-4 h-4" /> },
+    { name: '5G Mobile Applications', path: '/5g-mobile-applications', icon: <Code className="w-4 h-4" /> },
+    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
+    { name: '5G Private Networks', path: '/5g-private-networks', icon: <Shield className="w-4 h-4" /> },
+    { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions', icon: <Brain className="w-4 h-4" /> }
+  ], [])
+
   const mainNavItems = useMemo(() => [
     { name: 'Home', path: '/', icon: <Home className="w-4 h-4" /> },
     { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
@@ -256,6 +267,44 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         <Star className="w-3 h-3 text-yellow-400 fill-current" />
                       )}
                     </div>
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* 5G Solutions Section */}
+          <div className="mb-6">
+            <button
+              onClick={() => toggleSection('5g-solutions')}
+              className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-blue-500/10 hover:text-blue-400 transition-all duration-300 font-medium text-left"
+            >
+              <div className="flex items-center space-x-3">
+                <Zap className="w-4 h-4" />
+                <span>5G Solutions</span>
+              </div>
+              {expandedSections.has('5g-solutions') ? (
+                <ChevronDown className="w-4 h-4" />
+              ) : (
+                <ChevronRight className="w-4 h-4" />
+              )}
+            </button>
+            
+            {expandedSections.has('5g-solutions') && (
+              <div className="ml-6 mt-2 space-y-1">
+                {fiveGServices.map((service) => (
+                  <Link
+                    key={service.name}
+                    to={service.path}
+                    className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                      isActive(service.path)
+                        ? 'bg-blue-500/10 text-blue-400'
+                        : 'text-gray-400 hover:text-blue-400 hover:bg-blue-500/5'
+                    }`}
+                    onClick={onClose}
+                  >
+                    {service.icon}
+                    <span className="text-sm">{service.name}</span>
                   </Link>
                 ))}
               </div>
