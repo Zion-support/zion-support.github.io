@@ -1,13 +1,8 @@
-export const Performancemonitoring = {
-  init: () => {
-    },
+// Performancemonitoring utility functions
 
-  process: (data: any) => {
-    return data;
-  },
+export function performancemonitoring() {
+  // Implementation here
+  return null;
+}
 
-  cleanup: () => {
-    },
-};
-
-export default Performancemonitoring;
+export default performancemonitoring;

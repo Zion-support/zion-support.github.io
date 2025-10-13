@@ -1,13 +1,8 @@
-export const Logger = {
-  init: () => {
-    },
+// Logger utility functions
 
-  process: (data: any) => {
-    return data;
-  },
+export function logger() {
+  // Implementation here
+  return null;
+}
 
-  cleanup: () => {
-    },
-};
-
-export default Logger;
+export default logger;

@@ -1,12 +1,14 @@
 import React from 'react';
-interface TestrunnerxProps 
+
+interface TestrunnerProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const Testrunnerx: React.FC<TestrunnerxProps> = ({ className = "" }) => 
-    <div className={className} />
-      <h2>Testrunnerx</h2>
+export default function Testrunner({ className = '', children, ...props }: TestrunnerProps) {
+  return (
+    <div className={`testrunner-component ${className}`} {...props}>
+      {children}
     </div>
   );
-};
-
-export default Testrunnerx;
+}

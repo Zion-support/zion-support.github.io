@@ -1,13 +1,14 @@
-const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement,
-);
+import React from 'react';
 
-root.render(
-  <React.StrictMode></Reac></React>
-    <HelmetProvider></HelmetProvide></HelmetProvider>
-      <BrowserRouter></BrowserRoute></BrowserRouter>
-        <App /></App>
-      </BrowserRouter>
-    </HelmetProvider>
-  </React.StrictMode>,
-);
+interface MainProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function Main({ className = '', children, ...props }: MainProps) {
+  return (
+    <div className={`main-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}

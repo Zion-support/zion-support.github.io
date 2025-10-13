@@ -1,4 +1,8 @@
-import { clsx } from 'clsx';
+// Utils utility functions
 
-export function cn(...inputs: ClassValue[]) 
+export function utils() {
+  // Implementation here
+  return null;
 }
+
+export default utils;

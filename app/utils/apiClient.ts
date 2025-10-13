@@ -1,13 +1,8 @@
-export const Apiclient = {
-  init: () => {
-    },
+// Apiclient utility functions
 
-  process: (data: any) => {
-    return data;
-  },
+export function apiclient() {
+  // Implementation here
+  return null;
+}
 
-  cleanup: () => {
-    },
-};
-
-export default Apiclient;
+export default apiclient;

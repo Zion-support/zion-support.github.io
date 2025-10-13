@@ -1,20 +1,14 @@
-interface EnhancedAnalyticsProps 
+import React from 'react';
+
+interface EnhancedanalyticsProps {
+  className?: string;
+  children?: React.ReactNode;
 }
 
-const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps></EnhancedAnalyticsProps> = ({ children }) => 
-      }
-    };
-
-    // Track page views
-    const trackPageView = () => 
-      }
-    };
-
-    initializeAnalytics();
-    trackPageView();
-  }, []);
-
-  return <>{children}</>;
-};
-
-export default EnhancedAnalytics;
+export default function Enhancedanalytics({ className = '', children, ...props }: EnhancedanalyticsProps) {
+  return (
+    <div className={`enhancedanalytics-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}

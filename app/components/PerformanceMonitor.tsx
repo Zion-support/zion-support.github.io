@@ -1,7 +1,14 @@
 import React from 'react';
 
-const PerformanceMonitor: React.FC = () => {
-  return null;
-};
+interface PerformancemonitorProps {
+  className?: string;
+  children?: React.ReactNode;
+}
 
-export default PerformanceMonitor;
+export default function Performancemonitor({ className = '', children, ...props }: PerformancemonitorProps) {
+  return (
+    <div className={`performancemonitor-component ${className}`} {...props}>
+      {children}
+    </div>
+  );
+}

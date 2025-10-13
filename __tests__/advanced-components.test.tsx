@@ -1,17 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import FuturisticButton from '../app/components/FuturisticButton';
 
-const TestComponent = () => 
-};
-
-describe("Advanced Components", () => 
-  });
-
-  it("should render test content", () => 
-  });
-
-  it("should handle console errors", () => 
-      .mockImplementation(() => {});
-    // Test implementation
-    consoleSpy.mockRestore();
+describe('Advanced Components', () => {
+  it('renders FuturisticButton without crashing', () => {
+    render(<FuturisticButton>Test Button</FuturisticButton>);
+    expect(screen.getByText('Test Button')).toBeInTheDocument();
   });
 });

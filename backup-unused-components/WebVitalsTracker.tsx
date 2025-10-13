@@ -1,23 +1,10 @@
-import React, { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+import React from 'react';
 
-interface WebVitalsTrackerProps {
-  children: React.ReactNode;
-}
-
-export default function WebVitalsTracker({ children }: WebVitalsTrackerProps) {
-  useEffect(() => {
-    const sendToAnalytics = (metric: any) => {
-      console.log('Web Vital:', metric.name, metric.value);
-      // Add actual analytics tracking here
-    };
-
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics);
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
-  }, []);
-
-  return <>{children}</>;
+export default function Component() {
+  return (
+    <div>
+      <h1>Component</h1>
+      <p>This component is under construction.</p>
+    </div>
+  );
 }

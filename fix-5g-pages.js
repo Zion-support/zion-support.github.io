@@ -4,15 +4,15 @@ import fs from "fs";
 import path from "path";
 
 const pages = [
-  "5g-edge-computing",
-  "5g-mobile-applications",
-  "5g-network-infrastructure",
-  "5g-private-networks",
-  "5g-smart-city-solutions",
-  "5g-data-analytics",
-  "5g-implementation",
-  "5g-iot-solutions",
-  "5g-solutions",
+  "5g-edge-computing";
+  "5g-mobile-applications";
+  "5g-network-infrastructure";
+  "5g-private-networks";
+  "5g-smart-city-solutions";
+  "5g-data-analytics";
+  "5g-implementation";
+  "5g-iot-solutions";
+  "5g-solutions";
 ];
 
 const template = `import React from 'react';
@@ -20,7 +20,7 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-export default function {FUNCTION_NAME}() {
+export default function {FUNCTION_NAME}() {;
   return (
     <>
       <Helmet>
@@ -45,51 +45,51 @@ export default function {FUNCTION_NAME}() {
 
 const pageData = {
   "5g-edge-computing": {
-    functionName: "FiveGEdgeComputingPage",
-    title: "5G Edge Computing",
-    description: "Professional 5G edge computing services coming soon.",
-  },
+    functionName: "FiveGEdgeComputingPage";
+    title: "5G Edge Computing";
+    description: "Professional 5G edge computing services coming soon.";
+  };
   "5g-mobile-applications": {
-    functionName: "FiveGMobileApplicationsPage",
-    title: "5G Mobile Applications",
-    description: "Advanced 5G mobile application development coming soon.",
-  },
+    functionName: "FiveGMobileApplicationsPage";
+    title: "5G Mobile Applications";
+    description: "Advanced 5G mobile application development coming soon.";
+  };
   "5g-network-infrastructure": {
-    functionName: "FiveGNetworkInfrastructurePage",
-    title: "5G Network Infrastructure",
+    functionName: "FiveGNetworkInfrastructurePage";
+    title: "5G Network Infrastructure";
     description:
-      "Comprehensive 5G network infrastructure solutions coming soon.",
-  },
+      "Comprehensive 5G network infrastructure solutions coming soon.";
+  };
   "5g-private-networks": {
-    functionName: "FiveGPrivateNetworksPage",
-    title: "5G Private Networks",
-    description: "Secure 5G private network solutions coming soon.",
-  },
+    functionName: "FiveGPrivateNetworksPage";
+    title: "5G Private Networks";
+    description: "Secure 5G private network solutions coming soon.";
+  };
   "5g-smart-city-solutions": {
-    functionName: "FiveGSmartCitySolutionsPage",
-    title: "5G Smart City Solutions",
-    description: "Innovative 5G smart city solutions coming soon.",
-  },
+    functionName: "FiveGSmartCitySolutionsPage";
+    title: "5G Smart City Solutions";
+    description: "Innovative 5G smart city solutions coming soon.";
+  };
   "5g-data-analytics": {
-    functionName: "FiveGDataAnalyticsPage",
-    title: "5G Data Analytics",
-    description: "Advanced 5G data analytics solutions coming soon.",
-  },
+    functionName: "FiveGDataAnalyticsPage";
+    title: "5G Data Analytics";
+    description: "Advanced 5G data analytics solutions coming soon.";
+  };
   "5g-implementation": {
-    functionName: "FiveGImplementationPage",
-    title: "5G Implementation",
-    description: "Complete 5G network implementation services coming soon.",
-  },
+    functionName: "FiveGImplementationPage";
+    title: "5G Implementation";
+    description: "Complete 5G network implementation services coming soon.";
+  };
   "5g-iot-solutions": {
-    functionName: "FiveGIoTSolutionsPage",
-    title: "5G IoT Solutions",
-    description: "Revolutionary 5G IoT solutions coming soon.",
-  },
+    functionName: "FiveGIoTSolutionsPage";
+    title: "5G IoT Solutions";
+    description: "Revolutionary 5G IoT solutions coming soon.";
+  };
   "5g-solutions": {
-    functionName: "FiveGSolutionsPage",
-    title: "5G Solutions",
-    description: "Comprehensive 5G technology solutions coming soon.",
-  },
+    functionName: "FiveGSolutionsPage";
+    title: "5G Solutions";
+    description: "Comprehensive 5G technology solutions coming soon.";
+  };
 };
 
 function fixPage(pageName) {
