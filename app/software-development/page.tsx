@@ -1,32 +1,6 @@
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-
-export default function SoftwareDevelopmentZionTechGroup() {
-  return (
-    <>
-      <Helmet>
-        <title>Software Development - Zion Tech Group</title>
-        <meta name="description" content="Professional software development services for modern applications." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            Software Development
-          </h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional software development services for modern applications.
-          </p>
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
-      </div>
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Globe, Smartphone, Monitor, Database, Shield, Code } from 'lucide-react';
 
 const SoftwareDevelopmentPage: React.FC = () => {
   const services = [
@@ -49,117 +23,101 @@ const SoftwareDevelopmentPage: React.FC = () => {
       features: ["System integration", "Legacy modernization", "Workflow automation", "Data migration"]
     },
     {
-      title: "API Development",
-      description: "Design and build secure, scalable APIs that enable seamless integration between different systems and services.",
+      title: "Database Solutions",
+      description: "Design and implement efficient database systems that handle large-scale data with optimal performance and security.",
+      icon: <Database className="w-6 h-6" />,
+      features: ["Database design", "Query optimization", "Data modeling", "Performance tuning"]
+    },
+    {
+      title: "Security & Compliance",
+      description: "Implement comprehensive security measures and ensure compliance with industry standards and regulations.",
+      icon: <Shield className="w-6 h-6" />,
+      features: ["Security audits", "Penetration testing", "Compliance implementation", "Data protection"]
+    },
+    {
+      title: "Code Review & Optimization",
+      description: "Review and optimize existing codebases to improve performance, maintainability, and scalability.",
       icon: <Code className="w-6 h-6" />,
-      features: ["RESTful APIs", "GraphQL endpoints", "API documentation", "Rate limiting"]
-    },
-    {
-      title: "Cloud-Native Applications",
-      description: "Build applications designed for the cloud with microservices architecture, containerization, and serverless computing.",
-      icon: <Zap className="w-6 h-6" />,
-      features: ["Microservices", "Containerization", "Serverless functions", "Cloud deployment"]
-    },
-    {
-      title: "AI-Powered Solutions",
-      description: "Integrate artificial intelligence and machine learning capabilities into your applications for enhanced functionality.",
-      icon: <BarChart3 className="w-6 h-6" />,
-      features: ["Machine learning models", "AI integration", "Data analytics", "Predictive features"]
+      features: ["Code quality analysis", "Performance optimization", "Refactoring", "Best practices implementation"]
     }
   ];
 
   const technologies = [
-    { name: "React/Next.js", category: "Frontend" },
-    { name: "Node.js/Express", category: "Backend" },
-    { name: "TypeScript", category: "Language" },
-    { name: "PostgreSQL/MongoDB", category: "Database" },
-    { name: "AWS/Azure", category: "Cloud" },
-    { name: "Docker/Kubernetes", category: "DevOps" },
-    { name: "Python/Django", category: "Backend" },
-    { name: "React Native", category: "Mobile" }
+    "React & Next.js", "Node.js & Express", "TypeScript", "Python & Django", 
+    "Java & Spring", "C# & .NET", "PHP & Laravel", "React Native", 
+    "Flutter", "Swift & Kotlin", "PostgreSQL", "MongoDB", 
+    "Redis", "Docker", "Kubernetes", "AWS & Azure"
   ];
 
   const benefits = [
-    {
-      title: "Faster Time to Market",
-      description: "Accelerate development with agile methodologies and modern tools",
-      icon: <Clock className="w-8 h-8" />
-    },
-    {
-      title: "High Quality Code",
-      description: "Deliver robust, maintainable code with comprehensive testing and code reviews",
-      icon: <Award className="w-8 h-8" />
-    },
-    {
-      title: "Scalable Solutions",
-      description: "Build applications that grow with your business needs",
-      icon: <Settings className="w-8 h-8" />
-    },
-    {
-      title: "Ongoing Support",
-      description: "Get continuous support and maintenance for your applications",
-      icon: <Users className="w-8 h-8" />
-    }
+    "Scalable and maintainable code",
+    "Modern development practices",
+    "Comprehensive testing",
+    "Security-first approach",
+    "Performance optimization",
+    "Ongoing support and maintenance"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Software Development - Zion Tech Group</title>
+        <meta name="description" content="Professional software development services for modern applications." />
+      </Helmet>
+
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Software Development
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your ideas into powerful software solutions. From web applications to mobile apps, 
-            we deliver custom software that drives business growth and innovation.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center"
-            >
-              Start Your Project
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Link>
-            <Link
-              to="/demo"
-              className="border border-green-500 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
-            >
-              View Portfolio
-            </Link>
+      <section className="relative py-20 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              Software Development
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Transform your ideas into powerful, scalable software solutions. 
+              We build custom applications that drive business growth and innovation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center"
+              >
+                Start Your Project
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+              <Link
+                to="/consultation"
+                className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300"
+              >
+                Free Consultation
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Our Development Services
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We specialize in creating custom software solutions that meet your unique business requirements and exceed expectations.
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Our Development Services</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              From web applications to mobile apps, we provide comprehensive software development 
+              solutions tailored to your business needs.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-                <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+              <div key={index} className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors">
+                <div className="text-blue-400 mb-4">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-gray-300 leading-relaxed mb-4">
-                  {service.description}
-                </p>
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-gray-300 mb-4">{service.description}</p>
                 <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                  {service.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+                      <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
                       {feature}
                     </li>
                   ))}
@@ -171,25 +129,20 @@ const SoftwareDevelopmentPage: React.FC = () => {
       </section>
 
       {/* Technologies Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Technologies We Use
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We leverage cutting-edge technologies and frameworks to build modern, scalable applications.
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Technologies We Use</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              We stay up-to-date with the latest technologies and frameworks to deliver 
+              cutting-edge solutions for our clients.
             </p>
           </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
             {technologies.map((tech, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mx-auto mb-2 group-hover:scale-110 transition-transform">
-                  <Code className="w-8 h-8 text-green-400" />
-                </div>
-                <h3 className="text-sm font-semibold text-white mb-1">{tech.name}</h3>
-                <p className="text-xs text-gray-400">{tech.category}</p>
+              <div key={index} className="bg-gray-700 rounded-lg p-4 text-center hover:bg-gray-600 transition-colors">
+                <span className="text-sm font-medium">{tech}</span>
               </div>
             ))}
           </div>
@@ -197,29 +150,22 @@ const SoftwareDevelopmentPage: React.FC = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Why Choose Our Development Services?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              We combine technical expertise with business understanding to deliver software solutions that drive real value.
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Why Choose Our Development Services?</h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Experience the benefits of professional software development with our expert team and proven methodologies.
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {benefit.icon}
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold">{index + 1}</span>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {benefit.title}
-                </h3>
-                <p className="text-gray-300">
-                  {benefit.description}
-                </p>
+                <h3 className="text-lg font-semibold mb-2">{benefit}</h3>
               </div>
             ))}
           </div>
@@ -227,24 +173,22 @@ const SoftwareDevelopmentPage: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-blue-900/30">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Build Your Next Software Solution?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Let our experienced development team bring your ideas to life with cutting-edge technology and proven methodologies.
+      <section className="py-20 bg-gray-800">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Build Your Next Project?</h2>
+          <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+            Let's discuss your software development needs and create a solution that drives your business forward.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center"
             >
               Start Your Project
             </Link>
             <Link
               to="/consultation"
-              className="border border-green-500 text-green-400 px-8 py-3 rounded-lg font-semibold hover:bg-green-500/10 transition-all duration-300"
+              className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300"
             >
               Free Consultation
             </Link>
@@ -255,3 +199,4 @@ const SoftwareDevelopmentPage: React.FC = () => {
   );
 };
 
+export default SoftwareDevelopmentPage;

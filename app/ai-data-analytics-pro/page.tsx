@@ -1,9 +1,7 @@
-import { TrendingUp } from 'lucide-react';
-import { Brain } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { TrendingUp, Brain, BarChart3, Database } from 'lucide-react';
 
 const AIDataAnalyticsProPage = () => {
-  const benefits: string[] = [];
-
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -39,9 +37,7 @@ const AIDataAnalyticsProPage = () => {
     "Scale to handle any data volume",
     "Integrate with existing systems"
   ];
-import { Helmet } from 'react-helmet-async';
 
-export default function AiDataAnalyticsProPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -82,4 +78,6 @@ export default function AiDataAnalyticsProPage() {
       </div>
     </div>
   );
-}
+};
+
+export default AIDataAnalyticsProPage;

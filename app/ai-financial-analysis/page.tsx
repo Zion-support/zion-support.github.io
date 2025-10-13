@@ -1,16 +1,7 @@
 import { Helmet } from 'react-helmet-async';
-import { TrendingUp } from 'lucide-react';
+import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-react';
 
 const AIFinancialAnalysisPage = () => {
-  const benefits = [
-    "Increase investment returns by 25%",
-    "Reduce financial risk by 60%",
-    "Automate 90% of analysis tasks",
-    "Real-time market monitoring",
-    "Advanced fraud detection",
-    "Comprehensive compliance reporting"
-  ];
-
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
