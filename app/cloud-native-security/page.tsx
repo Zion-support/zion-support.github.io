@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 export default function CloudNativeSecurityZionTechGroup() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -58,4 +44,5 @@ export default function CloudNativeSecurityZionTechGroup() {
       </div>
     </div>
   );
+}
 }

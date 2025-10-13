@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function CaseStudiesPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -42,4 +42,5 @@ export default function CaseStudiesPage() {
       </div>
     </div>
   );
+}
 }

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -10,7 +9,6 @@ import { Sparkles } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Package } from 'lucide-react';
-
 const AssetManagementPage = () => {
   const benefits = [
     "Increase asset utilization by 40%",
@@ -51,7 +49,6 @@ const AssetManagementPage = () => {
       icon: <Globe className="w-8 h-8" />,
       title: "Global Access",
       description: "Access your assets from anywhere with cloud-based management platform."
-    }
   ];
 
   const benefits = [
@@ -62,10 +59,12 @@ const AssetManagementPage = () => {
     "Enhanced security controls",
     "Scalable management solution"
   ];
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+
+  return null;
+};
 
 export default function AssetManagementPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -106,4 +105,5 @@ export default function AssetManagementPage() {
       </div>
     </div>
   );
+}
 }

@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { ArrowRight, Users, BarChart3, TrendingUp, Target, Eye, Heart, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Cloud, Settings, Headphones, DollarSign, CreditCard, TrendingDown, Play, Zap, ShoppingCart, Store } from 'lucide-react';
-=======
-import React, { useState } from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React, { useState } from 'react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+import React, { useState } from 'react';import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -29,13 +20,9 @@ import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import { Heart } from 'lucide-react';
-
 const ZionAICustomerInsightsPage = () => {
-<<<<<<< HEAD
-=======
   // const [selectedPlan, setSelectedPlan] = useState('pro');
   // const [selectedPlan, setSelectedPlan] = useState('pro');
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
   const features = [
     {
@@ -109,7 +96,6 @@ const ZionAICustomerInsightsPage = () => {
       description: '24/7 priority support with dedicated customer success manager',
       icon: <Headphones className="w-6 h-6" />,
       included: true
-    }
   ];
 
   const pricingPlans = [
@@ -166,7 +152,6 @@ const ZionAICustomerInsightsPage = () => {
       ],
       popular: false,
       color: 'from-cyan-500 to-blue-500'
-    }
   ];
 
   const useCases = [
@@ -193,7 +178,6 @@ const ZionAICustomerInsightsPage = () => {
       description: 'Improve customer retention and cross-selling opportunities',
       icon: <CreditCard className="w-8 h-8" />,
       examples: ['Risk assessment', 'Cross-selling opportunities', 'Customer lifetime value', 'Fraud detection']
-    }
   ];
 
   return (

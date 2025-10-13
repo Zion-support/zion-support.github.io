@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Users, Brain, Clock, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Calendar, Heart } from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-import EnhancedSEO from '../components/EnhancedSEO';
+import React from 'react';import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Clock } from 'lucide-react';
@@ -19,7 +12,8 @@ import { Calendar } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Heart } from 'lucide-react';
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const ZionHRAssistantPro = () => {
   const features = [
     {
@@ -57,7 +51,6 @@ const ZionHRAssistantPro = () => {
       description: "Monitor employee satisfaction and engagement through AI-powered sentiment analysis",
       icon: <Brain className="w-6 h-6" />,
       benefit: "Proactive engagement"
-    }
   ];
 
   const pricingPlans = [
@@ -110,7 +103,6 @@ const ZionHRAssistantPro = () => {
         "Advanced security"
       ],
       popular: false
-    }
   ];
 
   const hrProcesses = [
@@ -137,14 +129,13 @@ const ZionHRAssistantPro = () => {
       description: "Automated compliance tracking, reporting, and predictive analytics",
       icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+
+  return null;
+};
 
 export default function ZionHrAssistantProPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -185,4 +176,5 @@ export default function ZionHrAssistantProPage() {
       </div>
     </div>
   );
+}
 }

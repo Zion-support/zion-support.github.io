@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -16,12 +10,6 @@ import { Brain } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 const features = [
     {
       title: "Predictive Analytics",
@@ -60,8 +48,8 @@ const testimonials = [
       rating: 5
     }
   ];
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 export default function ZionSecurityShield() {
+
   const features = [
     {
       icon: <Shield className="w-6 h-6" />,
@@ -92,7 +80,6 @@ export default function ZionSecurityShield() {
       icon: <Brain className="w-6 h-6" />,
       title: "Behavioral Analytics",
       description: "Advanced user behavior analysis to detect insider threats and anomalies"
-    }
   ];
 
   const securityFeatures = [
@@ -158,10 +145,13 @@ export default function ZionSecurityShield() {
         "Custom integrations"
       ],
       popular: false
-    }
   ];
 
+  return null;
+};
+
 export default function ZionSecurityShieldPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -203,5 +193,5 @@ export default function ZionSecurityShieldPage() {
     </div>
   );
 }
-
+}
 }

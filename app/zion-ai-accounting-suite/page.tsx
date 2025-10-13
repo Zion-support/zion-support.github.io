@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Calculator, Brain, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Receipt, BarChart3, CreditCard, PieChart } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { Brain, ArrowRight, CheckCircle, CheckCircle, ArrowRight } from 'lucide-react';
-=======
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
@@ -19,8 +11,7 @@ import { Brain } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Receipt } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
+import { Helmet } from 'react-helmet-async';
 const ZionAIAccountingSuite = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -78,7 +69,6 @@ const ZionAIAccountingSuite = () => {
         "Advanced security"
       ],
       popular: false
-    }
   ];
 
   const accountingModules = [
@@ -105,14 +95,13 @@ const ZionAIAccountingSuite = () => {
       description: "Automated tax calculations, filing, and compliance monitoring across all jurisdictions",
       icon: <Calculator className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+
+  return null;
+};
 
 export default function ZionAiAccountingSuitePage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -153,4 +142,5 @@ export default function ZionAiAccountingSuitePage() {
       </div>
     </div>
   );
+}
 }

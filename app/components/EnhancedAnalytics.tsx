@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 interface EnhancedAnalyticsProps {
   children: React.ReactNode;
 }
-
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
   useEffect(() => {
     // Initialize analytics tracking
@@ -14,15 +9,16 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
       if (typeof window !== 'undefined' && process.env.NODE_ENV === 'production') {
         // Google Analytics initialization would go here
         console.log('Analytics initialized');
-      }
     };
 
     // Track page views
+  return null;
+};
+
     const trackPageView = () => {
       if (typeof window !== 'undefined') {
         // Page view tracking would go here
         console.log('Page view tracked:', window.location.pathname);
-      }
     };
 
     initializeAnalytics();
@@ -32,3 +28,6 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({ children }) => {
   return <>{children}</>;
 };
 
+
+  return null;
+};

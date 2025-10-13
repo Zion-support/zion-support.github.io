@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -17,12 +11,6 @@ import { Globe } from 'lucide-react';
 import { Lock } from 'lucide-react';
 import { Filter } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 const features = [
     {
       title: "Predictive Analytics",
@@ -61,8 +49,8 @@ const testimonials = [
       rating: 5
     }
   ];
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 export default function ZionCloudVault() {
+
   const features = [
     {
       icon: <Cloud className="w-6 h-6" />,
@@ -93,7 +81,6 @@ export default function ZionCloudVault() {
       icon: <Database className="w-6 h-6" />,
       title: "Unlimited Storage",
       description: "Scale from GB to PB with no storage limits and automatic scaling"
-    }
   ];
 
   const storageFeatures = [
@@ -158,10 +145,13 @@ export default function ZionCloudVault() {
         "Dedicated account manager"
       ],
       popular: false
-    }
   ];
 
+  return null;
+};
+
 export default function ZionCloudVaultPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -203,5 +193,5 @@ export default function ZionCloudVaultPage() {
     </div>
   );
 }
-
+}
 }

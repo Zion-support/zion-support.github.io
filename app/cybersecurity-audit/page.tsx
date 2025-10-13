@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Search } from 'lucide-react';
@@ -9,7 +8,6 @@ import { CheckCircle } from 'lucide-react';
 import { Zap } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { Target } from 'lucide-react';
-
 const CybersecurityAuditPage = () => {
   const features = [
     {
@@ -35,12 +33,13 @@ const CybersecurityAuditPage = () => {
       description: "Ensure adherence to industry standards like GDPR, HIPAA, and SOC 2",
       icon: <CheckCircle className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+
+  return null;
+};
 
 export default function CybersecurityAuditPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -81,4 +80,5 @@ export default function CybersecurityAuditPage() {
       </div>
     </div>
   );
+}
 }

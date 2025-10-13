@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+import React from 'react';import { ArrowRight, TrendingUp, Globe, CheckCircle, MessageSquare, Target, BarChart3 } from 'lucide-react';
 import React from 'react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-import { ArrowRight, TrendingUp, Globe, CheckCircle, MessageSquare, Target, BarChart3 } from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import FuturisticButton from '../components/FuturisticButton';
-import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
@@ -22,43 +14,12 @@ import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
-
 const AISentimentAnalysisPro = () => {
-  const features = [
-    {
-      title: "Real-time Sentiment Tracking",
-      description: "Monitor customer sentiment across all channels in real-time",
-      icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Multi-language Support",
-      description: "Analyze sentiment in 50+ languages with high accuracy",
-      icon: <Globe className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Emotion Detection",
-      description: "Detect emotions like joy, anger, fear, and sadness in text",
-      icon: <MessageSquare className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Trend Analysis",
-      description: "Identify sentiment trends and patterns over time",
-      icon: <BarChart3 className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
+  return null;
+};
 
-  const benefits = [
-    "95% sentiment accuracy",
-    "Real-time monitoring",
-    "Multi-language support",
-    "Emotion detection",
-    "Trend analysis",
-    "Actionable insights"
-  ];
+  return null;
+};
 
 export default function AiSentimentAnalysisProPage() {
   return (
@@ -101,7 +62,7 @@ export default function AiSentimentAnalysisProPage() {
       </div>
     </div>
   );
+}
+}
 };
-
-
 }

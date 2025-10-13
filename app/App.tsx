@@ -1,11 +1,4 @@
-"use client";
-
-<<<<<<< HEAD
-import { Suspense, lazy } from 'react';
-=======
-import React, { lazy, Suspense } from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import React, { lazy, Suspense } from 'react';import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from "./components/ErrorBoundary";
 import PerformanceMonitor from "./components/PerformanceMonitor";
@@ -18,7 +11,7 @@ import { Helmet } from 'react-helmet-async';
 import { Home } from 'lucide-react';
 import { Network } from 'lucide-react';
 import { Monitor } from 'lucide-react';
-
+"use client";
 // Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"));
 const AboutPage = lazy(() => import("./about/page"));
@@ -32,7 +25,6 @@ const CareersPage = lazy(() => import("./careers/page"));
 const PrivacyPage = lazy(() => import("./privacy/page"));
 const TermsPage = lazy(() => import("./terms/page"));
 const CookiesPage = lazy(() => import("./cookies/page"));
-
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
 const FiveGEdgeComputingPage = lazy(() => import("./5g-edge-computing/page"));
@@ -51,24 +43,17 @@ const FiveGSmartCitySolutionsPage = lazy(
   () => import("./5g-smart-city-solutions/page"),
 );
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
-
 // Main App Component
 function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
-<<<<<<< HEAD
-          <PerformanceMonitor showDetails={false}>
-            <div>Performance monitoring active</div>
-          </PerformanceMonitor>
-=======
-          <PerformanceMonitor />
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-          <AccessibilityEnhancer>
+          <PerformanceMonitor />          <AccessibilityEnhancer>
             <CriticalResourcePreloader />
             <CacheManager />
             <AdvancedPerformanceMonitor />
+}
             <Suspense fallback={<LoadingSpinner />}>
               <Routes>
               <Route path="/" element={<HomePage />} />
@@ -83,7 +68,6 @@ function App() {
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/cookies" element={<CookiesPage />} />
-
               {/* 5G Solutions Routes */}
               <Route
                 path="/5g-data-analytics"
@@ -126,5 +110,4 @@ function App() {
     </HelmetProvider>
   );
 }
-
 export default App;

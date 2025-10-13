@@ -1,30 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, BarChart3, DollarSign } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
-import React from "react";
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React from "react";
+import React from "react";import React from "react";
 import { ArrowRight, CheckCircle, BarChart3, DollarSign } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 import SEOOptimizer from "../components/SEOOptimizer";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { DollarSign } from 'lucide-react';
-
 export default function ZionAnalyticsPro() {
+
   const features = [
     "Real-time dashboard analytics",
     "Predictive business insights",
@@ -73,10 +60,13 @@ export default function ZionAnalyticsPro() {
       description: "For large organizations",
       features: ["Unlimited data sources", "AI insights", "24/7 support", "Unlimited users", "White-label options"],
       popular: false
-    }
   ];
 
+  return null;
+};
+
 export default function ZionAnalyticsProPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -118,5 +108,5 @@ export default function ZionAnalyticsProPage() {
     </div>
   );
 }
-
+}
 }

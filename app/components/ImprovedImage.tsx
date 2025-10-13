@@ -1,20 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ImageIcon } from 'lucide-react';
-=======
 import React, { useState, useRef, useEffect } from 'react';
-import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React, { useRef, useState, useEffect } from 'react';
+import { Cloud } from 'lucide-react';import React, { useRef, useState, useEffect } from 'react';
 import { ImageIcon } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
 interface ImprovedimageProps {
   className?: string;
   children?: React.ReactNode;
 }
-
 export default function Improvedimage({ className = '', children, ...props }: ImprovedimageProps) {
   return (
     <div className={`improvedimage-component ${className}`} {...props}>

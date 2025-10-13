@@ -1,12 +1,8 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
 export default function Page() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
@@ -30,4 +26,5 @@ export default function Page() {
       </div>
     </div>
   );
+}
 }

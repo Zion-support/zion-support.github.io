@@ -1,26 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-=======
 import React from 'react';
-import { 
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-  Cpu, 
-  Zap, 
-  Shield, 
-  Brain, 
-  Target, 
-  CheckCircle, 
-  Globe,
-  Activity,
-  Lock,
-  Gauge
-} from 'lucide-react';
-=======
-import React from 'react';
+import {   Cpu, 
 import { Helmet } from 'react-helmet-async';
 import { Cpu, Zap, Shield, Brain, Target, CheckCircle, Globe, Activity, Lock, Gauge } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
@@ -42,7 +23,16 @@ import { Lock } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { Activity } from 'lucide-react';
-
+  Zap, 
+  Shield, 
+  Brain, 
+  Target, 
+  CheckCircle, 
+  Globe,
+  Activity,
+  Lock,
+  Gauge
+} from 'lucide-react';
 const QuantumComputingSolutionsPage = () => {
   const features = [
     {
@@ -68,7 +58,6 @@ const QuantumComputingSolutionsPage = () => {
       description: "Solve complex optimization problems with quantum algorithms",
       icon: <Target className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
 
   const pricingPlans = [
@@ -122,7 +111,6 @@ const QuantumComputingSolutionsPage = () => {
         "Dedicated quantum team"
       ],
       popular: false
-    }
   ];
 
   const capabilities = [
@@ -149,7 +137,6 @@ const QuantumComputingSolutionsPage = () => {
       description: "Maintain quantum states for extended computation periods",
       coherence: "99.7%",
       icon: <Activity className="w-6 h-6" />
-    }
   ];
 
   const stats = [
@@ -159,7 +146,11 @@ const QuantumComputingSolutionsPage = () => {
     { number: "24/7", label: "Quantum Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
 
+  return null;
+};
+
 export default function QuantumComputingSolutionsPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -200,7 +191,6 @@ export default function QuantumComputingSolutionsPage() {
       </div>
     </div>
   );
+}
 };
-
-
 }

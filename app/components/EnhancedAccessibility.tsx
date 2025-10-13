@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
-
 const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   useEffect(() => {
     // Add keyboard navigation enhancements
@@ -26,7 +17,6 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
         }
       }
     };
-
     // Add focus management
     const handleFocusIn = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
@@ -34,33 +24,31 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
         target.setAttribute('data-focused', 'true');
       }
     };
-
     const handleFocusOut = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       if (target) {
         target.removeAttribute('data-focused');
       }
     };
-
     // Add ARIA landmarks
     const addLandmarks = () => {
       const main = document.querySelector('main');
       if (main && !main.getAttribute('role')) {
         main.setAttribute('role', 'main');
-      }
 
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
-      }
 
       const footer = document.querySelector('footer');
       if (footer && !footer.getAttribute('role')) {
         footer.setAttribute('role', 'contentinfo');
-      }
     };
 
     // Add skip links
+  return null;
+};
+
     const addSkipLinks = () => {
       const skipLink = document.createElement('a');
       skipLink.href = '#main-content';

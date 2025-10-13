@@ -1,18 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from "react";
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-import { Helmet } from 'react-helmet-async';
-=======
+import React from "react";import { Helmet } from 'react-helmet-async';
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
 export default function ZionAiSocialMediaManagerPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -53,4 +46,5 @@ export default function ZionAiSocialMediaManagerPage() {
       </div>
     </div>
   );
+}
 }

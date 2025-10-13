@@ -1,31 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Star, Mic, Video, Calendar } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
-import React from "react";
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React from "react";
+import React from "react";import React from "react";
 import { ArrowRight, CheckCircle, Mic, Video, Calendar } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 import SEOOptimizer from "../components/SEOOptimizer";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Search } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Calendar } from 'lucide-react';
 import { Mic } from 'lucide-react';
-
 export default function ZionAIMeetingTranscriber() {
+
   const features = [
     "Real-time meeting transcription with 99.5% accuracy",
     "Multi-language support (100+ languages)",
@@ -74,7 +61,6 @@ export default function ZionAIMeetingTranscriber() {
       description: "For large organizations",
       features: ["Unlimited hours", "Custom integrations", "Dedicated support", "Unlimited users", "Advanced analytics", "White-labeling"],
       popular: false
-    }
   ];
 
   const testimonials = [
@@ -98,10 +84,13 @@ export default function ZionAIMeetingTranscriber() {
       role: "Director",
       content: "The automatic action item extraction saves us hours of follow-up work. Highly recommended!",
       rating: 5
-    }
   ];
 
+  return null;
+};
+
 export default function ZionAiMeetingTranscriberPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -143,5 +132,5 @@ export default function ZionAiMeetingTranscriberPage() {
     </div>
   );
 }
-
+}
 }

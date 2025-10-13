@@ -4,7 +4,6 @@ import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticButton from "./components/FuturisticButton";
 import ResponsiveContainer from "./components/ResponsiveContainer";
-
 const HomePage = () => {
   // const structuredData = {
   //   "@context": "https://schema.org",
@@ -132,7 +131,6 @@ const HomePage = () => {
       icon: <Users className="w-6 h-6" />,
       link: "/zion-ai-crm-pro",
       featured: true
-    }
   ];
 
   const stats = [
@@ -163,7 +161,6 @@ const HomePage = () => {
       role: "Operations Director",
       content: "Outstanding support and cutting-edge technology. Zion Tech Group is our trusted partner for all digital transformation needs.",
       rating: 5
-    }
   ];
 
   return (

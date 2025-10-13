@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useRef } from 'react';
-=======
 import { Star } from 'lucide-react';
 import { Monitor } from 'lucide-react';
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
+import { useState, useEffect } from 'react';
 interface PerformanceMetrics {
   loadTime: number
   firstContentfulPaint: number
@@ -15,7 +9,6 @@ interface PerformanceMetrics {
   cumulativeLayoutShift: number
   timeToInteractive: number
 }
-
 export const usePerformanceMonitor = () => {
   const metricsRef = useRef<PerformanceMetrics>({
     loadTime: 0,
@@ -25,11 +18,9 @@ export const usePerformanceMonitor = () => {
     cumulativeLayoutShift: 0,
     timeToInteractive: 0
   })
-=======
-import { useState, useEffect } from 'react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
 
 export function usePerformanceMonitor() {
+
   const [state, setState] = useState<string | null>(null);
   
   useEffect(() => {
@@ -38,6 +29,8 @@ export function usePerformanceMonitor() {
   }, []);
   
   return state;
-}
 
 export default usePerformanceMonitor;
+
+  return null;
+};

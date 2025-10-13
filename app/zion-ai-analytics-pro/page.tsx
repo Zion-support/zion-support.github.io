@@ -1,10 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { BarChart3, ArrowRight, Sparkles, CheckCircle, Star, Users, Brain, Target, Mail, Phone, MapPin, Play, Settings, Database, Cloud, Watch, FileText } from 'lucide-react';
-=======
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -23,8 +18,6 @@ import { Phone } from 'lucide-react';
 import { FileText } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
 const ZionAIAnalyticsProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -66,7 +59,6 @@ const ZionAIAnalyticsProPage = () => {
       description: 'Get intelligent recommendations and insights powered by advanced AI algorithms.',
       icon: <Target className="w-6 h-6" />,
       benefits: ['Smart recommendations', 'Pattern recognition', 'Automated alerts', 'Action suggestions']
-    }
   ];
 
   const pricingPlans = [
@@ -120,7 +112,6 @@ const ZionAIAnalyticsProPage = () => {
         'SLA guarantee'
       ],
       popular: false
-    }
   ];
 
   const integrations = [
@@ -137,10 +128,12 @@ const ZionAIAnalyticsProPage = () => {
     { name: 'MongoDB', logo: 'MG', category: 'Database' },
     { name: 'AWS', logo: 'AW', category: 'Cloud' }
   ];
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+
+  return null;
+};
 
 export default function ZionAiAnalyticsProPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -181,4 +174,5 @@ export default function ZionAiAnalyticsProPage() {
       </div>
     </div>
   );
+}
 }

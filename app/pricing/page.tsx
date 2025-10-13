@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -21,14 +15,12 @@ import { Smartphone } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
-export default function Pricing() {
-=======
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+export default function Pricing() {
+
+
+  return null;
+};
 
 export default function Pricing() {
   const features = [
@@ -51,7 +43,6 @@ export default function Pricing() {
       title: "Automated Reporting",
       description: "Generate detailed reports automatically",
       icon: "FileText"
-    }
   ];
 const services = [
     {
@@ -68,14 +59,16 @@ const services = [
       title: "Performance Optimization",
       description: "Optimize your cloud performance",
       icon: "Zap"
-    }
   ];
+  return null;
+};
+
 export default function Page() {
+
   const features = [
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }
   ];
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
   const aiServicesPricing = [
     {
       name: "AI Analytics Dashboard",
@@ -124,7 +117,6 @@ export default function Page() {
       ],
       popular: false,
       color: "from-purple-500 to-pink-500"
-    }
   ];
 
   const microSaasPricing = [
@@ -175,7 +167,6 @@ export default function Page() {
       ],
       popular: false,
       color: "from-blue-500 to-cyan-500"
-    }
   ];
 
   const enterprisePricing = [
@@ -214,7 +205,6 @@ export default function Page() {
       ],
       popular: true,
       color: "from-indigo-500 to-purple-500"
-    }
   ];
 
   const faqs = [
@@ -241,10 +231,13 @@ export default function Page() {
     {
       question: "What happens if I exceed my plan limits?",
       answer: "We'll notify you before you reach your limits and offer options to upgrade or purchase additional capacity."
-    }
   ];
 
+  return null;
+};
+
 export default function PricingPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -285,4 +278,5 @@ export default function PricingPage() {
       </div>
     </div>
   );
+}
 }

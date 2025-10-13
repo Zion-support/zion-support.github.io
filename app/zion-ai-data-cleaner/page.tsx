@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-=======
 import React from "react";
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import { Helmet } from 'react-helmet-async';
-
 export default function ZionAIDataCleaner() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
@@ -17,4 +14,5 @@ export default function ZionAIDataCleaner() {
       </div>
     </div>
   );
+}
 }

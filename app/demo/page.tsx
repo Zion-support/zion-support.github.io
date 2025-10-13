@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar, Users } from 'lucide-react';
-=======
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Pause } from 'lucide-react';
@@ -15,15 +11,10 @@ import { Monitor } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Hand } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
 import { useState } from 'react';
-=======
-import { ArrowRight } from 'lucide-react';
 import { Play, Pause, SkipForward, SkipBack, Maximize, ArrowRight, CheckCircle, Star, Calendar, Users, Award } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
 export default function Page() {
+
   const [currentDemo, setCurrentDemo] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -54,7 +45,6 @@ export default function Page() {
       icon: <BarChart3 className="w-8 h-8 text-yellow-400" />,
       title: "Data-Driven",
       description: "Make informed decisions with data"
-    }
   ];
 
   const demos = [
@@ -117,24 +107,36 @@ export default function Page() {
       features: ['Auto-scaling', 'Disaster Recovery', 'Cost Optimization', 'Multi-cloud Support'],
       thumbnail: '/api/placeholder/800/450',
       videoUrl: '#'
-    }
   ];
+
+  return null;
+};
 
   const handlePlayPause = () => {
     setIsPlaying(!isPlaying);
   };
+
+  return null;
+};
 
   const handleNextDemo = () => {
     setCurrentDemo((prev) => (prev + 1) % demos.length);
     setIsPlaying(false);
   };
 
+  return null;
+};
+
   const handlePrevDemo = () => {
     setCurrentDemo((prev) => (prev - 1 + demos.length) % demos.length);
     setIsPlaying(false);
   };
 
+  return null;
+};
+
 export default function DemoPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -176,5 +178,5 @@ export default function DemoPage() {
     </div>
   );
 }
-
+}
 }

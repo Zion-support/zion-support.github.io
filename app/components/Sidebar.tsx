@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-import React, { useState, useCallback, useMemo } from 'react';
-<<<<<<< HEAD
-import { Link, useLocation } from 'react-router-dom';
-import {
-  X, 
-  ChevronDown, 
-  ChevronRight,
-  Home,
-  Users,
-  Settings,
-  BarChart3,
-  Shield,
-  Cloud,
-  Code,
-  Brain,
-  Zap,
-  Database,
-  Star,
-  ArrowRight,
-  Phone,
-  Mail,
-  MapPin
-} from 'lucide-react';
-=======
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Home } from 'lucide-react';
@@ -40,21 +15,13 @@ import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React, { useMemo, useCallback, useState } from 'react';
+import { Cloud } from 'lucide-react';import React, { useMemo, useCallback, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { X, ChevronDown, ChevronRight, Home, Users, Settings, BarChart3, Shield, Cloud, Code, Brain, Zap, Database, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
 interface SidebarProps {
   isOpen: boolean;
   onClose: () => void;
 }
-
 export default function Sidebar({ isOpen, onClose }: SidebarProps) {
   const location = useLocation();
   const [expandedItems, setExpandedItems] = useState<string[]>([]);
@@ -117,7 +84,6 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       path: '/contact',
       icon: <Phone className="w-5 h-5" />,
       children: []
-    }
   ], []);
 
   if (!isOpen) return null;

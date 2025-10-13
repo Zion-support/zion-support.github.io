@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { Brain, ArrowRight, CheckCircle, Star, Zap, Users, Target, Cpu, Globe, Eye, Hand } from 'lucide-react';
-=======
-import React from 'react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-import EnhancedSEO from '../components/EnhancedSEO';
+import React from 'react';import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
@@ -17,7 +10,8 @@ import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { Hand } from 'lucide-react';
-
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 const ZionAINeuralInterface = () => {
   const features = [
     {
@@ -43,7 +37,6 @@ const ZionAINeuralInterface = () => {
       description: "Ultra-low latency processing ensures instant response to your neural commands and thoughts.",
       icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
 
   const capabilities = [
@@ -106,7 +99,6 @@ const ZionAINeuralInterface = () => {
         "SLA guarantee"
       ],
       popular: false
-    }
   ];
 
   const testimonials = [
@@ -133,7 +125,6 @@ const ZionAINeuralInterface = () => {
       content: "The neural pattern recognition capabilities are outstanding. We've seen remarkable improvements in cognitive performance across all test subjects.",
       rating: 5,
       avatar: "EW"
-    }
   ];
 
   const stats = [
@@ -142,12 +133,12 @@ const ZionAINeuralInterface = () => {
     { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "50+", label: "Languages Supported", icon: <Globe className="w-6 h-6" /> }
   ];
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+
+  return null;
+};
 
 export default function ZionAiNeuralInterfacePage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -188,4 +179,5 @@ export default function ZionAiNeuralInterfacePage() {
       </div>
     </div>
   );
+}
 }

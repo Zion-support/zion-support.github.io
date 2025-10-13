@@ -1,22 +1,5 @@
 import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-<<<<<<< HEAD
-import {
-  Brain, 
-  Shield, 
-  Zap, 
-  Globe, 
-  Star, 
-  Users, 
-  Sparkles, 
-  Mail, 
-  Monitor,
-  ChevronDown,
-  ChevronUp,
-  Menu,
-  X
-} from 'lucide-react';
-=======
 import React, { useState, useCallback, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -46,17 +29,11 @@ import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import { Package } from 'lucide-react';
 import { Heart } from 'lucide-react';
-import { Receipt } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import { Link } from 'react-router-dom';
+import { Receipt } from 'lucide-react';import { Link } from 'react-router-dom';
 import { Menu, X, Brain, Shield, Zap, Globe, ChevronDown, ChevronUp } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
-
 export default function Navigation({ onSidebarToggle }: NavigationProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -114,7 +91,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
       name: 'Contact',
       path: '/contact',
       icon: <Globe className="w-4 h-4" />
-    }
   ];
 
   const serviceDropdownItems = [
@@ -135,8 +111,10 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: '5G Implementation', path: '/5g-implementation' },
         { name: '5G Private Networks', path: '/5g-private-networks' }
       ]
-    }
   ];
+
+  return null;
+};
 
 export default function Navigation({ className = '', children, ...props }: NavigationProps) {
   return (

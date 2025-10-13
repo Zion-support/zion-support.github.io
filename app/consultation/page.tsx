@@ -1,8 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Clock } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { MapPin } from 'lucide-react';
@@ -16,9 +13,10 @@ import { Calendar } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
+import { Link } from 'react-router-dom';
+import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from 'lucide-react';
 export default function ConsultationPage() {
+
   const benefits = [
     "Benefit 1",
     "Benefit 2"
@@ -98,7 +96,6 @@ export default function ConsultationPage() {
       price: "Free",
       icon: <Globe className="w-6 h-6" />,
       features: ["Network Planning", "Use Case Analysis", "Technology Selection", "Implementation Timeline"]
-    }
   ];
 
   return (
@@ -453,7 +450,3 @@ export default function ConsultationPage() {
 </div>
   );
 }
-=======
-import { Link } from 'react-router-dom';
-import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9

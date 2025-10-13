@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-import { BarChart3, Package, TrendingUp, AlertTriangle, Zap, ArrowRight, CheckCircle, Star, Smartphone, Globe } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import { Link } from 'react-router-dom';
-import { Zap, ArrowRight, CheckCircle, CheckCircle, ArrowRight } from 'lucide-react';
-=======
 import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import { Link } from 'react-router-dom';
@@ -19,8 +12,6 @@ import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Package } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
 const ZionAIInventoryManager = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];
 
@@ -77,7 +68,6 @@ const ZionAIInventoryManager = () => {
         "Dedicated account manager"
       ],
       popular: false
-    }
   ];
 
   return (

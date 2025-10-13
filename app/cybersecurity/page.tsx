@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, Users, Database, Mail, Smartphone, Globe } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
@@ -19,13 +13,8 @@ import { Monitor } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
 export default function Cybersecurity() {
-=======
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+
 const features = [
     {
       title: "Predictive Analytics",
@@ -46,7 +35,6 @@ const features = [
       title: "Automated Reporting",
       description: "Generate detailed reports automatically",
       icon: "FileText"
-    }
   ];
 const capabilities = [
     "Machine Learning Models",
@@ -71,14 +59,16 @@ const services = [
       title: "Performance Optimization",
       description: "Optimize your cloud performance",
       icon: "Zap"
-    }
   ];
+  return null;
+};
+
 export default function Page() {
+
   const features = [
     { title: "Feature 1", description: "Description 1" },
     { title: "Feature 2", description: "Description 2" }
   ];
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
   const services = [
     {
       title: "AI Cybersecurity Suite",
@@ -133,10 +123,13 @@ export default function Page() {
       color: "from-teal-500 to-cyan-500",
       price: "Starting at $179/month",
       features: ["Vulnerability Scanning", "Patch Management", "Policy Enforcement", "Compliance Automation"]
-    }
   ];
 
+  return null;
+};
+
 export default function CybersecurityPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -178,5 +171,5 @@ export default function CybersecurityPage() {
     </div>
   );
 }
-
+}
 }

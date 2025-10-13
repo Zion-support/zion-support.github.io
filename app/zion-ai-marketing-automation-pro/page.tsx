@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
 import { Star } from 'lucide-react';
@@ -16,19 +11,14 @@ import { Mail } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Phone } from 'lucide-react';
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
 import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Users, Globe, Play, Address } from 'lucide-react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { Target, Users, MessageSquare, Brain, Zap, ArrowRight, Play, CheckCircle, Mail, Phone, Globe } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
 export default function page() {
+
   const stats = [
     { label: "Stat 1", value: "100%" }
   ];
@@ -75,7 +65,6 @@ export default function page() {
       description: "Intelligent lead nurturing workflows that automatically guide prospects through the sales funnel with personalized content and timing.",
       icon: <Zap className="w-6 h-6" />,
       benefits: ["Behavioral triggers", "Personalized sequences", "Lead scoring integration", "Conversion optimization"]
-    }
   ];
 
   const pricingPlans = [
@@ -128,10 +117,13 @@ export default function page() {
         "Dedicated account manager"
       ],
       popular: false
-    }
   ];
 
+  return null;
+};
+
 export default function ZionAiMarketingAutomationProPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -173,5 +165,5 @@ export default function ZionAiMarketingAutomationProPage() {
     </div>
   );
 }
-
+}
 }

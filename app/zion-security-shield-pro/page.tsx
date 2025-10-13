@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { ArrowRight } from 'lucide-react';
 import { Search } from 'lucide-react';
 import { Award } from 'lucide-react';
@@ -17,19 +12,14 @@ import { Monitor } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { FileText } from 'lucide-react';
-
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 import { ArrowRight, Shield, Brain, CheckCircle, Star, Award, Zap, Globe, Mail, Phone, Sparkles, FileText, Eye, Fingerprint, Search } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
 export default function Page() {
+
   const benefits = [
     "Benefit 1",
     "Benefit 2"
@@ -70,7 +60,6 @@ export default function Page() {
       description: "Secure access with advanced MFA options including biometric authentication, hardware tokens, and mobile app verification.",
       icon: <Fingerprint className="w-8 h-8" />,
       benefits: ["Biometric authentication", "Hardware tokens", "Mobile app verification", "SSO integration"]
-    }
   ];
 
   const securityStats = [
@@ -127,10 +116,13 @@ export default function Page() {
         "On-premise deployment"
       ],
       popular: false
-    }
   ];
 
+  return null;
+};
+
 export default function ZionSecurityShieldProPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -172,5 +164,5 @@ export default function ZionSecurityShieldProPage() {
     </div>
   );
 }
-
+}
 }

@@ -1,135 +1,14 @@
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Receipt } from 'lucide-react';
-
-"use client";
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-import { Receipt, Bot, Brain, Shield, CheckCircle, Star, BarChart3, TrendingUp, DollarSign } from 'lucide-react';
-=======
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
+import { Link } from 'react-router-dom';import { Receipt, Bot, Brain, Shield, CheckCircle, Star, BarChart3, TrendingUp, DollarSign } from 'lucide-react';
 export default function AIExpenseTracker() {
-  const features = [
-    {
-      icon: <Brain className="w-12 h-12 text-cyan-400" />,
-      title: "AI-Powered Analysis",
-      description:
-        "Advanced AI algorithms analyze your spending patterns and provide intelligent insights.",
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-purple-400" />,
-      title: "Real-time Tracking",
-      description:
-        "Track your expenses in real-time with automatic categorization and smart notifications.",
-    },
-    {
-      icon: <Shield className="w-12 h-12 text-green-400" />,
-      title: "Secure & Private",
-      description:
-        "Bank-level security ensures your financial data is protected and private.",
-    },
-    {
-      icon: <BarChart3 className="w-12 h-12 text-yellow-400" />,
-      title: "Smart Reports",
-      description:
-        "Generate detailed reports and visualizations to understand your spending habits.",
-    },
-  ];
+  return null;
+};
 
-  const capabilities = [
-    {
-      title: "Automatic Categorization",
-      description:
-        "AI automatically categorizes your expenses into predefined categories like food, transportation, entertainment, etc.",
-      icon: <Bot className="w-8 h-8 text-blue-400" />,
-    },
-    {
-      title: "Receipt Scanning",
-      description:
-        "Simply take a photo of your receipt and let AI extract all the relevant information automatically.",
-      icon: <Receipt className="w-8 h-8 text-green-400" />,
-    },
-    {
-      title: "Budget Management",
-      description:
-        "Set budgets for different categories and get alerts when you're approaching your limits.",
-      icon: <DollarSign className="w-8 h-8 text-yellow-400" />,
-    },
-    {
-      title: "Expense Insights",
-      description:
-        "Get personalized insights and recommendations to help you save money and manage finances better.",
-      icon: <Brain className="w-8 h-8 text-purple-400" />,
-    },
-  ];
-
-  const pricingPlans = [
-    {
-      name: "Basic",
-      price: "$9.99",
-      period: "/month",
-      description: "Perfect for personal use",
-      features: [
-        "Unlimited expense tracking",
-        "Basic AI categorization",
-        "Receipt scanning (50/month)",
-        "Basic reports",
-        "Mobile app access",
-        "Email support",
-      ],
-      popular: false,
-    },
-    {
-      name: "Pro",
-      price: "$19.99",
-      period: "/month",
-      description: "Ideal for professionals",
-      features: [
-        "Everything in Basic",
-        "Advanced AI insights",
-        "Unlimited receipt scanning",
-        "Advanced analytics",
-        "Budget management",
-        "Priority support",
-        "API access",
-      ],
-      popular: true,
-    },
-    {
-      name: "Business",
-      price: "$49.99",
-      period: "/month",
-      description: "For small businesses",
-      features: [
-        "Everything in Pro",
-        "Team collaboration",
-        "Multi-user accounts",
-        "Advanced reporting",
-        "Integration with accounting software",
-        "Dedicated support",
-        "Custom categories",
-      ],
-      popular: false,
-    },
-  ];
+  return null;
+};
 
 export default function AiExpenseTrackerPage() {
   return (
@@ -173,5 +52,6 @@ export default function AiExpenseTrackerPage() {
     </div>
   );
 }
-
+}
+}
 }

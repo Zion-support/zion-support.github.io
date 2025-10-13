@@ -1,10 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import SEOOptimizer from "../components/SEOOptimizer";
-import { Cloud, Shield, Network, Database, Code, Headphones, Smartphone, Monitor, Target, HardDrive, Settings, ArrowRight, Star, ArrowRight, ArrowRight } from 'lucide-react';
-=======
 import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -22,9 +16,8 @@ import { BarChart3 } from 'lucide-react';
 import { Headphones } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
 export default function ITServices() {
+
   const itServices = [
     {
       id: "cloud-infrastructure",
@@ -373,7 +366,6 @@ export default function ITServices() {
       reviews: 1789,
       link: "/managed-it-services",
       featured: false
-    }
   ];
 
   const processSteps = [
@@ -400,7 +392,6 @@ export default function ITServices() {
       title: "Monitoring & Support",
       description: "Provide ongoing monitoring, maintenance, and support to ensure optimal performance and security.",
       icon: <Monitor className="w-8 h-8" />
-    }
   ];
 
   return (

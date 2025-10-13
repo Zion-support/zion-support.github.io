@@ -1,8 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-<<<<<<< HEAD
-=======
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Brain } from 'lucide-react';
@@ -10,7 +8,6 @@ import { Sparkles } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Box } from 'lucide-react';
 import { Mic } from 'lucide-react';
-
 const ARVRDevelopmentPage = () => {
   const features = [
     {
@@ -36,11 +33,13 @@ const ARVRDevelopmentPage = () => {
       description: "Deploy across all major AR/VR platforms including Meta, Apple, and Microsoft",
       icon: <Globe className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
+
+  return null;
+};
 
 export default function Page() {
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
@@ -64,4 +63,5 @@ export default function Page() {
       </div>
     </div>
   );
+}
 }

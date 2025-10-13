@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Shield } from 'lucide-react';
@@ -10,12 +9,13 @@ import { Globe } from 'lucide-react';
 import { Play } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-
 const WebinarsPage = () => {
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+
+  return null;
+};
 
 export default function WebinarsPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -56,4 +56,5 @@ export default function WebinarsPage() {
       </div>
     </div>
   );
+}
 }

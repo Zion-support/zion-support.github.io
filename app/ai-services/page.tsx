@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from "react";
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-=======
-import React from 'react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+import React from "react";import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 export default function AIServices() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
@@ -49,4 +41,6 @@ export default function AIServices() {
       </div>
     </div>
   );
+}
+}
 }

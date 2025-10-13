@@ -1,144 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Cpu, Brain, Atom, Users, Award, Globe, Lock, TrendingUp, Monitor, MessageSquare, Phone } from 'lucide-react';
-import { Link } from "react-router-dom";
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-import { Helmet } from 'react-helmet-async';
+import { Link } from "react-router-dom";import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
-import React from "react";
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-import SEOOptimizer from "../../components/SEOOptimizer";
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Cpu } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
-import { Phone } from 'lucide-react';
-=======
 import { ArrowRight } from 'lucide-react';
 import { Atom, ArrowRight, Monitor, Cpu, Users, Award, CheckCircle, MessageSquare, Phone, Globe, Star } from 'lucide-react';
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
-
 export default function AIQuantumComputingPage() {
-  const testimonials = [
-    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5, avatar: "/api/placeholder/64/64" }
-  ];
-  const features = [
-    "Quantum Algorithm Development",
-    "Quantum Circuit Optimization",
-    "Quantum Error Correction",
-    "Quantum Machine Learning",
-    "Quantum Cryptography",
-    "Quantum Simulation"
-  ];
+  return null;
+};
 
-  const applications = [
-    "Drug Discovery & Molecular Simulation",
-    "Financial Modeling & Risk Analysis",
-    "Cryptography & Security",
-    "Optimization Problems",
-    "Machine Learning & AI",
-    "Climate Modeling"
-  ];
-  
-  const pricingPlans = [
-    {
-      name: "Research",
-      price: "$2,999",
-      period: "/month",
-      description: "Perfect for academic research and small-scale quantum experiments",
-      features: [
-        "Up to 100 quantum circuit executions",
-        "Basic quantum algorithms library",
-        "Quantum simulator access",
-        "Email support",
-        "Basic documentation",
-        "5 user accounts",
-        "Standard quantum gates"
-      ],
-      popular: false
-    },
-    {
-      name: "Enterprise",
-      price: "$9,999",
-      period: "/month",
-      description: "Ideal for large organizations and commercial quantum applications",
-      features: [
-        "Up to 1,000 quantum circuit executions",
-        "Advanced quantum algorithms library",
-        "Real quantum hardware access",
-        "Priority support",
-        "Advanced documentation",
-        "25 user accounts",
-        "Custom quantum gates",
-        "API access",
-        "Quantum error correction",
-        "Dedicated quantum resources"
-      ],
-      popular: true
-    },
-    {
-      name: "Quantum Lab",
-      price: "$29,999",
-      period: "/month",
-      description: "For quantum research institutions and cutting-edge applications",
-      features: [
-        "Unlimited quantum circuit executions",
-        "Complete quantum algorithms library",
-        "Exclusive quantum hardware access",
-        "24/7 dedicated support",
-        "Custom quantum development",
-        "Unlimited user accounts",
-        "Custom quantum processors",
-        "Advanced API access",
-        "Quantum entanglement protocols",
-        "Dedicated quantum scientists",
-        "White-label quantum solutions",
-        "On-premise quantum deployment"
-      ],
-      popular: false
-    }
-  ];
-
-  const applications = [
-    {
-      title: "Drug Discovery",
-      description: "Simulate molecular interactions and discover new pharmaceutical compounds",
-      icon: <Atom className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Financial Optimization",
-      description: "Optimize complex portfolios and risk management strategies",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Cryptography",
-      description: "Develop unbreakable quantum encryption and secure communications",
-      icon: <Lock className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Machine Learning",
-      description: "Train quantum neural networks for advanced pattern recognition",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
+  return null;
+};
 
 export default function AiQuantumComputingPage() {
   return (
@@ -182,5 +53,6 @@ export default function AiQuantumComputingPage() {
     </div>
   );
 }
-
+}
+}
 }

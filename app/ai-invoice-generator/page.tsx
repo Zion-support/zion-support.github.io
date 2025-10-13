@@ -1,15 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-
 "use client";
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-=======
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
 export default function AiInvoiceGeneratorZionTechGroup() {
   return (
     <div>
@@ -35,4 +27,6 @@ export default function AiInvoiceGeneratorZionTechGroup() {
       </div>
 </div>
   );
+}
+}
 }

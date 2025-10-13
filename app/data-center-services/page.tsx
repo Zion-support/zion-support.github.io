@@ -1,8 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { Server, Shield, ArrowRight, Sparkles, CheckCircle, Globe, Settings } from 'lucide-react';
-=======
 import { ArrowRight } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
@@ -13,8 +10,6 @@ import { Globe } from 'lucide-react';
 import { Server } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { Cloud } from 'lucide-react';
->>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
-
 const DataCenterServicesPage = () => {
   const benefits = [
     "99.99% uptime guarantee",
@@ -49,7 +44,6 @@ const DataCenterServicesPage = () => {
       description: "Round-the-clock monitoring and support to ensure optimal performance",
       icon: <Settings className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
-    }
   ];
 
   return (

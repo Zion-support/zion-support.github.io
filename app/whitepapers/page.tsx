@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { Download } from 'lucide-react';
@@ -13,7 +12,6 @@ import { Target } from 'lucide-react';
 import { Filter } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
-
 const WhitepapersPage = () => {
   const whitepapers = [
     {
@@ -63,12 +61,13 @@ const WhitepapersPage = () => {
       pages: "35 pages",
       downloads: "6,100+",
       icon: <BookOpen className="w-6 h-6" />
-    }
   ];
-=======
->>>>>>> 1768cb0a99d39a994ad89c8211ed1a93ecd366f9
+
+  return null;
+};
 
 export default function WhitepapersPage() {
+
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -109,4 +108,5 @@ export default function WhitepapersPage() {
       </div>
     </div>
   );
+}
 }
