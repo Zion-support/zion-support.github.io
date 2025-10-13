@@ -1,4 +1,15 @@
-import { withErrorLogging } from './withErrorLogging.cjs';
+const withErrorLogging = (handler) => {
+  return async (req, res) => {
+    try {
+      await handler(req, res);
+    } catch (error) {
+      console.error('API Error:', error);
+      res.statusCode = 500;
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify({ error: 'Internal server error' }));
+    }
+  };
+};
 
 async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -8,11 +19,31 @@ async function handler(req, res) {
     return;
   }
 
+  const { amount, currency = 'usd' } = req.body || {};
+
+  if (!amount) {
+    res.statusCode = 400;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Amount is required' }));
+    return;
+  }
+
+  try {
+    const paymentIntent = {
+      id: `pi_${Date.now()}`,
+      amount: Math.round(amount * 100), // Convert to cents
+      currency,
+      status: 'requires_payment_method',
+      created: Math.floor(Date.now() / 1000)
     };
 
     res.statusCode = 200;
     res.json({ paymentIntent });
-  } catch (_err) { // eslint-disable-line no-unused-vars
-    // console.error("Error:", err);
+  } catch {
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
+  }
+}
+
+export default withErrorLogging(handler);
