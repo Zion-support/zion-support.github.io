@@ -1,203 +1,277 @@
-'use client'
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  fcp: number | null
-  lcp: number | null
-  fid: number | null
-  cls: number | null
-  ttfb: number | null
-  memoryUsage: number | null
-  loadTime: number | null
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  interactionToNextPaint: number;
+  cumulativeLayoutShift: number;
+  timeToFirstByte: number;
+  firstInputDelay: number;
+  totalBlockingTime: number;
+  speedIndex: number;
 }
 
-const AdvancedPerformanceMonitor = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null,
-    lcp: null,
-    fid: null,
-    cls: null,
-    ttfb: null,
-    memoryUsage: null,
-    loadTime: null
-  })
+interface PerformanceReport {
+  metrics: PerformanceMetrics;
+  recommendations: string[];
+  score: number;
+}
+
+const AdvancedPerformanceMonitor: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+  const [report, setReport] = useState<PerformanceReport | null>(null);
+
+  const updateMetric = useCallback((metric: any) => {
+    setMetrics(prev => {
+      const baseMetrics = prev || {
+        loadTime: 0,
+        firstContentfulPaint: 0,
+        largestContentfulPaint: 0,
+        interactionToNextPaint: 0,
+        cumulativeLayoutShift: 0,
+        timeToFirstByte: 0,
+        firstInputDelay: 0,
+        totalBlockingTime: 0,
+        speedIndex: 0
+      };
+      
+      return {
+        ...baseMetrics,
+        [metric.name === 'CLS' ? 'cumulativeLayoutShift' : 
+         metric.name === 'INP' ? 'interactionToNextPaint' :
+         metric.name === 'FCP' ? 'firstContentfulPaint' :
+         metric.name === 'LCP' ? 'largestContentfulPaint' :
+         metric.name === 'TTFB' ? 'timeToFirstByte' : 'loadTime']: metric.value
+      };
+    });
+  }, []);
+
+  const calculateScore = useCallback((metrics: PerformanceMetrics): number => {
+    let score = 100;
+    
+    // LCP scoring (25% weight)
+    if (metrics.largestContentfulPaint > 4000) score -= 25;
+    else if (metrics.largestContentfulPaint > 2500) score -= 15;
+    
+    // FID scoring (25% weight)
+    if (metrics.firstInputDelay > 300) score -= 25;
+    else if (metrics.firstInputDelay > 100) score -= 15;
+    
+    // CLS scoring (25% weight)
+    if (metrics.cumulativeLayoutShift > 0.25) score -= 25;
+    else if (metrics.cumulativeLayoutShift > 0.1) score -= 15;
+    
+    // FCP scoring (25% weight)
+    if (metrics.firstContentfulPaint > 3000) score -= 25;
+    else if (metrics.firstContentfulPaint > 1800) score -= 15;
+    
+    return Math.max(0, score);
+  }, []);
+
+  const generateRecommendations = useCallback((metrics: PerformanceMetrics): string[] => {
+    const recommendations: string[] = [];
+    
+    if (metrics.largestContentfulPaint > 2500) {
+      recommendations.push('Optimize images and implement lazy loading');
+      recommendations.push('Consider using a CDN for static assets');
+    }
+    
+    if (metrics.firstContentfulPaint > 1800) {
+      recommendations.push('Minimize render-blocking resources');
+      recommendations.push('Implement critical CSS inlining');
+    }
+    
+    if (metrics.cumulativeLayoutShift > 0.1) {
+      recommendations.push('Add size attributes to images and videos');
+      recommendations.push('Avoid inserting content above existing content');
+    }
+    
+    if (metrics.interactionToNextPaint > 200) {
+      recommendations.push('Optimize JavaScript execution');
+      recommendations.push('Consider code splitting for large bundles');
+    }
+    
+    if (metrics.timeToFirstByte > 800) {
+      recommendations.push('Optimize server response time');
+      recommendations.push('Consider using a faster hosting provider');
+    }
+    
+    return recommendations;
+  }, []);
 
   useEffect(() => {
-    // Import web-vitals dynamically
-    const measureWebVitals = async () => {
-      try {
-        const { onCLS, onINP, onFCP, onLCP, onTTFB } = await import('web-vitals')
+    if (typeof window === 'undefined') return;
 
-        onCLS((metric: any) => {
-          setMetrics(prev => ({ ...prev, cls: metric.value }))
-          reportMetric('CLS', metric.value)
-        })
+    // Measure Core Web Vitals
+    onCLS(updateMetric);
+    onINP(updateMetric);
+    onFCP(updateMetric);
+    onLCP(updateMetric);
+    onTTFB(updateMetric);
 
-        onINP((metric: any) => {
-          setMetrics(prev => ({ ...prev, fid: metric.value }))
-          reportMetric('INP', metric.value)
-        })
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      setMetrics(prev => {
+        const baseMetrics = prev || {
+          loadTime: 0,
+          firstContentfulPaint: 0,
+          largestContentfulPaint: 0,
+          interactionToNextPaint: 0,
+          cumulativeLayoutShift: 0,
+          timeToFirstByte: 0,
+          firstInputDelay: 0,
+          totalBlockingTime: 0,
+          speedIndex: 0
+        };
+        
+        const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+        
+        return {
+          ...baseMetrics,
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          firstContentfulPaint: fcp ? fcp.startTime : 0,
+          timeToFirstByte: navigation.responseStart - navigation.requestStart
+        };
+      });
+    };
 
-        onFCP((metric: any) => {
-          setMetrics(prev => ({ ...prev, fcp: metric.value }))
-          reportMetric('FCP', metric.value)
-        })
-
-        onLCP((metric: any) => {
-          setMetrics(prev => ({ ...prev, lcp: metric.value }))
-          reportMetric('LCP', metric.value)
-        })
-
-        onTTFB((metric: any) => {
-          setMetrics(prev => ({ ...prev, ttfb: metric.value }))
-          reportMetric('TTFB', metric.value)
-        })
-      } catch (error) {
-        console.warn('Failed to load web-vitals:', error);
-      }
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
 
-    // Measure memory usage
-    const measureMemoryUsage = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory
-        const memoryUsage = (memory.usedJSHeapSize / memory.totalJSHeapSize) * 100
-        setMetrics(prev => ({ ...prev, memoryUsage }))
-        reportMetric('Memory Usage', memoryUsage)
-      }
-    }
-
-    // Measure page load time
-    const measureLoadTime = () => {
-      window.addEventListener('load', () => {
-        const loadTime = performance.now()
-        setMetrics(prev => ({ ...prev, loadTime }))
-        reportMetric('Load Time', loadTime)
-      })
-    }
-
-    // Report metrics to analytics
-    const reportMetric = (name: string, value: number) => {
-      // Send to Google Analytics
-      if (typeof window !== 'undefined' && (window as any).gtag) {
-        (window as any).gtag('event', 'web_vitals', {
-          metric_name: name,
-          metric_value: Math.round(value),
-          metric_delta: Math.round(value)
-        })
-      }
-
-      // Send to custom analytics
-      if (typeof window !== 'undefined' && (window as any).analytics) {
-        (window as any).analytics.track('Performance Metric', {
-          name,
-          value: Math.round(value),
-          timestamp: Date.now()
-        })
-      }
-
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log(`Performance metric ${name}:`, value);
-      }
-    }
-
-    // Monitor resource loading performance
-    const monitorResourcePerformance = () => {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          if (entry.entryType === 'resource') {
-            const resourceEntry = entry as PerformanceResourceTiming
-            const loadTime = resourceEntry.responseEnd - resourceEntry.requestStart
-            
-            // Report slow resources
-            if (loadTime > 1000) {
-              reportMetric('Slow Resource', loadTime)
-              }
-          }
-        })
-      })
-
-      observer.observe({ entryTypes: ['resource'] })
-    }
-
-    // Monitor long tasks
-    const monitorLongTasks = () => {
-      const observer = new PerformanceObserver((list) => {
-        list.getEntries().forEach((entry) => {
-          const longTask = entry as PerformanceEntry
-          if (longTask.duration > 50) {
-            reportMetric('Long Task', longTask.duration)
-            }
-        })
-      })
-
-      observer.observe({ entryTypes: ['longtask'] })
-    }
-
-    // Initialize all monitoring
-    measureWebVitals()
-    measureMemoryUsage()
-    measureLoadTime()
-    monitorResourcePerformance()
-    monitorLongTasks()
-
-    // Periodic memory monitoring
-    const memoryInterval = setInterval(measureMemoryUsage, 30000)
-
-    // Cleanup
     return () => {
-      clearInterval(memoryInterval)
-    }
-  }, [])
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [updateMetric]);
 
-  // Performance score calculation
-  const calculatePerformanceScore = () => {
-    const scores = []
-    
-    if (metrics.fcp !== null) {
-      scores.push(metrics.fcp < 1800 ? 100 : Math.max(0, 100 - (metrics.fcp - 1800) / 100))
+  useEffect(() => {
+    if (metrics) {
+      const score = calculateScore(metrics);
+      const recommendations = generateRecommendations(metrics);
+      
+      setReport({
+        metrics,
+        recommendations,
+        score
+      });
     }
-    
-    if (metrics.lcp !== null) {
-      scores.push(metrics.lcp < 2500 ? 100 : Math.max(0, 100 - (metrics.lcp - 2500) / 100))
-    }
-    
-    if (metrics.fid !== null) {
-      scores.push(metrics.fid < 100 ? 100 : Math.max(0, 100 - (metrics.fid - 100) / 10))
-    }
-    
-    if (metrics.cls !== null) {
-      scores.push(metrics.cls < 0.1 ? 100 : Math.max(0, 100 - metrics.cls * 1000))
-    }
+  }, [metrics, calculateScore, generateRecommendations]);
 
-    return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : null
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development' || !report) {
+    return null;
   }
 
-  const performanceScore = calculatePerformanceScore()
+  const getScoreColor = (score: number) => {
+    if (score >= 90) return 'text-green-600';
+    if (score >= 70) return 'text-yellow-600';
+    return 'text-red-600';
+  };
 
-  // Render performance dashboard in development
-  if (process.env.NODE_ENV === 'development') {
-    return (
-      <div className="fixed bottom-4 right-4 bg-black bg-opacity-80 text-white p-4 rounded-lg text-xs font-mono z-50">
-        <div className="font-bold mb-2">Performance Metrics</div>
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}</div>
-        <div>CLS: {metrics.cls ? metrics.cls.toFixed(3) : 'N/A'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}</div>
-        <div>Memory: {metrics.memoryUsage ? `${metrics.memoryUsage.toFixed(1)}%` : 'N/A'}</div>
-        <div>Load: {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}</div>
-        {performanceScore && (
-          <div className="mt-2 pt-2 border-t border-gray-600">
-            <div>Score: {performanceScore}/100</div>
+  const getMetricColor = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'text-green-600';
+    if (value <= thresholds.poor) return 'text-yellow-600';
+    return 'text-red-600';
+  };
+
+  return (
+    <div className="fixed bottom-4 right-4 z-50">
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg"
+        aria-label="Toggle performance metrics"
+      >
+        Performance ({report.score}/100)
+      </button>
+      
+      {isVisible && (
+        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-xl p-4 w-96 max-h-96 overflow-y-auto">
+          <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
+            <span className={`w-2 h-2 rounded-full mr-2 ${getScoreColor(report.score).replace('text-', 'bg-')}`}></span>
+            Performance Report
+          </h3>
+          
+          <div className="mb-4">
+            <div className="flex justify-between items-center mb-2">
+              <span className="text-gray-600">Overall Score:</span>
+              <span className={`font-bold text-lg ${getScoreColor(report.score)}`}>
+                {report.score}/100
+              </span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div 
+                className={`h-2 rounded-full transition-all duration-500 ${
+                  report.score >= 90 ? 'bg-green-500' : 
+                  report.score >= 70 ? 'bg-yellow-500' : 'bg-red-500'
+                }`}
+                style={{ width: `${report.score}%` }}
+              ></div>
+            </div>
           </div>
-        )}
-      </div>
-    )
-  }
+          
+          <div className="space-y-3 text-sm mb-4">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">Load Time:</span>
+              <span className={`font-mono ${getMetricColor(report.metrics.loadTime, { good: 1000, poor: 3000 })}`}>
+                {report.metrics.loadTime.toFixed(0)}ms
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">FCP:</span>
+              <span className={`font-mono ${getMetricColor(report.metrics.firstContentfulPaint, { good: 1800, poor: 3000 })}`}>
+                {report.metrics.firstContentfulPaint.toFixed(0)}ms
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">LCP:</span>
+              <span className={`font-mono ${getMetricColor(report.metrics.largestContentfulPaint, { good: 2500, poor: 4000 })}`}>
+                {report.metrics.largestContentfulPaint.toFixed(0)}ms
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">INP:</span>
+              <span className={`font-mono ${getMetricColor(report.metrics.interactionToNextPaint, { good: 200, poor: 500 })}`}>
+                {report.metrics.interactionToNextPaint.toFixed(0)}ms
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">CLS:</span>
+              <span className={`font-mono ${getMetricColor(report.metrics.cumulativeLayoutShift, { good: 0.1, poor: 0.25 })}`}>
+                {report.metrics.cumulativeLayoutShift.toFixed(3)}
+              </span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-600">TTFB:</span>
+              <span className={`font-mono ${getMetricColor(report.metrics.timeToFirstByte, { good: 800, poor: 1800 })}`}>
+                {report.metrics.timeToFirstByte.toFixed(0)}ms
+              </span>
+            </div>
+          </div>
+          
+          {report.recommendations.length > 0 && (
+            <div className="mt-4 pt-3 border-t border-gray-200">
+              <h4 className="font-semibold text-gray-900 mb-2">Recommendations:</h4>
+              <ul className="text-xs text-gray-600 space-y-1">
+                {report.recommendations.map((rec, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="w-1 h-1 bg-blue-500 rounded-full mt-2 mr-2 flex-shrink-0"></span>
+                    {rec}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
+  );
+};
 
-  return null
-}
-
-export default AdvancedPerformanceMonitor
+export default AdvancedPerformanceMonitor;
