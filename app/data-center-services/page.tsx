@@ -1,17 +1,16 @@
 import React from 'react';
-import { Settings, Sparkles, ArrowRight, CheckCircle, Star, Globe, Shield, Server } from 'lucide-react';
+import { Settings, Sparkles, ArrowRight, CheckCircle, Globe, Shield, Server } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
 import { Shield } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Settings } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Server } from 'lucide-react';
-import { Monitor } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+import { Users, Zap, Clock } from 'lucide-react';
 
 const DataCenterServicesPage = () => {
   const benefits = [

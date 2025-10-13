@@ -13,6 +13,7 @@ import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
+import { Lightbulb, TrendingDown } from 'lucide-react';
 
 export default function AiAnalytics() {
   const features = [

@@ -9,7 +9,7 @@ import { Settings } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
-import { Hand } from 'lucide-react';
+import { Workflow } from 'lucide-react';
 
 "use client";
 

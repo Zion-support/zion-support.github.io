@@ -5,9 +5,9 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import { ArrowRight } from 'lucide-react';
 import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Target } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 const AIImageRecognitionPro = () => {
   const features = [

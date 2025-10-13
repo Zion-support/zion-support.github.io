@@ -1,9 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Hand } from 'lucide-react';
+import { Home, AlertTriangle, Mail } from 'lucide-react';
 
 interface Props {
   children: ReactNode;
@@ -39,9 +36,6 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-    
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
   }
 
   handleRetry = () => {
@@ -56,43 +50,40 @@ class ImprovedErrorBoundary extends Component<Props, State> {
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <div className="max-w-md mx-auto px-6 text-center">
+        <div className="min-h-screen bg-gradient-to-br from-gray-900 via-red-900 to-red-800 flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full text-center">
             <div className="mb-8">
-              <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <AlertTriangle className="w-10 h-10 text-red-400" />
-              </div>
-              <h1 className="text-3xl font-bold text-white mb-4">
+              <AlertTriangle className="w-24 h-24 text-red-400 mx-auto mb-6" />
+              <h1 className="text-4xl font-bold text-white mb-4">
                 Oops! Something went wrong
               </h1>
-              <p className="text-gray-300 mb-6">
-                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+              <p className="text-gray-300 text-lg mb-8">
+                We encountered an unexpected error. Don't worry, our team has been notified.
               </p>
             </div>
 
-            <div className="space-y-4">
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <button
                 onClick={this.handleRetry}
-                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
               >
-                <RefreshCw className="w-5 h-5" />
                 Try Again
               </button>
-              
               <Link
                 to="/"
-                className="w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gray-700 text-white font-semibold rounded-lg hover:bg-gray-600 transition-colors"
               >
-                <Home className="w-5 h-5" />
+                <Home className="w-4 h-4" />
                 Go Home
               </Link>
             </div>
 
-            {/* Development Error Details */}
+            {/* Error Details (Development Only) */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="mt-8 text-left">
-                <summary className="text-red-400 cursor-pointer hover:text-red-300">
-                  Error Details (Development Only)
+                <summary className="text-gray-400 cursor-pointer hover:text-white transition-colors">
+                  Error Details (Development)
                 </summary>
                 <div className="mt-4 p-4 bg-red-900/20 border border-red-500/30 rounded-lg">
                   <pre className="text-red-300 text-sm overflow-auto">
@@ -127,28 +118,18 @@ class ImprovedErrorBoundary extends Component<Props, State> {
 
 // Higher-order component for easier usage
 export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
+  WrappedComponent: React.ComponentType<P>,
   errorBoundaryProps?: Omit<Props, 'children'>
 ) => {
-  const WrappedComponent = (props: P) => (
+  const WithErrorBoundary = (props: P) => (
     <ImprovedErrorBoundary {...errorBoundaryProps}>
-      <Component {...props} />
+      <WrappedComponent {...props} />
     </ImprovedErrorBoundary>
   );
-  
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  
-  return WrappedComponent;
-};
 
-// Hook for functional components to handle errors
-export const useErrorHandler = () => {
-  return (error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by hook:', error, errorInfo);
-    
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
-  };
+  WithErrorBoundary.displayName = `withErrorBoundary(${WrappedComponent.displayName || WrappedComponent.name})`;
+
+  return WithErrorBoundary;
 };
 
 export default ImprovedErrorBoundary;

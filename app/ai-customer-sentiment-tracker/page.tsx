@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Monitor, Users, CheckCircle, Brain, Zap, Clock, Target, BarChart3, Globe, Heart, AlertCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const AICustomerSentimentTrackerPage = () => {
   const benefits = [

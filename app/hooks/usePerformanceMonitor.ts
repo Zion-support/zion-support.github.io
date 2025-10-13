@@ -1,5 +1,3 @@
-import { Star } from 'lucide-react';
-import { Monitor } from 'lucide-react';
 
 
 interface PerformanceMetrics {
@@ -103,16 +101,14 @@ export const usePerformanceMonitor = () => {
 
       // Start measuring after page load
       if (document.readyState === 'complete') {
-        measureWebVitals()
+
       } else {
         window.addEventListener('load', measureWebVitals)
       }
 
       // Log metrics after 5 seconds
-      setTimeout(logMetrics, 5000)
-    }
 
-    measurePerformance()
+    }
 
     // Cleanup
     return () => {

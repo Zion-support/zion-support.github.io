@@ -16,6 +16,7 @@ import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Activity } from 'lucide-react';
 import { Plus } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 const ZionAiBusinessIntelligencePro = () => {
   const testimonials = [

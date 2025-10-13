@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Star } from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number;
@@ -77,9 +76,6 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           totalBlockingTime: totalBlockingTime
         };
 
-        setMetrics(finalMetrics);
-        setIsLoading(false);
-
         // Send metrics to analytics (if available)
         if (typeof window !== 'undefined' && window.gtag) {
           window.gtag('event', 'web_vitals', {
@@ -96,13 +92,13 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           });
         }
       } catch (error) {
-        setIsLoading(false);
+
       }
     };
 
     // Measure after page load
     if (document.readyState === 'complete') {
-      measurePerformance();
+
     } else {
       window.addEventListener('load', measurePerformance);
     }

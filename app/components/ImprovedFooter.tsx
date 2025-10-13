@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Cloud, Users, Award, CheckCircle, Brain, Zap, Shield, Workflow, Network, Code, Phone, Mail, Globe, MapPin, Video } from 'lucide-react';
 
 const ImprovedFooter = () => {
   const currentYear = new Date().getFullYear();

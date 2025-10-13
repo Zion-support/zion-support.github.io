@@ -14,6 +14,7 @@ import { Calendar } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
+import { Users } from 'lucide-react';
 
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({
@@ -62,19 +63,10 @@ export default function ConsultationPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+
     setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        service: '',
-        budget: '',
-        timeline: '',
-        message: ''
-      });
+
+
     }, 3000);
   };
 

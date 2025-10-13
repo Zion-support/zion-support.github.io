@@ -19,6 +19,7 @@ import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 const ZionAICybersecuritySuiteProPage = () => {
   const testimonials = [

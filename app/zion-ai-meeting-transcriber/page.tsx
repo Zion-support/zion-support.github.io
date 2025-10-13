@@ -3,7 +3,6 @@ import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import { Search } from 'lucide-react';
 import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Calendar } from 'lucide-react';
@@ -305,6 +304,7 @@ export default function ZionAIMeetingTranscriber() {
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
             Join thousands of teams already using Zion AI Meeting Transcriber to capture every important detail.
+import { Video } from 'lucide-react';
             Start your free trial today.
           </p>
           

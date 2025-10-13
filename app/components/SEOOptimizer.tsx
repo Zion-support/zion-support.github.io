@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
-import { Code } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Code } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 
 interface SEOOptimizerProps {
@@ -115,37 +113,9 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({ children }) => {
     };
 
     // Initialize SEO optimizations
-    addStructuredData();
-    addSocialMetaTags();
-    addPerformanceHints();
+
   }, []);
 
-  return (
-    <>
-      <Helmet>
-        {/* Additional meta tags for better SEO */}
-        <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="bingbot" content="index, follow" />
-        
-        {/* Mobile optimization */}
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-        <meta name="theme-color" content="#0f172a" />
-        
-        {/* Performance hints */}
-        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        
-        {/* Security headers */}
-        <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
-        <meta httpEquiv="X-Frame-Options" content="DENY" />
-        <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
-        
-        {/* Cache control */}
-        <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
-      </Helmet>
-      {children}
-    </>
-  );
 };
 
 export default SEOOptimizer;

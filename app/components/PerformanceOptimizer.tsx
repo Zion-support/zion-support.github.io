@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { lazy } from 'react';
 
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
@@ -74,11 +75,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     return () => clearTimeout(timer);
   }, []);
 
-  return (
-    <div className="performance-optimizer">
-      {children}
-    </div>
-  );
 };
 
 export default PerformanceOptimizer;

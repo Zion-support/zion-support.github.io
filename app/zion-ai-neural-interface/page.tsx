@@ -11,6 +11,7 @@ import { Brain } from 'lucide-react';
 import { Globe } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { Hand } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 const ZionAINeuralInterface = () => {
   const features = [

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Users, CheckCircle, Sparkles, Zap, Clock, Settings, Globe, Mic } from 'lucide-react';
 
 const AIVoiceAssistantProPage = () => {
   const benefits = [

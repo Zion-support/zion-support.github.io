@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Users, CheckCircle, TrendingUp, Sparkles, Zap, Shield, Clock, Target } from 'lucide-react';
 
 const AIHRRecruitmentProPage = () => {
   const benefits = [

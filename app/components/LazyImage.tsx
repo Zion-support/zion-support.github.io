@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { lazy } from 'react';
 
 interface LazyImageProps {
   src: string;
@@ -34,7 +35,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
+
           observer.disconnect();
         }
       },
@@ -52,12 +53,12 @@ const LazyImage: React.FC<LazyImageProps> = ({
   }, [priority]);
 
   const handleLoad = () => {
-    setIsLoaded(true);
+
     onLoad?.();
   };
 
   const handleError = () => {
-    setHasError(true);
+
     onError?.();
   };
 

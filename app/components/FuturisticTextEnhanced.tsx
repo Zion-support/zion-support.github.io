@@ -131,25 +131,9 @@ const FuturisticTextEnhanced: React.FC<FuturisticTextEnhancedProps> = ({
   `;
 
   if (animated) {
-    return (
-      <motion.div
-        className={textClasses}
-        variants={textVariants}
-        initial="hidden"
-        whileInView="visible"
-        whileHover="hover"
-        viewport={{ once: true, margin: "-100px" }}
-      >
-        {children}
-      </motion.div>
-    );
+
   }
 
-  return (
-    <div className={textClasses}>
-      {children}
-    </div>
-  );
 };
 
 export default FuturisticTextEnhanced;

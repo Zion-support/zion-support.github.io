@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Star, Cloud, Users, Award, CheckCircle, TrendingUp, Sparkles, Brain, Zap, Shield, Clock, Settings, BarChart3, Workflow, Network, Code, Phone, Mail, Globe, Search, MapPin, Video } from 'lucide-react';
 
 const ImprovedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,8 +11,8 @@ const ImprovedNavigation = () => {
 
   // Close mobile menu when route changes
   useEffect(() => {
-    setIsOpen(false);
-    setIsSidebarOpen(false);
+
+
   }, [location]);
 
   const navigationItems = [

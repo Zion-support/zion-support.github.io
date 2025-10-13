@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -78,9 +77,6 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
         document.body.insertBefore(skipLinks, document.body.firstChild);
       }
     };
-
-    addLiveRegion();
-    addSkipLinks();
 
     document.addEventListener('keydown', handleKeyDown);
     document.addEventListener('focusin', handleFocusIn);

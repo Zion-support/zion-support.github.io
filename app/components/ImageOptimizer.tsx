@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Box } from 'lucide-react';
+import { lazy } from 'react';
 
 interface ImageOptimizerProps {
   src: string;
@@ -53,7 +53,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsInView(true);
+
             observer.disconnect();
           }
         });
@@ -67,13 +67,11 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   }, [lazy]);
 
   const handleLoad = () => {
-    setIsLoaded(true);
-    setHasError(false);
+
   };
 
   const handleError = () => {
-    setHasError(true);
-    setIsLoaded(false);
+
   };
 
   const optimizedSrc = getOptimizedSrc(src);

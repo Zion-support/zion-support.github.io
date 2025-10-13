@@ -1,4 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import { Star, Monitor, Cloud, Users, Sparkles, Brain, Zap, Shield, Workflow, Home, Network, Mail, Globe, Database } from 'lucide-react';
 
 interface NavigationProps {
   onSidebarToggle: () => void;
@@ -10,12 +12,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const location = useLocation();
 
   const toggleMenu = useCallback(() => {
-    setIsMenuOpen(prev => !prev);
+
   }, []);
 
 
   const closeDropdowns = useCallback(() => {
-    setActiveDropdown(null);
+
   }, []);
 
   const isActive = useCallback((path: string) => {
@@ -233,7 +235,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                         key={dropdownItem.label}
                         to={dropdownItem.href}
                         className={`block px-3 py-2 text-sm rounded-md ${
-                          isActive(dropdownItem.href)
+                          location.pathname === dropdownItem.href
                             ? 'text-cyan-400 bg-cyan-500/10'
                             : 'text-gray-300 hover:text-white hover:bg-white/10'
                         }`}

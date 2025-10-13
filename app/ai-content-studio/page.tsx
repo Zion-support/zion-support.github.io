@@ -12,6 +12,7 @@ import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { Sparkles } from 'lucide-react';
 import { FileText } from 'lucide-react';
+import { PenTool, Video } from 'lucide-react';
 
 const AIContentStudioZionTechGroup = () => {
   const testimonials = [

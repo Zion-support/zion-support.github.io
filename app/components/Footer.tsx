@@ -1,4 +1,6 @@
 import React, { useMemo } from "react";
+import { Link } from 'react-router-dom';
+import { Cloud, Users, Award, Brain, Zap, Shield, Clock, BarChart3, Code, Phone, Mail, Globe, MapPin } from 'lucide-react';
 
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();

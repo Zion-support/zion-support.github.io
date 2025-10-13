@@ -7,6 +7,7 @@ import { Brain } from 'lucide-react';
 import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+import { Workflow } from 'lucide-react';
 
 "use client";
 

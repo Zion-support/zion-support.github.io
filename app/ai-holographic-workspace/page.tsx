@@ -9,6 +9,7 @@ import { CheckCircle } from 'lucide-react';
 import { Monitor } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { Hand } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 const AIHolographicWorkspace = () => {
   const features = [

@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { ArrowRight, Zap, BarChart3, Code, Phone, Mail, Smartphone, Globe, Database } from 'lucide-react';
 
 export default function CustomDevelopment() {
   const services = [

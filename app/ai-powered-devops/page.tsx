@@ -17,6 +17,7 @@ import { Plus } from 'lucide-react';
 import { DollarSign } from 'lucide-react';
 import { Phone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+import { Eye } from 'lucide-react';
 
 export default function AiPoweredDevops() {
   const features = [

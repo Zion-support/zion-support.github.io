@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Users, Award, CheckCircle, Shield, Globe } from 'lucide-react';
 
 export default function Compliance() {
   const complianceFrameworks = [

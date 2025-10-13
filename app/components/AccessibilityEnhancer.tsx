@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
@@ -13,9 +14,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     // Check for user preferences
     const mediaQueryHighContrast = window.matchMedia('(prefers-contrast: high)');
     const mediaQueryReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-    
-    setIsHighContrast(mediaQueryHighContrast.matches);
-    setIsReducedMotion(mediaQueryReducedMotion.matches);
+
 
     // Listen for changes
     const handleHighContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
@@ -65,8 +64,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       });
     };
 
-    addAriaLandmarks();
-
     return () => {
       mediaQueryHighContrast.removeEventListener('change', handleHighContrastChange);
       mediaQueryReducedMotion.removeEventListener('change', handleReducedMotionChange);
@@ -113,17 +110,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     </a>
   );
 
-  return (
-    <>
-      <SkipToMainLink />
-      <div
-        className={`accessibility-enhanced ${isHighContrast ? 'high-contrast' : ''} ${isReducedMotion ? 'reduced-motion' : ''}`}
-        style={{ fontSize: `${fontSize}px` }}
-      >
-        {children}
-      </div>
-    </>
-  );
 };
 
 export default AccessibilityEnhancer;

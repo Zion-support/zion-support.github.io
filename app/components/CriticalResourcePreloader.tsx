@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 
 'use client'
 
@@ -114,9 +113,6 @@ const CriticalResourcePreloader = () => {
     }
 
     // Initialize preloading
-    preloadCriticalResources()
-    preconnectDomains()
-    dnsPrefetchDomains()
 
     // Preload next page resources on hover
     const preloadOnHover = () => {
@@ -136,7 +132,6 @@ const CriticalResourcePreloader = () => {
     }
 
     // Initialize hover preloading after a delay
-    setTimeout(preloadOnHover, 2000)
 
   }, [])
 

@@ -20,6 +20,7 @@ import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Cloud } from 'lucide-react';
 import { Heart } from 'lucide-react';
+import { Eye, TrendingDown } from 'lucide-react';
 
 const ZionAICustomerInsightsPage = () => {
   const testimonials = [

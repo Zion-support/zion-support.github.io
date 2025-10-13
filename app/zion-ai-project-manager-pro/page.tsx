@@ -18,6 +18,7 @@ import { Target } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { MessageSquare } from 'lucide-react';
 import { FileText } from 'lucide-react';
+import { Workflow, Lightbulb } from 'lucide-react';
 
 const ZionAIProjectManagerProPage = () => {
   const testimonials = [

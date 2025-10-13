@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Cloud, Users, CheckCircle, TrendingUp, Sparkles, Target, Settings, BarChart3, Workflow } from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
   const features = [

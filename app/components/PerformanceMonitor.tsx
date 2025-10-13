@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Monitor } from 'lucide-react';
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -100,9 +101,8 @@ const PerformanceMonitor: React.FC = () => {
     };
 
     // Run measurements
-    measureWebVitals();
-    measureResourcePerformance();
-    measureMemoryUsage();
+
+
 
     // Log metrics to console in development
     if (process.env.NODE_ENV === 'development') {
@@ -119,11 +119,10 @@ const PerformanceMonitor: React.FC = () => {
       };
 
       // Log initial metrics
-      setTimeout(logMetrics, 1000);
 
       // Log final metrics after page load
       window.addEventListener('load', () => {
-        setTimeout(logMetrics, 2000);
+
       });
     }
 
@@ -148,7 +147,7 @@ const PerformanceMonitor: React.FC = () => {
       };
 
       // Send metrics after a delay to ensure all measurements are complete
-      setTimeout(sendMetricsToAnalytics, 5000);
+
     }
 
   }, [metrics]);

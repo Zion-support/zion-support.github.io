@@ -129,34 +129,9 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
   `;
 
   if (href) {
-    return (
-      <motion.a
-        href={href}
-        className={buttonClasses}
-        variants={animated ? buttonVariants : undefined}
-        initial="initial"
-        whileHover={!disabled ? "hover" : undefined}
-        whileTap={!disabled ? "tap" : undefined}
-        onClick={onClick}
-      >
-        {content}
-      </motion.a>
-    );
+
   }
 
-  return (
-    <motion.button
-      className={buttonClasses}
-      variants={animated ? buttonVariants : undefined}
-      initial="initial"
-      whileHover={!disabled ? "hover" : undefined}
-      whileTap={!disabled ? "tap" : undefined}
-      onClick={onClick}
-      disabled={disabled || loading}
-    >
-      {content}
-    </motion.button>
-  );
 };
 
 export default FuturisticButtonEnhanced;

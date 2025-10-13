@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { ArrowRight, Users, CheckCircle, Brain, Zap, Shield, Clock, Target, BarChart3, Globe } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const SmartInventoryOptimizerPage = () => {
   const benefits = [

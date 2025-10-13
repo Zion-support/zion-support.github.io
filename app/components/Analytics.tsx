@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { Star } from 'lucide-react';
 
 declare global {
   interface Window {
@@ -111,7 +110,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     // Wait for page to be fully loaded
     if (document.readyState === 'complete') {
-      trackWebVitals();
+
     } else {
       window.addEventListener('load', trackWebVitals);
     }

@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Cloud } from 'lucide-react';
+import { lazy } from 'react';
 
 interface ImprovedImageProps {
   src: string;
@@ -41,7 +41,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
+
           observer.disconnect();
         }
       },
@@ -59,12 +59,12 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
   }, [lazy, priority]);
 
   const handleLoad = () => {
-    setIsLoaded(true);
+
     onLoad?.();
   };
 
   const handleError = () => {
-    setHasError(true);
+
     onError?.();
   };
 
@@ -169,12 +169,7 @@ export const BlurImage: React.FC<ImprovedImageProps & { blurDataURL?: string }> 
   blurDataURL,
   ...props
 }) => {
-  return (
-    <ImprovedImage
-      {...props}
-      placeholder={blurDataURL}
-    />
-  );
+
 };
 
 export default ImprovedImage;

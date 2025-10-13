@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Users, CheckCircle, Sparkles, Zap, Shield, Clock, Target, BarChart3 } from 'lucide-react';
 
 const AssetManagementPage = () => {
   const benefits = [

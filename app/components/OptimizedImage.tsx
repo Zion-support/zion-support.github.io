@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { lazy } from 'react';
 
 interface OptimizedImageProps {
   src: string;
@@ -46,7 +47,7 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
+
           observer.disconnect();
         }
       },
@@ -64,12 +65,12 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   }, [priority, isInView]);
 
   const handleLoad = () => {
-    setIsLoaded(true);
+
     onLoad?.();
   };
 
   const handleError = () => {
-    setHasError(true);
+
     onError?.();
   };
 

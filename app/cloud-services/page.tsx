@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { ArrowRight, Cloud, CheckCircle, Zap, Shield, BarChart3, Globe, Database } from 'lucide-react';
 
 const CloudServicesPage: React.FC = () => {
   const services = [

@@ -9,6 +9,7 @@ import { Brain } from 'lucide-react';
 import { BarChart3 } from 'lucide-react';
 import { DollarSign } from 'lucide-react';
 import { Receipt } from 'lucide-react';
+import { Bot } from 'lucide-react';
 
 "use client";
 

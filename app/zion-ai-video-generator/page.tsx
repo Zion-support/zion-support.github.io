@@ -19,6 +19,7 @@ import { Phone } from 'lucide-react';
 import { Smartphone } from 'lucide-react';
 import { Mic } from 'lucide-react';
 import { Cloud } from 'lucide-react';
+import { Video } from 'lucide-react';
 
 const ZionAIVideoGeneratorPage = () => {
   const testimonials = [

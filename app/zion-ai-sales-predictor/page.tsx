@@ -7,6 +7,7 @@ import { Star } from 'lucide-react';
 import { CheckCircle } from 'lucide-react';
 import { TrendingUp } from 'lucide-react';
 import { Calendar } from 'lucide-react';
+import { Video } from 'lucide-react';
 
 export default function ZionAISalesPredictor() {
   const features = [
