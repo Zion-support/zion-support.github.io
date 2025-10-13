@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import React, { Suspense, useEffect, useState } from "react";
-=======
 import React, { Suspense, useEffect, useState, useCallback } from "react";
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
@@ -13,24 +9,6 @@ import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-<<<<<<< HEAD
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import Breadcrumb from "./app/components/Breadcrumb";
-<<<<<<< HEAD
-import LoadingPageEnhanced from "./app/components/EnhancedLoading";
-import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
-import ImprovedLoading from "./app/components/ImprovedLoading";
-import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
@@ -39,9 +17,7 @@ import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 import EnhancedSEO from "./app/components/EnhancedSEO";
-import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
 import ImprovedAccessibility from "./app/components/ImprovedAccessibility";
 import ImprovedPerformanceMonitor from "./app/components/ImprovedPerformanceMonitor";
 
@@ -50,22 +26,14 @@ const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
-<<<<<<< HEAD
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
 const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
-<<<<<<< HEAD
-=======
-const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
-const TermsPage = React.lazy(() => import("./app/terms/page"));
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -112,12 +80,10 @@ const WebsiteAnalyticsToolPage = React.lazy(() => import("./app/data-analytics/p
 const TaskAutomationWorkflowPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
 // New Innovative Micro SAAS Services
-<<<<<<< HEAD
 const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-assistant/page"));
 const SmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-inventory-smart/page"));
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/ai-financial-crime-detection-pro/page"));
-=======
 const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
 const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
 const ZionAICustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
@@ -138,19 +104,6 @@ const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-netwo
 const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
 const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
 
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsSidebarOpen(!isSidebarOpen);
-  };
-
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
-  };
-=======
 // Additional AI Services Pages
 const AIChatbotBuilderPage = React.lazy(() => import("./app/ai-chatbot-builder/page"));
 const AICodeAssistantPage = React.lazy(() => import("./app/ai-code-assistant/page"));
