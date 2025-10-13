@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, FileText, TrendingUp, Package } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
@@ -39,6 +39,65 @@ const HomePage = () => {
   ];
 
   const microSaasHighlights = [
+    {
+      name: "Zion AI Chatbot Builder",
+      description: "No-code AI chatbot platform with 50+ languages",
+      price: "From $29/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-chatbot-builder",
+      featured: true
+    },
+    {
+      name: "Zion AI Voice Assistant",
+      description: "Advanced voice AI with custom voice cloning",
+      price: "From $49/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-voice-assistant",
+      featured: true
+    },
+    {
+      name: "Zion AI Document Processor",
+      description: "AI-powered OCR and document processing",
+      price: "From $39/month",
+      icon: <FileText className="w-6 h-6" />,
+      link: "/zion-ai-document-processor",
+      featured: true
+    },
+    {
+      name: "Zion AI Email Marketer",
+      description: "AI-powered email marketing automation",
+      price: "From $29/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/zion-ai-email-marketer"
+    },
+    {
+      name: "Zion AI Social Media Manager",
+      description: "Multi-platform social media management",
+      price: "From $39/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-social-media-manager"
+    },
+    {
+      name: "Zion AI Customer Insights",
+      description: "Advanced customer analytics and segmentation",
+      price: "From $59/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-customer-insights"
+    },
+    {
+      name: "Zion AI Sales Forecaster",
+      description: "AI-powered sales forecasting and analytics",
+      price: "From $79/month",
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: "/zion-ai-sales-forecaster"
+    },
+    {
+      name: "Zion AI Inventory Optimizer",
+      description: "Smart inventory management and forecasting",
+      price: "From $49/month",
+      icon: <Package className="w-6 h-6" />,
+      link: "/zion-ai-inventory-optimizer"
+    },
     {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
@@ -215,22 +274,33 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
+                  saas.featured 
+                    ? 'border-cyan-500/50 shadow-lg shadow-cyan-500/20' 
+                    : 'border-white/20 hover:border-cyan-500/30'
+                }`}
               >
+                {saas.featured && (
+                  <div className="absolute -top-2 -right-2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                      Featured
+                    </span>
+                  </div>
+                )}
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
                     {saas.icon}
                   </div>
-                  <div>
+                  <div className="flex-1">
                     <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                       {saas.name}
                     </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    <p className="text-cyan-400 font-medium text-sm">{saas.price}</p>
                   </div>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">

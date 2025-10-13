@@ -178,6 +178,32 @@ const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
 
+// New Micro SAAS Pages
+const ZionAiChatbotBuilderPage = React.lazy(
+  () => import("./app/zion-ai-chatbot-builder/page"),
+);
+const ZionAiVoiceAssistantPage = React.lazy(
+  () => import("./app/zion-ai-voice-assistant/page"),
+);
+const ZionAiDocumentProcessorPage = React.lazy(
+  () => import("./app/zion-ai-document-processor/page"),
+);
+const ZionAiEmailMarketerPage = React.lazy(
+  () => import("./app/zion-ai-email-marketer/page"),
+);
+const ZionAiSocialMediaManagerPage = React.lazy(
+  () => import("./app/zion-ai-social-media-manager/page"),
+);
+const ZionAiCustomerInsightsPage = React.lazy(
+  () => import("./app/zion-ai-customer-insights/page"),
+);
+const ZionAiSalesForecasterPage = React.lazy(
+  () => import("./app/zion-ai-sales-forecaster/page"),
+);
+const ZionAiInventoryOptimizerPage = React.lazy(
+  () => import("./app/zion-ai-inventory-optimizer/page"),
+);
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
   () => import("./app/5g-data-analytics/page"),
@@ -427,6 +453,40 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-chatbot-builder"
+                    element={<ZionAiChatbotBuilderPage />}
+                  />
+                  <Route
+                    path="/zion-ai-voice-assistant"
+                    element={<ZionAiVoiceAssistantPage />}
+                  />
+                  <Route
+                    path="/zion-ai-document-processor"
+                    element={<ZionAiDocumentProcessorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-email-marketer"
+                    element={<ZionAiEmailMarketerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-social-media-manager"
+                    element={<ZionAiSocialMediaManagerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-customer-insights"
+                    element={<ZionAiCustomerInsightsPage />}
+                  />
+                  <Route
+                    path="/zion-ai-sales-forecaster"
+                    element={<ZionAiSalesForecasterPage />}
+                  />
+                  <Route
+                    path="/zion-ai-inventory-optimizer"
+                    element={<ZionAiInventoryOptimizerPage />}
                   />
 
                   {/* 5G Solutions Routes */}
