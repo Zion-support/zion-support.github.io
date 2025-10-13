@@ -1,5 +1,5 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   loadTime?: number;
@@ -22,6 +22,11 @@ const PerformanceMonitor: React.FC = () => {
     return 'text-red-600';
   }, []);
 
+  const formatMetric = useCallback((value: number | undefined, unit: string = 'ms') => {
+    if (value === undefined || value === null) return 'N/A';
+    return `${value.toFixed(0)}${unit}`;
+  }, []);
+
   const updateMetrics = useCallback(() => {
     const newMetrics: PerformanceMetrics = {};
 
@@ -31,181 +36,74 @@ const PerformanceMonitor: React.FC = () => {
       if (loadTime > 0) newMetrics.loadTime = loadTime;
     }
 
-    // Web Vitals
-    if ('web-vitals' in window) {
-      // This would be populated by the WebVitalsTracker component
-      // For now, we'll use placeholder values
+    // Memory usage
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      if (memory) {
+        newMetrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+      }
     }
 
-      {isVisible && (
-        <div className="absolute bottom-12 left-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 min-w-80">
-          <h3 className="text-lg font-semibold mb-4 text-gray-800">Performance Metrics</h3>
-          
-          <div className="space-y-3 text-sm">
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">Load Time:</span>
-              <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">FCP:</span>
-              <span className={`font-mono ${metrics.firstContentfulPaint ? getMetricColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">LCP:</span>
-              <span className={`font-mono ${metrics.largestContentfulPaint ? getMetricColor(metrics.largestContentfulPaint, { good: 2500, poor: 4000 }) : 'text-gray-400'}`}>
-                {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">FID:</span>
-              <span className={`font-mono ${metrics.firstInputDelay ? getMetricColor(metrics.firstInputDelay, { good: 100, poor: 300 }) : 'text-gray-400'}`}>
-                {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">CLS:</span>
-              <span className={`font-mono ${metrics.cumulativeLayoutShift ? getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, poor: 0.25 }) : 'text-gray-400'}`}>
-                {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A'}
-              </span>
-            </div>
-            
-            <div className="flex justify-between items-center">
-              <span className="text-gray-600">TTFB:</span>
-              <span className={`font-mono ${metrics.timeToFirstByte ? getMetricColor(metrics.timeToFirstByte, { good: 800, poor: 1800 }) : 'text-gray-400'}`}>
-                {metrics.timeToFirstByte ? `${metrics.timeToFirstByte.toFixed(0)}ms` : 'N/A'}
-              </span>
-            </div>
-            </div>
-          </div>
-      <div className="space-y-2">
-        <div className="flex justify-between">
-          <span className="text-gray-300">Load Time:</span>
-          <span className={getMetricColor(metrics.loadTime, { good: 2000, needsImprovement: 4000 })}>
-            {formatMetric(metrics.loadTime)}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-300">FCP:</span>
-          <span className={getMetricColor(metrics.firstContentfulPaint, { good: 1800, needsImprovement: 3000 })}>
-            {formatMetric(metrics.firstContentfulPaint)}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-300">LCP:</span>
-          <span className={getMetricColor(metrics.largestContentfulPaint, { good: 2500, needsImprovement: 4000 })}>
-            {formatMetric(metrics.largestContentfulPaint)}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-300">FID:</span>
-          <span className={getMetricColor(metrics.firstInputDelay, { good: 100, needsImprovement: 300 })}>
-            {formatMetric(metrics.firstInputDelay)}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-300">CLS:</span>
-          <span className={getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, needsImprovement: 0.25 })}>
-            {formatMetric(metrics.cumulativeLayoutShift, '')}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span className="text-gray-300">TTFB:</span>
-          <span className={getMetricColor(metrics.timeToFirstByte, { good: 200, needsImprovement: 600 })}>
-            {formatMetric(metrics.timeToFirstByte)}
-          </span>
-        </div>
-        
-        {metrics.memoryUsage !== null && (
-          <div className="flex justify-between">
-            <span className="text-gray-300">Memory:</span>
-            <span className={getMetricColor(metrics.memoryUsage, { good: 50, needsImprovement: 100 })}>
-              {formatMetric(metrics.memoryUsage, 'MB')}
-            </span>
-          </div>
-        )}
-      </div>
-      
-      <div className="mt-3 pt-3 border-t border-white/20 text-xs text-gray-400">
-        Press Ctrl+Shift+P to toggle
-      </div>
-    </div>
-  );
-};
+    setMetrics(prev => ({ ...prev, ...newMetrics }));
+  }, []);
 
-export default PerformanceMonitor;
-=======
-import React, { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-
-interface PerformanceMetrics {
-  cls: number | null;
-  inp: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
-}
-
-const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
-    const metrics: PerformanceMetrics = {
-      cls: null,
-      inp: null,
-      fcp: null,
-      lcp: null,
-      ttfb: null,
-    };
-
     // Collect Core Web Vitals
     onCLS((metric) => {
-      metrics.cls = metric.value;
-      console.log('CLS:', metric.value);
+      setMetrics(prev => ({ ...prev, cumulativeLayoutShift: metric.value }));
     });
 
     onINP((metric) => {
-      metrics.inp = metric.value;
-      console.log('INP:', metric.value);
+      setMetrics(prev => ({ ...prev, interactionToNextPaint: metric.value }));
     });
 
     onFCP((metric) => {
-      metrics.fcp = metric.value;
-      console.log('FCP:', metric.value);
+      setMetrics(prev => ({ ...prev, firstContentfulPaint: metric.value }));
     });
 
     onLCP((metric) => {
-      metrics.lcp = metric.value;
-      console.log('LCP:', metric.value);
+      setMetrics(prev => ({ ...prev, largestContentfulPaint: metric.value }));
     });
 
     onTTFB((metric) => {
-      metrics.ttfb = metric.value;
-      console.log('TTFB:', metric.value);
+      setMetrics(prev => ({ ...prev, timeToFirstByte: metric.value }));
     });
 
-    // Send metrics to analytics (if needed)
+    // Initial metrics collection
+    updateMetrics();
+
+    // Update metrics periodically
+    const interval = setInterval(updateMetrics, 5000);
+
+    // Keyboard shortcut to toggle visibility
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.ctrlKey && e.shiftKey && e.key === 'P') {
+        e.preventDefault();
+        setIsVisible(prev => !prev);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyPress);
+
+    return () => {
+      clearInterval(interval);
+      document.removeEventListener('keydown', handleKeyPress);
+    };
+  }, [updateMetrics]);
+
+  // Send metrics to analytics (if needed)
+  useEffect(() => {
     const sendMetrics = () => {
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', 'web_vitals', {
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
           event_category: 'Performance',
           event_label: 'Core Web Vitals',
           custom_map: {
-            cls: metrics.cls,
-            inp: metrics.inp,
-            fcp: metrics.fcp,
-            lcp: metrics.lcp,
-            ttfb: metrics.ttfb,
+            cls: metrics.cumulativeLayoutShift,
+            inp: metrics.interactionToNextPaint,
+            fcp: metrics.firstContentfulPaint,
+            lcp: metrics.largestContentfulPaint,
+            ttfb: metrics.timeToFirstByte,
           },
         });
       }
@@ -213,12 +111,82 @@ const PerformanceMonitor: React.FC = () => {
 
     // Send metrics after a delay to ensure all are collected
     const timeoutId = setTimeout(sendMetrics, 5000);
-
     return () => clearTimeout(timeoutId);
-  }, []);
+  }, [metrics]);
 
-  return null; // This component doesn't render anything
+  if (!isVisible) return null;
+
+  return (
+    <div className="fixed bottom-4 left-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg shadow-lg p-4 min-w-80 z-50">
+      <div className="flex justify-between items-center mb-4">
+        <h3 className="text-lg font-semibold text-white">Performance Metrics</h3>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-gray-400 hover:text-white transition-colors"
+          aria-label="Close performance monitor"
+        >
+          ×
+        </button>
+      </div>
+      
+      <div className="space-y-2 text-sm">
+        <div className="flex justify-between">
+          <span className="text-gray-300">Load Time:</span>
+          <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 2000, poor: 4000 }) : 'text-gray-400'}`}>
+            {formatMetric(metrics.loadTime)}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-gray-300">FCP:</span>
+          <span className={`font-mono ${metrics.firstContentfulPaint ? getMetricColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 }) : 'text-gray-400'}`}>
+            {formatMetric(metrics.firstContentfulPaint)}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-gray-300">LCP:</span>
+          <span className={`font-mono ${metrics.largestContentfulPaint ? getMetricColor(metrics.largestContentfulPaint, { good: 2500, poor: 4000 }) : 'text-gray-400'}`}>
+            {formatMetric(metrics.largestContentfulPaint)}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-gray-300">INP:</span>
+          <span className={`font-mono ${metrics.interactionToNextPaint ? getMetricColor(metrics.interactionToNextPaint, { good: 200, poor: 500 }) : 'text-gray-400'}`}>
+            {formatMetric(metrics.interactionToNextPaint)}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-gray-300">CLS:</span>
+          <span className={`font-mono ${metrics.cumulativeLayoutShift ? getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, poor: 0.25 }) : 'text-gray-400'}`}>
+            {metrics.cumulativeLayoutShift ? metrics.cumulativeLayoutShift.toFixed(4) : 'N/A'}
+          </span>
+        </div>
+        
+        <div className="flex justify-between">
+          <span className="text-gray-300">TTFB:</span>
+          <span className={`font-mono ${metrics.timeToFirstByte ? getMetricColor(metrics.timeToFirstByte, { good: 200, poor: 600 }) : 'text-gray-400'}`}>
+            {formatMetric(metrics.timeToFirstByte)}
+          </span>
+        </div>
+        
+        {metrics.memoryUsage !== undefined && (
+          <div className="flex justify-between">
+            <span className="text-gray-300">Memory:</span>
+            <span className={`font-mono ${getMetricColor(metrics.memoryUsage, { good: 50, poor: 100 })}`}>
+              {formatMetric(metrics.memoryUsage, 'MB')}
+            </span>
+          </div>
+        )}
+      </div>
+      
+      <div className="mt-3 pt-3 border-t border-cyan-500/20 text-xs text-cyan-400">
+        Press Ctrl+Shift+P to toggle
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
