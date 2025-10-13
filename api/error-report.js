@@ -6,6 +6,16 @@ export default function handler(req, res) {
 
   try {
     const { error, stack, componentStack, timestamp, userAgent, url } = req.body;
+    
+    // Log the error details
+    console.error('Client Error Report:', {
+      error: error?.message || error,
+      stack,
+      componentStack,
+      timestamp,
+      userAgent,
+      url
+    });
 
     // Log error details (in production you would send this to your monitoring service)
     // In a real application, you would:
