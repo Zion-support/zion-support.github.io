@@ -19,6 +19,18 @@ const Header: React.FC = () => {
         { name: 'Digital Transformation', href: '/digital-transformation' }
       ]
     },
+    { 
+      name: 'Micro SaaS', 
+      href: '/micro-saas-solutions',
+      submenu: [
+        { name: 'AI CLV Predictor', href: '/ai-customer-lifetime-value-predictor' },
+        { name: 'AI Social Media Scheduler', href: '/ai-social-media-scheduler-pro' },
+        { name: 'AI Business Intelligence', href: '/ai-business-intelligence-dashboard' },
+        { name: 'AI Email Marketing', href: '/ai-email-marketing-automation-pro' },
+        { name: 'AI Project Management', href: '/ai-project-management-suite' },
+        { name: 'View All Micro SaaS', href: '/micro-saas-solutions' }
+      ]
+    },
     { name: 'Solutions', href: '/solutions' },
     { name: 'Case Studies', href: '/case-studies' },
     { name: 'Blog', href: '/blog' },

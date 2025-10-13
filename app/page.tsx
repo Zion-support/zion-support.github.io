@@ -147,10 +147,10 @@ export default function HomePage() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Micro SaaS</h3>
               <p className="text-gray-300 mb-6">
-                Custom micro SaaS solutions designed to solve specific business 
-                challenges with scalable, cost-effective applications.
+                AI-powered micro SaaS solutions including CLV prediction, social media automation, 
+                business intelligence, email marketing, and project management tools.
               </p>
-              <Link to="/micro-saas" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
+              <Link to="/micro-saas-solutions" className="text-pink-400 hover:text-pink-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
             </div>
@@ -168,6 +168,113 @@ export default function HomePage() {
               <Link to="/5g-solutions" className="text-indigo-400 hover:text-indigo-300 font-semibold flex items-center gap-2 group-hover:gap-3 transition-all">
                 Learn More <ArrowRightIcon className="w-4 h-4" />
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Micro SaaS Services Section */}
+      <section className="py-20 bg-slate-900">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+              Featured Micro SaaS Solutions
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              AI-powered micro SaaS tools designed to solve specific business challenges with real results
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* AI CLV Predictor */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-purple-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <ChartBarIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">AI CLV Predictor</h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                Predict customer lifetime value with 95% accuracy. Increase revenue by 30% with AI-powered customer analytics.
+              </p>
+              <div className="text-purple-400 font-semibold text-sm mb-2">Starting at $99/month</div>
+              <Link to="/ai-customer-lifetime-value-predictor" className="text-purple-400 hover:text-purple-300 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                Learn More <ArrowRightIcon className="w-3 h-3" />
+              </Link>
+            </div>
+
+            {/* AI Social Media Scheduler */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-cyan-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <GlobeAltIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">AI Social Media Scheduler</h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                AI-powered social media management with optimal timing and content suggestions. Increase engagement by 150%.
+              </p>
+              <div className="text-cyan-400 font-semibold text-sm mb-2">Starting at $29/month</div>
+              <Link to="/ai-social-media-scheduler-pro" className="text-cyan-400 hover:text-cyan-300 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                Learn More <ArrowRightIcon className="w-3 h-3" />
+              </Link>
+            </div>
+
+            {/* AI Business Intelligence */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-green-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <CpuChipIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">AI Business Intelligence</h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                Transform data into actionable insights with AI-powered analytics and predictive intelligence.
+              </p>
+              <div className="text-green-400 font-semibold text-sm mb-2">Starting at $199/month</div>
+              <Link to="/ai-business-intelligence-dashboard" className="text-green-400 hover:text-green-300 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                Learn More <ArrowRightIcon className="w-3 h-3" />
+              </Link>
+            </div>
+
+            {/* AI Email Marketing */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-yellow-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-12 h-12 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <EnvelopeIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">AI Email Marketing</h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                AI-powered email automation with smart segmentation and personalized content. Increase open rates by 200%.
+              </p>
+              <div className="text-yellow-400 font-semibold text-sm mb-2">Starting at $49/month</div>
+              <Link to="/ai-email-marketing-automation-pro" className="text-yellow-400 hover:text-yellow-300 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                Learn More <ArrowRightIcon className="w-3 h-3" />
+              </Link>
+            </div>
+
+            {/* AI Project Management */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-pink-500 transition-all duration-300 hover:transform hover:scale-105">
+              <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-rose-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                <ChartBarIcon className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">AI Project Management</h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                AI-powered project management with smart task allocation and predictive analytics. Increase productivity by 40%.
+              </p>
+              <div className="text-pink-400 font-semibold text-sm mb-2">Starting at $29/user/month</div>
+              <Link to="/ai-project-management-suite" className="text-pink-400 hover:text-pink-300 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+                Learn More <ArrowRightIcon className="w-3 h-3" />
+              </Link>
+            </div>
+
+            {/* View All Micro SaaS */}
+            <div className="group bg-gradient-to-br from-slate-800 to-slate-700 p-6 rounded-xl border border-slate-600 hover:border-indigo-500 transition-all duration-300 hover:transform hover:scale-105 flex items-center justify-center">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform">
+                  <GlobeAltIcon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">View All Micro SaaS</h3>
+                <p className="text-gray-300 mb-4 text-sm">
+                  Explore our complete collection of AI-powered micro SaaS solutions
+                </p>
+                <Link to="/micro-saas-solutions" className="text-indigo-400 hover:text-indigo-300 font-semibold text-sm flex items-center gap-1 group-hover:gap-2 transition-all justify-center">
+                  View All <ArrowRightIcon className="w-3 h-3" />
+                </Link>
+              </div>
             </div>
           </div>
         </div>

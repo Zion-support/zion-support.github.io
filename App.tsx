@@ -27,6 +27,13 @@ import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
 
+// Micro SaaS Services
+import AICustomerLifetimeValuePredictorPage from './app/ai-customer-lifetime-value-predictor/page';
+import AISocialMediaSchedulerProPage from './app/ai-social-media-scheduler-pro/page';
+import AIBusinessIntelligenceDashboardPage from './app/ai-business-intelligence-dashboard/page';
+import AIEmailMarketingAutomationProPage from './app/ai-email-marketing-automation-pro/page';
+import AIProjectManagementSuitePage from './app/ai-project-management-suite/page';
+
 // Service Pages
 import AIServicesPage from './app/pages/AIServicesPage';
 import ITServicesPage from './app/pages/ITServicesPage';
@@ -83,6 +90,13 @@ function App() {
               <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
               <Route path="/ai-solutions" element={<AISolutionsPage />} />
               <Route path="/it-solutions" element={<ITSolutionsPage />} />
+              
+              {/* Micro SaaS Services */}
+              <Route path="/ai-customer-lifetime-value-predictor" element={<AICustomerLifetimeValuePredictorPage />} />
+              <Route path="/ai-social-media-scheduler-pro" element={<AISocialMediaSchedulerProPage />} />
+              <Route path="/ai-business-intelligence-dashboard" element={<AIBusinessIntelligenceDashboardPage />} />
+              <Route path="/ai-email-marketing-automation-pro" element={<AIEmailMarketingAutomationProPage />} />
+              <Route path="/ai-project-management-suite" element={<AIProjectManagementSuitePage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/tutorials" element={<TutorialsPage />} />
               <Route path="/demo" element={<DemoPage />} />
