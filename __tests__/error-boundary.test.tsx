@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { MemoryRouter } from 'react-router-dom';
 import ErrorBoundary from '../app/components/ErrorBoundary';
 
 // Mock component that throws an error
@@ -23,9 +24,11 @@ describe('ErrorBoundary', () => {
 
   it('renders children when there is no error', () => {
     render(
-      <ErrorBoundary>
-        <ThrowError shouldThrow={false} />
-      </ErrorBoundary>
+      <MemoryRouter>
+        <ErrorBoundary>
+          <ThrowError shouldThrow={false} />
+        </ErrorBoundary>
+      </MemoryRouter>
     );
 
     expect(screen.getByText('No error')).toBeInTheDocument();
@@ -33,9 +36,11 @@ describe('ErrorBoundary', () => {
 
   it('renders error UI when there is an error', () => {
     render(
-      <ErrorBoundary>
-        <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      <MemoryRouter>
+        <ErrorBoundary>
+          <ThrowError shouldThrow={true} />
+        </ErrorBoundary>
+      </MemoryRouter>
     );
 
     expect(screen.getByText('Oops! Something went wrong')).toBeInTheDocument();
@@ -45,9 +50,11 @@ describe('ErrorBoundary', () => {
 
   it('has clickable reset button', () => {
     render(
-      <ErrorBoundary>
-        <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      <MemoryRouter>
+        <ErrorBoundary>
+          <ThrowError shouldThrow={true} />
+        </ErrorBoundary>
+      </MemoryRouter>
     );
 
     const tryAgainButton = screen.getByText('Try Again');
@@ -59,9 +66,11 @@ describe('ErrorBoundary', () => {
     const customFallback = <div>Custom error message</div>;
     
     render(
-      <ErrorBoundary fallback={customFallback}>
-        <ThrowError shouldThrow={true} />
-      </ErrorBoundary>
+      <MemoryRouter>
+        <ErrorBoundary fallback={customFallback}>
+          <ThrowError shouldThrow={true} />
+        </ErrorBoundary>
+      </MemoryRouter>
     );
 
     expect(screen.getByText('Custom error message')).toBeInTheDocument();
