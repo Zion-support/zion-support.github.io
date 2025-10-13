@@ -3,6 +3,7 @@ const path = require('path');
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Generate sitemap.xml for better SEO
 const generateSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
@@ -131,6 +132,8 @@ generateSitemap();
 =======
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
 // Define all routes for the sitemap
 const routes = [
   // Main pages
@@ -138,6 +141,7 @@ const routes = [
   { url: '/about', priority: '0.8', changefreq: 'monthly' },
   { url: '/contact', priority: '0.9', changefreq: 'monthly' },
   { url: '/services', priority: '0.9', changefreq: 'weekly' },
+<<<<<<< HEAD
   { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
 <<<<<<< HEAD
   { url: '/blog', priority: '0.7', changefreq: 'daily' },
@@ -161,28 +165,45 @@ const routes = [
   { url: '/cookies', priority: '0.5', changefreq: 'yearly' },
   { url: '/sitemap', priority: '0.3', changefreq: 'monthly' },
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+  { url: '/blog', priority: '0.7', changefreq: 'weekly' },
+  { url: '/privacy', priority: '0.5', changefreq: 'yearly' },
+  { url: '/terms', priority: '0.5', changefreq: 'yearly' },
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
 
   // AI Services
   { url: '/ai-analytics', priority: '0.8', changefreq: 'weekly' },
-  { url: '/ai-automation', priority: '0.8', changefreq: 'weekly' },
-  { url: '/ai-business-intelligence', priority: '0.8', changefreq: 'weekly' },
   { url: '/ai-content-generation', priority: '0.8', changefreq: 'weekly' },
-  { url: '/ai-customer-service', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-customer-support', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-cybersecurity', priority: '0.8', changefreq: 'weekly' },
   { url: '/ai-data-analytics', priority: '0.8', changefreq: 'weekly' },
-  { url: '/ai-email-automation', priority: '0.8', changefreq: 'weekly' },
-  { url: '/ai-fraud-detection', priority: '0.8', changefreq: 'weekly' },
-  { url: '/ai-healthcare', priority: '0.8', changefreq: 'weekly' },
-  { url: '/ai-marketing', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-document-processing', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-marketing-automation', priority: '0.8', changefreq: 'weekly' },
   { url: '/ai-predictive-analytics', priority: '0.8', changefreq: 'weekly' },
-  { url: '/ai-project-management', priority: '0.8', changefreq: 'weekly' },
-  { url: '/ai-recommendation-engine', priority: '0.8', changefreq: 'weekly' },
-  { url: '/ai-sales-automation', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-voice-assistant', priority: '0.8', changefreq: 'weekly' },
   { url: '/ai-workflow-automation', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-chatbot-builder', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-code-assistant', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-design-studio', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-business-intelligence', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-automation', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-computer-vision', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-conversational-ai', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-crm', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-customer-insights', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-data-visualization', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-devops-automation', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-document-intelligence', priority: '0.8', changefreq: 'weekly' },
 
   // IT Services
-  { url: '/cloud-infrastructure', priority: '0.8', changefreq: 'weekly' },
-  { url: '/cybersecurity-solutions', priority: '0.8', changefreq: 'weekly' },
+  { url: '/cloud-migration', priority: '0.8', changefreq: 'weekly' },
+  { url: '/devops-services', priority: '0.8', changefreq: 'weekly' },
+  { url: '/it-consulting', priority: '0.8', changefreq: 'weekly' },
+  { url: '/network-security', priority: '0.8', changefreq: 'weekly' },
+  { url: '/software-development', priority: '0.8', changefreq: 'weekly' },
+  { url: '/system-integration', priority: '0.8', changefreq: 'weekly' },
   { url: '/web-development', priority: '0.8', changefreq: 'weekly' },
+<<<<<<< HEAD
   { url: '/mobile-development', priority: '0.8', changefreq: 'weekly' },
   { url: '/database-management', priority: '0.8', changefreq: 'weekly' },
   { url: '/custom-software', priority: '0.8', changefreq: 'weekly' },
@@ -205,14 +226,50 @@ const routes = [
   { url: '/5g-edge-computing', priority: '0.8', changefreq: 'weekly' },
   { url: '/5g-implementation', priority: '0.8', changefreq: 'weekly' },
   { url: '/5g-mobile-applications', priority: '0.8', changefreq: 'weekly' },
+=======
+  { url: '/cloud-consulting', priority: '0.8', changefreq: 'weekly' },
+  { url: '/data-center-solutions', priority: '0.8', changefreq: 'weekly' },
+  { url: '/disaster-recovery', priority: '0.8', changefreq: 'weekly' },
+  { url: '/it-support', priority: '0.8', changefreq: 'weekly' },
+  { url: '/managed-services', priority: '0.8', changefreq: 'weekly' },
+  { url: '/security-audit', priority: '0.8', changefreq: 'weekly' },
+  { url: '/technology-consulting', priority: '0.8', changefreq: 'weekly' },
+
+  // 5G Solutions
+  { url: '/5g-solutions', priority: '0.9', changefreq: 'weekly' },
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
   { url: '/5g-network-infrastructure', priority: '0.8', changefreq: 'weekly' },
-  { url: '/5g-private-networks', priority: '0.8', changefreq: 'weekly' },
+  { url: '/5g-edge-computing', priority: '0.8', changefreq: 'weekly' },
+  { url: '/5g-iot-solutions', priority: '0.8', changefreq: 'weekly' },
   { url: '/5g-smart-city-solutions', priority: '0.8', changefreq: 'weekly' },
+<<<<<<< HEAD
 <<<<<<< HEAD
   { url: '/5g-iot-solutions', priority: '0.8', changefreq: 'weekly' }
 =======
   { url: '/5g-iot-solutions', priority: '0.8', changefreq: 'weekly' },
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+  { url: '/5g-private-networks', priority: '0.8', changefreq: 'weekly' },
+  { url: '/5g-mobile-applications', priority: '0.8', changefreq: 'weekly' },
+  { url: '/5g-data-analytics', priority: '0.8', changefreq: 'weekly' },
+  { url: '/5g-implementation', priority: '0.8', changefreq: 'weekly' },
+
+  // Micro SAAS
+  { url: '/micro-saas-services', priority: '0.9', changefreq: 'weekly' },
+  { url: '/project-management-tool', priority: '0.8', changefreq: 'weekly' },
+  { url: '/customer-relationship-manager', priority: '0.8', changefreq: 'weekly' },
+  { url: '/inventory-management-system', priority: '0.8', changefreq: 'weekly' },
+  { url: '/financial-reporting-tool', priority: '0.8', changefreq: 'weekly' },
+  { url: '/employee-time-tracker', priority: '0.8', changefreq: 'weekly' },
+  { url: '/social-media-scheduler', priority: '0.8', changefreq: 'weekly' },
+  { url: '/email-marketing-platform', priority: '0.8', changefreq: 'weekly' },
+  { url: '/website-analytics-tool', priority: '0.8', changefreq: 'weekly' },
+  { url: '/task-automation-workflow', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-powered-email-analyzer', priority: '0.8', changefreq: 'weekly' },
+  { url: '/smart-inventory-optimizer', priority: '0.8', changefreq: 'weekly' },
+  { url: '/ai-customer-sentiment-tracker', priority: '0.8', changefreq: 'weekly' },
+  { url: '/smart-expense-categorizer', priority: '0.8', changefreq: 'weekly' }
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
 ];
 
 // Generate sitemap XML
@@ -273,11 +330,14 @@ Allow: /micro-saas/
 Allow: /5g-solutions/
 Allow: /about/
 Allow: /contact/
+<<<<<<< HEAD
 Allow: /pricing/
 Allow: /blog/
 Allow: /tutorials/
 Allow: /demo/
 Allow: /support/
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
 
 # Block specific file types
 Disallow: /*.json$
@@ -364,5 +424,9 @@ fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemapContent);
 fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsContent);
 
 console.log(`Generated sitemap with ${routes.length} routes`);
+<<<<<<< HEAD
 console.log('Generated robots.txt');
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+console.log('Generated robots.txt');
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571

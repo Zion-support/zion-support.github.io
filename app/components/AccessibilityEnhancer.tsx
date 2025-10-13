@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 import React, { useEffect, ReactNode } from 'react'
 
+<<<<<<< HEAD
 interface AccessibilityEnhancerProps {
   children: ReactNode
 }
@@ -17,17 +18,37 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       skipLink.href = '#main-content'
       skipLink.textContent = 'Skip to main content'
       skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-cyan-500 focus:text-white focus:rounded-lg focus:shadow-lg'
+=======
+const AccessibilityEnhancer: React.FC = () => {
+  useEffect(() => {
+    // Skip if not in browser environment
+    if (typeof window === 'undefined') return;
+
+    // Enhanced keyboard navigation
+    const enhanceKeyboardNavigation = () => {
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-4 py-2 rounded z-50';
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
       skipLink.style.cssText = `
         position: absolute;
         top: -40px;
         left: 6px;
+<<<<<<< HEAD
         background: #00ffff;
         color: #000;
+=======
+        background: #2563eb;
+        color: white;
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
         padding: 8px;
         text-decoration: none;
         border-radius: 4px;
         z-index: 1000;
         transition: top 0.3s;
+<<<<<<< HEAD
       `
       
       skipLink.addEventListener('focus', () => {
@@ -181,23 +202,28 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     // Reduced motion detection
     const handleReducedMotion = () => {
       const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+=======
+      `;
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
       
-      const handleMotionChange = (e: MediaQueryListEvent) => {
-        if (e.matches) {
-          document.documentElement.classList.add('reduce-motion');
-        } else {
-          document.documentElement.classList.remove('reduce-motion');
-        }
-      };
+      skipLink.addEventListener('focus', () => {
+        skipLink.style.top = '6px';
+      });
+      
+      skipLink.addEventListener('blur', () => {
+        skipLink.style.top = '-40px';
+      });
+      
+      document.body.insertBefore(skipLink, document.body.firstChild);
 
-      mediaQuery.addEventListener('change', handleMotionChange);
-      handleMotionChange(mediaQuery as any);
-
-      return () => {
-        mediaQuery.removeEventListener('change', handleMotionChange);
-      };
+      // Add main content landmark
+      const mainContent = document.querySelector('main');
+      if (mainContent && !mainContent.id) {
+        mainContent.id = 'main-content';
+      }
     };
 
+<<<<<<< HEAD
     // Screen reader announcements
     const enhanceScreenReader = () => {
       if (!enableScreenReader) return;
@@ -207,12 +233,23 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         const main = document.querySelector('main');
         if (main && !main.getAttribute('role')) {
           main.setAttribute('role', 'main');
+=======
+    // Enhanced focus management
+    const enhanceFocusManagement = () => {
+      // Add visible focus indicators
+      const style = document.createElement('style');
+      style.textContent = `
+        *:focus {
+          outline: 2px solid #3b82f6 !important;
+          outline-offset: 2px !important;
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
         }
-
-        const nav = document.querySelector('nav');
-        if (nav && !nav.getAttribute('role')) {
-          nav.setAttribute('role', 'navigation');
+        
+        .focus-visible:focus {
+          outline: 2px solid #3b82f6 !important;
+          outline-offset: 2px !important;
         }
+<<<<<<< HEAD
 
         const header = document.querySelector('header');
         if (header && !header.getAttribute('role')) {
@@ -319,6 +356,9 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         }
 
         /* Screen reader only content */
+=======
+        
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
         .sr-only {
           position: absolute;
           width: 1px;
@@ -330,8 +370,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           white-space: nowrap;
           border: 0;
         }
-
-        .sr-only:focus {
+        
+        .focus\:not-sr-only:focus {
           position: static;
           width: auto;
           height: auto;
@@ -341,35 +381,74 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           clip: auto;
           white-space: normal;
         }
+      `;
+      document.head.appendChild(style);
+    };
 
-        /* High contrast mode */
-        .high-contrast {
-          filter: contrast(150%) brightness(110%);
+    // Enhanced ARIA attributes
+    const enhanceARIA = () => {
+      // Add ARIA landmarks
+      const header = document.querySelector('header');
+      if (header && !header.getAttribute('role')) {
+        header.setAttribute('role', 'banner');
+      }
+
+      const nav = document.querySelector('nav');
+      if (nav && !nav.getAttribute('role')) {
+        nav.setAttribute('role', 'navigation');
+      }
+
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+      }
+
+      const footer = document.querySelector('footer');
+      if (footer && !footer.getAttribute('role')) {
+        footer.setAttribute('role', 'contentinfo');
+      }
+
+      // Add heading hierarchy
+      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
+      headings.forEach((heading, index) => {
+        if (!heading.id) {
+          const id = heading.textContent?.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') || `heading-${index}`;
+          heading.id = id;
         }
+      });
 
-        .high-contrast * {
-          border-color: currentColor !important;
+      // Add alt text to images without alt
+      const images = document.querySelectorAll('img:not([alt])');
+      images.forEach(img => {
+        img.setAttribute('alt', '');
+      });
+    };
+
+    // Enhanced color contrast
+    const enhanceColorContrast = () => {
+      const style = document.createElement('style');
+      style.textContent = `
+        /* Ensure sufficient color contrast */
+        .text-gray-300 {
+          color: #d1d5db !important;
         }
-
-        /* Focus indicators */
-        .focus-visible:focus-visible {
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px;
+        
+        .text-gray-400 {
+          color: #9ca3af !important;
         }
-
-        /* Reduced motion */
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
+        
+        .bg-white\/10 {
+          background-color: rgba(255, 255, 255, 0.1) !important;
         }
-
-        /* Large text mode */
-        .large-text {
-          font-size: 1.2em;
-          line-height: 1.6;
+        
+        .bg-white\/20 {
+          background-color: rgba(255, 255, 255, 0.2) !important;
         }
+      `;
+      document.head.appendChild(style);
+    };
 
+<<<<<<< HEAD
         .large-text h1 { font-size: 2.5em; }
         .large-text h2 { font-size: 2em; }
         .large-text h3 { font-size: 1.75em; }
@@ -389,6 +468,112 @@ interface AccessibilityEnhancerProps {
 const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   return <>{children}</>;
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+    // Enhanced screen reader support
+    const enhanceScreenReaderSupport = () => {
+      // Add live regions for dynamic content
+      const liveRegion = document.createElement('div');
+      liveRegion.setAttribute('aria-live', 'polite');
+      liveRegion.setAttribute('aria-atomic', 'true');
+      liveRegion.className = 'sr-only';
+      liveRegion.id = 'live-region';
+      document.body.appendChild(liveRegion);
+
+      // Announce page changes
+      const announcePageChange = (message: string) => {
+        const liveRegion = document.getElementById('live-region');
+        if (liveRegion) {
+          liveRegion.textContent = message;
+        }
+      };
+
+      // Listen for route changes (if using React Router)
+      const originalPushState = history.pushState;
+      const originalReplaceState = history.replaceState;
+
+      history.pushState = function(...args) {
+        originalPushState.apply(history, args);
+        announcePageChange('Page navigation occurred');
+      };
+
+      history.replaceState = function(...args) {
+        originalReplaceState.apply(history, args);
+        announcePageChange('Page content updated');
+      };
+    };
+
+    // Enhanced form accessibility
+    const enhanceFormAccessibility = () => {
+      const forms = document.querySelectorAll('form');
+      forms.forEach(form => {
+        const inputs = form.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+          const inputElement = input as HTMLInputElement;
+          
+          // Add required indicator
+          if (inputElement.required && !form.querySelector(`[for="${inputElement.id}"] .required`)) {
+            const label = form.querySelector(`label[for="${inputElement.id}"]`);
+            if (label) {
+              const requiredSpan = document.createElement('span');
+              requiredSpan.textContent = ' *';
+              requiredSpan.className = 'text-red-500';
+              requiredSpan.setAttribute('aria-label', 'required');
+              label.appendChild(requiredSpan);
+            }
+          }
+
+          // Add error handling
+          inputElement.addEventListener('invalid', () => {
+            const errorId = `${inputElement.id}-error`;
+            let errorElement = document.getElementById(errorId);
+            
+            if (!errorElement) {
+              errorElement = document.createElement('div');
+              errorElement.id = errorId;
+              errorElement.className = 'text-red-500 text-sm mt-1';
+              errorElement.setAttribute('role', 'alert');
+              inputElement.parentNode?.insertBefore(errorElement, inputElement.nextSibling);
+            }
+            
+            errorElement.textContent = inputElement.validationMessage;
+            inputElement.setAttribute('aria-describedby', errorId);
+          });
+
+          inputElement.addEventListener('input', () => {
+            const errorElement = document.getElementById(`${inputElement.id}-error`);
+            if (errorElement) {
+              errorElement.textContent = '';
+            }
+          });
+        });
+      });
+    };
+
+    // Initialize all enhancements
+    enhanceKeyboardNavigation();
+    enhanceFocusManagement();
+    enhanceARIA();
+    enhanceColorContrast();
+    enhanceScreenReaderSupport();
+    enhanceFormAccessibility();
+
+    // Cleanup function
+    return () => {
+      // Remove any added elements or event listeners
+      const skipLink = document.querySelector('a[href="#main-content"]');
+      if (skipLink) {
+        skipLink.remove();
+      }
+      
+      const liveRegion = document.getElementById('live-region');
+      if (liveRegion) {
+        liveRegion.remove();
+      }
+    };
+  }, []);
+
+  return null; // This component doesn't render anything
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
 };
 
 export default AccessibilityEnhancer;

@@ -18,6 +18,7 @@ interface EnhancedSEOProps {
   twitterImage?: string;
   structuredData?: object;
 <<<<<<< HEAD
+<<<<<<< HEAD
   noIndex?: boolean;
   lang?: string;
   noindex?: boolean;
@@ -40,11 +41,17 @@ interface EnhancedSEOProps {
   noindex?: boolean;
   nofollow?: boolean;
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+  noindex?: boolean;
+  nofollow?: boolean;
+  lang?: string;
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   title,
   description,
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   keywords,
@@ -114,10 +121,21 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   ogTitle,
   ogDescription,
   ogImage = "https://ziontechgroup.com/og-image.jpg",
+=======
+  keywords,
+  canonical,
+  ogTitle,
+  ogDescription,
+  ogImage,
+  ogUrl,
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
   twitterTitle,
   twitterDescription,
   twitterImage = "https://ziontechgroup.com/twitter-image.jpg",
   structuredData,
+<<<<<<< HEAD
   noIndex = false
 }) => {
 <<<<<<< HEAD
@@ -146,12 +164,27 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
     'max-video-preview:-1'
   ].join(', ');
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+  noindex = false,
+  nofollow = false,
+  lang = 'en'
+}) => {
+  const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
+  const fullOgTitle = ogTitle || fullTitle;
+  const fullOgDescription = ogDescription || description;
+  const fullTwitterTitle = twitterTitle || fullTitle;
+  const fullTwitterDescription = twitterDescription || description;
+  const fullOgImage = ogImage || '/api/placeholder/1200/630';
+  const fullTwitterImage = twitterImage || fullOgImage;
+  const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
 
   return (
     <Helmet>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       <meta name="keywords" content={finalKeywords} />
@@ -222,39 +255,30 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://www.google-analytics.com" />
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
       {keywords && <meta name="keywords" content={keywords} />}
-      <meta name="robots" content={robotsContent} />
-      {fullCanonical && <link rel="canonical" href={fullCanonical} />}
-      
-      {/* Language and Locale */}
-      <meta httpEquiv="content-language" content="en-US" />
-      <meta name="language" content="English" />
-      <meta name="geo.region" content="US-DE" />
-      <meta name="geo.placename" content="Middletown" />
-      <meta name="geo.position" content="39.4496;-75.7163" />
-      <meta name="ICBM" content="39.4496, -75.7163" />
-      
-      {/* Author and Publisher */}
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="publisher" content="Zion Tech Group" />
-      <meta name="copyright" content="Zion Tech Group" />
-      
+      <meta name="language" content={lang} />
+      <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
+      <link rel="canonical" href={fullCanonical} />
+
       {/* Open Graph Meta Tags */}
-      <meta property="og:site_name" content={siteName} />
-      <meta property="og:title" content={ogTitle || fullTitle} />
-      <meta property="og:description" content={ogDescription || description} />
       <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={fullOgUrl} />
+      <meta property="og:title" content={fullOgTitle} />
+      <meta property="og:description" content={fullOgDescription} />
       <meta property="og:image" content={fullOgImage} />
-      <meta property="og:image:width" content="1200" />
-      <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content={ogTitle || fullTitle} />
-      <meta property="og:locale" content="en_US" />
-      
+      <meta property="og:url" content={fullOgUrl || fullCanonical} />
+      <meta property="og:site_name" content="Zion Tech Group" />
+      <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang} />
+
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
+      <meta name="twitter:title" content={fullTwitterTitle} />
+      <meta name="twitter:description" content={fullTwitterDescription} />
+      <meta name="twitter:image" content={fullTwitterImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
+<<<<<<< HEAD
       <meta name="twitter:title" content={twitterTitle || ogTitle || fullTitle} />
       <meta name="twitter:description" content={twitterDescription || ogDescription || description} />
       <meta name="twitter:image" content={fullTwitterImage} />
@@ -287,6 +311,16 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
 =======
 =======
       
+=======
+
+      {/* Additional SEO Meta Tags */}
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="theme-color" content="#0f172a" />
+      <meta name="msapplication-TileColor" content="#0f172a" />
+
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
       {/* Structured Data */}
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
       {structuredData && (
@@ -294,8 +328,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
           {JSON.stringify(structuredData)}
         </script>
       )}
-      
-<<<<<<< HEAD
+
       {/* Default Structured Data for Organization */}
       {!structuredData && (
         <script type="application/ld+json">
@@ -305,7 +338,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
             "name": "Zion Tech Group",
             "url": "https://ziontechgroup.com",
             "logo": "https://ziontechgroup.com/logo.svg",
-            "description": "Leading technology solutions provider specializing in AI, cybersecurity, cloud infrastructure, and digital transformation services.",
+            "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
             "address": {
               "@type": "PostalAddress",
               "streetAddress": "364 E Main St STE 1008",
@@ -327,6 +360,7 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
           })}
         </script>
       )}
+<<<<<<< HEAD
 >>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 =======
       {/* Default Organization Structured Data */}
@@ -370,6 +404,36 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
         })}
       </script>
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
+=======
+
+      {/* Preconnect to external domains for performance */}
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      <link rel="preconnect" href="https://api.ziontechgroup.com" />
+
+      {/* Favicon and App Icons */}
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+      <link rel="manifest" href="/site.webmanifest" />
+
+      {/* Additional Performance Optimizations */}
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
+
+      {/* Security Headers */}
+      <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
+      <meta httpEquiv="X-Frame-Options" content="DENY" />
+      <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
+      <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+      {/* Cache Control */}
+      <meta httpEquiv="Cache-Control" content="public, max-age=31536000" />
+>>>>>>> cursor/analyze-improve-and-deploy-application-0571
     </Helmet>
   )
 }
