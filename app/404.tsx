@@ -1,44 +1,40 @@
 'use client';
-import React, { Helmet } from 'react-helmet-async';
-import React, { Link } from 'react-router-dom';
-import React, { Home, ArrowLeft, Search, AlertTriangle, RefreshCw } from 'lucide-react';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Home, ArrowLeft, Search, AlertTriangle, RefreshCw } from 'lucide-react';
+
 const NotFoundPage: React.FC = () => {
   return (
-    <div>
-  )
-    </div>
-  );
-  );
-  )
     <>
       <Helmet>
         <title>404 - Page Not Found | Zion Tech Group</title>
-        <meta name="description" content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage or explore our AI and IT solutions." />"'
-        <meta name="robots" content="noindex, nofollow" />"
-        <meta property="og:title" content="404 - Page Not Found | Zion Tech Group" />"
-        <meta property="og:description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />"
+        <meta name="description" content="The page you're looking for doesn't exist. Return to Zion Tech Group's homepage or explore our AI and IT solutions." />
+        <meta name="robots" content="noindex, nofollow" />
+        <meta property="og:title" content="404 - Page Not Found | Zion Tech Group" />
+        <meta property="og:description" content="The page you're looking for doesn't exist. Return to our homepage or explore our services." />
         <meta property="og:type" content="website" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">"
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
         <div className="max-w-2xl w-full text-center">
           {/* 404 Animation */}
-          <div className="relative mb-8">"
+          <div className="relative mb-8">
             <div className="text-9xl font-bold text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text animate-pulse">
-              404;
+              404
             </div>
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">"
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-red-500/20 rounded-full animate-bounce">
               <AlertTriangle className="w-6 h-6 text-red-400" />
             </div>
           </div>
 
           {/* Error Message */}
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Page Not Found;
+            Page Not Found
           </h1>
           
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">"
-            Oops! The page you're looking for seems to have vanished into the digital void. '
+          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+            Oops! The page you're looking for seems to have vanished into the digital void. 
             Don't worry, even our AI can't predict everything!
           </p>
 
