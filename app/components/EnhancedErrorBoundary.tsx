@@ -1,6 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import React, { Component, ReactNode } from 'react';
@@ -10,20 +11,27 @@ import React, { Component, ReactNode } from 'react';
 
 export default class EnhancedErrorBoundary extends Component<Props, State> {
 =======
+=======
+import { RefreshCw, Home, AlertTriangle } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
+<<<<<<< HEAD
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 =======
 
 interface Props {
   children: ReactNode;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
 }
 
 interface State {
   hasError: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   error: Error | null;
   errorInfo: ErrorInfo | null;
@@ -199,6 +207,10 @@ Please describe what you were doing when this error occurred:
               We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
 =======
   error?: Error;
+=======
+  error?: Error;
+  errorInfo?: ErrorInfo;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
 }
 
 class EnhancedErrorBoundary extends Component<Props, State> {
@@ -212,20 +224,42 @@ class EnhancedErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+<<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo);
+=======
+    console.error('EnhancedErrorBoundary caught an error:', error, errorInfo);
+    this.setState({ error, errorInfo });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
   }
 
   render() {
     if (this.state.hasError) {
+<<<<<<< HEAD
       return (
         <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
           <div className="max-w-md mx-auto text-center p-8">
+=======
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
             <h1 className="text-2xl font-bold text-white mb-4">
               Something went wrong
             </h1>
             <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
               We're sorry, but something unexpected happened. Please try refreshing the page.
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+              We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
             </p>
             
             {process.env['NODE_ENV'] === 'development' && this.state.error && (
@@ -318,6 +352,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {
                 Report Bug
               </button>
             </div>
+<<<<<<< HEAD
 
             <div className="mt-6 text-sm text-gray-400">
               Error ID: {this.state.errorId}
@@ -353,6 +388,8 @@ export default EnhancedErrorBoundary;
                 Try Again
               </button>
             </div>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
           </div>
         </div>
       );
@@ -362,5 +399,9 @@ export default EnhancedErrorBoundary;
   }
 }
 
+<<<<<<< HEAD
 export default EnhancedErrorBoundary;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+export default EnhancedErrorBoundary;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061

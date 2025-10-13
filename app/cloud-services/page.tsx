@@ -56,6 +56,7 @@ export default function CloudServices() {
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
 <<<<<<< HEAD
+<<<<<<< HEAD
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center">
@@ -66,6 +67,78 @@ export default function CloudServices() {
               <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
                 Transform your business with our comprehensive cloud solutions. 
                 Scalable, secure, and optimized for performance.
+=======
+        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Cloud Services
+            </h1>
+            <p className="text-xl text-gray-300 mb-8">
+              Transform your business with our comprehensive cloud solutions
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+              >
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              >
+                Free Consultation
+              </Link>
+            </div>
+          </div>
+        </div>
+        </section>
+
+        {/* Key Benefits */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Why Choose Our Cloud Services?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We deliver cloud solutions that provide real business value through innovation, security, and scalability.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {services.map((service, index) => (
+                <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
+                  <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 leading-relaxed">
+                    {service.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+};
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+              <p className="text-xl text-gray-300 mb-8">
+                Let our cloud experts help you migrate, optimize, and secure your infrastructure.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1061
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
