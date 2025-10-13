@@ -56,18 +56,88 @@ const Footer = React.memo(() => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4">AI Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/ai-services"
+                  to="/ai-analytics-dashboard-pro"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Services
+                  AI Analytics Dashboard Pro
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/ai-content-generation-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Content Generation Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-cybersecurity-suite-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Cybersecurity Suite Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-business-intelligence-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  AI Business Intelligence Pro
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Micro SAAS</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/zion-analytics-pro"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Analytics Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-security-shield"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Security Shield
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-cloud-vault"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Cloud Vault
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-content-studio"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Content Studio
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">IT Services</h4>
+            <ul className="space-y-2">
               <li>
                 <Link
                   to="/cloud-infrastructure"
@@ -81,15 +151,62 @@ const Footer = React.memo(() => {
                   to="/cybersecurity-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Cybersecurity
+                  Cybersecurity Solutions
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/web-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/mobile-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Mobile Development
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* 5G Solutions */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">5G Solutions</h4>
+            <ul className="space-y-2">
               <li>
                 <Link
                   to="/5g-implementation"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   5G Implementation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-edge-computing"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  5G Edge Computing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-smart-city-solutions"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  5G Smart City Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-data-analytics"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  5G Data Analytics
                 </Link>
               </li>
             </ul>
@@ -171,6 +288,24 @@ const Footer = React.memo(() => {
                 </Link>
               </li>
             </ul>
+          </div>
+        </div>
+
+        {/* Contact Information */}
+        <div className="border-t border-gray-800 pt-8 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <h4 className="text-lg font-semibold text-white mb-2">Phone</h4>
+              <p className="text-cyan-400 font-mono">+1 302 464 0950</p>
+            </div>
+            <div className="text-center">
+              <h4 className="text-lg font-semibold text-white mb-2">Email</h4>
+              <p className="text-cyan-400 font-mono">kleber@ziontechgroup.com</p>
+            </div>
+            <div className="text-center">
+              <h4 className="text-lg font-semibold text-white mb-2">Address</h4>
+              <p className="text-cyan-400">364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
           </div>
         </div>
 
