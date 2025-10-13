@@ -13,6 +13,29 @@ import {
   Target,
   Globe
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { motion } from 'framer-motion';
+
+const features = [
+    {
+      icon: <Target className="w-6 h-6 md:w-8 md:h-8 text-white" />,
+      title: "Feature 1",
+      description: "Description for feature 1",
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      icon: <Zap className="w-6 h-6 md:w-8 md:h-8 text-white" />,
+      title: "Feature 2", 
+      description: "Description for feature 2",
+      color: "from-purple-500 to-pink-500"
+    }
+  ];
+
+const stats = [
+    { label: "Stat 1", value: "100%" },
+    { label: "Stat 2", value: "50+" },
+    { label: "Stat 3", value: "24/7" }
+  ];
 
 const AIPoweredEmailAnalyzerPage = () => {
   

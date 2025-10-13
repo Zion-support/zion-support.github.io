@@ -1,17 +1,27 @@
-import { 
-  Package, 
-  BarChart3, 
-  Zap, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Brain,
-  Users,
-  Globe,
-  Settings,
-  Shield
-} from 'lucide-react';
+import { Package, BarChart3, Zap, ArrowRight, Sparkles, CheckCircle, Target, Brain, Users, Globe, Settings, Shield, Star } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+const features = [
+    {
+      icon: <Target className="w-6 h-6 md:w-8 md:h-8 text-white" />,
+      title: "Feature 1",
+      description: "Description for feature 1",
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      icon: <Zap className="w-6 h-6 md:w-8 md:h-8 text-white" />,
+      title: "Feature 2", 
+      description: "Description for feature 2",
+      color: "from-purple-500 to-pink-500"
+    }
+  ];
+
+const benefits = [
+    "Benefit 1",
+    "Benefit 2", 
+    "Benefit 3"
+  ];
 
 const AssetManagementPage = () => {
   

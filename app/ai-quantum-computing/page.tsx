@@ -3,6 +3,12 @@ import SEOOptimizer from "../components/SEOOptimizer";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 
+const applications = [
+    "Application 1",
+    "Application 2", 
+    "Application 3"
+  ];
+
 export default function page() {
   const testimonials = [
     { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5 }
@@ -88,10 +94,7 @@ export default function page() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing" />
       </Helmet>
-      <SEOOptimizer
-        title="AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group"
-        description="Harness the power of quantum computing with AI. Zion's quantum platform offers quantum machine learning, simulation, and optimization for breakthrough discoveries and solutions."
-      />
+      <SEOOptimizer />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -322,7 +325,7 @@ export default function page() {
                   <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                   <div className="flex items-center">
                     <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-sm mr-3">
-                      {testimonial.avatar}
+                      {testimonial.name}
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>

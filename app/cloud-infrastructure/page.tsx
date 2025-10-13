@@ -19,9 +19,47 @@ import {
   HardDrive,
   Network
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+
+const features = [
+    {
+      icon: <Target className="w-6 h-6 md:w-8 md:h-8 text-white" />,
+      title: "Feature 1",
+      description: "Description for feature 1",
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      icon: <Zap className="w-6 h-6 md:w-8 md:h-8 text-white" />,
+      title: "Feature 2", 
+      description: "Description for feature 2",
+      color: "from-purple-500 to-pink-500"
+    }
+  ];
+
+const stats = [
+    { label: "Stat 1", value: "100%" },
+    { label: "Stat 2", value: "50+" },
+    { label: "Stat 3", value: "24/7" }
+  ];
+
+const capabilities = [
+    "Capability 1",
+    "Capability 2",
+    "Capability 3"
+  ];
+
+const testimonials = [
+    {
+      name: "John Doe",
+      role: "CEO",
+      company: "Company Inc",
+      content: "Great service!",
+      rating: 5
+    }
+  ];
 
 const CloudInfrastructure = () => {
   const services = [
@@ -351,7 +389,7 @@ const CloudInfrastructure = () => {
                 </p>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
-                    {testimonial.avatar}
+                    {testimonial.name}
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>

@@ -19,7 +19,6 @@ export default function CaseStudies() {
       image: "/images/case-studies/ecommerce-ai.jpg",
       duration: "6 months",
       services: ["AI Analytics", "AI Customer Support", "Data Analytics"],
-      image: "/api/placeholder/600/400",
       featured: true
     },
     {

@@ -1,18 +1,17 @@
 import React from 'react';
-import { 
-  Cloud, 
-  Shield, 
-  Zap, 
-  Globe, 
-  ArrowRight, 
-  CheckCircle, 
-  BarChart3, 
-  Database, 
-  Lock, 
-  Users, 
-  Settings, 
-  Monitor 
-} from 'lucide-react';
+import { Cloud, Shield, Zap, Globe, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings, Monitor, Star } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+const benefits = [
+    "Benefit 1",
+    "Benefit 2", 
+    "Benefit 3"
+  ];
+
+const services = [
+    { name: "Service 1", description: "Description 1" },
+    { name: "Service 2", description: "Description 2" }
+  ];
 
 const CloudServicesPage: React.FC = () => {
   

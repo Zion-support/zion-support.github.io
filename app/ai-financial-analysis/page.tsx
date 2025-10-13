@@ -12,9 +12,45 @@ import {
   Activity,
   Shield
 } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const AIFinancialAnalysisPage = () => {
-  
+  const features = [
+    {
+      icon: <BarChart3 className="w-6 h-6 md:w-8 md:h-8 text-white" />,
+      title: "Predictive Modeling",
+      description: "Advanced ML algorithms for accurate financial forecasting and trend analysis.",
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-white" />,
+      title: "Risk Assessment",
+      description: "Comprehensive risk analysis with real-time monitoring and alerts.",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      icon: <DollarSign className="w-6 h-6 md:w-8 md:h-8 text-white" />,
+      title: "Investment Analysis",
+      description: "AI-powered portfolio optimization and investment recommendations.",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: <Shield className="w-6 h-6 md:w-8 md:h-8 text-white" />,
+      title: "Compliance Monitoring",
+      description: "Automated regulatory compliance and reporting capabilities.",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const benefits = [
+    "95% accuracy in financial predictions",
+    "Real-time risk monitoring and alerts",
+    "Automated compliance reporting",
+    "Advanced portfolio optimization",
+    "Predictive analytics for better decisions",
+    "Integration with existing financial systems"
+  ];
   
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">

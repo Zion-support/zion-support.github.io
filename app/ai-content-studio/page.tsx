@@ -29,28 +29,12 @@ const StructuredData = ({ children, type, data }: {
 }) => <div>{children}</div>;
 const ResponsiveContainer = ({ children, className }: { children: React.ReactNode; className?: string }) => <div className={className}>{children}</div>;
 const FuturisticTextEnhanced = ({ children, className }: { children: React.ReactNode; className?: string }) => <h2 className={className}>{children}</h2>;
-const FuturisticButtonEnhanced = ({ children, className, onClick, variant, size, gradient, animated, glow, neon, href, icon, iconPosition, glowColor }: { 
-  children: React.ReactNode; 
-  className?: string; 
+const FuturisticButtonEnhanced = ({ children, className, onClick }: { 
+  children: React.ReactNode; className?: string; 
   onClick?: () => void;
-  variant?: string;
-  size?: string;
-  gradient?: boolean;
-  animated?: boolean;
-  glow?: boolean;
-  neon?: boolean;
-  href?: string;
-  icon?: React.ReactNode;
-  iconPosition?: string;
-  glowColor?: string;
 }) => <button className={className} onClick={onClick}>{children}</button>;
-const FuturisticCardEnhanced = ({ children, className, glowColor, hoverEffect, animated, neon }: { 
-  children: React.ReactNode; 
-  className?: string;
-  glowColor?: string;
-  hoverEffect?: boolean;
-  animated?: boolean;
-  neon?: boolean;
+const FuturisticCardEnhanced = ({ children, className }: { 
+  children: React.ReactNode; className?: string;
 }) => <div className={className}>{children}</div>;
 
 // Create a proper Image component
@@ -224,9 +208,7 @@ const AIContentStudioZionTechGroup = () => {
                   gradient={true}
                   animated={true}
                   glow={true}
-                  neon={true}
-                  className="mb-6 leading-tight"
-                >
+                  neon={true} className="mb-6 leading-tight">
                   Zion AI Content Studio Pro
                 </FuturisticTextEnhanced>
                 
@@ -236,28 +218,10 @@ const AIContentStudioZionTechGroup = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-                  <FuturisticButtonEnhanced
-                    href="#pricing"
-                    variant="primary"
-                    size="lg"
-                    icon={<Sparkles className="w-5 h-5" />}
-                    iconPosition="left"
-                    glowColor="purple"
-                    neon={true}
-                    animated={true}
-                  >
+                  <FuturisticButtonEnhanced className="w-5 h-5">
                     Start Free Trial
                   </FuturisticButtonEnhanced>
-                  <FuturisticButtonEnhanced
-                    href="#demo"
-                    variant="outline"
-                    size="lg"
-                    icon={<ArrowRight className="w-5 h-5" />}
-                    iconPosition="left"
-                    glowColor="pink"
-                    neon={true}
-                    animated={true}
-                  >
+                  <FuturisticButtonEnhanced className="w-5 h-5">
                     Watch Demo
                   </FuturisticButtonEnhanced>
                 </div>
@@ -277,18 +241,9 @@ const AIContentStudioZionTechGroup = () => {
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                   {features.map((feature, index) => (
-                    <FuturisticCardEnhanced
-                      key={index}
-                      glowColor={index % 2 === 0 ? 'purple' : 'pink'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
-                      className="text-center"
-                    >
-                      <div
-                        className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                        aria-hidden="true"
-                      >
+                    <FuturisticCardEnhanced className="text-center">
+                      <div className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                        aria-hidden="true">
                         {feature.icon}
                       </div>
                       <h3 className="text-lg md:text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
@@ -316,14 +271,7 @@ const AIContentStudioZionTechGroup = () => {
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {pricingPlans.map((plan, index) => (
-                    <FuturisticCardEnhanced
-                      key={index}
-                      glowColor={plan.popular ? 'purple' : 'pink'}
-                      hoverEffect={true}
-                      animated={true}
-                      neon={true}
-                      className={`relative ${plan.popular ? 'ring-2 ring-purple-500' : ''}`}
-                    >
+                    <FuturisticCardEnhanced>
                       {plan.popular && (
                         <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                           <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -346,17 +294,7 @@ const AIContentStudioZionTechGroup = () => {
                           </li>
                         ))}
                       </ul>
-                      <FuturisticButtonEnhanced
-                        href="/contact"
-                        variant={plan.popular ? "primary" : "outline"}
-                        size="lg"
-                        icon={<ArrowRight className="w-5 h-5" />}
-                        iconPosition="right"
-                        glowColor={plan.popular ? "purple" : "pink"}
-                        neon={true}
-                        animated={true}
-                        className="w-full"
-                      >
+                      <FuturisticButtonEnhanced className="w-full">
                         Get Started
                       </FuturisticButtonEnhanced>
                     </FuturisticCardEnhanced>
@@ -379,9 +317,7 @@ const AIContentStudioZionTechGroup = () => {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {testimonials.map((testimonial, index) => (
                     <div
-                      key={index}
-                      className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden"
-                    >
+                      key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden">
                       <div className="flex items-center mb-4">
                         {[...Array(testimonial.rating)].map((_, i) => (
                           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -410,28 +346,10 @@ const AIContentStudioZionTechGroup = () => {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <FuturisticButtonEnhanced
-                    href="/contact"
-                    variant="primary"
-                    size="lg"
-                    icon={<ArrowRight className="w-5 h-5" />}
-                    iconPosition="right"
-                    glowColor="purple"
-                    neon={true}
-                    animated={true}
-                  >
+                  <FuturisticButtonEnhanced className="w-5 h-5">
                     Start Free Trial
                   </FuturisticButtonEnhanced>
-                  <FuturisticButtonEnhanced
-                    href="/demo"
-                    variant="outline"
-                    size="lg"
-                    icon={<Sparkles className="w-5 h-5" />}
-                    iconPosition="right"
-                    glowColor="pink"
-                    neon={true}
-                    animated={true}
-                  >
+                  <FuturisticButtonEnhanced className="w-5 h-5">
                     Schedule Demo
                   </FuturisticButtonEnhanced>
                 </div>

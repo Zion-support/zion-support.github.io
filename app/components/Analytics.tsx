@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 declare global {
   interface Window {
@@ -29,8 +30,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
 
     // Initialize dataLayer
     window.dataLayer = window.dataLayer || [];
-    window.gtag = function() {
-      window.dataLayer.push(arguments);
+    window.gtag = function(...args: any[]) {
+      window.dataLayer.push(args);
     };
 
     window.gtag('js', new Date());
@@ -83,7 +84,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
           if (entry.entryType === 'first-input') {
             window.gtag('event', 'web_vitals', {
               name: 'FID',
-              value: Math.round(entry.processingStart - entry.startTime),
+              value: Math.round((entry as any).processingStart - entry.startTime),
               event_category: 'Web Vitals',
               event_label: 'First Input Delay',
             });

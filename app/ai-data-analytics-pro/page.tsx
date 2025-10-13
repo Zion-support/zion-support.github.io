@@ -1,20 +1,13 @@
 import React from 'react';
-import { 
-  BarChart3, 
-  TrendingUp, 
-  Database, 
-  ArrowRight,
-  Sparkles,
-  CheckCircle,
-  Target,
-  Zap,
-  Brain,
-  PieChart,
-  Activity,
-  LineChart
-} from 'lucide-react';
+import { BarChart3, TrendingUp, Database, ArrowRight, Sparkles, CheckCircle, Target, Zap, Brain, PieChart, Activity, LineChart, Star } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+
+const benefits = [
+    "Benefit 1",
+    "Benefit 2", 
+    "Benefit 3"
+  ];
 
 const AIDataAnalyticsProPage = () => {
   const features = [
