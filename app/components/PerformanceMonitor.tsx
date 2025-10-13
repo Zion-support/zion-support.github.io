@@ -2,12 +2,12 @@ import React, { useEffect, useState, useCallback } from 'react';
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  interactionToNextPaint: number;
-  cumulativeLayoutShift: number;
-  timeToFirstByte: number;
+  loadTime?: number;
+  firstContentfulPaint?: number;
+  largestContentfulPaint?: number;
+  interactionToNextPaint?: number;
+  cumulativeLayoutShift?: number;
+  timeToFirstByte?: number;
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -88,38 +88,38 @@ const PerformanceMonitor: React.FC = () => {
           <div className="space-y-3 text-sm">
             <div className="flex justify-between items-center">
               <span className="text-gray-600">Load Time:</span>
-              <span className={`font-mono ${getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 })}`}>
-                {metrics.loadTime.toFixed(0)}ms
+              <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
+                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-gray-600">FCP:</span>
-              <span className={`font-mono ${getMetricColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 })}`}>
-                {metrics.firstContentfulPaint.toFixed(0)}ms
+              <span className={`font-mono ${metrics.firstContentfulPaint ? getMetricColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 }) : 'text-gray-400'}`}>
+                {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(0)}ms` : 'N/A'}
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-gray-600">LCP:</span>
-              <span className={`font-mono ${getMetricColor(metrics.largestContentfulPaint, { good: 2500, poor: 4000 })}`}>
-                {metrics.largestContentfulPaint.toFixed(0)}ms
+              <span className={`font-mono ${metrics.largestContentfulPaint ? getMetricColor(metrics.largestContentfulPaint, { good: 2500, poor: 4000 }) : 'text-gray-400'}`}>
+                {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(0)}ms` : 'N/A'}
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-gray-600">INP:</span>
-              <span className={`font-mono ${getMetricColor(metrics.interactionToNextPaint, { good: 200, poor: 500 })}`}>
-                {metrics.interactionToNextPaint.toFixed(0)}ms
+              <span className={`font-mono ${metrics.interactionToNextPaint ? getMetricColor(metrics.interactionToNextPaint, { good: 200, poor: 500 }) : 'text-gray-400'}`}>
+                {metrics.interactionToNextPaint ? `${metrics.interactionToNextPaint.toFixed(0)}ms` : 'N/A'}
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-gray-600">CLS:</span>
-              <span className={`font-mono ${getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, poor: 0.25 })}`}>
-                {metrics.cumulativeLayoutShift.toFixed(3)}
+              <span className={`font-mono ${metrics.cumulativeLayoutShift !== undefined ? getMetricColor(metrics.cumulativeLayoutShift, { good: 0.1, poor: 0.25 }) : 'text-gray-400'}`}>
+                {metrics.cumulativeLayoutShift !== undefined ? metrics.cumulativeLayoutShift.toFixed(3) : 'N/A'}
               </span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-gray-600">TTFB:</span>
-              <span className={`font-mono ${getMetricColor(metrics.timeToFirstByte, { good: 800, poor: 1800 })}`}>
-                {metrics.timeToFirstByte.toFixed(0)}ms
+              <span className={`font-mono ${metrics.timeToFirstByte ? getMetricColor(metrics.timeToFirstByte, { good: 800, poor: 1800 }) : 'text-gray-400'}`}>
+                {metrics.timeToFirstByte ? `${metrics.timeToFirstByte.toFixed(0)}ms` : 'N/A'}
               </span>
             </div>
           </div>

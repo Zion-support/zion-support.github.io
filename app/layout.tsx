@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { AnalyticsProvider } from "./components/AnalyticsProvider";
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
-import LoadingSpinner from "./components/LoadingSpinner";
+// import LoadingSpinner from "./components/LoadingSpinner";
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./components/ErrorFallback";
 import { Helmet } from "react-helmet-async";
