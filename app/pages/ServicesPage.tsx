@@ -29,7 +29,9 @@ export default function ServicesPage() {
         "Automated Decision Making"
       ],
       color: "from-purple-500 to-pink-500",
-      href: "/ai-solutions"
+      href: "/ai-solutions",
+      price: "Starting at $2,500/month",
+      benefits: ["40% faster decision making", "60% cost reduction", "99.9% accuracy"]
     },
     {
       title: "Cybersecurity",
@@ -44,7 +46,9 @@ export default function ServicesPage() {
         "Compliance Support"
       ],
       color: "from-cyan-500 to-blue-500",
-      href: "/cybersecurity"
+      href: "/cybersecurity",
+      price: "Starting at $1,800/month",
+      benefits: ["24/7 monitoring", "Zero breach guarantee", "SOC 2 compliance"]
     },
     {
       title: "Cloud Infrastructure",
@@ -59,7 +63,9 @@ export default function ServicesPage() {
         "Multi-cloud Strategy"
       ],
       color: "from-green-500 to-emerald-500",
-      href: "/cloud-solutions"
+      href: "/cloud-solutions",
+      price: "Starting at $1,200/month",
+      benefits: ["50% cost savings", "99.99% uptime", "Auto-scaling"]
     },
     {
       title: "Digital Transformation",
@@ -74,10 +80,12 @@ export default function ServicesPage() {
         "Performance Optimization"
       ],
       color: "from-yellow-500 to-orange-500",
-      href: "/digital-transformation"
+      href: "/digital-transformation",
+      price: "Starting at $3,000/month",
+      benefits: ["300% ROI increase", "80% process efficiency", "Digital-first approach"]
     },
     {
-      title: "Micro SaaS",
+      title: "Micro SaaS Solutions",
       description: "Custom micro SaaS solutions designed to solve specific business challenges with scalable, cost-effective applications.",
       icon: GlobeAltIcon,
       features: [
@@ -89,7 +97,9 @@ export default function ServicesPage() {
         "Analytics Dashboard"
       ],
       color: "from-pink-500 to-rose-500",
-      href: "/micro-saas"
+      href: "/micro-saas",
+      price: "Starting at $500/month",
+      benefits: ["Rapid deployment", "Scalable architecture", "Low maintenance"]
     },
     {
       title: "5G Solutions",
@@ -104,7 +114,111 @@ export default function ServicesPage() {
         "Smart City Solutions"
       ],
       color: "from-indigo-500 to-purple-500",
-      href: "/5g-solutions"
+      href: "/5g-solutions",
+      price: "Starting at $4,000/month",
+      benefits: ["Ultra-low latency", "Massive IoT support", "Enhanced security"]
+    },
+    {
+      title: "AI-Powered Analytics",
+      description: "Advanced analytics solutions powered by AI to extract actionable insights from your data and drive business growth.",
+      icon: ChartBarIcon,
+      features: [
+        "Real-time Analytics",
+        "Predictive Modeling",
+        "Data Visualization",
+        "Business Intelligence",
+        "Custom Dashboards",
+        "Automated Reporting"
+      ],
+      color: "from-emerald-500 to-teal-500",
+      href: "/ai-analytics",
+      price: "Starting at $1,500/month",
+      benefits: ["Real-time insights", "Predictive accuracy", "Automated reports"]
+    },
+    {
+      title: "Blockchain Solutions",
+      description: "Secure blockchain technology solutions for transparent, immutable, and decentralized business processes.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Smart Contracts",
+        "Decentralized Applications",
+        "Cryptocurrency Integration",
+        "Supply Chain Tracking",
+        "Identity Management",
+        "Tokenization"
+      ],
+      color: "from-orange-500 to-red-500",
+      href: "/blockchain-solutions",
+      price: "Starting at $2,200/month",
+      benefits: ["Enhanced security", "Transparency", "Cost reduction"]
+    },
+    {
+      title: "IoT Edge Computing",
+      description: "Internet of Things solutions with edge computing capabilities for real-time data processing and decision making.",
+      icon: CpuChipIcon,
+      features: [
+        "IoT Device Management",
+        "Edge Analytics",
+        "Real-time Processing",
+        "Sensor Integration",
+        "Data Streaming",
+        "Remote Monitoring"
+      ],
+      color: "from-violet-500 to-purple-500",
+      href: "/iot-edge-computing",
+      price: "Starting at $1,800/month",
+      benefits: ["Real-time processing", "Reduced latency", "Cost efficiency"]
+    },
+    {
+      title: "AI Content Generation",
+      description: "AI-powered content creation tools for automated content generation, optimization, and personalization.",
+      icon: GlobeAltIcon,
+      features: [
+        "Automated Content Creation",
+        "SEO Optimization",
+        "Multi-language Support",
+        "Content Personalization",
+        "Brand Voice Consistency",
+        "Performance Analytics"
+      ],
+      color: "from-rose-500 to-pink-500",
+      href: "/ai-content-generation",
+      price: "Starting at $800/month",
+      benefits: ["80% time savings", "Consistent quality", "SEO optimized"]
+    },
+    {
+      title: "AI Customer Support",
+      description: "Intelligent customer support solutions with AI chatbots, sentiment analysis, and automated ticket routing.",
+      icon: PhoneIcon,
+      features: [
+        "AI Chatbots",
+        "Sentiment Analysis",
+        "Automated Routing",
+        "Knowledge Base",
+        "Multi-channel Support",
+        "Performance Analytics"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      href: "/ai-customer-support",
+      price: "Starting at $1,200/month",
+      benefits: ["24/7 availability", "Instant responses", "Customer satisfaction"]
+    },
+    {
+      title: "AI Cybersecurity Suite",
+      description: "Advanced AI-powered cybersecurity solutions for threat detection, prevention, and automated response.",
+      icon: ShieldCheckIcon,
+      features: [
+        "AI Threat Detection",
+        "Behavioral Analysis",
+        "Automated Response",
+        "Vulnerability Assessment",
+        "Compliance Monitoring",
+        "Security Analytics"
+      ],
+      color: "from-red-500 to-orange-500",
+      href: "/ai-cybersecurity-suite",
+      price: "Starting at $2,800/month",
+      benefits: ["Proactive protection", "Zero false positives", "Automated response"]
     }
   ];
 
@@ -150,9 +264,26 @@ export default function ServicesPage() {
                   </div>
                   
                   <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
+                  <p className="text-gray-300 mb-4 leading-relaxed">
                     {service.description}
                   </p>
+                  
+                  {/* Pricing */}
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-green-400">{service.price}</span>
+                  </div>
+                  
+                  {/* Benefits */}
+                  <div className="mb-6">
+                    <h4 className="text-sm font-semibold text-gray-400 mb-2">Key Benefits:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <span key={benefitIndex} className="text-xs bg-green-900/30 text-green-300 px-2 py-1 rounded-full">
+                          {benefit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                   
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (

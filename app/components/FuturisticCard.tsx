@@ -1,9 +1,9 @@
 import React from 'react';
 
 interface FuturisticCardProps {
-  children: .Node;
+  children: React.ReactNode;
   className?: string;
-  variant?: &apos;default&apos; | &apos;glow&apos; | &apos;gradient&apos;;
+  variant?: 'default' | 'glow' | 'gradient';
 }
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
@@ -11,12 +11,12 @@ const FuturisticCard: React.FC<FuturisticCardProps> = ({
   className = '', 
   variant = 'default' 
 }) => {
-  const baseClasses = &apos;rounded-xl p-6 border border-white/20 backdrop-blur-sm&apos;;
+  const baseClasses = 'rounded-xl p-6 border border-white/20 backdrop-blur-sm';
   
   const variantClasses = {
-    default: &apos;bg-white/10&apos;,
-    glow: &apos;bg-white/10 shadow-lg shadow-blue-500/20&apos;,
-    gradient: &apos;bg-gradient-to-br from-blue-500/20 to-purple-500/20&apos;
+    default: 'bg-white/10',
+    glow: 'bg-white/10 shadow-lg shadow-blue-500/20',
+    gradient: 'bg-gradient-to-br from-blue-500/20 to-purple-500/20'
   };
 
   return (
