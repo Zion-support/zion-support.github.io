@@ -50,7 +50,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
     { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
     { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance', icon: <Shield className="w-4 h-4" />, featured: true },
+    { name: 'AI Supply Chain Optimization', path: '/ai-supply-chain-optimization', icon: <Database className="w-4 h-4" />, featured: true }
   ], [])
 
   const itServices = useMemo(() => [
@@ -61,18 +63,21 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
     { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
     { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI-Powered DevOps', path: '/ai-powered-devops', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Enterprise AI Platform', path: '/enterprise-ai-platform', icon: <Brain className="w-4 h-4" />, featured: true }
   ], [])
 
   const microSaasServices = useMemo(() => [
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
-    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
-    { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion AI Chatbot Builder', path: '/zion-ai-chatbot-builder', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Voice Assistant', path: '/zion-ai-voice-assistant', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Document Analyzer', path: '/zion-ai-document-analyzer', icon: <Code className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Social Media Manager', path: '/zion-ai-social-media-manager', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion AI Email Marketing Pro', path: '/zion-ai-email-marketing-pro', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion AI Customer Insights', path: '/zion-ai-customer-insights', icon: <BarChart3 className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -258,6 +263,77 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     </div>
                   </Link>
                 ))}
+              </div>
+            )}
+          </div>
+
+          {/* 5G Solutions Section */}
+          <div className="mb-6">
+            <button
+              onClick={() => toggleSection('5g-solutions')}
+              className="flex items-center justify-between w-full px-4 py-3 rounded-lg hover:bg-orange-500/10 hover:text-orange-400 transition-all duration-300 font-medium text-left"
+            >
+              <div className="flex items-center space-x-3">
+                <Cloud className="w-4 h-4" />
+                <span>5G Solutions</span>
+              </div>
+              {expandedSections.has('5g-solutions') ? (
+                <ChevronDown className="w-4 h-4" />
+              ) : (
+                <ChevronRight className="w-4 h-4" />
+              )}
+            </button>
+            
+            {expandedSections.has('5g-solutions') && (
+              <div className="ml-6 mt-2 space-y-1">
+                <Link
+                  to="/5g-solutions"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/5g-solutions')
+                      ? 'bg-orange-500/10 text-orange-400'
+                      : 'text-gray-400 hover:text-orange-400 hover:bg-orange-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <Cloud className="w-4 h-4" />
+                  <span className="text-sm">5G Solutions Overview</span>
+                </Link>
+                <Link
+                  to="/5g-data-analytics"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/5g-data-analytics')
+                      ? 'bg-orange-500/10 text-orange-400'
+                      : 'text-gray-400 hover:text-orange-400 hover:bg-orange-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <BarChart3 className="w-4 h-4" />
+                  <span className="text-sm">5G Data Analytics</span>
+                </Link>
+                <Link
+                  to="/5g-edge-computing"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/5g-edge-computing')
+                      ? 'bg-orange-500/10 text-orange-400'
+                      : 'text-gray-400 hover:text-orange-400 hover:bg-orange-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <Zap className="w-4 h-4" />
+                  <span className="text-sm">5G Edge Computing</span>
+                </Link>
+                <Link
+                  to="/5g-smart-city-solutions"
+                  className={`flex items-center space-x-3 px-4 py-2 rounded-lg transition-all duration-300 ${
+                    isActive('/5g-smart-city-solutions')
+                      ? 'bg-orange-500/10 text-orange-400'
+                      : 'text-gray-400 hover:text-orange-400 hover:bg-orange-500/5'
+                  }`}
+                  onClick={onClose}
+                >
+                  <Settings className="w-4 h-4" />
+                  <span className="text-sm">5G Smart City Solutions</span>
+                </Link>
               </div>
             )}
           </div>

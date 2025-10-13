@@ -27,7 +27,7 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -40,6 +40,11 @@ const Footer = React.memo(() => {
               Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            <div className="space-y-2 text-sm text-gray-400">
+              <p><strong className="text-white">Phone:</strong> +1 302 464 0950</p>
+              <p><strong className="text-white">Email:</strong> kleber@ziontechgroup.com</p>
+              <p><strong className="text-white">Address:</strong> 364 E Main St STE 1008<br />Middletown DE 19709</p>
+            </div>
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -78,10 +83,18 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/ai-automation"
+                  to="/ai-predictive-maintenance"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
-                  AI Automation
+                  AI Predictive Maintenance
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-supply-chain-optimization"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Supply Chain Optimization
                 </Link>
               </li>
               <li>
@@ -100,14 +113,6 @@ const Footer = React.memo(() => {
                   AI Customer Service
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/ai-cybersecurity"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
-                >
-                  AI Cybersecurity
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -121,6 +126,22 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-green-400 transition-colors"
                 >
                   Cloud Infrastructure
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-powered-devops"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
+                >
+                  AI-Powered DevOps
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/enterprise-ai-platform"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
+                >
+                  Enterprise AI Platform
                 </Link>
               </li>
               <li>
@@ -147,22 +168,6 @@ const Footer = React.memo(() => {
                   Mobile Development
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/database-management"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  Database Management
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/custom-software"
-                  className="text-gray-400 hover:text-green-400 transition-colors"
-                >
-                  Custom Software
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -172,50 +177,97 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/zion-analytics-pro"
+                  to="/zion-ai-chatbot-builder"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Analytics Pro
+                  Zion AI Chatbot Builder
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-security-shield"
+                  to="/zion-ai-voice-assistant"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Security Shield
+                  Zion AI Voice Assistant
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-cloud-vault"
+                  to="/zion-ai-document-analyzer"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Cloud Vault
+                  Zion AI Document Analyzer
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-content-studio"
+                  to="/zion-ai-social-media-manager"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Content Studio
+                  Zion AI Social Media Manager
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-data-sync"
+                  to="/zion-ai-email-marketing-pro"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Data Sync
+                  Zion AI Email Marketing Pro
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-project-master"
+                  to="/zion-ai-customer-insights"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Project Master
+                  Zion AI Customer Insights
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* 5G Solutions */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-orange-400">5G Solutions</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/5g-solutions"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Solutions Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-data-analytics"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-edge-computing"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Edge Computing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-smart-city-solutions"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Smart City Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-private-networks"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Private Networks
                 </Link>
               </li>
             </ul>
