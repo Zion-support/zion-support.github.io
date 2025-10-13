@@ -3,37 +3,29 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-<<<<<<< HEAD
 import Navigation from './app/components/Navigation';
-=======
-import Header from './app/components/Header';
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
 import Footer from './app/components/Footer';
 
 // Page Components
 import HomePage from './app/page';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import BlogPage from './app/pages/BlogPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
-import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
+import AboutPage from './app/about/page';
+import ContactPage from './app/contact/page';
+import ServicesPage from './app/services/page';
+import BlogPage from './app/blog/page';
+import TutorialsPage from './app/tutorials/page';
+import DemoPage from './app/demo/page';
+import SupportPage from './app/support/page';
+import PrivacyPage from './app/privacy/page';
+import TermsPage from './app/terms/page';
+import PricingPage from './app/pricing/page';
+import SolutionsPage from './app/solutions/page';
+import MicroSaaSPage from './app/micro-saas/page';
 import AISolutionsPage from './app/ai-solutions/page';
 import ITSolutionsPage from './app/it-solutions/page';
 
 // Service Pages
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
-import CareersPage from './app/pages/CareersPage';
+import AIChatbotBuilderPage from './app/ai-chatbot-builder/page';
+import AIContentGenerationPage from './app/ai-content-generation/page';
 
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -66,13 +58,8 @@ function App() {
   return (
     <HelmetProvider>
       <Router>
-<<<<<<< HEAD
         <div className="min-h-screen bg-slate-900">
           <Navigation />
-=======
-        <div className="min-h-screen bg-gray-900">
-          <Header />
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
           <main className="relative z-10" id="main-content" role="main">
             <Routes>
               {/* Main Pages */}
@@ -80,7 +67,7 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/services" element={<ServicesPage />} />
-              <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+              <Route path="/micro-saas" element={<MicroSaaSPage />} />
               <Route path="/ai-solutions" element={<AISolutionsPage />} />
               <Route path="/it-solutions" element={<ITSolutionsPage />} />
               <Route path="/blog" element={<BlogPage />} />
@@ -93,12 +80,8 @@ function App() {
               <Route path="/solutions" element={<SolutionsPage />} />
               
               {/* Service Pages */}
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
+              <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
               
               {/* Catch all route */}
               <Route path="*" element={
