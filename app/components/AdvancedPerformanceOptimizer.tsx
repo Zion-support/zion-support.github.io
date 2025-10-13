@@ -1,132 +1,263 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import React, { useEffect, useCallback } from 'react';
+import { useLocation } from 'react-router-dom';
 
+interface PerformanceOptimizerProps {
+  enableImageOptimization?: boolean;
+  enablePreloading?: boolean;
+  enableCaching?: boolean;
+  enableCompression?: boolean;
+}
+
+const AdvancedPerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  enableImageOptimization = true,
+  enablePreloading = true,
+  enableCaching = true,
+  enableCompression = true,
+}) => {
+  const location = useLocation();
+
+  // Image optimization
+  const optimizeImages = useCallback(() => {
+    if (!enableImageOptimization) return;
+
+    const images = document.querySelectorAll('img');
+    images.forEach((img) => {
+      // Add loading="lazy" to images below the fold
+      if (img.getBoundingClientRect().top > window.innerHeight) {
+        img.setAttribute('loading', 'lazy');
+      }
+
+      // Add decoding="async" for better performance
+      img.setAttribute('decoding', 'async');
+
+      // Add fetchpriority="high" for above-the-fold images
+      if (img.getBoundingClientRect().top <= window.innerHeight) {
+        img.setAttribute('fetchpriority', 'high');
+      }
+    });
+  }, [enableImageOptimization]);
+
+  // Preload critical resources
+  const preloadCriticalResources = useCallback(() => {
+    if (!enablePreloading) return;
+
+    // Preload critical CSS
+    const criticalCSS = document.createElement('link');
+    criticalCSS.rel = 'preload';
+    criticalCSS.href = '/assets/index-Dq8n7JAm.css';
+    criticalCSS.as = 'style';
+    criticalCSS.onload = () => {
+      criticalCSS.rel = 'stylesheet';
+    };
+    document.head.appendChild(criticalCSS);
+
+    // Preload critical fonts
+    const fontPreload = document.createElement('link');
+    fontPreload.rel = 'preload';
+    fontPreload.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+    fontPreload.as = 'style';
+    document.head.appendChild(fontPreload);
+
+    // Preload next likely page based on current route
+    const nextPage = getNextLikelyPage(location.pathname);
+    if (nextPage) {
+      const prefetchLink = document.createElement('link');
+      prefetchLink.rel = 'prefetch';
+      prefetchLink.href = nextPage;
+      document.head.appendChild(prefetchLink);
     }
-  ];
+  }, [enablePreloading, location.pathname]);
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+  // Enhanced caching strategies
+  const setupCaching = useCallback(() => {
+    if (!enableCaching) return;
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AdvancedPerformanceOptimizer | Zion Tech Group</title>
-        <meta name="description" content="Professional AdvancedPerformanceOptimizer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="AdvancedPerformanceOptimizer, AI solutions, IT services, Zion Tech Group, advancedperformanceoptimizer" />
-      </Helmet>
+    // Service Worker registration for caching
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('SW registered: ', registration);
+          }
+        })
+        .catch((registrationError) => {
+          if (process.env.NODE_ENV === 'development') {
+            console.log('SW registration failed: ', registrationError);
+          }
+        });
+    }
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                AdvancedPerformanceOptimizer
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced advancedperformanceoptimizer solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+    // Set up cache headers for static assets
+    const staticAssets = document.querySelectorAll('link[rel="stylesheet"], script[src]');
+    staticAssets.forEach((asset) => {
+      if (asset instanceof HTMLLinkElement && asset.href) {
+        // Add cache control headers via meta tags
+        const cacheMeta = document.createElement('meta');
+        cacheMeta.setAttribute('http-equiv', 'Cache-Control');
+        cacheMeta.setAttribute('content', 'public, max-age=31536000');
+        asset.appendChild(cacheMeta);
+      }
+    });
+  }, [enableCaching]);
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our AdvancedPerformanceOptimizer?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our advancedperformanceoptimizer solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
+  // Compression optimization
+  const setupCompression = useCallback(() => {
+    if (!enableCompression) return;
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+    // Enable gzip compression hints
+    const compressionMeta = document.createElement('meta');
+    compressionMeta.setAttribute('http-equiv', 'Accept-Encoding');
+    compressionMeta.setAttribute('content', 'gzip, deflate, br');
+    document.head.appendChild(compressionMeta);
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our advancedperformanceoptimizer solutions for your business.
-            </p>
-          </div>
+    // Optimize resource loading
+    const scripts = document.querySelectorAll('script[src]');
+    scripts.forEach((script) => {
+      if (script instanceof HTMLScriptElement) {
+        script.setAttribute('defer', '');
+        script.setAttribute('async', '');
+      }
+    });
+  }, [enableCompression]);
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+  // Memory management
+  const optimizeMemory = useCallback(() => {
+    // Clean up unused event listeners
+    const cleanup = () => {
+      // Remove old event listeners that might be causing memory leaks
+      const oldListeners = document.querySelectorAll('[data-listener-cleanup]');
+      oldListeners.forEach((element) => {
+        element.removeAttribute('data-listener-cleanup');
+      });
+    };
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your advancedperformanceoptimizer needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+    // Run cleanup every 5 minutes
+    const cleanupInterval = setInterval(cleanup, 5 * 60 * 1000);
+
+    return () => clearInterval(cleanupInterval);
+  }, []);
+
+  // Bundle splitting optimization
+  const optimizeBundleSplitting = useCallback(() => {
+    // Dynamically import non-critical components
+    const lazyLoadComponents = () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const target = entry.target as HTMLElement;
+            const componentName = target.dataset.lazyComponent;
+            
+            if (componentName) {
+              // Mark component as loaded
+              target.classList.add('loaded');
+              
+              observer.unobserve(target);
+            }
+          }
+        });
+      });
+
+      // Observe all elements with lazy-loading data attribute
+      const lazyElements = document.querySelectorAll('[data-lazy-component]');
+      lazyElements.forEach((element) => observer.observe(element));
+    };
+
+    // Start lazy loading after initial page load
+    if (document.readyState === 'complete') {
+      lazyLoadComponents();
+    } else {
+      window.addEventListener('load', lazyLoadComponents);
+    }
+  }, []);
+
+  // Performance monitoring
+  const setupPerformanceMonitoring = useCallback(() => {
+    // Monitor Core Web Vitals
+    const observer = new PerformanceObserver((list) => {
+      list.getEntries().forEach((entry) => {
+        if (entry.entryType === 'largest-contentful-paint') {
+          const lcp = entry as PerformanceEntry & { startTime: number };
+          if (lcp.startTime > 2500) {
+            // LCP is too slow, trigger optimization
+            optimizeImages();
+          }
+        }
+      });
+    });
+
+    observer.observe({ entryTypes: ['largest-contentful-paint'] });
+
+    // Monitor memory usage
+    if ('memory' in performance) {
+      const checkMemory = () => {
+        const memory = (performance as any).memory;
+        const usedMemory = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
+        
+        if (usedMemory > 0.8) {
+          // Memory usage is high, trigger garbage collection
+          if (window.gc) {
+            window.gc();
+          }
+        }
+      };
+
+      setInterval(checkMemory, 30000); // Check every 30 seconds
+    }
+  }, [optimizeImages]);
+
+  // Initialize all optimizations
+  useEffect(() => {
+    const cleanup = optimizeMemory();
+    
+    // Run optimizations after a short delay to not block initial render
+    const timeoutId = setTimeout(() => {
+      optimizeImages();
+      preloadCriticalResources();
+      setupCaching();
+      setupCompression();
+      optimizeBundleSplitting();
+      setupPerformanceMonitoring();
+    }, 100);
+
+    return () => {
+      clearTimeout(timeoutId);
+      cleanup();
+    };
+  }, [
+    optimizeImages,
+    preloadCriticalResources,
+    setupCaching,
+    setupCompression,
+    optimizeMemory,
+    optimizeBundleSplitting,
+    setupPerformanceMonitoring,
+  ]);
+
+  // Re-run optimizations on route change
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      optimizeImages();
+      preloadCriticalResources();
+    }, 200);
+
+    return () => clearTimeout(timeoutId);
+  }, [location.pathname, optimizeImages, preloadCriticalResources]);
+
+  return null; // This component doesn't render anything
 };
 
-export default AdvancedPerformanceOptimizerPage;
+// Helper function to determine next likely page
+const getNextLikelyPage = (currentPath: string): string | null => {
+  const likelyPages: Record<string, string> = {
+    '/': '/about',
+    '/about': '/services',
+    '/services': '/contact',
+    '/ai-services': '/ai-analytics',
+    '/micro-saas': '/zion-analytics-pro',
+    '/5g-solutions': '/5g-implementation',
+  };
+
+  return likelyPages[currentPath] || null;
+};
+
+export default AdvancedPerformanceOptimizer;

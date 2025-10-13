@@ -1,105 +1,279 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+<<<<<<< HEAD
+<<<<<<< HEAD
+import { AlertTriangle, RefreshCw, Home, Bug } from 'lucide-react';
+=======
+import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
 
+interface Props {
+  children: ReactNode;
+  fallback?: ReactNode;
+<<<<<<< HEAD
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
+}
+
+interface State {
+  hasError: boolean;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  retryCount: number;
+}
+
+class EnhancedErrorBoundary extends Component<Props, State> {
+  private retryTimeoutId: NodeJS.Timeout | null = null;
+
+=======
+
+interface Props {
+  children: ReactNode;
+}
+
+interface State {
+  hasError: boolean;
+  error?: Error;
+}
+
+export class EnhancedErrorBoundary extends Component<Props, State> {
+>>>>>>> cursor/analyze-improve-and-deploy-application-a281
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      retryCount: 0
+    };
+  }
+
+<<<<<<< HEAD
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      error
+    };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({
+      error,
+      errorInfo
+    });
+    
+    // Log error to console in development
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Error caught by boundary:', error, errorInfo);
     }
-  ];
+<<<<<<< HEAD
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    // Call custom error handler if provided
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>EnhancedErrorBoundary | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedErrorBoundary services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="EnhancedErrorBoundary, AI solutions, IT services, Zion Tech Group, enhancederrorboundary" />
-      </Helmet>
+    // Send error to monitoring service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.logErrorToService(error, errorInfo);
+    }
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
+  }
 
+  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    // In a real application, you would send this to your error monitoring service
+    // like Sentry, LogRocket, or Bugsnag
+    try {
+      const errorData = {
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+        retryCount: this.state.retryCount
+      };
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our EnhancedErrorBoundary?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our enhancederrorboundary solutions deliver unmatched performance, security, and scalability.
+      // Example: Send to monitoring service
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'exception', {
+          description: error.message,
+          fatal: true,
+          custom_map: errorData
+        });
+      }
+    } catch (loggingError) {
+      console.error('Failed to log error to service:', loggingError);
+    }
+  };
+
+<<<<<<< HEAD
+  private handleRetry = () => {
+    this.setState(prevState => ({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      retryCount: prevState.retryCount + 1
+    }));
+  };
+
+  private handleGoHome = () => {
+    window.location.href = '/';
+  };
+
+  private handleReload = () => {
+    window.location.reload();
+  };
+
+  componentWillUnmount() {
+    if (this.retryTimeoutId) {
+      clearTimeout(this.retryTimeoutId);
+    }
+=======
+  static getDerivedStateFromError(error: Error): State {
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('Enhanced Error Boundary caught an error:', error, errorInfo);
+>>>>>>> cursor/analyze-improve-and-deploy-application-a281
+  }
+
+  render() {
+    if (this.state.hasError) {
+      // Custom fallback UI
+=======
+  render() {
+    if (this.state.hasError) {
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
+      if (this.props.fallback) {
+        return this.props.fallback;
+      }
+
+      return (
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
+          <div className="max-w-2xl w-full bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 p-8 text-center">
+            <div className="w-16 h-16 mx-auto mb-6 bg-red-500/20 rounded-full flex items-center justify-center">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
+=======
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="max-w-md mx-auto text-center p-8">
+            <div className="mb-6">
+              <AlertTriangle className="w-16 h-16 text-red-400 mx-auto" />
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
+            </div>
+            
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Something went wrong
+            </h1>
+            
+<<<<<<< HEAD
+            <p className="text-gray-300 mb-6 leading-relaxed">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
+=======
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Please try again.
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+            
+            {process.env.NODE_ENV === 'development' && this.state.error && (
+<<<<<<< HEAD
+              <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg text-left">
+                <h3 className="text-red-400 font-semibold mb-2 flex items-center">
+                  <Bug className="w-4 h-4 mr-2" />
+                  Error Details (Development Only)
+                </h3>
+                <pre className="text-xs text-red-300 overflow-auto max-h-32">
+                  {this.state.error.message}
+                  {'\n\n'}
+                  {this.state.error.stack}
+                </pre>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            )}
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our enhancederrorboundary solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your enhancederrorboundary needs and get a customized solution.
-            </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
+              <button
+                onClick={this.handleRetry}
+                className="flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group"
+              >
+                <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform duration-500" />
+=======
+              <details className="mb-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer mb-2">
+                  Error Details (Development)
+                </summary>
+                <pre className="text-xs text-red-300 bg-gray-800 p-3 rounded overflow-auto">
+                  {this.state.error.toString()}
+                  {this.state.errorInfo?.componentStack}
+                </pre>
+              </details>
+            )}
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={this.handleRetry}
+                className="flex items-center justify-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors"
+              >
+                <RefreshCw className="w-4 h-4 mr-2" />
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
+                Try Again
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
+              
+              <button
+<<<<<<< HEAD
+                onClick={this.handleGoHome}
+                className="flex items-center justify-center px-6 py-3 bg-white/10 text-white font-semibold rounded-lg hover:bg-white/20 transition-all duration-300 group"
+              >
+                <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Go Home
+              </button>
+              
+              <button
+                onClick={this.handleReload}
+                className="flex items-center justify-center px-6 py-3 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 group"
+              >
+                <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform duration-500" />
+                Reload Page
               </button>
             </div>
+
+            <div className="mt-6 text-sm text-gray-400">
+              <p>If this problem persists, please contact our support team.</p>
+              <p className="mt-2">
+                Error ID: {Date.now().toString(36)}-{Math.random().toString(36).substr(2, 9)}
+              </p>
+            </div>
+=======
+        <div className="min-h-screen flex items-center justify-center bg-slate-900">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-white mb-4">Something went wrong</h1>
+            <p className="text-gray-400 mb-4">Please refresh the page or try again later.</p>
+            <button
+              onClick={() => window.location.reload()}
+              className="px-4 py-2 bg-cyan-500 text-white rounded hover:bg-cyan-600 transition-colors"
+            >
+              Refresh Page
+            </button>
+>>>>>>> cursor/analyze-improve-and-deploy-application-a281
+=======
+                onClick={() => window.location.href = '/'}
+                className="flex items-center justify-center px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors"
+              >
+                <Home className="w-4 h-4 mr-2" />
+                Go Home
+              </button>
+            </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
           </div>
         </div>
-      </section>
-    </div>
-  );
-};
+      );
+    }
 
-export default EnhancedErrorBoundaryPage;
+    return this.props.children;
+  }
+}
+
+export default EnhancedErrorBoundary;

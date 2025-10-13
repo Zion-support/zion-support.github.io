@@ -1,75 +1,70 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node
 
-// Get all TypeScript/JavaScript files in src directory
-function getAllFiles(dir, fileList = []) {
-  const files = fs.readdirSync(dir);
-  
-  files.forEach(file => {
-    const filePath = path.join(dir, file);
-    const stat = fs.statSync(filePath);
-    
-    if (stat.isDirectory()) {
-      getAllFiles(filePath, fileList);
-    } else if (file.endsWith('.tsx') || file.endsWith('.ts')) {
-      fileList.push(filePath);
-    }
-  });
-  
-  return fileList;
-}
+const fs = require("fs");
+const { execSync } = require("child_process");
 
-// Fix unused variables and exports
+// Function to fix unused variables in a file
 function fixUnusedVars(filePath) {
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    const lines = content.split('\n');
+    let content = fs.readFileSync(filePath, "utf8");
     let modified = false;
-    
-    // Check for unused variable declarations
-    const newLines = lines.map(line => {
-      // Fix unused variable declarations
-      if (line.includes('const ') && line.includes(': React.FC') && line.includes('= () =>')) {
-        // This is likely a component declaration that's not exported
-        const varName = line.match(/const\s+(\w+):/);
-        if (varName) {
-          const name = varName[1];
-          // Check if this variable is used anywhere in the file
-          const isUsed = content.includes(`<${name}`) || content.includes(`export default ${name}`);
-          if (!isUsed) {
-            // Convert to default export
-            const newLine = line.replace(`const ${name}: React.FC = () =>`, `export default function ${name}()`);
-            modified = true;
-            return newLine;
-          }
+
+    // Remove unused imports from lucide-react
+    const lucideImportRegex =
+      /import\s*{\s*([^}]+)\s*}\s*from\s*['"]lucide-react['"];?/g;
+    const matches = content.match(lucideImportRegex);
+
+    if (matches) {
+      matches.forEach((match) => {
+        const importContent = match.match(/{\s*([^}]+)\s*}/)[1];
+        const imports = importContent.split(",").map((imp) => imp.trim());
+
+        // Check which imports are actually used
+        const usedImports = imports.filter((imp) => {
+          const importName = imp.split(" as ")[0].trim();
+          return (
+            content.includes(importName) &&
+            !content.includes(`'${importName}'`) &&
+            !content.includes(`"${importName}"`)
+          );
+        });
+
+        if (usedImports.length === 0) {
+          // Remove the entire import line
+          content = content.replace(match + "\n", "");
+          modified = true;
+        } else if (usedImports.length < imports.length) {
+          // Replace with only used imports
+          const newImport = `import { ${usedImports.join(", ")} } from 'lucide-react';`;
+          content = content.replace(match, newImport);
+          modified = true;
         }
-      }
-      
-      // Fix unused exports
-      if (line.includes('export default') && line.includes(';')) {
-        const exportMatch = line.match(/export default (\w+);/);
-        if (exportMatch) {
-          const exportName = exportMatch[1];
-          // Check if this export is used in the file
-          const isUsed = content.includes(`<${exportName}`) || content.includes(`const ${exportName}`);
-          if (!isUsed) {
-            // Remove the export line
-            modified = true;
-            return '';
-          }
+      });
+    }
+
+    // Remove unused variable declarations
+    const unusedVarRegex = /^\s*const\s+(\w+)\s*=\s*[^;]+;\s*$/gm;
+    const varMatches = content.match(unusedVarRegex);
+
+    if (varMatches) {
+      varMatches.forEach((match) => {
+        const varName = match.match(/const\s+(\w+)\s*=/)[1];
+        const varUsageRegex = new RegExp(`\\b${varName}\\b`, "g");
+        const usages = content.match(varUsageRegex) || [];
+
+        if (usages.length <= 1) {
+          // Only the declaration itself
+          content = content.replace(match + "\n", "");
+          modified = true;
         }
-      }
-      
-      return line;
-    }).filter(line => line !== '');
-    
+      });
+    }
+
     if (modified) {
-      const newContent = newLines.join('\n');
-      fs.writeFileSync(filePath, newContent);
-      console.log(`Fixed unused vars: ${filePath}`);
+      fs.writeFileSync(filePath, content, "utf8");
       return true;
     }
-    
+
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -77,17 +72,50 @@ function fixUnusedVars(filePath) {
   }
 }
 
-// Main execution
-console.log('Fixing unused variables in src directory...');
-
-const srcDir = path.join(process.cwd(), 'src');
-const files = getAllFiles(srcDir);
-
-let fixedCount = 0;
-files.forEach(file => {
-  if (fixUnusedVars(file)) {
-    fixedCount++;
+// Function to find files with unused variable errors
+function findFilesWithUnusedVars() {
+  try {
+    const result = execSync(
+      'npm run lint 2>&1 | grep "is defined but never used" | cut -d: -f1 | sort -u',
+      {
+        encoding: "utf8",
+        cwd: process.cwd(),
+      },
+    );
+    return result
+      .trim()
+      .split("\n")
+      .filter((f) => f.length > 0);
+  } catch (error) {
+    return [];
   }
-});
+}
 
-console.log(`Fixed ${fixedCount} files`);
+// Main function
+function main() {
+  console.log("Starting unused variable cleanup...");
+
+  const filesWithUnusedVars = findFilesWithUnusedVars();
+
+  if (filesWithUnusedVars.length === 0) {
+    console.log("No files with unused variables found.");
+    return;
+  }
+
+  console.log(
+    `Found ${filesWithUnusedVars.length} files with unused variables:`,
+  );
+  filesWithUnusedVars.forEach((file) => console.log(`  - ${file}`));
+
+  let fixedCount = 0;
+
+  filesWithUnusedVars.forEach((file) => {
+    if (fixUnusedVars(file)) {
+      fixedCount++;
+    }
+  });
+
+  console.log(`\nFixed unused variables in ${fixedCount} files.`);
+}
+
+main();

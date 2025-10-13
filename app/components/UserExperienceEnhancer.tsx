@@ -1,47 +1,25 @@
-'use client';
-import React from 'react';
-'use client';
-import React, { useEffect, useState } from 'react';
+import React from "react";
 
 interface UserExperienceEnhancerProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
+  className?: string;
+  title?: string;
+  description?: string;
 }
 
-const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({ children }) => {
-  const [loadingStates, setLoadingStates] = useState<Record<string, boolean>>({});
-
-  useEffect(() => {
-    // UX enhancement logic
-    const enhanceUX = () => {
-      // Add smooth scrolling
-      document.documentElement.style.scrollBehavior = 'smooth';
-
-      // Add loading states for interactive elements
-      const interactiveElements = document.querySelectorAll('button, a, input');
-      interactiveElements.forEach((element, index) => {
-        element.addEventListener('click', () => {
-          setLoadingStates(prev => ({ ...prev, [index]: true }));
-          setTimeout(() => {
-            setLoadingStates(prev => ({ ...prev, [index]: false }));
-          }, 1000);
-        });
-      });
-
-      // Add focus indicators
-      const style = document.createElement('style');
-      style.textContent = `
-        *:focus {
-          outline: 2px solid #06b6d4;
-          outline-offset: 2px,
-        }
-      `;
-      document.head.appendChild(style);
-    };
-
-    enhanceUX();
-  }, []);
-
-  return <>{children}</>;
+const UserExperienceEnhancer: React.FC<UserExperienceEnhancerProps> = ({
+  children,
+  className = "",
+  title,
+  description,
+}) => {
+  return (
+    <div className={`enhanced-component ${className}`}>
+      {title && <h2 className="text-2xl font-bold mb-4">{title}</h2>}
+      {description && <p className="text-gray-600 mb-4">{description}</p>}
+      {children}
+    </div>
+  );
 };
 
 export default UserExperienceEnhancer;

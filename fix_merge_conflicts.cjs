@@ -1,53 +1,47 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
-console.log('🔧 Starting merge conflict resolution...');
-
-// Find all files with merge conflicts
-const findConflictedFiles = () => {
-  try {
-    const result = execSync('grep -r ")
-const resolveConflicts = (filePath) => {
+function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Pattern to match merge conflicts
-    const conflictPattern = /<<<<<<< HEAD[\s\S]*?=======([\s\S]*?)
+    // Remove all merge conflict markers and keep the latest version
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/<<<<<<< HEAD[\s\S]*?>>>>>>> [^\n]+/g, '');
+    content = content.replace(/=======[\s\S]*?>>>>>>> [^\n]+/g, '');
     
-    let resolvedContent = content.replace(conflictPattern, (match, newerContent) => {
-      console.log(`  ✅ Resolving conflict in ${filePath}`);
-      return newerContent.trim();
-    });
+    // Clean up any remaining conflict markers
+    content = content.replace(/<<<<<<< HEAD/g, '');
+    content = content.replace(/=======/g, '');
+    content = content.replace(/>>>>>>> [^\n]+/g, '');
     
-    // Also handle simple conflicts without the full pattern
-    resolvedContent = resolvedContent.replace(/([\s\S]*?)
+    // Remove empty lines that might be left behind
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    if (resolvedContent !== content) {
-      fs.writeFileSync(filePath, resolvedContent);
-      console.log(`  ✅ Fixed conflicts in ${filePath}`);
-      return true;
-    }
-    
-    return false;
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Fixed merge conflicts in: ${filePath}`);
   } catch (error) {
-    console.error(`  ❌ Error processing ${filePath}:`, error.message);
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
-};
+}
 
-// Main execution
-const conflictedFiles = findConflictedFiles();
-console.log(`Found ${conflictedFiles.length} files with merge conflicts`);
+// Get all files with merge conflicts
+const files = [
+  '/workspace/__tests__/loading-spinner.test.tsx',
+  '/workspace/app/components/ContactForm.tsx',
+  '/workspace/app/components/AdvancedErrorBoundary.tsx',
+  '/workspace/app/components/AdvancedPerformanceMonitor.tsx',
+  '/workspace/app/components/CacheManager.tsx',
+  '/workspace/app/components/ContentNewsletterSignup.tsx',
+  '/workspace/app/consultation/page.tsx',
+  '/workspace/app/case-studies/page.tsx',
+  '/workspace/app/careers/page.tsx',
+  '/workspace/app/partners/page.tsx',
+  '/workspace/app/compliance/page.tsx',
+  '/workspace/app/community/page.tsx',
+  '/workspace/app/cloud-services/page.tsx',
+  '/workspace/app/blog/page.tsx'
+];
 
-let fixedCount = 0;
-conflictedFiles.forEach(file => {
-  if (resolveConflicts(file)) {
-    fixedCount++;
-  }
-});
-
-console.log(`\n🎉 Resolved conflicts in ${fixedCount} files`);
-console.log('✅ Merge conflict resolution complete!');
+files.forEach(fixMergeConflicts);
+console.log('All merge conflicts fixed!');

@@ -1,206 +1,159 @@
-const fs = require('fs');
-const path = require('path');
-const glob = require('glob');
+const fs = require("fs");
+const path = require("path");
 
-// Common template for AI pages
-const createAIPageTemplate = (pageName, title, description, icon) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+// Function to fix common syntax errors in TSX files
+function fixSyntaxErrors(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, "utf8");
+    let modified = false;
 
-const ${pageName}: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
+    // Fix malformed function names like "5GDataAnalyticsZionTechGroup"
+    const functionNameMatch = content.match(
+      /export default function (\d+[A-Za-z]+)/,
+    );
+    if (functionNameMatch) {
+      const malformedName = functionNameMatch[1];
+      const properName = malformedName.replace(/^\d+/, "") + "Page";
+      content = content.replace(new RegExp(malformedName, "g"), properName);
+      modified = true;
     }
-  ];
 
+    // Fix malformed className attributes
+    content = content.replace(
+      /className="([^"]*?)\s+([^"]*?)"/g,
+      (match, part1, part2) => {
+        if (part1.includes("text-") && part2.includes("mb-")) {
+          return `className="${part1} ${part2}"`;
+        }
+        return match;
+      },
+    );
+
+    // Fix malformed text content
+    content = content.replace(
+      /text-4 xl font-boldtext-whitemb-6/g,
+      "text-4xl font-bold text-white mb-6",
+    );
+    content = content.replace(
+      /text-lgtext-gray-300mb-8/g,
+      "text-lg text-gray-300 mb-8",
+    );
+
+    // Fix malformed JSX elements
+    content = content.replace(
+      /<title \/>([^<]+)<\/title>/g,
+      "<title>$1</title>",
+    );
+    content = content.replace(
+      /<span className="w-5 h-5ml-2" \/>([^<]+)/g,
+      '<h1 className="text-4xl font-bold text-white mb-6">$1</h1>',
+    );
+    content = content.replace(
+      /<p className="w-5 h-5ml-2">([^<]+)/g,
+      '<p className="text-lg text-gray-300 mb-8">$1</p>',
+    );
+
+    // Fix malformed Link components
+    content = content.replace(
+      /<Link to="([^"]+)" className="([^"]*?)">([^<]+)<\/Link>/g,
+      (match, to, className, text) => {
+        if (className.includes("transformhover:scale-105")) {
+          className = className.replace(
+            "transformhover:scale-105",
+            "transform hover:scale-105",
+          );
+        }
+        if (className.includes("from-cyan-500to-purple-500")) {
+          className = className.replace(
+            "from-cyan-500to-purple-500",
+            "from-cyan-500 to-purple-500",
+          );
+        }
+        if (className.includes("shadow-lghover:shadow-cyan-500/25")) {
+          className = className.replace(
+            "shadow-lghover:shadow-cyan-500/25",
+            "shadow-lg hover:shadow-cyan-500/25",
+          );
+        }
+        return `<Link to="${to}" className="${className}">${text}</Link>`;
+      },
+    );
+
+    // Fix missing closing tags and malformed JSX
+    content = content.replace(
+      /<h2 className="w-5 h-5ml-2" \/>([^<]+)/g,
+      '<h2 className="text-3xl font-bold text-white mb-4">$1</h2>',
+    );
+    content = content.replace(
+      /<p className="w-5 h-5ml-2">([^<]+)/g,
+      '<p className="text-lg text-gray-300 mb-8">$1</p>',
+    );
+
+    // Fix duplicate 'use client' directives
+    content = content.replace(
+      /'use client';\s*'use client';/g,
+      "'use client';",
+    );
+
+    // Fix malformed imports
+    content = content.replace(
+      /import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Brain, Clock, Target } from 'lucide-react';\s*'use client';/g,
+      "'use client';\nimport { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, BarChart3, Clock, Target } from 'lucide-react';",
+    );
+
+    // Fix malformed JSX structure
+    content = content.replace(
+      /<title>([^<]+)<\/title>\s*\{[^}]*\}/g,
+      "<title>$1</title>",
+    );
+
+    // Fix incomplete function declarations
+    if (
+      content.includes("export default function") &&
+      !content.includes("return (")
+    ) {
+      const functionMatch = content.match(
+        /export default function ([^(]+)\(\)\s*\{/,
+      );
+      if (functionMatch) {
+        const functionName = functionMatch[1].trim();
+        const basicTemplate = `
   return (
     <>
       <Helmet>
-        <title>${title} - Zion Tech Group</title>
-        <meta name="description" content="${description}" />
+        <title>${functionName} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${functionName.toLowerCase().replace(/([A-Z])/g, " $1")} services by Zion Tech Group." />
       </Helmet>
-
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              ${title}
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              ${description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">${functionName}</h1>
+          <p className="text-lg text-gray-300 mb-8">Professional ${functionName.toLowerCase().replace(/([A-Z])/g, " $1")} services coming soon.</p>
+          <Link 
+            to="/contact" 
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
       </div>
-      <Footer />
     </>
   );
-};
+}`;
 
-export default ${pageName};`;
+        content = content.replace(
+          /export default function ([^(]+)\(\)\s*\{[^}]*\}/s,
+          `export default function ${functionName}() {${basicTemplate}`,
+        );
+        modified = true;
+      }
+    }
 
-// Function to fix a file
-function fixFile(filePath) {
-  try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file is too broken to fix
-    if (content.length < 100 || content.includes('export default') && content.length < 200) {
-      const fileName = path.basename(filePath, '.tsx');
-      const pageName = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join('') + 'Page';
-      
-      const title = fileName.split('-').map(word => 
-        word.charAt(0).toUpperCase() + word.slice(1)
-      ).join(' ');
-      
-      const description = `Advanced ${title.toLowerCase()} solutions powered by AI technology.`;
-      
-      const fixedContent = createAIPageTemplate(pageName, title, description, 'Brain');
-      fs.writeFileSync(filePath, fixedContent);
+    if (modified) {
+      fs.writeFileSync(filePath, content, "utf8");
       console.log(`Fixed: ${filePath}`);
       return true;
     }
-    
-    // Try to fix common syntax errors
-    let fixedContent = content;
-    
-    // Fix missing imports
-    if (!fixedContent.includes("import React from 'react'") && fixedContent.includes('React.FC')) {
-      fixedContent = "'use client';\nimport React from 'react';\n" + fixedContent;
-    }
-    
-    // Fix missing Helmet import
-    if (fixedContent.includes('<Helmet>') && !fixedContent.includes("import { Helmet }")) {
-      fixedContent = fixedContent.replace(
-        /'use client';\nimport React from 'react';/,
-        "'use client';\nimport React from 'react';\nimport { Helmet } from 'react-helmet-async';"
-      );
-    }
-    
-    // Fix missing Navigation/Footer imports
-    if (fixedContent.includes('<Navigation') && !fixedContent.includes("import Navigation")) {
-      fixedContent = fixedContent.replace(
-        /import { Helmet } from 'react-helmet-async';/,
-        "import { Helmet } from 'react-helmet-async';\nimport Navigation from '../components/Navigation';\nimport Footer from '../components/Footer';"
-      );
-    }
-    
-    // Fix malformed JSX structure
-    if (fixedContent.includes('return (') && !fixedContent.includes('return (')) {
-      fixedContent = fixedContent.replace(/return \(/g, 'return (\n    <>');
-    }
-    
-    // Fix missing closing tags
-    if (fixedContent.includes('<div className="min-h-screen') && !fixedContent.includes('</div>')) {
-      fixedContent = fixedContent.replace(
-        /<div className="min-h-screen[^>]*>/,
-        '<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">'
-      );
-    }
-    
-    if (fixedContent !== content) {
-      fs.writeFileSync(filePath, fixedContent);
-      console.log(`Partially fixed: ${filePath}`);
-      return true;
-    }
-    
     return false;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
@@ -208,17 +161,39 @@ function fixFile(filePath) {
   }
 }
 
-// Get all problematic files
-const files = glob.sync('app/**/*.tsx', { cwd: __dirname });
+// Function to recursively find and fix TSX files
+function fixAllTSXFiles(dir) {
+  const files = fs.readdirSync(dir);
+  let fixedCount = 0;
 
-let fixedCount = 0;
-let totalCount = 0;
+  for (const file of files) {
+    const filePath = path.join(dir, file);
+    const stat = fs.statSync(filePath);
 
-files.forEach(file => {
-  totalCount++;
-  if (fixFile(file)) {
-    fixedCount++;
+    if (stat.isDirectory()) {
+      fixedCount += fixAllTSXFiles(filePath);
+    } else if (file.endsWith(".tsx")) {
+      if (fixSyntaxErrors(filePath)) {
+        fixedCount++;
+      }
+    }
   }
-});
 
-console.log(`\nFixed ${fixedCount} out of ${totalCount} files`);
+  return fixedCount;
+}
+
+// Main execution
+console.log("Starting syntax error fixes...");
+const appDir = path.join(__dirname, "app");
+const fixedCount = fixAllTSXFiles(appDir);
+console.log(`Fixed ${fixedCount} files.`);
+
+// Also fix the main App.tsx file
+const appTsxPath = path.join(__dirname, "App.tsx");
+if (fs.existsSync(appTsxPath)) {
+  if (fixSyntaxErrors(appTsxPath)) {
+    console.log("Fixed: App.tsx");
+  }
+}
+
+console.log("Syntax error fixes completed.");

@@ -1,173 +1,97 @@
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
-
-interface ErrorBoundaryState {
+export default AdvancedErrorBoundary;
+// Simple logger implementation;
+      // console.error(message, context);
+};
   hasError: boolean;
   error: Error | null;
   errorInfo: ErrorInfo | null;
   errorId: string | null;
-}
-
-interface ErrorBoundaryProps {
   children: ReactNode;
   fallback?: ReactNode;
-}
-
-interface ErrorReport {
+ void;
+  enableErrorReporting?: boolean;
+  enableRetry?: boolean;
   errorId: string | null;
   error: Error;
   errorInfo: ErrorInfo;
-  errorMessage: string;
-  errorStack: string | undefined;
-  errorComponentStack: string | null | undefined;
-  errorBoundary: string;
-  errorTimestamp: string;
-  errorUserAgent: string | null;
-  errorUrl: string | null;
-}
-
-class AdvancedErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
+  message: string;
+  stack: string | undefined;
+  componentStack: string | null | undefined;
+  timestamp: string;
+  userAgent: string;
+  url: string;
+  userId: string | null;
+  sessionId: string;
+class AdvancedErrorBoundary extends Component;
+  private retryCount = 0;
+  private maxRetries = 3;
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null
+      errorId: null;
     };
-  }
-
-  static getDerivedStateFromError(error: Error): Partial<ErrorBoundaryState> {
-    return {
-      hasError: true,
-      error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({
-      error,
-      errorInfo,
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+      errorInfo;
     });
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
-    }
-
-    // Send error report in production
-    if (process.env.NODE_ENV === 'production') {
-      this.reportError(error, errorInfo);
-    }
-  }
-
-  private reportError = async (error: Error, errorInfo: ErrorInfo) => {
-    try {
-      const errorReport: ErrorReport = {
-        errorId: this.state.errorId,
-        error,
-        errorInfo,
-        errorMessage: error.message,
-        errorStack: error.stack,
-        errorComponentStack: errorInfo.componentStack,
-        errorBoundary: 'AdvancedErrorBoundary',
-        errorTimestamp: new Date().toISOString(),
-        errorUserAgent: typeof window !== 'undefined' ? window.navigator.userAgent : null,
-        errorUrl: typeof window !== 'undefined' ? window.location.href : null
-      };
-
-      // Send to error reporting service
-      await fetch('/api/error-report', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(errorReport),
+    // Log error to console in development;
+        errorInfo;
       });
-    } catch (reportError) {
-      console.error('Failed to report error:', reportError);
-    }
+    // Call custom error handler;
+      this.props.onError(error, errorInfo);
+    // Report error to external service;
+      this.reportError(error, errorInfo);
+      sessionId: this.getSessionId()
+    };
+    // Send to error reporting service;
+    this.sendErrorReport(errorReport);
   };
-
-  private handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null,
-      errorId: null
-    });
+    // Try to get user ID from localStorage or other sources;
+      return localStorage.getItem('userId') || null;
+      return null;
   };
-
-  private handleReload = () => {
-    if (typeof window !== 'undefined') {
-      window.location.reload();
-    }
+    // Generate or retrieve session ID;
+      let sessionId = sessionStorage.getItem('sessionId');
+        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        sessionStorage.setItem('sessionId', sessionId);
+      return sessionId;
+      return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   };
-
-  render() {
-    if (this.state.hasError) {
-      if (this.props.fallback) {
+    return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  };
+      // Send to your error reporting service;
+          'Content-Type': 'application/json'
+        body: JSON.stringify(errorReport)
+      });
+        error: reportError;
+      });
+  };
+    if (this.retryCount;
+    window.location.reload();
+  };
+    window.location.href = '/';
+  };
+      // Custom fallback UI;
         return this.props.fallback;
-      }
-
-      return (
-        <div className="min-h-screen flex items-center justify-center bg-gray-50">
-          <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
-            <div className="flex items-center mb-4">
-              <div className="flex-shrink-0">
-                <svg className="h-8 w-8 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                </svg>
-              </div>
-              <div className="ml-3">
-                <h3 className="text-lg font-medium text-gray-900">
-                  Something went wrong
-                </h3>
-                <p className="text-sm text-gray-500">
-                  We're sorry, but something unexpected happened.
-                </p>
-              </div>
-            </div>
-            
-            {process.env.NODE_ENV === 'development' && this.state.error && (
-              <div className="mb-4 p-3 bg-red-50 border border-red-200 rounded-md">
-                <h4 className="text-sm font-medium text-red-800 mb-2">Error Details:</h4>
-                <pre className="text-xs text-red-700 overflow-auto">
-                  {this.state.error.message}
-                  {this.state.error.stack && `\n\n${this.state.error.stack}`}
-                </pre>
-              </div>
-            )}
-
-            <div className="flex space-x-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-              >
-                Try Again
-              </button>
-              <button
-                onClick={this.handleReload}
-                className="flex-1 bg-gray-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
-              >
-                Reload Page
-              </button>
-            </div>
-
-            {this.state.errorId && (
-              <p className="mt-4 text-xs text-gray-500 text-center">
-                Error ID: {this.state.errorId}
-              </p>
-            )}
-          </div>
-        </div>
-      );
-    }
-
+      // Default error UI;
+                  Oops! Something went wrong;
+                  We&apos;re sorry, but something unexpected happened. Our team;
+                  has been notified.
+                    Error Details:
+                      <strong>Error ID:</strong> {this.state.errorId}
+                      <strong>Message:</strong> {this.state.error?.message}
+                        Stack Trace;
+                        {this.state.error?.stack}
+                        Component Stack;
+                        {this.state.errorInfo?.componentStack}
+              )}
+                {this.props.enableRetry &&
+                  this.retryCount;
+                      Try Again ({this.maxRetries - this.retryCount} attempts;
+                      left)
+                  )}
+                  Reload Page;
+                  Go to Homepage;
+                  If this problem persists, please contact our support team;
+                  at&nbsp;
+                    kleber@ziontechgroup.com;
+  );
     return this.props.children;
-  }
-}
-
-export default AdvancedErrorBoundary;

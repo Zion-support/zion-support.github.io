@@ -1,28 +1,32 @@
-/* Accessibility Styles */
+/* Accessibility and Performance Enhancements */
 
-/* Skip links */
-.skip-links {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  z-index: 1000;
+/* Focus management */
+.using-mouse *:focus {
+  outline: none;
 }
 
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  text-decoration: none;
-  z-index: 1000;
-  border-radius: 4px;
-  font-weight: bold;
+.using-mouse *:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }
 
-.skip-link:focus {
-  top: 6px;
+/* High contrast mode */
+.high-contrast {
+  filter: contrast(150%);
+}
+
+.high-contrast * {
+  border-color: currentColor !important;
+}
+
+/* Reduced motion */
+.reduce-motion *,
+.reduce-motion *::before,
+.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
 }
 
 /* Screen reader only content */
@@ -38,241 +42,197 @@
   border: 0;
 }
 
-/* High contrast mode */
-.high-contrast {
-  --bg-color: #000;
-  --text-color: #fff;
-  --border-color: #fff;
-  --accent-color: #ffff00;
+.sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  padding: inherit;
+  margin: inherit;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
 }
 
-.high-contrast * {
-  background-color: var(--bg-color) !important;
-  color: var(--text-color) !important;
-  border-color: var(--border-color) !important;
-}
-
-.high-contrast .cyber-button {
-  background: var(--accent-color) !important;
-  color: #000 !important;
-  border: 2px solid #000 !important;
-}
-
-/* Reduced motion */
-.reduced-motion * {
-  animation-duration: 0.01ms !important;
-  animation-iteration-count: 1 !important;
-  transition-duration: 0.01ms !important;
-}
-
-.reduced-motion .animate-pulse,
-.reduced-motion .animate-bounce,
-.reduced-motion .animate-spin {
-  animation: none !important;
-}
-
-/* Focus indicators */
-*:focus {
-  outline: 2px solid #4f46e5;
-  outline-offset: 2px;
-}
-
-.cyber-button:focus,
-button:focus {
-  outline: 3px solid #ffff00;
-  outline-offset: 2px;
-}
-
-/* Voice navigation button */
-.voice-navigation-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #4f46e5;
+/* Skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: #2563eb;
   color: white;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 50px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-  transition: all 0.3s ease;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
   z-index: 1000;
+  transition: top 0.3s;
 }
 
-.voice-navigation-button:hover {
-  background: #3730a3;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(79, 70, 229, 0.4);
+.skip-link:focus {
+  top: 6px;
 }
 
-.voice-navigation-button:focus {
-  outline: 3px solid #ffff00;
-  outline-offset: 2px;
-}
-
-/* Font scaling */
-.font-scale-large {
-  font-size: 1.2em;
-}
-
-.font-scale-extra-large {
-  font-size: 1.4em;
-}
-
-/* Color contrast indicators */
-[data-contrast-checked="true"] {
+/* Loading states */
+.loading {
   position: relative;
+  pointer-events: none;
 }
 
-[data-contrast-checked="true"]:after {
-  content: "⚠️";
+.loading::after {
+  content: "";
   position: absolute;
-  top: -5px;
-  right: -5px;
-  font-size: 12px;
-  opacity: 0.7;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
 }
 
-/* Live region for screen readers */
-#live-region {
-  position: absolute;
-  left: -10000px;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
-/* Enhanced focus for interactive elements */
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus,
-[tabindex]:focus {
-  outline: 3px solid #4f46e5;
+/* Enhanced focus indicators */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #3b82f6;
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* High contrast focus for better visibility */
-.high-contrast a:focus,
-.high-contrast button:focus,
-.high-contrast input:focus,
-.high-contrast select:focus,
-.high-contrast textarea:focus,
-.high-contrast [tabindex]:focus {
-  outline: 3px solid #ffff00;
-  outline-offset: 2px;
+/* Improved contrast for interactive elements */
+button:not(:disabled):hover,
+a:hover {
+  opacity: 0.9;
 }
 
-/* Ensure sufficient color contrast */
-.cyber-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #ffffff;
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
-.cyber-card h1,
-.cyber-card h2,
-.cyber-card h3,
-.cyber-card h4,
-.cyber-card h5,
-.cyber-card h6 {
-  color: #ffffff;
+/* Better text contrast */
+.text-low-contrast {
+  color: #6b7280;
 }
 
-.cyber-card p,
-.cyber-card span,
-.cyber-card div {
-  color: #e5e7eb;
+/* Responsive typography */
+@media (max-width: 640px) {
+  .text-responsive {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
 }
 
-/* Ensure text is readable on all backgrounds */
-.text-white {
-  color: #ffffff !important;
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
 }
 
-.text-gray-300 {
-  color: #d1d5db !important;
+.will-change-opacity {
+  will-change: opacity;
 }
 
-.text-gray-400 {
-  color: #9ca3af !important;
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
 }
 
-/* Button contrast improvements */
-.cyber-button {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #ffffff;
-  border: 2px solid transparent;
-  font-weight: 600;
-}
-
-.cyber-button:hover {
-  background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
-  color: #ffffff;
-}
-
-.cyber-button:focus {
-  outline: 3px solid #ffff00;
-  outline-offset: 2px;
-}
-
-/* Form accessibility */
+/* Improved form accessibility */
 input[type="text"],
 input[type="email"],
+input[type="password"],
 input[type="tel"],
 input[type="url"],
 textarea,
 select {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #ffffff;
-  padding: 12px;
+  border: 2px solid #e5e7eb;
   border-radius: 6px;
-  font-size: 16px; /* Prevent zoom on mobile */
+  padding: 8px 12px;
+  font-size: 16px; /* Prevents zoom on mobile */
 }
 
-input[type="text"]:focus,
-input[type="email"]:focus,
-input[type="tel"]:focus,
-input[type="url"]:focus,
+input:focus,
 textarea:focus,
 select:focus {
-  outline: 3px solid #4f46e5;
-  outline-offset: 2px;
-  border-color: #4f46e5;
-}
-
-/* Placeholder text contrast */
-input::placeholder,
-textarea::placeholder {
-  color: #9ca3af;
-  opacity: 1;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
 }
 
 /* Error states */
-.error {
-  border-color: #ef4444 !important;
-  outline: 2px solid #ef4444 !important;
+.input-error {
+  border-color: #ef4444;
 }
 
-.error-message {
-  color: #fca5a5;
-  font-size: 14px;
-  margin-top: 4px;
+.input-error:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
 }
 
 /* Success states */
-.success {
-  border-color: #10b981 !important;
-  outline: 2px solid #10b981 !important;
+.input-success {
+  border-color: #10b981;
 }
 
-.success-message {
-  color: #6ee7b7;
-  font-size: 14px;
-  margin-top: 4px;
+.input-success:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Loading button states */
+.btn-loading {
+  position: relative;
+  color: transparent;
+}
+
+.btn-loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Dark mode improvements */
+@media (prefers-color-scheme: dark) {
+  .auto-dark {
+    background-color: #1f2937;
+    color: #f9fafb;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
 }

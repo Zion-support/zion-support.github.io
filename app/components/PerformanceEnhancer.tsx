@@ -1,107 +1,140 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
 
+interface PerformanceMetrics {
+  fcp: number;
+  lcp: number;
+  fid: number;
+  cls: number;
+  ttfb: number;
+  loadTime: number;
+}
+
+const PerformanceEnhancer: React.FC = () => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    // Only run in browser environment
+    if (typeof window === 'undefined') return;
+
+    const measurePerformance = () => {
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
+      
+      const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+      const lcp = performance.getEntriesByType('largest-contentful-paint')[0] as PerformanceEntry;
+      
+      const metrics: PerformanceMetrics = {
+        fcp: fcp ? fcp.startTime : 0,
+        lcp: lcp ? lcp.startTime : 0,
+        fid: 0, // Would need PerformanceObserver
+        cls: 0, // Would need PerformanceObserver
+        ttfb: navigation.responseStart - navigation.requestStart,
+        loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      };
+
+      setMetrics(metrics);
+
+      // Log performance metrics
+      };
+
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
-  ];
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
-  ];
+    // Cleanup
+    return () => {
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, []);
+
+  // Preload critical resources
+  useEffect(() => {
+    const preloadCriticalResources = () => {
+      // Preload critical CSS
+      const criticalCSS = document.createElement('link');
+      criticalCSS.rel = 'preload';
+      criticalCSS.href = '/critical.css';
+      criticalCSS.as = 'style';
+      document.head.appendChild(criticalCSS);
+
+      // Preload critical fonts
+      const fontPreload = document.createElement('link');
+      fontPreload.rel = 'preload';
+      fontPreload.href = '/fonts/inter-var.woff2';
+      fontPreload.as = 'font';
+      fontPreload.type = 'font/woff2';
+      fontPreload.crossOrigin = 'anonymous';
+      document.head.appendChild(fontPreload);
+    };
+
+    preloadCriticalResources();
+  }, []);
+
+  // Optimize images
+  useEffect(() => {
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const img = entry.target as HTMLImageElement;
+            img.src = img.dataset.src || '';
+            img.classList.remove('lazy');
+            imageObserver.unobserve(img);
+          }
+        });
+      });
+
+      images.forEach((img) => imageObserver.observe(img));
+    };
+
+    optimizeImages();
+  }, []);
+
+  // Only show in development
+  if (process.env.NODE_ENV !== 'development' || !metrics) {
+    return null;
+  }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>PerformanceEnhancer | Zion Tech Group</title>
-        <meta name="description" content="Professional PerformanceEnhancer services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="PerformanceEnhancer, AI solutions, IT services, Zion Tech Group, performanceenhancer" />
-      </Helmet>
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                PerformanceEnhancer
-              </span>
-              <br />
-              <span className="text-white">Solutions</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business with our advanced performanceenhancer solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More
-              </button>
+    <div className="fixed bottom-4 right-4 z-50">
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className="bg-purple-600 text-white px-3 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition-colors focus:outline-none focus:ring-2 focus:ring-purple-500"
+        aria-label="Toggle performance metrics"
+      >
+        Performance
+      </button>
+      
+      {isVisible && (
+        <div className="absolute bottom-12 right-0 bg-white border border-gray-200 rounded-lg shadow-lg p-4 w-64">
+          <h3 className="font-semibold text-gray-900 mb-3">Performance Metrics</h3>
+          <div className="space-y-2 text-sm">
+            <div className="flex justify-between">
+              <span className="text-gray-600">FCP:</span>
+              <span className="font-mono">{metrics.fcp.toFixed(2)}ms</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">LCP:</span>
+              <span className="font-mono">{metrics.lcp.toFixed(2)}ms</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">TTFB:</span>
+              <span className="font-mono">{metrics.ttfb.toFixed(2)}ms</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">Load Time:</span>
+              <span className="font-mono">{metrics.loadTime.toFixed(2)}ms</span>
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our PerformanceEnhancer?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our performanceenhancer solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our performanceenhancer solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      )}
+    </div>
+  );
 };
 
-export default PerformanceEnhancerPage;
+export default PerformanceEnhancer;

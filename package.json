@@ -60,6 +60,7 @@
     "optimize:all": "npm run clean && npm run build && npm run optimize:assets",
     "perf:analyze": "node scripts/performance-optimizer.js",
     "perf:build": "pnpm run build && pnpm run perf:analyze",
+    "perf:audit": "node scripts/performance-audit.js",
     "netlify:optimize": "node scripts/netlify-optimizer.js",
     "build:check": "pnpm run type-check && pnpm run lint && pnpm run build:production",
     "preview:check": "pnpm run build:production && pnpm run preview",
@@ -78,7 +79,6 @@
     "seo:audit": "node scripts/seo-audit.js",
     "comprehensive:audit": "pnpm run performance:audit && pnpm run security:audit && pnpm run accessibility:audit && pnpm run seo:audit",
     "perf:lighthouse": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
-    "perf:audit": "lighthouse http://localhost:4173 --output=html --output-path=./lighthouse-report.html",
     "test:unit": "jest --testPathPattern=src --passWithNoTests",
     "test:integration": "jest --testPathPattern=app --passWithNoTests",
     "lint:fix-all": "eslint . --ext .ts,.tsx,.js,.jsx --fix --max-warnings 0",
@@ -96,8 +96,14 @@
     "optimize:enhanced": "npm run optimize:performance && npm run build:optimized",
     "deploy:production": "npm run optimize:enhanced && npm run build:check && echo 'Ready for production deployment'",
     "generate:sitemap": "node scripts/generate-sitemap.cjs",
+    "sitemap": "npm run generate:sitemap",
     "optimize:performance": "node scripts/performance-optimizer.cjs",
-    "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\""
+    "optimize:performance-enhanced": "node scripts/performance-optimizer-enhanced.cjs",
+    "optimize:seo-enhanced": "node scripts/seo-optimizer-enhanced.cjs",
+    "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
+    "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\"",
+    "analyze:full": "npm run build && npm run analyze:bundle",
+    "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev"
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",
@@ -130,6 +136,7 @@
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.37.0",
     "@jest/globals": "^30.2.0",
+    "@prisma/client": "^6.17.1",
     "@rollup/rollup-linux-x64-gnu": "4.52.3",
     "@tailwindcss/postcss": "^4.1.14",
     "@testing-library/dom": "^10.4.1",
@@ -163,6 +170,7 @@
     "jest-esbuild": "^0.4.0",
     "lighthouse": "^12.8.2",
     "netlify-plugin-cloudinary": "1.17.0",
+    "node-mocks-http": "^1.17.2",
     "postcss": "^8.5.6",
     "prettier": "^3.6.2",
     "rollup-plugin-visualizer": "^6.0.4",
@@ -172,7 +180,8 @@
     "ts-jest": "^29.4.4",
     "typescript": "^5.9.3",
     "typescript-eslint": "8.44.1",
-    "vite": "^7.1.9"
+    "vite": "^7.1.9",
+    "vitest": "^3.2.4"
   },
   "packageManager": "pnpm@10.17.1",
   "engines": {

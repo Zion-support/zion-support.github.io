@@ -1,116 +1,81 @@
-const fs = require('fs');
-const path = require('path');
+const fs = require("fs");
+const path = require("path");
+const glob = require("glob");
 
-// List of files that need to be fixed based on the error output
-const problematicFiles = [
-  'app/ai-api-management/page.tsx',
-  'app/ai-api-manager/page.tsx',
-  'app/ai-autonomous-systems/page.tsx',
-  'app/ai-blockchain-analytics/page.tsx',
-  'app/ai-blockchain-solutions/page.tsx',
-  'app/ai-climate-solutions-pro/page.tsx',
-  'app/ai-cloud-infrastructure/page.tsx',
-  'app/ai-code-assistant/page.tsx',
-  'app/ai-code-security-auditor/page.tsx',
-  'app/ai-computer-vision/page.tsx',
-  'app/ai-content-delivery-network/page.tsx',
-  'app/ai-content-generation/page.tsx'
-];
+// Function to fix a single file
+function fixFile(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, "utf8");
+    let fixed = false;
 
-// Template for a basic page component
-const createBasicPage = (pageName, title, description) => `'use client';
+    // Fix corrupted files with duplicate content
+    if (
+      content.includes("'use client'\nimport React from 'react'") &&
+      content.includes("export default PagePage")
+    ) {
+      // This is a corrupted file, replace with proper structure
+      const fileName = path.basename(filePath, ".tsx");
+      const pageName =
+        fileName.charAt(0).toUpperCase() +
+        fileName.slice(1).replace(/-/g, " ") +
+        "Page";
+
+      content = `'use client';
 import React from 'react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight } from 'lucide-react';
 
 const ${pageName}: React.FC = () => {
   const features = [
     {
-      title: 'Feature 1',
-      description: 'Description of feature 1',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+      title: '${pageName.replace("Page", "")}',
+      description: 'Professional ${fileName.replace(/-/g, " ")} services and solutions.',
+      benefits: ['High Quality', 'Expert Team', '24/7 Support', 'Custom Solutions']
     },
     {
-      title: 'Feature 2',
-      description: 'Description of feature 2',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+      title: 'Advanced Technology',
+      description: 'Cutting-edge tools and technologies to deliver superior results.',
+      benefits: ['Latest Tools', 'Modern Methods', 'Scalable Solutions', 'Future-Ready']
     },
     {
-      title: 'Feature 3',
-      description: 'Description of feature 3',
-      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+      title: 'Proven Results',
+      description: 'Track record of successful projects and satisfied clients.',
+      benefits: ['High Success Rate', 'Client Satisfaction', 'Ongoing Support', 'Continuous Improvement']
     }
   ];
 
-  const benefits = [
-    'Benefit 1',
-    'Benefit 2',
-    'Benefit 3',
-    'Benefit 4',
-    'Benefit 5',
-    'Benefit 6'
-  ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>${title} | Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-        <meta name="keywords" content="${title.toLowerCase()}, AI solutions, IT services, Zion Tech Group" />
+        <title>${pageName.replace("Page", "")} - Zion Tech Group</title>
+        <meta name="description" content="Professional ${fileName.replace(/-/g, " ")} services and solutions." />
+        <meta name="keywords" content="${fileName.replace(/-/g, " ")}, services, solutions, technology" />
       </Helmet>
       
       <Navigation />
-
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="relative max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-            ${title}
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              Solutions
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            ${description}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25">
-              Get Started Today
-              <ArrowRight className="inline-block ml-2 w-5 h-5" />
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              View Demo
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4">
+      
+      <main className="pt-20 px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">${title} Features</h2>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              ${pageName.replace("Page", "")}
+            </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Advanced solutions designed for modern business needs
+              Professional ${fileName.replace(/-/g, " ")} services to help your business succeed and grow.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
             {features.map((feature, index) => (
-              <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group">
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20">
+                <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
                 <ul className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-300">
+                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
                       {benefit}
                     </li>
                   ))}
@@ -118,96 +83,128 @@ const ${pageName}: React.FC = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our ${title}?</h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions
-            </p>
-          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-lg font-semibold text-white">{benefit}</h3>
+          <div className="text-center">
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-12">
+              <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Contact us today to learn more about our ${fileName.replace(/-/g, " ")} services.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <button className="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                  Contact Us
+                </button>
+                <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                  Learn More
+                </button>
               </div>
-            ))}
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Transform your business with our ${title.toLowerCase()} solutions today
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Start Free Trial
-            </button>
-            <button className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-              Contact Sales
-            </button>
-          </div>
-        </div>
-      </section>
-
+      </main>
+      
       <Footer />
     </div>
   );
 };
 
 export default ${pageName};`;
+      fixed = true;
+    }
 
-// Function to get page name from file path
-function getPageName(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  return fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join('') + 'Page';
-}
+    // Fix files with duplicate imports and corrupted content
+    if (
+      content.includes("'use client'\nimport React from 'react'") &&
+      content.includes("const ") &&
+      content.includes("return (")
+    ) {
+      // Remove duplicate imports and fix structure
+      const lines = content.split("\n");
+      const cleanLines = [];
+      let inCorruptedSection = false;
+      let foundReturn = false;
 
-// Function to get title from file path
-function getTitle(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  return fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-}
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
 
-// Function to get description from file path
-function getDescription(filePath) {
-  const fileName = path.basename(filePath, '.tsx');
-  const title = fileName.split('-').map(word => 
-    word.charAt(0).toUpperCase() + word.slice(1)
-  ).join(' ');
-  return `Professional ${title.toLowerCase()} solutions by Zion Tech Group. Advanced AI and IT solutions for your business.`;
-}
+        if (line.includes("'use client'") && i > 0) {
+          inCorruptedSection = true;
+          continue;
+        }
 
-// Fix each problematic file
-problematicFiles.forEach(filePath => {
-  const fullPath = path.join('/workspace', filePath);
-  const pageName = getPageName(filePath);
-  const title = getTitle(filePath);
-  const description = getDescription(filePath);
-  
-  try {
-    const content = createBasicPage(pageName, title, description);
-    fs.writeFileSync(fullPath, content);
-    console.log(`Fixed: ${filePath}`);
+        if (
+          inCorruptedSection &&
+          line.includes("const ") &&
+          line.includes(": React.FC")
+        ) {
+          inCorruptedSection = false;
+          cleanLines.push(line);
+          continue;
+        }
+
+        if (inCorruptedSection) {
+          continue;
+        }
+
+        if (line.includes("return (") && !foundReturn) {
+          foundReturn = true;
+          cleanLines.push(line);
+          continue;
+        }
+
+        cleanLines.push(line);
+      }
+
+      content = cleanLines.join("\n");
+      fixed = true;
+    }
+
+    // Remove unused ArrowRight imports
+    if (content.includes("ArrowRight") && !content.includes("<ArrowRight")) {
+      content = content.replace(
+        /import { [^}]*ArrowRight[^}]* } from 'lucide-react';/g,
+        "",
+      );
+      content = content.replace(
+        /import { CheckCircle, ArrowRight } from 'lucide-react';/g,
+        "import { CheckCircle } from 'lucide-react';",
+      );
+      fixed = true;
+    }
+
+    // Remove unused React imports
+    if (
+      content.includes("import React from 'react';") &&
+      !content.includes("<React") &&
+      !content.includes("React.")
+    ) {
+      content = content.replace(/import React from 'react';\n/g, "");
+      fixed = true;
+    }
+
+    // Fix parsing errors with missing closing braces
+    if (content.includes("export default") && !content.includes("};")) {
+      content = content.replace(
+        /export default (\w+);$/,
+        "};\n\nexport default $1;",
+      );
+      fixed = true;
+    }
+
+    if (fixed) {
+      fs.writeFileSync(filePath, content);
+      console.log(`Fixed: ${filePath}`);
+    }
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
-});
+}
 
-console.log('Finished fixing problematic files');
+// Get all page files
+const pageFiles = glob.sync("app/**/page.tsx");
+
+console.log(`Found ${pageFiles.length} page files to check...`);
+
+pageFiles.forEach(fixFile);
+
+console.log("Done fixing files!");

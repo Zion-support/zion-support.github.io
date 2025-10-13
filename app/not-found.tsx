@@ -1,41 +1,47 @@
-import Link from 'next/link';
-import { Home, ArrowLeft, RefreshCw } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
-export default function NotFound() {
+const NotFoundPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
-      <div className="max-w-md w-full bg-gray-800 rounded-xl shadow-2xl p-8 text-center">
-        <div className="flex justify-center mb-6">
-          <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center">
-            <span className="text-4xl">404</span>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+        <title>Page Not Found | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="The page you are looking for could not be found"
+        />
+      </Helmet>
+
+      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              Page Not Found
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            The page you are looking for could not be found
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/contact"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              Learn More
+            </Link>
           </div>
-        </div>
-        <h1 className="text-2xl font-bold text-white mb-4">
-          Page Not Found
-        </h1>
-        <p className="text-gray-300 mb-6">
-          Sorry, we couldn't find the page you're looking for. It might have been moved, deleted, or doesn't exist.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3">
-          <Link
-            href="/"
-            className="flex items-center justify-center px-6 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-medium rounded-lg transition-colors"
-          >
-            <Home className="w-4 h-4 mr-2" />
-            Go Home
-          </Link>
-          <button
-            onClick={() => window.history.back()}
-            className="flex items-center justify-center px-6 py-3 border-2 border-gray-600 text-gray-300 hover:bg-gray-700 font-medium rounded-lg transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Go Back
-          </button>
-        </div>
-        <div className="mt-6 text-sm text-gray-400">
-          If you believe this is an error, please contact our support team.
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default NotFoundPage;

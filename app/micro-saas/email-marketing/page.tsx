@@ -1,56 +1,31 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Mail, ArrowRight } from 'lucide-react';
+import { ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
-const EmailMarketingSuitePage: React.FC = () => {
+import { Link } from "react-router-dom";
+
+export default function GDataAnalyticsZionTechGroupPage() {
   return (
     <>
       <Helmet>
-        <title>Email Marketing Suite | Zion Tech Group - AI Email Campaigns</title>
-        <meta name="description" content="AI-powered email marketing automation. Create, send, and optimize email campaigns with intelligent automation." />
-        <link rel="canonical" href="https://ziontechgroup.com/micro-saas/email-marketing" />
+        <title>5G Data Analytics - Zion Tech Group</title>
       </Helmet>
-
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
-        <section className="pt-24 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center"></div>
-            <div className="inline-flex items-center space-x-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-medium mb-6"></div>
-              <Mail className="w-4 h-4" />
-              <span>Email Marketing Suite</span>
-            </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 cyber-text">
-              AI Email </h1>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-green-400"> Campaigns</span>
-            </h1>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-              AI-powered email marketing automation. Create, send, and optimize email campaigns 
-              with intelligent automation and personalization.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all flex items-center justify-center space-x-2">
-                <span>Get Started</span>
-                <ArrowRight className="w-5 h-5" />
-              </button>
-              <button className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400/10 transition-all">
-                View Demo
-              </button>
-            </div>
-          </div>
-        </section>
-
-        <section className="py-16 px-4">
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
-              <h2 className="text-4xl font-bold text-white mb-4">Coming Soon</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're developing powerful email marketing solutions. Stay tuned for updates!
-              </p>
-            </div>
-          </div>
-        </section>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            Email Marketing
+          </h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional email marketing services coming soon.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
       </div>
     </>
   );
-};
-
-export default EmailMarketingSuitePage;
+}

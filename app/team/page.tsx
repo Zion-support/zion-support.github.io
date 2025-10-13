@@ -1,44 +1,29 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
+import { ArrowRight } from "lucide-react";
 
-const TeamPage: React.FC = () => {
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+export default function TeamZionTechGroup() {
   return (
     <>
       <Helmet>
-        <title>Our Team - Zion Tech Group</title>
-        <meta name="description" content="Meet the talented team behind Zion Tech Group. Our experts in AI, technology, and business solutions." />
+        <title>Team - Zion Tech Group</title>
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50"></div>
-        <Navigation />
-        
-        <main className="pt-20">
-          <div className="container mx-auto px-4 py-16"></div>
-            <div className="max-w-4xl mx-auto"></div>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-8">
-                Our Team</h1>
-              </h1>
-              
-              <div className="prose prose-lg max-w-none"></div>
-                <p className="text-xl text-gray-600 mb-8">
-                  Meet the experts behind our success.
-                </p>
-                
-                <p className="text-gray-700 mb-6">
-                  Coming soon - stay tuned to meet our team!
-                </p>
-              </div>
-            </div>
-          </div>
-        </main>
-        
-        <Footer />
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Team</h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional team services coming soon.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
+        </div>
       </div>
     </>
   );
-};
-
-export default TeamPage;
+}

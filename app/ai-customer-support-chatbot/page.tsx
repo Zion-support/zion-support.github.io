@@ -1,164 +1,306 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react';
+"use client";
+import { Brain, Clock, Target, BarChart3 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
-const AiCustomerSupportChatbotPage: React.FC = () => {
-  const features = [
+export default function AICustomerSupportChatbot() {
+  const chatbotFeatures = [
     {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
+      category: "Core Features",
+      items: [
+        "Natural Language Processing",
+        "Multi-language Support",
+        "Context Awareness",
+        "Real-time Responses",
+      ],
     },
     {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
+      category: "Integration",
+      items: [
+        "API Integration",
+        "CRM Integration",
+        "Database Connectivity",
+        "Third-party Tools",
+      ],
     },
     {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
+      category: "Analytics",
+      items: [
+        "Conversation Analytics",
+        "Performance Metrics",
+        "User Insights",
+        "Custom Reports",
+      ],
     },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
   ];
 
-  const benefits = [
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-    'Gain competitive advantage with advanced technology'
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$299",
+      features: ["Basic chatbot", "Email support", "Standard templates"],
+      description: "Perfect for small businesses getting started",
+      period: "/month",
+      popular: false,
+    },
+    {
+      name: "Professional",
+      price: "$799",
+      features: ["Advanced AI", "Priority support", "Custom integrations"],
+      description: "Ideal for growing businesses with complex needs",
+      period: "/month",
+      popular: true,
+    },
+    {
+      name: "Enterprise",
+      price: "$1999",
+      features: ["Full customization", "24/7 support", "Dedicated manager"],
+      description: "Complete solution for large organizations",
+      period: "/month",
+      popular: false,
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      company: "TechCorp",
+      text: "Amazing chatbot solution!",
+      rating: 5,
+      content:
+        "The AI chatbot has transformed our customer service operations.",
+    },
+    {
+      name: "Mike Chen",
+      company: "StartupXYZ",
+      text: "Increased customer satisfaction by 40%.",
+      rating: 5,
+      content:
+        "Our response times have improved dramatically with this solution.",
+    },
+  ];
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      title: "Natural Language Processing",
+      description:
+        "Advanced AI understands context, intent, and provides human-like responses",
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-purple-400" />,
+      title: "24/7 Availability",
+      description:
+        "Provide instant support around the clock without additional staffing costs",
+    },
+    {
+      icon: <Target className="w-6 h-6 text-yellow-400" />,
+      title: "Intelligent Routing",
+      description:
+        "Automatically route complex queries to the right human agents when needed",
+    },
+    {
+      icon: <BarChart3 className="w-6 h-6 text-green-400" />,
+      title: "Analytics & Insights",
+      description:
+        "Track customer satisfaction, response times, and identify improvement opportunities",
+    },
   ];
 
   return (
     <>
       <Helmet>
-        <title>Ai Customer Support Chatbot - Zion Tech Group</title>
-        <meta name="description" content="Advanced AI-powered ai customer support chatbot solution for modern businesses." />
-        <meta name="keywords" content="AI ai customer support chatbot, artificial intelligence, ai customer support chatbot, AI solutions, intelligent automation" />
+        <title>AI Customer Support Chatbot - Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Professional AI customer support chatbot services by Zion Tech Group. Expert solutions tailored to your business needs."
+        />
       </Helmet>
 
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Customer Support Chatbot
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              AI Customer Support Chatbot
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced AI-powered ai customer support chatbot solution for modern businesses.
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Professional AI customer support chatbot services by Zion Tech
+              Group. Expert solutions tailored to your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              >
                 Get Started
-              </button>
-              <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                View Demo
-              </button>
+              </Link>
+              <Link
+                to="/contact"
+                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+              >
+                Learn More
+              </Link>
             </div>
           </div>
-        </section>
 
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Advanced AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Benefits Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Why Choose Our Solution?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven results that drive business growth and efficiency
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <CheckCircle className="w-8 h-8 text-white" />
-                  </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-red-500 to-blue-600 hover:from-red-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-red-400 text-red-400 hover:bg-red-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
+          {/* Features Section */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
+              >
+                <div className="flex justify-center mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
+            ))}
+          </div>
+
+          {/* Chatbot Features Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Comprehensive Chatbot Features
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {chatbotFeatures.map((category, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+                >
+                  <h3 className="text-xl font-semibold text-white mb-4">
+                    {category.category}
+                  </h3>
+                  <ul className="space-y-2">
+                    {category.items.map((item, itemIndex) => (
+                      <li
+                        key={itemIndex}
+                        className="text-gray-300 flex items-center"
+                      >
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
-        </section>
+
+          {/* Pricing Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              Simple, Transparent Pricing
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`bg-white/10 backdrop-blur-sm rounded-lg p-8 ${plan.popular ? "ring-2 ring-cyan-400" : ""}`}
+                >
+                  {plan.popular && (
+                    <div className="text-center mb-4">
+                      <span className="bg-cyan-400 text-white px-4 py-2 rounded-full text-sm font-medium">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    {plan.name}
+                  </h3>
+                  <p className="text-gray-300 mb-6">{plan.description}</p>
+                  <div className="mb-6">
+                    <span className="text-4xl font-bold text-white">
+                      {plan.price}
+                    </span>
+                    <span className="text-gray-400">{plan.period}</span>
+                  </div>
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li
+                        key={featureIndex}
+                        className="text-gray-300 flex items-center"
+                      >
+                        <span className="w-2 h-2 bg-cyan-400 rounded-full mr-3"></span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  <Link
+                    to="/contact"
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-colors ${
+                      plan.popular
+                        ? "bg-gradient-to-r from-cyan-500 to-purple-500 text-white hover:from-cyan-600 hover:to-purple-600"
+                        : "bg-white/20 text-white hover:bg-white/30"
+                    }`}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Testimonials Section */}
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-12">
+              What Our Customers Say
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
+                >
+                  <div className="flex mb-4">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <span key={i} className="text-yellow-400">
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                  <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+                  <div>
+                    <p className="font-semibold text-white">
+                      {testimonial.name}
+                    </p>
+                    <p className="text-gray-400 text-sm">
+                      {testimonial.company}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CTA Section */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-lg text-gray-300 mb-8">
+              Contact us to learn more about our solutions and how we can help
+              your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              >
+                Contact Us
+              </Link>
+              <Link
+                to="/services"
+                className="border border-cyan-500 text-cyan-400 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-cyan-500/10 transition-all duration-300 transform hover:scale-105"
+              >
+                View All Services
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
-      <Footer />
     </>
   );
-};
-
-export default AiCustomerSupportChatbotPage;
+}

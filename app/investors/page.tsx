@@ -1,60 +1,47 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
-const PagePage: React.FC = () => {
-  const features = [
-    {
-      icon: Zap,
-      title: 'High Performance',
-      description: 'Lightning-fast processing and real-time analytics for optimal results'
-    },
-    {
-  ];
-
+const InvestorsPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Page | Zion Tech Group</title>
-        <meta name="description" content="Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="page, AI solutions, IT services, Zion Tech Group, page" />
+        <title>Investors | Zion Tech Group</title>
+        <meta
+          name="description"
+          content="Investment opportunities and partnership information"
+        />
       </Helmet>
 
-      {/* Hero Section */}
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Page?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our page solutions deliver unmatched performance, security, and scalability.
-            </p>
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
-              </div>
-            ))}
+      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              Investors
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            Investment opportunities and partnership information
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+            >
+              Get Started
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Link>
+            <Link
+              to="/contact"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+            >
+              Learn More
+            </Link>
           </div>
         </div>
-      </section>
-
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our page solutions for your business.
-            </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-          </div>
-        </div>
-      </section>
+      </div>
     </div>
   );
 };
 
-export default PagePage;
+export default InvestorsPage;

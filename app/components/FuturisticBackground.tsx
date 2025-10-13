@@ -1,130 +1,176 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
 
-const FuturisticBackgroundPage: React.FC = () => {
-  const features = [
-    {
-      icon: Brain,
-      title: 'AI-Powered Analysis',
-      description: 'Advanced AI algorithms provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']
-    },
-    {
-      icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
-    },
-    {
-      icon: TrendingUp,
-      title: 'Growth Optimization',
-      description: 'Optimize your business growth with data-driven strategies.',
-      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
-    }
-  ];
+<<<<<<< HEAD
+const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let animationId: number;
+    let particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;
+    }> = [];
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    const createParticle = () => {
+      const colors = ['#00f5ff', '#ff00ff', '#00ff00', '#ffff00', '#ff4500'];
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 3 + 1,
+        opacity: Math.random() * 0.8 + 0.2,
+        color: colors[Math.floor(Math.random() * colors.length)]
+      };
+    };
+
+    const initParticles = () => {
+      particles = [];
+      for (let i = 0; i < 100; i++) {
+        particles.push(createParticle());
+      }
+    };
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Update and draw particles
+      particles.forEach((particle, index) => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Wrap around edges
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
+        ctx.fill();
+
+        // Draw connections
+        particles.forEach((otherParticle, otherIndex) => {
+          if (index !== otherIndex) {
+            const dx = particle.x - otherParticle.x;
+            const dy = particle.y - otherParticle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 150) {
+              ctx.beginPath();
+              ctx.moveTo(particle.x, particle.y);
+              ctx.lineTo(otherParticle.x, otherParticle.y);
+              ctx.strokeStyle = `rgba(0, 245, 255, ${0.1 * (1 - distance / 150)})`;
+              ctx.lineWidth = 1;
+              ctx.stroke();
+            }
+          }
+        });
+      });
+
+      // Draw animated grid
+      ctx.strokeStyle = 'rgba(0, 245, 255, 0.1)';
+      ctx.lineWidth = 1;
+      const gridSize = 50;
+      const time = Date.now() * 0.001;
+
+      for (let x = 0; x < canvas.width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+      }
+
+      for (let y = 0; y < canvas.height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+
+      // Draw animated circles
+      for (let i = 0; i < 5; i++) {
+        const radius = 100 + Math.sin(time + i) * 50;
+        const x = canvas.width / 2 + Math.cos(time * 0.5 + i) * 200;
+        const y = canvas.height / 2 + Math.sin(time * 0.5 + i) * 200;
+
+        ctx.beginPath();
+        ctx.arc(x, y, radius, 0, Math.PI * 2);
+        ctx.strokeStyle = `rgba(255, 0, 255, ${0.1 * Math.sin(time + i)})`;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+      }
+
+      animationId = requestAnimationFrame(animate);
+    };
+
+    resizeCanvas();
+    initParticles();
+    animate();
+
+    const handleResize = () => {
+      resizeCanvas();
+      initParticles();
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      cancelAnimationFrame(animationId);
+    };
+  }, []);
+=======
+interface FuturisticBackgroundProps {
+  children?: React.ReactNode;
+}
+>>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
   return (
-    <>
-      <Helmet>
-        <title>FuturisticBackground - Zion Tech Group</title>
-        <meta name="description" content="Advanced futuristicbackground solutions powered by AI technology." />
-      </Helmet>
-
-      <Navigation />
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }} />
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
-              FuturisticBackground
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Advanced futuristicbackground solutions powered by AI technology.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                Get Started
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Key Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI technology that drives results
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-                    <feature.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
-                  <p className="text-gray-300 mb-4">{feature.description}</p>
-                  {feature.benefits && (
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, idx) => (
-                        <li key={idx} className="flex items-center text-sm text-gray-400">
-                          <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                          {benefit}
-                        </li>
-                      ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Ready to Get Started?
-              </h2>
-              <p className="text-xl text-gray-300 mb-8">
-                Contact our experts to discuss your requirements and get started today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
-                </button>
-                <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+<<<<<<< HEAD
+    <div className="relative min-h-screen">
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full"
+        style={{ zIndex: 1 }}
+      />
+      <div className="relative z-10">
+        {children}
       </div>
-      <Footer />
-    </>
+=======
+    <div className="relative">
+      {/* Animated background elements */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-2xl animate-pulse delay-500"></div>
+        
+        {/* Grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
+      </div>
+      
+      {children}
+>>>>>>> cursor/analyze-improve-and-deploy-application-a281
+    </div>
   );
 };
 
-export default FuturisticBackgroundPage;
+export default FuturisticBackground;

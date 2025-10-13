@@ -1,110 +1,62 @@
 #!/usr/bin/env python3
 import os
 import re
-import subprocess
+import glob
 
 def resolve_merge_conflicts(file_path):
-    """Resolve merge conflicts in a file by keeping the latest version"""
+    """Resolve merge conflicts by keeping the HEAD version"""
     try:
-        result = subprocess.run(['git', 'grep', '-l', '<<<<<<< HEAD'], 
-                              capture_output=True, text=True, cwd='/workspace')
-        if result.returncode != 0:
-            print("No merge conflicts found")
-            return
+        with open(file_path, 'r', encoding='utf-8') as f:
+            content = f.read()
         
-        # Check if file has merge conflicts
-        if '<<<<<<< HEAD' not in content:
-            return False
+        # Pattern to match merge conflict markers
+        conflict_pattern = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+\n'
         
-        # Remove all merge conflict markers and keep the latest version
-        # Pattern 1: Remove everything from <<<<<<< HEAD to ======= (keep nothing from HEAD)
-        content = re.sub(r'<<<<<<< HEAD.*?=======\s*\n', '', content, flags=re.DOTALL)
+        # Replace conflicts with HEAD version
+        resolved_content = re.sub(conflict_pattern, r'\1\n', content, flags=re.DOTALL)
         
-        # Pattern 2: Remove everything from ======= to >>>>>>> (keep the latest version)
-        content = re.sub(r'=======.*?>>>>>>>.*?\n', '', content, flags=re.DOTALL)
+        # Also handle cases where there might be multiple conflict markers in one block
+        conflict_pattern2 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
+        resolved_content = re.sub(conflict_pattern2, r'\1', resolved_content, flags=re.DOTALL)
         
-        # Pattern 3: Remove any remaining <<<<<<< HEAD lines
-        content = re.sub(r'^<<<<<<< HEAD.*?\n', '', content, flags=re.MULTILINE)
+        # Remove any remaining conflict markers
+        resolved_content = re.sub(r'<<<<<<< HEAD\n', '', resolved_content)
+        resolved_content = re.sub(r'=======\n', '', resolved_content)
+        resolved_content = re.sub(r'>>>>>>> [^\n]+\n', '', resolved_content)
         
-        # Pattern 4: Remove any remaining ======= lines
-        content = re.sub(r'^=======.*?\n', '', content, flags=re.MULTILINE)
-        
-        # Pattern 5: Remove any remaining >>>>>>> lines
-        content = re.sub(r'^>>>>>>>.*?\n', '', content, flags=re.MULTILINE)
-        
-        # Clean up multiple empty lines
-        content = re.sub(r'\n\s*\n\s*\n', '\n\n', content)
-        
-        # Write the cleaned content back
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-        
-        print(f"✅ Resolved conflicts in {file_path}")
-        return True
-        
+        if content != resolved_content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(resolved_content)
+            print(f"Resolved conflicts in {file_path}")
+            return True
+        return False
     except Exception as e:
-        print(f"❌ Error processing {file_path}: {e}")
+        print(f"Error processing {file_path}: {e}")
         return False
 
 def main():
-    """Main function to resolve all merge conflicts"""
-    print("🔍 Searching for files with merge conflicts...")
-    
-    # Find all files with merge conflicts
-    files_with_conflicts = []
-    
-    # Search in common directories
-    search_patterns = [
+    # Find all TypeScript and JavaScript files
+    patterns = [
         '**/*.tsx',
         '**/*.ts',
-        '**/*.js',
         '**/*.jsx',
-        '**/*.css',
-        '**/*.json',
-        '**/*.md'
+        '**/*.js'
     ]
     
-    for pattern in search_patterns:
+    files_processed = 0
+    files_resolved = 0
+    
+    for pattern in patterns:
         for file_path in glob.glob(pattern, recursive=True):
-            # Skip node_modules, .git, and other irrelevant directories
-            if any(skip in file_path for skip in ['node_modules', '.git', 'dist', '.next', 'out']):
+            # Skip node_modules and dist directories
+            if 'node_modules' in file_path or 'dist' in file_path:
                 continue
                 
-            try:
-                with open(file_path, 'r', encoding='utf-8') as f:
-                    content = f.read()
-                    if '<<<<<<< HEAD' in content:
-                        files_with_conflicts.append(file_path)
-            except:
-                continue
+            files_processed += 1
+            if resolve_merge_conflicts(file_path):
+                files_resolved += 1
     
-    print(f"📁 Found {len(files_with_conflicts)} files with merge conflicts")
-    
-    # Resolve conflicts in each file
-    resolved_count = 0
-    for file_path in files_with_conflicts:
-        if resolve_merge_conflicts(file_path):
-            resolved_count += 1
-    
-    print(f"✅ Successfully resolved conflicts in {resolved_count} files")
-    
-    # Verify no conflicts remain
-    remaining_conflicts = []
-    for file_path in files_with_conflicts:
-        try:
-            with open(file_path, 'r', encoding='utf-8') as f:
-                content = f.read()
-                if '<<<<<<< HEAD' in content:
-                    remaining_conflicts.append(file_path)
-        except:
-            continue
-    
-    if remaining_conflicts:
-        print(f"⚠️  {len(remaining_conflicts)} files still have conflicts:")
-        for file_path in remaining_conflicts:
-            print(f"   - {file_path}")
-    else:
-        print("🎉 All merge conflicts have been resolved!")
+    print(f"Processed {files_processed} files, resolved conflicts in {files_resolved} files")
 
 if __name__ == "__main__":
-    resolve_merge_conflicts()
+    main()

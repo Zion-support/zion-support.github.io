@@ -1,106 +1,169 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import React from "react";
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
-  ];
+interface EnhancedHeroProps {
+  title?: string;
+  subtitle?: string;
+  description?: string;
+  primaryCta?: {
+    text: string;
+    href: string;
+  };
+  secondaryCta?: {
+    text: string;
+    href: string;
+  };
+  benefits?: string[];
+  backgroundImage?: string;
+  className?: string;
+}
 
-  const benefits = [
-    'Advanced AI technology integration',
-    'Real-time processing and analytics',
-    'Enterprise-grade security and compliance',
-    'Scalable and flexible solutions',
-    '24/7 technical support',
-    'Easy integration with existing systems',
-    'Cost-effective pricing plans',
-    'Proven track record of success'
+const EnhancedHero: React.FC<EnhancedHeroProps> = ({
+  title = "Transform Your Business with AI",
+  subtitle = "Leading Provider of AI Solutions",
+  description = "Revolutionize your operations with cutting-edge artificial intelligence technology. Our advanced solutions deliver measurable results and drive unprecedented growth.",
+  primaryCta = {
+    text: "Get Started",
+    href: "/contact",
+  },
+  secondaryCta = {
+    text: "Learn More",
+    href: "/about",
+  },
+  benefits = [
+    "Advanced AI technology integration",
+    "Real-time processing and analytics",
+    "Enterprise-grade security and compliance",
+    "Scalable and flexible solutions",
+    "24/7 technical support",
+    "Custom implementation and training",
+  ],
+  backgroundImage = "/api/placeholder/1920/1080",
+  className = "",
+}) => {
+  const contactInfo = [
+    {
+      icon: Phone,
+      title: "Call Us",
+      details: "+1 (555) 123-4567",
+      description: "Mon-Fri 9 AM-6 PM PST",
+    },
+    {
+      icon: Mail,
+      title: "Email Us",
+      details: "info@ziontechgroup.com",
+      description: "We respond within 24 hours",
+    },
+    {
+      icon: MapPin,
+      title: "Visit Us",
+      details: "123 Tech Street, San Francisco, CA",
+      description: "Schedule a meeting",
+    },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>EnhancedHero | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedHero services by Zion Tech Group. Advanced AI and IT solutions for your business." />
-        <meta name="keywords" content="EnhancedHero, AI solutions, IT services, Zion Tech Group, enhancedhero" />
-      </Helmet>
+    <div
+      className={`relative min-h-screen flex items-center justify-center overflow-hidden ${className}`}
+    >
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {backgroundImage && (
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+          />
+        )}
+      </div>
 
-        </div>
-      </section>
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column */}
+          <div className="space-y-8">
+            <div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+                {title}
+              </h1>
+              <p className="text-xl text-cyan-400 mb-4 font-semibold">
+                {subtitle}
+              </p>
+              <p className="text-lg text-gray-300 mb-8">{description}</p>
+            </div>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our EnhancedHero?
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our enhancedhero solutions deliver unmatched performance, security, and scalability.
-            </p>
-          </div>
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                to={primaryCta.href}
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+              >
+                {primaryCta.text}
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to={secondaryCta.href}
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+              >
+                {secondaryCta.text}
+              </Link>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4">
-                  <feature.icon className="h-6 w-6 text-white" />
+            {/* Benefits */}
+            <div className="grid sm:grid-cols-2 gap-4">
+              {benefits.slice(0, 4).map((benefit, index) => (
+                <div key={index} className="flex items-center text-gray-300">
+                  <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
+                  <span className="text-sm">{benefit}</span>
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                <p className="text-gray-300">{feature.description}</p>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column - Contact Info */}
+          <div className="space-y-6">
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
+              <h3 className="text-xl font-semibold text-white mb-6 text-center">
+                Get in Touch
+              </h3>
+              <div className="space-y-4">
+                {contactInfo.map((info, index) => (
+                  <div key={index} className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <info.icon className="w-6 h-6 text-cyan-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-white font-medium">{info.title}</h4>
+                      <p className="text-gray-300">{info.details}</p>
+                      <p className="text-gray-400 text-sm">
+                        {info.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Benefits
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of our enhancedhero solutions for your business.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start space-x-3">
-                <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
-                <p className="text-gray-300 text-lg">{benefit}</p>
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-4">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">500+</div>
+                <div className="text-gray-400 text-sm">Happy Clients</div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
-            </h2>
-            <p className="text-xl text-purple-100 mb-8">
-              Contact our experts to discuss your enhancedhero needs and get a customized solution.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 flex items-center justify-center">
-                <Phone className="mr-2 h-5 w-5" />
-                Call Now
-              </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">
-                <Mail className="mr-2 h-5 w-5" />
-                Email Us
-              </button>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">99.9%</div>
+                <div className="text-gray-400 text-sm">Uptime</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-white">24/7</div>
+                <div className="text-gray-400 text-sm">Support</div>
+              </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 };
 
-export default EnhancedHeroPage;
+export default EnhancedHero;
