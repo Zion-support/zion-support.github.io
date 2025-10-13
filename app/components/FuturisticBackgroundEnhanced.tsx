@@ -1,18 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 
-interface FuturisticBackgroundEnhancedProps {
-  children: React.ReactNode;
-  variant?: 'cyber-grid' | 'holographic' | 'quantum' | 'matrix' | 'neural';
-  intensity?: 'low' | 'medium' | 'high';
-  color?: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'rainbow';
-}
-
-const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> = ({
-  children,
-  variant = 'cyber-grid',
-  intensity = 'medium',
-  color = 'rainbow'
-}) => {
+const FuturisticBackgroundEnhanced: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number>();
 
@@ -31,51 +19,30 @@ const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> 
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    // Particle system for quantum effect
+    // Particle system
     const particles: Array<{
       x: number;
       y: number;
       vx: number;
       vy: number;
       size: number;
+      opacity: number;
       color: string;
-      alpha: number;
-      life: number;
     }> = [];
 
-    const colors = {
-      purple: '#8b5cf6',
-      cyan: '#06b6d4',
-      pink: '#ec4899',
-      green: '#10b981',
-      blue: '#3b82f6',
-      rainbow: ['#8b5cf6', '#ec4899', '#06b6d4', '#10b981', '#f59e0b']
-    };
+    const colors = ['#00d4ff', '#8b5cf6', '#ec4899', '#f97316', '#10b981'];
 
-    const getColor = () => {
-      if (color === 'rainbow') {
-        return colors.rainbow[Math.floor(Math.random() * colors.rainbow.length)];
-      }
-      return colors[color as keyof typeof colors];
-    };
-
-    const createParticle = () => {
-      return {
+    // Create particles
+    for (let i = 0; i < 100; i++) {
+      particles.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
         size: Math.random() * 3 + 1,
-        color: getColor(),
-        alpha: Math.random() * 0.8 + 0.2,
-        life: 1
-      };
-    };
-
-    // Initialize particles
-    const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
-    for (let i = 0; i < particleCount; i++) {
-      particles.push(createParticle());
+        opacity: Math.random() * 0.5 + 0.1,
+        color: colors[Math.floor(Math.random() * colors.length)]
+      });
     }
 
     const animate = () => {
@@ -85,64 +52,80 @@ const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> 
       particles.forEach((particle, index) => {
         particle.x += particle.vx;
         particle.y += particle.vy;
-        particle.life -= 0.01;
 
-        if (particle.life <= 0 || particle.x < 0 || particle.x > canvas.width || particle.y < 0 || particle.y > canvas.height) {
-          particles[index] = createParticle();
-        }
+        // Wrap around screen
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
 
-        ctx.save();
-        ctx.globalAlpha = particle.alpha * particle.life;
-        ctx.fillStyle = particle.color;
+        // Draw particle
         ctx.beginPath();
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
         ctx.fill();
-        ctx.restore();
-      });
 
-      // Draw connections between nearby particles
-      particles.forEach((particle, i) => {
-        particles.slice(i + 1).forEach(otherParticle => {
-          const dx = particle.x - otherParticle.x;
-          const dy = particle.y - otherParticle.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+        // Draw connections
+        particles.forEach((otherParticle, otherIndex) => {
+          if (index !== otherIndex) {
+            const dx = particle.x - otherParticle.x;
+            const dy = particle.y - otherParticle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
 
-          if (distance < 150) {
-            ctx.save();
-            ctx.globalAlpha = (1 - distance / 150) * 0.2;
-            ctx.strokeStyle = particle.color;
-            ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(otherParticle.x, otherParticle.y);
-            ctx.stroke();
-            ctx.restore();
+            if (distance < 100) {
+              ctx.beginPath();
+              ctx.moveTo(particle.x, particle.y);
+              ctx.lineTo(otherParticle.x, otherParticle.y);
+              ctx.strokeStyle = particle.color + Math.floor((1 - distance / 100) * 50).toString(16).padStart(2, '0');
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
           }
         });
       });
 
-      // Add variant-specific effects
-      if (variant === 'matrix') {
-        // Matrix rain effect
-        ctx.fillStyle = '#10b981';
-        ctx.font = '14px monospace';
-        for (let i = 0; i < 50; i++) {
-          const x = (i * canvas.width / 50) + Math.sin(Date.now() * 0.001 + i) * 10;
-          const y = (Date.now() * 0.1 + i * 20) % canvas.height;
-          ctx.fillText(String.fromCharCode(0x30A0 + Math.random() * 96), x, y);
-        }
-      } else if (variant === 'neural') {
-        // Neural network connections
-        ctx.strokeStyle = '#8b5cf6';
-        ctx.lineWidth = 1;
-        particles.forEach((particle, i) => {
-          if (i % 3 === 0) {
-            ctx.beginPath();
-            ctx.moveTo(particle.x, particle.y);
-            ctx.lineTo(canvas.width / 2, canvas.height / 2);
-            ctx.stroke();
-          }
-        });
+      // Draw animated grid
+      ctx.strokeStyle = '#00d4ff20';
+      ctx.lineWidth = 0.5;
+      const gridSize = 50;
+      const time = Date.now() * 0.001;
+
+      for (let x = 0; x < canvas.width; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x + Math.sin(time + x * 0.01) * 10, 0);
+        ctx.lineTo(x + Math.sin(time + x * 0.01) * 10, canvas.height);
+        ctx.stroke();
+      }
+
+      for (let y = 0; y < canvas.height; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y + Math.cos(time + y * 0.01) * 10);
+        ctx.lineTo(canvas.width, y + Math.cos(time + y * 0.01) * 10);
+        ctx.stroke();
+      }
+
+      // Draw floating orbs
+      const orbCount = 3;
+      for (let i = 0; i < orbCount; i++) {
+        const orbX = canvas.width * (0.2 + i * 0.3) + Math.sin(time + i) * 50;
+        const orbY = canvas.height * 0.5 + Math.cos(time + i) * 30;
+        const orbSize = 100 + Math.sin(time * 2 + i) * 20;
+
+        // Outer glow
+        const gradient = ctx.createRadialGradient(orbX, orbY, 0, orbX, orbY, orbSize);
+        gradient.addColorStop(0, colors[i % colors.length] + '40');
+        gradient.addColorStop(1, colors[i % colors.length] + '00');
+        
+        ctx.fillStyle = gradient;
+        ctx.beginPath();
+        ctx.arc(orbX, orbY, orbSize, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Inner core
+        ctx.fillStyle = colors[i % colors.length] + '80';
+        ctx.beginPath();
+        ctx.arc(orbX, orbY, orbSize * 0.3, 0, Math.PI * 2);
+        ctx.fill();
       }
 
       animationRef.current = requestAnimationFrame(animate);
@@ -156,29 +139,16 @@ const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> 
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [variant, intensity, color]);
-
-  const getBackgroundClass = () => {
-    const baseClass = 'relative min-h-screen';
-    const variantClass = {
-      'cyber-grid': 'cyber-grid-enhanced',
-      'holographic': 'holographic-matrix',
-      'quantum': 'quantum-particles',
-      'matrix': 'data-stream',
-      'neural': 'neural-network-bg'
-    }[variant];
-
-    return `${baseClass} ${variantClass}`;
-  };
+  }, []);
 
   return (
-    <div className={getBackgroundClass()}>
+    <div className="relative min-h-screen">
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full pointer-events-none"
         style={{ zIndex: 1 }}
       />
-      <div className="relative z-10">
+      <div className="relative" style={{ zIndex: 2 }}>
         {children}
       </div>
     </div>

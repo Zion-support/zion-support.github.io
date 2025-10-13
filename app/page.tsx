@@ -90,12 +90,49 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "AI Smart Contract Auditor",
+      description: "Advanced AI-powered smart contract auditing with automated vulnerability detection and gas optimization",
+      price: "From $299/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/ai-smart-contract-auditor",
+      featured: true,
+      category: "Blockchain"
+    },
+    {
+      name: "AI Quantum Computing Simulator",
+      description: "Revolutionary quantum computing simulator with up to 50 qubits support and real-time visualization",
+      price: "From $499/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/ai-quantum-computing-simulator",
+      featured: true,
+      category: "Quantum"
+    },
+    {
+      name: "AI Neural Interface",
+      description: "Brain-computer interface technology enabling direct neural communication with 99.7% accuracy",
+      price: "From $1,999/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/ai-neural-interface",
+      featured: true,
+      category: "Neural"
+    },
+    {
+      name: "AI Edge Computing",
+      description: "Ultra-low latency AI processing at the edge with sub-10ms response times for critical applications",
+      price: "From $599/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/ai-edge-computing",
+      featured: true,
+      category: "Edge"
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro",
-      featured: true
+      featured: true,
+      category: "Analytics"
     },
     {
       name: "Zion Security Shield",
@@ -103,39 +140,8 @@ const HomePage = () => {
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
-      featured: true
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
-      price: "From $99/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault",
-      featured: true
-    },
-    {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
-      featured: true
+      featured: true,
+      category: "Security"
     }
   ];
 
@@ -171,7 +177,22 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <div className="min-h-screen futuristic-bg animated-gradient relative overflow-hidden">
+      {/* Floating Particles */}
+      <div className="particles">
+        {Array.from({ length: 50 }).map((_, i) => (
+          <div
+            key={i}
+            className="particle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 15}s`,
+              animationDuration: `${15 + Math.random() * 10}s`
+            }}
+          />
+        ))}
+      </div>
+      
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
@@ -193,8 +214,8 @@ const HomePage = () => {
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight futuristic-title">
+            <span className="holographic glitch" data-text="Welcome to Zion Tech Group">
               Welcome to Zion Tech Group
             </span>
           </h1>
@@ -205,22 +226,20 @@ const HomePage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
+            <Link
+              to="/contact"
+              className="neon-button inline-flex items-center px-8 py-4 text-lg font-semibold group"
             >
+              <Sparkles className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
               Get Started Today
-            </FuturisticButton>
-            <FuturisticButton
-              href="/demo"
-              variant="outline"
-              size="lg"
-              icon={<Monitor className="w-5 h-5" />}
+            </Link>
+            <Link
+              to="/demo"
+              className="neon-button inline-flex items-center px-8 py-4 text-lg font-semibold group border-purple-500 text-purple-400 hover:border-purple-400"
             >
+              <Monitor className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
               Watch Demo
-            </FuturisticButton>
+            </Link>
           </div>
           
           {/* Stats */}
@@ -254,7 +273,7 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                className="group glass-card p-6 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
               >
                 <Link
                   to={feature.link}
@@ -262,19 +281,19 @@ const HomePage = () => {
                   aria-label={`Learn more about ${feature.title}`}
                 >
                   <div
-                    className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 pulse-neon`}
                     aria-hidden="true"
                   >
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors futuristic-subtitle">
                     {feature.title}
                   </h3>
                   <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
                     {feature.description}
                   </p>
                   <div className="text-center">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs md:text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs md:text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 neon-button">
                       {feature.stats}
                     </span>
                   </div>
@@ -301,27 +320,30 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group glass-card p-6 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               >
                 {saas.featured && (
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute top-4 right-4 flex flex-col gap-2">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                       Featured
+                    </span>
+                    <span className="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                      {saas.category}
                     </span>
                   </div>
                 )}
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform pulse-neon">
                     {saas.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors futuristic-subtitle">
                       {saas.name}
                     </h3>
                     <p className="text-cyan-400 font-medium">{saas.price}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {saas.description}
                 </p>
                 <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
@@ -415,14 +437,14 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              className="neon-button inline-flex items-center px-8 py-4 text-lg font-semibold group"
             >
               Start Your Journey
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="neon-button inline-flex items-center px-8 py-4 text-lg font-semibold group border-purple-500 text-purple-400 hover:border-purple-400"
             >
               Explore Services
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />

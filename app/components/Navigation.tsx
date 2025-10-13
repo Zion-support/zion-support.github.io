@@ -29,7 +29,7 @@ import {
   TrendingUp,
   Cpu,
   Network,
-  Sparkles
+  Server
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -144,7 +144,12 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             { name: 'AI Email Analyzer', path: '/ai-powered-email-analyzer', icon: <Mail className="w-4 h-4" /> },
             { name: 'Customer Sentiment Tracker', path: '/ai-customer-sentiment-tracker', icon: <Heart className="w-4 h-4" /> },
             { name: 'Smart Expense Categorizer', path: '/smart-expense-categorizer', icon: <Receipt className="w-4 h-4" /> },
-            { name: 'Smart Inventory Optimizer', path: '/smart-inventory-optimizer', icon: <Package className="w-4 h-4" /> }
+            { name: 'Smart Inventory Optimizer', path: '/smart-inventory-optimizer', icon: <Package className="w-4 h-4" /> },
+            { name: 'AI Smart Contract Auditor', path: '/ai-smart-contract-auditor', icon: <Shield className="w-4 h-4" /> },
+            { name: 'AI Quantum Simulator', path: '/ai-quantum-computing-simulator', icon: <Cpu className="w-4 h-4" /> },
+            { name: 'AI Neural Interface', path: '/ai-neural-interface', icon: <Brain className="w-4 h-4" /> },
+            { name: 'AI Edge Computing', path: '/ai-edge-computing', icon: <Zap className="w-4 h-4" /> },
+            { name: 'AI Infrastructure Automation', path: '/ai-infrastructure-automation', icon: <Server className="w-4 h-4" /> }
           ]
         },
         {

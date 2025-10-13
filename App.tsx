@@ -2,6 +2,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
+import "./app/styles/futuristic-enhanced.css";
 import "./app/styles/accessibility-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
@@ -76,6 +77,13 @@ const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-
 const SmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-inventory-smart/page"));
 const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
 const SmartExpenseCategorizerPage = React.lazy(() => import("./app/ai-financial-crime-detection-pro/page"));
+
+// Advanced AI Services
+const AISmartContractAuditorPage = React.lazy(() => import("./app/ai-smart-contract-auditor/page"));
+const AIQuantumComputingSimulatorPage = React.lazy(() => import("./app/ai-quantum-computing-simulator/page"));
+const AINeuralInterfacePage = React.lazy(() => import("./app/ai-neural-interface/page"));
+const AIEdgeComputingPage = React.lazy(() => import("./app/ai-edge-computing/page"));
+const AIInfrastructureAutomationPage = React.lazy(() => import("./app/ai-infrastructure-automation/page"));
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -174,6 +182,13 @@ function App() {
                                     <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
                                     <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
                                     <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
+
+                                    {/* Advanced AI Services */}
+                                    <Route path="/ai-smart-contract-auditor" element={<AISmartContractAuditorPage />} />
+                                    <Route path="/ai-quantum-computing-simulator" element={<AIQuantumComputingSimulatorPage />} />
+                                    <Route path="/ai-neural-interface" element={<AINeuralInterfacePage />} />
+                                    <Route path="/ai-edge-computing" element={<AIEdgeComputingPage />} />
+                                    <Route path="/ai-infrastructure-automation" element={<AIInfrastructureAutomationPage />} />
 
                                     {/* Catch all route */}
                                     <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
