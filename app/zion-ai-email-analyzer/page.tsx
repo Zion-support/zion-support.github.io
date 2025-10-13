@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  FileText, 
+  Mail, 
   BarChart3, 
   Brain, 
   CheckCircle, 
@@ -21,7 +21,7 @@ import {
   Shield,
   Lock,
   Send,
-  FileText as FileTextIcon,
+  FileText,
   Settings,
   Zap,
   Clock,
@@ -37,52 +37,45 @@ import {
   Filter,
   Search,
   Download,
-  Upload,
-  Scale,
-  Gavel,
-  BookOpen,
-  PenTool,
-  Edit3,
-  Save,
-  Trash2
+  Upload
 } from 'lucide-react';
 
-export default function ZionAIContractAnalyzer() {
+export default function ZionAIEmailAnalyzer() {
   const features = [
     {
-      title: "AI-Powered Contract Analysis",
-      description: "Automatically analyze contracts for risks, clauses, and compliance issues",
+      title: "AI-Powered Email Analysis",
+      description: "Analyze email content, sentiment, and engagement patterns using advanced AI algorithms",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Risk Assessment",
-      description: "Identify potential risks and red flags in contract terms and conditions",
-      icon: <AlertCircle className="w-8 h-8" />,
+      title: "Sentiment Analysis",
+      description: "Understand the emotional tone and sentiment of your email communications",
+      icon: <Heart className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Clause Extraction",
-      description: "Extract and categorize key clauses, terms, and obligations automatically",
-      icon: <FileText className="w-8 h-8" />,
+      title: "Engagement Prediction",
+      description: "Predict email open rates, click-through rates, and response likelihood",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Compliance Checking",
-      description: "Check contracts against regulatory requirements and company policies",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Content Optimization",
+      description: "Get AI-powered suggestions to improve email content and subject lines",
+      icon: <Target className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Contract Comparison",
-      description: "Compare multiple contracts and identify differences and similarities",
-      icon: <Scale className="w-8 h-8" />,
+      title: "Spam Detection",
+      description: "Identify potential spam triggers and improve deliverability rates",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Automated Summaries",
-      description: "Generate comprehensive summaries and key points from complex contracts",
-      icon: <BookOpen className="w-8 h-8" />,
+      title: "A/B Testing Insights",
+      description: "Analyze A/B test results and get recommendations for better performance",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
@@ -90,41 +83,41 @@ export default function ZionAIContractAnalyzer() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$49",
       period: "/month",
       description: "Perfect for small businesses and freelancers",
       features: [
-        "Up to 50 contracts per month",
-        "Basic analysis",
+        "Up to 1,000 emails per month",
+        "Basic sentiment analysis",
         "Standard reporting",
         "Email support",
-        "Basic integrations",
+        "Basic optimization tips",
         "Data export"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$149",
       period: "/month",
-      description: "Ideal for growing businesses and legal teams",
+      description: "Ideal for marketing teams and agencies",
       features: [
-        "Up to 500 contracts per month",
+        "Up to 10,000 emails per month",
         "Advanced AI analysis",
-        "Risk assessment",
+        "Engagement prediction",
+        "Content optimization",
         "Priority support",
-        "API access",
-        "Custom templates"
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$399",
       period: "/month",
-      description: "For large organizations and law firms",
+      description: "For large organizations and enterprises",
       features: [
-        "Unlimited contracts",
+        "Unlimited emails",
         "Custom AI models",
         "White-label options",
         "Dedicated support",
@@ -137,36 +130,36 @@ export default function ZionAIContractAnalyzer() {
 
   const benefits = [
     {
-      title: "Reduce Risk",
-      description: "Reduce contract risks by 75% with AI-powered analysis and alerts",
+      title: "Higher Open Rates",
+      description: "Improve email open rates by up to 40% with AI-optimized subject lines",
+      icon: <Eye className="w-6 h-6" />,
+      stat: "+40%"
+    },
+    {
+      title: "Better Engagement",
+      description: "Increase click-through rates by 35% with optimized content",
+      icon: <ThumbsUp className="w-6 h-6" />,
+      stat: "+35%"
+    },
+    {
+      title: "Reduced Spam",
+      description: "Lower spam rates by 90% with intelligent content analysis",
       icon: <Shield className="w-6 h-6" />,
-      stat: "-75%"
-    },
-    {
-      title: "Save Time",
-      description: "Reduce contract review time by 90% with automated analysis",
-      icon: <Clock className="w-6 h-6" />,
-      stat: "90%"
-    },
-    {
-      title: "Improve Accuracy",
-      description: "Achieve 98% accuracy in contract analysis and risk identification",
-      icon: <Target className="w-6 h-6" />,
-      stat: "98%"
+      stat: "-90%"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Contract Analyzer - AI-Powered Contract Analysis & Risk Assessment</title>
+        <title>Zion AI Email Analyzer - AI-Powered Email Analysis & Optimization</title>
         <meta
           name="description"
-          content="Analyze contracts with Zion AI Contract Analyzer. AI-powered contract analysis, risk assessment, clause extraction, compliance checking, and automated summaries for better contract management."
+          content="Analyze and optimize your emails with Zion AI Email Analyzer. Sentiment analysis, engagement prediction, content optimization, and spam detection for better email performance."
         />
         <meta
           name="keywords"
-          content="contract analysis, AI contract review, risk assessment, contract management, legal AI, contract compliance, contract automation, legal technology"
+          content="email analyzer, email optimization, sentiment analysis, email marketing, email performance, AI email analysis, email engagement"
         />
       </Helmet>
 
@@ -176,18 +169,18 @@ export default function ZionAIContractAnalyzer() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Legal Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Email Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Contract Analyzer
+                Zion AI Email Analyzer
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your contract management with AI-powered analysis, risk assessment, 
-              and compliance checking. Reduce risks and save time with intelligent automation.
+              Transform your email marketing with AI-powered analysis and optimization. 
+              Understand sentiment, predict engagement, and optimize content for better results.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -203,27 +196,27 @@ export default function ZionAIContractAnalyzer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Mail className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">10K+</div>
-                <div className="text-gray-300">Contracts Analyzed</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">500K+</div>
+                <div className="text-gray-300">Emails Analyzed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">75%</div>
-                <div className="text-gray-300">Risk Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">40%</div>
+                <div className="text-gray-300">Higher Open Rates</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">90%</div>
-                <div className="text-gray-300">Time Saved</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">35%</div>
+                <div className="text-gray-300">Better Engagement</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">98%</div>
-                <div className="text-gray-300">Accuracy Rate</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">90%</div>
+                <div className="text-gray-300">Spam Reduction</div>
               </div>
             </div>
           </div>
@@ -234,10 +227,10 @@ export default function ZionAIContractAnalyzer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Contract Analysis Features
+                Advanced Email Analysis Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to manage contracts intelligently
+                Everything you need to optimize your email marketing campaigns
               </p>
             </div>
             
@@ -272,7 +265,7 @@ export default function ZionAIContractAnalyzer() {
                 Proven Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See the impact of AI-powered contract analysis
+                See the impact of AI-powered email analysis on your campaigns
               </p>
             </div>
             
@@ -306,7 +299,7 @@ export default function ZionAIContractAnalyzer() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Scale your contract analysis as your business grows
+                Scale your email analysis as your campaigns grow
               </p>
             </div>
             
@@ -366,10 +359,10 @@ export default function ZionAIContractAnalyzer() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Contract Management?
+              Ready to Optimize Your Email Marketing?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Contract Analyzer to manage their contracts intelligently. 
+              Join thousands of marketers using Zion AI Email Analyzer to improve their email performance. 
               Start your free trial today and see the difference AI can make.
             </p>
             
@@ -386,7 +379,7 @@ export default function ZionAIContractAnalyzer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Mail className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>

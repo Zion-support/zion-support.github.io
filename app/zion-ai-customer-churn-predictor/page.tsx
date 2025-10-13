@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  FileText, 
+  Users, 
   BarChart3, 
   Brain, 
   CheckCircle, 
@@ -21,7 +21,7 @@ import {
   Shield,
   Lock,
   Send,
-  FileText as FileTextIcon,
+  FileText,
   Settings,
   Zap,
   Clock,
@@ -38,51 +38,49 @@ import {
   Search,
   Download,
   Upload,
-  Scale,
-  Gavel,
-  BookOpen,
-  PenTool,
-  Edit3,
-  Save,
-  Trash2
+  TrendingDown,
+  UserX,
+  UserCheck,
+  Activity,
+  Gauge
 } from 'lucide-react';
 
-export default function ZionAIContractAnalyzer() {
+export default function ZionAICustomerChurnPredictor() {
   const features = [
     {
-      title: "AI-Powered Contract Analysis",
-      description: "Automatically analyze contracts for risks, clauses, and compliance issues",
+      title: "AI-Powered Churn Prediction",
+      description: "Predict customer churn with 95% accuracy using advanced machine learning algorithms",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Risk Assessment",
-      description: "Identify potential risks and red flags in contract terms and conditions",
-      icon: <AlertCircle className="w-8 h-8" />,
+      title: "Real-time Risk Scoring",
+      description: "Score customers in real-time based on their likelihood to churn",
+      icon: <Gauge className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Clause Extraction",
-      description: "Extract and categorize key clauses, terms, and obligations automatically",
-      icon: <FileText className="w-8 h-8" />,
+      title: "Behavioral Analysis",
+      description: "Analyze customer behavior patterns to identify early warning signs",
+      icon: <Activity className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Compliance Checking",
-      description: "Check contracts against regulatory requirements and company policies",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Automated Alerts",
+      description: "Get notified when customers show high churn risk with automated alerts",
+      icon: <Bell className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Contract Comparison",
-      description: "Compare multiple contracts and identify differences and similarities",
-      icon: <Scale className="w-8 h-8" />,
+      title: "Retention Recommendations",
+      description: "Get AI-powered recommendations for retaining at-risk customers",
+      icon: <Target className="w-8 h-8" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Automated Summaries",
-      description: "Generate comprehensive summaries and key points from complex contracts",
-      icon: <BookOpen className="w-8 h-8" />,
+      title: "Cohort Analysis",
+      description: "Analyze customer cohorts and identify patterns in churn behavior",
+      icon: <Users className="w-8 h-8" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
@@ -92,10 +90,10 @@ export default function ZionAIContractAnalyzer() {
       name: "Starter",
       price: "$99",
       period: "/month",
-      description: "Perfect for small businesses and freelancers",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 50 contracts per month",
-        "Basic analysis",
+        "Up to 10,000 customers",
+        "Basic churn prediction",
         "Standard reporting",
         "Email support",
         "Basic integrations",
@@ -107,14 +105,14 @@ export default function ZionAIContractAnalyzer() {
       name: "Professional",
       price: "$299",
       period: "/month",
-      description: "Ideal for growing businesses and legal teams",
+      description: "Ideal for growing businesses and customer success teams",
       features: [
-        "Up to 500 contracts per month",
-        "Advanced AI analysis",
-        "Risk assessment",
+        "Up to 100,000 customers",
+        "Advanced AI prediction",
+        "Real-time alerts",
         "Priority support",
-        "API access",
-        "Custom templates"
+        "Advanced analytics",
+        "API access"
       ],
       popular: true
     },
@@ -122,9 +120,9 @@ export default function ZionAIContractAnalyzer() {
       name: "Enterprise",
       price: "$799",
       period: "/month",
-      description: "For large organizations and law firms",
+      description: "For large organizations and enterprises",
       features: [
-        "Unlimited contracts",
+        "Unlimited customers",
         "Custom AI models",
         "White-label options",
         "Dedicated support",
@@ -137,36 +135,36 @@ export default function ZionAIContractAnalyzer() {
 
   const benefits = [
     {
-      title: "Reduce Risk",
-      description: "Reduce contract risks by 75% with AI-powered analysis and alerts",
-      icon: <Shield className="w-6 h-6" />,
-      stat: "-75%"
+      title: "Reduce Churn",
+      description: "Reduce customer churn by 40% with proactive retention strategies",
+      icon: <TrendingDown className="w-6 h-6" />,
+      stat: "-40%"
     },
     {
-      title: "Save Time",
-      description: "Reduce contract review time by 90% with automated analysis",
-      icon: <Clock className="w-6 h-6" />,
-      stat: "90%"
+      title: "Increase Retention",
+      description: "Improve customer retention rates by 60% with AI insights",
+      icon: <UserCheck className="w-6 h-6" />,
+      stat: "+60%"
     },
     {
-      title: "Improve Accuracy",
-      description: "Achieve 98% accuracy in contract analysis and risk identification",
-      icon: <Target className="w-6 h-6" />,
-      stat: "98%"
+      title: "Save Revenue",
+      description: "Save up to $500K annually by preventing customer churn",
+      icon: <DollarSign className="w-6 h-6" />,
+      stat: "$500K"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Contract Analyzer - AI-Powered Contract Analysis & Risk Assessment</title>
+        <title>Zion AI Customer Churn Predictor - AI-Powered Churn Prediction & Retention</title>
         <meta
           name="description"
-          content="Analyze contracts with Zion AI Contract Analyzer. AI-powered contract analysis, risk assessment, clause extraction, compliance checking, and automated summaries for better contract management."
+          content="Predict and prevent customer churn with Zion AI Customer Churn Predictor. AI-powered prediction, real-time risk scoring, behavioral analysis, and retention recommendations for better customer retention."
         />
         <meta
           name="keywords"
-          content="contract analysis, AI contract review, risk assessment, contract management, legal AI, contract compliance, contract automation, legal technology"
+          content="customer churn prediction, churn analysis, customer retention, AI churn prediction, customer success, retention strategies, churn prevention"
         />
       </Helmet>
 
@@ -176,18 +174,18 @@ export default function ZionAIContractAnalyzer() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Legal Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Churn Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Contract Analyzer
+                Zion AI Customer Churn Predictor
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your contract management with AI-powered analysis, risk assessment, 
-              and compliance checking. Reduce risks and save time with intelligent automation.
+              Predict and prevent customer churn with AI-powered analysis, real-time risk scoring, 
+              and automated retention strategies. Keep your customers happy and reduce churn.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -203,27 +201,27 @@ export default function ZionAIContractAnalyzer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Users className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">10K+</div>
-                <div className="text-gray-300">Contracts Analyzed</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">1M+</div>
+                <div className="text-gray-300">Customers Analyzed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">75%</div>
-                <div className="text-gray-300">Risk Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+                <div className="text-gray-300">Prediction Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">90%</div>
-                <div className="text-gray-300">Time Saved</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">40%</div>
+                <div className="text-gray-300">Churn Reduction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">98%</div>
-                <div className="text-gray-300">Accuracy Rate</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
+                <div className="text-gray-300">Retention Increase</div>
               </div>
             </div>
           </div>
@@ -234,10 +232,10 @@ export default function ZionAIContractAnalyzer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Contract Analysis Features
+                Advanced Churn Prediction Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to manage contracts intelligently
+                Everything you need to predict and prevent customer churn
               </p>
             </div>
             
@@ -272,7 +270,7 @@ export default function ZionAIContractAnalyzer() {
                 Proven Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See the impact of AI-powered contract analysis
+                See the impact of AI-powered churn prediction
               </p>
             </div>
             
@@ -306,7 +304,7 @@ export default function ZionAIContractAnalyzer() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Scale your contract analysis as your business grows
+                Scale your churn prediction as your customer base grows
               </p>
             </div>
             
@@ -366,10 +364,10 @@ export default function ZionAIContractAnalyzer() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Contract Management?
+              Ready to Predict and Prevent Customer Churn?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Contract Analyzer to manage their contracts intelligently. 
+              Join thousands of businesses using Zion AI Customer Churn Predictor to improve their retention. 
               Start your free trial today and see the difference AI can make.
             </p>
             
@@ -386,7 +384,7 @@ export default function ZionAIContractAnalyzer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Users className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>

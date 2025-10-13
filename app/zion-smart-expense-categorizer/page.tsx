@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  FileText, 
+  Receipt, 
   BarChart3, 
   Brain, 
   CheckCircle, 
@@ -21,7 +21,7 @@ import {
   Shield,
   Lock,
   Send,
-  FileText as FileTextIcon,
+  FileText,
   Settings,
   Zap,
   Clock,
@@ -38,95 +38,94 @@ import {
   Search,
   Download,
   Upload,
-  Scale,
-  Gavel,
-  BookOpen,
-  PenTool,
-  Edit3,
-  Save,
-  Trash2
+  DollarSign,
+  CreditCard,
+  Wallet,
+  PiggyBank,
+  Calculator,
+  PieChart as PieChartIcon
 } from 'lucide-react';
 
-export default function ZionAIContractAnalyzer() {
+export default function ZionSmartExpenseCategorizer() {
   const features = [
     {
-      title: "AI-Powered Contract Analysis",
-      description: "Automatically analyze contracts for risks, clauses, and compliance issues",
+      title: "AI-Powered Expense Categorization",
+      description: "Automatically categorize expenses with 98% accuracy using machine learning",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Risk Assessment",
-      description: "Identify potential risks and red flags in contract terms and conditions",
-      icon: <AlertCircle className="w-8 h-8" />,
+      title: "Receipt Scanning",
+      description: "Scan receipts and extract expense data automatically with OCR technology",
+      icon: <Receipt className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Clause Extraction",
-      description: "Extract and categorize key clauses, terms, and obligations automatically",
-      icon: <FileText className="w-8 h-8" />,
+      title: "Multi-currency Support",
+      description: "Handle expenses in multiple currencies with automatic conversion",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Compliance Checking",
-      description: "Check contracts against regulatory requirements and company policies",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Smart Budgeting",
+      description: "Set budgets and get alerts when you're approaching limits",
+      icon: <PiggyBank className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Contract Comparison",
-      description: "Compare multiple contracts and identify differences and similarities",
-      icon: <Scale className="w-8 h-8" />,
+      title: "Tax Preparation",
+      description: "Generate tax-ready reports and export data for tax filing",
+      icon: <FileText className="w-8 h-8" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Automated Summaries",
-      description: "Generate comprehensive summaries and key points from complex contracts",
-      icon: <BookOpen className="w-8 h-8" />,
+      title: "Expense Analytics",
+      description: "Get insights into spending patterns and trends with detailed analytics",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "Personal",
+      price: "$9",
       period: "/month",
-      description: "Perfect for small businesses and freelancers",
+      description: "Perfect for individuals and freelancers",
       features: [
-        "Up to 50 contracts per month",
-        "Basic analysis",
-        "Standard reporting",
+        "Up to 500 expenses per month",
+        "Basic categorization",
+        "Receipt scanning",
         "Email support",
-        "Basic integrations",
+        "Basic reporting",
         "Data export"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$29",
       period: "/month",
-      description: "Ideal for growing businesses and legal teams",
+      description: "Ideal for small businesses and professionals",
       features: [
-        "Up to 500 contracts per month",
-        "Advanced AI analysis",
-        "Risk assessment",
+        "Up to 2,000 expenses per month",
+        "Advanced AI categorization",
+        "Multi-currency support",
         "Priority support",
-        "API access",
-        "Custom templates"
+        "Advanced analytics",
+        "API access"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$799",
+      name: "Business",
+      price: "$79",
       period: "/month",
-      description: "For large organizations and law firms",
+      description: "For growing businesses and teams",
       features: [
-        "Unlimited contracts",
-        "Custom AI models",
-        "White-label options",
+        "Unlimited expenses",
+        "Custom categories",
+        "Team collaboration",
         "Dedicated support",
         "SLA guarantee",
         "Custom integrations"
@@ -137,36 +136,36 @@ export default function ZionAIContractAnalyzer() {
 
   const benefits = [
     {
-      title: "Reduce Risk",
-      description: "Reduce contract risks by 75% with AI-powered analysis and alerts",
-      icon: <Shield className="w-6 h-6" />,
-      stat: "-75%"
-    },
-    {
       title: "Save Time",
-      description: "Reduce contract review time by 90% with automated analysis",
+      description: "Reduce expense categorization time by 90% with AI automation",
       icon: <Clock className="w-6 h-6" />,
       stat: "90%"
     },
     {
       title: "Improve Accuracy",
-      description: "Achieve 98% accuracy in contract analysis and risk identification",
+      description: "Achieve 98% accuracy in expense categorization with AI",
       icon: <Target className="w-6 h-6" />,
       stat: "98%"
+    },
+    {
+      title: "Reduce Errors",
+      description: "Eliminate manual data entry errors and save on accounting costs",
+      icon: <Shield className="w-6 h-6" />,
+      stat: "95%"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Contract Analyzer - AI-Powered Contract Analysis & Risk Assessment</title>
+        <title>Zion Smart Expense Categorizer - AI-Powered Expense Management</title>
         <meta
           name="description"
-          content="Analyze contracts with Zion AI Contract Analyzer. AI-powered contract analysis, risk assessment, clause extraction, compliance checking, and automated summaries for better contract management."
+          content="Automate expense categorization with Zion Smart Expense Categorizer. AI-powered categorization, receipt scanning, multi-currency support, and smart budgeting for better financial management."
         />
         <meta
           name="keywords"
-          content="contract analysis, AI contract review, risk assessment, contract management, legal AI, contract compliance, contract automation, legal technology"
+          content="expense management, expense categorization, receipt scanning, AI expense tracking, financial management, expense automation, budget tracking"
         />
       </Helmet>
 
@@ -176,18 +175,18 @@ export default function ZionAIContractAnalyzer() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Legal Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Expense Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Contract Analyzer
+                Zion Smart Expense Categorizer
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your contract management with AI-powered analysis, risk assessment, 
-              and compliance checking. Reduce risks and save time with intelligent automation.
+              Automate your expense management with AI-powered categorization, receipt scanning, 
+              and smart budgeting. Save time and improve accuracy in your financial tracking.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -203,27 +202,27 @@ export default function ZionAIContractAnalyzer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Receipt className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">10K+</div>
-                <div className="text-gray-300">Contracts Analyzed</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">100K+</div>
+                <div className="text-gray-300">Expenses Categorized</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">75%</div>
-                <div className="text-gray-300">Risk Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">98%</div>
+                <div className="text-gray-300">Accuracy Rate</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-pink-400 mb-2">90%</div>
                 <div className="text-gray-300">Time Saved</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">98%</div>
-                <div className="text-gray-300">Accuracy Rate</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">95%</div>
+                <div className="text-gray-300">Error Reduction</div>
               </div>
             </div>
           </div>
@@ -234,10 +233,10 @@ export default function ZionAIContractAnalyzer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Contract Analysis Features
+                Advanced Expense Management Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to manage contracts intelligently
+                Everything you need to streamline your expense management
               </p>
             </div>
             
@@ -272,7 +271,7 @@ export default function ZionAIContractAnalyzer() {
                 Proven Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See the impact of AI-powered contract analysis
+                See the impact of AI-powered expense management
               </p>
             </div>
             
@@ -306,7 +305,7 @@ export default function ZionAIContractAnalyzer() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Scale your contract analysis as your business grows
+                Scale your expense management as your business grows
               </p>
             </div>
             
@@ -366,10 +365,10 @@ export default function ZionAIContractAnalyzer() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Contract Management?
+              Ready to Automate Your Expense Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Contract Analyzer to manage their contracts intelligently. 
+              Join thousands of businesses using Zion Smart Expense Categorizer to streamline their financial tracking. 
               Start your free trial today and see the difference AI can make.
             </p>
             
@@ -386,7 +385,7 @@ export default function ZionAIContractAnalyzer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Receipt className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>

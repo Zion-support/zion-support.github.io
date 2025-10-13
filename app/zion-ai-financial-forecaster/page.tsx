@@ -2,14 +2,14 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  FileText, 
+  TrendingUp, 
   BarChart3, 
   Brain, 
   CheckCircle, 
   ArrowRight,
   Sparkles,
   Award,
-  TrendingUp,
+  TrendingUp as TrendingUpIcon,
   Eye,
   Target,
   MessageSquare,
@@ -21,7 +21,7 @@ import {
   Shield,
   Lock,
   Send,
-  FileText as FileTextIcon,
+  FileText,
   Settings,
   Zap,
   Clock,
@@ -38,51 +38,54 @@ import {
   Search,
   Download,
   Upload,
-  Scale,
-  Gavel,
-  BookOpen,
-  PenTool,
-  Edit3,
-  Save,
-  Trash2
+  DollarSign,
+  Calculator,
+  CreditCard,
+  Wallet,
+  PiggyBank,
+  Banknote,
+  Coins,
+  Receipt,
+  ChartLine,
+  TrendingDown
 } from 'lucide-react';
 
-export default function ZionAIContractAnalyzer() {
+export default function ZionAIFinancialForecaster() {
   const features = [
     {
-      title: "AI-Powered Contract Analysis",
-      description: "Automatically analyze contracts for risks, clauses, and compliance issues",
+      title: "AI-Powered Financial Forecasting",
+      description: "Predict financial performance with 95% accuracy using advanced machine learning",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Risk Assessment",
-      description: "Identify potential risks and red flags in contract terms and conditions",
-      icon: <AlertCircle className="w-8 h-8" />,
+      title: "Revenue Prediction",
+      description: "Forecast revenue streams and identify growth opportunities with AI analysis",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Clause Extraction",
-      description: "Extract and categorize key clauses, terms, and obligations automatically",
-      icon: <FileText className="w-8 h-8" />,
+      title: "Cash Flow Analysis",
+      description: "Monitor and predict cash flow patterns for better financial planning",
+      icon: <DollarSign className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Compliance Checking",
-      description: "Check contracts against regulatory requirements and company policies",
+      title: "Risk Assessment",
+      description: "Identify financial risks and opportunities with predictive analytics",
       icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Contract Comparison",
-      description: "Compare multiple contracts and identify differences and similarities",
-      icon: <Scale className="w-8 h-8" />,
+      title: "Budget Optimization",
+      description: "Optimize budgets and resource allocation with AI recommendations",
+      icon: <Target className="w-8 h-8" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Automated Summaries",
-      description: "Generate comprehensive summaries and key points from complex contracts",
-      icon: <BookOpen className="w-8 h-8" />,
+      title: "Scenario Planning",
+      description: "Model different financial scenarios and their potential outcomes",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
@@ -90,12 +93,12 @@ export default function ZionAIContractAnalyzer() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$149",
       period: "/month",
-      description: "Perfect for small businesses and freelancers",
+      description: "Perfect for small businesses and startups",
       features: [
-        "Up to 50 contracts per month",
-        "Basic analysis",
+        "Up to 5 financial models",
+        "Basic forecasting",
         "Standard reporting",
         "Email support",
         "Basic integrations",
@@ -105,26 +108,26 @@ export default function ZionAIContractAnalyzer() {
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$399",
       period: "/month",
-      description: "Ideal for growing businesses and legal teams",
+      description: "Ideal for growing businesses and finance teams",
       features: [
-        "Up to 500 contracts per month",
-        "Advanced AI analysis",
-        "Risk assessment",
+        "Up to 50 financial models",
+        "Advanced AI forecasting",
+        "Real-time analysis",
         "Priority support",
-        "API access",
-        "Custom templates"
+        "Advanced analytics",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$999",
       period: "/month",
-      description: "For large organizations and law firms",
+      description: "For large organizations and enterprises",
       features: [
-        "Unlimited contracts",
+        "Unlimited financial models",
         "Custom AI models",
         "White-label options",
         "Dedicated support",
@@ -137,36 +140,36 @@ export default function ZionAIContractAnalyzer() {
 
   const benefits = [
     {
+      title: "Improve Accuracy",
+      description: "Achieve 95% accuracy in financial forecasting with AI predictions",
+      icon: <Target className="w-6 h-6" />,
+      stat: "95%"
+    },
+    {
       title: "Reduce Risk",
-      description: "Reduce contract risks by 75% with AI-powered analysis and alerts",
+      description: "Reduce financial risks by 60% with predictive analytics",
       icon: <Shield className="w-6 h-6" />,
-      stat: "-75%"
+      stat: "-60%"
     },
     {
       title: "Save Time",
-      description: "Reduce contract review time by 90% with automated analysis",
+      description: "Reduce financial planning time by 80% with automation",
       icon: <Clock className="w-6 h-6" />,
-      stat: "90%"
-    },
-    {
-      title: "Improve Accuracy",
-      description: "Achieve 98% accuracy in contract analysis and risk identification",
-      icon: <Target className="w-6 h-6" />,
-      stat: "98%"
+      stat: "80%"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Contract Analyzer - AI-Powered Contract Analysis & Risk Assessment</title>
+        <title>Zion AI Financial Forecaster - AI-Powered Financial Forecasting & Analysis</title>
         <meta
           name="description"
-          content="Analyze contracts with Zion AI Contract Analyzer. AI-powered contract analysis, risk assessment, clause extraction, compliance checking, and automated summaries for better contract management."
+          content="Forecast financial performance with Zion AI Financial Forecaster. AI-powered forecasting, revenue prediction, cash flow analysis, risk assessment, and budget optimization for better financial planning."
         />
         <meta
           name="keywords"
-          content="contract analysis, AI contract review, risk assessment, contract management, legal AI, contract compliance, contract automation, legal technology"
+          content="financial forecasting, AI financial analysis, revenue prediction, cash flow analysis, financial planning, budget optimization, financial risk assessment"
         />
       </Helmet>
 
@@ -176,18 +179,18 @@ export default function ZionAIContractAnalyzer() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Legal Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Financial Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Contract Analyzer
+                Zion AI Financial Forecaster
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your contract management with AI-powered analysis, risk assessment, 
-              and compliance checking. Reduce risks and save time with intelligent automation.
+              Predict financial performance with AI-powered forecasting, revenue prediction, 
+              cash flow analysis, and risk assessment. Make better financial decisions with confidence.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -203,7 +206,7 @@ export default function ZionAIContractAnalyzer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <TrendingUp className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
 
@@ -211,19 +214,19 @@ export default function ZionAIContractAnalyzer() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">10K+</div>
-                <div className="text-gray-300">Contracts Analyzed</div>
+                <div className="text-gray-300">Financial Models</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">75%</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
+                <div className="text-gray-300">Forecasting Accuracy</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-pink-400 mb-2">60%</div>
                 <div className="text-gray-300">Risk Reduction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">90%</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">80%</div>
                 <div className="text-gray-300">Time Saved</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">98%</div>
-                <div className="text-gray-300">Accuracy Rate</div>
               </div>
             </div>
           </div>
@@ -234,10 +237,10 @@ export default function ZionAIContractAnalyzer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Contract Analysis Features
+                Advanced Financial Forecasting Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to manage contracts intelligently
+                Everything you need to predict and plan your financial future
               </p>
             </div>
             
@@ -272,7 +275,7 @@ export default function ZionAIContractAnalyzer() {
                 Proven Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See the impact of AI-powered contract analysis
+                See the impact of AI-powered financial forecasting
               </p>
             </div>
             
@@ -306,7 +309,7 @@ export default function ZionAIContractAnalyzer() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Scale your contract analysis as your business grows
+                Scale your financial forecasting as your business grows
               </p>
             </div>
             
@@ -366,10 +369,10 @@ export default function ZionAIContractAnalyzer() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Contract Management?
+              Ready to Transform Your Financial Planning?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Contract Analyzer to manage their contracts intelligently. 
+              Join thousands of businesses using Zion AI Financial Forecaster to make better financial decisions. 
               Start your free trial today and see the difference AI can make.
             </p>
             
@@ -386,7 +389,7 @@ export default function ZionAIContractAnalyzer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <TrendingUp className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>

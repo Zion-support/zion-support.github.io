@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  FileText, 
+  Calendar, 
   BarChart3, 
   Brain, 
   CheckCircle, 
@@ -21,12 +21,12 @@ import {
   Shield,
   Lock,
   Send,
-  FileText as FileTextIcon,
+  FileText,
   Settings,
   Zap,
   Clock,
   PieChart,
-  Calendar,
+  Calendar as CalendarIcon,
   Bell,
   Heart,
   ThumbsUp,
@@ -38,64 +38,78 @@ import {
   Search,
   Download,
   Upload,
-  Scale,
-  Gavel,
-  BookOpen,
-  PenTool,
+  CheckSquare,
+  Square,
+  Play,
+  Pause,
+  Stop,
+  RotateCcw,
+  RefreshCw,
+  Plus,
+  Minus,
   Edit3,
+  Trash2,
   Save,
-  Trash2
+  Folder,
+  FolderOpen,
+  Tag,
+  Flag,
+  Star as StarIcon,
+  User,
+  Users,
+  Team,
+  Project
 } from 'lucide-react';
 
-export default function ZionAIContractAnalyzer() {
+export default function ZionAITaskScheduler() {
   const features = [
     {
-      title: "AI-Powered Contract Analysis",
-      description: "Automatically analyze contracts for risks, clauses, and compliance issues",
+      title: "AI-Powered Task Scheduling",
+      description: "Automatically schedule tasks with optimal timing using AI algorithms",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Risk Assessment",
-      description: "Identify potential risks and red flags in contract terms and conditions",
-      icon: <AlertCircle className="w-8 h-8" />,
+      title: "Smart Prioritization",
+      description: "Intelligently prioritize tasks based on deadlines, importance, and dependencies",
+      icon: <Target className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Clause Extraction",
-      description: "Extract and categorize key clauses, terms, and obligations automatically",
-      icon: <FileText className="w-8 h-8" />,
+      title: "Resource Optimization",
+      description: "Optimize resource allocation and team workload for maximum efficiency",
+      icon: <Users className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Compliance Checking",
-      description: "Check contracts against regulatory requirements and company policies",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Deadline Management",
+      description: "Track deadlines and automatically adjust schedules to meet project goals",
+      icon: <Clock className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Contract Comparison",
-      description: "Compare multiple contracts and identify differences and similarities",
-      icon: <Scale className="w-8 h-8" />,
+      title: "Dependency Tracking",
+      description: "Manage task dependencies and ensure proper sequencing of work",
+      icon: <Link className="w-8 h-8" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Automated Summaries",
-      description: "Generate comprehensive summaries and key points from complex contracts",
-      icon: <BookOpen className="w-8 h-8" />,
+      title: "Progress Monitoring",
+      description: "Monitor task progress and provide real-time updates and insights",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "Personal",
+      price: "$19",
       period: "/month",
-      description: "Perfect for small businesses and freelancers",
+      description: "Perfect for individuals and freelancers",
       features: [
-        "Up to 50 contracts per month",
-        "Basic analysis",
+        "Up to 100 tasks per month",
+        "Basic scheduling",
         "Standard reporting",
         "Email support",
         "Basic integrations",
@@ -104,27 +118,27 @@ export default function ZionAIContractAnalyzer() {
       popular: false
     },
     {
-      name: "Professional",
-      price: "$299",
+      name: "Team",
+      price: "$59",
       period: "/month",
-      description: "Ideal for growing businesses and legal teams",
+      description: "Ideal for small teams and growing businesses",
       features: [
-        "Up to 500 contracts per month",
-        "Advanced AI analysis",
-        "Risk assessment",
+        "Up to 1,000 tasks per month",
+        "Advanced AI scheduling",
+        "Team collaboration",
         "Priority support",
-        "API access",
-        "Custom templates"
+        "Advanced analytics",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$199",
       period: "/month",
-      description: "For large organizations and law firms",
+      description: "For large organizations and enterprises",
       features: [
-        "Unlimited contracts",
+        "Unlimited tasks",
         "Custom AI models",
         "White-label options",
         "Dedicated support",
@@ -137,36 +151,36 @@ export default function ZionAIContractAnalyzer() {
 
   const benefits = [
     {
-      title: "Reduce Risk",
-      description: "Reduce contract risks by 75% with AI-powered analysis and alerts",
-      icon: <Shield className="w-6 h-6" />,
-      stat: "-75%"
+      title: "Increase Productivity",
+      description: "Boost team productivity by 50% with AI-optimized task scheduling",
+      icon: <TrendingUp className="w-6 h-6" />,
+      stat: "+50%"
     },
     {
-      title: "Save Time",
-      description: "Reduce contract review time by 90% with automated analysis",
-      icon: <Clock className="w-6 h-6" />,
-      stat: "90%"
-    },
-    {
-      title: "Improve Accuracy",
-      description: "Achieve 98% accuracy in contract analysis and risk identification",
+      title: "Meet Deadlines",
+      description: "Improve deadline compliance by 80% with intelligent scheduling",
       icon: <Target className="w-6 h-6" />,
-      stat: "98%"
+      stat: "+80%"
+    },
+    {
+      title: "Reduce Overload",
+      description: "Reduce team overload by 60% with balanced workload distribution",
+      icon: <Users className="w-6 h-6" />,
+      stat: "-60%"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Contract Analyzer - AI-Powered Contract Analysis & Risk Assessment</title>
+        <title>Zion AI Task Scheduler - AI-Powered Task Management & Scheduling</title>
         <meta
           name="description"
-          content="Analyze contracts with Zion AI Contract Analyzer. AI-powered contract analysis, risk assessment, clause extraction, compliance checking, and automated summaries for better contract management."
+          content="Schedule tasks with Zion AI Task Scheduler. AI-powered scheduling, smart prioritization, resource optimization, deadline management, and progress monitoring for better productivity."
         />
         <meta
           name="keywords"
-          content="contract analysis, AI contract review, risk assessment, contract management, legal AI, contract compliance, contract automation, legal technology"
+          content="task scheduling, AI task management, project scheduling, resource optimization, deadline management, productivity tools, team management"
         />
       </Helmet>
 
@@ -176,18 +190,18 @@ export default function ZionAIContractAnalyzer() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Legal Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Task Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Contract Analyzer
+                Zion AI Task Scheduler
               </span>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your contract management with AI-powered analysis, risk assessment, 
-              and compliance checking. Reduce risks and save time with intelligent automation.
+              Optimize your productivity with AI-powered task scheduling, smart prioritization, 
+              and resource optimization. Meet deadlines and achieve more with intelligent automation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -203,7 +217,7 @@ export default function ZionAIContractAnalyzer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Calendar className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
 
@@ -211,19 +225,19 @@ export default function ZionAIContractAnalyzer() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-3xl font-bold text-cyan-400 mb-2">10K+</div>
-                <div className="text-gray-300">Contracts Analyzed</div>
+                <div className="text-gray-300">Tasks Scheduled</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">75%</div>
-                <div className="text-gray-300">Risk Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">50%</div>
+                <div className="text-gray-300">Productivity Boost</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">90%</div>
-                <div className="text-gray-300">Time Saved</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">80%</div>
+                <div className="text-gray-300">Deadline Compliance</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">98%</div>
-                <div className="text-gray-300">Accuracy Rate</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
+                <div className="text-gray-300">Overload Reduction</div>
               </div>
             </div>
           </div>
@@ -234,10 +248,10 @@ export default function ZionAIContractAnalyzer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Contract Analysis Features
+                Advanced Task Scheduling Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to manage contracts intelligently
+                Everything you need to optimize your task management and productivity
               </p>
             </div>
             
@@ -272,7 +286,7 @@ export default function ZionAIContractAnalyzer() {
                 Proven Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See the impact of AI-powered contract analysis
+                See the impact of AI-powered task scheduling
               </p>
             </div>
             
@@ -306,7 +320,7 @@ export default function ZionAIContractAnalyzer() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Scale your contract analysis as your business grows
+                Scale your task scheduling as your team grows
               </p>
             </div>
             
@@ -366,10 +380,10 @@ export default function ZionAIContractAnalyzer() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Contract Management?
+              Ready to Optimize Your Task Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Contract Analyzer to manage their contracts intelligently. 
+              Join thousands of teams using Zion AI Task Scheduler to boost their productivity. 
               Start your free trial today and see the difference AI can make.
             </p>
             
@@ -386,7 +400,7 @@ export default function ZionAIContractAnalyzer() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <FileText className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Calendar className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>
