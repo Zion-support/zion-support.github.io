@@ -214,21 +214,7 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         >
                           View All Services →
                         </Link>
-                      </div>                {/* Dropdown Menu */}
-                {item.hasDropdown && item.dropdownItems && (
-                  <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    <div className="py-2">
-                      {item.dropdownItems.map((dropdownItem, index) => (
-                        <Link
-                          key={index}
-                          to={dropdownItem.path}
-                          className={`block px-4 py-2 text-sm text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/10 transition-colors ${
-                            isActive(dropdownItem.path) ? 'text-cyan-400 bg-cyan-500/10' : ''
-                          }`}
-                        >
-                          {dropdownItem.name}
-                        </Link>
-                      ))}
+                      </div>
                     </div>
                   </div>
                 )}

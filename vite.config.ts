@@ -35,9 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 150, // Reduced threshold for better optimization
-    assetsInlineLimit: 2048, // Reduced for better performance
-    // Enable compression
+    chunkSizeWarningLimit: 150,
+    assetsInlineLimit: 2048,
     reportCompressedSize: true,
     // Optimize for production
     terserOptions: {
@@ -45,7 +44,7 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3, // More passes for better optimization
+        passes: 3,
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
@@ -63,7 +62,7 @@ export default defineConfig({
         unused: true,
       },
       mangle: {
-        safari10: true, // Better Safari compatibility
+        safari10: true,
         toplevel: true,
         properties: {
           regex: /^_/
@@ -118,15 +117,36 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // Group all AI service pages into fewer chunks
+          // Group AI service pages by category for better caching
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
+            if (id.includes('analytics') || id.includes('data')) {
+              return 'ai-analytics'
+            }
+            if (id.includes('content') || id.includes('generation')) {
+              return 'ai-content'
+            }
+            if (id.includes('cybersecurity') || id.includes('security')) {
+              return 'ai-security'
+            }
+            if (id.includes('crm') || id.includes('customer')) {
+              return 'ai-crm'
+            }
             return 'ai-services'
           }
-          // Group all Zion service pages
+          // Group Zion service pages by type
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
+            if (id.includes('analytics') || id.includes('data')) {
+              return 'zion-analytics'
+            }
+            if (id.includes('video') || id.includes('content')) {
+              return 'zion-content'
+            }
+            if (id.includes('security') || id.includes('shield')) {
+              return 'zion-security'
+            }
             return 'zion-services'
           }
-          // Group all 5G service pages
+          // Group 5G service pages
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
@@ -135,7 +155,7 @@ export default defineConfig({
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
             return 'main-pages'
           }
-          // Components - group by type
+          // Components - group by type for better caching
           if (id.includes('/components/')) {
             if (id.includes('Performance') || id.includes('Analytics')) {
               return 'components-performance'
@@ -145,6 +165,9 @@ export default defineConfig({
             }
             if (id.includes('Loading') || id.includes('Error')) {
               return 'components-ui'
+            }
+            if (id.includes('Futuristic') || id.includes('Responsive')) {
+              return 'components-ui-advanced'
             }
             return 'components-common'
           }

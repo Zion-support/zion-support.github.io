@@ -1,136 +1,94 @@
 const fs = require('fs');
 const path = require('path');
 
-// Define all the routes in your application
-const routes = [
-  '/',
-  '/about',
-  '/contact',
-  '/services',
-  '/ai-services',
-  '/micro-saas',
-  '/5g-solutions',
-  '/blog',
-  '/tutorials',
-  '/demo',
-  '/support',
-  '/privacy',
-  '/terms',
-  // AI Services
-  '/ai-analytics',
-  '/ai-content-generation',
-  '/ai-customer-support',
-  '/ai-cybersecurity',
-  '/ai-data-analytics',
-  '/ai-document-processing',
-  '/ai-marketing-automation',
-  '/ai-predictive-analytics',
-  '/ai-voice-assistant',
-  '/ai-workflow-automation',
-  // IT Services
-  '/cloud-migration',
-  '/devops',
-  '/it-consulting',
-  '/network-security',
-  '/custom-software',
-  '/system-integration',
-  '/web-development',
-  // 5G Services
-  '/5g-network-infrastructure',
-  '/5g-edge-computing',
-  '/5g-iot-solutions',
-  '/5g-smart-city-solutions',
-  '/5g-private-networks',
-  '/5g-mobile-applications',
-  '/5g-data-analytics',
-  '/5g-implementation',
-  // Micro SAAS Services
-  '/zion-content-studio',
-  '/project-management-pro',
-  '/zion-ai-crm-pro',
-  '/zion-inventory-smart',
-  '/ai-financial-analytics-pro',
-  '/zion-performance-monitor',
-  '/zion-ai-marketing-automation',
-  '/zion-email-automation',
-  '/data-analytics',
-  '/ai-workflow-automation',
-  // New Innovative Micro SAAS Services
-  '/zion-ai-video-generator',
-  '/zion-ai-invoice-generator',
-  '/zion-ai-customer-insights',
-  '/zion-ai-email-analyzer',
-  '/zion-smart-inventory-optimizer',
-  '/zion-ai-customer-sentiment-tracker',
-  '/zion-smart-expense-categorizer',
-  '/zion-ai-voice-assistant-pro',
-  '/zion-ai-code-reviewer',
-  '/zion-ai-social-media-manager',
-  '/zion-ai-contract-analyzer',
-  '/zion-ai-performance-optimizer',
-  '/zion-ai-customer-churn-predictor',
-  '/zion-ai-supply-chain-optimizer',
-  '/zion-ai-financial-forecaster',
-  '/zion-ai-content-moderator',
-  '/zion-ai-translator-pro',
-  '/zion-ai-data-cleaner',
-  '/zion-ai-task-scheduler',
-  '/zion-ai-customer-support-pro'
-];
-
-// Generate sitemap XML
-const generateSitemap = () => {
+// Generate comprehensive sitemap
+function generateSitemap() {
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString();
   
-  let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n';
-  sitemap += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
-  
-  routes.forEach(route => {
-    sitemap += '  <url>\n';
-    sitemap += `    <loc>${baseUrl}${route}</loc>\n`;
-    sitemap += `    <lastmod>${currentDate}</lastmod>\n`;
-    sitemap += '    <changefreq>weekly</changefreq>\n';
-    sitemap += '    <priority>0.8</priority>\n';
-    sitemap += '  </url>\n';
+  // Get all page routes
+  const pages = [
+    { url: '/', priority: '1.0', changefreq: 'daily' },
+    { url: '/about', priority: '0.8', changefreq: 'monthly' },
+    { url: '/services', priority: '0.9', changefreq: 'weekly' },
+    { url: '/contact', priority: '0.8', changefreq: 'monthly' },
+    { url: '/ai-services', priority: '0.9', changefreq: 'weekly' },
+    { url: '/micro-saas', priority: '0.9', changefreq: 'weekly' },
+    { url: '/5g-solutions', priority: '0.9', changefreq: 'weekly' },
+    { url: '/accessibility', priority: '0.6', changefreq: 'monthly' },
+    { url: '/privacy', priority: '0.5', changefreq: 'yearly' },
+    { url: '/terms', priority: '0.5', changefreq: 'yearly' }
+  ];
+
+  // Add AI service pages
+  const aiServices = [
+    'ai-analytics', 'ai-content-generation', 'ai-customer-support', 'ai-cybersecurity',
+    'ai-data-analytics', 'ai-document-processing', 'ai-marketing-automation',
+    'ai-predictive-analytics', 'ai-voice-assistant', 'ai-workflow-automation',
+    'ai-business-intelligence', 'ai-chatbot-builder', 'ai-computer-vision',
+    'ai-crm', 'ai-automation', 'ai-blockchain-solutions'
+  ];
+
+  aiServices.forEach(service => {
+    pages.push({
+      url: `/ai-services/${service}`,
+      priority: '0.8',
+      changefreq: 'weekly'
+    });
   });
-  
-  sitemap += '</urlset>';
-  
-  return sitemap;
-};
 
-// Write sitemap to public directory
-const writeSitemap = () => {
-  const sitemap = generateSitemap();
-  const sitemapPath = path.join(__dirname, '..', 'public', 'sitemap.xml');
-  
-  try {
-    fs.writeFileSync(sitemapPath, sitemap, 'utf8');
-    console.log('✅ Sitemap generated successfully at:', sitemapPath);
-  } catch (error) {
-    console.error('❌ Error generating sitemap:', error);
-  }
-};
+  // Add Micro SAAS pages
+  const microSaasServices = [
+    'zion-ai-analytics-pro', 'zion-security-shield', 'zion-cloud-vault',
+    'zion-ai-crm-pro', 'zion-ai-marketing-automation-pro', 'zion-ai-project-manager-pro',
+    'zion-ai-video-generator', 'zion-ai-invoice-generator', 'zion-ai-customer-insights'
+  ];
 
-// Generate robots.txt
-const generateRobotsTxt = () => {
-  const robotsTxt = `User-agent: *
-Allow: /
+  microSaasServices.forEach(service => {
+    pages.push({
+      url: `/micro-saas/${service}`,
+      priority: '0.8',
+      changefreq: 'weekly'
+    });
+  });
 
-Sitemap: https://ziontechgroup.com/sitemap.xml
-`;
-  
-  const robotsPath = path.join(__dirname, '..', 'public', 'robots.txt');
-  
-  try {
-    fs.writeFileSync(robotsPath, robotsTxt, 'utf8');
-    console.log('✅ Robots.txt generated successfully at:', robotsPath);
-  } catch (error) {
-    console.error('❌ Error generating robots.txt:', error);
-  }
-};
+  // Add 5G solution pages
+  const fiveGServices = [
+    '5g-network-infrastructure', '5g-edge-computing', '5g-iot-solutions',
+    '5g-smart-city-solutions', '5g-private-networks', '5g-mobile-applications',
+    '5g-data-analytics', '5g-implementation'
+  ];
 
-// Run the generation
-writeSitemap();
-generateRobotsTxt();
+  fiveGServices.forEach(service => {
+    pages.push({
+      url: `/5g-solutions/${service}`,
+      priority: '0.8',
+      changefreq: 'weekly'
+    });
+  });
+
+  // Generate XML sitemap
+  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">`;
+
+  pages.forEach(page => {
+    sitemap += `
+  <url>
+    <loc>${baseUrl}${page.url}</loc>
+    <lastmod>${currentDate}</lastmod>
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`;
+  });
+
+  sitemap += `
+</urlset>`;
+
+  // Write sitemap
+  fs.writeFileSync('/workspace/public/sitemap.xml', sitemap);
+  console.log('✅ Comprehensive sitemap generated');
+}
+
+generateSitemap();

@@ -41,7 +41,6 @@ const AdvancedPerformanceMonitor = () => {
     measureMemory()
     measureLoadTime()
 
-
         onFCP((metric: any) => {
           setMetrics(prev => ({ ...prev, fcp: metric.value }))
           reportMetric('FCP', metric.value)
@@ -180,4 +179,3 @@ const AdvancedPerformanceMonitor = () => {
 }
 
 export default AdvancedPerformanceMonitor
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
