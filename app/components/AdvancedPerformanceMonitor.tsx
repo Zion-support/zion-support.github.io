@@ -1,25 +1,15 @@
+import React from 'react';
+
 interface AdvancedPerformanceMonitorProps {
-  className?: string;
+  // Add props here
 }
 
-export default function AdvancedPerformanceMonitor({ className = '' }: AdvancedPerformanceMonitorProps) {
+const AdvancedPerformanceMonitor: React.FC<AdvancedPerformanceMonitorProps> = (props) => {
   return (
-    <div className={`advanced-performance-monitor ${className}`}>
-      <h3>Performance Monitor</h3>
-      <p>Advanced performance monitoring component</p>
+    <div className="advancedperformancemonitor">
+      {/* Component content */}
     </div>
   );
-}
-  useEffect(() => {
-    if (!enableRealTimeMonitoring) return;
-
-    const cleanup = measureWebVitals();
-    measureResourceTiming();
-    measureCoreWebVitals();
-
-    // Monitor performance every 5 seconds
-    const interval = setInterval(() => {
-      measureResourceTiming();
-    }, 5000);
+};
 
 export default AdvancedPerformanceMonitor;

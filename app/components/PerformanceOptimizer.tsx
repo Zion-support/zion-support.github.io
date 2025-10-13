@@ -1,25 +1,15 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 interface PerformanceOptimizerProps {
-  children: React.ReactNode;
+  // Add props here
 }
 
-const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
-  useEffect(() => {
-    // Performance optimization logic
-    if (typeof window !== 'undefined') {
-      // Preload critical resources
-      const preloadLink = document.createElement('link');
-      preloadLink.rel = 'preload';
-      preloadLink.href = '/fonts/inter.woff2';
-      preloadLink.as = 'font';
-      preloadLink.type = 'font/woff2';
-      preloadLink.crossOrigin = 'anonymous';
-      document.head.appendChild(preloadLink);
-    }
-  }, []);
-
-  return <>{children}</>;
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = (props) => {
+  return (
+    <div className="performanceoptimizer">
+      {/* Component content */}
+    </div>
+  );
 };
 
 export default PerformanceOptimizer;

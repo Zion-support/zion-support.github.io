@@ -1,24 +1,14 @@
-const Header: React.FC = () => {,
-  return(<React.Fragment>)</React.Fragment>
-      <Navigation />
-      {/* Spacer to prevent content from going under fixed header */} <div className="h-16 lg: h-20" />,
-    </React.Fragment>
-    <>
-      <Navigation />
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" />
-    </>
-  );
-};
+import React from 'react';
 
-export default Header;
-    <>
-  </>
-      <Navigation />
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" />
+interface HeaderProps {
+  // Add props here
+}
 
-    </>
+const Header: React.FC<HeaderProps> = (props) => {
+  return (
+    <div className="header">
+      {/* Component content */}
+    </div>
   );
 };
 

@@ -1,30 +1,15 @@
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
-  children,
-  trackingId = 'G-XXXXXXXXXX'
-}) => {
-  // Initialize Google Analytics
-  useEffect(() => {
-    if (typeof window !== 'undefined' && trackingId) {
-      // Load Google Analytics script
-      const script = document.createElement('script');
-      script.async = true;
-      script['src'] = `https://www.googletagmanager.com/gtag/js?id=${trackingId}`;
-      document.head.appendChild(script);
+import React from 'react';
 
-      // Initialize gtag
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
-      }
-      window.gtag = gtag;
+interface EnhancedAnalyticsProps {
+  // Add props here
+}
 
-      gtag('js', new Date());
-      gtag('config', trackingId, {
-        page_title: document.title,
-        page_location: window.location.href
-      });
-    }
-  }, [enableTracking]);
+const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = (props) => {
+  return (
+    <div className="enhancedanalytics">
+      {/* Component content */}
+    </div>
+  );
+};
 
-  return <>{children}</>;
 export default EnhancedAnalytics;

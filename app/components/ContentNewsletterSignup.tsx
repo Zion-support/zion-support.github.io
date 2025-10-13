@@ -1,6 +1,15 @@
-      setEmail('');
-    } catch (error) {
-      console.error('Subscription failed:', error);
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Welcome to Our Community!
-          </h2>
+import React from 'react';
+
+interface ContentNewsletterSignupProps {
+  // Add props here
+}
+
+const ContentNewsletterSignup: React.FC<ContentNewsletterSignupProps> = (props) => {
+  return (
+    <div className="contentnewslettersignup">
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default ContentNewsletterSignup;

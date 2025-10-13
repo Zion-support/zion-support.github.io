@@ -1,6 +1,15 @@
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
-    const {name, value}}= e.target;
-    setFormData(prev => ({)
-      [name]: value;}));
-    } catch (error) {
-      } finally {
+import React from 'react';
+
+interface ContactFormProps {
+  // Add props here
+}
+
+const ContactForm: React.FC<ContactFormProps> = (props) => {
+  return (
+    <div className="contactform">
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default ContactForm;

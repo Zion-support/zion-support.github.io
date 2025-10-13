@@ -1,29 +1,15 @@
 import React from 'react';
 
 interface CoreWebVitalsProps {
-  className?: string;
-  children?: React.ReactNode;
+  // Add props here
 }
 
-export default function CoreWebVitals({ className = '', children }: CoreWebVitalsProps) {
+const CoreWebVitals: React.FC<CoreWebVitalsProps> = (props) => {
   return (
-    <div className={`core-web-vitals ${className}`}>
-      {children}
+    <div className="corewebvitals">
+      {/* Component content */}
     </div>
   );
-}
-  }, []);
-
-  useEffect(() => {
-    // Measure Core Web Vitals
-    onCLS(reportWebVitals);
-    onINP(reportWebVitals);
-    onFCP(reportWebVitals);
-    onLCP(reportWebVitals);
-    onTTFB(reportWebVitals);
-  }, [reportWebVitals]);
-
-  return null;
 };
 
 export default CoreWebVitals;

@@ -1,11 +1,15 @@
-import React, { useEffect, ReactNode } from 'react';
-import { AnalyticsContext } from '../contexts/AnalyticsContext';
+import React from 'react';
+
 interface AnalyticsProviderProps {
-'use client;
+  // Add props here
+}
 
-import React, { createContext, useContext, useEffect } from 'react;
-  if (!context) {
-    throw new Error(useAnalytics must be used within an AnalyticsProvider);
+const AnalyticsProvider: React.FC<AnalyticsProviderProps> = (props) => {
+  return (
+    <div className="analyticsprovider">
+      {/* Component content */}
+    </div>
+  );
+};
 
-export default AnalyticsProvider;
 export default AnalyticsProvider;

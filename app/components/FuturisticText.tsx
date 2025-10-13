@@ -1,1 +1,15 @@
-export default function FuturisticText({ className = '', children, ...props }: FuturisticTextProps) {
+import React from 'react';
+
+interface FuturisticTextProps {
+  // Add props here
+}
+
+const FuturisticText: React.FC<FuturisticTextProps> = (props) => {
+  return (
+    <div className="futuristictext">
+      {/* Component content */}
+    </div>
+  );
+};
+
+export default FuturisticText;

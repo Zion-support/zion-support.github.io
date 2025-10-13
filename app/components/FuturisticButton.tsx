@@ -1,5 +1,15 @@
+import React from 'react';
 
-// import React from 'react';
+interface FuturisticButtonProps {
+  // Add props here
+}
 
-// import React from 'react';
+const FuturisticButton: React.FC<FuturisticButtonProps> = (props) => {
+  return (
+    <div className="futuristicbutton">
+      {/* Component content */}
+    </div>
+  );
+};
 
+export default FuturisticButton;

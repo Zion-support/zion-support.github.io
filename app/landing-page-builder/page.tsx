@@ -1,21 +1,19 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">A/B Testing</h3>
-              <p className="text-gray-600">
-                Built-in A/B testing tools to optimize conversion rates.
-              </p>
-            </div>
-            <div className="bg-white rounded-lg shadow-md p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Analytics Integration</h3>
-              <p className="text-gray-600">
-                Comprehensive analytics and performance tracking.
-              </p>
-            </div>
-          </div>
+export default function landingpagebuilder() {
+  return (
+    <>
+      <Helmet>
+        <title>landing page builder - Zion Tech Group</title>
+        <meta name="description" content="Professional landing page builder services for modern businesses." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <div className="container mx-auto px-4 py-20">
+          <h1 className="text-4xl font-bold text-white mb-8">landing page builder</h1>
+          <p className="text-xl text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </div>
+    </>
   );
 }
