@@ -11,6 +11,7 @@ import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import Analytics from "./app/components/Analytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
@@ -167,6 +168,7 @@ function App() {
               </div>
               <AnalyticsProvider>
                 <div>
+                  <Analytics />
                   <WebVitalsTracker />
                 </div>
               </AnalyticsProvider>

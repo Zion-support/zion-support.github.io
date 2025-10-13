@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
-import SEOOptimizer from "./components/SEOOptimizer";
+import EnhancedSEO from "./components/EnhancedSEO";
+import LazyImage from "./components/LazyImage";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
@@ -173,11 +174,28 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
-      <SEOOptimizer
+      <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
         canonical="https://ziontechgroup.com"
+        faqs={[
+          {
+            question: "What services does Zion Tech Group offer?",
+            answer: "Zion Tech Group offers comprehensive AI solutions, IT services, cybersecurity, cloud computing, 5G solutions, and micro SaaS products to help businesses transform digitally."
+          },
+          {
+            question: "How can AI solutions benefit my business?",
+            answer: "Our AI solutions can increase efficiency by up to 40%, automate processes, provide predictive analytics, and help make data-driven decisions that drive business growth."
+          },
+          {
+            question: "What is the uptime guarantee for your services?",
+            answer: "We provide a 99.9% uptime SLA for all our services, ensuring your business operations remain uninterrupted with 24/7 support."
+          }
+        ]}
+        breadcrumbs={[
+          { name: "Home", url: "https://ziontechgroup.com" }
+        ]}
       />
 
       {/* Hero Section */}
