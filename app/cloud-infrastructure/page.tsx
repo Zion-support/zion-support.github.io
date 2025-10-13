@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
-<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 
 export default function CloudInfrastructure() {
@@ -75,5 +74,3 @@ export default function CloudInfrastructure() {
     </div>
   );
 }
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-100c

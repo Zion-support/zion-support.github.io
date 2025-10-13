@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 interface AccessibilityEnhancerProps {
@@ -92,13 +91,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
 
-    const handleFocus = (e: FocusEvent) => {
+    const handleFocus = (e: Event) => {
       const target = e.target as HTMLElement;
       target.style.outline = '2px solid #0066cc';
       target.style.outlineOffset = '2px';
     };
 
-    const handleBlur = (e: FocusEvent) => {
+    const handleBlur = (e: Event) => {
       const target = e.target as HTMLElement;
       target.style.outline = '';
       target.style.outlineOffset = '';
@@ -163,12 +162,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>
     </div>
   );
-=======
-import React from 'react';
-
-const AccessibilityEnhancer: React.FC = () => {
-  return null; // This component enhances accessibility but doesn't render anything visible
->>>>>>> cursor/fix-errors-and-merge-to-main-bca9
 };
 
 export default AccessibilityEnhancer;
