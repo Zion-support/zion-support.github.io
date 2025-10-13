@@ -149,9 +149,6 @@ if (!fs.existsSync(outputDir)) {
 
 fs.writeFileSync(path.join(outputDir, 'sitemap.xml'), sitemapData);
 console.log('Sitemap generated successfully');
-
-// Define all the routes in your application
-const routes = [
   '/',
   '/about',
   '/contact',
