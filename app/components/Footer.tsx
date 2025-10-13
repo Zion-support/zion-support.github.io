@@ -189,22 +189,6 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/zion-ai-video-generator"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion AI Video Generator
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-ai-customer-insights"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion AI Customer Insights
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/zion-analytics-pro"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
@@ -233,6 +217,46 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
                   Zion Content Studio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-video-generator"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Video Generator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-customer-insights"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Customer Insights
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-task-automation-pro"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion Task Automation Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-marketing-optimizer"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion Marketing Optimizer
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-financial-tracker"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion Financial Tracker
                 </Link>
               </li>
             </ul>
