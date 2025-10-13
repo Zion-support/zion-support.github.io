@@ -1,10 +1,4 @@
 import React from "react";
-<<<<<<< HEAD
-=======
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone, Plus } from 'lucide-react';
-import { Link } from "react-router-dom";
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 import SEOOptimizer from "../../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';

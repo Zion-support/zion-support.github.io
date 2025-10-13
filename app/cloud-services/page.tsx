@@ -1,17 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Cloud } from 'lucide-react';
-=======
-import { Cloud, Shield, Zap, Globe, ArrowRight, CheckCircle, BarChart3, Database, Lock, Users, Settings, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 const CloudServicesPage: React.FC = () => {
   const services = [

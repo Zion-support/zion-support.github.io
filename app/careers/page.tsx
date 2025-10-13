@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-=======
-
->>>>>>> 0cc9739f1846a61570a2c68806f6c98f4253bf23
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const CareersPage = () => {

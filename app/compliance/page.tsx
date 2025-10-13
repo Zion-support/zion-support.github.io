@@ -1,20 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { FileText } from 'lucide-react';
-=======
-import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 export default function Compliance() {
   const complianceFrameworks = [

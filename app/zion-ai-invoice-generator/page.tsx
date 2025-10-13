@@ -1,9 +1,4 @@
 import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-import { Settings, Users, Sparkles, ArrowRight, CheckCircle, Star, Globe, Brain, BarChart3, Database, Target, Hand, FileText, Smartphone, Mail, Headphones, Download, Play, Phone } from 'lucide-react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';

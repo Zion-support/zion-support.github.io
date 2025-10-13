@@ -1,18 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Box } from 'lucide-react';
-import { Mic } from 'lucide-react';
-=======
-import { Eye, Box, ArrowRight, Sparkles, CheckCircle, Brain, Globe, Star, Mic } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 
 const ARVRDevelopmentPage = () => {
   const benefits = [

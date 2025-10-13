@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from "lucide-react";
-=======
-<<<<<<< HEAD
-=======
-import { Brain, Code, Zap, Shield, CheckCircle, ArrowRight, Star, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
->>>>>>> 0cc9739f1846a61570a2c68806f6c98f4253bf23
 import EnhancedSEO from "../components/EnhancedSEO";
 import StructuredData from "../components/StructuredData";
 import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";

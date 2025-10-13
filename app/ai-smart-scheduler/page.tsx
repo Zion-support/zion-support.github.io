@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-=======
-import { Link } from "react-router-dom";
-import { Brain, Users, Zap, Globe, Clock, CheckCircle, Star, Calendar } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ee7e
 import Layout from "../layout";
 import { Link } from 'react-router-dom';
 import { Clock } from 'lucide-react';

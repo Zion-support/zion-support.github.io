@@ -3,12 +3,6 @@ import AnalyticsProvider from "./components/AnalyticsProvider";
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
 // import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
 import ErrorFallback from "./components/ErrorFallback";
-<<<<<<< HEAD
-import { Helmet } from "react-helmet-async";
-=======
-
-import MobileNavigation from "./components/MobileNavigation";
->>>>>>> 0cc9739f1846a61570a2c68806f6c98f4253bf23
 import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";
