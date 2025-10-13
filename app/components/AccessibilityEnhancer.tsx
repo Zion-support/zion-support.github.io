@@ -221,11 +221,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
   const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
     const root = document.documentElement;
     
@@ -271,10 +266,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     setSettings(defaultSettings);
     applyAccessibilitySettings(defaultSettings);
   };
-<<<<<<< HEAD
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3b6d
+
   return (
     <>
       {children}
