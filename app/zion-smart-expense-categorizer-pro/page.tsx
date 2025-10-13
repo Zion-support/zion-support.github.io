@@ -26,5 +26,6 @@ export default function Zionsmartexpensecategorizerpro() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};

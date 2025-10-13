@@ -26,5 +26,6 @@ export default function Financialreportingtool() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};

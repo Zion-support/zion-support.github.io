@@ -26,5 +26,6 @@ export default function Inventorymanagementsystem() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};

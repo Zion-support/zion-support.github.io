@@ -435,5 +435,6 @@ export default function AIPoweredDevOpsPage() {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </div>
   );
+};

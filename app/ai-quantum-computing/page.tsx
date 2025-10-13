@@ -436,5 +436,6 @@ export default function AIQuantumComputingPage() {
           </div>
         </section>
       </div>
-    </React.Fragment>
+    </div>
   );
+};

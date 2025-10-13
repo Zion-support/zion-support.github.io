@@ -26,5 +26,6 @@ export default function Zionaidevopsautomationpro() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};

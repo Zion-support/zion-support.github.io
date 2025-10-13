@@ -26,5 +26,6 @@ export default function Projectmanagementtool() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};

@@ -1,217 +1,217 @@
+import React from 'react';
+import { 
+  Sparkles, 
+  ArrowRight, 
+  CheckCircle,
+  Zap,
+  Shield,
+  Users,
+  Target,
+  Brain
+} from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Eye, Box, ArrowRight, Sparkles, CheckCircle, Brain, Globe } from 'lucide-react';
+import { motion } from 'framer-motion';
+import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
 
-const ARVRDevelopmentPage = () => {
-  const benefits = [
-    "Increase engagement by 300%",
-    "Reduce training costs by 70%",
-    "Improve learning retention by 80%",
-    "Enable remote collaboration",
-    "Create memorable experiences",
-    "Future-proof your business"
-  ];
-
+const Page = () => {
   const features = [
     {
-      icon: <Eye className="w-8 h-8" />,
-      title: "AR Development",
-      description: "Create immersive augmented reality experiences for mobile and web platforms."
+      icon: Sparkles,
+      title: "Immersive AR Experiences",
+      description: "Create engaging augmented reality applications that blend digital content with the real world"
     },
     {
-      icon: <Box className="w-8 h-8" />,
+      icon: Zap,
       title: "VR Development",
-      description: "Build virtual reality applications for Oculus, HTC Vive, and other VR headsets."
+      description: "Build virtual reality experiences for training, entertainment, and business applications"
     },
     {
-      icon: <Target className="w-8 h-8" />,
-      title: "Mixed Reality",
-      description: "Develop mixed reality solutions that blend physical and digital worlds."
-    },
-    {
-      icon: <Brain className="w-8 h-8" />,
+      icon: Brain,
       title: "AI Integration",
-      description: "Integrate AI and machine learning for intelligent AR/VR experiences."
+      description: "Integrate artificial intelligence to create intelligent and responsive AR/VR experiences"
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Multi-user Experiences",
-      description: "Create collaborative AR/VR experiences for teams and communities."
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Cross-platform",
-      description: "Deploy across multiple platforms and devices with consistent performance."
+      icon: Shield,
+      title: "Cross-Platform Support",
+      description: "Develop for all major AR/VR platforms including Oculus, HTC Vive, and mobile devices"
     }
   ];
 
   const benefits = [
-    "Immersive user experiences",
-    "Increased engagement",
-    "Real-time 3D rendering",
+    "Enhanced user engagement",
+    "Immersive training solutions",
+    "Real-time 3D visualization",
+    "Interactive user interfaces",
     "Cross-platform compatibility",
     "AI-powered interactions",
     "Scalable solutions"
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
-      <Helmet></Helmet>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <Helmet>
         <title>AR/VR Development - Zion Tech Group</title>
-        <meta name="description" content="Professional AR/VR development services creating immersive experiences for training, entertainment, and business applications across all major platforms." /></meta>
-        <meta name="keywords" content="AR development, VR development, mixed reality, immersive experiences, virtual reality, augmented reality" /></meta>
-        <link rel="canonical" href="https://ziontechgroup.com/ar-vr-development" /></link>
+        <meta name="description" content="Professional AR/VR development services creating immersive experiences for training, entertainment, and business applications across all major platforms." />
+        <meta name="keywords" content="AR development, VR development, mixed reality, immersive experiences, virtual reality, augmented reality" />
+        <link rel="canonical" href="https://ziontechgroup.com/ar-vr-development" />
       </Helmet>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden"></section>
-        <div className="absolute inset-0 overflow-hidden"></div>
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto text-center relative z-10"></div>
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"></div>
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" /></Sparkles>
+        <div className="max-w-7xl mx-auto text-center relative z-10">
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">Immersive Technology</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"></h1>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"></span>
-              AR/VR Development)
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+              AR/VR Development
             </span>
           </h1>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"></p>
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
             Create immersive AR and VR experiences that captivate users and transform your business. 
             From training simulations to entertainment, we bring your vision to life.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16"></div>
-            <Link)
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-            ></Link>
-              Get Started Today)
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
+            >
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
-            <Link)
+            <Link
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-            ></Link>
-              Watch Demo)
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" /></Sparkles>
+            >
+              Watch Demo
+              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
-              Immersive Development Services)
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Our AR/VR Development Services
             </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"></p>
-              Our AR/VR development team creates cutting-edge immersive experiences)
-              using the latest technologies and platforms.
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We create immersive experiences that engage users and drive business results
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <div)
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              ></div>
-                <div)
-                  className="w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300"
-                ></div>
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors"></h3>
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-center leading-relaxed text-sm md:text-base"></p>
-                  {feature.description}
-                </p>
-              </div>
+              <motion.div
+                key={feature.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="group"
+              >
+                <FuturisticCardEnhanced className="h-full">
+                  <div className="p-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                      <feature.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white mb-3">
+                      {feature.title}
+                    </h3>
+                    <p className="text-gray-300 leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </FuturisticCardEnhanced>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="text-center mb-16"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4"></h2>
-              Transform Your Business with Immersive Tech)
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-500/10 to-purple-500/10">
+        <div className="max-w-7xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Why Choose Our AR/VR Solutions?
             </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto"></p>
-              Experience the power of AR/VR technology in your business operations)
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our AR/VR development services deliver exceptional results for your business
             </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20"></div>
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" /></CheckCircle>
-                <span className="text-gray-300 font-medium">{benefit}</span>
-              </div>
+              <motion.div
+                key={benefit}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="flex items-center space-x-3"
+              >
+                <CheckCircle className="w-6 h-6 text-cyan-400 flex-shrink-0" />
+                <span className="text-gray-300 text-lg">{benefit}</span>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"></section>
-        <div className="max-w-4xl mx-auto text-center"></div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"></h2>
-            Ready to Go Immersive?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed"></p>
-            Join the immersive technology revolution. Let's create amazing AR/VR experiences)
-            that engage your audience and drive business growth.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-            <Link)
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-            ></Link>
-              Start Your Project)
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></ArrowRight>
-            </Link>
-            <Link)
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-            ></Link>
-              Schedule Demo)
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" /></Sparkles>
-            </Link>
-          </div>
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              Ready to Create Immersive Experiences?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Let's bring your AR/VR vision to life with cutting-edge technology and expert development
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25"
+              >
+                Start Your Project
+                <Sparkles className="w-5 h-5 ml-2" />
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
     </div>
   );
-
-</Eye>
-</Box>
-</Target>
-</Brain>
-</Users>
-</Globe>
-</meta>
-</meta>
-</link>
-</Sparkles>
-</Sparkles>
-</Sparkles>
-</ArrowRight>
-</ArrowRight>
-</CheckCircle>
 };
 
-export default ARVRDevelopmentPage;
+export default Page;

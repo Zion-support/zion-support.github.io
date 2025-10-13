@@ -26,5 +26,6 @@ export default function Zionsmartinventoryoptimizerpro() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};

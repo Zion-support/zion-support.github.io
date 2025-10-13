@@ -26,5 +26,6 @@ export default function Zionaicontentstudiopro() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};

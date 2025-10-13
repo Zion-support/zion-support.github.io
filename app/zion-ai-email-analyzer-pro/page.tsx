@@ -26,5 +26,6 @@ export default function Zionaiemailanalyzerpro() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};
