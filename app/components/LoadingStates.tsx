@@ -1,54 +1,78 @@
 import React from 'react';
-import { Loader2 } from 'lucide-react';
+import { Loader2, Brain, Shield, Zap, Globe, BarChart3, Cloud, Code, Database, Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react';
 
-export const LoadingPage: React.FC = () => {
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <div className="text-center">
-<<<<<<< HEAD
-        <Loader2 className="w-12 h-12 text-blue-400 animate-spin mx-auto mb-4" />
-        <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
-        <p className="text-gray-400">Please wait while we load the content</p>
-=======
-        <div className="w-16 h-16 mx-auto mb-4">
-          <Loader2 className="w-16 h-16 text-cyan-400 animate-spin" />
+interface LoadingPageProps {
+  message?: string;
+  variant?: 'default' | 'futuristic' | 'minimal';
+}
+
+export const LoadingPage: React.FC<LoadingPageProps> = ({ 
+  message = "Loading...", 
+  variant = "futuristic" 
+}) => {
+  if (variant === 'minimal') {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-slate-900">
+        <div className="flex items-center space-x-3">
+          <Loader2 className="w-6 h-6 animate-spin text-cyan-400" />
+          <span className="text-white text-lg">{message}</span>
         </div>
-        <h2 className="text-xl font-semibold text-white mb-2">Loading...</h2>
-        <p className="text-gray-300">Please wait while we load the content</p>
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-16 h-16 mx-auto mb-6 relative">
+          <div className="absolute inset-0 rounded-full border-4 border-cyan-500/20"></div>
+          <div className="absolute inset-0 rounded-full border-4 border-cyan-500 border-t-transparent animate-spin"></div>
+        </div>
+        <h2 className="text-2xl font-bold text-white mb-2">Loading</h2>
+        <p className="text-gray-300">{message}</p>
       </div>
     </div>
   );
 };
 
-<<<<<<< HEAD
-export default LoadingPage;
-=======
-export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
-  return (
-    <div className="animate-pulse">
-      {Array.from({ length: lines }).map((_, index) => (
-        <div
-          key={index}
-          className="h-4 bg-gray-700 rounded mb-2"
-          style={{ width: `${Math.random() * 40 + 60}%` }}
-        />
-      ))}
-    </div>
-  );
-};
-
-export const Spinner: React.FC<{ size?: 'sm' | 'md' | 'lg' }> = ({ size = 'md' }) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
+  const getServiceIcon = (serviceName: string) => {
+    switch (serviceName.toLowerCase()) {
+      case 'ai':
+      case 'artificial intelligence':
+        return <Brain className="w-8 h-8" />;
+      case 'security':
+      case 'cybersecurity':
+        return <Shield className="w-8 h-8" />;
+      case 'cloud':
+      case 'cloud computing':
+        return <Cloud className="w-8 h-8" />;
+      case 'web':
+      case 'web development':
+        return <Code className="w-8 h-8" />;
+      case 'mobile':
+      case 'mobile development':
+        return <Phone className="w-8 h-8" />;
+      case 'database':
+        return <Database className="w-8 h-8" />;
+      case 'analytics':
+        return <BarChart3 className="w-8 h-8" />;
+      case '5g':
+        return <Zap className="w-8 h-8" />;
+      default:
+        return <Star className="w-8 h-8" />;
+    }
   };
 
   return (
-    <Loader2 className={`${sizeClasses[size]} text-cyan-400 animate-spin`} />
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+      <div className="text-center">
+        <div className="w-20 h-20 mx-auto mb-6 text-cyan-400">
+          {getServiceIcon(service)}
+        </div>
+        <h2 className="text-2xl font-bold text-white mb-2">Loading {service}</h2>
+        <p className="text-gray-300">Please wait while we prepare your content...</p>
+      </div>
+    </div>
   );
 };
-
-export default LoadingPage;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573

@@ -1,87 +1,73 @@
 import React, { useEffect } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 const CoreWebVitals: React.FC = () => {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const reportWebVitals = useCallback((data: WebVitalsData) => {
-    // Send to Google Analytics if available
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'web_vitals', {
-        metric_name: data.name,
-        metric_value: Math.round(data.value),
-        metric_delta: Math.round(data.delta),
-        metric_id: data.id,
-        metric_navigation_type: data.navigationType,
+  useEffect(() => {
+    // Import web-vitals library dynamically
+    import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
+      // Measure Core Web Vitals
+      getCLS((data) => {
+        console.log('CLS:', data);
+        // Send to analytics service
+        sendToAnalytics('CLS', data.value);
       });
-    }
 
-    // Log to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.log('Web Vital:', data);
-    }
-  }, []);
+      getFID((data) => {
+        console.log('FID:', data);
+        sendToAnalytics('FID', data.value);
+      });
 
-  useEffect(() => {
-    // Track Cumulative Layout Shift (CLS)
-    if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
-      try {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
-              const clsValue = (entry as any).value;
-              reportWebVitals({
-                name: 'CLS',
-                value: clsValue,
-                delta: clsValue,
-                id: 'cls-' + Date.now(),
-                navigationType: 'navigate',
-              });
-            }
-          }
-        });
+      getFCP((data) => {
+        console.log('FCP:', data);
+        sendToAnalytics('FCP', data.value);
+      });
 
-        observer.observe({ entryTypes: ['layout-shift'] });
+      getLCP((data) => {
+        console.log('LCP:', data);
+        sendToAnalytics('LCP', data.value);
+      });
 
-        return () => {
-          observer.disconnect();
-        };
-      } catch (error) {
-        console.warn('PerformanceObserver not supported:', error);
-      }
-    }
-  }, [reportWebVitals]);
-=======
-  useEffect(() => {
-    const sendToAnalytics = (data: any) => {
-      // Send to Google Analytics or other analytics service
-      if (typeof window !== 'undefined' && 'gtag' in window) {
-        (window as any).gtag('event', data.name, {
-          event_category: 'Web Vitals',
-          event_label: data.id,
-          value: Math.round(data.name === 'CLS' ? data.value * 1000 : data.value),
-          non_interaction: true,
-        });
-      }
+      getTTFB((data) => {
+        console.log('TTFB:', data);
+        sendToAnalytics('TTFB', data.value);
+      });
+    }).catch((error) => {
+      console.warn('Failed to load web-vitals:', error);
+    });
 
-      // Log to console in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Web Vital:', data.name, data.value);
-      }
+    // Function to send metrics to analytics
+    const sendToAnalytics = (metricName: string, value: number) => {
+      // In a real implementation, you would send this to your analytics service
+      console.log('Web Vital:', metricName, value);
+      
+      // Example: Send to Google Analytics
+      // gtag('event', 'web_vital', {
+      //   metric_name: metricName,
+      //   metric_value: value,
+      //   metric_rating: getMetricRating(metricName, value)
+      // });
     };
 
-    // Track Core Web Vitals
-    onCLS(sendToAnalytics);
-    onINP(sendToAnalytics);
-    onFCP(sendToAnalytics);
-    onLCP(sendToAnalytics);
-    onTTFB(sendToAnalytics);
-  }, []);
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
+    // Function to determine metric rating
+    const getMetricRating = (metricName: string, value: number): string => {
+      const thresholds = {
+        CLS: { good: 0.1, poor: 0.25 },
+        FID: { good: 100, poor: 300 },
+        FCP: { good: 1800, poor: 3000 },
+        LCP: { good: 2500, poor: 4000 },
+        TTFB: { good: 800, poor: 1800 }
+      };
 
-  return null;
+      const threshold = thresholds[metricName as keyof typeof thresholds];
+      if (!threshold) return 'unknown';
+
+      if (value <= threshold.good) return 'good';
+      if (value <= threshold.poor) return 'needs-improvement';
+      return 'poor';
+    };
+
+  }, []);
+
+  return null; // This component doesn't render anything
 };
 
 export default CoreWebVitals;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9c39

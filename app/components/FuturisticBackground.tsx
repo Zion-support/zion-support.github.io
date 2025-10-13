@@ -1,93 +1,33 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 
-<<<<<<< HEAD
-const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
-
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-    };
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-
-    // Simple animated background
-    const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-      
-      // Draw some animated elements
-      const time = Date.now() * 0.001;
-      const centerX = canvas.width / 2;
-      const centerY = canvas.height / 2;
-      
-      // Animated circles
-      for (let i = 0; i < 5; i++) {
-        const angle = time + i * Math.PI / 2.5;
-        const radius = 50 + i * 30;
-        const x = centerX + Math.cos(angle) * radius;
-        const y = centerY + Math.sin(angle) * radius;
-        
-        ctx.beginPath();
-        ctx.arc(x, y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(59, 130, 246, ${0.3 - i * 0.05})`;
-        ctx.fill();
-      }
-      
-      requestAnimationFrame(animate);
-    };
-
-    animate();
-
-    return () => {
-      window.removeEventListener('resize', resizeCanvas);
-    };
-  }, []);
-=======
 interface FuturisticBackgroundProps {
-  children: React.ReactNode;
+  children: ReactNode;
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 
 const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
   return (
     <div className="relative min-h-screen">
-<<<<<<< HEAD
-      <canvas
-        ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none"
-        style={{ zIndex: -1 }}
-      />
-      {children}
-=======
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Gradient orbs */}
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         
-        {/* Radial gradient overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+        {/* Grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px]"></div>
         
-        {/* Floating particles effect */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-cyan-400/20 rounded-full animate-ping"></div>
-          <div className="absolute top-3/4 right-1/4 w-1 h-1 bg-purple-400/30 rounded-full animate-ping animation-delay-1000"></div>
-          <div className="absolute top-1/2 left-3/4 w-1.5 h-1.5 bg-pink-400/25 rounded-full animate-ping animation-delay-2000"></div>
-        </div>
+        {/* Animated lines */}
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-500 to-transparent animate-pulse"></div>
+        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent animate-pulse delay-1000"></div>
+        <div className="absolute top-0 left-0 w-px h-full bg-gradient-to-b from-transparent via-cyan-500 to-transparent animate-pulse delay-500"></div>
+        <div className="absolute top-0 right-0 w-px h-full bg-gradient-to-b from-transparent via-purple-500 to-transparent animate-pulse delay-1500"></div>
       </div>
       
       {/* Content */}
       <div className="relative z-10">
         {children}
       </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
     </div>
   );
 };
