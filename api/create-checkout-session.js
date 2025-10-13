@@ -25,12 +25,7 @@ export default withErrorLogging(async (req, res) => {
   }
 
   try {
-<<<<<<< HEAD
-
     const session = {
-=======
-const session = {
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
       id: 'cs_test_' + Math.random().toString(36).substr(2, 9),
       status: 'pending',
       productId: productId

@@ -17,12 +17,7 @@ export default withErrorLogging(async (req, res) => {
     return;
   }
 
-<<<<<<< HEAD
   const { amount, currency = 'usd' } = req.body;
-
-=======
-const { amount, currency = 'usd' } = req.body;
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
   if (!amount) {
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Amount is required' }));

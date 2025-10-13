@@ -1,31 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-2b79
 'use client';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import SEO from './components/SEO';
-=======
-=======
-=======
 import SEOHead from './components/SEOHead';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
->>>>>>> origin/main
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
->>>>>>> cursor/analyze-improve-and-deploy-application-705a
 import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
@@ -36,8 +13,7 @@ import {
   StarIcon
 } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
-export default function HomePage()  {
+export default function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -48,133 +24,113 @@ export default function HomePage()  {
       "@type": "Organization",
       "name": "Zion Tech Group",
       "url": "https://ziontechgroup.com",
-      "logo": "https://ziontechgroup.com/logo192.png",
-      "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services.",
-      "foundingDate": "2020",
+      "logo": "https://ziontechgroup.com/logo.png",
+      "description": "Advanced AI and IT solutions provider",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "US"
       },
       "contactPoint": {
         "@type": "ContactPoint",
-        "telephone": "+1-302-464-0950",
-        "contactType": "customer service",
-        "email": "kleber@ziontechgroup.com"
-      },
-      "sameAs": [
-        "https://linkedin.com/company/ziontechgroup",
-        "https://twitter.com/ziontechgroup"
-      ]
-=======
-const HomePage: React.FC = () => {
-  const services = [
-    {
-      icon: CpuChipIcon,
-      title: 'AI Solutions',
-      description: 'Advanced artificial intelligence and machine learning solutions to transform your business.',
-      href: '/ai-solutions'
-    },
-    {
-      icon: ShieldCheckIcon,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and infrastructure.',
-      href: '/cybersecurity'
-    },
-    {
-      icon: CloudIcon,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable cloud solutions and infrastructure management for modern businesses.',
-      href: '/cloud-solutions'
-    },
-    {
-      icon: RocketLaunchIcon,
-      title: 'Digital Transformation',
-      description: 'Complete digital transformation strategies to modernize your operations.',
-      href: '/digital-transformation'
->>>>>>> cursor/analyze-improve-and-deploy-application-7aca
+        "telephone": "+1-555-0123",
+        "contactType": "customer service"
+      }
     }
-  ];
-
-  const features = [
-    '24/7 Expert Support',
-    'Cutting-edge Technology',
-    'Scalable Solutions',
-    'Industry Expertise',
-    'Proven Results',
-    'Custom Implementation'
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Projects Completed' },
-    { number: '50+', label: 'Happy Clients' },
-    { number: '99.9%', label: 'Uptime Guarantee' },
-    { number: '24/7', label: 'Support Available' }
-  ];
+  };
 
   return (
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <SEO 
+      <SEOHead 
         title="Zion Tech Group - Advanced AI and IT Solutions"
         description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
         keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        url="/"
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
+        structuredData={structuredData}
       />
-      
-      {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden particles">
-        {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20 animated-grid"></div>
-        </div>
-        
-        {/* Floating Elements with Neon Effects */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full opacity-20 animate-pulse floating"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-20 w-16 h-16 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full opacity-20 animate-pulse floating" style={{animationDelay: '2s'}}></div>
-        <div className="absolute top-1/4 right-1/4 w-24 h-24 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full opacity-15 floating" style={{animationDelay: '3s'}}></div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 gradient-text neon-text">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Advanced AI and IT Solutions for Modern Businesses
-            </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
-              Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
-              cloud infrastructure, and digital transformation services to drive innovation and growth.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
-                to="/contact" 
-                className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glow-effect"
-              >
-                Get Started Today
-                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link 
-                to="/services" 
-                className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 hover-lift hover-glow flex items-center gap-2 glass"
-              >
-                Explore Services
-                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+      <div className="min-h-screen bg-slate-900 text-white">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-20"></div>
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Advanced AI & IT Solutions
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with cutting-edge artificial intelligence, cybersecurity, and cloud infrastructure solutions.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link 
+                  to="/contact" 
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold rounded-lg transition-all duration-300 transform hover:scale-105"
+                >
+                  Get Started
+                  <ArrowRightIcon className="ml-2 h-5 w-5" />
+                </Link>
+                <Link 
+                  to="/services" 
+                  className="inline-flex items-center px-8 py-4 border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white font-bold rounded-lg transition-all duration-300"
+                >
+                  Our Services
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-slate-900 particles">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+        {/* Features Section */}
+        <section className="py-20 bg-slate-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Zion Tech Group?</h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                We deliver innovative solutions that drive digital transformation and business growth.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+              <div className="text-center p-6 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors">
+                <CpuChipIcon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">AI Solutions</h3>
+                <p className="text-gray-300">Advanced artificial intelligence and machine learning solutions.</p>
+              </div>
+              <div className="text-center p-6 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors">
+                <ShieldCheckIcon className="h-12 w-12 text-cyan-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">Cybersecurity</h3>
+                <p className="text-gray-300">Comprehensive security solutions to protect your business.</p>
+              </div>
+              <div className="text-center p-6 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors">
+                <CloudIcon className="h-12 w-12 text-green-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">Cloud Infrastructure</h3>
+                <p className="text-gray-300">Scalable and secure cloud solutions for modern businesses.</p>
+              </div>
+              <div className="text-center p-6 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors">
+                <RocketLaunchIcon className="h-12 w-12 text-yellow-400 mx-auto mb-4" />
+                <h3 className="text-xl font-bold mb-2">Digital Transformation</h3>
+                <p className="text-gray-300">Complete digital transformation strategies and implementation.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 bg-gradient-to-r from-purple-600 to-cyan-600">
+          <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ready to Transform Your Business?</h2>
+            <p className="text-xl mb-8 text-purple-100">
+              Let's discuss how our solutions can help you achieve your goals.
+            </p>
+            <Link 
+              to="/contact" 
+              className="inline-flex items-center px-8 py-4 bg-white text-purple-600 hover:bg-gray-100 font-bold rounded-lg transition-all duration-300 transform hover:scale-105"
+            >
+              Contact Us Today
+              <ArrowRightIcon className="ml-2 h-5 w-5" />
+            </Link>
+          </div>
+        </section>
+      </div>
+    </>
+  );
+}
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 gradient-text">
               Our Core Services
             </h2>
