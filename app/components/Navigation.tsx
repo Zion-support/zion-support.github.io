@@ -11,7 +11,6 @@ import {
   AcademicCapIcon,
   PlayIcon,
   QuestionMarkCircleIcon,
-  ShieldCheckIcon,
   CurrencyDollarIcon,
   CogIcon
 } from '@heroicons/react/24/outline';

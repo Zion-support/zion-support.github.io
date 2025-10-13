@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -16,11 +16,12 @@ import {
 export default function HomePage() {
   return (
     <>
-      <Helmet>
-        <title>Zion Tech Group - Advanced AI and IT Solutions</title>
-        <meta name="description" content="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide." />
-        <meta name="keywords" content="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions" />
-      </Helmet>
+      <SEOHead
+        title="Zion Tech Group - Advanced AI and IT Solutions"
+        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
+        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
+        canonicalUrl="https://ziontechgroup.com"
+      />
       
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
@@ -182,7 +183,7 @@ export default function HomePage() {
             </h2>
             <p className="text-xl text-gray-300 mb-12 leading-relaxed">
               With over 4 years of experience in cutting-edge technology solutions, 
-              we've helped businesses across various industries transform their operations 
+              we&apos;ve helped businesses across various industries transform their operations 
               and achieve unprecedented growth.
             </p>
             
@@ -219,7 +220,7 @@ export default function HomePage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Let's discuss how our technology solutions can drive your business forward
+              Let&apos;s discuss how our technology solutions can drive your business forward
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mb-12">

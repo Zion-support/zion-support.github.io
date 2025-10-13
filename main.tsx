@@ -23,15 +23,17 @@ root.render(
 );
 
 // Register service worker for PWA functionality
-if ("serviceWorker" in navigator) {
+if (typeof window !== 'undefined' && "serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
       .register("/sw.js")
       .then((registration) => {
         // Service worker registered successfully
+        console.log('Service worker registered:', registration);
       })
       .catch((registrationError) => {
         // Service worker registration failed
+        console.log('Service worker registration failed:', registrationError);
       });
   });
 }

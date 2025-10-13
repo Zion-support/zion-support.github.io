@@ -1,6 +1,6 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 import { 
   CpuChipIcon,
   ShieldCheckIcon,
@@ -110,11 +110,12 @@ export default function ServicesPage() {
 
   return (
     <>
-      <Helmet>
-        <title>Our Services - Zion Tech Group</title>
-        <meta name="description" content="Explore our comprehensive AI and IT services including cybersecurity, cloud infrastructure, digital transformation, and more." />
-        <meta name="keywords" content="AI services, cybersecurity, cloud computing, digital transformation, micro SaaS, 5G solutions, IT services" />
-      </Helmet>
+      <SEOHead
+        title="Our Services - Zion Tech Group"
+        description="Explore our comprehensive AI and IT services including cybersecurity, cloud infrastructure, digital transformation, and more."
+        keywords="AI services, cybersecurity, cloud computing, digital transformation, micro SaaS, 5G solutions, IT services"
+        canonicalUrl="https://ziontechgroup.com/services"
+      />
       
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -138,7 +139,7 @@ export default function ServicesPage() {
       <section className="py-20 bg-slate-900">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => {
+            {services.map((service) => {
               const Icon = service.icon;
               return (
                 <div 
@@ -316,7 +317,7 @@ export default function ServicesPage() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-gray-300 mb-12">
-              Let's discuss your project and find the perfect solution for your business needs
+              Let&apos;s discuss your project and find the perfect solution for your business needs
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
