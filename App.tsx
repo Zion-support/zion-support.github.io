@@ -8,7 +8,7 @@ import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
-import ErrorBoundary from "./app/components/ErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedPerformanceOptimizer from "./app/components/EnhancedPerformanceOptimizer";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
@@ -16,10 +16,12 @@ import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
+import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -201,9 +203,18 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 
 // Main App Component
 function App() {
+  // Initialize performance optimizations
+  usePerformanceOptimization({
+    enableLazyLoading: true,
+    enablePreloading: true,
+    enableImageOptimization: true,
+    enableCodeSplitting: true,
+    enableCaching: true,
+  });
+
   return (
     <ErrorHandler>
-      <ErrorBoundary>
+      <EnhancedErrorBoundary>
         <HelmetProvider>
           <AccessibilityEnhancer>
             <Router>
@@ -455,6 +466,7 @@ function App() {
                 <AnalyticsProvider>
                   <div>
                     <PerformanceMonitor />
+                    <WebVitalsTracker />
                     <PerformanceEnhancer />
                     <SEOOptimizer />
                     <EnhancedSEO />
@@ -464,7 +476,7 @@ function App() {
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </ErrorHandler>
   );
 }
