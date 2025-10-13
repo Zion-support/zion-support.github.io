@@ -3,7 +3,7 @@ import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, B
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function Services() {
+export default function ServicesPage() {
   const services = [
     {
       title: "AI-Powered Business Intelligence Pro",
@@ -340,7 +340,6 @@ export default function Services() {
     }
   ];
 
-export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>
@@ -381,6 +380,4 @@ export default function ServicesPage() {
       </div>
     </div>
   );
-}
-
 }
