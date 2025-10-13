@@ -1,8 +1,14 @@
 export interface AccessibilityConfig {
   enabled: boolean;
+
   announceChanges: boolean;
   highContrast: boolean;
   reducedMotion: boolean;
+
+  highContrast: boolean;
+  fontSize: number;
+  screenReader: boolean;
+
 }
 
 export class AccessibilityUtils {
@@ -18,6 +24,7 @@ export class AccessibilityUtils {
     };
   }
 
+
   announceToScreenReader(message: string) {
     if (this.config.enabled && this.config.announceChanges) {
       const announcement = document.createElement('div');
@@ -30,6 +37,11 @@ export class AccessibilityUtils {
       setTimeout(() => {
         document.body.removeChild(announcement);
       }, 1000);
+
+  init(): void {
+    if (this.config.enabled) {
+      console.log('Accessibility utils initialized');
+
     }
   }
 

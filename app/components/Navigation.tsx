@@ -1,15 +1,12 @@
 import React, { useState, useCallback } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
-
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
-
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
   const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-
   const navigationItems = [
     {
       name: 'Home',
@@ -47,15 +44,12 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
       icon: <Globe className="w-4 h-4" />
     }
   ];
-
   const isActive = (path: string) => {
     return location.pathname === path;
   };
-
   const toggleMenu = useCallback(() => {
     setIsOpen(prev => !prev);
   }, []);
-
   return (
     <nav className="bg-slate-900/90 backdrop-blur-md border-b border-white/10 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -67,7 +61,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             </div>
             <span className="text-xl font-bold text-white">Zion Tech Group</span>
           </Link>
-
           {/* Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline space-x-4">
@@ -87,7 +80,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
               ))}
             </div>
           </div>
-
           {/* Mobile menu button */}
           <div className="md:hidden">
             <button
@@ -99,7 +91,6 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
             </button>
           </div>
         </div>
-
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
@@ -126,5 +117,4 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
     </nav>
   );
 };
-
 export default Navigation;

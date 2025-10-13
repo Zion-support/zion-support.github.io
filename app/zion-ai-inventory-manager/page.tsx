@@ -2,6 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 
+
 export default function PageTsxPage() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -29,6 +30,8 @@ export default function PageTsxPage() {
       
 
 
+
+
 export default function ZionAiInventoryManager() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900">
@@ -42,7 +45,7 @@ export default function ZionAiInventoryManager() {
             Zion AI Inventory Manager
           </h1>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Optimize your inventory with AI-powered demand forecasting, automated reordering, 
+            Optimize your inventory with AI-powered demand forecasting, automated reordering,
             and intelligent stock management.
           </p>
           <div className="max-w-4xl mx-auto text-center">
@@ -50,7 +53,7 @@ export default function ZionAiInventoryManager() {
               Ready to Transform Your Inventory Management?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already using Zion AI Inventory Manager to optimize their supply chain. 
+              Join thousands of businesses already using Zion AI Inventory Manager to optimize their supply chain.
               Start your free trial today and see the difference AI can make.
             </p>
             <div className="flex justify-center space-x-4">
@@ -62,6 +65,9 @@ export default function ZionAiInventoryManager() {
               </button>
             </div>
           </div>
+
+
+
 
 
         </div>
