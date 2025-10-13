@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { X, Brain, Shield, Zap, Globe, Menu } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -8,17 +6,7 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
-  const navigationItems = [
-    { name: 'Home', path: '/', icon: <Globe className="w-5 h-5" /> },
-    { name: 'About', path: '/about', icon: <Brain className="w-5 h-5" /> },
-    { name: 'Services', path: '/services', icon: <Shield className="w-5 h-5" /> },
-    { name: 'AI Services', path: '/ai-services', icon: <Brain className="w-5 h-5" /> },
-    { name: 'Micro SAAS', path: '/micro-saas', icon: <Zap className="w-5 h-5" /> },
-    { name: '5G Solutions', path: '/5g-solutions', icon: <Zap className="w-5 h-5" /> },
-    { name: 'Blog', path: '/blog', icon: <Globe className="w-5 h-5" /> },
-    { name: 'Contact', path: '/contact', icon: <Globe className="w-5 h-5" /> }
-  ];
-
+  
   if (!isOpen) return null;
 
   return (

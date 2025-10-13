@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Shield, 
   Brain, 
@@ -43,45 +42,7 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAICybersecuritySuiteProPage = () => {
-  const features = [
-    {
-      title: "AI-Powered Threat Detection",
-      description: "Advanced machine learning algorithms detect and prevent cyber threats in real-time with 99.9% accuracy",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Zero-Trust Security Architecture",
-      description: "Implement comprehensive zero-trust security model with continuous verification and least-privilege access",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Automated Incident Response",
-      description: "AI-driven incident response system that automatically contains, analyzes, and remediates security breaches",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Advanced Endpoint Protection",
-      description: "Comprehensive endpoint security with behavioral analysis, ransomware protection, and device management",
-      icon: <Smartphone className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Network Security Monitoring",
-      description: "24/7 network monitoring with AI-powered anomaly detection and automated threat hunting",
-      icon: <Network className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Compliance Management",
-      description: "Automated compliance monitoring for GDPR, HIPAA, SOX, and other regulatory requirements",
-      icon: <FileShield className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
+  
   const pricingPlans = [
     {
       name: "Essential",
@@ -143,111 +104,9 @@ const ZionAICybersecuritySuiteProPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Robert Chen",
-      company: "Financial Services Inc.",
-      role: "CISO",
-      content: "Zion AI Cybersecurity Suite Pro has been a game-changer for our security posture. The AI threat detection caught several sophisticated attacks that traditional systems missed.",
-      rating: 5,
-      avatar: "RC"
-    },
-    {
-      name: "Maria Rodriguez",
-      company: "Healthcare Group",
-      role: "IT Security Director",
-      content: "The automated incident response saved us hours of manual work during a recent breach. The system contained the threat and provided detailed forensics automatically.",
-      rating: 5,
-      avatar: "MR"
-    },
-    {
-      name: "James Thompson",
-      company: "E-commerce Platform",
-      role: "Security Manager",
-      content: "The compliance management features helped us pass our SOC 2 audit with flying colors. The automated reporting and monitoring made everything so much easier.",
-      rating: 5,
-      avatar: "JT"
-    }
-  ];
-
-  const securityModules = [
-    {
-      title: "Threat Intelligence",
-      description: "Real-time threat intelligence feeds and AI-powered analysis of global security threats and attack patterns",
-      icon: <Eye className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Vulnerability Management",
-      description: "Automated vulnerability scanning, assessment, and remediation with AI-powered prioritization",
-      icon: <Bug className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Identity & Access Management",
-      description: "Advanced IAM with multi-factor authentication, single sign-on, and privileged access management",
-      icon: <Key className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Data Loss Prevention",
-      description: "AI-powered data classification, monitoring, and protection to prevent sensitive data breaches",
-      icon: <FileShield className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Security Analytics",
-      description: "Advanced security analytics with machine learning for threat hunting and forensic analysis",
-      icon: <BarChart3 className="w-6 h-6" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Cloud Security",
-      description: "Comprehensive cloud security monitoring and protection for AWS, Azure, and Google Cloud",
-      icon: <Cloud className="w-6 h-6" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
-  const threatTypes = [
-    {
-      title: "Ransomware Protection",
-      description: "Advanced behavioral analysis and AI-powered detection to prevent ransomware attacks before they encrypt your data",
-      icon: <Lock className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Phishing Detection",
-      description: "AI-powered email security that identifies and blocks sophisticated phishing attempts with 99.8% accuracy",
-      icon: <AlertTriangle className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Malware Prevention",
-      description: "Next-generation antivirus with machine learning to detect and prevent zero-day malware and advanced persistent threats",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Insider Threat Detection",
-      description: "Behavioral analytics and AI monitoring to detect and prevent insider threats and data exfiltration",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "DDoS Mitigation",
-      description: "AI-powered DDoS protection that automatically detects and mitigates distributed denial-of-service attacks",
-      icon: <Network className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Supply Chain Security",
-      description: "Comprehensive monitoring and analysis of third-party vendors and supply chain security risks",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO

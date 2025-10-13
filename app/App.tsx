@@ -50,7 +50,9 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
-          <PerformanceMonitor />
+          <PerformanceMonitor showDetails={false}>
+            <div>Performance monitoring active</div>
+          </PerformanceMonitor>
           <AccessibilityEnhancer>
             <CriticalResourcePreloader />
             <CacheManager />

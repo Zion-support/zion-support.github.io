@@ -1,3 +1,4 @@
+import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
@@ -19,7 +20,35 @@ import {
   TrendingDown
 } from "lucide-react";
 
-export default function AiAnalytics() {
+export default function page() {
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2"
+  ];
+  const analyticsStats = [
+    { label: "Data Points Processed", value: "2.5M+", icon: BarChart3 },
+    { label: "Real-time Updates", value: "99.9%", icon: Zap },
+    { label: "Accuracy Rate", value: "98.5%", icon: CheckCircle },
+    { label: "Processing Speed", value: "50ms", icon: TrendingUp }
+  ];
+
+  const testimonials = [
+    {
+      name: "Sarah Johnson",
+      role: "Data Scientist",
+      company: "TechCorp",
+      content: "Zion's AI analytics platform has revolutionized our data processing capabilities.",
+      rating: 5
+    },
+    {
+      name: "Michael Chen",
+      role: "CTO",
+      company: "DataFlow Inc",
+      content: "The real-time insights and predictive analytics are game-changing for our business.",
+      rating: 5
+    }
+  ];
+
   const features = [
     {
       title: "Real-time Data Processing",
@@ -59,13 +88,7 @@ export default function AiAnalytics() {
     }
   ];
 
-  const analyticsStats = [
-    { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
-    { number: "85%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
-    { number: "60%", label: "Cost Reduction", icon: <TrendingDown className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Monitoring", icon: <Monitor className="w-6 h-6" /> }
-  ];
-
+  
   const pricingPlans = [
     {
       name: "Starter",
@@ -118,33 +141,7 @@ export default function AiAnalytics() {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "TechStart Inc.",
-      role: "CEO",
-      content: "Zion AI Analytics has revolutionized our decision-making process. The predictive insights helped us identify market opportunities before our competitors.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "E-commerce Solutions",
-      role: "CTO",
-      content: "The real-time analytics and automated insights have improved our operational efficiency by 40%. We can now make data-driven decisions instantly.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Digital Marketing Agency",
-      role: "Operations Director",
-      content: "The AI-powered recommendations have been game-changing. Our campaign performance improved by 60% thanks to the intelligent insights.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
+  
   return (
     <>
       <Helmet>

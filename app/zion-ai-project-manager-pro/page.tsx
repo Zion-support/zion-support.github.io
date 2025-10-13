@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Calendar, 
   Brain, 
@@ -38,45 +37,7 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAIProjectManagerProPage = () => {
-  const features = [
-    {
-      title: "AI-Powered Task Management",
-      description: "Intelligent task prioritization, automatic scheduling, and smart resource allocation based on team capacity and project requirements",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast project completion dates, identify potential bottlenecks, and predict resource needs with advanced AI algorithms",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Smart Resource Allocation",
-      description: "Automatically assign tasks to the right team members based on skills, availability, and workload optimization",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Real-time Collaboration",
-      description: "Seamless team communication, file sharing, and collaborative workspace with AI-powered meeting summaries",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate comprehensive project reports, status updates, and stakeholder communications automatically",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Risk Management",
-      description: "AI-powered risk assessment, early warning systems, and automated mitigation strategies",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
+  
   const pricingPlans = [
     {
       name: "Starter",
@@ -136,111 +97,9 @@ const ZionAIProjectManagerProPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "David Kim",
-      company: "TechStart Solutions",
-      role: "Project Director",
-      content: "Zion AI Project Manager Pro has transformed how we manage projects. The AI predictions are incredibly accurate, and we've improved delivery times by 40%.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Martinez",
-      company: "Creative Agency Co.",
-      role: "Operations Manager",
-      content: "The smart resource allocation feature is a game-changer. It automatically assigns tasks to the right people, saving us hours of manual planning every week.",
-      rating: 5,
-      avatar: "LM"
-    },
-    {
-      name: "James Wilson",
-      company: "Enterprise Corp",
-      role: "VP of Engineering",
-      content: "The predictive analytics help us identify risks before they become problems. We've reduced project overruns by 60% since implementing this tool.",
-      rating: 5,
-      avatar: "JW"
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Software Development",
-      description: "Manage agile sprints, code reviews, and deployment pipelines with AI-powered sprint planning and bug tracking",
-      icon: <GitBranch className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Marketing Campaigns",
-      description: "Plan and execute multi-channel marketing campaigns with AI-optimized content scheduling and performance tracking",
-      icon: <Target className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Event Planning",
-      description: "Coordinate complex events with AI-powered vendor management, timeline optimization, and resource allocation",
-      icon: <Calendar className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Construction Projects",
-      description: "Manage construction timelines, resource allocation, and compliance tracking with industry-specific AI models",
-      icon: <Workflow className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Research & Development",
-      description: "Track R&D milestones, manage experiments, and optimize research workflows with AI-powered insights",
-      icon: <Lightbulb className="w-6 h-6" />,
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      title: "Client Services",
-      description: "Deliver exceptional client projects with AI-optimized resource planning and automated progress reporting",
-      icon: <Users className="w-6 h-6" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
-  const aiCapabilities = [
-    {
-      title: "Intelligent Task Prioritization",
-      description: "AI analyzes task dependencies, deadlines, and team capacity to automatically prioritize tasks for optimal project flow",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Predictive Timeline Management",
-      description: "Machine learning algorithms predict project completion dates and identify potential delays before they occur",
-      icon: <Timer className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Smart Resource Optimization",
-      description: "AI automatically assigns tasks to the most suitable team members based on skills, availability, and workload",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Automated Risk Assessment",
-      description: "Continuous monitoring and analysis of project risks with AI-powered early warning systems and mitigation strategies",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Intelligent Reporting",
-      description: "Generate comprehensive project reports, stakeholder updates, and performance analytics automatically",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Workflow Automation",
-      description: "Automate repetitive tasks, approvals, and notifications to streamline project management processes",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO

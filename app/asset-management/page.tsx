@@ -1,6 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   Package, 
   BarChart3, 
@@ -17,42 +14,8 @@ import {
 } from 'lucide-react';
 
 const AssetManagementPage = () => {
-  const features = [
-    {
-      title: "IT Asset Tracking",
-      description: "Comprehensive tracking and management of all IT assets from procurement to disposal",
-      icon: <Package className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Asset Lifecycle Management",
-      description: "Complete lifecycle management from planning and procurement to retirement",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Cost Optimization",
-      description: "Reduce costs by optimizing asset utilization and identifying savings opportunities",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Compliance & Security",
-      description: "Ensure compliance with regulations and maintain security across all assets",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  const benefits = [
-    "Reduce asset costs by 30%",
-    "Improve asset utilization by 50%",
-    "Ensure compliance automatically",
-    "Eliminate asset loss and theft",
-    "Optimize procurement decisions",
-    "Streamline asset operations"
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

@@ -1,32 +1,18 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Cpu, Brain, Zap, Settings, Sparkles, Users, Award, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Monitor, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award as AwardIcon, Rocket, Wifi, Battery, Camera, Headphones, Mic, Video, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import SEOOptimizer from "../components/SEOOptimizer";
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../../components/SEOOptimizer";
+import { Helmet } from "react-helmet-async";
 
-export default function AiPoweredDevops() {
+export default function page() {
+  const testimonials = [
+    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5 }
+  ];
   const features = [
-    "AI-powered automated testing and quality assurance",
-    "Intelligent deployment orchestration and rollback",
-    "Predictive infrastructure scaling and optimization",
-    "Automated security vulnerability detection and patching",
-    "AI-driven performance monitoring and alerting",
-    "Intelligent log analysis and anomaly detection",
-    "Automated code review and optimization suggestions",
-    "Smart resource allocation and cost optimization",
-    "AI-powered incident response and resolution",
-    "Automated compliance checking and reporting",
-    "Intelligent capacity planning and forecasting",
-    "AI-driven continuous integration and deployment"
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
   ];
-
-  const benefits = [
-    "Reduce deployment time by 80%",
-    "Eliminate 95% of manual DevOps tasks",
-    "Improve system reliability by 99.9%",
-    "Cut infrastructure costs by 40%"
-  ];
-
+  
+  
   const pricingPlans = [
     {
       name: "Startup",
@@ -86,60 +72,8 @@ export default function AiPoweredDevops() {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Jennifer Martinez",
-      company: "Tech Startup",
-      role: "CTO",
-      content: "AI-powered DevOps has transformed our development process. We've reduced deployment time by 85% and our system uptime is now 99.9%. The AI predictions are incredibly accurate.",
-      rating: 5,
-      avatar: "JM"
-    },
-    {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Head of Engineering",
-      content: "The automated testing and deployment features are game-changing. We can now deploy multiple times per day with confidence, and our bug rate has dropped by 90%.",
-      rating: 5,
-      avatar: "DK"
-    },
-    {
-      name: "Lisa Thompson",
-      company: "Financial Services",
-      role: "DevOps Director",
-      content: "The AI-driven security monitoring and compliance checking have been invaluable. We've achieved 100% compliance and our security incidents have dropped to zero.",
-      rating: 5,
-      avatar: "LT"
-    }
-  ];
-
-  const capabilities = [
-    {
-      title: "Automated Testing",
-      description: "AI generates and executes comprehensive test suites automatically",
-      icon: <CheckCircle className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Smart Deployment",
-      description: "Intelligent deployment strategies with automatic rollback capabilities",
-      icon: <Rocket className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Predictive Scaling",
-      description: "AI predicts traffic patterns and scales infrastructure proactively",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Intelligent Monitoring",
-      description: "AI-powered monitoring with anomaly detection and alerting",
-      icon: <Eye className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
+  
+  
   return (
     <>
       <Helmet>

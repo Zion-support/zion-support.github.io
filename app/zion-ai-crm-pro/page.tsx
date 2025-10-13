@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   Users, 
   ArrowRight,
@@ -229,51 +227,8 @@ const ZionAICRMProPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Michael Chen',
-      company: 'E-commerce Solutions',
-      role: 'CTO',
-      content: 'The AI CRM system is incredible. Our sales team productivity increased by 60% with automated lead scoring.',
-      rating: 5,
-      avatar: 'MC',
-      results: '60% increase in sales productivity'
-    },
-    {
-      name: 'Sarah Johnson',
-      company: 'TechStart Inc.',
-      role: 'Sales Director',
-      content: 'The predictive analytics helped us identify high-value prospects and increased our conversion rate by 45%.',
-      rating: 5,
-      avatar: 'SJ',
-      results: '45% increase in conversion rate'
-    },
-    {
-      name: 'David Rodriguez',
-      company: 'Marketing Agency',
-      role: 'CEO',
-      content: 'Automated follow-ups saved us 20 hours per week. The AI knows exactly when to reach out to prospects.',
-      rating: 5,
-      avatar: 'DR',
-      results: '20 hours saved per week'
-    }
-  ];
-
-  const integrations = [
-    { name: 'Gmail', logo: 'GM', category: 'Email' },
-    { name: 'Outlook', logo: 'OL', category: 'Email' },
-    { name: 'Slack', logo: 'SL', category: 'Communication' },
-    { name: 'Microsoft Teams', logo: 'MT', category: 'Communication' },
-    { name: 'Zoom', logo: 'ZM', category: 'Video' },
-    { name: 'Calendly', logo: 'CL', category: 'Scheduling' },
-    { name: 'Stripe', logo: 'ST', category: 'Payments' },
-    { name: 'PayPal', logo: 'PP', category: 'Payments' },
-    { name: 'HubSpot', logo: 'HS', category: 'Marketing' },
-    { name: 'Mailchimp', logo: 'MC', category: 'Email Marketing' },
-    { name: 'Zapier', logo: 'ZP', category: 'Automation' },
-    { name: 'Salesforce', logo: 'SF', category: 'CRM' }
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

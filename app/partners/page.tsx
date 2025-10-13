@@ -1,77 +1,8 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
 
 export default function Partners() {
-  const partners = [
-    {
-      name: "Microsoft",
-      logo: "/images/partners/microsoft.png",
-      description: "Leading cloud and productivity solutions",
-      category: "Technology Partner",
-      tier: "Platinum"
-    },
-    {
-      name: "Amazon Web Services",
-      logo: "/images/partners/aws.png",
-      description: "Comprehensive cloud computing platform",
-      category: "Cloud Partner",
-      tier: "Platinum"
-    },
-    {
-      name: "Google Cloud",
-      logo: "/images/partners/google-cloud.png",
-      description: "AI and machine learning cloud services",
-      category: "AI Partner",
-      tier: "Gold"
-    },
-    {
-      name: "Salesforce",
-      logo: "/images/partners/salesforce.png",
-      description: "Customer relationship management platform",
-      category: "CRM Partner",
-      tier: "Gold"
-    },
-    {
-      name: "IBM",
-      logo: "/images/partners/ibm.png",
-      description: "Enterprise AI and hybrid cloud solutions",
-      category: "Enterprise Partner",
-      tier: "Silver"
-    },
-    {
-      name: "Oracle",
-      logo: "/images/partners/oracle.png",
-      description: "Database and enterprise software solutions",
-      category: "Database Partner",
-      tier: "Silver"
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Joint Marketing",
-      description: "Collaborative marketing campaigns and co-branded content"
-    },
-    {
-      icon: <Globe className="w-8 h-8" />,
-      title: "Global Reach",
-      description: "Access to our worldwide network of clients and opportunities"
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Technical Support",
-      description: "Dedicated technical resources and training programs"
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Innovation Labs",
-      description: "Joint innovation initiatives and R&D projects"
-    }
-  ];
-
+  
+  
   const tiers = [
     {
       name: "Platinum",

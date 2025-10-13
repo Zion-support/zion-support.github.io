@@ -1,7 +1,4 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Star, Globe, Shield, CheckCircle, TrendingUp, Zap, BarChart3, Clock } from 'lucide-react';
+import React from "react";
 import EnhancedSEO from '../components/EnhancedSEO';
 
 export default function CaseStudies() {
@@ -117,13 +114,7 @@ export default function CaseStudies() {
     }
   ];
 
-  const stats = [
-    { number: "50+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
-    { number: "95%", label: "Client Satisfaction", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "40%", label: "Average Cost Reduction", icon: <BarChart3 className="w-6 h-6" /> },
-    { number: "60%", label: "Average Efficiency Gain", icon: <Zap className="w-6 h-6" /> }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO

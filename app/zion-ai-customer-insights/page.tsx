@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
   Users, 
@@ -86,86 +85,11 @@ import {
   Zap,
   Clock
 } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 
 const ZionAICustomerInsightsPage = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');
 
-  const features = [
-    {
-      title: 'Behavioral Analytics',
-      description: 'Track customer behavior patterns and engagement across all touchpoints',
-      icon: <Eye className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Churn Prediction',
-      description: 'Predict customer churn with machine learning models and early warning systems',
-      icon: <TrendingDown className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Personalized Recommendations',
-      description: 'Generate AI-powered product and content recommendations for each customer',
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Customer Segmentation',
-      description: 'Automatically segment customers based on behavior, value, and preferences',
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Real-time Insights',
-      description: 'Get instant insights and alerts about customer behavior and trends',
-      icon: <Zap className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'ROI Tracking',
-      description: 'Measure the return on investment of your customer engagement strategies',
-      icon: <DollarSign className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Sentiment Analysis',
-      description: 'Analyze customer sentiment from reviews, feedback, and social media',
-      icon: <Heart className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Lifetime Value Prediction',
-      description: 'Predict customer lifetime value and optimize acquisition strategies',
-      icon: <TrendingUp className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Cross-channel Analytics',
-      description: 'Unify customer data from all channels for complete customer view',
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Automated Reports',
-      description: 'Generate comprehensive customer insight reports automatically',
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'API Integration',
-      description: 'Integrate with your existing CRM, marketing, and analytics tools',
-      icon: <Settings className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Priority Support',
-      description: '24/7 priority support with dedicated customer success manager',
-      icon: <Headphones className="w-6 h-6" />,
-      included: true
-    }
-  ];
-
+  
   const pricingPlans = [
     {
       name: 'Starter',
@@ -250,40 +174,8 @@ const ZionAICustomerInsightsPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Jennifer Adams',
-      company: 'E-commerce Platform',
-      role: 'Head of Marketing',
-      content: 'Zion AI Customer Insights has transformed our understanding of customer behavior. We\'ve increased retention by 40% and revenue by 25%.',
-      rating: 5,
-      avatar: 'JA'
-    },
-    {
-      name: 'Robert Kim',
-      company: 'SaaS Startup',
-      role: 'CEO',
-      content: 'The churn prediction feature is incredibly accurate. We can now intervene before customers leave and save thousands in revenue.',
-      rating: 5,
-      avatar: 'RK'
-    },
-    {
-      name: 'Maria Garcia',
-      company: 'Retail Chain',
-      role: 'Customer Experience Director',
-      content: 'The personalized recommendations have increased our average order value by 35%. Our customers love the relevant suggestions.',
-      rating: 5,
-      avatar: 'MG'
-    }
-  ];
-
-  const stats = [
-    { number: '40%', label: 'Average Retention Increase', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '95%', label: 'Prediction Accuracy', icon: <Target className="w-6 h-6" /> },
-    { number: '25%', label: 'Revenue Growth', icon: <DollarSign className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Headphones className="w-6 h-6" /> }
-  ];
-
+  
+  
   return (
     <>
       <Helmet>

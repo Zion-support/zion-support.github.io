@@ -1,6 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
 import { 
   Mail, 
   TrendingUp, 
@@ -18,39 +15,7 @@ import {
 } from 'lucide-react';
 
 const AIPoweredEmailAnalyzerPage = () => {
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Sentiment Analysis",
-      description: "Advanced machine learning algorithms analyze email tone, sentiment, and emotional context to help you craft perfect responses."
-    },
-    {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
-      title: "Smart Response Suggestions",
-      description: "Get intelligent, context-aware response suggestions that match your communication style and business objectives."
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Email Performance Analytics",
-      description: "Track open rates, response times, and engagement metrics with detailed analytics and actionable insights."
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: "Security & Compliance",
-      description: "Enterprise-grade security with GDPR compliance, data encryption, and secure cloud storage for all email data."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: "Real-time Processing",
-      description: "Instant analysis and suggestions as you type, with lightning-fast processing powered by advanced AI models."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-      title: "Team Collaboration",
-      description: "Share insights across teams, set up approval workflows, and maintain consistent communication standards."
-    }
-  ];
-
+  
   const pricingPlans = [
     {
       name: "Starter",
@@ -101,13 +66,7 @@ const AIPoweredEmailAnalyzerPage = () => {
     }
   ];
 
-  const stats = [
-    { number: "95%", label: "Accuracy Rate" },
-    { number: "2.5x", label: "Faster Response Time" },
-    { number: "40%", label: "Increase in Engagement" },
-    { number: "10k+", label: "Happy Customers" }
-  ];
-
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

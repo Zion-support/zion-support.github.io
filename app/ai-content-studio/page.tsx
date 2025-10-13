@@ -1,14 +1,3 @@
-import { Link } from "react-router-dom";
-import { Sparkles, PenTool, Video, Image, FileText, CheckCircle, ArrowRight, Star, Users, Award, Clock, Globe, Smartphone, Mail } from "lucide-react";
-import EnhancedSEO from "../components/EnhancedSEO";
-import StructuredData from "../components/StructuredData";
-import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
-import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
-import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
-import ResponsiveContainer from "../components/ResponsiveContainer";
-import EnhancedAccessibility from "../components/EnhancedAccessibility";
-import PerformanceOptimizer from "../components/PerformanceOptimizer";
 
 const AIContentStudioZionTechGroup = () => {
   const structuredData = {

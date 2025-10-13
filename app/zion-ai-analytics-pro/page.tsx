@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   BarChart3, 
   ArrowRight,
@@ -229,51 +227,8 @@ const ZionAIAnalyticsProPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      company: 'TechStart Inc.',
-      role: 'CEO',
-      content: 'Zion AI Analytics Pro transformed our data insights. We increased our conversion rate by 40% in just 3 months.',
-      rating: 5,
-      avatar: 'SJ',
-      results: '40% increase in conversion rate'
-    },
-    {
-      name: 'Michael Chen',
-      company: 'E-commerce Solutions',
-      role: 'CTO',
-      content: 'The predictive analytics feature helped us optimize our inventory and reduce costs by 25%.',
-      rating: 5,
-      avatar: 'MC',
-      results: '25% reduction in inventory costs'
-    },
-    {
-      name: 'Emily Rodriguez',
-      company: 'Digital Marketing Agency',
-      role: 'Operations Director',
-      content: 'The automated reporting saves us 15 hours per week. The AI insights are incredibly accurate.',
-      rating: 5,
-      avatar: 'ER',
-      results: '15 hours saved per week'
-    }
-  ];
-
-  const integrations = [
-    { name: 'Salesforce', logo: 'SF', category: 'CRM' },
-    { name: 'HubSpot', logo: 'HS', category: 'Marketing' },
-    { name: 'Google Analytics', logo: 'GA', category: 'Web Analytics' },
-    { name: 'Shopify', logo: 'SH', category: 'E-commerce' },
-    { name: 'Stripe', logo: 'ST', category: 'Payments' },
-    { name: 'Slack', logo: 'SL', category: 'Communication' },
-    { name: 'Microsoft Teams', logo: 'MT', category: 'Communication' },
-    { name: 'Zapier', logo: 'ZP', category: 'Automation' },
-    { name: 'MySQL', logo: 'MY', category: 'Database' },
-    { name: 'PostgreSQL', logo: 'PG', category: 'Database' },
-    { name: 'MongoDB', logo: 'MG', category: 'Database' },
-    { name: 'AWS', logo: 'AW', category: 'Cloud' }
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

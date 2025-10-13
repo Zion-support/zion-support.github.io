@@ -14,6 +14,7 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import Breadcrumb from "./app/components/Breadcrumb";
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
+import ErrorBoundary from "./app/components/ErrorBoundary";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -127,7 +128,9 @@ function App() {
         <AnalyticsProvider>
           <EnhancedAnalytics>
             <PerformanceOptimizer>
-              <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'} />
+              <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
+                <div>Performance monitoring active</div>
+              </PerformanceMonitor>
               <WebVitalsTracker>
                 <AccessibilityEnhancer>
                   <Router>

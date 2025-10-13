@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Code, Globe, Smartphone, Database, Shield, Zap, Users, Clock, DollarSign } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const WebDevelopmentPage = () => {
@@ -55,29 +53,7 @@ const WebDevelopmentPage = () => {
     }
   ];
 
-  const process = [
-    {
-      step: '01',
-      title: 'Discovery & Planning',
-      description: 'We analyze your requirements and create a detailed project plan.'
-    },
-    {
-      step: '02',
-      title: 'Design & Prototyping',
-      description: 'We create wireframes and prototypes to visualize your project.'
-    },
-    {
-      step: '03',
-      title: 'Development',
-      description: 'Our team builds your application using the latest technologies.'
-    },
-    {
-      step: '04',
-      title: 'Testing & Launch',
-      description: 'We thoroughly test your application and deploy it to production.'
-    }
-  ];
-
+  
   return (
     <div className="min-h-screen">
       <EnhancedSEO 

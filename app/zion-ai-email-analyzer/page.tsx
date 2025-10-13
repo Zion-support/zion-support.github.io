@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
   Mail, 
@@ -86,86 +85,11 @@ import {
   BarChart3,
   TrendingUp
 } from 'lucide-react';
-import { Helmet } from 'react-helmet-async';
 
 const ZionAIEmailAnalyzerPage = () => {
   const [selectedPlan, setSelectedPlan] = useState('pro');
 
-  const features = [
-    {
-      title: 'Sentiment Analysis',
-      description: 'Analyze email sentiment and emotional tone to understand customer mood and satisfaction',
-      icon: <Heart className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Spam Detection',
-      description: 'Advanced AI-powered spam detection with 99.9% accuracy to protect your inbox',
-      icon: <Shield className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Auto Response',
-      description: 'Generate intelligent email responses based on content analysis and context',
-      icon: <MessageSquare className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Email Classification',
-      description: 'Automatically categorize emails by type, priority, and department',
-      icon: <Target className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Priority Scoring',
-      description: 'AI-powered priority scoring to help you focus on the most important emails',
-      icon: <Star className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Team Collaboration',
-      description: 'Share insights and collaborate with team members on email analysis',
-      icon: <Users className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Language Detection',
-      description: 'Automatically detect email language and provide translation suggestions',
-      icon: <Globe className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Attachment Analysis',
-      description: 'Analyze email attachments for security threats and content relevance',
-      icon: <FileText className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Email Threading',
-      description: 'Intelligently group related emails into conversation threads',
-      icon: <MessageSquare className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Analytics Dashboard',
-      description: 'Comprehensive analytics on email patterns, response times, and engagement',
-      icon: <BarChart3 className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'API Integration',
-      description: 'Integrate with Gmail, Outlook, and other email providers',
-      icon: <Settings className="w-6 h-6" />,
-      included: true
-    },
-    {
-      title: 'Priority Support',
-      description: '24/7 priority support with dedicated account manager',
-      icon: <Headphones className="w-6 h-6" />,
-      included: true
-    }
-  ];
-
+  
   const pricingPlans = [
     {
       name: 'Starter',
@@ -250,40 +174,8 @@ const ZionAIEmailAnalyzerPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: 'Amanda Foster',
-      company: 'Customer Support Team',
-      role: 'Support Manager',
-      content: 'Zion AI Email Analyzer has revolutionized our customer support. We can now respond to urgent emails 3x faster and with better context.',
-      rating: 5,
-      avatar: 'AF'
-    },
-    {
-      name: 'Carlos Rodriguez',
-      company: 'Sales Agency',
-      role: 'Sales Director',
-      content: 'The sentiment analysis helps us understand our prospects better. We\'ve increased our response rates by 40% and closed more deals.',
-      rating: 5,
-      avatar: 'CR'
-    },
-    {
-      name: 'Jennifer Lee',
-      company: 'Marketing Firm',
-      role: 'Email Marketing Manager',
-      content: 'The analytics dashboard gives us incredible insights into our email campaigns. We can now optimize our content for maximum engagement.',
-      rating: 5,
-      avatar: 'JL'
-    }
-  ];
-
-  const stats = [
-    { number: '99.9%', label: 'Spam Detection Accuracy', icon: <Shield className="w-6 h-6" /> },
-    { number: '3x', label: 'Faster Response Times', icon: <Zap className="w-6 h-6" /> },
-    { number: '40%', label: 'Increase in Engagement', icon: <TrendingUp className="w-6 h-6" /> },
-    { number: '24/7', label: 'Support Available', icon: <Headphones className="w-6 h-6" /> }
-  ];
-
+  
+  
   return (
     <>
       <Helmet>

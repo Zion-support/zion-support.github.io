@@ -1,8 +1,12 @@
-import { ArrowRight, Code, Smartphone, Globe, Database, Zap, BarChart3, Mail, Smartphone as Phone } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
-export default function CustomDevelopment() {
+export default function page() {
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
   const services = [
     {
       title: "Custom Software Development",

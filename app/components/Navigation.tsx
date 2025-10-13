@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { 
   Menu, 
   X, 
@@ -32,86 +31,10 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     return location.pathname === path;
   }, [location.pathname]);
 
-  const navigationItems = [
-    {
-      name: 'Home',
-      path: '/',
-      icon: <Globe className="w-4 h-4" />
-    },
-    {
-      name: 'About',
-      path: '/about',
-      icon: <Brain className="w-4 h-4" />
-    },
-    {
-      name: 'Services',
-      path: '/services',
-      icon: <Shield className="w-4 h-4" />
-    },
-    {
-      name: 'AI Services',
-      path: '/ai-services',
-      icon: <Brain className="w-4 h-4" />
-    },
-    {
-      name: 'Micro SAAS',
-      path: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />
-    },
-    {
-      name: '5G Solutions',
-      path: '/5g-solutions',
-      icon: <Zap className="w-4 h-4" />
-    },
-    {
-      name: 'Blog',
-      path: '/blog',
-      icon: <Globe className="w-4 h-4" />
-    },
-    {
-      name: 'Contact',
-      path: '/contact',
-      icon: <Globe className="w-4 h-4" />
-    }
-  ];
-
-  const aiServices = [
-    { name: 'AI Analytics', path: '/ai-analytics' },
-    { name: 'AI Content Generation', path: '/ai-content-generation' },
-    { name: 'AI Customer Support', path: '/ai-customer-support' },
-    { name: 'AI Cybersecurity', path: '/ai-cybersecurity' },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics' },
-    { name: 'AI Document Processing', path: '/ai-document-processing' },
-    { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
-    { name: 'AI Predictive Analytics', path: '/ai-predictive-analytics' },
-    { name: 'AI Voice Assistant', path: '/ai-voice-assistant' },
-    { name: 'AI Workflow Automation', path: '/ai-workflow-automation' }
-  ];
-
-  const microSaasServices = [
-    { name: 'AI Video Generator', path: '/zion-ai-video-generator' },
-    { name: 'AI Invoice Generator', path: '/zion-ai-invoice-generator' },
-    { name: 'AI Customer Insights', path: '/zion-ai-customer-insights' },
-    { name: 'AI Email Analyzer', path: '/zion-ai-email-analyzer' },
-    { name: 'Smart Inventory Optimizer', path: '/zion-smart-inventory-optimizer' },
-    { name: 'AI Customer Sentiment Tracker', path: '/zion-ai-customer-sentiment-tracker' },
-    { name: 'Smart Expense Categorizer', path: '/zion-smart-expense-categorizer' },
-    { name: 'AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro' },
-    { name: 'AI Code Reviewer', path: '/zion-ai-code-reviewer' },
-    { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' }
-  ];
-
-  const fiveGServices = [
-    { name: '5G Network Infrastructure', path: '/5g-network-infrastructure' },
-    { name: '5G Edge Computing', path: '/5g-edge-computing' },
-    { name: '5G IoT Solutions', path: '/5g-iot-solutions' },
-    { name: '5G Smart City Solutions', path: '/5g-smart-city-solutions' },
-    { name: '5G Private Networks', path: '/5g-private-networks' },
-    { name: '5G Mobile Applications', path: '/5g-mobile-applications' },
-    { name: '5G Data Analytics', path: '/5g-data-analytics' },
-    { name: '5G Implementation', path: '/5g-implementation' }
-  ];
-
+  
+  
+  
+  
   return (
     <nav className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 shadow-lg border-b border-purple-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

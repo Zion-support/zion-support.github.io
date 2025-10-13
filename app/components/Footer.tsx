@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Mail, 
@@ -18,111 +17,15 @@ import {
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
-  const socialLinks = [
-    {
-      name: "Twitter",
-      href: "https://twitter.com/ziontechgroup",
-      icon: <Twitter className="w-5 h-5" />
-    },
-    {
-      name: "LinkedIn",
-      href: "https://linkedin.com/company/ziontechgroup",
-      icon: <Linkedin className="w-5 h-5" />
-    },
-    {
-      name: "GitHub",
-      href: "https://github.com/ziontechgroup",
-      icon: <Github className="w-5 h-5" />
-    }
-  ];
-
-  const mainLinks = [
-    { name: "About", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "AI Services", path: "/ai-services" },
-    { name: "Micro SAAS", path: "/micro-saas" },
-    { name: "5G Solutions", path: "/5g-solutions" },
-    { name: "Contact", path: "/contact" },
-    { name: "Blog", path: "/blog" },
-    { name: "Tutorials", path: "/tutorials" },
-    { name: "Demo", path: "/demo" },
-    { name: "Consultation", path: "/consultation" },
-    { name: "Support", path: "/support" },
-  ];
-
-  const aiServices = [
-    { name: "AI Analytics", path: "/ai-analytics" },
-    { name: "AI Content Generation", path: "/ai-content-generation" },
-    { name: "AI Customer Support", path: "/ai-customer-support" },
-    { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
-    { name: "AI Data Analytics", path: "/ai-data-analytics" },
-    { name: "AI Document Processing", path: "/ai-document-processing" },
-    { name: "AI Marketing Automation", path: "/ai-marketing-automation" },
-    { name: "AI Predictive Analytics", path: "/ai-predictive-analytics" },
-    { name: "AI Voice Assistant", path: "/ai-voice-assistant" },
-    { name: "AI Workflow Automation", path: "/ai-workflow-automation" },
-  ];
-
-  const microSaasServices = [
-    { name: "AI Video Generator", path: "/zion-ai-video-generator" },
-    { name: "AI Invoice Generator", path: "/zion-ai-invoice-generator" },
-    { name: "AI Customer Insights", path: "/zion-ai-customer-insights" },
-    { name: "AI Email Analyzer", path: "/zion-ai-email-analyzer" },
-    { name: "Smart Inventory Optimizer", path: "/zion-smart-inventory-optimizer" },
-    { name: "AI Customer Sentiment Tracker", path: "/zion-ai-customer-sentiment-tracker" },
-    { name: "Smart Expense Categorizer", path: "/zion-smart-expense-categorizer" },
-    { name: "AI Voice Assistant Pro", path: "/zion-ai-voice-assistant-pro" },
-    { name: "AI Code Reviewer", path: "/zion-ai-code-reviewer" },
-    { name: "AI Social Media Manager", path: "/zion-ai-social-media-manager" },
-    { name: "AI Document Analyzer", path: "/zion-ai-document-analyzer" },
-    { name: "AI Project Manager Pro", path: "/zion-ai-project-manager-pro" },
-    { name: "AI Cybersecurity Suite Pro", path: "/zion-ai-cybersecurity-suite-pro" },
-  ];
-
-  const itServices = [
-    { name: "Cloud Migration", path: "/cloud-migration" },
-    { name: "DevOps Services", path: "/devops" },
-    { name: "IT Consulting", path: "/it-consulting" },
-    { name: "Network Security", path: "/network-security" },
-    { name: "Custom Software", path: "/custom-software" },
-    { name: "System Integration", path: "/system-integration" },
-    { name: "Web Development", path: "/web-development" },
-  ];
-
-  const fiveGServices = [
-    { name: "5G Network Infrastructure", path: "/5g-network-infrastructure" },
-    { name: "5G Edge Computing", path: "/5g-edge-computing" },
-    { name: "5G IoT Solutions", path: "/5g-iot-solutions" },
-    { name: "5G Smart City Solutions", path: "/5g-smart-city-solutions" },
-    { name: "5G Private Networks", path: "/5g-private-networks" },
-    { name: "5G Mobile Applications", path: "/5g-mobile-applications" },
-    { name: "5G Data Analytics", path: "/5g-data-analytics" },
-    { name: "5G Implementation", path: "/5g-implementation" },
-  ];
-
-  const companyLinks = [
-    { name: "About Us", path: "/about" },
-    { name: "Our Team", path: "/about#team" },
-    { name: "Careers", path: "/careers" },
-    { name: "Press", path: "/press" },
-    { name: "Partners", path: "/partners" },
-  ];
-
-  const supportLinks = [
-    { name: "Help Center", path: "/support" },
-    { name: "Documentation", path: "/docs" },
-    { name: "API Reference", path: "/api" },
-    { name: "Status", path: "/status" },
-    { name: "Contact Support", path: "/contact" },
-  ];
-
-  const legalLinks = [
-    { name: "Privacy Policy", path: "/privacy" },
-    { name: "Terms of Service", path: "/terms" },
-    { name: "Cookie Policy", path: "/cookies" },
-    { name: "GDPR", path: "/gdpr" },
-  ];
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">

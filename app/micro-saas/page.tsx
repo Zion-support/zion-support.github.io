@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   ArrowRight, 
   Brain, 
@@ -14,7 +12,15 @@ import {
   TrendingUp
 } from 'lucide-react';
 
-export default function MicroSaas() {
+export default function page() {
+  const benefits = [
+    "Benefit 1",
+    "Benefit 2"
+  ];
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
   const microSaasServices = [
     {
       icon: <Brain className="w-8 h-8" />,
@@ -60,29 +66,7 @@ export default function MicroSaas() {
     }
   ];
 
-  const benefits = [
-    {
-      icon: <CheckCircle className="w-6 h-6" />,
-      title: "Ready to Use",
-      description: "No complex setup or configuration required"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Instant Deployment",
-      description: "Get started in minutes, not months"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and reliability"
-    },
-    {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Scalable",
-      description: "Grows with your business needs"
-    }
-  ];
-
+  
   return (
     <>
       <Helmet>

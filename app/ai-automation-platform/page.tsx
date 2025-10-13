@@ -1,6 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   Zap, 
   BarChart3, 
@@ -21,65 +18,9 @@ import {
 } from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
-  const features = [
-    {
-      title: "Intelligent Workflow Automation",
-      description: "AI-powered workflow automation that learns from your business processes and optimizes them automatically",
-      icon: <Workflow className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Smart Process Discovery",
-      description: "Automatically discover and map your business processes using AI analysis",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Predictive Automation",
-      description: "Anticipate needs and trigger automated actions before issues arise",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Multi-System Integration",
-      description: "Seamlessly connect and automate across all your business systems",
-      icon: <Settings className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  const benefits = [
-    "Reduce manual work by up to 80%",
-    "Improve process efficiency by 60%",
-    "Eliminate human errors in repetitive tasks",
-    "Scale operations without proportional staff increases",
-    "24/7 automated monitoring and execution",
-    "Real-time process optimization"
-  ];
-
-  const useCases = [
-    {
-      industry: "Finance",
-      description: "Automated invoice processing, fraud detection, and compliance reporting",
-      icon: <BarChart3 className="w-6 h-6" />
-    },
-    {
-      industry: "Healthcare",
-      description: "Patient data management, appointment scheduling, and medical record processing",
-      icon: <Users className="w-6 h-6" />
-    },
-    {
-      industry: "E-commerce",
-      description: "Inventory management, order processing, and customer service automation",
-      icon: <Cloud className="w-6 h-6" />
-    },
-    {
-      industry: "Manufacturing",
-      description: "Quality control, supply chain optimization, and predictive maintenance",
-      icon: <Settings className="w-6 h-6" />
-    }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

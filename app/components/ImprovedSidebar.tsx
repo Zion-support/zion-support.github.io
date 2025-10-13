@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
 import { 
   ArrowRight, 
   ChevronDown, 
@@ -165,26 +164,8 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     }
   ];
 
-  const quickLinks = [
-    { label: 'Home', href: '/', icon: <Home className="w-4 h-4" /> },
-    { label: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4" /> },
-    { label: 'Demo', href: '/demo', icon: <Play className="w-4 h-4" /> },
-    { label: 'Support', href: '/support', icon: <HelpCircle className="w-4 h-4" /> },
-    { label: 'Documentation', href: '/docs', icon: <BookOpen className="w-4 h-4" /> },
-    { label: 'Blog', href: '/blog', icon: <FileText className="w-4 h-4" /> },
-    { label: 'Contact', href: '/contact', icon: <Phone className="w-4 h-4" /> }
-  ];
-
-  const companyLinks = [
-    { label: 'About Us', href: '/about' },
-    { label: 'Our Team', href: '/team' },
-    { label: 'Careers', href: '/careers' },
-    { label: 'Case Studies', href: '/case-studies' },
-    { label: 'News', href: '/news' },
-    { label: 'Press', href: '/press' },
-    { label: 'Partners', href: '/partners' }
-  ];
-
+  
+  
   const filteredSections = navigationSections.map(section => ({
     ...section,
     items: section.items.filter(item => 

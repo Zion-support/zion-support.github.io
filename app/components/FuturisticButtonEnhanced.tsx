@@ -1,6 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { LucideIcon } from 'lucide-react';
 
 interface FuturisticButtonEnhancedProps {
   children: React.ReactNode;
@@ -39,13 +37,7 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
     ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
   `;
 
-  const sizeClasses = {
-    sm: 'px-3 py-1.5 text-sm',
-    md: 'px-4 py-2 text-base',
-    lg: 'px-6 py-3 text-lg',
-    xl: 'px-8 py-4 text-xl'
-  };
-
+  
   const variantClasses = {
     primary: `
       bg-gradient-to-r from-cyan-500 to-purple-600 text-white
@@ -68,15 +60,7 @@ const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
     `
   };
 
-  const glowColors = {
-    cyan: 'shadow-cyan-500/25',
-    purple: 'shadow-purple-500/25',
-    pink: 'shadow-pink-500/25',
-    green: 'shadow-green-500/25',
-    blue: 'shadow-blue-500/25',
-    orange: 'shadow-orange-500/25'
-  };
-
+  
   const buttonVariants = {
     initial: { 
       scale: 1,

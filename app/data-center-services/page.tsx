@@ -1,6 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   Server, 
   Shield, 
@@ -17,42 +14,8 @@ import {
 } from 'lucide-react';
 
 const DataCenterServicesPage = () => {
-  const features = [
-    {
-      title: "Enterprise Data Centers",
-      description: "State-of-the-art data centers with 99.99% uptime and enterprise-grade security",
-      icon: <Server className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Cloud Migration",
-      description: "Seamless migration to cloud infrastructure with zero downtime and data loss",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Disaster Recovery",
-      description: "Comprehensive backup and disaster recovery solutions to protect your data",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "24/7 Monitoring",
-      description: "Round-the-clock monitoring and support to ensure optimal performance",
-      icon: <Settings className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  const benefits = [
-    "99.99% uptime guarantee",
-    "Reduce infrastructure costs by 40%",
-    "Scale resources instantly",
-    "Enhanced security and compliance",
-    "24/7 expert support",
-    "Future-proof infrastructure"
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

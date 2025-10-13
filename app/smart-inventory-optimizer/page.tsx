@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { motion } from 'framer-motion';
 import { 
   Package, 
   TrendingUp, 
@@ -21,39 +19,7 @@ import {
 } from 'lucide-react';
 
 const SmartInventoryOptimizerPage = () => {
-  const features = [
-    {
-      icon: <Brain className="w-8 h-8 text-cyan-400" />,
-      title: "AI-Powered Demand Forecasting",
-      description: "Advanced machine learning algorithms predict demand patterns with 95% accuracy, reducing stockouts and overstock situations."
-    },
-    {
-      icon: <Target className="w-8 h-8 text-purple-400" />,
-      title: "Smart Reorder Points",
-      description: "Automatically calculate optimal reorder points based on lead times, demand variability, and supplier reliability."
-    },
-    {
-      icon: <BarChart3 className="w-8 h-8 text-green-400" />,
-      title: "Real-time Analytics Dashboard",
-      description: "Comprehensive analytics and reporting with real-time insights into inventory performance, turnover rates, and cost optimization."
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: "Multi-location Management",
-      description: "Seamlessly manage inventory across multiple warehouses, stores, and distribution centers with centralized control."
-    },
-    {
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: "Automated Alerts & Notifications",
-      description: "Get instant alerts for low stock, overstock, expiring items, and unusual demand patterns to prevent costly mistakes."
-    },
-    {
-      icon: <Users className="w-8 h-8 text-blue-400" />,
-      title: "Supplier Integration",
-      description: "Connect with suppliers for automated ordering, real-time stock updates, and seamless supply chain management."
-    }
-  ];
-
+  
   const pricingPlans = [
     {
       name: "Starter",
@@ -104,36 +70,8 @@ const SmartInventoryOptimizerPage = () => {
     }
   ];
 
-  const benefits = [
-    {
-      icon: <DollarSign className="w-12 h-12 text-green-400" />,
-      title: "Reduce Inventory Costs",
-      description: "Save up to 30% on inventory costs through optimized stock levels and reduced carrying costs."
-    },
-    {
-      icon: <Truck className="w-12 h-12 text-blue-400" />,
-      title: "Improve Order Fulfillment",
-      description: "Increase order fulfillment rates by 25% with better stock availability and demand prediction."
-    },
-    {
-      icon: <AlertTriangle className="w-12 h-12 text-yellow-400" />,
-      title: "Prevent Stockouts",
-      description: "Eliminate stockouts and lost sales with intelligent demand forecasting and automated reordering."
-    },
-    {
-      icon: <TrendingUp className="w-12 h-12 text-purple-400" />,
-      title: "Increase Profitability",
-      description: "Boost profit margins by 15-20% through optimized inventory management and reduced waste."
-    }
-  ];
-
-  const stats = [
-    { number: "30%", label: "Cost Reduction" },
-    { number: "95%", label: "Forecast Accuracy" },
-    { number: "25%", label: "Faster Fulfillment" },
-    { number: "50%", label: "Less Waste" }
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>

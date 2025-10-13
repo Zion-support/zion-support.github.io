@@ -1,6 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   Mic, 
   Brain, 
@@ -17,42 +14,8 @@ import {
 } from 'lucide-react';
 
 const AIVoiceAssistantProPage = () => {
-  const features = [
-    {
-      title: "Natural Voice Recognition",
-      description: "Advanced speech recognition that understands context, accents, and natural conversation",
-      icon: <Mic className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Intelligent Conversations",
-      description: "AI-powered conversations that feel natural and human-like with emotional intelligence",
-      icon: <MessageSquare className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Multi-Language Support",
-      description: "Seamlessly communicate in 50+ languages with real-time translation capabilities",
-      icon: <Globe className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Custom Voice Training",
-      description: "Train the assistant with your specific voice patterns and business terminology",
-      icon: <Settings className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  const benefits = [
-    "Reduce customer service costs by 60%",
-    "Handle 1000+ conversations simultaneously",
-    "Available 24/7 in multiple languages",
-    "Improve customer satisfaction by 40%",
-    "Integrate with any business system",
-    "Scale customer support instantly"
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

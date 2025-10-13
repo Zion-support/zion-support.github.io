@@ -1,3 +1,4 @@
+import React from "react";
 "use client";
 import { ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";

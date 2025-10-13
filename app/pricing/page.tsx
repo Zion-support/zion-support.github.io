@@ -1,8 +1,13 @@
+import React from "react";
 import { ArrowRight, CheckCircle, Zap, Shield, Cloud, Brain, Mail, Smartphone, Globe } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function Pricing() {
+export default function page() {
+  const features = [
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
+  ];
   const aiServicesPricing = [
     {
       name: "AI Analytics Dashboard",

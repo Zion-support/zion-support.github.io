@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -26,33 +25,7 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAiBusinessIntelligencePro = () => {
-  const features = [
-    {
-      title: "AI-Powered Insights",
-      description: "Automatically generate actionable business insights using advanced machine learning and natural language processing",
-      icon: <Brain className="w-6 h-6" />,
-      stats: "95% accuracy"
-    },
-    {
-      title: "Real-Time Analytics",
-      description: "Monitor key performance indicators and business metrics in real-time with instant updates and alerts",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "Sub-second response"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast future trends, customer behavior, and business outcomes with AI-powered predictive models",
-      icon: <TrendingUp className="w-6 h-6" />,
-      stats: "85% prediction accuracy"
-    },
-    {
-      title: "Natural Language Queries",
-      description: "Ask questions about your data in plain English and get instant answers with visualizations",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "50+ languages"
-    }
-  ];
-
+  
   const pricingPlans = [
     {
       name: "Professional",
@@ -155,40 +128,8 @@ const ZionAiBusinessIntelligencePro = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Retail Analytics Corp",
-      role: "VP of Analytics",
-      content: "Zion AI Business Intelligence Pro has revolutionized how we analyze data. The AI insights have helped us identify opportunities worth millions in additional revenue.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Financial Services Group",
-      role: "Chief Data Officer",
-      content: "The predictive analytics capabilities are outstanding. We can now forecast market trends with 85% accuracy, giving us a significant competitive advantage.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Manufacturing Solutions",
-      role: "Operations Director",
-      content: "This platform has transformed our decision-making process. The real-time dashboards and AI insights help us optimize operations and reduce costs by 25%.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
-  const stats = [
-    { number: "500+", label: "Enterprise Customers", icon: <Users className="w-6 h-6" /> },
-    { number: "1B+", label: "Data Points Processed", icon: <Database className="w-6 h-6" /> },
-    { number: "95%", label: "Insight Accuracy", icon: <Award className="w-6 h-6" /> },
-    { number: "50%", label: "Faster Decision Making", icon: <Clock className="w-6 h-6" /> }
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>

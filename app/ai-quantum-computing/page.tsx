@@ -1,32 +1,18 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Cpu, Brain, Zap, Atom, Sparkles, Users, Award, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award as AwardIcon, Rocket, Wifi, Battery, Camera, Headphones, Mic, Video, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import SEOOptimizer from "../components/SEOOptimizer";
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../../components/SEOOptimizer";
+import { Helmet } from "react-helmet-async";
 
-export default function AiQuantumComputing() {
+export default function page() {
+  const testimonials = [
+    { name: "John Doe", role: "CEO", company: "Tech Corp", content: "Great service!", rating: 5 }
+  ];
   const features = [
-    "Quantum machine learning algorithms for complex optimization",
-    "Quantum simulation for drug discovery and materials science",
-    "Quantum cryptography for ultra-secure communications",
-    "Quantum annealing for combinatorial optimization problems",
-    "Quantum neural networks for pattern recognition",
-    "Quantum error correction and fault tolerance",
-    "Hybrid quantum-classical computing workflows",
-    "Quantum cloud access with real quantum hardware",
-    "Advanced quantum algorithm development",
-    "Quantum state preparation and manipulation",
-    "Quantum entanglement and teleportation protocols",
-    "Custom quantum circuit design and optimization"
+    { title: "Feature 1", description: "Description 1" },
+    { title: "Feature 2", description: "Description 2" }
   ];
-
-  const benefits = [
-    "Solve problems 1000x faster than classical computers",
-    "Breakthrough discoveries in science and medicine",
-    "Unbreakable quantum encryption for data security",
-    "Revolutionary optimization for complex systems"
-  ];
-
+  
+  
   const pricingPlans = [
     {
       name: "Research",
@@ -86,60 +72,8 @@ export default function AiQuantumComputing() {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Dr. Sarah Chen",
-      company: "Quantum Research Institute",
-      role: "Chief Quantum Scientist",
-      content: "Zion's quantum computing platform has accelerated our research by years. We've made breakthrough discoveries in quantum chemistry that would have been impossible with classical computers.",
-      rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "Michael Rodriguez",
-      company: "Pharmaceutical Corp",
-      role: "Head of R&D",
-      content: "The quantum simulation capabilities are extraordinary. We've discovered new drug compounds and optimized molecular structures in weeks instead of years.",
-      rating: 5,
-      avatar: "MR"
-    },
-    {
-      name: "Dr. Emily Watson",
-      company: "Financial Services",
-      role: "Quantitative Analyst",
-      content: "Quantum optimization has revolutionized our portfolio management. We're achieving returns that were theoretically impossible with classical algorithms.",
-      rating: 5,
-      avatar: "EW"
-    }
-  ];
-
-  const applications = [
-    {
-      title: "Drug Discovery",
-      description: "Simulate molecular interactions and discover new pharmaceutical compounds",
-      icon: <Atom className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Financial Optimization",
-      description: "Optimize complex portfolios and risk management strategies",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Cryptography",
-      description: "Develop unbreakable quantum encryption and secure communications",
-      icon: <Lock className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Machine Learning",
-      description: "Train quantum neural networks for advanced pattern recognition",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
+  
+  
   return (
     <>
       <Helmet>

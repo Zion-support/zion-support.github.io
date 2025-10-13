@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { 
   FileText, 
   Brain, 
@@ -33,45 +32,7 @@ import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAIDocumentAnalyzerPage = () => {
-  const features = [
-    {
-      title: "AI-Powered Document Processing",
-      description: "Advanced OCR and NLP technology to extract, analyze, and understand content from any document format",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Multi-Format Support",
-      description: "Process PDFs, Word docs, images, scanned documents, and more with 99.9% accuracy",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Intelligent Data Extraction",
-      description: "Automatically extract key information, dates, names, amounts, and structured data",
-      icon: <Search className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Document Classification",
-      description: "Automatically categorize and tag documents by type, importance, and content",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Compliance Monitoring",
-      description: "Ensure documents meet regulatory requirements and flag potential compliance issues",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Real-time Analytics",
-      description: "Get insights and analytics on document processing patterns and trends",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
+  
   const pricingPlans = [
     {
       name: "Starter",
@@ -127,72 +88,8 @@ const ZionAIDocumentAnalyzerPage = () => {
     }
   ];
 
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      company: "Legal Firm Inc.",
-      role: "Managing Partner",
-      content: "Zion AI Document Analyzer has revolutionized our document processing. We've reduced manual review time by 80% and improved accuracy significantly.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      company: "Financial Services Co.",
-      role: "Operations Director",
-      content: "The compliance monitoring feature has been a game-changer. We catch potential issues before they become problems, saving us thousands in fines.",
-      rating: 5,
-      avatar: "MC"
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "Healthcare Group",
-      role: "IT Director",
-      content: "Processing medical records has never been easier. The AI understands complex medical terminology and extracts exactly what we need.",
-      rating: 5,
-      avatar: "ER"
-    }
-  ];
-
-  const useCases = [
-    {
-      title: "Legal Document Review",
-      description: "Automatically analyze contracts, agreements, and legal documents for key terms and potential risks",
-      icon: <FileCheck className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Financial Document Processing",
-      description: "Extract data from invoices, receipts, and financial statements for accounting and reporting",
-      icon: <DollarSign className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Medical Record Analysis",
-      description: "Process patient records, lab reports, and medical documents with healthcare-specific AI models",
-      icon: <Shield className="w-6 h-6" />,
-      color: "from-red-500 to-pink-500"
-    },
-    {
-      title: "Insurance Claims Processing",
-      description: "Automatically analyze insurance claims, damage reports, and supporting documentation",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Research Document Analysis",
-      description: "Process academic papers, research reports, and scientific documents for data extraction",
-      icon: <TrendingUp className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Compliance Auditing",
-      description: "Ensure documents meet regulatory requirements and identify compliance gaps automatically",
-      icon: <CheckCircle className="w-6 h-6" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO

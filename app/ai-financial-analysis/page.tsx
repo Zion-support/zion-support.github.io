@@ -1,6 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -17,42 +14,8 @@ import {
 } from 'lucide-react';
 
 const AIFinancialAnalysisPage = () => {
-  const features = [
-    {
-      title: "Predictive Financial Modeling",
-      description: "AI-powered financial forecasting with 95% accuracy for better investment decisions",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Risk Assessment & Management",
-      description: "Advanced risk analysis and automated portfolio optimization using machine learning",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Real-time Market Analysis",
-      description: "Continuous monitoring of market trends and instant financial insights",
-      icon: <Activity className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate comprehensive financial reports and insights automatically",
-      icon: <PieChart className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  const benefits = [
-    "Improve investment returns by 30%",
-    "Reduce financial risk by 50%",
-    "Automate 90% of financial analysis",
-    "Make decisions 10x faster",
-    "Identify opportunities in real-time",
-    "Ensure regulatory compliance"
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

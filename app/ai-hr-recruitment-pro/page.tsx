@@ -1,6 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   Users, 
   Target, 
@@ -17,42 +14,8 @@ import {
 } from 'lucide-react';
 
 const AIHRRecruitmentProPage = () => {
-  const features = [
-    {
-      title: "Intelligent Candidate Matching",
-      description: "AI-powered matching that finds the perfect candidates based on skills, experience, and cultural fit",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Automated Resume Screening",
-      description: "Instantly screen and rank thousands of resumes using advanced AI algorithms",
-      icon: <FileText className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Predictive Hiring Analytics",
-      description: "Predict candidate success and retention with 90% accuracy using machine learning",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Bias-Free Recruitment",
-      description: "Eliminate unconscious bias and ensure fair, diverse hiring practices",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  const benefits = [
-    "Reduce time-to-hire by 70%",
-    "Improve candidate quality by 50%",
-    "Eliminate hiring bias completely",
-    "Automate 80% of recruitment tasks",
-    "Increase retention rates by 40%",
-    "Scale recruitment across all departments"
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>

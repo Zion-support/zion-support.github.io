@@ -1,5 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { 
   Cloud, 
   Server, 
@@ -113,67 +111,9 @@ const CloudInfrastructure = () => {
     }
   ];
 
-  const capabilities = [
-    {
-      title: "Multi-Cloud Strategy",
-      description: "Design and implement hybrid and multi-cloud architectures for maximum flexibility and redundancy",
-      icon: <Globe className="w-6 h-6" />,
-      stats: "99.99% uptime"
-    },
-    {
-      title: "Cost Optimization",
-      description: "Reduce cloud costs by up to 40% through intelligent resource management and optimization",
-      icon: <BarChart3 className="w-6 h-6" />,
-      stats: "40% cost reduction"
-    },
-    {
-      title: "Security First",
-      description: "Implement enterprise-grade security measures to protect your cloud infrastructure",
-      icon: <Lock className="w-6 h-6" />,
-      stats: "Zero security incidents"
-    },
-    {
-      title: "24/7 Monitoring",
-      description: "Continuous monitoring and alerting to ensure optimal performance and availability",
-      icon: <Activity className="w-6 h-6" />,
-      stats: "Sub-second response"
-    }
-  ];
-
-  const testimonials = [
-    {
-      name: "David Chen",
-      company: "TechStart Solutions",
-      role: "CTO",
-      content: "Zion's cloud infrastructure services transformed our operations. We achieved 99.99% uptime and reduced costs by 35% in the first year.",
-      rating: 5,
-      avatar: "DC"
-    },
-    {
-      name: "Sarah Rodriguez",
-      company: "E-commerce Plus",
-      role: "VP of Engineering",
-      content: "The migration was seamless and the ongoing support is exceptional. Our applications now scale automatically and perform better than ever.",
-      rating: 5,
-      avatar: "SR"
-    },
-    {
-      name: "Michael Johnson",
-      company: "Financial Services Corp",
-      role: "IT Director",
-      content: "Enterprise-grade security and compliance features gave us confidence to move our critical systems to the cloud. Highly recommended.",
-      rating: 5,
-      avatar: "MJ"
-    }
-  ];
-
-  const stats = [
-    { number: "500+", label: "Infrastructure Projects", icon: <Server className="w-6 h-6" /> },
-    { number: "99.99%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "40%", label: "Average Cost Savings", icon: <BarChart3 className="w-6 h-6" /> },
-    { number: "24/7", label: "Monitoring & Support", icon: <Clock className="w-6 h-6" /> }
-  ];
-
+  
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
       <Helmet>

@@ -1,6 +1,3 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -17,42 +14,8 @@ import {
 } from 'lucide-react';
 
 const AIDataAnalyticsProPage = () => {
-  const features = [
-    {
-      title: "Advanced Predictive Analytics",
-      description: "AI-powered predictive models that forecast trends and outcomes with 95% accuracy",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Real-time Data Processing",
-      description: "Process and analyze massive datasets in real-time with lightning-fast performance",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Intelligent Insights",
-      description: "AI automatically discovers hidden patterns and generates actionable business insights",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Interactive Dashboards",
-      description: "Beautiful, interactive dashboards that make complex data easy to understand",
-      icon: <PieChart className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  const benefits = [
-    "Make data-driven decisions 10x faster",
-    "Identify opportunities before competitors",
-    "Reduce data analysis time by 90%",
-    "Improve forecast accuracy by 40%",
-    "Automate report generation",
-    "Scale analytics across your organization"
-  ];
-
+  
+  
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
