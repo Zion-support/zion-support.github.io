@@ -24,6 +24,9 @@ const Navigation = React.memo(() => {
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Chatbot Pro', path: '/zion-ai-chatbot-pro', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion Data Insights Pro', path: '/zion-data-insights-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: 'Zion Workflow Automation Pro', path: '/zion-workflow-automation-pro', icon: <Zap className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
@@ -51,8 +54,8 @@ const Navigation = React.memo(() => {
         { name: 'AI Automation', path: '/ai-automation' },
         { name: 'AI Content Generation', path: '/ai-content-generation' },
         { name: 'AI Customer Support', path: '/ai-customer-support' },
-        { name: 'AI Marketing Automation', path: '/ai-marketing-automation' },
-        { name: 'AI Cybersecurity', path: '/ai-cybersecurity' }
+        { name: 'AI Marketing Automation Pro', path: '/ai-marketing-automation-pro' },
+        { name: 'AI Cybersecurity Advanced', path: '/ai-cybersecurity-advanced' }
       ]
     },
     {

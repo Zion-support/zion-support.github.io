@@ -18,6 +18,7 @@ import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import FuturisticBackgroundEnhanced from "./app/components/FuturisticBackgroundEnhanced";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
@@ -57,6 +58,8 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AiCybersecurityAdvancedPage = React.lazy(() => import("./app/ai-cybersecurity-advanced/page"));
+const AiMarketingAutomationProPage = React.lazy(() => import("./app/ai-marketing-automation-pro/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -176,6 +179,15 @@ const ZionComplianceManagerPage = React.lazy(
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
+const ZionAiChatbotProPage = React.lazy(
+  () => import("./app/zion-ai-chatbot-pro/page"),
+);
+const ZionDataInsightsProPage = React.lazy(
+  () => import("./app/zion-data-insights-pro/page"),
+);
+const ZionWorkflowAutomationProPage = React.lazy(
+  () => import("./app/zion-workflow-automation-pro/page"),
+);
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
@@ -219,7 +231,7 @@ function App() {
           <AccessibilityEnhancer>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <FuturisticBackground>
+                <FuturisticBackgroundEnhanced>
                   <Navigation />
                   <Breadcrumb />
                   <main id="main-content" role="main">
@@ -262,6 +274,8 @@ function App() {
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
                   <Route path="/ai-marketing-automation" element={<AiMarketingPage />} />
+                  <Route path="/ai-cybersecurity-advanced" element={<AiCybersecurityAdvancedPage />} />
+                  <Route path="/ai-marketing-automation-pro" element={<AiMarketingAutomationProPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -426,6 +440,18 @@ function App() {
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
                   />
+                  <Route
+                    path="/zion-ai-chatbot-pro"
+                    element={<ZionAiChatbotProPage />}
+                  />
+                  <Route
+                    path="/zion-data-insights-pro"
+                    element={<ZionDataInsightsProPage />}
+                  />
+                  <Route
+                    path="/zion-workflow-automation-pro"
+                    element={<ZionWorkflowAutomationProPage />}
+                  />
 
                   {/* 5G Solutions Routes */}
                   <Route
@@ -468,7 +494,7 @@ function App() {
                   <EnhancedAccessibility>
                     <div></div>
                   </EnhancedAccessibility>
-                </FuturisticBackground>
+                </FuturisticBackgroundEnhanced>
                 <AnalyticsProvider>
                   <div>
                     <PerformanceMonitor />
