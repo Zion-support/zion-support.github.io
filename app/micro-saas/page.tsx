@@ -377,6 +377,68 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "zion-ai-accounting-assistant",
+      name: "Zion AI Accounting Assistant",
+      description: "Intelligent accounting automation with expense tracking, invoice processing, and financial insights",
+      price: "From $30/month",
+      originalPrice: "$50/month",
+      discount: "40% OFF",
+      icon: <Calculator className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "Automated expense tracking",
+        "Invoice processing & OCR",
+        "Financial reporting",
+        "Tax preparation assistance",
+        "Receipt scanning & categorization",
+        "Bank reconciliation",
+        "Budget planning & forecasting",
+        "Compliance monitoring"
+      ],
+      benefits: [
+        "Reduce accounting time by 70%",
+        "Eliminate manual data entry",
+        "Improve financial accuracy",
+        "Ensure tax compliance"
+      ],
+      category: "Finance",
+      rating: 4.8,
+      reviews: 987,
+      link: "/zion-ai-accounting-assistant",
+      featured: true
+    },
+    {
+      id: "zion-ai-crm-intelligence",
+      name: "Zion AI CRM Intelligence",
+      description: "AI-enhanced CRM with predictive analytics, lead scoring, and automated follow-ups",
+      price: "From $35/month",
+      originalPrice: "$55/month",
+      discount: "36% OFF",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "AI lead scoring",
+        "Predictive analytics",
+        "Automated follow-ups",
+        "Sales forecasting",
+        "Customer journey mapping",
+        "Pipeline management",
+        "Performance dashboards",
+        "Mobile CRM access"
+      ],
+      benefits: [
+        "Increase sales by 35%",
+        "Improve lead quality by 50%",
+        "Reduce follow-up time by 70%",
+        "Boost customer retention"
+      ],
+      category: "CRM",
+      rating: 4.9,
+      reviews: 1892,
+      link: "/zion-ai-crm-intelligence",
+      featured: true
     }
   ];
 

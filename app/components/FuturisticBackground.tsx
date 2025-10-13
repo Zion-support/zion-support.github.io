@@ -1,7 +1,18 @@
 import React, { useEffect, useRef } from 'react';
 
-const FuturisticBackground = () => {
+interface FuturisticBackgroundProps {
+  children: React.ReactNode;
+  variant?: 'default' | 'cyber' | 'matrix' | 'holographic';
+  intensity?: 'low' | 'medium' | 'high';
+}
+
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ 
+  children, 
+  variant = 'default',
+  intensity = 'medium' 
+}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const animationRef = useRef<number>();
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -10,12 +21,16 @@ const FuturisticBackground = () => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    let animationId: number;
-    let particles: Particle[] = [];
-    let mouseX = 0;
-    let mouseY = 0;
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
 
-    class Particle {
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Particle system
+    const particles: Array<{
       x: number;
       y: number;
       vx: number;
@@ -23,168 +38,165 @@ const FuturisticBackground = () => {
       size: number;
       opacity: number;
       color: string;
-      life: number;
-      maxLife: number;
+    }> = [];
 
-      constructor() {
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.vx = (Math.random() - 0.5) * 0.5;
-        this.vy = (Math.random() - 0.5) * 0.5;
-        this.size = Math.random() * 2 + 1;
-        this.opacity = Math.random() * 0.5 + 0.2;
-        this.color = Math.random() > 0.5 ? '#06b6d4' : '#8b5cf6';
-        this.life = 0;
-        this.maxLife = Math.random() * 200 + 100;
-      }
-
-      update() {
-        this.x += this.vx;
-        this.y += this.vy;
-        this.life++;
-
-        // Mouse interaction
-        const dx = mouseX - this.x;
-        const dy = mouseY - this.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        
-        if (distance < 100) {
-          const force = (100 - distance) / 100;
-          this.vx += (dx / distance) * force * 0.01;
-          this.vy += (dy / distance) * force * 0.01;
-        }
-
-        // Boundary check
-        if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
-        if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
-
-        // Fade out
-        this.opacity = Math.max(0, this.opacity - 0.002);
-      }
-
-      draw() {
-        if (!ctx) return;
-        
-        ctx.save();
-        ctx.globalAlpha = this.opacity;
-        ctx.fillStyle = this.color;
-        ctx.shadowBlur = 10;
-        ctx.shadowColor = this.color;
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.restore();
-      }
-
-      isDead() {
-        return this.life >= this.maxLife || this.opacity <= 0;
-      }
-    }
-
-    const initParticles = () => {
-      particles = [];
-      for (let i = 0; i < 50; i++) {
-        particles.push(new Particle());
-      }
+    const createParticle = () => {
+      const colors = ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080'];
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 3 + 1,
+        opacity: Math.random() * 0.8 + 0.2,
+        color: colors[Math.floor(Math.random() * colors.length)]
+      };
     };
 
+    // Initialize particles based on intensity
+    const particleCount = intensity === 'low' ? 50 : intensity === 'medium' ? 100 : 200;
+    for (let i = 0; i < particleCount; i++) {
+      particles.push(createParticle());
+    }
+
     const animate = () => {
-      if (!ctx || !canvas) return;
-
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Draw connections
-      ctx.strokeStyle = 'rgba(139, 92, 246, 0.1)';
-      ctx.lineWidth = 1;
-      
-      for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
-          
-          if (distance < 100) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.stroke();
-          }
-        }
-      }
 
       // Update and draw particles
       particles.forEach((particle, index) => {
-        particle.update();
-        particle.draw();
-        
-        if (particle.isDead()) {
-          particles[index] = new Particle();
-        }
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Wrap around screen
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+
+        // Draw particle
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color;
+        ctx.globalAlpha = particle.opacity;
+        ctx.fill();
+
+        // Draw connections
+        particles.forEach((otherParticle, otherIndex) => {
+          if (index !== otherIndex) {
+            const dx = particle.x - otherParticle.x;
+            const dy = particle.y - otherParticle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+
+            if (distance < 100) {
+              ctx.beginPath();
+              ctx.moveTo(particle.x, particle.y);
+              ctx.lineTo(otherParticle.x, otherParticle.y);
+              ctx.strokeStyle = particle.color;
+              ctx.globalAlpha = (100 - distance) / 100 * 0.2;
+              ctx.lineWidth = 1;
+              ctx.stroke();
+            }
+          }
+        });
       });
 
-      animationId = requestAnimationFrame(animate);
+      // Add variant-specific effects
+      if (variant === 'cyber') {
+        drawCyberGrid(ctx, canvas);
+      } else if (variant === 'matrix') {
+        drawMatrixRain(ctx, canvas);
+      } else if (variant === 'holographic') {
+        drawHolographicWaves(ctx, canvas);
+      }
+
+      animationRef.current = requestAnimationFrame(animate);
     };
 
-    const handleResize = () => {
-      if (!canvas) return;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initParticles();
-    };
-
-    const handleMouseMove = (e: MouseEvent) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    };
-
-    // Initialize
-    handleResize();
-    initParticles();
     animate();
 
-    // Event listeners
-    window.addEventListener('resize', handleResize);
-    window.addEventListener('mousemove', handleMouseMove);
-
     return () => {
-      cancelAnimationFrame(animationId);
-      window.removeEventListener('resize', handleResize);
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', resizeCanvas);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
     };
-  }, []);
+  }, [variant, intensity]);
+
+  const drawCyberGrid = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
+    const gridSize = 50;
+    const offsetX = (Date.now() * 0.01) % gridSize;
+    const offsetY = (Date.now() * 0.005) % gridSize;
+
+    ctx.strokeStyle = '#00ffff';
+    ctx.globalAlpha = 0.3;
+    ctx.lineWidth = 1;
+
+    for (let x = -offsetX; x < canvas.width + gridSize; x += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, canvas.height);
+      ctx.stroke();
+    }
+
+    for (let y = -offsetY; y < canvas.height + gridSize; y += gridSize) {
+      ctx.beginPath();
+      ctx.moveTo(0, y);
+      ctx.lineTo(canvas.width, y);
+      ctx.stroke();
+    }
+  };
+
+  const drawMatrixRain = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
+    const columns = Math.floor(canvas.width / 20);
+    const drops: number[] = Array(columns).fill(0);
+
+    for (let i = 0; i < drops.length; i++) {
+      const char = String.fromCharCode(0x30A0 + Math.random() * 96);
+      ctx.fillStyle = '#00ff00';
+      ctx.globalAlpha = 0.8;
+      ctx.font = '15px monospace';
+      ctx.fillText(char, i * 20, drops[i] * 20);
+
+      if (drops[i] * 20 > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  };
+
+  const drawHolographicWaves = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
+    const time = Date.now() * 0.001;
+    
+    for (let i = 0; i < 5; i++) {
+      ctx.beginPath();
+      ctx.strokeStyle = `hsl(${(time * 50 + i * 60) % 360}, 100%, 50%)`;
+      ctx.globalAlpha = 0.3;
+      ctx.lineWidth = 2;
+
+      for (let x = 0; x < canvas.width; x += 2) {
+        const y = canvas.height / 2 + 
+          Math.sin((x * 0.01) + time + i) * 50 +
+          Math.sin((x * 0.02) + time * 2 + i) * 25;
+        
+        if (x === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      }
+      ctx.stroke();
+    }
+  };
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
+    <div className="relative min-h-screen overflow-hidden">
       <canvas
         ref={canvasRef}
-        className="w-full h-full"
-        style={{ background: 'transparent' }}
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        style={{ zIndex: 1 }}
       />
-      
-      {/* Additional futuristic elements */}
-      <div className="absolute inset-0">
-        {/* Animated gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        
-        {/* Grid pattern */}
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }}
-        ></div>
-        
-        {/* Scanning lines */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse delay-1000"></div>
-        </div>
+      <div className="relative z-10">
+        {children}
       </div>
     </div>
   );
