@@ -1,6 +1,6 @@
-'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
+&apos;use client&apos;;
+import React from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
 
 const MobileNavigation: React.FC = () => {
   return (
@@ -71,7 +71,7 @@ const MobileNavigation: React.FC = () => {
             Ready to Get Started?
           </h2>
           <p className="text-xl text-blue-100 mb-8">
-            Let's discuss how our mobile navigation 
+            Let&apos;s discuss how our mobile navigation 
             services can help you achieve your goals.
           </p>
           <a

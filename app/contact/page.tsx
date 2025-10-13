@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import React, { useState } from &apos;react&apos;;
+import { Helmet } from &apos;react-helmet-async&apos;;
+import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from &apos;lucide-react&apos;;
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    subject: '',
-    message: ''
+    name: &apos;&apos;,
+    email: &apos;&apos;,
+    company: &apos;&apos;,
+    phone: &apos;&apos;,
+    subject: &apos;&apos;,
+    message: &apos;&apos;
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -36,38 +36,38 @@ export default function ContactPage() {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      description: 'Mon-Fri 9AM-6PM EST'
+      title: &apos;Phone&apos;,
+      value: &apos;+1 (555) 123-4567&apos;,
+      description: &apos;Mon-Fri 9AM-6PM EST&apos;
     },
     {
       icon: Mail,
-      title: 'Email',
-      value: 'contact@ziontechgroup.com',
-      description: 'We respond within 24 hours'
+      title: &apos;Email&apos;,
+      value: &apos;contact@ziontechgroup.com&apos;,
+      description: &apos;We respond within 24 hours&apos;
     },
     {
       icon: MapPin,
-      title: 'Address',
-      value: '123 Tech Street, Suite 100',
-      description: 'San Francisco, CA 94105'
+      title: &apos;Address&apos;,
+      value: &apos;123 Tech Street, Suite 100&apos;,
+      description: &apos;San Francisco, CA 94105&apos;
     },
     {
       icon: Clock,
-      title: 'Business Hours',
-      value: 'Monday - Friday',
-      description: '9:00 AM - 6:00 PM EST'
+      title: &apos;Business Hours&apos;,
+      value: &apos;Monday - Friday&apos;,
+      description: &apos;9:00 AM - 6:00 PM EST&apos;
     }
   ];
 
   const subjects = [
-    'AI Services',
-    'IT Services',
-    'Cloud Services',
-    'Micro SAAS',
-    'Digital Transformation',
-    '5G Implementation',
-    'Other'
+    &apos;AI Services&apos;,
+    &apos;IT Services&apos;,
+    &apos;Cloud Services&apos;,
+    &apos;Micro SAAS&apos;,
+    &apos;Digital Transformation&apos;,
+    &apos;5G Implementation&apos;,
+    &apos;Other&apos;
   ];
 
   return (
@@ -132,18 +132,18 @@ export default function ContactPage() {
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Message Sent!</h3>
               <p className="text-gray-300 mb-6">
-                Thank you for contacting us. We'll get back to you within 24 hours.
+                Thank you for contacting us. We&apos;ll get back to you within 24 hours.
               </p>
               <button
                 onClick={() => {
                   setIsSubmitted(false);
                   setFormData({
-                    name: '',
-                    email: '',
-                    company: '',
-                    phone: '',
-                    subject: '',
-                    message: ''
+                    name: &apos;&apos;,
+                    email: &apos;&apos;,
+                    company: &apos;&apos;,
+                    phone: &apos;&apos;,
+                    subject: &apos;&apos;,
+                    message: &apos;&apos;
                   });
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
