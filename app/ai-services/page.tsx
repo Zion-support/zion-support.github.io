@@ -13,58 +13,201 @@ import {
   ArrowRight,
   Sparkles,
   Target,
-  TrendingUp
+  TrendingUp,
+  Eye,
+  MessageSquare,
+  Settings,
+  Mic,
+  FileText,
+  Truck,
+  Heart,
+  Scale,
+  CheckCircle
 } from 'lucide-react';
 
 const AIServicesPage = () => {
   const aiServices = [
     {
-      title: "AI Analytics",
-      description: "Transform your data into actionable insights with our advanced AI analytics platform.",
+      title: "AI Business Intelligence Pro",
+      description: "Transform raw data into actionable insights with advanced AI analytics, predictive modeling, and real-time dashboards.",
       icon: <BarChart3 className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
-      link: "/ai-analytics",
-      features: ["Predictive Analytics", "Real-time Insights", "Custom Dashboards"]
+      link: "/ai-business-intelligence-pro",
+      features: ["Predictive Analytics", "Real-time Dashboards", "Custom ML Models", "Data Visualization"],
+      price: "From $299/month",
+      popular: true
     },
     {
-      title: "AI Content Generation",
-      description: "Create high-quality content at scale with our AI-powered content generation tools.",
+      title: "AI Content Generation Studio",
+      description: "Create high-quality content at scale with AI-powered writing tools, SEO optimization, and multi-format output.",
       icon: <Code className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      link: "/ai-content-generation",
-      features: ["Automated Writing", "SEO Optimization", "Multi-language Support"]
+      link: "/ai-content-generation-studio",
+      features: ["Automated Writing", "SEO Optimization", "Multi-language Support", "Brand Voice Training"],
+      price: "From $149/month"
     },
     {
-      title: "AI Cybersecurity",
-      description: "Protect your business with AI-driven security solutions and threat detection.",
+      title: "AI Cybersecurity Defense Matrix",
+      description: "Advanced threat detection and response with AI-powered security monitoring and automated incident response.",
       icon: <Shield className="w-8 h-8" />,
       color: "from-red-500 to-orange-500",
-      link: "/ai-cybersecurity",
-      features: ["Threat Detection", "Automated Response", "24/7 Monitoring"]
+      link: "/ai-cybersecurity-defense-matrix",
+      features: ["Threat Detection", "Automated Response", "24/7 Monitoring", "Compliance Reporting"],
+      price: "From $399/month",
+      popular: true
     },
     {
-      title: "AI Customer Support",
-      description: "Enhance customer experience with intelligent chatbots and support automation.",
+      title: "AI Customer Support Automation",
+      description: "Intelligent chatbots and customer service automation with natural language processing and sentiment analysis.",
       icon: <Users className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
-      link: "/ai-customer-support",
-      features: ["Smart Chatbots", "Sentiment Analysis", "Multi-channel Support"]
+      link: "/ai-customer-support-automation",
+      features: ["Smart Chatbots", "Sentiment Analysis", "Multi-channel Support", "Live Handoff"],
+      price: "From $199/month"
     },
     {
-      title: "AI Data Analytics",
-      description: "Unlock the power of your data with advanced AI analytics and machine learning.",
+      title: "AI Data Analytics Platform",
+      description: "Advanced data processing and visualization with machine learning models and automated insights generation.",
       icon: <Database className="w-8 h-8" />,
       color: "from-indigo-500 to-purple-500",
-      link: "/ai-data-analytics",
-      features: ["Data Mining", "Pattern Recognition", "Predictive Modeling"]
+      link: "/ai-data-analytics-platform",
+      features: ["Data Mining", "Pattern Recognition", "Predictive Modeling", "Interactive Dashboards"],
+      price: "From $179/month"
     },
     {
-      title: "AI Workflow Automation",
-      description: "Streamline your business processes with intelligent workflow automation.",
+      title: "AI Workflow Automation Hub",
+      description: "Intelligent business process automation with AI-powered decision making and smart routing capabilities.",
       icon: <Zap className="w-8 h-8" />,
       color: "from-yellow-500 to-orange-500",
-      link: "/ai-workflow-automation",
-      features: ["Process Optimization", "Task Automation", "Smart Routing"]
+      link: "/ai-workflow-automation-hub",
+      features: ["Process Optimization", "Task Automation", "Smart Routing", "Integration Management"],
+      price: "From $159/month"
+    },
+    {
+      title: "AI Computer Vision Solutions",
+      description: "Advanced image and video analysis with object detection, facial recognition, and automated visual processing.",
+      icon: <Eye className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      link: "/ai-computer-vision-solutions",
+      features: ["Object Detection", "Facial Recognition", "Image Classification", "Video Analysis"],
+      price: "From $249/month"
+    },
+    {
+      title: "AI Natural Language Processing",
+      description: "Advanced text analysis and language understanding with sentiment analysis, entity extraction, and translation.",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-teal-500 to-green-500",
+      link: "/ai-natural-language-processing",
+      features: ["Sentiment Analysis", "Entity Extraction", "Language Translation", "Text Summarization"],
+      price: "From $199/month"
+    },
+    {
+      title: "AI Predictive Maintenance",
+      description: "Intelligent equipment monitoring and maintenance prediction to reduce downtime and optimize operations.",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      link: "/ai-predictive-maintenance",
+      features: ["Equipment Monitoring", "Failure Prediction", "Maintenance Scheduling", "Cost Optimization"],
+      price: "From $299/month"
+    },
+    {
+      title: "AI Fraud Detection System",
+      description: "Advanced fraud detection and prevention with real-time monitoring and automated risk assessment.",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      link: "/ai-fraud-detection-system",
+      features: ["Real-time Detection", "Risk Assessment", "Pattern Recognition", "Automated Alerts"],
+      price: "From $349/month"
+    },
+    {
+      title: "AI Recommendation Engine",
+      description: "Intelligent recommendation systems for personalized user experiences and product suggestions.",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-purple-500 to-violet-500",
+      link: "/ai-recommendation-engine",
+      features: ["Personalized Recommendations", "User Behavior Analysis", "A/B Testing", "Real-time Updates"],
+      price: "From $229/month"
+    },
+    {
+      title: "AI Voice Recognition & Processing",
+      description: "Advanced speech recognition and voice processing with real-time transcription and voice commands.",
+      icon: <Mic className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      link: "/ai-voice-recognition-processing",
+      features: ["Speech Recognition", "Voice Commands", "Real-time Transcription", "Multi-language Support"],
+      price: "From $179/month"
+    },
+    {
+      title: "AI Document Intelligence",
+      description: "Intelligent document processing with OCR, data extraction, and automated document classification.",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      link: "/ai-document-intelligence",
+      features: ["OCR Technology", "Data Extraction", "Document Classification", "Workflow Automation"],
+      price: "From $159/month"
+    },
+    {
+      title: "AI Supply Chain Optimization",
+      description: "Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.",
+      icon: <Truck className="w-8 h-8" />,
+      color: "from-blue-500 to-indigo-500",
+      link: "/ai-supply-chain-optimization",
+      features: ["Demand Forecasting", "Inventory Optimization", "Route Planning", "Cost Analysis"],
+      price: "From $279/month"
+    },
+    {
+      title: "AI Energy Management System",
+      description: "Smart energy management with consumption optimization, renewable energy integration, and predictive analytics.",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      link: "/ai-energy-management-system",
+      features: ["Energy Optimization", "Renewable Integration", "Predictive Analytics", "Cost Reduction"],
+      price: "From $199/month"
+    },
+    {
+      title: "AI Healthcare Diagnostics",
+      description: "Revolutionary medical diagnostics with image analysis, symptom assessment, and treatment recommendations.",
+      icon: <Heart className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500",
+      link: "/ai-healthcare-diagnostics",
+      features: ["Medical Imaging", "Symptom Analysis", "Treatment Recommendations", "Patient Monitoring"],
+      price: "From $499/month"
+    },
+    {
+      title: "AI Legal Research Assistant",
+      description: "Advanced legal research and document analysis with case law search and compliance monitoring.",
+      icon: <Scale className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      link: "/ai-legal-research-assistant",
+      features: ["Case Law Search", "Document Analysis", "Compliance Monitoring", "Legal Research"],
+      price: "From $329/month"
+    },
+    {
+      title: "AI Financial Analytics Pro",
+      description: "Advanced financial modeling and risk assessment with automated reporting and investment analysis.",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-amber-500 to-yellow-500",
+      link: "/ai-financial-analytics-pro",
+      features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Portfolio Optimization"],
+      price: "From $349/month"
+    },
+    {
+      title: "AI Marketing Personalization",
+      description: "AI-powered marketing personalization with customer segmentation and automated campaign optimization.",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      link: "/ai-marketing-personalization",
+      features: ["Customer Segmentation", "Campaign Optimization", "Personalized Content", "Performance Analytics"],
+      price: "From $199/month"
+    },
+    {
+      title: "AI Quality Assurance Automation",
+      description: "Intelligent quality testing and assurance with automated test generation and defect prediction.",
+      icon: <CheckCircle className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      link: "/ai-quality-assurance-automation",
+      features: ["Automated Testing", "Defect Prediction", "Quality Metrics", "Test Generation"],
+      price: "From $229/month"
     }
   ];
 
@@ -137,8 +280,16 @@ const AIServicesPage = () => {
             <Link
               key={index}
               to={service.link}
-              className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
+              className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
             >
+              {service.popular && (
+                <div className="absolute top-4 right-4">
+                  <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-2 py-1 rounded-full">
+                    POPULAR
+                  </span>
+                </div>
+              )}
+              
               <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
                 {service.icon}
               </div>
@@ -150,6 +301,10 @@ const AIServicesPage = () => {
               <p className="text-gray-300 mb-4 leading-relaxed">
                 {service.description}
               </p>
+              
+              <div className="text-cyan-400 font-bold text-lg mb-4">
+                {service.price}
+              </div>
               
               <ul className="space-y-2 mb-4">
                 {service.features.map((feature, featureIndex) => (

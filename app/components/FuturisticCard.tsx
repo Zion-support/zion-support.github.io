@@ -1,28 +1,50 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 interface FuturisticCardProps {
   children: React.ReactNode;
   className?: string;
-  variant?: 'default' | 'glow' | 'border';
+  hover?: boolean;
+  glow?: boolean;
+  neon?: boolean;
 }
 
 const FuturisticCard: React.FC<FuturisticCardProps> = ({ 
   children, 
-  className = '', 
-  variant = 'default' 
+  className = "", 
+  hover = true, 
+  glow = true,
+  neon = true 
 }) => {
-  const baseClasses = 'bg-slate-800/50 backdrop-blur-md rounded-2xl p-6 transition-all duration-300';
-  
-  const variantClasses = {
-    default: 'border border-cyan-500/20 hover:border-cyan-500/40',
-    glow: 'border border-cyan-500/20 hover:border-cyan-500/40 hover:shadow-lg hover:shadow-cyan-500/20',
-    border: 'border-2 border-cyan-500/30 hover:border-cyan-500/60'
-  };
-
   return (
-    <div className={`${baseClasses} ${variantClasses[variant]} ${className}`}>
-      {children}
-    </div>
+    <motion.div
+      className={`
+        relative bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 
+        ${neon ? 'shadow-lg shadow-cyan-500/10' : ''}
+        ${hover ? 'hover:bg-white/20 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20' : ''}
+        transition-all duration-300 overflow-hidden
+        ${className}
+      `}
+      whileHover={hover ? { scale: 1.05, y: -5 } : {}}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      {/* Animated background gradient */}
+      {glow && (
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+      )}
+      
+      {/* Neon border effect */}
+      {neon && (
+        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-pink-500/20 opacity-0 hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
+      )}
+      
+      {/* Content */}
+      <div className="relative z-10">
+        {children}
+      </div>
+    </motion.div>
   );
 };
 

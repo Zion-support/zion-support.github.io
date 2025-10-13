@@ -15,7 +15,26 @@ import {
   Sparkles,
   Star,
   CheckCircle,
-  TrendingUp
+  TrendingUp,
+  Mail,
+  Globe,
+  Package,
+  DollarSign,
+  MessageSquare,
+  FileText,
+  Target,
+  Monitor,
+  Calendar,
+  Receipt,
+  Clock,
+  ClipboardList,
+  HardDrive,
+  Lock,
+  Video,
+  CheckSquare,
+  Activity,
+  FileCheck,
+  Workflow
 } from 'lucide-react';
 
 const MicroSaasPage = () => {
@@ -75,6 +94,223 @@ const MicroSaasPage = () => {
       color: "from-yellow-500 to-orange-500",
       link: "/zion-ai-project-manager-pro",
       features: ["Task Automation", "Resource Optimization", "Progress Tracking", "Team Collaboration"]
+    },
+    {
+      name: "Zion AI Email Marketing Suite",
+      description: "Intelligent email marketing platform with AI-driven personalization and automated campaigns",
+      price: "From $79/month",
+      icon: <Mail className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      link: "/zion-ai-email-marketing-suite",
+      features: ["AI Personalization", "Automated Campaigns", "A/B Testing", "Analytics Dashboard"],
+      popular: true
+    },
+    {
+      name: "Zion AI Social Media Manager",
+      description: "AI-powered social media management with content scheduling and engagement optimization",
+      price: "From $129/month",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      link: "/zion-ai-social-media-manager",
+      features: ["Content Scheduling", "Engagement Analytics", "Hashtag Optimization", "Multi-platform Management"]
+    },
+    {
+      name: "Zion AI Inventory Optimizer",
+      description: "Smart inventory management with demand forecasting and automated reorder points",
+      price: "From $199/month",
+      icon: <Package className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      link: "/zion-ai-inventory-optimizer",
+      features: ["Demand Forecasting", "Automated Reordering", "Stock Alerts", "Cost Optimization"]
+    },
+    {
+      name: "Zion AI HR Assistant Pro",
+      description: "AI-powered human resources management with recruitment automation and employee analytics",
+      price: "From $179/month",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      link: "/zion-ai-hr-assistant-pro",
+      features: ["Recruitment Automation", "Employee Analytics", "Performance Tracking", "Compliance Management"]
+    },
+    {
+      name: "Zion AI Financial Planner",
+      description: "Intelligent financial planning and budgeting tool with predictive cash flow analysis",
+      price: "From $149/month",
+      icon: <DollarSign className="w-8 h-8" />,
+      color: "from-amber-500 to-yellow-500",
+      link: "/zion-ai-financial-planner",
+      features: ["Budget Planning", "Cash Flow Analysis", "Expense Tracking", "Financial Forecasting"]
+    },
+    {
+      name: "Zion AI Customer Feedback Analyzer",
+      description: "AI-powered customer feedback analysis with sentiment tracking and actionable insights",
+      price: "From $99/month",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      link: "/zion-ai-customer-feedback-analyzer",
+      features: ["Sentiment Analysis", "Feedback Categorization", "Trend Analysis", "Actionable Insights"]
+    },
+    {
+      name: "Zion AI Document Processor",
+      description: "Intelligent document processing with OCR, data extraction, and automated workflows",
+      price: "From $119/month",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-slate-500 to-gray-500",
+      link: "/zion-ai-document-processor",
+      features: ["OCR Technology", "Data Extraction", "Workflow Automation", "Document Classification"]
+    },
+    {
+      name: "Zion AI Lead Generator Pro",
+      description: "AI-powered lead generation with automated prospecting and qualification scoring",
+      price: "From $199/month",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      link: "/zion-ai-lead-generator-pro",
+      features: ["Automated Prospecting", "Lead Scoring", "Contact Enrichment", "CRM Integration"]
+    },
+    {
+      name: "Zion AI Website Optimizer",
+      description: "AI-powered website optimization with performance monitoring and conversion rate optimization",
+      price: "From $159/month",
+      icon: <Monitor className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      link: "/zion-ai-website-optimizer",
+      features: ["Performance Monitoring", "CRO Testing", "SEO Optimization", "User Experience Analysis"]
+    },
+    {
+      name: "Zion AI Appointment Scheduler",
+      description: "Intelligent appointment scheduling with automated booking and calendar management",
+      price: "From $79/month",
+      icon: <Calendar className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      link: "/zion-ai-appointment-scheduler",
+      features: ["Automated Booking", "Calendar Sync", "Reminder System", "Multi-timezone Support"]
+    },
+    {
+      name: "Zion AI Expense Tracker Pro",
+      description: "Smart expense tracking with receipt scanning and automated categorization",
+      price: "From $89/month",
+      icon: <Receipt className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      link: "/zion-ai-expense-tracker-pro",
+      features: ["Receipt Scanning", "Auto-categorization", "Expense Reports", "Tax Preparation"]
+    },
+    {
+      name: "Zion AI Time Tracker",
+      description: "AI-powered time tracking with productivity analysis and project billing automation",
+      price: "From $69/month",
+      icon: <Clock className="w-8 h-8" />,
+      color: "from-cyan-500 to-teal-500",
+      link: "/zion-ai-time-tracker",
+      features: ["Automatic Time Tracking", "Productivity Analysis", "Project Billing", "Team Management"]
+    },
+    {
+      name: "Zion AI Survey Builder Pro",
+      description: "Intelligent survey creation with AI-powered question suggestions and response analysis",
+      price: "From $99/month",
+      icon: <ClipboardList className="w-8 h-8" />,
+      color: "from-rose-500 to-pink-500",
+      link: "/zion-ai-survey-builder-pro",
+      features: ["AI Question Suggestions", "Response Analysis", "Custom Templates", "Advanced Analytics"]
+    },
+    {
+      name: "Zion AI Backup Manager",
+      description: "Automated backup solution with intelligent scheduling and disaster recovery planning",
+      price: "From $129/month",
+      icon: <HardDrive className="w-8 h-8" />,
+      color: "from-gray-500 to-slate-500",
+      link: "/zion-ai-backup-manager",
+      features: ["Automated Backups", "Disaster Recovery", "Version Control", "Cloud Storage"]
+    },
+    {
+      name: "Zion AI Password Manager Pro",
+      description: "Secure password management with AI-powered security recommendations and breach monitoring",
+      price: "From $59/month",
+      icon: <Lock className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500",
+      link: "/zion-ai-password-manager-pro",
+      features: ["Secure Storage", "Security Recommendations", "Breach Monitoring", "Team Sharing"]
+    },
+    {
+      name: "Zion AI Meeting Assistant",
+      description: "AI-powered meeting management with transcription, action items, and follow-up automation",
+      price: "From $149/month",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-blue-500 to-indigo-500",
+      link: "/zion-ai-meeting-assistant",
+      features: ["Live Transcription", "Action Item Extraction", "Meeting Summaries", "Follow-up Automation"]
+    },
+    {
+      name: "Zion AI Invoice Generator",
+      description: "Automated invoice generation with AI-powered pricing suggestions and payment tracking",
+      price: "From $79/month",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      link: "/zion-ai-invoice-generator",
+      features: ["Automated Generation", "Pricing Suggestions", "Payment Tracking", "Tax Calculations"]
+    },
+    {
+      name: "Zion AI Task Scheduler Pro",
+      description: "Intelligent task scheduling with AI-powered prioritization and deadline management",
+      price: "From $89/month",
+      icon: <CheckSquare className="w-8 h-8" />,
+      color: "from-yellow-500 to-orange-500",
+      link: "/zion-ai-task-scheduler-pro",
+      features: ["AI Prioritization", "Deadline Management", "Team Collaboration", "Progress Tracking"]
+    },
+    {
+      name: "Zion AI Data Visualizer",
+      description: "AI-powered data visualization with automated chart generation and interactive dashboards",
+      price: "From $139/month",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-purple-500 to-violet-500",
+      link: "/zion-ai-data-visualizer",
+      features: ["Automated Charts", "Interactive Dashboards", "Data Import", "Export Options"]
+    },
+    {
+      name: "Zion AI Content Moderator",
+      description: "AI-powered content moderation with automated filtering and compliance monitoring",
+      price: "From $199/month",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      link: "/zion-ai-content-moderator",
+      features: ["Automated Filtering", "Compliance Monitoring", "Custom Rules", "Real-time Alerts"]
+    },
+    {
+      name: "Zion AI API Gateway",
+      description: "Intelligent API management with automated monitoring, security, and performance optimization",
+      price: "From $299/month",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      link: "/zion-ai-api-gateway",
+      features: ["API Monitoring", "Security Management", "Performance Optimization", "Rate Limiting"]
+    },
+    {
+      name: "Zion AI Workflow Builder",
+      description: "Visual workflow automation with AI-powered process optimization and integration management",
+      price: "From $179/month",
+      icon: <Workflow className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      link: "/zion-ai-workflow-builder",
+      features: ["Visual Builder", "Process Optimization", "Integration Management", "Custom Triggers"]
+    },
+    {
+      name: "Zion AI Compliance Monitor",
+      description: "Automated compliance monitoring with regulatory updates and audit trail management",
+      price: "From $249/month",
+      icon: <FileCheck className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      link: "/zion-ai-compliance-monitor",
+      features: ["Regulatory Updates", "Audit Trails", "Risk Assessment", "Automated Reporting"]
+    },
+    {
+      name: "Zion AI Performance Monitor",
+      description: "AI-powered performance monitoring with predictive analytics and automated optimization",
+      price: "From $159/month",
+      icon: <Activity className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      link: "/zion-ai-performance-monitor",
+      features: ["Predictive Analytics", "Automated Optimization", "Real-time Monitoring", "Performance Alerts"]
     }
   ];
 

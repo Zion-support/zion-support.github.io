@@ -176,68 +176,63 @@ const HomePage = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <PerformanceOptimizer>
       <EnhancedAccessibility>
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <FuturisticBackground className="min-h-screen">
           <EnhancedSEO
             title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
             keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
             canonical="https://ziontechgroup.com"
+            structuredData={structuredData}
           />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
-        canonical="https://ziontechgroup.com"
-        structuredData={structuredData}
-      />
-      
-      <StructuredData type="Organization" data={structuredData} />
-      
-      <StructuredData 
-        type="WebSite" 
-        data={{
-          name: "Zion Tech Group",
-          url: "https://ziontechgroup.com",
-          potentialAction: {
-            "@type": "SearchAction",
-            "target": "https://ziontechgroup.com/search?q={search_term_string}",
-            "query-input": "required name=search_term_string"
-          }
-        }} 
-      />
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
+          
+          <StructuredData type="Organization" data={structuredData} />
+          
+          <StructuredData 
+            type="WebSite" 
+            data={{
+              name: "Zion Tech Group",
+              url: "https://ziontechgroup.com",
+              potentialAction: {
+                "@type": "SearchAction",
+                "target": "https://ziontechgroup.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            }} 
+          />
 
       {/* Main Content */}
       <main id="main-content" role="main" aria-label="Main content">
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
-          </div>
+          <FuturisticCard className="inline-block p-4 mb-6">
+            <div className="flex items-center">
+              <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
+            </div>
+          </FuturisticCard>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Welcome to Zion Tech Group
-            </span>
-          </h1>
+          <FuturisticText 
+            variant="heading" 
+            size="6xl" 
+            className="mb-6 leading-tight"
+            animate={true}
+            glow={true}
+          >
+            Welcome to Zion Tech Group
+          </FuturisticText>
           
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
+          <FuturisticText 
+            variant="body" 
+            size="xl" 
+            className="mb-8 max-w-4xl mx-auto leading-relaxed text-center"
+            animate={true}
+          >
             Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 
             Transform your operations with cutting-edge technology and innovative solutions.
-          </p>
+          </FuturisticText>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <FuturisticButton
@@ -287,9 +282,12 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {features.map((feature, index) => (
-              <div
+              <FuturisticCard
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                className="p-6 cursor-pointer"
+                hover={true}
+                glow={true}
+                neon={true}
               >
                 <Link
                   to={feature.link}
@@ -302,19 +300,27 @@ const HomePage = () => {
                   >
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
+                  <FuturisticText 
+                    variant="heading" 
+                    size="lg" 
+                    className="mb-3 text-center group-hover:text-cyan-400 transition-colors"
+                  >
                     {feature.title}
-                  </h3>
-                  <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
+                  </FuturisticText>
+                  <FuturisticText 
+                    variant="body" 
+                    size="sm" 
+                    className="text-center mb-4 leading-relaxed"
+                  >
                     {feature.description}
-                  </p>
+                  </FuturisticText>
                   <div className="text-center">
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-xs md:text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
                       {feature.stats}
                     </span>
                   </div>
                 </Link>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </ResponsiveContainer>
@@ -333,47 +339,69 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
-              <Link
+              <FuturisticCard
                 key={index}
-                to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="p-6 relative overflow-hidden"
+                hover={true}
+                glow={true}
+                neon={true}
               >
-                {saas.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
-                      Featured
-                    </span>
+                <Link
+                  to={saas.link}
+                  className="block"
+                >
+                  {saas.featured && (
+                    <div className="absolute top-4 right-4">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                        Featured
+                      </span>
+                    </div>
+                  )}
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                      {saas.icon}
+                    </div>
+                    <div className="flex-1">
+                      <FuturisticText 
+                        variant="heading" 
+                        size="lg" 
+                        className="group-hover:text-cyan-400 transition-colors"
+                      >
+                        {saas.name}
+                      </FuturisticText>
+                      <FuturisticText 
+                        variant="gradient" 
+                        size="sm" 
+                        className="font-medium"
+                      >
+                        {saas.price}
+                      </FuturisticText>
+                    </div>
                   </div>
-                )}
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {saas.icon}
+                  <FuturisticText 
+                    variant="body" 
+                    size="sm" 
+                    className="leading-relaxed"
+                  >
+                    {saas.description}
+                  </FuturisticText>
+                  <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                      {saas.name}
-                    </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {saas.description}
-                </p>
-                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </Link>
+                </Link>
+              </FuturisticCard>
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link
-              to="/micro-saas"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
+            <FuturisticButton
+              href="/micro-saas"
+              variant="secondary"
+              size="lg"
+              icon={<ArrowRight className="w-5 h-5" />}
             >
               View All Micro SAAS Solutions
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </FuturisticButton>
           </div>
         </div>
       </section>
@@ -391,21 +419,42 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div
+              <FuturisticCard
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="p-6"
+                hover={true}
+                glow={true}
+                neon={true}
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                <FuturisticText 
+                  variant="body" 
+                  size="md" 
+                  className="mb-4 italic leading-relaxed"
+                >
+                  "{testimonial.content}"
+                </FuturisticText>
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  <FuturisticText 
+                    variant="heading" 
+                    size="md" 
+                    className="font-semibold"
+                  >
+                    {testimonial.name}
+                  </FuturisticText>
+                  <FuturisticText 
+                    variant="caption" 
+                    size="sm" 
+                    className="text-gray-400"
+                  >
+                    {testimonial.role}, {testimonial.company}
+                  </FuturisticText>
                 </div>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
@@ -448,25 +497,27 @@ const HomePage = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            <FuturisticButton
+              href="/contact"
+              variant="primary"
+              size="lg"
+              icon={<ArrowRight className="w-5 h-5" />}
             >
               Start Your Journey
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            </FuturisticButton>
+            <FuturisticButton
+              href="/services"
+              variant="outline"
+              size="lg"
+              icon={<Sparkles className="w-5 h-5" />}
             >
               Explore Services
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
+            </FuturisticButton>
           </div>
         </div>
       </section>
       </main>
-        </div>
+        </FuturisticBackground>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );

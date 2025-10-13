@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones, CheckCircle, Star, Award, Rocket, Sparkles } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Zap, Database, Settings, Monitor, Lock, Server, Cpu, Network, HardDrive, Smartphone as Phone, Laptop, Headphones, CheckCircle, Star, Award, Rocket, Sparkles, Link, RefreshCw, FileCheck, GraduationCap, AlertTriangle, DollarSign, Lightbulb } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -336,6 +336,205 @@ export default function Services() {
       originalPrice: "$299/month",
       features: ["Asset Inventory", "Lifecycle Management", "Cost Tracking", "License Management", "Depreciation Tracking", "Compliance Reporting"],
       category: "Asset Management"
+    },
+    {
+      title: "AI-Powered Network Monitoring",
+      description: "Intelligent network monitoring with AI-driven anomaly detection, predictive maintenance, and automated troubleshooting for enterprise networks.",
+      icon: <Network className="w-8 h-8" />,
+      path: "/ai-network-monitoring",
+      color: "from-cyan-500 to-teal-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["AI Anomaly Detection", "Predictive Maintenance", "Automated Troubleshooting", "Performance Analytics", "Real-time Alerts", "Network Optimization"],
+      category: "Network AI",
+      popular: true
+    },
+    {
+      title: "Blockchain Development Services",
+      description: "Complete blockchain solutions including smart contracts, DeFi applications, NFT platforms, and cryptocurrency integration for modern businesses.",
+      icon: <Link className="w-8 h-8" />,
+      path: "/blockchain-development",
+      color: "from-purple-500 to-violet-500",
+      price: "Starting at $399/month",
+      originalPrice: "$799/month",
+      features: ["Smart Contracts", "DeFi Applications", "NFT Platforms", "Crypto Integration", "Security Audits", "Token Development"],
+      category: "Blockchain"
+    },
+    {
+      title: "IoT Solutions & Integration",
+      description: "Comprehensive Internet of Things solutions with device management, data collection, and real-time monitoring for smart environments.",
+      icon: <Wifi className="w-8 h-8" />,
+      path: "/iot-solutions",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $249/month",
+      originalPrice: "$499/month",
+      features: ["Device Management", "Data Collection", "Real-time Monitoring", "Edge Computing", "Protocol Integration", "Security Implementation"],
+      category: "IoT Solutions"
+    },
+    {
+      title: "Machine Learning Model Development",
+      description: "Custom machine learning model development with data preprocessing, model training, deployment, and ongoing optimization for business applications.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/ml-model-development",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $499/month",
+      originalPrice: "$999/month",
+      features: ["Custom Model Development", "Data Preprocessing", "Model Training", "Deployment Services", "Performance Optimization", "Ongoing Support"],
+      category: "Machine Learning"
+    },
+    {
+      title: "API Development & Management",
+      description: "Complete API development services with RESTful and GraphQL APIs, documentation, testing, and ongoing maintenance for modern applications.",
+      icon: <Globe className="w-8 h-8" />,
+      path: "/api-development",
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $179/month",
+      originalPrice: "$359/month",
+      features: ["RESTful APIs", "GraphQL APIs", "API Documentation", "Testing & Validation", "Rate Limiting", "Security Implementation"],
+      category: "API Services"
+    },
+    {
+      title: "Data Science & Analytics Consulting",
+      description: "Expert data science consulting with statistical analysis, predictive modeling, and business intelligence solutions for data-driven decisions.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      path: "/data-science-consulting",
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $299/month",
+      originalPrice: "$599/month",
+      features: ["Statistical Analysis", "Predictive Modeling", "Business Intelligence", "Data Visualization", "Machine Learning", "Custom Analytics"],
+      category: "Data Science"
+    },
+    {
+      title: "Software Testing & QA Services",
+      description: "Comprehensive software testing services including automated testing, performance testing, security testing, and quality assurance for applications.",
+      icon: <CheckCircle className="w-8 h-8" />,
+      path: "/software-testing-qa",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Automated Testing", "Performance Testing", "Security Testing", "Load Testing", "Regression Testing", "Test Automation"],
+      category: "Quality Assurance"
+    },
+    {
+      title: "Digital Transformation Consulting",
+      description: "Strategic digital transformation consulting with technology roadmaps, process optimization, and change management for modern businesses.",
+      icon: <RefreshCw className="w-8 h-8" />,
+      path: "/digital-transformation",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $349/month",
+      originalPrice: "$699/month",
+      features: ["Technology Roadmaps", "Process Optimization", "Change Management", "Digital Strategy", "Implementation Planning", "Training & Support"],
+      category: "Digital Transformation"
+    },
+    {
+      title: "Cloud Security & Compliance",
+      description: "Comprehensive cloud security services with compliance management, security audits, and risk assessment for cloud environments.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/cloud-security-compliance",
+      color: "from-red-500 to-orange-500",
+      price: "Starting at $279/month",
+      originalPrice: "$559/month",
+      features: ["Compliance Management", "Security Audits", "Risk Assessment", "Vulnerability Testing", "Security Policies", "Incident Response"],
+      category: "Cloud Security"
+    },
+    {
+      title: "Business Process Automation",
+      description: "Intelligent business process automation with workflow optimization, robotic process automation, and digital transformation solutions.",
+      icon: <Zap className="w-8 h-8" />,
+      path: "/business-process-automation",
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $229/month",
+      originalPrice: "$459/month",
+      features: ["Workflow Optimization", "RPA Implementation", "Process Mapping", "Integration Services", "Performance Monitoring", "Continuous Improvement"],
+      category: "Process Automation"
+    },
+    {
+      title: "Enterprise Software Integration",
+      description: "Complete enterprise software integration services with ERP, CRM, and business application integration for seamless operations.",
+      icon: <Link className="w-8 h-8" />,
+      path: "/enterprise-integration",
+      color: "from-indigo-500 to-blue-500",
+      price: "Starting at $299/month",
+      originalPrice: "$599/month",
+      features: ["ERP Integration", "CRM Integration", "API Integration", "Data Synchronization", "Custom Connectors", "Migration Services"],
+      category: "Enterprise Integration"
+    },
+    {
+      title: "IT Governance & Risk Management",
+      description: "Comprehensive IT governance services with risk management, compliance monitoring, and policy development for enterprise IT operations.",
+      icon: <FileCheck className="w-8 h-8" />,
+      path: "/it-governance-risk",
+      color: "from-slate-500 to-gray-500",
+      price: "Starting at $249/month",
+      originalPrice: "$499/month",
+      features: ["Risk Management", "Compliance Monitoring", "Policy Development", "Audit Support", "Governance Frameworks", "Regulatory Compliance"],
+      category: "IT Governance"
+    },
+    {
+      title: "Technology Training & Certification",
+      description: "Comprehensive technology training programs with certification courses, workshops, and hands-on training for IT professionals and teams.",
+      icon: <GraduationCap className="w-8 h-8" />,
+      path: "/technology-training",
+      color: "from-emerald-500 to-green-500",
+      price: "Starting at $149/month",
+      originalPrice: "$299/month",
+      features: ["Certification Courses", "Hands-on Training", "Workshop Programs", "Online Learning", "Custom Training", "Exam Preparation"],
+      category: "Training & Education"
+    },
+    {
+      title: "IT Disaster Recovery Planning",
+      description: "Comprehensive disaster recovery planning with backup strategies, recovery procedures, and business continuity planning for IT infrastructure.",
+      icon: <AlertTriangle className="w-8 h-8" />,
+      path: "/disaster-recovery-planning",
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Recovery Planning", "Backup Strategies", "Business Continuity", "Testing & Validation", "Documentation", "Emergency Response"],
+      category: "Disaster Recovery"
+    },
+    {
+      title: "IT Performance Optimization",
+      description: "Comprehensive IT performance optimization with system tuning, capacity planning, and performance monitoring for optimal IT operations.",
+      icon: <TrendingUp className="w-8 h-8" />,
+      path: "/it-performance-optimization",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $179/month",
+      originalPrice: "$359/month",
+      features: ["System Tuning", "Capacity Planning", "Performance Monitoring", "Bottleneck Analysis", "Optimization Strategies", "Performance Metrics"],
+      category: "Performance Optimization"
+    },
+    {
+      title: "IT Vendor Management",
+      description: "Comprehensive IT vendor management services with vendor selection, contract negotiation, and ongoing vendor relationship management.",
+      icon: <Users className="w-8 h-8" />,
+      path: "/it-vendor-management",
+      color: "from-violet-500 to-purple-500",
+      price: "Starting at $159/month",
+      originalPrice: "$319/month",
+      features: ["Vendor Selection", "Contract Negotiation", "Relationship Management", "Performance Monitoring", "Cost Optimization", "Service Level Management"],
+      category: "Vendor Management"
+    },
+    {
+      title: "IT Cost Optimization",
+      description: "Strategic IT cost optimization with budget analysis, cost reduction strategies, and technology investment planning for maximum ROI.",
+      icon: <DollarSign className="w-8 h-8" />,
+      path: "/it-cost-optimization",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $199/month",
+      originalPrice: "$399/month",
+      features: ["Budget Analysis", "Cost Reduction", "ROI Optimization", "Technology Planning", "Licensing Optimization", "Resource Allocation"],
+      category: "Cost Optimization"
+    },
+    {
+      title: "IT Innovation Consulting",
+      description: "Strategic IT innovation consulting with emerging technology assessment, innovation roadmaps, and digital innovation strategies.",
+      icon: <Lightbulb className="w-8 h-8" />,
+      path: "/it-innovation-consulting",
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $299/month",
+      originalPrice: "$599/month",
+      features: ["Technology Assessment", "Innovation Roadmaps", "Digital Strategy", "Emerging Technologies", "Innovation Planning", "Technology Trends"],
+      category: "Innovation Consulting"
     }
   ];
 
