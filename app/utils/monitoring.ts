@@ -1,15 +1,25 @@
-import { Monitor } from 'lucide-react';
-
 // Monitoring utility functions
 
 export const Monitoring = {
   init: () => {
-    },
-// Monitoring utility functions
+    console.log('Monitoring initialized');
+  },
+  
+  trackEvent: (eventName: string, properties?: Record<string, any>) => {
+    console.log('Event tracked:', eventName, properties);
+  },
+  
+  trackError: (error: Error, context?: string) => {
+    console.error('Error tracked:', error, context);
+  },
+  
+  trackPerformance: (metricName: string, value: number) => {
+    console.log('Performance metric:', metricName, value);
+  }
+};
 
 export function monitoring() {
-  // Implementation here
-  return null;
+  return Monitoring;
 }
 
 export default monitoring;

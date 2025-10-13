@@ -1,17 +1,23 @@
+import React from 'react';
 
 interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
   data: any;
-
-interface StructureddataProps {
-  className?: string;
-  children?: React.ReactNode;
 }
 
-export default function Structureddata({ className = '', children, ...props }: StructureddataProps) {
+export default function StructuredData({ type, data }: StructuredDataProps) {
+  const structuredData = {
+    '@context': 'https://schema.org',
+    '@type': type,
+    ...data
+  };
+
   return (
-    <div className={`structureddata-component ${className}`} {...props}>
-      {children}
-    </div>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(structuredData, null, 2)
+      }}
+    />
   );
 }

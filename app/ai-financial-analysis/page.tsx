@@ -1,16 +1,7 @@
 import { Helmet } from 'react-helmet-async';
-import { TrendingUp } from 'lucide-react';
+import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-react';
 
-const AIFinancialAnalysisPage = () => {
-  const benefits = [
-    "Increase investment returns by 25%",
-    "Reduce financial risk by 60%",
-    "Automate 90% of analysis tasks",
-    "Real-time market monitoring",
-    "Advanced fraud detection",
-    "Comprehensive compliance reporting"
-  ];
-
+export default function AIFinancialAnalysisPage() {
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -53,43 +44,39 @@ const AIFinancialAnalysisPage = () => {
     "Advanced fraud detection and prevention"
   ];
 
-export default function AiFinancialAnalysisPage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
-      <Helmet>
-        <title>Ai Financial Analysis - Zion Tech Group</title>
-        <meta name="description" content="Ai Financial Analysis solutions by Zion Tech Group" />
-      </Helmet>
-      
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
       <div className="container mx-auto px-4 py-20">
-        <h1 className="text-4xl font-bold mb-8">Ai Financial Analysis</h1>
-        <div className="prose prose-invert max-w-none">
-          <p className="text-xl text-gray-300 mb-8">
-            Discover our comprehensive ai financial analysis solutions designed to meet your business needs.
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            AI Financial Analysis
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI-powered financial analysis solutions to optimize your investment strategies and risk management.
           </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Expert Solutions</h3>
-              <p className="text-gray-300">
-                Our team of experts delivers tailored solutions for your specific requirements.
-              </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+              <div className="flex items-center mb-4">
+                {feature.icon}
+                <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+              </div>
+              <p className="text-gray-300">{feature.description}</p>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">Cutting-Edge Technology</h3>
-              <p className="text-gray-300">
-                We use the latest technologies and best practices to ensure optimal performance.
-              </p>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="flex items-center mb-2">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                <span className="text-white font-medium">{benefit}</span>
+              </div>
             </div>
-            
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h3 className="text-xl font-semibold mb-4">24/7 Support</h3>
-              <p className="text-gray-300">
-                Get round-the-clock support from our dedicated team of professionals.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
