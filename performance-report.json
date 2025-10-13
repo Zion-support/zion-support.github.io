@@ -1,29 +1,16 @@
 {
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T09:02:34.776Z",
+  "timestamp": "2025-10-13T09:22:28.307Z",
   "buildStats": {
-    "totalFiles": 17,
-    "totalSize": 548251,
-    "jsFiles": 14,
-    "jsSize": 539744,
-=======
-  "timestamp": "2025-10-13T09:08:10.314Z",
-  "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 558046,
-    "jsFiles": 14,
-    "jsSize": 535049,
->>>>>>> main
+    "totalFiles": 14,
+    "totalSize": 440073,
+    "jsFiles": 11,
+    "jsSize": 431111,
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 0,
     "imageSize": 0
   },
   "recommendations": [
-    {
-      "type": "warning",
-      "message": "JavaScript bundle size is large. Consider code splitting or tree shaking."
-    },
     {
       "type": "success",
       "message": "Build size is optimized! Great job!"
