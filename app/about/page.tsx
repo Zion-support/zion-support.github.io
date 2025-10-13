@@ -1,16 +1,7 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import React from 'react;
-
-import { Helmet } from 'react-helmet-async;
-
-import {
-  Download,
-  ExternalLink,
-  ChevronRight,
-  Phone,
-  Mail,
 import { Link } from 'react-router-dom';
-import { ArrowRight, Brain, Shield, Users } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Users, Download, ExternalLink, ChevronRight, Phone, Mail } from 'lucide-react';
 
 export default function AboutPage() {
   // Team members data (for future use)
@@ -80,7 +71,6 @@ export default function AboutPage() {
 const AboutPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-  </>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
         <meta name="description" content="Learn about Zion Tech Group's mission, team, and expertise in AI and IT solutions" />
@@ -94,16 +84,10 @@ const AboutPage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             We are a cutting-edge technology company specializing in AI solutions, 
             cloud infrastructure, and innovative IT services that transform businesses.
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                About Zion Tech Group
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
-              </p>
-        <section className="py-20 bg-slate-800">
+          </p>
+        </div>
+
+        <section className="py-20 bg-slate-800 rounded-2xl mb-16">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>

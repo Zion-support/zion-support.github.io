@@ -1,6 +1,6 @@
-import React, {Suspense, lazy}from 'react';
-import {BrowserRouter, Routes, Route}}from 'react-router-dom';
-import {HelmetProvider}}from 'react-helmet-async';
+import React, { Suspense, lazy } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from './components/ErrorBoundary';
 import PerformanceMonitor from './components/PerformanceMonitor';
 // AI Services;
@@ -16,9 +16,10 @@ const AiWorkflowAutomationPage = lazy(() => import('./ai-workflow-automation/pag
 const AiCustomerSupportPage = lazy(() => import('./ai-customer-support/page'));
 const AiSalesAutomationPage = lazy(() => import('./ai-sales-automation/page'));
 const AiDataVisualizationPage = lazy(() => import('./ai-data-visualization/page'));
-const App: React.FC = () => {,
-    return(<ErrorBoundary>)
-      <HelmetProvider />
+const App: React.FC = () => {
+  return (
+    <ErrorBoundary>
+      <HelmetProvider>
         <BrowserRouter>
           <div className="App">
             <PerformanceMonitor />
@@ -145,7 +146,11 @@ const App: React.FC = () => {,
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
             </Routes>
             </Suspense>
-          </AccessibilityEnhancer>
-        </ErrorBoundary>
-      </BrowserRouter>
-    </HelmetProvider>
+          </div>
+        </BrowserRouter>
+      </HelmetProvider>
+    </ErrorBoundary>
+  );
+};
+
+export default App;
