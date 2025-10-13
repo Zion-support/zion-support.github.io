@@ -21,13 +21,58 @@ import {
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
     {
+      title: 'Zion AI CRM Pro',
+      description: 'AI-powered customer relationship management with intelligent lead scoring and automation.',
+      icon: <Users className="w-8 h-8" />,
+      path: '/zion-ai-crm-pro',
+      features: ['AI lead scoring', 'Predictive analytics', 'Automated workflows'],
+      price: '$79/month',
+      featured: true
+    },
+    {
+      title: 'Zion AI Marketing Automation Pro',
+      description: 'AI-powered marketing automation with predictive content generation and multi-channel orchestration.',
+      icon: <Target className="w-8 h-8" />,
+      path: '/zion-ai-marketing-automation-pro',
+      features: ['Campaign optimization', 'Audience segmentation', 'Content generation'],
+      price: '$149/month',
+      featured: true
+    },
+    {
+      title: 'Zion AI Project Manager Pro',
+      description: 'AI-powered project management with intelligent task prioritization and resource allocation.',
+      icon: <Calendar className="w-8 h-8" />,
+      path: '/zion-ai-project-manager-pro',
+      features: ['Task prioritization', 'Risk management', 'Resource optimization'],
+      price: '$79/month',
+      featured: true
+    },
+    {
+      title: 'Zion AI Financial Forecaster',
+      description: 'AI-powered financial forecasting with 95% accuracy for revenue and cash flow predictions.',
+      icon: <TrendingUp className="w-8 h-8" />,
+      path: '/zion-ai-financial-forecaster',
+      features: ['Revenue forecasting', 'Cash flow analysis', 'Risk assessment'],
+      price: '$299/month',
+      featured: true
+    },
+    {
+      title: 'Zion AI Supply Chain Optimizer',
+      description: 'AI-powered supply chain optimization with demand forecasting and inventory management.',
+      icon: <Package className="w-8 h-8" />,
+      path: '/zion-ai-supply-chain-optimizer',
+      features: ['Demand forecasting', 'Inventory optimization', 'Route planning'],
+      price: '$599/month',
+      featured: true
+    },
+    {
       title: 'Zion Analytics Pro',
       description: 'Advanced analytics dashboard with real-time insights and customizable reports.',
       icon: <BarChart3 className="w-8 h-8" />,
       path: '/zion-analytics-pro',
       features: ['Real-time dashboards', 'Custom reports', 'Data visualization'],
       price: '$29/month',
-      featured: true
+      featured: false
     },
     {
       title: 'Zion Security Shield',
@@ -36,7 +81,7 @@ const MicroSaasPage: React.FC = () => {
       path: '/zion-security-shield',
       features: ['Threat detection', 'Security monitoring', 'Incident response'],
       price: '$49/month',
-      featured: true
+      featured: false
     },
     {
       title: 'Zion Cloud Vault',
@@ -115,7 +160,7 @@ const MicroSaasPage: React.FC = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {microSaasProducts.map((product, index) => (
                 <div
                   key={index}

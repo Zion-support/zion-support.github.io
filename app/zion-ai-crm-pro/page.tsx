@@ -1,95 +1,112 @@
-import { ArrowRight, Users, Brain, BarChart3, CheckCircle, Star, Zap, Target, MessageSquare, Calendar, Phone, Mail, TrendingUp, Shield, Globe, Clock, Award, Database, Eye, Filter, Search, Bell, Settings, Lock, RefreshCw, Download, Upload, Share2, Plus, Minus, X, Check, AlertTriangle, Info, ExternalLink, Play, Pause, Stop, SkipForward, SkipBack, Volume2, VolumeX, Mic, MicOff, Video, VideoOff, Camera, CameraOff, Image, FileText, File, Folder, FolderOpen, Archive, Trash2, Edit, Save, Copy, Cut, Paste, Undo, Redo, Bold, Italic, Underline, AlignLeft, AlignCenter, AlignRight, List, Grid, Table, Columns, Rows, PlusCircle, MinusCircle, XCircle, CheckCircle2, AlertCircle, HelpCircle, InfoIcon, Lightbulb, Bookmark, Heart, ThumbsUp, ThumbsDown, Flag, FlagOff, Star as StarIcon, StarOff, Moon, Sun, Cloud, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Activity, Pulse, Heart as HeartIcon, Zap as ZapIcon, Flash, Thunder, Fire, Water, Earth, Air, Space, Rocket, Satellite, Planet, Sun as SunIcon, Moon as MoonIcon, Star as StarIcon2, Comet, Meteor, Galaxy, Nebula, BlackHole, Wormhole, Time, Space as SpaceIcon, Infinity, Atom, Molecule, DNA, Cell, Organism, Evolution, Growth, Development, Progress, Success, Achievement, Victory, Trophy, Medal, Badge, Certificate, Diploma, Degree, License, Permit, Passport, ID, Card, Ticket, Voucher, Coupon, Discount, Sale, Price, Money, Dollar, Euro, Pound, Yen, Rupee, Bitcoin, Ethereum, Crypto, Blockchain, Wallet, Bank, Credit, Debit, Payment, Transaction, Transfer, Exchange, Trade, Market, Stock, Bond, Investment, Portfolio, Fund, Asset, Liability, Equity, Revenue, Profit, Loss, Income, Expense, Budget, Finance, Accounting, Bookkeeping, Tax, Audit, Compliance, Legal, Contract, Agreement, Terms, Conditions, Privacy, Security, Protection, Safety, Risk, Insurance, Claim, Policy, Coverage, Premium, Deductible, Copay, Coinsurance, OutOfPocket, Maximum, Minimum, Limit, Cap, Floor, Ceiling, Range, Scale, Level, Grade, Rank, Position, Status, State, Condition, Situation, Circumstance, Context, Environment, Setting, Location, Place, Address, City, State, Country, Region, Area, Zone, District, Neighborhood, Street, Road, Avenue, Boulevard, Lane, Drive, Court, Circle, Square, Plaza, Mall, Center, Complex, Building, Tower, Skyscraper, House, Home, Apartment, Condo, Townhouse, Villa, Mansion, Palace, Castle, Fort, Tower, Bridge, Tunnel, Highway, Freeway, Expressway, Parkway, Street, Road, Avenue, Boulevard, Lane, Drive, Court, Circle, Square, Plaza, Mall, Center, Complex, Building, Tower, Skyscraper, House, Home, Apartment, Condo, Townhouse, Villa, Mansion, Palace, Castle, Fort, Tower, Bridge, Tunnel, Highway, Freeway, Expressway, Parkway } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  Users, 
+  BarChart3, 
+  Mail, 
+  Phone, 
+  Calendar, 
+  Target, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  Star, 
+  ArrowRight,
+  Brain,
+  Database,
+  Globe,
+  Clock,
+  Award,
+  Sparkles
+} from 'lucide-react';
 
-export default function ZionAiCrmPro() {
+const ZionAICrmProPage: React.FC = () => {
   const features = [
     {
-      title: "AI-Powered Lead Scoring",
-      description: "Automatically score and prioritize leads using machine learning algorithms that analyze behavior patterns, engagement levels, and conversion probability.",
+      title: 'AI-Powered Lead Scoring',
+      description: 'Automatically score and prioritize leads using machine learning algorithms',
       icon: <Target className="w-6 h-6" />,
-      benefits: ["95% accuracy in lead scoring", "Real-time lead prioritization", "Behavioral pattern analysis", "Predictive conversion modeling"]
+      benefits: ['95% accuracy in lead qualification', '40% increase in conversion rates', 'Real-time scoring updates']
     },
     {
-      title: "Intelligent Contact Management",
-      description: "Smart contact database with AI-powered data enrichment, duplicate detection, and automatic contact information updates.",
+      title: 'Intelligent Contact Management',
+      description: 'Smart contact organization with automatic data enrichment and deduplication',
       icon: <Users className="w-6 h-6" />,
-      benefits: ["Auto data enrichment", "Duplicate detection", "Contact deduplication", "Social media integration"]
+      benefits: ['Auto-enrichment from 50+ sources', 'Duplicate detection & merging', 'Contact relationship mapping']
     },
     {
-      title: "Conversational AI Assistant",
-      description: "AI-powered chatbot that handles customer inquiries, schedules meetings, and provides instant support 24/7.",
-      icon: <MessageSquare className="w-6 h-6" />,
-      benefits: ["24/7 customer support", "Natural language processing", "Multi-language support", "Sentiment analysis"]
-    },
-    {
-      title: "Predictive Analytics Dashboard",
-      description: "Advanced analytics and forecasting tools that predict sales trends, customer behavior, and revenue projections.",
+      title: 'Predictive Analytics Dashboard',
+      description: 'Advanced analytics with AI-driven insights and forecasting',
       icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Sales forecasting", "Revenue predictions", "Customer lifetime value", "Churn prediction"]
+      benefits: ['Sales forecasting with 85% accuracy', 'Pipeline health monitoring', 'Custom KPI tracking']
     },
     {
-      title: "Automated Workflow Engine",
-      description: "Create complex sales and marketing workflows with AI-powered automation that adapts to your business processes.",
-      icon: <Zap className="w-6 h-6" />,
-      benefits: ["Visual workflow builder", "AI-powered optimization", "Multi-channel automation", "Performance tracking"]
+      title: 'Automated Email Sequences',
+      description: 'AI-powered email campaigns that adapt based on customer behavior',
+      icon: <Mail className="w-6 h-6" />,
+      benefits: ['Personalized content generation', 'Optimal send time detection', 'A/B testing automation']
     },
     {
-      title: "Advanced Reporting Suite",
-      description: "Comprehensive reporting and analytics with custom dashboards, real-time insights, and automated report generation.",
+      title: 'Smart Task Management',
+      description: 'AI-driven task prioritization and automated follow-up reminders',
+      icon: <Calendar className="w-6 h-6" />,
+      benefits: ['Priority-based task sorting', 'Automated follow-up scheduling', 'Team collaboration tools']
+    },
+    {
+      title: 'Advanced Reporting Suite',
+      description: 'Comprehensive reporting with AI insights and custom dashboards',
       icon: <TrendingUp className="w-6 h-6" />,
-      benefits: ["Custom dashboards", "Real-time insights", "Automated reports", "Data visualization"]
+      benefits: ['Real-time performance metrics', 'Custom report builder', 'Data visualization tools']
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$199",
-      period: "/month",
-      description: "Perfect for small teams",
+      name: 'Starter',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for small teams getting started',
       features: [
-        "Up to 1,000 contacts",
-        "Basic AI features",
-        "Email integration",
-        "Mobile app access",
-        "Email support",
-        "Basic reporting",
-        "5 users included"
+        'Up to 1,000 contacts',
+        'Basic AI lead scoring',
+        'Email automation (500/month)',
+        'Standard reporting',
+        'Email support',
+        'Mobile app access'
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$399",
-      period: "/month",
-      description: "Most popular for growing businesses",
+      name: 'Professional',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for growing businesses',
       features: [
-        "Up to 10,000 contacts",
-        "Advanced AI features",
-        "Full integrations",
-        "Priority support",
-        "Advanced analytics",
-        "Custom workflows",
-        "25 users included",
-        "API access"
+        'Up to 10,000 contacts',
+        'Advanced AI analytics',
+        'Unlimited email automation',
+        'Custom dashboards',
+        'Phone & email support',
+        'API access',
+        'Advanced integrations'
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$799",
-      period: "/month",
-      description: "For large organizations",
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations',
       features: [
-        "Unlimited contacts",
-        "AI-powered insights",
-        "Custom integrations",
-        "24/7 phone support",
-        "Advanced security",
-        "White-label options",
-        "Unlimited users",
-        "Dedicated account manager"
+        'Unlimited contacts',
+        'AI-powered forecasting',
+        'Custom AI models',
+        'White-label options',
+        'Dedicated support',
+        'Custom integrations',
+        'Advanced security'
       ],
       popular: false
     }
@@ -97,189 +114,137 @@ export default function ZionAiCrmPro() {
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "SalesForce Solutions",
-      role: "VP of Sales",
-      content: "Zion AI CRM Pro has revolutionized our sales process. The AI lead scoring increased our conversion rate by 45% in just 3 months.",
+      name: 'Sarah Johnson',
+      company: 'TechStart Inc.',
+      role: 'Sales Director',
+      content: 'Zion AI CRM Pro increased our lead conversion by 60% in just 3 months. The AI insights are incredibly accurate.',
       rating: 5,
-      avatar: "AT"
+      avatar: 'SJ'
     },
     {
-      name: "Sarah Williams",
-      company: "Tech Innovations Inc.",
-      role: "Sales Director",
-      content: "The predictive analytics are incredibly accurate. We can now forecast our quarterly revenue with 95% accuracy.",
+      name: 'Michael Chen',
+      company: 'GrowthCorp',
+      role: 'VP Sales',
+      content: 'The predictive analytics helped us identify our best prospects. Our sales team productivity has doubled.',
       rating: 5,
-      avatar: "SW"
+      avatar: 'MC'
     },
     {
-      name: "Michael Rodriguez",
-      company: "Global Enterprises",
-      role: "CRM Manager",
-      content: "The AI assistant handles 80% of our customer inquiries automatically. Our response time improved from hours to minutes.",
+      name: 'Emily Rodriguez',
+      company: 'Digital Solutions',
+      role: 'Sales Manager',
+      content: 'Finally, a CRM that actually helps instead of just storing data. The AI features are game-changing.',
       rating: 5,
-      avatar: "MR"
+      avatar: 'ER'
     }
   ];
 
   const stats = [
-    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
-    { number: "45%", label: "Average Conversion Increase", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "95%", label: "AI Accuracy Rate", icon: <Brain className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Support Available", icon: <Clock className="w-6 h-6" /> }
+    { number: '10,000+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
+    { number: '60%', label: 'Average Conversion Increase', icon: <TrendingUp className="w-6 h-6" /> },
+    { number: '95%', label: 'Lead Scoring Accuracy', icon: <Target className="w-6 h-6" /> },
+    { number: '24/7', label: 'AI-Powered Support', icon: <Brain className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
         <title>Zion AI CRM Pro - AI-Powered Customer Relationship Management | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform your sales process with Zion AI CRM Pro. AI-powered lead scoring, predictive analytics, and automated workflows for modern sales teams."
-        />
-        <meta
-          name="keywords"
-          content="AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales forecasting, CRM software"
-        />
+        <meta name="description" content="Transform your sales process with Zion AI CRM Pro. AI-powered lead scoring, predictive analytics, automated email sequences, and intelligent contact management. Start your free trial today!" />
+        <meta name="keywords" content="AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, contact management, sales forecasting" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-crm-pro" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.3),transparent_50%)]"></div>
-        
+      <div className="min-h-screen pt-16">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border border-indigo-500/30 mb-6">
-                  <Brain className="w-4 h-4 text-indigo-400 mr-2" />
-                  <span className="text-indigo-400 text-sm font-medium">AI-Powered CRM Platform</span>
-                </div>
-                
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Zion AI CRM
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 animate-pulse">
-                    {" "}Pro
-                  </span>
-                </h1>
-                
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Transform your sales process with the world's most intelligent CRM platform. 
-                  AI-powered lead scoring, predictive analytics, and automated workflows for modern sales teams.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Link
-                    to="/contact"
-                    className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-indigo-500/25 hover:scale-105"
-                  >
-                    Start Free Trial
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <Link
-                    to="/demo"
-                    className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-                  >
-                    Watch Demo
-                    <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-                  </Link>
-                </div>
-                
-                {/* Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  {stats.map((stat, index) => (
-                    <div key={index} className="text-center group">
-                      <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        {stat.icon}
-                      </div>
-                      <div className="text-xl font-bold text-white mb-1">{stat.number}</div>
-                      <div className="text-gray-300 text-sm">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-cyan-900/20"></div>
+          <div className="max-w-7xl mx-auto text-center relative z-10">
+            <div className="flex justify-center mb-8">
+              <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center">
+                <Users className="w-10 h-10 text-white" />
               </div>
-              
-              <div className="relative">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">AI CRM Dashboard</h3>
-                    <p className="text-gray-300">See your sales data in action</p>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Zion AI CRM Pro
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+                {' '}Powered by AI
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              The most intelligent CRM platform that uses AI to automate your sales process, 
+              predict customer behavior, and maximize your revenue potential. 
+              Transform your sales team with cutting-edge artificial intelligence.
+            </p>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-4xl mx-auto">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    {stat.icon}
                   </div>
-                  
-                  {/* Mock CRM Dashboard */}
-                  <div className="space-y-4">
-                    <div className="bg-gradient-to-r from-indigo-500/20 to-purple-500/20 rounded-lg p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-white font-semibold">Pipeline Value</span>
-                        <span className="text-green-400 text-sm">+23.5%</span>
-                      </div>
-                      <div className="text-2xl font-bold text-white">$2.4M</div>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg p-4">
-                        <div className="text-white font-semibold text-sm mb-1">Active Leads</div>
-                        <div className="text-xl font-bold text-white">1,247</div>
-                      </div>
-                      <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-4">
-                        <div className="text-white font-semibold text-sm mb-1">Conversion Rate</div>
-                        <div className="text-xl font-bold text-white">18.3%</div>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-white font-semibold">AI Insights</span>
-                        <span className="text-yellow-400 text-sm">Live</span>
-                      </div>
-                      <div className="text-sm text-gray-300">High-value leads identified: 23</div>
-                    </div>
-                  </div>
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
-              </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 flex items-center justify-center space-x-2 group"
+              >
+                <span>Start Free Trial</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="px-8 py-4 border border-blue-400 text-blue-400 rounded-lg font-semibold hover:bg-blue-400/10 transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <span>Watch Demo</span>
+                <Sparkles className="w-5 h-5" />
+              </Link>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">
-                  AI-Powered Features
-                </span>
+                AI-Powered Features That Drive Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to transform your sales process with artificial intelligence.
+                Our advanced AI technology automates complex sales processes and provides 
+                insights that help you close more deals faster.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/10"
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-blue-500/30 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-indigo-300 transition-colors">
+                  <h3 className="text-xl font-semibold text-white mb-4">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                  <p className="text-gray-300 mb-6">
                     {feature.description}
                   </p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-300">
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        <span>{benefit}</span>
-                      </div>
+                        {benefit}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               ))}
             </div>
@@ -287,63 +252,63 @@ export default function ZionAiCrmPro() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-indigo-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Simple, Transparent Pricing
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your sales team. All plans include our core AI features.
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Choose the plan that fits your business needs. All plans include our core AI features.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  className={`bg-white/5 backdrop-blur-sm border rounded-xl p-8 relative ${
                     plan.popular 
-                      ? 'border-indigo-500/50 shadow-2xl shadow-indigo-500/25' 
-                      : 'border-white/20 hover:border-indigo-500/30'
+                      ? 'border-blue-500/50 ring-2 ring-blue-500/20' 
+                      : 'border-white/10'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                        <Star className="w-4 h-4 mr-1" />
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-center mb-6">
+                  <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <p className="text-gray-400 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-300 ml-1">{plan.period}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
                   
-                  <div className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-gray-300">
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </div>
+                        {feature}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                   
                   <Link
                     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white hover:from-indigo-600 hover:to-purple-700 shadow-lg hover:shadow-indigo-500/25'
-                        : 'border border-indigo-400 text-indigo-400 hover:bg-indigo-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:shadow-lg hover:shadow-blue-500/25'
+                        : 'border border-white/20 text-white hover:bg-white/10'
                     }`}
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
               ))}
@@ -352,31 +317,31 @@ export default function ZionAiCrmPro() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Sales Teams Say
+                Trusted by Sales Teams Worldwide
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of sales professionals already using Zion AI CRM Pro to boost their performance.
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                See what our customers say about Zion AI CRM Pro
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-blue-500/30 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -390,53 +355,27 @@ export default function ZionAiCrmPro() {
           </div>
         </section>
 
-        {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border border-blue-500/20 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Sales?
+                Ready to Transform Your Sales Process?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us today to start your free trial or schedule a personalized demo.
+                Join thousands of sales teams already using Zion AI CRM Pro to close more deals.
+                Start your free 14-day trial today - no credit card required.
               </p>
-              
-              {/* Contact Details */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Email</h3>
-                  <p className="text-indigo-400">kleber@ziontechgroup.com</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Phone</h3>
-                  <p className="text-indigo-400">+1 302 464 0950</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Address</h3>
-                  <p className="text-indigo-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                </div>
-              </div>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="group bg-gradient-to-r from-indigo-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-indigo-500/25 hover:scale-105"
+                  className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300"
                 >
                   Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="border border-indigo-400 text-indigo-400 px-8 py-4 rounded-lg font-semibold hover:bg-indigo-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+                  className="px-8 py-4 border border-white/20 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
                 >
                   Schedule Demo
                 </Link>
@@ -447,4 +386,6 @@ export default function ZionAiCrmPro() {
       </div>
     </>
   );
-}
+};
+
+export default ZionAICrmProPage;

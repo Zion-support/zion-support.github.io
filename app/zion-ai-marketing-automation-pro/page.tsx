@@ -1,95 +1,114 @@
-import { ArrowRight, Target, Brain, BarChart3, CheckCircle, Star, Zap, Mail, MessageSquare, Calendar, Users, TrendingUp, Shield, Globe, Clock, Award, Database, Eye, Filter, Search, Bell, Settings, Lock, RefreshCw, Download, Upload, Share2, Plus, Minus, X, Check, AlertTriangle, Info, ExternalLink, Play, Pause, Stop, SkipForward, SkipBack, Volume2, VolumeX, Mic, MicOff, Video, VideoOff, Camera, CameraOff, Image, FileText, File, Folder, FolderOpen, Archive, Trash2, Edit, Save, Copy, Cut, Paste, Undo, Redo, Bold, Italic, Underline, AlignLeft, AlignCenter, AlignRight, List, Grid, Table, Columns, Rows, PlusCircle, MinusCircle, XCircle, CheckCircle2, AlertCircle, HelpCircle, InfoIcon, Lightbulb, Bookmark, Heart, ThumbsUp, ThumbsDown, Flag, FlagOff, Star as StarIcon, StarOff, Moon, Sun, Cloud, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Activity, Pulse, Heart as HeartIcon, Zap as ZapIcon, Flash, Thunder, Fire, Water, Earth, Air, Space, Rocket, Satellite, Planet, Sun as SunIcon, Moon as MoonIcon, Star as StarIcon2, Comet, Meteor, Galaxy, Nebula, BlackHole, Wormhole, Time, Space as SpaceIcon, Infinity, Atom, Molecule, DNA, Cell, Organism, Evolution, Growth, Development, Progress, Success, Achievement, Victory, Trophy, Medal, Badge, Certificate, Diploma, Degree, License, Permit, Passport, ID, Card, Ticket, Voucher, Coupon, Discount, Sale, Price, Money, Dollar, Euro, Pound, Yen, Rupee, Bitcoin, Ethereum, Crypto, Blockchain, Wallet, Bank, Credit, Debit, Payment, Transaction, Transfer, Exchange, Trade, Market, Stock, Bond, Investment, Portfolio, Fund, Asset, Liability, Equity, Revenue, Profit, Loss, Income, Expense, Budget, Finance, Accounting, Bookkeeping, Tax, Audit, Compliance, Legal, Contract, Agreement, Terms, Conditions, Privacy, Security, Protection, Safety, Risk, Insurance, Claim, Policy, Coverage, Premium, Deductible, Copay, Coinsurance, OutOfPocket, Maximum, Minimum, Limit, Cap, Floor, Ceiling, Range, Scale, Level, Grade, Rank, Position, Status, State, Condition, Situation, Circumstance, Context, Environment, Setting, Location, Place, Address, City, State, Country, Region, Area, Zone, District, Neighborhood, Street, Road, Avenue, Boulevard, Lane, Drive, Court, Circle, Square, Plaza, Mall, Center, Complex, Building, Tower, Skyscraper, House, Home, Apartment, Condo, Townhouse, Villa, Mansion, Palace, Castle, Fort, Tower, Bridge, Tunnel, Highway, Freeway, Expressway, Parkway, Street, Road, Avenue, Boulevard, Lane, Drive, Court, Circle, Square, Plaza, Mall, Center, Complex, Building, Tower, Skyscraper, House, Home, Apartment, Condo, Townhouse, Villa, Mansion, Palace, Castle, Fort, Tower, Bridge, Tunnel, Highway, Freeway, Expressway, Parkway } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { 
+  Target, 
+  BarChart3, 
+  Mail, 
+  Smartphone, 
+  Calendar, 
+  Users, 
+  TrendingUp, 
+  Shield, 
+  Zap, 
+  CheckCircle, 
+  Star, 
+  ArrowRight,
+  Brain,
+  Globe,
+  Clock,
+  Award,
+  Sparkles,
+  MessageSquare,
+  Share2,
+  PieChart
+} from 'lucide-react';
 
-export default function ZionAiMarketingAutomationPro() {
+const ZionAIMarketingAutomationProPage: React.FC = () => {
   const features = [
     {
-      title: "AI-Powered Campaign Optimization",
-      description: "Automatically optimize your marketing campaigns using machine learning algorithms that analyze performance data and adjust targeting, timing, and content in real-time.",
+      title: 'AI-Powered Campaign Optimization',
+      description: 'Automatically optimize your marketing campaigns using machine learning algorithms',
       icon: <Target className="w-6 h-6" />,
-      benefits: ["Real-time optimization", "A/B testing automation", "Performance prediction", "ROI maximization"]
+      benefits: ['40% higher conversion rates', 'Real-time campaign adjustments', 'A/B testing automation']
     },
     {
-      title: "Intelligent Audience Segmentation",
-      description: "AI-driven audience segmentation that automatically groups customers based on behavior, preferences, and engagement patterns for highly targeted campaigns.",
+      title: 'Intelligent Audience Segmentation',
+      description: 'AI-driven customer segmentation for highly targeted marketing campaigns',
       icon: <Users className="w-6 h-6" />,
-      benefits: ["Behavioral segmentation", "Predictive modeling", "Dynamic audience updates", "Personalization at scale"]
+      benefits: ['Dynamic audience creation', 'Behavioral pattern analysis', 'Predictive customer modeling']
     },
     {
-      title: "Multi-Channel Campaign Orchestration",
-      description: "Seamlessly coordinate campaigns across email, social media, SMS, push notifications, and web with unified messaging and timing.",
+      title: 'Multi-Channel Campaign Orchestration',
+      description: 'Seamlessly coordinate campaigns across email, social media, SMS, and web',
+      icon: <Globe className="w-6 h-6" />,
+      benefits: ['Unified campaign management', 'Cross-channel analytics', 'Consistent messaging']
+    },
+    {
+      title: 'Predictive Content Generation',
+      description: 'AI creates personalized content that resonates with your audience',
       icon: <MessageSquare className="w-6 h-6" />,
-      benefits: ["Cross-channel consistency", "Unified customer journey", "Automated scheduling", "Performance tracking"]
+      benefits: ['Personalized email content', 'Social media post generation', 'Ad copy optimization']
     },
     {
-      title: "Predictive Content Generation",
-      description: "AI-powered content creation that generates personalized marketing messages, subject lines, and creative assets based on audience data and preferences.",
-      icon: <Brain className="w-6 h-6" />,
-      benefits: ["Personalized content", "A/B testing automation", "Brand voice consistency", "Performance optimization"]
-    },
-    {
-      title: "Advanced Analytics & Insights",
-      description: "Comprehensive analytics dashboard with AI-powered insights, attribution modeling, and predictive analytics for data-driven marketing decisions.",
+      title: 'Advanced Analytics & Insights',
+      description: 'Comprehensive analytics with AI-powered insights and recommendations',
       icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Attribution modeling", "Predictive analytics", "Custom dashboards", "Real-time reporting"]
+      benefits: ['ROI prediction models', 'Customer lifetime value analysis', 'Campaign performance forecasting']
     },
     {
-      title: "Automated Lead Nurturing",
-      description: "Intelligent lead nurturing workflows that automatically guide prospects through the sales funnel with personalized content and timing.",
+      title: 'Smart Lead Nurturing',
+      description: 'Automated lead nurturing sequences that adapt based on customer behavior',
       icon: <Zap className="w-6 h-6" />,
-      benefits: ["Behavioral triggers", "Personalized sequences", "Lead scoring integration", "Conversion optimization"]
+      benefits: ['Behavioral trigger automation', 'Lead scoring integration', 'Personalized journey mapping']
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$149",
-      period: "/month",
-      description: "Perfect for small businesses",
+      name: 'Starter',
+      price: '$49',
+      period: '/month',
+      description: 'Perfect for small businesses',
       features: [
-        "Up to 5,000 contacts",
-        "Basic AI features",
-        "Email campaigns",
-        "Social media integration",
-        "Email support",
-        "Basic analytics",
-        "5 users included"
+        'Up to 5,000 contacts',
+        'Basic AI optimization',
+        'Email & SMS campaigns',
+        'Standard analytics',
+        'Email support',
+        '5 automation workflows'
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$299",
-      period: "/month",
-      description: "Most popular for growing businesses",
+      name: 'Professional',
+      price: '$149',
+      period: '/month',
+      description: 'Ideal for growing companies',
       features: [
-        "Up to 25,000 contacts",
-        "Advanced AI features",
-        "Multi-channel campaigns",
-        "Priority support",
-        "Advanced analytics",
-        "Custom workflows",
-        "15 users included",
-        "API access"
+        'Up to 25,000 contacts',
+        'Advanced AI features',
+        'All marketing channels',
+        'Advanced analytics',
+        'Priority support',
+        'Unlimited workflows',
+        'API access'
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$599",
-      period: "/month",
-      description: "For large organizations",
+      name: 'Enterprise',
+      price: '$399',
+      period: '/month',
+      description: 'For large organizations',
       features: [
-        "Unlimited contacts",
-        "AI-powered insights",
-        "Custom integrations",
-        "24/7 phone support",
-        "Advanced security",
-        "White-label options",
-        "Unlimited users",
-        "Dedicated account manager"
+        'Unlimited contacts',
+        'Custom AI models',
+        'White-label options',
+        'Custom integrations',
+        'Dedicated support',
+        'Advanced security',
+        'Custom reporting'
       ],
       popular: false
     }
@@ -97,189 +116,137 @@ export default function ZionAiMarketingAutomationPro() {
 
   const testimonials = [
     {
-      name: "Jessica Chen",
-      company: "Digital Marketing Agency",
-      role: "Marketing Director",
-      content: "Zion AI Marketing Automation Pro has increased our campaign ROI by 67%. The AI optimization is incredible - it's like having a marketing expert working 24/7.",
+      name: 'Jennifer Martinez',
+      company: 'E-commerce Plus',
+      role: 'Marketing Director',
+      content: 'Our email open rates increased by 65% with Zion AI Marketing Automation Pro. The AI optimization is incredible.',
       rating: 5,
-      avatar: "JC"
+      avatar: 'JM'
     },
     {
-      name: "David Park",
-      company: "E-commerce Solutions",
-      role: "Head of Marketing",
-      content: "The predictive content generation is a game-changer. We're creating 10x more personalized content with half the effort.",
+      name: 'David Thompson',
+      company: 'SaaS Solutions',
+      role: 'VP Marketing',
+      content: 'The predictive content generation saves us 20 hours per week. Our campaigns are more effective than ever.',
       rating: 5,
-      avatar: "DP"
+      avatar: 'DT'
     },
     {
-      name: "Maria Santos",
-      company: "SaaS Platform",
-      role: "VP of Growth",
-      content: "The multi-channel orchestration has streamlined our entire marketing operation. Our team productivity increased by 80%.",
+      name: 'Lisa Wang',
+      company: 'Retail Innovations',
+      role: 'Head of Marketing',
+      content: 'Finally, a platform that truly understands our customers. The AI insights have transformed our marketing strategy.',
       rating: 5,
-      avatar: "MS"
+      avatar: 'LW'
     }
   ];
 
   const stats = [
-    { number: "25,000+", label: "Active Marketers", icon: <Users className="w-6 h-6" /> },
-    { number: "67%", label: "Average ROI Increase", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "95%", label: "Campaign Success Rate", icon: <Target className="w-6 h-6" /> },
-    { number: "10x", label: "Content Generation Speed", icon: <Zap className="w-6 h-6" /> }
+    { number: '15,000+', label: 'Active Users', icon: <Users className="w-6 h-6" /> },
+    { number: '65%', label: 'Average Open Rate Increase', icon: <TrendingUp className="w-6 h-6" /> },
+    { number: '40%', label: 'Higher Conversion Rates', icon: <Target className="w-6 h-6" /> },
+    { number: '24/7', label: 'AI-Powered Optimization', icon: <Brain className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
         <title>Zion AI Marketing Automation Pro - AI-Powered Marketing Platform | Zion Tech Group</title>
-        <meta
-          name="description"
-          content="Transform your marketing with Zion AI Marketing Automation Pro. AI-powered campaign optimization, predictive content generation, and multi-channel orchestration for modern marketers."
-        />
-        <meta
-          name="keywords"
-          content="AI marketing automation, marketing automation, campaign optimization, predictive analytics, content generation, multi-channel marketing, marketing platform"
-        />
+        <meta name="description" content="Transform your marketing with Zion AI Marketing Automation Pro. AI-powered campaign optimization, intelligent audience segmentation, multi-channel orchestration, and predictive content generation. Start your free trial today!" />
+        <meta name="keywords" content="AI marketing automation, marketing platform, campaign optimization, audience segmentation, content generation, email marketing, social media automation" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-marketing-automation-pro" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-pink-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-indigo-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3),transparent_50%)]"></div>
-        
+      <div className="min-h-screen pt-16">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 border border-pink-500/30 mb-6">
-                  <Target className="w-4 h-4 text-pink-400 mr-2" />
-                  <span className="text-pink-400 text-sm font-medium">AI-Powered Marketing Platform</span>
-                </div>
-                
-                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                  Zion AI Marketing
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-indigo-400 animate-pulse">
-                    {" "}Automation Pro
-                  </span>
-                </h1>
-                
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Transform your marketing with the world's most intelligent automation platform. 
-                  AI-powered campaign optimization, predictive content generation, and multi-channel orchestration for modern marketers.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Link
-                    to="/contact"
-                    className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-pink-500/25 hover:scale-105"
-                  >
-                    Start Free Trial
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                  <Link
-                    to="/demo"
-                    className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-                  >
-                    Watch Demo
-                    <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
-                  </Link>
-                </div>
-                
-                {/* Stats */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                  {stats.map((stat, index) => (
-                    <div key={index} className="text-center group">
-                      <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-pink-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        {stat.icon}
-                      </div>
-                      <div className="text-xl font-bold text-white mb-1">{stat.number}</div>
-                      <div className="text-gray-300 text-sm">{stat.label}</div>
-                    </div>
-                  ))}
-                </div>
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-pink-900/20 to-red-900/20"></div>
+          <div className="max-w-7xl mx-auto text-center relative z-10">
+            <div className="flex justify-center mb-8">
+              <div className="w-20 h-20 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center">
+                <Target className="w-10 h-10 text-white" />
               </div>
-              
-              <div className="relative">
-                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <div className="text-center mb-6">
-                    <h3 className="text-2xl font-bold text-white mb-2">Marketing Dashboard</h3>
-                    <p className="text-gray-300">See your campaigns in action</p>
+            </div>
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Zion AI Marketing
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400">
+                {' '}Automation Pro
+              </span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              The most intelligent marketing automation platform that uses AI to optimize campaigns, 
+              personalize content, and maximize your marketing ROI. 
+              Transform your marketing strategy with cutting-edge artificial intelligence.
+            </p>
+            
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-4xl mx-auto">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    {stat.icon}
                   </div>
-                  
-                  {/* Mock Marketing Dashboard */}
-                  <div className="space-y-4">
-                    <div className="bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-lg p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-white font-semibold">Campaign ROI</span>
-                        <span className="text-green-400 text-sm">+67%</span>
-                      </div>
-                      <div className="text-2xl font-bold text-white">$45,230</div>
-                    </div>
-                    
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="bg-gradient-to-r from-purple-500/20 to-indigo-500/20 rounded-lg p-4">
-                        <div className="text-white font-semibold text-sm mb-1">Open Rate</div>
-                        <div className="text-xl font-bold text-white">34.2%</div>
-                      </div>
-                      <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-lg p-4">
-                        <div className="text-white font-semibold text-sm mb-1">Click Rate</div>
-                        <div className="text-xl font-bold text-white">8.7%</div>
-                      </div>
-                    </div>
-                    
-                    <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-lg p-4">
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-white font-semibold">AI Insights</span>
-                        <span className="text-yellow-400 text-sm">Live</span>
-                      </div>
-                      <div className="text-sm text-gray-300">Optimal send time: 2:30 PM</div>
-                    </div>
-                  </div>
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300 text-sm">{stat.label}</div>
                 </div>
-              </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center space-x-2 group"
+              >
+                <span>Start Free Trial</span>
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                to="/demo"
+                className="px-8 py-4 border border-purple-400 text-purple-400 rounded-lg font-semibold hover:bg-purple-400/10 transition-all duration-300 flex items-center justify-center space-x-2"
+              >
+                <span>Watch Demo</span>
+                <Sparkles className="w-5 h-5" />
+              </Link>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
-                  AI-Powered Marketing Features
-                </span>
+                AI-Powered Marketing Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to transform your marketing with artificial intelligence.
+                Our advanced AI technology automates complex marketing processes and provides 
+                insights that help you reach the right audience with the right message at the right time.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10"
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-purple-500/30 transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-pink-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                  <div className="text-purple-400 mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-pink-300 transition-colors">
+                  <h3 className="text-xl font-semibold text-white mb-4">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                  <p className="text-gray-300 mb-6">
                     {feature.description}
                   </p>
-                  <div className="space-y-2">
-                    {feature.benefits.map((benefit, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-gray-300">
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, benefitIndex) => (
+                      <li key={benefitIndex} className="flex items-center text-sm text-gray-400">
                         <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
-                        <span>{benefit}</span>
-                      </div>
+                        {benefit}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               ))}
             </div>
@@ -287,63 +254,63 @@ export default function ZionAiMarketingAutomationPro() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-pink-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple, Transparent Pricing
+                Flexible Pricing for Every Business
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                 Choose the plan that fits your marketing needs. All plans include our core AI features.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  className={`bg-white/5 backdrop-blur-sm border rounded-xl p-8 relative ${
                     plan.popular 
-                      ? 'border-pink-500/50 shadow-2xl shadow-pink-500/25' 
-                      : 'border-white/20 hover:border-pink-500/30'
+                      ? 'border-purple-500/50 ring-2 ring-purple-500/20' 
+                      : 'border-white/10'
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-purple-500 to-pink-600 text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center">
+                        <Star className="w-4 h-4 mr-1" />
                         Most Popular
                       </span>
                     </div>
                   )}
                   
-                  <div className="text-center mb-6">
+                  <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <p className="text-gray-400 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-300 ml-1">{plan.period}</span>
+                      <span className="text-gray-400 ml-1">{plan.period}</span>
                     </div>
                   </div>
                   
-                  <div className="space-y-4 mb-8">
-                    {plan.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-gray-300">
+                  <ul className="space-y-4 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
                         <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span>{feature}</span>
-                      </div>
+                        {feature}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                   
                   <Link
                     to="/contact"
-                    className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center ${
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700 shadow-lg hover:shadow-pink-500/25'
-                        : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
+                        ? 'bg-gradient-to-r from-purple-500 to-pink-600 text-white hover:shadow-lg hover:shadow-purple-500/25'
+                        : 'border border-white/20 text-white hover:bg-white/10'
                     }`}
                   >
                     Get Started
-                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
               ))}
@@ -352,31 +319,31 @@ export default function ZionAiMarketingAutomationPro() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-pink-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                What Marketers Say
+                Trusted by Marketing Teams Worldwide
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Join thousands of marketers already using Zion AI Marketing Automation Pro to boost their performance.
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                See what our customers say about Zion AI Marketing Automation Pro
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-purple-500/30 transition-all duration-300"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-6 italic">"{testimonial.content}"</p>
                   <div className="flex items-center">
-                    <div className="w-10 h-10 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                    <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-full flex items-center justify-center text-white font-semibold mr-4">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -390,53 +357,27 @@ export default function ZionAiMarketingAutomationPro() {
           </div>
         </section>
 
-        {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+            <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-2xl p-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Marketing?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Contact us today to start your free trial or schedule a personalized demo.
+                Join thousands of marketing teams already using Zion AI Marketing Automation Pro 
+                to boost their ROI. Start your free 14-day trial today - no credit card required.
               </p>
-              
-              {/* Contact Details */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Email</h3>
-                  <p className="text-pink-400">kleber@ziontechgroup.com</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Phone</h3>
-                  <p className="text-pink-400">+1 302 464 0950</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Globe className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-white font-semibold mb-2">Address</h3>
-                  <p className="text-pink-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
-                </div>
-              </div>
-              
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-pink-500/25 hover:scale-105"
+                  className="px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-600 text-white rounded-lg font-semibold hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
                 >
                   Start Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
                   to="/demo"
-                  className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+                  className="px-8 py-4 border border-white/20 text-white rounded-lg font-semibold hover:bg-white/10 transition-all duration-300"
                 >
                   Schedule Demo
                 </Link>
@@ -447,4 +388,6 @@ export default function ZionAiMarketingAutomationPro() {
       </div>
     </>
   );
-}
+};
+
+export default ZionAIMarketingAutomationProPage;

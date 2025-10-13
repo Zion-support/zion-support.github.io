@@ -35,23 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
-    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
-=======
     chunkSizeWarningLimit: 500, // Increased threshold for better chunking
     assetsInlineLimit: 1024, // Optimized for better caching and faster initial load
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
-    chunkSizeWarningLimit: 150, // Increased threshold for better chunking
-    assetsInlineLimit: 4096, // Increased for better caching of small assets
->>>>>>> cursor/analyze-improve-and-deploy-application-c69e
-=======
-    chunkSizeWarningLimit: 500, // Increased threshold for better chunking
-    assetsInlineLimit: 1024, // Optimized for better caching and faster initial load
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
     // Enable compression
     reportCompressedSize: true,
     // Better compression settings
@@ -133,44 +118,9 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - more granular splitting
+          // AI service pages - group by category
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
-<<<<<<< HEAD
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'ai-analytics'
-            }
-            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
-              return 'ai-content'
-            }
-            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
-              return 'ai-security'
-            }
-            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
-              return 'ai-customer'
-            }
-            return 'ai-other'
-          }
-          // Zion service pages - group by category
-          if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/zion-')[1]?.split('/')[0];
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'zion-analytics'
-            }
-            if (serviceName?.includes('ai-')) {
-              return 'zion-ai'
-            }
-            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
-              return 'zion-security'
-            }
-            return 'zion-other'
-<<<<<<< HEAD
-<<<<<<< HEAD
-          }
-          // 5G service pages
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
             if (serviceName && ['analytics', 'automation', 'business-intelligence', 'content-generation'].includes(serviceName)) {
               return 'ai-core'
             }
@@ -182,10 +132,6 @@ export default defineConfig({
           // Zion service pages - group together
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
             return 'zion-services'
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-1ef3
           }
           // 5G service pages - group together
           if (id.includes('/5g-') && id.includes('/page.tsx')) {

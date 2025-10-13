@@ -15,52 +15,76 @@ import {
   CheckCircle,
   Star,
   Award,
-  Globe
+  Globe,
+  Box,
+  Link as LinkIcon
 } from 'lucide-react';
 
 const AIServicesPage: React.FC = () => {
   const aiServices = [
     {
+      title: 'AI 3D Generation',
+      description: 'Create stunning 3D models, animations, and scenes from text or images using advanced AI.',
+      icon: <Box className="w-8 h-8" />,
+      path: '/ai-3d-generation',
+      features: ['Text-to-3D conversion', 'Animation generation', 'Real-time rendering'],
+      featured: true
+    },
+    {
+      title: 'AI Blockchain Solutions',
+      description: 'Intelligent smart contracts, DeFi protocols, and NFT solutions powered by AI.',
+      icon: <LinkIcon className="w-8 h-8" />,
+      path: '/ai-blockchain-solutions',
+      features: ['Smart contracts', 'DeFi protocols', 'NFT intelligence'],
+      featured: true
+    },
+    {
       title: 'AI Analytics',
       description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
       icon: <BarChart3 className="w-8 h-8" />,
       path: '/ai-analytics',
-      features: ['Real-time data processing', 'Predictive analytics', 'Custom dashboards']
+      features: ['Real-time data processing', 'Predictive analytics', 'Custom dashboards'],
+      featured: false
     },
     {
       title: 'AI Automation',
       description: 'Streamline your business processes with intelligent automation solutions.',
       icon: <Zap className="w-8 h-8" />,
       path: '/ai-automation',
-      features: ['Workflow automation', 'Process optimization', 'Smart scheduling']
+      features: ['Workflow automation', 'Process optimization', 'Smart scheduling'],
+      featured: false
     },
     {
       title: 'AI Content Generation',
       description: 'Create high-quality content at scale with our AI-powered content generation tools.',
       icon: <Sparkles className="w-8 h-8" />,
       path: '/ai-content-generation',
-      features: ['Blog posts', 'Social media content', 'Marketing copy']
+      features: ['Blog posts', 'Social media content', 'Marketing copy'],
+      featured: false
     },
     {
       title: 'AI Customer Service',
       description: 'Enhance customer experience with intelligent chatbots and support systems.',
       icon: <Users className="w-8 h-8" />,
       path: '/ai-customer-service',
-      features: ['24/7 support', 'Natural language processing', 'Sentiment analysis']
+      features: ['24/7 support', 'Natural language processing', 'Sentiment analysis'],
+      featured: false
     },
     {
       title: 'AI Data Analytics',
       description: 'Unlock the power of your data with advanced AI-driven analytics.',
       icon: <Database className="w-8 h-8" />,
       path: '/ai-data-analytics',
-      features: ['Data visualization', 'Pattern recognition', 'Trend analysis']
+      features: ['Data visualization', 'Pattern recognition', 'Trend analysis'],
+      featured: false
     },
     {
       title: 'AI Marketing',
       description: 'Optimize your marketing campaigns with AI-powered insights and automation.',
       icon: <TrendingUp className="w-8 h-8" />,
       path: '/ai-marketing',
-      features: ['Campaign optimization', 'Audience targeting', 'ROI analysis']
+      features: ['Campaign optimization', 'Audience targeting', 'ROI analysis'],
+      featured: false
     }
   ];
 
@@ -125,10 +149,20 @@ const AIServicesPage: React.FC = () => {
               {aiServices.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-slate-800/50 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:border-cyan-500/30 transition-all duration-300 group"
+                  className={`bg-slate-800/50 backdrop-blur-sm border rounded-xl p-8 hover:border-cyan-500/30 transition-all duration-300 group ${
+                    service.featured ? 'border-cyan-500/30 ring-2 ring-cyan-500/20' : 'border-white/10'
+                  }`}
                 >
-                  <div className="text-cyan-400 mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {service.icon}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="text-cyan-400 group-hover:scale-110 transition-transform duration-300">
+                      {service.icon}
+                    </div>
+                    {service.featured && (
+                      <span className="px-3 py-1 bg-cyan-500/20 text-cyan-400 text-sm rounded-full flex items-center">
+                        <Star className="w-3 h-3 mr-1" />
+                        Featured
+                      </span>
+                    )}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-4">
                     {service.title}
