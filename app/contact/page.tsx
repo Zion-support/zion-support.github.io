@@ -126,6 +126,11 @@ export default function ContactPage() {
           </h2>
           
           {isSubmitted ? (
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-white mb-4">Thank You!</h3>
+              <p className="text-gray-300 mb-6">Your message has been sent successfully.</p>
+              <button
+                onClick={() => {
                   setIsSubmitted(false);
                   setFormData({
                     name: '',

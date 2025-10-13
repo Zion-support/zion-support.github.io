@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
@@ -11,26 +10,14 @@ const withErrorLogging = (handler) => {
     }
   };
 };
+
 async function handler(req, res) {
-=======
-export default function handler(req, res) {
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
-<<<<<<< HEAD
-  try {
-    const { amount, currency = 'usd' } = req.body || {};
-    if (!amount) {
-      res.statusCode = 400;
-      res.setHeader('Content-Type', 'application/json');
-      res.end(JSON.stringify({ error: 'Amount is required' }));
-      return;
-    }
-=======
 
   const { amount, currency = 'usd' } = req.body || {};
 
@@ -42,32 +29,21 @@ export default function handler(req, res) {
   }
 
   try {
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
     // Mock payment intent creation
     const paymentIntent = {
       id: `pi_${Date.now()}`,
       amount: Math.round(amount * 100), // Convert to cents
       currency,
-<<<<<<< HEAD
       status: 'requires_payment_method',
       created: Math.floor(Date.now() / 1000)
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
     };
     res.statusCode = 200;
     res.json({ paymentIntent });
-<<<<<<< HEAD
-  } catch (_error) {
-=======
   } catch (error) {
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
-<<<<<<< HEAD
 }
+
 export default withErrorLogging(handler);
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
