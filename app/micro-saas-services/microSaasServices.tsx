@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface microSaasServicesProps {
+interface MicroSaasServicesProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function microSaasServices({ className = '', children }: microSaasServicesProps) {
+export default function MicroSaasServices({ className = '', children }: MicroSaasServicesProps) {
   return (
     <div className={`${className}`}>
       {children}

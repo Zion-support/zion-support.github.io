@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface pagebroken2Props {
+interface PageBroken2Props {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function pagebroken2({ className = '', children }: pagebroken2Props) {
+export default function PageBroken2({ className = '', children }: PageBroken2Props) {
   return (
     <div className={`${className}`}>
       {children}

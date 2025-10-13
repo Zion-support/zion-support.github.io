@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface errorBoundaryConfigProps {
+interface ErrorBoundaryConfigProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function errorBoundaryConfig({ className = '', children }: errorBoundaryConfigProps) {
+export default function ErrorBoundaryConfig({ className = '', children }: ErrorBoundaryConfigProps) {
   return (
     <div className={`${className}`}>
       {children}

@@ -1,25 +1,5 @@
-// sitemapGenerator utility functions
-
-export interface sitemapGeneratorConfig {
-  enabled: boolean;
+// SitemapGenerator utility
+export function SitemapGenerator() {
+  // Implementation coming soon
+  return null;
 }
-
-export class sitemapGenerator {
-  private config: sitemapGeneratorConfig;
-
-  constructor(config: Partial<sitemapGeneratorConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('sitemapGenerator initialized');
-    }
-  }
-}
-
-export const sitemapgenerator = new sitemapGenerator();
-export default sitemapgenerator;

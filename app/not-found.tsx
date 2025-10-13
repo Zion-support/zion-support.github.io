@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface notfoundProps {
+interface NotFoundProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function notfound({ className = '', children }: notfoundProps) {
+export default function NotFound({ className = '', children }: NotFoundProps) {
   return (
     <div className={`${className}`}>
       {children}

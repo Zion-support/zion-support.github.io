@@ -10,5 +10,9 @@ export default function WebVitalsTracker({ className = '', children }: WebVitals
     <div className={`${className}`}>
       {children}
     </div>
+    <div>
+      <h1>Component</h1>
+      <p>This component is under construction.</p>
+  </div>
   );
 }

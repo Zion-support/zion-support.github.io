@@ -1,25 +1,5 @@
-// validators utility functions
-
-export interface validatorsConfig {
-  enabled: boolean;
+// Validators utility
+export function Validators() {
+  // Implementation coming soon
+  return null;
 }
-
-export class validators {
-  private config: validatorsConfig;
-
-  constructor(config: Partial<validatorsConfig> = {}) {
-    this.config = {
-      enabled: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('validators initialized');
-    }
-  }
-}
-
-export const validatorsInstance = new validators();
-export default validatorsInstance;

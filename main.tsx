@@ -1,14 +1,9 @@
-import React from 'react';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-interface mainProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function main({ className = '', children }: mainProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);

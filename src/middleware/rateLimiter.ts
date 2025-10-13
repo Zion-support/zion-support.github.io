@@ -1,10 +1,5 @@
-import React from 'react';
-
-export default function Component() {
-  return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
-    </div>
-  );
+// RateLimiter utility
+export function RateLimiter() {
+  // Implementation coming soon
+  return null;
 }

@@ -10,5 +10,9 @@ export default function InteractiveAIROICalculator({ className = '', children }:
     <div className={`${className}`}>
       {children}
     </div>
+    <div>
+      <h1>Component</h1>
+      <p>This component is under construction.</p>
+  </div>
   );
 }

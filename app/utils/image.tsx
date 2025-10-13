@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface imageProps {
+interface ImageProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function image({ className = '', children }: imageProps) {
+export default function Image({ className = '', children }: ImageProps) {
   return (
     <div className={`${className}`}>
       {children}
