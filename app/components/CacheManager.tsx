@@ -19,8 +19,6 @@ const CacheManager = () => {
   const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
-<<<<<<< HEAD
-=======
     // Service Worker registration for caching
     const registerServiceWorker = async () => {
       if ('serviceWorker' in navigator) {
@@ -34,8 +32,6 @@ const CacheManager = () => {
 
 
 
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
         }
       }
     }
@@ -57,8 +53,6 @@ const CacheManager = () => {
         try {
           const cache = await caches.open(CACHE_NAME);
           await cache.addAll(CACHE_URLS);
-<<<<<<< HEAD
-=======
 =======
           console.log('Static assets cached successfully');
 
@@ -67,8 +61,6 @@ const CacheManager = () => {
 
 
 
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
         }
       }
 

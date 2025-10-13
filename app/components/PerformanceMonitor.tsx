@@ -43,41 +43,20 @@ const PerformanceMonitor: React.FC = () => {
           <div className="space-y-3 text-sm">
             <div className="flex justify-between items-center">
               <span className="text-gray-600">Load Time:</span>
-<<<<<<< HEAD
-              <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
               </span>
             </div>
             
             <div className="flex justify-between items-center">
               <span className="text-gray-600">FCP:</span>
-<<<<<<< HEAD
-              <span className={`font-mono ${metrics.firstContentfulPaint ? getMetricColor(metrics.firstContentfulPaint, { good: 1800, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.firstContentfulPaint ? `${metrics.firstContentfulPaint.toFixed(0)}ms` : 'N/A'}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
               </span>
             </div>
             
             <div className="flex justify-between items-center">
               <span className="text-gray-600">LCP:</span>
-<<<<<<< HEAD
-              <span className={`font-mono ${metrics.largestContentfulPaint ? getMetricColor(metrics.largestContentfulPaint, { good: 2500, poor: 4000 }) : 'text-gray-400'}`}>
-                {metrics.largestContentfulPaint ? `${metrics.largestContentfulPaint.toFixed(0)}ms` : 'N/A'}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
               </span>
             </div>
             
             <div className="flex justify-between items-center">
-<<<<<<< HEAD
-              <span className="text-gray-600">FID:</span>
-              <span className={`font-mono ${metrics.firstInputDelay ? getMetricColor(metrics.firstInputDelay, { good: 100, poor: 300 }) : 'text-gray-400'}`}>
-                {metrics.firstInputDelay ? `${metrics.firstInputDelay.toFixed(0)}ms` : 'N/A'}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
               </span>
             </div>
             
@@ -88,11 +67,6 @@ const PerformanceMonitor: React.FC = () => {
             
             <div className="flex justify-between items-center">
               <span className="text-gray-600">TTFB:</span>
-<<<<<<< HEAD
-              <span className={`font-mono ${metrics.timeToFirstByte ? getMetricColor(metrics.timeToFirstByte, { good: 800, poor: 1800 }) : 'text-gray-400'}`}>
-                {metrics.timeToFirstByte ? `${metrics.timeToFirstByte.toFixed(0)}ms` : 'N/A'}
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
               </span>
             </div>
             </div>

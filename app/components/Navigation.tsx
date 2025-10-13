@@ -1,9 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-=======
 import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon, Globe } from 'lucide-react'
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
 
 interface NavigationProps {
   onSidebarToggle?: () => void

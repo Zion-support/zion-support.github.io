@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -7,28 +5,19 @@ import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, T
 
 export default function CloudServices() {
   const services = [
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
     {
-      icon: <TrendingUp className="w-6 h-6" />,
-      title: "Scalability",
-      description: "Scale your infrastructure up or down based on demand"
+      icon: <Cloud className="w-8 h-8" />,
+      title: "Cloud Infrastructure",
+      description: "Comprehensive cloud infrastructure solutions designed for scalability, reliability, and performance.",
+      features: ["Cloud Migration", "Infrastructure Setup", "Auto-scaling", "Load Balancing"]
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Security",
-      description: "Enterprise-grade security with advanced threat protection"
+      icon: <Shield className="w-8 h-8" />,
+      title: "Cloud Security",
+      description: "Advanced security measures to protect your cloud infrastructure and data from threats.",
+      features: ["Identity Management", "Data Encryption", "Threat Detection", "Compliance"]
     },
     {
-<<<<<<< HEAD
-      icon: <Clock className="w-6 h-6" />,
-      title: "Reliability",
-      description: "99.9% uptime guarantee with redundant systems"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Performance",
-      description: "Optimized performance with global content delivery"
-=======
       icon: <Zap className="w-8 h-8" />,
       title: "Cloud Automation",
       description: "Automate your cloud operations for improved efficiency and reduced costs.",
@@ -48,180 +37,180 @@ export default function CloudServices() {
     },
     {
       icon: <Server className="w-8 h-8" />,
-      title: "Cloud Infrastructure",
-      description: "Build and manage robust cloud infrastructure tailored to your business requirements.",
-      features: ["Infrastructure Design", "Load Balancing", "CDN Setup", "Monitoring & Alerting"]
+      title: "Cloud Storage Solutions",
+      description: "Secure and scalable storage solutions for all your data storage requirements.",
+      features: ["Data Archiving", "Backup Solutions", "Disaster Recovery", "Data Synchronization"]
     }
   ];
 
   const benefits = [
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Cost Reduction",
-      description: "Reduce infrastructure costs by up to 40% with optimized cloud solutions"
-    },
-    {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Faster Deployment",
-      description: "Deploy applications 10x faster with automated cloud infrastructure"
+      title: "Scalability",
+      description: "Scale your infrastructure up or down based on demand"
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Enhanced Security",
-      description: "Enterprise-grade security with 99.9% uptime guarantee"
+      title: "Security",
+      description: "Enterprise-grade security with advanced threat protection"
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: "Reliability",
+      description: "99.9% uptime guarantee with redundant systems"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Scalability",
-      description: "Scale your infrastructure automatically based on demand"
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
+      title: "Performance",
+      description: "Optimized performance with global content delivery"
+    }
+  ];
+
+  const pricingPlans = [
+    {
+      name: "Starter",
+      price: "$299",
+      period: "month",
+      description: "Perfect for small businesses getting started with cloud",
+      features: [
+        "Basic cloud setup",
+        "24/7 support",
+        "Monthly monitoring",
+        "Basic security",
+        "Up to 5 users"
+      ],
+      popular: false
+    },
+    {
+      name: "Professional",
+      price: "$799",
+      period: "month",
+      description: "Ideal for growing businesses with advanced needs",
+      features: [
+        "Advanced cloud infrastructure",
+        "Priority support",
+        "Real-time monitoring",
+        "Advanced security",
+        "Up to 25 users",
+        "Multi-cloud support"
+      ],
+      popular: true
+    },
+    {
+      name: "Enterprise",
+      price: "Custom",
+      period: "quote",
+      description: "Tailored solutions for large enterprises",
+      features: [
+        "Custom cloud architecture",
+        "Dedicated support team",
+        "Advanced analytics",
+        "Enterprise security",
+        "Unlimited users",
+        "Custom integrations"
+      ],
+      popular: false
     }
   ];
 
   return (
     <>
       <Helmet>
-<<<<<<< HEAD
-        <title>Cloud Services - Zion Tech Group | Enterprise Cloud Solutions</title>
-        <meta name="description" content="Comprehensive cloud services including migration, security, storage, and infrastructure management. Transform your business with our enterprise cloud solutions." />
-        <meta name="keywords" content="cloud services, cloud migration, cloud security, cloud infrastructure, AWS, Azure, Google Cloud" />
-=======
         <title>Cloud Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive cloud services including migration, security, automation, and multi-cloud solutions. Transform your business with our cloud expertise." />
-        <meta name="keywords" content="cloud services, cloud migration, cloud security, multi-cloud, cloud automation, cloud infrastructure" />
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
+        <meta name="description" content="Comprehensive cloud services including infrastructure, security, automation, and multi-cloud solutions. Scale your business with our expert cloud consulting." />
+        <meta name="keywords" content="cloud services, cloud infrastructure, cloud security, cloud migration, multi-cloud, cloud automation, cloud consulting" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-<<<<<<< HEAD
-        <div className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-=======
-        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          </div>
+          
+          <div className="max-w-7xl mx-auto text-center relative z-10">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
                 Cloud Services
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Transform your business with our comprehensive cloud solutions. From migration to optimization, 
-              we provide end-to-end cloud services that drive growth and efficiency.
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
+              Transform your business with our comprehensive cloud solutions. From infrastructure setup to advanced automation, we help you leverage the power of the cloud.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-<<<<<<< HEAD
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Get Started
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <Link
-=======
-                className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              >
-                Get Started
+                Get Started Today
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/consultation"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Free Consultation
-                to="/demo"
-                className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 border border-white/20"
-              >
-                View Demo
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
-        </div>
+        </section>
 
-<<<<<<< HEAD
-=======
-        {/* Services Grid */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Services Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Our Cloud Solutions
-                </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Our Cloud Services
               </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive cloud solutions designed to accelerate your digital transformation
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                Comprehensive cloud solutions designed to accelerate your digital transformation and drive business growth.
               </p>
             </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
-                  <div className="text-cyan-400 mb-4">
+                <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10">
+                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 text-white">
                     {service.icon}
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
-                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
                   <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-400">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                    {service.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-300">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                   </ul>
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
                 </div>
               ))}
             </div>
           </div>
-        </div>
+        </section>
 
-<<<<<<< HEAD
-              <p className="text-xl text-gray-300 mb-8">
-                Let our cloud experts help you migrate, optimize, and secure your infrastructure.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/contact"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:scale-105"
-                >
-                  Start Your Cloud Journey
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-                <Link
-                  to="/pricing"
-                  className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl transition-all duration-300 border border-white/20"
-                >
-                  View Pricing
-                  <ArrowRight className="w-5 h-5" />
-                </Link>
-              </div>
-=======
         {/* Benefits Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Why Choose Our Cloud Services?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the benefits of cloud transformation with our expert guidance
+                Experience the benefits of working with a trusted cloud partner
               </p>
             </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
-                <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <div className="text-white">
-                      {benefit.icon}
-                    </div>
+                <div key={index} className="text-center group">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    {benefit.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
                 </div>
               ))}
@@ -229,33 +218,95 @@ export default function CloudServices() {
           </div>
         </section>
 
+        {/* Pricing Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Cloud Service Plans
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Choose the perfect plan for your cloud needs
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {pricingPlans.map((plan, index) => (
+                <div key={index} className={`bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  plan.popular 
+                    ? 'border-cyan-500/50 bg-gradient-to-b from-cyan-500/10 to-purple-500/10' 
+                    : 'border-white/20 hover:border-white/40'
+                }`}>
+                  {plan.popular && (
+                    <div className="text-center mb-4">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                        Most Popular
+                      </span>
+                    </div>
+                  )}
+                  
+                  <div className="text-center mb-6">
+                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                    <div className="text-4xl font-bold text-white mb-2">
+                      {plan.price}
+                      <span className="text-lg text-gray-400">/{plan.period}</span>
+                    </div>
+                    <p className="text-gray-300">{plan.description}</p>
+                  </div>
+                  
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                  
+                  <Link
+                    to="/contact"
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
+                      plan.popular
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                        : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Your Cloud Infrastructure?
+              Ready to Transform Your Business with Cloud?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Let our cloud experts help you migrate, optimize, and secure your cloud environment.
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Let our cloud experts help you design and implement the perfect cloud solution for your business needs.
             </p>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Get Started Today
+                Start Your Cloud Journey
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/consultation"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Schedule Consultation
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </>
   );

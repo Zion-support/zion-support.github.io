@@ -14,6 +14,20 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import Breadcrumb from "./app/components/Breadcrumb";
+import LoadingSpinner from "./app/components/LoadingSpinner";
+import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+
+// Loading page component
+const LoadingPage = () => (
+  <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="text-center">
+      <LoadingSpinner />
+      <p className="text-white mt-4">Loading...</p>
+    </div>
+  </div>
+);
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -30,29 +44,14 @@ const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 
-<<<<<<< HEAD
-// Additional pages
-const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
-const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
-const ITServicesPage = React.lazy(() => import("./app/it-services/page"));
-const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
-const CybersecurityPage = React.lazy(() => import("./app/cybersecurity/page"));
-const CustomDevelopmentPage = React.lazy(() => import("./app/custom-development/page"));
-const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
-const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
-const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
-const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
-const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
-const CareersPage = React.lazy(() => import("./app/careers/page"));
-=======
 // Additional service pages
 const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const ItServicesPage = React.lazy(() => import("./app/it-services/page"));
 const CloudServicesPage = React.lazy(() => import("./app/cloud-services/page"));
 const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
-const CybersecurityPage = React.lazy(() => import("./app/security/page"));
+const CybersecurityPage = React.lazy(() => import("./app/cybersecurity/page"));
 const CybersecuritySolutionsPage = React.lazy(() => import("./app/cybersecurity-solutions/page"));
-const CustomDevelopmentPage = React.lazy(() => import("./app/custom-software/page"));
+const CustomDevelopmentPage = React.lazy(() => import("./app/custom-development/page"));
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 const MobileDevelopmentPage = React.lazy(() => import("./app/mobile-development/page"));
 const DatabaseManagementPage = React.lazy(() => import("./app/database-management/page"));
@@ -80,9 +79,10 @@ const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio
 
 // Additional pages
 const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
 const NetworkInfrastructurePage = React.lazy(() => import("./app/network-infrastructure/page"));
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
+const CareersPage = React.lazy(() => import("./app/careers/page"));
 
 // Main App Component
 function App() {
@@ -96,7 +96,6 @@ function App() {
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
         <HelmetProvider>
-<<<<<<< HEAD
           <AccessibilityEnhancer>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -121,86 +120,54 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        <Route path="/consultation" element={<ConsultationPage />} />
+                        <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                        <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
+                        <Route path="/careers" element={<CareersPage />} />
+                        
+                        {/* Service Pages */}
+                        <Route path="/micro-saas" element={<MicroSaasPage />} />
+                        <Route path="/it-services" element={<ItServicesPage />} />
+                        <Route path="/cloud-services" element={<CloudServicesPage />} />
+                        <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                        <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                        <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
+                        <Route path="/custom-development" element={<CustomDevelopmentPage />} />
+                        <Route path="/web-development" element={<WebDevelopmentPage />} />
+                        <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
+                        <Route path="/database-management" element={<DatabaseManagementPage />} />
+                        
+                        {/* 5G Solutions */}
+                        <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                        <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                        <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                        <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
+                        <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
+                        <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                        <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
+                        
+                        {/* AI Services */}
+                        <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
+                        <Route path="/ai-automation" element={<AiAutomationPage />} />
+                        <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
+                        <Route path="/ai-customer-support" element={<AiCustomerServicePage />} />
+                        <Route path="/ai-marketing-automation" element={<AiMarketingAutomationPage />} />
+                        <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
+                        
+                        {/* Micro SAAS */}
+                        <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                        <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                        <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
+                        <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
                       </Routes>
                     </Suspense>
                   </main>
                   <Footer />
                 </FuturisticBackground>
-                  </div>
-                </AnalyticsProvider>
               </div>
             </Router>
           </AccessibilityEnhancer>
-=======
-          <Router>
-            <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-              <FuturisticBackground>
-                <Navigation onSidebarToggle={toggleSidebar} />
-                <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
-                <Breadcrumb />
-                <main id="main-content" role="main">
-                  <Suspense fallback={<LoadingPage />}>
-                    <Routes>
-                      <Route path="/" element={<HomePage />} />
-                      <Route path="/about" element={<AboutPage />} />
-                      <Route path="/contact" element={<ContactPage />} />
-                      <Route path="/services" element={<ServicesPage />} />
-                      <Route path="/pricing" element={<PricingPage />} />
-                      <Route path="/blog" element={<BlogPage />} />
-                      <Route path="/ai-services" element={<AIServicesPage />} />
-                      <Route path="/tutorials" element={<TutorialsPage />} />
-                      <Route path="/demo" element={<DemoPage />} />
-                      <Route path="/support" element={<SupportPage />} />
-                      <Route path="/privacy" element={<PrivacyPage />} />
-                      <Route path="/terms" element={<TermsPage />} />
-                      <Route path="/cookies" element={<CookiesPage />} />
-                      <Route path="/sitemap" element={<SitemapPage />} />
-                      <Route path="/case-studies" element={<CaseStudiesPage />} />
-                      <Route path="/data-analytics" element={<DataAnalyticsPage />} />
-                      <Route path="/network-infrastructure" element={<NetworkInfrastructurePage />} />
-                      
-                      {/* Service Pages */}
-                      <Route path="/micro-saas" element={<MicroSaasPage />} />
-                      <Route path="/it-services" element={<ItServicesPage />} />
-                      <Route path="/cloud-services" element={<CloudServicesPage />} />
-                      <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-                      <Route path="/cybersecurity" element={<CybersecurityPage />} />
-                      <Route path="/cybersecurity-solutions" element={<CybersecuritySolutionsPage />} />
-                      <Route path="/custom-development" element={<CustomDevelopmentPage />} />
-                      <Route path="/web-development" element={<WebDevelopmentPage />} />
-                      <Route path="/mobile-development" element={<MobileDevelopmentPage />} />
-                      <Route path="/database-management" element={<DatabaseManagementPage />} />
-                      
-                      {/* 5G Solutions */}
-                      <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                      <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
-                      <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
-                      <Route path="/5g-iot-solutions" element={<FiveGIotSolutionsPage />} />
-                      <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
-                      <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
-                      <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
-                      
-                      {/* AI Services */}
-                      <Route path="/ai-analytics" element={<AiAnalyticsPage />} />
-                      <Route path="/ai-automation" element={<AiAutomationPage />} />
-                      <Route path="/ai-content-generation" element={<AiContentGenerationPage />} />
-                      <Route path="/ai-customer-support" element={<AiCustomerServicePage />} />
-                      <Route path="/ai-marketing-automation" element={<AiMarketingAutomationPage />} />
-                      <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
-                      
-                      {/* Micro SAAS */}
-                      <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
-                      <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
-                      <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
-                      <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
-                    </Routes>
-                  </Suspense>
-                </main>
-                <Footer />
-              </FuturisticBackground>
-            </div>
-          </Router>
->>>>>>> cursor/website-audit-and-update-with-deployment-3210
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>
