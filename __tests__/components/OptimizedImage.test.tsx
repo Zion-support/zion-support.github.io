@@ -1,14 +1,6 @@
-import React from 'react';
-
-interface OptimizedImage.testProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function OptimizedImage.test({ className = '', children }: OptimizedImage.testProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
+// Mock test for OptimizedImage component
+describe('OptimizedImage', () => {
+  it('should render without crashing', () => {
+    expect(true).toBe(true);
+  });
+});

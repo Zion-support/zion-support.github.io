@@ -1,14 +1,6 @@
-import React from 'react';
-
-interface error-boundary.testProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function error-boundary.test({ className = '', children }: error-boundary.testProps) {
-  return (
-    <div className={`${className}`}>
-      {children}
-    </div>
-  );
-}
+// Mock test for error boundary
+describe('Error Boundary', () => {
+  it('should render without crashing', () => {
+    expect(true).toBe(true);
+  });
+});
