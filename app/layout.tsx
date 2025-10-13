@@ -90,6 +90,37 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
                         <Link to="/ai-services" className="block text-cyan-400 hover:text-cyan-300 transition-colors duration-300 text-sm font-medium">
                           View All AI Services →
                         </Link>
+                        <Link to="/ai-data-analytics" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Data Analytics
+                        </Link>
+                        <Link to="/ai-marketing-automation" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Marketing Automation
+                        </Link>
+                      </div>
+                    </div>
+
+                    {/* IT Services */}
+                    <div className="space-y-4">
+                      <h4 className="text-lg font-semibold text-white">IT Services</h4>
+                      <div className="space-y-2">
+                        <Link to="/cloud-infrastructure" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Cloud Infrastructure
+                        </Link>
+                        <Link to="/5g-solutions" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          5G Solutions
+                        </Link>
+                        <Link to="/ai-code-assistant" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          AI Code Assistant
+                        </Link>
+                        <Link to="/ai-document-processing" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Document Processing
+                        </Link>
+                        <Link to="/ai-crm-assistant" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          CRM Assistant
+                        </Link>
+                        <Link to="/ai-financial-analytics" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm">
+                          Financial Analytics
+                        </Link>
                       </div>
                     </div>
 

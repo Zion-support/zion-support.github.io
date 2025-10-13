@@ -136,6 +136,10 @@ const BlogPage = () => {
                         <Calendar className="w-4 h-4" />
                         {new Date(featuredPost.date).toLocaleDateString()}
                       </span>
+                      <div className="flex items-center text-gray-400 text-sm">
+                        <Calendar className="w-4 h-4 mr-1" />
+                        {new Date(filteredPosts[0].date).toLocaleDateString()}
+                      </div>
                     </div>
                     <Link
                       to={`/blog/${featuredPost.id}`}

@@ -22,6 +22,10 @@ const ServicesPage = React.lazy(() => import("./app/services/page"));
 const PricingPage = React.lazy(() => import("./app/pricing/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
+const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
+const AIHealthcareDiagnosticsPage = React.lazy(() => import("./app/ai-healthcare-diagnostics/page"));
+const AISupplyChainOptimizerPage = React.lazy(() => import("./app/ai-supply-chain-optimizer/page"));
 const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
@@ -586,6 +590,10 @@ function App() {
                         <Route path="/about" element={<AboutPage />} />
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path="/services" element={<ServicesPage />} />
+                        <Route path="/micro-saas" element={<MicroSaasPage />} />
+                        <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                        <Route path="/ai-healthcare-diagnostics" element={<AIHealthcareDiagnosticsPage />} />
+                        <Route path="/ai-supply-chain-optimizer" element={<AISupplyChainOptimizerPage />} />
                         <Route path="/pricing" element={<PricingPage />} />
                         <Route path="/blog" element={<BlogPage />} />
                         <Route path="/ai-services" element={<AIServicesPage />} />
