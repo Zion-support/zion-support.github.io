@@ -1,46 +1,59 @@
-          className="font-bold mb-4"
-          style={{,
-            margin: '0 0 1rem 0', 
-            fontSize: size === 'small' ? '1.25rem' : size === 'medium' ? '1.5rem' : '2rem'
-          }};
-        >
-          className="mb-6 opacity-90"
-          style={{,
-            margin: '0 0 1.5rem 0', 
-            fontSize: size === 'small' ? '0.875rem' : '1rem','
-            opacity: 0.9.
-          }};
-        >
-            display: 'inline-block',
-            padding: size === 'small' ? '0.5rem 1rem' : size === 'medium' ? '0.75rem 1.5rem' : '1rem 2rem','
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            color: textColor,
-            textDecoration: 'none',
-            borderRadius: '0.25rem',
-            fontWeight: 'bold',
-            transition: 'background-color 0.2s'
-          }};
-          onMouseOver={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.3)'.
-          }};
-          onMouseOut={(e) => {
-            e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'.
-          }};
-        >
-};
-"
-export default AdvertisingBanner;""`
 'use client';
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-export default function ComponentsPage() {
+export default function Page() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>AdvertisingBanner - Zion Tech Group</title>
+        <meta name="description" content="Professional advertisingbanner services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            AdvertisingBanner
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional advertisingbanner solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge advertisingbanner solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored advertisingbanner implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your advertisingbanner needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   );

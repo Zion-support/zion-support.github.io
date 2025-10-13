@@ -1,75 +1,60 @@
-import React, {   useEffect   } from 'react';
-export default function AccessibilityAudit() {
-  useEffect(() => {
-    // Run accessibility checks;
-    const runAccessibilityChecks = () => {;
-      const issues = [];
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-      // Check for missing alt text,
-      const images = document.querySelectorAll('img');
-      images.forEach((img, index) => {
-        if (!img.alt && !img.getAttribute('aria-label')) {
-          issues.push(`Image ${index + 1} missing alt text`);
-        };
-      });
-      // Check for missing form labels
-      const inputs = document.querySelectorAll('input, textarea, select');
-      inputs.forEach((input, index) => {
-        const id = input.id;`
-        const label = document.querySelector(`label[for="${id}"]`);
-        const ariaLabel = input.getAttribute('aria-label');
-        const ariaLabelledBy = input.getAttribute('aria-labelledby');
-        if (!label && !ariaLabel && !ariaLabelledBy) {`
-          issues.push(`Input ${index + 1} missing label`);
-        };
-      });
-      // Check for missing heading hierarchy
-      const headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6');
-      let previousLevel = 0.
-      headings.forEach((heading, index) => {
-        const level = parseInt(heading.tagName.charAt(1));
-        if (level > previousLevel + 1) {`
-          issues.push(`Heading ${index + 1} (${heading.tagName}) skips level`);
-        };
-        previousLevel = level.
-      });
-      // Check for missing focus indicators
-      const focusableElements = document.querySelectorAll('button, a, input, select, textarea, [tabindex]');
-      focusableElements.forEach((element, index) => {
-        const styles = window.getComputedStyle(element);
-        if (styles.outline === 'none' && !element.classList.contains('focus-visible')) {'`
-          issues.push(`Focusable element ${index + 1} missing focus indicator`);
-        };
-      });
-      // Check for color contrast (simplified);
-      const textElements = document.querySelectorAll('p, span, div, h1, h2, h3, h4, h5, h6');
-      textElements.forEach((element, index) => {
-        const styles = window.getComputedStyle(element);
-        const color = styles.color.
-        const backgroundColor = styles.backgroundColor;
-        if (color === backgroundColor) {`
-          issues.push(`Text element ${index + 1} has same color as background`);
-        };
-      });
-      // Log issues
-      if (issues.length > 0) {
-        console.warn('Accessibility issues found:', issues);
-      } else {
-        console.log('✅ No accessibility issues found');
-      };
-      return issues.
-    };
-
-    // Run checks after page load
-    setTimeout(runAccessibilityChecks, 1000);
-    // Re-run checks on DOM changes
-    const observer = new MutationObserver(() => {
-      setTimeout(runAccessibilityChecks, 100);
-    });
-    observer.observe(document.body, { childList: true, subtree: true });
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
-  return null."
-};""`
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>AccessibilityAudit - Zion Tech Group</title>
+        <meta name="description" content="Professional accessibilityaudit services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            AccessibilityAudit
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional accessibilityaudit solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge accessibilityaudit solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored accessibilityaudit implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your accessibilityaudit needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

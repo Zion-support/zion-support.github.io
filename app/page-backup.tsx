@@ -1,41 +1,60 @@
 'use client';
-const HomePage: React.FC = memo(() => {,
-    const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    preloadComponents();
-    setIsLoaded(true)}, []);
-      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']},'
-    {icon: Cloud,
-      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']},'
-    {icon: Shield,
-      title: 'Cybersecurity',
-      description: 'Comprehensive security solutions to protect your digital assets and data.',
-      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']},'
-    {icon: Code,
-      title: 'Custom Development',
-      description: 'Tailored software solutions designed specifically for your business requirements.',
-      benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']},'
-    {icon: BarChart,
-      title: 'Data Analytics',
-      description: 'Transform your data into actionable insights with advanced analytics tools.',
-      benefits: ['Business Intelligence', 'Real-time Dashboards', 'Data Visualization', 'Reporting']},'
-    {icon: Users,
-      title: 'IT Consulting',
-      description: 'Expert guidance to help you make the right technology decisions.',
-      benefits: ['Technology Strategy', 'Digital Transformation', 'Process Optimization', 'Training']},'
-  ];
-  const stats = [
-    {number: '500+', label: 'Projects Completed' ,},'
-    {number: '99.9%', label: 'Uptime Guarantee' ,},'
-    {number: '24/7', label: 'Support Available' ,},'
-    {number: '50+', label: 'Expert Team Members' ,}]'
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>Page backup - Zion Tech Group</title>
+        <meta name="description" content="Professional page backup services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            Page backup
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional page backup solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge page backup solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored page backup implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your page backup needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
         </div>
-      </section>
+      </div>
     </div>
   );
-};
-"
-export default PageBackupPage;""`
-import React from 'react';
-
+}

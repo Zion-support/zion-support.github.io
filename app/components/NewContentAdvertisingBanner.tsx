@@ -1,15 +1,60 @@
-            {featuredContent.map((content, index) => (
-              <div."
-                key={content.id};""
-                className="group relative bg-white/5 backdrop-blur-lg rounded-2xl border border-white/10 hover: border-indigo-500/50 transition-all duration-500 overflow-hidden hover:transform hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/20",
-                style={{ animationDelay: `${index * 200}ms` }};
-              >
-                {/* Card glow effect */};"`
-                <div className={`absolute inset-0 bg-gradient-to-br ${content.gradient} opacity-0 group-hover:opacity-10 transition-all duration-500`} />""
-                <div className="relative p-8">"""
-                  <div className="flex items-center gap-2 mb-4">"`
-                    <span className={`px-3 py-1 rounded-full text-xs font-bold bg-gradient-to-r ${content.gradient} text-white`}>
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+export default function Page() {
+  return (
+    <div className="min-h-screen bg-white">
+      <Helmet>
+        <title>NewContentAdvertisingBanner - Zion Tech Group</title>
+        <meta name="description" content="Professional newcontentadvertisingbanner services by Zion Tech Group." />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-8">
+            NewContentAdvertisingBanner
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            Professional newcontentadvertisingbanner solutions tailored to your business needs.
+          </p>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-blue-900 mb-2">
+                Expert Solutions
+              </h3>
+              <p className="text-blue-700">
+                Our team of experts delivers cutting-edge newcontentadvertisingbanner solutions.
+              </p>
+            </div>
+            
+            <div className="bg-green-50 border border-green-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-green-900 mb-2">
+                Custom Implementation
+              </h3>
+              <p className="text-green-700">
+                Tailored newcontentadvertisingbanner implementations for your specific requirements.
+              </p>
+            </div>
+            
+            <div className="bg-purple-50 border border-purple-200 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-purple-900 mb-2">
+                24/7 Support
+              </h3>
+              <p className="text-purple-700">
+                Round-the-clock support for all your newcontentadvertisingbanner needs.
+              </p>
+            </div>
+          </div>
+          
+          <div className="mt-12">
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get Started Today
+            </button>
+          </div>
+        </div>
       </div>
-    </div>,
+    </div>
   );
 }
