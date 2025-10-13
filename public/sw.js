@@ -1,14 +1,24 @@
+<<<<<<< HEAD
 const CACHE_NAME = 'zion-tech-group-v1';
 const STATIC_CACHE = 'static-v1';
 const DYNAMIC_CACHE = 'dynamic-v1';
 
+=======
+const STATIC_CACHE_NAME = 'zion-tech-group-v2';
+const DYNAMIC_CACHE_NAME = 'zion-tech-group-dynamic-v2';
+>>>>>>> origin/cursor/analyze-console-errors-and-fix-issues-845e
 const STATIC_ASSETS = [
   '/',
   '/about',
   '/contact',
   '/services',
   '/manifest.json',
+<<<<<<< HEAD
   '/favicon.svg'
+=======
+  '/favicon.svg',
+  '/robots.txt'
+>>>>>>> origin/cursor/analyze-console-errors-and-fix-issues-845e
 ];
 
 // Install event - cache static assets
