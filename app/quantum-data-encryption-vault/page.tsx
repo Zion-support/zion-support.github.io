@@ -1,83 +1,67 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Shield, Lock, Database } from 'lucide-react';
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-export default function PageTsxPage() {
-=======
-export default function Page() {
->>>>>>> cursor/fix-errors-and-merge-to-main-4df1
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
-      <Helmet>
-        <title>Page - Zion Tech Group</title>
-        <meta name="description" content="Advanced page solutions by Zion Tech Group" />
-      </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center">
-<<<<<<< HEAD
-          <h1 className="text-4xl font-bold text-white mb-8">Page.Tsx</h1>
-          <p className="text-xl text-gray-300 mb-8">
-            Advanced page.tsx solutions by Zion Tech Group
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          
-        <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20">
-          <h2 className="text-2xl font-semibold text-white mb-4">Coming Soon</h2>
-          <p className="text-gray-300">
-            This page is under development. Please check back later for updates.
-          </p>
-        </div>
-      
-
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
 export default function QuantumDataEncryptionVault() {
+  const features = [
+    {
+      title: "Quantum-Safe Encryption",
+      description: "Advanced quantum-resistant encryption algorithms to protect your data from future quantum threats",
+      icon: <Shield className="w-8 h-8" />,
+    },
+    {
+      title: "Zero-Knowledge Architecture",
+      description: "Your data is encrypted in such a way that even we cannot access it without your keys",
+      icon: <Lock className="w-8 h-8" />,
+    },
+    {
+      title: "Distributed Storage",
+      description: "Your data is distributed across multiple secure locations for maximum redundancy and security",
+      icon: <Database className="w-8 h-8" />,
+    }
+  ];
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 to-blue-900">
+    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-indigo-100">
       <Helmet>
         <title>Quantum Data Encryption Vault - Zion Tech Group</title>
-        <meta name="description" content="Quantum-grade data encryption vault solutions by Zion Tech Group" />
+        <meta name="description" content="Advanced quantum data encryption vault solutions by Zion Tech Group" />
       </Helmet>
-      <div className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
             Quantum Data Encryption Vault
           </h1>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Protect your most sensitive data with quantum-grade encryption and zero-knowledge architecture.
-            Start your quantum security journey today.
-=======
-          <h1 className="text-4xl font-bold text-gray-900 mb-4">
-            Page
-          </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Advanced page solutions by Zion Tech Group.
->>>>>>> cursor/fix-errors-and-merge-to-main-4df1
+            Future-proof your data with quantum-safe encryption technology
           </p>
         </div>
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-lg shadow-md p-8">
-            <h2 className="text-2xl font-semibold text-gray-900 mb-4">Coming Soon</h2>
-            <p className="text-gray-600">
-              This page is under development. Please check back later for updates.
-            </p>
-          </div>
-<<<<<<< HEAD
 
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <div className="text-purple-600 mb-4">
+                {feature.icon}
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600">
+                {feature.description}
+              </p>
+            </div>
+          ))}
+        </div>
 
-
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4df1
+        <div className="bg-white rounded-lg shadow-md p-8">
+          <h2 className="text-3xl font-bold text-gray-900 text-center mb-8">
+            Coming Soon
+          </h2>
+          <p className="text-gray-600 text-center">
+            We're working on bringing you the most advanced quantum-safe encryption technology. 
+            Check back soon for updates!
+          </p>
         </div>
       </div>
     </div>

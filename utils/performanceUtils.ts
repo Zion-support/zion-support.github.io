@@ -1,9 +1,14 @@
-
 export interface PerformanceMetrics {
   loadTime: number;
   renderTime: number;
   memoryUsage: number;
   fps: number;
+}
+
+interface PerformanceConfig {
+  enabled: boolean;
+  monitoring: boolean;
+  optimization: boolean;
 }
 
 export class PerformanceUtils {
@@ -15,26 +20,12 @@ export class PerformanceUtils {
   };
 
   measureLoadTime() {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-interface PerformanceConfig {
-  enabled: boolean;
-  monitoring: boolean;
-  optimization: boolean;
-}
-
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-82b8
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-4df1
     if (typeof window !== 'undefined' && window.performance) {
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
     }
+    return this.metrics.loadTime;
   }
-
 
   measureRenderTime() {
     if (typeof window !== 'undefined' && window.performance) {
@@ -44,40 +35,44 @@ interface PerformanceConfig {
         this.metrics.renderTime = fcp.startTime;
       }
     }
+    return this.metrics.renderTime;
   }
 
   measureMemoryUsage() {
-    if (typeof window !== 'undefined' && (window as unknown as { performance?: { memory?: { usedJSHeapSize: number } } }).performance?.memory) {
-      const memory = (window as unknown as { performance: { memory: { usedJSHeapSize: number } } }).performance.memory;
+    if (typeof window !== 'undefined' && (window as any).performance.memory) {
+      const memory = (window as any).performance.memory;
       this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
     }
+    return this.metrics.memoryUsage;
   }
 
   measureFPS() {
     let lastTime = performance.now();
     let frameCount = 0;
     
-    const measureFrame = () => {
+    const countFrames = () => {
       frameCount++;
       const currentTime = performance.now();
-      
       if (currentTime - lastTime >= 1000) {
-        this.metrics.fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
+        this.metrics.fps = frameCount;
         frameCount = 0;
         lastTime = currentTime;
       }
-      
-      requestAnimationFrame(measureFrame);
+      requestAnimationFrame(countFrames);
     };
     
-    requestAnimationFrame(measureFrame);
+    if (typeof window !== 'undefined') {
+      requestAnimationFrame(countFrames);
+    }
+    
+    return this.metrics.fps;
   }
 
-  getMetrics(): PerformanceMetrics {
+  getAllMetrics(): PerformanceMetrics {
     return { ...this.metrics };
   }
 
-  reset() {
+  resetMetrics() {
     this.metrics = {
       loadTime: 0,
       renderTime: 0,
@@ -85,39 +80,4 @@ interface PerformanceConfig {
       fps: 0
     };
   }
-
-  constructor(config: Partial<PerformanceConfig> = {}) {
-    this.config = {
-      enabled: true,
-      monitoring: true,
-      optimization: true,
-      ...config
-    };
-  }
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('Performance utils initialized');
-    }
-  }
-
-  measurePerformance(name: string, fn: () => void): void {
-    if (this.config.monitoring) {
-      const start = performance.now();
-      fn();
-      const end = performance.now();
-      console.log(`${name} took ${end - start} milliseconds`);
-    } else {
-      fn();
-    }
-  }
-
-  optimizeImages(): void {
-    if (this.config.optimization) {
-      console.log('Optimizing images...');
-    }
-  }
-
 }
-
-export default PerformanceUtils;

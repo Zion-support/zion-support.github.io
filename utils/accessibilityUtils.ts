@@ -1,67 +1,70 @@
 export interface AccessibilityConfig {
-  enabled: boolean;
-
-  announceChanges: boolean;
-  highContrast: boolean;
-  reducedMotion: boolean;
-
-  highContrast: boolean;
-  fontSize: number;
-  screenReader: boolean;
-
+  enableKeyboardNavigation: boolean;
+  enableScreenReader: boolean;
+  enableHighContrast: boolean;
+  enableReducedMotion: boolean;
 }
 
 export class AccessibilityUtils {
-  private config: AccessibilityConfig;
+  private config: AccessibilityConfig = {
+    enableKeyboardNavigation: true,
+    enableScreenReader: true,
+    enableHighContrast: false,
+    enableReducedMotion: false
+  };
 
-  constructor(config: Partial<AccessibilityConfig> = {}) {
-    this.config = {
-      enabled: true,
-      announceChanges: true,
-      highContrast: false,
-      reducedMotion: false,
-      ...config
-    };
-  }
-
-
-  announceToScreenReader(message: string) {
-    if (this.config.enabled && this.config.announceChanges) {
-      const announcement = document.createElement('div');
-      announcement.setAttribute('aria-live', 'polite');
-      announcement.setAttribute('aria-atomic', 'true');
-      announcement.className = 'sr-only';
-      announcement.textContent = message;
-      document.body.appendChild(announcement);
-      
-      setTimeout(() => {
-        document.body.removeChild(announcement);
-      }, 1000);
-
-  init(): void {
-    if (this.config.enabled) {
-      console.log('Accessibility utils initialized');
-
+  constructor(config?: Partial<AccessibilityConfig>) {
+    if (config) {
+      this.config = { ...this.config, ...config };
     }
   }
 
-  setHighContrast(enabled: boolean) {
-    this.config.highContrast = enabled;
-    if (enabled) {
-      document.documentElement.classList.add('high-contrast');
-    } else {
-      document.documentElement.classList.remove('high-contrast');
+  setupKeyboardNavigation() {
+    if (!this.config.enableKeyboardNavigation) return;
+    
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Tab') {
+        document.body.classList.add('keyboard-navigation');
+      }
+    });
+
+    document.addEventListener('mousedown', () => {
+      document.body.classList.remove('keyboard-navigation');
+    });
+  }
+
+  setupScreenReaderSupport() {
+    if (!this.config.enableScreenReader) return;
+    
+    // Add ARIA labels and roles where needed
+    const images = document.querySelectorAll('img:not([alt])');
+    images.forEach(img => {
+      img.setAttribute('alt', '');
+    });
+  }
+
+  setupHighContrast() {
+    if (!this.config.enableHighContrast) return;
+    
+    const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+    if (mediaQuery.matches) {
+      document.body.classList.add('high-contrast');
     }
   }
 
-  setReducedMotion(enabled: boolean) {
-    this.config.reducedMotion = enabled;
-    if (enabled) {
-      document.documentElement.classList.add('reduced-motion');
-    } else {
-      document.documentElement.classList.remove('reduced-motion');
+  setupReducedMotion() {
+    if (!this.config.enableReducedMotion) return;
+    
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mediaQuery.matches) {
+      document.body.classList.add('reduced-motion');
     }
+  }
+
+  initialize() {
+    this.setupKeyboardNavigation();
+    this.setupScreenReaderSupport();
+    this.setupHighContrast();
+    this.setupReducedMotion();
   }
 }
-
-export default AccessibilityUtils;
