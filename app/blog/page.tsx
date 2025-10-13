@@ -1,3 +1,10 @@
+<<<<<<< HEAD
+=======
+import React, { useState } from "react";
+import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+>>>>>>> cursor/website-audit-and-update-with-deployment-3210
 export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -11,6 +18,7 @@ export default function Blog() {
 
   const blogPosts = [
     {
+<<<<<<< HEAD
       id: '1',
       title: 'The Future of AI in Enterprise Solutions',
       excerpt: 'Exploring how artificial intelligence is transforming business operations and decision-making processes.',
@@ -79,6 +87,8 @@ interface BlogPost {
 const BlogPage: React.FC = () => {
   const blogPosts: BlogPost[] = [
     {
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-3210
       id: 1,
       title: "The Future of AI in Business: 2024 Trends and Predictions",
       excerpt: "Discover how artificial intelligence is transforming business operations and what to expect in 2024. From automation to predictive analytics, explore the latest AI innovations.",
@@ -223,7 +233,10 @@ const BlogPage: React.FC = () => {
       tags: ["Digital Transformation", "Strategy", "Business", "Technology"]
     }
   ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-3210
   const filteredPosts = blogPosts.filter(post => {
     const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
@@ -235,7 +248,18 @@ const BlogPage: React.FC = () => {
     <>
       <Helmet>
         <title>Blog - Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="Latest insights and updates from Zion Tech Group" />
+=======
+        <meta
+          name="description"
+          content="Stay updated with the latest insights on AI, technology, and business innovation. Expert articles, case studies, and industry trends from Zion Tech Group."
+        />
+        <meta
+          name="keywords"
+          content="AI blog, technology insights, business innovation, artificial intelligence articles, tech trends, digital transformation, cybersecurity, cloud computing"
+        />
+>>>>>>> cursor/website-audit-and-update-with-deployment-3210
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -245,6 +269,19 @@ const BlogPage: React.FC = () => {
                   placeholder="Search articles..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
+<<<<<<< HEAD
+=======
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                />
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                {categories.map(category => (
+                  <button
+                    key={category.id}
+                    onClick={() => setSelectedCategory(category.id)}
+                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
+                      selectedCategory === category.id
+>>>>>>> cursor/website-audit-and-update-with-deployment-3210
                         ? 'bg-blue-600 text-white'
                         : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600'
                     }`}
@@ -258,6 +295,7 @@ const BlogPage: React.FC = () => {
               </div>
             </div>
 
+<<<<<<< HEAD
             {/* Category Filter */}
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {categories.map((category) => (
@@ -273,6 +311,20 @@ const BlogPage: React.FC = () => {
                   {category.name} ({category.count})
                 </button>
               ))}
+=======
+        {/* Blog Posts Grid */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  Latest Articles
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Explore our collection of expert insights, tutorials, and industry analysis.
+              </p>
+>>>>>>> cursor/website-audit-and-update-with-deployment-3210
             </div>
           </div>
         </div>
@@ -383,7 +435,11 @@ const BlogPage: React.FC = () => {
       </div>
     </>
   );
+<<<<<<< HEAD
 };
 
 export default BlogPage;
 
+=======
+}
+>>>>>>> cursor/website-audit-and-update-with-deployment-3210

@@ -33,6 +33,7 @@ const AdvancedPerformanceMonitor = () => {
     // Only run in development
     if (process.env.NODE_ENV !== 'development') return
 
+<<<<<<< HEAD
       window.addEventListener('load', () => {
         const loadTime = performance.now()
         setMetrics(prev => ({ ...prev, loadTime }))
@@ -191,3 +192,5 @@ const AdvancedPerformanceMonitor = () => {
 
 export default AdvancedPerformanceMonitor
 
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-3210
