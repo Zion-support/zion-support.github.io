@@ -2,7 +2,9 @@ import React from 'react';
 import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
 
 interface LoadingPageProps {
+  type?: 'loading' | 'ai' | 'security' | 'performance' | 'global';
   message?: string;
+<<<<<<< HEAD
   variant?: 'default' | 'futuristic' | 'minimal';
 }
 
@@ -25,20 +27,39 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
 export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
   const getServiceIcon = (serviceName: string) => {
     switch (serviceName.toLowerCase()) {
+=======
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const LoadingPage: React.FC<LoadingPageProps> = ({ 
+  type = 'loading', 
+  message = 'Loading...', 
+  size = 'md' 
+}) => {
+  const getIcon = () => {
+    switch (type) {
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
       case 'ai':
-      case 'ai services':
-        return <Brain className="w-8 h-8 text-cyan-400" />;
+        return <Brain className="animate-pulse" />;
       case 'security':
-      case 'cybersecurity':
-        return <Shield className="w-8 h-8 text-green-400" />;
-      case 'micro saas':
-      case 'saas':
-        return <Zap className="w-8 h-8 text-purple-400" />;
-      case '5g':
-      case '5g solutions':
-        return <Globe className="w-8 h-8 text-orange-400" />;
+        return <Shield className="animate-pulse" />;
+      case 'performance':
+        return <Zap className="animate-pulse" />;
+      case 'global':
+        return <Globe className="animate-pulse" />;
       default:
-        return <Brain className="w-8 h-8 text-cyan-400" />;
+        return <Loader2 className="animate-spin" />;
+    }
+  };
+
+  const getSizeClasses = () => {
+    switch (size) {
+      case 'sm':
+        return 'w-6 h-6';
+      case 'lg':
+        return 'w-12 h-12';
+      default:
+        return 'w-8 h-8';
     }
   };
 =======
@@ -57,6 +78,7 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
 
   // Futuristic variant
   return (
+<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center relative overflow-hidden">
       {/* Optimized animated background elements */}
       <div className="absolute inset-0">
@@ -106,11 +128,27 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
           </div>
           <p className="text-sm text-gray-400">Initializing advanced systems...</p>
         </div>
+=======
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="text-center">
+        <div className={`${getSizeClasses()} text-blue-400 mx-auto mb-4`}>
+          {getIcon()}
+        </div>
+        <p className="text-white text-lg font-medium">{message}</p>
+        <div className="mt-4 flex justify-center">
+          <div className="animate-pulse flex space-x-1">
+            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+            <div className="w-2 h-2 bg-blue-400 rounded-full"></div>
+          </div>
+        </div>
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
       </div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   return (
@@ -144,3 +182,6 @@ export const CardSkeleton: React.FC = () => {
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
 export default LoadingPage;
+=======
+export { LoadingPage };
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146

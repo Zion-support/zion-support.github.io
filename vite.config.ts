@@ -37,6 +37,7 @@ export default defineConfig({
     // Performance optimizations
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
 =======
@@ -47,6 +48,10 @@ export default defineConfig({
     chunkSizeWarningLimit: 150, // Increased threshold for better chunking
     assetsInlineLimit: 4096, // Increased for better caching of small assets
 >>>>>>> cursor/analyze-improve-and-deploy-application-c69e
+=======
+    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
+    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
     // Enable compression
     reportCompressedSize: true,
     // Better compression settings
@@ -132,6 +137,9 @@ export default defineConfig({
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
               return 'ai-analytics'
             }
@@ -160,6 +168,7 @@ export default defineConfig({
             }
             return 'zion-other'
 <<<<<<< HEAD
+<<<<<<< HEAD
           }
           // 5G service pages
 =======
@@ -179,17 +188,42 @@ export default defineConfig({
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-a281
           }
+=======
+          }
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
           // 5G service pages - group together
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
+<<<<<<< HEAD
           // Micro SAAS pages
           if (id.includes('/micro-') && id.includes('/page.tsx')) {
+=======
+          // IT service pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
+              (id.includes('devops') || id.includes('cloud') || id.includes('network') || 
+               id.includes('software') || id.includes('web') || id.includes('it-'))) {
+            return 'it-services'
+          }
+          // Micro SAAS pages - group together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              (id.includes('micro-saas') || id.includes('project-management') || 
+               id.includes('customer-relationship') || id.includes('inventory') ||
+               id.includes('financial') || id.includes('employee') || id.includes('social') ||
+               id.includes('email') || id.includes('website') || id.includes('task') ||
+               id.includes('smart-') || id.includes('ai-powered'))) {
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
             return 'micro-saas'
           }
           // Main pages - keep core pages together
           if (id.includes('/app/') && id.includes('/page.tsx') && 
+<<<<<<< HEAD
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') && !id.includes('/micro-')) {
+=======
+              (id.includes('about') || id.includes('contact') || id.includes('services') || 
+               id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
             return 'main-pages'
           }
           // Large vendor libraries

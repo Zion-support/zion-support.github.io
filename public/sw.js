@@ -6,6 +6,7 @@ const DYNAMIC_CACHE = 'dynamic-v1';
 // Assets to cache immediately
 const STATIC_ASSETS = [
   '/',
+<<<<<<< HEAD
   '/index.html',
   '/manifest.json',
   '/favicon.ico',
@@ -20,6 +21,8 @@ self.addEventListener('install', (event) => {
       .then((cache) => {
         console.log('Caching static assets');
         return cache.addAll(STATIC_ASSETS);
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
       })
       .then(() => {
         return self.skipWaiting();
@@ -62,6 +65,7 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
+<<<<<<< HEAD
   event.respondWith(
     caches.match(request)
       .then((cachedResponse) => {
@@ -156,3 +160,5 @@ async function handleOfflineFormSubmissions() {
   // and syncing when back online
   console.log('Handling offline form submissions');
 }
+=======
+>>>>>>> cursor/website-audit-and-update-with-deployment-4146
