@@ -1,19 +1,10 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
 
-import App from "./App";
-import "./index.css";
-import { Helmet } from 'react-helmet-async';
-
-interface MainProps {
-  className?: string;
-  children?: React.ReactNode;
-}
-
-export default function Main({ className = '', children, ...props }: MainProps) {
+export default function Main() {
   return (
-    <div className={`main-component ${className}`} {...props}>
-      {children}
+    <div>
+      <h1>Main App</h1>
+      <p>This is the main application component.</p>
     </div>
   );
 }
