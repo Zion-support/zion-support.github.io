@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Mail, Phone, MapPin, ArrowRight, Twitter, Linkedin, Github } from 'lucide-react';
+import { Brain, Mail, Phone, MapPin, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer = () => {
   const services = [
