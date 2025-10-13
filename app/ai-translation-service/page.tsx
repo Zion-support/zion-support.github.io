@@ -1,20 +1,7 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Languages, Brain, FileText, Clock, Target, CheckCircle } from 'lucide-react';
 import Layout from '../layout';
-=======
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import {
-  CheckCircle,
-  Globe,
-  Zap,
-  Shield,
-  Star,
-  ArrowRight,
-} from "lucide-react";
->>>>>>> origin/main
 
 const AITranslationServicePage = () => {
   const features = [
@@ -33,7 +20,6 @@ const AITranslationServicePage = () => {
       title: "Enterprise Security",
       description: "Bank-level security for all your translation needs",
     },
-<<<<<<< HEAD
     {
       icon: <Target className="w-6 h-6 text-green-400" />,
       title: 'Industry-Specific Translation',
@@ -58,8 +44,6 @@ const AITranslationServicePage = () => {
       category: 'Integration',
       items: ['API Access', 'CMS Integration', 'Website Widgets', 'Mobile Apps', 'Desktop Software', 'Cloud Storage']
     }
-=======
->>>>>>> origin/main
   ];
 
   const pricingPlans = [
@@ -69,19 +53,12 @@ const AITranslationServicePage = () => {
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-<<<<<<< HEAD
         'Up to 10,000 words/month',
         '50+ languages',
         'Basic document translation',
         'Email support',
         'API access',
         'Web interface'
-=======
-        "Up to 10,000 words",
-        "50+ languages",
-        "Basic support",
-        "Standard quality",
->>>>>>> origin/main
       ],
       popular: false,
     },
@@ -91,7 +68,6 @@ const AITranslationServicePage = () => {
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-<<<<<<< HEAD
         'Up to 100,000 words/month',
         '100+ languages',
         'Advanced document processing',
@@ -102,13 +78,6 @@ const AITranslationServicePage = () => {
         'API access',
         'Priority support',
         'Custom terminology'
-=======
-        "Up to 100,000 words",
-        "100+ languages",
-        "Priority support",
-        "Advanced quality checks",
-        "Custom integrations",
->>>>>>> origin/main
       ],
       popular: true,
     },
@@ -126,30 +95,16 @@ const AITranslationServicePage = () => {
         "Advanced security",
         "Custom integrations",
       ],
-<<<<<<< HEAD
       popular: false
     }
-=======
-      popular: false,
-    },
->>>>>>> origin/main
   ];
 
   const testimonials = [
     {
-<<<<<<< HEAD
       name: 'Sarah Johnson',
       company: 'Global Marketing Agency',
       content: 'The AI translation service has revolutionized our international campaigns. The quality is incredible and saves us weeks of work.',
       rating: 5
-=======
-      name: "Sarah Johnson",
-      role: "Marketing Director",
-      company: "Global Corp",
-      content:
-        "The AI translation service has revolutionized our international marketing efforts.",
-      rating: 5,
->>>>>>> origin/main
     },
     {
       name: "Michael Chen",
@@ -160,7 +115,6 @@ const AITranslationServicePage = () => {
       rating: 5,
     },
   ];
-<<<<<<< HEAD
 
   const testimonials = [
     {
@@ -197,8 +151,6 @@ const AITranslationServicePage = () => {
       rating: 5
     }
   ]
-=======
->>>>>>> origin/main
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -232,7 +184,6 @@ const AITranslationServicePage = () => {
               Get Started
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-<<<<<<< HEAD
             <p className="text-gray-300 text-center mb-8">
               Break down language barriers with our advanced AI translation service. 
               Translate documents, websites, and conversations in real-time with 99% accuracy.
@@ -243,13 +194,6 @@ const AITranslationServicePage = () => {
             </button>
             <Link to="#demo" className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
               Watch Demo
-=======
-            <Link
-              to="/contact"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-            >
-              Learn More
->>>>>>> origin/main
             </Link>
           </div>
         </div>
@@ -262,19 +206,12 @@ const AITranslationServicePage = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Why Choose Our AI Translation Service?
             </h2>
-<<<<<<< HEAD
             <p className="text-gray-300 text-lg">
               Powered by state-of-the-art AI for accurate, context-aware translations
-=======
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI-powered translation solutions deliver unmatched accuracy,
-              speed, and security.
->>>>>>> origin/main
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-<<<<<<< HEAD
               <div key={index} className="bg-gray-800 p-6 rounded-lg border border-gray-700 hover:border-cyan-500 transition-colors">
                 <div className="text-cyan-400 mb-4">
                   {feature.icon}
@@ -387,21 +324,6 @@ const AITranslationServicePage = () => {
                     </li>
                   ))}
                 </ul>
-=======
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-              >
-                <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto">
-                  <feature.icon className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-center">
-                  {feature.description}
-                </p>
->>>>>>> origin/main
               </div>
             ))}
           </div>
@@ -536,7 +458,6 @@ const AITranslationServicePage = () => {
   );
 };
 
-<<<<<<< HEAD
       {/* CTA Section */}
       <div className="py-20 bg-gray-900">
         <div className="max-w-4xl mx-auto text-center px-4">
@@ -560,6 +481,3 @@ const AITranslationServicePage = () => {
     </Layout>
   );
 }
-=======
-export default AITranslationServicePage;
->>>>>>> origin/main
