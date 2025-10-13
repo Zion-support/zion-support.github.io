@@ -1,47 +1,15 @@
 import React from 'react';
-import { Loader2, Brain, Shield, Zap, Globe } from 'lucide-react';
+import { Loader2, Brain, Shield, Zap, Globe, BarChart3, Cloud, Code, Database, Star, TrendingUp, Network, Settings } from 'lucide-react';
 
-interface LoadingPageProps {
+interface LoadingSpinnerProps {
   message?: string;
-  variant?: 'default' | 'futuristic' | 'minimal';
+  variant?: 'default' | 'futuristic';
 }
 
-export const LoadingPage: React.FC<LoadingPageProps> = ({ 
-  message = "Loading...", 
-  variant = "futuristic" 
+export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  message = 'Loading...', 
+  variant = 'futuristic' 
 }) => {
-  if (variant === 'minimal') {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-slate-900">
-        <div className="flex items-center space-x-3">
-          <Loader2 className="w-6 h-6 animate-spin text-cyan-400" />
-          <span className="text-white text-lg">{message}</span>
-        </div>
-      </div>
-    );
-  }
-
-<<<<<<< HEAD
-export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
-  const getServiceIcon = (serviceName: string) => {
-    switch (serviceName.toLowerCase()) {
-      case 'ai':
-      case 'ai services':
-        return <Brain className="w-8 h-8 text-cyan-400" />;
-      case 'security':
-      case 'cybersecurity':
-        return <Shield className="w-8 h-8 text-green-400" />;
-      case 'micro saas':
-      case 'saas':
-        return <Zap className="w-8 h-8 text-purple-400" />;
-      case '5g':
-      case '5g solutions':
-        return <Globe className="w-8 h-8 text-orange-400" />;
-      default:
-        return <Brain className="w-8 h-8 text-cyan-400" />;
-    }
-  };
-=======
   if (variant === 'default') {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -53,7 +21,6 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
       </div>
     );
   }
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 
   // Futuristic variant
   return (
@@ -111,16 +78,97 @@ export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
   );
 };
 
-<<<<<<< HEAD
+export const ServiceLoading: React.FC<{ service: string }> = ({ service }) => {
+  const getServiceIcon = (serviceName: string) => {
+    switch (serviceName.toLowerCase()) {
+      case 'ai':
+      case 'ai services':
+        return <Brain className="w-8 h-8 text-cyan-400" />;
+      case 'security':
+      case 'cybersecurity':
+        return <Shield className="w-8 h-8 text-green-400" />;
+      case 'micro saas':
+      case 'saas':
+        return <Zap className="w-8 h-8 text-purple-400" />;
+      case '5g':
+      case '5g solutions':
+        return <Globe className="w-8 h-8 text-orange-400" />;
+      case 'analytics':
+      case 'data':
+        return <BarChart3 className="w-8 h-8 text-blue-400" />;
+      case 'cloud':
+      case 'infrastructure':
+        return <Cloud className="w-8 h-8 text-sky-400" />;
+      case 'development':
+      case 'web':
+      case 'mobile':
+        return <Code className="w-8 h-8 text-indigo-400" />;
+      case 'database':
+        return <Database className="w-8 h-8 text-emerald-400" />;
+      case 'zion':
+        return <Star className="w-8 h-8 text-yellow-400" />;
+      case 'marketing':
+      case 'sales':
+        return <TrendingUp className="w-8 h-8 text-pink-400" />;
+      case 'network':
+        return <Network className="w-8 h-8 text-teal-400" />;
+      case 'settings':
+      case 'management':
+        return <Settings className="w-8 h-8 text-gray-400" />;
+      default:
+        return <Brain className="w-8 h-8 text-cyan-400" />;
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+
+      <div className="relative z-10 text-center">
+        {/* Service icon */}
+        <div className="mb-8">
+          <div className="w-24 h-24 bg-slate-800/50 backdrop-blur-md border border-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 animate-pulse">
+            {getServiceIcon(service)}
+          </div>
+          <h1 className="text-3xl font-bold text-white mb-2">{service}</h1>
+          <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-purple-600 mx-auto rounded-full"></div>
+        </div>
+
+        {/* Loading animation */}
+        <div className="mb-8">
+          <div className="flex justify-center space-x-2 mb-4">
+            <div className="w-3 h-3 bg-cyan-400 rounded-full animate-bounce"></div>
+            <div className="w-3 h-3 bg-purple-400 rounded-full animate-bounce delay-100"></div>
+            <div className="w-3 h-3 bg-pink-400 rounded-full animate-bounce delay-200"></div>
+          </div>
+          <h2 className="text-2xl font-semibold text-white mb-2">Loading {service}...</h2>
+          <p className="text-gray-400">Preparing your specialized experience...</p>
+        </div>
+
+        {/* Progress bar */}
+        <div className="w-64 mx-auto">
+          <div className="w-full bg-slate-800/50 rounded-full h-2 mb-2">
+            <div className="bg-gradient-to-r from-cyan-500 to-purple-600 h-2 rounded-full animate-pulse"></div>
+          </div>
+          <p className="text-sm text-gray-400">Initializing {service} systems...</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
   return (
     <div className="animate-pulse">
       {Array.from({ length: lines }).map((_, index) => (
         <div
           key={index}
-          className={`h-4 bg-gray-700 rounded mb-2 ${
-            index === lines - 1 ? 'w-3/4' : 'w-full'
-          }`}
+          className="h-4 bg-slate-700 rounded mb-2"
+          style={{ width: `${Math.random() * 40 + 60}%` }}
         />
       ))}
     </div>
@@ -129,18 +177,43 @@ export const SkeletonLoader: React.FC<{ lines?: number }> = ({ lines = 3 }) => {
 
 export const CardSkeleton: React.FC = () => {
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 animate-pulse">
-      <div className="w-16 h-16 bg-gray-700 rounded-lg mb-4"></div>
-      <div className="h-6 bg-gray-700 rounded mb-3"></div>
-      <div className="space-y-2 mb-4">
-        <div className="h-4 bg-gray-700 rounded"></div>
-        <div className="h-4 bg-gray-700 rounded w-3/4"></div>
-      </div>
-      <div className="h-8 bg-gray-700 rounded w-1/3"></div>
+    <div className="bg-slate-800/50 backdrop-blur-sm border border-white/10 rounded-xl p-6 animate-pulse">
+      <div className="w-12 h-12 bg-slate-700 rounded-lg mb-4"></div>
+      <div className="h-6 bg-slate-700 rounded mb-2"></div>
+      <div className="h-4 bg-slate-700 rounded mb-2"></div>
+      <div className="h-4 bg-slate-700 rounded w-3/4"></div>
     </div>
   );
 };
 
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-export default LoadingPage;
+export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({ 
+  rows = 5, 
+  columns = 4 
+}) => {
+  return (
+    <div className="animate-pulse">
+      <div className="bg-slate-800/50 backdrop-blur-sm border border-white/10 rounded-xl overflow-hidden">
+        {/* Header */}
+        <div className="bg-slate-700/50 p-4">
+          <div className="grid grid-cols-4 gap-4">
+            {Array.from({ length: columns }).map((_, index) => (
+              <div key={index} className="h-4 bg-slate-600 rounded"></div>
+            ))}
+          </div>
+        </div>
+        {/* Rows */}
+        <div className="p-4 space-y-3">
+          {Array.from({ length: rows }).map((_, rowIndex) => (
+            <div key={rowIndex} className="grid grid-cols-4 gap-4">
+              {Array.from({ length: columns }).map((_, colIndex) => (
+                <div key={colIndex} className="h-4 bg-slate-700 rounded"></div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default LoadingSpinner;

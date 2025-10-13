@@ -1,137 +1,185 @@
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Star, Globe, Shield, CheckCircle } from 'lucide-react';
+"use client";
 
-import { ArrowRight, TrendingUp, Zap, BarChart3, Clock, CheckCircle } from "lucide-react";
+import React from "react";
 import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { 
+  Brain, 
+  CheckCircle, 
+  ArrowRight,
+  Star,
+  Zap,
+  Shield,
+  Target,
+  TrendingUp,
+  Users,
+  Clock
+} from "lucide-react";
 
-export default function CaseStudies() {
-  const caseStudies = [
-    {
-      id: 1,
-      title: "E-commerce Platform AI Transformation",
-      company: "TechStart Inc.",
-      industry: "E-commerce",
-      challenge: "Manual inventory management and customer service bottlenecks",
-      solution: "AI-powered inventory optimization and automated customer support",
-      results: [
-        "60% reduction in inventory costs",
-        "40% increase in customer satisfaction",
-        "80% faster response times",
-        "35% increase in sales"
-      ],
-      image: "/images/case-studies/ecommerce-ai.jpg",
-      duration: "6 months",
-      services: ["AI Analytics", "AI Customer Support", "Data Analytics"],
-      image: "/api/placeholder/600/400",
-      featured: true
-    },
-    {
-      id: 2,
-      title: "Healthcare Data Analytics Implementation",
-      company: "MedTech Solutions",
-      industry: "Healthcare",
-      challenge: "Complex patient data analysis and treatment optimization",
-      solution: "Advanced AI analytics platform for predictive healthcare insights",
-      results: [
-        "45% improvement in diagnosis accuracy",
-        "30% reduction in treatment costs",
-        "50% faster data processing",
-        "25% increase in patient outcomes"
-      ],
-      duration: "8 months",
-      services: ["AI Analytics", "Data Engineering", "Machine Learning"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 3,
-      title: "Manufacturing Process Automation",
-      company: "Industrial Corp",
-      industry: "Manufacturing",
-      challenge: "Inefficient production processes and quality control issues",
-      solution: "AI-driven process optimization and automated quality monitoring",
-      results: [
-        "55% increase in production efficiency",
-        "70% reduction in defects",
-        "40% decrease in downtime",
-        "25% cost savings"
-      ],
-      duration: "10 months",
-      services: ["AI Automation", "IoT Solutions", "Process Optimization"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 4,
-      title: "Financial Services Risk Management",
-      company: "FinanceFirst",
-      industry: "Financial Services",
-      challenge: "Manual fraud detection and risk assessment processes",
-      solution: "AI-powered fraud detection and real-time risk analysis",
-      results: [
-        "85% improvement in fraud detection",
-        "60% reduction in false positives",
-        "90% faster risk assessment",
-        "50% decrease in financial losses"
-      ],
-      duration: "7 months",
-      services: ["AI Fraud Detection", "Risk Analytics", "Cybersecurity"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 5,
-      title: "Retail Customer Experience Enhancement",
-      company: "RetailMax",
-      industry: "Retail",
-      challenge: "Personalized customer experience and inventory management",
-      solution: "AI-driven personalization and demand forecasting",
-      results: [
-        "65% increase in customer engagement",
-        "40% improvement in inventory turnover",
-        "50% boost in average order value",
-        "30% increase in customer retention"
-      ],
-      duration: "5 months",
-      services: ["AI Marketing", "Recommendation Engine", "Data Analytics"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    },
-    {
-      id: 6,
-      title: "Logistics Optimization with 5G",
-      company: "LogiTech",
-      industry: "Logistics",
-      challenge: "Real-time tracking and route optimization challenges",
-      solution: "5G-enabled IoT network with AI-powered route optimization",
-      results: [
-        "45% reduction in delivery times",
-        "35% decrease in fuel costs",
-        "80% improvement in tracking accuracy",
-        "25% increase in customer satisfaction"
-      ],
-      duration: "9 months",
-      services: ["5G Solutions", "IoT Integration", "AI Analytics"],
-      image: "/api/placeholder/600/400",
-      featured: false
-    }
-  ];
+const CaseStudiesPage = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Case Studies | Zion Tech Group</title>
+        <meta name="description" content="Advanced case studies solutions powered by cutting-edge AI technology to transform your business operations and drive growth." />
+        <meta name="keywords" content="AI solutions, technology, business automation, digital transformation" />
+        <meta property="og:title" content="Case Studies" />
+        <meta property="og:description" content="Advanced case studies solutions powered by cutting-edge AI technology to transform your business operations and drive growth." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com/case-studies" />
+        <link rel="canonical" href="https://ziontechgroup.com/case-studies" />
+      </Helmet>
 
-  const stats = [
-    { number: "50+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
-    { number: "95%", label: "Client Satisfaction", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "40%", label: "Average Cost Reduction", icon: <BarChart3 className="w-6 h-6" /> },
-    { number: "60%", label: "Average Efficiency Gain", icon: <Zap className="w-6 h-6" /> }
-  ];
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center"
+            >
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8">
+                <Brain className="w-5 h-5 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 font-medium">Case Studies</span>
+              </div>
+              
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Case Studies
+                <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                  {" "}Solutions
+                </span>
+              </h1>
+              
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Advanced case studies solutions powered by cutting-edge AI technology to transform your business operations and drive growth.
+              </p>
+              
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                >
+                  Get Started
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/5 transition-all duration-300"
+                >
+                  Learn More
+                </motion.button>
+              </div>
+            </motion.div>
+          </div>
+        </section>
 
-              </Link>
+        {/* Features Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Key Features
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Comprehensive solutions designed to enhance your business operations
+              </p>
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  icon: <Brain className="w-8 h-8 text-cyan-400" />,
+                  title: "AI-Powered Intelligence",
+                  description: "Advanced artificial intelligence algorithms to optimize your business processes and decision-making."
+                },
+                {
+                  icon: <Shield className="w-8 h-8 text-purple-400" />,
+                  title: "Enterprise Security",
+                  description: "Bank-level security measures to protect your data and ensure compliance with industry standards."
+                },
+                {
+                  icon: <Target className="w-8 h-8 text-pink-400" />,
+                  title: "Precision Analytics",
+                  description: "Detailed insights and analytics to help you make informed business decisions and track performance."
+                },
+                {
+                  icon: <TrendingUp className="w-8 h-8 text-green-400" />,
+                  title: "Scalable Solutions",
+                  description: "Flexible architecture that grows with your business needs and adapts to changing requirements."
+                },
+                {
+                  icon: <Users className="w-8 h-8 text-blue-400" />,
+                  title: "Team Collaboration",
+                  description: "Seamless collaboration tools that enhance productivity and streamline team communication."
+                },
+                {
+                  icon: <Clock className="w-8 h-8 text-orange-400" />,
+                  title: "24/7 Support",
+                  description: "Round-the-clock technical support and maintenance to ensure uninterrupted service."
+                }
+              ].map((feature, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-all duration-300"
+                >
+                  <div className="mb-4">{feature.icon}</div>
+                  <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                  <p className="text-gray-300">{feature.description}</p>
+                </motion.div>
+              ))}
             </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Get Started?
+              </h2>
+              <p className="text-xl text-gray-300 mb-8">
+                Join thousands of businesses using our solutions to transform their operations
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                >
+                  Start Free Trial
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-8 py-4 border border-gray-600 text-white font-semibold rounded-lg hover:bg-white/5 transition-all duration-300"
+                >
+                  Contact Sales
+                </motion.button>
+              </div>
+            </motion.div>
           </div>
         </section>
       </div>
     </>
   );
-}
+};
+
+export default CaseStudiesPage;
