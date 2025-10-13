@@ -112,7 +112,7 @@ function hasSyntaxErrors(filePath) {
       /'}' expected/,
       /JSX expressions must have one parent element/,
       /Expected corresponding closing tag for JSX fragment/,
-      /    ];
+    ];
     
     return errorPatterns.some(pattern => pattern.test(content));
   } catch (error) {

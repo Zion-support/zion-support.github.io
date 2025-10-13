@@ -1,5 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 
@@ -43,9 +47,12 @@ export default function handler(req, res) {
     res.end(JSON.stringify({ 
       success: true,
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
       message: 'Onsite request submitted successfully',
       id: newRequest.id
     }));

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+
 interface SEOEnhancerProps {
   title?: string;
   description?: string;
@@ -58,6 +59,12 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     { name: 'theme-color', content: '#0066cc' },
     { name: 'msapplication-TileColor', content: '#0066cc' },
     { name: 'apple-mobile-web-app-capable', content: 'yes' },
+<<<<<<< HEAD
+=======
+    { name: 'apple-mobile-web-app-status-bar-style', content: 'default' },
+  ];
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
   return (
     <Helmet>
       <title>{title}</title>
@@ -110,6 +117,11 @@ export const defaultStructuredData = {
   }
 };
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 export default SEOEnhancer;
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+
+export default SEOEnhancer;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847

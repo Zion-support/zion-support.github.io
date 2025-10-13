@@ -29,7 +29,12 @@ export default async function handler(req, res) {
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
+<<<<<<< HEAD
     // // console.log('Quote request received:', quoteData);
+=======
+    // console.log('Quote request received:', quoteData);
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -38,9 +43,19 @@ export default async function handler(req, res) {
       quoteId: `quote_${Date.now()}`,
       data: quoteData
     }));
+<<<<<<< HEAD
   } catch (_error) {
     // console.error('Quote submission error:', error);
 <<<<<<< HEAD
 =======
 }}
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+  } catch (error) {
+    console.error('Quote submission error:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Internal server error' }));
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847

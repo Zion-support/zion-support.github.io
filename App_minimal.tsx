@@ -12,7 +12,16 @@ const App: React.FC = () => {
           <Route path="/" element={<HomePage />} />
         </Routes>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <Footer />
 =======
         <Footer />
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+        <Footer />
+      </Router>
+    </HelmetProvider>
+  );
+};
+export default App;
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847

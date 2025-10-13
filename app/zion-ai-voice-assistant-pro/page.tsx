@@ -2,9 +2,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
 export default function ZionAIVoiceAssistantPro() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -27,6 +31,9 @@ export default function ZionAIVoiceAssistantPro() {
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
             <h3 className="text-xl font-semibold text-white mb-4">Voice Recognition</h3>
             <p className="text-gray-300 mb-4">
               Advanced voice recognition and natural language processing.
@@ -35,6 +42,7 @@ export default function ZionAIVoiceAssistantPro() {
               <li>• Speech-to-text</li>
               <li>• Voice commands</li>
               <li>• Multi-language support</li>
+<<<<<<< HEAD
 =======
             <h3 className="text-xl font-semibold text-white mb-4">Natural Language Processing</h3>
             <p className="text-gray-300 mb-4">
@@ -45,10 +53,13 @@ export default function ZionAIVoiceAssistantPro() {
               <li>• Intent understanding</li>
               <li>• Context awareness</li>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
             </ul>
           </div>
           
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <h3 className="text-xl font-semibold text-white mb-4">Smart Responses</h3>
             <p className="text-gray-300 mb-4">
@@ -96,15 +107,43 @@ export default function ZionAIVoiceAssistantPro() {
           </div>
         </div>
         
+=======
+            <h3 className="text-xl font-semibold text-white mb-4">Smart Automation</h3>
+            <p className="text-gray-300 mb-4">
+              Intelligent automation and task management capabilities.
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Task automation</li>
+              <li>• Calendar management</li>
+              <li>• Email handling</li>
+            </ul>
+          </div>
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Integration</h3>
+            <p className="text-gray-300 mb-4">
+              Seamless integration with business systems and applications.
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• API integration</li>
+              <li>• CRM connectivity</li>
+              <li>• Custom workflows</li>
+            </ul>
+          </div>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
+            <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Voice Experience?</h2>
             <p className="text-gray-300 mb-6">
+<<<<<<< HEAD
 <<<<<<< HEAD
               Our AI experts are ready to help you optimize your business processes.
 =======
               Our zion ai voice assistant pro experts are ready to help you optimize your operations.
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+              Our AI voice assistant experts are ready to help you implement cutting-edge voice solutions.
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
             </p>
             <button className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300">
               Get Started Today
@@ -115,6 +154,10 @@ export default function ZionAIVoiceAssistantPro() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847

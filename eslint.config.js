@@ -78,10 +78,30 @@ export default [
         global: 'readonly'},
 =======
         global: 'readonly',
+<<<<<<< HEAD
+=======
+        HTMLElement: 'readonly',
+        Event: 'readonly',
+        KeyboardEvent: 'readonly',
+        MediaQueryListEvent: 'readonly',
+        PerformanceObserver: 'readonly',
+        PerformanceNavigationTiming: 'readonly',
+        HTMLInputElement: 'readonly',
+        HTMLTextAreaElement: 'readonly',
+        HTMLSelectElement: 'readonly',
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
         setTimeout: 'readonly',
         clearTimeout: 'readonly',
         setInterval: 'readonly',
         clearInterval: 'readonly',
+<<<<<<< HEAD
+=======
+        performance: 'readonly',
+        require: 'readonly',
+        module: 'readonly',
+        exports: 'readonly',
+        fs: 'readonly'
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
       }
     },
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0

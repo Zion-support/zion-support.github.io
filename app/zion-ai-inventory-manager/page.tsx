@@ -2,7 +2,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
 
 export default function ZionAIInventoryManager() {
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
@@ -97,9 +100,24 @@ export default function ZionAIInventoryManager() {
               <li>• Custom reports</li>
             </ul>
           </div>
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
         </div>
         
+=======
+          <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+            <h3 className="text-xl font-semibold text-white mb-4">Cost Optimization</h3>
+            <p className="text-gray-300 mb-4">
+              Intelligent cost optimization and waste reduction.
+            </p>
+            <ul className="text-sm text-gray-400 space-y-2">
+              <li>• Cost analysis</li>
+              <li>• Waste reduction</li>
+              <li>• Efficiency metrics</li>
+            </ul>
+          </div>
+        </div>
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
         <div className="text-center">
           <div className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 max-w-2xl mx-auto">
             <h2 className="text-2xl font-bold text-white mb-4">Ready to Transform Your Business?</h2>
@@ -119,6 +137,10 @@ export default function ZionAIInventoryManager() {
     </div>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847

@@ -33,11 +33,21 @@ const handler = async (req, res) => {
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
+<<<<<<< HEAD
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
       sessionId: `session_${Date.now()}`,
       ...sessionData
+=======
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true, 
+      sessionId: `session_${Date.now()}`,
+      data: sessionData
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
     }));
   } catch (error) {
     console.error('Checkout session creation error:', error);
@@ -50,7 +60,11 @@ const handler = async (req, res) => {
 };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default withErrorLogging(handler);
 =======
 export default withErrorLogging(handler);
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+export default withErrorLogging(handler);
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847

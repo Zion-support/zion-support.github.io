@@ -1,7 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'subscribers.json');
+
 export default function handler(req, res) {
   if (req.method !== 'POST') {
     res.statusCode = 405;
@@ -26,8 +28,13 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
+<<<<<<< HEAD
   } catch (_error) {
     // console.error('Error reading existing subscribers:', error);
+=======
+  } catch (error) {
+    console.error('Error reading existing subscribers:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
     existing = [];
   }
   
@@ -57,9 +64,19 @@ export default function handler(req, res) {
       message: 'Successfully subscribed to newsletter',
       id: newSubscriber.id
     }));
+<<<<<<< HEAD
   } catch (_error) {
     // console.error('Error saving subscriber:', error);
 <<<<<<< HEAD
 =======
 }}
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+  } catch (error) {
+    console.error('Error saving subscriber:', error);
+    res.statusCode = 500;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ error: 'Failed to save subscription' }));
+  }
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847

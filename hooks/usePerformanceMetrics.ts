@@ -19,6 +19,15 @@ interface PerformanceEntryExtended extends PerformanceEntry {
   requestStart?: number;
 }
 
+declare global {
+  interface PerformanceEntry {
+    name: string;
+    entryType: string;
+    startTime: number;
+    duration: number;
+  }
+}
+
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({});
   const [isSupported, setIsSupported] = useState(false);

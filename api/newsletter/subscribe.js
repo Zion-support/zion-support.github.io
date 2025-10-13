@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default async function handler(req, res) {
 
 // Simple email validation function (currently unused but kept for future use)
@@ -9,16 +10,23 @@ export default async function handler(req, res) {
 
 export default async function handler(req, res) {
 =======
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
 // Simple email validation function
 const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
+<<<<<<< HEAD
 async function handler(req, res) {
 
 export default async function handler(req, res) {
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+
+export default async function handler(req, res) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -50,6 +58,10 @@ export default async function handler(req, res) {
       email: req.body.email,
       timestamp: new Date().toISOString()
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -66,6 +78,7 @@ export default async function handler(req, res) {
     }));
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 
 export default handler;
@@ -76,3 +89,6 @@ export default handler;
 
 }}
 >>>>>>> cursor/fix-errors-and-merge-to-main-e3a0
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-b847
