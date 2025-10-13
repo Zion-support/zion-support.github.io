@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
+<<<<<<< HEAD
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 import ErrorBoundary from './app/components/ErrorBoundary';
@@ -11,6 +12,14 @@ import PerformanceMonitor from './app/components/PerformanceMonitor';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+=======
+import Header from './app/components/Header';
+import Footer from './app/components/Footer';
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import LoadingSpinner from './app/components/LoadingSpinner';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
 // Page Components
 import HomePage from './app/page';
@@ -67,6 +76,7 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 function App() {
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <HelmetProvider>
 <<<<<<< HEAD
       <Router>
@@ -81,6 +91,17 @@ function App() {
             <main className="relative z-10" id="main-content" role="main">
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
             <Routes>
+=======
+    <HelmetProvider>
+      <EnhancedErrorBoundary>
+        <AccessibilityEnhancer>
+          <Router>
+            <div className="min-h-screen bg-slate-900">
+              <Header />
+              <main className="relative z-10" id="main-content" role="main">
+                <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
+                  <Routes>
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
               {/* Main Pages */}
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
@@ -118,6 +139,7 @@ function App() {
                   </div>
                 </div>
               } />
+<<<<<<< HEAD
             </Routes>
             </main>
             <Footer />
@@ -125,6 +147,17 @@ function App() {
           </div>
         </Router>
       </ErrorBoundary>
+=======
+                  </Routes>
+                </Suspense>
+              </main>
+              <Footer />
+              <PerformanceMonitor />
+            </div>
+          </Router>
+        </AccessibilityEnhancer>
+      </EnhancedErrorBoundary>
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
     </HelmetProvider>
 =======
     <ErrorBoundary>

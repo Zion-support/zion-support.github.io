@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sitemap
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
@@ -38,3 +39,18 @@ Allow: /support
 # Crawl delay
 Crawl-delay: 1
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+=======
+Sitemap: https://ziontechgroup.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /scripts/
+Disallow: /node_modules/
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d

@@ -3,12 +3,16 @@ import { Link } from 'react-router-dom';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
   MapPinIcon,
+<<<<<<< HEAD
 <<<<<<< HEAD
   ArrowRightIcon,
   HeartIcon
@@ -23,10 +27,15 @@ import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
   ArrowRightIcon
 } from '@heroicons/react/24/outline';
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+=======
+  ArrowRightIcon
+} from '@heroicons/react/24/outline';
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -71,6 +80,13 @@ const Footer: React.FC = () => {
 
 <<<<<<< HEAD
 =======
+=======
+  const services = [
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Cybersecurity', href: '/cybersecurity' },
+    { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
     { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
     { name: '5G Solutions', href: '/5g-solutions' },
   ];
@@ -102,6 +118,7 @@ const Footer: React.FC = () => {
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
@@ -118,6 +135,15 @@ const Footer: React.FC = () => {
     { name: 'LinkedIn', href: '#', icon: 'linkedin' },
     { name: 'GitHub', href: '#', icon: 'github' }
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+=======
+  ];
+
+  const socialLinks = [
+    { name: 'Facebook', href: '#', icon: 'Facebook' },
+    { name: 'Twitter', href: '#', icon: 'Twitter' },
+    { name: 'LinkedIn', href: '#', icon: 'LinkedIn' },
+    { name: 'GitHub', href: '#', icon: 'GitHub' }
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
   ];
 
   return (
@@ -133,9 +159,12 @@ const Footer: React.FC = () => {
           {/* Company Info */}
           <div className="lg:col-span-2">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Link to="/" className="flex items-center space-x-3 mb-6 group">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
             <Link to="/" className="flex items-center space-x-2 mb-6">
               <div className="w-10 h-10 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-lg flex items-center justify-center">
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
@@ -172,6 +201,7 @@ const Footer: React.FC = () => {
                   className="text-gray-400 hover:text-cyan-400 transition-colors text-2xl"
                   aria-label={social.name}
                 >
+<<<<<<< HEAD
                   {social.icon === 'facebook' && '📘'}
                   {social.icon === 'twitter' && '🐦'}
                   {social.icon === 'linkedin' && '💼'}
@@ -179,14 +209,25 @@ const Footer: React.FC = () => {
                 </a>
               ))}
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+=======
+                  {social.icon === 'Facebook' && '📘'}
+                  {social.icon === 'Twitter' && '🐦'}
+                  {social.icon === 'LinkedIn' && '💼'}
+                  {social.icon === 'GitHub' && '🐙'}
+                </a>
+              ))}
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
             </div>
           </div>
 
           {/* Services */}
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
             <h3 className="text-white font-semibold text-lg mb-6">Services</h3>
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
             <ul className="space-y-3">
@@ -207,8 +248,11 @@ const Footer: React.FC = () => {
           {/* Company */}
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Company</h3>
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
             <h3 className="text-white font-semibold text-lg mb-6">Company</h3>
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
             <ul className="space-y-3">
@@ -229,8 +273,11 @@ const Footer: React.FC = () => {
           {/* Resources & Legal */}
           <div>
 <<<<<<< HEAD
+<<<<<<< HEAD
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Resources</h3>
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
             <h3 className="text-white font-semibold text-lg mb-6">Resources</h3>
 >>>>>>> cursor/analyze-improve-and-deploy-application-b99c
             <ul className="space-y-3 mb-8">
@@ -294,11 +341,14 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
 <<<<<<< HEAD
+<<<<<<< HEAD
           <div className="flex items-center space-x-2 text-gray-400 mb-4 md:mb-0">
             <span>Made with</span>
             <HeartIcon className="w-4 h-4 text-red-400" />
             <span>by Zion Tech Group</span>
 =======
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
             {legal.map((link) => (
               <Link
