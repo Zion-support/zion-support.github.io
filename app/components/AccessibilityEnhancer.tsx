@@ -245,6 +245,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 <<<<<<< HEAD
@@ -304,6 +305,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 >>>>>>> origin/main
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-c36b
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-48cd
   return (
     <>
       {children}

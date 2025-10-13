@@ -37,6 +37,7 @@ export default defineConfig({
     // Performance optimizations
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
     assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
 =======
@@ -47,6 +48,10 @@ export default defineConfig({
     chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
     assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
 >>>>>>> cursor/analyze-improve-and-deploy-application-c36b
+=======
+    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
+    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
+>>>>>>> cursor/analyze-improve-and-deploy-application-48cd
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production

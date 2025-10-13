@@ -1,12 +1,14 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
+import "./app/styles/accessibility-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import { LoadingPage } from "./app/components/LoadingStates";
@@ -40,12 +42,16 @@ import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 >>>>>>> cursor/analyze-improve-and-deploy-application-c36b
+=======
+import { LoadingPage } from "./app/components/LoadingStates";
+>>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import LoadingPage from "./app/components/EnhancedLoading";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import EnhancedSEO from "./app/components/EnhancedSEO";
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
@@ -62,6 +68,13 @@ import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityManager from "./app/components/AccessibilityManager";
 import ImageOptimizer from "./app/components/ImageOptimizer";
 >>>>>>> cursor/analyze-improve-and-deploy-application-c36b
+=======
+import AnalyticsProvider from "./app/components/AnalyticsProvider";
+import WebVitalsTracker from "./app/components/WebVitalsTracker";
+import CoreWebVitals from "./app/components/CoreWebVitals";
+import { performanceOptimizer } from "./utils/performanceUtils";
+import { accessibilityManager } from "./utils/accessibilityUtils";
+>>>>>>> cursor/analyze-improve-and-deploy-application-48cd
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -675,10 +688,28 @@ function App() {
     setIsSidebarOpen(false);
   }, []);
 
+  // Initialize performance and accessibility optimizations
+  useEffect(() => {
+    // Initialize performance monitoring
+    performanceOptimizer.init();
+
+    // Initialize accessibility features
+    accessibilityManager.init();
+
+    // Cleanup on unmount
+    return () => {
+      performanceOptimizer.cleanup();
+    };
+  }, []);
+
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
     <GlobalErrorBoundary>
       <EnhancedErrorBoundary>
+=======
+    <EnhancedErrorBoundary>
+>>>>>>> cursor/analyze-improve-and-deploy-application-48cd
         <HelmetProvider>
           <AccessibilityEnhancer>
             <Router>
@@ -766,6 +797,7 @@ function App() {
                   <Footer />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-c36b
                 </FuturisticBackground>
@@ -817,6 +849,15 @@ function App() {
                 </AnalyticsProvider>
 >>>>>>> cursor/website-audit-and-update-with-deployment-3531
 >>>>>>> origin/main
+=======
+                </FuturisticBackground>
+                <PerformanceMonitor />
+                <EnhancedSEO 
+                  title="Zion Tech Group - Advanced AI and IT Solutions"
+                  description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
+                  keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
+                />
+>>>>>>> cursor/analyze-improve-and-deploy-application-48cd
               </div>
               <AnalyticsProvider>
                 <div>
@@ -831,6 +872,7 @@ function App() {
           </AccessibilityEnhancer>
         </HelmetProvider>
       </EnhancedErrorBoundary>
+<<<<<<< HEAD
     </GlobalErrorBoundary>
 =======
     <ErrorBoundary>
@@ -933,6 +975,8 @@ function App() {
       </GlobalErrorBoundary>
     </ErrorBoundary>
 >>>>>>> cursor/analyze-improve-and-deploy-application-381c
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-48cd
   );
 }
 
