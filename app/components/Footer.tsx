@@ -27,7 +27,7 @@ const Footer = React.memo(() => {
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-8 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
@@ -108,6 +108,30 @@ const Footer = React.memo(() => {
                   AI Cybersecurity
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/ai-smart-contracts"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Smart Contracts
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-voice-assistant"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Voice Assistant
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-predictive-maintenance"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                >
+                  AI Predictive Maintenance
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -163,6 +187,30 @@ const Footer = React.memo(() => {
                   Custom Software
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/ai-devops-automation"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
+                >
+                  AI DevOps Automation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/data-analytics"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
+                >
+                  Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/machine-learning"
+                  className="text-gray-400 hover:text-green-400 transition-colors"
+                >
+                  Machine Learning
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -216,6 +264,77 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
                   Zion Project Master
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-scheduler"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Scheduler
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-translator"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Translator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-email-automation"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion Email Automation
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* 5G Solutions */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4 text-orange-400">5G Solutions</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/5g-solutions"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Solutions Overview
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-data-analytics"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-edge-computing"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  5G Edge Computing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-smart-city-solutions"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  Smart City Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-mobile-applications"
+                  className="text-gray-400 hover:text-orange-400 transition-colors"
+                >
+                  Mobile Applications
                 </Link>
               </li>
             </ul>

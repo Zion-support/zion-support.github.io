@@ -1,79 +1,79 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Code, Brain, Zap, Settings, Clock, CheckCircle, Star, Mail, Smartphone, Globe, GitBranch, Cloud, Shield, BarChart3 } from "lucide-react";
+import { ArrowRight, Calendar, Brain, Zap, Users, Clock, CheckCircle, Star, Mail, Smartphone, Globe, Settings, BarChart3, Smartphone as Phone } from "lucide-react";
 
-export default function AIDevOpsAutomation() {
+export default function ZionAIScheduler() {
   const features = [
     {
-      title: "Intelligent CI/CD",
-      description: "AI-powered continuous integration and deployment with automated testing and rollback",
-      icon: <GitBranch className="w-6 h-6" />,
-      benefits: ["Auto-testing", "Smart rollbacks", "Performance optimization", "Risk assessment"]
+      title: "AI-Powered Scheduling",
+      description: "Intelligent scheduling that learns from patterns and optimizes time slots automatically",
+      icon: <Brain className="w-6 h-6" />,
+      benefits: ["Pattern recognition", "Auto-optimization", "Conflict resolution", "Smart suggestions"]
     },
     {
-      title: "Infrastructure as Code",
-      description: "Automated infrastructure provisioning and management with AI-driven optimization",
-      icon: <Cloud className="w-6 h-6" />,
-      benefits: ["Auto-provisioning", "Cost optimization", "Security hardening", "Scalability management"]
+      title: "Multi-Calendar Sync",
+      description: "Seamlessly sync with Google, Outlook, Apple Calendar, and other platforms",
+      icon: <Calendar className="w-6 h-6" />,
+      benefits: ["Real-time sync", "Cross-platform", "Conflict detection", "Bulk operations"]
     },
     {
-      title: "Monitoring & Alerting",
-      description: "Intelligent monitoring with predictive alerts and automated incident response",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Predictive alerts", "Auto-healing", "Performance insights", "Anomaly detection"]
+      title: "Smart Notifications",
+      description: "Intelligent reminders and notifications that adapt to user preferences and behavior",
+      icon: <Zap className="w-6 h-6" />,
+      benefits: ["Adaptive timing", "Multi-channel alerts", "Smart snoozing", "Priority management"]
     },
     {
-      title: "Security Automation",
-      description: "Automated security scanning, vulnerability assessment, and compliance monitoring",
-      icon: <Shield className="w-6 h-6" />,
-      benefits: ["Vulnerability scanning", "Compliance checks", "Threat detection", "Auto-patching"]
+      title: "Team Collaboration",
+      description: "Advanced team scheduling with availability tracking and meeting optimization",
+      icon: <Users className="w-6 h-6" />,
+      benefits: ["Availability tracking", "Meeting optimization", "Resource booking", "Team analytics"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
+      name: "Personal",
+      price: "$9",
       period: "/month",
-      description: "Perfect for small development teams",
+      description: "Perfect for individuals and freelancers",
       features: [
-        "Up to 5 applications",
-        "Basic CI/CD automation",
-        "Standard monitoring",
+        "Unlimited personal calendars",
+        "Basic AI scheduling",
+        "2 calendar integrations",
         "Email support",
-        "Basic security scanning",
-        "Cloud integration"
+        "Mobile app access",
+        "Basic analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$29",
       period: "/month",
-      description: "Ideal for growing development teams",
+      description: "Ideal for small teams and growing businesses",
       features: [
-        "Up to 25 applications",
-        "Advanced CI/CD automation",
-        "Comprehensive monitoring",
+        "Up to 10 team members",
+        "Advanced AI scheduling",
+        "Unlimited integrations",
         "Priority support",
-        "Advanced security suite",
-        "Multi-cloud support",
-        "API access",
-        "Custom integrations"
+        "Team collaboration tools",
+        "Advanced analytics",
+        "Custom notifications",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$99",
       period: "/month",
-      description: "For large-scale development operations",
+      description: "For large organizations and enterprises",
       features: [
-        "Unlimited applications",
+        "Unlimited team members",
         "Custom AI model training",
         "White-label solution",
         "24/7 dedicated support",
-        "Advanced security suite",
+        "Advanced integrations",
         "Custom development",
         "Dedicated account manager",
         "SLA guarantee"
@@ -84,70 +84,57 @@ export default function AIDevOpsAutomation() {
 
   const useCases = [
     {
-      title: "Microservices Architecture",
-      description: "Automate deployment and management of complex microservices with intelligent orchestration",
-      icon: <Code className="w-8 h-8" />,
+      title: "Personal Productivity",
+      description: "Optimize your personal schedule with AI-powered time management and smart reminders",
+      icon: <Clock className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Cloud Migration",
-      description: "Seamlessly migrate applications to cloud with automated testing and optimization",
-      icon: <Cloud className="w-8 h-8" />,
+      title: "Team Meetings",
+      description: "Streamline team scheduling with intelligent meeting optimization and resource booking",
+      icon: <Users className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Kubernetes Management",
-      description: "Intelligent container orchestration with auto-scaling and resource optimization",
-      icon: <Settings className="w-8 h-8" />,
+      title: "Client Appointments",
+      description: "Manage client bookings with automated scheduling and smart conflict resolution",
+      icon: <Calendar className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Security Compliance",
-      description: "Automated security scanning and compliance monitoring for regulatory requirements",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Resource Management",
+      description: "Optimize room and equipment bookings with intelligent resource allocation",
+      icon: <Settings className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
-  const benefits = [
-    {
-      metric: "80%",
-      description: "Reduction in deployment time",
-      icon: <Clock className="w-8 h-8" />
-    },
-    {
-      metric: "90%",
-      description: "Decrease in manual errors",
-      icon: <Zap className="w-8 h-8" />
-    },
-    {
-      metric: "70%",
-      description: "Improvement in system reliability",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      metric: "50%",
-      description: "Reduction in operational costs",
-      icon: <BarChart3 className="w-8 h-8" />
-    }
-  ];
-
-  const tools = [
-    "Docker", "Kubernetes", "Jenkins", "GitLab CI", "GitHub Actions", "Terraform", "Ansible", "Prometheus",
-    "Grafana", "ELK Stack", "AWS", "Azure", "Google Cloud", "Datadog", "New Relic", "Splunk"
+  const integrations = [
+    "Google Calendar",
+    "Microsoft Outlook",
+    "Apple Calendar",
+    "Slack",
+    "Microsoft Teams",
+    "Zoom",
+    "Webex",
+    "Calendly",
+    "Acuity Scheduling",
+    "HubSpot",
+    "Salesforce",
+    "Zapier"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI DevOps Automation - Zion Tech Group | Intelligent Development Operations</title>
+        <title>Zion AI Scheduler - Zion Tech Group | Intelligent Scheduling Platform</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered DevOps automation platform with intelligent CI/CD, infrastructure as code, monitoring, and security automation. Reduce deployment time by 80% and errors by 90%."
+          content="Revolutionary AI-powered scheduling platform that learns from patterns and optimizes time management. Multi-calendar sync, smart notifications, and team collaboration tools for maximum productivity."
         />
         <meta
           name="keywords"
-          content="AI DevOps, DevOps automation, CI/CD automation, infrastructure as code, monitoring automation, security automation, cloud migration, Kubernetes management, microservices"
+          content="AI scheduler, intelligent scheduling, calendar management, time optimization, team collaboration, meeting scheduling, productivity tools, calendar sync, smart notifications"
         />
       </Helmet>
 
@@ -160,20 +147,20 @@ export default function AIDevOpsAutomation() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Code className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered DevOps</span>
+              <Calendar className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Scheduling</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              AI DevOps
+              Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Automation
+                {" "}Scheduler
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your development operations with AI-powered automation. 
-              Reduce deployment time by 80%, errors by 90%, and operational costs by 50% with intelligent DevOps solutions.
+              The most intelligent scheduling platform that learns from your patterns and optimizes your time automatically. 
+              Multi-calendar sync, smart notifications, and team collaboration in one powerful solution.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -181,58 +168,29 @@ export default function AIDevOpsAutomation() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Automation
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                View Demo
-                <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                Watch Demo
+                <Calendar className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Proven Results
+                Intelligent Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI DevOps automation platform delivers measurable improvements in development efficiency and operational excellence.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
-                >
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    {benefit.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.metric}</div>
-                  <div className="text-gray-300 text-sm">{benefit.description}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Automation Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powered by cutting-edge AI that learns from your development patterns and optimizes your DevOps pipeline automatically.
+                Powered by advanced AI that learns from your scheduling patterns and optimizes your time management automatically.
               </p>
             </div>
             
@@ -240,7 +198,7 @@ export default function AIDevOpsAutomation() {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
@@ -266,14 +224,14 @@ export default function AIDevOpsAutomation() {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Comprehensive DevOps Solutions
+                Perfect for Every Use Case
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From microservices to cloud migration, our AI DevOps automation adapts to any development environment.
+                From personal productivity to enterprise team management, Zion AI Scheduler adapts to your needs.
               </p>
             </div>
             
@@ -298,25 +256,25 @@ export default function AIDevOpsAutomation() {
           </div>
         </section>
 
-        {/* Tools Integration Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
+        {/* Integrations Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Seamless Tool Integration
+                Seamless Integrations
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Integrate with all your favorite DevOps tools and platforms for a unified automation experience.
+                Connect with all your favorite tools and platforms for a unified scheduling experience.
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-              {tools.map((tool, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {integrations.map((integration, index) => (
                 <div
                   key={index}
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 text-center border border-white/10 hover:border-cyan-500/30 transition-all duration-300 hover:scale-105"
                 >
-                  <span className="text-gray-300 text-sm font-medium">{tool}</span>
+                  <span className="text-gray-300 text-sm font-medium">{integration}</span>
                 </div>
               ))}
             </div>
@@ -324,14 +282,14 @@ export default function AIDevOpsAutomation() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Flexible Pricing Plans
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your DevOps needs. All plans include our core AI automation features.
+                Choose the perfect plan for your scheduling needs. All plans include our core AI features and integrations.
               </p>
             </div>
             
@@ -392,11 +350,11 @@ export default function AIDevOpsAutomation() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your DevOps?
+              Ready to Optimize Your Time?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading development teams using our AI DevOps automation to accelerate delivery and improve reliability. 
-              Contact us today to start your automation journey.
+              Join thousands of users who have transformed their productivity with Zion AI Scheduler. 
+              Start your free trial today and experience intelligent scheduling.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -428,7 +386,7 @@ export default function AIDevOpsAutomation() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Your Project
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link

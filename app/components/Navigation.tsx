@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon, Globe } from 'lucide-react'
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -36,7 +36,11 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
     { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
     { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Smart Contracts', path: '/ai-smart-contracts', icon: <Code className="w-4 h-4" /> },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Brain className="w-4 h-4" /> },
+    { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI DevOps Automation', path: '/ai-devops-automation', icon: <Zap className="w-4 h-4" /> }
   ], [])
 
   const itServices = useMemo(() => [
@@ -58,7 +62,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion AI Scheduler', path: '/zion-ai-scheduler', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Translator', path: '/zion-ai-translator', icon: <Globe className="w-4 h-4" />, featured: true }
   ], [])
 
   const mainNavItems = useMemo(() => [

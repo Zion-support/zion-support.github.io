@@ -1,82 +1,79 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Code, Brain, Zap, Settings, Clock, CheckCircle, Star, Mail, Smartphone, Globe, GitBranch, Cloud, Shield, BarChart3 } from "lucide-react";
+import { ArrowRight, Shield, Zap, Brain, Code, BarChart3, Users, Clock, CheckCircle, Star, Mail, Smartphone, Globe } from "lucide-react";
 
-export default function AIDevOpsAutomation() {
+export default function AISmartContracts() {
   const features = [
     {
-      title: "Intelligent CI/CD",
-      description: "AI-powered continuous integration and deployment with automated testing and rollback",
-      icon: <GitBranch className="w-6 h-6" />,
-      benefits: ["Auto-testing", "Smart rollbacks", "Performance optimization", "Risk assessment"]
+      title: "Automated Contract Generation",
+      description: "AI-powered contract creation with legal compliance and risk assessment",
+      icon: <Code className="w-6 h-6" />,
+      benefits: ["99.9% accuracy", "Legal compliance", "Risk mitigation", "Time savings"]
     },
     {
-      title: "Infrastructure as Code",
-      description: "Automated infrastructure provisioning and management with AI-driven optimization",
-      icon: <Cloud className="w-6 h-6" />,
-      benefits: ["Auto-provisioning", "Cost optimization", "Security hardening", "Scalability management"]
-    },
-    {
-      title: "Monitoring & Alerting",
-      description: "Intelligent monitoring with predictive alerts and automated incident response",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Predictive alerts", "Auto-healing", "Performance insights", "Anomaly detection"]
-    },
-    {
-      title: "Security Automation",
-      description: "Automated security scanning, vulnerability assessment, and compliance monitoring",
+      title: "Smart Contract Auditing",
+      description: "Automated security analysis and vulnerability detection for blockchain contracts",
       icon: <Shield className="w-6 h-6" />,
-      benefits: ["Vulnerability scanning", "Compliance checks", "Threat detection", "Auto-patching"]
+      benefits: ["Security scanning", "Vulnerability detection", "Compliance checks", "Audit reports"]
+    },
+    {
+      title: "DeFi Integration",
+      description: "Seamless integration with DeFi protocols and automated yield optimization",
+      icon: <Zap className="w-6 h-6" />,
+      benefits: ["Yield farming", "Liquidity management", "Automated trading", "Portfolio optimization"]
+    },
+    {
+      title: "Multi-Chain Support",
+      description: "Deploy and manage contracts across multiple blockchain networks",
+      icon: <Globe className="w-6 h-6" />,
+      benefits: ["Ethereum", "Polygon", "BSC", "Avalanche", "Solana"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small development teams",
+      description: "Perfect for small projects and startups",
       features: [
-        "Up to 5 applications",
-        "Basic CI/CD automation",
-        "Standard monitoring",
+        "Up to 5 smart contracts",
+        "Basic AI contract generation",
+        "Standard security auditing",
         "Email support",
-        "Basic security scanning",
-        "Cloud integration"
+        "Basic analytics dashboard"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$499",
       period: "/month",
-      description: "Ideal for growing development teams",
+      description: "Ideal for growing businesses and DeFi projects",
       features: [
-        "Up to 25 applications",
-        "Advanced CI/CD automation",
-        "Comprehensive monitoring",
+        "Up to 25 smart contracts",
+        "Advanced AI contract generation",
+        "Comprehensive security auditing",
         "Priority support",
-        "Advanced security suite",
-        "Multi-cloud support",
-        "API access",
-        "Custom integrations"
+        "Advanced analytics & reporting",
+        "Multi-chain deployment",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$999",
       period: "/month",
-      description: "For large-scale development operations",
+      description: "For large-scale operations and enterprise clients",
       features: [
-        "Unlimited applications",
+        "Unlimited smart contracts",
         "Custom AI model training",
-        "White-label solution",
+        "White-label security auditing",
         "24/7 dedicated support",
-        "Advanced security suite",
-        "Custom development",
-        "Dedicated account manager",
-        "SLA guarantee"
+        "Custom integrations",
+        "Advanced compliance tools",
+        "Dedicated account manager"
       ],
       popular: false
     }
@@ -84,70 +81,42 @@ export default function AIDevOpsAutomation() {
 
   const useCases = [
     {
-      title: "Microservices Architecture",
-      description: "Automate deployment and management of complex microservices with intelligent orchestration",
-      icon: <Code className="w-8 h-8" />,
+      title: "DeFi Protocol Development",
+      description: "Build and deploy secure DeFi protocols with automated yield farming and liquidity management",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Cloud Migration",
-      description: "Seamlessly migrate applications to cloud with automated testing and optimization",
-      icon: <Cloud className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Kubernetes Management",
-      description: "Intelligent container orchestration with auto-scaling and resource optimization",
-      icon: <Settings className="w-8 h-8" />,
+      title: "NFT Marketplace Integration",
+      description: "Create smart contracts for NFT minting, trading, and royalty distribution",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Security Compliance",
-      description: "Automated security scanning and compliance monitoring for regulatory requirements",
-      icon: <Shield className="w-8 h-8" />,
+      title: "DAO Governance",
+      description: "Implement decentralized governance with voting mechanisms and proposal management",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Supply Chain Tracking",
+      description: "Track products through supply chain with immutable blockchain records",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
-  const benefits = [
-    {
-      metric: "80%",
-      description: "Reduction in deployment time",
-      icon: <Clock className="w-8 h-8" />
-    },
-    {
-      metric: "90%",
-      description: "Decrease in manual errors",
-      icon: <Zap className="w-8 h-8" />
-    },
-    {
-      metric: "70%",
-      description: "Improvement in system reliability",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      metric: "50%",
-      description: "Reduction in operational costs",
-      icon: <BarChart3 className="w-8 h-8" />
-    }
-  ];
-
-  const tools = [
-    "Docker", "Kubernetes", "Jenkins", "GitLab CI", "GitHub Actions", "Terraform", "Ansible", "Prometheus",
-    "Grafana", "ELK Stack", "AWS", "Azure", "Google Cloud", "Datadog", "New Relic", "Splunk"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI DevOps Automation - Zion Tech Group | Intelligent Development Operations</title>
+        <title>AI Smart Contracts - Zion Tech Group | Blockchain & DeFi Solutions</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered DevOps automation platform with intelligent CI/CD, infrastructure as code, monitoring, and security automation. Reduce deployment time by 80% and errors by 90%."
+          content="Revolutionary AI-powered smart contract development platform. Automated contract generation, security auditing, DeFi integration, and multi-chain deployment. Transform your blockchain projects with cutting-edge AI technology."
         />
         <meta
           name="keywords"
-          content="AI DevOps, DevOps automation, CI/CD automation, infrastructure as code, monitoring automation, security automation, cloud migration, Kubernetes management, microservices"
+          content="AI smart contracts, blockchain development, DeFi protocols, smart contract auditing, automated contract generation, multi-chain deployment, NFT marketplace, DAO governance, supply chain tracking"
         />
       </Helmet>
 
@@ -160,20 +129,20 @@ export default function AIDevOpsAutomation() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Code className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered DevOps</span>
+              <Brain className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Blockchain Solutions</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              AI DevOps
+              AI Smart
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Automation
+                {" "}Contracts
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your development operations with AI-powered automation. 
-              Reduce deployment time by 80%, errors by 90%, and operational costs by 50% with intelligent DevOps solutions.
+              Revolutionize blockchain development with our AI-powered smart contract platform. 
+              Automated generation, security auditing, and multi-chain deployment for the next generation of DeFi and Web3 applications.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -181,7 +150,7 @@ export default function AIDevOpsAutomation() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Automation
+                Start Building
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -189,50 +158,21 @@ export default function AIDevOpsAutomation() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 View Demo
-                <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Brain className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Proven Results
+                Powerful AI Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI DevOps automation platform delivers measurable improvements in development efficiency and operational excellence.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
-                >
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    {benefit.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.metric}</div>
-                  <div className="text-gray-300 text-sm">{benefit.description}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Automation Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powered by cutting-edge AI that learns from your development patterns and optimizes your DevOps pipeline automatically.
+                Leverage cutting-edge artificial intelligence to build, audit, and deploy smart contracts with unprecedented efficiency and security.
               </p>
             </div>
             
@@ -240,7 +180,7 @@ export default function AIDevOpsAutomation() {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
@@ -266,14 +206,14 @@ export default function AIDevOpsAutomation() {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Comprehensive DevOps Solutions
+                Real-World Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From microservices to cloud migration, our AI DevOps automation adapts to any development environment.
+                From DeFi protocols to supply chain management, our AI smart contracts power the next generation of blockchain applications.
               </p>
             </div>
             
@@ -298,31 +238,6 @@ export default function AIDevOpsAutomation() {
           </div>
         </section>
 
-        {/* Tools Integration Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Seamless Tool Integration
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Integrate with all your favorite DevOps tools and platforms for a unified automation experience.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-              {tools.map((tool, index) => (
-                <div
-                  key={index}
-                  className="bg-white/5 backdrop-blur-sm rounded-lg p-4 text-center border border-white/10 hover:border-cyan-500/30 transition-all duration-300 hover:scale-105"
-                >
-                  <span className="text-gray-300 text-sm font-medium">{tool}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -331,7 +246,7 @@ export default function AIDevOpsAutomation() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your DevOps needs. All plans include our core AI automation features.
+                Choose the perfect plan for your blockchain development needs. All plans include our core AI features and security auditing.
               </p>
             </div>
             
@@ -392,11 +307,11 @@ export default function AIDevOpsAutomation() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your DevOps?
+              Ready to Build the Future?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading development teams using our AI DevOps automation to accelerate delivery and improve reliability. 
-              Contact us today to start your automation journey.
+              Join the blockchain revolution with AI-powered smart contracts. 
+              Contact us today to start building your next-generation Web3 application.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

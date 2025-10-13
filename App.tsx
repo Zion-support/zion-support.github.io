@@ -61,6 +61,10 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AiSmartContractsPage = React.lazy(() => import("./app/ai-smart-contracts/page"));
+const AiVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
+const AiPredictiveMaintenancePage = React.lazy(() => import("./app/ai-predictive-maintenance/page"));
+const AiDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -180,6 +184,8 @@ const ZionComplianceManagerPage = React.lazy(
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
+const ZionAISchedulerPage = React.lazy(() => import("./app/zion-ai-scheduler/page"));
+const ZionAITranslatorPage = React.lazy(() => import("./app/zion-ai-translator/page"));
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
@@ -272,6 +278,10 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                  <Route path="/ai-smart-contracts" element={<AiSmartContractsPage />} />
+                  <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
+                  <Route path="/ai-predictive-maintenance" element={<AiPredictiveMaintenancePage />} />
+                  <Route path="/ai-devops-automation" element={<AiDevOpsAutomationPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -431,6 +441,14 @@ function App() {
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
                   />
+                  <Route
+                    path="/zion-ai-scheduler"
+                    element={<ZionAISchedulerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-translator"
+                    element={<ZionAITranslatorPage />}
+                  />
 
                   {/* 5G Solutions Routes */}
                   <Route
@@ -501,7 +519,6 @@ function App() {
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </ErrorHandler>
-    </GlobalErrorBoundary>
   );
 }
 

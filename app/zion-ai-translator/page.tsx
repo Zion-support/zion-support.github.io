@@ -1,82 +1,82 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Code, Brain, Zap, Settings, Clock, CheckCircle, Star, Mail, Smartphone, Globe, GitBranch, Cloud, Shield, BarChart3 } from "lucide-react";
+import { ArrowRight, Languages, Brain, Zap, Globe, Clock, CheckCircle, Star, Mail, Smartphone, Globe as GlobeIcon, Mic, FileText, Volume2 } from "lucide-react";
 
-export default function AIDevOpsAutomation() {
+export default function ZionAITranslator() {
   const features = [
     {
-      title: "Intelligent CI/CD",
-      description: "AI-powered continuous integration and deployment with automated testing and rollback",
-      icon: <GitBranch className="w-6 h-6" />,
-      benefits: ["Auto-testing", "Smart rollbacks", "Performance optimization", "Risk assessment"]
+      title: "Real-Time Translation",
+      description: "Instant translation with 99.9% accuracy across 100+ languages",
+      icon: <Languages className="w-6 h-6" />,
+      benefits: ["100+ languages", "99.9% accuracy", "Real-time processing", "Context awareness"]
     },
     {
-      title: "Infrastructure as Code",
-      description: "Automated infrastructure provisioning and management with AI-driven optimization",
-      icon: <Cloud className="w-6 h-6" />,
-      benefits: ["Auto-provisioning", "Cost optimization", "Security hardening", "Scalability management"]
+      title: "Voice Translation",
+      description: "Speak and hear translations instantly with natural voice synthesis",
+      icon: <Mic className="w-6 h-6" />,
+      benefits: ["Voice recognition", "Text-to-speech", "Natural pronunciation", "Offline capability"]
     },
     {
-      title: "Monitoring & Alerting",
-      description: "Intelligent monitoring with predictive alerts and automated incident response",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefits: ["Predictive alerts", "Auto-healing", "Performance insights", "Anomaly detection"]
+      title: "Document Translation",
+      description: "Translate entire documents while preserving formatting and layout",
+      icon: <FileText className="w-6 h-6" />,
+      benefits: ["Format preservation", "Batch processing", "Multiple formats", "Quality assurance"]
     },
     {
-      title: "Security Automation",
-      description: "Automated security scanning, vulnerability assessment, and compliance monitoring",
-      icon: <Shield className="w-6 h-6" />,
-      benefits: ["Vulnerability scanning", "Compliance checks", "Threat detection", "Auto-patching"]
+      title: "AI Context Understanding",
+      description: "Advanced AI that understands context, idioms, and cultural nuances",
+      icon: <Brain className="w-6 h-6" />,
+      benefits: ["Context awareness", "Cultural adaptation", "Idiom recognition", "Tone preservation"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$299",
+      name: "Personal",
+      price: "$19",
       period: "/month",
-      description: "Perfect for small development teams",
+      description: "Perfect for individuals and students",
       features: [
-        "Up to 5 applications",
-        "Basic CI/CD automation",
-        "Standard monitoring",
-        "Email support",
-        "Basic security scanning",
-        "Cloud integration"
+        "Up to 50,000 words/month",
+        "50+ languages",
+        "Basic voice translation",
+        "Document translation",
+        "Mobile app access",
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$49",
       period: "/month",
-      description: "Ideal for growing development teams",
+      description: "Ideal for businesses and professionals",
       features: [
-        "Up to 25 applications",
-        "Advanced CI/CD automation",
-        "Comprehensive monitoring",
-        "Priority support",
-        "Advanced security suite",
-        "Multi-cloud support",
+        "Up to 200,000 words/month",
+        "100+ languages",
+        "Advanced voice translation",
+        "Batch document processing",
         "API access",
-        "Custom integrations"
+        "Priority support",
+        "Custom glossaries",
+        "Team collaboration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$199",
       period: "/month",
-      description: "For large-scale development operations",
+      description: "For large organizations and enterprises",
       features: [
-        "Unlimited applications",
+        "Unlimited words",
+        "All languages",
         "Custom AI model training",
         "White-label solution",
         "24/7 dedicated support",
-        "Advanced security suite",
+        "Advanced integrations",
         "Custom development",
-        "Dedicated account manager",
-        "SLA guarantee"
+        "Dedicated account manager"
       ],
       popular: false
     }
@@ -84,70 +84,61 @@ export default function AIDevOpsAutomation() {
 
   const useCases = [
     {
-      title: "Microservices Architecture",
-      description: "Automate deployment and management of complex microservices with intelligent orchestration",
-      icon: <Code className="w-8 h-8" />,
+      title: "Business Communication",
+      description: "Break language barriers in international business with accurate, context-aware translations",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Cloud Migration",
-      description: "Seamlessly migrate applications to cloud with automated testing and optimization",
-      icon: <Cloud className="w-8 h-8" />,
+      title: "Content Localization",
+      description: "Translate websites, apps, and marketing materials for global audiences",
+      icon: <FileText className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Kubernetes Management",
-      description: "Intelligent container orchestration with auto-scaling and resource optimization",
-      icon: <Settings className="w-8 h-8" />,
+      title: "Customer Support",
+      description: "Provide multilingual customer support with real-time translation capabilities",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Security Compliance",
-      description: "Automated security scanning and compliance monitoring for regulatory requirements",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Education & Training",
+      description: "Create multilingual educational content and training materials",
+      icon: <Brain className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
-  const benefits = [
-    {
-      metric: "80%",
-      description: "Reduction in deployment time",
-      icon: <Clock className="w-8 h-8" />
-    },
-    {
-      metric: "90%",
-      description: "Decrease in manual errors",
-      icon: <Zap className="w-8 h-8" />
-    },
-    {
-      metric: "70%",
-      description: "Improvement in system reliability",
-      icon: <Shield className="w-8 h-8" />
-    },
-    {
-      metric: "50%",
-      description: "Reduction in operational costs",
-      icon: <BarChart3 className="w-8 h-8" />
-    }
+  const languages = [
+    "English", "Spanish", "French", "German", "Italian", "Portuguese", "Russian", "Chinese", "Japanese", "Korean",
+    "Arabic", "Hindi", "Dutch", "Swedish", "Norwegian", "Danish", "Finnish", "Polish", "Czech", "Hungarian",
+    "Greek", "Turkish", "Hebrew", "Thai", "Vietnamese", "Indonesian", "Malay", "Tagalog", "Swahili", "Zulu"
   ];
 
-  const tools = [
-    "Docker", "Kubernetes", "Jenkins", "GitLab CI", "GitHub Actions", "Terraform", "Ansible", "Prometheus",
-    "Grafana", "ELK Stack", "AWS", "Azure", "Google Cloud", "Datadog", "New Relic", "Splunk"
+  const industries = [
+    "E-commerce & Retail",
+    "Healthcare & Medical",
+    "Education & Training",
+    "Travel & Hospitality",
+    "Legal Services",
+    "Financial Services",
+    "Technology & Software",
+    "Media & Entertainment",
+    "Government",
+    "Non-Profit"
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI DevOps Automation - Zion Tech Group | Intelligent Development Operations</title>
+        <title>Zion AI Translator - Zion Tech Group | Advanced Translation Platform</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered DevOps automation platform with intelligent CI/CD, infrastructure as code, monitoring, and security automation. Reduce deployment time by 80% and errors by 90%."
+          content="Revolutionary AI-powered translation platform with real-time voice and document translation. 100+ languages, 99.9% accuracy, and advanced context understanding for global communication."
         />
         <meta
           name="keywords"
-          content="AI DevOps, DevOps automation, CI/CD automation, infrastructure as code, monitoring automation, security automation, cloud migration, Kubernetes management, microservices"
+          content="AI translator, real-time translation, voice translation, document translation, multilingual support, language translation, global communication, localization, content translation"
         />
       </Helmet>
 
@@ -160,20 +151,20 @@ export default function AIDevOpsAutomation() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Code className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered DevOps</span>
+              <Languages className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Translation</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              AI DevOps
+              Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Automation
+                {" "}Translator
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your development operations with AI-powered automation. 
-              Reduce deployment time by 80%, errors by 90%, and operational costs by 50% with intelligent DevOps solutions.
+              Break language barriers with the most advanced AI translation platform. 
+              Real-time voice and document translation across 100+ languages with 99.9% accuracy and cultural context understanding.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -181,58 +172,29 @@ export default function AIDevOpsAutomation() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Automation
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                View Demo
-                <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                Try Demo
+                <Languages className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Benefits Section */}
+        {/* Features Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Proven Results
+                Advanced Translation Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI DevOps automation platform delivers measurable improvements in development efficiency and operational excellence.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
-                >
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    {benefit.icon}
-                  </div>
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">{benefit.metric}</div>
-                  <div className="text-gray-300 text-sm">{benefit.description}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Automation Features
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powered by cutting-edge AI that learns from your development patterns and optimizes your DevOps pipeline automatically.
+                Powered by cutting-edge AI that understands context, culture, and nuance for the most accurate translations possible.
               </p>
             </div>
             
@@ -240,7 +202,7 @@ export default function AIDevOpsAutomation() {
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
@@ -266,14 +228,14 @@ export default function AIDevOpsAutomation() {
         </section>
 
         {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Comprehensive DevOps Solutions
+                Perfect for Every Industry
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From microservices to cloud migration, our AI DevOps automation adapts to any development environment.
+                From business communication to content localization, our AI translator adapts to your specific needs.
               </p>
             </div>
             
@@ -298,25 +260,50 @@ export default function AIDevOpsAutomation() {
           </div>
         </section>
 
-        {/* Tools Integration Section */}
+        {/* Languages Section */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                100+ Languages Supported
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Translate between any of these languages with high accuracy and cultural context understanding.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-4">
+              {languages.map((language, index) => (
+                <div
+                  key={index}
+                  className="bg-white/5 backdrop-blur-sm rounded-lg p-3 text-center border border-white/10 hover:border-cyan-500/30 transition-all duration-300 hover:scale-105"
+                >
+                  <span className="text-gray-300 text-sm font-medium">{language}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Industries Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Seamless Tool Integration
+                Trusted by Leading Industries
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Integrate with all your favorite DevOps tools and platforms for a unified automation experience.
+                Organizations across various industries rely on our AI translator for their global communication needs.
               </p>
             </div>
             
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
-              {tools.map((tool, index) => (
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              {industries.map((industry, index) => (
                 <div
                   key={index}
                   className="bg-white/5 backdrop-blur-sm rounded-lg p-4 text-center border border-white/10 hover:border-cyan-500/30 transition-all duration-300 hover:scale-105"
                 >
-                  <span className="text-gray-300 text-sm font-medium">{tool}</span>
+                  <span className="text-gray-300 text-sm font-medium">{industry}</span>
                 </div>
               ))}
             </div>
@@ -331,7 +318,7 @@ export default function AIDevOpsAutomation() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your DevOps needs. All plans include our core AI automation features.
+                Choose the perfect plan for your translation needs. All plans include our core AI features and language support.
               </p>
             </div>
             
@@ -392,11 +379,11 @@ export default function AIDevOpsAutomation() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Automate Your DevOps?
+              Ready to Break Language Barriers?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join leading development teams using our AI DevOps automation to accelerate delivery and improve reliability. 
-              Contact us today to start your automation journey.
+              Join thousands of users who have transformed their global communication with Zion AI Translator. 
+              Start your free trial today and experience the future of translation.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -416,7 +403,7 @@ export default function AIDevOpsAutomation() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Globe className="w-6 h-6 text-white" />
+                  <GlobeIcon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -428,7 +415,7 @@ export default function AIDevOpsAutomation() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Your Project
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link

@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Mic, Wrench, GitBranch } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -111,6 +111,42 @@ export default function Services() {
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
       features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+    },
+    {
+      title: "AI Smart Contracts",
+      description: "Revolutionary AI-powered smart contract development with automated generation, security auditing, and multi-chain deployment.",
+      icon: <Code className="w-8 h-8" />,
+      path: "/ai-smart-contracts",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $199/month",
+      features: ["Contract Generation", "Security Auditing", "DeFi Integration", "Multi-Chain Support"]
+    },
+    {
+      title: "AI Voice Assistant",
+      description: "Advanced conversational AI with natural language processing, voice recognition, and custom voice cloning capabilities.",
+      icon: <Mic className="w-8 h-8" />,
+      path: "/ai-voice-assistant",
+      color: "from-pink-500 to-rose-500",
+      price: "Starting at $149/month",
+      features: ["Voice Recognition", "Custom Voice Cloning", "Multi-Channel", "NLP Processing"]
+    },
+    {
+      title: "AI Predictive Maintenance",
+      description: "Intelligent equipment monitoring with machine learning, IoT sensors, and automated maintenance scheduling.",
+      icon: <Wrench className="w-8 h-8" />,
+      path: "/ai-predictive-maintenance",
+      color: "from-orange-500 to-red-500",
+      price: "Starting at $299/month",
+      features: ["ML Models", "IoT Integration", "Predictive Alerts", "Cost Optimization"]
+    },
+    {
+      title: "AI DevOps Automation",
+      description: "Intelligent CI/CD automation with infrastructure as code, monitoring, and security automation for development teams.",
+      icon: <GitBranch className="w-8 h-8" />,
+      path: "/ai-devops-automation",
+      color: "from-teal-500 to-cyan-500",
+      price: "Starting at $299/month",
+      features: ["CI/CD Automation", "Infrastructure as Code", "Monitoring", "Security Automation"]
     }
   ];
 
