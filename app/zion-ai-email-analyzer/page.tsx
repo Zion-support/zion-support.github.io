@@ -1,102 +1,101 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight, FileText, Download, Send, CheckCircle, Star, Users, Clock, Zap, Receipt, Calculator, CreditCard, DollarSign, TrendingUp, BarChart3, Globe, Smartphone, Monitor, Headphones, Mic, Camera, Edit, Palette, Layers, Filter, RotateCcw, PlayCircle, Pause, Stop, SkipBack, SkipForward, Volume2, VolumeX, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt as ReceiptIcon, ClipboardList, Workflow, Mail, Phone, MapPin, Award, TrendingUp as TrendingUpIcon, Shield, Cloud, Database, Code, Settings, Monitor as MonitorIcon, Laptop, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone as PhoneIcon, Voicemail, Headset, Speaker, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, RotateCcw as RotateCcwIcon, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize as MaximizeIcon, Minimize as MinimizeIcon, Square as SquareIcon, Circle as CircleIcon, Triangle as TriangleIcon, Hexagon as HexagonIcon, Octagon as OctagonIcon, Diamond as DiamondIcon, Star as StarIconIcon, Moon as MoonIcon, Sun as SunIcon, Sunrise as SunriseIcon, Sunset as SunsetIcon, CloudRain as CloudRainIcon, CloudSnow as CloudSnowIcon, CloudLightning as CloudLightningIcon, Wind as WindIcon, Droplets as DropletsIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Timer as TimerIcon, Stopwatch as StopwatchIcon, Hourglass as HourglassIcon, Clock3 as Clock3Icon, Clock4 as Clock4Icon, Clock5 as Clock5Icon, Clock6 as Clock6Icon, Clock7 as Clock7Icon, Clock8 as Clock8Icon, Clock9 as Clock9Icon, Clock10 as Clock10Icon, Clock11 as Clock11Icon, Clock12 as Clock12Icon, Calendar as CalendarIconIcon, CalendarDays as CalendarDaysIcon, CalendarCheck as CalendarCheckIcon, CalendarX as CalendarXIcon, CalendarPlus as CalendarPlusIcon, CalendarMinus as CalendarMinusIcon, CalendarRange as CalendarRangeIcon, CalendarSearch as CalendarSearchIcon, CalendarHeart as CalendarHeartIcon, CalendarStar as CalendarStarIcon, CalendarClock as CalendarClockIcon, CalendarUser as CalendarUserIcon, CalendarEdit as CalendarEditIcon, CalendarTrash as CalendarTrashIcon, CalendarSettings as CalendarSettingsIcon, CalendarImport as CalendarImportIcon, CalendarExport as CalendarExportIcon, CalendarShare as CalendarShareIcon, CalendarLock as CalendarLockIcon, CalendarUnlock as CalendarUnlockIcon, CalendarKey as CalendarKeyIcon, CalendarShield as CalendarShieldIcon, CalendarAlert as CalendarAlertIcon, CalendarBell as CalendarBellIcon, CalendarZap as CalendarZapIcon, CalendarSparkles as CalendarSparklesIcon, CalendarGift as CalendarGiftIcon, CalendarAward as CalendarAwardIcon, CalendarTrophy as CalendarTrophyIcon, CalendarMedal as CalendarMedalIcon, CalendarCrown as CalendarCrownIcon, CalendarGem as CalendarGemIcon, CalendarDiamond as CalendarDiamondIcon, CalendarPearl as CalendarPearlIcon, CalendarRuby as CalendarRubyIcon, CalendarSapphire as CalendarSapphireIcon, CalendarEmerald as CalendarEmeraldIcon, CalendarTopaz as CalendarTopazIcon, CalendarAmethyst as CalendarAmethystIcon, CalendarQuartz as CalendarQuartzIcon, CalendarCrystal as CalendarCrystalIcon, CalendarJewel as CalendarJewelIcon, CalendarTreasure as CalendarTreasureIcon, CalendarGold as CalendarGoldIcon, CalendarSilver as CalendarSilverIcon, CalendarBronze as CalendarBronzeIcon, CalendarPlatinum as CalendarPlatinumIcon, CalendarTitanium as CalendarTitaniumIcon, CalendarSteel as CalendarSteelIcon, CalendarIron as CalendarIronIcon, CalendarCopper as CalendarCopperIcon, CalendarAluminum as CalendarAluminumIcon, CalendarZinc as CalendarZincIcon, CalendarTin as CalendarTinIcon, CalendarLead as CalendarLeadIcon, CalendarMercury as CalendarMercuryIcon, CalendarUranium as CalendarUraniumIcon, CalendarPlutonium as CalendarPlutoniumIcon, CalendarRadium as CalendarRadiumIcon, CalendarThorium as CalendarThoriumIcon, CalendarActinium as CalendarActiniumIcon, CalendarProtactinium as CalendarProtactiniumIcon, CalendarNeptunium as CalendarNeptuniumIcon, CalendarAmericium as CalendarAmericiumIcon, CalendarCurium as CalendarCuriumIcon, CalendarBerkelium as CalendarBerkeliumIcon, CalendarCalifornium as CalendarCaliforniumIcon, CalendarEinsteinium as CalendarEinsteiniumIcon, CalendarFermium as CalendarFermiumIcon, CalendarMendelevium as CalendarMendeleviumIcon, CalendarNobelium as CalendarNobeliumIcon, CalendarLawrencium as CalendarLawrenciumIcon, CalendarRutherfordium as CalendarRutherfordiumIcon, CalendarDubnium as CalendarDubniumIcon, CalendarSeaborgium as CalendarSeaborgiumIcon, CalendarBohrium as CalendarBohriumIcon, CalendarHassium as CalendarHassiumIcon, CalendarMeitnerium as CalendarMeitneriumIcon, CalendarDarmstadtium as CalendarDarmstadtiumIcon, CalendarRoentgenium as CalendarRoentgeniumIcon, CalendarCopernicium as CalendarCoperniciumIcon, CalendarNihonium as CalendarNihoniumIcon, CalendarFlerovium as CalendarFleroviumIcon, CalendarMoscovium as CalendarMoscoviumIcon, CalendarLivermorium as CalendarLivermoriumIcon, CalendarTennessine as CalendarTennessineIcon, CalendarOganesson as CalendarOganessonIcon, Package as PackageIcon, Receipt as ReceiptIconIcon, ClipboardList as ClipboardListIcon, Workflow as WorkflowIcon } from 'lucide-react';
+import { ArrowRight, Mail, BarChart3, CheckCircle, Star, Users, Clock, Zap, Brain, TrendingUp, Target, MessageSquare, Heart, ThumbsUp, Award, Globe, Smartphone, Monitor, Headphones, Mic, Camera, Edit, Palette, Layers, Filter, RotateCcw, PlayCircle, Pause, Stop, SkipBack, SkipForward, Volume2, VolumeX, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow, Mail as MailIcon, Phone, MapPin, Award as AwardIcon, TrendingUp as TrendingUpIcon, Shield, Cloud, Database, Code, Settings, Monitor as MonitorIcon, Laptop, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone as PhoneIcon, Voicemail, Headset, Speaker, Volume2 as Volume2Icon, VolumeX as VolumeXIcon, Play as PlayIcon, Pause as PauseIcon, Stop as StopIcon, SkipBack as SkipBackIcon, SkipForward as SkipForwardIcon, RotateCcw as RotateCcwIcon, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize as MaximizeIcon, Minimize as MinimizeIcon, Square as SquareIcon, Circle as CircleIcon, Triangle as TriangleIcon, Hexagon as HexagonIcon, Octagon as OctagonIcon, Diamond as DiamondIcon, Star as StarIconIcon, Moon as MoonIcon, Sun as SunIcon, Sunrise as SunriseIcon, Sunset as SunsetIcon, CloudRain as CloudRainIcon, CloudSnow as CloudSnowIcon, CloudLightning as CloudLightningIcon, Wind as WindIcon, Droplets as DropletsIcon, Thermometer as ThermometerIcon, Gauge as GaugeIcon, Timer as TimerIcon, Stopwatch as StopwatchIcon, Hourglass as HourglassIcon, Clock3 as Clock3Icon, Clock4 as Clock4Icon, Clock5 as Clock5Icon, Clock6 as Clock6Icon, Clock7 as Clock7Icon, Clock8 as Clock8Icon, Clock9 as Clock9Icon, Clock10 as Clock10Icon, Clock11 as Clock11Icon, Clock12 as Clock12Icon, Calendar as CalendarIconIcon, CalendarDays as CalendarDaysIcon, CalendarCheck as CalendarCheckIcon, CalendarX as CalendarXIcon, CalendarPlus as CalendarPlusIcon, CalendarMinus as CalendarMinusIcon, CalendarRange as CalendarRangeIcon, CalendarSearch as CalendarSearchIcon, CalendarHeart as CalendarHeartIcon, CalendarStar as CalendarStarIcon, CalendarClock as CalendarClockIcon, CalendarUser as CalendarUserIcon, CalendarEdit as CalendarEditIcon, CalendarTrash as CalendarTrashIcon, CalendarSettings as CalendarSettingsIcon, CalendarImport as CalendarImportIcon, CalendarExport as CalendarExportIcon, CalendarShare as CalendarShareIcon, CalendarLock as CalendarLockIcon, CalendarUnlock as CalendarUnlockIcon, CalendarKey as CalendarKeyIcon, CalendarShield as CalendarShieldIcon, CalendarAlert as CalendarAlertIcon, CalendarBell as CalendarBellIcon, CalendarZap as CalendarZapIcon, CalendarSparkles as CalendarSparklesIcon, CalendarGift as CalendarGiftIcon, CalendarAward as CalendarAwardIcon, CalendarTrophy as CalendarTrophyIcon, CalendarMedal as CalendarMedalIcon, CalendarCrown as CalendarCrownIcon, CalendarGem as CalendarGemIcon, CalendarDiamond as CalendarDiamondIcon, CalendarPearl as CalendarPearlIcon, CalendarRuby as CalendarRubyIcon, CalendarSapphire as CalendarSapphireIcon, CalendarEmerald as CalendarEmeraldIcon, CalendarTopaz as CalendarTopazIcon, CalendarAmethyst as CalendarAmethystIcon, CalendarQuartz as CalendarQuartzIcon, CalendarCrystal as CalendarCrystalIcon, CalendarJewel as CalendarJewelIcon, CalendarTreasure as CalendarTreasureIcon, CalendarGold as CalendarGoldIcon, CalendarSilver as CalendarSilverIcon, CalendarBronze as CalendarBronzeIcon, CalendarPlatinum as CalendarPlatinumIcon, CalendarTitanium as CalendarTitaniumIcon, CalendarSteel as CalendarSteelIcon, CalendarIron as CalendarIronIcon, CalendarCopper as CalendarCopperIcon, CalendarAluminum as CalendarAluminumIcon, CalendarZinc as CalendarZincIcon, CalendarTin as CalendarTinIcon, CalendarLead as CalendarLeadIcon, CalendarMercury as CalendarMercuryIcon, CalendarUranium as CalendarUraniumIcon, CalendarPlutonium as CalendarPlutoniumIcon, CalendarRadium as CalendarRadiumIcon, CalendarThorium as CalendarThoriumIcon, CalendarActinium as CalendarActiniumIcon, CalendarProtactinium as CalendarProtactiniumIcon, CalendarNeptunium as CalendarNeptuniumIcon, CalendarAmericium as CalendarAmericiumIcon, CalendarCurium as CalendarCuriumIcon, CalendarBerkelium as CalendarBerkeliumIcon, CalendarCalifornium as CalendarCaliforniumIcon, CalendarEinsteinium as CalendarEinsteiniumIcon, CalendarFermium as CalendarFermiumIcon, CalendarMendelevium as CalendarMendeleviumIcon, CalendarNobelium as CalendarNobeliumIcon, CalendarLawrencium as CalendarLawrenciumIcon, CalendarRutherfordium as CalendarRutherfordiumIcon, CalendarDubnium as CalendarDubniumIcon, CalendarSeaborgium as CalendarSeaborgiumIcon, CalendarBohrium as CalendarBohriumIcon, CalendarHassium as CalendarHassiumIcon, CalendarMeitnerium as CalendarMeitneriumIcon, CalendarDarmstadtium as CalendarDarmstadtiumIcon, CalendarRoentgenium as CalendarRoentgeniumIcon, CalendarCopernicium as CalendarCoperniciumIcon, CalendarNihonium as CalendarNihoniumIcon, CalendarFlerovium as CalendarFleroviumIcon, CalendarMoscovium as CalendarMoscoviumIcon, CalendarLivermorium as CalendarLivermoriumIcon, CalendarTennessine as CalendarTennessineIcon, CalendarOganesson as CalendarOganessonIcon, Package as PackageIcon, Receipt as ReceiptIcon, ClipboardList as ClipboardListIcon, Workflow as WorkflowIcon } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 
-const ZionAIInvoiceGeneratorPage: React.FC = () => {
+const ZionAIEmailAnalyzerPage: React.FC = () => {
   const features = [
     {
-      title: "AI-Powered Invoice Creation",
-      description: "Generate professional invoices automatically from project data and client information",
-      icon: <FileText className="w-8 h-8" />,
+      title: "Email Performance Analytics",
+      description: "Analyze open rates, click-through rates, and engagement metrics across all email campaigns",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Smart Data Extraction",
-      description: "Automatically extract billing information from emails, contracts, and project management tools",
-      icon: <Calculator className="w-8 h-8" />,
+      title: "Subject Line Optimization",
+      description: "AI-powered suggestions to improve subject line performance and increase open rates",
+      icon: <Target className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Multiple Payment Methods",
-      description: "Accept payments via credit cards, bank transfers, PayPal, and cryptocurrency",
-      icon: <CreditCard className="w-8 h-8" />,
+      title: "Spam Score Analysis",
+      description: "Identify and fix issues that could land your emails in spam folders",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Automated Follow-ups",
-      description: "Send automatic payment reminders and follow-up emails to clients",
-      icon: <Send className="w-8 h-8" />,
+      title: "A/B Testing Automation",
+      description: "Automatically test different email variations and optimize for better performance",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Tax Compliance",
-      description: "Automatically calculate taxes, VAT, and ensure compliance with local regulations",
-      icon: <Receipt className="w-8 h-8" />,
+      title: "Deliverability Monitoring",
+      description: "Track email deliverability across different ISPs and identify delivery issues",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-indigo-500 to-violet-500"
     },
     {
-      title: "Financial Analytics",
-      description: "Track revenue, outstanding payments, and generate financial reports",
-      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Content Analysis",
+      description: "Analyze email content for readability, tone, and engagement potential",
+      icon: <MessageSquare className="w-8 h-8" />,
       color: "from-teal-500 to-cyan-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Solo",
-      price: "$19",
+      name: "Starter",
+      price: "$29",
       period: "per month",
-      description: "Perfect for freelancers and solo entrepreneurs",
+      description: "Perfect for small businesses and individual marketers",
       features: [
-        "50 invoices per month",
-        "Basic templates",
-        "Payment tracking",
+        "Up to 10,000 emails/month",
+        "Basic analytics dashboard",
+        "Subject line optimization",
         "Email support",
-        "PDF export",
-        "Basic analytics"
+        "Spam score analysis",
+        "Basic A/B testing"
       ],
       popular: false,
       color: "from-gray-500 to-gray-600"
     },
     {
-      name: "Business",
-      price: "$49",
+      name: "Professional",
+      price: "$79",
       period: "per month",
-      description: "Ideal for small to medium businesses",
+      description: "Ideal for growing businesses with advanced email needs",
       features: [
-        "200 invoices per month",
-        "Premium templates",
-        "Automated follow-ups",
+        "Up to 100,000 emails/month",
+        "Advanced analytics & reporting",
+        "AI-powered optimization",
         "Priority support",
-        "Multiple payment methods",
-        "Advanced analytics",
-        "Tax calculations",
-        "Client portal"
+        "Deliverability monitoring",
+        "Advanced A/B testing",
+        "Content analysis",
+        "API access"
       ],
       popular: true,
       color: "from-cyan-500 to-blue-500"
     },
     {
       name: "Enterprise",
-      price: "$99",
+      price: "$199",
       period: "per month",
-      description: "For large organizations with high-volume needs",
+      description: "For large organizations with high-volume email campaigns",
       features: [
-        "Unlimited invoices",
-        "Custom templates",
-        "API integration",
-        "24/7 phone support",
+        "Unlimited emails",
+        "Custom analytics dashboard",
         "White-label solution",
-        "Advanced reporting",
-        "Multi-currency support",
-        "Team collaboration",
-        "Custom workflows"
+        "24/7 phone support",
+        "Advanced deliverability tools",
+        "Custom integrations",
+        "Dedicated account manager",
+        "SLA guarantee"
       ],
       popular: false,
       color: "from-purple-500 to-pink-500"
@@ -105,57 +104,57 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
 
   const testimonials = [
     {
-      name: "David Martinez",
-      company: "Freelance Developer",
-      role: "Independent Contractor",
-      content: "Zion AI Invoice Generator has streamlined my billing process completely. I can create professional invoices in seconds and track payments effortlessly.",
+      name: "Jennifer Lee",
+      company: "Digital Marketing Agency",
+      role: "Email Marketing Manager",
+      content: "Zion AI Email Analyzer has improved our email performance by 45%. The subject line optimization alone increased our open rates by 30%.",
       rating: 5,
-      avatar: "DM"
+      avatar: "JL"
     },
     {
-      name: "Lisa Thompson",
-      company: "Marketing Agency",
-      role: "Operations Manager",
-      content: "The automated follow-up feature is a game-changer. Our payment collection time has improved by 60% since using this tool.",
+      name: "Robert Kim",
+      company: "E-commerce Store",
+      role: "Marketing Director",
+      content: "The spam score analysis saved us from major deliverability issues. Our emails now reach the inbox consistently and our ROI has improved significantly.",
       rating: 5,
-      avatar: "LT"
+      avatar: "RK"
     },
     {
-      name: "James Wilson",
-      company: "Consulting Firm",
-      role: "Managing Partner",
-      content: "The tax compliance features save us hours every month. Everything is calculated automatically and stays up-to-date with regulations.",
+      name: "Amanda White",
+      company: "SaaS Company",
+      role: "Growth Marketing Lead",
+      content: "The A/B testing automation is incredible. We can now test multiple variations simultaneously and let AI optimize our campaigns automatically.",
       rating: 5,
-      avatar: "JW"
+      avatar: "AW"
     }
   ];
 
   const stats = [
-    { number: "50,000+", label: "Invoices Generated", icon: <FileText className="w-6 h-6" /> },
-    { number: "95%", label: "Faster Payment Collection", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "30+", label: "Countries Supported", icon: <Globe className="w-6 h-6" /> },
-    { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
+    { number: "45%", label: "Performance Improvement", icon: <TrendingUp className="w-6 h-6" /> },
+    { number: "30%", label: "Open Rate Increase", icon: <Target className="w-6 h-6" /> },
+    { number: "99.5%", label: "Deliverability Rate", icon: <Shield className="w-6 h-6" /> },
+    { number: "24/7", label: "Monitoring", icon: <Clock className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Invoice Generator - Automated Invoice Creation & Payment Processing | Zion Tech Group</title>
+        <title>Zion AI Email Analyzer - Email Marketing Analytics & Optimization | Zion Tech Group</title>
         <meta
           name="description"
-          content="Create professional invoices automatically with Zion AI Invoice Generator. Smart data extraction, automated follow-ups, and payment processing. Start your free trial today!"
+          content="Optimize your email marketing with Zion AI Email Analyzer. Performance analytics, subject line optimization, spam score analysis, and A/B testing automation. Start your free trial today!"
         />
         <meta
           name="keywords"
-          content="AI invoice generator, automated invoicing, invoice creation, payment processing, billing automation, financial management"
+          content="email analyzer, email marketing analytics, subject line optimization, spam score analysis, email deliverability, A/B testing, email performance"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-invoice-generator" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-email-analyzer" />
       </Helmet>
       <EnhancedSEO
-        title="Zion AI Invoice Generator - Automated Invoice Creation & Payment Processing"
-        description="Create professional invoices automatically with Zion AI Invoice Generator. Smart data extraction, automated follow-ups, and payment processing."
-        keywords="AI invoice generator, automated invoicing, invoice creation, payment processing, billing automation"
-        canonical="https://ziontechgroup.com/zion-ai-invoice-generator"
+        title="Zion AI Email Analyzer - Email Marketing Analytics & Optimization"
+        description="Optimize your email marketing with Zion AI Email Analyzer. Performance analytics, subject line optimization, spam score analysis, and A/B testing automation."
+        keywords="email analyzer, email marketing analytics, subject line optimization, spam score analysis, email deliverability"
+        canonical="https://ziontechgroup.com/zion-ai-email-analyzer"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -165,18 +164,18 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Zap className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Automate Your Billing Process</span>
+              <Mail className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">Email Marketing Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Zion AI Invoice Generator
+                Zion AI Email Analyzer
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Create professional invoices automatically with AI-powered data extraction, automated follow-ups, and seamless payment processing. Get paid faster with intelligent billing automation.
+              Optimize your email marketing campaigns with AI-powered analytics, subject line optimization, and deliverability monitoring. Maximize your email ROI with intelligent insights.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -184,7 +183,7 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
                 href="/contact"
                 variant="primary"
                 size="lg"
-                icon={<FileText className="w-5 h-5" />}
+                icon={<Mail className="w-5 h-5" />}
               >
                 Start Free Trial
               </FuturisticButton>
@@ -192,7 +191,7 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
                 href="/demo"
                 variant="outline"
                 size="lg"
-                icon={<Calculator className="w-5 h-5" />}
+                icon={<BarChart3 className="w-5 h-5" />}
               >
                 Watch Demo
               </FuturisticButton>
@@ -218,10 +217,10 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Intelligent Invoice Management
+                Advanced Email Marketing Intelligence
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Transform your billing process with AI-powered automation and smart financial management tools.
+                Transform your email marketing with AI-powered analytics and optimization tools.
               </p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -255,7 +254,7 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Flexible pricing options to fit your invoicing needs
+                Flexible pricing options to fit your email marketing needs
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -312,10 +311,10 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Businesses Worldwide
+                Trusted by Email Marketing Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our users say about Zion AI Invoice Generator
+                See what our users say about Zion AI Email Analyzer
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -349,10 +348,10 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Automate Your Invoicing?
+              Ready to Optimize Your Email Marketing?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Invoice Generator to streamline their billing process and get paid faster.
+              Join thousands of marketers using Zion AI Email Analyzer to maximize their email marketing ROI.
             </p>
             
             {/* Contact Information */}
@@ -393,7 +392,7 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
                 href="/services"
                 variant="outline"
                 size="lg"
-                icon={<DollarSign className="w-5 h-5" />}
+                icon={<BarChart3 className="w-5 h-5" />}
               >
                 View All Services
               </FuturisticButton>
@@ -405,4 +404,4 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
   );
 };
 
-export default ZionAIInvoiceGeneratorPage;
+export default ZionAIEmailAnalyzerPage;

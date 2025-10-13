@@ -41,10 +41,11 @@ const WebVitalsTracker: React.FC = () => {
 
     // Track Core Web Vitals
     onCLS(sendToAnalytics);
-    onINP(sendToAnalytics); // INP replaces FID in newer versions
+    onINP(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
+<<<<<<< HEAD
 
     // Track additional performance metrics
     if (typeof window !== 'undefined' && 'performance' in window) {
@@ -76,6 +77,8 @@ const WebVitalsTracker: React.FC = () => {
         });
       }
     }
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-c573
   }, []);
 
   return null;

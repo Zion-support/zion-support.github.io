@@ -1,14 +1,8 @@
-import React, { useEffect, useCallback } from 'react';
-
-interface WebVitalsData {
-  name: string;
-  value: number;
-  delta: number;
-  id: string;
-  navigationType: string;
-}
+import React, { useEffect } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 const CoreWebVitals: React.FC = () => {
+<<<<<<< HEAD
   const reportWebVitals = useCallback((data: WebVitalsData) => {
     // Send to Google Analytics if available
     if (typeof window !== 'undefined' && (window as any).gtag) {
@@ -56,6 +50,33 @@ const CoreWebVitals: React.FC = () => {
       }
     }
   }, [reportWebVitals]);
+=======
+  useEffect(() => {
+    const sendToAnalytics = (data: any) => {
+      // Send to Google Analytics or other analytics service
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as any).gtag('event', data.name, {
+          event_category: 'Web Vitals',
+          event_label: data.id,
+          value: Math.round(data.name === 'CLS' ? data.value * 1000 : data.value),
+          non_interaction: true,
+        });
+      }
+
+      // Log to console in development
+      if (process.env.NODE_ENV === 'development') {
+        console.log('Web Vital:', data.name, data.value);
+      }
+    };
+
+    // Track Core Web Vitals
+    onCLS(sendToAnalytics);
+    onINP(sendToAnalytics);
+    onFCP(sendToAnalytics);
+    onLCP(sendToAnalytics);
+    onTTFB(sendToAnalytics);
+  }, []);
+>>>>>>> cursor/analyze-improve-and-deploy-application-c573
 
   return null;
 };
