@@ -18,16 +18,8 @@ export class GlobalErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false };
   }
 
-<<<<<<< HEAD
-  static getDerivedStateFromError(error: Error): Partial<State> {
-    return {
-      hasError: true,
-      error
-    };
-=======
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error };
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -42,28 +34,6 @@ export class GlobalErrorBoundary extends Component<Props, State> {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };
 
-<<<<<<< HEAD
-  private handleRetry = () => {
-    if (this.state.retryCount < this.maxRetries) {
-      this.setState(prevState => ({
-        hasError: false,
-        error: null,
-        errorInfo: null,
-        retryCount: prevState.retryCount + 1
-      }));
-    }
-  };
-
-  private handleGoHome = () => {
-    window.location.href = '/';
-  };
-
-  private handleReload = () => {
-    window.location.reload();
-  };
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -142,40 +112,4 @@ export class GlobalErrorBoundary extends Component<Props, State> {
   }
 }
 
-<<<<<<< HEAD
-// Functional error boundary for specific components
-export const ErrorBoundary: React.FC<{
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error) => void;
-}> = ({ children, fallback, onError }) => {
-  const [hasError, setHasError] = React.useState(false);
-  const [error, setError] = React.useState<Error | null>(null);
-
-  React.useEffect(() => {
-    const handleError = (event: ErrorEvent) => {
-      setHasError(true);
-      setError(new Error(event.message));
-      if (onError) {
-        onError(new Error(event.message));
-      }
-    };
-
-    window.addEventListener('error', handleError);
-    return () => window.removeEventListener('error', handleError);
-  }, [onError]);
-
-  if (hasError) {
-    return fallback || (
-      <div className="p-4 bg-red-500/20 border border-red-500/30 rounded-lg">
-        <p className="text-red-300">Something went wrong: {error?.message}</p>
-      </div>
-    );
-  }
-
-  return <>{children}</>;
-};
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 export default GlobalErrorBoundary;

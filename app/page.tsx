@@ -90,6 +90,42 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "AI-Powered Email Analyzer",
+      description: "Advanced AI email analysis with sentiment detection, optimization recommendations, and comprehensive analytics",
+      price: "From $29/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/ai-powered-email-analyzer",
+      featured: true,
+      new: true
+    },
+    {
+      name: "Smart Inventory Optimizer",
+      description: "AI-powered inventory management with demand forecasting, automated reordering, and cost optimization",
+      price: "From $39/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/smart-inventory-optimizer",
+      featured: true,
+      new: true
+    },
+    {
+      name: "AI Customer Sentiment Tracker",
+      description: "Real-time customer sentiment analysis with automated alerts and actionable insights for better customer experience",
+      price: "From $49/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/ai-customer-sentiment-tracker",
+      featured: true,
+      new: true
+    },
+    {
+      name: "Smart Expense Categorizer",
+      description: "AI-powered expense management with automatic receipt scanning, smart categorization, and real-time analytics",
+      price: "From $19/month",
+      icon: <Target className="w-6 h-6" />,
+      link: "/smart-expense-categorizer",
+      featured: true,
+      new: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
@@ -114,27 +150,11 @@ const HomePage = () => {
       featured: true
     },
     {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
-      price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
+      name: "Zion Content Studio",
+      description: "AI-powered content creation platform with automated generation, optimization, and multi-channel publishing",
       price: "From $149/month",
-      icon: <Target className="w-6 h-6" />,
-      link: "/zion-ai-marketing-automation-pro",
-      featured: true
-    },
-    {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
       icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
+      link: "/zion-content-studio",
       featured: true
     }
   ];
@@ -304,13 +324,18 @@ const HomePage = () => {
                 to={saas.link}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               >
-                {saas.featured && (
-                  <div className="absolute top-4 right-4">
+                <div className="absolute top-4 right-4 flex flex-col gap-2">
+                  {saas.new && (
+                    <span className="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-2 py-1 rounded-full text-xs font-semibold animate-pulse">
+                      NEW
+                    </span>
+                  )}
+                  {saas.featured && (
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                       Featured
                     </span>
-                  </div>
-                )}
+                  )}
+                </div>
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
                     {saas.icon}
