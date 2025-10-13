@@ -99,7 +99,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
     // Focus management
     const enhanceFocusManagement = () => {
-      if (!enableFocusManagement) return;
+      if (!enableFocusManagement) return () => {};
 
       const trapFocus = (element: HTMLElement) => {
         const focusableElements = element.querySelectorAll(
@@ -134,12 +134,16 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
 
       // Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
-      modals.forEach(modal => trapFocus(modal as HTMLElement));
+      const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
+
+      return () => {
+        cleanupFunctions.forEach(cleanup => cleanup());
+      };
     };
 
     // High contrast mode detection
     const enhanceHighContrast = () => {
-      if (!enableHighContrast) return;
+      if (!enableHighContrast) return () => {};
 
       const mediaQuery = window.matchMedia('(prefers-contrast: high)');
       
@@ -152,7 +156,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       mediaQuery.addEventListener('change', handleContrastChange);
-      handleContrastChange(mediaQuery);
+      handleContrastChange(mediaQuery as any);
 
       return () => {
         mediaQuery.removeEventListener('change', handleContrastChange);
@@ -172,7 +176,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
       };
 
       mediaQuery.addEventListener('change', handleMotionChange);
-      handleMotionChange(mediaQuery);
+      handleMotionChange(mediaQuery as any);
 
       return () => {
         mediaQuery.removeEventListener('change', handleMotionChange);
@@ -210,10 +214,10 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
     enhanceScreenReader();
 
     return () => {
-      cleanupKeyboard?.();
-      cleanupFocus?.();
-      cleanupContrast?.();
-      cleanupMotion?.();
+      if (cleanupKeyboard) cleanupKeyboard();
+      if (cleanupFocus) cleanupFocus();
+      if (cleanupContrast) cleanupContrast();
+      if (cleanupMotion) cleanupMotion();
     };
   }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
 
@@ -221,7 +225,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({
   return (
     <>
       {children}
-      <style jsx global>{`
+      <style>{`
         /* Keyboard navigation styles */
         .keyboard-navigation *:focus {
           outline: 2px solid #06b6d4;
