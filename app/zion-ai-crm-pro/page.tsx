@@ -1,6 +1,23 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Users, ArrowRight, Sparkles, CheckCircle, Star, Target, TrendingUp, Zap, BarChart3, Mail, Phone, MapPin, Play, Watch, Video } from 'lucide-react';
+=======
+import { ArrowRight } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { MapPin } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Play } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Mic } from 'lucide-react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const ZionAICRMProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];

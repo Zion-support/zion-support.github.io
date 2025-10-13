@@ -1,4 +1,10 @@
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+=======
+import { Database } from 'lucide-react';
+import { Mic } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 export default function Partners() {
   // const partners = [

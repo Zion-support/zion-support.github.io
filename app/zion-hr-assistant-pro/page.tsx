@@ -1,6 +1,23 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Users, Brain, Clock, Shield, ArrowRight, CheckCircle, Star, FileText, TrendingUp, Calendar, Heart } from 'lucide-react';
+=======
+import React from 'react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import EnhancedSEO from '../components/EnhancedSEO';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Calendar } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { FileText } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
 const ZionHRAssistantPro = () => {
   const features = [

@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 const services = [
     {
       title: "Cloud Migration",
@@ -16,6 +17,11 @@ const services = [
       icon: "Zap"
     }
   ];
+=======
+import { Code } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 interface SEOOptimizerProps {
   children: React.ReactNode;
 }

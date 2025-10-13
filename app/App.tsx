@@ -1,6 +1,10 @@
 "use client";
 
+<<<<<<< HEAD
 import { Suspense, lazy } from 'react';
+=======
+import React, { lazy, Suspense } from 'react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import ErrorBoundary from "./components/ErrorBoundary";
@@ -10,6 +14,10 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import CriticalResourcePreloader from "./components/CriticalResourcePreloader";
 import CacheManager from "./components/CacheManager";
 import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
+import { Helmet } from 'react-helmet-async';
+import { Home } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Monitor } from 'lucide-react';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"));
@@ -50,15 +58,19 @@ function App() {
     <HelmetProvider>
       <BrowserRouter>
         <ErrorBoundary>
+<<<<<<< HEAD
           <PerformanceMonitor showDetails={false}>
             <div>Performance monitoring active</div>
           </PerformanceMonitor>
+=======
+          <PerformanceMonitor />
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
           <AccessibilityEnhancer>
             <CriticalResourcePreloader />
             <CacheManager />
             <AdvancedPerformanceMonitor />
             <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+              <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
@@ -106,7 +118,7 @@ function App() {
                 element={<FiveGSmartCitySolutionsPage />}
               />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-            </Routes>
+              </Routes>
             </Suspense>
           </AccessibilityEnhancer>
         </ErrorBoundary>

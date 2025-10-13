@@ -1,6 +1,22 @@
+<<<<<<< HEAD
 import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 export default function ZionSecurityShield() {
   const features = [

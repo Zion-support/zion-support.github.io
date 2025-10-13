@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode, ErrorInfo } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Home } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
+
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;

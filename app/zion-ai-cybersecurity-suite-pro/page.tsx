@@ -1,7 +1,27 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { AlertTriangle } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Award } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+import { Cloud } from 'lucide-react';
 
 const ZionAICybersecuritySuiteProPage = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];

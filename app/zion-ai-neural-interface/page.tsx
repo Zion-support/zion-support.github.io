@@ -1,6 +1,21 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Brain, ArrowRight, CheckCircle, Star, Zap, Users, Target, Cpu, Globe, Eye, Hand } from 'lucide-react';
+=======
+import React from 'react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import EnhancedSEO from '../components/EnhancedSEO';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Cpu } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Target } from 'lucide-react';
+import { Hand } from 'lucide-react';
 
 const ZionAINeuralInterface = () => {
   const features = [

@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import { Loader2 } from 'lucide-react';
+=======
+import React from 'react';
+
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
   text?: string;

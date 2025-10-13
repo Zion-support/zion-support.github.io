@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
+=======
+import React, { useEffect, useState } from 'react';
+import { Star } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 interface PerformanceMetrics {
   loadTime: number;

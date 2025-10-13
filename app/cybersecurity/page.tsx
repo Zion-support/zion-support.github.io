@@ -1,6 +1,25 @@
+<<<<<<< HEAD
 import { ArrowRight, Shield, Lock, Eye, AlertTriangle, Users, Database, Mail, Smartphone, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+=======
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Network } from 'lucide-react';
+import { Lock } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
+import { Smartphone } from 'lucide-react';
+
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 export default function Cybersecurity() {
   const services = [

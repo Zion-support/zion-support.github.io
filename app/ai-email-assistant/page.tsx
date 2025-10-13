@@ -1,7 +1,23 @@
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Settings } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
+import { Hand } from 'lucide-react';
+
 "use client";
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { MessageSquare, Brain, Shield, Zap, Star, Mail, BarChart3, Settings, Users } from 'lucide-react';
+=======
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 export default function AIEmailAssistant() {
   const features = [

@@ -1,9 +1,29 @@
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 import { BarChart3, TrendingUp, Brain, Zap, CheckCircle, ArrowRight, Activity, Users, Globe, Star, Database, Eye } from 'lucide-react';
+=======
+import React from 'react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+=======
+import { ArrowRight } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Activity } from 'lucide-react';
+import { Plus } from 'lucide-react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const ZionAiBusinessIntelligencePro = () => {
   const testimonials: { name: string; role: string; company: string; content: string; rating: number; avatar: string }[] = [];

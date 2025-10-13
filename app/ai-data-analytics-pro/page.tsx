@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { 
   TrendingUp, 
   ArrowRight,
@@ -9,6 +10,16 @@ import {
   Brain,
   PieChart
 } from 'lucide-react';
+=======
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { PieChart } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Sparkles } from 'lucide-react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const AIDataAnalyticsProPage = () => {
   const benefits: string[] = [];

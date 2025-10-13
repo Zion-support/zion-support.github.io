@@ -1,5 +1,11 @@
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Menu, X, ArrowRight } from 'lucide-react';
+=======
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 const MobileNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 

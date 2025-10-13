@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Monitor, ArrowRight, CheckCircle, Star, Shield, BarChart3, Users, Eye, Hand } from 'lucide-react';
+=======
+import React from 'react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import EnhancedSEO from '../components/EnhancedSEO';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Monitor } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Hand } from 'lucide-react';
 
 const AIHolographicWorkspace = () => {
   const features = [

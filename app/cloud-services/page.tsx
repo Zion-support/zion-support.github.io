@@ -1,6 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Cloud, Shield, Zap, Globe, ArrowRight, BarChart3, Database } from 'lucide-react';
+=======
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { Shield } from 'lucide-react';
+import { Database } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { BarChart3 } from 'lucide-react';
+import { Cloud } from 'lucide-react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 
 const CloudServicesPage: React.FC = () => {
   const benefits = [

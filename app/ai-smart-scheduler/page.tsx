@@ -1,6 +1,18 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Brain, Users, Zap, Globe, Clock, CheckCircle } from 'lucide-react';
+=======
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import Layout from "../layout";
+import { Link } from 'react-router-dom';
+import { Clock } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Zap } from 'lucide-react';
+import { Brain } from 'lucide-react';
+import { Globe } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 export default function AISmartScheduler() {
   const testimonials = [

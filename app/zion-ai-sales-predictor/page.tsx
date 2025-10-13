@@ -1,7 +1,18 @@
+<<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, TrendingUp, Video, Calendar } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+=======
+import React from "react";
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import SEOOptimizer from "../components/SEOOptimizer";
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { TrendingUp } from 'lucide-react';
+import { Calendar } from 'lucide-react';
 
 export default function ZionAISalesPredictor() {
   const features = [

@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 import { ArrowRight, Camera, Users, CheckCircle, Eye, Image, Target, Scan } from 'lucide-react';
+=======
+import React from 'react';
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
+import { ArrowRight } from 'lucide-react';
+import { Users } from 'lucide-react';
+import { Star } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
+import { Target } from 'lucide-react';
 
 const AIImageRecognitionPro = () => {
   const features = [

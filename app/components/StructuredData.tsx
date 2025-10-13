@@ -1,4 +1,10 @@
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+=======
+import { Search } from 'lucide-react';
+import { Code } from 'lucide-react';
+
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 interface StructuredDataProps {
   type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
   data: any;

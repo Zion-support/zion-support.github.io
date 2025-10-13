@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Home, ArrowLeft, Search, AlertTriangle } from 'lucide-react';
+=======
+import React from 'react';
+import EnhancedSEO from '../components/EnhancedSEO';
+import { Link } from 'react-router-dom';
+import { ArrowLeft } from 'lucide-react';
+import { Home } from 'lucide-react';
+import { Search } from 'lucide-react';
+import { AlertTriangle } from 'lucide-react';
+import { Mic } from 'lucide-react';
+
+>>>>>>> 2fda46b8c81d66ef34322b3dc826b41bdfbc86e8
 const NotFoundPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
