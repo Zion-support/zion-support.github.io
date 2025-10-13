@@ -24,6 +24,12 @@ const CareersPage = lazy(() => import("./careers/page"));
 const PrivacyPage = lazy(() => import("./privacy/page"));
 const TermsPage = lazy(() => import("./terms/page"));
 const CookiesPage = lazy(() => import("./cookies/page"));
+const ConsultationPage = lazy(() => import("./consultation/page"));
+const DemoPage = lazy(() => import("./demo/page"));
+const SupportPage = lazy(() => import("./support/page"));
+const DocsPage = lazy(() => import("./docs/page"));
+const TutorialsPage = lazy(() => import("./tutorials/page"));
+const PressPage = lazy(() => import("./press/page"));
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = lazy(() => import("./5g-data-analytics/page"));
@@ -69,6 +75,12 @@ function App() {
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
               <Route path="/cookies" element={<CookiesPage />} />
+              <Route path="/consultation" element={<ConsultationPage />} />
+              <Route path="/demo" element={<DemoPage />} />
+              <Route path="/support" element={<SupportPage />} />
+              <Route path="/docs" element={<DocsPage />} />
+              <Route path="/tutorials" element={<TutorialsPage />} />
+              <Route path="/press" element={<PressPage />} />
 
               {/* 5G Solutions Routes */}
               <Route

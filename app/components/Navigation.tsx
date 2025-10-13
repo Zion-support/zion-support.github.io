@@ -28,7 +28,9 @@ import {
   Receipt,
   TrendingUp,
   Cpu,
-  Network
+  Network,
+  FileText,
+  Clock
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -132,7 +134,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     },
     {
       name: 'Micro SAAS',
-      path: '/micro-saas-services',
+      path: '/micro-saas',
       icon: <Package className="w-4 h-4" />,
       hasDropdown: true,
       dropdownItems: [
@@ -164,9 +166,60 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
       ]
     },
     {
-      name: 'Blog',
-      path: '/blog',
-      icon: <Code className="w-4 h-4" />
+      name: 'Resources',
+      path: '#',
+      icon: <FileText className="w-4 h-4" />,
+      hasDropdown: true,
+      dropdownItems: [
+        {
+          name: 'Documentation',
+          icon: <FileText className="w-4 h-4" />,
+          items: [
+            { name: 'API Reference', path: '/docs', icon: <Code className="w-4 h-4" /> },
+            { name: 'User Guides', path: '/docs/guides', icon: <BookOpen className="w-4 h-4" /> },
+            { name: 'Tutorials', path: '/tutorials', icon: <Play className="w-4 h-4" /> },
+            { name: 'SDKs & Libraries', path: '/docs/sdks', icon: <Download className="w-4 h-4" /> }
+          ]
+        },
+        {
+          name: 'Support',
+          icon: <Users className="w-4 h-4" />,
+          items: [
+            { name: 'Help Center', path: '/support', icon: <HelpCircle className="w-4 h-4" /> },
+            { name: 'Contact Support', path: '/contact', icon: <Mail className="w-4 h-4" /> },
+            { name: 'Status Page', path: '/status', icon: <Shield className="w-4 h-4" /> },
+            { name: 'Community Forum', path: '/community', icon: <Users className="w-4 h-4" /> }
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Company',
+      path: '#',
+      icon: <Users className="w-4 h-4" />,
+      hasDropdown: true,
+      dropdownItems: [
+        {
+          name: 'About Us',
+          icon: <Users className="w-4 h-4" />,
+          items: [
+            { name: 'About', path: '/about', icon: <Users className="w-4 h-4" /> },
+            { name: 'Team', path: '/team', icon: <Users className="w-4 h-4" /> },
+            { name: 'Careers', path: '/careers', icon: <Briefcase className="w-4 h-4" /> },
+            { name: 'Case Studies', path: '/case-studies', icon: <BarChart3 className="w-4 h-4" /> }
+          ]
+        },
+        {
+          name: 'Resources',
+          icon: <FileText className="w-4 h-4" />,
+          items: [
+            { name: 'Blog', path: '/blog', icon: <FileText className="w-4 h-4" /> },
+            { name: 'Press', path: '/press', icon: <Newspaper className="w-4 h-4" /> },
+            { name: 'Partners', path: '/partners', icon: <Handshake className="w-4 h-4" /> },
+            { name: 'News', path: '/news', icon: <Globe className="w-4 h-4" /> }
+          ]
+        }
+      ]
     },
     {
       name: 'Contact',
@@ -253,7 +306,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Link
-              to="/contact"
+              to="/consultation"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center space-x-2"
             >
               <span>Get Started</span>
@@ -300,7 +353,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               ))}
               <div className="pt-4">
                 <Link
-                  to="/contact"
+                  to="/consultation"
                   className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
                   onClick={() => setIsOpen(false)}
                 >

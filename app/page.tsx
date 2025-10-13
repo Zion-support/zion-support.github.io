@@ -8,6 +8,7 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
+import Layout from "./components/Layout";
 
 const HomePage = () => {
   const structuredData = {
@@ -171,7 +172,7 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+    <Layout>
       <FuturisticBackground />
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
@@ -431,7 +432,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-    </div>
+    </Layout>
   );
 };
 
