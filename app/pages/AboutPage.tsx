@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { 
   CheckCircleIcon,
@@ -12,9 +11,6 @@ import {
   ArrowRightIcon,
   StarIcon
 } from '@heroicons/react/24/outline';
-=======
-import { Target, Users, Award, Lightbulb, Shield, Zap } from 'lucide-react';
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
 
 export default function AboutPage() {
   const values = [
@@ -77,7 +73,6 @@ export default function AboutPage() {
     <>
       <Helmet>
         <title>About Us - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta name="description" content="Learn about Zion Tech Group's mission, values, and expertise in AI and IT solutions. Discover our team and company culture." />
         <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" />
       </Helmet>
@@ -96,22 +91,6 @@ export default function AboutPage() {
               Founded in 2020, we've been at the forefront of digital transformation, 
               helping companies leverage the power of artificial intelligence, cybersecurity, 
               and cloud technologies to achieve unprecedented growth.
-=======
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and expertise in AI and IT solutions. Meet our team of industry experts." />
-        <meta name="keywords" content="about us, company, team, mission, values, AI experts, IT professionals" />
-      </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          {/* Hero Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Zion Tech Group</span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              We are a team of passionate technologists dedicated to transforming businesses 
-              through innovative AI and IT solutions.
->>>>>>> cursor/website-audit-and-update-with-deployment-7db2
             </p>
           </div>
 
