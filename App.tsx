@@ -18,13 +18,6 @@ import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-<<<<<<< HEAD
-import LoadingPageEnhanced from "./app/components/EnhancedLoading";
-import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
-import ImprovedLoading from "./app/components/ImprovedLoading";
-import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 import EnhancedSEO from "./app/components/EnhancedSEO";
 import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
 import ImprovedAccessibility from "./app/components/ImprovedAccessibility";
@@ -66,7 +59,6 @@ const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 
 // 5G Services Pages
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
 const FiveGIoTSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
@@ -89,12 +81,6 @@ const WebsiteAnalyticsToolPage = React.lazy(() => import("./app/data-analytics/p
 const TaskAutomationWorkflowPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
 // New Innovative Micro SAAS Services
-<<<<<<< HEAD
-const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-assistant/page"));
-const SmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-inventory-smart/page"));
-const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
-const SmartExpenseCategorizerPage = React.lazy(() => import("./app/ai-financial-crime-detection-pro/page"));
-=======
 const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
 const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
 const ZionAICustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
@@ -116,17 +102,6 @@ const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleane
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
 
-// 5G Solutions Pages
-const FiveGDataAnalyticsPage = React.lazy(() => import("./app/5g-data-analytics/page"));
-const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
-const FiveGImplementationPage = React.lazy(() => import("./app/5g-implementation/page"));
-const FiveGMobileApplicationsPage = React.lazy(() => import("./app/5g-mobile-applications/page"));
-const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
-const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
-const FiveGSmartCitySolutionsPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
-const FiveGIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -146,36 +121,6 @@ function App() {
   }, []);
 
   return (
-<<<<<<< HEAD
-    <ImprovedErrorBoundary>
-      <GlobalErrorBoundary>
-        <EnhancedErrorBoundary>
-          <HelmetProvider>
-            <AnalyticsProvider>
-              <PerformanceMonitor>
-                <WebVitalsTracker>
-                  <EnhancedAccessibility>
-                    <AccessibilityEnhancer>
-                      <CoreWebVitals>
-                        <Router>
-                          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                            <FuturisticBackground>
-                              <Navigation onSidebarToggle={toggleSidebar} />
-                              <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                              <Breadcrumb />
-                              
-                              <main id="main-content" role="main" className="relative z-10">
-                                <Suspense fallback={<LoadingPage />}>
-                                  <Routes>
-                                    {/* Main Pages */}
-                                    <Route path="/" element={<HomePage />} />
-                                    <Route path="/about" element={<AboutPage />} />
-                                    <Route path="/contact" element={<ContactPage />} />
-                                    <Route path="/services" element={<ServicesPage />} />
-                                    <Route path="/blog" element={<BlogPage />} />
-                                    <Route path="/privacy" element={<PrivacyPage />} />
-                                    <Route path="/terms" element={<TermsPage />} />
-=======
     <HelmetProvider>
       <ImprovedErrorBoundary>
         <AnalyticsProvider>
@@ -205,9 +150,7 @@ function App() {
                                 <Route path="/micro-saas" element={<MicroSaasPage />} />
                                 <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
                                 <Route path="/tutorials" element={<TutorialsPage />} />
-                                <Route path="/demo" element={<DemoPage />} />
                                 <Route path="/support" element={<SupportPage />} />
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 
                                     {/* AI Services */}
                                     <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
@@ -253,43 +196,6 @@ function App() {
                                     <Route path="/website-analytics-tool" element={<WebsiteAnalyticsToolPage />} />
                                     <Route path="/task-automation-workflow" element={<TaskAutomationWorkflowPage />} />
 
-<<<<<<< HEAD
-                                    {/* New Innovative Micro SAAS Services */}
-                                    <Route path="/ai-powered-email-analyzer" element={<AIPoweredEmailAnalyzerPage />} />
-                                    <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
-                                    <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
-                                    <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
-
-                                    {/* Catch all route */}
-                                    <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                                      <div className="text-center">
-                                        <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                                        <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
-                                        <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                          Go Home
-                                        </a>
-                                      </div>
-                                    </div>} />
-                                  </Routes>
-                                </Suspense>
-                              </main>
-                              
-                              <Footer />
-                            </FuturisticBackground>
-                          </div>
-                        </Router>
-                      </CoreWebVitals>
-                    </AccessibilityEnhancer>
-                  </EnhancedAccessibility>
-                </WebVitalsTracker>
-              </PerformanceMonitor>
-            </AnalyticsProvider>
-          </HelmetProvider>
-        </EnhancedErrorBoundary>
-      </GlobalErrorBoundary>
-    </ImprovedErrorBoundary>
-  );
-=======
                                 {/* 5G Services */}
                                 <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
                                 <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
@@ -325,7 +231,6 @@ function App() {
         </ImprovedErrorBoundary>
       </HelmetProvider>
     );
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 }
 
 export default App;
