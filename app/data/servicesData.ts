@@ -20,7 +20,7 @@ export interface Service {
     website: string;
   };
   href: string;
-  glowColor: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow';
+  glowColor: 'purple' | 'cyan' | 'pink' | 'green' | 'blue' | 'yellow' | 'red' | 'orange';
 }
 
 export const services: Service[] = [
@@ -527,6 +527,646 @@ export const services: Service[] = [
     },
     href: '/iot-platform-solution',
     glowColor: 'yellow'
+  },
+
+  // Additional AI Services
+  {
+    id: 'ai-code-assistant-pro',
+    title: 'AI Code Assistant Pro',
+    description: 'Advanced AI-powered coding assistant that helps developers write better code, debug issues, and learn new technologies with intelligent suggestions and real-time assistance.',
+    shortDescription: 'AI-powered coding assistant for developers',
+    category: 'AI',
+    icon: '💻',
+    features: [
+      'Intelligent Code Completion',
+      'Bug Detection & Fixing',
+      'Code Review & Optimization',
+      'Multi-language Support',
+      'Real-time Documentation',
+      'Code Generation',
+      'Refactoring Suggestions',
+      'Learning Recommendations'
+    ],
+    pricing: {
+      basic: 49,
+      pro: 149,
+      enterprise: 399
+    },
+    benefits: [
+      'Increase coding productivity by 50%',
+      'Reduce bugs and errors',
+      'Learn new technologies faster',
+      'Consistent code quality',
+      '24/7 coding assistance'
+    ],
+    useCases: [
+      'Software Development',
+      'Code Review',
+      'Learning New Languages',
+      'Debugging',
+      'Code Optimization'
+    ],
+    technologies: ['OpenAI Codex', 'GitHub Copilot', 'VS Code', 'IntelliJ', 'Python', 'JavaScript'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-code-assistant-pro'
+    },
+    href: '/ai-code-assistant-pro',
+    glowColor: 'purple'
+  },
+  {
+    id: 'ai-customer-sentiment-tracker',
+    title: 'AI Customer Sentiment Tracker',
+    description: 'Real-time customer sentiment analysis platform that monitors social media, reviews, and feedback to help businesses understand customer emotions and improve satisfaction.',
+    shortDescription: 'Real-time customer sentiment analysis and monitoring',
+    category: 'AI',
+    icon: '😊',
+    features: [
+      'Real-time Sentiment Analysis',
+      'Multi-platform Monitoring',
+      'Emotion Detection',
+      'Trend Analysis',
+      'Alert System',
+      'Custom Dashboards',
+      'API Integration',
+      'Historical Data'
+    ],
+    pricing: {
+      basic: 199,
+      pro: 499,
+      enterprise: 1299
+    },
+    benefits: [
+      'Understand customer emotions',
+      'Improve customer satisfaction',
+      'Prevent PR crises',
+      'Data-driven decisions',
+      'Competitive advantage'
+    ],
+    useCases: [
+      'Brand Monitoring',
+      'Customer Feedback Analysis',
+      'Social Media Management',
+      'Product Development',
+      'Marketing Campaigns'
+    ],
+    technologies: ['NLP', 'Machine Learning', 'Python', 'React', 'MongoDB', 'APIs'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-customer-sentiment-tracker'
+    },
+    href: '/ai-customer-sentiment-tracker',
+    glowColor: 'cyan'
+  },
+  {
+    id: 'ai-automated-testing',
+    title: 'AI Automated Testing Suite',
+    description: 'Intelligent automated testing platform that uses AI to generate test cases, execute tests, and identify bugs across web and mobile applications.',
+    shortDescription: 'AI-powered automated testing for applications',
+    category: 'AI',
+    icon: '🧪',
+    features: [
+      'AI Test Case Generation',
+      'Automated Test Execution',
+      'Cross-browser Testing',
+      'Mobile App Testing',
+      'Performance Testing',
+      'Visual Regression Testing',
+      'API Testing',
+      'Test Reporting'
+    ],
+    pricing: {
+      basic: 299,
+      pro: 799,
+      enterprise: 1999
+    },
+    benefits: [
+      'Reduce testing time by 70%',
+      'Improve test coverage',
+      'Early bug detection',
+      'Consistent quality',
+      'Cost-effective testing'
+    ],
+    useCases: [
+      'Web Application Testing',
+      'Mobile App Testing',
+      'API Testing',
+      'Performance Testing',
+      'Regression Testing'
+    ],
+    technologies: ['Selenium', 'Appium', 'Jest', 'Cypress', 'Python', 'JavaScript'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/ai-automated-testing'
+    },
+    href: '/ai-automated-testing',
+    glowColor: 'green'
+  },
+
+  // Additional Micro SaaS Services
+  {
+    id: 'email-marketing-automation',
+    title: 'Email Marketing Automation SaaS',
+    description: 'Complete email marketing automation platform with AI-powered personalization, advanced segmentation, and detailed analytics for businesses.',
+    shortDescription: 'AI-powered email marketing automation platform',
+    category: 'SaaS',
+    icon: '📧',
+    features: [
+      'AI-Powered Personalization',
+      'Advanced Segmentation',
+      'Drag & Drop Email Builder',
+      'A/B Testing',
+      'Automation Workflows',
+      'Analytics & Reporting',
+      'Template Library',
+      'API Integration'
+    ],
+    pricing: {
+      basic: 79,
+      pro: 199,
+      enterprise: 599
+    },
+    benefits: [
+      'Increase email open rates by 40%',
+      'Automate marketing campaigns',
+      'Personalized customer experiences',
+      'Detailed performance analytics',
+      'Easy-to-use interface'
+    ],
+    useCases: [
+      'Email Campaigns',
+      'Lead Nurturing',
+      'Customer Retention',
+      'Product Announcements',
+      'Newsletter Management'
+    ],
+    technologies: ['React', 'Node.js', 'SendGrid', 'MongoDB', 'Redis', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/email-marketing-automation'
+    },
+    href: '/email-marketing-automation',
+    glowColor: 'pink'
+  },
+  {
+    id: 'social-media-management-saas',
+    title: 'Social Media Management SaaS',
+    description: 'Comprehensive social media management platform with AI-powered content creation, scheduling, analytics, and engagement tools for all major platforms.',
+    shortDescription: 'Complete social media management and analytics platform',
+    category: 'SaaS',
+    icon: '📱',
+    features: [
+      'Multi-platform Management',
+      'AI Content Generation',
+      'Post Scheduling',
+      'Engagement Analytics',
+      'Hashtag Research',
+      'Competitor Analysis',
+      'Team Collaboration',
+      'Brand Monitoring'
+    ],
+    pricing: {
+      basic: 99,
+      pro: 299,
+      enterprise: 799
+    },
+    benefits: [
+      'Save 5+ hours per week',
+      'Increase engagement by 60%',
+      'Consistent brand voice',
+      'Data-driven insights',
+      'Team collaboration'
+    ],
+    useCases: [
+      'Social Media Marketing',
+      'Brand Management',
+      'Content Strategy',
+      'Community Management',
+      'Influencer Marketing'
+    ],
+    technologies: ['React', 'Node.js', 'Social APIs', 'MongoDB', 'Redis', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/social-media-management-saas'
+    },
+    href: '/social-media-management-saas',
+    glowColor: 'blue'
+  },
+  {
+    id: 'hr-management-saas',
+    title: 'HR Management SaaS',
+    description: 'Complete human resources management platform with employee onboarding, time tracking, performance management, and payroll integration.',
+    shortDescription: 'Comprehensive HR management and employee engagement platform',
+    category: 'SaaS',
+    icon: '👥',
+    features: [
+      'Employee Database',
+      'Time & Attendance Tracking',
+      'Performance Management',
+      'Payroll Integration',
+      'Benefits Administration',
+      'Recruitment Tools',
+      'Document Management',
+      'Analytics & Reporting'
+    ],
+    pricing: {
+      basic: 149,
+      pro: 399,
+      enterprise: 999
+    },
+    benefits: [
+      'Streamline HR processes',
+      'Reduce administrative tasks',
+      'Improve employee engagement',
+      'Compliance management',
+      'Data-driven HR decisions'
+    ],
+    useCases: [
+      'Employee Management',
+      'Payroll Processing',
+      'Performance Reviews',
+      'Recruitment',
+      'Benefits Administration'
+    ],
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'AWS', 'Redis'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/hr-management-saas'
+    },
+    href: '/hr-management-saas',
+    glowColor: 'yellow'
+  },
+  {
+    id: 'financial-accounting-saas',
+    title: 'Financial Accounting SaaS',
+    description: 'Advanced financial management and accounting platform with automated bookkeeping, invoicing, expense tracking, and financial reporting.',
+    shortDescription: 'Complete financial management and accounting solution',
+    category: 'SaaS',
+    icon: '💰',
+    features: [
+      'Automated Bookkeeping',
+      'Invoice Generation',
+      'Expense Tracking',
+      'Financial Reporting',
+      'Tax Preparation',
+      'Bank Integration',
+      'Multi-currency Support',
+      'Audit Trail'
+    ],
+    pricing: {
+      basic: 199,
+      pro: 499,
+      enterprise: 1299
+    },
+    benefits: [
+      'Automate accounting tasks',
+      'Reduce errors by 90%',
+      'Real-time financial insights',
+      'Tax compliance',
+      'Time-saving automation'
+    ],
+    useCases: [
+      'Small Business Accounting',
+      'Freelancer Finances',
+      'Expense Management',
+      'Tax Preparation',
+      'Financial Planning'
+    ],
+    technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'QuickBooks API', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/financial-accounting-saas'
+    },
+    href: '/financial-accounting-saas',
+    glowColor: 'green'
+  },
+
+  // Additional IT Services
+  {
+    id: 'devops-automation-service',
+    title: 'DevOps Automation Service',
+    description: 'Complete DevOps automation service including CI/CD pipeline setup, infrastructure as code, monitoring, and deployment automation.',
+    shortDescription: 'End-to-end DevOps automation and infrastructure management',
+    category: 'IT',
+    icon: '⚙️',
+    features: [
+      'CI/CD Pipeline Setup',
+      'Infrastructure as Code',
+      'Container Orchestration',
+      'Monitoring & Alerting',
+      'Security Scanning',
+      'Automated Deployments',
+      'Backup & Recovery',
+      'Performance Optimization'
+    ],
+    pricing: {
+      basic: 2000,
+      pro: 5000,
+      enterprise: 15000
+    },
+    benefits: [
+      'Reduce deployment time by 80%',
+      'Improve system reliability',
+      'Automated infrastructure management',
+      'Enhanced security',
+      '24/7 monitoring'
+    ],
+    useCases: [
+      'Application Deployment',
+      'Infrastructure Management',
+      'Continuous Integration',
+      'Monitoring Setup',
+      'Security Automation'
+    ],
+    technologies: ['Docker', 'Kubernetes', 'Jenkins', 'Terraform', 'AWS', 'Prometheus'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/devops-automation-service'
+    },
+    href: '/devops-automation-service',
+    glowColor: 'cyan'
+  },
+  {
+    id: 'api-development-service',
+    title: 'API Development Service',
+    description: 'Professional API development and integration services including RESTful APIs, GraphQL, microservices, and third-party integrations.',
+    shortDescription: 'Custom API development and integration services',
+    category: 'IT',
+    icon: '🔌',
+    features: [
+      'RESTful API Development',
+      'GraphQL Implementation',
+      'Microservices Architecture',
+      'API Documentation',
+      'Authentication & Security',
+      'Rate Limiting',
+      'Monitoring & Analytics',
+      'Third-party Integrations'
+    ],
+    pricing: {
+      basic: 3000,
+      pro: 8000,
+      enterprise: 20000
+    },
+    benefits: [
+      'Scalable API architecture',
+      'Enhanced security',
+      'Comprehensive documentation',
+      'Performance optimization',
+      'Easy integration'
+    ],
+    useCases: [
+      'Mobile App Backend',
+      'Third-party Integrations',
+      'Microservices',
+      'Data APIs',
+      'Authentication Services'
+    ],
+    technologies: ['Node.js', 'Python', 'GraphQL', 'PostgreSQL', 'Redis', 'AWS'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/api-development-service'
+    },
+    href: '/api-development-service',
+    glowColor: 'purple'
+  },
+  {
+    id: 'database-optimization-service',
+    title: 'Database Optimization Service',
+    description: 'Professional database optimization and management services including performance tuning, scaling, backup strategies, and migration.',
+    shortDescription: 'Database performance optimization and management services',
+    category: 'IT',
+    icon: '🗄️',
+    features: [
+      'Performance Tuning',
+      'Query Optimization',
+      'Index Management',
+      'Backup & Recovery',
+      'Scaling Strategies',
+      'Migration Services',
+      'Security Hardening',
+      'Monitoring Setup'
+    ],
+    pricing: {
+      basic: 1500,
+      pro: 4000,
+      enterprise: 12000
+    },
+    benefits: [
+      'Improve query performance by 300%',
+      'Reduce database costs',
+      'Enhanced security',
+      'Reliable backup strategies',
+      'Scalable architecture'
+    ],
+    useCases: [
+      'Database Performance Issues',
+      'Migration Projects',
+      'Scaling Challenges',
+      'Security Hardening',
+      'Backup Optimization'
+    ],
+    technologies: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', 'AWS RDS', 'Docker'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/database-optimization-service'
+    },
+    href: '/database-optimization-service',
+    glowColor: 'blue'
+  },
+
+  // Additional Cybersecurity Services
+  {
+    id: 'penetration-testing-service',
+    title: 'Penetration Testing Service',
+    description: 'Comprehensive penetration testing and vulnerability assessment services to identify security weaknesses and provide remediation strategies.',
+    shortDescription: 'Professional penetration testing and security assessment',
+    category: 'Cybersecurity',
+    icon: '🔍',
+    features: [
+      'Web Application Testing',
+      'Network Penetration Testing',
+      'Mobile App Security',
+      'Social Engineering Tests',
+      'Physical Security Assessment',
+      'Compliance Testing',
+      'Detailed Reporting',
+      'Remediation Guidance'
+    ],
+    pricing: {
+      basic: 2500,
+      pro: 7500,
+      enterprise: 20000
+    },
+    benefits: [
+      'Identify security vulnerabilities',
+      'Meet compliance requirements',
+      'Improve security posture',
+      'Detailed remediation plans',
+      'Expert security guidance'
+    ],
+    useCases: [
+      'Security Audits',
+      'Compliance Requirements',
+      'Pre-deployment Testing',
+      'Regular Security Checks',
+      'Incident Response'
+    ],
+    technologies: ['OWASP', 'Nmap', 'Burp Suite', 'Metasploit', 'Wireshark', 'Custom Tools'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/penetration-testing-service'
+    },
+    href: '/penetration-testing-service',
+    glowColor: 'red'
+  },
+  {
+    id: 'security-awareness-training',
+    title: 'Security Awareness Training',
+    description: 'Comprehensive cybersecurity training program for employees including phishing simulation, security best practices, and compliance training.',
+    shortDescription: 'Employee cybersecurity awareness and training program',
+    category: 'Cybersecurity',
+    icon: '🎓',
+    features: [
+      'Interactive Training Modules',
+      'Phishing Simulation',
+      'Security Best Practices',
+      'Compliance Training',
+      'Progress Tracking',
+      'Certification Programs',
+      'Custom Content',
+      'Regular Updates'
+    ],
+    pricing: {
+      basic: 25,
+      pro: 50,
+      enterprise: 100
+    },
+    benefits: [
+      'Reduce human error by 70%',
+      'Improve security awareness',
+      'Meet compliance requirements',
+      'Engaging training content',
+      'Measurable progress'
+    ],
+    useCases: [
+      'Employee Training',
+      'Compliance Requirements',
+      'Security Awareness',
+      'Phishing Prevention',
+      'Best Practices Education'
+    ],
+    technologies: ['LMS Platform', 'Interactive Content', 'Analytics', 'Gamification', 'Mobile App'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/security-awareness-training'
+    },
+    href: '/security-awareness-training',
+    glowColor: 'orange'
+  },
+
+  // Additional Cloud Services
+  {
+    id: 'cloud-cost-optimization',
+    title: 'Cloud Cost Optimization Service',
+    description: 'Professional cloud cost optimization service that analyzes usage patterns and implements strategies to reduce cloud spending by up to 50%.',
+    shortDescription: 'Cloud cost optimization and resource management service',
+    category: 'Cloud',
+    icon: '💸',
+    features: [
+      'Cost Analysis & Reporting',
+      'Resource Optimization',
+      'Reserved Instance Planning',
+      'Auto-scaling Setup',
+      'Waste Identification',
+      'Budget Alerts',
+      'Cost Forecasting',
+      'ROI Analysis'
+    ],
+    pricing: {
+      basic: 1000,
+      pro: 3000,
+      enterprise: 8000
+    },
+    benefits: [
+      'Reduce cloud costs by 50%',
+      'Optimize resource usage',
+      'Better budget control',
+      'Detailed cost insights',
+      'Automated optimization'
+    ],
+    useCases: [
+      'Cost Reduction',
+      'Resource Optimization',
+      'Budget Management',
+      'Scaling Strategies',
+      'Performance Tuning'
+    ],
+    technologies: ['AWS Cost Explorer', 'Azure Cost Management', 'GCP Billing', 'Terraform', 'CloudWatch'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/cloud-cost-optimization'
+    },
+    href: '/cloud-cost-optimization',
+    glowColor: 'green'
+  },
+  {
+    id: 'multi-cloud-strategy',
+    title: 'Multi-Cloud Strategy Service',
+    description: 'Comprehensive multi-cloud strategy and implementation service to help businesses leverage multiple cloud providers for better resilience and cost optimization.',
+    shortDescription: 'Multi-cloud strategy and implementation service',
+    category: 'Cloud',
+    icon: '☁️',
+    features: [
+      'Cloud Strategy Planning',
+      'Multi-cloud Architecture',
+      'Vendor Management',
+      'Disaster Recovery',
+      'Compliance Management',
+      'Cost Optimization',
+      'Security Implementation',
+      'Migration Planning'
+    ],
+    pricing: {
+      basic: 5000,
+      pro: 15000,
+      enterprise: 40000
+    },
+    benefits: [
+      'Improved resilience',
+      'Vendor independence',
+      'Cost optimization',
+      'Better compliance',
+      'Reduced risk'
+    ],
+    useCases: [
+      'Cloud Strategy',
+      'Disaster Recovery',
+      'Vendor Diversification',
+      'Compliance Requirements',
+      'Cost Optimization'
+    ],
+    technologies: ['AWS', 'Azure', 'GCP', 'Terraform', 'Kubernetes', 'Docker'],
+    contactInfo: {
+      phone: '+1-302-464-0950',
+      email: 'kleber@ziontechgroup.com',
+      website: 'https://ziontechgroup.com/multi-cloud-strategy'
+    },
+    href: '/multi-cloud-strategy',
+    glowColor: 'blue'
   }
 ];
 
