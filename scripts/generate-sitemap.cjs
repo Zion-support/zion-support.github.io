@@ -6,10 +6,10 @@ const generateSitemap = () => {
   const baseUrl = 'https://ziontechgroup.com';
   const currentDate = new Date().toISOString();
   
-  // Define all the routes
-  const routes = [
+  const pages = [
     { url: '', priority: '1.0', changefreq: 'daily' },
     { url: '/about', priority: '0.8', changefreq: 'monthly' },
+<<<<<<< HEAD
     { url: '/contact', priority: '0.9', changefreq: 'monthly' },
     { url: '/services', priority: '0.9', changefreq: 'weekly' },
     { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
@@ -65,32 +65,37 @@ const generateSitemap = () => {
     { url: '/5g-private-networks', priority: '0.8', changefreq: 'weekly' },
     { url: '/5g-smart-city-solutions', priority: '0.8', changefreq: 'weekly' },
     { url: '/5g-iot-solutions', priority: '0.8', changefreq: 'weekly' }
+=======
+    { url: '/services', priority: '0.8', changefreq: 'monthly' },
+    { url: '/contact', priority: '0.7', changefreq: 'monthly' },
+    { url: '/blog', priority: '0.6', changefreq: 'weekly' },
+    { url: '/ai-services', priority: '0.8', changefreq: 'monthly' },
+    { url: '/micro-saas', priority: '0.8', changefreq: 'monthly' },
+    { url: '/5g-solutions', priority: '0.8', changefreq: 'monthly' },
+    { url: '/privacy', priority: '0.3', changefreq: 'yearly' },
+    { url: '/terms', priority: '0.3', changefreq: 'yearly' }
+>>>>>>> cursor/analyze-improve-and-deploy-application-a281
   ];
 
-  // Generate XML sitemap
-  let sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-`;
-
-  routes.forEach(route => {
-    const fullUrl = `${baseUrl}${route.url}`;
-    sitemap += `  <url>
-    <loc>${fullUrl}</loc>
+${pages.map(page => `  <url>
+    <loc>${baseUrl}${page.url}</loc>
     <lastmod>${currentDate}</lastmod>
-    <changefreq>${route.changefreq}</changefreq>
-    <priority>${route.priority}</priority>
-  </url>
-`;
-  });
+    <changefreq>${page.changefreq}</changefreq>
+    <priority>${page.priority}</priority>
+  </url>`).join('\n')}
+</urlset>`;
 
-  sitemap += `</urlset>`;
-
-  // Write sitemap to public directory
-  const publicDir = path.join(__dirname, '..', 'public');
-  if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true });
+  const sitemapPath = path.join(process.cwd(), 'dist', 'sitemap.xml');
+  
+  // Ensure dist directory exists
+  const distDir = path.dirname(sitemapPath);
+  if (!fs.existsSync(distDir)) {
+    fs.mkdirSync(distDir, { recursive: true });
   }
   
+<<<<<<< HEAD
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
   console.log('✅ Sitemap generated successfully!');
   
@@ -124,3 +129,29 @@ Allow: /pricing
 };
 
 generateSitemap();
+=======
+  fs.writeFileSync(sitemapPath, sitemap);
+  console.log('✅ Sitemap generated successfully at dist/sitemap.xml');
+};
+
+// Generate robots.txt
+const generateRobots = () => {
+  const robotsContent = `User-agent: *
+Allow: /
+
+Sitemap: https://ziontechgroup.com/sitemap.xml`;
+
+  const robotsPath = path.join(process.cwd(), 'dist', 'robots.txt');
+  fs.writeFileSync(robotsPath, robotsContent);
+  console.log('✅ Robots.txt generated successfully at dist/robots.txt');
+};
+
+// Run the generation
+try {
+  generateSitemap();
+  generateRobots();
+} catch (error) {
+  console.error('❌ Error generating sitemap:', error);
+  process.exit(1);
+}
+>>>>>>> cursor/analyze-improve-and-deploy-application-a281
