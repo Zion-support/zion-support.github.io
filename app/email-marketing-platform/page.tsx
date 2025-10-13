@@ -26,5 +26,6 @@ export default function Emailmarketingplatform() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};

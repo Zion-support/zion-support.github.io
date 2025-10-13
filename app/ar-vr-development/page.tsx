@@ -55,8 +55,9 @@ const ARVRDevelopmentPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
-      <Helmet></Helmet>
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <Helmet>
         <title>AR/VR Development - Zion Tech Group</title>
         <meta name="description" content="Professional AR/VR development services creating immersive experiences for training, entertainment, and business applications across all major platforms." /></meta>
         <meta name="keywords" content="AR development, VR development, mixed reality, immersive experiences, virtual reality, augmented reality" /></meta>
@@ -206,12 +207,11 @@ const ARVRDevelopmentPage = () => {
 </meta>
 </meta>
 </link>
-</Sparkles>
-</Sparkles>
-</Sparkles>
-</ArrowRight>
-</ArrowRight>
-</CheckCircle>
+        </div>
+      </section>
+      </div>
+    </>
+  );
 };
 
 export default ARVRDevelopmentPage;

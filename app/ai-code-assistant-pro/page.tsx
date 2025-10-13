@@ -115,8 +115,9 @@ const AICodeAssistantProZionTechGroup = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
-      <Helmet>
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI analytics platform with real-time insights and predictive modeling." />
         <meta name="keywords" content="AI analytics, data analysis, business intelligence, machine learning" />
@@ -131,7 +132,7 @@ const AICodeAssistantProZionTechGroup = () => {
         </div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10"></div>
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6"></div>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
             <span className="text-cyan-400 text-sm font-medium">AI-Powered Analytics</span>
           </div>
@@ -389,6 +390,8 @@ const AICodeAssistantProZionTechGroup = () => {
         </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
+      </div>
+    </>
   );
 };
 

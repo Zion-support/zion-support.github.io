@@ -26,5 +26,6 @@ export default function Employeetimetracker() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};

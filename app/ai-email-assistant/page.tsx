@@ -249,8 +249,8 @@ export default function AIEmailAssistant() {
             </div>
           </div>
         </div>
-      </div>
-</div>
+      </section>
+    </div>
   );
 };
 

@@ -10,7 +10,6 @@ const CybersecuritySolutions = () => {
 
   const stats: { label: string; value: string; number: string; icon: React.ReactNode }[] = [];
 
-  const capabilities: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 
   const features: { title: string; description: string; icon: React.ReactNode; color: string }[] = [];
 

@@ -107,8 +107,9 @@ const AIPoweredEmailAnalyzerPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden"></div>
-      <Helmet>
+    <>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        <Helmet>
         <title>AI Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI services with cutting-edge technology and expert solutions." />
         <meta name="keywords" content="AI services, artificial intelligence, machine learning, automation" />
@@ -365,7 +366,8 @@ const AIPoweredEmailAnalyzerPage = () => {
           </Link>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

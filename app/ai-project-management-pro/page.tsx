@@ -295,8 +295,8 @@ export default function AIProjectManagementPro() {
             </div>
           </div>
         </div>
-      </div>
-</div>
+      </section>
+    </div>
   );
 };
 

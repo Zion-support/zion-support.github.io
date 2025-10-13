@@ -26,5 +26,6 @@ export default function Softwaredevelopment() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};

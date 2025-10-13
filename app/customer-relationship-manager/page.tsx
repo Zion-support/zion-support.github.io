@@ -26,5 +26,6 @@ export default function Customerrelationshipmanager() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};

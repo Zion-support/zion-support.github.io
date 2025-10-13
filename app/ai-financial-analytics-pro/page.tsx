@@ -296,8 +296,8 @@ export default function page() {
             </div>
           </div>
         </div>
-      </div>
-</div>
+      </section>
+    </div>
   );
 };
 

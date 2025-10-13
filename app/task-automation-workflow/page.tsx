@@ -26,5 +26,6 @@ export default function Taskautomationworkflow() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};

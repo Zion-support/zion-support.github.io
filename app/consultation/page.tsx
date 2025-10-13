@@ -434,5 +434,6 @@ export default function ConsultationPage() {
           </div>
         </section>
       </div>
-</div>
+    </div>
   );
+};

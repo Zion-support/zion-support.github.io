@@ -26,5 +26,6 @@ export default function Socialmediascheduler() {
           </Link>
         </div>
       </div>
-</div>
+    </div>
   );
+};
