@@ -1,96 +1,143 @@
-export interface Application {;
 export interface Application {
-  // TODO: Add properties
+  id: string;
+  name: string;
+  email: string;
+  position: string;
+  experience: number;
+  skills: string[];
+  createdAt: string;
+  updatedAt?: string;
 }
-  // TODO: Add properties
-}
-  id: string
-  name: string
-  email: string
-  position: string
-  experience: number
-  skills: string[]
-  createdAt: string
-  updatedAt?: string
-}
-export interface Application {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  id: string
-  job_id: string
-  talent_slug: string
-  status: 'applied' | 'skipped' | 'pending''
-  createdAtIso: string
-}
-export type UserRole = 'admin' | 'user' | 'guest';'
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee;
-export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';';';
+
+export type UserRole = 'admin' | 'user' | 'guest';
+
+export type JobStatus = 'New' | 'In Progress' | 'Filled' | 'Closed';
+
 export type Job = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  id: string
-  title: string
-  description: string
-  category: string
-  requiredSkills: string[]
-  budgetMinUsd?: number
-  budgetMaxUsd?: number
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  requiredSkills: string[];
+  budgetMinUsd?: number;
+  budgetMaxUsd?: number;
   deliveryDeadlineIso?: string; // ISO string
-  clientEmail: string
-  status: JobStatus
-  createdAtIso: string
-  updatedAtIso: string
-}
-export type ApplicationStatus = 'applied' | 'skipped' | 'withdrawn';';';
+  clientEmail: string;
+  status: JobStatus;
+  createdAtIso: string;
+  updatedAtIso: string;
+};
+
+export type ApplicationStatus = 'applied' | 'skipped' | 'withdrawn';
+
 export type Application = {
-  // TODO: Add properties
+  id: string;
+  job_id: string;
+  talent_slug: string;
+  status: ApplicationStatus;
+  createdAtIso: string;
+};
+
+export interface User {
+  id: string;
+  email: string;
+  name: string;
+  role: UserRole;
+  createdAt: string;
+  updatedAt?: string;
 }
-  // TODO: Add properties
+
+export interface Project {
+  id: string;
+  title: string;
+  description: string;
+  status: 'active' | 'completed' | 'paused';
+  createdAt: string;
+  updatedAt?: string;
 }
-  id: string
-  jobId: string
-  talentSlug: string
-  status: ApplicationStatus
-  createdAtIso: string
+
+export interface Service {
+  id: string;
+  name: string;
+  description: string;
+  category: string;
+  price: number;
+  currency: string;
+  createdAt: string;
+  updatedAt?: string;
 }
-export type Participant = { type: 'email' | 'talent'; id: string }';
-export type Attachment = {
-  // TODO: Add properties
+
+export interface Contact {
+  id: string;
+  name: string;
+  email: string;
+  message: string;
+  createdAt: string;
+  status: 'new' | 'read' | 'replied';
 }
-  // TODO: Add properties
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  content: string;
+  excerpt: string;
+  author: string;
+  publishedAt: string;
+  tags: string[];
+  slug: string;
 }
-  name: string
-  url: string
-  sizeBytes?: number
+
+export interface Newsletter {
+  id: string;
+  email: string;
+  subscribedAt: string;
+  status: 'active' | 'unsubscribed';
 }
-export type Message = {
-  // TODO: Add properties
+
+export interface Analytics {
+  id: string;
+  event: string;
+  data: Record<string, any>;
+  timestamp: string;
+  userId?: string;
 }
-  // TODO: Add properties
+
+export interface ErrorLog {
+  id: string;
+  message: string;
+  stack?: string;
+  timestamp: string;
+  userId?: string;
+  url?: string;
 }
-  id: string
-  conversationId: string
-  sender: Participant
-  text?: string
-  attachments?: Attachment[]
-  createdAtIso: string
-  readBy?: { participantId: string; readAtIso: string }[]
+
+export interface PerformanceMetric {
+  id: string;
+  metric: string;
+  value: number;
+  timestamp: string;
+  url?: string;
 }
-export type Conversation = {
-  // TODO: Add properties
+
+export interface ApiResponse<T = any> {
+  success: boolean;
+  data?: T;
+  error?: string;
+  message?: string;
 }
-  // TODO: Add properties
+
+export interface PaginationParams {
+  page: number;
+  limit: number;
+  sortBy?: string;
+  sortOrder?: 'asc' | 'desc';
 }
-  id: string
-  jobId?: string
-  participants: Participant[]
-  createdAtIso: string
-  updatedAtIso: string
-  messages: Message[]
-}
+
+export interface PaginatedResponse<T> extends ApiResponse<T[]> {
+  pagination: {
+    page: number;
+    limit: number;
+    total: number;
+    totalPages: number;
+  };
 }

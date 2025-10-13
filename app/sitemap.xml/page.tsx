@@ -1,47 +1,53 @@
-'use client';';
-import React from 'react';';';
-import { Helmet } from 'react-helmet-async';';'
-;
-const SitemapXMLPage: React.FC = () => {
-  // TODO: Implement
-}
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
-  // TODO: Implement
-}
-  return (
-  // TODO: Add parameters
-)
-    <>
-<Helmet>
-<title>Sitemap | Zion Tech Group</title>
-<meta name="description" content="Complete sitemap of all pages and services available on Zion Tech Group website." />"
-<meta name="robots" content="noindex, nofollow" /></Helmet>"
-<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
-<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">"
-<div className="text-center mb-12">"
-<h1 className="text-4xl font-bold text-white mb-4">"
-              Sitemap
-            </h1>
-<p className="text-xl text-gray-300">"
-              Complete directory of all pages and services
-            </p></div>
-<div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/20">"
-<div className="text-center">"
-<p className="text-gray-300 mb-4">"
-                This page provides a comprehensive sitemap of all available pages and services.
-              </p>
-<p className="text-sm text-gray-400">"
-                For the XML sitemap, please visit: <a href="/sitemap.xml" className="text-cyan-400 hover:text-cyan-300">/sitemap.xml</a></p>"
-</div></div>
-</div></div>
-</>
-  );
-};
-;
-export default SitemapXMLPage;
-=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Shield, Zap } from 'lucide-react';
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+export default function page() {
+  const features = [
+    {
+      title: 'Advanced Solutions',
+      description: 'Cutting-edge technology for your business needs',
+      icon: Brain
+    },
+    {
+      title: 'Secure Platform',
+      description: 'Enterprise-grade security and reliability',
+      icon: Shield
+    },
+    {
+      title: 'High Performance',
+      description: 'Optimized for speed and efficiency',
+      icon: Zap
+    }
+  ];
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Page - Zion AI</title>
+        <meta name="description" content="Professional page services and solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Page
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional page services and solutions
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-lg p-6 shadow-lg">
+              <feature.icon className="w-12 h-12 text-blue-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

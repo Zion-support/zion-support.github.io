@@ -1,102 +1,53 @@
-  structuredData;}}) => {}const fullTitle = title.includes('Zion Tech Group') ? title : `${title}| Zion Tech Group`;';
-const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : ');'';
-const defaultStructuredData = {"@context": "https: //schema.org","
-    "@type": "Organization","
-    "name": "Zion Tech Group","
-    "url": "https: //ziontechgroup.com","
-    "logo": "https: //ziontechgroup.com/logo.png","
-    "description": "Advanced AI and IT Solutions company providing cutting-edge technology services","
-    "address": {"
-      "@type": "PostalAddress","
-      "streetAddress": "364 E Main St STE 1008","
-      "addressLocality": "Middletown","
-      "addressRegion": "DE","
-      "postalCode": "19709","
-      "addressCountry": "US"},"
-    "contactPoint": {"@type": "ContactPoint","
-      "telephone": "+1-302-464-0950","
-      "contactType": "customer service","
-      "email": "kleber@ziontechgroup.com"},"
-    "sameAs": [;"
-      "https: //www.linkedin.com/company/zion-tech-group","
-      "https: //twitter.com/ziontechgroup","
-    ],
-  }
-return(<Helmet />)
-      {/* Basic Meta Tags */} <title>{fullTitle}</title>
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" />"
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" />"
-<meta />
-      {/* Canonical URL */}{canonicalUrl && <link rel="canonical" href={canonicalUrl}/>}"
-{/* Open Graph Meta Tags */} <meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" />"
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" />"
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" />"
-<meta />
-      {/* Twitter Card Meta Tags */} <meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" />"
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" />"
-      {/* Additional SEO Meta Tags */} <meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" />"
-<meta name="description" content="AI-powered solution" />"
-<meta name="keywords" content="AI, artificial intelligence, business solutions" />"
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { Brain, Shield, Zap } from 'lucide-react';
 
-      {/* Structured Data */} <script>
-        {JSON.stringify(structuredData || defaultStructuredData)} </script></Helmet>
-  )
-}
-export default SEOHead;
-      "email": "kleber@ziontechgroup.com""
+export default function SEOHead() {
+  const features = [
+    {
+      title: 'Advanced Solutions',
+      description: 'Cutting-edge technology for your business needs',
+      icon: Brain
     },
-    "sameAs": ["
-      "https://www.linkedin.com/company/zion-tech-group","
-      "https://twitter.com/ziontechgroup""
-    ]
-  }
-  return (
-  // TODO: Add parameters
-)
-    <Helmet>
-      {/* Basic Meta Tags */}
-      <title>{fullTitle}
-      <meta name="description" content={description} />"
-<meta name="keywords" content={keywords} />"
-<meta name="author" content="Zion Tech Group" />"
-<meta name="robots" content="index, follow" />"
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />"
-      {/* Canonical URL */}
-      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}"
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={fullTitle} />"
-<meta property="og:description" content={description} />"
-<meta property="og:type" content={ogType} />"
-<meta property="og:url" content={canonicalUrl} />"
-<meta property="og:image" content={ogImage} />"
-<meta property="og:site_name" content="Zion Tech Group" />"
-<meta property="og:locale" content="en_US" />"
-      {/* Twitter Card Meta Tags */}
-      <meta name="twitter:card" content={twitterCard} />"
-<meta name="twitter:title" content={fullTitle} />"
-<meta name="twitter:description" content={description} />"
-<meta name="twitter:image" content={ogImage} />"
-      {/* Additional SEO Meta Tags */}
-      <meta name="theme-color" content="#0f172a" />"
-<meta name="msapplication-TileColor" content="#0f172a" />"
-<meta name="apple-mobile-web-app-capable" content="yes" />"
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />"
-      {/* Structured Data */}
-      <script type="application/ld+json">"
-        {JSON.stringify(structuredData || defaultStructuredData</div></script>
-</Helmet>
-  );
-};
-;
-export default SEOHead;
-=======
+    {
+      title: 'Secure Platform',
+      description: 'Enterprise-grade security and reliability',
+      icon: Shield
+    },
+    {
+      title: 'High Performance',
+      description: 'Optimized for speed and efficiency',
+      icon: Zap
+    }
+  ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+      <Helmet>
+        <title>Seohead - Zion AI</title>
+        <meta name="description" content="Professional seohead services and solutions" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            Seohead
+          </h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Professional seohead services and solutions
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-lg p-6 shadow-lg">
+              <feature.icon className="w-12 h-12 text-blue-600 mb-4" />
+              <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+              <p className="text-gray-600">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}

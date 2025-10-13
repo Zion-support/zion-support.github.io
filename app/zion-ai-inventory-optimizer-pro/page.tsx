@@ -1,26 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { 
-  Package, 
-  BarChart3, 
-  Target, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  Zap, 
-  Sparkles,
-  Cpu,
-  Globe,
-  AlertTriangle,
-  ShoppingCart,
-  Truck
-} from 'lucide-react';
-=======
-import { Package, BarChart3, Target, ArrowRight, CheckCircle, Star, Clock, Zap, Sparkles, Cpu, Globe, AlertTriangle, ShoppingCart, Truck } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
 
 const ZionAIInventoryOptimizerProPage: React.FC = () => {
   const features = [

@@ -1,19 +1,3 @@
-<<<<<<< HEAD
-interface SEOUtilsConfig {
-  enabled: boolean;
-  analytics: boolean;
-  sitemap: boolean;
-}
-
-export class SEOUtils {
-  private config: SEOUtilsConfig;
-
-  constructor(config: Partial<SEOUtilsConfig> = {}) {
-    this.config = {
-      enabled: true,
-      analytics: true,
-      sitemap: true,
-=======
 interface SeoConfig {
   enabled: boolean;
   metaTags: boolean;
@@ -27,9 +11,7 @@ export class SeoUtils {
     this.config = {
       enabled: true,
       metaTags: true,
-      structuredData: true,
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-      ...config
+      structuredData: true,      ...config
     };
   }
 
@@ -39,15 +21,11 @@ export class SeoUtils {
     }
   }
 
-<<<<<<< HEAD
 /**
  * SEO utility functions
  */;
 export interface SEOConfig {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
     title: string
   description: string
   keywords?: string[]
@@ -87,9 +65,7 @@ export const updatePageTitle = (titl)
   }
 }
 "`"
-</li>
-=======
-  generateMetaTags(title: string, description: string): void {
+</li>  generateMetaTags(title: string, description: string): void {
     if (this.config.enabled) {
       document.title = title;
       const metaDescription = document.querySelector('meta[name="description"]');
@@ -107,10 +83,7 @@ export const updatePageTitle = (titl)
 }
 
 export const seoUtils = new SEOUtils();
-export default seoUtils;
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
-  generateMetaTags(title: string, description: string): Record<string, string> {
+export default seoUtils;  generateMetaTags(title: string, description: string): Record<string, string> {
     if (this.config.metaTags) {
       return {
         title,
@@ -128,7 +101,7 @@ export default seoUtils;
     if (this.config.structuredData) {
       return JSON.stringify(data);
     }
-    return '';
+    return ';
   }
 }
 

@@ -1,24 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { 
-  Workflow, 
-  Bot, 
-  ArrowRight, 
-  CheckCircle, 
-  Star, 
-  Clock, 
-  BarChart3, 
-  Shield,
-  Sparkles,
-  Target,
-  Cpu,
-  Globe
-} from 'lucide-react';
-=======
-import { Workflow, Bot, ArrowRight, CheckCircle, Star, Clock, BarChart3, Shield, Sparkles, Target, Cpu, Globe } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-234b
 
 const ZionAIWorkflowAutomatorProPage: React.FC = () => {
   const features = [

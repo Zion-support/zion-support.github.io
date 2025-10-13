@@ -1,12 +1,7 @@
 interface AccessibilityUtilsConfig {
   enabled: boolean;
   highContrast: boolean;
-<<<<<<< HEAD
-  fontSize: 'small' | 'medium' | 'large';
-=======
-  fontSize: number;
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-  screenReader: boolean;
+fontSize: 'small' | 'medium' | 'large';  screenReader: boolean;
 }
 
 export class AccessibilityUtils {
@@ -16,12 +11,7 @@ export class AccessibilityUtils {
     this.config = {
       enabled: true,
       highContrast: false,
-<<<<<<< HEAD
-      fontSize: 'medium',
-=======
-      fontSize: 16,
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-      screenReader: false,
+      fontSize: 'medium',      fontSize: 16,      screenReader: false,
       ...config
     };
   }
@@ -29,7 +19,6 @@ export class AccessibilityUtils {
   init(): void {
     if (this.config.enabled) {
       console.log('Accessibility utils initialized');
-<<<<<<< HEAD
       this.applyAccessibilitySettings();
     }
   }
@@ -56,14 +45,11 @@ export class AccessibilityUtils {
 
 // Focus management utilities;
 export const focusManagement = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
   // Trap focus within an element
   trapFocus: (element: HTMLElement): (() => void) => {,;
 const focusableElements = element.querySelectorAll()
-      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])''"
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'"
     );
 const _firstElement = focusableElements[0] as HTMLElement;
 const lastElement = focusableElements[
@@ -74,10 +60,7 @@ const lastElement = focusableElements[
       focusableElements.length - 1
     ] as HTMLElement;
 const handleKeyDown = (e: KeyboardEvent) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
       if (e.key === 'Tab') {,'
         if (e.shiftKey) {,
           if (document.activeElement === firstElement) {,
@@ -99,10 +82,7 @@ export const focusManagement = {/* TODO: Fix JSX expression */}
 
   // Restore focus to previous element
   restoreFocus: (element: HTMLElement): void => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
     ,
     element.focus()
   },
@@ -125,10 +105,7 @@ const _mainElement = document.querySelector('main') as HTMLElement,'
 
 // ARIA utilities;
 export const ariaUtils = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
   // Generate unique IDs for ARIA relationships
   generateId: (prefix: string = 'aria'): string => {,;';
 export const ariaUtils = {/* TODO: Fix JSX expression */}
@@ -137,10 +114,7 @@ export const ariaUtils = {/* TODO: Fix JSX expression */}
 
   // Set ARIA attributes
     Object.entries(attributes).forEach(([key, value]) => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
       element.setAttribute(key, value)
     Object.entries(attributes).forEach(([key, value]) => {/* TODO: Fix JSX expression */}
     })
@@ -150,7 +124,7 @@ export const ariaUtils = {/* TODO: Fix JSX expression */}
 const _announcement = document.createElement('div')'
     announcement.setAttribute('aria-live', priority)'
     announcement.setAttribute('aria-atomic', 'true')'
-    announcement.className = 'sr-only''
+    announcement.className = 'sr-only'
     announcement.textContent = message
     setTimeout(() => {/* TODO: Fix JSX expression */}
     }, 1000)
@@ -158,10 +132,7 @@ const _announcement = document.createElement('div')'
 
 // Keyboard navigation utilities;
 export const keyboardNavigation = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
     // Handle arrow key navigation for lists
   handleArrowKeys: (
   // TODO: Add parameters
@@ -201,10 +172,7 @@ export const keyboardNavigation = {/* TODO: Fix JSX expression */}
   }}
 // Color contrast utilities;
 export const colorContrast = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
   // Calculate relative luminance
   getLuminance: (r: number, g: number, b: number): number => {,;
 const [rs, gs, bs] = [r, g, b].map(c => {)
@@ -226,37 +194,28 @@ export const colorContrast = {/* TODO: Fix JSX expression */}
   }}
 // Motion and animation utilities;
 export const motionUtils = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
     // Check if user prefers reduced motion
   prefersReducedMotion: (): boolean => {,
     return window.matchMedia('(prefers-reduced-motion: reduce)').matches'
   },
   // Apply reduced motion styles
   applyReducedMotion: (element: HTMLElement): void => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
     ,
     if (motionUtils.prefersReducedMotion()) {,
-      element.style.animation = 'none''
-      element.style.transition = 'none''
+      element.style.animation = 'none'
+      element.style.transition = 'none'
   }
   },
   // Respect user's motion preferences'
-  conditionalAnimation: (animation: string, fallback: string = ''): string => {'
+  conditionalAnimation: (animation: string, fallback: string = '): string => {'
     ,
     return motionUtils.prefersReducedMotion() ? fallback : animation
   }}
 // Form accessibility utilities;
 export const formAccessibility = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
   // Associate label with input
   associateLabel: (
   // TODO: Add parameters
@@ -267,10 +226,7 @@ const _label = document.createElement('label')'
     label.textContent = labelText
     label.setAttribute('for', input.id || formAccessibility.generateInputId())'
     if (!input.id) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
       input.id = label.getAttribute('for')!'
   // Check if contrast meets WCAG standards,
   meetsWCAG: (contrastRati,
@@ -288,7 +244,7 @@ export const motionUtils = {/* TODO: Fix JSX expression */}
   // Respect user's motion preferences,'
   conditionalAnimation: (animatio,
   n: string, fallbac)
-  k: string = ''): string => {/* TODO: Fix JSX expression */}'
+  k: string = '): string => {/* TODO: Fix JSX expression */}'
   }}
 // Form accessibility utilities;
 export const formAccessibility = {/* TODO: Fix JSX expression */}
@@ -313,20 +269,14 @@ const contrastRatio = 4.5; // Placeholder
   }}
 // Screen reader utilities;
 export const screenReaderUtils = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
     // Hide element from screen readers
   hideFromScreenReader: (element: HTMLElement): void => {,
     element.setAttribute('aria-hidden', 'true')'
   },
   // Show element to screen readers
   showToScreenReader: (element: HTMLElement): void => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
     ,
     element.removeAttribute('aria-hidden')'
   },
@@ -339,10 +289,7 @@ const _element = document.createElement('span')'
   }}
 // Accessibility testing utilities;
 export const accessibilityTesting = {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
     // Check for missing alt text on images
   checkImageAltText: (): {,
     missing: HTMLImageElement[],
@@ -350,7 +297,7 @@ export const accessibilityTesting = {
   } => {;
 const _images = Array.from(document.querySelectorAll('img'));';
 const _missing = images.filter(img => !img.hasAttribute('alt'));';
-const _empty = images.filter(img => img.getAttribute('alt') === ')''
+const _empty = images.filter(img => img.getAttribute('alt') === ')'
     return { missing, empty }
   })
     return inputs.filter(input => {)
@@ -407,10 +354,7 @@ const totalIssues =
       headingCheck.issues.length
 //     const score = Math.max(0, 100 - totalIssues * 10)
     return {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
       images: {,
         missing: imageCheck.missing.length,
         empty: imageCheck.empty.length
@@ -454,15 +398,12 @@ const focusableSelectors = [,
 
 // Initialize accessibility features;
 export const initAccessibility = (): void => {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
   // Add skip links;
 const _skipLink = document.createElement('a')'
-  skipLink.href = '#main-content''
-  skipLink.textContent = 'Skip to main content''
-  skipLink.className = 'skip-link''
+  skipLink.href = '#main-content'
+  skipLink.textContent = 'Skip to main content'
+  skipLink.className = 'skip-link'
   skipLink.style.cssText = `
     position: absolute
     top: -40 px
@@ -481,13 +422,8 @@ export const initAccessibility = (): void => {/* TODO: Fix JSX expression */}
   skipLink.addEventListener('blur', () => {/* TODO: Fix JSX expression */}'
   })
   document.body.insertBefore(skipLink, document.body.firstChild)
-"`
-=======
-export const accessibilityUtils = new AccessibilityUtils();
-export default accessibilityUtils;
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
-    }
+"`export const accessibilityUtils = new AccessibilityUtils();
+export default accessibilityUtils;    }
   }
 
   setHighContrast(enabled: boolean): void {

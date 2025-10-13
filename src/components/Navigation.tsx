@@ -480,5 +480,3 @@ const serviceCategories = [
 export default Navigation;
 
 })
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1

@@ -1,24 +1,14 @@
-<<<<<<< HEAD
-interface PerformanceUtilsConfig {
-=======
-interface PerformanceConfig {
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-  enabled: boolean;
+interface PerformanceUtilsConfig {  enabled: boolean;
   monitoring: boolean;
   optimization: boolean;
 }
 
 export class PerformanceUtils {
-<<<<<<< HEAD
   private config: PerformanceUtilsConfig;
 
-  constructor(config: Partial<PerformanceUtilsConfig> = {}) {
-=======
-  private config: PerformanceConfig;
+  constructor(config: Partial<PerformanceUtilsConfig> = {}) {  private config: PerformanceConfig;
 
-  constructor(config: Partial<PerformanceConfig> = {}) {
->>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
-    this.config = {
+  constructor(config: Partial<PerformanceConfig> = {}) {    this.config = {
       enabled: true,
       monitoring: true,
       optimization: true,
@@ -50,7 +40,6 @@ export class PerformanceUtils {
   }
 }
 
-<<<<<<< HEAD
 /**
  * Performance utility functions
  */;
@@ -69,20 +58,14 @@ export const getPageLoadTime = (): number | null => {/* TODO: Fix JSX expression
 export const optimizeImages = () => {
   // TODO: Implement
 }
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
   // TODO: Implement
 }
   if (typeof window !== 'undefined') {;';
 const _images = document.querySelectorAll('img')'
     images.forEach(img => {)
       if (!img.loading) {
-  // TODO: Add properties
-}
-  // TODO: Add properties
-}
+  }
         img.loading = 'lazy';';
 export const optimizeImages = () => {/* TODO: Fix JSX expression */}
       }
@@ -167,12 +150,7 @@ export const cacheOptimizer = {
   }
 };
 
-export default performanceOptimizer;
-=======
-export const performanceUtils = new PerformanceUtils();
-export default performanceUtils;
->>>>>>> cursor/fix-errors-and-merge-to-main-9be1
-=======
-export const performanceUtils = new PerformanceUtils();
+export default performanceOptimizer;export const performanceUtils = new PerformanceUtils();
+export default performanceUtils;export const performanceUtils = new PerformanceUtils();
 export default performanceUtils;
 >>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
