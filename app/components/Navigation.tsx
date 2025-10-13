@@ -9,38 +9,28 @@ import {
   Mail, 
   Brain, 
   Shield, 
-<<<<<<< HEAD
-  Zap, 
-  Globe, 
-  ArrowRight, 
-  Star, 
-  Users, 
-  Award, 
-  BarChart3, 
-  Cloud, 
-  Sparkles, 
-  Mail, 
-  Smartphone, 
+  Zap,
+  ChevronDown,
+  ArrowRight,
+  BarChart3,
+  Cloud,
+  Sparkles,
+  Smartphone,
   Monitor,
   Phone,
   MapPin,
-  Code,
   Database,
-  ChevronDown,
-  Menu,
-  X,
-  SidebarIcon,
   Package,
   Heart,
   Receipt,
   TrendingUp,
   Cpu,
   Network,
-  Sparkles
-} from 'lucide-react';
-=======
-  Zap,
-  ChevronDown
+  Award,
+  FileText,
+  Clock,
+  Target,
+  Calendar
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -49,13 +39,11 @@ interface NavigationItem {
   icon: React.ReactNode;
   dropdown?: NavigationItem[];
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
 
-<<<<<<< HEAD
 const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -67,16 +55,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen);
   }, [isOpen]);
-=======
-export default function Navigation({ onSidebarToggle }: NavigationProps) {
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const location = useLocation();
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 
   const toggleServices = useCallback(() => {
     setIsServicesOpen(!isServicesOpen);
   }, [isServicesOpen]);
-<<<<<<< HEAD
 
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen);
@@ -89,8 +71,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
   const toggle5GServices = useCallback(() => {
     setIs5GServicesOpen(!is5GServicesOpen);
   }, [is5GServicesOpen]);
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 
   const isActive = useCallback((path: string) => {
     return location.pathname === path;
@@ -285,32 +265,16 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
   ], []);
 
   return (
-<<<<<<< HEAD
-    <nav className="relative z-50 bg-black/20 backdrop-blur-md border-b border-cyan-500/20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-cyan-500/20 shadow-lg shadow-cyan-500/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg shadow-cyan-500/25">
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-=======
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <div className="flex items-center">
-            <Link
-              to="/"
-              className="flex items-center space-x-2 text-white hover:text-cyan-400 transition-colors"
-            >
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Brain className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
                 Zion Tech Group
               </span>
             </Link>
