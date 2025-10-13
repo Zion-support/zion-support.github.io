@@ -14,7 +14,8 @@ import {
   ShieldCheckIcon,
   CurrencyDollarIcon,
   CogIcon,
-  ChevronDownIcon
+  ChevronDownIcon,
+  UserGroupIcon
 } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
@@ -31,8 +32,9 @@ const Navigation = () => {
       icon: BriefcaseIcon,
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions' },
+        { name: 'IT Solutions', href: '/it-solutions' },
         { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+        { name: 'Cloud Solutions', href: '/cloud-solutions' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
         { name: 'Micro SaaS', href: '/micro-saas' },
         { name: '5G Solutions', href: '/5g-solutions' }
@@ -40,8 +42,18 @@ const Navigation = () => {
     },
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+    { name: 'Resources', href: '#', icon: DocumentTextIcon, submenu: [
+      { name: 'Blog', href: '/blog' },
+      { name: 'News', href: '/news' },
+      { name: 'Tutorials', href: '/tutorials' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'API Reference', href: '/api' }
+    ]},
+    { name: 'Company', href: '#', icon: UserGroupIcon, submenu: [
+      { name: 'Our Team', href: '/team' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Case Studies', href: '/case-studies' }
+    ]},
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }

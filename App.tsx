@@ -34,6 +34,18 @@ import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
 import CaseStudiesPage from './app/pages/CaseStudiesPage';
 import CareersPage from './app/pages/CareersPage';
 
+// Additional Service Pages
+import CybersecurityPage from './app/cybersecurity/page';
+import CloudSolutionsPage from './app/cloud-solutions/page';
+import MicroSaaSPage from './app/micro-saas/page';
+import FiveGSolutionsPage from './app/5g-solutions/page';
+
+// Company Pages
+import TeamPage from './app/team/page';
+import NewsPage from './app/news/page';
+import DocsPage from './app/docs/page';
+import APIPage from './app/api/page';
+
 // Error fallback component
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -63,57 +75,6 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 
 function App() {
   return (
-<<<<<<< HEAD
-    <HelmetProvider>
-      <Router>
-        <div className="min-h-screen bg-slate-900">
-          <Navigation />
-          <main className="relative z-10" id="main-content" role="main">
-            <Routes>
-              {/* Main Pages */}
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
-              <Route path="/ai-solutions" element={<AISolutionsPage />} />
-              <Route path="/it-solutions" element={<ITSolutionsPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/tutorials" element={<TutorialsPage />} />
-              <Route path="/demo" element={<DemoPage />} />
-              <Route path="/support" element={<SupportPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/solutions" element={<SolutionsPage />} />
-              
-              {/* Service Pages */}
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/careers" element={<CareersPage />} />
-              
-              {/* Catch all route */}
-              <Route path="*" element={
-                <div className="min-h-screen flex items-center justify-center bg-slate-900">
-                  <div className="text-center">
-                    <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                    <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                    <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
-                      Go Home
-                    </a>
-                  </div>
-                </div>
-              } />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
-      </Router>
-    </HelmetProvider>
-=======
     <ErrorBoundary>
       <HelmetProvider>
         <Router>
@@ -127,6 +88,9 @@ function App() {
                   <Route path="/about" element={<AboutPage />} />
                   <Route path="/contact" element={<ContactPage />} />
                   <Route path="/services" element={<ServicesPage />} />
+                  <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+                  <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                  <Route path="/it-solutions" element={<ITSolutionsPage />} />
                   <Route path="/blog" element={<BlogPage />} />
                   <Route path="/tutorials" element={<TutorialsPage />} />
                   <Route path="/demo" element={<DemoPage />} />
@@ -135,6 +99,26 @@ function App() {
                   <Route path="/terms" element={<TermsPage />} />
                   <Route path="/pricing" element={<PricingPage />} />
                   <Route path="/solutions" element={<SolutionsPage />} />
+                  
+                  {/* Service Pages */}
+                  <Route path="/ai-services" element={<AIServicesPage />} />
+                  <Route path="/it-services" element={<ITServicesPage />} />
+                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                  <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                  <Route path="/case-studies" element={<CaseStudiesPage />} />
+                  <Route path="/careers" element={<CareersPage />} />
+                  
+                  {/* Additional Service Pages */}
+                  <Route path="/cybersecurity" element={<CybersecurityPage />} />
+                  <Route path="/cloud-solutions" element={<CloudSolutionsPage />} />
+                  <Route path="/micro-saas" element={<MicroSaaSPage />} />
+                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                  
+                  {/* Company Pages */}
+                  <Route path="/team" element={<TeamPage />} />
+                  <Route path="/news" element={<NewsPage />} />
+                  <Route path="/docs" element={<DocsPage />} />
+                  <Route path="/api" element={<APIPage />} />
                   
                   {/* Catch all route */}
                   <Route path="*" element={
@@ -158,7 +142,6 @@ function App() {
         </Router>
       </HelmetProvider>
     </ErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
   );
 }
 
