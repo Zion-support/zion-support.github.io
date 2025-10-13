@@ -6,30 +6,42 @@ const FiveGSolutionsPage: React.FC = () => {
   const features = [
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Zap,
 =======
       icon: Wifi,
 >>>>>>> cursor/fix-errors-and-merge-to-main-0c82
+=======
+      icon: Zap,
+>>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Ultra-Fast Speeds',
       description: 'Experience lightning-fast 5G connectivity with speeds up to 10 Gbps',
       benefits: [&apos;10x faster than 4G&apos;, &apos;Low latency&apos;, &apos;High bandwidth&apos;, &apos;Reliable connection&apos;]
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Globe,
 =======
       icon: Circle,
 >>>>>>> cursor/fix-errors-and-merge-to-main-0c82
+=======
+      icon: Globe,
+>>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Global Coverage',
       description: 'Comprehensive 5G network coverage across multiple regions',
       benefits: [&apos;Wide coverage&apos;, &apos;Seamless roaming&apos;, &apos;International support&apos;, &apos;Network redundancy&apos;]
     },
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
       icon: Smartphone,
 =======
       icon: Wifi,
 >>>>>>> cursor/fix-errors-and-merge-to-main-0c82
+=======
+      icon: Smartphone,
+>>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Mobile Optimization',
       description: 'Optimized 5G solutions for mobile devices and applications',
       benefits: [&apos;Mobile-first design&apos;, &apos;App optimization&apos;, &apos;Battery efficiency&apos;, &apos;Device compatibility&apos;]

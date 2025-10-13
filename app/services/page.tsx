@@ -1,10 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Circle, Star, Right, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe } from 'lucide-react';
 =======
 import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-0c82
+=======
+import { Circle, Star, Right } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
@@ -151,7 +155,7 @@ const ServicesPage: React.FC = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
                     <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>

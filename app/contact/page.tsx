@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Circle, Send } from 'lucide-react';
+import { Circle, Send, Phone, Mail, MapPin, Clock } from 'lucide-react';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -35,6 +35,7 @@ export default function ContactPage() {
 
   const contactInfo = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       icon: title: '',
       value: &apos;+1 (555) 123-4567&apos;,
@@ -73,6 +74,27 @@ export default function ContactPage() {
     },
     {
       icon: 'Clock',
+=======
+      icon: Phone,
+      title: 'Phone',
+      value: '+1 (555) 123-4567',
+      description: 'Mon-Fri 9AM-6PM EST'
+    },
+    {
+      icon: Mail,
+      title: 'Email',
+      value: 'contact@ziontechgroup.com',
+      description: 'We respond within 24 hours'
+    },
+    {
+      icon: MapPin,
+      title: 'Address',
+      value: '123 Tech Street, Suite 100',
+      description: 'San Francisco, CA 94105'
+    },
+    {
+      icon: Clock,
+>>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Business Hours',
       value: 'Monday - Friday',
 >>>>>>> cursor/fix-errors-and-merge-to-main-0c82
