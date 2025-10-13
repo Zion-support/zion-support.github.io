@@ -21,8 +21,6 @@ export default defineConfig({
   build: {
     target: "esnext",
     minify: "terser",
-<<<<<<< HEAD
-    target: "es2020",
     cssCodeSplit: true,
     modulePreload: {
       polyfill: false,
@@ -32,6 +30,7 @@ export default defineConfig({
     assetsInlineLimit: 1024, // Optimized for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
+    sourcemap: true,
     // Better compression settings
     terserOptions: {
       compress: {
@@ -128,31 +127,13 @@ export default defineConfig({
             }
             return 'ai-other'
           }
-          // Zion service pages - group by category
-          if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/zion-')[1]?.split('/')[0];
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'zion-analytics'
-            }
-            if (serviceName?.includes('ai-')) {
-              return 'zion-ai'
-            }
-            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
-              return 'zion-security'
-            }
-            return 'zion-other'
-          }
           // 5G service pages - group together
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
-          // Micro SAAS pages
-          if (id.includes('/micro-') && id.includes('/page.tsx')) {
-            return 'micro-saas'
-          }
           // Main pages - keep core pages together
           if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') && !id.includes('/micro-')) {
+              !id.includes('/ai-') && !id.includes('/5g-')) {
             return 'main-pages'
           }
           // Large vendor libraries
@@ -174,47 +155,21 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    // Enable tree shaking
-    treeshake: true,
-=======
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ["react", "react-dom"],
-          router: ["react-router-dom"],
-          ui: ["framer-motion", "lucide-react"],
-        },
-      },
-    },
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-      },
-    },
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
   },
   server: {
     port: 3000,
     open: true,
-<<<<<<< HEAD
     host: true,
     // Enable HMR
     hmr: {
       overlay: true,
     },
-=======
     cors: true,
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
   },
   preview: {
     port: 4173,
     open: true,
-<<<<<<< HEAD
     host: true,
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
   },
   optimizeDeps: {
     include: [
@@ -225,13 +180,11 @@ export default defineConfig({
       "lucide-react",
     ],
   },
-<<<<<<< HEAD
   // CSS optimization
   css: {
     devSourcemap: true,
-=======
+  },
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
->>>>>>> cursor/fix-errors-and-merge-to-main-48ac
   },
 });
