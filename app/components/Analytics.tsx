@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react';
-import { Star } from 'lucide-react';
+import React from 'react';
 declare global {
   interface Window {
     gtag: (...args: any[]) => void;
