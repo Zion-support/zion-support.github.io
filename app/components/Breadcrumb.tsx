@@ -5,9 +5,9 @@ interface BreadcrumbProps {
   children?: React.ReactNode;
 }
 
-export default function Breadcrumb({ className = '', children, ...props }: BreadcrumbProps) {
+export default function Breadcrumb({ className = '', children }: BreadcrumbProps) {
   return (
-    <div className={`breadcrumb-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

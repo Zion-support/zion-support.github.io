@@ -1,4 +1,14 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-export default function FuturisticGlow() 
+import React from 'react';
+
+interface FuturisticGlowProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function FuturisticGlow({ className = '', children }: FuturisticGlowProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

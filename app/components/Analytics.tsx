@@ -1,19 +1,13 @@
 import React from 'react';
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-    dataLayer: any[];
-  }
-}
 
 interface AnalyticsProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Analytics({ className = '', children, ...props }: AnalyticsProps) {
+export default function Analytics({ className = '', children }: AnalyticsProps) {
   return (
-    <div className={`analytics-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

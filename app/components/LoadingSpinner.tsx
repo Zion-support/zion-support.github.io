@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface LoadingspinnerProps {
+interface LoadingSpinnerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Loadingspinner({ className = '', children, ...props }: LoadingspinnerProps) {
+export default function LoadingSpinner({ className = '', children }: LoadingSpinnerProps) {
   return (
-    <div className={`loadingspinner-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

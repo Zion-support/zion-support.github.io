@@ -1,10 +1,14 @@
 import React from 'react';
 
-export default function Component() {
+interface FuturisticBackgroundEnhancedProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function FuturisticBackgroundEnhanced({ className = '', children }: FuturisticBackgroundEnhancedProps) {
   return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
+    <div className={`${className}`}>
+      {children}
     </div>
   );
 }

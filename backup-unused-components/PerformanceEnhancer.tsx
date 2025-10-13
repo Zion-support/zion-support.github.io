@@ -1,10 +1,14 @@
 import React from 'react';
 
-export default function Component() {
+interface PerformanceEnhancerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function PerformanceEnhancer({ className = '', children }: PerformanceEnhancerProps) {
   return (
-    <div>
-      <h1>Component</h1>
-      <p>This component is under construction.</p>
+    <div className={`${className}`}>
+      {children}
     </div>
   );
 }

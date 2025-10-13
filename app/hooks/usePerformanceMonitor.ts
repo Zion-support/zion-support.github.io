@@ -1,30 +1,19 @@
-import { useState, useEffect, useRef } from 'react';
-
-interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  firstInputDelay: number;
-  cumulativeLayoutShift: number;
-  timeToInteractive: number;
-}
+// usePerformanceMonitor hook
+import { useEffect, useRef } from 'react';
 
 export function usePerformanceMonitor() {
-  const [state, setState] = useState<string | null>(null);
-  const metricsRef = useRef<PerformanceMetrics>({
-    loadTime: 0,
-    firstContentfulPaint: 0,
-    largestContentfulPaint: 0,
-    firstInputDelay: 0,
-    cumulativeLayoutShift: 0,
-    timeToInteractive: 0
-  });
+  const metricsRef = useRef({});
 
   useEffect(() => {
-    setState('initialized');
+    // Performance monitoring logic will be implemented here
+    console.log('Performance monitor initialized');
   }, []);
 
-  return state;
+  return {
+    metrics: metricsRef.current,
+    startMonitoring: () => console.log('Monitoring started'),
+    stopMonitoring: () => console.log('Monitoring stopped')
+  };
 }
 
 export default usePerformanceMonitor;

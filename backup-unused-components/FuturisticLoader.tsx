@@ -1,3 +1,14 @@
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-export default function FuturisticLoader() 
+import React from 'react';
+
+interface FuturisticLoaderProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function FuturisticLoader({ className = '', children }: FuturisticLoaderProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

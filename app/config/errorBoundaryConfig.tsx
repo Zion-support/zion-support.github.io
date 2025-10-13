@@ -1,7 +1,13 @@
+import React from 'react';
 
-const ErrorboundaryconfigPage = () => {
+interface errorBoundaryConfigProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function errorBoundaryConfig({ className = '', children }: errorBoundaryConfigProps) {
   return (
-    <div className={`errorboundaryconfig-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

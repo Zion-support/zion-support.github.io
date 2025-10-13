@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface TestrunnerProps {
+interface testRunnerProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Testrunner({ className = '', children, ...props }: TestrunnerProps) {
+export default function testRunner({ className = '', children }: testRunnerProps) {
   return (
-    <div className={`testrunner-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

@@ -1,16 +1,14 @@
+import React from 'react';
+
 interface ImageOptimizerProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Imageoptimizer({ className = '', children, ...props }: ImageoptimizerProps) {
+export default function ImageOptimizer({ className = '', children }: ImageOptimizerProps) {
   return (
-    <div className={`imageoptimizer-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );
-};
+}

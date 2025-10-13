@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface LoadingstatesProps {
+interface LoadingStatesProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Loadingstates({ className = '', children, ...props }: LoadingstatesProps) {
+export default function LoadingStates({ className = '', children }: LoadingStatesProps) {
   return (
-    <div className={`loadingstates-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

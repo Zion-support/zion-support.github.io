@@ -1,4 +1,14 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-export default function LoadingOptimizer() 
+import React from 'react';
+
+interface LoadingOptimizerProps {
+  className?: string;
+  children?: React.ReactNode;
+}
+
+export default function LoadingOptimizer({ className = '', children }: LoadingOptimizerProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
+}

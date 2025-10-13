@@ -1,6 +1,25 @@
-import { clsx, type ClassValue } from 'clsx';
-import { twMerge } from "tailwind-merge";
+// utils utility functions
 
-export function cn(...inputs: ClassValue[]) {
-  return twMerge(clsx(inputs));
+export interface utilsConfig {
+  enabled: boolean;
 }
+
+export class utils {
+  private config: utilsConfig;
+
+  constructor(config: Partial<utilsConfig> = {}) {
+    this.config = {
+      enabled: true,
+      ...config
+    };
+  }
+
+  init(): void {
+    if (this.config.enabled) {
+      console.log('utils initialized');
+    }
+  }
+}
+
+export const utilsInstance = new utils();
+export default utilsInstance;

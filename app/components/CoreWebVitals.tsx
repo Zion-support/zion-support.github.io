@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface CorewebvitalsProps {
+interface CoreWebVitalsProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Corewebvitals({ className = '', children, ...props }: CorewebvitalsProps) {
+export default function CoreWebVitals({ className = '', children }: CoreWebVitalsProps) {
   return (
-    <div className={`corewebvitals-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

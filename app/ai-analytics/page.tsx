@@ -1,70 +1,22 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 
-import {
-  BarChart3,
-  Zap,
-  Shield,
-  Target,
-  Brain,
-  Users,
-  Globe,
-  Mail,
-  Phone,
-  Database,
-  Settings,
-  Sparkles,
-  Lightbulb,
-  CheckCircle,
-  TrendingDown,
-  Monitor
-} from "lucide-react";
-
-export default function AIAnalyticsPage() {
-  const analyticsStats = [
-    { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
-    { number: "85%", label: "Prediction Accuracy", icon: <Brain className="w-6 h-6" /> },
-    { number: "60%", label: "Cost Reduction", icon: <TrendingDown className="w-6 h-6" /> },
-    { number: "24/7", label: "Automated Monitoring", icon: <Monitor className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Data Scientist",
-      company: "TechCorp",
-      content: "Zion's AI analytics platform has revolutionized our data processing capabilities.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO",
-      company: "DataFlow Inc",
-      content: "The real-time insights and predictive analytics are game-changing for our business.",
-      rating: 5,
-      avatar: "MC"
-    }
-  ];
-
-  const features = [
-    {
-      title: "Real-time Data Processing",
-      description: "Process and analyze data in real-time with our advanced AI algorithms that provide instant insights and actionable intelligence.",
-      icon: <Zap className="w-8 h-8" />,
-      benefits: ["Instant data processing", "Real-time dashboards", "Live monitoring", "Immediate alerts"]
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Leverage machine learning models to predict future trends, behaviors, and outcomes with high accuracy.",
-      icon: <Brain className="w-8 h-8" />,
-      benefits: ["Trend forecasting", "Behavior prediction", "Risk assessment", "Opportunity identification"]
-    },
-    {
-      title: "Advanced Data Visualization",
-      description: "Transform complex data into intuitive, interactive visualizations that make insights accessible to everyone.",
-      icon: <BarChart3 className="w-8 h-8" />,
-      benefits: ["Interactive charts", "Custom dashboards", "Mobile-responsive", "Export capabilities"]
-    }
-  ];
-
+export default function aiAnalytics() {
+  return (
+    <div className="min-h-screen bg-gray-900 text-white">
+      <Helmet>
+        <title>Ai Analytics - Zion Tech Group</title>
+        <meta name="description" content="Ai Analytics solutions by Zion Tech Group" />
+      </Helmet>
+      
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-8">Ai Analytics</h1>
+          <p className="text-xl text-gray-300 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
 }

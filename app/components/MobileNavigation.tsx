@@ -1,18 +1,14 @@
+import React from 'react';
 
-const MobileNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-interface MobilenavigationProps {
+interface MobileNavigationProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Mobilenavigation({ className = '', children, ...props }: MobilenavigationProps) {
+export default function MobileNavigation({ className = '', children }: MobileNavigationProps) {
   return (
-    <div className={`mobilenavigation-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );
-};
-
 }

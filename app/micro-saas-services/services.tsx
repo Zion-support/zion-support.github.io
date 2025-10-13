@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface ServicesProps {
+interface servicesProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Services({ className = '', children, ...props }: ServicesProps) {
+export default function services({ className = '', children }: servicesProps) {
   return (
-    <div className={`services-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

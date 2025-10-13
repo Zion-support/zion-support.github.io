@@ -1,13 +1,13 @@
 import React from 'react';
 
-interface AdvancedperformancemonitorProps {
+interface AdvancedPerformanceMonitorProps {
   className?: string;
   children?: React.ReactNode;
 }
 
-export default function Advancedperformancemonitor({ className = '', children, ...props }: AdvancedperformancemonitorProps) {
+export default function AdvancedPerformanceMonitor({ className = '', children }: AdvancedPerformanceMonitorProps) {
   return (
-    <div className={`advancedperformancemonitor-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );

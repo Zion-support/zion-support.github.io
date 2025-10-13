@@ -1,13 +1,13 @@
+import React from 'react';
 
 interface ErrorFallbackProps {
-  error: Error;
-  resetErrorBoundary: () => void;
-  errorInfo?: React.ErrorInfo;
+  className?: string;
+  children?: React.ReactNode;
 }
 
-export default function Errorfallback({ className = '', children, ...props }: ErrorfallbackProps) {
+export default function ErrorFallback({ className = '', children }: ErrorFallbackProps) {
   return (
-    <div className={`errorfallback-component ${className}`} {...props}>
+    <div className={`${className}`}>
       {children}
     </div>
   );
