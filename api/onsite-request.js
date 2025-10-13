@@ -1,5 +1,5 @@
-const path = require('path');
-const fs = require('fs');
+import path from 'path';
+import fs from 'fs';
 
 export default function handler(req, res) {
   if (req.method !== "POST") {
