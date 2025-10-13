@@ -9,38 +9,26 @@ import {
   Mail, 
   Brain, 
   Shield, 
-<<<<<<< HEAD
-  Zap, 
-  Globe, 
-  ArrowRight, 
-  Star, 
-  Users, 
-  Award, 
-  BarChart3, 
-  Cloud, 
-  Sparkles, 
-  Mail, 
-  Smartphone, 
+  Zap,
+  ChevronDown,
+  ArrowRight,
+  Star,
+  Award,
+  BarChart3,
+  Cloud,
+  Sparkles,
+  Smartphone,
   Monitor,
   Phone,
   MapPin,
-  Code,
   Database,
-  ChevronDown,
-  Menu,
-  X,
   SidebarIcon,
   Package,
   Heart,
   Receipt,
   TrendingUp,
   Cpu,
-  Network,
-  Sparkles
-} from 'lucide-react';
-=======
-  Zap,
-  ChevronDown
+  Network
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -49,13 +37,11 @@ interface NavigationItem {
   icon: React.ReactNode;
   dropdown?: NavigationItem[];
 }
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 
 interface NavigationProps {
   onSidebarToggle?: () => void;
 }
 
-<<<<<<< HEAD
 const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -67,16 +53,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen);
   }, [isOpen]);
-=======
-export default function Navigation({ onSidebarToggle }: NavigationProps) {
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const location = useLocation();
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 
   const toggleServices = useCallback(() => {
     setIsServicesOpen(!isServicesOpen);
   }, [isServicesOpen]);
-<<<<<<< HEAD
 
   const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen);
@@ -89,8 +69,6 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
   const toggle5GServices = useCallback(() => {
     setIs5GServicesOpen(!is5GServicesOpen);
   }, [is5GServicesOpen]);
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 
   const isActive = useCallback((path: string) => {
     return location.pathname === path;
