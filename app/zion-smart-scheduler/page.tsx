@@ -1,146 +1,115 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Wrench, AlertTriangle, TrendingUp, CheckCircle, Star, ArrowRight, Smartphone, Mail, Globe, BarChart3, Zap, Shield } from 'lucide-react';
+import { Calendar, Clock, Users, Zap, CheckCircle, Star, ArrowRight, Smartphone, Mail, Globe } from 'lucide-react';
 
-export default function AiPredictiveMaintenance() {
+export default function ZionSmartScheduler() {
   const features = [
     {
-      title: "AI-Powered Failure Prediction",
-      description: "Predict equipment failures up to 30 days in advance with 95% accuracy using advanced machine learning algorithms",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      benefit: "95% accuracy rate"
+      title: "AI-Powered Scheduling",
+      description: "Intelligent calendar management that learns from your preferences and automatically optimizes meeting times",
+      icon: <Calendar className="w-6 h-6" />,
+      benefit: "Save 3+ hours per week"
     },
     {
-      title: "Real-Time Monitoring",
-      description: "Continuous monitoring of equipment health with IoT sensors and real-time data analysis",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefit: "24/7 monitoring"
+      title: "Multi-Platform Sync",
+      description: "Seamlessly sync with Google Calendar, Outlook, Apple Calendar, and 20+ other platforms",
+      icon: <Zap className="w-6 h-6" />,
+      benefit: "Universal compatibility"
     },
     {
-      title: "Automated Maintenance Scheduling",
-      description: "Intelligent scheduling of maintenance tasks based on predicted failure risks and operational requirements",
-      icon: <Wrench className="w-6 h-6" />,
-      benefit: "Optimal scheduling"
+      title: "Smart Conflict Resolution",
+      description: "Automatically detect and resolve scheduling conflicts with intelligent suggestions",
+      icon: <CheckCircle className="w-6 h-6" />,
+      benefit: "Zero double-bookings"
     },
     {
-      title: "Cost Optimization",
-      description: "Reduce maintenance costs by up to 40% through predictive maintenance and optimized resource allocation",
-      icon: <TrendingUp className="w-6 h-6" />,
-      benefit: "40% cost reduction"
+      title: "Team Collaboration",
+      description: "Coordinate team schedules, find optimal meeting times, and manage group availability",
+      icon: <Users className="w-6 h-6" />,
+      benefit: "Perfect team coordination"
     },
     {
-      title: "Downtime Prevention",
-      description: "Prevent unexpected equipment failures and minimize production downtime with proactive maintenance",
-      icon: <Shield className="w-6 h-6" />,
-      benefit: "Zero unexpected downtime"
+      title: "Time Zone Intelligence",
+      description: "Automatically handle time zones for global teams and international meetings",
+      icon: <Globe className="w-6 h-6" />,
+      benefit: "Global team support"
     },
     {
-      title: "Mobile Alerts",
-      description: "Get instant notifications on your mobile device when maintenance is required or issues are detected",
+      title: "Mobile-First Design",
+      description: "Native mobile apps for iOS and Android with offline capabilities",
       icon: <Smartphone className="w-6 h-6" />,
-      benefit: "Instant notifications"
+      benefit: "Schedule anywhere, anytime"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$9",
       period: "per month",
-      description: "Perfect for small facilities",
+      description: "Perfect for individuals and small teams",
       features: [
-        "Up to 50 assets",
-        "Basic AI predictions",
-        "Email alerts",
-        "Mobile app",
-        "Standard support"
+        "Up to 5 calendars",
+        "Basic AI scheduling",
+        "2-way sync",
+        "Mobile apps",
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$29",
       period: "per month",
-      description: "Ideal for medium facilities",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 200 assets",
-        "Advanced AI algorithms",
-        "Real-time monitoring",
-        "Custom dashboards",
+        "Unlimited calendars",
+        "Advanced AI features",
+        "Multi-platform sync",
+        "Team collaboration",
         "Priority support",
-        "API integration"
+        "Custom integrations"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$99",
       period: "per month",
-      description: "For large industrial facilities",
+      description: "For large organizations",
       features: [
-        "Unlimited assets",
-        "Custom AI training",
-        "White-label options",
-        "Dedicated support",
+        "Everything in Professional",
         "Advanced analytics",
-        "Custom integrations"
+        "Custom AI training",
+        "Dedicated support",
+        "SSO integration",
+        "Custom branding"
       ],
       popular: false
     }
   ];
 
-  const industries = [
-    {
-      title: "Manufacturing",
-      description: "Optimize production lines and reduce equipment downtime with predictive maintenance",
-      icon: <Wrench className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      savings: "35% cost reduction"
-    },
-    {
-      title: "Energy & Utilities",
-      description: "Prevent power outages and optimize energy generation with intelligent maintenance scheduling",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500",
-      savings: "50% downtime reduction"
-    },
-    {
-      title: "Transportation",
-      description: "Ensure fleet reliability and safety with predictive maintenance for vehicles and infrastructure",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      savings: "60% maintenance efficiency"
-    },
-    {
-      title: "Healthcare",
-      description: "Maintain critical medical equipment and ensure patient safety with predictive maintenance",
-      icon: <CheckCircle className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500",
-      savings: "45% equipment uptime"
-    }
-  ];
-
   const testimonials = [
     {
-      name: "James Wilson",
-      company: "Industrial Manufacturing",
-      role: "Maintenance Director",
-      content: "Zion AI Predictive Maintenance has transformed our operations. We've reduced unplanned downtime by 80% and saved over $2M in maintenance costs.",
-      rating: 5
-    },
-    {
-      name: "Sarah Davis",
-      company: "Power Generation Plant",
+      name: "Sarah Chen",
+      company: "TechStart Inc.",
       role: "Operations Manager",
-      content: "The AI predictions are incredibly accurate. We've prevented 3 major equipment failures that would have cost us millions in downtime.",
+      content: "Zion Smart Scheduler has revolutionized how we manage our team's time. The AI suggestions are incredibly accurate and save us hours every week.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      company: "Automotive Manufacturing",
-      role: "Plant Manager",
-      content: "Our production efficiency has increased by 25% since implementing this system. The predictive alerts help us plan maintenance perfectly.",
+      name: "Michael Rodriguez",
+      company: "Global Consulting",
+      role: "Project Director",
+      content: "The time zone handling is flawless. We coordinate with teams across 5 continents and never have scheduling issues anymore.",
+      rating: 5
+    },
+    {
+      name: "Emily Johnson",
+      company: "Creative Agency",
+      role: "CEO",
+      content: "The mobile app is so intuitive. I can manage my entire team's schedule from anywhere. It's become essential to our workflow.",
       rating: 5
     }
   ];
@@ -148,16 +117,16 @@ export default function AiPredictiveMaintenance() {
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Industrial IoT Solutions | Zion Tech Group</title>
+        <title>Zion Smart Scheduler - AI-Powered Calendar Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered predictive maintenance platform. Prevent equipment failures, reduce downtime by 80%, and cut maintenance costs by 40%. Industrial IoT and machine learning solutions."
+          content="Revolutionary AI-powered calendar management tool. Smart scheduling, multi-platform sync, team collaboration, and time zone intelligence. Start your free trial today!"
         />
         <meta
           name="keywords"
-          content="predictive maintenance, AI maintenance, industrial IoT, equipment monitoring, failure prediction, maintenance optimization, industrial automation, machine learning"
+          content="calendar management, AI scheduling, team collaboration, time zone handling, productivity tools, smart calendar, meeting scheduler, calendar sync"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-predictive-maintenance" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-smart-scheduler" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -171,19 +140,19 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Star className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 AI Maintenance Platform 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 AI Calendar Tool 2024</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Predictive
+              Zion Smart
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Maintenance
+                {" "}Scheduler
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Prevent equipment failures before they happen. Our AI-powered predictive maintenance platform 
-              reduces downtime by 80% and cuts maintenance costs by 40% using advanced machine learning.
+              The world's most intelligent calendar management platform. AI-powered scheduling, 
+              seamless multi-platform sync, and team collaboration tools that save you hours every week.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -199,7 +168,7 @@ export default function AiPredictiveMaintenance() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Wrench className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Clock className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
@@ -210,13 +179,13 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Intelligent Maintenance
+                Powerful Features for
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Solutions
+                  {" "}Modern Teams
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to optimize your maintenance operations and prevent costly equipment failures.
+                Everything you need to manage your time efficiently and collaborate seamlessly with your team.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -245,54 +214,15 @@ export default function AiPredictiveMaintenance() {
           </div>
         </section>
 
-        {/* Industries Section */}
+        {/* Pricing Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted Across Industries
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI predictive maintenance solutions are transforming operations across multiple industries.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {industries.map((industry, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
-                >
-                  <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${industry.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    {industry.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {industry.title}
-                  </h3>
-                  <p className="text-gray-300 mb-4 leading-relaxed">
-                    {industry.description}
-                  </p>
-                  <div className="text-center">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
-                      {industry.savings}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your facility size and maintenance needs.
+                Choose the plan that fits your needs. All plans include our core AI scheduling features.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -345,14 +275,14 @@ export default function AiPredictiveMaintenance() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                Trusted by Teams Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Predictive Maintenance
+                See what our customers say about Zion Smart Scheduler
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -381,10 +311,10 @@ export default function AiPredictiveMaintenance() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Prevent Equipment Failures?
+              Ready to Transform Your Scheduling?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of facilities already using AI Predictive Maintenance to reduce downtime and cut costs. 
+              Join thousands of teams already using Zion Smart Scheduler to save time and improve collaboration. 
               Start your free trial today - no credit card required.
             </p>
             
@@ -426,7 +356,7 @@ export default function AiPredictiveMaintenance() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Wrench className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Clock className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

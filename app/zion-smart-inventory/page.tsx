@@ -1,146 +1,146 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Wrench, AlertTriangle, TrendingUp, CheckCircle, Star, ArrowRight, Smartphone, Mail, Globe, BarChart3, Zap, Shield } from 'lucide-react';
+import { Package, TrendingUp, Zap, CheckCircle, Star, ArrowRight, Smartphone, Mail, Globe, BarChart3, AlertTriangle, RefreshCw } from 'lucide-react';
 
-export default function AiPredictiveMaintenance() {
+export default function ZionSmartInventory() {
   const features = [
     {
-      title: "AI-Powered Failure Prediction",
-      description: "Predict equipment failures up to 30 days in advance with 95% accuracy using advanced machine learning algorithms",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      benefit: "95% accuracy rate"
-    },
-    {
-      title: "Real-Time Monitoring",
-      description: "Continuous monitoring of equipment health with IoT sensors and real-time data analysis",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefit: "24/7 monitoring"
-    },
-    {
-      title: "Automated Maintenance Scheduling",
-      description: "Intelligent scheduling of maintenance tasks based on predicted failure risks and operational requirements",
-      icon: <Wrench className="w-6 h-6" />,
-      benefit: "Optimal scheduling"
-    },
-    {
-      title: "Cost Optimization",
-      description: "Reduce maintenance costs by up to 40% through predictive maintenance and optimized resource allocation",
+      title: "AI-Powered Demand Forecasting",
+      description: "Predict inventory needs with 95% accuracy using machine learning and historical data analysis",
       icon: <TrendingUp className="w-6 h-6" />,
-      benefit: "40% cost reduction"
+      benefit: "Reduce stockouts by 80%"
     },
     {
-      title: "Downtime Prevention",
-      description: "Prevent unexpected equipment failures and minimize production downtime with proactive maintenance",
-      icon: <Shield className="w-6 h-6" />,
-      benefit: "Zero unexpected downtime"
+      title: "Real-Time Inventory Tracking",
+      description: "Monitor stock levels across multiple locations with instant updates and automated alerts",
+      icon: <Package className="w-6 h-6" />,
+      benefit: "Always know your stock"
     },
     {
-      title: "Mobile Alerts",
-      description: "Get instant notifications on your mobile device when maintenance is required or issues are detected",
-      icon: <Smartphone className="w-6 h-6" />,
-      benefit: "Instant notifications"
+      title: "Automated Reordering",
+      description: "Set smart reorder points and let AI automatically place orders with your suppliers",
+      icon: <Zap className="w-6 h-6" />,
+      benefit: "Never run out of stock"
+    },
+    {
+      title: "Multi-Channel Sync",
+      description: "Sync inventory across online stores, physical locations, and marketplaces in real-time",
+      icon: <RefreshCw className="w-6 h-6" />,
+      benefit: "Unified inventory view"
+    },
+    {
+      title: "Advanced Analytics",
+      description: "Get insights into sales patterns, seasonal trends, and inventory performance with detailed reports",
+      icon: <BarChart3 className="w-6 h-6" />,
+      benefit: "Data-driven decisions"
+    },
+    {
+      title: "Low Stock Alerts",
+      description: "Get instant notifications when items are running low or out of stock across all channels",
+      icon: <AlertTriangle className="w-6 h-6" />,
+      benefit: "Proactive management"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$49",
       period: "per month",
-      description: "Perfect for small facilities",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 50 assets",
-        "Basic AI predictions",
-        "Email alerts",
-        "Mobile app",
-        "Standard support"
+        "Up to 1,000 products",
+        "2 locations",
+        "Basic forecasting",
+        "Email support",
+        "Mobile app"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$149",
       period: "per month",
-      description: "Ideal for medium facilities",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 200 assets",
-        "Advanced AI algorithms",
-        "Real-time monitoring",
-        "Custom dashboards",
+        "Up to 10,000 products",
+        "10 locations",
+        "Advanced AI forecasting",
+        "Multi-channel sync",
         "Priority support",
-        "API integration"
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$399",
       period: "per month",
-      description: "For large industrial facilities",
+      description: "For large organizations",
       features: [
-        "Unlimited assets",
+        "Unlimited products",
+        "Unlimited locations",
         "Custom AI training",
         "White-label options",
         "Dedicated support",
-        "Advanced analytics",
-        "Custom integrations"
+        "Advanced integrations"
       ],
       popular: false
     }
   ];
 
-  const industries = [
+  const benefits = [
     {
-      title: "Manufacturing",
-      description: "Optimize production lines and reduce equipment downtime with predictive maintenance",
-      icon: <Wrench className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      savings: "35% cost reduction"
-    },
-    {
-      title: "Energy & Utilities",
-      description: "Prevent power outages and optimize energy generation with intelligent maintenance scheduling",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500",
-      savings: "50% downtime reduction"
-    },
-    {
-      title: "Transportation",
-      description: "Ensure fleet reliability and safety with predictive maintenance for vehicles and infrastructure",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Reduce Inventory Costs",
+      description: "Optimize stock levels and reduce carrying costs by up to 30% with intelligent forecasting",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
-      savings: "60% maintenance efficiency"
+      stat: "30% cost reduction"
     },
     {
-      title: "Healthcare",
-      description: "Maintain critical medical equipment and ensure patient safety with predictive maintenance",
-      icon: <CheckCircle className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500",
-      savings: "45% equipment uptime"
+      title: "Eliminate Stockouts",
+      description: "Prevent lost sales with accurate demand forecasting and automated reordering",
+      icon: <AlertTriangle className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      stat: "95% accuracy"
+    },
+    {
+      title: "Save Time",
+      description: "Automate inventory management tasks and focus on growing your business",
+      icon: <Zap className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      stat: "10+ hours saved/week"
+    },
+    {
+      title: "Increase Sales",
+      description: "Never miss a sale due to out-of-stock items with intelligent inventory optimization",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      stat: "25% sales increase"
     }
   ];
 
   const testimonials = [
     {
-      name: "James Wilson",
-      company: "Industrial Manufacturing",
-      role: "Maintenance Director",
-      content: "Zion AI Predictive Maintenance has transformed our operations. We've reduced unplanned downtime by 80% and saved over $2M in maintenance costs.",
-      rating: 5
-    },
-    {
-      name: "Sarah Davis",
-      company: "Power Generation Plant",
+      name: "Jennifer Martinez",
+      company: "Retail Chain",
       role: "Operations Manager",
-      content: "The AI predictions are incredibly accurate. We've prevented 3 major equipment failures that would have cost us millions in downtime.",
+      content: "Zion Smart Inventory transformed our operations. We reduced stockouts by 90% and cut inventory costs by 35% in just 3 months.",
       rating: 5
     },
     {
-      name: "Michael Chen",
-      company: "Automotive Manufacturing",
-      role: "Plant Manager",
-      content: "Our production efficiency has increased by 25% since implementing this system. The predictive alerts help us plan maintenance perfectly.",
+      name: "Robert Chen",
+      company: "E-commerce Store",
+      role: "Founder",
+      content: "The AI forecasting is incredibly accurate. We've never been out of stock on our bestsellers since implementing this system.",
+      rating: 5
+    },
+    {
+      name: "Lisa Thompson",
+      company: "Wholesale Distributor",
+      role: "Inventory Director",
+      content: "Managing inventory across 15 locations used to be a nightmare. Now it's completely automated and we have perfect visibility.",
       rating: 5
     }
   ];
@@ -148,16 +148,16 @@ export default function AiPredictiveMaintenance() {
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Industrial IoT Solutions | Zion Tech Group</title>
+        <title>Zion Smart Inventory - AI-Powered Inventory Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered predictive maintenance platform. Prevent equipment failures, reduce downtime by 80%, and cut maintenance costs by 40%. Industrial IoT and machine learning solutions."
+          content="Revolutionary AI-powered inventory management system. Demand forecasting, automated reordering, multi-channel sync, and real-time tracking. Reduce costs by 30% and eliminate stockouts."
         />
         <meta
           name="keywords"
-          content="predictive maintenance, AI maintenance, industrial IoT, equipment monitoring, failure prediction, maintenance optimization, industrial automation, machine learning"
+          content="inventory management, demand forecasting, stock management, automated reordering, multi-channel sync, inventory tracking, supply chain, warehouse management"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-predictive-maintenance" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-smart-inventory" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -171,19 +171,19 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Star className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 AI Maintenance Platform 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 AI Inventory Platform 2024</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Predictive
+              Zion Smart
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Maintenance
+                {" "}Inventory
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Prevent equipment failures before they happen. Our AI-powered predictive maintenance platform 
-              reduces downtime by 80% and cuts maintenance costs by 40% using advanced machine learning.
+              The world's most intelligent inventory management system. AI-powered forecasting, 
+              automated reordering, and real-time tracking that reduces costs by 30% and eliminates stockouts.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -199,7 +199,7 @@ export default function AiPredictiveMaintenance() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Wrench className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Package className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
@@ -210,13 +210,13 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Intelligent Maintenance
+                Intelligent Inventory
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Solutions
+                  {" "}Management
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to optimize your maintenance operations and prevent costly equipment failures.
+                Everything you need to optimize your inventory and maximize profitability.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -245,37 +245,37 @@ export default function AiPredictiveMaintenance() {
           </div>
         </section>
 
-        {/* Industries Section */}
+        {/* Benefits Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted Across Industries
+                Proven Business Results
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI predictive maintenance solutions are transforming operations across multiple industries.
+                Join thousands of businesses that have transformed their inventory management with Zion Smart Inventory.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {industries.map((industry, index) => (
+              {benefits.map((benefit, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${industry.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${benefit.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                   >
-                    {industry.icon}
+                    {benefit.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {industry.title}
+                    {benefit.title}
                   </h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">
-                    {industry.description}
+                    {benefit.description}
                   </p>
                   <div className="text-center">
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
-                      {industry.savings}
+                      {benefit.stat}
                     </span>
                   </div>
                 </div>
@@ -289,10 +289,10 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your facility size and maintenance needs.
+                Choose the plan that fits your business size and inventory needs.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -352,7 +352,7 @@ export default function AiPredictiveMaintenance() {
                 Trusted by Industry Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Predictive Maintenance
+                See what our customers say about Zion Smart Inventory
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -381,10 +381,10 @@ export default function AiPredictiveMaintenance() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Prevent Equipment Failures?
+              Ready to Optimize Your Inventory?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of facilities already using AI Predictive Maintenance to reduce downtime and cut costs. 
+              Join thousands of businesses already using Zion Smart Inventory to reduce costs and eliminate stockouts. 
               Start your free trial today - no credit card required.
             </p>
             
@@ -426,7 +426,7 @@ export default function AiPredictiveMaintenance() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Wrench className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Package className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

@@ -218,6 +218,30 @@ const Footer = React.memo(() => {
                   Zion Project Master
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/zion-smart-scheduler"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion Smart Scheduler
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-ai-translator"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Translator
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-smart-inventory"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion Smart Inventory
+                </Link>
+              </li>
             </ul>
           </div>
 

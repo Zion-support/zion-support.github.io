@@ -1,45 +1,45 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Wrench, AlertTriangle, TrendingUp, CheckCircle, Star, ArrowRight, Smartphone, Mail, Globe, BarChart3, Zap, Shield } from 'lucide-react';
+import { Cpu, Zap, Globe, CheckCircle, Star, ArrowRight, Smartphone, Mail, Globe as GlobeIcon, BarChart3, Shield, Cloud } from 'lucide-react';
 
-export default function AiPredictiveMaintenance() {
+export default function EdgeComputingSolutions() {
   const features = [
     {
-      title: "AI-Powered Failure Prediction",
-      description: "Predict equipment failures up to 30 days in advance with 95% accuracy using advanced machine learning algorithms",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      benefit: "95% accuracy rate"
+      title: "Ultra-Low Latency Processing",
+      description: "Process data at the edge with sub-5ms latency for real-time applications and IoT devices",
+      icon: <Cpu className="w-6 h-6" />,
+      benefit: "Sub-5ms latency"
     },
     {
-      title: "Real-Time Monitoring",
-      description: "Continuous monitoring of equipment health with IoT sensors and real-time data analysis",
-      icon: <BarChart3 className="w-6 h-6" />,
-      benefit: "24/7 monitoring"
+      title: "Distributed Edge Network",
+      description: "Deploy computing resources across multiple edge locations for maximum coverage and redundancy",
+      icon: <Globe className="w-6 h-6" />,
+      benefit: "Global coverage"
     },
     {
-      title: "Automated Maintenance Scheduling",
-      description: "Intelligent scheduling of maintenance tasks based on predicted failure risks and operational requirements",
-      icon: <Wrench className="w-6 h-6" />,
-      benefit: "Optimal scheduling"
+      title: "AI at the Edge",
+      description: "Run machine learning models directly on edge devices for instant decision-making and reduced bandwidth",
+      icon: <Zap className="w-6 h-6" />,
+      benefit: "Real-time AI"
     },
     {
-      title: "Cost Optimization",
-      description: "Reduce maintenance costs by up to 40% through predictive maintenance and optimized resource allocation",
-      icon: <TrendingUp className="w-6 h-6" />,
-      benefit: "40% cost reduction"
+      title: "5G Integration",
+      description: "Seamless integration with 5G networks for ultra-fast data transmission and connectivity",
+      icon: <Cloud className="w-6 h-6" />,
+      benefit: "5G ready"
     },
     {
-      title: "Downtime Prevention",
-      description: "Prevent unexpected equipment failures and minimize production downtime with proactive maintenance",
+      title: "Edge Security",
+      description: "Advanced security protocols and encryption for edge devices and data transmission",
       icon: <Shield className="w-6 h-6" />,
-      benefit: "Zero unexpected downtime"
+      benefit: "Military-grade security"
     },
     {
-      title: "Mobile Alerts",
-      description: "Get instant notifications on your mobile device when maintenance is required or issues are detected",
-      icon: <Smartphone className="w-6 h-6" />,
-      benefit: "Instant notifications"
+      title: "Real-Time Analytics",
+      description: "Process and analyze data streams in real-time at the edge for immediate insights",
+      icon: <BarChart3 className="w-6 h-6" />,
+      benefit: "Instant insights"
     }
   ];
 
@@ -48,99 +48,99 @@ export default function AiPredictiveMaintenance() {
       name: "Starter",
       price: "$299",
       period: "per month",
-      description: "Perfect for small facilities",
+      description: "Perfect for small IoT deployments",
       features: [
-        "Up to 50 assets",
-        "Basic AI predictions",
-        "Email alerts",
-        "Mobile app",
-        "Standard support"
+        "Up to 10 edge nodes",
+        "Basic analytics",
+        "Standard support",
+        "5G connectivity",
+        "Basic security"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$899",
       period: "per month",
-      description: "Ideal for medium facilities",
+      description: "Ideal for medium-scale deployments",
       features: [
-        "Up to 200 assets",
-        "Advanced AI algorithms",
-        "Real-time monitoring",
-        "Custom dashboards",
+        "Up to 100 edge nodes",
+        "Advanced AI processing",
+        "Real-time analytics",
         "Priority support",
-        "API integration"
+        "Custom integrations",
+        "Advanced security"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$2,999",
       period: "per month",
-      description: "For large industrial facilities",
+      description: "For large-scale industrial deployments",
       features: [
-        "Unlimited assets",
-        "Custom AI training",
+        "Unlimited edge nodes",
+        "Custom AI models",
         "White-label options",
         "Dedicated support",
-        "Advanced analytics",
-        "Custom integrations"
+        "Advanced monitoring",
+        "Custom security"
       ],
       popular: false
     }
   ];
 
-  const industries = [
+  const useCases = [
     {
-      title: "Manufacturing",
-      description: "Optimize production lines and reduce equipment downtime with predictive maintenance",
-      icon: <Wrench className="w-8 h-8" />,
+      title: "Smart Manufacturing",
+      description: "Real-time quality control and predictive maintenance on production lines",
+      icon: <Cpu className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
-      savings: "35% cost reduction"
+      benefit: "40% efficiency gain"
     },
     {
-      title: "Energy & Utilities",
-      description: "Prevent power outages and optimize energy generation with intelligent maintenance scheduling",
+      title: "Autonomous Vehicles",
+      description: "Ultra-low latency processing for autonomous driving and traffic management",
       icon: <Zap className="w-8 h-8" />,
-      color: "from-yellow-500 to-orange-500",
-      savings: "50% downtime reduction"
-    },
-    {
-      title: "Transportation",
-      description: "Ensure fleet reliability and safety with predictive maintenance for vehicles and infrastructure",
-      icon: <Shield className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
-      savings: "60% maintenance efficiency"
+      benefit: "99.9% safety rate"
     },
     {
-      title: "Healthcare",
-      description: "Maintain critical medical equipment and ensure patient safety with predictive maintenance",
-      icon: <CheckCircle className="w-8 h-8" />,
-      color: "from-red-500 to-pink-500",
-      savings: "45% equipment uptime"
+      title: "Smart Cities",
+      description: "Real-time monitoring and optimization of city infrastructure and services",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      benefit: "30% cost reduction"
+    },
+    {
+      title: "Healthcare IoT",
+      description: "Real-time patient monitoring and emergency response systems",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      benefit: "50% faster response"
     }
   ];
 
   const testimonials = [
     {
-      name: "James Wilson",
-      company: "Industrial Manufacturing",
-      role: "Maintenance Director",
-      content: "Zion AI Predictive Maintenance has transformed our operations. We've reduced unplanned downtime by 80% and saved over $2M in maintenance costs.",
-      rating: 5
-    },
-    {
-      name: "Sarah Davis",
-      company: "Power Generation Plant",
-      role: "Operations Manager",
-      content: "The AI predictions are incredibly accurate. We've prevented 3 major equipment failures that would have cost us millions in downtime.",
+      name: "Dr. Sarah Johnson",
+      company: "Smart Manufacturing Corp",
+      role: "CTO",
+      content: "Edge computing has revolutionized our production line. We've achieved 40% efficiency gains and zero downtime with real-time quality control.",
       rating: 5
     },
     {
       name: "Michael Chen",
-      company: "Automotive Manufacturing",
-      role: "Plant Manager",
-      content: "Our production efficiency has increased by 25% since implementing this system. The predictive alerts help us plan maintenance perfectly.",
+      company: "Autonomous Vehicle Systems",
+      role: "Lead Engineer",
+      content: "The ultra-low latency processing is incredible. Our autonomous vehicles can make split-second decisions that have improved safety by 99.9%.",
+      rating: 5
+    },
+    {
+      name: "Lisa Rodriguez",
+      company: "Smart City Initiative",
+      role: "Project Director",
+      content: "Edge computing has transformed our city's infrastructure. Traffic optimization alone has reduced congestion by 35% and saved millions in costs.",
       rating: 5
     }
   ];
@@ -148,16 +148,16 @@ export default function AiPredictiveMaintenance() {
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Industrial IoT Solutions | Zion Tech Group</title>
+        <title>Edge Computing Solutions - Ultra-Low Latency Processing | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered predictive maintenance platform. Prevent equipment failures, reduce downtime by 80%, and cut maintenance costs by 40%. Industrial IoT and machine learning solutions."
+          content="Revolutionary edge computing solutions with sub-5ms latency. AI at the edge, 5G integration, real-time analytics, and distributed edge networks for IoT and industrial applications."
         />
         <meta
           name="keywords"
-          content="predictive maintenance, AI maintenance, industrial IoT, equipment monitoring, failure prediction, maintenance optimization, industrial automation, machine learning"
+          content="edge computing, ultra-low latency, IoT processing, 5G integration, real-time analytics, distributed computing, industrial IoT, smart manufacturing"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-predictive-maintenance" />
+        <link rel="canonical" href="https://ziontechgroup.com/edge-computing-solutions" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -171,19 +171,19 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Star className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 AI Maintenance Platform 2024</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 Edge Computing Platform 2024</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI Predictive
+              Edge Computing
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Maintenance
+                {" "}Solutions
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Prevent equipment failures before they happen. Our AI-powered predictive maintenance platform 
-              reduces downtime by 80% and cuts maintenance costs by 40% using advanced machine learning.
+              Process data at the edge with sub-5ms latency. Our edge computing platform enables 
+              real-time AI, IoT processing, and ultra-fast decision-making for modern applications.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -199,7 +199,7 @@ export default function AiPredictiveMaintenance() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Wrench className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Cpu className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
@@ -210,13 +210,13 @@ export default function AiPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Intelligent Maintenance
+                Ultra-Fast Edge
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  {" "}Solutions
+                  {" "}Processing
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Everything you need to optimize your maintenance operations and prevent costly equipment failures.
+                Everything you need to deploy and manage edge computing infrastructure for real-time applications.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -245,37 +245,37 @@ export default function AiPredictiveMaintenance() {
           </div>
         </section>
 
-        {/* Industries Section */}
+        {/* Use Cases Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted Across Industries
+                Transform Your Industry
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI predictive maintenance solutions are transforming operations across multiple industries.
+                Edge computing solutions for every industry, from manufacturing to healthcare.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {industries.map((industry, index) => (
+              {useCases.map((useCase, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${industry.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                   >
-                    {industry.icon}
+                    {useCase.icon}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {industry.title}
+                    {useCase.title}
                   </h3>
                   <p className="text-gray-300 mb-4 leading-relaxed">
-                    {industry.description}
+                    {useCase.description}
                   </p>
                   <div className="text-center">
                     <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
-                      {industry.savings}
+                      {useCase.benefit}
                     </span>
                   </div>
                 </div>
@@ -292,7 +292,7 @@ export default function AiPredictiveMaintenance() {
                 Flexible Pricing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your facility size and maintenance needs.
+                Choose the plan that fits your edge computing needs and deployment scale.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -352,7 +352,7 @@ export default function AiPredictiveMaintenance() {
                 Trusted by Industry Leaders
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Predictive Maintenance
+                See what our customers say about Edge Computing Solutions
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -381,10 +381,10 @@ export default function AiPredictiveMaintenance() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Prevent Equipment Failures?
+              Ready to Deploy Edge Computing?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of facilities already using AI Predictive Maintenance to reduce downtime and cut costs. 
+              Join thousands of organizations already using edge computing to achieve ultra-low latency and real-time processing. 
               Start your free trial today - no credit card required.
             </p>
             
@@ -406,7 +406,7 @@ export default function AiPredictiveMaintenance() {
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                  <Globe className="w-6 h-6 text-white" />
+                  <GlobeIcon className="w-6 h-6 text-white" />
                 </div>
                 <h3 className="text-white font-semibold mb-2">Address</h3>
                 <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
@@ -426,7 +426,7 @@ export default function AiPredictiveMaintenance() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Wrench className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Cpu className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

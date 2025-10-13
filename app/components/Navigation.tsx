@@ -36,7 +36,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
     { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
     { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance', icon: <Shield className="w-4 h-4" /> },
+    { name: 'AI-Powered DevOps', path: '/ai-powered-devops', icon: <Code className="w-4 h-4" /> }
   ], [])
 
   const itServices = useMemo(() => [
@@ -47,7 +49,8 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Database Management', path: '/database-management', icon: <Database className="w-4 h-4" /> },
     { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
     { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'Edge Computing Solutions', path: '/edge-computing-solutions', icon: <Zap className="w-4 h-4" /> }
   ], [])
 
   const microSaasServices = useMemo(() => [
@@ -58,7 +61,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Smart Scheduler', path: '/zion-smart-scheduler', icon: <Zap className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Translator', path: '/zion-ai-translator', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion Smart Inventory', path: '/zion-smart-inventory', icon: <Database className="w-4 h-4" />, featured: true }
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -119,23 +125,25 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20 max-h-96 overflow-y-auto">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
                     <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">AI Services</h3>
                   </div>
-                  {aiServices.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.path}
-                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group"
-                      onClick={() => setIsServicesOpen(false)}
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-300">
-                        {service.icon}
-                      </div>
-                      <span className="font-medium">{service.name}</span>
-                    </Link>
-                  ))}
+                  <div className="grid grid-cols-1 gap-1">
+                    {aiServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group rounded-lg mx-2"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-300 flex-shrink-0">
+                          {service.icon}
+                        </div>
+                        <span className="font-medium text-sm">{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -151,23 +159,25 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               </button>
               
               {isItServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-green-500/20 max-h-96 overflow-y-auto">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
                     <h3 className="text-sm font-semibold text-green-400 uppercase tracking-wider">IT Services</h3>
                   </div>
-                  {itServices.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.path}
-                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 group"
-                      onClick={() => setIsItServicesOpen(false)}
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-blue-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-blue-500/30 transition-all duration-300">
-                        {service.icon}
-                      </div>
-                      <span className="font-medium">{service.name}</span>
-                    </Link>
-                  ))}
+                  <div className="grid grid-cols-1 gap-1">
+                    {itServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-green-500/10 hover:text-green-400 transition-all duration-300 group rounded-lg mx-2"
+                        onClick={() => setIsItServicesOpen(false)}
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-green-500/20 to-blue-500/20 flex items-center justify-center group-hover:from-green-500/30 group-hover:to-blue-500/30 transition-all duration-300 flex-shrink-0">
+                          {service.icon}
+                        </div>
+                        <span className="font-medium text-sm">{service.name}</span>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -183,33 +193,35 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               </button>
               
               {isMicroSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
+                <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20 max-h-96 overflow-y-auto">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
                     <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">Micro SAAS Solutions</h3>
                   </div>
-                  {microSaasServices.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.path}
-                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group ${
-                        service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : ''
-                      }`}
-                      onClick={() => setIsMicroSaasOpen(false)}
-                    >
-                      <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300">
-                        {service.icon}
-                      </div>
-                      <div className="flex-1">
-                        <span className="font-medium">{service.name}</span>
-                        {service.featured && (
-                          <div className="flex items-center mt-1">
-                            <Star className="w-3 h-3 text-yellow-400 fill-current mr-1" />
-                            <span className="text-xs text-yellow-400">Featured</span>
-                          </div>
-                        )}
-                      </div>
-                    </Link>
-                  ))}
+                  <div className="grid grid-cols-1 gap-1">
+                    {microSaasServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group rounded-lg mx-2 ${
+                          service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : ''
+                        }`}
+                        onClick={() => setIsMicroSaasOpen(false)}
+                      >
+                        <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center group-hover:from-purple-500/30 group-hover:to-cyan-500/30 transition-all duration-300 flex-shrink-0">
+                          {service.icon}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <span className="font-medium text-sm block truncate">{service.name}</span>
+                          {service.featured && (
+                            <div className="flex items-center mt-1">
+                              <Star className="w-3 h-3 text-yellow-400 fill-current mr-1 flex-shrink-0" />
+                              <span className="text-xs text-yellow-400">Featured</span>
+                            </div>
+                          )}
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -260,7 +272,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                 </button>
                 
                 {isServicesOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
+                  <div className="ml-4 mt-2 space-y-1 max-h-64 overflow-y-auto">
                     {aiServices.map((service) => (
                       <Link
                         key={service.name}
@@ -271,8 +283,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                           toggleMenu()
                         }}
                       >
-                        {service.icon}
-                        <span>{service.name}</span>
+                        <div className="w-6 h-6 rounded bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center flex-shrink-0">
+                          {service.icon}
+                        </div>
+                        <span className="text-sm">{service.name}</span>
                       </Link>
                     ))}
                   </div>
@@ -290,7 +304,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                 </button>
                 
                 {isItServicesOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
+                  <div className="ml-4 mt-2 space-y-1 max-h-64 overflow-y-auto">
                     {itServices.map((service) => (
                       <Link
                         key={service.name}
@@ -301,8 +315,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                           toggleMenu()
                         }}
                       >
-                        {service.icon}
-                        <span>{service.name}</span>
+                        <div className="w-6 h-6 rounded bg-gradient-to-r from-green-500/20 to-blue-500/20 flex items-center justify-center flex-shrink-0">
+                          {service.icon}
+                        </div>
+                        <span className="text-sm">{service.name}</span>
                       </Link>
                     ))}
                   </div>
@@ -320,7 +336,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                 </button>
                 
                 {isMicroSaasOpen && (
-                  <div className="ml-4 mt-2 space-y-1">
+                  <div className="ml-4 mt-2 space-y-1 max-h-64 overflow-y-auto">
                     {microSaasServices.map((service) => (
                       <Link
                         key={service.name}
@@ -331,9 +347,11 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                           toggleMenu()
                         }}
                       >
-                        {service.icon}
-                        <span>{service.name}</span>
-                        {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current ml-auto" />}
+                        <div className="w-6 h-6 rounded bg-gradient-to-r from-purple-500/20 to-cyan-500/20 flex items-center justify-center flex-shrink-0">
+                          {service.icon}
+                        </div>
+                        <span className="text-sm flex-1">{service.name}</span>
+                        {service.featured && <Star className="w-3 h-3 text-yellow-400 fill-current flex-shrink-0" />}
                       </Link>
                     ))}
                   </div>
