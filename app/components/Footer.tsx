@@ -70,7 +70,7 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cloud-services"
+                  to="/cloud-infrastructure"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Cloud Solutions
@@ -78,7 +78,7 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/cybersecurity"
+                  to="/cybersecurity-solutions"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Cybersecurity
@@ -165,7 +165,7 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/custom-development"
+                  to="/custom-software"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Custom Development

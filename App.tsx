@@ -60,6 +60,9 @@ const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-auto
 const CloudInfrastructurePage = React.lazy(
   () => import("./app/cloud-infrastructure/page"),
 );
+const CloudServicesPage = React.lazy(
+  () => import("./app/cloud-services/page"),
+);
 const CybersecuritySolutionsPage = React.lazy(
   () => import("./app/cybersecurity-solutions/page"),
 );
@@ -255,6 +258,10 @@ function App() {
                   <Route
                     path="/cloud-infrastructure"
                     element={<CloudInfrastructurePage />}
+                  />
+                  <Route
+                    path="/cloud-services"
+                    element={<CloudServicesPage />}
                   />
                   <Route
                     path="/cybersecurity-solutions"
