@@ -1,23 +1,26 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
-import "./app/styles/futuristic.css";
-import "./app/styles/accessibility-enhanced.css";
 import Navigation from "./app/components/Navigation";
-import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
+import Footer from "./app/components/Footer";
+import LoadingPage from "./app/components/Loading";
 import HomePage from "./app/page";
-import { LoadingPage } from "./app/components/LoadingStates";
-import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
+<<<<<<< HEAD
+=======
+import LoadingPage from "./app/components/Loading";
+import EnhancedSEO from "./app/components/EnhancedSEO";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
+import PerformanceMonitor from "./app/components/PerformanceMonitor";
+>>>>>>> cursor/analyze-improve-and-deploy-application-5cc2
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -26,6 +29,12 @@ const ServicesPage = React.lazy(() => import("./app/services/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
+const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
+const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
+const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
+const DemoPage = React.lazy(() => import("./app/demo/page"));
+const SupportPage = React.lazy(() => import("./app/support/page"));
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
@@ -49,7 +58,6 @@ const SystemIntegrationPage = React.lazy(() => import("./app/system-integration/
 const WebDevelopmentPage = React.lazy(() => import("./app/web-development/page"));
 
 // 5G Services Pages
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
 const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
 const FiveGIoTSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
@@ -72,10 +80,27 @@ const WebsiteAnalyticsToolPage = React.lazy(() => import("./app/data-analytics/p
 const TaskAutomationWorkflowPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
 // New Innovative Micro SAAS Services
-const AIPoweredEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-assistant/page"));
-const SmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-inventory-smart/page"));
-const AICustomerSentimentTrackerPage = React.lazy(() => import("./app/ai-customer-sentiment-tracker/page"));
-const SmartExpenseCategorizerPage = React.lazy(() => import("./app/ai-financial-crime-detection-pro/page"));
+const ZionAIVideoGeneratorPage = React.lazy(() => import("./app/zion-ai-video-generator/page"));
+const ZionAIInvoiceGeneratorPage = React.lazy(() => import("./app/zion-ai-invoice-generator/page"));
+const ZionAICustomerInsightsPage = React.lazy(() => import("./app/zion-ai-customer-insights/page"));
+const ZionAIEmailAnalyzerPage = React.lazy(() => import("./app/zion-ai-email-analyzer/page"));
+const ZionSmartInventoryOptimizerPage = React.lazy(() => import("./app/zion-smart-inventory-optimizer/page"));
+const ZionAICustomerSentimentTrackerPage = React.lazy(() => import("./app/zion-ai-customer-sentiment-tracker/page"));
+const ZionSmartExpenseCategorizerPage = React.lazy(() => import("./app/zion-smart-expense-categorizer/page"));
+const ZionAIVoiceAssistantProPage = React.lazy(() => import("./app/zion-ai-voice-assistant-pro/page"));
+const ZionAICodeReviewerPage = React.lazy(() => import("./app/zion-ai-code-reviewer/page"));
+const ZionAISocialMediaManagerPage = React.lazy(() => import("./app/zion-ai-social-media-manager/page"));
+const ZionAIContractAnalyzerPage = React.lazy(() => import("./app/zion-ai-contract-analyzer/page"));
+const ZionAIPerformanceOptimizerPage = React.lazy(() => import("./app/zion-ai-performance-optimizer/page"));
+const ZionAICustomerChurnPredictorPage = React.lazy(() => import("./app/zion-ai-customer-churn-predictor/page"));
+const ZionAISupplyChainOptimizerPage = React.lazy(() => import("./app/zion-ai-supply-chain-optimizer/page"));
+const ZionAIFinancialForecasterPage = React.lazy(() => import("./app/zion-ai-financial-forecaster/page"));
+const ZionAIContentModeratorPage = React.lazy(() => import("./app/zion-ai-content-moderator/page"));
+const ZionAITranslatorProPage = React.lazy(() => import("./app/zion-ai-translator-pro/page"));
+const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
+const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
+const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
+
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -90,119 +115,125 @@ function App() {
   useEffect(() => {
     // Initialize performance monitoring
     if (typeof window !== 'undefined') {
-      // Add any global initialization logic here
       console.log('Zion Tech Group App initialized');
     }
   }, []);
 
   return (
-    <ImprovedErrorBoundary>
-      <GlobalErrorBoundary>
-        <EnhancedErrorBoundary>
-          <HelmetProvider>
-            <AnalyticsProvider>
-              <PerformanceMonitor>
-                <WebVitalsTracker>
-                  <EnhancedAccessibility>
-                    <AccessibilityEnhancer>
-                      <CoreWebVitals>
-                        <Router>
-                          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                            <FuturisticBackground>
-                              <Navigation onSidebarToggle={toggleSidebar} />
-                              <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                              <Breadcrumb />
-                              
-                              <main id="main-content" role="main" className="relative z-10">
-                                <Suspense fallback={<LoadingPage />}>
-                                  <Routes>
-                                    {/* Main Pages */}
-                                    <Route path="/" element={<HomePage />} />
-                                    <Route path="/about" element={<AboutPage />} />
-                                    <Route path="/contact" element={<ContactPage />} />
-                                    <Route path="/services" element={<ServicesPage />} />
-                                    <Route path="/blog" element={<BlogPage />} />
-                                    <Route path="/privacy" element={<PrivacyPage />} />
-                                    <Route path="/terms" element={<TermsPage />} />
+    <HelmetProvider>
+      <ErrorBoundary>
+        <AnalyticsProvider>
+          <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
+            <WebVitalsTracker>
+              <AccessibilityEnhancer>
+                <Router>
+                  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                    {/* Skip to main content link */}
+                    <a href="#main-content" className="skip-link">
+                      Skip to main content
+                    </a>
+                    
+                    <FuturisticBackground>
+                      <Navigation onSidebarToggle={toggleSidebar} />
+                      <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
+                      <Breadcrumb />
+                      
+                      <main id="main-content" role="main" className="relative z-10">
+                        <Suspense fallback={<LoadingPage message="Loading Zion Tech Group..." />}>
+                          <Routes>
+                            {/* Main Pages */}
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/about" element={<AboutPage />} />
+                            <Route path="/contact" element={<ContactPage />} />
+                            <Route path="/services" element={<ServicesPage />} />
+                            <Route path="/blog" element={<BlogPage />} />
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/ai-services" element={<AIServicesPage />} />
+                            <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+                            <Route path="/tutorials" element={<TutorialsPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/support" element={<SupportPage />} />
 
-                                    {/* AI Services */}
-                                    <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
-                                    <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-                                    <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
-                                    <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
-                                    <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
-                                    <Route path="/ai-document-processing" element={<AIDocumentProcessingPage />} />
-                                    <Route path="/ai-marketing-automation" element={<AIMarketingAutomationPage />} />
-                                    <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
-                                    <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
-                                    <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
+                            {/* AI Services Routes */}
+                            <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
+                            <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
+                            <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />
+                            <Route path="/ai-cybersecurity" element={<AICybersecurityPage />} />
+                            <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
+                            <Route path="/ai-document-processing" element={<AIDocumentProcessingPage />} />
+                            <Route path="/ai-marketing-automation" element={<AIMarketingAutomationPage />} />
+                            <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
+                            <Route path="/ai-voice-assistant" element={<AIVoiceAssistantPage />} />
+                            <Route path="/ai-workflow-automation" element={<AIWorkflowAutomationPage />} />
 
-                                    {/* IT Services */}
-                                    <Route path="/cloud-migration" element={<CloudMigrationPage />} />
-                                    <Route path="/devops-services" element={<DevOpsServicesPage />} />
-                                    <Route path="/it-consulting" element={<ITConsultingPage />} />
-                                    <Route path="/network-security" element={<NetworkSecurityPage />} />
-                                    <Route path="/software-development" element={<SoftwareDevelopmentPage />} />
-                                    <Route path="/system-integration" element={<SystemIntegrationPage />} />
-                                    <Route path="/web-development" element={<WebDevelopmentPage />} />
+                            {/* IT Services Routes */}
+                            <Route path="/cloud-migration" element={<CloudMigrationPage />} />
+                            <Route path="/devops" element={<DevOpsServicesPage />} />
+                            <Route path="/it-consulting" element={<ITConsultingPage />} />
+                            <Route path="/network-security" element={<NetworkSecurityPage />} />
+                            <Route path="/custom-software" element={<SoftwareDevelopmentPage />} />
+                            <Route path="/system-integration" element={<SystemIntegrationPage />} />
+                            <Route path="/web-development" element={<WebDevelopmentPage />} />
 
-                                    {/* 5G Services */}
-                                    <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                                    <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
-                                    <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
-                                    <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
-                                    <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
-                                    <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
-                                    <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
-                                    <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
-                                    <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
+                            {/* 5G Services Routes */}
+                            <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
+                            <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
+                            <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
+                            <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
+                            <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
+                            <Route path="/5g-mobile-applications" element={<FiveGMobileApplicationsPage />} />
+                            <Route path="/5g-data-analytics" element={<FiveGDataAnalyticsPage />} />
+                            <Route path="/5g-implementation" element={<FiveGImplementationPage />} />
 
-                                    {/* Micro SAAS Services */}
-                                    <Route path="/micro-saas-services" element={<MicroSaaSServicesPage />} />
-                                    <Route path="/project-management-tool" element={<ProjectManagementToolPage />} />
-                                    <Route path="/customer-relationship-manager" element={<CustomerRelationshipManagerPage />} />
-                                    <Route path="/inventory-management-system" element={<InventoryManagementSystemPage />} />
-                                    <Route path="/financial-reporting-tool" element={<FinancialReportingToolPage />} />
-                                    <Route path="/employee-time-tracker" element={<EmployeeTimeTrackerPage />} />
-                                    <Route path="/social-media-scheduler" element={<SocialMediaSchedulerPage />} />
-                                    <Route path="/email-marketing-platform" element={<EmailMarketingPlatformPage />} />
-                                    <Route path="/website-analytics-tool" element={<WebsiteAnalyticsToolPage />} />
-                                    <Route path="/task-automation-workflow" element={<TaskAutomationWorkflowPage />} />
+                            {/* Micro SAAS Services Routes */}
+                            <Route path="/zion-content-studio" element={<MicroSaaSServicesPage />} />
+                            <Route path="/project-management-pro" element={<ProjectManagementToolPage />} />
+                            <Route path="/zion-ai-crm-pro" element={<CustomerRelationshipManagerPage />} />
+                            <Route path="/zion-inventory-smart" element={<InventoryManagementSystemPage />} />
+                            <Route path="/ai-financial-analytics-pro" element={<FinancialReportingToolPage />} />
+                            <Route path="/zion-performance-monitor" element={<EmployeeTimeTrackerPage />} />
+                            <Route path="/zion-ai-marketing-automation" element={<SocialMediaSchedulerPage />} />
+                            <Route path="/zion-email-automation" element={<EmailMarketingPlatformPage />} />
+                            <Route path="/data-analytics" element={<WebsiteAnalyticsToolPage />} />
+                            <Route path="/ai-workflow-automation" element={<TaskAutomationWorkflowPage />} />
 
-                                    {/* New Innovative Micro SAAS Services */}
-                                    <Route path="/ai-powered-email-analyzer" element={<AIPoweredEmailAnalyzerPage />} />
-                                    <Route path="/smart-inventory-optimizer" element={<SmartInventoryOptimizerPage />} />
-                                    <Route path="/ai-customer-sentiment-tracker" element={<AICustomerSentimentTrackerPage />} />
-                                    <Route path="/smart-expense-categorizer" element={<SmartExpenseCategorizerPage />} />
-
-                                    {/* Catch all route */}
-                                    <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
-                                      <div className="text-center">
-                                        <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                                        <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
-                                        <a href="/" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                                          Go Home
-                                        </a>
-                                      </div>
-                                    </div>} />
-                                  </Routes>
-                                </Suspense>
-                              </main>
-                              
-                              <Footer />
-                            </FuturisticBackground>
-                          </div>
-                        </Router>
-                      </CoreWebVitals>
-                    </AccessibilityEnhancer>
-                  </EnhancedAccessibility>
-                </WebVitalsTracker>
-              </PerformanceMonitor>
-            </AnalyticsProvider>
-          </HelmetProvider>
-        </EnhancedErrorBoundary>
-      </GlobalErrorBoundary>
-    </ImprovedErrorBoundary>
+                            {/* New Innovative Micro SAAS Services Routes */}
+                            <Route path="/zion-ai-video-generator" element={<ZionAIVideoGeneratorPage />} />
+                            <Route path="/zion-ai-invoice-generator" element={<ZionAIInvoiceGeneratorPage />} />
+                            <Route path="/zion-ai-customer-insights" element={<ZionAICustomerInsightsPage />} />
+                            <Route path="/zion-ai-email-analyzer" element={<ZionAIEmailAnalyzerPage />} />
+                            <Route path="/zion-smart-inventory-optimizer" element={<ZionSmartInventoryOptimizerPage />} />
+                            <Route path="/zion-ai-customer-sentiment-tracker" element={<ZionAICustomerSentimentTrackerPage />} />
+                            <Route path="/zion-smart-expense-categorizer" element={<ZionSmartExpenseCategorizerPage />} />
+                            <Route path="/zion-ai-voice-assistant-pro" element={<ZionAIVoiceAssistantProPage />} />
+                            <Route path="/zion-ai-code-reviewer" element={<ZionAICodeReviewerPage />} />
+                            <Route path="/zion-ai-social-media-manager" element={<ZionAISocialMediaManagerPage />} />
+                            <Route path="/zion-ai-contract-analyzer" element={<ZionAIContractAnalyzerPage />} />
+                            <Route path="/zion-ai-performance-optimizer" element={<ZionAIPerformanceOptimizerPage />} />
+                            <Route path="/zion-ai-customer-churn-predictor" element={<ZionAICustomerChurnPredictorPage />} />
+                            <Route path="/zion-ai-supply-chain-optimizer" element={<ZionAISupplyChainOptimizerPage />} />
+                            <Route path="/zion-ai-financial-forecaster" element={<ZionAIFinancialForecasterPage />} />
+                            <Route path="/zion-ai-content-moderator" element={<ZionAIContentModeratorPage />} />
+                            <Route path="/zion-ai-translator-pro" element={<ZionAITranslatorProPage />} />
+                            <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
+                            <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
+                            <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+                          </Routes>
+                        </Suspense>
+                      </main>
+                      
+                      <Footer />
+                    </FuturisticBackground>
+                  </div>
+                </Router>
+              </AccessibilityEnhancer>
+            </WebVitalsTracker>
+          </PerformanceMonitor>
+        </AnalyticsProvider>
+      </ErrorBoundary>
+    </HelmetProvider>
   );
 }
 

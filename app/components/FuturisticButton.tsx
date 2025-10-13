@@ -1,12 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
 interface FuturisticButtonProps {
   children: React.ReactNode;
   href?: string;
-  onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
+  to?: string;
+  variant?: 'primary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
+  icon?: React.ReactNode;
+  onClick?: () => void;
   className?: string;
   disabled?: boolean;
 }
@@ -14,20 +17,15 @@ interface FuturisticButtonProps {
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   children,
   href,
-  onClick,
+  to,
   variant = 'primary',
   size = 'md',
+  icon,
+  onClick,
   className = '',
   disabled = false
 }) => {
-  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500';
-  
-  const variantClasses = {
-    primary: 'bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white shadow-lg hover:shadow-cyan-500/25',
-    secondary: 'bg-gray-800 hover:bg-gray-700 text-gray-300 border border-gray-600 hover:border-cyan-500',
-    outline: 'border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500 hover:text-white',
-    ghost: 'text-gray-300 hover:text-white hover:bg-white/10'
-  };
+  const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 group focus:outline-none focus:ring-2 focus:ring-cyan-500/50 disabled:opacity-50 disabled:cursor-not-allowed';
   
   const sizeClasses = {
     sm: 'px-4 py-2 text-sm',
@@ -35,21 +33,55 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     lg: 'px-8 py-4 text-lg'
   };
   
-  const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`;
+  const variantClasses = {
+    primary: 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25 hover:scale-105',
+    outline: 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 hover:scale-105',
+    ghost: 'text-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-300 hover:scale-105'
+  };
+  
+  const classes = `${baseClasses} ${sizeClasses[size]} ${variantClasses[variant]} ${className}`;
+  
+  const content = (
+    <>
+      {icon && <span className="mr-2">{icon}</span>}
+      {children}
+      {variant === 'primary' && <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />}
+    </>
+  );
   
   if (href) {
     return (
-      <a href={href} className={classes}>
-        {children}
-        <ArrowRight className="w-4 h-4 ml-2" />
+      <a
+        href={href}
+        className={classes}
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={onClick}
+      >
+        {content}
       </a>
     );
   }
   
+  if (to) {
+    return (
+      <Link
+        to={to}
+        className={classes}
+        onClick={onClick}
+      >
+        {content}
+      </Link>
+    );
+  }
+  
   return (
-    <button onClick={onClick} className={classes} disabled={disabled}>
-      {children}
-      <ArrowRight className="w-4 h-4 ml-2" />
+    <button
+      className={classes}
+      onClick={onClick}
+      disabled={disabled}
+    >
+      {content}
     </button>
   );
 };

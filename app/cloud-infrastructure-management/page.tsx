@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Link } from "react-router-dom";
 import {
   Cloud,
@@ -80,3 +81,5 @@ export default function CloudInfrastructureManagement() {
     </div>
   );
 }
+=======
+>>>>>>> cursor/analyze-improve-and-deploy-application-5cc2

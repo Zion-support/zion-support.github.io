@@ -1,146 +1,124 @@
 import React, { useEffect, useState } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
+  CLS: number | null;
+  INP: number | null;
+  FCP: number | null;
+  LCP: number | null;
+  TTFB: number | null;
 }
 
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
-  const [isVisible, setIsVisible] = useState(false);
+interface PerformanceMonitorProps {
+  children: React.ReactNode;
+  showDetails?: boolean;
+}
+
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ 
+  children, 
+  showDetails = false 
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({
+    CLS: null,
+    INP: null,
+    FCP: null,
+    LCP: null,
+    TTFB: null
+  });
 
   useEffect(() => {
-    // Only run in development or when explicitly enabled
-    if (process.env.NODE_ENV !== 'development' && !localStorage.getItem('debug-performance')) {
-      return;
-    }
+    const sendToAnalytics = (metric: any) => {
+      console.log('Performance Metric:', metric.name, metric.value);
+      
+      setMetrics(prev => ({
+        ...prev,
+        [metric.name]: metric.value
+      }));
 
-    const measurePerformance = () => {
-      // Get Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
-        for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime } as PerformanceMetrics));
-            }
-          }
-          
-          if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime } as PerformanceMetrics));
-          }
-          
-          if (entry.entryType === 'first-input') {
-            setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime } as PerformanceMetrics));
-          }
-          
-          if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              setMetrics(prev => ({ 
-                ...prev, 
-                cls: (prev?.cls || 0) + (entry as any).value 
-              } as PerformanceMetrics));
-            }
-          }
-        }
-      });
-
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
-
-      // Measure TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
-        } as PerformanceMetrics));
+      // Send to analytics service (replace with your analytics)
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', metric.name, {
+          event_category: 'Web Vitals',
+          value: Math.round(metric.value),
+          non_interaction: true,
+        });
       }
-
-      // Show performance monitor after 3 seconds
-      setTimeout(() => {
-        setIsVisible(true);
-      }, 3000);
-
-      return () => {
-        observer.disconnect();
-      };
     };
 
-    const cleanup = measurePerformance();
-    return cleanup;
+    onCLS(sendToAnalytics);
+    onINP(sendToAnalytics);
+    onFCP(sendToAnalytics);
+    onLCP(sendToAnalytics);
+    onTTFB(sendToAnalytics);
   }, []);
 
-  if (!isVisible || !metrics) {
-    return null;
+  const getMetricStatus = (value: number | null, thresholds: { good: number; poor: number }) => {
+    if (value === null) return 'pending';
+    if (value <= thresholds.good) return 'good';
+    if (value <= thresholds.poor) return 'needs-improvement';
+    return 'poor';
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'good': return 'text-green-400';
+      case 'needs-improvement': return 'text-yellow-400';
+      case 'poor': return 'text-red-400';
+      default: return 'text-gray-400';
+    }
+  };
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'good': return '✅';
+      case 'needs-improvement': return '⚠️';
+      case 'poor': return '❌';
+      default: return '⏳';
+    }
+  };
+
+  if (!showDetails) {
+    return <>{children}</>;
   }
 
-  const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
-    return 'text-red-400';
-  };
-
-  const getScoreText = (value: number, thresholds: { good: number; needsImprovement: number }) => {
-    if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
-    return 'Poor';
-  };
-
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white text-xs font-mono z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="text-cyan-400 font-semibold">Performance Monitor</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white transition-colors"
-          aria-label="Close performance monitor"
-        >
-          ×
-        </button>
-      </div>
+    <div className="relative">
+      {children}
       
-      <div className="space-y-1">
-        <div className="flex justify-between">
-          <span>FCP:</span>
-          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
-            {metrics.fcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>LCP:</span>
-          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
-            {metrics.lcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
-            {metrics.fid.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>CLS:</span>
-          <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
-            {metrics.cls.toFixed(3)}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>TTFB:</span>
-          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
-            {metrics.ttfb.toFixed(0)}ms
-          </span>
-        </div>
-      </div>
-      
-      <div className="mt-2 pt-2 border-t border-gray-600">
-        <div className="text-xs text-gray-400">
-          Overall: {getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 })}
+      {/* Performance Debug Panel */}
+      <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg p-4 max-w-sm z-50">
+        <h3 className="text-sm font-semibold text-white mb-3">Performance Metrics</h3>
+        <div className="space-y-2 text-xs">
+          <div className="flex justify-between items-center">
+            <span className="text-gray-300">CLS:</span>
+            <span className={getStatusColor(getMetricStatus(metrics.CLS, { good: 0.1, poor: 0.25 }))}>
+              {getStatusIcon(getMetricStatus(metrics.CLS, { good: 0.1, poor: 0.25 }))} {metrics.CLS?.toFixed(3) || '...'}
+            </span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-gray-300">INP:</span>
+            <span className={getStatusColor(getMetricStatus(metrics.INP, { good: 200, poor: 500 }))}>
+              {getStatusIcon(getMetricStatus(metrics.INP, { good: 200, poor: 500 }))} {metrics.INP ? `${metrics.INP}ms` : '...'}
+            </span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-gray-300">FCP:</span>
+            <span className={getStatusColor(getMetricStatus(metrics.FCP, { good: 1800, poor: 3000 }))}>
+              {getStatusIcon(getMetricStatus(metrics.FCP, { good: 1800, poor: 3000 }))} {metrics.FCP ? `${metrics.FCP}ms` : '...'}
+            </span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-gray-300">LCP:</span>
+            <span className={getStatusColor(getMetricStatus(metrics.LCP, { good: 2500, poor: 4000 }))}>
+              {getStatusIcon(getMetricStatus(metrics.LCP, { good: 2500, poor: 4000 }))} {metrics.LCP ? `${metrics.LCP}ms` : '...'}
+            </span>
+          </div>
+          <div className="flex justify-between items-center">
+            <span className="text-gray-300">TTFB:</span>
+            <span className={getStatusColor(getMetricStatus(metrics.TTFB, { good: 800, poor: 1800 }))}>
+              {getStatusIcon(getMetricStatus(metrics.TTFB, { good: 800, poor: 1800 }))} {metrics.TTFB ? `${metrics.TTFB}ms` : '...'}
+            </span>
+          </div>
         </div>
       </div>
     </div>
