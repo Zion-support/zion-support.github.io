@@ -75,6 +75,7 @@ import {
   Cpu, 
   Target, 
   Globe, 
+<<<<<<< HEAD
   Database, 
   Smartphone, 
   Lock, 
@@ -85,6 +86,10 @@ import {
   FileText, 
   Search,
   Palette
+=======
+  ChevronDown,
+  ChevronUp
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
 } from 'lucide-react';
   const [microSaasOpen, setMicroSaasOpen] = useState(false);
   const handleResize = () => {
@@ -477,6 +482,7 @@ export default function Navigation() {
                 </button>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f49
                 
+<<<<<<< HEAD
                 {/* Services Dropdown */}
                 {item.hasDropdown && (
                   <div className="absolute top-full left-0 mt-2 w-96 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
@@ -538,6 +544,13 @@ export default function Navigation() {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-3">Core Services</h3>
                       {services.slice(0, 8).map((service, index) => (
+=======
+                {/* Dropdown Menu */}
+                {item.hasDropdown && item.dropdownItems && (
+                  <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                    <div className="py-2">
+                      {item.dropdownItems.map((dropdownItem, index) => (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
                         <Link
                           key={index}
                           to={service.url}
@@ -547,6 +560,7 @@ export default function Navigation() {
                           {service.name}
                         </Link>
                       ))}
+<<<<<<< HEAD
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-3">Additional Services</h3>
@@ -1483,6 +1497,8 @@ Navigation.displayName = 'Navigation';
                           <ArrowRight className="ml-1 h-3 w-3" />
                         </Link>
                       </div>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
                     </div>
                   </div>
                 )}

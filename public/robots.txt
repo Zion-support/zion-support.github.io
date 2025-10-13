@@ -6,6 +6,7 @@ Allow: /
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Sitemap
 =======
 # Sitemaps
@@ -16,6 +17,9 @@ Allow: /
 =======
 # Sitemap
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
+=======
+# Sitemap
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
 Sitemap: https://ziontechgroup.com/sitemap.xml
 
 <<<<<<< HEAD
@@ -94,9 +98,11 @@ Allow: /
 Allow: /about
 <<<<<<< HEAD
 Allow: /services
+Allow: /contact
 Allow: /ai-services
 Allow: /micro-saas
 Allow: /5g-solutions
+<<<<<<< HEAD
 Allow: /contact
 
 # Host
@@ -129,3 +135,14 @@ Allow: /ai-services/
 Allow: /blog/
 Allow: /case-studies/
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
+=======
+Allow: /blog
+Allow: /tutorials
+Allow: /demo
+Allow: /support
+
+# Block common bot traps
+Disallow: /*.json$
+Disallow: /*?*
+Disallow: /*#
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb

@@ -39,6 +39,7 @@ export default defineConfig(({ mode }) => ({
       output: {
         manualChunks: (id) => {
 <<<<<<< HEAD
+<<<<<<< HEAD
           if (id.includes("node_modules")) {
             if (id.includes("react") || id.includes("react-dom")) {
               return "react-vendor";
@@ -54,13 +55,27 @@ export default defineConfig(({ mode }) => ({
           // Core React libraries - split further
           if (id.includes('react/') && !id.includes('react-dom')) {
             return 'react-core'
+=======
+          // Core React libraries - split further
+          if (id.includes('react/') && !id.includes('react-dom')) {
+            return 'react-core'
+          }
+          if (id.includes('react-dom')) {
+            return 'react-dom'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
           }
           if (id.includes('react-dom')) {
             return 'react-dom'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
           }
+<<<<<<< HEAD
           if (id.includes("/app/") && id.includes("/page.tsx")) {
             return "pages";
+=======
+          // UI libraries - split by size
+          if (id.includes('framer-motion')) {
+            return 'animations'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
           }
           if (id.includes("/components/")) {
             return "components";
@@ -98,12 +113,18 @@ export default defineConfig(({ mode }) => ({
             if (id.includes('eslint') || id.includes('prettier')) {
               return 'dev-tools'
             }
+<<<<<<< HEAD
             if (id.includes('jest') || id.includes('testing')) {
               return 'testing'
             }
             return 'vendor'
           }
           // AI service pages - split into smaller chunks
+=======
+            return 'vendor'
+          }
+          // AI service pages - group by category
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
             return `ai-${serviceName || 'services'}`

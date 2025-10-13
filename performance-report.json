@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   "timestamp": "2025-10-13T01:38:53.389Z",
 =======
 <<<<<<< HEAD
@@ -34,6 +35,16 @@
     "cssFiles": 1,
     "cssSize": 1811,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
+=======
+  "timestamp": "2025-10-13T10:03:40.350Z",
+  "buildStats": {
+    "totalFiles": 22,
+    "totalSize": 664097,
+    "jsFiles": 17,
+    "jsSize": 638972,
+    "cssFiles": 1,
+    "cssSize": 1811,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fdb
     "imageFiles": 0,
     "imageSize": 0
   },
