@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Calendar, Globe, Users, DollarSign, Target } from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,6 +32,11 @@ const Navigation = React.memo(() => {
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Scheduler', path: '/zion-ai-scheduler', icon: <Calendar className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Translator', path: '/zion-ai-translator', icon: <Globe className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Recruiter', path: '/zion-ai-recruiter', icon: <Users className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Finance', path: '/zion-ai-finance', icon: <DollarSign className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Marketing', path: '/zion-ai-marketing', icon: <Target className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },

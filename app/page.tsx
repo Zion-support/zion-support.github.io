@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Calendar, DollarSign, Target } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
@@ -40,25 +40,46 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Scheduler",
+      description: "Intelligent meeting & calendar management",
+      price: "From $19/month",
+      icon: <Calendar className="w-6 h-6" />,
+      link: "/zion-ai-scheduler"
+    },
+    {
+      name: "Zion AI Translator",
+      description: "Real-time translation for 100+ languages",
+      price: "From $29/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-translator"
+    },
+    {
+      name: "Zion AI Recruiter",
+      description: "AI-powered talent acquisition platform",
+      price: "From $99/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-recruiter"
+    },
+    {
+      name: "Zion AI Finance",
+      description: "Intelligent financial management platform",
+      price: "From $49/month",
+      icon: <DollarSign className="w-6 h-6" />,
+      link: "/zion-ai-finance"
+    },
+    {
+      name: "Zion AI Marketing",
+      description: "AI-powered marketing automation",
+      price: "From $79/month",
+      icon: <Target className="w-6 h-6" />,
+      link: "/zion-ai-marketing"
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $29/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro"
-    },
-    {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection",
-      price: "From $49/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield"
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
     }
   ];
 
@@ -103,11 +124,12 @@ const HomePage = () => {
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden cyber-grid floating-elements">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-gradient-to-br from-pink-500/10 to-cyan-500/10 rounded-full blur-3xl animate-pulse delay-2000"></div>
         </div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
@@ -118,7 +140,7 @@ const HomePage = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Welcome to
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse neon-text">
               {" "}
               Zion Tech Group
             </span>
@@ -132,7 +154,7 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              className="cyber-button px-8 py-4 rounded-lg font-semibold flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -215,12 +237,12 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
