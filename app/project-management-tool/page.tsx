@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
+  Calendar, 
   ArrowRight, 
   CheckCircle, 
   Star, 
@@ -20,20 +21,20 @@ import {
 } from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function Contact() {
+export default function ProjectManagementTool() {
   return (
     <>
       <Helmet>
-        <title>Contact - Zion Tech Group | Advanced Technology Solutions</title>
+        <title>Project Management Tool - Zion Tech Group | AI-Powered Project Management</title>
         <meta
           name="description"
-          content="Professional contact services and solutions for modern businesses."
+          content="Advanced project management tool with AI-powered insights, task automation, and team collaboration features."
         />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
+        <link rel="canonical" href="https://ziontechgroup.com/project-management-tool" />
       </Helmet>
       <SEOOptimizer
-        title="Contact - Zion Tech Group | Advanced Technology Solutions"
-        description="Professional contact services and solutions for modern businesses."
+        title="Project Management Tool - Zion Tech Group | AI-Powered Project Management"
+        description="Advanced project management tool with AI-powered insights, task automation, and team collaboration features."
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -41,17 +42,17 @@ export default function Contact() {
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Contact Excellence</span>
+              <span className="text-cyan-400 text-sm font-medium">Project Management Excellence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Contact
+                Project Management Tool
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Professional contact services and solutions designed to help your business grow and succeed in the digital age.
+              AI-powered project management tool that helps teams plan, execute, and deliver projects more efficiently with intelligent insights and automation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -59,7 +60,7 @@ export default function Contact() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Get Started
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -76,10 +77,10 @@ export default function Contact() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Get Started?
+              Ready to Manage Your Projects?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Contact us for a free consultation and assessment.
+              Contact us for a free trial and project management consultation.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

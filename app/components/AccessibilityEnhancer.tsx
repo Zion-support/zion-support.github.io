@@ -120,15 +120,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         })
       }
 
-<<<<<<< HEAD
       // Apply focus trap to modals and dropdowns
       const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
       const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
-=======
+      
       // Initialize all enhancements
       enhanceFocusManagement()
       enhanceKeyboardNavigation()
->>>>>>> cursor/analyze-improve-and-deploy-application-2b18
 
       // Re-run enhancements when DOM changes
       const observer = new MutationObserver(() => {

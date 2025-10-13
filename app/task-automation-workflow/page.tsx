@@ -20,20 +20,20 @@ import {
 } from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function Contact() {
+export default function Task Automation Workflow() {
   return (
     <>
       <Helmet>
-        <title>Contact - Zion Tech Group | Advanced Technology Solutions</title>
+        <title>Task Automation Workflow - Zion Tech Group | Advanced Technology Solutions</title>
         <meta
           name="description"
-          content="Professional contact services and solutions for modern businesses."
+          content="Professional task automation workflow services and solutions for modern businesses."
         />
-        <link rel="canonical" href="https://ziontechgroup.com/contact" />
+        <link rel="canonical" href="https://ziontechgroup.com/task-automation-workflow" />
       </Helmet>
       <SEOOptimizer
-        title="Contact - Zion Tech Group | Advanced Technology Solutions"
-        description="Professional contact services and solutions for modern businesses."
+        title="Task Automation Workflow - Zion Tech Group | Advanced Technology Solutions"
+        description="Professional task automation workflow services and solutions for modern businesses."
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -41,17 +41,17 @@ export default function Contact() {
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Contact Excellence</span>
+              <span className="text-cyan-400 text-sm font-medium">Task Automation Workflow Excellence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Contact
+                Task Automation Workflow
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Professional contact services and solutions designed to help your business grow and succeed in the digital age.
+              Professional task automation workflow services and solutions designed to help your business grow and succeed in the digital age.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">

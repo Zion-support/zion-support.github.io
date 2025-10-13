@@ -2,10 +2,9 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
-  Package, 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
+  Code, 
+  Cloud, 
+  Shield, 
   Zap, 
   CheckCircle, 
   Star, 
@@ -207,6 +206,7 @@ import {
   CalendarLivermorium, 
   CalendarTennessine, 
   CalendarOganesson, 
+  Package, 
   Receipt, 
   ClipboardList, 
   Workflow,
@@ -215,103 +215,102 @@ import {
   Monitor,
   Phone as PhoneIcon,
   MapPin,
-  Truck,
-  Warehouse,
-  AlertTriangle,
-  RefreshCw,
-  TrendingDown
+  Database,
+  Server,
+  GitBranch,
+  RefreshCw
 } from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function SmartInventoryOptimizer() {
+export default function DevOpsServices() {
   const features = [
     {
-      title: "AI Demand Forecasting",
-      description: "Predict future demand with 95% accuracy using advanced machine learning algorithms",
-      icon: <Brain className="w-8 h-8" />,
+      title: "CI/CD Pipeline Automation",
+      description: "Automated build, test, and deployment pipelines for faster, more reliable releases",
+      icon: <GitBranch className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Automated Reordering",
-      description: "Set intelligent reorder points that automatically trigger purchase orders",
-      icon: <RefreshCw className="w-8 h-8" />,
+      title: "Infrastructure as Code",
+      description: "Manage and provision infrastructure using code for consistency and scalability",
+      icon: <Code className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Multi-Location Management",
-      description: "Track inventory across multiple warehouses, stores, and distribution centers",
-      icon: <Warehouse className="w-8 h-8" />,
+      title: "Container Orchestration",
+      description: "Kubernetes and Docker container management for scalable applications",
+      icon: <Package className="w-8 h-8" />,
       color: "from-purple-500 to-violet-500"
     },
     {
-      title: "Real-Time Analytics",
-      description: "Monitor inventory levels, turnover rates, and performance metrics in real-time",
-      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Cloud Migration",
+      description: "Seamless migration to AWS, Azure, or GCP with zero downtime",
+      icon: <Cloud className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Supplier Integration",
-      description: "Connect with suppliers for automated ordering and price optimization",
-      icon: <Truck className="w-8 h-8" />,
+      title: "Monitoring & Alerting",
+      description: "24/7 system monitoring with intelligent alerting and incident response",
+      icon: <Activity className="w-8 h-8" />,
       color: "from-indigo-500 to-blue-500"
     },
     {
-      title: "Mobile Access",
-      description: "Manage inventory on-the-go with our intuitive mobile application",
-      icon: <Smartphone className="w-8 h-8" />,
-      color: "from-pink-500 to-rose-500"
+      title: "Security Automation",
+      description: "Automated security scanning, compliance checks, and vulnerability management",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-pink-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Small Business",
-      price: "$49",
+      name: "Starter",
+      price: "$2,999",
       period: "/month",
-      description: "Perfect for small retailers",
+      description: "Perfect for small teams",
       features: [
-        "Up to 1,000 SKUs",
-        "Basic demand forecasting",
-        "Single location",
+        "Basic CI/CD setup",
+        "Container orchestration",
+        "Cloud migration support",
+        "Monthly monitoring",
         "Email support",
-        "Basic reporting",
-        "Mobile app access"
+        "Up to 5 applications"
       ],
       popular: false,
       color: "from-gray-500 to-gray-600"
     },
     {
       name: "Professional",
-      price: "$149",
+      price: "$7,999",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 SKUs",
-        "Advanced AI forecasting",
-        "Multi-location support",
-        "Supplier integration",
-        "Advanced analytics",
+        "Advanced CI/CD pipelines",
+        "Infrastructure as Code",
+        "Full cloud migration",
+        "24/7 monitoring & alerting",
         "Priority support",
-        "API access",
-        "Custom reports"
+        "Up to 20 applications",
+        "Security automation",
+        "Performance optimization"
       ],
       popular: true,
       color: "from-cyan-500 to-blue-500"
     },
     {
       name: "Enterprise",
-      price: "$399",
+      price: "$19,999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited SKUs",
-        "Custom AI models",
-        "Unlimited locations",
-        "Advanced integrations",
-        "White-label options",
+        "Custom DevOps solutions",
+        "Multi-cloud strategy",
+        "Advanced security suite",
+        "Dedicated DevOps team",
         "24/7 phone support",
-        "Dedicated account manager",
-        "Custom development"
+        "Unlimited applications",
+        "Custom integrations",
+        "Training & consulting"
       ],
       popular: false,
       color: "from-purple-500 to-pink-500"
@@ -320,75 +319,75 @@ export default function SmartInventoryOptimizer() {
 
   const benefits = [
     {
-      title: "Reduce Stockouts by 70%",
-      description: "AI-powered forecasting prevents inventory shortages and lost sales",
-      icon: <AlertTriangle className="w-6 h-6" />
+      title: "Deploy 10x Faster",
+      description: "Automated pipelines reduce deployment time from hours to minutes",
+      icon: <Zap className="w-6 h-6" />
     },
     {
-      title: "Lower Inventory Costs by 25%",
-      description: "Optimize stock levels to reduce carrying costs and waste",
+      title: "99.9% Uptime",
+      description: "Robust monitoring and automated recovery ensure maximum availability",
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      title: "Reduce Costs by 40%",
+      description: "Optimized infrastructure and automated processes lower operational costs",
       icon: <DollarSign className="w-6 h-6" />
     },
     {
-      title: "Improve Cash Flow",
-      description: "Better inventory management leads to improved working capital",
-      icon: <TrendingUp className="w-6 h-6" />
-    },
-    {
-      title: "Save 15+ Hours Weekly",
-      description: "Automate manual inventory tasks and focus on strategic activities",
-      icon: <Clock className="w-6 h-6" />
+      title: "Scale Instantly",
+      description: "Auto-scaling infrastructure handles traffic spikes automatically",
+      icon: <Activity className="w-6 h-6" />
     }
   ];
 
   const testimonials = [
     {
-      name: "David Martinez",
-      company: "Retail Operations Manager",
-      content: "Smart Inventory Optimizer has revolutionized our stock management. We've reduced stockouts by 80% and improved our cash flow significantly.",
+      name: "Alex Thompson",
+      company: "CTO",
+      content: "Zion's DevOps services transformed our deployment process. We now deploy multiple times per day with zero downtime.",
       rating: 5,
-      avatar: "DM"
+      avatar: "AT"
     },
     {
-      name: "Lisa Chen",
-      company: "Supply Chain Director",
-      content: "The AI forecasting is incredibly accurate. We can now plan our inventory months ahead with confidence, reducing waste and improving efficiency.",
+      name: "Maria Garcia",
+      company: "Engineering Director",
+      content: "The infrastructure automation has saved us countless hours. Our team can focus on building features instead of managing servers.",
       rating: 5,
-      avatar: "LC"
+      avatar: "MG"
     },
     {
-      name: "Robert Johnson",
-      company: "E-commerce Manager",
-      content: "This tool has transformed how we manage inventory across our multiple warehouses. The real-time visibility and automated reordering are game-changers.",
+      name: "David Chen",
+      company: "VP of Engineering",
+      content: "Outstanding DevOps expertise. They helped us migrate to the cloud seamlessly and improved our system reliability significantly.",
       rating: 5,
-      avatar: "RJ"
+      avatar: "DC"
     }
   ];
 
   const stats = [
-    { number: "95%", label: "Forecasting Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "70%", label: "Reduction in Stockouts", icon: <AlertTriangle className="w-6 h-6" /> },
-    { number: "25%", label: "Lower Inventory Costs", icon: <DollarSign className="w-6 h-6" /> },
-    { number: "15+", label: "Hours Saved Weekly", icon: <Clock className="w-6 h-6" /> }
+    { number: "10x", label: "Faster Deployments", icon: <Zap className="w-6 h-6" /> },
+    { number: "99.9%", label: "System Uptime", icon: <Shield className="w-6 h-6" /> },
+    { number: "40%", label: "Cost Reduction", icon: <DollarSign className="w-6 h-6" /> },
+    { number: "24/7", label: "Monitoring", icon: <Activity className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Smart Inventory Optimizer - Zion Tech Group | AI-Powered Inventory Management</title>
+        <title>DevOps Services - Zion Tech Group | CI/CD, Cloud Migration & Infrastructure</title>
         <meta
           name="description"
-          content="Optimize your inventory with AI-powered demand forecasting, automated reordering, and real-time analytics. Reduce costs and prevent stockouts."
+          content="Transform your development workflow with our comprehensive DevOps services. CI/CD pipelines, cloud migration, container orchestration, and 24/7 monitoring."
         />
         <meta
           name="keywords"
-          content="inventory management, demand forecasting, stock optimization, supply chain, AI inventory, automated reordering, inventory analytics"
+          content="devops services, CI/CD, cloud migration, kubernetes, docker, infrastructure as code, monitoring, automation"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/smart-inventory-optimizer" />
+        <link rel="canonical" href="https://ziontechgroup.com/devops-services" />
       </Helmet>
       <SEOOptimizer
-        title="Smart Inventory Optimizer - Zion Tech Group | AI-Powered Inventory Management"
-        description="Optimize your inventory with AI-powered demand forecasting, automated reordering, and real-time analytics. Reduce costs and prevent stockouts."
+        title="DevOps Services - Zion Tech Group | CI/CD, Cloud Migration & Infrastructure"
+        description="Transform your development workflow with our comprehensive DevOps services. CI/CD pipelines, cloud migration, container orchestration, and 24/7 monitoring."
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -402,18 +401,18 @@ export default function SmartInventoryOptimizer() {
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">DevOps Excellence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                Smart Inventory Optimizer
+                DevOps Services
               </span>
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your inventory management with AI-powered demand forecasting, automated reordering, and real-time analytics. 
-              Reduce costs, prevent stockouts, and optimize your supply chain with intelligent inventory management.
+              Transform your development workflow with our comprehensive DevOps services. 
+              From CI/CD pipelines to cloud migration, we help you deploy faster, scale efficiently, and maintain 99.9% uptime.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -421,7 +420,7 @@ export default function SmartInventoryOptimizer() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Get Started
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -453,10 +452,10 @@ export default function SmartInventoryOptimizer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced Inventory Features
+                Comprehensive DevOps Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Our AI-powered inventory optimizer provides comprehensive tools to manage, forecast, and optimize your inventory across all channels.
+                Our DevOps services cover every aspect of modern software delivery, from development to production.
               </p>
             </div>
             
@@ -488,10 +487,10 @@ export default function SmartInventoryOptimizer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Proven Business Impact
+                Why Choose Our DevOps Services?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our customers see measurable improvements in inventory efficiency and cost savings
+                Our DevOps expertise delivers measurable improvements in speed, reliability, and cost efficiency
               </p>
             </div>
             
@@ -517,10 +516,10 @@ export default function SmartInventoryOptimizer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Flexible DevOps Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that matches your inventory complexity and business size
+                Choose the plan that matches your team size and infrastructure needs
               </p>
             </div>
             
@@ -582,10 +581,10 @@ export default function SmartInventoryOptimizer() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Supply Chain Professionals
+                Trusted by Engineering Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about our inventory optimization platform
+                See what our clients say about our DevOps services
               </p>
             </div>
             
@@ -620,10 +619,10 @@ export default function SmartInventoryOptimizer() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Optimize Your Inventory?
+              Ready to Transform Your DevOps?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using our AI-powered inventory optimizer to reduce costs, prevent stockouts, and improve efficiency.
+              Join hundreds of engineering teams using our DevOps services to deploy faster, scale efficiently, and maintain high availability.
             </p>
             
             {/* Contact Information */}
@@ -656,14 +655,14 @@ export default function SmartInventoryOptimizer() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Get Started
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                to="/micro-saas-services"
+                to="/services"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                View All Solutions
+                View All Services
                 <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
