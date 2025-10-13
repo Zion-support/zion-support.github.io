@@ -32,17 +32,13 @@ const Navigation = () => {
       icon: BriefcaseIcon,
       submenu: [
         { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+        { name: 'IT Solutions', href: '/it-solutions' },
+        { name: 'Cloud Infrastructure', href: '/cloud-infrastructure' },
         { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: 'Micro SaaS', href: '/micro-saas' },
+        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
@@ -50,17 +46,6 @@ const Navigation = () => {
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-<<<<<<< HEAD
-=======
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Support', href: '/support' },
-    { name: 'Contact', href: '/contact' }
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
   ];
 
   const isActive = (path: string) => {
@@ -81,38 +66,6 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
-            {navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                  onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
-                </Link>
-                
-                {/* Dropdown Menu */}
-                {item.submenu && isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
-=======
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
@@ -148,7 +101,6 @@ const Navigation = () => {
                 </div>
               );
             })}
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
           </div>
 
           {/* CTA Button */}

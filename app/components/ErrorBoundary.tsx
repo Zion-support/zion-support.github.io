@@ -1,106 +1,37 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
-<<<<<<< HEAD
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Link } from 'react-router-dom';
-=======
-import { Link } from 'react-router-dom';
-import { ExclamationTriangleIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
 }
 
 interface State {
   hasError: boolean;
-<<<<<<< HEAD
-  error: Error | null;
-  errorInfo: ErrorInfo | null;
-=======
   error?: Error;
-  errorInfo?: ErrorInfo;
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 }
 
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
-    this.state = {
-      hasError: false,
-      error: null,
-      errorInfo: null
-    };
+    this.state = { hasError: false };
   }
 
   static getDerivedStateFromError(error: Error): State {
-    return {
-      hasError: true,
-      error,
-      errorInfo: null
-    };
+    return { hasError: true, error };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     console.error('ErrorBoundary caught an error:', error, errorInfo);
-<<<<<<< HEAD
-    
-    if (this.props.onError) {
-      this.props.onError(error, errorInfo);
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-    this.setState({
-      error,
-      errorInfo
-    });
-<<<<<<< HEAD
-
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // Here you would typically send the error to a service like Sentry
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
   }
-
-  handleRetry = () => {
-    this.setState({
-      hasError: false,
-      error: null,
-      errorInfo: null
-    });
-=======
-  }
-
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-  };
 
   render() {
     if (this.state.hasError) {
-      if (this.props.fallback) {
-        return this.props.fallback;
-      }
-
       return (
-        <div className="min-h-screen flex items-center justify-center bg-slate-900 px-4">
-          <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-8 text-center">
-            <div className="flex items-center justify-center w-16 h-16 mx-auto bg-red-500/20 rounded-full mb-6">
-<<<<<<< HEAD
-              <AlertTriangle className="w-8 h-8 text-red-400" />
-=======
-              <ExclamationTriangleIcon className="w-8 h-8 text-red-400" />
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
+        <div className="min-h-screen flex items-center justify-center bg-slate-900 p-4">
+          <div className="max-w-md w-full bg-slate-800 rounded-lg shadow-xl p-6 text-center">
+            <div className="flex justify-center mb-4">
+              <AlertTriangle className="w-16 h-16 text-red-500" />
             </div>
             
             <h1 className="text-2xl font-bold text-white mb-4">
@@ -108,94 +39,43 @@ class ErrorBoundary extends Component<Props, State> {
             </h1>
             
             <p className="text-gray-300 mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              We're sorry, but something unexpected happened. Please try refreshing the page.
-=======
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-=======
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
-              We're sorry, but something unexpected happened. Our team has been notified and is working to fix the issue.
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
+              We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.
             </p>
-
-            {process.env.NODE_ENV === 'development' && this.state.error && (
+            
+            {this.state.error && (
               <details className="mb-6 text-left">
-                <summary className="text-sm text-gray-400 cursor-pointer hover:text-white">
-<<<<<<< HEAD
-                  Error Details (Development Only)
+                <summary className="text-gray-400 cursor-pointer hover:text-white">
+                  Error Details
                 </summary>
-                <div className="mt-2 p-4 bg-slate-900 rounded text-xs text-red-400 font-mono overflow-auto">
-                  <div className="mb-2">
-                    <strong>Error:</strong> {this.state.error.message}
-                  </div>
-                  {this.state.errorInfo && (
-                    <div>
-                      <strong>Stack Trace:</strong>
-                      <pre className="mt-1 whitespace-pre-wrap">
-                        {this.state.errorInfo.componentStack}
-                      </pre>
-                    </div>
-                  )}
-                </div>
-              </details>
-            )}
-
-            <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={this.handleRetry}
-                className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300"
-              >
-                <RefreshCw className="w-4 h-4" />
-=======
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 text-xs text-red-300 bg-slate-900 p-3 rounded overflow-auto">
-                  {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
+                <pre className="mt-2 p-3 bg-slate-700 rounded text-xs text-red-300 overflow-auto">
+                  {this.state.error.message}
                 </pre>
               </details>
             )}
-
-            <div className="space-y-3">
+            
+            <div className="flex flex-col sm:flex-row gap-3">
               <button
-                onClick={this.handleRetry}
-                className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
+                onClick={() => window.location.reload()}
+                className="flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition-colors"
               >
-                <ArrowPathIcon className="w-5 h-5" />
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-                Try Again
+                <RefreshCw className="w-4 h-4" />
+                Refresh Page
               </button>
               
               <Link
                 to="/"
-<<<<<<< HEAD
-                className="flex items-center justify-center gap-2 border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
+                className="flex items-center justify-center gap-2 border border-gray-600 hover:border-gray-500 text-gray-300 hover:text-white px-4 py-2 rounded-lg transition-colors"
               >
                 <Home className="w-4 h-4" />
                 Go Home
               </Link>
             </div>
-
-            <div className="mt-6 pt-6 border-t border-slate-700">
+            
+            <div className="mt-6 pt-4 border-t border-slate-700">
               <p className="text-sm text-gray-400">
-                If this problem persists, please{' '}
-                <Link to="/contact" className="text-purple-400 hover:text-purple-300">
-                  contact our support team
-                </Link>
+                If this problem continues, please contact our support team.
               </p>
             </div>
-=======
-                className="block w-full border-2 border-purple-400 text-purple-300 px-6 py-3 rounded-lg font-semibold hover:bg-purple-400 hover:text-white transition-all duration-300"
-              >
-                Go Home
-              </Link>
-            </div>
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
           </div>
         </div>
       );
