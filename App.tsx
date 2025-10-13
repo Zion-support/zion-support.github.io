@@ -175,6 +175,25 @@ const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
 
+// New Micro SAAS Services
+const ZionAIVideoGeneratorPage = React.lazy(
+  () => import("./app/zion-ai-video-generator/page"),
+);
+const ZionAISocialMediaManagerPage = React.lazy(
+  () => import("./app/zion-ai-social-media-manager/page"),
+);
+const ZionAIVoiceAssistantPage = React.lazy(
+  () => import("./app/zion-ai-voice-assistant/page"),
+);
+const ZionAIBlockchainAnalyzerPage = React.lazy(
+  () => import("./app/zion-ai-blockchain-analyzer/page"),
+);
+
+// New AI Services
+const AIPredictiveMaintenancePage = React.lazy(
+  () => import("./app/ai-predictive-maintenance/page"),
+);
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
   () => import("./app/5g-data-analytics/page"),
@@ -408,6 +427,30 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-video-generator"
+                    element={<ZionAIVideoGeneratorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-social-media-manager"
+                    element={<ZionAISocialMediaManagerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-voice-assistant"
+                    element={<ZionAIVoiceAssistantPage />}
+                  />
+                  <Route
+                    path="/zion-ai-blockchain-analyzer"
+                    element={<ZionAIBlockchainAnalyzerPage />}
+                  />
+
+                  {/* New AI Service Routes */}
+                  <Route
+                    path="/ai-predictive-maintenance"
+                    element={<AIPredictiveMaintenancePage />}
                   />
 
                   {/* 5G Solutions Routes */}

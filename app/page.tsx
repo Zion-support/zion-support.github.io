@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Mic } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
@@ -40,6 +40,38 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Video Generator",
+      description: "Create professional videos from text prompts with AI",
+      price: "From $29/month",
+      icon: <Sparkles className="w-6 h-6" />,
+      link: "/zion-ai-video-generator",
+      featured: true
+    },
+    {
+      name: "Zion AI Social Media Manager",
+      description: "AI-powered social media automation and management",
+      price: "From $39/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-social-media-manager",
+      featured: true
+    },
+    {
+      name: "Zion AI Voice Assistant",
+      description: "Advanced voice AI with natural language processing",
+      price: "From $49/month",
+      icon: <Mic className="w-6 h-6" />,
+      link: "/zion-ai-voice-assistant",
+      featured: true
+    },
+    {
+      name: "Zion AI Blockchain Analyzer",
+      description: "Real-time blockchain analysis and DeFi insights",
+      price: "From $199/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-ai-blockchain-analyzer",
+      featured: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $29/month",
@@ -52,13 +84,6 @@ const HomePage = () => {
       price: "From $49/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield"
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
     }
   ];
 
@@ -215,15 +240,31 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className={`group bg-white/10 backdrop-blur-sm rounded-xl p-6 border transition-all duration-300 hover:scale-105 relative overflow-hidden ${
+                  saas.featured 
+                    ? 'border-cyan-500/50 shadow-2xl shadow-cyan-500/20 hover:bg-white/20' 
+                    : 'border-white/20 hover:bg-white/20'
+                }`}
               >
+                {saas.featured && (
+                  <div className="absolute -top-2 -right-2">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                      Featured
+                    </span>
+                  </div>
+                )}
+                
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform ${
+                    saas.featured 
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500' 
+                      : 'bg-gradient-to-r from-purple-500 to-cyan-500'
+                  }`}>
                     {saas.icon}
                   </div>
                   <div>

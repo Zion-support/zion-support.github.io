@@ -1,90 +1,78 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Wrench, Zap, Star, CheckCircle, ArrowRight, BarChart3, Shield, Sparkles, Users, Clock, Settings, AlertTriangle } from "lucide-react";
+import { Play, Zap, Star, CheckCircle, ArrowRight, Video, Sparkles, Users, Clock, Shield } from "lucide-react";
 
-export default function AIPredictiveMaintenance() {
+export default function ZionAIVideoGenerator() {
   const features = [
     {
-      title: "AI-Powered Predictions",
-      description: "Machine learning algorithms predict equipment failures before they occur with 95% accuracy",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "AI-Powered Video Creation",
+      description: "Generate professional videos from text prompts using advanced AI technology",
+      icon: <Video className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-Time Monitoring",
-      description: "Continuous monitoring of equipment health with instant alerts and notifications",
-      icon: <Shield className="w-6 h-6" />,
+      title: "Multiple Video Formats",
+      description: "Create videos in various formats: social media, presentations, marketing, and more",
+      icon: <Play className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Cost Optimization",
-      description: "Reduce maintenance costs by up to 40% through predictive scheduling and optimization",
-      icon: <Settings className="w-6 h-6" />,
+      title: "Voice Synthesis",
+      description: "Generate natural-sounding voiceovers in multiple languages and accents",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Downtime Prevention",
-      description: "Minimize unplanned downtime by scheduling maintenance at optimal times",
-      icon: <AlertTriangle className="w-6 h-6" />,
+      title: "Auto-Editing",
+      description: "AI automatically edits and optimizes your videos for maximum engagement",
+      icon: <Sparkles className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
-  ];
-
-  const industries = [
-    { name: "Manufacturing", icon: <Wrench className="w-8 h-8" />, color: "from-blue-500 to-cyan-500" },
-    { name: "Energy & Utilities", icon: <Zap className="w-8 h-8" />, color: "from-yellow-500 to-orange-500" },
-    { name: "Transportation", icon: <Settings className="w-8 h-8" />, color: "from-green-500 to-emerald-500" },
-    { name: "Healthcare", icon: <Shield className="w-8 h-8" />, color: "from-purple-500 to-pink-500" },
-    { name: "Aerospace", icon: <BarChart3 className="w-8 h-8" />, color: "from-indigo-500 to-purple-500" },
-    { name: "Oil & Gas", icon: <AlertTriangle className="w-8 h-8" />, color: "from-red-500 to-orange-500" }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$29",
       period: "per month",
-      description: "Perfect for small manufacturing facilities",
+      description: "Perfect for individuals and small businesses",
       features: [
-        "Up to 50 equipment units",
-        "Basic predictive analytics",
-        "Email alerts",
-        "Standard reporting",
-        "Email support",
-        "30-day data retention"
+        "10 video generations per month",
+        "HD quality (1080p)",
+        "Basic templates",
+        "Standard voice synthesis",
+        "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$79",
       period: "per month",
-      description: "Ideal for medium to large facilities",
+      description: "Ideal for content creators and agencies",
       features: [
-        "Up to 500 equipment units",
-        "Advanced predictive analytics",
-        "Real-time alerts",
-        "Custom reporting",
-        "Priority support",
-        "1-year data retention",
-        "API integration"
+        "50 video generations per month",
+        "4K quality available",
+        "Premium templates",
+        "Advanced voice synthesis",
+        "Custom branding",
+        "Priority support"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$199",
       period: "per month",
-      description: "For large industrial complexes",
+      description: "For large organizations and teams",
       features: [
-        "Unlimited equipment units",
-        "AI-powered predictions",
-        "Custom alert systems",
-        "Advanced analytics",
+        "Unlimited video generations",
+        "4K quality included",
+        "Custom templates",
+        "Multi-language support",
+        "API access",
         "Dedicated support",
-        "Unlimited data retention",
-        "Full API access",
-        "Custom integrations"
+        "Team collaboration"
       ],
       popular: false
     }
@@ -92,21 +80,21 @@ export default function AIPredictiveMaintenance() {
 
   const testimonials = [
     {
-      name: "John Martinez",
-      company: "Manufacturing Plant Manager",
-      content: "Zion AI Predictive Maintenance has reduced our unplanned downtime by 60%. The cost savings have been incredible, and our equipment reliability has never been better.",
+      name: "Sarah Chen",
+      company: "Digital Marketing Agency",
+      content: "Zion AI Video Generator has revolutionized our content creation process. We can now produce high-quality videos 10x faster than before.",
       rating: 5
     },
     {
-      name: "Sarah Johnson",
-      company: "Energy Company CTO",
-      content: "The predictive accuracy is outstanding. We've prevented several major equipment failures that would have cost us millions in repairs and lost production.",
+      name: "Mike Rodriguez",
+      company: "E-learning Platform",
+      content: "The voice synthesis is incredibly natural. Our students can't tell the difference between AI-generated and human voiceovers.",
       rating: 5
     },
     {
-      name: "Mike Chen",
-      company: "Transportation Fleet Manager",
-      content: "This system has transformed our maintenance operations. We can now schedule maintenance at optimal times, reducing costs while improving reliability.",
+      name: "Emily Johnson",
+      company: "Social Media Manager",
+      content: "This tool has saved us thousands of dollars in video production costs. The quality is outstanding and the interface is intuitive.",
       rating: 5
     }
   ];
@@ -114,14 +102,14 @@ export default function AIPredictiveMaintenance() {
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Smart Equipment Monitoring | Zion Tech Group</title>
+        <title>Zion AI Video Generator - AI-Powered Video Creation | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionize your maintenance operations with AI-powered predictive maintenance. Reduce downtime, cut costs, and optimize equipment performance. Starting at $299/month."
+          content="Create professional videos from text prompts with Zion AI Video Generator. Advanced AI technology, voice synthesis, auto-editing, and multiple formats. Starting at $29/month."
         />
         <meta
           name="keywords"
-          content="predictive maintenance, AI maintenance, equipment monitoring, industrial IoT, maintenance optimization, downtime prevention, cost reduction"
+          content="AI video generator, video creation, text to video, voice synthesis, video editing, content creation, marketing videos, social media videos"
         />
       </Helmet>
 
@@ -135,19 +123,19 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Equipment Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI Video Generation Technology</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              AI
+              Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Predictive Maintenance
+                {" "}Video Generator
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your maintenance operations with AI-powered predictions. 
-              Prevent failures, reduce costs, and optimize equipment performance with intelligent monitoring.
+              Transform your ideas into stunning videos with AI-powered technology. 
+              Create professional content from text prompts in minutes, not hours.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -155,61 +143,30 @@ export default function AIPredictiveMaintenance() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Predictive Maintenance
+                Start Creating Videos
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                View Demo
-                <BarChart3 className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                Watch Demo
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>
         </section>
 
-        {/* Industries Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted Across Industries
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI predictive maintenance solutions work across all major industries
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {industries.map((industry, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
-                >
-                  <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${industry.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                  >
-                    {industry.icon}
-                  </div>
-                  <h3 className="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                    {industry.name}
-                  </h3>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Features Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Predictive Maintenance Features
+                Powerful AI Video Creation Features
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Our AI-powered platform delivers intelligent maintenance insights and optimization.
+                Our advanced AI technology makes video creation accessible to everyone, 
+                regardless of technical expertise or budget.
               </p>
             </div>
             
@@ -237,14 +194,14 @@ export default function AIPredictiveMaintenance() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Choose Your Maintenance Plan
+                Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Scale your predictive maintenance operations with our flexible pricing.
+                Choose the plan that fits your video creation needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -301,14 +258,14 @@ export default function AIPredictiveMaintenance() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Maintenance Professionals
+                Trusted by Content Creators Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our clients say about AI Predictive Maintenance
+                See what our users say about Zion AI Video Generator
               </p>
             </div>
             
@@ -340,11 +297,11 @@ export default function AIPredictiveMaintenance() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Maintenance?
+              Ready to Create Amazing Videos?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join leading companies using AI Predictive Maintenance to reduce costs, 
-              prevent failures, and optimize equipment performance. Start your transformation today.
+              Join thousands of content creators using Zion AI Video Generator to produce 
+              professional videos in minutes. Start your free trial today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -359,8 +316,8 @@ export default function AIPredictiveMaintenance() {
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                View Demo
-                <BarChart3 className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                Watch Demo
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>

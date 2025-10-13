@@ -1,88 +1,88 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Wrench, Zap, Star, CheckCircle, ArrowRight, BarChart3, Shield, Sparkles, Users, Clock, Settings, AlertTriangle } from "lucide-react";
+import { Shield, Zap, Star, CheckCircle, ArrowRight, TrendingUp, BarChart3, Sparkles, Users, Clock, Database, Lock } from "lucide-react";
 
-export default function AIPredictiveMaintenance() {
+export default function ZionAIBlockchainAnalyzer() {
   const features = [
     {
-      title: "AI-Powered Predictions",
-      description: "Machine learning algorithms predict equipment failures before they occur with 95% accuracy",
+      title: "Real-Time Blockchain Analysis",
+      description: "Monitor and analyze blockchain transactions in real-time with advanced AI algorithms",
       icon: <BarChart3 className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-Time Monitoring",
-      description: "Continuous monitoring of equipment health with instant alerts and notifications",
+      title: "Smart Contract Security",
+      description: "Automatically detect vulnerabilities and security issues in smart contracts",
       icon: <Shield className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Cost Optimization",
-      description: "Reduce maintenance costs by up to 40% through predictive scheduling and optimization",
-      icon: <Settings className="w-6 h-6" />,
+      title: "DeFi Risk Assessment",
+      description: "Evaluate DeFi protocols and provide risk scores for investment decisions",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Downtime Prevention",
-      description: "Minimize unplanned downtime by scheduling maintenance at optimal times",
-      icon: <AlertTriangle className="w-6 h-6" />,
+      title: "Compliance Monitoring",
+      description: "Ensure regulatory compliance with automated monitoring and reporting",
+      icon: <Lock className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
-  const industries = [
-    { name: "Manufacturing", icon: <Wrench className="w-8 h-8" />, color: "from-blue-500 to-cyan-500" },
-    { name: "Energy & Utilities", icon: <Zap className="w-8 h-8" />, color: "from-yellow-500 to-orange-500" },
-    { name: "Transportation", icon: <Settings className="w-8 h-8" />, color: "from-green-500 to-emerald-500" },
-    { name: "Healthcare", icon: <Shield className="w-8 h-8" />, color: "from-purple-500 to-pink-500" },
-    { name: "Aerospace", icon: <BarChart3 className="w-8 h-8" />, color: "from-indigo-500 to-purple-500" },
-    { name: "Oil & Gas", icon: <AlertTriangle className="w-8 h-8" />, color: "from-red-500 to-orange-500" }
+  const supportedChains = [
+    { name: "Ethereum", icon: "Ξ", color: "from-blue-500 to-cyan-500" },
+    { name: "Bitcoin", icon: "₿", color: "from-orange-500 to-yellow-500" },
+    { name: "Binance Smart Chain", icon: "B", color: "from-yellow-500 to-orange-500" },
+    { name: "Polygon", icon: "⬟", color: "from-purple-500 to-pink-500" },
+    { name: "Solana", icon: "◎", color: "from-green-500 to-emerald-500" },
+    { name: "Cardano", icon: "₳", color: "from-blue-600 to-indigo-600" }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$299",
+      price: "$199",
       period: "per month",
-      description: "Perfect for small manufacturing facilities",
+      description: "Perfect for individual traders and small projects",
       features: [
-        "Up to 50 equipment units",
-        "Basic predictive analytics",
+        "3 blockchain networks",
+        "Basic analytics dashboard",
+        "Smart contract scanning",
         "Email alerts",
-        "Standard reporting",
-        "Email support",
-        "30-day data retention"
+        "Standard support",
+        "Historical data (30 days)"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$799",
+      price: "$499",
       period: "per month",
-      description: "Ideal for medium to large facilities",
+      description: "Ideal for trading firms and DeFi protocols",
       features: [
-        "Up to 500 equipment units",
-        "Advanced predictive analytics",
-        "Real-time alerts",
-        "Custom reporting",
+        "10 blockchain networks",
+        "Advanced analytics dashboard",
+        "Real-time monitoring",
+        "Custom alerts",
         "Priority support",
-        "1-year data retention",
-        "API integration"
+        "Historical data (1 year)",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,999",
+      price: "$1,299",
       period: "per month",
-      description: "For large industrial complexes",
+      description: "For large institutions and exchanges",
       features: [
-        "Unlimited equipment units",
-        "AI-powered predictions",
-        "Custom alert systems",
-        "Advanced analytics",
+        "All supported networks",
+        "Custom analytics dashboard",
+        "Real-time + historical analysis",
+        "White-label options",
         "Dedicated support",
-        "Unlimited data retention",
+        "Unlimited historical data",
         "Full API access",
         "Custom integrations"
       ],
@@ -92,21 +92,21 @@ export default function AIPredictiveMaintenance() {
 
   const testimonials = [
     {
-      name: "John Martinez",
-      company: "Manufacturing Plant Manager",
-      content: "Zion AI Predictive Maintenance has reduced our unplanned downtime by 60%. The cost savings have been incredible, and our equipment reliability has never been better.",
+      name: "Alex Thompson",
+      company: "Crypto Trading Firm",
+      content: "Zion AI Blockchain Analyzer has given us a significant edge in the market. The real-time analysis helps us make better trading decisions and avoid risky investments.",
       rating: 5
     },
     {
-      name: "Sarah Johnson",
-      company: "Energy Company CTO",
-      content: "The predictive accuracy is outstanding. We've prevented several major equipment failures that would have cost us millions in repairs and lost production.",
+      name: "Sarah Kim",
+      company: "DeFi Protocol",
+      content: "The smart contract security analysis is invaluable. We've identified and fixed several vulnerabilities before they could be exploited. This tool is essential for any DeFi project.",
       rating: 5
     },
     {
-      name: "Mike Chen",
-      company: "Transportation Fleet Manager",
-      content: "This system has transformed our maintenance operations. We can now schedule maintenance at optimal times, reducing costs while improving reliability.",
+      name: "Michael Chen",
+      company: "Investment Fund",
+      content: "The compliance monitoring features have saved us countless hours of manual work. We can now ensure regulatory compliance across all our blockchain investments automatically.",
       rating: 5
     }
   ];
@@ -114,14 +114,14 @@ export default function AIPredictiveMaintenance() {
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Smart Equipment Monitoring | Zion Tech Group</title>
+        <title>Zion AI Blockchain Analyzer - Advanced Blockchain Intelligence | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionize your maintenance operations with AI-powered predictive maintenance. Reduce downtime, cut costs, and optimize equipment performance. Starting at $299/month."
+          content="Advanced AI-powered blockchain analysis platform. Real-time monitoring, smart contract security, DeFi risk assessment, and compliance monitoring. Starting at $199/month."
         />
         <meta
           name="keywords"
-          content="predictive maintenance, AI maintenance, equipment monitoring, industrial IoT, maintenance optimization, downtime prevention, cost reduction"
+          content="blockchain analysis, smart contract security, DeFi analysis, crypto analytics, blockchain monitoring, compliance monitoring, blockchain intelligence"
         />
       </Helmet>
 
@@ -135,19 +135,19 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Equipment Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">Advanced Blockchain Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-              AI
+              Zion AI
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Predictive Maintenance
+                {" "}Blockchain Analyzer
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your maintenance operations with AI-powered predictions. 
-              Prevent failures, reduce costs, and optimize equipment performance with intelligent monitoring.
+              Unlock the power of blockchain intelligence with AI-powered analysis. 
+              Monitor transactions, secure smart contracts, and make informed DeFi decisions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -155,7 +155,7 @@ export default function AIPredictiveMaintenance() {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Predictive Maintenance
+                Start Blockchain Analysis
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -169,31 +169,31 @@ export default function AIPredictiveMaintenance() {
           </div>
         </section>
 
-        {/* Industries Section */}
+        {/* Supported Chains */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted Across Industries
+                Multi-Chain Support
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Our AI predictive maintenance solutions work across all major industries
+                Analyze and monitor transactions across all major blockchain networks
               </p>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              {industries.map((industry, index) => (
+              {supportedChains.map((chain, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 text-center"
                 >
                   <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${industry.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${chain.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 text-2xl font-bold text-white`}
                   >
-                    {industry.icon}
+                    {chain.icon}
                   </div>
                   <h3 className="text-sm font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                    {industry.name}
+                    {chain.name}
                   </h3>
                 </div>
               ))}
@@ -206,10 +206,10 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Predictive Maintenance Features
+                Advanced Blockchain Intelligence
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Our AI-powered platform delivers intelligent maintenance insights and optimization.
+                Our AI-powered platform provides comprehensive blockchain analysis and monitoring.
               </p>
             </div>
             
@@ -241,10 +241,10 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Choose Your Maintenance Plan
+                Choose Your Analysis Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Scale your predictive maintenance operations with our flexible pricing.
+                Scale your blockchain intelligence with our flexible pricing plans.
               </p>
             </div>
             
@@ -305,10 +305,10 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Maintenance Professionals
+                Trusted by Blockchain Professionals
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our clients say about AI Predictive Maintenance
+                See what our clients say about Zion AI Blockchain Analyzer
               </p>
             </div>
             
@@ -340,11 +340,11 @@ export default function AIPredictiveMaintenance() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Optimize Your Maintenance?
+              Ready to Master Blockchain Intelligence?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join leading companies using AI Predictive Maintenance to reduce costs, 
-              prevent failures, and optimize equipment performance. Start your transformation today.
+              Join leading blockchain professionals using Zion AI Blockchain Analyzer to 
+              make smarter decisions and secure their investments. Start your analysis today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
