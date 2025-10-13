@@ -3,23 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
 // Components
-<<<<<<< HEAD
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-<<<<<<< HEAD
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
 import Header from './app/components/Header';
 import Footer from './app/components/Footer';
 import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
 import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
 import LoadingSpinner from './app/components/LoadingSpinner';
 import PerformanceMonitor from './app/components/PerformanceMonitor';
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
 
 // Page Components
 import HomePage from './app/page';
@@ -75,23 +64,6 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
 
 function App() {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <HelmetProvider>
-<<<<<<< HEAD
-      <Router>
-        <div className="min-h-screen bg-slate-900">
-          <Navigation />
-          <main className="relative z-10" id="main-content" role="main">
-=======
-      <ErrorBoundary>
-        <Router>
-          <div className="min-h-screen bg-slate-900">
-            <Navigation />
-            <main className="relative z-10" id="main-content" role="main">
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-            <Routes>
-=======
     <HelmetProvider>
       <EnhancedErrorBoundary>
         <AccessibilityEnhancer>
@@ -101,53 +73,43 @@ function App() {
               <main className="relative z-10" id="main-content" role="main">
                 <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
                   <Routes>
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-              {/* Main Pages */}
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
-              <Route path="/ai-solutions" element={<AISolutionsPage />} />
-              <Route path="/it-solutions" element={<ITSolutionsPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/tutorials" element={<TutorialsPage />} />
-              <Route path="/demo" element={<DemoPage />} />
-              <Route path="/support" element={<SupportPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
-              <Route path="/solutions" element={<SolutionsPage />} />
-              
-              {/* Service Pages */}
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
-              <Route path="/careers" element={<CareersPage />} />
-              
-              {/* Catch all route */}
-              <Route path="*" element={
-                <div className="min-h-screen flex items-center justify-center bg-slate-900">
-                  <div className="text-center">
-                    <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                    <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                    <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
-                      Go Home
-                    </a>
-                  </div>
-                </div>
-              } />
-<<<<<<< HEAD
-            </Routes>
-            </main>
-            <Footer />
-            <PerformanceMonitor />
-          </div>
-        </Router>
-      </ErrorBoundary>
-=======
+                    {/* Main Pages */}
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/services" element={<ServicesPage />} />
+                    <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+                    <Route path="/ai-solutions" element={<AISolutionsPage />} />
+                    <Route path="/it-solutions" element={<ITSolutionsPage />} />
+                    <Route path="/blog" element={<BlogPage />} />
+                    <Route path="/tutorials" element={<TutorialsPage />} />
+                    <Route path="/demo" element={<DemoPage />} />
+                    <Route path="/support" element={<SupportPage />} />
+                    <Route path="/privacy" element={<PrivacyPage />} />
+                    <Route path="/terms" element={<TermsPage />} />
+                    <Route path="/pricing" element={<PricingPage />} />
+                    <Route path="/solutions" element={<SolutionsPage />} />
+                    
+                    {/* Service Pages */}
+                    <Route path="/ai-services" element={<AIServicesPage />} />
+                    <Route path="/it-services" element={<ITServicesPage />} />
+                    <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                    <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
+                    <Route path="/case-studies" element={<CaseStudiesPage />} />
+                    <Route path="/careers" element={<CareersPage />} />
+                    
+                    {/* Catch all route */}
+                    <Route path="*" element={
+                      <div className="min-h-screen flex items-center justify-center bg-slate-900">
+                        <div className="text-center">
+                          <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                          <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
+                          <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
+                            Go Home
+                          </a>
+                        </div>
+                      </div>
+                    } />
                   </Routes>
                 </Suspense>
               </main>
@@ -157,54 +119,7 @@ function App() {
           </Router>
         </AccessibilityEnhancer>
       </EnhancedErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
     </HelmetProvider>
-=======
-    <ErrorBoundary>
-      <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-slate-900">
-            <Navigation />
-            <main className="relative z-10" id="main-content" role="main">
-              <ErrorBoundary>
-                <Routes>
-                  {/* Main Pages */}
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/tutorials" element={<TutorialsPage />} />
-                  <Route path="/demo" element={<DemoPage />} />
-                  <Route path="/support" element={<SupportPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/solutions" element={<SolutionsPage />} />
-                  
-                  {/* Catch all route */}
-                  <Route path="*" element={
-                    <div className="min-h-screen flex items-center justify-center bg-slate-900">
-                      <div className="text-center">
-                        <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                        <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                        <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
-                          Go Home
-                        </a>
-                      </div>
-                    </div>
-                  } />
-                </Routes>
-              </ErrorBoundary>
-            </main>
-            <Footer />
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
-          </div>
-        </Router>
-      </HelmetProvider>
-    </ErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
   );
 }
 

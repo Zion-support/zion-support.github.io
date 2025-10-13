@@ -39,10 +39,6 @@ const Navigation = () => {
         { name: '5G Solutions', href: '/5g-solutions' }
       ]
     },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
@@ -50,17 +46,6 @@ const Navigation = () => {
     { name: 'Demo', href: '/demo', icon: PlayIcon },
     { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-<<<<<<< HEAD
-=======
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'Support', href: '/support' },
-    { name: 'Contact', href: '/contact' }
->>>>>>> cursor/website-audit-and-update-with-deployment-936a
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
   ];
 
   const isActive = (path: string) => {
@@ -81,7 +66,6 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
@@ -148,7 +132,6 @@ const Navigation = () => {
                 </div>
               );
             })}
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
           </div>
 
           {/* CTA Button */}

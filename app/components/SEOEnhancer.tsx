@@ -81,7 +81,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   );
 };
 // Default structured data for the organization
-const  {
+const defaultStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Zion Tech Group",

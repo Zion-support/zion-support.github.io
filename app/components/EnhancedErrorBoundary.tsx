@@ -63,8 +63,8 @@ class EnhancedErrorBoundary extends Component<Props, State> {
         componentStack: errorInfo.componentStack,
         errorId: this.state.errorId,
         timestamp: new Date().toISOString(),
-        userAgent: navigator.userAgent,
-        url: window.location.href
+        userAgent: typeof window !== 'undefined' && typeof window.navigator !== 'undefined' ? window.navigator.userAgent : 'Unknown',
+        url: typeof window !== 'undefined' ? window.location.href : 'Unknown'
       };
 
       // Example: Send to error tracking service
