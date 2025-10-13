@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { 
   BarChart3, 
   TrendingUp, 
   Zap, 
@@ -16,35 +17,6 @@ import { Helmet } from 'react-helmet-async';
 } from "lucide-react";
 
 export default function page() {
-  const benefits: string[] = [];
-  
-  const analyticsStats = [
-    {
-      label: "Data Points Processed", value: "2.5M+", icon: <BarChart3 className="w-6 h-6" />
-    },
-    { label: "Real-time Updates", value: "99.9%", icon: <Zap className="w-6 h-6" /> },
-    { label: "Accuracy Rate", value: "98.5%", icon: <CheckCircle className="w-6 h-6" /> },
-    { label: "Processing Speed", value: "50ms", icon: <TrendingUp className="w-6 h-6" /> }
-  ];
-
-  const testimonials = [
-    {
-      name: "Sarah Johnson",
-      role: "Data Scientist",
-      company: "TechCorp",
-      content: "Zion's AI analytics platform has revolutionized our data processing capabilities.",
-      rating: 5,
-      avatar: "SJ"
-    },
-    {
-      name: "Michael Chen",
-      role: "CTO",
-      company: "DataFlow Inc",
-      content: "The real-time insights and predictive analytics are game-changing for our business.",
-      rating: 5,
-      avatar: "MC"
-    }
-  ];
 
   const features = [
     {
@@ -172,7 +144,7 @@ export default function page() {
   ];
 
   return (
-    <div>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
         <title>AI Analytics - Zion Tech Group</title>
         <meta name="description" content="Advanced AI analytics platform with real-time insights and predictive modeling." />
@@ -266,10 +238,8 @@ export default function page() {
               </p>
             </div>
           </div>
-        </section>
-      </div>
-</div>
+        </div>
+      </section>
+    </div>
   );
 };
-
-export default Page;

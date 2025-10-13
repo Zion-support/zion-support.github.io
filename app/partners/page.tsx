@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
 export default function Partners() {
-  // const partners = [
+  const partners = [
     {
       name: "Microsoft",
       logo: "/images/partners/microsoft.png",
