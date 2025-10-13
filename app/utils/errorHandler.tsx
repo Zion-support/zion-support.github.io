@@ -1,3 +1,12 @@
+<<<<<<< HEAD
+interface ErrorhandlerxProps {
+}
+const Errorhandlerx: React.FC<ErrorhandlerxProps> = ({ className = "" }) => {
+  return (
+    <div className={className}>
+      <h2>Errorhandlerx</h2>
+    </div>
+=======
 import React from 'react';
 
 interface ErrorhandlerProps {
@@ -12,3 +21,4 @@ export default function Errorhandler({ className = '', children, ...props }: Err
     </div>
   );
 }
+>>>>>>> origin/main

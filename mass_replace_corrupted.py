@@ -10,7 +10,7 @@ def create_clean_page_template(file_path):
     """Create a clean page template for corrupted files."""
     filename = os.path.basename(file_path)
     page_name = filename.replace('.tsx', '').replace('.ts', '')
-    
+
     # Handle special cases for component names
     if page_name.startswith('5g-'):
         component_name = 'FiveG' + ''.join(word.capitalize() for word in page_name[3:].split('-'))
@@ -22,7 +22,7 @@ def create_clean_page_template(file_path):
         component_name = 'App'
     else:
         component_name = ''.join(word.capitalize() for word in page_name.split('-'))
-    
+
     # Special handling for App.tsx
     if page_name == 'App':
         return '''import React from 'react';
@@ -44,7 +44,7 @@ export default function App() {
   );
 }
 '''
-    
+
     template = f'''import React from 'react';
 
 export default function {component_name}() {{
@@ -64,7 +64,7 @@ export default function {component_name}() {{
   );
 }}
 '''
-    
+
     return template
 
 def is_file_corrupted(file_path):
@@ -72,44 +72,44 @@ def is_file_corrupted(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
-        
+
         # Check for common corruption patterns
-        if '<<<<<<< HEAD' in content or '=======' in content or '>>>>>>> ' in content:
+        if '
             return True
-        
+
         # Check for malformed JSX/TSX
         if 'export default function' in content:
             # Check if function is properly closed
             if not re.search(r'export default function.*?\{.*?\}', content, re.DOTALL):
                 return True
-        
+
         # Check for unclosed tags
         if '<' in content and '>' in content:
             open_tags = re.findall(r'<(\w+)[^>]*>', content)
             close_tags = re.findall(r'</(\w+)>', content)
             if len(open_tags) != len(close_tags):
                 return True
-        
+
         return False
-        
+
     except Exception:
         return True
 
 def mass_replace_corrupted():
     """Replace all corrupted files with clean templates."""
-    
+
     # Find all TypeScript/TSX files in the app directory
     result = os.popen('find app -name "*.tsx" -o -name "*.ts"').read()
     files = [f.strip() for f in result.split('\n') if f.strip()]
-    
+
     print(f"Checking {len(files)} TypeScript files...")
-    
+
     replaced_count = 0
-    
+
     for file_path in files:
         if not os.path.exists(file_path):
             continue
-            
+
         try:
             if is_file_corrupted(file_path):
                 print(f"Replacing corrupted file: {file_path}")
@@ -117,10 +117,10 @@ def mass_replace_corrupted():
                 with open(file_path, 'w', encoding='utf-8') as f:
                     f.write(template)
                 replaced_count += 1
-                
+
         except Exception as e:
             print(f"Error processing {file_path}: {e}")
-    
+
     print(f"Replaced {replaced_count} corrupted files")
 
 def main():

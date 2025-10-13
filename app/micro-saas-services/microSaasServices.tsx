@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+interface MicrosaasservicesProps {
+}
+const Microsaasservices: React.FC<MicrosaasservicesProps> = ({
+  className = "",
+}) => {
+  return (
+    <div className={className}>
+      <h2>Microsaasservices</h2>
+    </div>
+=======
 import React from 'react';
 
 export default function Microsaasservices() {
@@ -16,3 +27,4 @@ export default function Microsaasservices() {
     </div>
   );
 }
+>>>>>>> origin/main

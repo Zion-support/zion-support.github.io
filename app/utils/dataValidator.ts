@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+// Datavalidator utility functions
+export const Datavalidator = {
+  init: () => {
+    },
+  process: (data: any) => {
+  },
+  cleanup: () => {
+    },
+=======
 // dataValidator utility
 export const dataValidator = {
   // Utility implementation
@@ -5,3 +15,4 @@ export const dataValidator = {
     console.log('dataValidator initialized');
   }
 };
+>>>>>>> origin/main

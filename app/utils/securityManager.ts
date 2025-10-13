@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+// Securitymanager utility functions
+export const Securitymanager = {
+  init: () => {
+    },
+  process: (data: any) => {
+  },
+  cleanup: () => {
+    },
+=======
 // securityManager utility
 export const securityManager = {
   // Utility implementation
@@ -5,3 +15,4 @@ export const securityManager = {
     console.log('securityManager initialized');
   }
 };
+>>>>>>> origin/main

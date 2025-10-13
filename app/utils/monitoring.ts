@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+// Monitoring utility functions
+export const Monitoring = {
+  init: () => {
+    },
+  process: (data: any) => {
+  },
+  cleanup: () => {
+    },
+=======
 // monitoring utility
 export const monitoring = {
   // Utility implementation
@@ -5,3 +15,4 @@ export const monitoring = {
     console.log('monitoring initialized');
   }
 };
+>>>>>>> origin/main
