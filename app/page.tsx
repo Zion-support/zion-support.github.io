@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, Play } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -91,51 +91,69 @@ const HomePage = () => {
   const microSaasHighlights = [
     {
       name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
+      description: "AI-powered business intelligence platform with real-time dashboards, predictive analytics, and automated reporting. Transform raw data into actionable insights with 99.9% accuracy.",
       price: "From $299/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/zion-analytics-pro",
-      featured: true
+      featured: true,
+      rating: 4.9,
+      users: "2,500+",
+      capabilities: ["Real-time Analytics", "Predictive Modeling", "Automated Reporting", "Custom Dashboards"]
     },
     {
       name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
+      description: "Advanced cybersecurity protection with AI-powered threat detection, automated response, and 24/7 monitoring. Protect your business with enterprise-grade security solutions.",
       price: "From $499/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
-      featured: true
+      featured: true,
+      rating: 4.9,
+      users: "1,500+",
+      capabilities: ["AI Threat Detection", "Automated Response", "24/7 Monitoring", "Compliance Reporting"]
     },
     {
       name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution with end-to-end encryption and unlimited scalability",
+      description: "Secure cloud storage solution with end-to-end encryption, unlimited scalability, and advanced file management. Store and access your data securely from anywhere.",
       price: "From $99/month",
       icon: <Cloud className="w-6 h-6" />,
       link: "/zion-cloud-vault",
-      featured: true
+      featured: true,
+      rating: 4.8,
+      users: "6,500+",
+      capabilities: ["Unlimited Storage", "End-to-end Encryption", "File Versioning", "Collaboration Tools"]
     },
     {
-      name: "Zion AI CRM Pro",
-      description: "AI-powered customer relationship management with intelligent lead scoring and automation",
+      name: "Zion AI Workflow Automation",
+      description: "Intelligent workflow automation platform that streamlines business processes, reduces manual work, and increases operational efficiency through AI decision-making.",
       price: "From $199/month",
-      icon: <Users className="w-6 h-6" />,
-      link: "/zion-ai-crm-pro",
-      featured: true
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-workflow-automation",
+      featured: true,
+      rating: 4.8,
+      users: "2,800+",
+      capabilities: ["Process Automation", "AI Decision Making", "Integration Hub", "Performance Analytics"]
     },
     {
       name: "Zion AI Marketing Automation Pro",
-      description: "AI-powered marketing automation with predictive content generation and multi-channel orchestration",
-      price: "From $149/month",
+      description: "Comprehensive marketing automation platform with AI-powered campaign optimization, lead scoring, and personalized customer journeys for maximum ROI.",
+      price: "From $299/month",
       icon: <Target className="w-6 h-6" />,
       link: "/zion-ai-marketing-automation-pro",
-      featured: true
+      featured: true,
+      rating: 4.8,
+      users: "3,500+",
+      capabilities: ["Campaign Optimization", "Lead Scoring", "Personalization", "Multi-channel Marketing"]
     },
     {
-      name: "Zion AI Project Manager Pro",
-      description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
-      icon: <Calendar className="w-6 h-6" />,
-      link: "/zion-ai-project-manager-pro",
-      featured: true
+      name: "Zion AI Customer Support Chatbot",
+      description: "Intelligent customer service chatbot powered by advanced NLP that provides 24/7 support, handles complex queries, and escalates issues to human agents when needed.",
+      price: "From $149/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-customer-support-chatbot",
+      featured: true,
+      rating: 4.7,
+      users: "6,200+",
+      capabilities: ["Natural Language Processing", "24/7 Availability", "Context Awareness", "Human Handoff"]
     }
   ];
 
@@ -307,18 +325,18 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
-              <Link
+              <div
                 key={index}
-                to={saas.link}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
               >
                 {saas.featured && (
                   <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                       Featured
                     </span>
                   </div>
                 )}
+                
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
                     {saas.icon}
@@ -330,14 +348,53 @@ const HomePage = () => {
                     <p className="text-cyan-400 font-medium">{saas.price}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
+
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {saas.description}
                 </p>
-                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
-                  Learn More
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+
+                <div className="mb-4">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className={`w-4 h-4 ${i < Math.floor(saas.rating) ? 'text-yellow-400 fill-current' : 'text-gray-400'}`} />
+                      ))}
+                    </div>
+                    <span className="text-gray-300 text-sm">{saas.rating}</span>
+                    <span className="text-gray-500 text-sm">•</span>
+                    <span className="text-gray-300 text-sm">{saas.users} users</span>
+                  </div>
                 </div>
-              </Link>
+
+                <div className="mb-4">
+                  <h5 className="text-white font-medium mb-2 text-sm">Key Capabilities:</h5>
+                  <div className="flex flex-wrap gap-1">
+                    {saas.capabilities.map((capability, capabilityIndex) => (
+                      <span key={capabilityIndex} className="text-xs bg-white/10 text-gray-300 px-2 py-1 rounded">
+                        {capability}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <Link
+                    to={saas.link}
+                    className="text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors flex items-center"
+                  >
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <FuturisticButton
+                    href="/contact"
+                    variant="outline"
+                    size="sm"
+                    icon={<Play className="w-4 h-4" />}
+                  >
+                    Try Free
+                  </FuturisticButton>
+                </div>
+              </div>
             ))}
           </div>
           <div className="text-center mt-12">
