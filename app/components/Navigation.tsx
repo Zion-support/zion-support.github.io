@@ -36,7 +36,13 @@ const Navigation = React.memo(() => {
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Social Scheduler', path: '/zion-social-scheduler', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Workflow Automation', path: '/zion-workflow-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Invoice Genius', path: '/zion-invoice-genius', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Inventory Smart', path: '/zion-inventory-smart', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion Compliance Manager', path: '/zion-compliance-manager', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Zion Performance Monitor', path: '/zion-performance-monitor', icon: <BarChart3 className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [

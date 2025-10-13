@@ -424,6 +424,26 @@ function App() {
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
                   />
+                  <Route
+                    path="/zion-social-scheduler"
+                    element={<ZionSocialSchedulerPage />}
+                  />
+                  <Route
+                    path="/zion-workflow-automation"
+                    element={<ZionWorkflowAutomationPage />}
+                  />
+                  <Route
+                    path="/zion-invoice-genius"
+                    element={<ZionInvoiceGeniusPage />}
+                  />
+                  <Route
+                    path="/zion-inventory-smart"
+                    element={<ZionInventorySmartPage />}
+                  />
+                  <Route
+                    path="/zion-compliance-manager"
+                    element={<ZionComplianceManagerPage />}
+                  />
 
                   {/* 5G Solutions Routes */}
                   <Route
