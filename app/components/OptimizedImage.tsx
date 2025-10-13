@@ -10,7 +10,6 @@ interface OptimizedImageProps {
   priority?: boolean;
   placeholder?: 'blur' | 'empty';
   blurDataURL?: string;
-  quality?: number;
   sizes?: string;
   loading?: 'lazy' | 'eager';
   onLoad?: () => void;
@@ -24,14 +23,8 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   height,
   className = '',
   priority = false,
-<<<<<<< HEAD
   placeholder = 'empty',
   blurDataURL = '',
-=======
-  // placeholder = 'empty',
-  // blurDataURL = '',
-  // quality = 75,
->>>>>>> cursor/fix-errors-and-merge-to-main-c834
   sizes = '100vw',
   loading = 'lazy',
   onLoad,
