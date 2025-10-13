@@ -1,22 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { 
+  Menu, 
+  X, 
   Network,
   FileText,
   Clock
 } from 'lucide-react';
 import FuturisticButton from './FuturisticButton';
+
 interface NavigationProps {
   onSidebarToggle: () => void;
 }
-import { Menu, X } from 'lucide-react';
-
-const Navigation: React.FC = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 
 const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
-    setIsMenuOpen(prev => !prev);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(prev => !prev);
+  };
 
   const toggleDropdown = useCallback((dropdown: string) => {
     setActiveDropdown(prev => prev === dropdown ? null : dropdown);

@@ -1,26 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect, Suspense, memo } from 'react';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/PerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
-import React, { useState, useEffect, Suspense, memo } from 'react;
-
-import { Navigation } from './components/Navigation;
-
-import { Footer } from './components/Footer;
-
-import { ContentPromotionBanner } from './components/ContentPromotionBanner;
+import ContentPromotionBanner from './components/ContentPromotionBanner';
 
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = memo(() => (
+  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
+    <div className="h-4 bg-gray-300 rounded mb-4"></div>
+    <div className="h-3 bg-gray-300 rounded mb-2"></div>
+    <div className="h-3 bg-gray-300 rounded"></div>
+  </div>
+));
 
-  <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card>
-    <div className="h-4 bg-gray-300 rounded mb-4></div>
-    <div className="h-3 bg-gray-300 rounded mb-2></div>
-    <div className="h-3 bg-gray-300 rounded></div>
-))
-ServiceCardSkeleton.displayName = 'ServiceCardSkeleton;
+ServiceCardSkeleton.displayName = 'ServiceCardSkeleton';
 
 const HomePage: React.FC = () => {}
 

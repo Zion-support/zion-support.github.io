@@ -36,6 +36,7 @@ export default tseslint.config(
       "backup-problematic*/**",
       "backup-unused-components/**",
       "corrupted-src-backup/**",
+      "app-disabled/**",
       "*.js",
       "*.py",
       "*.sh",
