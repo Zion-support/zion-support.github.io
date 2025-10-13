@@ -377,6 +377,130 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "zion-ai-invoice-genius",
+      name: "Zion AI Invoice Genius",
+      description: "AI-powered invoice management with automated generation, payment tracking, and financial insights",
+      price: "From $29/month",
+      originalPrice: "$49/month",
+      discount: "41% OFF",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-emerald-500 to-green-500",
+      features: [
+        "AI-powered invoice generation",
+        "Automated payment tracking",
+        "Smart expense categorization",
+        "Multi-currency support",
+        "Real-time financial insights",
+        "Automated reminders",
+        "Tax calculation & reporting",
+        "Client portal integration"
+      ],
+      benefits: [
+        "Save 15+ hours weekly",
+        "Reduce payment delays by 40%",
+        "Improve cash flow management",
+        "Eliminate manual errors"
+      ],
+      category: "Finance",
+      rating: 4.8,
+      reviews: 1456,
+      link: "/zion-ai-invoice-genius",
+      featured: true
+    },
+    {
+      id: "zion-ai-inventory-smart",
+      name: "Zion AI Inventory Smart",
+      description: "AI-powered inventory management with demand forecasting, automated reordering, and cost optimization",
+      price: "From $49/month",
+      originalPrice: "$79/month",
+      discount: "38% OFF",
+      icon: <Package className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      features: [
+        "AI-powered demand forecasting",
+        "Automated reorder points",
+        "Real-time inventory tracking",
+        "Multi-location management",
+        "Barcode scanning integration",
+        "Supplier management system",
+        "Cost optimization algorithms",
+        "Waste reduction analytics"
+      ],
+      benefits: [
+        "Reduce inventory costs by 25%",
+        "Eliminate stockouts by 90%",
+        "Optimize warehouse space usage",
+        "Improve supplier relationships"
+      ],
+      category: "Inventory",
+      rating: 4.7,
+      reviews: 1892,
+      link: "/zion-ai-inventory-smart",
+      featured: true
+    },
+    {
+      id: "zion-ai-compliance-manager",
+      name: "Zion AI Compliance Manager",
+      description: "AI-powered compliance management with automated monitoring, risk assessment, and regulatory updates",
+      price: "From $99/month",
+      originalPrice: "$159/month",
+      discount: "38% OFF",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-indigo-500 to-blue-500",
+      features: [
+        "AI-powered compliance monitoring",
+        "Automated risk assessment",
+        "Real-time regulatory updates",
+        "Multi-framework support (GDPR, HIPAA, SOX)",
+        "Document management system",
+        "Audit trail automation",
+        "Policy template library",
+        "Training management"
+      ],
+      benefits: [
+        "Reduce compliance costs by 40%",
+        "Eliminate compliance violations",
+        "Automate 80% of compliance tasks",
+        "Improve audit readiness"
+      ],
+      category: "Compliance",
+      rating: 4.9,
+      reviews: 1123,
+      link: "/zion-ai-compliance-manager",
+      featured: true
+    },
+    {
+      id: "zion-ai-performance-monitor",
+      name: "Zion AI Performance Monitor",
+      description: "AI-powered performance monitoring with real-time analytics, predictive alerts, and automated optimization",
+      price: "From $39/month",
+      originalPrice: "$65/month",
+      discount: "40% OFF",
+      icon: <Activity className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "AI-powered performance analytics",
+        "Real-time system monitoring",
+        "Predictive performance alerts",
+        "Automated optimization recommendations",
+        "Multi-platform support",
+        "Custom dashboard creation",
+        "Performance benchmarking",
+        "User experience tracking"
+      ],
+      benefits: [
+        "Improve performance by 60%",
+        "Reduce downtime by 90%",
+        "Optimize resource utilization",
+        "Enhance user experience"
+      ],
+      category: "Performance",
+      rating: 4.8,
+      reviews: 1678,
+      link: "/zion-ai-performance-monitor",
+      featured: false
     }
   ];
 
@@ -393,12 +517,15 @@ export default function MicroSaas() {
     { name: "Support", count: microSaasServices.filter(s => s.category === "Support").length, active: false },
     { name: "Automation", count: microSaasServices.filter(s => s.category === "Automation").length, active: false },
     { name: "Finance", count: microSaasServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false }
+    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false },
+    { name: "Inventory", count: microSaasServices.filter(s => s.category === "Inventory").length, active: false },
+    { name: "Compliance", count: microSaasServices.filter(s => s.category === "Compliance").length, active: false },
+    { name: "Performance", count: microSaasServices.filter(s => s.category === "Performance").length, active: false }
   ];
 
   const stats = [
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "55+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];

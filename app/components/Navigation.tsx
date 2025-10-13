@@ -1,5 +1,28 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
+import { 
+  Phone, 
+  Mail, 
+  MapPin, 
+  ChevronDown, 
+  X, 
+  Menu, 
+  ArrowRight, 
+  Star,
+  Cloud,
+  Shield,
+  Code,
+  Database,
+  BarChart3,
+  Brain,
+  Zap,
+  FileText,
+  Package,
+  Activity,
+  Globe
+} from 'lucide-react'
+import FuturisticButton from './FuturisticButton'
+import { SidebarIcon } from './SidebarIcon'
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -42,11 +65,15 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Invoice Genius', path: '/zion-ai-invoice-genius', icon: <FileText className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Inventory Smart', path: '/zion-ai-inventory-smart', icon: <Package className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Compliance Manager', path: '/zion-ai-compliance-manager', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> },
+    { name: 'Zion AI Performance Monitor', path: '/zion-ai-performance-monitor', icon: <Activity className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
