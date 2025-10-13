@@ -216,4 +216,6 @@ export const TableSkeleton: React.FC<{ rows?: number; columns?: number }> = ({
   );
 };
 
+export const LoadingPage = LoadingSpinner;
+
 export default LoadingSpinner;
