@@ -115,9 +115,21 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, Search } from 'lucide-react';
 =======
 'use client'
+<<<<<<< HEAD
 import React from 'react'
 import { CheckCircle, ArrowRight, Zap, Shield, Globe, Cloud, Database, Smartphone } from 'lucide-react'
 import { Link } from 'react-router-dom'
+=======
+import React, { Suspense } from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, Zap, Shield, Globe, Database, Code, Cloud } from 'lucide-react'
+import Navigation from './components/Navigation'
+import Footer from './components/Footer'
+import ErrorBoundary from './components/ErrorBoundary'
+import LoadingSpinner from './components/LoadingSpinner'
+import PerformanceMonitor from './components/PerformanceMonitor'
+import AccessibilityEnhancer from './components/AccessibilityEnhancer'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
 
 export default function HomePage() {
   const features = [
@@ -190,6 +202,7 @@ export default function HomePage() {
 const HomePage: React.FC = () => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -412,6 +425,78 @@ const HomePage: React.FC = () => {
               <h2 className="text-4xl font-bold text-white mb-6">Our Services</h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Comprehensive AI and IT solutions designed to accelerate your business growth and innovation.
+=======
+    <ErrorBoundary>
+      <div className="min-h-screen bg-gray-50">
+        <Helmet>
+        <title>Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company</title>
+        <meta name="description" content="Leading provider of AI-powered solutions, IT services, cloud computing, and digital transformation for modern businesses. Expert technology consulting and implementation." />
+        <meta name="keywords" content="AI solutions, IT services, cloud computing, digital transformation, artificial intelligence, machine learning, technology consulting, business automation" />
+        <meta name="author" content="Zion Tech Group" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        
+        {/* Open Graph Tags */}
+        <meta property="og:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta property="og:description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://ziontechgroup.com" />
+        <meta property="og:site_name" content="Zion Tech Group" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Zion Tech Group - Advanced AI and IT Solutions" />
+        <meta name="twitter:description" content="Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses." />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://ziontechgroup.com" />
+        
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Zion Tech Group",
+            "url": "https://ziontechgroup.com",
+            "logo": "https://ziontechgroup.com/logo.png",
+            "description": "Leading provider of AI-powered solutions, IT services, and digital transformation for modern businesses.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "364 E Main St STE 1008",
+              "addressLocality": "Middletown",
+              "addressRegion": "DE",
+              "postalCode": "19709",
+              "addressCountry": "US"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "telephone": "+1-302-464-0950",
+              "contactType": "customer service",
+              "email": "kleber@ziontechgroup.com"
+            },
+            "sameAs": [
+              "https://twitter.com/ziontechgroup",
+              "https://linkedin.com/company/ziontechgroup"
+            ]
+          })}
+        </script>
+        </Helmet>
+        
+        <Suspense fallback={<LoadingSpinner size="lg" text="Loading..." className="min-h-screen" />}>
+          <Navigation />
+        </Suspense>
+        
+        <main>
+        <section className="relative py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center">
+              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+                Advanced <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">AI & IT Solutions</span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Transform your business with cutting-edge artificial intelligence, cloud computing, and digital transformation services.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
               </p>
             </div>
             
@@ -477,6 +562,7 @@ const HomePage: React.FC = () => {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
       </div>
     </>
   );
@@ -813,3 +899,17 @@ const HomePage: React.FC = () => {
 
 export default HomePage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+        </main>
+        
+        <Suspense fallback={<LoadingSpinner size="md" text="Loading footer..." />}>
+          <Footer />
+        </Suspense>
+        
+        <PerformanceMonitor enabled={true} />
+        <AccessibilityEnhancer />
+      </div>
+    </ErrorBoundary>
+  )
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440

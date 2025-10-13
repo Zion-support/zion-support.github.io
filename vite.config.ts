@@ -26,12 +26,23 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+<<<<<<< HEAD
           vendor: ["react", "react-dom"],
           router: ["react-router-dom"],
           ui: ["framer-motion", "lucide-react"],
+=======
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          ui: ['framer-motion', 'lucide-react'],
+          helmet: ['react-helmet-async'],
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
         },
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]'
       },
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     // Performance optimizations
@@ -126,6 +137,11 @@ export default defineConfig({
     // Enable tree shaking
     treeshake: true,
 >>>>>>> origin/cursor/analyze-and-fix-application-errors-5651
+=======
+    chunkSizeWarningLimit: 1000,
+    target: 'esnext',
+    cssCodeSplit: true,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
   },
   server: {
     port: 3000,

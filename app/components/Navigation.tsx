@@ -929,7 +929,71 @@ export default function Navigation() {
             </button>
           </div>
         </div>
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+
+        {isOpen && (
+          <div className="lg:hidden">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200 shadow-lg">
+              <Link
+                to="/"
+                className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                to="/about"
+                className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                About
+              </Link>
+              
+              <div>
+                <button
+                  onClick={toggleServices}
+                  className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium w-full text-left flex items-center justify-between"
+                >
+                  Services
+                  <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {isServicesOpen && (
+                  <div className="pl-6 space-y-1">
+                    {services.map((service) => {
+                      const IconComponent = service.icon
+                      return (
+                        <Link
+                          key={service.href}
+                          to={service.href}
+                          className="text-gray-600 hover:text-purple-600 block px-3 py-2 text-sm font-medium flex items-center"
+                          onClick={() => {
+                            setIsOpen(false)
+                            setIsServicesOpen(false)
+                          }}
+                        >
+                          <IconComponent className="w-4 h-4 text-purple-600 mr-2" />
+                          {service.title}
+                        </Link>
+                      )
+                    })}
+                  </div>
+                )}
+              </div>
+
+              <Link
+                to="/contact"
+                className="text-gray-900 hover:text-purple-600 block px-3 py-2 text-base font-medium"
+                onClick={() => setIsOpen(false)}
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+        )}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
       </div>
 
       {/* Mobile Navigation */}

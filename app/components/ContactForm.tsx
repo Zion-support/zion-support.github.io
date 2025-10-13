@@ -15,11 +15,27 @@ const ContactForm: React.FC = () => {
     message: '',})
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {,
     const {name, value}}= e.target;
     setFormData(prev => ({)
       [name]: value;}));
 =======
+=======
+  const [status, setStatus] = useState<FormStatus>({
+    type: 'idle',
+    message: ''
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);

@@ -7,11 +7,16 @@ Sitemap: https://ziontechgroup.com/sitemap.xml
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 
+<<<<<<< HEAD
 # Disallow admin and private areas
+=======
+# Disallow admin areas (if any)
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
 Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 Disallow: /_next/
+<<<<<<< HEAD
 Disallow: /node_modules/
 
 # Allow important pages
@@ -37,3 +42,6 @@ Allow: /*.gif$
 Allow: /*.svg$
 Allow: /*.webp$
 Allow: /*.ico$
+=======
+Disallow: /private/
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440

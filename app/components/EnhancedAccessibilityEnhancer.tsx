@@ -17,8 +17,18 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
+<<<<<<< HEAD
               <span>EnhancedAccessibilityEnhancer;</span>
             <p>Transform your business with our advanced enhancedaccessibilityenhancer solutions.;</p>
+=======
+                Enhanced Accessibility
+              </span>
+              <br />
+              <span className="text-white">Solutions</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced enhancedaccessibilityenhancer solutions. 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
               Powered by cutting-edge AI technology and industry expertise.
             </p>
 <<<<<<< HEAD
