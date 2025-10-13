@@ -1,80 +1,78 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { BarChart3, Brain, Users, TrendingUp, CheckCircle, ArrowRight, Star, Target, Zap, Award, Globe, Shield } from "lucide-react";
+import { Link as LinkIcon, Shield, Zap, Brain, CheckCircle, ArrowRight, Star, Target, Award, Globe, BarChart3, Sparkles } from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-const ZionAiCustomerInsightsPage = () => {
+const ZionAiBlockchainSolutionsPage = () => {
   const features = [
     {
-      title: "AI-Powered Customer Segmentation",
-      description: "Automatically segment your customers using advanced machine learning algorithms that identify patterns and behaviors",
-      icon: <Users className="w-6 h-6" />,
-      stats: "95% accuracy"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast customer behavior, churn risk, and lifetime value with our advanced predictive models",
-      icon: <TrendingUp className="w-6 h-6" />,
-      stats: "90% prediction accuracy"
-    },
-    {
-      title: "Real-time Sentiment Analysis",
-      description: "Analyze customer feedback, reviews, and social media mentions in real-time to understand customer sentiment",
+      title: "AI-Powered Smart Contracts",
+      description: "Create intelligent smart contracts that adapt and learn from transaction patterns using advanced AI algorithms",
       icon: <Brain className="w-6 h-6" />,
-      stats: "Real-time processing"
+      stats: "99.9% accuracy"
     },
     {
-      title: "Automated Insights Generation",
-      description: "Get actionable insights and recommendations automatically generated from your customer data",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "100+ insights daily"
+      title: "Decentralized AI Networks",
+      description: "Build distributed AI networks that operate across multiple blockchain nodes for enhanced security and performance",
+      icon: <Globe className="w-6 h-6" />,
+      stats: "Global distribution"
+    },
+    {
+      title: "Blockchain Analytics",
+      description: "Advanced AI-driven analytics for blockchain transactions, fraud detection, and pattern recognition",
+      icon: <BarChart3 className="w-6 h-6" />,
+      stats: "Real-time analysis"
+    },
+    {
+      title: "Quantum-Safe Cryptography",
+      description: "Implement quantum-resistant cryptographic solutions to future-proof your blockchain applications",
+      icon: <Shield className="w-6 h-6" />,
+      stats: "Future-proof security"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$49",
+      name: "Blockchain Starter",
+      price: "$199",
       period: "/month",
-      description: "Perfect for small businesses starting their customer analytics journey",
+      description: "Perfect for startups and small projects exploring blockchain technology",
       features: [
-        "Up to 10,000 customers",
-        "Basic segmentation",
-        "Monthly reports",
+        "Basic smart contract deployment",
+        "Standard blockchain analytics",
         "Email support",
-        "3 data sources"
+        "Public blockchain integration",
+        "Documentation & tutorials"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$149",
+      name: "Blockchain Professional",
+      price: "$599",
       period: "/month",
-      description: "Ideal for growing businesses with advanced analytics needs",
+      description: "Ideal for growing businesses with advanced blockchain requirements",
       features: [
-        "Up to 100,000 customers",
-        "Advanced AI segmentation",
-        "Real-time analytics",
-        "Predictive modeling",
+        "Advanced AI smart contracts",
+        "Custom blockchain analytics",
         "Priority support",
-        "10 data sources",
-        "Custom dashboards"
+        "Private blockchain networks",
+        "AI model integration",
+        "Dedicated blockchain engineer"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$399",
+      name: "Blockchain Enterprise",
+      price: "$1,999",
       period: "/month",
-      description: "For large organizations with complex customer data requirements",
+      description: "For large organizations requiring enterprise-grade blockchain solutions",
       features: [
-        "Unlimited customers",
-        "Custom AI models",
-        "White-label solution",
-        "API access",
-        "Dedicated support",
-        "Unlimited data sources",
-        "Advanced integrations"
+        "Custom blockchain development",
+        "Advanced AI integration",
+        "24/7 dedicated support",
+        "Multi-chain solutions",
+        "White-label platform",
+        "Blockchain consulting services"
       ],
       popular: false
     }
@@ -82,88 +80,88 @@ const ZionAiCustomerInsightsPage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Retail Solutions Inc.",
-      role: "Marketing Director",
-      content: "Zion AI Customer Insights helped us increase our customer retention by 40% through better understanding of customer behavior patterns.",
+      name: "Alex Chen",
+      company: "DeFi Innovations",
+      role: "CTO",
+      content: "Zion AI Blockchain Solutions has transformed our DeFi platform. The AI-powered smart contracts have reduced gas costs by 60% while improving security.",
       rating: 5,
-      avatar: "JM"
+      avatar: "AC"
     },
     {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Head of Analytics",
-      content: "The predictive analytics are incredibly accurate. We can now anticipate customer needs and personalize experiences like never before.",
+      name: "Maria Rodriguez",
+      company: "Supply Chain Solutions",
+      role: "Blockchain Director",
+      content: "The AI analytics capabilities have given us unprecedented visibility into our supply chain. We can now track and optimize every transaction in real-time.",
       rating: 5,
-      avatar: "DK"
+      avatar: "MR"
     },
     {
-      name: "Lisa Thompson",
-      company: "SaaS Company",
-      role: "VP of Customer Success",
-      content: "The automated insights save us hours of analysis. We get actionable recommendations that directly impact our business growth.",
+      name: "Dr. James Wilson",
+      company: "Healthcare Blockchain",
+      role: "Chief Technology Officer",
+      content: "The quantum-safe cryptography ensures our patient data remains secure for decades. This is exactly what healthcare needs for long-term data integrity.",
       rating: 5,
-      avatar: "LT"
+      avatar: "JW"
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Companies Using", icon: <Globe className="w-6 h-6" /> },
-    { number: "40%", label: "Average Retention Increase", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "95%", label: "Prediction Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Processing", icon: <Brain className="w-6 h-6" /> }
+    { number: "100+", label: "Blockchain Projects", icon: <LinkIcon className="w-6 h-6" /> },
+    { number: "60%", label: "Cost Reduction", icon: <Zap className="w-6 h-6" /> },
+    { number: "99.9%", label: "Security Uptime", icon: <Shield className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Monitoring", icon: <Brain className="w-6 h-6" /> }
   ];
 
   const useCases = [
     {
-      title: "Customer Retention",
-      description: "Identify at-risk customers and implement targeted retention strategies",
-      icon: <Shield className="w-6 h-6" />,
-      benefit: "Reduce churn by up to 40%"
-    },
-    {
-      title: "Personalization",
-      description: "Create personalized experiences based on customer behavior and preferences",
-      icon: <Target className="w-6 h-6" />,
-      benefit: "Increase engagement by 60%"
-    },
-    {
-      title: "Revenue Optimization",
-      description: "Identify high-value customers and optimize pricing strategies",
-      icon: <TrendingUp className="w-6 h-6" />,
-      benefit: "Boost revenue by 25%"
-    },
-    {
-      title: "Product Development",
-      description: "Understand customer needs to guide product roadmap decisions",
+      title: "DeFi Platforms",
+      description: "Build next-generation decentralized finance applications with AI-enhanced smart contracts",
       icon: <BarChart3 className="w-6 h-6" />,
-      benefit: "Improve product-market fit"
+      benefit: "60% lower gas costs"
+    },
+    {
+      title: "Supply Chain",
+      description: "Create transparent, traceable supply chains with AI-powered analytics and automation",
+      icon: <Globe className="w-6 h-6" />,
+      benefit: "100% traceability"
+    },
+    {
+      title: "Digital Identity",
+      description: "Implement secure, AI-verified digital identity solutions for enhanced privacy and security",
+      icon: <Shield className="w-6 h-6" />,
+      benefit: "Zero-knowledge proofs"
+    },
+    {
+      title: "NFT Marketplaces",
+      description: "Create intelligent NFT platforms with AI-driven pricing, authentication, and trading",
+      icon: <Sparkles className="w-6 h-6" />,
+      benefit: "AI-powered valuation"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Customer Insights - Advanced Customer Analytics Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your customer understanding with Zion AI Customer Insights. Advanced AI-powered analytics, predictive modeling, and automated insights generation. Starting at $49/month." />
-        <meta name="keywords" content="customer analytics, AI insights, customer segmentation, predictive analytics, customer behavior, data analysis, business intelligence, customer retention" />
-        <meta property="og:title" content="Zion AI Customer Insights - Advanced Customer Analytics Platform" />
-        <meta property="og:description" content="Transform your customer understanding with AI-powered analytics, predictive modeling, and automated insights generation. Starting at $49/month." />
+        <title>Zion AI Blockchain Solutions - Advanced Blockchain & AI Integration | Zion Tech Group</title>
+        <meta name="description" content="Revolutionize your blockchain applications with Zion AI Blockchain Solutions. AI-powered smart contracts, decentralized networks, analytics, and quantum-safe cryptography. Starting at $199/month." />
+        <meta name="keywords" content="blockchain AI, smart contracts, decentralized AI, blockchain analytics, quantum cryptography, DeFi, NFT, supply chain, digital identity, blockchain development" />
+        <meta property="og:title" content="Zion AI Blockchain Solutions - Advanced Blockchain & AI Integration" />
+        <meta property="og:description" content="Revolutionize your blockchain applications with AI-powered smart contracts, decentralized networks, analytics, and quantum-safe cryptography. Starting at $199/month." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-customer-insights" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-customer-insights.jpg" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-blockchain-solutions" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-blockchain-solutions.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion AI Customer Insights - Advanced Customer Analytics Platform" />
-        <meta name="twitter:description" content="Transform your customer understanding with AI-powered analytics, predictive modeling, and automated insights generation." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-customer-insights.jpg" />
+        <meta name="twitter:title" content="Zion AI Blockchain Solutions - Advanced Blockchain & AI Integration" />
+        <meta name="twitter:description" content="Revolutionize your blockchain applications with AI-powered smart contracts, decentralized networks, analytics, and quantum-safe cryptography." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-blockchain-solutions.jpg" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <SEOOptimizer
-          title="Zion AI Customer Insights - AI-Powered Customer Analytics Platform | Zion Tech Group"
-          description="Transform your customer understanding with our AI-powered analytics platform. Features customer segmentation, predictive modeling, sentiment analysis, and automated insights generation. Starting at $49/month."
-          keywords="customer analytics, AI insights, customer segmentation, predictive analytics, customer behavior, data analysis, business intelligence, customer retention, machine learning, customer data platform"
-          canonical="https://ziontechgroup.com/zion-ai-customer-insights"
+          title="Zion AI Blockchain Solutions - Advanced Blockchain & AI Platform | Zion Tech Group"
+          description="Revolutionize your blockchain applications with our AI-powered platform. Features smart contracts, decentralized networks, analytics, and quantum-safe cryptography. Starting at $199/month."
+          keywords="blockchain AI, smart contracts, decentralized AI, blockchain analytics, quantum cryptography, DeFi, NFT, supply chain, digital identity, blockchain development, Web3, cryptocurrency"
+          canonical="https://ziontechgroup.com/ai-blockchain-solutions"
         />
 
         {/* Hero Section */}
@@ -175,20 +173,20 @@ const ZionAiCustomerInsightsPage = () => {
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 AI Customer Analytics 2024</span>
+              <LinkIcon className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">#1 AI Blockchain Platform 2024</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Understand Your Customers
+              The Future of Blockchain is
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Like Never Before
+                {" "}AI-Powered
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your customer data into actionable insights with our AI-powered analytics platform. 
-              Get predictive analytics, automated segmentation, and real-time customer intelligence.
+              Combine the power of artificial intelligence with blockchain technology to create next-generation decentralized applications. 
+              Build smarter, more secure, and more efficient blockchain solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -196,7 +194,7 @@ const ZionAiCustomerInsightsPage = () => {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Analyzing
+                Start Building
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -204,7 +202,7 @@ const ZionAiCustomerInsightsPage = () => {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 View Demo
-                <BarChart3 className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <LinkIcon className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
             
@@ -228,10 +226,10 @@ const ZionAiCustomerInsightsPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced AI Analytics
+                Advanced AI-Blockchain Integration
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Our AI-powered platform combines machine learning, predictive analytics, and real-time processing to deliver deep customer insights.
+                Our platform seamlessly combines artificial intelligence with blockchain technology to create powerful, secure, and intelligent decentralized applications.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -265,10 +263,10 @@ const ZionAiCustomerInsightsPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Real-World Applications
+                Blockchain AI Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how businesses are using Zion AI Customer Insights to drive growth and improve customer experience.
+                Discover how AI-powered blockchain solutions are transforming industries and creating new possibilities.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -302,10 +300,10 @@ const ZionAiCustomerInsightsPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Blockchain AI Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your customer analytics needs. All plans include our core AI features.
+                Choose the blockchain AI plan that matches your project requirements and development goals.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -363,10 +361,10 @@ const ZionAiCustomerInsightsPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                Trusted by Blockchain Innovators
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Customer Insights
+                See what leading blockchain companies say about our AI-powered solutions
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -400,11 +398,11 @@ const ZionAiCustomerInsightsPage = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Understanding?
+              Ready to Build the Future of Blockchain?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join hundreds of companies using Zion AI Customer Insights to make data-driven decisions and improve customer experience. 
-              Start your free trial today.
+              Join the blockchain revolution with AI-powered solutions that are secure, efficient, and intelligent. 
+              Start building your next-generation decentralized applications today.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -412,7 +410,7 @@ const ZionAiCustomerInsightsPage = () => {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Start Building
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -420,7 +418,7 @@ const ZionAiCustomerInsightsPage = () => {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 View Demo
-                <BarChart3 className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <LinkIcon className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>
@@ -430,4 +428,4 @@ const ZionAiCustomerInsightsPage = () => {
   );
 };
 
-export default ZionAiCustomerInsightsPage;
+export default ZionAiBlockchainSolutionsPage;

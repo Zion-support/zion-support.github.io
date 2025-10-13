@@ -1,80 +1,78 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { BarChart3, Brain, Users, TrendingUp, CheckCircle, ArrowRight, Star, Target, Zap, Award, Globe, Shield } from "lucide-react";
+import { Cpu, Brain, Zap, Shield, CheckCircle, ArrowRight, Star, Target, Award, Globe, BarChart3, Sparkles } from "lucide-react";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-const ZionAiCustomerInsightsPage = () => {
+const ZionAiQuantumComputingPage = () => {
   const features = [
     {
-      title: "AI-Powered Customer Segmentation",
-      description: "Automatically segment your customers using advanced machine learning algorithms that identify patterns and behaviors",
-      icon: <Users className="w-6 h-6" />,
-      stats: "95% accuracy"
-    },
-    {
-      title: "Predictive Analytics",
-      description: "Forecast customer behavior, churn risk, and lifetime value with our advanced predictive models",
-      icon: <TrendingUp className="w-6 h-6" />,
-      stats: "90% prediction accuracy"
-    },
-    {
-      title: "Real-time Sentiment Analysis",
-      description: "Analyze customer feedback, reviews, and social media mentions in real-time to understand customer sentiment",
+      title: "Quantum Machine Learning",
+      description: "Leverage quantum algorithms for exponentially faster machine learning and pattern recognition",
       icon: <Brain className="w-6 h-6" />,
-      stats: "Real-time processing"
+      stats: "1000x faster processing"
     },
     {
-      title: "Automated Insights Generation",
-      description: "Get actionable insights and recommendations automatically generated from your customer data",
-      icon: <Zap className="w-6 h-6" />,
-      stats: "100+ insights daily"
+      title: "Quantum Optimization",
+      description: "Solve complex optimization problems using quantum annealing and variational algorithms",
+      icon: <Target className="w-6 h-6" />,
+      stats: "Exponential speedup"
+    },
+    {
+      title: "Quantum Cryptography",
+      description: "Ultra-secure communication using quantum key distribution and quantum-resistant encryption",
+      icon: <Shield className="w-6 h-6" />,
+      stats: "Unbreakable security"
+    },
+    {
+      title: "Quantum Simulation",
+      description: "Simulate quantum systems for drug discovery, materials science, and financial modeling",
+      icon: <Cpu className="w-6 h-6" />,
+      stats: "Molecular-level precision"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$49",
+      name: "Quantum Starter",
+      price: "$999",
       period: "/month",
-      description: "Perfect for small businesses starting their customer analytics journey",
+      description: "Perfect for research institutions and startups exploring quantum computing",
       features: [
-        "Up to 10,000 customers",
-        "Basic segmentation",
-        "Monthly reports",
-        "Email support",
-        "3 data sources"
+        "10 quantum computing hours",
+        "Basic quantum algorithms",
+        "Standard support",
+        "Quantum simulator access",
+        "Documentation & tutorials"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$149",
+      name: "Quantum Professional",
+      price: "$2,999",
       period: "/month",
-      description: "Ideal for growing businesses with advanced analytics needs",
+      description: "Ideal for enterprises with advanced quantum computing needs",
       features: [
-        "Up to 100,000 customers",
-        "Advanced AI segmentation",
-        "Real-time analytics",
-        "Predictive modeling",
+        "50 quantum computing hours",
+        "Advanced quantum algorithms",
         "Priority support",
-        "10 data sources",
-        "Custom dashboards"
+        "Real quantum hardware access",
+        "Custom algorithm development",
+        "Dedicated quantum engineer"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$399",
+      name: "Quantum Enterprise",
+      price: "$9,999",
       period: "/month",
-      description: "For large organizations with complex customer data requirements",
+      description: "For large organizations requiring maximum quantum computing power",
       features: [
-        "Unlimited customers",
-        "Custom AI models",
-        "White-label solution",
-        "API access",
-        "Dedicated support",
-        "Unlimited data sources",
-        "Advanced integrations"
+        "Unlimited quantum computing hours",
+        "Custom quantum algorithms",
+        "24/7 dedicated support",
+        "Exclusive quantum hardware",
+        "White-label solutions",
+        "Quantum consulting services"
       ],
       popular: false
     }
@@ -82,88 +80,88 @@ const ZionAiCustomerInsightsPage = () => {
 
   const testimonials = [
     {
-      name: "Jennifer Martinez",
-      company: "Retail Solutions Inc.",
-      role: "Marketing Director",
-      content: "Zion AI Customer Insights helped us increase our customer retention by 40% through better understanding of customer behavior patterns.",
+      name: "Dr. Sarah Chen",
+      company: "Quantum Research Labs",
+      role: "Chief Quantum Officer",
+      content: "Zion AI Quantum Computing has revolutionized our research capabilities. We've achieved breakthroughs that would have taken years with classical computing.",
       rating: 5,
-      avatar: "JM"
+      avatar: "SC"
     },
     {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "Head of Analytics",
-      content: "The predictive analytics are incredibly accurate. We can now anticipate customer needs and personalize experiences like never before.",
+      name: "Michael Rodriguez",
+      company: "Financial Services Corp",
+      role: "Head of Quantitative Research",
+      content: "The quantum optimization algorithms have transformed our portfolio optimization. We're seeing results that were impossible with traditional methods.",
       rating: 5,
-      avatar: "DK"
+      avatar: "MR"
     },
     {
-      name: "Lisa Thompson",
-      company: "SaaS Company",
-      role: "VP of Customer Success",
-      content: "The automated insights save us hours of analysis. We get actionable recommendations that directly impact our business growth.",
+      name: "Dr. Emily Johnson",
+      company: "Pharmaceutical Research",
+      role: "Director of Drug Discovery",
+      content: "Quantum simulation has accelerated our drug discovery process by 10x. We can now model complex molecular interactions with unprecedented accuracy.",
       rating: 5,
-      avatar: "LT"
+      avatar: "EJ"
     }
   ];
 
   const stats = [
-    { number: "500+", label: "Companies Using", icon: <Globe className="w-6 h-6" /> },
-    { number: "40%", label: "Average Retention Increase", icon: <TrendingUp className="w-6 h-6" /> },
-    { number: "95%", label: "Prediction Accuracy", icon: <Target className="w-6 h-6" /> },
-    { number: "24/7", label: "AI Processing", icon: <Brain className="w-6 h-6" /> }
+    { number: "50+", label: "Quantum Algorithms", icon: <Cpu className="w-6 h-6" /> },
+    { number: "1000x", label: "Speed Improvement", icon: <Zap className="w-6 h-6" /> },
+    { number: "99.9%", label: "Quantum Fidelity", icon: <Award className="w-6 h-6" /> },
+    { number: "24/7", label: "Quantum Access", icon: <Globe className="w-6 h-6" /> }
   ];
 
   const useCases = [
     {
-      title: "Customer Retention",
-      description: "Identify at-risk customers and implement targeted retention strategies",
-      icon: <Shield className="w-6 h-6" />,
-      benefit: "Reduce churn by up to 40%"
+      title: "Drug Discovery",
+      description: "Simulate molecular interactions for faster drug development and discovery",
+      icon: <Brain className="w-6 h-6" />,
+      benefit: "10x faster drug discovery"
     },
     {
-      title: "Personalization",
-      description: "Create personalized experiences based on customer behavior and preferences",
-      icon: <Target className="w-6 h-6" />,
-      benefit: "Increase engagement by 60%"
-    },
-    {
-      title: "Revenue Optimization",
-      description: "Identify high-value customers and optimize pricing strategies",
-      icon: <TrendingUp className="w-6 h-6" />,
-      benefit: "Boost revenue by 25%"
-    },
-    {
-      title: "Product Development",
-      description: "Understand customer needs to guide product roadmap decisions",
+      title: "Financial Modeling",
+      description: "Optimize portfolios and risk management using quantum algorithms",
       icon: <BarChart3 className="w-6 h-6" />,
-      benefit: "Improve product-market fit"
+      benefit: "Exponential optimization gains"
+    },
+    {
+      title: "Materials Science",
+      description: "Design new materials with quantum properties for advanced applications",
+      icon: <Target className="w-6 h-6" />,
+      benefit: "Revolutionary material design"
+    },
+    {
+      title: "Cryptography",
+      description: "Implement quantum-resistant security for future-proof encryption",
+      icon: <Shield className="w-6 h-6" />,
+      benefit: "Unbreakable security"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion AI Customer Insights - Advanced Customer Analytics Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your customer understanding with Zion AI Customer Insights. Advanced AI-powered analytics, predictive modeling, and automated insights generation. Starting at $49/month." />
-        <meta name="keywords" content="customer analytics, AI insights, customer segmentation, predictive analytics, customer behavior, data analysis, business intelligence, customer retention" />
-        <meta property="og:title" content="Zion AI Customer Insights - Advanced Customer Analytics Platform" />
-        <meta property="og:description" content="Transform your customer understanding with AI-powered analytics, predictive modeling, and automated insights generation. Starting at $49/month." />
+        <title>Zion AI Quantum Computing - Next-Generation Quantum Solutions | Zion Tech Group</title>
+        <meta name="description" content="Harness the power of quantum computing with Zion AI Quantum Computing. Advanced quantum algorithms, machine learning, optimization, and cryptography solutions. Starting at $999/month." />
+        <meta name="keywords" content="quantum computing, quantum algorithms, quantum machine learning, quantum optimization, quantum cryptography, quantum simulation, quantum hardware, quantum software" />
+        <meta property="og:title" content="Zion AI Quantum Computing - Next-Generation Quantum Solutions" />
+        <meta property="og:description" content="Harness the power of quantum computing with advanced algorithms, machine learning, optimization, and cryptography solutions. Starting at $999/month." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-customer-insights" />
-        <meta property="og:image" content="https://ziontechgroup.com/og-customer-insights.jpg" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-quantum-computing" />
+        <meta property="og:image" content="https://ziontechgroup.com/og-quantum-computing.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Zion AI Customer Insights - Advanced Customer Analytics Platform" />
-        <meta name="twitter:description" content="Transform your customer understanding with AI-powered analytics, predictive modeling, and automated insights generation." />
-        <meta name="twitter:image" content="https://ziontechgroup.com/og-customer-insights.jpg" />
+        <meta name="twitter:title" content="Zion AI Quantum Computing - Next-Generation Quantum Solutions" />
+        <meta name="twitter:description" content="Harness the power of quantum computing with advanced algorithms, machine learning, optimization, and cryptography solutions." />
+        <meta name="twitter:image" content="https://ziontechgroup.com/og-quantum-computing.jpg" />
       </Helmet>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         <SEOOptimizer
-          title="Zion AI Customer Insights - AI-Powered Customer Analytics Platform | Zion Tech Group"
-          description="Transform your customer understanding with our AI-powered analytics platform. Features customer segmentation, predictive modeling, sentiment analysis, and automated insights generation. Starting at $49/month."
-          keywords="customer analytics, AI insights, customer segmentation, predictive analytics, customer behavior, data analysis, business intelligence, customer retention, machine learning, customer data platform"
-          canonical="https://ziontechgroup.com/zion-ai-customer-insights"
+          title="Zion AI Quantum Computing - Advanced Quantum Solutions Platform | Zion Tech Group"
+          description="Harness the power of quantum computing with our advanced platform. Features quantum machine learning, optimization algorithms, cryptography, and simulation capabilities. Starting at $999/month."
+          keywords="quantum computing, quantum algorithms, quantum machine learning, quantum optimization, quantum cryptography, quantum simulation, quantum hardware, quantum software, quantum annealing, quantum key distribution"
+          canonical="https://ziontechgroup.com/ai-quantum-computing"
         />
 
         {/* Hero Section */}
@@ -175,20 +173,20 @@ const ZionAiCustomerInsightsPage = () => {
           
           <div className="max-w-7xl mx-auto text-center relative z-10">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 AI Customer Analytics 2024</span>
+              <Cpu className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">#1 Quantum Computing Platform 2024</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              Understand Your Customers
+              The Future of Computing is
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Like Never Before
+                {" "}Quantum
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Transform your customer data into actionable insights with our AI-powered analytics platform. 
-              Get predictive analytics, automated segmentation, and real-time customer intelligence.
+              Unlock unprecedented computational power with our quantum computing platform. 
+              Solve complex problems exponentially faster using quantum algorithms, machine learning, and optimization.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -196,7 +194,7 @@ const ZionAiCustomerInsightsPage = () => {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Analyzing
+                Explore Quantum Computing
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -204,7 +202,7 @@ const ZionAiCustomerInsightsPage = () => {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 View Demo
-                <BarChart3 className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Cpu className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
             
@@ -228,10 +226,10 @@ const ZionAiCustomerInsightsPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-                Advanced AI Analytics
+                Revolutionary Quantum Capabilities
               </h2>
               <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-                Our AI-powered platform combines machine learning, predictive analytics, and real-time processing to deliver deep customer insights.
+                Our quantum computing platform combines cutting-edge quantum hardware with advanced algorithms to deliver unprecedented computational power.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -265,10 +263,10 @@ const ZionAiCustomerInsightsPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Real-World Applications
+                Quantum Computing Applications
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how businesses are using Zion AI Customer Insights to drive growth and improve customer experience.
+                Discover how quantum computing is transforming industries and solving previously impossible problems.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -302,10 +300,10 @@ const ZionAiCustomerInsightsPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Flexible Pricing Plans
+                Quantum Computing Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your customer analytics needs. All plans include our core AI features.
+                Choose the quantum computing plan that matches your computational needs and research goals.
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -363,10 +361,10 @@ const ZionAiCustomerInsightsPage = () => {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                Trusted by Quantum Researchers
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Customer Insights
+                See what leading researchers and organizations say about our quantum computing platform
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -400,11 +398,11 @@ const ZionAiCustomerInsightsPage = () => {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Transform Your Customer Understanding?
+              Ready to Harness Quantum Power?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join hundreds of companies using Zion AI Customer Insights to make data-driven decisions and improve customer experience. 
-              Start your free trial today.
+              Join the quantum revolution and solve problems that were previously impossible. 
+              Start your quantum computing journey with our advanced platform.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -412,7 +410,7 @@ const ZionAiCustomerInsightsPage = () => {
                 to="/contact"
                 className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Free Trial
+                Start Quantum Journey
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
@@ -420,7 +418,7 @@ const ZionAiCustomerInsightsPage = () => {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 View Demo
-                <BarChart3 className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Cpu className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>
@@ -430,4 +428,4 @@ const ZionAiCustomerInsightsPage = () => {
   );
 };
 
-export default ZionAiCustomerInsightsPage;
+export default ZionAiQuantumComputingPage;

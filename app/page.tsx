@@ -88,21 +88,48 @@ const HomePage = () => {
       description: "Create professional videos with AI in minutes",
       price: "From $29/month",
       icon: <Brain className="w-6 h-6" />,
-      link: "/zion-ai-video-generator"
+      link: "/zion-ai-video-generator",
+      featured: true
     },
     {
       name: "Zion AI Customer Insights",
       description: "AI-powered customer analytics and insights",
       price: "From $49/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-ai-customer-insights"
+      link: "/zion-ai-customer-insights",
+      featured: true
+    },
+    {
+      name: "Zion AI Quantum Computing",
+      description: "Next-generation quantum computing solutions",
+      price: "From $999/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/ai-quantum-computing",
+      featured: true
+    },
+    {
+      name: "Zion AI Blockchain Solutions",
+      description: "AI-powered blockchain and Web3 solutions",
+      price: "From $199/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/ai-blockchain-solutions",
+      featured: true
+    },
+    {
+      name: "Zion AI-Powered DevOps",
+      description: "Intelligent DevOps automation platform",
+      price: "From $99/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/ai-powered-devops",
+      featured: true
     },
     {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $29/month",
       icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro"
+      link: "/zion-analytics-pro",
+      featured: false
     }
   ];
 
@@ -165,12 +192,16 @@ const HomePage = () => {
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden quantum-field holographic-grid">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-br from-cyan-400/10 to-purple-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
         </div>
+        
+        {/* Data Stream Effect */}
+        <div className="absolute inset-0 data-stream"></div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
@@ -180,7 +211,7 @@ const HomePage = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Welcome to
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
+            <span className="text-cyberpunk neon-advanced">
               {" "}
               Zion Tech Group
             </span>
@@ -194,14 +225,14 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              className="btn-quantum hover-quantum flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="holographic-card border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
@@ -224,10 +255,10 @@ const HomePage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 plasma-effect">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 text-cyberpunk">
               Our Core Services
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -240,11 +271,11 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={feature.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="group holographic-card hover-quantum p-6 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
                 aria-label={`Learn more about ${feature.title}`}
               >
                 <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 pulse-glow`}
                   aria-hidden="true"
                 >
                   {feature.icon}
@@ -256,7 +287,7 @@ const HomePage = () => {
                   {feature.description}
                 </p>
                 <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 neon-advanced">
                     {feature.stats}
                   </span>
                 </div>
@@ -267,32 +298,55 @@ const HomePage = () => {
       </section>
 
       {/* Micro SAAS Highlights */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 holographic-grid">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-cyberpunk">
               Featured Micro SAAS Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className={`group holographic-card hover-quantum p-6 relative ${
+                  saas.featured 
+                    ? 'border-cyan-500/50 hover:border-cyan-400/70' 
+                    : 'border-white/20 hover:border-purple-400/50'
+                }`}
               >
+                {saas.featured && (
+                  <div className="absolute -top-2 -right-2 z-10">
+                    <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-2 py-1 rounded-full text-xs font-semibold neon-advanced">
+                      Featured
+                    </span>
+                  </div>
+                )}
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                  <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform pulse-glow ${
+                    saas.featured 
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500' 
+                      : 'bg-gradient-to-r from-purple-500 to-pink-500'
+                  }`}>
                     {saas.icon}
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                    <h3 className={`text-lg font-semibold transition-colors ${
+                      saas.featured 
+                        ? 'text-white group-hover:text-cyan-400' 
+                        : 'text-white group-hover:text-purple-400'
+                    }`}>
                       {saas.name}
                     </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    <p className={`font-medium ${
+                      saas.featured ? 'text-cyan-400' : 'text-purple-400'
+                    }`}>
+                      {saas.price}
+                    </p>
                   </div>
                 </div>
                 <p className="text-gray-300 text-sm leading-relaxed">
@@ -304,7 +358,7 @@ const HomePage = () => {
           <div className="text-center mt-12">
             <Link
               to="/micro-saas"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
+              className="btn-quantum hover-quantum inline-flex items-center group"
             >
               View All Micro SAAS Solutions
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -314,10 +368,10 @@ const HomePage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 quantum-field">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 text-cyberpunk">
               Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -328,7 +382,7 @@ const HomePage = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group holographic-card hover-quantum p-6 relative overflow-hidden"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -347,9 +401,9 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 holographic-grid">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 text-cyberpunk">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -385,14 +439,14 @@ const HomePage = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              className="btn-quantum hover-quantum flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
               Start Your Journey
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="holographic-card border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Explore Services
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
