@@ -24,21 +24,13 @@ const FiveGSolutionsPage: React.FC = () => {
     },
     {
       icon: Wifi,
-<<<<<<< HEAD
       title: 'IoT Integration',
       description: 'Seamless integration with Internet of Things devices and sensors',
-      benefits: ['IoT connectivity', 'Sensor networks', 'Real-time data', 'Smart automation']
-=======
-      title: 'IoT Connectivity',
-      description: 'Connect thousands of IoT devices with 5G technology',
-      benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-    }
+      benefits: ['IoT connectivity', 'Sensor networks', 'Real-time data', 'Smart automation']    }
   ];
 
   const solutions = [
     {
-<<<<<<< HEAD
       title: 'Enterprise 5G',
       description: 'Dedicated 5G solutions for large enterprises and organizations',
       features: ['Private networks', 'Custom configurations', '24/7 support', 'Scalable infrastructure']
@@ -51,26 +43,7 @@ const FiveGSolutionsPage: React.FC = () => {
     {
       title: 'Consumer 5G',
       description: 'High-speed 5G services for residential and personal use',
-      features: ['Home internet', 'Mobile plans', 'Unlimited data', 'Premium support']
-=======
-      title: '5G Network Infrastructure',
-      description: 'Complete 5G network setup and optimization',
-      price: 'Starting at $50,000',
-      features: ['Network planning', 'Tower installation', 'Signal optimization', 'Performance monitoring']
-    },
-    {
-      title: '5G Mobile Applications',
-      description: 'Custom mobile apps optimized for 5G networks',
-      price: 'Starting at $25,000',
-      features: ['App development', '5G optimization', 'Testing & QA', 'Deployment support']
-    },
-    {
-      title: '5G IoT Solutions',
-      description: 'IoT device connectivity and management platform',
-      price: 'Starting at $35,000',
-      features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-    }
+      features: ['Home internet', 'Mobile plans', 'Unlimited data', 'Premium support']    }
   ];
 
   return (

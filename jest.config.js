@@ -2,7 +2,6 @@ export default {
   testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   moduleNameMapping: {
-<<<<<<< HEAD
     '^@/(.*)$': '<rootDir>/$1',
     '^@/components/(.*)$': '<rootDir>/app/components/$1',
     '^@/pages/(.*)$': '<rootDir>/app/$1',
@@ -11,19 +10,7 @@ export default {
     '^@/hooks/(.*)$': '<rootDir>/hooks/$1',
     '^@/config/(.*)$': '<rootDir>/config/$1',
     '^@/data/(.*)$': '<rootDir>/data/$1',
-    '^@/content/(.*)$': '<rootDir>/content/$1',
-=======
-    '^@/(.*)$': '<rootDir>/app/$1',
-    '^@/components/(.*)$': '<rootDir>/app/components/$1',
-    '^@/pages/(.*)$': '<rootDir>/app/$1',
-    '^@/utils/(.*)$': '<rootDir>/app/utils/$1',
-    '^@/types/(.*)$': '<rootDir>/app/types/$1',
-    '^@/hooks/(.*)$': '<rootDir>/hooks/$1',
-    '^@/config/(.*)$': '<rootDir>/app/config/$1',
-    '^@/data/(.*)$': '<rootDir>/app/data/$1',
-    '^@/content/(.*)$': '<rootDir>/app/content/$1'
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-  },
+    '^@/content/(.*)$': '<rootDir>/content/$1',  },
   transform: {
     '^.+\\.(ts|tsx)$': ['ts-jest', {
       tsconfig: 'tsconfig.jest.json'
@@ -31,21 +18,12 @@ export default {
     '^.+\\.(js|jsx)$': 'babel-jest'
   },
   testMatch: [
-<<<<<<< HEAD
     '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js)',
     '<rootDir>/app/**/*.(test|spec).(ts|tsx|js)',
-    '<rootDir>/__tests__/**/*.(ts|tsx|js)'
-=======
-    '<rootDir>/app/**/__tests__/**/*.(ts|tsx|js|jsx)',
-    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)',
-    '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
-    '<rootDir>/**/*.(test|spec).(ts|tsx|js|jsx)'
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-  ],
+    '<rootDir>/__tests__/**/*.(ts|tsx|js)'  ],
   coverageDirectory: 'coverage',
   coverageReporters: ['text', 'lcov', 'html'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-<<<<<<< HEAD
   collectCoverageFrom: [
     'app/**/*.{ts,tsx}',
     '!app/**/*.d.ts',
@@ -53,18 +31,4 @@ export default {
     '!app/**/*.test.{ts,tsx}',
     '!app/**/*.spec.{ts,tsx}'
   ],
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-  globals: {
-    'ts-jest': {
-      useESM: true
-    }
-<<<<<<< HEAD
-  }
-=======
-  },
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
-  preset: 'ts-jest'
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-};
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],};

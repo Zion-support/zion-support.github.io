@@ -14,7 +14,6 @@ export default async function handler(req, res) {
   }
 
   try {
-<<<<<<< HEAD
     // Store quote data (in a real app, save to database)
     console.log('Quote request received:', { name, email, phone, details, country, service });
 
@@ -27,33 +26,5 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error('Error processing quote request:', error);
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to process quote request' }));
-=======
-    // Process the quote request
-    const quote = {
-      id: Date.now().toString(),
-      name,
-      email,
-      phone,
-      details,
-      country: country || 'Not specified',
-      service: service || 'General inquiry',
-      status: 'pending',
-      createdAt: new Date().toISOString()
-    };
-    
-    // Here you would typically save the quote to a database
-    console.log('Quote request processed:', quote.id);
-
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ 
-      success: true,
-      message: 'Quote request submitted successfully' 
-    }));
-  } catch (error) {
-    console.error('Quote submission error:', error);
-    res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Internal server error' }));
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
-  }
+    res.end(JSON.stringify({ error: 'Failed to process quote request' }));  }
 }
