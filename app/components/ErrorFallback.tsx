@@ -3,6 +3,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1911
 const ErrorFallback: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
@@ -83,6 +86,7 @@ const ErrorFallback: React.FC = () => {
           </a>
         </div>
       </section>
+<<<<<<< HEAD
 =======
 interface ErrorFallbackProps {
   error: Error;
@@ -121,6 +125,8 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({ error, resetErrorBoundary
         </div>
       </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1911
     </div>
   );
 };

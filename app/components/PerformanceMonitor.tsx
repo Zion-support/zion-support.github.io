@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 // Type definitions for browser APIs
 declare global {
   interface PerformanceObserver {
@@ -36,6 +37,8 @@ declare global {
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
 }
 import React, { useEffect, useState } from 'react';
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1911
 interface PerformanceMetrics {
   fcp: number | null;
   lcp: number | null;

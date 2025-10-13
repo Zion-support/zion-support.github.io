@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import React, { useEffect, useState } from 'react';
@@ -38,6 +39,10 @@ import React, { useEffect, useState } from 'react';
 
 // Using built-in DOM types
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
+=======
+import React, { useEffect, useState } from 'react';
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-1911
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -205,6 +210,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
@@ -219,6 +225,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 >>>>>>> cursor/fix-errors-and-merge-to-main-3792
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1911
 };
 
 export default AccessibilityEnhancer;

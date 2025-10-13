@@ -1,6 +1,9 @@
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1911
 import { Helmet } from 'react-helmet-async';
 
 const FuturisticBackgroundEnhanced: React.FC = () => {
@@ -83,6 +86,7 @@ const FuturisticBackgroundEnhanced: React.FC = () => {
           </a>
         </div>
       </section>
+<<<<<<< HEAD
 =======
 
 interface FuturisticBackgroundEnhancedProps {
@@ -108,6 +112,8 @@ const FuturisticBackgroundEnhanced: React.FC<FuturisticBackgroundEnhancedProps> 
         {children}
       </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-529c
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-1911
     </div>
   );
 };
