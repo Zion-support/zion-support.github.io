@@ -1,19 +1,32 @@
-import React from "react";
-import { Helmet } from "react-helmet-async";
+import React from 'react';
+import EnhancedSEO from '../components/EnhancedSEO';
+import FuturisticBackground from '../components/FuturisticBackground';
+import ResponsiveContainer from '../components/ResponsiveContainer';
 
-export default function Support() {
+const SupportPage = () => {
   return (
-    <>
-      <Helmet>
-        <title>Support - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Get help and support for our AI and IT solutions." />
-      </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Support</h1>
-          <p className="text-gray-300">Coming soon...</p>
-        </div>
-      </div>
-    </>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+      <EnhancedSEO
+        title="Support - Zion Tech Group"
+        description="Zion Tech Group support page"
+        canonical="https://ziontechgroup.com/support"
+      />
+      <FuturisticBackground />
+
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <ResponsiveContainer className="text-center relative z-10">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
+              Support
+            </span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Coming soon - Support page content.
+          </p>
+        </ResponsiveContainer>
+      </section>
+    </div>
   );
-}
+};
+
+export default SupportPage;
