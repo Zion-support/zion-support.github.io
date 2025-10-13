@@ -5,7 +5,7 @@ import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAiContractAnalyzerPage = () => {
+const ZionSmartExpenseCategorizerPage = () => {
   const features = [
     {
       title: "AI-Powered Analysis",
@@ -69,10 +69,10 @@ const ZionAiContractAnalyzerPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Zion Ai Contract Analyzer - AI-Powered Business Solution"
-        description="Transform your business with Zion Ai Contract Analyzer. Advanced AI technology for improved efficiency and productivity."
-        keywords="zion, ai, contract, analyzer, AI solution, business automation, productivity"
-        canonical="https://ziontechgroup.com/zion-ai-contract-analyzer"
+        title="Zion Smart Expense Categorizer - AI-Powered Business Solution"
+        description="Transform your business with Zion Smart Expense Categorizer. Advanced AI technology for improved efficiency and productivity."
+        keywords="zion, smart, expense, categorizer, AI solution, business automation, productivity"
+        canonical="https://ziontechgroup.com/zion-smart-expense-categorizer"
       />
 
       {/* Hero Section */}
@@ -85,12 +85,12 @@ const ZionAiContractAnalyzerPage = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion Ai Contract Analyzer
+              Zion Smart Expense Categorizer
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with Zion Ai Contract Analyzer. Advanced AI technology for improved efficiency and productivity.
+            Transform your business with Zion Smart Expense Categorizer. Advanced AI technology for improved efficiency and productivity.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -264,4 +264,4 @@ const ZionAiContractAnalyzerPage = () => {
   );
 };
 
-export default ZionAiContractAnalyzerPage;
+export default ZionSmartExpenseCategorizerPage;

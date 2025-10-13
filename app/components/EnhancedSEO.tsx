@@ -8,7 +8,6 @@ interface EnhancedSEOProps {
   canonical?: string;
   ogImage?: string;
   ogType?: string;
-<<<<<<< HEAD
   twitterCard?: string;
   twitterTitle?: string;
   twitterDescription?: string;
@@ -18,8 +17,6 @@ interface EnhancedSEOProps {
   lang?: string;
   noindex?: boolean;
   nofollow?: boolean;
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
 }
 
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
@@ -28,16 +25,23 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   keywords,
   canonical,
   ogImage = '/og-image.svg',
-  ogType = 'website'
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  twitterTitle,
+  twitterDescription,
+  twitterImage,
+  structuredData,
+  noIndex = false,
+  lang = 'en',
+  noindex = false,
+  nofollow = false
 }) => {
-<<<<<<< HEAD
   const siteName = 'Zion Tech Group';
   const siteUrl = 'https://ziontechgroup.com';
   const defaultImage = 'https://ziontechgroup.com/og-image.jpg';
   
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
   const fullCanonical = canonical ? (canonical.startsWith('http') ? canonical : `${siteUrl}${canonical}`) : undefined;
-  const fullOgUrl = ogUrl || fullCanonical || siteUrl;
   const fullOgImage = ogImage || defaultImage;
   const fullTwitterImage = twitterImage || fullOgImage;
   
@@ -72,14 +76,10 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   };
 
   const mergedStructuredData = structuredData ? { ...defaultStructuredData, ...structuredData } : defaultStructuredData;
-
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
   return (
     <Helmet>
-      <title>{title}</title>
+      <title>{fullTitle}</title>
       <meta name="description" content={description} />
-<<<<<<< HEAD
       <meta name="keywords" content={finalKeywords} />
       <meta name="author" content={siteName} />
       <meta name="robots" content={`${noIndex || noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
@@ -92,17 +92,17 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={ogType} />
-      <meta property="og:title" content={ogTitle || fullTitle} />
-      <meta property="og:description" content={ogDescription || description} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content={fullOgImage} />
-      <meta property="og:url" content={fullOgUrl} />
+      <meta property="og:url" content={fullCanonical || siteUrl} />
       <meta property="og:site_name" content={siteName} />
       <meta property="og:locale" content={lang === 'en' ? 'en_US' : lang} />
       
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
-      <meta name="twitter:title" content={twitterTitle || ogTitle || fullTitle} />
-      <meta name="twitter:description" content={twitterDescription || ogDescription || description} />
+      <meta name="twitter:title" content={twitterTitle || fullTitle} />
+      <meta name="twitter:description" content={twitterDescription || description} />
       <meta name="twitter:image" content={fullTwitterImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
@@ -127,23 +127,6 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       <link rel="manifest" href="/manifest.json" />
-=======
-      <meta name="keywords" content={keywords} />
-      {canonical && <link rel="canonical" href={canonical} />}
-      
-      {/* Open Graph */}
-      <meta property="og:type" content={ogType} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
-      {canonical && <meta property="og:url" content={canonical} />}
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
     </Helmet>
   );
 };

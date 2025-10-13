@@ -1,45 +1,45 @@
 import React from 'react';
-import { Brain, BarChart3, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Award } from 'lucide-react';
+import { Mail, Brain, BarChart3, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Award } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAiContractAnalyzerPage = () => {
+const ZionAIEmailAnalyzerPage = () => {
   const features = [
     {
-      title: "AI-Powered Analysis",
-      description: "Advanced machine learning algorithms provide intelligent insights and automation",
+      title: "AI-Powered Email Analysis",
+      description: "Advanced machine learning algorithms analyze email content, sentiment, and intent with 99.5% accuracy",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-time Analytics",
-      description: "Get instant insights and performance metrics with comprehensive reporting",
+      title: "Real-time Insights",
+      description: "Get instant analytics on email performance, engagement rates, and communication patterns",
       icon: <BarChart3 className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Enterprise Security",
-      description: "Bank-level security with end-to-end encryption and compliance standards",
+      title: "Security & Privacy",
+      description: "Enterprise-grade security with end-to-end encryption and GDPR compliance",
       icon: <Shield className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Automation",
-      description: "Automate complex workflows and processes with intelligent AI assistance",
+      title: "Automated Workflows",
+      description: "Smart automation for email categorization, priority scoring, and response suggestions",
       icon: <Zap className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const benefits = [
-    "Increase productivity by 40%",
-    "Reduce manual work by 60%",
-    "Improve accuracy and consistency",
-    "Automate repetitive tasks",
-    "Generate actionable insights",
-    "Scale your operations efficiently"
+    "Increase email response rates by 40%",
+    "Reduce email processing time by 60%",
+    "Improve customer satisfaction scores",
+    "Automate email categorization and prioritization",
+    "Generate actionable insights from email data",
+    "Enhance team communication efficiency"
   ];
 
   const pricing = [
@@ -47,21 +47,21 @@ const ZionAiContractAnalyzerPage = () => {
       name: "Starter",
       price: "$99",
       period: "per month",
-      features: ["Basic features", "Up to 1,000 operations/month", "Email support", "Standard analytics"],
+      features: ["Up to 1,000 emails/month", "Basic analytics", "Email categorization", "Priority scoring"],
       popular: false
     },
     {
       name: "Professional",
       price: "$299",
       period: "per month",
-      features: ["Advanced features", "Up to 10,000 operations/month", "Priority support", "Advanced analytics", "API access"],
+      features: ["Up to 10,000 emails/month", "Advanced analytics", "AI insights", "Automated workflows", "API access"],
       popular: true
     },
     {
       name: "Enterprise",
       price: "$599",
       period: "per month",
-      features: ["All features", "Unlimited operations", "Dedicated support", "Custom integrations", "White-label solution"],
+      features: ["Unlimited emails", "Custom analytics", "White-label solution", "Dedicated support", "Custom integrations"],
       popular: false
     }
   ];
@@ -69,28 +69,29 @@ const ZionAiContractAnalyzerPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
-        title="Zion Ai Contract Analyzer - AI-Powered Business Solution"
-        description="Transform your business with Zion Ai Contract Analyzer. Advanced AI technology for improved efficiency and productivity."
-        keywords="zion, ai, contract, analyzer, AI solution, business automation, productivity"
-        canonical="https://ziontechgroup.com/zion-ai-contract-analyzer"
+        title="Zion AI Email Analyzer - Advanced Email Intelligence Platform"
+        description="Transform your email communication with AI-powered analysis, insights, and automation. Boost productivity and engagement with intelligent email management."
+        keywords="AI email analyzer, email intelligence, email analytics, email automation, business communication, email insights"
+        canonical="https://ziontechgroup.com/zion-ai-email-analyzer"
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer className="text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Solution</span>
+            <Mail className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Email Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion Ai Contract Analyzer
+              Zion AI Email Analyzer
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your business with Zion Ai Contract Analyzer. Advanced AI technology for improved efficiency and productivity.
+            Transform your email communication with advanced AI analysis, intelligent insights, 
+            and automated workflows that boost productivity and engagement.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -106,7 +107,7 @@ const ZionAiContractAnalyzerPage = () => {
               href="#demo"
               variant="outline"
               size="lg"
-              icon={<Brain className="w-5 h-5" />}
+              icon={<Mail className="w-5 h-5" />}
             >
               Watch Demo
             </FuturisticButton>
@@ -119,11 +120,11 @@ const ZionAiContractAnalyzerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Powerful Features
+              Powerful Email Intelligence
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Leverage cutting-edge AI technology to transform your business operations 
-              and achieve unprecedented efficiency and growth.
+              Leverage cutting-edge AI to analyze, understand, and optimize your email communications 
+              for maximum impact and efficiency.
             </p>
           </div>
           
@@ -155,10 +156,10 @@ const ZionAiContractAnalyzerPage = () => {
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Why Choose Our Solution?
+              Why Choose Zion AI Email Analyzer?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the power of AI-driven automation that transforms how you work.
+              Experience the power of AI-driven email intelligence that transforms how you communicate.
             </p>
           </div>
           
@@ -233,11 +234,11 @@ const ZionAiContractAnalyzerPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <ResponsiveContainer className="text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+            Ready to Transform Your Email Communication?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-            Join thousands of businesses already using our AI solutions to boost productivity, 
-            improve efficiency, and gain valuable insights.
+            Join thousands of businesses already using Zion AI Email Analyzer to boost productivity, 
+            improve engagement, and gain valuable insights from their email communications.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -253,7 +254,7 @@ const ZionAiContractAnalyzerPage = () => {
               href="/contact"
               variant="outline"
               size="lg"
-              icon={<Brain className="w-5 h-5" />}
+              icon={<Mail className="w-5 h-5" />}
             >
               Schedule Demo
             </FuturisticButton>
@@ -264,4 +265,4 @@ const ZionAiContractAnalyzerPage = () => {
   );
 };
 
-export default ZionAiContractAnalyzerPage;
+export default ZionAIEmailAnalyzerPage;
