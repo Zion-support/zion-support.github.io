@@ -1,10 +1,11 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Globe, Database, Code, Smartphone, Brain, Package, Calendar, Car, Atom, Server } from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
   const [isServicesOpen, setIsServicesOpen] = useState(false)
+  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -14,14 +15,30 @@ const Navigation = React.memo(() => {
     setIsServicesOpen(!isServicesOpen)
   }, [isServicesOpen])
 
+  const toggleMicroSaas = useCallback(() => {
+    setIsMicroSaasOpen(!isMicroSaasOpen)
+  }, [isMicroSaasOpen])
+
   const services = useMemo(() => [
-    { name: 'AI & Machine Learning', path: '/ai-services', icon: <Zap className="w-4 h-4" /> },
+    { name: 'AI & Machine Learning', path: '/ai-services', icon: <Brain className="w-4 h-4" /> },
     { name: 'Cloud Solutions', path: '/cloud-services', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity', path: '/cybersecurity', icon: <Shield className="w-4 h-4" /> },
     { name: '5G Implementation', path: '/5g-implementation', icon: <Globe className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <Database className="w-4 h-4" /> },
     { name: 'Custom Development', path: '/custom-development', icon: <Code className="w-4 h-4" /> },
-    { name: 'Mobile Solutions', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> }
+    { name: 'Mobile Solutions', path: '/mobile-development', icon: <Smartphone className="w-4 h-4" /> },
+    { name: 'AI DevOps', path: '/ai-powered-devops', icon: <Server className="w-4 h-4" /> },
+    { name: 'Quantum Computing', path: '/quantum-computing-solutions', icon: <Atom className="w-4 h-4" /> },
+    { name: 'Autonomous Vehicles', path: '/ai-autonomous-vehicles', icon: <Car className="w-4 h-4" /> }
+  ], [])
+
+  const microSaasServices = useMemo(() => [
+    { name: 'AI Customer Insights', path: '/zion-ai-customer-insights', icon: <Brain className="w-4 h-4" /> },
+    { name: 'Smart Inventory', path: '/zion-smart-inventory', icon: <Package className="w-4 h-4" /> },
+    { name: 'AI Content Scheduler', path: '/zion-ai-content-scheduler', icon: <Calendar className="w-4 h-4" /> },
+    { name: 'Analytics Pro', path: '/zion-analytics-pro', icon: <Database className="w-4 h-4" /> },
+    { name: 'Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" /> },
+    { name: 'Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" /> }
   ], [])
 
   const mainNavItems = useMemo(() => [
@@ -70,6 +87,33 @@ const Navigation = React.memo(() => {
                       to={service.path}
                       className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
                       onClick={() => setIsServicesOpen(false)}
+                    >
+                      {service.icon}
+                      <span>{service.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Micro SAAS Dropdown */}
+            <div className="relative">
+              <button
+                onClick={toggleMicroSaas}
+                className="flex items-center space-x-1 hover:text-blue-400 transition-colors"
+              >
+                <span>Micro SAAS</span>
+                <ChevronDown className={`w-4 h-4 transition-transform ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isMicroSaasOpen && (
+                <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
+                  {microSaasServices.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.path}
+                      className="flex items-center space-x-3 px-4 py-2 text-gray-700 hover:bg-gray-100 transition-colors"
+                      onClick={() => setIsMicroSaasOpen(false)}
                     >
                       {service.icon}
                       <span>{service.name}</span>

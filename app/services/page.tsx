@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Zap, Globe, Database, Code, Smartphone } from "lucide-react";
+import { ArrowRight, Brain, Shield, Zap, Globe, Database, Code, Smartphone, Server, Atom, Car, Package, Calendar } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -52,6 +52,78 @@ export default function Services() {
       icon: <Smartphone className="w-8 h-8" />,
       color: "from-pink-500 to-rose-500",
       path: "/mobile-development"
+    },
+    {
+      title: "AI-Powered DevOps",
+      description: "Intelligent development operations with automated CI/CD and monitoring",
+      icon: <Server className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      path: "/ai-powered-devops"
+    },
+    {
+      title: "Quantum Computing",
+      description: "Next-generation quantum computing solutions for complex problem solving",
+      icon: <Atom className="w-8 h-8" />,
+      color: "from-purple-500 to-cyan-500",
+      path: "/quantum-computing-solutions"
+    },
+    {
+      title: "Autonomous Vehicles",
+      description: "AI-powered self-driving vehicle technology and fleet management",
+      icon: <Car className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      path: "/ai-autonomous-vehicles"
+    }
+  ];
+
+  const microSaasServices = [
+    {
+      title: "AI Customer Insights",
+      description: "Transform customer data into actionable insights with AI-powered analytics",
+      icon: <Brain className="w-8 h-8" />,
+      color: "from-cyan-500 to-purple-500",
+      path: "/zion-ai-customer-insights",
+      price: "From $99/month"
+    },
+    {
+      title: "Smart Inventory",
+      description: "AI-powered inventory management with predictive forecasting and automation",
+      icon: <Package className="w-8 h-8" />,
+      color: "from-green-500 to-blue-500",
+      path: "/zion-smart-inventory",
+      price: "From $149/month"
+    },
+    {
+      title: "AI Content Scheduler",
+      description: "Intelligent social media management with AI-powered content planning",
+      icon: <Calendar className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      path: "/zion-ai-content-scheduler",
+      price: "From $79/month"
+    },
+    {
+      title: "Analytics Pro",
+      description: "Advanced business intelligence and data visualization platform",
+      icon: <Database className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      path: "/zion-analytics-pro",
+      price: "From $199/month"
+    },
+    {
+      title: "Security Shield",
+      description: "Comprehensive cybersecurity monitoring and threat detection",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      path: "/zion-security-shield",
+      price: "From $299/month"
+    },
+    {
+      title: "Cloud Vault",
+      description: "Secure cloud storage and file management with advanced encryption",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      path: "/zion-cloud-vault",
+      price: "From $49/month"
     }
   ];
 
@@ -102,6 +174,47 @@ export default function Services() {
                   <p className="text-gray-300 text-center">
                     {service.description}
                   </p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Micro SAAS Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-purple-900/20 to-blue-900/20">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Micro SAAS Solutions
+              </h2>
+              <p className="text-xl text-gray-300">
+                Ready-to-use software solutions for immediate deployment
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasServices.map((service, index) => (
+                <Link
+                  key={index}
+                  to={service.path}
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                >
+                  <div
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  >
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-300 text-center mb-4">
+                    {service.description}
+                  </p>
+                  <div className="text-center">
+                    <span className="text-cyan-400 font-semibold">
+                      {service.price}
+                    </span>
+                  </div>
                 </Link>
               ))}
             </div>

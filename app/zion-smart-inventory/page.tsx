@@ -1,96 +1,95 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
-  Atom, 
-  Cpu, 
+  Package, 
+  TrendingUp, 
+  AlertTriangle, 
+  BarChart3, 
   Zap, 
   Shield, 
-  BarChart3, 
   CheckCircle,
   ArrowRight,
-  Clock,
   DollarSign,
+  Clock,
   Globe,
-  Brain,
-  Target,
-  Database,
-  Lock
+  Smartphone,
+  Database
 } from "lucide-react";
 
-export default function QuantumComputingSolutions() {
+export default function ZionSmartInventory() {
   const features = [
     {
-      title: "Quantum Algorithm Development",
-      description: "Custom quantum algorithms for optimization, cryptography, and machine learning",
-      icon: <Atom className="w-6 h-6" />,
+      title: "AI-Powered Demand Forecasting",
+      description: "Machine learning algorithms predict inventory needs with 95% accuracy",
+      icon: <TrendingUp className="w-6 h-6" />,
     },
     {
-      title: "Quantum Machine Learning",
-      description: "Quantum-enhanced ML models for complex pattern recognition and optimization",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Real-time Stock Monitoring",
+      description: "Track inventory levels across multiple locations in real-time",
+      icon: <Package className="w-6 h-6" />,
     },
     {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms",
-      icon: <Lock className="w-6 h-6" />,
+      title: "Automated Reorder Points",
+      description: "Smart alerts and automatic purchase orders when stock runs low",
+      icon: <AlertTriangle className="w-6 h-6" />,
     },
     {
-      title: "Quantum Simulation",
-      description: "Simulate quantum systems for drug discovery, materials science, and financial modeling",
-      icon: <Cpu className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive reports on inventory turnover, costs, and trends",
+      icon: <BarChart3 className="w-6 h-6" />,
     },
     {
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems in logistics, finance, and resource allocation",
-      icon: <Target className="w-6 h-6" />,
-    },
-    {
-      title: "Quantum Cloud Access",
-      description: "Access to leading quantum computers through our cloud platform",
+      title: "Multi-Channel Sync",
+      description: "Sync inventory across e-commerce, retail, and warehouse systems",
       icon: <Globe className="w-6 h-6" />,
+    },
+    {
+      title: "Mobile Management",
+      description: "Manage inventory on-the-go with our mobile app",
+      icon: <Smartphone className="w-6 h-6" />,
     },
   ];
 
   const pricingPlans = [
     {
-      name: "Research",
-      price: "$2,999",
+      name: "Starter",
+      price: "$149",
       period: "/month",
-      description: "Perfect for research institutions",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 100 quantum hours",
-        "Basic quantum algorithms",
+        "Up to 1,000 SKUs",
+        "Basic forecasting",
         "Email support",
-        "Standard documentation",
-        "Community access",
-        "Basic simulation tools"
+        "Standard integrations",
+        "Mobile app access",
+        "Monthly reports"
       ],
       popular: false,
     },
     {
-      name: "Enterprise",
-      price: "$9,999",
+      name: "Professional",
+      price: "$399",
       period: "/month",
-      description: "Ideal for large corporations",
+      description: "Ideal for growing companies",
       features: [
-        "Up to 1,000 quantum hours",
-        "Custom quantum algorithms",
+        "Up to 10,000 SKUs",
+        "Advanced AI forecasting",
+        "Real-time analytics",
         "Priority support",
-        "Advanced simulation",
-        "Dedicated resources",
         "Custom integrations",
-        "API access"
+        "API access",
+        "Multi-location support"
       ],
       popular: true,
     },
     {
-      name: "Government",
-      price: "$24,999",
+      name: "Enterprise",
+      price: "$999",
       period: "/month",
-      description: "For government agencies",
+      description: "For large organizations",
       features: [
-        "Unlimited quantum hours",
-        "Classified algorithms",
+        "Unlimited SKUs",
+        "Custom AI models",
         "Dedicated account manager",
         "24/7 phone support",
         "Custom development",
@@ -103,69 +102,69 @@ export default function QuantumComputingSolutions() {
 
   const benefits = [
     {
-      title: "Solve Problems 1000x Faster",
-      description: "Quantum algorithms solve complex problems exponentially faster than classical computers",
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: "Reduce Stockouts by 60%",
+      description: "AI-powered forecasting prevents stockouts and lost sales",
+      icon: <Package className="w-8 h-8 text-green-400" />,
     },
     {
-      title: "Unbreakable Security",
-      description: "Quantum cryptography provides theoretically unbreakable encryption",
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      title: "Cut Inventory Costs by 25%",
+      description: "Optimize stock levels and reduce carrying costs",
+      icon: <DollarSign className="w-8 h-8 text-blue-400" />,
     },
     {
-      title: "Revolutionary Discoveries",
-      description: "Enable breakthrough discoveries in drug discovery and materials science",
-      icon: <Atom className="w-8 h-8 text-purple-400" />,
+      title: "Save 15 Hours/Week",
+      description: "Automated processes save your team valuable time",
+      icon: <Clock className="w-8 h-8 text-purple-400" />,
     },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Quantum Computing Solutions - Next-Generation Quantum Technology</title>
+        <title>Zion Smart Inventory - AI-Powered Inventory Management System</title>
         <meta
           name="description"
-          content="Harness the power of quantum computing with our advanced solutions for optimization, cryptography, machine learning, and scientific simulation."
+          content="Transform your inventory management with AI-powered forecasting, real-time monitoring, and automated reordering. Reduce costs and prevent stockouts."
         />
         <meta
           name="keywords"
-          content="quantum computing, quantum algorithms, quantum cryptography, quantum machine learning, quantum simulation, quantum optimization"
+          content="inventory management, AI forecasting, stock management, supply chain, warehouse management, inventory optimization"
         />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 mb-6">
-            <Atom className="w-5 h-5 text-purple-400 mr-2" />
-            <span className="text-purple-300 text-sm font-medium">Next-Generation Quantum Technology</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 border border-green-500/30 mb-6">
+            <Package className="w-5 h-5 text-green-400 mr-2" />
+            <span className="text-green-300 text-sm font-medium">AI-Powered Inventory Management</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Quantum Computing
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
-              {" "}Solutions
+            Zion Smart
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-400">
+              {" "}Inventory
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Harness the power of quantum computing with our advanced solutions for optimization, 
-            cryptography, machine learning, and scientific simulation. Solve problems that are impossible with classical computers.
+            Transform your inventory management with AI-powered forecasting, real-time monitoring, 
+            and automated reordering. Reduce costs, prevent stockouts, and optimize your supply chain.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/demo"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
             >
-              Schedule Consultation
+              Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
-              Contact Quantum Experts
+              Schedule Demo
             </Link>
           </div>
         </div>
@@ -176,10 +175,10 @@ export default function QuantumComputingSolutions() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quantum Advantage
+              Proven Results
             </h2>
             <p className="text-xl text-gray-300">
-              Unlock the power of quantum computing for your organization
+              Join thousands of businesses optimizing their inventory
             </p>
           </div>
 
@@ -206,10 +205,10 @@ export default function QuantumComputingSolutions() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quantum Capabilities
+              Powerful Features
             </h2>
             <p className="text-xl text-gray-300">
-              Cutting-edge quantum computing solutions for the future
+              Everything you need to optimize your inventory management
             </p>
           </div>
 
@@ -219,7 +218,7 @@ export default function QuantumComputingSolutions() {
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -239,10 +238,10 @@ export default function QuantumComputingSolutions() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quantum Computing Plans
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300">
-              Access to the world's most advanced quantum computers
+              Choose the plan that fits your business needs
             </p>
           </div>
 
@@ -252,13 +251,13 @@ export default function QuantumComputingSolutions() {
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular
-                    ? "border-purple-500/50 ring-2 ring-purple-500/20"
+                    ? "border-green-500/50 ring-2 ring-green-500/20"
                     : "border-white/20"
                 } hover:bg-white/20 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -294,7 +293,7 @@ export default function QuantumComputingSolutions() {
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? "bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600"
+                      ? "bg-gradient-to-r from-green-500 to-blue-500 text-white hover:from-green-600 hover:to-blue-600"
                       : "border border-white/30 text-white hover:bg-white/10"
                   }`}
                 >
@@ -310,26 +309,26 @@ export default function QuantumComputingSolutions() {
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
+          <div className="bg-gradient-to-r from-green-500/20 to-blue-500/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Explore Quantum Computing?
+              Ready to Optimize Your Inventory?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the quantum revolution and solve problems that were previously impossible.
+              Join thousands of businesses using AI to optimize their inventory management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/demo"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-green-500 to-blue-500 text-white font-semibold rounded-lg hover:from-green-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105"
               >
-                Schedule Consultation
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
-                Contact Quantum Experts
+                Contact Sales
               </Link>
             </div>
           </div>
@@ -340,17 +339,17 @@ export default function QuantumComputingSolutions() {
       <section className="py-8 px-4 sm:px-6 lg:px-8 border-t border-white/10">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-300 mb-4">
-            Questions? Contact our quantum computing team at{" "}
+            Questions? Contact our team at{" "}
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="text-purple-400 hover:text-purple-300 transition-colors"
+              className="text-green-400 hover:text-green-300 transition-colors"
             >
               kleber@ziontechgroup.com
             </a>{" "}
             or call{" "}
             <a
               href="tel:+13024640950"
-              className="text-purple-400 hover:text-purple-300 transition-colors"
+              className="text-green-400 hover:text-green-300 transition-colors"
             >
               +1 302 464 0950
             </a>

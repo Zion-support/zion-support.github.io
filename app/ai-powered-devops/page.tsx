@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
-  Atom, 
-  Cpu, 
+  Code, 
+  Server, 
   Zap, 
   Shield, 
   BarChart3, 
@@ -11,89 +11,89 @@ import {
   Clock,
   DollarSign,
   Globe,
-  Brain,
-  Target,
+  Smartphone,
   Database,
-  Lock
+  Brain,
+  Target
 } from "lucide-react";
 
-export default function QuantumComputingSolutions() {
+export default function AIPoweredDevOps() {
   const features = [
     {
-      title: "Quantum Algorithm Development",
-      description: "Custom quantum algorithms for optimization, cryptography, and machine learning",
-      icon: <Atom className="w-6 h-6" />,
+      title: "Intelligent CI/CD Pipelines",
+      description: "AI-optimized deployment pipelines that adapt to your codebase and requirements",
+      icon: <Code className="w-6 h-6" />,
     },
     {
-      title: "Quantum Machine Learning",
-      description: "Quantum-enhanced ML models for complex pattern recognition and optimization",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Automated Infrastructure Management",
+      description: "Self-healing infrastructure with predictive scaling and resource optimization",
+      icon: <Server className="w-6 h-6" />,
     },
     {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms",
-      icon: <Lock className="w-6 h-6" />,
+      title: "Smart Monitoring & Alerting",
+      description: "AI-powered anomaly detection and intelligent alerting to prevent downtime",
+      icon: <BarChart3 className="w-6 h-6" />,
     },
     {
-      title: "Quantum Simulation",
-      description: "Simulate quantum systems for drug discovery, materials science, and financial modeling",
-      icon: <Cpu className="w-6 h-6" />,
+      title: "Security Automation",
+      description: "Automated security scanning, vulnerability assessment, and compliance checks",
+      icon: <Shield className="w-6 h-6" />,
     },
     {
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems in logistics, finance, and resource allocation",
-      icon: <Target className="w-6 h-6" />,
+      title: "Performance Optimization",
+      description: "Continuous performance monitoring and automatic optimization recommendations",
+      icon: <Zap className="w-6 h-6" />,
     },
     {
-      title: "Quantum Cloud Access",
-      description: "Access to leading quantum computers through our cloud platform",
+      title: "Multi-Cloud Management",
+      description: "Unified management across AWS, Azure, GCP, and hybrid environments",
       icon: <Globe className="w-6 h-6" />,
     },
   ];
 
   const pricingPlans = [
     {
-      name: "Research",
-      price: "$2,999",
+      name: "Starter",
+      price: "$299",
       period: "/month",
-      description: "Perfect for research institutions",
+      description: "Perfect for small teams",
       features: [
-        "Up to 100 quantum hours",
-        "Basic quantum algorithms",
+        "Up to 5 applications",
+        "Basic CI/CD pipelines",
         "Email support",
-        "Standard documentation",
-        "Community access",
-        "Basic simulation tools"
+        "Standard monitoring",
+        "Basic security scanning",
+        "Single cloud provider"
       ],
       popular: false,
     },
     {
-      name: "Enterprise",
-      price: "$9,999",
+      name: "Professional",
+      price: "$799",
       period: "/month",
-      description: "Ideal for large corporations",
+      description: "Ideal for growing companies",
       features: [
-        "Up to 1,000 quantum hours",
-        "Custom quantum algorithms",
+        "Up to 25 applications",
+        "Advanced AI automation",
         "Priority support",
-        "Advanced simulation",
-        "Dedicated resources",
-        "Custom integrations",
+        "Advanced monitoring",
+        "Comprehensive security",
+        "Multi-cloud support",
         "API access"
       ],
       popular: true,
     },
     {
-      name: "Government",
-      price: "$24,999",
+      name: "Enterprise",
+      price: "$1999",
       period: "/month",
-      description: "For government agencies",
+      description: "For large organizations",
       features: [
-        "Unlimited quantum hours",
-        "Classified algorithms",
+        "Unlimited applications",
+        "Custom AI models",
         "Dedicated account manager",
         "24/7 phone support",
-        "Custom development",
+        "Custom integrations",
         "Advanced security",
         "SLA guarantee"
       ],
@@ -103,69 +103,69 @@ export default function QuantumComputingSolutions() {
 
   const benefits = [
     {
-      title: "Solve Problems 1000x Faster",
-      description: "Quantum algorithms solve complex problems exponentially faster than classical computers",
-      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      title: "Reduce Deployment Time by 70%",
+      description: "AI-optimized pipelines deploy code 70% faster with fewer errors",
+      icon: <Clock className="w-8 h-8 text-green-400" />,
     },
     {
-      title: "Unbreakable Security",
-      description: "Quantum cryptography provides theoretically unbreakable encryption",
-      icon: <Shield className="w-8 h-8 text-green-400" />,
+      title: "Cut Infrastructure Costs by 40%",
+      description: "Smart resource management and auto-scaling reduce cloud costs",
+      icon: <DollarSign className="w-8 h-8 text-blue-400" />,
     },
     {
-      title: "Revolutionary Discoveries",
-      description: "Enable breakthrough discoveries in drug discovery and materials science",
-      icon: <Atom className="w-8 h-8 text-purple-400" />,
+      title: "Eliminate 95% of Downtime",
+      description: "Predictive monitoring and self-healing prevent most outages",
+      icon: <Shield className="w-8 h-8 text-purple-400" />,
     },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Quantum Computing Solutions - Next-Generation Quantum Technology</title>
+        <title>AI-Powered DevOps - Intelligent Development Operations Platform</title>
         <meta
           name="description"
-          content="Harness the power of quantum computing with our advanced solutions for optimization, cryptography, machine learning, and scientific simulation."
+          content="Transform your DevOps with AI-powered automation, intelligent monitoring, and self-healing infrastructure. Reduce deployment time and eliminate downtime."
         />
         <meta
           name="keywords"
-          content="quantum computing, quantum algorithms, quantum cryptography, quantum machine learning, quantum simulation, quantum optimization"
+          content="AI DevOps, intelligent CI/CD, automated infrastructure, smart monitoring, DevOps automation, cloud management"
         />
       </Helmet>
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/20 border border-purple-500/30 mb-6">
-            <Atom className="w-5 h-5 text-purple-400 mr-2" />
-            <span className="text-purple-300 text-sm font-medium">Next-Generation Quantum Technology</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/20 border border-orange-500/30 mb-6">
+            <Code className="w-5 h-5 text-orange-400 mr-2" />
+            <span className="text-orange-300 text-sm font-medium">AI-Powered DevOps Platform</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Quantum Computing
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
-              {" "}Solutions
+            AI-Powered
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-red-400">
+              {" "}DevOps
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto">
-            Harness the power of quantum computing with our advanced solutions for optimization, 
-            cryptography, machine learning, and scientific simulation. Solve problems that are impossible with classical computers.
+            Transform your DevOps with AI-powered automation, intelligent monitoring, 
+            and self-healing infrastructure. Reduce deployment time and eliminate downtime.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/demo"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
             >
-              Schedule Consultation
+              Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
             >
-              Contact Quantum Experts
+              Schedule Demo
             </Link>
           </div>
         </div>
@@ -176,10 +176,10 @@ export default function QuantumComputingSolutions() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quantum Advantage
+              Proven Results
             </h2>
             <p className="text-xl text-gray-300">
-              Unlock the power of quantum computing for your organization
+              Join thousands of teams optimizing their DevOps processes
             </p>
           </div>
 
@@ -206,10 +206,10 @@ export default function QuantumComputingSolutions() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quantum Capabilities
+              Powerful Features
             </h2>
             <p className="text-xl text-gray-300">
-              Cutting-edge quantum computing solutions for the future
+              Everything you need to modernize your DevOps
             </p>
           </div>
 
@@ -219,7 +219,7 @@ export default function QuantumComputingSolutions() {
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
               >
-                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center mb-4">
+                <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center mb-4">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">
@@ -239,10 +239,10 @@ export default function QuantumComputingSolutions() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Quantum Computing Plans
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300">
-              Access to the world's most advanced quantum computers
+              Choose the plan that fits your team size
             </p>
           </div>
 
@@ -252,13 +252,13 @@ export default function QuantumComputingSolutions() {
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border ${
                   plan.popular
-                    ? "border-purple-500/50 ring-2 ring-purple-500/20"
+                    ? "border-orange-500/50 ring-2 ring-orange-500/20"
                     : "border-white/20"
                 } hover:bg-white/20 transition-all duration-300`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-purple-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -294,7 +294,7 @@ export default function QuantumComputingSolutions() {
                   to="/contact"
                   className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? "bg-gradient-to-r from-purple-500 to-cyan-500 text-white hover:from-purple-600 hover:to-cyan-600"
+                      ? "bg-gradient-to-r from-orange-500 to-red-500 text-white hover:from-orange-600 hover:to-red-600"
                       : "border border-white/30 text-white hover:bg-white/10"
                   }`}
                 >
@@ -310,26 +310,26 @@ export default function QuantumComputingSolutions() {
       {/* CTA Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-500/20 to-cyan-500/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
+          <div className="bg-gradient-to-r from-orange-500/20 to-red-500/20 backdrop-blur-sm rounded-2xl p-12 border border-white/20">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Explore Quantum Computing?
+              Ready to Transform Your DevOps?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Join the quantum revolution and solve problems that were previously impossible.
+              Join thousands of teams using AI to optimize their development operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/demo"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold rounded-lg hover:from-orange-600 hover:to-red-600 transition-all duration-300 transform hover:scale-105"
               >
-                Schedule Consultation
+                Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300"
               >
-                Contact Quantum Experts
+                Contact Sales
               </Link>
             </div>
           </div>
@@ -340,17 +340,17 @@ export default function QuantumComputingSolutions() {
       <section className="py-8 px-4 sm:px-6 lg:px-8 border-t border-white/10">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-gray-300 mb-4">
-            Questions? Contact our quantum computing team at{" "}
+            Questions? Contact our team at{" "}
             <a
               href="mailto:kleber@ziontechgroup.com"
-              className="text-purple-400 hover:text-purple-300 transition-colors"
+              className="text-orange-400 hover:text-orange-300 transition-colors"
             >
               kleber@ziontechgroup.com
             </a>{" "}
             or call{" "}
             <a
               href="tel:+13024640950"
-              className="text-purple-400 hover:text-purple-300 transition-colors"
+              className="text-orange-400 hover:text-orange-300 transition-colors"
             >
               +1 302 464 0950
             </a>
