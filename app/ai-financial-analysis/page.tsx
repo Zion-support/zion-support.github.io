@@ -8,6 +8,7 @@
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7665
@@ -129,7 +130,11 @@ const AIFinancialAnalysisPage = () => {
     "Advanced fraud detection",
     "Comprehensive compliance reporting"
   ];
+=======
+import { TrendingUp, BarChart3, DollarSign, Target, Zap, Brain } from 'lucide-react';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 
+export default function AIFinancialAnalysisPage() {
   const features = [
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -203,6 +208,7 @@ const AIFinancialAnalysisPage = () => {
     }
   ];
 
+<<<<<<< HEAD
   const testimonials = [
     {
       name: "Sarah Chen",
@@ -510,6 +516,41 @@ export default function PagePage() {
             Contact Us
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            AI Financial Analysis
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI-powered financial analysis solutions to optimize your investment strategies and risk management.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+              <div className="flex items-center mb-4">
+                {feature.icon}
+                <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+              </div>
+              <p className="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {benefits.map((benefit, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <div className="flex items-center mb-2">
+                <span className="w-2 h-2 bg-green-400 rounded-full mr-3"></span>
+                <span className="text-white font-medium">{benefit}</span>
+              </div>
+            </div>
+          ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
         </div>
       </div>
     </div>

@@ -10,6 +10,8 @@ import { Helmet } from 'react-helmet-async';
 =======
 import React from 'react';
 
+import { Brain, TrendingUp, BarChart3, Zap } from 'lucide-react';
+
 export default function AIEcommerceOptimizerPro() {
   const features = [
     {
@@ -134,6 +136,7 @@ export default function AIEcommerceOptimizerPro() {
       popular: false,
     },
   ];
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 
@@ -235,6 +238,47 @@ export default function AiecommerceoptimizerproPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            AI Ecommerce Optimizer Pro
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI-powered ecommerce optimization solutions to boost your online sales and customer experience.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+              <div className="flex items-center mb-4">
+                {feature.icon}
+                <h3 className="text-xl font-semibold text-white ml-3">{feature.title}</h3>
+              </div>
+              <p className="text-gray-300">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {optimizationFeatures.map((category, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+              <h3 className="text-xl font-semibold text-white mb-4">{category.category}</h3>
+              <ul className="space-y-2">
+                {category.items.map((item, idx) => (
+                  <li key={idx} className="text-gray-300 flex items-center">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
         </div>
       </div>
     </div>

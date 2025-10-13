@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -33,6 +34,11 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Zap, Server, Globe, BarChart3, Lock, Database, Clock, Award, Users, Settings, CheckCircle } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight, Zap, Cloud, Shield, Monitor, Settings, Database, GitBranch } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 
 export default function DevopsservicesPage() {
   return (

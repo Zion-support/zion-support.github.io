@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // usePerformanceMonitor hook
 import { useEffect, useRef } from 'react';
 
@@ -22,6 +23,17 @@ export function usePerformanceMonitor() {
     startMonitoring: () => console.log('Monitoring started'),
     stopMonitoring: () => console.log('Monitoring stopped')
   };
+=======
+import { useState, useEffect, useRef } from 'react';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  firstContentfulPaint: number;
+  largestContentfulPaint: number;
+  firstInputDelay: number;
+  cumulativeLayoutShift: number;
+  timeToInteractive: number;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 }
 
 export default usePerformanceMonitor;
@@ -95,7 +107,39 @@ export function usePerformanceMonitor() {
     timeToInteractive: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   })
+=======
+  });
+
+  const [metrics, setMetrics] = useState<PerformanceMetrics>(metricsRef.current);
+
+  useEffect(() => {
+    const updateMetrics = () => {
+      if (typeof window !== 'undefined' && 'performance' in window) {
+        const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+        const paintEntries = performance.getEntriesByType('paint');
+        
+        const newMetrics: PerformanceMetrics = {
+          loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+          firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+          largestContentfulPaint: 0, // Would need to be measured with LCP API
+          firstInputDelay: 0, // Would need to be measured with FID API
+          cumulativeLayoutShift: 0, // Would need to be measured with CLS API
+          timeToInteractive: 0 // Would need to be calculated
+        };
+        
+        setMetrics(newMetrics);
+        metricsRef.current = newMetrics;
+      }
+    };
+
+    updateMetrics();
+  }, []);
+
+  return { metrics, metricsRef };
+};
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 
   useEffect(() => {
 <<<<<<< HEAD
@@ -316,5 +360,9 @@ export default usePerformanceMonitor;
   return { state, metrics: metricsRef.current };
 }
 
+<<<<<<< HEAD
 export default usePerformanceMonitor;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+export default usePerformanceMonitor;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707

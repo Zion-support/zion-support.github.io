@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -224,6 +225,12 @@ import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Globe, Smartphone, Monitor, Code, Zap, BarChart3, Clock, Award, Settings, Users, CheckCircle } from 'lucide-react';
 
+=======
+import { Link } from 'react-router-dom';
+import { ArrowRight, Globe, Smartphone, Monitor, Cloud, Database, Shield, Zap } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 export default function SoftwareDevelopmentPage() {
   const services = [
     {
@@ -245,61 +252,63 @@ export default function SoftwareDevelopmentPage() {
       features: ["System integration", "Legacy modernization", "Workflow automation", "Data migration"]
     },
     {
-      title: "API Development",
-      description: "Design and build secure, scalable APIs that enable seamless integration between different systems and services.",
-      icon: <Code className="w-6 h-6" />,
-      features: ["RESTful APIs", "GraphQL endpoints", "API documentation", "Rate limiting"]
+      title: "Cloud Solutions",
+      description: "Design and implement cloud-based solutions that scale with your business and provide reliable, secure access to your applications.",
+      icon: <Cloud className="w-6 h-6" />,
+      features: ["AWS/Azure/GCP", "Microservices architecture", "Containerization", "Auto-scaling"]
     },
     {
-      title: "Cloud-Native Applications",
-      description: "Build applications designed for the cloud with microservices architecture, containerization, and serverless computing.",
-      icon: <Zap className="w-6 h-6" />,
-      features: ["Microservices", "Containerization", "Serverless functions", "Cloud deployment"]
+      title: "Database Design",
+      description: "Create efficient, scalable database architectures that support your application's data requirements and performance needs.",
+      icon: <Database className="w-6 h-6" />,
+      features: ["SQL/NoSQL databases", "Data modeling", "Performance optimization", "Backup strategies"]
     },
     {
-      title: "AI-Powered Solutions",
-      description: "Integrate artificial intelligence and machine learning capabilities into your applications for enhanced functionality.",
-      icon: <BarChart3 className="w-6 h-6" />,
-      features: ["Machine learning models", "AI integration", "Data analytics", "Predictive features"]
+      title: "Security Implementation",
+      description: "Implement comprehensive security measures to protect your applications and data from threats and vulnerabilities.",
+      icon: <Shield className="w-6 h-6" />,
+      features: ["Authentication systems", "Data encryption", "Security audits", "Compliance standards"]
     }
   ];
 
   const technologies = [
-    { name: "React/Next.js", category: "Frontend" },
-    { name: "Node.js/Express", category: "Backend" },
-    { name: "TypeScript", category: "Language" },
-    { name: "PostgreSQL/MongoDB", category: "Database" },
-    { name: "AWS/Azure", category: "Cloud" },
-    { name: "Docker/Kubernetes", category: "DevOps" },
-    { name: "Python/Django", category: "Backend" },
-    { name: "React Native", category: "Mobile" }
+    "React", "Next.js", "Node.js", "TypeScript", "Python", "Java", "C#", "Go",
+    "React Native", "Flutter", "Swift", "Kotlin", "PostgreSQL", "MongoDB",
+    "Redis", "Docker", "Kubernetes", "AWS", "Azure", "GCP"
   ];
 
-  const benefits = [
+  const process = [
     {
-      title: "Faster Time to Market",
-      description: "Accelerate development with agile methodologies and modern tools",
-      icon: <Clock className="w-8 h-8" />
+      step: "1",
+      title: "Discovery & Planning",
+      description: "We analyze your requirements and create a detailed project plan with timelines and milestones."
     },
     {
-      title: "High Quality Code",
-      description: "Deliver robust, maintainable code with comprehensive testing and code reviews",
-      icon: <Award className="w-8 h-8" />
+      step: "2",
+      title: "Design & Architecture",
+      description: "Our team designs the system architecture and creates wireframes and prototypes."
     },
     {
-      title: "Scalable Solutions",
-      description: "Build applications that grow with your business needs",
-      icon: <Settings className="w-8 h-8" />
+      step: "3",
+      title: "Development & Testing",
+      description: "We build your application using agile methodologies with continuous testing and quality assurance."
     },
     {
+<<<<<<< HEAD
       title: "Ongoing Support",
       description: "Get continuous support and maintenance for your applications",
       icon: <Users className="w-8 h-8" />
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+      step: "4",
+      title: "Deployment & Support",
+      description: "We deploy your application and provide ongoing maintenance and support services."
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
     }
   ];
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <PerformanceOptimizer>
@@ -343,10 +352,14 @@ export default function SoftwareDevelopmentPage() {
 =======
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-green-900 to-slate-900">
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+    <>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
       <Helmet>
         <title>Software Development - Zion Tech Group</title>
         <meta name="description" content="Professional software development services for modern applications." />
       </Helmet>
+<<<<<<< HEAD
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -385,15 +398,32 @@ export default function SoftwareDevelopmentPage() {
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               We provide comprehensive software development services tailored to your specific needs and business objectives.
+=======
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-white mb-6">
+              Software Development Services
+            </h1>
+            <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+              We build custom software solutions that drive business growth and digital transformation.
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {services.map((service, index) => (
+<<<<<<< HEAD
               <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+=======
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+                <div className="flex items-center mb-4">
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
                   {service.icon}
+                  <h3 className="text-xl font-semibold text-white ml-3">{service.title}</h3>
                 </div>
+<<<<<<< HEAD
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                   {service.title}
                 </h3>
@@ -451,6 +481,12 @@ export default function SoftwareDevelopmentPage() {
                         {service.description}
                       </p>
                     </FuturisticCardEnhanced>
+=======
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <ul className="text-sm text-gray-400 space-y-1">
+                  {service.features.map((feature, idx) => (
+                    <li key={idx}>• {feature}</li>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
                   ))}
 <<<<<<< HEAD
                 </div>
@@ -472,9 +508,8 @@ export default function SoftwareDevelopmentPage() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
+<<<<<<< HEAD
       {/* Technologies Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
@@ -494,10 +529,35 @@ export default function SoftwareDevelopmentPage() {
                 <div className="text-gray-400 text-sm">{tech.category}</div>
               </div>
             ))}
+=======
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-8">Technologies We Use</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              {technologies.map((tech, index) => (
+                <span key={index} className="px-4 py-2 bg-white/10 text-white rounded-full text-sm">
+                  {tech}
+                </span>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
 
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-white text-center mb-8">Our Development Process</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {process.map((step, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">
+                    {step.step}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
+                  <p className="text-gray-300">{step.description}</p>
+                </div>
+              ))}
+            </div>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
+          </div>
+
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -776,12 +836,22 @@ const SoftwareDevelopmentPage: React.FC = () => {
               className="border border-blue-500 text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-500/10 transition-all duration-300"
             >
               Free Consultation
+=======
+          <div className="text-center">
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors text-lg"
+            >
+              Start Your Project
+              <ArrowRight className="ml-2 h-5 w-5" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
             </Link>
           </div>
         </div>
-      </section>
-    </div>
+      </div>
+    </>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 };
 
@@ -790,3 +860,6 @@ export default SoftwareDevelopmentPage;
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707

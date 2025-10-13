@@ -5,8 +5,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // useEnhancedPerformance
+=======
+import { useState, useEffect } from 'react';
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 export const useEnhancedPerformance = () => {
   // Utility function implementation
   return null;
@@ -24,6 +29,7 @@ export function useEnhancedPerformance() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+<<<<<<< HEAD
   useEffect(() => {
 <<<<<<< HEAD
     setLoading(true);
@@ -39,11 +45,21 @@ export function useEnhancedPerformance() {
       setError(null);
     } catch (err) {
       setError(err instanceof Error ? err.message : "An error occurred");
+=======
+  const fetchData = async () => {
+    setLoading(true);
+    try {
+      // Implementation here
+      setData('performance data');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred');
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
     } finally {
       setLoading(false);
     }
   };
 
+<<<<<<< HEAD
   return {
     data,
     loading,
@@ -60,6 +76,15 @@ export default useEnhancedPerformance;
 
 import { useState, useEffect } from 'react';
 
+=======
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  return { data, loading, error, refetch: fetchData };
+};
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 export function useEnhancedPerformance() {
   const [state, setState] = useState<string | null>(null);
 
@@ -123,5 +148,9 @@ export default useEnhancedPerformance;
   return { data, loading, error, setData, setLoading, setError };
 }
 
+<<<<<<< HEAD
 export default useEnhancedPerformance;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+export default useEnhancedPerformance;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707

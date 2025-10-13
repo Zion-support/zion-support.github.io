@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
@@ -98,12 +99,17 @@ import { Link } from 'react-router-dom';
 export default function Page() {
 =======
 import React from 'react';
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 import { ArrowRight, Brain, Shield, Zap, BarChart3, Cloud, Sparkles, Users, TrendingUp, Award, Database, Cpu, Star } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function MicroSaasPage() {
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
   const microSaasServices = [
     {
       icon: <Brain className="w-8 h-8" />,
@@ -171,7 +177,10 @@ export default function MicroSaasPage() {
       features: ['End-to-end encryption', 'Automated backups', 'File sharing', 'Version control'],
       price: '$99/month',
       featured: false
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
     }
   ];
 
@@ -399,6 +408,7 @@ export default function MicroSaasPage() {
         <title>Micro SaaS Services - Zion Tech Group</title>
         <meta name="description" content="Professional micro SaaS services for modern business solutions." />
       </Helmet>
+<<<<<<< HEAD
       
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -483,11 +493,48 @@ export default function MicroSaasPage() {
                     className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                   >
                     Learn More
+=======
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl font-bold text-white mb-6">
+              Micro SaaS Services
+            </h1>
+            <p className="text-lg text-gray-300 mb-8">
+              Professional micro SaaS services for modern business solutions.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {microSaasServices.map((service, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+                <div className="flex items-center mb-4">
+                  {service.icon}
+                  <h3 className="text-xl font-semibold text-white ml-3">{service.title}</h3>
+                </div>
+                <p className="text-gray-300 mb-4">{service.description}</p>
+                <div className="mb-4">
+                  <ul className="text-sm text-gray-400 space-y-1">
+                    {service.features.map((feature, idx) => (
+                      <li key={idx}>• {feature}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-2xl font-bold text-white">{service.price}</span>
+                  <Link
+                    to={service.link || service.path || '/contact'}
+                    className="inline-flex items-center px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 h-4 w-4" />
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
                   </Link>
                 </div>
               </div>
             ))}
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -516,6 +563,34 @@ export default function MicroSaasPage() {
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed mb-4">"{testimonial.content}"</p>
+=======
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="flex justify-center mb-2">
+                  {stat.icon}
+                </div>
+                <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-gray-300">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
+                <div className="flex items-center mb-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                    {testimonial.avatar}
+                  </div>
+                  <div>
+                    <div className="text-white font-semibold">{testimonial.name}</div>
+                    <div className="text-gray-400 text-sm">{testimonial.role}, {testimonial.company}</div>
+                  </div>
+                </div>
+                <p className="text-gray-300 mb-4">"{testimonial.content}"</p>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
                 <div className="flex">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
@@ -523,6 +598,7 @@ export default function MicroSaasPage() {
                 </div>
               </div>
             ))}
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
           </div>
         </section>
@@ -629,3 +705,11 @@ export default function PagePage() {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707

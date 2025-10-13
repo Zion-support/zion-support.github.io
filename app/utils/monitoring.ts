@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // monitoring utility functions
 
 export interface monitoringConfig {
@@ -39,10 +40,13 @@ export const monitoring = () => {
 
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 // Monitoring utility functions
 
 export const Monitoring = {
   init: () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     },
 
@@ -206,3 +210,26 @@ export default Monitoring;
 =======
 export default monitoring;
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+    console.log('Monitoring initialized');
+  },
+  
+  trackEvent: (eventName: string, properties?: Record<string, any>) => {
+    console.log('Event tracked:', eventName, properties);
+  },
+  
+  trackError: (error: Error, context?: string) => {
+    console.error('Error tracked:', error, context);
+  },
+  
+  trackPerformance: (metricName: string, value: number) => {
+    console.log('Performance metric:', metricName, value);
+  }
+};
+
+export function monitoring() {
+  return Monitoring;
+}
+
+export default monitoring;
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707

@@ -188,6 +188,7 @@ export default function Page() {
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-07e8
 import { Helmet } from 'react-helmet-async';
 =======
@@ -678,3 +679,5 @@ import React from 'react';
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707

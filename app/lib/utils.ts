@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // utils utility functions
 
 export interface utilsConfig {
@@ -50,13 +51,33 @@ export function formatDate(date: Date | string): string {
     month: 'long',
     day: 'numeric'
   });
+=======
+import { type ClassValue, clsx } from "clsx"
+import { twMerge } from "tailwind-merge"
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
+export function formatDate(date: Date | string): string {
+  return new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  }).format(new Date(date))
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 }
 
 export function formatCurrency(amount: number, currency = 'USD'): string {
   return new Intl.NumberFormat('en-US', {
     style: 'currency',
+<<<<<<< HEAD
     currency
   }).format(amount);
+=======
+    currency,
+  }).format(amount)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 }
 
 export function slugify(text: string): string {
@@ -64,6 +85,7 @@ export function slugify(text: string): string {
     .toLowerCase()
     .replace(/[^\w\s-]/g, '')
     .replace(/[\s_-]+/g, '-')
+<<<<<<< HEAD
     .replace(/^-+|-+$/g, '');
 }
 
@@ -143,6 +165,14 @@ export function formatPhoneNumber(phone: string): string {
 export function formatEmail(email: string): string {
   return email.toLowerCase().trim();
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+    .replace(/^-+|-+$/g, '')
+}
+
+export function truncateText(text: string, maxLength: number): string {
+  if (text.length <= maxLength) return text
+  return text.slice(0, maxLength).trim() + '...'
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 }
 
 export function debounce<T extends (...args: any[]) => any>(
@@ -150,11 +180,15 @@ export function debounce<T extends (...args: any[]) => any>(
   wait: number
 ): (...args: Parameters<T>) => void {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
   let timeout: NodeJS.Timeout
   return (...args: Parameters<T>) => {
     clearTimeout(timeout)
     timeout = setTimeout(() => func(...args), wait)
   }
+<<<<<<< HEAD
 =======
   let timeout: NodeJS.Timeout;
   return (...args: Parameters<T>) => {
@@ -162,6 +196,8 @@ export function debounce<T extends (...args: any[]) => any>(
     timeout = setTimeout(() => func(...args), wait);
   };
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 }
 
 export function throttle<T extends (...args: any[]) => any>(
@@ -169,6 +205,9 @@ export function throttle<T extends (...args: any[]) => any>(
   limit: number
 ): (...args: Parameters<T>) => void {
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
   let inThrottle: boolean
   return (...args: Parameters<T>) => {
     if (!inThrottle) {
@@ -177,6 +216,7 @@ export function throttle<T extends (...args: any[]) => any>(
       setTimeout(() => (inThrottle = false), limit)
     }
   }
+<<<<<<< HEAD
 }
 
 export function generateId(): string {
@@ -217,3 +257,6 @@ export function isValidUrl(url: string): boolean {
   };
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707

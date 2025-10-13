@@ -3,6 +3,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
@@ -220,6 +221,10 @@ const AIDataAnalyticsProPage = () => {
       popular: false
     }
   ];
+=======
+import { TrendingUp, BarChart3, Database, Brain } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
 
   const testimonials = [
     {

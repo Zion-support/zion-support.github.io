@@ -126,6 +126,7 @@ export default function Page() {
         popular: false
     }
 
+<<<<<<< HEAD
 import React from 'react';
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-365c
 
@@ -223,10 +224,40 @@ export default function AihealthcarediagnosticsPage() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900">
+      <div className="container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <h1 className="text-4xl font-bold text-white mb-6">
+            AI Healthcare Diagnostics
+          </h1>
+          <p className="text-lg text-gray-300 mb-8 max-w-3xl mx-auto">
+            Advanced AI-powered healthcare diagnostic solutions to improve patient outcomes and medical accuracy.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {diagnosticServices.map((service, index) => (
+            <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors">
+              <div className="flex items-center mb-4">
+                {service.icon}
+                <h3 className="text-xl font-semibold text-white ml-3">{service.title}</h3>
+              </div>
+              <p className="text-gray-300 mb-4">{service.description}</p>
+              <ul className="text-sm text-gray-400 space-y-1">
+                {service.features.map((feature, idx) => (
+                  <li key={idx}>• {feature}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 import { ArrowRight, Brain, Shield, Users, BarChart3, CheckCircle, Sparkles, Mail, Smartphone, Globe } from 'lucide-react';
@@ -254,3 +285,6 @@ export default function AIHealthcareDiagnostics() {
 =======
 }
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-2fa5
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-b707
