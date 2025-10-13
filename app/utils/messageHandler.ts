@@ -1,7 +1,34 @@
 // Message handler to prevent async response errors
+
+// Chrome extension types
+interface ChromeMessage {
+  type: string;
+  [key: string]: unknown;
+}
+
+interface ChromeSender {
+  id?: string;
+  tab?: {
+    id: number;
+    url?: string;
+  };
+}
+
+interface ChromeRuntime {
+  onMessage: {
+    addListener: (callback: (message: ChromeMessage, sender: ChromeSender, sendResponse: (response?: unknown) => void) => boolean) => void;
+  };
+}
+
+interface Chrome {
+  runtime?: ChromeRuntime;
+}
+
+declare const chrome: Chrome;
+
 export class MessageHandler {
   private static instance: MessageHandler;
-  private pendingMessages: Map<string, any> = new Map();
+  private pendingMessages: Map<string, (event: MessageEvent) => void> = new Map();
 
   static getInstance(): MessageHandler {
     if (!MessageHandler.instance) {
@@ -25,7 +52,7 @@ export class MessageHandler {
 
     // Listen for chrome extension messages
     if (typeof chrome !== 'undefined' && chrome.runtime) {
-      chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+      chrome.runtime.onMessage.addListener((message: ChromeMessage, sender: ChromeSender, sendResponse: (response?: unknown) => void) => {
         // Always send a response to prevent async response errors
         try {
           this.handleChromeMessage(message, sender, sendResponse);
@@ -40,7 +67,7 @@ export class MessageHandler {
   }
 
   private handleMessage(event: MessageEvent): void {
-    const { data, source, origin } = event;
+    const { data } = event;
     
     // Handle specific message types that might cause issues
     if (data.type === 'LAUNCHDARKLY_INIT') {
@@ -55,7 +82,7 @@ export class MessageHandler {
     }
   }
 
-  private handleChromeMessage(message: any, sender: chrome.runtime.MessageSender, sendResponse: (response?: any) => void): void {
+  private handleChromeMessage(message: ChromeMessage, sender: ChromeSender, sendResponse: (response?: unknown) => void): void {
     // Handle different message types
     switch (message.type) {
       case 'PING':
@@ -69,7 +96,7 @@ export class MessageHandler {
     }
   }
 
-  public sendMessage(target: Window, message: any, targetOrigin: string = '*'): void {
+  public sendMessage(target: Window, message: unknown, targetOrigin: string = '*'): void {
     try {
       target.postMessage(message, targetOrigin);
     } catch (error) {
@@ -77,7 +104,7 @@ export class MessageHandler {
     }
   }
 
-  public addMessageListener(type: string, handler: (data: any) => void): void {
+  public addMessageListener(type: string, handler: (data: unknown) => void): void {
     const messageHandler = (event: MessageEvent) => {
       if (event.data && event.data.type === type) {
         handler(event.data);
