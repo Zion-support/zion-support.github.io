@@ -20,22 +20,33 @@ const LoadingPage = () => (
   </div>
 );
 
-// Lazy load pages for better performance
-const AboutPage = React.lazy(() => import("./app/about/page"));
-const ContactPage = React.lazy(() => import("./app/contact/page"));
-const ServicesPage = React.lazy(() => import("./app/services/page"));
-const PricingPage = React.lazy(() => import("./app/pricing/page"));
-const BlogPage = React.lazy(() => import("./app/blog/page"));
-const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
-const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
-const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
-const DemoPage = React.lazy(() => import("./app/demo/page"));
-const SupportPage = React.lazy(() => import("./app/support/page"));
-const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
-const TermsPage = React.lazy(() => import("./app/terms/page"));
-const CookiesPage = React.lazy(() => import("./app/cookies/page"));
-const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+// Simple page components
+const AboutPage = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-white mb-4">About Us</h1>
+      <p className="text-gray-300">Zion Tech Group - Advanced AI and IT Solutions</p>
+    </div>
+  </div>
+);
+
+const ContactPage = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-white mb-4">Contact Us</h1>
+      <p className="text-gray-300">Get in touch with Zion Tech Group</p>
+    </div>
+  </div>
+);
+
+const ServicesPage = () => (
+  <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="text-center">
+      <h1 className="text-4xl font-bold text-white mb-4">Our Services</h1>
+      <p className="text-gray-300">AI Solutions, IT Services, and More</p>
+    </div>
+  </div>
+);
 
 // Main App Component
 function App() {
@@ -64,18 +75,6 @@ function App() {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/services" element={<ServicesPage />} />
-                <Route path="/micro-saas" element={<MicroSaasPage />} />
-                <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                <Route path="/pricing" element={<PricingPage />} />
-                <Route path="/blog" element={<BlogPage />} />
-                <Route path="/ai-services" element={<AIServicesPage />} />
-                <Route path="/tutorials" element={<TutorialsPage />} />
-                <Route path="/demo" element={<DemoPage />} />
-                <Route path="/support" element={<SupportPage />} />
-                <Route path="/privacy" element={<PrivacyPage />} />
-                <Route path="/terms" element={<TermsPage />} />
-                <Route path="/cookies" element={<CookiesPage />} />
-                <Route path="/sitemap" element={<SitemapPage />} />
 
                 {/* Catch all route */}
                 <Route path="*" element={
