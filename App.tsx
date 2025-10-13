@@ -5,6 +5,7 @@ import Navigation from "./app/components/Navigation";
 import Sidebar from "./app/components/Sidebar";
 import Footer from "./app/components/Footer";
 import LoadingPage from "./app/components/Loading";
+import EnhancedLoading from "./app/components/EnhancedLoading";
 import HomePage from "./app/page";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -13,8 +14,10 @@ import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedSEO from "./app/components/EnhancedSEO";
+import PerformanceDashboard from "./app/components/PerformanceDashboard";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -115,7 +118,7 @@ function App() {
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <EnhancedErrorBoundary>
         <AnalyticsProvider>
           <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
             <WebVitalsTracker>
@@ -133,7 +136,7 @@ function App() {
                       <Breadcrumb />
                       
                       <main id="main-content" role="main" className="relative z-10">
-                        <Suspense fallback={<LoadingPage message="Loading Zion Tech Group..." />}>
+                        <Suspense fallback={<EnhancedLoading message="Loading Zion Tech Group..." variant="tech" />}>
                           <Routes>
                             {/* Main Pages */}
                             <Route path="/" element={<HomePage />} />
@@ -219,6 +222,7 @@ function App() {
                       </main>
                       
                       <Footer />
+                      <PerformanceDashboard />
                     </FuturisticBackground>
                   </div>
                 </Router>
@@ -226,7 +230,7 @@ function App() {
             </WebVitalsTracker>
           </PerformanceMonitor>
         </AnalyticsProvider>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </HelmetProvider>
   );
 }
