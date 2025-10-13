@@ -32,17 +32,15 @@ function fixUnusedImports(filePath) {
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
       
-      // Skip lines that declare unused variables
-      if (line.includes('const ') && line.includes(' = [')) {
-        const varName = line.match(/const\s+(\w+)\s*=/)?.[1];
-        if (varName) {
-          // Check if this variable is used elsewhere in the file
-          const restOfFile = lines.slice(i + 1).join('\n');
-          if (!restOfFile.includes(varName + '[') && !restOfFile.includes(varName + '.')) {
-            // Skip this variable declaration
-            continue;
-          }
-        }
+      // Skip empty lines and comments
+      if (line.trim() === '' || line.trim().startsWith('//')) {
+        filteredLines.push(line);
+        continue;
+      }
+      
+      // Skip unused variable declarations
+      if (line.includes('const [') && line.includes('] = useState') && !line.includes('set')) {
+        continue;
       }
       
       filteredLines.push(line);
@@ -54,18 +52,13 @@ function fixUnusedImports(filePath) {
     content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
     fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    console.log(`✓ Fixed imports in ${filePath}`);
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-085b
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
-=======
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-69c0
+// Process all files
+files.forEach(fixUnusedImports);
+
+console.log('Import fixing completed!');
