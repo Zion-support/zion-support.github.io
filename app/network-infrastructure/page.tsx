@@ -1,34 +1,31 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
+import { ArrowRight } from "lucide-react";
 
-const NetworkInfrastructurePage: React.FC = () => {
+import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
+
+export default function NetworkInfrastructureZionTechGroup() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="Network Infrastructure - Reliable Network Solutions"
-        description="Design and implement robust network infrastructure solutions for your business with our expert team."
-        keywords="network infrastructure, network solutions, network design, network implementation, network services"
-        canonical="/network-infrastructure"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Network Infrastructure
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Design and implement robust network infrastructure solutions for your business with our expert team.
-          </p>
-        </div>
-        
+    <>
+      <Helmet>
+        <title>NetworkInfrastructure - Zion Tech Group</title>
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
         <div className="text-center">
-          <p className="text-gray-300 text-lg">Service details coming soon. Contact us for more information.</p>
+          <h1 className="text-4xl font-bold text-white mb-6">
+            NetworkInfrastructure
+          </h1>
+          <p className="text-lg text-gray-300 mb-8">
+            Professional networkinfrastructure services coming soon.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
+          >
+            Contact Us
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
       </div>
-    </div>
+    </>
   );
-};
-
-export default NetworkInfrastructurePage;
+}

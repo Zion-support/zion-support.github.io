@@ -1,34 +1,19 @@
-import React from 'react';
-import EnhancedSEO from '../components/EnhancedSEO';
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-const TutorialsPage: React.FC = () => {
+export default function Tutorials() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="Tutorials - Zion Tech Group"
-        description="Learn about AI, technology, and digital transformation with our comprehensive tutorials and guides."
-        keywords="tutorials, guides, learning, AI, technology, digital transformation"
-        canonical="/tutorials"
-      />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Tutorials
-            </span>
-          </h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Learn about AI, technology, and digital transformation with our comprehensive tutorials and guides.
-          </p>
-        </div>
-        
+    <>
+      <Helmet>
+        <title>Tutorials - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Learn from our comprehensive tutorials on AI, cybersecurity, and cloud computing." />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
         <div className="text-center">
-          <p className="text-gray-300 text-lg">Tutorials coming soon. Check back for learning resources.</p>
+          <h1 className="text-4xl font-bold text-white mb-4">Tutorials</h1>
+          <p className="text-gray-300">Coming soon...</p>
         </div>
       </div>
-    </div>
+    </>
   );
-};
-
-export default TutorialsPage;
+}
