@@ -1,20 +1,12 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { BarChart3, Zap, Clock, Eye, MousePointer, Download } from 'lucide-react';
 
 interface PerformanceMetrics {
-<<<<<<< HEAD
-  fcp: number;
-  lcp: number;
-  fid: number;
-  cls: number;
-  ttfb: number;
-=======
   lcp: number | null;
   fid: number | null;
   cls: number | null;
   fcp: number | null;
   ttfb: number | null;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
 }
 
 const PerformanceMonitor: React.FC = () => {
@@ -31,192 +23,166 @@ const PerformanceMonitor: React.FC = () => {
       // Get Core Web Vitals
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
-          if (entry.entryType === 'paint') {
-            if (entry.name === 'first-contentful-paint') {
-              setMetrics(prev => ({ ...prev, fcp: entry.startTime } as PerformanceMetrics));
-            }
-          }
-          
           if (entry.entryType === 'largest-contentful-paint') {
-            setMetrics(prev => ({ ...prev, lcp: entry.startTime } as PerformanceMetrics));
-          }
-          
-          if (entry.entryType === 'first-input') {
-            setMetrics(prev => ({ ...prev, fid: (entry as any).processingStart - entry.startTime } as PerformanceMetrics));
-          }
-          
-          if (entry.entryType === 'layout-shift') {
-            if (!(entry as any).hadRecentInput) {
-              setMetrics(prev => ({ 
-                ...prev, 
-                cls: (prev?.cls || 0) + (entry as any).value 
-              } as PerformanceMetrics));
-            }
+            setMetrics(prev => ({
+              ...prev,
+              lcp: entry.startTime
+            }));
           }
         }
       });
 
-      observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
+      observer.observe({ entryTypes: ['largest-contentful-paint'] });
 
-      // Measure TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      if (navigationEntry) {
-        setMetrics(prev => ({ 
-          ...prev, 
-          ttfb: navigationEntry.responseStart - navigationEntry.requestStart 
-        } as PerformanceMetrics));
+      // Measure other metrics
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      if (navigation) {
+        setMetrics(prev => ({
+          ...prev,
+          ttfb: navigation.responseStart - navigation.requestStart,
+          fcp: navigation.domContentLoadedEventEnd - navigation.navigationStart
+        }));
       }
 
-      // Show performance monitor after 3 seconds
-      setTimeout(() => {
-        setIsVisible(true);
-      }, 3000);
-
-      return () => {
-        observer.disconnect();
-      };
+      return () => observer.disconnect();
     };
 
     const cleanup = measurePerformance();
     return cleanup;
   }, []);
 
-  if (!isVisible || !metrics) {
+  // Don't render in production unless explicitly enabled
+  if (process.env.NODE_ENV === 'production' && !localStorage.getItem('debug-performance')) {
     return null;
   }
 
-  const getScoreColor = (value: number, thresholds: { good: number; needsImprovement: number }) => {
+  const getScoreColor = (value: number | null, thresholds: { good: number; poor: number }) => {
+    if (value === null) return 'text-gray-400';
     if (value <= thresholds.good) return 'text-green-400';
-    if (value <= thresholds.needsImprovement) return 'text-yellow-400';
+    if (value <= thresholds.poor) return 'text-yellow-400';
     return 'text-red-400';
   };
 
-  const getScoreText = (value: number, thresholds: { good: number; needsImprovement: number }) => {
+  const getScoreText = (value: number | null, thresholds: { good: number; poor: number }) => {
+    if (value === null) return 'N/A';
     if (value <= thresholds.good) return 'Good';
-    if (value <= thresholds.needsImprovement) return 'Needs Improvement';
+    if (value <= thresholds.poor) return 'Needs Improvement';
     return 'Poor';
   };
 
   return (
-    <div className="fixed bottom-4 right-4 bg-slate-800/90 backdrop-blur-sm border border-cyan-500/30 rounded-lg p-4 text-white text-xs font-mono z-50 max-w-xs">
-      <div className="flex items-center justify-between mb-2">
-        <h3 className="text-cyan-400 font-semibold">Performance Monitor</h3>
-        <button
-          onClick={() => setIsVisible(false)}
-          className="text-gray-400 hover:text-white transition-colors"
-          aria-label="Close performance monitor"
-        >
-          ×
-        </button>
-      </div>
-      
-      <div className="space-y-1">
-        <div className="flex justify-between">
-          <span>FCP:</span>
-          <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
-            {metrics.fcp.toFixed(0)}ms
-          </span>
+    <div className="fixed bottom-4 right-4 z-50">
+      <button
+        onClick={() => setIsVisible(!isVisible)}
+        className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
+        title="Performance Monitor"
+      >
+        <BarChart3 className="w-6 h-6" />
+      </button>
+
+      {isVisible && (
+        <div className="absolute bottom-16 right-0 w-80 bg-slate-900/95 backdrop-blur-md rounded-xl border border-white/20 p-6 shadow-2xl">
+          <div className="flex items-center justify-between mb-4">
+            <h3 className="text-lg font-semibold text-white">Performance Monitor</h3>
+            <button
+              onClick={() => setIsVisible(false)}
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              ×
+            </button>
+          </div>
+
+          <div className="space-y-4">
+            {/* LCP */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <Eye className="w-4 h-4 text-cyan-400" />
+                <span className="text-sm text-gray-300">LCP</span>
+              </div>
+              <div className="text-right">
+                <div className={`text-sm font-medium ${getScoreColor(metrics?.lcp, { good: 2500, poor: 4000 })}`}>
+                  {metrics?.lcp ? `${metrics.lcp.toFixed(0)}ms` : 'N/A'}
+                </div>
+                <div className="text-xs text-gray-400">
+                  {getScoreText(metrics?.lcp, { good: 2500, poor: 4000 })}
+                </div>
+              </div>
+            </div>
+
+            {/* FID */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <MousePointer className="w-4 h-4 text-green-400" />
+                <span className="text-sm text-gray-300">FID</span>
+              </div>
+              <div className="text-right">
+                <div className={`text-sm font-medium ${getScoreColor(metrics?.fid, { good: 100, poor: 300 })}`}>
+                  {metrics?.fid ? `${metrics.fid.toFixed(0)}ms` : 'N/A'}
+                </div>
+                <div className="text-xs text-gray-400">
+                  {getScoreText(metrics?.fid, { good: 100, poor: 300 })}
+                </div>
+              </div>
+            </div>
+
+            {/* CLS */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <Zap className="w-4 h-4 text-purple-400" />
+                <span className="text-sm text-gray-300">CLS</span>
+              </div>
+              <div className="text-right">
+                <div className={`text-sm font-medium ${getScoreColor(metrics?.cls, { good: 0.1, poor: 0.25 })}`}>
+                  {metrics?.cls ? metrics.cls.toFixed(3) : 'N/A'}
+                </div>
+                <div className="text-xs text-gray-400">
+                  {getScoreText(metrics?.cls, { good: 0.1, poor: 0.25 })}
+                </div>
+              </div>
+            </div>
+
+            {/* FCP */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <Clock className="w-4 h-4 text-blue-400" />
+                <span className="text-sm text-gray-300">FCP</span>
+              </div>
+              <div className="text-right">
+                <div className={`text-sm font-medium ${getScoreColor(metrics?.fcp, { good: 1800, poor: 3000 })}`}>
+                  {metrics?.fcp ? `${metrics.fcp.toFixed(0)}ms` : 'N/A'}
+                </div>
+                <div className="text-xs text-gray-400">
+                  {getScoreText(metrics?.fcp, { good: 1800, poor: 3000 })}
+                </div>
+              </div>
+            </div>
+
+            {/* TTFB */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center space-x-2">
+                <Download className="w-4 h-4 text-orange-400" />
+                <span className="text-sm text-gray-300">TTFB</span>
+              </div>
+              <div className="text-right">
+                <div className={`text-sm font-medium ${getScoreColor(metrics?.ttfb, { good: 800, poor: 1800 })}`}>
+                  {metrics?.ttfb ? `${metrics.ttfb.toFixed(0)}ms` : 'N/A'}
+                </div>
+                <div className="text-xs text-gray-400">
+                  {getScoreText(metrics?.ttfb, { good: 800, poor: 1800 })}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-4 pt-4 border-t border-white/20">
+            <div className="text-xs text-gray-400 text-center">
+              Performance monitoring is enabled for development
+            </div>
+          </div>
         </div>
-        
-        <div className="flex justify-between">
-          <span>LCP:</span>
-          <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
-            {metrics.lcp.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>FID:</span>
-          <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
-            {metrics.fid.toFixed(0)}ms
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>CLS:</span>
-          <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
-            {metrics.cls.toFixed(3)}
-          </span>
-        </div>
-        
-        <div className="flex justify-between">
-          <span>TTFB:</span>
-          <span className={getScoreColor(metrics.ttfb, { good: 800, needsImprovement: 1800 })}>
-            {metrics.ttfb.toFixed(0)}ms
-          </span>
-        </div>
-      </div>
-      
-      <div className="mt-2 pt-2 border-t border-gray-600">
-        <div className="text-xs text-gray-400">
-          Overall: {getScoreText(metrics.lcp, { good: 2500, needsImprovement: 4000 })}
-        </div>
-      </div>
+      )}
     </div>
   );
 };
 
-<<<<<<< HEAD
 export default PerformanceMonitor;
-=======
-export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-c573
-=======
-import React, { useEffect, ReactNode } from 'react';
-
-interface PerformanceMonitorProps {
-  children: ReactNode;
-}
-
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ children }) => {
-  useEffect(() => {
-    // Monitor performance metrics
-    const monitorPerformance = () => {
-      // Monitor Core Web Vitals
-      if ('web-vitals' in window) {
-        import('web-vitals').then(({ getCLS, getFID, getFCP, getLCP, getTTFB }) => {
-          getCLS(console.log);
-          getFID(console.log);
-          getFCP(console.log);
-          getLCP(console.log);
-          getTTFB(console.log);
-        });
-      }
-
-      // Monitor resource loading
-      if ('performance' in window) {
-        const observer = new PerformanceObserver((list) => {
-          for (const entry of list.getEntries()) {
-            if (entry.entryType === 'navigation') {
-              console.log('Navigation timing:', entry);
-            } else if (entry.entryType === 'resource') {
-              console.log('Resource timing:', entry);
-            }
-          }
-        });
-
-        observer.observe({ entryTypes: ['navigation', 'resource'] });
-      }
-
-      // Monitor memory usage
-      if ('memory' in performance) {
-        const logMemoryUsage = () => {
-          console.log('Memory usage:', {
-            used: Math.round((performance as any).memory.usedJSHeapSize / 1024 / 1024),
-            total: Math.round((performance as any).memory.totalJSHeapSize / 1024 / 1024),
-            limit: Math.round((performance as any).memory.jsHeapSizeLimit / 1024 / 1024)
-          });
-        };
-
-        setInterval(logMemoryUsage, 30000); // Log every 30 seconds
-      }
-    };
-
-    monitorPerformance();
-  }, []);
-
-  return <>{children}</>;
-};
-
-export default PerformanceMonitor;
->>>>>>> cursor/analyze-improve-and-deploy-application-30da
