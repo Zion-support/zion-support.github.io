@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Monitor, Users, Settings, Globe, Smartphone, Mail, Phone, MapPin } from 'lucide-react'
+import FuturisticButton from './FuturisticButton'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
@@ -93,10 +94,45 @@ const Navigation = React.memo(() => {
 
   return (
     <nav 
-      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
+      className="bg-gradient-to-r from-slate-900/95 via-purple-900/95 to-slate-900/95 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md sticky top-0 z-50"
       role="navigation"
       aria-label="Main navigation"
     >
+      {/* Contact Bar */}
+      <div className="bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row items-center justify-between py-2 text-sm">
+            <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6">
+              <div className="flex items-center text-cyan-400">
+                <Phone className="w-4 h-4 mr-2" />
+                <a href="tel:+13024640950" className="hover:text-cyan-300 transition-colors">
+                  +1 302 464 0950
+                </a>
+              </div>
+              <div className="flex items-center text-cyan-400">
+                <Mail className="w-4 h-4 mr-2" />
+                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-cyan-300 transition-colors">
+                  kleber@ziontechgroup.com
+                </a>
+              </div>
+              <div className="flex items-center text-cyan-400">
+                <MapPin className="w-4 h-4 mr-2" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+            <div className="flex items-center space-x-4">
+              <FuturisticButton
+                href="/contact"
+                variant="ghost"
+                size="sm"
+                className="text-cyan-400 hover:text-white"
+              >
+                Get Quote
+              </FuturisticButton>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <Link 
