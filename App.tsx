@@ -22,6 +22,7 @@ import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import FuturisticBackgroundEnhanced from "./app/components/FuturisticBackgroundEnhanced";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
@@ -61,6 +62,10 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+
+// Advanced AI Service Pages
+const AIAutonomousSystemsPage = React.lazy(() => import("./app/ai-autonomous-systems/page"));
+const AIClimateSolutionsProPage = React.lazy(() => import("./app/ai-climate-solutions-pro/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -181,6 +186,20 @@ const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
 
+// New Advanced Micro SAAS Pages
+const ZionAICodeAssistantPage = React.lazy(
+  () => import("./app/zion-ai-code-assistant/page"),
+);
+const ZionQuantumAnalyticsPage = React.lazy(
+  () => import("./app/zion-quantum-analytics/page"),
+);
+const ZionAIMarketingAutomationPage = React.lazy(
+  () => import("./app/zion-ai-marketing-automation/page"),
+);
+const ZionBlockchainSecurityPage = React.lazy(
+  () => import("./app/zion-blockchain-security/page"),
+);
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
   () => import("./app/5g-data-analytics/page"),
@@ -229,8 +248,8 @@ function App() {
         <HelmetProvider>
           <AccessibilityEnhancer>
             <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <FuturisticBackground>
+              <div className="min-h-screen">
+                <FuturisticBackgroundEnhanced>
                   <Navigation onSidebarToggle={toggleSidebar} />
                   <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
                   <Breadcrumb />
@@ -273,6 +292,10 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+
+                  {/* Advanced AI Service Routes */}
+                  <Route path="/ai-autonomous-systems" element={<AIAutonomousSystemsPage />} />
+                  <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -433,6 +456,24 @@ function App() {
                     element={<ZionPerformanceMonitorPage />}
                   />
 
+                  {/* New Advanced Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-code-assistant"
+                    element={<ZionAICodeAssistantPage />}
+                  />
+                  <Route
+                    path="/zion-quantum-analytics"
+                    element={<ZionQuantumAnalyticsPage />}
+                  />
+                  <Route
+                    path="/zion-ai-marketing-automation"
+                    element={<ZionAIMarketingAutomationPage />}
+                  />
+                  <Route
+                    path="/zion-blockchain-security"
+                    element={<ZionBlockchainSecurityPage />}
+                  />
+
                   {/* 5G Solutions Routes */}
                   <Route
                     path="/5g-data-analytics"
@@ -486,7 +527,7 @@ function App() {
                   <EnhancedAccessibility>
                     <div></div>
                   </EnhancedAccessibility>
-                </FuturisticBackground>
+                </FuturisticBackgroundEnhanced>
                 <AnalyticsProvider>
                   <div>
                     <PerformanceMonitor />

@@ -1,83 +1,79 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Zap, Shield, BarChart3, Star, ArrowRight, CheckCircle, Users, Clock, Award, Cpu, Eye, Navigation } from 'lucide-react';
+import { Code, Brain, Zap, Shield, Star, ArrowRight, CheckCircle, Users, Clock, Award } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
-import NeonText from '../components/NeonText';
-import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
 
-const AIAutonomousSystemsPage = () => {
+const ZionAICodeAssistantPage = () => {
   const features = [
     {
-      title: "Self-Learning Algorithms",
-      description: "Advanced AI systems that continuously learn and adapt without human intervention",
-      icon: <Brain className="w-6 h-6" />,
-      benefits: ["Continuous learning", "Adaptive behavior", "Self-optimization", "Predictive maintenance"]
+      title: "AI-Powered Code Generation",
+      description: "Generate high-quality code in 50+ programming languages using advanced AI models",
+      icon: <Code className="w-6 h-6" />,
+      benefits: ["Instant code generation", "Multi-language support", "Context-aware suggestions"]
     },
     {
-      title: "Real-Time Decision Making",
-      description: "Instant decision processing for critical autonomous operations",
+      title: "Intelligent Code Review",
+      description: "Automated code review with security vulnerability detection and best practices",
+      icon: <Shield className="w-6 h-6" />,
+      benefits: ["Security scanning", "Performance optimization", "Code quality metrics"]
+    },
+    {
+      title: "Smart Refactoring",
+      description: "AI-driven code refactoring suggestions to improve maintainability and performance",
       icon: <Zap className="w-6 h-6" />,
-      benefits: ["Microsecond responses", "Edge computing", "Real-time analytics", "Instant adaptation"]
+      benefits: ["Automated refactoring", "Performance improvements", "Code simplification"]
     },
     {
-      title: "Advanced Perception Systems",
-      description: "Multi-sensor fusion for comprehensive environmental understanding",
-      icon: <Eye className="w-6 h-6" />,
-      benefits: ["Computer vision", "Sensor fusion", "Object recognition", "Spatial awareness"]
-    },
-    {
-      title: "Autonomous Navigation",
-      description: "Intelligent pathfinding and navigation for complex environments",
-      icon: <Navigation className="w-6 h-6" />,
-      benefits: ["Dynamic pathfinding", "Obstacle avoidance", "Route optimization", "Multi-agent coordination"]
+      title: "Documentation Generation",
+      description: "Auto-generate comprehensive documentation and API references",
+      icon: <Brain className="w-6 h-6" />,
+      benefits: ["Auto-documentation", "API references", "Code comments"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Development Kit",
-      price: "$2,999",
+      name: "Starter",
+      price: "$29",
       period: "/month",
-      description: "Perfect for research and development",
+      description: "Perfect for individual developers",
       features: [
-        "Basic autonomous algorithms",
-        "Simulation environment",
-        "API access",
-        "Documentation",
-        "Email support",
-        "5 concurrent systems"
+        "1,000 AI code generations/month",
+        "5 code reviews/month",
+        "Basic refactoring suggestions",
+        "Standard documentation generation",
+        "Email support"
       ],
       popular: false
     },
     {
-      name: "Production Ready",
-      price: "$9,999",
+      name: "Professional",
+      price: "$79",
       period: "/month",
-      description: "Ideal for commercial deployment",
+      description: "Ideal for small teams",
       features: [
-        "Advanced AI models",
-        "Real-time processing",
-        "Custom integrations",
+        "10,000 AI code generations/month",
+        "Unlimited code reviews",
+        "Advanced refactoring tools",
+        "Enhanced documentation features",
         "Priority support",
-        "SLA guarantee",
-        "50 concurrent systems",
-        "Custom training"
+        "Team collaboration tools"
       ],
       popular: true
     },
     {
-      name: "Enterprise Scale",
-      price: "$49,999",
+      name: "Enterprise",
+      price: "$199",
       period: "/month",
-      description: "For large-scale autonomous operations",
+      description: "For large development teams",
       features: [
-        "Unlimited systems",
-        "Custom AI development",
+        "Unlimited AI code generations",
+        "Unlimited code reviews",
+        "Custom AI model training",
+        "Advanced security scanning",
         "24/7 dedicated support",
-        "On-premise deployment",
-        "White-label solution",
-        "Custom hardware integration",
-        "Compliance assistance"
+        "Custom integrations",
+        "On-premise deployment"
       ],
       popular: false
     }
@@ -85,42 +81,42 @@ const AIAutonomousSystemsPage = () => {
 
   const testimonials = [
     {
-      name: "Dr. Sarah Chen",
-      role: "CTO",
-      company: "AutonomousTech Corp",
-      content: "Zion's autonomous systems have revolutionized our manufacturing operations. The self-learning algorithms have improved efficiency by 300% while reducing maintenance costs by 50%.",
+      name: "Sarah Chen",
+      role: "Senior Developer",
+      company: "TechCorp Inc.",
+      content: "Zion AI Code Assistant has revolutionized our development process. We've seen a 40% increase in productivity and significantly improved code quality.",
       rating: 5
     },
     {
       name: "Michael Rodriguez",
-      role: "Head of R&D",
-      company: "FutureMobility Inc",
-      content: "The real-time decision making capabilities are incredible. Our autonomous vehicles can now navigate complex urban environments with 99.9% accuracy.",
+      role: "CTO",
+      company: "StartupXYZ",
+      content: "The AI-powered code generation is incredibly accurate. It understands our codebase context and generates code that fits perfectly with our architecture.",
       rating: 5
     },
     {
       name: "Emily Johnson",
-      role: "VP of Operations",
-      company: "SmartFactory Solutions",
-      content: "The advanced perception systems have given our robots human-like understanding of their environment. Productivity has increased by 400%.",
+      role: "Lead Developer",
+      company: "DevTeam Solutions",
+      content: "The automated code review feature has caught numerous security vulnerabilities before they reached production. It's like having a senior developer reviewing every commit.",
       rating: 5
     }
   ];
 
   const stats = [
-    { number: "99.9%", label: "System Reliability", icon: <Shield className="w-6 h-6" /> },
-    { number: "300%", label: "Efficiency Increase", icon: <BarChart3 className="w-6 h-6" /> },
-    { number: "50+", label: "Enterprise Clients", icon: <Users className="w-6 h-6" /> },
-    { number: "1M+", label: "Autonomous Decisions", icon: <Cpu className="w-6 h-6" /> }
+    { number: "50+", label: "Programming Languages", icon: <Code className="w-6 h-6" /> },
+    { number: "95%", label: "Code Accuracy Rate", icon: <Award className="w-6 h-6" /> },
+    { number: "10,000+", label: "Active Developers", icon: <Users className="w-6 h-6" /> },
+    { number: "2M+", label: "Lines of Code Generated", icon: <Zap className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="AI Autonomous Systems - Self-Learning AI Solutions | Zion Tech Group"
-        description="Revolutionary AI autonomous systems with self-learning algorithms, real-time decision making, and advanced perception. Transform your operations with intelligent automation."
-        keywords="AI autonomous systems, self-learning AI, autonomous robots, intelligent automation, machine learning, computer vision, autonomous navigation"
-        canonical="https://ziontechgroup.com/ai-autonomous-systems"
+        title="Zion AI Code Assistant - AI-Powered Development Tool | Zion Tech Group"
+        description="Revolutionary AI-powered code generation, review, and refactoring tool. Boost developer productivity by 40% with intelligent coding assistance. Start free trial today."
+        keywords="AI code generation, code review, refactoring, developer tools, programming assistant, code quality, software development"
+        canonical="https://ziontechgroup.com/zion-ai-code-assistant"
       />
 
       {/* Hero Section */}
@@ -133,19 +129,19 @@ const AIAutonomousSystemsPage = () => {
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI Autonomous Systems</span>
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Development</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI
-            <NeonText variant="cyan" size="6xl" animate={true}>
-              {" "}Autonomous Systems
-            </NeonText>
+            Zion AI
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
+              {" "}Code Assistant
+            </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary self-learning AI systems that operate independently, make real-time decisions, 
-            and continuously adapt to complex environments. The future of intelligent automation.
+            Revolutionize your development workflow with AI-powered code generation, intelligent reviews, 
+            and automated refactoring. Boost productivity by 40% while maintaining code quality.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -153,7 +149,7 @@ const AIAutonomousSystemsPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Start Development
+              Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -161,7 +157,7 @@ const AIAutonomousSystemsPage = () => {
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
-              <Brain className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <Code className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
           
@@ -185,20 +181,18 @@ const AIAutonomousSystemsPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced AI Capabilities
+              Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Cutting-edge AI technologies that enable truly autonomous systems 
-              capable of independent operation and continuous learning.
+              Leverage cutting-edge AI technology to accelerate your development process 
+              and maintain the highest code quality standards.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <FuturisticCardEnhanced
+              <div
                 key={index}
-                variant="glass"
-                hover={true}
-                glow={true}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
@@ -217,7 +211,7 @@ const AIAutonomousSystemsPage = () => {
                     </li>
                   ))}
                 </ul>
-              </FuturisticCardEnhanced>
+              </div>
             ))}
           </div>
         </div>
@@ -228,19 +222,21 @@ const AIAutonomousSystemsPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Autonomous AI Pricing
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the autonomous AI power that matches your development and deployment needs.
+              Choose the plan that fits your development needs. All plans include our core AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <FuturisticCardEnhanced
+              <div
                 key={index}
-                variant={plan.popular ? "neon" : "glass"}
-                hover={true}
-                glow={true}
+                className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  plan.popular
+                    ? 'border-cyan-400 shadow-2xl shadow-cyan-500/20'
+                    : 'border-white/20 hover:border-cyan-400'
+                }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -275,7 +271,7 @@ const AIAutonomousSystemsPage = () => {
                 >
                   Get Started
                 </Link>
-              </FuturisticCardEnhanced>
+              </div>
             ))}
           </div>
         </div>
@@ -286,19 +282,17 @@ const AIAutonomousSystemsPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Innovation Leaders
+              Trusted by Developers Worldwide
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what industry leaders are saying about our AI autonomous systems
+              See what developers are saying about Zion AI Code Assistant
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <FuturisticCardEnhanced
+              <div
                 key={index}
-                variant="holographic"
-                hover={true}
-                glow={true}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -310,7 +304,7 @@ const AIAutonomousSystemsPage = () => {
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                 </div>
-              </FuturisticCardEnhanced>
+              </div>
             ))}
           </div>
         </div>
@@ -320,11 +314,11 @@ const AIAutonomousSystemsPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready for Autonomous AI?
+            Ready to Transform Your Development?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join the autonomous revolution. Build intelligent systems that learn, adapt, 
-            and operate independently. Start your autonomous AI journey today.
+            Join thousands of developers who are already using Zion AI Code Assistant 
+            to write better code faster. Start your free trial today.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -332,7 +326,7 @@ const AIAutonomousSystemsPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Start Development
+              Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -349,4 +343,4 @@ const AIAutonomousSystemsPage = () => {
   );
 };
 
-export default AIAutonomousSystemsPage;
+export default ZionAICodeAssistantPage;

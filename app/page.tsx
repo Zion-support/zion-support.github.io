@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
+import NeonText from "./components/NeonText";
+import ParticleSystem from "./components/ParticleSystem";
+import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
 
 const HomePage = () => {
   const features = [
@@ -40,6 +43,34 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Code Assistant",
+      description: "AI-powered development tool with code generation and review",
+      price: "From $29/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-code-assistant"
+    },
+    {
+      name: "Zion Quantum Analytics",
+      description: "Quantum-powered data analytics platform",
+      price: "From $199/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/zion-quantum-analytics"
+    },
+    {
+      name: "Zion AI Marketing",
+      description: "AI-powered marketing automation platform",
+      price: "From $99/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-marketing-automation"
+    },
+    {
+      name: "Zion Blockchain Security",
+      description: "Advanced DeFi and smart contract security",
+      price: "From $199/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-blockchain-security"
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $29/month",
@@ -52,13 +83,6 @@ const HomePage = () => {
       price: "From $49/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield"
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
     }
   ];
 
@@ -94,12 +118,21 @@ const HomePage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <div className="min-h-screen relative">
       <SEOOptimizer
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
         canonical="https://ziontechgroup.com"
+      />
+      
+      {/* Particle System Background */}
+      <ParticleSystem 
+        particleCount={80}
+        colors={['#00d4ff', '#00ff88', '#a855f7', '#ff0080', '#00ffff']}
+        speed={0.5}
+        size={2}
+        className="z-0"
       />
 
       {/* Hero Section */}
@@ -118,10 +151,10 @@ const HomePage = () => {
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             Welcome to
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-              {" "}
+            <br />
+            <NeonText variant="cyan" size="6xl" animate={true}>
               Zion Tech Group
-            </span>
+            </NeonText>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -178,26 +211,28 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={feature.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="group"
                 aria-label={`Learn more about ${feature.title}`}
               >
-                <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                  aria-hidden="true"
-                >
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed">
-                  {feature.description}
-                </p>
-                <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
-                    {feature.stats}
-                  </span>
-                </div>
+                <FuturisticCardEnhanced variant="glass" hover={true} glow={true}>
+                  <div
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    aria-hidden="true"
+                  >
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  <div className="text-center">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
+                      {feature.stats}
+                    </span>
+                  </div>
+                </FuturisticCardEnhanced>
               </Link>
             ))}
           </div>
@@ -215,27 +250,29 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
+                className="group"
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {saas.icon}
+                <FuturisticCardEnhanced variant="neon" hover={true} glow={true}>
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                      {saas.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                        {saas.name}
+                      </h3>
+                      <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                      {saas.name}
-                    </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {saas.description}
-                </p>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {saas.description}
+                  </p>
+                </FuturisticCardEnhanced>
               </Link>
             ))}
           </div>
@@ -264,9 +301,11 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div
+              <FuturisticCardEnhanced
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                variant="holographic"
+                hover={true}
+                glow={true}
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -278,7 +317,7 @@ const HomePage = () => {
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                 </div>
-              </div>
+              </FuturisticCardEnhanced>
             ))}
           </div>
         </div>

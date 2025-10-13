@@ -1,83 +1,80 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Brain, Zap, Shield, BarChart3, Star, ArrowRight, CheckCircle, Users, Clock, Award, Cpu, Eye, Navigation } from 'lucide-react';
+import { BarChart3, Zap, Brain, Shield, Star, ArrowRight, CheckCircle, Users, Clock, Award, TrendingUp, Database } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
-import NeonText from '../components/NeonText';
-import FuturisticCardEnhanced from '../components/FuturisticCardEnhanced';
 
-const AIAutonomousSystemsPage = () => {
+const ZionQuantumAnalyticsPage = () => {
   const features = [
     {
-      title: "Self-Learning Algorithms",
-      description: "Advanced AI systems that continuously learn and adapt without human intervention",
-      icon: <Brain className="w-6 h-6" />,
-      benefits: ["Continuous learning", "Adaptive behavior", "Self-optimization", "Predictive maintenance"]
+      title: "Quantum-Powered Insights",
+      description: "Leverage quantum computing algorithms for unprecedented data analysis speed and accuracy",
+      icon: <BarChart3 className="w-6 h-6" />,
+      benefits: ["1000x faster processing", "Quantum machine learning", "Advanced pattern recognition"]
     },
     {
-      title: "Real-Time Decision Making",
-      description: "Instant decision processing for critical autonomous operations",
+      title: "Real-Time Analytics",
+      description: "Process massive datasets in real-time with quantum-enhanced algorithms",
       icon: <Zap className="w-6 h-6" />,
-      benefits: ["Microsecond responses", "Edge computing", "Real-time analytics", "Instant adaptation"]
+      benefits: ["Instant insights", "Live dashboards", "Streaming analytics"]
     },
     {
-      title: "Advanced Perception Systems",
-      description: "Multi-sensor fusion for comprehensive environmental understanding",
-      icon: <Eye className="w-6 h-6" />,
-      benefits: ["Computer vision", "Sensor fusion", "Object recognition", "Spatial awareness"]
+      title: "Predictive Intelligence",
+      description: "AI-driven predictions with quantum-enhanced accuracy for business forecasting",
+      icon: <Brain className="w-6 h-6" />,
+      benefits: ["95% prediction accuracy", "Multi-dimensional analysis", "Risk assessment"]
     },
     {
-      title: "Autonomous Navigation",
-      description: "Intelligent pathfinding and navigation for complex environments",
-      icon: <Navigation className="w-6 h-6" />,
-      benefits: ["Dynamic pathfinding", "Obstacle avoidance", "Route optimization", "Multi-agent coordination"]
+      title: "Enterprise Security",
+      description: "Quantum-resistant encryption and secure data processing for sensitive information",
+      icon: <Shield className="w-6 h-6" />,
+      benefits: ["Quantum encryption", "Zero-trust architecture", "Compliance ready"]
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Development Kit",
-      price: "$2,999",
+      name: "Quantum Starter",
+      price: "$199",
       period: "/month",
-      description: "Perfect for research and development",
+      description: "Perfect for small businesses",
       features: [
-        "Basic autonomous algorithms",
-        "Simulation environment",
-        "API access",
-        "Documentation",
+        "1M data points processed/month",
+        "Basic quantum algorithms",
+        "Standard dashboards",
         "Email support",
-        "5 concurrent systems"
+        "5 user accounts"
       ],
       popular: false
     },
     {
-      name: "Production Ready",
-      price: "$9,999",
+      name: "Quantum Professional",
+      price: "$499",
       period: "/month",
-      description: "Ideal for commercial deployment",
+      description: "Ideal for growing enterprises",
       features: [
-        "Advanced AI models",
-        "Real-time processing",
-        "Custom integrations",
+        "10M data points processed/month",
+        "Advanced quantum algorithms",
+        "Custom dashboards",
         "Priority support",
-        "SLA guarantee",
-        "50 concurrent systems",
-        "Custom training"
+        "25 user accounts",
+        "API access",
+        "Real-time alerts"
       ],
       popular: true
     },
     {
-      name: "Enterprise Scale",
-      price: "$49,999",
+      name: "Quantum Enterprise",
+      price: "$1,299",
       period: "/month",
-      description: "For large-scale autonomous operations",
+      description: "For large organizations",
       features: [
-        "Unlimited systems",
-        "Custom AI development",
+        "Unlimited data processing",
+        "Full quantum computing access",
+        "Custom AI models",
         "24/7 dedicated support",
+        "Unlimited users",
         "On-premise deployment",
-        "White-label solution",
-        "Custom hardware integration",
-        "Compliance assistance"
+        "Custom integrations"
       ],
       popular: false
     }
@@ -85,42 +82,42 @@ const AIAutonomousSystemsPage = () => {
 
   const testimonials = [
     {
-      name: "Dr. Sarah Chen",
-      role: "CTO",
-      company: "AutonomousTech Corp",
-      content: "Zion's autonomous systems have revolutionized our manufacturing operations. The self-learning algorithms have improved efficiency by 300% while reducing maintenance costs by 50%.",
+      name: "Dr. Sarah Kim",
+      role: "Chief Data Officer",
+      company: "QuantumTech Corp",
+      content: "Zion Quantum Analytics has revolutionized our data processing capabilities. We're now processing 10x more data in half the time with unprecedented accuracy.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
-      role: "Head of R&D",
-      company: "FutureMobility Inc",
-      content: "The real-time decision making capabilities are incredible. Our autonomous vehicles can now navigate complex urban environments with 99.9% accuracy.",
+      name: "Michael Chen",
+      role: "VP of Analytics",
+      company: "DataFlow Solutions",
+      content: "The quantum-powered insights have given us a competitive edge. Our predictive models are now 95% accurate, helping us make better business decisions.",
       rating: 5
     },
     {
-      name: "Emily Johnson",
-      role: "VP of Operations",
-      company: "SmartFactory Solutions",
-      content: "The advanced perception systems have given our robots human-like understanding of their environment. Productivity has increased by 400%.",
+      name: "Emily Rodriguez",
+      role: "Head of Research",
+      company: "Innovation Labs",
+      content: "The real-time analytics capabilities are incredible. We can now process and analyze data streams as they happen, giving us instant insights.",
       rating: 5
     }
   ];
 
   const stats = [
-    { number: "99.9%", label: "System Reliability", icon: <Shield className="w-6 h-6" /> },
-    { number: "300%", label: "Efficiency Increase", icon: <BarChart3 className="w-6 h-6" /> },
+    { number: "1000x", label: "Faster Processing", icon: <Zap className="w-6 h-6" /> },
+    { number: "95%", label: "Prediction Accuracy", icon: <TrendingUp className="w-6 h-6" /> },
     { number: "50+", label: "Enterprise Clients", icon: <Users className="w-6 h-6" /> },
-    { number: "1M+", label: "Autonomous Decisions", icon: <Cpu className="w-6 h-6" /> }
+    { number: "1B+", label: "Data Points Processed", icon: <Database className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="AI Autonomous Systems - Self-Learning AI Solutions | Zion Tech Group"
-        description="Revolutionary AI autonomous systems with self-learning algorithms, real-time decision making, and advanced perception. Transform your operations with intelligent automation."
-        keywords="AI autonomous systems, self-learning AI, autonomous robots, intelligent automation, machine learning, computer vision, autonomous navigation"
-        canonical="https://ziontechgroup.com/ai-autonomous-systems"
+        title="Zion Quantum Analytics - Quantum-Powered Data Analytics | Zion Tech Group"
+        description="Revolutionary quantum-powered analytics platform. Process massive datasets 1000x faster with quantum computing. Get real-time insights and predictive intelligence for your business."
+        keywords="quantum analytics, quantum computing, data analytics, business intelligence, predictive analytics, real-time analytics, quantum algorithms"
+        canonical="https://ziontechgroup.com/zion-quantum-analytics"
       />
 
       {/* Hero Section */}
@@ -132,20 +129,20 @@ const AIAutonomousSystemsPage = () => {
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI Autonomous Systems</span>
+            <BarChart3 className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">Quantum-Powered Analytics</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI
-            <NeonText variant="cyan" size="6xl" animate={true}>
-              {" "}Autonomous Systems
-            </NeonText>
+            Zion
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
+              {" "}Quantum Analytics
+            </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary self-learning AI systems that operate independently, make real-time decisions, 
-            and continuously adapt to complex environments. The future of intelligent automation.
+            Experience the future of data analytics with quantum computing power. 
+            Process massive datasets 1000x faster and unlock insights impossible with classical computing.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -153,7 +150,7 @@ const AIAutonomousSystemsPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Start Development
+              Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -161,7 +158,7 @@ const AIAutonomousSystemsPage = () => {
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
-              <Brain className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <BarChart3 className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
           
@@ -185,20 +182,18 @@ const AIAutonomousSystemsPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced AI Capabilities
+              Quantum-Powered Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Cutting-edge AI technologies that enable truly autonomous systems 
-              capable of independent operation and continuous learning.
+              Harness the power of quantum computing to unlock unprecedented insights 
+              from your data with revolutionary analytics capabilities.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <FuturisticCardEnhanced
+              <div
                 key={index}
-                variant="glass"
-                hover={true}
-                glow={true}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
@@ -217,7 +212,7 @@ const AIAutonomousSystemsPage = () => {
                     </li>
                   ))}
                 </ul>
-              </FuturisticCardEnhanced>
+              </div>
             ))}
           </div>
         </div>
@@ -228,19 +223,21 @@ const AIAutonomousSystemsPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Autonomous AI Pricing
+              Quantum-Powered Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the autonomous AI power that matches your development and deployment needs.
+              Choose the quantum computing power that matches your data processing needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <FuturisticCardEnhanced
+              <div
                 key={index}
-                variant={plan.popular ? "neon" : "glass"}
-                hover={true}
-                glow={true}
+                className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
+                  plan.popular
+                    ? 'border-cyan-400 shadow-2xl shadow-cyan-500/20'
+                    : 'border-white/20 hover:border-cyan-400'
+                }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
@@ -275,7 +272,7 @@ const AIAutonomousSystemsPage = () => {
                 >
                   Get Started
                 </Link>
-              </FuturisticCardEnhanced>
+              </div>
             ))}
           </div>
         </div>
@@ -286,19 +283,17 @@ const AIAutonomousSystemsPage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Innovation Leaders
+              Trusted by Data Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what industry leaders are saying about our AI autonomous systems
+              See what industry leaders are saying about Zion Quantum Analytics
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <FuturisticCardEnhanced
+              <div
                 key={index}
-                variant="holographic"
-                hover={true}
-                glow={true}
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -310,7 +305,7 @@ const AIAutonomousSystemsPage = () => {
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                 </div>
-              </FuturisticCardEnhanced>
+              </div>
             ))}
           </div>
         </div>
@@ -320,11 +315,11 @@ const AIAutonomousSystemsPage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready for Autonomous AI?
+            Ready for Quantum Analytics?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join the autonomous revolution. Build intelligent systems that learn, adapt, 
-            and operate independently. Start your autonomous AI journey today.
+            Join the quantum revolution in data analytics. Experience processing power 
+            that was impossible with classical computing. Start your free trial today.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -332,7 +327,7 @@ const AIAutonomousSystemsPage = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Start Development
+              Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -349,4 +344,4 @@ const AIAutonomousSystemsPage = () => {
   );
 };
 
-export default AIAutonomousSystemsPage;
+export default ZionQuantumAnalyticsPage;

@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon, Search } from 'lucide-react'
+import SearchModalEnhanced from './SearchModalEnhanced'
 
 interface NavigationProps {
   onSidebarToggle?: () => void
@@ -11,6 +12,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
   const [isItServicesOpen, setIsItServicesOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
   
   const toggleMenu = useCallback(() => {
     setIsOpen(!isOpen)
@@ -28,7 +30,13 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     setIsItServicesOpen(!isItServicesOpen)
   }, [isItServicesOpen])
 
+  const toggleSearch = useCallback(() => {
+    setIsSearchOpen(!isSearchOpen)
+  }, [isSearchOpen])
+
   const aiServices = useMemo(() => [
+    { name: 'AI Autonomous Systems', path: '/ai-autonomous-systems', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'AI Climate Solutions', path: '/ai-climate-solutions-pro', icon: <Brain className="w-4 h-4" />, featured: true },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
     { name: 'AI Content Generator', path: '/ai-content-generator', icon: <Brain className="w-4 h-4" /> },
     { name: 'AI Cybersecurity Suite', path: '/ai-cybersecurity-suite-pro', icon: <Shield className="w-4 h-4" /> },
@@ -54,6 +62,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Code Assistant', path: '/zion-ai-code-assistant', icon: <Code className="w-4 h-4" />, featured: true },
+    { name: 'Zion Quantum Analytics', path: '/zion-quantum-analytics', icon: <BarChart3 className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Marketing', path: '/zion-ai-marketing-automation', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion Blockchain Security', path: '/zion-blockchain-security', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
@@ -88,6 +100,15 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           </Link>
 
           <div className="hidden lg:flex space-x-8 items-center">
+            {/* Search Button */}
+            <button
+              onClick={toggleSearch}
+              className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
+              aria-label="Search"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+            
             {/* Sidebar Toggle Button */}
             <button
               onClick={onSidebarToggle}
@@ -352,6 +373,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           </div>
         )}
       </div>
+      
+      {/* Search Modal */}
+      <SearchModalEnhanced isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </nav>
   )
 })
