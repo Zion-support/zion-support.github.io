@@ -74,7 +74,7 @@ const missingPages = [
 // Template for a basic page
 const pageTemplate = (title, description, pageName) => `import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Zap } from 'lucide-react';
+import { ArrowRight, Brain, Shield, Zap } from 'lucide-react';
 
 export default function ${pageName}Page() {
   const features = [
