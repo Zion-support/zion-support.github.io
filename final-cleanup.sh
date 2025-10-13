@@ -3,7 +3,7 @@
 echo "🧹 Final cleanup - removing all merge conflict markers..."
 
 # Find all files with merge conflict markers
-files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "" 2>/dev/null)
+files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
 echo "Found $(echo "$files_with_conflicts" | wc -l) files with conflict markers"
 
@@ -11,8 +11,10 @@ echo "Found $(echo "$files_with_conflicts" | wc -l) files with conflict markers"
 for file in $files_with_conflicts; do
     echo "Cleaning $file..."
     
-    # Remove all conflict markers and keep only the content after     sed -i '//,//d' "$file" 2>/dev/null
-    sed -i '/    
+    # Remove all conflict markers and keep only the content after =======
+    sed -i '/<<<<<<< HEAD/,/=======/d' "$file" 2>/dev/null
+    sed -i '/>>>>>>> /d' "$file" 2>/dev/null
+    
     # If file is empty or broken, create a simple working version
     if [ ! -s "$file" ] || ! grep -q "export default" "$file" 2>/dev/null; then
         echo "Creating working version for $file..."

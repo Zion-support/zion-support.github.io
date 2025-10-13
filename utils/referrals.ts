@@ -1,0 +1,98 @@
+export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',;';';
+export async function triggerReferralEvent(event: ReferralEvent, code?: string) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  try {;
+const refCode = code || (typeof window !== 'undefined' ? (localStorage.getItem('ref_code') || ') : ''),'
+    if (!refCode) return,;
+export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire';';';
+export async function triggerReferralEvent() {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  try {const refCode = code |(typeof window !== 'undefined' ? (localStorage.getItem('ref_code') |') : '')'
+    if (!refCode) return
+    await fetch('/api/referrals/track', {'
+      method: 'POST''
+      headers: { 'Content-Type': 'application/json' }'
+      body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : ', referrer: typeof document !== 'undefined' ? document.referrer : ' })})''
+  } catch {}
+export async function triggerReferralEvent(event: ReferralEvent, code?: string) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  try {;
+const refCode = code || (typeof window !== 'undefined' ? (localStorage.getItem('ref_code') || ') : '')'
+    if (!refCode) return
+    await fetch('/api/referrals/track', {'
+      method: 'POST','
+      headers: { 'Content-Type': 'application/json' }'
+      body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : ', referrer: typeof document !== 'undefined' ? document.referrer : ' })});'';
+export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire',;';';
+export async /**;
+ * triggerReferralEvent - Function description
+ */
+function triggerReferralEvent() {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  try {;
+const ref_code = code || (typeof window !== 'undefined' ? (local_storage.get_item ('ref_code') || ') : ''),'
+    // Check condition
+if (return, ) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  $2
+}
+    await fetch ('/api / referrals / track', {'
+      method: 'POST','
+      headers: { 'Content - Type': 'application / json' }'
+      body: JSON.stringify ({ code: ref_code, event, url: typeof window !== 'undefined' ? window.location.href : ', referrer: typeof document !== 'undefined' ? document.referrer : ' })})''
+  } catch {}
+}
+    await fetch('/api/referrals/track', {'
+      method: 'POST','
+      headers: { 'Content-Type': 'application/json' }'
+      body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : ', referrer: typeof document !== 'undefined' ? document.referrer : ' })})''
+  } catch {}
+  } catch {  } catch (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
+  }
+}
+  } catch (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
+  }
+}
+export type ReferralEvent = 'visit' | 'signup' | 'profile_completed' | 'job_created' | 'hire';';';
+export async function triggerReferralEvent(event: ReferralEvent, code?: string) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  try {;
+const refCode = code || (typeof window !== 'undefined' ? (localStorage.getItem('ref_code') || ') : '')'
+    if (!refCode) return
+    await fetch('/api/referrals/track', {'
+      method: 'POST','
+      headers: { 'Content-Type': 'application/json' },'
+      body: JSON.stringify({ code: refCode, event, url: typeof window !== 'undefined' ? window.location.href : ', referrer: typeof document !== 'undefined' ? document.referrer : ' }),''
+    })
+  } catch {}
+}

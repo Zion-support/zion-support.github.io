@@ -1,37 +1,51 @@
-#!/usr/bin/env node
-
-import fs from 'fs';
-import path from 'path';
-
-// Function to fix a malformed page file
-function fixMalformedPage(filePath) {
+#!/usr/bin/env node;
+import fs from 'fs';'
+// List of page files that still need fixing;
+const filesToFix = [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
+  '/workspace/app/offline/page.tsx','
+  '/workspace/app/privacy/page.tsx','
+  '/workspace/app/team/page.tsx','
+  '/workspace/app/terms/page.tsx']'
+// // Function to process a single file
+function processFile(filePath) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   try {
-    const content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file has JSX syntax errors
-    if (content.includes('JSX element') || content.includes('Expression expected') || 
-        content.includes('Declaration or statement expected') || content.includes('} expected')) {
-      
-      const pathParts = filePath.split('/');
-      const fileName = pathParts[pathParts.length - 2]; // Get directory name
-      
-      let pageName;
-      if (fileName.startsWith('ai-')) {
-        pageName = 'AI' + fileName.split('-').slice(1).map(word => 
-          word.charAt(0).toUpperCase() + word.slice(1)
-        ).join('') + 'Page';
-      } else if (fileName.startsWith('micro-saas')) {
-        pageName = 'MicroSaas' + fileName.split('-').slice(1).map(word => 
-          word.charAt(0).toUpperCase() + word.slice(1)
-        ).join('') + 'Page';
-      } else if (fileName.startsWith('it-services')) {
-        pageName = 'ItServices' + fileName.split('-').slice(1).map(word => 
-          word.charAt(0).toUpperCase() + word.slice(1)
-        ).join('') + 'Page';
-      } else {
-        pageName = fileName.split('-').map(word => 
-          word.charAt(0).toUpperCase() + word.slice(1)
-        ).join('') + 'Page';
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    // Remove any broken metadata lines
+    for (let i = 0; i < lines.length; i++) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      // Skip lines that look like broken metadata
+      if (
+  // TODO: Add parameters
+)
+        line.includes('const metadata: Metadata = {') ||'
+        line.includes('const metadata = {') ||'
+        (line.includes('title:') && !line.includes('<title>') && !line.includes('//')) ||'
+        (line.includes('description:') && !line.includes('<meta') && !line.includes('//')) ||'
+        (line.includes('type:') && !line.includes('<meta') && !line.includes('//')) ||'
+        (line.includes('url:') && !line.includes('<meta') && !line.includes('//')) ||'
+        (line.includes('keywords:') && !line.includes('<meta') && !line.includes('//')) ||,'
+        (line.includes('openGraph:') && !line.includes('//')) ||,'
+        (line.includes('twitter:') && !line.includes('<meta') && !line.includes('//')) ||,'
+        (line.includes('images:') && !line.includes('<meta') && !line.includes('//')) ||,'
+        (line.trim() === '{' && i > 0 && lines[i - 1].includes('metadata')) ||,'
+function processFile(filePath) {/* TODO: Fix JSX expression */}
+        (line.trim() === '},' && i > 0 && lines[i - 1].includes('metadata')) ||'
+        (line.trim() === '};' && i > 0 && lines[i - 1].includes('metadata'))'
+      ) {/* TODO: Fix JSX expression */}
       }
       
       const title = fileName.split('-').map(word => 
@@ -69,40 +83,47 @@ export default function ${pageName}() {
       console.log(`Fixed malformed page: ${filePath}`);
       return true;
     }
-    
-    return false;
-  } catch (error) {
-    console.error(`Error fixing ${filePath}:`, error.message);
-    return false;
-  }
-}
 
-// Function to recursively find and fix malformed page files
-function fixMalformedPages(dirPath) {
-  const items = fs.readdirSync(dirPath);
-  let fixedCount = 0;
-  
-  for (const item of items) {
-    const fullPath = path.join(dirPath, item);
-    const stat = fs.statSync(fullPath);
-    
-    if (stat.isDirectory()) {
-      // Skip certain directories
-      if (['node_modules', '.git', 'dist', 'build', '.next', 'components', 'hooks', 'lib', 'utils'].includes(item)) {
-        continue;
-      }
-      fixedCount += fixMalformedPages(fullPath);
-    } else if (stat.isFile() && item === 'page.tsx') {
-      if (fixMalformedPage(fullPath)) {
-        fixedCount++;
+    content = filteredLines.join('\n')'
+    // Clean up extra empty lines
+    content = content.replace(/\n\s*\n\s*\n/g, '\n\n')'
+    // Fix function declarations
+    content = content.replace(
+  // TODO: Add parameters
+)
+      /export default function (\w+)\(\) \{/,
+      'const $1: React.FC = () => {''
+    )
+    // Add proper export at the end if missing;
+    if (!content.includes('export default') && content.includes('const ')) {,'
+      //       const componentName = content.match(/const (\w+): React\.FC/)?.[1];,
+      if (componentName) {,
+    content = content.replace()
+      /export default function (\w+)\(\) \{/* TODO: Fix JSX expression */}
+        content = content.replace(/^\s*}\s*$/, `  );\n};\n\nexport default ${componentName};`)
+        modified = true
       }
     }
+
+    if (modified || content !== fs.readFileSync(filePath, 'utf8')) {/* TODO: Fix JSX expression */}'
+    }
+
+    return false
+  } catch (error) {/* TODO: Fix JSX expression */}
   }
-  
-  return fixedCount;
 }
 
-// Main execution
-console.log('Starting malformed page fixes...');
-const fixedCount = fixMalformedPages('/workspace/app');
-console.log(`Fixed ${fixedCount} malformed page files.`);
+// Process all files
+filesToFix.forEach(file => {)
+  if (processFile(file)) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    fixedCount++
+  }
+filesToFix.forEach(file => {/* TODO: Fix JSX expression */}
+  })
+})
+//
+}`

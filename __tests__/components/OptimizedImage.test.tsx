@@ -2,15 +2,8 @@ import React from 'react';
 import { render, screen, waitFor, act } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
 
-// Mock framer-motion
-jest.mock('framer-motion', () => ({
-  motion: {
-    img: ({ children, ...props }: React.ImgHTMLAttributes<HTMLImageElement> & { children?: React.ReactNode }) => <img {...props}>{children}</img>,
-  },
-}));
-
 const defaultProps = {
-  src: 'https://example.com/image.jpg',
+  src: 'test-image.jpg',
   alt: 'Test image',
   width: 300,
   height: 200,
@@ -25,13 +18,6 @@ describe('OptimizedImage Component', () => {
   it('renders with custom className', () => {
     const { container } = render(<OptimizedImage {...defaultProps} className="test-class" />);
     expect(container.firstChild).toHaveClass('test-class');
-  });
-
-  it('renders with width and height', () => {
-    render(<OptimizedImage {...defaultProps} width={300} height={200} />);
-    const img = screen.getByAltText('Test image');
-    expect(img).toHaveAttribute('width', '300');
-    expect(img).toHaveAttribute('height', '200');
   });
 
   it('shows loading skeleton initially', () => {

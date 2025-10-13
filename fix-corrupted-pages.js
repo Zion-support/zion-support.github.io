@@ -1,3 +1,4 @@
+
 import fs from "fs";
 import path from "path";
 import { Helmet } from 'react-helmet-async';
@@ -18,10 +19,12 @@ export default function {PAGE_NAME}() {;
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">{PAGE_TITLE}</h1>
           <p className="text-lg text-gray-300 mb-8">{PAGE_DESCRIPTION}</p>
+
   );
 }`;
 
 const pages = [
+
 ];
 
 function fixPage(pageInfo) {

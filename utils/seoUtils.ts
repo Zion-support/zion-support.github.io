@@ -1,103 +1,137 @@
-export interface SEOConfig {
-  title: string;
-  description: string;
-  keywords: string[];
-  canonicalUrl?: string;
-  ogImage?: string;
-  ogType?: string;
-  twitterCard?: string;
+<<<<<<< HEAD
+interface SEOUtilsConfig {
+  enabled: boolean;
+  analytics: boolean;
+  sitemap: boolean;
 }
 
 export class SEOUtils {
-  private config: SEOConfig;
+  private config: SEOUtilsConfig;
 
-  constructor(config: SEOConfig) {
-    this.config = config;
-  }
+  constructor(config: Partial<SEOUtilsConfig> = {}) {
+    this.config = {
+      enabled: true,
+      analytics: true,
+      sitemap: true,
+=======
+interface SeoConfig {
+  enabled: boolean;
+  metaTags: boolean;
+  structuredData: boolean;
+}
 
-  generateMetaTags() {
-    return {
-      title: this.config.title,
-      description: this.config.description,
-      keywords: this.config.keywords.join(', '),
-      canonical: this.config.canonicalUrl,
-      'og:title': this.config.title,
-      'og:description': this.config.description,
-      'og:image': this.config.ogImage,
-      'og:type': this.config.ogType || 'website',
-      'twitter:card': this.config.twitterCard || 'summary_large_image',
-      'twitter:title': this.config.title,
-      'twitter:description': this.config.description,
-      'twitter:image': this.config.ogImage,
+export class SeoUtils {
+  private config: SeoConfig;
+
+  constructor(config: Partial<SeoConfig> = {}) {
+    this.config = {
+      enabled: true,
+      metaTags: true,
+      structuredData: true,
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
+      ...config
     };
   }
 
-  updateTitle(title: string): void {
+  init(): void {
+    if (this.config.enabled) {
+      console.log('SEO utils initialized');
+    }
+  }
+
+<<<<<<< HEAD
+/**
+ * SEO utility functions
+ */;
+export interface SEOConfig {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    title: string
+  description: string
+  keywords?: string[]
+  ogImage?: string,,
+  canonicalUrl?: string
+  }
+;
+export const generateMetaTags = (config: SEOConfig): string => {,;
+export interface SEOConfig {/* TODO: Fix JSX expression */}
+}
+;
+export const generateMetaTags = (confi)
+  g: SEOConfig): string => {/* TODO: Fix JSX expression */}
+  const { title, description, keywords, ogImage, canonicalUrl } = config;
+let _tags = `<title>${title}</title>`;`
+  tags += `<meta name="description" content="${description}" />`"
+  if (keywords && keywords.length > 0) {/* TODO: Fix JSX expression */}"`"
+    tags += `<meta name="keywords" content="${keywords.join(', ')}" />`"'"
+  }
+
+  if (ogImage) {/* TODO: Fix JSX expression */}"`"
+  g:image" content="${ogImage}" />`"
+  }
+
+  if (canonicalUrl) {/* TODO: Fix JSX expression */}"`"
+    tags += `<link rel="canonical" href="${canonicalUrl}" />`"
+  }
+
+  return tags
+}
+;
+export const updatePageTitle = (title: string) => {,
+  if (typeof window !== 'undefined') {,'
     document.title = title;
-  }
-
-  updateMetaDescription(description: string): void {
-    let metaDescription = document.querySelector('meta[name="description"]');
-    if (!metaDescription) {
-      metaDescription = document.createElement('meta');
-      metaDescription.setAttribute('name', 'description');
-      document.head.appendChild(metaDescription);
-    }
-    metaDescription.setAttribute('content', description);
-  }
-
-  updateMetaKeywords(keywords: string[]): void {
-    let metaKeywords = document.querySelector('meta[name="keywords"]');
-    if (!metaKeywords) {
-      metaKeywords = document.createElement('meta');
-      metaKeywords.setAttribute('name', 'keywords');
-      document.head.appendChild(metaKeywords);
-    }
-    metaKeywords.setAttribute('content', keywords.join(', '));
-  }
-
-  updateCanonicalUrl(url: string): void {
-    let canonical = document.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement('link');
-      canonical.setAttribute('rel', 'canonical');
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute('href', url);
-  }
-
-  updateOpenGraphTags(tags: Record<string, string>): void {
-    Object.entries(tags).forEach(([property, content]) => {
-      let meta = document.querySelector(`meta[property="${property}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('property', property);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', content);
-    });
-  }
-
-  updateTwitterCardTags(tags: Record<string, string>): void {
-    Object.entries(tags).forEach(([name, content]) => {
-      let meta = document.querySelector(`meta[name="${name}"]`);
-      if (!meta) {
-        meta = document.createElement('meta');
-        meta.setAttribute('name', name);
-        document.head.appendChild(meta);
-      }
-      meta.setAttribute('content', content);
-    });
-  }
-
-  generateStructuredData(data: Record<string, any>): void {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.textContent = JSON.stringify(data);
-    document.head.appendChild(script);
-  }
-
-  getConfig(): SEOConfig {
-    return { ...this.config };
+export const updatePageTitle = (titl)
+  e: string) => {/* TODO: Fix JSX expression */}
   }
 }
+"`"
+</li>
+=======
+  generateMetaTags(title: string, description: string): void {
+    if (this.config.enabled) {
+      document.title = title;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', description);
+      }
+    }
+  }
+
+  generateSitemap(): void {
+    if (this.config.sitemap) {
+      console.log('Generating sitemap...');
+    }
+  }
+}
+
+export const seoUtils = new SEOUtils();
+export default seoUtils;
+>>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+  generateMetaTags(title: string, description: string): Record<string, string> {
+    if (this.config.metaTags) {
+      return {
+        title,
+        description,
+        'og:title': title,
+        'og:description': description,
+        'twitter:title': title,
+        'twitter:description': description,
+      };
+    }
+    return {};
+  }
+
+  generateStructuredData(data: Record<string, unknown>): string {
+    if (this.config.structuredData) {
+      return JSON.stringify(data);
+    }
+    return '';
+  }
+}
+
+export const seoUtils = new SeoUtils();
+export default seoUtils;
+>>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0

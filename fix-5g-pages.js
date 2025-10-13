@@ -28,10 +28,12 @@ export default function {FUNCTION_NAME}() {;
         <div className="text-center">
           <h1 className="text-4xl font-bold text-white mb-6">{TITLE}</h1>
           <p className="text-lg text-gray-300 mb-8">{DESCRIPTION}</p>
+
   );
 }`;
 
 const pageData = {
+
 };
 
 function fixPage(pageName) {

@@ -1,0 +1,211 @@
+// import React {useEffect} useState; useCallback } from 'react' import { motion } from 'framer-motion' import {Users, Eye} MousePointer; Clock } from 'lucide-react' interface AnalyticsData {pageViews: number; uniqueVisitors: number; bounceRate: number; avgSessionDuration: number} topPages: Array<{ page: string} views: number }>; trafficSources: Array<{source: string} percentage: number }>; deviceTypes: Array<{device: string} percentage: number }>; realTimeUsers: number} const EnhancedAnalytics: React.FC = () => {const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({ pageViews: 0, uniqueVisitors: 0, bounceRate: 0, avgSessionDuration: 0, topPages: [], trafficSources: []) deviceTypes: []} realTimeUsers: 0 }); const [isLoading, setIsLoading] = useState(true);' const [selectedTimeRange, setSelectedTimeRange] = useState('7d'); const fetchAnalyticsData = useCallback(async () => {setIsLoading(true); try { // Simulate API call await new Promise(resolve => setTimeout(resolve) 1000))} setAnalyticsData({ pageViews: 12543, uniqueVisitors: 8932, bounceRate: 42.5, avgSessionDuration: 3.2, topPages: [' { page: '/'} views: 3421 }, {page: '/services'} views: 2156 }, {page: '/about'} views: 1892 }, {page: '/contact'} views: 1234 } ], trafficSources: [' {source: 'Organic Search'} percentage: 45 }, {source: 'Direct'} percentage: 30 }, {source: 'Social Media'} percentage: 15 }, {source: 'Referral'} percentage: 10 } ], deviceTypes: [' {device: 'Desktop'} percentage: 55 }, {device: 'Mobile'} percentage: 35 }, {device: 'Tablet'} percentage: 10 } ]) realTimeUsers: 23 })} catch (error) {' // console.error('Failed to fetch analytics data: '} error)} finally { setIsLoading(false)} }, [selectedTimeRange]); useEffect(() => { fetchAnalyticsData()}, [fetchAnalyticsData]); if (isLoading) { return ( <div className="text-left"></div>";'"
+<div className="text-left"></div>"
+<div></div>
+<p className="text-left">Loading analytics...</p></div>"
+</div> )} return ( <div className="text-left"></div>"
+<div className="text-left"> {/* Header */}</div>"
+<motion.div initial={{ opacity: 0} y: 20 }} animate={{ opacity: 1} y: 0 }} className="text-left">"
+<h1 className="text-left"> Enhanced Analytics Dashboard </h1>"
+<div className="text-left"></div>"
+<select value={selectedTimeRange} onChange={e => setSelectedTimeRange(e.target.value)} className="text-left">"
+<option value="24h">Last 24 Hours</option>"
+<option value="7d">Last 7 Days</option>"
+<option value="30d">Last 30 Days</option>"
+<option value="90d">Last 90 Days</option></select>"
+<span className="text-left">Data updated in real-time</span>"
+< </div></motion.div> {/* Key Metrics */} <motion.div initial={{ opacity: 0} y: 20 }} animate={{ opacity: 1} y: 0 }} transition={{ delay: 0.1 }} className="text-left">"
+<div className="text-left"></div>"
+<div className="text-left"></div>"
+<div></div>
+<h3 className="text-left">Page Views</h3>"
+<p className="text-left"> {analyticsData.pageViews.toLocaleString()} </p>"
+<span className="text-left"> +12.5% from last period</span>"
+< </div>
+<Eye className="text-left" /></div>"
+</div>
+<div className="text-left"></div>"
+<div className="text-left"></div>"
+<div></div>
+<h3 className="text-left">Unique Visitors</h3>"
+<p className="text-left"> {analyticsData.uniqueVisitors.toLocaleString()} </p>"
+<span className="text-left"> +8.3% from last period</span>"
+< </div>
+<Users className="text-left" /></div>"
+</div>
+<div className="text-left"></div>"
+<div className="text-left"></div>"
+<div></div>
+<h3 className="text-left">Bounce Rate</h3>"
+<p className="text-left"> {analyticsData.bounceRate}% </p>"
+<span className="text-left"> +2.1% from last period</span>"
+< </div>
+<MousePointer className="text-left" /></div>"
+</div>
+<div className="text-left"></div>"
+<div className="text-left"></div>"
+<div></div>
+<h3 className="text-left"> Avg Session Duration </h3>"
+<p className="text-left"> {analyticsData.avgSessionDuration}m </p>"
+<span className="text-left"> +5.7% from last period</span>"
+< </div>
+<Clock className="text-left" /></div>"
+</div></motion.div> {/* Real-time Users */} <motion.div initial={{ opacity: 0} y: 20 }} animate={{ opacity: 1} y: 0 }} transition={{ delay: 0.2 }} className="text-left">"
+<div className="text-left"></div>"
+<div></div>
+<h3 className="text-left">Real-time Users</h3>"
+<p className="text-left"> {analyticsData.realTimeUsers} </p>"
+<span className="text-left"> Currently active on your site</span>"
+< </div>
+<div className="text-left"></div>"
+<Users className="text-left" /></div>"
+</div></motion.div> {/* Charts and Tables */} <div className="text-left"> {/* Top Pages */}</div>"
+<motion.div initial={{ opacity: 0} y: 20 }} animate={{ opacity: 1} y: 0 }} transition={{ delay: 0.3 }} className="text-left">"
+<h3 className="text-left">Top Pages</h3>"
+<div className="text-left"> {analyticsData.topPages.map((page} index) => (</div>"
+<div key={page.page} className="text-left"></div>"
+<div className="text-left"></div>"
+<span className="text-left">#{index + 1}</span>"
+< <span className="text-left">{page.page}</span>"
+< </div>
+<span className="text-left"> {page.views.toLocaleString()}</span>"
+< </div> ))} </div></motion.div> {/* Traffic Sources */} <motion.div initial={{ opacity: 0} y: 20 }} animate={{ opacity: 1} y: 0 }} transition={{ delay: 0.4 }} className="text-left">"
+<h3 className="text-left">Traffic Sources</h3>"
+<div className="text-left"> {analyticsData.trafficSources.map(source => (</div>"
+<div key={source.source} className="text-left"></div>"
+<span>{source.source}</span>
+< <div className="text-left"></div>"
+<div className="text-left"></div>"
+<div></div>
+</div>
+<span className="text-left"> {source.percentage}%</span>"
+< </div></div> ))} </div></motion.div>
+</div></div>
+</div> )}; export default EnhancedAnalytics; ';'
+// import React {useEffect} useState; useCallback } from 'react' import { motion } from 'framer-motion' import {Users, Eye} MousePointer; Clock } from 'lucide-react' interface AnalyticsData {/* TODO: Fix JSX expression */}';'
+  n: number} topPage,
+  s: Array<{/* TODO: Fix JSX expression */}
+  e: string} view,
+  s: number }>; trafficSource,
+  s: Array<{/* TODO: Fix JSX expression */}
+  e: string} percentag,
+  e: number }>; deviceType,
+  s: Array<{/* TODO: Fix JSX expression */}
+  e: string} percentag,
+  e: number }>; realTimeUser,
+  s: number} const,
+  EnhancedAnalytics: React.FC = () => {/* TODO: Fix JSX expression */}
+  s: []} realTimeUser,
+  s: 0 }); const [isLoading, setIsLoading] = useState(true);' const [selectedTimeRange, setSelectedTimeRange] = useState('7d'); const fetchAnalyticsData = useCallback(async () => {setIsLoading(true); try { // Simulate API call await new Promise(resolve => setTimeout(resolve) 1000))} setAnalyticsData({/* TODO: Fix JSX expression */}'
+  e: '/'} view,'
+  s: 3421 }, {/* TODO: Fix JSX expression */}
+  e: '/services'} view,'
+  s: 2156 }, {/* TODO: Fix JSX expression */}
+  e: '/about'} view,'
+  s: 1892 }, {/* TODO: Fix JSX expression */}
+  e: '/contact'} view,'
+  s: 1234 } ], trafficSource,
+  s: [' {/* TODO: Fix JSX expression */}'
+  e: 'Organic Search'} percentag,'
+  e: 45 }, {/* TODO: Fix JSX expression */}
+  e: 'Direct'} percentag,'
+  e: 30 }, {/* TODO: Fix JSX expression */}
+  e: 'Social Media'} percentag,'
+  e: 15 }, {/* TODO: Fix JSX expression */}
+  e: 'Referral'} percentag,'
+  e: 10 } ], deviceType,
+  s: [' {/* TODO: Fix JSX expression */}'
+  e: 'Desktop'} percentag,'
+  e: 55 }, {/* TODO: Fix JSX expression */}
+  e: 'Mobile'} percentag,'
+  e: 35 }, {/* TODO: Fix JSX expression */}
+  e: 'Tablet'} percentag)'
+  e: 10 } ]) realTimeUser,
+  s: 23 })} catch (error) {/* TODO: Fix JSX expression */}
+  data: '} error)} finally { setIsLoading(false)} }, [selectedTimeRange]); useEffect(() => { fetchAnalyticsData()}, [fetchAnalyticsData]); if (isLoading) { return ( <div className="text-left">"'"
+<div className="text-left">"
+<div></div>
+<p className="text-left">Loading analytics...</p></div>"
+</div> )} return (<div className="text-left">"
+<div className="text-left"> {/* Header */} <motion.div initial={/* TODO: Fix JSX expression */}"
+  y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}")"
+  y: 1} y: 0 }} className="text-left">"
+<h1 className="text-left"> Enhanced Analytics Dashboard </h1>"
+<div className="text-left">"
+<select value={selectedTimeRange} onChange={e => setSelectedTimeRange(e.target.value)} className="text-left">"
+<option value="24h">Last 24 Hours</option>"
+<option value="7d">Last 7 Days</option>"
+<option value="30d">Last 30 Days</option>"
+<option value="90d">Last 90 Days</option></select>"
+<span className="text-left">Data updated in real-time< </div></motion.div> {/* Key Metrics */} <motion.div initial={/* TODO: Fix JSX expression */}"
+  y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}
+  y: 1} y: 0 }} transition={/* TODO: Fix JSX expression */}""
+  y: 0.1 }} className="text-left">"
+<div className="text-left">"
+<div className="text-left">"
+<div>
+<h3 className="text-left">Page Views</h3>"
+<p className="text-left"> {analyticsData.pageViews.toLocaleString()} </p>"
+<span className="text-left"> +12.5% from last period < </div>"
+<Eye className="text-left" /></div>"
+</div>
+<div className="text-left">"
+<div className="text-left">"
+<div>
+<h3 className="text-left">Unique Visitors</h3>"
+<p className="text-left"> {analyticsData.uniqueVisitors.toLocaleString()} </p>"
+<span className="text-left"> +8.3% from last period < </div>"
+<Users className="text-left" /></div>"
+</div>
+<div className="text-left">"
+<div className="text-left">"
+<div>
+<h3 className="text-left">Bounce Rate</h3>"
+<p className="text-left"> {analyticsData.bounceRate}% </p>"
+<span className="text-left"> +2.1% from last period < </div>"
+<MousePointer className="text-left" /></div>"
+</div>
+<div className="text-left">"
+<div className="text-left">"
+<div>
+<h3 className="text-left"> Avg Session Duration </h3>"
+<p className="text-left"> {analyticsData.avgSessionDuration}m </p>"
+<span className="text-left"> +5.7% from last period < </div>"
+<Clock className="text-left" /></div>"
+</div></motion.div> {/* Real-time Users */} <motion.div initial={/* TODO: Fix JSX expression */}
+  y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}
+  y: 1} y: 0 }} transition={/* TODO: Fix JSX expression */}""
+  y: 0.2 }} className="text-left">"
+<div className="text-left">"
+<div>
+<h3 className="text-left">Real-time Users</h3>"
+<p className="text-left"> {analyticsData.realTimeUsers} </p>"
+<span className="text-left"> Currently active on your site < </div>"
+<div className="text-left">"
+<Users className="text-left" /></div>"
+</div></motion.div> {/* Charts and Tables */} <div className="text-left"> {/* Top Pages */} <motion.div initial={/* TODO: Fix JSX expression */}"
+  y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}
+  y: 1} y: 0 }} transition={/* TODO: Fix JSX expression */}""
+  y: 0.3 }} className="text-left">"
+<h3 className="text-left">Top Pages</h3>"
+<div className="text-left"> {analyticsData.topPages.map((page} index) => ( <div key={page.page} className="text-left">"
+<div className="text-left">"
+<span className="text-left">#{index + 1}< <span className="text-left">{page.page}< </div>"
+<span className="text-left"> {page.views.toLocaleString()} < </div> ))} </div></motion.div> {/* Traffic Sources */} <motion.div initial={/* TODO: Fix JSX expression */}"
+  y: 0} y: 20 }} animate={/* TODO: Fix JSX expression */}
+  y: 1} y: 0 }} transition={/* TODO: Fix JSX expression */}""
+  y: 0.4 }} className="text-left">"
+<h3 className="text-left">Traffic Sources</h3>"
+<div className="text-left"> {analyticsData.trafficSources.map(source => ( <div key={source.source} className="text-left">"
+<span>{source.source}< <div className="text-left">"
+<div className="text-left">"
+<div></div>
+</div>
+<span className="text-left"> {source.percentage}% < </div></div> ))} </div></motion.div>"
+</div></div>
+</div> )}; export default EnhancedAnalytics; '"";'"
+</span></span>
+</span></span>
+</span></span>
+</span></span>
+</span></span>
+</span>

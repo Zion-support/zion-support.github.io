@@ -1,8 +1,148 @@
-import js from "@eslint/js";
-import globals from "globals";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import tseslint from "typescript-eslint";
+import globals from 'globals';';
+import js from '@eslint/js';';
+import tseslint from '@typescript-eslint/eslint-plugin';';
+import tsParser from '@typescript-eslint/parser';';
+import reactHooks from 'eslint-plugin-react-hooks';';
+import reactRefresh from 'eslint-plugin-react-refresh';';
+export default [;
+  // Global ignores
+  {
+  // TODO: Add properties
+}
+    ignores: [
+  {
+    ignores: [
+      "dist/**", 
+      "node_modules/**", 
+      "*.config.js", 
+      "*.config.cjs",
+      "add-missing-routes*.jsx",
+      "backup-problematic/**",
+      "backup-unused-components/**",
+      "backup/**",
+      "cleanup-*.js",
+      "cleanup-*.cjs",
+      "comprehensive-*.js",
+      "fix-*.js",
+      "fix-*.cjs",
+      "*.cjs",
+      "scripts/**",
+      "src/**",
+      "create-*.js",
+      "identify-*.js",
+      "merge-*.js",
+      "remove-*.js",
+      "simple-*.js",
+      "website-*.js",
+      "public/sw.js",
+  // TODO: Add items
+]
+      'admin-api-disabled/**','
+      'ai-customer-support-disabled/**','
+      'ai-data-visualization-disabled/**','
+      'ai-sales-automation-disabled/**','
+      'ai-workflow-automation-disabled/**','
+      'api-disabled/**','
+      'api.disabled/**','
+      'api-backup/**','
+      'components-disabled/**','
+      'components.disabled/**','
+      'automation_backup/**','
+      'backup*/**','
+      '*-disabled/**','
+      '*.disabled/**','
+      '*.broken','
+      '*.backup','
+      'temp-files/**','
+      'cache/**','
+      'dist/**','
+      'node_modules/**','
+      'analyze-*.js','
+      'check-*.js','
+      'clean-*.js','
+      'fix-*.js','
+      '*.cjs','
+      '*.js.broken','
+      'jest.setup.js'
+    ],
+
+  },
+  {
+  // TODO: Add properties
+}
+    files: ['**/*.{js,jsx}'],'
+    languageOptions: {
+  // TODO: Add properties
+}
+      globals: { ...globals.browser, ...globals.node },
+      parserOptions: {
+  // TODO: Add properties
+}
+        ecmaVersion: 'latest','
+        sourceType: 'module','
+        ecmaFeatures: {
+  // TODO: Add properties
+}
+          jsx: true
+        }
+      }
+    },
+    rules: {
+  // TODO: Add properties
+}
+      ...js.configs.recommended.rules,
+      'no-unused-vars': 'warn','
+      'no-console': 'off'
+    }
+  },
+  // TypeScript configuration
+  {
+  // TODO: Add properties
+}
+    files: ['**/*.{ts,tsx}'],'
+    languageOptions: {
+  // TODO: Add properties
+}
+      globals: { ...globals.browser, ...globals.node },
+      parser: tsParser,
+      parserOptions: {
+  // TODO: Add properties
+}
+        ecmaVersion: 'latest','
+        sourceType: 'module','
+        ecmaFeatures: {
+  // TODO: Add properties
+}
+          jsx: true
+        }
+      }
+    },
+    plugins: {
+  // TODO: Add properties
+}
+      '@typescript-eslint': tseslint,'
+      'react-hooks': reactHooks,'
+      'react-refresh': reactRefresh'
+    },
+    rules: {
+  // TODO: Add properties
+}
+      ...tseslint.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      'react-refresh/only-export-components': [;'
+        'warn','
+        { allowConstantExport: true }
+      ],
+      '@typescript-eslint/no-unused-vars': 'off','
+      '@typescript-eslint/no-explicit-any': 'off','
+      '@typescript-eslint/explicit-function-return-type': 'off','
+      '@typescript-eslint/explicit-module-boundary-types': 'off','
+      '@typescript-eslint/no-non-null-assertion': 'off','
+      'no-console': 'off','
+      'no-unused-vars': 'off'
+    }
+  }
+];
 
 export default tseslint.config(
   js.configs.recommended,
@@ -32,35 +172,249 @@ export default tseslint.config(
       "dist", 
       "node_modules", 
       "*.config.js",
-      "backup*/**",
-      "backup-problematic*/**",
+      "backup-*/**",
+      "backup-problematic/**",
       "backup-unused-components/**",
-      "corrupted-src-backup/**",
-      "cleanup-*.cjs",
-      "comprehensive-*.cjs",
-      "fix-*.cjs",
-      "fix-*.js",
-      "create-*.cjs",
-      "create-*.js",
-      "scripts/**",
-      "src/**",
-      "utils/**",
+      "App_clean.tsx",
+      "api/onsite-request.js",
       "*.cjs",
       "*.js",
-      "*.py",
-      "*.sh",
-      "*.md",
-      "*.txt",
-      "*.json",
-      "*.html",
-      "*.original",
-      "*.backup*",
-      "__tests__/**",
-      "api/**",
-      "analysis/**",
-      "ci-cd-reports/**",
-      "content/**",
-      "contracts/**"
+      "cleanup-*.js",
+      "fix-*.js",
+      "fix-*.cjs",
+      "create-*.js",
+      "create-*.cjs",
+      "comprehensive-*.js",
+      "comprehensive-*.cjs",
+      "aggressive-*.js",
+      "aggressive-*.cjs",
+      "batch-*.js",
+      "batch-*.cjs",
+      "auto-*.js",
+      "auto-*.cjs",
+      "complete-*.js",
+      "complete-*.cjs",
+      "check-*.js",
+      "check-*.cjs",
+      "close-*.js",
+      "close-*.cjs",
+      "COMMIT_AND_MERGE.sh",
+      "complete_merge.sh",
+      "COMPLETE_SOLUTION.sh",
+      "clean_merge_conflicts.py",
+      "clean_merge_conflicts.sh",
+      "clean_problematic_files.py",
+      "clean_template.py",
+      "cleanup_conflicts.py",
+      "cleanup_corrupted_files.py",
+      "cleanup_files.py",
+      "cleanup_merge_conflicts_aggressive.py",
+      "cleanup_merge_conflicts.py",
+      "cleanup_merge_conflicts.sh",
+      "cleanup_unused_imports.py",
+      "cleanup-app-comprehensive.cjs",
+      "cleanup-app-tsx.cjs",
+      "cleanup-merge-conflicts.js",
+      "cleanup-remaining-issues.cjs",
+      "cleanup-unused-imports.cjs",
+      "cleanup-unused-imports.js",
+      "cleanup-unused.cjs",
+      "comprehensive_fix.cjs",
+      "comprehensive_fix.py",
+      "comprehensive_fix.sh",
+      "comprehensive_improvements.sh",
+      "comprehensive_jsx_fix.py",
+      "comprehensive_merge_script.sh",
+      "comprehensive_merge.sh",
+      "comprehensive_typescript_fixer.py",
+      "comprehensive-analysis.js",
+      "comprehensive-cleanup.cjs",
+      "comprehensive-fix.cjs",
+      "comprehensive-fix.js",
+      "comprehensive-improvements-report.json",
+      "comprehensive-pr-merger.sh",
+      "console-error-fixer-report.json",
+      "create_5g_pages.py",
+      "create_missing_files.cjs",
+      "create_missing_pages.cjs",
+      "create_missing_pages.js",
+      "fix-5g-function-names.cjs",
+      "fix-5g-pages.cjs",
+      "fix-5g-pages.js",
+      "fix-ai-pages.js",
+      "fix-all-conflicts.cjs",
+      "fix-all-parsing-errors.cjs",
+      "fix-all-unused-imports.js",
+      "fix-all-unused.cjs",
+      "fix-common-errors.cjs",
+      "fix-common-issues.cjs",
+      "fix-complex-jsx.js",
+      "fix-comprehensive-jsx.js",
+      "fix-corrupted-files.cjs",
+      "fix-corrupted-pages.js",
+      "fix-duplicate-imports.cjs",
+      "fix-errors.cjs",
+      "fix-final-errors.cjs",
+      "fix-final-jsx.js",
+      "fix-import-issues.cjs",
+      "fix-import-syntax.js",
+      "fix-imports.cjs",
+      "fix-jsx-errors.js",
+      "fix-jsx-issues.cjs",
+      "fix-jsx-structure.cjs",
+      "fix-merge-conflicts.cjs",
+      "fix-missing-braces.cjs",
+      "fix-missing-imports.js",
+      "fix-page-components.cjs",
+      "fix-pages.cjs",
+      "fix-parsing-errors.cjs",
+      "fix-problematic-files.cjs",
+      "fix-remaining-conflicts.js",
+      "fix-remaining-errors.cjs",
+      "fix-remaining-problematic.cjs",
+      "fix-remaining-ts-errors.cjs",
+      "fix-routes.js",
+      "fix-specific-jsx.js",
+      "fix-syntax-errors.cjs",
+      "fix-typescript-errors.cjs",
+      "fix-typescript-errors.js",
+      "fix-unused-imports.cjs",
+      "fix-unused-vars.cjs",
+      "fix_all_broken_files.js",
+      "fix_all_errors.cjs",
+      "fix_all_errors.js",
+      "fix_broken_files.js",
+      "fix_duplicate_exports.cjs",
+      "fix_errors.cjs",
+      "fix_final_errors.js",
+      "fix_function_names.js",
+      "fix_merge_conflicts.cjs",
+      "fix_merge_conflicts.js",
+      "fix_missing_closing_divs.js",
+      "fix_missing_imports.cjs",
+      "fix_numbered_pages.js",
+      "fix_pages.cjs",
+      "fix_pages_comprehensive.cjs",
+      "fix_remaining_errors.cjs",
+      "fix_remaining_errors.js",
+      "fix_remaining_jsx_issues.js",
+      "fix_remaining_pages.cjs",
+      "add_missing_routes.js",
+      "add-missing-routes-v2.js",
+      "add-missing-routes.js",
+      "aggressive_fix.py",
+      "aggressive-cleanup.sh",
+      "aggressive-fix.js.broken",
+      "analyze_error_boundary.py",
+      "auto_merge_prs.py",
+      "auto_merge.sh",
+      "batch_fix.py",
+      "batch_merge_prs.sh",
+      "check_about_page.py",
+      "check_and_merge_prs.sh",
+      "check_conflicts_in_main.sh",
+      "clean_merge_conflicts.py",
+      "clean_merge_conflicts.sh",
+      "clean_problematic_files.py",
+      "clean_template.py",
+      "cleanup_conflicts.py",
+      "cleanup_corrupted_files.py",
+      "cleanup_files.py",
+      "cleanup_merge_conflicts_aggressive.py",
+      "cleanup_merge_conflicts.py",
+      "cleanup_merge_conflicts.sh",
+      "cleanup_unused_imports.py",
+      "cleanup-app-comprehensive.cjs",
+      "cleanup-app-tsx.cjs",
+      "cleanup-merge-conflicts.js",
+      "cleanup-remaining-issues.cjs",
+      "cleanup-unused-imports.cjs",
+      "cleanup-unused-imports.js",
+      "cleanup-unused.cjs",
+      "comprehensive_fix.cjs",
+      "comprehensive_fix.py",
+      "comprehensive_fix.sh",
+      "comprehensive_improvements.sh",
+      "comprehensive_jsx_fix.py",
+      "comprehensive_merge_script.sh",
+      "comprehensive_merge.sh",
+      "comprehensive_typescript_fixer.py",
+      "comprehensive-analysis.js",
+      "comprehensive-cleanup.cjs",
+      "comprehensive-fix.cjs",
+      "comprehensive-fix.js",
+      "comprehensive-improvements-report.json",
+      "comprehensive-pr-merger.sh",
+      "console-error-fixer-report.json",
+      "create_5g_pages.py",
+      "create_missing_files.cjs",
+      "create_missing_pages.cjs",
+      "create_missing_pages.js",
+      "fix-5g-function-names.cjs",
+      "fix-5g-pages.cjs",
+      "fix-5g-pages.js",
+      "fix-ai-pages.js",
+      "fix-all-conflicts.cjs",
+      "fix-all-parsing-errors.cjs",
+      "fix-all-unused-imports.js",
+      "fix-all-unused.cjs",
+      "fix-common-errors.cjs",
+      "fix-common-issues.cjs",
+      "fix-complex-jsx.js",
+      "fix-comprehensive-jsx.js",
+      "fix-corrupted-files.cjs",
+      "fix-corrupted-pages.js",
+      "fix-duplicate-imports.cjs",
+      "fix-errors.cjs",
+      "fix-final-errors.cjs",
+      "fix-final-jsx.js",
+      "fix-import-issues.cjs",
+      "fix-import-syntax.js",
+      "fix-imports.cjs",
+      "fix-jsx-errors.js",
+      "fix-jsx-issues.cjs",
+      "fix-jsx-structure.cjs",
+      "fix-merge-conflicts.cjs",
+      "fix-missing-braces.cjs",
+      "fix-missing-imports.js",
+      "fix-page-components.cjs",
+      "fix-pages.cjs",
+      "fix-parsing-errors.cjs",
+      "fix-problematic-files.cjs",
+      "fix-remaining-conflicts.js",
+      "fix-remaining-errors.cjs",
+      "fix-remaining-problematic.cjs",
+      "fix-remaining-ts-errors.cjs",
+      "fix-routes.js",
+      "fix-specific-jsx.js",
+      "fix-syntax-errors.cjs",
+      "fix-typescript-errors.cjs",
+      "fix-typescript-errors.js",
+      "fix-unused-imports.cjs",
+      "fix-unused-vars.cjs",
+      "fix_all_broken_files.js",
+      "fix_all_errors.cjs",
+      "fix_all_errors.js",
+      "fix_broken_files.js",
+      "fix_duplicate_exports.cjs",
+      "fix_errors.cjs",
+      "fix_final_errors.js",
+      "fix_function_names.js",
+      "fix_merge_conflicts.cjs",
+      "fix_merge_conflicts.js",
+      "fix_missing_closing_divs.js",
+      "fix_missing_imports.cjs",
+      "fix_numbered_pages.js",
+      "fix_pages.cjs",
+      "fix_pages_comprehensive.cjs",
+      "fix_remaining_errors.cjs",
+      "fix_remaining_errors.js",
+      "fix_remaining_jsx_issues.js",
+      "fix_remaining_pages.cjs",
+      "scripts/**",
+      "src/**",
+      "backup/**"
     ],
   }
 );
+

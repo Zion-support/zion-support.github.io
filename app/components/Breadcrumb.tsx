@@ -1,31 +1,50 @@
+'use client';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { ChevronRight, Home } from 'lucide-react';
 
-interface BreadcrumbProps {
-  items: Array<{
-    label: string;
-    href?: string;
-  }>;
-  className?: string;
-}
+const Breadcrumb: React.FC = () => {
+  const location = useLocation();
+  const pathnames = location.pathname.split('/').filter((x) => x);
 
-export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
   return (
-    <nav className={`breadcrumb ${className}`} aria-label="Breadcrumb">
-      <ol className="flex space-x-2">
-        {items.map((item, index) => (
-          <li key={index} className="flex items-center">
-            {index > 0 && <span className="mx-2">/</span>}
-            {item.href ? (
-              <Link to={item.href} className="text-blue-600 hover:text-blue-800">
-                {item.label}
-              </Link>
-            ) : (
-              <span className="text-gray-500">{item.label}</span>
-            )}
+    <nav className="bg-slate-800/50 backdrop-blur-lg border-b border-white/10 py-4">
+      <div className="container mx-auto px-4">
+        <ol className="flex items-center space-x-2 text-sm">
+          <li>
+            <Link
+              to="/"
+              className="text-gray-300 hover:text-white transition-colors"
+            >
+              <Home className="w-4 h-4" />
+            </Link>
           </li>
-        ))}
-      </ol>
+          {pathnames.map((name, index) => {
+            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
+            const isLast = index === pathnames.length - 1;
+            
+            return (
+              <li key={name} className="flex items-center space-x-2">
+                <ChevronRight className="w-4 h-4 text-gray-400" />
+                {isLast ? (
+                  <span className="text-white font-medium capitalize">
+                    {name.replace(/-/g, ' ')}
+                  </span>
+                ) : (
+                  <Link
+                    to={routeTo}
+                    className="text-gray-300 hover:text-white transition-colors capitalize"
+                  >
+                    {name.replace(/-/g, ' ')}
+                  </Link>
+                )}
+              </li>
+            );
+          })}
+        </ol>
+      </div>
     </nav>
   );
-}
+};
+
+export default Breadcrumb;

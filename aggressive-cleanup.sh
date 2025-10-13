@@ -3,7 +3,7 @@
 echo "🧹 Aggressive cleanup - removing ALL merge conflict markers..."
 
 # Find all files with merge conflict markers
-files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "" 2>/dev/null)
+files_with_conflicts=$(find . -name "*.tsx" -o -name "*.ts" -o -name "*.js" -o -name "*.jsx" | xargs grep -l "<<<<<<< HEAD" 2>/dev/null)
 
 echo "Found $(echo "$files_with_conflicts" | wc -l) files with conflict markers"
 

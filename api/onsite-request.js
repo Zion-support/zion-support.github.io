@@ -1,5 +1,6 @@
-import path from 'path';
-import fs from 'fs';
+// API endpoint for onsite requests
+const path = require('path');
+const fs = require('fs');
 
 export default function handler(req, res) {
   if (req.method !== "POST") {
@@ -18,20 +19,7 @@ export default function handler(req, res) {
     fs.mkdirSync(dir, { recursive: true });
   }
 
-  let existing = [];
-  try {
-    if (fs.existsSync(file)) {
-      const data = fs.readFileSync(file, "utf8");
-      existing = JSON.parse(data);
-      if (!Array.isArray(existing)) existing = [];
-    }
-  } catch (error) {
-    // Log error for debugging in development
-    console.error("Error reading existing requests:", error);
-    existing = [];
-  }
-
-  const newRequest = {
+  const requestData = {
     id: Date.now().toString(),
     name,
     email,
@@ -40,25 +28,38 @@ export default function handler(req, res) {
     message,
     location,
     timestamp: new Date().toISOString(),
+    status: 'pending'
   };
 
-  existing.push(newRequest);
+  let requests = [];
+  if (fs.existsSync(file)) {
+    try {
+      const data = fs.readFileSync(file, 'utf8');
+      requests = JSON.parse(data);
+    } catch (error) {
+      console.error('Error reading requests file:', error);
+    }
+  }
+
+  requests.push(requestData);
 
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    fs.writeFileSync(file, JSON.stringify(requests, null, 2));
+    
     res.statusCode = 200;
     res.setHeader("Content-Type", "application/json");
-    res.end(
-      JSON.stringify({
-        success: true,
-        id: newRequest.id,
-      }),
-    );
+    res.end(JSON.stringify({ 
+      success: true, 
+      message: "Onsite request submitted successfully",
+      id: requestData.id
+    }));
   } catch (error) {
-    // Log error for debugging in development
-    console.error("Error saving onsite request:", error);
+    console.error('Error saving request:', error);
     res.statusCode = 500;
     res.setHeader("Content-Type", "application/json");
-    res.end(JSON.stringify({ error: "Failed to save request" }));
+    res.end(JSON.stringify({ 
+      success: false, 
+      error: "Failed to save request" 
+    }));
   }
 }

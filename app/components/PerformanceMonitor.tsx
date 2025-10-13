@@ -1,14 +1,23 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
 
-interface PerformanceMonitorProps {
-  className?: string;
-}
+const PerformanceMonitor: React.FC = () => {
+  useEffect(() => {
+    // Monitor Core Web Vitals
+    const observer = new PerformanceObserver((list) => {
+      for (const entry of list.getEntries()) {
+        console.log('Performance metric:', entry.name, entry.value);
+      }
+    });
 
-export default function PerformanceMonitor({ className = '' }: PerformanceMonitorProps) {
-  return (
-    <div className={`performance-monitor ${className}`}>
-      <h3>Performance Monitor</h3>
-      <p>Performance monitoring component</p>
-    </div>
-  );
-}
+    observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  return null;
+};
+
+export default PerformanceMonitor;

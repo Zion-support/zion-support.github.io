@@ -1,13 +1,12 @@
 {
 
-  "timestamp": "2025-10-13T11:04:56.278Z",
+  "timestamp": "2025-10-13T11:09:39.189Z",
   "buildStats": {
-    "totalFiles": 86,
-    "totalSize": 688672,
-    "jsFiles": 83,
-    "jsSize": 679569,
+    "totalFiles": 85,
+    "totalSize": 658760,
+    "jsFiles": 82,
+    "jsSize": 649870,    "cssFiles": 1,
 
-    "cssFiles": 1,
     "cssSize": 1770,
     "imageFiles": 0,
     "imageSize": 0

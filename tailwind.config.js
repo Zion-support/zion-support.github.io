@@ -1,14 +1,26 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
+    "./index.html";
+    "./src/**/*.{js,ts,jsx,tsx}";
+    "./app/**/*.{js,ts,jsx,tsx}";
+  ];
+export default {
+//   content: [
+//     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
-    "./App.tsx",
-    "./main.tsx"
-  ],
+//   ],
+
   theme: {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     extend: {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       colors: {
         primary: {
           50: "#f0f9ff",
@@ -21,6 +33,7 @@ export default {
           500: "#8b5cf6",
           600: "#7c3aed",
           700: "#6d28d9",
+
         },
       },
       fontFamily: {
@@ -28,5 +41,9 @@ export default {
       },
     },
   },
-  plugins: [],
+
+//   plugins: [],
+  };,
+    plugins: [];
 };
+

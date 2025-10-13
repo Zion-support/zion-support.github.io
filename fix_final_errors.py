@@ -1,202 +1,89 @@
 #!/usr/bin/env python3
 """
-Fix final TypeScript errors
+Fix the final remaining parsing errors.
 """
+
 import os
+import re
+import glob
+from pathlib import Path
 
-def fix_accessibility_enhancer():
-    """Fix accessibilityEnhancer.ts with proper syntax"""
-    content = '''import React from 'react';
-
-export interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export default function AccessibilityEnhancer({ children, className = '' }: AccessibilityEnhancerProps) {
-  return (
-    <div className={`accessibility-enhancer ${className}`}>
-      {children}
-    </div>
-  );
-}'''
+def fix_numeric_function_names():
+    """Fix function names that start with numbers."""
+    print("Fixing function names that start with numbers...")
     
-    with open('/workspace/app/utils/accessibilityEnhancer.ts', 'w', encoding='utf-8') as f:
-        f.write(content)
-    print("Fixed: app/utils/accessibilityEnhancer.ts")
-
-def fix_app_tsx():
-    """Fix App.tsx with proper JSX structure"""
-    content = '''import React, { useState, useCallback, useEffect, Suspense } from 'react';
-import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-import Navigation from "./app/components/Navigation";
-import Footer from "./app/components/Footer";
-import Sidebar from "./app/components/Sidebar";
-import HomePage from "./app/page";
-import LoadingStates from './app/components/LoadingStates';
-import EnhancedErrorFeedback from './app/components/EnhancedErrorFeedback';
-import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
-import AnalyticsProvider from "./app/components/AnalyticsProvider";
-import PerformanceMonitor from "./app/components/PerformanceMonitor";
-import WebVitalsTracker from "./app/components/WebVitalsTracker";
-import AccessibilityEnhancer from "./app/utils/accessibilityEnhancer";
-import CoreWebVitals from "./app/components/CoreWebVitals";
-import FuturisticBackground from "./app/components/FuturisticBackground";
-import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
-import Breadcrumb from "./app/components/Breadcrumb";
-import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
-
-// Lazy load pages for better performance
-const AboutPage = React.lazy(() => import("./app/about/page"));
-const ContactPage = React.lazy(() => import("./app/contact/page"));
-const ServicesPage = React.lazy(() => import("./app/services/page"));
-const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
-const TermsPage = React.lazy(() => import("./app/terms/page"));
-const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
-const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
-const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
-const DemoPage = React.lazy(() => import("./app/demo/page"));
-const SupportPage = React.lazy(() => import("./app/support/page"));
-const BlogPage = React.lazy(() => import("./app/blog/page"));
-
-// AI Services Pages
-const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
-const AIAutomationPage = React.lazy(() => import("./app/ai-automation/page"));
-const AIBusinessIntelligencePage = React.lazy(() => import("./app/ai-business-intelligence/page"));
-const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
-const AICustomerServicePage = React.lazy(() => import("./app/ai-customer-service/page"));
-const AIDataAnalyticsPage = React.lazy(() => import("./app/ai-data-analytics/page"));
-const AIEmailAutomationPage = React.lazy(() => import("./app/ai-email-automation/page"));
-const AIFraudDetectionPage = React.lazy(() => import("./app/ai-fraud-detection/page"));
-const AIHealthcarePage = React.lazy(() => import("./app/ai-healthcare/page"));
-const AIMarketingPage = React.lazy(() => import("./app/ai-marketing/page"));
-const AIPredictiveAnalyticsPage = React.lazy(() => import("./app/ai-predictive-analytics/page"));
-const AIProjectManagementPage = React.lazy(() => import("./app/ai-project-management/page"));
-
-// 5G Solutions Pages
-const FiveGNetworkInfrastructurePage = React.lazy(() => import("./app/5g-network-infrastructure/page"));
-const FiveGPrivateNetworksPage = React.lazy(() => import("./app/5g-private-networks/page"));
-const FiveGIoTSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
-const FiveGEdgeComputingPage = React.lazy(() => import("./app/5g-edge-computing/page"));
-const FiveGSmartCitiesPage = React.lazy(() => import("./app/5g-smart-city-solutions/page"));
-
-function App() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
-  const toggleSidebar = useCallback(() => {
-    setIsSidebarOpen(prev => !prev);
-  }, []);
-
-  const closeSidebar = useCallback(() => {
-    setIsSidebarOpen(false);
-  }, []);
-
-  useEffect(() => {
-    // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
-      console.log('Zion Tech Group App initialized');
-    }
-  }, []);
-
-  const breadcrumbItems = [
-    { label: 'Home', href: '/' },
-    { label: 'Current Page' }
-  ];
-
-  return (
-    <EnhancedErrorBoundary>
-      <HelmetProvider>
-        <AnalyticsProvider>
-          <PerformanceMonitor className="performance-monitor">
-            <WebVitalsTracker className="web-vitals-tracker">
-              <EnhancedAccessibility className="enhanced-accessibility">
-                <AccessibilityEnhancer>
-                  <CoreWebVitals className="core-web-vitals">
-                    <Router>
-                      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                        <FuturisticBackground>
-                          <PerformanceOptimizer>
-                            <Navigation />
-                            <Sidebar isOpen={isSidebarOpen} onClose={closeSidebar} />
-                            <Breadcrumb items={breadcrumbItems} />
-                            
-                            <main className="relative z-10" id="main-content" role="main">
-                              <Suspense fallback={<LoadingStates isLoading={true}><div>Loading...</div></LoadingStates>}>
-                                <Routes>
-                                  {/* Main Pages */}
-                                  <Route path="/" element={<HomePage />} />
-                                  <Route path="/about" element={<AboutPage />} />
-                                  <Route path="/contact" element={<ContactPage />} />
-                                  <Route path="/services" element={<ServicesPage />} />
-                                  <Route path="/privacy" element={<PrivacyPage />} />
-                                  <Route path="/terms" element={<TermsPage />} />
-                                  <Route path="/tutorials" element={<TutorialsPage />} />
-                                  <Route path="/demo" element={<DemoPage />} />
-                                  <Route path="/support" element={<SupportPage />} />
-                                  <Route path="/blog" element={<BlogPage />} />
-
-                                  {/* AI Services */}
-                                  <Route path="/ai-services" element={<AIServicesPage />} />
-                                  <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
-                                  <Route path="/ai-automation" element={<AIAutomationPage />} />
-                                  <Route path="/ai-business-intelligence" element={<AIBusinessIntelligencePage />} />
-                                  <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
-                                  <Route path="/ai-customer-service" element={<AICustomerServicePage />} />
-                                  <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
-                                  <Route path="/ai-email-automation" element={<AIEmailAutomationPage />} />
-                                  <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
-                                  <Route path="/ai-healthcare" element={<AIHealthcarePage />} />
-                                  <Route path="/ai-marketing" element={<AIMarketingPage />} />
-                                  <Route path="/ai-predictive-analytics" element={<AIPredictiveAnalyticsPage />} />
-                                  <Route path="/ai-project-management" element={<AIProjectManagementPage />} />
-
-                                  {/* 5G Solutions */}
-                                  <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-                                  <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
-                                  <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
-                                  <Route path="/5g-iot-solutions" element={<FiveGIoTSolutionsPage />} />
-                                  <Route path="/5g-edge-computing" element={<FiveGEdgeComputingPage />} />
-                                  <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitiesPage />} />
-
-                                  {/* Cloud Infrastructure */}
-                                  <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-
-                                  {/* Catch all route */}
-                                  <Route path="*" element={<div className="min-h-screen flex items-center justify-center"><h1 className="text-4xl text-white">404 - Page Not Found</h1></div>} />
-                                </Routes>
-                              </Suspense>
-                            </main>
-                            
-                            <Footer />
-                          </PerformanceOptimizer>
-                        </FuturisticBackground>
-                      </div>
-                    </Router>
-                  </CoreWebVitals>
-                </AccessibilityEnhancer>
-              </EnhancedAccessibility>
-            </WebVitalsTracker>
-          </PerformanceMonitor>
-        </AnalyticsProvider>
-      </HelmetProvider>
-    </EnhancedErrorBoundary>
-  );
-}
-
-export default App;'''
+    # Files that have numeric function names
+    problematic_files = [
+        'app/404/page.tsx',
+        'app/5g-data-analytics/page.tsx',
+        'app/5g-edge-computing/page.tsx',
+        'app/5g-implementation/page.tsx',
+        'app/5g-iot-solutions/page.tsx',
+        'app/5g-mobile-applications/page.tsx',
+        'app/5g-network-infrastructure/page.tsx',
+        'app/5g-private-networks/page.tsx',
+        'app/5g-smart-city-solutions/page.tsx',
+        'app/5g-solutions/page.tsx',
+        'app/page.tsx',
+        'app/sitemap.xml/page.tsx'
+    ]
     
-    with open('/workspace/App.tsx', 'w', encoding='utf-8') as f:
-        f.write(content)
-    print("Fixed: App.tsx")
+    for file_path in problematic_files:
+        if os.path.exists(file_path):
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    content = f.read()
+                
+                # Extract the service name from the path
+                service_name = file_path.replace('app/', '').replace('/page.tsx', '')
+                
+                # Create a valid function name
+                if service_name.startswith('5g'):
+                    function_name = 'FiveG' + service_name[2:].replace('-', '').replace('/', '').title()
+                elif service_name == '404':
+                    function_name = 'NotFound'
+                elif service_name == 'page':
+                    function_name = 'Home'
+                elif service_name == 'sitemap.xml':
+                    function_name = 'Sitemap'
+                else:
+                    function_name = service_name.replace('-', '').replace('/', '').title()
+                
+                # Update the function name in the content
+                old_pattern = r'export default function [^(]+\(\)'
+                new_function = f'export default function {function_name}Page()'
+                content = re.sub(old_pattern, new_function, content)
+                
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                
+                print(f"Fixed function name in: {file_path}")
+                
+            except Exception as e:
+                print(f"Error fixing {file_path}: {e}")
+
+def fix_remaining_files():
+    """Fix remaining problematic files."""
+    print("Fixing remaining files...")
+    
+    # Fix fix-imports.cjs
+    if os.path.exists('fix-imports.cjs'):
+        os.remove('fix-imports.cjs')
+        print("Removed fix-imports.cjs")
+    
+    # Fix page_clean.tsx
+    if os.path.exists('page_clean.tsx'):
+        os.remove('page_clean.tsx')
+        print("Removed page_clean.tsx")
 
 def main():
-    """Main function"""
-    print("Fixing final errors...")
-    fix_accessibility_enhancer()
-    fix_app_tsx()
-    print("All final fixes completed!")
+    """Main function to fix final errors."""
+    print("Starting final error fixes...")
+    
+    fix_numeric_function_names()
+    fix_remaining_files()
+    
+    print("Final error fixes complete!")
 
 if __name__ == "__main__":
     main()

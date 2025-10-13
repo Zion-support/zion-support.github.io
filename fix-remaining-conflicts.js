@@ -35,6 +35,7 @@ export default function Page() {;
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
 //               Professional services by Zion Tech Group. Expert solutions tailored to your business needs.
 </p>
@@ -50,6 +51,7 @@ export default function Page() {;
 //                 Contact us to learn more about our solutions and how we can help your business.
 </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+
   );
 }`;
 

@@ -19,15 +19,24 @@ def clean_file(file_path):
     
     # Remove all merge conflict markers and everything between them
     # Pattern to match merge conflict blocks
+<<<<<<< HEAD
     conflict_pattern = r'.*?
     
+=======
+    conflict_pattern = r'    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     # Remove all merge conflicts
     cleaned_content = re.sub(conflict_pattern, '', content, flags=re.DOTALL)
     
     # Remove any remaining merge conflict markers
+<<<<<<< HEAD
     cleaned_content = re.sub(r'.*', '', cleaned_content, flags=re.DOTALL)
     cleaned_content = re.sub(r'
     
+=======
+    cleaned_content = re.sub(r'    cleaned_content = re.sub(r'.*', '', cleaned_content, flags=re.DOTALL)
+    cleaned_content = re.sub(r'    
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
     # Clean up multiple empty lines
     cleaned_content = re.sub(r'\n\s*\n\s*\n', '\n\n', cleaned_content)
     

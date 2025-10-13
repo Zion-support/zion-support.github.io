@@ -1,27 +1,129 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+'use client';
+import React, { useState, useCallback } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
 
-export default function Navigation() {
+interface NavigationProps {
+  onSidebarToggle?: () => void;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
+  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navigationItems = [
+    {
+      name: 'Home',
+      path: '/',
+      icon: <Home className="w-4 h-4" />
+    },
+    {
+      name: 'About',
+      path: '/about',
+      icon: <Globe className="w-4 h-4" />
+    },
+    {
+      name: 'Services',
+      path: '/services',
+      icon: <Zap className="w-4 h-4" />
+    },
+    {
+      name: 'AI Solutions',
+      path: '/ai-services',
+      icon: <Brain className="w-4 h-4" />
+    },
+    {
+      name: 'Contact',
+      path: '/contact',
+      icon: <Shield className="w-4 h-4" />
+    }
+  ];
+
+  const toggleMobileMenu = useCallback(() => {
+    setIsOpen(prev => !prev);
+  }, []);
+
+  const isActive = (path: string) => {
+    return location.pathname === path;
+  };
+
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center py-4">
-          <Link to="/" className="text-xl font-bold text-gray-800">
-            Zion Tech Group
-          </Link>
-          <div className="space-x-6">
-            <Link to="/about" className="text-gray-600 hover:text-gray-800">
-              About
+    <nav className="bg-slate-900/90 backdrop-blur-sm border-b border-purple-500/20 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          {/* Logo */}
+          <div className="flex items-center">
+            <Link to="/" className="text-2xl font-bold text-white hover:text-purple-400 transition-colors">
+              Zion Tech Group
             </Link>
-            <Link to="/services" className="text-gray-600 hover:text-gray-800">
-              Services
-            </Link>
-            <Link to="/contact" className="text-gray-600 hover:text-gray-800">
-              Contact
-            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive(item.path)
+                    ? 'text-purple-400 bg-purple-500/20'
+                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {item.icon}
+                <span>{item.name}</span>
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden flex items-center space-x-4">
+            {onSidebarToggle && (
+              <button
+                onClick={onSidebarToggle}
+                className="text-gray-300 hover:text-white p-2"
+                aria-label="Toggle sidebar"
+              >
+                <Menu className="h-6 w-6" />
+              </button>
+            )}
+            <button
+              onClick={toggleMobileMenu}
+              className="text-gray-300 hover:text-white p-2"
+              aria-label="Toggle mobile menu"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Mobile Navigation */}
+      {isOpen && (
+        <div className="md:hidden bg-slate-900/95 backdrop-blur-sm border-t border-purple-500/20">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            {navigationItems.map((item) => (
+              <Link
+                key={item.name}
+                to={item.path}
+                onClick={() => setIsOpen(false)}
+                className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  isActive(item.path)
+                    ? 'text-purple-400 bg-purple-500/20'
+                    : 'text-gray-300 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {item.icon}
+                <span>{item.name}</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
-}
+};
+
+export default Navigation;

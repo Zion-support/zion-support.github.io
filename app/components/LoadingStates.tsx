@@ -1,20 +1,39 @@
+'use client';
 import React from 'react';
 
 interface LoadingStatesProps {
-  isLoading: boolean;
-  children: React.ReactNode;
   className?: string;
+  children?: React.ReactNode;
 }
 
-export default function LoadingStates({ isLoading, children, className = '' }: LoadingStatesProps) {
-  if (isLoading) {
-    return (
-      <div className={`loading-states ${className}`}>
-        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-        <p>Loading...</p>
-      </div>
-    );
-  }
+export const LoadingPage: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500"></div>
+    </div>
+  );
+};
 
-  return <>{children}</>;
+export const PageLoader: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500"></div>
+    </div>
+  );
+};
+
+export const AppLoadingSpinner: React.FC = () => {
+  return (
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-purple-500"></div>
+    </div>
+  );
+};
+
+export default function LoadingStates({ className = '', children }: LoadingStatesProps) {
+  return (
+    <div className={`${className}`}>
+      {children}
+    </div>
+  );
 }

@@ -8,7 +8,12 @@ def fix_conflicts(file_path):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
         
+<<<<<<< HEAD
         # Remove all merge conflict markers and choose the newer version (after 
+=======
+        # Remove all merge conflict markers and choose the newer version (after )
+        pattern = r'        new_content = re.sub(pattern, r'\1\n', content, flags=re.DOTALL)
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
         
         # Also handle cases without (just remove the markers)
         new_content = re.sub(r'        

@@ -1,86 +1,178 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import { execSync } from 'child_process';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+console.log('🔧 Starting comprehensive file repair...');
 
-// Find all page.tsx files in app directory
-const findPageFiles = (dir) => {
-  const files = [];
-  const items = fs.readdirSync(dir);
+// Function to find and extract the first complete function from a corrupted file
+function extractCompleteFunction(content) {
+  const lines = content.split('\n');
+  let result = [];
+  let inFunction = false;
+  let braceCount = 0;
+  let functionStart = -1;
+  let foundCompleteFunction = false;
   
-  for (const item of items) {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
     
-    if (stat.isDirectory()) {
-      files.push(...findPageFiles(fullPath));
-    } else if (item === 'page.tsx') {
-      files.push(fullPath);
+    // Look for export default function
+    if (line.includes('export default function') && functionStart === -1) {
+      functionStart = i;
+      inFunction = true;
+      result.push(line);
+      continue;
+    }
+    
+    if (inFunction) {
+      result.push(line);
+      
+      // Count braces to find function end
+      for (const char of line) {
+        if (char === '{') braceCount++;
+        if (char === '}') braceCount--;
+      }
+      
+      // If we've closed all braces and we're in a function, we're done
+      if (braceCount === 0 && inFunction) {
+        foundCompleteFunction = true;
+        break;
+      }
     }
   }
   
-  return files;
-};
+  if (foundCompleteFunction) {
+    return result.join('\n');
+  }
+  
+  return null;
+}
 
-const pageFiles = findPageFiles(path.join(__dirname, 'app'));
-
-pageFiles.forEach(filePath => {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8');
-    
-    // Check if file is incomplete (missing closing brace or has syntax issues)
-    const lines = content.split('\n');
-    const hasIncompleteFunction = lines.some(line => 
-      line.includes('const ') && line.includes('= () => {') && 
-      !content.includes('export default')
-    );
-    
-    const hasDuplicateReturn = content.includes('return (') && 
-      content.split('return (').length > 2;
-    
-    const hasMissingClosingBrace = content.includes('const ') && 
-      content.includes('= () => {') && 
-      !content.includes('};') && 
-      !content.includes('}');
-    
-    if (hasIncompleteFunction || hasDuplicateReturn || hasMissingClosingBrace) {
-      console.log(`Fixing incomplete file: ${filePath}`);
-      
-      // Extract component name from file path
-      const pathParts = filePath.split('/');
-      const componentName = pathParts[pathParts.length - 2]
-        .split('-')
-        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-        .join('');
-      
-      // Create a basic working component
-      const basicComponent = `import React from "react";
+// Function to create a basic page template
+function createBasicPageTemplate(filePath) {
+  const fileName = path.basename(filePath, '.tsx');
+  const pageName = fileName.charAt(0).toUpperCase() + fileName.slice(1);
+  
+  return `import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ${componentName} = () => {
+export default function ${pageName}Page() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+    <div className="min-h-screen bg-gray-50">
       <Helmet>
-        <title>${componentName} - Zion Tech Group</title>
-        <meta name="description" content="Advanced ${componentName.toLowerCase().replace(/([A-Z])/g, ' $1').trim()} service coming soon." />
+        <title>${pageName} - Zion Tech Group</title>
+        <meta name="description" content="Advanced ${pageName} solutions by Zion Tech Group" />
       </Helmet>
-      <div className="text-center">
-        <h1 className="text-4xl font-bold text-white mb-4">${componentName}</h1>
-        <p className="text-xl text-gray-300">Coming Soon</p>
+      
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            ${pageName}
+          </h1>
+          <p className="text-xl text-gray-600 mb-8">
+            This page is under development. Please check back later.
+          </p>
+        </div>
       </div>
     </div>
   );
-};
+}`;
+}
 
-export default ${componentName};`;
+// Function to fix a single file
+function fixFile(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, 'utf8');
+    
+    // Check if file is incomplete (missing closing braces or very short)
+    if (content.length < 200 || !content.includes('}') || content.split('\n').length < 10) {
+      console.log(`🔧 Fixing incomplete file: ${filePath}`);
       
-      fs.writeFileSync(filePath, basicComponent, 'utf8');
+      // Try to extract complete function first
+      const extractedFunction = extractCompleteFunction(content);
+      
+      if (extractedFunction && extractedFunction.length > 200) {
+        fs.writeFileSync(filePath, extractedFunction, 'utf8');
+        return true;
+      } else {
+        // Create a basic template
+        const template = createBasicPageTemplate(filePath);
+        fs.writeFileSync(filePath, template, 'utf8');
+        return true;
+      }
     }
+    
+    return false; // File is already complete
   } catch (error) {
-    console.error(`Error processing ${filePath}:`, error.message);
+    console.error(`❌ Error fixing ${filePath}:`, error.message);
+    return false;
   }
-});
+}
 
-console.log('Incomplete file fixes completed');
+// Function to find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  const files = [];
+  
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory()) {
+        // Skip node_modules and other common directories
+        if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          traverse(fullPath);
+        }
+      } else if (stat.isFile()) {
+        const ext = path.extname(item);
+        if (extensions.includes(ext)) {
+          files.push(fullPath);
+        }
+      }
+    }
+  }
+  
+  traverse(dir);
+  return files;
+}
+
+// Main repair process
+async function main() {
+  console.log('📁 Scanning for files to fix...');
+  
+  const files = findFiles('/workspace/app');
+  console.log(`📊 Found ${files.length} files to check`);
+  
+  let fixedCount = 0;
+  let errorCount = 0;
+  
+  for (const file of files) {
+    try {
+      if (fixFile(file)) {
+        fixedCount++;
+      }
+    } catch (error) {
+      console.error(`❌ Error processing ${file}:`, error.message);
+      errorCount++;
+    }
+  }
+  
+  console.log(`\n✅ File repair complete!`);
+  console.log(`🔧 Fixed: ${fixedCount} files`);
+  console.log(`❌ Errors: ${errorCount} files`);
+  
+  // Run type check to see if we fixed the issues
+  console.log('\n🔍 Running type check...');
+  try {
+    execSync('pnpm run type-check', { stdio: 'pipe' });
+    console.log('✅ Type check passed!');
+  } catch (error) {
+    console.log('⚠️  Type check still has issues, but many files were fixed');
+  }
+}
+
+main().catch(console.error);
