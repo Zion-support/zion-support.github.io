@@ -1,6 +1,6 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { RefreshCw, Users, Target, TrendingUp, Lightbulb, CheckCircle } from 'lucide-react';
 const DigitalTransformationPage: React.FC = () => {
   const services = [{
       icon: RefreshCw,

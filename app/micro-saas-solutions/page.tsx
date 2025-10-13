@@ -18,7 +18,11 @@ import {
   CurrencyDollarIcon,
   ClockIcon,
   UserGroupIcon,
-  CogIcon
+  CogIcon,
+  DocumentTextIcon,
+  HomeIcon,
+  TruckIcon,
+  BoltIcon
 } from '@heroicons/react/24/outline';
 
 export default function MicroSaaSSolutionsPage() {
@@ -250,6 +254,215 @@ export default function MicroSaaSSolutionsPage() {
       benefits: ["40% open rates", "Personalized content", "Optimized timing"],
       useCases: ["Email campaigns", "Newsletter management", "Lead nurturing"],
       href: "/ai-email-marketing"
+    },
+    {
+      title: "AI Voice Assistant Platform",
+      description: "Enterprise-grade voice AI platform with natural language processing, multi-language support, and custom voice training.",
+      icon: PhoneIcon,
+      features: [
+        "Natural language processing",
+        "Multi-language support",
+        "Custom voice training",
+        "API integration",
+        "Real-time transcription",
+        "Voice analytics"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "$449/month",
+      setupFee: "$2,500",
+      benefits: ["95% accuracy", "Multi-language", "Custom voices"],
+      useCases: ["Customer service", "Voice apps", "Accessibility"],
+      href: "/ai-voice-assistant"
+    },
+    {
+      title: "AI Blockchain Analytics",
+      description: "Advanced blockchain data analysis with AI-powered insights, transaction monitoring, and smart contract auditing.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Blockchain data analysis",
+        "Transaction monitoring",
+        "Smart contract auditing",
+        "DeFi analytics",
+        "Risk assessment",
+        "Compliance reporting"
+      ],
+      color: "from-yellow-500 to-orange-500",
+      price: "$599/month",
+      setupFee: "$3,000",
+      benefits: ["Real-time monitoring", "Risk detection", "Compliance ready"],
+      useCases: ["Crypto trading", "DeFi protocols", "Compliance"],
+      href: "/ai-blockchain-analytics"
+    },
+    {
+      title: "AI Climate Intelligence",
+      description: "Climate data analysis and prediction platform with AI-powered weather forecasting and environmental monitoring.",
+      icon: CloudIcon,
+      features: [
+        "Weather forecasting",
+        "Climate modeling",
+        "Environmental monitoring",
+        "Risk assessment",
+        "Data visualization",
+        "API access"
+      ],
+      color: "from-cyan-500 to-teal-500",
+      price: "$379/month",
+      setupFee: "$1,800",
+      benefits: ["Accurate predictions", "Real-time data", "Risk mitigation"],
+      useCases: ["Agriculture", "Energy", "Insurance"],
+      href: "/ai-climate-intelligence"
+    },
+    {
+      title: "AI Medical Diagnosis Assistant",
+      description: "AI-powered medical diagnosis support with image analysis, symptom checking, and treatment recommendations.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Medical image analysis",
+        "Symptom checking",
+        "Treatment recommendations",
+        "Patient monitoring",
+        "Drug interaction checking",
+        "HIPAA compliance"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "$799/month",
+      setupFee: "$4,000",
+      benefits: ["95% accuracy", "HIPAA compliant", "Real-time analysis"],
+      useCases: ["Telemedicine", "Diagnostic imaging", "Patient care"],
+      href: "/ai-medical-diagnosis"
+    },
+    {
+      title: "AI Legal Document Analyzer",
+      description: "Intelligent legal document analysis with contract review, compliance checking, and risk assessment.",
+      icon: DocumentTextIcon,
+      features: [
+        "Contract analysis",
+        "Compliance checking",
+        "Risk assessment",
+        "Document comparison",
+        "Legal research",
+        "Case law analysis"
+      ],
+      color: "from-slate-500 to-gray-500",
+      price: "$499/month",
+      setupFee: "$2,200",
+      benefits: ["90% accuracy", "Time savings", "Risk reduction"],
+      useCases: ["Law firms", "Corporate legal", "Compliance"],
+      href: "/ai-legal-analyzer"
+    },
+    {
+      title: "AI Real Estate Valuation",
+      description: "AI-powered real estate valuation with market analysis, property assessment, and investment recommendations.",
+      icon: HomeIcon,
+      features: [
+        "Property valuation",
+        "Market analysis",
+        "Investment recommendations",
+        "Price predictions",
+        "Neighborhood insights",
+        "ROI calculations"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "$299/month",
+      setupFee: "$1,500",
+      benefits: ["Accurate valuations", "Market insights", "Investment guidance"],
+      useCases: ["Real estate", "Property investment", "Market analysis"],
+      href: "/ai-real-estate-valuation"
+    },
+    {
+      title: "AI Supply Chain Optimizer",
+      description: "Intelligent supply chain management with demand forecasting, route optimization, and risk monitoring.",
+      icon: TruckIcon,
+      features: [
+        "Demand forecasting",
+        "Route optimization",
+        "Risk monitoring",
+        "Supplier management",
+        "Cost optimization",
+        "Real-time tracking"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "$549/month",
+      setupFee: "$2,800",
+      benefits: ["30% cost reduction", "Optimized routes", "Risk mitigation"],
+      useCases: ["Logistics", "Manufacturing", "Retail"],
+      href: "/ai-supply-chain"
+    },
+    {
+      title: "AI Energy Management System",
+      description: "Smart energy management with consumption optimization, renewable energy integration, and cost analysis.",
+      icon: BoltIcon,
+      features: [
+        "Energy consumption analysis",
+        "Renewable integration",
+        "Cost optimization",
+        "Demand response",
+        "Carbon tracking",
+        "Predictive maintenance"
+      ],
+      color: "from-yellow-500 to-amber-500",
+      price: "$399/month",
+      setupFee: "$2,000",
+      benefits: ["25% energy savings", "Carbon reduction", "Cost optimization"],
+      useCases: ["Manufacturing", "Commercial buildings", "Utilities"],
+      href: "/ai-energy-management"
+    },
+    {
+      title: "AI Fraud Detection Platform",
+      description: "Advanced fraud detection with machine learning, real-time monitoring, and automated prevention systems.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Real-time fraud detection",
+        "Machine learning models",
+        "Transaction monitoring",
+        "Risk scoring",
+        "Automated prevention",
+        "Compliance reporting"
+      ],
+      color: "from-red-500 to-rose-500",
+      price: "$699/month",
+      setupFee: "$3,500",
+      benefits: ["99.9% accuracy", "Real-time detection", "Automated prevention"],
+      useCases: ["Banking", "E-commerce", "Fintech"],
+      href: "/ai-fraud-detection"
+    },
+    {
+      title: "AI Language Translation Hub",
+      description: "Enterprise translation platform with AI-powered language processing, cultural adaptation, and real-time translation.",
+      icon: GlobeAltIcon,
+      features: [
+        "100+ language support",
+        "Cultural adaptation",
+        "Real-time translation",
+        "Document processing",
+        "Voice translation",
+        "API integration"
+      ],
+      color: "from-purple-500 to-violet-500",
+      price: "$199/month",
+      setupFee: "$800",
+      benefits: ["100+ languages", "Cultural context", "Real-time processing"],
+      useCases: ["Global business", "Content localization", "Customer support"],
+      href: "/ai-translation-hub"
+    },
+    {
+      title: "AI Personalization Engine",
+      description: "Advanced personalization platform with user behavior analysis, content optimization, and recommendation systems.",
+      icon: UserGroupIcon,
+      features: [
+        "User behavior analysis",
+        "Content optimization",
+        "Recommendation systems",
+        "A/B testing",
+        "Segmentation",
+        "Performance tracking"
+      ],
+      color: "from-pink-500 to-rose-500",
+      price: "$349/month",
+      setupFee: "$1,600",
+      benefits: ["40% engagement increase", "Personalized experiences", "Higher conversions"],
+      useCases: ["E-commerce", "Content platforms", "Marketing"],
+      href: "/ai-personalization-engine"
     }
   ];
 

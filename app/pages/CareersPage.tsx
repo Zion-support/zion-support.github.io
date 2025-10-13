@@ -1,6 +1,6 @@
-import React from 'react;
-import { Helmet } from 'react-helmet-async;
-import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react;
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { MapPin, Clock, Users, Heart, Zap, Target } from 'lucide-react';
 const CareersPage: React.FC = () => {
   const benefits = [{
       icon: Heart,
