@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Target, Mail, Users } from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
@@ -32,6 +32,10 @@ const Navigation = React.memo(() => {
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Chatbot Builder', path: '/zion-ai-chatbot-builder', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion Project AI', path: '/zion-project-ai', icon: <Target className="w-4 h-4" />, featured: true },
+    { name: 'Zion Email AI', path: '/zion-email-ai', icon: <Mail className="w-4 h-4" />, featured: true },
+    { name: 'Zion Social AI', path: '/zion-social-ai', icon: <Users className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
@@ -51,11 +55,17 @@ const Navigation = React.memo(() => {
 
   return (
     <nav 
-      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
+      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md relative overflow-hidden"
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="max-w-7xl mx-auto px-4">
+      {/* Animated background effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,212,255,0.1),transparent_50%)]" />
+      
+      {/* Scan line effect */}
+      <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-50" />
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="flex justify-between items-center py-4">
           <Link 
             to="/" 
@@ -88,15 +98,18 @@ const Navigation = React.memo(() => {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20">
-                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20 relative overflow-hidden">
+                  {/* Animated background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5" />
+                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent" />
+                  <div className="px-4 py-2 border-b border-gray-700 mb-2 relative z-10">
                     <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">AI Services</h3>
                   </div>
                   {aiServices.map((service) => (
                     <Link
                       key={service.name}
                       to={service.path}
-                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group"
+                      className="flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 group relative z-10"
                       onClick={() => setIsServicesOpen(false)}
                     >
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:from-cyan-500/30 group-hover:to-purple-500/30 transition-all duration-300">
@@ -120,15 +133,18 @@ const Navigation = React.memo(() => {
               </button>
               
               {isMicroSaasOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20">
-                  <div className="px-4 py-2 border-b border-gray-700 mb-2">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-purple-500/20 relative overflow-hidden">
+                  {/* Animated background */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-purple-500/5 to-cyan-500/5" />
+                  <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-purple-400 to-transparent" />
+                  <div className="px-4 py-2 border-b border-gray-700 mb-2 relative z-10">
                     <h3 className="text-sm font-semibold text-purple-400 uppercase tracking-wider">Micro SAAS Solutions</h3>
                   </div>
                   {microSaasServices.map((service) => (
                     <Link
                       key={service.name}
                       to={service.path}
-                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group ${
+                      className={`flex items-center space-x-3 px-4 py-3 text-gray-300 hover:bg-purple-500/10 hover:text-purple-400 transition-all duration-300 group relative z-10 ${
                         service.featured ? 'bg-gradient-to-r from-purple-500/5 to-cyan-500/5 border-l-2 border-purple-400' : ''
                       }`}
                       onClick={() => setIsMicroSaasOpen(false)}
