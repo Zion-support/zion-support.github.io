@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
@@ -18,32 +19,44 @@ const handler = async (req, res) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+export default function handler(req, res) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
+  
   const { productId, userId } = req.body || {};
+  
   if (!productId) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Product ID is required' }));
     return;
   }
+
   try {
-    // Basic checkout session creation logic
+    // Mock checkout session creation
+    const sessionId = `cs_${Date.now()}`;
     const sessionData = {
+      id: sessionId,
       productId,
       userId: userId || null,
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
 
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
+<<<<<<< HEAD
 <<<<<<< HEAD
       success: true,
       sessionId,
@@ -60,6 +73,11 @@ const handler = async (req, res) => {
       sessionId: `session_${Date.now()}`,
       ...sessionData
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+      success: true,
+      sessionId,
+      sessionData
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
     }));
   } catch (error) {
     console.error('Checkout session creation error:', error);
@@ -69,6 +87,7 @@ const handler = async (req, res) => {
       error: 'Failed to create checkout session'
     }));
   }
+<<<<<<< HEAD
 };
 
 export default withErrorLogging(handler);
@@ -78,3 +97,6 @@ export default withErrorLogging(handler);
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea

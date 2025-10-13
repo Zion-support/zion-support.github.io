@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const withErrorLogging = (handler) => {
   return async (req, res) => {
     try {
@@ -19,6 +20,9 @@ export default function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+export default function handler(req, res) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -27,17 +31,22 @@ export default function handler(req, res) {
   }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
   const { amount, currency = 'usd' } = req.body || {};
-
-  if (!amount) {
+  
+  if (!amount || amount <= 0) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Amount is required' }));
+    res.end(JSON.stringify({ error: 'Valid amount is required' }));
     return;
   }
 
   try {
+<<<<<<< HEAD
 =======
 
   try {
@@ -54,11 +63,14 @@ export default function handler(req, res) {
       return;
     }
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
     // Mock payment intent creation
     const paymentIntent = {
       id: `pi_${Date.now()}`,
       amount: Math.round(amount * 100), // Convert to cents
       currency,
+<<<<<<< HEAD
       status: 'requires_payment_method',
       created: Math.floor(Date.now() / 1000)
 <<<<<<< HEAD
@@ -84,10 +96,24 @@ export default function handler(req, res) {
     res.json({ paymentIntent });
   } catch (_error) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+      status: 'requires_payment_method'
+    };
+
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({ 
+      success: true,
+      paymentIntent
+    }));
+  } catch (error) {
+    console.error('Payment intent creation error:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Failed to create payment intent' }));
   }
+<<<<<<< HEAD
 }
 
 <<<<<<< HEAD
@@ -97,3 +123,6 @@ export default withErrorLogging(handler);
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea

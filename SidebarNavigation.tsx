@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import { Home, User, Settings, HelpCircle, X } from 'lucide-react';
 =======
@@ -10,10 +11,13 @@ import { Home, User, Settings, HelpCircle } from 'lucide-react';
 =======
 import { Home, User, Settings, HelpCircle, X } from 'lucide-react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
 interface SidebarNavigationProps {
   isOpen: boolean;
   onClose: () => void;
 }
+<<<<<<< HEAD
 
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {
   const navigationItems = [
@@ -72,6 +76,11 @@ const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }
         </nav>
       </div>
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen }) => {
+  return (
+    <div className={`fixed inset-0 z-50 ${isOpen ? 'block' : 'hidden'}`}>
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
     </div>
   );
 };

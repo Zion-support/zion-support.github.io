@@ -5,14 +5,17 @@ export default async function handler(req, res) {
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
+  
   try {
     const { name, email, phone, details, country, service } = req.body || {};
+    
     if (!name || !email || !phone || !details) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Name, email, phone, and details are required' }));
       return;
     }
+    
     // Process quote submission logic here
     // In a real application, you would:
     // 1. Save to your database
@@ -29,6 +32,7 @@ export default async function handler(req, res) {
       timestamp: new Date().toISOString(),
       status: 'pending'
     };
+<<<<<<< HEAD
     // // console.log('Quote request received:', quoteData);
 <<<<<<< HEAD
 =======
@@ -36,6 +40,9 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -44,6 +51,7 @@ export default async function handler(req, res) {
       quoteId: `quote_${Date.now()}`,
       data: quoteData
     }));
+<<<<<<< HEAD
   } catch (_error) {
     // console.error('Quote submission error:', error);
 <<<<<<< HEAD
@@ -53,6 +61,10 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+  } catch (error) {
+    console.error('Quote submission error:', error);
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));

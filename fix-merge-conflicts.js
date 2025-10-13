@@ -27,6 +27,7 @@ const filesWithConflicts = [
 function fixMergeConflicts(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
+<<<<<<< HEAD
     
     // Remove merge conflict markers and keep the HEAD version
     content = content.replace(/<<<<<<< HEAD\n([\s\S]*?)=======([\s\S]*?)>>>>>>> [^\n]+\n?/g, '$1');
@@ -73,3 +74,8 @@ for (const file of filesWithConflicts) {
 }
 
 console.log(`Fixed merge conflicts in ${fixedCount} files.`);
+=======
+    const originalContent = content;
+
+    // Remove merge conflict markers and keep the HEAD version (first part)
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea

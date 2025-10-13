@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
@@ -30,20 +31,26 @@ export default async function handler(req, res) {
 export default async function handler(req, res) {
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+export default function handler(req, res) {
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Method not allowed' }));
     return;
   }
+  
   try {
     const { email } = req.body || {};
+    
     if (!email) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Email is required' }));
       return;
     }
+    
     // Simple email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
@@ -52,6 +59,7 @@ export default async function handler(req, res) {
       res.end(JSON.stringify({ error: 'Invalid email format' }));
       return;
     }
+    
     // Save subscription logic here
     // In a real application, you would:
     // 1. Save to your database
@@ -61,6 +69,7 @@ export default async function handler(req, res) {
       email: req.body.email,
       timestamp: new Date().toISOString()
     });
+<<<<<<< HEAD
 <<<<<<< HEAD
 
 <<<<<<< HEAD
@@ -79,6 +88,9 @@ export default async function handler(req, res) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+    
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -99,6 +111,7 @@ export default async function handler(req, res) {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-717a
 =======
@@ -127,3 +140,6 @@ export default handler;
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea

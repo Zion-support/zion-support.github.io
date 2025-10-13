@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -17,6 +18,8 @@ import path from 'path';
 >>>>>>> cursor/fix-errors-and-merge-to-main-8341
 =======
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
 const dir = path.join(process.cwd(), 'data');
 const file = path.join(dir, 'onsite-requests.json');
 export default function handler(req, res) {
@@ -57,6 +60,7 @@ export default function handler(req, res) {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
+<<<<<<< HEAD
       success: true,
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -75,6 +79,8 @@ export default function handler(req, res) {
 =======
       message: 'Onsite request submitted successfully',
 >>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-a5ea
       id: newRequest.id
     }));
   } catch {
