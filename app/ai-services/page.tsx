@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign, Globe, Lock, Settings, Target, TrendingUp, Cpu, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
@@ -859,119 +856,6 @@ export default function AIServices() {
                   <span className="text-sm">24/7 AI monitoring</span>
                 </div>
               </div>
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Brain, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Users, Award } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import ResponsiveGrid from '../components/ResponsiveGrid';
-
-const AIServicesPage = () => {
-  const services = [
-    {
-      id: "ai-analytics",
-      name: "AI Analytics",
-      description: "Advanced data analytics powered by artificial intelligence for deeper insights and better decision making",
-      features: [
-        "Predictive analytics",
-        "Real-time data processing",
-        "Automated reporting",
-        "Custom dashboards"
-      ],
-      icon: <BarChart3 className="w-8 h-8" />,
-      href: "/ai-analytics",
-      featured: true
-    },
-    {
-      id: "ai-automation",
-      name: "AI Automation",
-      description: "Intelligent automation solutions that streamline workflows and reduce manual tasks",
-      features: [
-        "Process automation",
-        "Workflow optimization",
-        "Task scheduling",
-        "Error reduction"
-      ],
-      icon: <Zap className="w-8 h-8" />,
-      href: "/ai-automation",
-      featured: true
-    },
-    {
-      id: "ai-business-intelligence",
-      name: "AI Business Intelligence",
-      description: "Transform raw data into actionable business insights with AI-powered analytics",
-      features: [
-        "Data visualization",
-        "Trend analysis",
-        "Performance metrics",
-        "Strategic planning"
-      ],
-      icon: <Brain className="w-8 h-8" />,
-      href: "/ai-business-intelligence",
-      featured: true
-    },
-    {
-      id: "ai-content-generation",
-      name: "AI Content Generation",
-      description: "Create high-quality content at scale with AI-powered content generation tools",
-      features: [
-        "Automated content creation",
-        "SEO optimization",
-        "Multi-language support",
-        "Brand consistency"
-      ],
-      icon: <Users className="w-8 h-8" />,
-      href: "/ai-content-generation",
-      featured: false
-    },
-    {
-      id: "ai-customer-service",
-      name: "AI Customer Service",
-      description: "Enhance customer experience with intelligent chatbots and automated support systems",
-      features: [
-        "24/7 customer support",
-        "Natural language processing",
-        "Sentiment analysis",
-        "Escalation management"
-      ],
-      icon: <Award className="w-8 h-8" />,
-      href: "/ai-customer-service",
-      featured: false
-    },
-    {
-      id: "ai-cybersecurity",
-      name: "AI Cybersecurity",
-      description: "Advanced threat detection and prevention using artificial intelligence",
-      features: [
-        "Threat detection",
-        "Anomaly detection",
-        "Automated response",
-        "Security monitoring"
-      ],
-      icon: <Shield className="w-8 h-8" />,
-      href: "/ai-cybersecurity",
-      featured: true
-    }
-  ];
-
-  const stats = [
-    { label: "AI Solutions Deployed", value: "500+", icon: <Brain className="w-6 h-6" /> },
-    { label: "Client Satisfaction", value: "98%", icon: <Star className="w-6 h-6" /> },
-    { label: "Process Automation", value: "85%", icon: <Zap className="w-6 h-6" /> },
-    { label: "Cost Reduction", value: "40%", icon: <BarChart3 className="w-6 h-6" /> }
-  ];
-
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
-        title="AI Services - Zion Tech Group | Artificial Intelligence Solutions"
-        description="Comprehensive AI services including analytics, automation, business intelligence, and cybersecurity. Transform your business with cutting-edge artificial intelligence solutions."
-        keywords="AI services, artificial intelligence, machine learning, automation, analytics, business intelligence, cybersecurity, AI solutions"
-      />
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -1087,7 +971,6 @@ const AIServicesPage = () => {
                 Schedule a Demo
               </FuturisticButton>
             </div>
-<<<<<<< HEAD
           </div>
         </div>
 
@@ -1369,25 +1252,11 @@ const AIServicesPage = () => {
         </div>
       </div>
     </>
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Brain, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Code, Database, Mail, Users, Clock, DollarSign } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
-<<<<<<< HEAD
 import FuturisticBackground from '../components/FuturisticBackground';
-=======
-          </FuturisticCard>
-        </ResponsiveContainer>
-      </section>
-    </div>
-  );
-};
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 
 const AIServicesPage = () => {
   const services = [

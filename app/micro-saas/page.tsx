@@ -1,21 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from "react";
 import { ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Cloud, Brain, Code, Database, Mail, Users, Clock, DollarSign, Globe, Smartphone, Lock, TrendingUp, Target, Settings, Monitor, FileText, MessageSquare, Calendar, Search, Filter, Download, Upload, Share, Bell, Eye, Heart, ThumbsUp, Award, Rocket, Cpu, Wifi, Battery, Camera, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass, Clock3, Clock4, Clock5, Clock6, Clock7, Clock8, Clock9, Clock10, Clock11, Clock12, Calendar as CalendarIcon, CalendarDays, CalendarCheck, CalendarX, CalendarPlus, CalendarMinus, CalendarRange, CalendarSearch, CalendarHeart, CalendarStar, CalendarClock, CalendarUser, CalendarEdit, CalendarTrash, CalendarSettings, CalendarImport, CalendarExport, CalendarShare, CalendarLock, CalendarUnlock, CalendarKey, CalendarShield, CalendarAlert, CalendarBell, CalendarZap, CalendarSparkles, CalendarGift, CalendarAward, CalendarTrophy, CalendarMedal, CalendarCrown, CalendarGem, CalendarDiamond, CalendarPearl, CalendarRuby, CalendarSapphire, CalendarEmerald, CalendarTopaz, CalendarAmethyst, CalendarQuartz, CalendarCrystal, CalendarJewel, CalendarTreasure, CalendarGold, CalendarSilver, CalendarBronze, CalendarPlatinum, CalendarTitanium, CalendarSteel, CalendarIron, CalendarCopper, CalendarAluminum, CalendarZinc, CalendarTin, CalendarLead, CalendarMercury, CalendarUranium, CalendarPlutonium, CalendarRadium, CalendarThorium, CalendarActinium, CalendarProtactinium, CalendarNeptunium, CalendarAmericium, CalendarCurium, CalendarBerkelium, CalendarCalifornium, CalendarEinsteinium, CalendarFermium, CalendarMendelevium, CalendarNobelium, CalendarLawrencium, CalendarRutherfordium, CalendarDubnium, CalendarSeaborgium, CalendarBohrium, CalendarHassium, CalendarMeitnerium, CalendarDarmstadtium, CalendarRoentgenium, CalendarCopernicium, CalendarNihonium, CalendarFlerovium, CalendarMoscovium, CalendarLivermorium, CalendarTennessine, CalendarOganesson, Package, Receipt, ClipboardList, Workflow } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
-=======
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Zap, Shield, Cloud, BarChart3, Users, Award, ArrowRight, CheckCircle, Star, Globe, Smartphone, Monitor } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import ResponsiveGrid from '../components/ResponsiveGrid';
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
 
 const MicroSaasPage: React.FC = () => {
   const microSaasProducts = [
@@ -78,7 +65,6 @@ const MicroSaasPage: React.FC = () => {
         "Customer segmentation",
         "Integration capabilities"
       ],
-<<<<<<< HEAD
       benefits: [
         "Increase sales by 35%",
         "Improve lead quality by 50%",
@@ -213,48 +199,10 @@ const MicroSaasPage: React.FC = () => {
       rating: 4.5,
       reviews: 1234,
       link: "/zion-social-scheduler",
-=======
-      icon: <Users className="w-8 h-8" />,
-      href: "/zion-ai-crm-pro",
-      price: "$129/month",
-      featured: false
-    },
-    {
-      id: "zion-ai-marketing-automation-pro",
-      name: "Zion AI Marketing Automation Pro",
-      description: "Complete marketing automation platform with AI-driven campaign optimization",
-      features: [
-        "Email marketing automation",
-        "Social media scheduling",
-        "Lead nurturing workflows",
-        "A/B testing",
-        "Performance analytics"
-      ],
-      icon: <Globe className="w-8 h-8" />,
-      href: "/zion-ai-marketing-automation-pro",
-      price: "$199/month",
-      featured: false
-    },
-    {
-      id: "zion-ai-project-manager-pro",
-      name: "Zion AI Project Manager Pro",
-      description: "Smart project management tool with AI-powered resource allocation and timeline optimization",
-      features: [
-        "AI task prioritization",
-        "Resource optimization",
-        "Timeline forecasting",
-        "Team collaboration",
-        "Progress tracking"
-      ],
-      icon: <Award className="w-8 h-8" />,
-      href: "/zion-ai-project-manager-pro",
-      price: "$159/month",
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
       featured: false
     }
   ];
 
-<<<<<<< HEAD
   const categories = [
     { name: "All", count: microSaasServices.length, active: true },
     { name: "Analytics", count: microSaasServices.filter(s => s.category === "Analytics").length, active: false },
@@ -278,8 +226,6 @@ const MicroSaasPage: React.FC = () => {
     { name: "Development", count: microSaasServices.filter(s => s.category === "Development").length, active: false }
   ];
 
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
   const stats = [
     { label: "Active Users", value: "10,000+", icon: <Users className="w-6 h-6" /> },
     { label: "Uptime", value: "99.9%", icon: <Shield className="w-6 h-6" /> },
@@ -313,7 +259,6 @@ const MicroSaasPage: React.FC = () => {
       avatar: "ER"
     }
   ];
-<<<<<<< HEAD
 
   return (
     <>
@@ -394,9 +339,6 @@ const MicroSaasPage: React.FC = () => {
             </div>
           </div>
         </div>
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Zap, ArrowRight, CheckCircle, Star, Cloud, BarChart3, Users, Clock, DollarSign, Shield, Code, Database, Mail, Settings } from 'lucide-react';
@@ -454,26 +396,14 @@ const MicroSaasPage = () => {
     }
   ];
 
-=======
-
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <EnhancedSEO
-<<<<<<< HEAD
         title="Micro SAAS Solutions - Zion Tech Group | Innovative Software as a Service"
         description="Discover our comprehensive suite of micro SAAS solutions designed to streamline business operations and drive growth."
         keywords="micro SAAS, software as a service, business solutions, productivity tools, cloud software"
         canonical="https://ziontechgroup.com/micro-saas"
-=======
-    <div className="min-h-screen">
-      <EnhancedSEO 
-        title="Micro SAAS Solutions - Zion Tech Group"
-        description="Custom micro software-as-a-service solutions designed to streamline your business operations and boost productivity."
-        keywords="micro SAAS, software as a service, business tools, productivity, automation, project management, CRM"
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
       />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -548,7 +478,6 @@ const MicroSaasPage = () => {
             );
           })}
         </div>
-<<<<<<< HEAD
       </section>
 
       {/* CTA Section */}
@@ -572,7 +501,6 @@ const MicroSaasPage = () => {
             </div>
           </div>
         </div>
-<<<<<<< HEAD
 
         {/* Hero Section */}
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
@@ -589,19 +517,6 @@ const MicroSaasPage = () => {
               </span>
               <br />
               Solutions
-=======
-        title="Micro SAAS Solutions - Zion Tech Group | AI-Powered Business Tools"
-        description="Discover our suite of micro SAAS solutions designed to streamline your business operations. From analytics to security, we have the tools you need to succeed."
-        keywords="micro SAAS, business tools, analytics, security, cloud storage, CRM, project management, AI-powered solutions"
-      />
-
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Micro SAAS Solutions
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Powerful, AI-driven business tools designed to streamline your operations and accelerate growth. 
@@ -767,43 +682,11 @@ const MicroSaasPage = () => {
                 Schedule a Demo
               </FuturisticButton>
             </div>
-<<<<<<< HEAD
-=======
-
-        {/* CTA Section */}
-        <div className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-lg p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">Ready to Streamline Your Business?</h2>
-          <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our micro SAAS solutions can help you automate processes and increase efficiency.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
-              to="/contact" 
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
-            >
-              <Zap className="w-5 h-5" />
-              Start Your SAAS Journey
-            </Link>
-            <Link 
-              to="/pricing" 
-              className="border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-colors"
-            >
-              View Pricing
-            </Link>
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </>
-=======
-=======
-          </FuturisticCard>
-        </ResponsiveContainer>
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
       </section>
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
     </div>
   );
 };
