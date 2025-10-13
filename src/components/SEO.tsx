@@ -1,9 +1,9 @@
-import React from 'react'
-'use client'
+import React from 'react';'
+'use client''
 /**
  * SEO Component
  * Provides comprehensive SEO meta tags and structured data
- *
+ *;
 export interface SEOProps {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -12,7 +12,7 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   keywords?: string[]
   image?: string
   url?: string
-  type?: 'website' | 'article' | 'product' | 'profile'
+  type?: 'website' | 'article' | 'product' | 'profile''
   author?: string
   publishDate?: string
   modifiedDate?: string
@@ -20,39 +20,43 @@ export interface SEOProps {/* TODO: Fix JSX expression */}
   noIndex?: boolean
   structuredData?: Record
           <string>
-  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player'
+  twitterCard?: 'summary' | 'summary_large_image' | 'app' | 'player''
   locale?: string
   alternateLocales?: {/* TODO: Fix JSX expression */}
   l: string }[]
 }
   titl,
-  e: 'Zion Tech Group - AI & IT Solutions',
+  e: 'Zion Tech Group - AI & IT Solutions','
   descriptio,
   n:
-// 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.',
+// 'Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with cutting-edge AI technology.','
   keyword,
   s: [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
   // TOD,
   O: Add items]
-//     'AI',
-//     'artificial intelligence',
-//     'enterprise solutions',
-//     'digital transformation',
-//     'IT services',
+//     'AI','
+//     'artificial intelligence','
+//     'enterprise solutions','
+//     'digital transformation','
+//     'IT services','
 //   ],
   imag,
-  e: 'http,
-  s://ziontechgroup.com/og-image.jpg',
+  e: 'http,'
+  s://ziontechgroup.com/og-image.jpg','
   ur,
-  l: 'http,
-  s://ziontechgroup.com',
+  l: 'http,'
+  s://ziontechgroup.com','
   typ,
-  e: 'website' as const,
+  e: 'website' as const,'
   local,
-  e: 'en_US',
+  e: 'en_US','
   twitterCar,
-  d: 'summary_large_image' as const}
-export const,
+  d: 'summary_large_image' as const}';
+export const,;
   SEO: React.FC,
           <SEOProps> = ({/* TODO: Fix JSX expression */}
   O: Add content,}
@@ -91,7 +95,7 @@ export const,
 //     type,
 //     twitterCard,
 //     locale}
-  // Generate structured data
+  // Generate structured data;
 const generateStructuredData = () => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -105,9 +109,9 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
           <string, unknown> = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-      '@context': 'http,
-  s://schema.org',
-      '@type': type === 'article' ? 'Article' : 'WebPage',
+      '@context': 'http,'
+  s://schema.org','
+      '@type': type === 'article' ? 'Article' : 'WebPage','
       headlin,
   e: seo.title,
       descriptio,
@@ -122,7 +126,7 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
       baseStructuredData.author = {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-        '@type': 'Person',
+        '@type': 'Person','
         nam,
   e: author}
     }
@@ -140,5 +144,5 @@ const generateStructuredData = () => {/* TODO: Fix JSX expression */}
   }
   return null
 }
-export default SEO;`
+export default SEO;`;
   </SEOProps>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';'
 interface InteractiveContentShowcase2026Props {/* TODO: Fix JSX expression */}
 }
 const,

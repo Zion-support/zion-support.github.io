@@ -1,60 +1,26 @@
-<<<<<<< HEAD
-'use client';
-import React from 'react';
-import Navigation from './Navigation';
-
-<<<<<<< HEAD
 const Header: React.FC = () => {,
   return(<React.Fragment>)</React.Fragment>
-      <Navigation />
-      {/* Spacer to prevent content from going under fixed header */} <div className="h-16 lg: h-20" />,
-    </React.Fragment>
-=======
-=======
-'use client'
-import React from 'react'
-import Navigation from './Navigation'
->>>>>>> origin/main
+<Navigation />
+      {/* Spacer to prevent content from going under fixed header */} <div className="h-16 lg: h-20" />,"
+    </React.Fragment>;
 const Header: React.FC = () => {
+  // TODO: Implement
+}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // TODO: Implement
+}
   return (
-<<<<<<< HEAD
-    <>
-      <Navigation />
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" />
+  // TODO: Add parameters
+)
     </>
-  );
-};
-
-export default Header;
-=======
-<<<<<<< HEAD
-    <>
-  </>
-      <Navigation />
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" />
-
-=======
-    <React.Fragment>
-      </React><Navigation />
-      {/* Spacer to prevent content from going under fixed header */}
-      <div className="h-16 lg:h-20" />
-<<<<<<< HEAD
-    </>
->>>>>>> origin/main
 >>>>>>> origin/main
   );
 };
-
+;
 export default Header;
-=======
-    </React.Fragment>
-  )
-}
-export default Header
-  )
-}
-export default Header</div>
 >>>>>>> origin/main
->>>>>>> origin/main
+
+}

@@ -1,34 +1,52 @@
-export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid'
-export type ProjectParticipantRole = 'client' | 'talent'
+export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';';';
+export type ProjectParticipantRole = 'client' | 'talent';';';
+export type ProjectParticipants = {;
 export type ProjectParticipants = {
-export type ProjectParticipants = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   clientUserId: string
   talentUserId: string
 }
-
+;
 export type Project = {  id: string
   title: string
   description?: string
   due_date: string
   amount_usd: number
-  status: 'pending' | 'completed' | 'cancelled'
+  status: 'pending' | 'completed' | 'cancelled''
   attachments?: MilestoneAttachment[]
   updatedAt: string
 }
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   return (
-    value === 'Pending' |
-    value === 'In Progress' |
-    value === 'Submitted' |
-    value === 'Approved' |
-    value === 'Paid'
+  // TODO: Add parameters
+)
+    value === 'Pending' |'
+    value === 'In Progress' |'
+    value === 'Submitted' |'
+    value === 'Approved' |'
+    value === 'Paid''
   );export interface MilestoneAttachment {
-    value === 'Pending' ||
-    value === 'In Progress' ||
-    value === 'Submitted' ||
-    value === 'Approved' ||
-    value === 'Paid'
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    value === 'Pending' ||'
+    value === 'In Progress' ||'
+    value === 'Submitted' ||'
+    value === 'Approved' ||'
+    value === 'Paid''
   );export interface MilestoneAttachment {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   id: string
   name: string
   url: string
@@ -41,34 +59,50 @@ export function isMilestoneStatus(value: string): value is MilestoneStatus {
   attachments?: MilestoneAttachment[]
 }
 export interface UpdateMilestoneRequest {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   title?: string
   description?: string
   dueDate?: string
   amountUsd?: number
-  status?: 'pending' | 'completed' | 'cancelled'
-  attachments?: MilestoneAttachment[]
+  status?: 'pending' | 'completed' | 'cancelled''
+  attachments?: MilestoneAttachment[];
 export function isOverdue(milestone: Milestone): boolean {
-  if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {'
     return false
   }
   return new Date(milestone.dueDate) < new Date()
 }
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-export type MilestoneStatus =
-  | 'Pending'
-  | 'In Progress'
-  | 'Submitted'
-  | 'Approved'
-  | 'Paid'
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39;
+export type MilestoneStatus =;
+  | 'Pending''
+  | 'In Progress''
+  | 'Submitted''
+  | 'Approved''
+  | 'Paid';';
 export type MilestoneAttachment = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   id: string
-  type: 'link' | 'file'
+  type: 'link' | 'file''
   url: string
   label?: string
   uploadedByUserId: string
   uploadedAt: string; // ISO date
 }
 export type Milestone = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   id: string
   title: string
   description?: string
@@ -82,12 +116,20 @@ export type Milestone = {
   createdAt: string; // ISO date
   updatedAt: string; // ISO date
 }
-export type ProjectParticipantRole = 'client' | 'talent'
+export type ProjectParticipantRole = 'client' | 'talent';';';
 export type ProjectParticipants = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   clientUserId: string
   talentUserId: string
 }
 export type Project = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   id: string
   name: string
   participants: ProjectParticipants
@@ -96,11 +138,19 @@ export type Project = {
   updatedAt: string
 }
 export function isMilestoneStatus(value: string): value is MilestoneStatus {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   return (
-    value === 'Pending' ||
-    value === 'In Progress' ||
-    value === 'Submitted' ||
-    value === 'Approved' ||
-    value === 'Paid'
+  // TODO: Add parameters
+)
+    value === 'Pending' ||'
+    value === 'In Progress' ||'
+    value === 'Submitted' ||'
+    value === 'Approved' ||'
+    value === 'Paid''
   )
 }
+
+}}}

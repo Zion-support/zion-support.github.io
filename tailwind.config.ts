@@ -1,52 +1,80 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from 'tailwindcss';';';
 const config: Config = {,
   content: [,
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/**/*.{js,ts,jsx,tsx,mdx}'],
+    './app/**/*.{js,ts,jsx,tsx,mdx}','
+    './components/**/*.{js,ts,jsx,tsx,mdx}','
+    './src/**/*.{js,ts,jsx,tsx,mdx}'],'
   theme: {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     extend: {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       colors: {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         primary: {
-          cyan: '#00ffff'
-          purple: '#8b5cf6'
-          pink: '#ec4899'
-          blue: '#3b82f6',
-          green: '#10b981',
-          orange: '#f59e0b',
-          red: '#ef4444',
-          yellow: '#eab308'},
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+          cyan: '#00ffff''
+          purple: '#8b5cf6''
+          pink: '#ec4899''
+          blue: '#3b82f6','
+          green: '#10b981','
+          orange: '#f59e0b','
+          red: '#ef4444','
+          yellow: '#eab308'},'
         dark: {,
-          bg: '#0a0a0a',
-          darker: '#050505',
-          card: '#1 a1 a1 a',
-          border: '#2 a2 a2 a'}},
+          bg: '#0a0a0a','
+          darker: '#050505','
+          card: '#1 a1 a1 a','
+          border: '#2 a2 a2 a'}},'
       fontFamily: {,
-        orbitron: ['Orbitron', 'monospace'],
-        rajdhani: ['Rajdhani', 'sans-serif'],
-        exo: ['Exo 2', 'sans-serif'],
-          50: '#eff6ff',
-          500: '#3b82f6',
-          600: '#2563eb',
-          700: '#1d4ed8'},
+        orbitron: ['Orbitron', 'monospace'],'
+        rajdhani: ['Rajdhani', 'sans-serif'],'
+        exo: ['Exo 2', 'sans-serif'],'
+          50: '#eff6ff','
+          500: '#3b82f6','
+          600: '#2563eb','
+          700: '#1d4ed8'},'
         dark: {
-          50: '#f8fafc',
-          100: '#f1f5f9',
-          900: '#0f172a'}},
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+          50: '#f8fafc','
+          100: '#f1f5f9','
+          900: '#0f172a'}},'
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif']},
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        sans: ['Inter', 'system-ui', 'sans-serif']},'
       animation: {,
-        'fade-in': 'fadeIn 0.5s ease-in-out',
-        'slide-up': 'slideUp 0.3s ease-out'},
+        'fade-in': 'fadeIn 0.5s ease-in-out','
+        'slide-up': 'slideUp 0.3s ease-out'},'
       keyframes: {,
         fadeIn: {,
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' }},
+          '0%': { opacity: '0' },'
+          '100%': { opacity: '1' }},'
         slideUp: {,
-          '0%': { transform: 'translateY(20px)', opacity: '0' },
+          '0%': { transform: 'translateY(20px)', opacity: '0' },'
         slideUp: {
-          '0%': { transform: 'translateY(10px)', opacity: '0' },
-          '100%': { transform: 'translateY(0)', opacity: '1' }}}}},
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+          '0%': { transform: 'translateY(10px)', opacity: '0' },'
+          '100%': { transform: 'translateY(0)', opacity: '1' }}}}},'
   plugins: []}
-
-export default config
+;
+export default config;

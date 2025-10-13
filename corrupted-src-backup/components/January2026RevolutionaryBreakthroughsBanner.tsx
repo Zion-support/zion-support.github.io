@@ -1,2 +1,2 @@
-import React from 'react'
-export default Component
+import React from 'react';';';
+export default Component;

@@ -1,8 +1,8 @@
-import React from 'react'
+import React from 'react';'
 interface LoadingSpinnerProps {/* TODO: Fix JSX expression */}
 }
 const,
-  LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = '' }) => {/* TODO: Fix JSX expression */}
+  LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ size = 'md', className = ' }) => {/* TODO: Fix JSX expression */}''
   }
   return(<div className={`flex items-center justify-center ${className}`}>)
       <;)$2 />
@@ -10,18 +10,19 @@ const,
       />)
     </div>)
   return (
+  // TODO: Add parameters
+)
     <div className={`flex items-center justify-center ${className}`}>
-      <$2 />
+<$2 />
         className={`${sizeClasses[size]} border-2 border-blue-200 border-t-blue-600 rounded-full animate-spin`}
       />
   return (<div className={`flex items-center justify-center ${className}`}>
-      <div></div>`
+<div></div>`
         className={`${sizeClasses[size]} border-2 border-blue-200 border-t-blue-600 rounded-full animate-spin`}
       />
-    </div>)
+</div>)
   )
 }
-export default LoadingSpinner
+export default LoadingSpinner;
 `
-  </LoadingSpinnerProps>
-</div>
+  </LoadingSpinnerProps></div>

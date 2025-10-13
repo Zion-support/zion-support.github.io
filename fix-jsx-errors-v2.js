@@ -1,86 +1,115 @@
-#!/usr/bin/env node
-import fs from 'fs'
-import { glob } from 'glob'
+#!/usr/bin/env node;
+import fs from 'fs';';
+import { glob } from 'glob';'
 //Find all TypeScript/JSX files in src/components
 // let fixedFiles = 0
 for (const filePath of files) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   try {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     //Fix orphaned /> tags (standalone /> on their own lines)
-    content = content.replace(/^\s*\/>\s*$/gm, '')
+    content = content.replace(/^\s*\/>\s*$/gm, ')''
     //Fix unterminated regular expression literals in object properties
     //Pattern: property: /pattern without closing /content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
-      if (value.startsWith('/') && !value.endsWith('/')) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      if (value.startsWith('/') && !value.endsWith('/')) {'
 for (const filePath of files) {/* TODO: Fix JSX expression */}
-        return `${prop}: '${value.substring(1)}'`
+        return `${prop}: '${value.substring(1)}'`'
       }
       return match
     })
     //Fix JSX attributes that look like regex but are actually strings
-    content = content.replace(/={\s*\/[^\/\n]*$/gm, match => {)
-      const value = match;)
+    content = content.replace(/={\s*\/[^\/\n]*$/gm, match => {);
+const value = match;)
         .match(/={\s*\/[^\/\n]*$/)[0]
-        .replace(/={\s*\//, '')
+        .replace(/={\s*\//, '')'
         .trim()
-      return `={'${value}'}`
+      return `={'${value}'}`'
     content = content.replace(/={/* TODO: Fix JSX expression */}`
-      return `={'${value}'}`;)
+      return `={'${value}'}`;)'
     })
     //Fix common patterns where /> appears in wrong places
-    content = content.replace(/\s*\/>\s*</g, ' <span')$2 />
-    content = content.replace(/\s*\/></span>\s*<\/span>/g, '</span>')
-    content = content.replace(/\s*\/>\s*<\/div>/g, '</div>')
-    content = content.replace(/\s*\/>\s*<\/a>/g, '</a>')
-    content = content.replace(/\s*\/>\s*<\/Link>/g, '</Link>')
+    content = content.replace(/\s*\/>\s*</g, ' <span')$2 />'
+    content = content.replace(/\s*\/>
+</span>\s*<\/span>/g, '</span>')'
+    content = content.replace(/\s*\/>\s*<\/div>/g, '</div>')'
+    content = content.replace(/\s*\/>\s*<\/a>/g, '</a>')'
+    content = content.replace(/\s*\/>\s*<\/Link>/g, '</Link>')'
     //Fix malformed <br> tags that should be self-closing
-    content = content.replace(/<br\s*>\s*<\/br>/g, '<br />')
-    content = content.replace(/<br\s*>\s*$/gm, '<br />')
+    content = content.replace(/<br\s*>\s*<\/br>/g, '<br />')'
+    content = content.replace(/<br\s*>\s*$/gm, '<br />')'
     //Fix unterminated regular expressions in array/object literals
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
-      if (value.startsWith('/') && !value.endsWith('/')) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      if (value.startsWith('/') && !value.endsWith('/')) {'
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-        return `${prop}: '${value.substring(1)}'`
+        return `${prop}: '${value.substring(1)}'`'
       }
       return match
     })
     //Fix malformed JSX expressions
     content = content.replace(/\{\s*\/[^\/\n]*$/gm, match => {)
     content = content.replace(/\{/* TODO: Fix JSX expression */}`
-      return `{'${value}'}`;)
+      return `{'${value}'}`;)'
     })
     //Fix specific patterns with unterminated regex in object properties
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
-      if (value.startsWith('/') && !value.endsWith('/')) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      if (value.startsWith('/') && !value.endsWith('/')) {'
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-        return `${prop}: '${value.substring(1)}'`
+        return `${prop}: '${value.substring(1)}'`'
       }
       return match
     })
     //Fix malformed template literals
     content = content.replace(/`[^`]*$/gm, match => {)
-      if (!match.endsWith('`')) {
-        return match + '`'
+      if (!match.endsWith('`')) {'
+        return match + '`''
     //Fix malformed template literals;`
     content = content.replace(/`[^`]*$/gm, match => {/* TODO: Fix JSX expression */}
       }
       return match;)
     })
     //Fix specific patterns where /> appears before other elements
-    content = content.replace(/\s*\/>\s*<(\w+)/g, ' <$1')
-    content = content.replace(/\s*\/>\s*<\/(\w+)>/g, '</$1>')
+    content = content.replace(/\s*\/>\s*<(\w+)/g, ' <$1')'
+    content = content.replace(/\s*\/>\s*<\/(\w+)>/g, '</$1>')'
     //Fix malformed JSX attributes
     content = content.replace(/(\w+)=\{[^}]*$/gm, match => {
-      if (!match.includes('}')) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      if (!match.includes('}')) {'
     content = content.replace(/(\w+)=\{[^}]*$/gm, match => {/* TODO: Fix JSX expression */}
-      if (!match.includes('}')) {/* TODO: Fix JSX expression */}
-        return match + '}'
+      if (!match.includes('}')) {/* TODO: Fix JSX expression */}'
+        return match + '}''
       }
       return match
     })
     //Fix specific patterns with malformed object properties
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {
-      if (value.startsWith('/') && !value.endsWith('/')) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      if (value.startsWith('/') && !value.endsWith('/')) {'
     content = content.replace(/(\w+):\s*\/[^\/\n]*$/gm, (match, prop) => {/* TODO: Fix JSX expression */}`
-        return `${prop}: '${value.substring(1)}'`
+        return `${prop}: '${value.substring(1)}'`'
       }
       return match
     })
@@ -90,5 +119,5 @@ for (const filePath of files) {/* TODO: Fix JSX expression */}
 //     }
 }
 
-// 
+//
 }}}`

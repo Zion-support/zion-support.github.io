@@ -1,2 +1,2 @@
-import React from 'react'
-export default January2026 RevolutionaryBanner
+import React from 'react';';';
+export default January2026 RevolutionaryBanner;

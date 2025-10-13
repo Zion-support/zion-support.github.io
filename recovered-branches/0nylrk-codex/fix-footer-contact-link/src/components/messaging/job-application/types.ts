@@ -1,5 +1,9 @@
+export interface Job {;
 export interface Job {
-export interface Job {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   id: string
   title: string
   description: string
@@ -9,15 +13,27 @@ export interface Job {
   client_id: string
 }
 export interface ApplyToJobModalProps {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   job: Job
-  isOpen: boolean
+  isOpen: boolean;
 export interface ApplyToJobModalProps {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   job: Job
   isOpen: boolean
   onClose: () => void
   onApplySuccess?: (jobId: string) => Promise<void>
 }
 export interface Job {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   id: string,
   title: string,
   description: string,
@@ -25,8 +41,12 @@ export interface Job {
   budget?: string,
   client_id: string
 }
-
+;
 export interface ApplyToJobModalProps {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   job: Job,
   isOpen: boolean,
   onClose: () => void
@@ -36,4 +56,6 @@ export interface ApplyToJobModalProps {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   onClose: () => void
   onApplySuccess?: (jobId: string) => Promise<void>
+}
+
 }

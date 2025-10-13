@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';'
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
-export default PerformanceDashboard
+export default PerformanceDashboard;

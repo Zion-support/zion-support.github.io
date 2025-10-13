@@ -1,2 +1,2 @@
-import React from 'react'
-export default ContentPromotionBanner
+import React from 'react';';';
+export default ContentPromotionBanner;

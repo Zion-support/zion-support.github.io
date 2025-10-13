@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';'
 interface NewestContent2025BannerProps {/* TODO: Fix JSX expression */}
 }
 const,
@@ -7,4 +7,4 @@ const,
     </div>
   )
 }
-export default NewestContent2025Banner</NewestContent2025BannerProps>
+export default NewestContent2025Banner</NewestContent2025BannerProps>;

@@ -1,3423 +1,4571 @@
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react'
-const MicroSAASPage: React.FC = () => {
-  const _microSAASServices = [
+import React from 'react';';
+import { Helmet } from 'react-helmet-async';';
+import {CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin} from 'lucide-react';';';
+const MicroSAASPage: React.FC = () => {;
+const _microSAASServices = [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
     // AI-Powered Developer Tools
     {
-      title: 'AI Code Review Assistant Pro',
-      description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
-      icon: '🔍',
-      price: '$89/month',
-      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],
-      benefits: ['Reduce bugs by 70%', 'Improve code quality', 'Save 15+ hours/week', 'Prevent security vulnerabilities'],
-      marketPrice: '$150-300/month',
-      category: 'Developer Tools',
-      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950',
-      link: 'https://ziontechgroup.com/ai-code-review',
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Code Review Assistant Pro','
+      description: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.','
+      icon: '🔍','
+      price: '$89/month','
+      features: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],'
+      benefits: ['Reduce bugs by 70%', 'Improve code quality', 'Save 15+ hours/week', 'Prevent security vulnerabilities'],'
+      marketPrice: '$150-300/month','
+      category: 'Developer Tools','
+      technologies: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],'
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950','
+      link: 'https://ziontechgroup.com/ai-code-review','
       popular: true
     },
     {
-      title: 'AI Test Generation Suite',
-      description: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
-      icon: '🧪',
-      price: '$149/month',
-      features: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', 'CI/CD integration', 'Custom test frameworks'],
-      benefits: ['Increase test coverage by 80%', 'Reduce testing time by 70%', 'Catch bugs earlier', 'Improve code reliability'],
-      marketPrice: '$250-500/month',
-      category: 'Developer Tools',
-      technologies: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Test Generation Suite','
+      description: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.','
+      icon: '🧪','
+      price: '$149/month','
+      features: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', 'CI/CD integration', 'Custom test frameworks'],'
+      benefits: ['Increase test coverage by 80%', 'Reduce testing time by 70%', 'Catch bugs earlier', 'Improve code reliability'],'
+      marketPrice: '$250-500/month','
+      category: 'Developer Tools','
+      technologies: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],'
       contactInfo:     ,
 $4},
     {
-      title: 'Smart API Documentation Generator',
-      description: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.',
-      icon: '📚',
-      price: '$79/month',
-      features: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration'],
-      benefits: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated'],
-      marketPrice: '$120-250/month',
-      category: 'Developer Tools',
-      technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart API Documentation Generator','
+      description: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.','
+      icon: '📚','
+      price: '$79/month','
+      features: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration'],';'
+      benefits: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated'],'
+      marketPrice: '$120-250/month','
+      category: 'Developer Tools','
+      technologies: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     // AI Marketing & SEO Tools
     {
-      title: 'AI SEO Optimizer Pro',
-      description: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
-      icon: '🎯',
-      price: '$199/month',
-      features: ['AI content optimization', 'Keyword research automation', 'Competitor analysis', 'Technical SEO audit', 'Rank tracking', 'Content gap analysis'],
-      benefits: ['Increase organic traffic by 150%', 'Improve search rankings', 'Save 25+ hours/week', 'Beat competitors'],
-      marketPrice: '$300-600/month',
-      category: 'Marketing',
-      technologies: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI SEO Optimizer Pro','
+      description: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.','
+      icon: '🎯','
+      price: '$199/month','
+      features: ['AI content optimization', 'Keyword research automation', 'Competitor analysis', 'Technical SEO audit', 'Rank tracking', 'Content gap analysis'],'
+      benefits: ['Increase organic traffic by 150%', 'Improve search rankings', 'Save 25+ hours/week', 'Beat competitors'],'
+      marketPrice: '$300-600/month','
+      category: 'Marketing','
+      technologies: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Social Media Manager',
-      description: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.',
-      icon: '📱',
-      price: '$129/month',
-      features: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management', 'Influencer outreach'],
-      benefits: ['Increase engagement by 45%', 'Save 20 hours/week', 'Grow followers organically', 'Improve brand awareness'],
-      marketPrice: '$200-400/month',
-      category: 'Marketing',
-      technologies: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Social Media Manager','
+      description: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.','
+      icon: '📱','
+      price: '$129/month','
+      features: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management', 'Influencer outreach'],'
+      benefits: ['Increase engagement by 45%', 'Save 20 hours/week', 'Grow followers organically', 'Improve brand awareness'],'
+      marketPrice: '$200-400/month','
+      category: 'Marketing','
+      technologies: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Email Marketing Platform',
-      description: 'Intelligent email campaigns with personalization, A/B testing, send time optimization, and advanced analytics.',
-      icon: '📧',
-      price: '$149/month',
-      features: ['Smart segmentation', 'A/B testing automation', 'Send time optimization', 'Content personalization', 'Performance analytics', 'Drip campaigns'],
-      benefits: ['Increase open rates by 35%', 'Boost conversion by 50%', 'Save 15 hours/week', 'Improve ROI'],
-      marketPrice: '$200-400/month',
-      category: 'Marketing',
-      technologies: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Email Marketing Platform','
+      description: 'Intelligent email campaigns with personalization, A/B testing, send time optimization, and advanced analytics.','
+      icon: '📧','
+      price: '$149/month','
+      features: ['Smart segmentation', 'A/B testing automation', 'Send time optimization', 'Content personalization', 'Performance analytics', 'Drip campaigns'],'
+      benefits: ['Increase open rates by 35%', 'Boost conversion by 50%', 'Save 15 hours/week', 'Improve ROI'],'
+      marketPrice: '$200-400/month','
+      category: 'Marketing','
+      technologies: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Content Generator Pro',
-      description: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.',
-      icon: '✍️',
-      price: '$119/month',
-      features: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency', 'Multi-language support'],
-      benefits: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality', 'Scale content production'],
-      marketPrice: '$180-350/month',
-      category: 'Content Creation',
-      technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Content Generator Pro','
+      description: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.','
+      icon: '✍️','
+      price: '$119/month','
+      features: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency', 'Multi-language support'],'
+      benefits: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality', 'Scale content production'],'
+      marketPrice: '$180-350/month','
+      category: 'Content Creation','
+      technologies: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],'
       contactInfo:     ,
 $4},
     // AI Business Intelligence & Analytics
     {
-      title: 'AI Analytics Dashboard Pro',
-      description: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.',
-      icon: '📊',
-      price: '$199/month',
-      features: ['Real-time visualization', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile responsive', 'Alert system'],
-      benefits: ['Increase decision speed by 40%', 'Reduce manual reporting by 80%', 'Identify trends early', 'Improve forecasting'],
-      marketPrice: '$300-600/month',
-      category: 'Analytics',
-      technologies: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Analytics Dashboard Pro','
+      description: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.','
+      icon: '📊','
+      price: '$199/month','
+      features: ['Real-time visualization', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile responsive', 'Alert system'],'
+      benefits: ['Increase decision speed by 40%', 'Reduce manual reporting by 80%', 'Identify trends early', 'Improve forecasting'],'
+      marketPrice: '$300-600/month','
+      category: 'Analytics','
+      technologies: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Lead Scoring Engine',
-      description: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.',
-      icon: '🎯',
-      price: '$139/month',
-      features: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation', 'ROI tracking'],
-      benefits: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time', 'Improve sales efficiency'],
-      marketPrice: '$200-400/month',
-      category: 'Sales',
-      technologies: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Lead Scoring Engine','
+      description: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.','
+      icon: '🎯','
+      price: '$139/month','
+      features: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation', 'ROI tracking'],'
+      benefits: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time', 'Improve sales efficiency'],'
+      marketPrice: '$200-400/month','
+      category: 'Sales','
+      technologies: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Customer Insights Platform',
-      description: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.',
-      icon: '👥',
-      price: '$179/month',
-      features: ['Customer segmentation', 'Sentiment analysis', 'Churn prediction', 'Personalization engine', 'Lifetime value prediction', 'Behavioral tracking'],
-      benefits: ['Reduce churn by 30%', 'Increase customer lifetime value', 'Improve personalization', 'Enhance customer experience'],
-      marketPrice: '$250-500/month',
-      category: 'Customer Analytics',
-      technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Insights Platform','
+      description: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.','
+      icon: '👥','
+      price: '$179/month','
+      features: ['Customer segmentation', 'Sentiment analysis', 'Churn prediction', 'Personalization engine', 'Lifetime value prediction', 'Behavioral tracking'],'
+      benefits: ['Reduce churn by 30%', 'Increase customer lifetime value', 'Improve personalization', 'Enhance customer experience'],'
+      marketPrice: '$250-500/month','
+      category: 'Customer Analytics','
+      technologies: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Finance & Accounting Tools
     {
-      title: 'AI Invoice Generator Pro',
-      description: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.',
-      icon: '💰',
-      price: '$79/month',
-      features: ['Automated invoice generation', 'Payment tracking', 'Financial analytics', 'Client portal', 'Tax calculations', 'Multi-currency support'],
-      benefits: ['Reduce billing time by 80%', 'Improve cash flow', 'Eliminate manual errors', 'Ensure compliance'],
-      marketPrice: '$120-250/month',
-      category: 'Finance',
-      technologies: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Invoice Generator Pro','
+      description: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.','
+      icon: '💰','
+      price: '$79/month','
+      features: ['Automated invoice generation', 'Payment tracking', 'Financial analytics', 'Client portal', 'Tax calculations', 'Multi-currency support'],'
+      benefits: ['Reduce billing time by 80%', 'Improve cash flow', 'Eliminate manual errors', 'Ensure compliance'],'
+      marketPrice: '$120-250/month','
+      category: 'Finance','
+      technologies: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Financial Planning Assistant',
-      description: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.',
-      icon: '📈',
-      price: '$89/month',
-      features: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning', 'Investment recommendations'],
-      benefits: ['Optimize investment returns', 'Reduce financial stress', 'Achieve goals faster', 'Improve financial literacy'],
-      marketPrice: '$150-300/month',
-      category: 'Finance',
-      technologies: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Financial Planning Assistant','
+      description: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.','
+      icon: '📈','
+      price: '$89/month','
+      features: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning', 'Investment recommendations'],'
+      benefits: ['Optimize investment returns', 'Reduce financial stress', 'Achieve goals faster', 'Improve financial literacy'],'
+      marketPrice: '$150-300/month','
+      category: 'Finance','
+      technologies: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Expense Management System',
-      description: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.',
-      icon: '🧾',
-      price: '$99/month',
-      features: ['Receipt OCR', 'Auto categorization', 'Approval workflows', 'Compliance monitoring', 'Expense analytics', 'Mobile app'],
-      benefits: ['Reduce expense processing time by 70%', 'Improve accuracy', 'Ensure compliance', 'Streamline approvals'],
-      marketPrice: '$150-300/month',
-      category: 'Finance',
-      technologies: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Expense Management System','
+      description: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.','
+      icon: '🧾','
+      price: '$99/month','
+      features: ['Receipt OCR', 'Auto categorization', 'Approval workflows', 'Compliance monitoring', 'Expense analytics', 'Mobile app'],'
+      benefits: ['Reduce expense processing time by 70%', 'Improve accuracy', 'Ensure compliance', 'Streamline approvals'],'
+      marketPrice: '$150-300/month','
+      category: 'Finance','
+      technologies: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Healthcare & Wellness
     {
-      title: 'AI Health Monitoring Platform',
-      description: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.',
-      icon: '🏥',
-      price: '$99/month',
-      features: ['Symptom tracking', 'Medication reminders', 'Health predictions', 'Doctor integration', 'Emergency alerts', 'Wearable sync'],
-      benefits: ['Improve health outcomes', 'Reduce medical costs', 'Early disease detection', 'Better medication adherence'],
-      marketPrice: '$150-300/month',
-      category: 'Healthcare',
-      technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Health Monitoring Platform','
+      description: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.','
+      icon: '🏥','
+      price: '$99/month','
+      features: ['Symptom tracking', 'Medication reminders', 'Health predictions', 'Doctor integration', 'Emergency alerts', 'Wearable sync'],'
+      benefits: ['Improve health outcomes', 'Reduce medical costs', 'Early disease detection', 'Better medication adherence'],'
+      marketPrice: '$150-300/month','
+      category: 'Healthcare','
+      technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Fitness Coach Pro',
-      description: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.',
-      icon: '💪',
-      price: '$49/month',
-      features: ['Personalized workouts', 'Nutrition tracking', 'Progress monitoring', 'Goal setting', 'Community features', 'Wearable integration'],
-      benefits: ['Achieve fitness goals faster', 'Personalized guidance', 'Track progress effectively', 'Stay motivated'],
-      marketPrice: '$80-150/month',
-      category: 'Health & Fitness',
-      technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Fitness Coach Pro','
+      description: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.','
+      icon: '💪','
+      price: '$49/month','
+      features: ['Personalized workouts', 'Nutrition tracking', 'Progress monitoring', 'Goal setting', 'Community features', 'Wearable integration'],'
+      benefits: ['Achieve fitness goals faster', 'Personalized guidance', 'Track progress effectively', 'Stay motivated'],'
+      marketPrice: '$80-150/month','
+      category: 'Health & Fitness','
+      technologies: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Mental Health Assistant',
-      description: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.',
-      icon: '🧠',
-      price: '$79/month',
-      features: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Crisis intervention', 'Progress tracking', 'Professional referrals'],
-      benefits: ['Improve mental wellbeing', 'Early intervention', 'Reduce stress', 'Better emotional regulation'],
-      marketPrice: '$120-250/month',
-      category: 'Mental Health',
-      technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Mental Health Assistant','
+      description: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.','
+      icon: '🧠','
+      price: '$79/month','
+      features: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Crisis intervention', 'Progress tracking', 'Professional referrals'],'
+      benefits: ['Improve mental wellbeing', 'Early intervention', 'Reduce stress', 'Better emotional regulation'],'
+      marketPrice: '$120-250/month','
+      category: 'Mental Health','
+      technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],'
       contactInfo:     ,
 $4},
     // AI Education & Learning
     {
-      title: 'AI Language Learning Platform',
-      description: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
-      icon: '🌍',
-      price: '$79/month',
-      features: ['AI tutoring', 'Speech recognition', 'Adaptive learning', 'Progress tracking', 'Multi-language support', 'Cultural context'],
-      benefits: ['Learn languages 3x faster', 'Personalized curriculum', 'Improve pronunciation', 'Cultural understanding'],
-      marketPrice: '$120-250/month',
-      category: 'Education',
-      technologies: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Language Learning Platform','
+      description: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.','
+      icon: '🌍','
+      price: '$79/month','
+      features: ['AI tutoring', 'Speech recognition', 'Adaptive learning', 'Progress tracking', 'Multi-language support', 'Cultural context'],'
+      benefits: ['Learn languages 3x faster', 'Personalized curriculum', 'Improve pronunciation', 'Cultural understanding'],'
+      marketPrice: '$120-250/month','
+      category: 'Education','
+      technologies: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Study Assistant Pro',
-      description: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.',
-      icon: '📚',
-      price: '$59/month',
-      features: ['Smart note-taking', 'Quiz generation', 'Learning paths', 'Progress tracking', 'Study reminders', 'Knowledge gaps analysis'],
-      benefits: ['Improve study efficiency', 'Retain information better', 'Identify knowledge gaps', 'Personalized learning'],
-      marketPrice: '$100-200/month',
-      category: 'Education',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Study Assistant Pro','
+      description: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.','
+      icon: '📚','
+      price: '$59/month','
+      features: ['Smart note-taking', 'Quiz generation', 'Learning paths', 'Progress tracking', 'Study reminders', 'Knowledge gaps analysis'],'
+      benefits: ['Improve study efficiency', 'Retain information better', 'Identify knowledge gaps', 'Personalized learning'],'
+      marketPrice: '$100-200/month','
+      category: 'Education','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Skill Assessment Platform',
-      description: 'Automated skill testing and certification with adaptive questioning and performance analytics.',
-      icon: '🎓',
-      price: '$149/month',
-      features: ['Adaptive testing', 'Skill certification', 'Performance analytics', 'Progress tracking', 'Custom assessments', 'Industry standards'],
-      benefits: ['Accurate skill assessment', 'Reduce testing time', 'Industry recognition', 'Career advancement'],
-      marketPrice: '$200-400/month',
-      category: 'Education',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Skill Assessment Platform','
+      description: 'Automated skill testing and certification with adaptive questioning and performance analytics.','
+      icon: '🎓','
+      price: '$149/month','
+      features: ['Adaptive testing', 'Skill certification', 'Performance analytics', 'Progress tracking', 'Custom assessments', 'Industry standards'],'
+      benefits: ['Accurate skill assessment', 'Reduce testing time', 'Industry recognition', 'Career advancement'],'
+      marketPrice: '$200-400/month','
+      category: 'Education','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],'
       contactInfo:     ,
 $4},
     // AI E-commerce & Retail
     {
-      title: 'AI Inventory Optimizer Pro',
-      description: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.',
-      icon: '📦',
-      price: '$299/month',
-      features: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis', 'Seasonal adjustments'],
-      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow', 'Optimize supplier relationships'],
-      marketPrice: '$400-800/month',
-      category: 'Supply Chain',
-      technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Inventory Optimizer Pro','
+      description: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.','
+      icon: '📦','
+      price: '$299/month','
+      features: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis', 'Seasonal adjustments'],'
+      benefits: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow', 'Optimize supplier relationships'],'
+      marketPrice: '$400-800/month','
+      category: 'Supply Chain','
+      technologies: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Product Recommendation Engine',
-      description: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.',
-      icon: '🛍️',
-      price: '$199/month',
-      features: ['Personalized recommendations', 'Cross-selling', 'Upselling', 'A/B testing', 'Real-time updates', 'Performance analytics'],
-      benefits: ['Increase sales by 25%', 'Improve customer experience', 'Boost average order value', 'Reduce cart abandonment'],
-      marketPrice: '$300-600/month',
-      category: 'E-commerce',
-      technologies: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Product Recommendation Engine','
+      description: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.','
+      icon: '🛍️','
+      price: '$199/month','
+      features: ['Personalized recommendations', 'Cross-selling', 'Upselling', 'A/B testing', 'Real-time updates', 'Performance analytics'],'
+      benefits: ['Increase sales by 25%', 'Improve customer experience', 'Boost average order value', 'Reduce cart abandonment'],'
+      marketPrice: '$300-600/month','
+      category: 'E-commerce','
+      technologies: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Price Optimization Tool',
-      description: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.',
-      icon: '💲',
-      price: '$249/month',
-      features: ['Dynamic pricing', 'Competitor analysis', 'Demand forecasting', 'Profit optimization', 'A/B testing', 'Market analysis'],
-      benefits: ['Increase profits by 15%', 'Stay competitive', 'Optimize pricing strategy', 'Maximize revenue'],
-      marketPrice: '$400-800/month',
-      category: 'E-commerce',
-      technologies: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Price Optimization Tool','
+      description: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.','
+      icon: '💲','
+      price: '$249/month','
+      features: ['Dynamic pricing', 'Competitor analysis', 'Demand forecasting', 'Profit optimization', 'A/B testing', 'Market analysis'],'
+      benefits: ['Increase profits by 15%', 'Stay competitive', 'Optimize pricing strategy', 'Maximize revenue'],'
+      marketPrice: '$400-800/month','
+      category: 'E-commerce','
+      technologies: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Legal & Compliance
     {
-      title: 'AI Legal Document Analyzer',
-      description: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.',
-      icon: '⚖️',
-      price: '$399/month',
-      features: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research', 'Clause extraction'],
-      benefits: ['Reduce legal review time by 60%', 'Improve accuracy', 'Lower legal costs', 'Ensure compliance'],
-      marketPrice: '$600-1200/month',
-      category: 'Legal',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Legal Document Analyzer','
+      description: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.','
+      icon: '⚖️','
+      price: '$399/month','
+      features: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research', 'Clause extraction'],'
+      benefits: ['Reduce legal review time by 60%', 'Improve accuracy', 'Lower legal costs', 'Ensure compliance'],'
+      marketPrice: '$600-1200/month','
+      category: 'Legal','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Real Estate & Property Management
     {
-      title: 'AI Property Valuation Engine',
-      description: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.',
-      icon: '🏠',
-      price: '$199/month',
-      features: ['Market analysis', 'Property comparison', 'Price prediction', 'Investment analysis', 'Market trends', 'ROI calculations'],
-      benefits: ['Accurate valuations', 'Better investment decisions', 'Save appraisal costs', 'Market insights'],
-      marketPrice: '$300-600/month',
-      category: 'Real Estate',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Property Valuation Engine','
+      description: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.','
+      icon: '🏠','
+      price: '$199/month','
+      features: ['Market analysis', 'Property comparison', 'Price prediction', 'Investment analysis', 'Market trends', 'ROI calculations'],'
+      benefits: ['Accurate valuations', 'Better investment decisions', 'Save appraisal costs', 'Market insights'],'
+      marketPrice: '$300-600/month','
+      category: 'Real Estate','
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],'
       contactInfo:     ,
 $4},
     // AI HR & Recruitment
     {
-      title: 'AI Resume Parser & Matcher',
-      description: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.',
-      icon: '👥',
-      price: '$149/month',
-      features: ['Resume parsing', 'Job matching', 'Candidate scoring', 'Automated screening', 'ATS integration', 'Bias detection'],
-      benefits: ['Reduce screening time by 70%', 'Improve candidate quality', 'Eliminate bias', 'Faster hiring'],
-      marketPrice: '$200-500/month',
-      category: 'HR & Recruitment',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Resume Parser & Matcher','
+      description: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.','
+      icon: '👥','
+      price: '$149/month','
+      features: ['Resume parsing', 'Job matching', 'Candidate scoring', 'Automated screening', 'ATS integration', 'Bias detection'],'
+      benefits: ['Reduce screening time by 70%', 'Improve candidate quality', 'Eliminate bias', 'Faster hiring'],'
+      marketPrice: '$200-500/month','
+      category: 'HR & Recruitment','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Interview Scheduler Pro',
-      description: 'Smart interview scheduling with calendar integration, timezone handling, and automated follow-ups.',
-      icon: '📅',
-      price: '$79/month',
-      features: ['Calendar integration', 'Timezone handling', 'Automated scheduling', 'Reminder system', 'Video conferencing', 'Feedback collection'],
-      benefits: ['Save 10+ hours/week', 'Reduce no-shows', 'Improve candidate experience', 'Streamline process'],
-      marketPrice: '$120-300/month',
-      category: 'HR & Recruitment',
-      technologies: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Interview Scheduler Pro','
+      description: 'Smart interview scheduling with calendar integration, timezone handling, and automated follow-ups.','
+      icon: '📅','
+      price: '$79/month','
+      features: ['Calendar integration', 'Timezone handling', 'Automated scheduling', 'Reminder system', 'Video conferencing', 'Feedback collection'],'
+      benefits: ['Save 10+ hours/week', 'Reduce no-shows', 'Improve candidate experience', 'Streamline process'],'
+      marketPrice: '$120-300/month','
+      category: 'HR & Recruitment','
+      technologies: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Employee Performance Tracker',
-      description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
-      icon: '📈',
-      price: '$199/month',
-      features: ['Goal tracking', 'Performance metrics', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
-      benefits: ['Improve performance by 30%', 'Better goal alignment', 'Data-driven decisions', 'Employee development'],
-      marketPrice: '$300-600/month',
-      category: 'HR & Recruitment',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Employee Performance Tracker','
+      description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.','
+      icon: '📈','
+      price: '$199/month','
+      features: ['Goal tracking', 'Performance metrics', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],'
+      benefits: ['Improve performance by 30%', 'Better goal alignment', 'Data-driven decisions', 'Employee development'],'
+      marketPrice: '$300-600/month','
+      category: 'HR & Recruitment','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],'
       contactInfo:     ,
 $4},
     // AI Finance & Accounting
     {
-      title: 'AI Expense Tracker & Categorizer',
-      description: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.',
-      icon: '💰',
-      price: '$99/month',
-      features: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Tax preparation', 'Expense reports', 'Fraud detection'],
-      benefits: ['Save 5+ hours/week', 'Improve accuracy', 'Better tax compliance', 'Cost control'],
-      marketPrice: '$150-300/month',
-      category: 'Finance & Accounting',
-      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Expense Tracker & Categorizer','
+      description: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.','
+      icon: '💰','
+      price: '$99/month','
+      features: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Tax preparation', 'Expense reports', 'Fraud detection'],'
+      benefits: ['Save 5+ hours/week', 'Improve accuracy', 'Better tax compliance', 'Cost control'],'
+      marketPrice: '$150-300/month','
+      category: 'Finance & Accounting','
+      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Invoice Processing System',
-      description: 'Automated invoice processing with data extraction, approval workflows, and payment tracking.',
-      icon: '🧾',
-      price: '$179/month',
-      features: ['Invoice scanning', 'Data extraction', 'Approval workflows', 'Payment tracking', 'Vendor management', 'Compliance checks'],
-      benefits: ['Process invoices 5x faster', 'Reduce errors by 90%', 'Improve cash flow', 'Better vendor relationships'],
-      marketPrice: '$250-500/month',
-      category: 'Finance & Accounting',
-      technologies: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Invoice Processing System','
+      description: 'Automated invoice processing with data extraction, approval workflows, and payment tracking.','
+      icon: '🧾','
+      price: '$179/month','
+      features: ['Invoice scanning', 'Data extraction', 'Approval workflows', 'Payment tracking', 'Vendor management', 'Compliance checks'],'
+      benefits: ['Process invoices 5x faster', 'Reduce errors by 90%', 'Improve cash flow', 'Better vendor relationships'],'
+      marketPrice: '$250-500/month','
+      category: 'Finance & Accounting','
+      technologies: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Financial Forecasting Tool',
-      description: 'Advanced financial forecasting with cash flow prediction, budget planning, and scenario analysis.',
-      icon: '📊',
-      price: '$299/month',
-      features: ['Cash flow prediction', 'Budget planning', 'Scenario analysis', 'Risk assessment', 'Investment tracking', 'Financial reports'],
-      benefits: ['Better financial planning', 'Reduce risk', 'Improve cash flow', 'Data-driven decisions'],
-      marketPrice: '$400-800/month',
-      category: 'Finance & Accounting',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Financial Forecasting Tool','
+      description: 'Advanced financial forecasting with cash flow prediction, budget planning, and scenario analysis.','
+      icon: '📊','
+      price: '$299/month','
+      features: ['Cash flow prediction', 'Budget planning', 'Scenario analysis', 'Risk assessment', 'Investment tracking', 'Financial reports'],'
+      benefits: ['Better financial planning', 'Reduce risk', 'Improve cash flow', 'Data-driven decisions'],'
+      marketPrice: '$400-800/month','
+      category: 'Finance & Accounting','
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],'
       contactInfo:     ,
 $4},
     // AI Project Management
     {
-      title: 'AI Project Manager Assistant',
-      description: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.',
-      icon: '📋',
-      price: '$149/month',
-      features: ['Task prioritization', 'Resource allocation', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Deadline management'],
-      benefits: ['Complete projects 25% faster', 'Reduce overruns', 'Better resource utilization', 'Improved team productivity'],
-      marketPrice: '$200-500/month',
-      category: 'Project Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Project Manager Assistant','
+      description: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.','
+      icon: '📋','
+      price: '$149/month','
+      features: ['Task prioritization', 'Resource allocation', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Deadline management'],'
+      benefits: ['Complete projects 25% faster', 'Reduce overruns', 'Better resource utilization', 'Improved team productivity'],'
+      marketPrice: '$200-500/month','
+      category: 'Project Management','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Time Tracking & Analytics',
-      description: 'Smart time tracking with productivity analysis, distraction detection, and work pattern insights.',
-      icon: '⏰',
-      price: '$79/month',
-      features: ['Automatic tracking', 'Productivity analysis', 'Distraction detection', 'Work patterns', 'Team insights', 'Goal setting'],
-      benefits: ['Increase productivity by 20%', 'Better work-life balance', 'Identify inefficiencies', 'Data-driven improvements'],
-      marketPrice: '$120-300/month',
-      category: 'Project Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Time Tracking & Analytics','
+      description: 'Smart time tracking with productivity analysis, distraction detection, and work pattern insights.','
+      icon: '⏰','
+      price: '$79/month','
+      features: ['Automatic tracking', 'Productivity analysis', 'Distraction detection', 'Work patterns', 'Team insights', 'Goal setting'],'
+      benefits: ['Increase productivity by 20%', 'Better work-life balance', 'Identify inefficiencies', 'Data-driven improvements'],'
+      marketPrice: '$120-300/month','
+      category: 'Project Management','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],'
       contactInfo:     ,
 $4},
     // AI Customer Service
     {
-      title: 'AI Live Chat Assistant',
-      description: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.',
-      icon: '💬',
-      price: '$129/month',
-      features: ['Instant responses', 'Sentiment analysis', 'Human handoff', 'Multi-language', 'Knowledge base', 'Analytics'],
-      benefits: ['24/7 customer support', 'Reduce response time by 80%', 'Improve satisfaction', 'Lower support costs'],
-      marketPrice: '$200-400/month',
-      category: 'Customer Service',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Live Chat Assistant','
+      description: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.','
+      icon: '💬','
+      price: '$129/month','
+      features: ['Instant responses', 'Sentiment analysis', 'Human handoff', 'Multi-language', 'Knowledge base', 'Analytics'],'
+      benefits: ['24/7 customer support', 'Reduce response time by 80%', 'Improve satisfaction', 'Lower support costs'],'
+      marketPrice: '$200-400/month','
+      category: 'Customer Service','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Ticket Classification System',
-      description: 'Automated ticket routing and prioritization with intelligent categorization and escalation.',
-      icon: '🎫',
-      price: '$99/month',
-      features: ['Auto classification', 'Priority scoring', 'Escalation rules', 'SLA tracking', 'Performance metrics', 'Integration APIs'],
-      benefits: ['Route tickets 90% faster', 'Improve response times', 'Better resource allocation', 'Enhanced customer experience'],
-      marketPrice: '$150-350/month',
-      category: 'Customer Service',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Ticket Classification System','
+      description: 'Automated ticket routing and prioritization with intelligent categorization and escalation.','
+      icon: '🎫','
+      price: '$99/month','
+      features: ['Auto classification', 'Priority scoring', 'Escalation rules', 'SLA tracking', 'Performance metrics', 'Integration APIs'],'
+      benefits: ['Route tickets 90% faster', 'Improve response times', 'Better resource allocation', 'Enhanced customer experience'],'
+      marketPrice: '$150-350/month','
+      category: 'Customer Service','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Sales & CRM
     {
-      title: 'AI Lead Scoring Engine',
-      description: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.',
-      icon: '🎯',
-      price: '$199/month',
-      features: ['Lead scoring', 'Nurturing automation', 'Conversion prediction', 'Behavior tracking', 'A/B testing', 'ROI analysis'],
-      benefits: ['Increase conversions by 35%', 'Focus on high-value leads', 'Automate nurturing', 'Improve sales efficiency'],
-      marketPrice: '$300-600/month',
-      category: 'Sales & CRM',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Lead Scoring Engine','
+      description: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.','
+      icon: '🎯','
+      price: '$199/month','
+      features: ['Lead scoring', 'Nurturing automation', 'Conversion prediction', 'Behavior tracking', 'A/B testing', 'ROI analysis'],'
+      benefits: ['Increase conversions by 35%', 'Focus on high-value leads', 'Automate nurturing', 'Improve sales efficiency'],'
+      marketPrice: '$300-600/month','
+      category: 'Sales & CRM','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Sales Forecasting Platform',
-      description: 'Advanced sales prediction with pipeline analysis, quota tracking, and performance optimization.',
-      icon: '📈',
-      price: '$249/month',
-      features: ['Sales forecasting', 'Pipeline analysis', 'Quota tracking', 'Performance metrics', 'Trend analysis', 'Goal setting'],
-      benefits: ['Improve forecast accuracy by 40%', 'Better quota planning', 'Identify opportunities', 'Optimize sales strategy'],
-      marketPrice: '$400-800/month',
-      category: 'Sales & CRM',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Sales Forecasting Platform','
+      description: 'Advanced sales prediction with pipeline analysis, quota tracking, and performance optimization.','
+      icon: '📈','
+      price: '$249/month','
+      features: ['Sales forecasting', 'Pipeline analysis', 'Quota tracking', 'Performance metrics', 'Trend analysis', 'Goal setting'],'
+      benefits: ['Improve forecast accuracy by 40%', 'Better quota planning', 'Identify opportunities', 'Optimize sales strategy'],'
+      marketPrice: '$400-800/month','
+      category: 'Sales & CRM','
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],'
       contactInfo:     ,
 $4},
     // AI Healthcare & Wellness
     {
-      title: 'AI Symptom Checker Pro',
-      description: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.',
-      icon: '🏥',
-      price: '$299/month',
-      features: ['Symptom analysis', 'Preliminary diagnosis', 'Treatment suggestions', 'Doctor matching', 'Health records', 'Emergency alerts'],
-      benefits: ['Improve healthcare access', 'Reduce misdiagnosis', 'Better patient outcomes', 'Lower healthcare costs'],
-      marketPrice: '$500-1000/month',
-      category: 'Healthcare',
-      technologies: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Symptom Checker Pro','
+      description: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.','
+      icon: '🏥','
+      price: '$299/month','
+      features: ['Symptom analysis', 'Preliminary diagnosis', 'Treatment suggestions', 'Doctor matching', 'Health records', 'Emergency alerts'],'
+      benefits: ['Improve healthcare access', 'Reduce misdiagnosis', 'Better patient outcomes', 'Lower healthcare costs'],'
+      marketPrice: '$500-1000/month','
+      category: 'Healthcare','
+      technologies: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Fitness Coach Platform',
-      description: 'Personalized fitness coaching with workout generation, nutrition planning, and progress tracking.',
-      icon: '💪',
-      price: '$149/month',
-      features: ['Workout generation', 'Nutrition planning', 'Progress tracking', 'Form analysis', 'Goal setting', 'Community features'],
-      benefits: ['Achieve fitness goals faster', 'Personalized guidance', 'Better motivation', 'Improved health outcomes'],
-      marketPrice: '$200-400/month',
-      category: 'Healthcare',
-      technologies: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Fitness Coach Platform','
+      description: 'Personalized fitness coaching with workout generation, nutrition planning, and progress tracking.','
+      icon: '💪','
+      price: '$149/month','
+      features: ['Workout generation', 'Nutrition planning', 'Progress tracking', 'Form analysis', 'Goal setting', 'Community features'],'
+      benefits: ['Achieve fitness goals faster', 'Personalized guidance', 'Better motivation', 'Improved health outcomes'],'
+      marketPrice: '$200-400/month','
+      category: 'Healthcare','
+      technologies: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],'
       contactInfo:     ,
 $4},
     // AI Security & Compliance
     {
-      title: 'AI Security Monitoring System',
-      description: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.',
-      icon: '🛡️',
-      price: '$399/month',
-      features: ['Threat detection', 'Real-time monitoring', 'Incident response', 'Compliance reporting', 'Vulnerability scanning', 'Security analytics'],
-      benefits: ['Detect threats 90% faster', 'Reduce security incidents', 'Ensure compliance', 'Lower security costs'],
-      marketPrice: '$600-1200/month',
-      category: 'Security',
-      technologies: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Security Monitoring System','
+      description: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.','
+      icon: '🛡️','
+      price: '$399/month','
+      features: ['Threat detection', 'Real-time monitoring', 'Incident response', 'Compliance reporting', 'Vulnerability scanning', 'Security analytics'],'
+      benefits: ['Detect threats 90% faster', 'Reduce security incidents', 'Ensure compliance', 'Lower security costs'],'
+      marketPrice: '$600-1200/month','
+      category: 'Security','
+      technologies: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Compliance Checker',
-      description: 'Automated compliance monitoring with regulation tracking, audit preparation, and risk assessment.',
-      icon: '📋',
-      price: '$249/month',
-      features: ['Regulation tracking', 'Audit preparation', 'Risk assessment', 'Policy management', 'Training modules', 'Reporting'],
-      benefits: ['Ensure compliance', 'Reduce audit costs', 'Minimize risks', 'Streamline processes'],
-      marketPrice: '$400-800/month',
-      category: 'Security',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Compliance Checker','
+      description: 'Automated compliance monitoring with regulation tracking, audit preparation, and risk assessment.','
+      icon: '📋','
+      price: '$249/month','
+      features: ['Regulation tracking', 'Audit preparation', 'Risk assessment', 'Policy management', 'Training modules', 'Reporting'],'
+      benefits: ['Ensure compliance', 'Reduce audit costs', 'Minimize risks', 'Streamline processes'],'
+      marketPrice: '$400-800/month','
+      category: 'Security','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Productivity & Automation
     {
-      title: 'AI Meeting Assistant Pro',
-      description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
-      icon: '🎤',
-      price: '$129/month',
-      features: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
-      benefits: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better team alignment'],
-      marketPrice: '$200-400/month',
-      category: 'Productivity',
-      technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Meeting Assistant Pro','
+      description: 'Intelligent meeting management with transcription, action items, and follow-up automation.','
+      icon: '🎤','
+      price: '$129/month','
+      features: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],'
+      benefits: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better team alignment'],'
+      marketPrice: '$200-400/month','
+      category: 'Productivity','
+      technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Email Management System',
-      description: 'Smart email organization with auto-categorization, priority scoring, and response suggestions.',
-      icon: '📧',
-      price: '$99/month',
-      features: ['Auto categorization', 'Priority scoring', 'Response suggestions', 'Email templates', 'Scheduling', 'Analytics'],
-      benefits: ['Process emails 3x faster', 'Never miss important emails', 'Improve response quality', 'Better email organization'],
-      marketPrice: '$150-300/month',
-      category: 'Productivity',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Email Management System','
+      description: 'Smart email organization with auto-categorization, priority scoring, and response suggestions.','
+      icon: '📧','
+      price: '$99/month','
+      features: ['Auto categorization', 'Priority scoring', 'Response suggestions', 'Email templates', 'Scheduling', 'Analytics'],'
+      benefits: ['Process emails 3x faster', 'Never miss important emails', 'Improve response quality', 'Better email organization'],'
+      marketPrice: '$150-300/month','
+      category: 'Productivity','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Document Management Platform',
-      description: 'Intelligent document organization with search, version control, and collaboration features.',
-      icon: '📄',
-      price: '$149/month',
-      features: ['Smart search', 'Version control', 'Collaboration tools', 'Document analysis', 'Workflow automation', 'Security controls'],
-      benefits: ['Find documents instantly', 'Improve collaboration', 'Ensure version control', 'Enhance security'],
-      marketPrice: '$200-500/month',
-      category: 'Productivity',
-      technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Document Management Platform','
+      description: 'Intelligent document organization with search, version control, and collaboration features.','
+      icon: '📄','
+      price: '$149/month','
+      features: ['Smart search', 'Version control', 'Collaboration tools', 'Document analysis', 'Workflow automation', 'Security controls'],'
+      benefits: ['Find documents instantly', 'Improve collaboration', 'Ensure version control', 'Enhance security'],'
+      marketPrice: '$200-500/month','
+      category: 'Productivity','
+      technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],'
       contactInfo:     ,
 $4},
     // AI Analytics & Reporting
     {
-      title: 'AI Business Intelligence Suite',
-      description: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.',
-      icon: '📊',
-      price: '$299/month',
-      features: ['Automated insights', 'Predictive analytics', 'Custom dashboards', 'Data visualization', 'Report generation', 'Mobile access'],
-      benefits: ['Make data-driven decisions', 'Identify trends early', 'Improve performance', 'Save analysis time'],
-      marketPrice: '$500-1000/month',
-      category: 'Analytics',
-      technologies: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Business Intelligence Suite','
+      description: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.','
+      icon: '📊','
+      price: '$299/month','
+      features: ['Automated insights', 'Predictive analytics', 'Custom dashboards', 'Data visualization', 'Report generation', 'Mobile access'],'
+      benefits: ['Make data-driven decisions', 'Identify trends early', 'Improve performance', 'Save analysis time'],'
+      marketPrice: '$500-1000/month','
+      category: 'Analytics','
+      technologies: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Social Media Analytics',
-      description: 'Advanced social media monitoring with sentiment analysis, competitor tracking, and engagement optimization.',
-      icon: '📱',
-      price: '$179/month',
-      features: ['Sentiment analysis', 'Competitor tracking', 'Engagement metrics', 'Content optimization', 'Influencer identification', 'Trend analysis'],
-      benefits: ['Improve social media ROI', 'Better brand monitoring', 'Optimize content strategy', 'Identify opportunities'],
-      marketPrice: '$250-500/month',
-      category: 'Analytics',
-      technologies: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Social Media Analytics','
+      description: 'Advanced social media monitoring with sentiment analysis, competitor tracking, and engagement optimization.','
+      icon: '📱','
+      price: '$179/month','
+      features: ['Sentiment analysis', 'Competitor tracking', 'Engagement metrics', 'Content optimization', 'Influencer identification', 'Trend analysis'],'
+      benefits: ['Improve social media ROI', 'Better brand monitoring', 'Optimize content strategy', 'Identify opportunities'],'
+      marketPrice: '$250-500/month','
+      category: 'Analytics','
+      technologies: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],'
       contactInfo:     ,
 $4},
     // AI Development & DevOps
     {
-      title: 'AI Code Quality Monitor',
-      description: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.',
-      icon: '🔍',
-      price: '$199/month',
-      features: ['Code quality monitoring', 'Technical debt tracking', 'Improvement suggestions', 'Team metrics', 'Integration tools', 'Custom rules'],
-      benefits: ['Improve code quality', 'Reduce technical debt', 'Better team performance', 'Faster development'],
-      marketPrice: '$300-600/month',
-      category: 'Development',
-      technologies: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Code Quality Monitor','
+      description: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.','
+      icon: '🔍','
+      price: '$199/month','
+      features: ['Code quality monitoring', 'Technical debt tracking', 'Improvement suggestions', 'Team metrics', 'Integration tools', 'Custom rules'],'
+      benefits: ['Improve code quality', 'Reduce technical debt', 'Better team performance', 'Faster development'],'
+      marketPrice: '$300-600/month','
+      category: 'Development','
+      technologies: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Deployment Automation',
-      description: 'Intelligent deployment pipeline with automated testing, rollback capabilities, and performance monitoring.',
-      icon: '🚀',
-      price: '$249/month',
-      features: ['Automated testing', 'Smart deployments', 'Rollback automation', 'Performance monitoring', 'Environment management', 'Security scanning'],
-      benefits: ['Deploy 5x faster', 'Reduce deployment errors', 'Improve reliability', 'Better monitoring'],
-      marketPrice: '$400-800/month',
-      category: 'Development',
-      technologies: ['CI/CD', 'Docker', 'Kubernetes', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Deployment Automation','
+      description: 'Intelligent deployment pipeline with automated testing, rollback capabilities, and performance monitoring.','
+      icon: '🚀','
+      price: '$249/month','
+      features: ['Automated testing', 'Smart deployments', 'Rollback automation', 'Performance monitoring', 'Environment management', 'Security scanning'],'
+      benefits: ['Deploy 5x faster', 'Reduce deployment errors', 'Improve reliability', 'Better monitoring'],'
+      marketPrice: '$400-800/month','
+      category: 'Development','
+      technologies: ['CI/CD', 'Docker', 'Kubernetes', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     // AI Communication & Collaboration
     {
-      title: 'AI Team Collaboration Hub',
-      description: 'Intelligent team workspace with smart notifications, task management, and productivity insights.',
-      icon: '👥',
-      price: '$199/month',
-      features: ['Smart notifications', 'Task management', 'Productivity insights', 'Team analytics', 'Integration tools', 'Mobile access'],
-      benefits: ['Improve team productivity', 'Better communication', 'Data-driven insights', 'Streamlined workflows'],
-      marketPrice: '$300-600/month',
-      category: 'Collaboration',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Team Collaboration Hub','
+      description: 'Intelligent team workspace with smart notifications, task management, and productivity insights.','
+      icon: '👥','
+      price: '$199/month','
+      features: ['Smart notifications', 'Task management', 'Productivity insights', 'Team analytics', 'Integration tools', 'Mobile access'],'
+      benefits: ['Improve team productivity', 'Better communication', 'Data-driven insights', 'Streamlined workflows'],'
+      marketPrice: '$300-600/month','
+      category: 'Collaboration','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Video Conferencing Assistant',
-      description: 'Smart video conferencing with noise cancellation, transcription, and meeting optimization.',
-      icon: '📹',
-      price: '$149/month',
-      features: ['Noise cancellation', 'Live transcription', 'Meeting optimization', 'Background effects', 'Recording', 'Analytics'],
-      benefits: ['Better meeting quality', 'Accessibility features', 'Improved focus', 'Professional appearance'],
-      marketPrice: '$200-400/month',
-      category: 'Collaboration',
-      technologies: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Video Conferencing Assistant','
+      description: 'Smart video conferencing with noise cancellation, transcription, and meeting optimization.','
+      icon: '📹','
+      price: '$149/month','
+      features: ['Noise cancellation', 'Live transcription', 'Meeting optimization', 'Background effects', 'Recording', 'Analytics'],'
+      benefits: ['Better meeting quality', 'Accessibility features', 'Improved focus', 'Professional appearance'],'
+      marketPrice: '$200-400/month','
+      category: 'Collaboration','
+      technologies: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],'
       contactInfo:     ,
 $4},
     // AI Marketing & Advertising
     {
-      title: 'AI Ad Campaign Optimizer',
-      description: 'Intelligent ad campaign management with automated optimization, A/B testing, and performance analytics.',
-      icon: '📢',
-      price: '$299/month',
-      features: ['Campaign optimization', 'A/B testing', 'Performance analytics', 'Budget management', 'Audience targeting', 'ROI tracking'],
-      benefits: ['Improve ad performance by 40%', 'Reduce ad spend waste', 'Better targeting', 'Higher ROI'],
-      marketPrice: '$500-1000/month',
-      category: 'Marketing',
-      technologies: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Ad Campaign Optimizer','
+      description: 'Intelligent ad campaign management with automated optimization, A/B testing, and performance analytics.','
+      icon: '📢','
+      price: '$299/month','
+      features: ['Campaign optimization', 'A/B testing', 'Performance analytics', 'Budget management', 'Audience targeting', 'ROI tracking'],'
+      benefits: ['Improve ad performance by 40%', 'Reduce ad spend waste', 'Better targeting', 'Higher ROI'],'
+      marketPrice: '$500-1000/month','
+      category: 'Marketing','
+      technologies: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Influencer Marketing Platform',
-      description: 'Smart influencer discovery and management with performance tracking and campaign optimization.',
-      icon: '⭐',
-      price: '$199/month',
-      features: ['Influencer discovery', 'Performance tracking', 'Campaign management', 'ROI analysis', 'Content collaboration', 'Payment processing'],
-      benefits: ['Find perfect influencers', 'Track campaign performance', 'Improve ROI', 'Streamline management'],
-      marketPrice: '$300-600/month',
-      category: 'Marketing',
-      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Influencer Marketing Platform','
+      description: 'Smart influencer discovery and management with performance tracking and campaign optimization.','
+      icon: '⭐','
+      price: '$199/month','
+      features: ['Influencer discovery', 'Performance tracking', 'Campaign management', 'ROI analysis', 'Content collaboration', 'Payment processing'],'
+      benefits: ['Find perfect influencers', 'Track campaign performance', 'Improve ROI', 'Streamline management'],'
+      marketPrice: '$300-600/month','
+      category: 'Marketing','
+      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI E-commerce & Retail
     {
-      title: 'AI Customer Behavior Analyzer',
-      description: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.',
-      icon: '🛒',
-      price: '$249/month',
-      features: ['Behavior analysis', 'Purchase prediction', 'Churn prevention', 'Personalization', 'Segmentation', 'Recommendation engine'],
-      benefits: ['Increase sales by 30%', 'Reduce churn by 25%', 'Better customer experience', 'Data-driven decisions'],
-      marketPrice: '$400-800/month',
-      category: 'E-commerce',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Behavior Analyzer','
+      description: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.','
+      icon: '🛒','
+      price: '$249/month','
+      features: ['Behavior analysis', 'Purchase prediction', 'Churn prevention', 'Personalization', 'Segmentation', 'Recommendation engine'],'
+      benefits: ['Increase sales by 30%', 'Reduce churn by 25%', 'Better customer experience', 'Data-driven decisions'],'
+      marketPrice: '$400-800/month','
+      category: 'E-commerce','
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Supply Chain Optimizer',
-      description: 'Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.',
-      icon: '🚚',
-      price: '$399/month',
-      features: ['Demand forecasting', 'Route optimization', 'Cost analysis', 'Supplier management', 'Risk assessment', 'Performance tracking'],
-      benefits: ['Reduce costs by 20%', 'Improve efficiency', 'Better planning', 'Risk mitigation'],
-      marketPrice: '$600-1200/month',
-      category: 'Supply Chain',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Supply Chain Optimizer','
+      description: 'Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.','
+      icon: '🚚','
+      price: '$399/month','
+      features: ['Demand forecasting', 'Route optimization', 'Cost analysis', 'Supplier management', 'Risk assessment', 'Performance tracking'],'
+      benefits: ['Reduce costs by 20%', 'Improve efficiency', 'Better planning', 'Risk mitigation'],'
+      marketPrice: '$600-1200/month','
+      category: 'Supply Chain','
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],'
       contactInfo:     ,
 $4},
     // AI Education & Training
     {
-      title: 'AI Corporate Training Platform',
-      description: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.',
-      icon: '🎓',
-      price: '$199/month',
-      features: ['Personalized learning', 'Skill assessment', 'Progress tracking', 'Content creation', 'Certification', 'Analytics'],
-      benefits: ['Improve employee skills', 'Reduce training costs', 'Better engagement', 'Measurable results'],
-      marketPrice: '$300-600/month',
-      category: 'Education',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Corporate Training Platform','
+      description: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.','
+      icon: '🎓','
+      price: '$199/month','
+      features: ['Personalized learning', 'Skill assessment', 'Progress tracking', 'Content creation', 'Certification', 'Analytics'],'
+      benefits: ['Improve employee skills', 'Reduce training costs', 'Better engagement', 'Measurable results'],'
+      marketPrice: '$300-600/month','
+      category: 'Education','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Knowledge Management System',
-      description: 'Smart knowledge base with intelligent search, content organization, and automated updates.',
-      icon: '📚',
-      price: '$149/month',
-      features: ['Intelligent search', 'Content organization', 'Automated updates', 'Version control', 'Collaboration', 'Analytics'],
-      benefits: ['Find information instantly', 'Keep knowledge current', 'Improve collaboration', 'Reduce support tickets'],
-      marketPrice: '$200-500/month',
-      category: 'Education',
-      technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Knowledge Management System','
+      description: 'Smart knowledge base with intelligent search, content organization, and automated updates.','
+      icon: '📚','
+      price: '$149/month','
+      features: ['Intelligent search', 'Content organization', 'Automated updates', 'Version control', 'Collaboration', 'Analytics'],'
+      benefits: ['Find information instantly', 'Keep knowledge current', 'Improve collaboration', 'Reduce support tickets'],'
+      marketPrice: '$200-500/month','
+      category: 'Education','
+      technologies: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],'
       contactInfo:     ,
 $4},
     // AI Legal & Compliance
     {
-      title: 'AI Contract Management System',
-      description: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.',
-      icon: '📋',
-      price: '$299/month',
-      features: ['Contract review', 'Renewal tracking', 'Compliance monitoring', 'Risk assessment', 'Template library', 'Workflow automation'],
-      benefits: ['Reduce contract risks', 'Improve compliance', 'Save time on reviews', 'Better organization'],
-      marketPrice: '$500-1000/month',
-      category: 'Legal',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Contract Management System','
+      description: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.','
+      icon: '📋','
+      price: '$299/month','
+      features: ['Contract review', 'Renewal tracking', 'Compliance monitoring', 'Risk assessment', 'Template library', 'Workflow automation'],'
+      benefits: ['Reduce contract risks', 'Improve compliance', 'Save time on reviews', 'Better organization'],'
+      marketPrice: '$500-1000/month','
+      category: 'Legal','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Privacy Compliance Monitor',
-      description: 'Automated privacy compliance monitoring with GDPR, CCPA, and other regulation tracking.',
-      icon: '🔒',
-      price: '$199/month',
-      features: ['GDPR compliance', 'CCPA tracking', 'Privacy audits', 'Data mapping', 'Consent management', 'Breach detection'],
-      benefits: ['Ensure compliance', 'Reduce legal risks', 'Protect customer data', 'Streamline audits'],
-      marketPrice: '$300-600/month',
-      category: 'Legal',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Privacy Compliance Monitor','
+      description: 'Automated privacy compliance monitoring with GDPR, CCPA, and other regulation tracking.','
+      icon: '🔒','
+      price: '$199/month','
+      features: ['GDPR compliance', 'CCPA tracking', 'Privacy audits', 'Data mapping', 'Consent management', 'Breach detection'],'
+      benefits: ['Ensure compliance', 'Reduce legal risks', 'Protect customer data', 'Streamline audits'],'
+      marketPrice: '$300-600/month','
+      category: 'Legal','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],'
       contactInfo:     ,
 $4},
     // AI Real Estate & Property
     {
-      title: 'AI Property Management Suite',
-      description: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.',
-      icon: '🏢',
-      price: '$249/month',
-      features: ['Tenant screening', 'Maintenance scheduling', 'Financial tracking', 'Lease management', 'Communication tools', 'Analytics'],
-      benefits: ['Streamline operations', 'Reduce vacancies', 'Improve tenant satisfaction', 'Better financial control'],
-      marketPrice: '$400-800/month',
-      category: 'Real Estate',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Property Management Suite','
+      description: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.','
+      icon: '🏢','
+      price: '$249/month','
+      features: ['Tenant screening', 'Maintenance scheduling', 'Financial tracking', 'Lease management', 'Communication tools', 'Analytics'],'
+      benefits: ['Streamline operations', 'Reduce vacancies', 'Improve tenant satisfaction', 'Better financial control'],'
+      marketPrice: '$400-800/month','
+      category: 'Real Estate','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Market Research Platform',
-      description: 'Intelligent market research with trend analysis, competitor monitoring, and opportunity identification.',
-      icon: '🔍',
-      price: '$179/month',
-      features: ['Trend analysis', 'Competitor monitoring', 'Opportunity identification', 'Market reports', 'Data visualization', 'Alert system'],
-      benefits: ['Stay ahead of trends', 'Identify opportunities', 'Better market understanding', 'Data-driven decisions'],
-      marketPrice: '$250-500/month',
-      category: 'Research',
-      technologies: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Market Research Platform','
+      description: 'Intelligent market research with trend analysis, competitor monitoring, and opportunity identification.','
+      icon: '🔍','
+      price: '$179/month','
+      features: ['Trend analysis', 'Competitor monitoring', 'Opportunity identification', 'Market reports', 'Data visualization', 'Alert system'],'
+      benefits: ['Stay ahead of trends', 'Identify opportunities', 'Better market understanding', 'Data-driven decisions'],'
+      marketPrice: '$250-500/month','
+      category: 'Research','
+      technologies: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Agriculture & Environment
     {
-      title: 'AI Crop Monitoring System',
-      description: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.',
-      icon: '🌾',
-      price: '$299/month',
-      features: ['Crop health analysis', 'Yield prediction', 'Resource optimization', 'Weather integration', 'Pest detection', 'Harvest planning'],
-      benefits: ['Increase crop yields by 20%', 'Reduce resource waste', 'Better planning', 'Sustainable farming'],
-      marketPrice: '$500-1000/month',
-      category: 'Agriculture',
-      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Crop Monitoring System','
+      description: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.','
+      icon: '🌾','
+      price: '$299/month','
+      features: ['Crop health analysis', 'Yield prediction', 'Resource optimization', 'Weather integration', 'Pest detection', 'Harvest planning'],'
+      benefits: ['Increase crop yields by 20%', 'Reduce resource waste', 'Better planning', 'Sustainable farming'],'
+      marketPrice: '$500-1000/month','
+      category: 'Agriculture','
+      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Environmental Monitoring',
-      description: 'Comprehensive environmental monitoring with pollution tracking, climate analysis, and sustainability reporting.',
-      icon: '🌍',
-      price: '$199/month',
-      features: ['Pollution tracking', 'Climate analysis', 'Sustainability reporting', 'Alert system', 'Data visualization', 'Compliance tracking'],
-      benefits: ['Monitor environmental impact', 'Ensure compliance', 'Improve sustainability', 'Better reporting'],
-      marketPrice: '$300-600/month',
-      category: 'Environment',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Environmental Monitoring','
+      description: 'Comprehensive environmental monitoring with pollution tracking, climate analysis, and sustainability reporting.','
+      icon: '🌍','
+      price: '$199/month','
+      features: ['Pollution tracking', 'Climate analysis', 'Sustainability reporting', 'Alert system', 'Data visualization', 'Compliance tracking'],'
+      benefits: ['Monitor environmental impact', 'Ensure compliance', 'Improve sustainability', 'Better reporting'],'
+      marketPrice: '$300-600/month','
+      category: 'Environment','
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Transportation & Logistics
     {
-      title: 'AI Fleet Management System',
-      description: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.',
-      icon: '🚛',
-      price: '$349/month',
-      features: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics'],
-      benefits: ['Reduce fuel costs by 15%', 'Improve safety', 'Better maintenance', 'Optimize routes'],
-      marketPrice: '$500-1000/month',
-      category: 'Transportation',
-      technologies: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Fleet Management System','
+      description: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.','
+      icon: '🚛','
+      price: '$349/month','
+      features: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics'],'
+      benefits: ['Reduce fuel costs by 15%', 'Improve safety', 'Better maintenance', 'Optimize routes'],'
+      marketPrice: '$500-1000/month','
+      category: 'Transportation','
+      technologies: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Logistics Optimizer',
-      description: 'Advanced logistics optimization with warehouse management, inventory tracking, and delivery optimization.',
-      icon: '📦',
-      price: '$299/month',
-      features: ['Warehouse management', 'Inventory tracking', 'Delivery optimization', 'Supplier coordination', 'Cost analysis', 'Performance metrics'],
-      benefits: ['Reduce logistics costs by 25%', 'Improve efficiency', 'Better inventory management', 'Faster deliveries'],
-      marketPrice: '$400-800/month',
-      category: 'Logistics',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Logistics Optimizer','
+      description: 'Advanced logistics optimization with warehouse management, inventory tracking, and delivery optimization.','
+      icon: '📦','
+      price: '$299/month','
+      features: ['Warehouse management', 'Inventory tracking', 'Delivery optimization', 'Supplier coordination', 'Cost analysis', 'Performance metrics'],'
+      benefits: ['Reduce logistics costs by 25%', 'Improve efficiency', 'Better inventory management', 'Faster deliveries'],'
+      marketPrice: '$400-800/month','
+      category: 'Logistics','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],'
       contactInfo:     ,
 $4},
     // AI Entertainment & Media
     {
-      title: 'AI Content Moderation Platform',
-      description: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.',
-      icon: '🎬',
-      price: '$199/month',
-      features: ['Automated filtering', 'Sentiment analysis', 'Compliance checking', 'User reporting', 'Appeal system', 'Analytics'],
-      benefits: ['Reduce moderation costs by 70%', 'Improve content quality', 'Faster response times', 'Better user experience'],
-      marketPrice: '$300-600/month',
-      category: 'Media',
-      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Content Moderation Platform','
+      description: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.','
+      icon: '🎬','
+      price: '$199/month','
+      features: ['Automated filtering', 'Sentiment analysis', 'Compliance checking', 'User reporting', 'Appeal system', 'Analytics'],'
+      benefits: ['Reduce moderation costs by 70%', 'Improve content quality', 'Faster response times', 'Better user experience'],'
+      marketPrice: '$300-600/month','
+      category: 'Media','
+      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Video Production Assistant',
-      description: 'Intelligent video production with automated editing, subtitle generation, and content optimization.',
-      icon: '🎥',
-      price: '$249/month',
-      features: ['Automated editing', 'Subtitle generation', 'Content optimization', 'Thumbnail creation', 'Quality enhancement', 'Analytics'],
-      benefits: ['Reduce production time by 50%', 'Improve video quality', 'Better engagement', 'Lower production costs'],
-      marketPrice: '$400-800/month',
-      category: 'Media',
-      technologies: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Video Production Assistant','
+      description: 'Intelligent video production with automated editing, subtitle generation, and content optimization.','
+      icon: '🎥','
+      price: '$249/month','
+      features: ['Automated editing', 'Subtitle generation', 'Content optimization', 'Thumbnail creation', 'Quality enhancement', 'Analytics'],'
+      benefits: ['Reduce production time by 50%', 'Improve video quality', 'Better engagement', 'Lower production costs'],'
+      marketPrice: '$400-800/month','
+      category: 'Media','
+      technologies: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],'
       contactInfo:     ,
 $4},
     // AI Gaming & Entertainment
     {
-      title: 'AI Game Development Platform',
-      description: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.',
-      icon: '🎮',
-      price: '$299/month',
-      features: ['Procedural generation', 'AI NPCs', 'Automated testing', 'Balance optimization', 'Player analytics', 'Content creation'],
-      benefits: ['Reduce development time', 'Create better games', 'Improve player experience', 'Lower development costs'],
-      marketPrice: '$500-1000/month',
-      category: 'Gaming',
-      technologies: ['Game Engines', 'Machine Learning', 'React', 'Node.js', 'Unity/Unreal'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Game Development Platform','
+      description: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.','
+      icon: '🎮','
+      price: '$299/month','
+      features: ['Procedural generation', 'AI NPCs', 'Automated testing', 'Balance optimization', 'Player analytics', 'Content creation'],'
+      benefits: ['Reduce development time', 'Create better games', 'Improve player experience', 'Lower development costs'],'
+      marketPrice: '$500-1000/month','
+      category: 'Gaming','
+      technologies: ['Game Engines', 'Machine Learning', 'React', 'Node.js', 'Unity/Unreal'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Player Behavior Analytics',
-      description: 'Advanced player analytics with behavior prediction, engagement optimization, and monetization insights.',
-      icon: '📊',
-      price: '$199/month',
-      features: ['Behavior prediction', 'Engagement optimization', 'Monetization insights', 'Churn prediction', 'A/B testing', 'Real-time analytics'],
-      benefits: ['Increase player retention', 'Optimize monetization', 'Better game design', 'Data-driven decisions'],
-      marketPrice: '$300-600/month',
-      category: 'Gaming',
-      technologies: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Player Behavior Analytics','
+      description: 'Advanced player analytics with behavior prediction, engagement optimization, and monetization insights.','
+      icon: '📊','
+      price: '$199/month','
+      features: ['Behavior prediction', 'Engagement optimization', 'Monetization insights', 'Churn prediction', 'A/B testing', 'Real-time analytics'],'
+      benefits: ['Increase player retention', 'Optimize monetization', 'Better game design', 'Data-driven decisions'],'
+      marketPrice: '$300-600/month','
+      category: 'Gaming','
+      technologies: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Research & Development
     {
-      title: 'AI Research Assistant Pro',
-      description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
-      icon: '🔬',
-      price: '$299/month',
-      features: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],
-      benefits: ['Accelerate research', 'Improve quality', 'Better collaboration', 'Stay current'],
-      marketPrice: '$500-1000/month',
-      category: 'Research',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Research Assistant Pro','
+      description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.','
+      icon: '🔬','
+      price: '$299/month','
+      features: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],'
+      benefits: ['Accelerate research', 'Improve quality', 'Better collaboration', 'Stay current'],'
+      marketPrice: '$500-1000/month','
+      category: 'Research','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Patent Analysis Tool',
-      description: 'Intelligent patent research with prior art analysis, patentability assessment, and competitive intelligence.',
-      icon: '📋',
-      price: '$399/month',
-      features: ['Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Patent monitoring', 'Citation analysis', 'Trend tracking'],
-      benefits: ['Improve patent strategy', 'Avoid infringement', 'Identify opportunities', 'Better R&D planning'],
-      marketPrice: '$600-1200/month',
-      category: 'Research',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Patent Analysis Tool','
+      description: 'Intelligent patent research with prior art analysis, patentability assessment, and competitive intelligence.','
+      icon: '📋','
+      price: '$399/month','
+      features: ['Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Patent monitoring', 'Citation analysis', 'Trend tracking'],'
+      benefits: ['Improve patent strategy', 'Avoid infringement', 'Identify opportunities', 'Better R&D planning'],'
+      marketPrice: '$600-1200/month','
+      category: 'Research','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],'
       contactInfo:     ,
 $4},
     // AI Energy & Utilities
     {
-      title: 'AI Energy Management System',
-      description: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.',
-      icon: '⚡',
-      price: '$249/month',
-      features: ['Consumption optimization', 'Predictive maintenance', 'Cost analysis', 'Demand forecasting', 'Renewable integration', 'Reporting'],
-      benefits: ['Reduce energy costs by 20%', 'Improve efficiency', 'Better planning', 'Sustainable operations'],
-      marketPrice: '$400-800/month',
-      category: 'Energy',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Energy Management System','
+      description: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.','
+      icon: '⚡','
+      price: '$249/month','
+      features: ['Consumption optimization', 'Predictive maintenance', 'Cost analysis', 'Demand forecasting', 'Renewable integration', 'Reporting'],'
+      benefits: ['Reduce energy costs by 20%', 'Improve efficiency', 'Better planning', 'Sustainable operations'],'
+      marketPrice: '$400-800/month','
+      category: 'Energy','
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Smart Grid Optimizer',
-      description: 'Advanced grid management with load balancing, fault detection, and renewable energy integration.',
-      icon: '🔌',
-      price: '$399/month',
-      features: ['Load balancing', 'Fault detection', 'Renewable integration', 'Demand response', 'Grid analytics', 'Predictive maintenance'],
-      benefits: ['Improve grid reliability', 'Reduce outages', 'Better renewable integration', 'Lower operational costs'],
-      marketPrice: '$600-1200/month',
-      category: 'Energy',
-      technologies: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Smart Grid Optimizer','
+      description: 'Advanced grid management with load balancing, fault detection, and renewable energy integration.','
+      icon: '🔌','
+      price: '$399/month','
+      features: ['Load balancing', 'Fault detection', 'Renewable integration', 'Demand response', 'Grid analytics', 'Predictive maintenance'],'
+      benefits: ['Improve grid reliability', 'Reduce outages', 'Better renewable integration', 'Lower operational costs'],'
+      marketPrice: '$600-1200/month','
+      category: 'Energy','
+      technologies: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Manufacturing & Industrial
     {
-      title: 'AI Quality Control System',
-      description: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.',
-      icon: '🏭',
-      price: '$349/month',
-      features: ['Defect detection', 'Process optimization', 'Predictive maintenance', 'Quality analytics', 'Compliance tracking', 'Alert system'],
-      benefits: ['Reduce defects by 80%', 'Improve quality', 'Lower maintenance costs', 'Better compliance'],
-      marketPrice: '$500-1000/month',
-      category: 'Manufacturing',
-      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Quality Control System','
+      description: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.','
+      icon: '🏭','
+      price: '$349/month','
+      features: ['Defect detection', 'Process optimization', 'Predictive maintenance', 'Quality analytics', 'Compliance tracking', 'Alert system'],'
+      benefits: ['Reduce defects by 80%', 'Improve quality', 'Lower maintenance costs', 'Better compliance'],'
+      marketPrice: '$500-1000/month','
+      category: 'Manufacturing','
+      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Production Planning Optimizer',
-      description: 'Intelligent production planning with demand forecasting, resource allocation, and schedule optimization.',
-      icon: '📊',
-      price: '$299/month',
-      features: ['Demand forecasting', 'Resource allocation', 'Schedule optimization', 'Capacity planning', 'Cost analysis', 'Performance tracking'],
-      benefits: ['Improve efficiency by 25%', 'Reduce waste', 'Better planning', 'Lower costs'],
-      marketPrice: '$400-800/month',
-      category: 'Manufacturing',
-      technologies: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Production Planning Optimizer','
+      description: 'Intelligent production planning with demand forecasting, resource allocation, and schedule optimization.','
+      icon: '📊','
+      price: '$299/month','
+      features: ['Demand forecasting', 'Resource allocation', 'Schedule optimization', 'Capacity planning', 'Cost analysis', 'Performance tracking'],'
+      benefits: ['Improve efficiency by 25%', 'Reduce waste', 'Better planning', 'Lower costs'],'
+      marketPrice: '$400-800/month','
+      category: 'Manufacturing','
+      technologies: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Insurance & Risk Management
     {
-      title: 'AI Risk Assessment Platform',
-      description: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.',
-      icon: '🛡️',
-      price: '$399/month',
-      features: ['Automated underwriting', 'Fraud detection', 'Claims processing', 'Risk scoring', 'Policy optimization', 'Compliance monitoring'],
-      benefits: ['Reduce underwriting time by 70%', 'Improve accuracy', 'Lower fraud losses', 'Better risk management'],
-      marketPrice: '$600-1200/month',
-      category: 'Insurance',
-      technologies: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Risk Assessment Platform','
+      description: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.','
+      icon: '🛡️','
+      price: '$399/month','
+      features: ['Automated underwriting', 'Fraud detection', 'Claims processing', 'Risk scoring', 'Policy optimization', 'Compliance monitoring'],'
+      benefits: ['Reduce underwriting time by 70%', 'Improve accuracy', 'Lower fraud losses', 'Better risk management'],'
+      marketPrice: '$600-1200/month','
+      category: 'Insurance','
+      technologies: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Claims Processing System',
-      description: 'Automated claims handling with damage assessment, fraud detection, and settlement optimization.',
-      icon: '📋',
-      price: '$299/month',
-      features: ['Damage assessment', 'Fraud detection', 'Settlement optimization', 'Document processing', 'Customer communication', 'Analytics'],
-      benefits: ['Process claims 5x faster', 'Reduce fraud', 'Improve accuracy', 'Better customer experience'],
-      marketPrice: '$400-800/month',
-      category: 'Insurance',
-      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Claims Processing System','
+      description: 'Automated claims handling with damage assessment, fraud detection, and settlement optimization.','
+      icon: '📋','
+      price: '$299/month','
+      features: ['Damage assessment', 'Fraud detection', 'Settlement optimization', 'Document processing', 'Customer communication', 'Analytics'],'
+      benefits: ['Process claims 5x faster', 'Reduce fraud', 'Improve accuracy', 'Better customer experience'],'
+      marketPrice: '$400-800/month','
+      category: 'Insurance','
+      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     // AI Government & Public Sector
     {
-      title: 'AI Citizen Services Platform',
-      description: 'Intelligent government services with automated processing, citizen engagement, and service optimization.',
-      icon: '🏛️',
-      price: '$499/month',
-      features: ['Automated processing', 'Citizen engagement', 'Service optimization', 'Document processing', 'Compliance tracking', 'Analytics'],
-      benefits: ['Improve citizen satisfaction', 'Reduce processing time', 'Better service delivery', 'Lower operational costs'],
-      marketPrice: '$800-1500/month',
-      category: 'Government',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Citizen Services Platform','
+      description: 'Intelligent government services with automated processing, citizen engagement, and service optimization.','
+      icon: '🏛️','
+      price: '$499/month','
+      features: ['Automated processing', 'Citizen engagement', 'Service optimization', 'Document processing', 'Compliance tracking', 'Analytics'],'
+      benefits: ['Improve citizen satisfaction', 'Reduce processing time', 'Better service delivery', 'Lower operational costs'],'
+      marketPrice: '$800-1500/month','
+      category: 'Government','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Public Safety System',
-      description: 'Advanced public safety monitoring with threat detection, emergency response, and resource allocation.',
-      icon: '🚨',
-      price: '$599/month',
-      features: ['Threat detection', 'Emergency response', 'Resource allocation', 'Incident tracking', 'Predictive analytics', 'Communication tools'],
-      benefits: ['Improve public safety', 'Faster response times', 'Better resource use', 'Proactive prevention'],
-      marketPrice: '$1000-2000/month',
-      category: 'Government',
-      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Public Safety System','
+      description: 'Advanced public safety monitoring with threat detection, emergency response, and resource allocation.','
+      icon: '🚨','
+      price: '$599/month','
+      features: ['Threat detection', 'Emergency response', 'Resource allocation', 'Incident tracking', 'Predictive analytics', 'Communication tools'],'
+      benefits: ['Improve public safety', 'Faster response times', 'Better resource use', 'Proactive prevention'],'
+      marketPrice: '$1000-2000/month','
+      category: 'Government','
+      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Non-Profit & Social Impact
     {
-      title: 'AI Donor Management System',
-      description: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.',
-      icon: '❤️',
-      price: '$199/month',
-      features: ['Donor segmentation', 'Personalized outreach', 'Impact tracking', 'Fundraising optimization', 'Event management', 'Analytics'],
-      benefits: ['Increase donations by 40%', 'Better donor relationships', 'Improve impact tracking', 'Streamline fundraising'],
-      marketPrice: '$300-600/month',
-      category: 'Non-Profit',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Donor Management System','
+      description: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.','
+      icon: '❤️','
+      price: '$199/month','
+      features: ['Donor segmentation', 'Personalized outreach', 'Impact tracking', 'Fundraising optimization', 'Event management', 'Analytics'],'
+      benefits: ['Increase donations by 40%', 'Better donor relationships', 'Improve impact tracking', 'Streamline fundraising'],'
+      marketPrice: '$300-600/month','
+      category: 'Non-Profit','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Volunteer Matching Platform',
-      description: 'Smart volunteer matching with skill assessment, opportunity matching, and impact measurement.',
-      icon: '🤝',
-      price: '$149/month',
-      features: ['Skill assessment', 'Opportunity matching', 'Impact measurement', 'Scheduling tools', 'Communication', 'Recognition system'],
-      benefits: ['Better volunteer matches', 'Increase engagement', 'Measure impact', 'Streamline management'],
-      marketPrice: '$200-500/month',
-      category: 'Non-Profit',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Volunteer Matching Platform','
+      description: 'Smart volunteer matching with skill assessment, opportunity matching, and impact measurement.','
+      icon: '🤝','
+      price: '$149/month','
+      features: ['Skill assessment', 'Opportunity matching', 'Impact measurement', 'Scheduling tools', 'Communication', 'Recognition system'],'
+      benefits: ['Better volunteer matches', 'Increase engagement', 'Measure impact', 'Streamline management'],'
+      marketPrice: '$200-500/month','
+      category: 'Non-Profit','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],'
       contactInfo:     ,
 $4},
     // AI Travel & Hospitality
     {
-      title: 'AI Travel Planning Assistant',
-      description: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.',
-      icon: '✈️',
-      price: '$179/month',
-      features: ['Personalized recommendations', 'Price optimization', 'Itinerary management', 'Booking automation', 'Travel alerts', 'Expense tracking'],
-      benefits: ['Save time on planning', 'Find better deals', 'Personalized experiences', 'Streamline bookings'],
-      marketPrice: '$250-500/month',
-      category: 'Travel',
-      technologies: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Travel Planning Assistant','
+      description: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.','
+      icon: '✈️','
+      price: '$179/month','
+      features: ['Personalized recommendations', 'Price optimization', 'Itinerary management', 'Booking automation', 'Travel alerts', 'Expense tracking'],'
+      benefits: ['Save time on planning', 'Find better deals', 'Personalized experiences', 'Streamline bookings'],'
+      marketPrice: '$250-500/month','
+      category: 'Travel','
+      technologies: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Hotel Revenue Optimizer',
-      description: 'Advanced hotel revenue management with dynamic pricing, demand forecasting, and occupancy optimization.',
-      icon: '🏨',
-      price: '$299/month',
-      features: ['Dynamic pricing', 'Demand forecasting', 'Occupancy optimization', 'Competitor analysis', 'Revenue analytics', 'Guest segmentation'],
-      benefits: ['Increase revenue by 15%', 'Optimize occupancy', 'Better pricing strategy', 'Improve profitability'],
-      marketPrice: '$400-800/month',
-      category: 'Hospitality',
-      technologies: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Hotel Revenue Optimizer','
+      description: 'Advanced hotel revenue management with dynamic pricing, demand forecasting, and occupancy optimization.','
+      icon: '🏨','
+      price: '$299/month','
+      features: ['Dynamic pricing', 'Demand forecasting', 'Occupancy optimization', 'Competitor analysis', 'Revenue analytics', 'Guest segmentation'],'
+      benefits: ['Increase revenue by 15%', 'Optimize occupancy', 'Better pricing strategy', 'Improve profitability'],'
+      marketPrice: '$400-800/month','
+      category: 'Hospitality','
+      technologies: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Sports & Fitness
     {
-      title: 'AI Sports Performance Analyzer',
-      description: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.',
-      icon: '⚽',
-      price: '$249/month',
-      features: ['Performance tracking', 'Injury prevention', 'Training optimization', 'Biomechanical analysis', 'Team analytics', 'Predictive modeling'],
-      benefits: ['Improve performance', 'Reduce injuries', 'Optimize training', 'Better team management'],
-      marketPrice: '$400-800/month',
-      category: 'Sports',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Sports Performance Analyzer','
+      description: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.','
+      icon: '⚽','
+      price: '$249/month','
+      features: ['Performance tracking', 'Injury prevention', 'Training optimization', 'Biomechanical analysis', 'Team analytics', 'Predictive modeling'],'
+      benefits: ['Improve performance', 'Reduce injuries', 'Optimize training', 'Better team management'],'
+      marketPrice: '$400-800/month','
+      category: 'Sports','
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Fitness Nutrition Coach',
-      description: 'Personalized nutrition coaching with meal planning, macro tracking, and dietary optimization.',
-      icon: '🥗',
-      price: '$149/month',
-      features: ['Meal planning', 'Macro tracking', 'Dietary optimization', 'Recipe suggestions', 'Progress tracking', 'Goal setting'],
-      benefits: ['Achieve fitness goals', 'Better nutrition', 'Personalized guidance', 'Improved health'],
-      marketPrice: '$200-400/month',
-      category: 'Fitness',
-      technologies: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Fitness Nutrition Coach','
+      description: 'Personalized nutrition coaching with meal planning, macro tracking, and dietary optimization.','
+      icon: '🥗','
+      price: '$149/month','
+      features: ['Meal planning', 'Macro tracking', 'Dietary optimization', 'Recipe suggestions', 'Progress tracking', 'Goal setting'],'
+      benefits: ['Achieve fitness goals', 'Better nutrition', 'Personalized guidance', 'Improved health'],'
+      marketPrice: '$200-400/month','
+      category: 'Fitness','
+      technologies: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Beauty & Fashion
     {
-      title: 'AI Virtual Try-On Platform',
-      description: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.',
-      icon: '👗',
-      price: '$299/month',
-      features: ['Virtual try-on', 'Size recommendations', 'Style matching', 'AR integration', 'Color analysis', 'Outfit suggestions'],
-      benefits: ['Reduce returns by 30%', 'Improve customer experience', 'Increase conversions', 'Better sizing accuracy'],
-      marketPrice: '$500-1000/month',
-      category: 'Fashion',
-      technologies: ['Computer Vision', 'AR/VR', 'Machine Learning', 'React', 'WebGL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Virtual Try-On Platform','
+      description: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.','
+      icon: '👗','
+      price: '$299/month','
+      features: ['Virtual try-on', 'Size recommendations', 'Style matching', 'AR integration', 'Color analysis', 'Outfit suggestions'],'
+      benefits: ['Reduce returns by 30%', 'Improve customer experience', 'Increase conversions', 'Better sizing accuracy'],'
+      marketPrice: '$500-1000/month','
+      category: 'Fashion','
+      technologies: ['Computer Vision', 'AR/VR', 'Machine Learning', 'React', 'WebGL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Beauty Analysis Tool',
-      description: 'Intelligent beauty analysis with skin assessment, product recommendations, and personalized routines.',
-      icon: '💄',
-      price: '$199/month',
-      features: ['Skin assessment', 'Product recommendations', 'Personalized routines', 'Color matching', 'Trend analysis', 'Progress tracking'],
-      benefits: ['Better product matches', 'Personalized beauty', 'Improve skin health', 'Stay on trend'],
-      marketPrice: '$300-600/month',
-      category: 'Beauty',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Beauty Analysis Tool','
+      description: 'Intelligent beauty analysis with skin assessment, product recommendations, and personalized routines.','
+      icon: '💄','
+      price: '$199/month','
+      features: ['Skin assessment', 'Product recommendations', 'Personalized routines', 'Color matching', 'Trend analysis', 'Progress tracking'],'
+      benefits: ['Better product matches', 'Personalized beauty', 'Improve skin health', 'Stay on trend'],'
+      marketPrice: '$300-600/month','
+      category: 'Beauty','
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Home & Lifestyle
     {
-      title: 'AI Smart Home Controller',
-      description: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.',
-      icon: '🏠',
-      price: '$199/month',
-      features: ['Device control', 'Energy optimization', 'Predictive maintenance', 'Security monitoring', 'Voice control', 'Analytics'],
-      benefits: ['Reduce energy costs', 'Improve security', 'Better comfort', 'Automated maintenance'],
-      marketPrice: '$300-600/month',
-      category: 'Smart Home',
-      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Smart Home Controller','
+      description: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.','
+      icon: '🏠','
+      price: '$199/month','
+      features: ['Device control', 'Energy optimization', 'Predictive maintenance', 'Security monitoring', 'Voice control', 'Analytics'],'
+      benefits: ['Reduce energy costs', 'Improve security', 'Better comfort', 'Automated maintenance'],'
+      marketPrice: '$300-600/month','
+      category: 'Smart Home','
+      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Personal Assistant Platform',
-      description: 'Comprehensive personal assistant with task management, scheduling, and lifestyle optimization.',
-      icon: '🤖',
-      price: '$149/month',
-      features: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Voice commands', 'Integration tools', 'Learning capabilities'],
-      benefits: ['Increase productivity', 'Better organization', 'Personalized assistance', 'Time savings'],
-      marketPrice: '$200-400/month',
-      category: 'Personal',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Personal Assistant Platform','
+      description: 'Comprehensive personal assistant with task management, scheduling, and lifestyle optimization.','
+      icon: '🤖','
+      price: '$149/month','
+      features: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Voice commands', 'Integration tools', 'Learning capabilities'],'
+      benefits: ['Increase productivity', 'Better organization', 'Personalized assistance', 'Time savings'],'
+      marketPrice: '$200-400/month','
+      category: 'Personal','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],'
       contactInfo:     ,
 $4},
     // AI Pets & Animals
     {
-      title: 'AI Pet Health Monitor',
-      description: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.',
-      icon: '🐕',
-      price: '$99/month',
-      features: ['Health tracking', 'Symptom analysis', 'Vet recommendations', 'Wellness monitoring', 'Vaccination reminders', 'Emergency alerts'],
-      benefits: ['Better pet health', 'Early problem detection', 'Reduce vet costs', 'Peace of mind'],
-      marketPrice: '$150-300/month',
-      category: 'Pets',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Pet Health Monitor','
+      description: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.','
+      icon: '🐕','
+      price: '$99/month','
+      features: ['Health tracking', 'Symptom analysis', 'Vet recommendations', 'Wellness monitoring', 'Vaccination reminders', 'Emergency alerts'],'
+      benefits: ['Better pet health', 'Early problem detection', 'Reduce vet costs', 'Peace of mind'],'
+      marketPrice: '$150-300/month','
+      category: 'Pets','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Pet Training Assistant',
-      description: 'Smart pet training with behavior analysis, personalized programs, and progress tracking.',
-      icon: '🐱',
-      price: '$79/month',
-      features: ['Behavior analysis', 'Training programs', 'Progress tracking', 'Expert advice', 'Video tutorials', 'Community features'],
-      benefits: ['Better training results', 'Personalized approach', 'Expert guidance', 'Faster learning'],
-      marketPrice: '$120-250/month',
-      category: 'Pets',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Pet Training Assistant','
+      description: 'Smart pet training with behavior analysis, personalized programs, and progress tracking.','
+      icon: '🐱','
+      price: '$79/month','
+      features: ['Behavior analysis', 'Training programs', 'Progress tracking', 'Expert advice', 'Video tutorials', 'Community features'],'
+      benefits: ['Better training results', 'Personalized approach', 'Expert guidance', 'Faster learning'],'
+      marketPrice: '$120-250/month','
+      category: 'Pets','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],'
       contactInfo:     ,
 $4},
     // AI Education & Learning
     {
-      title: 'AI Tutoring Platform',
-      description: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.',
-      icon: '🎓',
-      price: '$199/month',
-      features: ['Adaptive learning', 'Progress tracking', 'Intelligent assessment', 'Personalized content', 'Expert tutors', 'Performance analytics'],
-      benefits: ['Improve learning outcomes', 'Personalized education', 'Better engagement', 'Measurable progress'],
-      marketPrice: '$300-600/month',
-      category: 'Education',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Tutoring Platform','
+      description: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.','
+      icon: '🎓','
+      price: '$199/month','
+      features: ['Adaptive learning', 'Progress tracking', 'Intelligent assessment', 'Personalized content', 'Expert tutors', 'Performance analytics'],'
+      benefits: ['Improve learning outcomes', 'Personalized education', 'Better engagement', 'Measurable progress'],'
+      marketPrice: '$300-600/month','
+      category: 'Education','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Homework Helper',
-      description: 'Intelligent homework assistance with step-by-step solutions, concept explanation, and learning support.',
-      icon: '📝',
-      price: '$99/month',
-      features: ['Step-by-step solutions', 'Concept explanation', 'Learning support', 'Subject coverage', 'Progress tracking', 'Parent dashboard'],
-      benefits: ['Improve grades', 'Better understanding', 'Independent learning', 'Parental insight'],
-      marketPrice: '$150-300/month',
-      category: 'Education',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Homework Helper','
+      description: 'Intelligent homework assistance with step-by-step solutions, concept explanation, and learning support.','
+      icon: '📝','
+      price: '$99/month','
+      features: ['Step-by-step solutions', 'Concept explanation', 'Learning support', 'Subject coverage', 'Progress tracking', 'Parent dashboard'],'
+      benefits: ['Improve grades', 'Better understanding', 'Independent learning', 'Parental insight'],'
+      marketPrice: '$150-300/month','
+      category: 'Education','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Music & Audio
     {
-      title: 'AI Music Composition Tool',
-      description: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.',
-      icon: '🎵',
-      price: '$149/month',
-      features: ['Melody generation', 'Harmony suggestions', 'Style adaptation', 'Instrument simulation', 'Collaboration tools', 'Export options'],
-      benefits: ['Create music faster', 'Explore new styles', 'Professional quality', 'Collaborative creation'],
-      marketPrice: '$200-400/month',
-      category: 'Music',
-      technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Music Composition Tool','
+      description: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.','
+      icon: '🎵','
+      price: '$149/month','
+      features: ['Melody generation', 'Harmony suggestions', 'Style adaptation', 'Instrument simulation', 'Collaboration tools', 'Export options'],'
+      benefits: ['Create music faster', 'Explore new styles', 'Professional quality', 'Collaborative creation'],'
+      marketPrice: '$200-400/month','
+      category: 'Music','
+      technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Audio Enhancement Platform',
-      description: 'Advanced audio processing with noise reduction, quality enhancement, and intelligent mastering.',
-      icon: '🎧',
-      price: '$199/month',
-      features: ['Noise reduction', 'Quality enhancement', 'Intelligent mastering', 'Real-time processing', 'Batch processing', 'Format conversion'],
-      benefits: ['Improve audio quality', 'Professional results', 'Save time', 'Better listening experience'],
-      marketPrice: '$300-600/month',
-      category: 'Audio',
-      technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Audio Enhancement Platform','
+      description: 'Advanced audio processing with noise reduction, quality enhancement, and intelligent mastering.','
+      icon: '🎧','
+      price: '$199/month','
+      features: ['Noise reduction', 'Quality enhancement', 'Intelligent mastering', 'Real-time processing', 'Batch processing', 'Format conversion'],'
+      benefits: ['Improve audio quality', 'Professional results', 'Save time', 'Better listening experience'],'
+      marketPrice: '$300-600/month','
+      category: 'Audio','
+      technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],'
       contactInfo:     ,
 $4},
     // AI Art & Design
     {
-      title: 'AI Design Assistant Pro',
-      description: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.',
-      icon: '🎨',
-      price: '$199/month',
-      features: ['Automated layouts', 'Color suggestions', 'Brand consistency', 'Template generation', 'Collaboration tools', 'Export options'],
-      benefits: ['Create designs faster', 'Maintain brand consistency', 'Professional quality', 'Collaborative workflow'],
-      marketPrice: '$300-600/month',
-      category: 'Design',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Design Assistant Pro','
+      description: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.','
+      icon: '🎨','
+      price: '$199/month','
+      features: ['Automated layouts', 'Color suggestions', 'Brand consistency', 'Template generation', 'Collaboration tools', 'Export options'],'
+      benefits: ['Create designs faster', 'Maintain brand consistency', 'Professional quality', 'Collaborative workflow'],'
+      marketPrice: '$300-600/month','
+      category: 'Design','
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Logo Generator Platform',
-      description: 'Intelligent logo creation with brand analysis, style matching, and customization options.',
-      icon: '🏷️',
-      price: '$149/month',
-      features: ['Brand analysis', 'Style matching', 'Customization options', 'Multiple formats', 'Brand guidelines', 'Revision system'],
-      benefits: ['Create logos instantly', 'Professional quality', 'Brand consistency', 'Cost effective'],
-      marketPrice: '$200-400/month',
-      category: 'Design',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Logo Generator Platform','
+      description: 'Intelligent logo creation with brand analysis, style matching, and customization options.','
+      icon: '🏷️','
+      price: '$149/month','
+      features: ['Brand analysis', 'Style matching', 'Customization options', 'Multiple formats', 'Brand guidelines', 'Revision system'],'
+      benefits: ['Create logos instantly', 'Professional quality', 'Brand consistency', 'Cost effective'],'
+      marketPrice: '$200-400/month','
+      category: 'Design','
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],'
       contactInfo:     ,
 $4},
     // AI Dating & Relationships
     {
-      title: 'AI Dating Assistant',
-      description: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.',
-      icon: '💕',
-      price: '$99/month',
-      features: ['Compatibility matching', 'Conversation starters', 'Relationship advice', 'Profile optimization', 'Safety features', 'Success tracking'],
-      benefits: ['Better matches', 'Improve conversations', 'Relationship guidance', 'Safer dating'],
-      marketPrice: '$150-300/month',
-      category: 'Dating',
-      technologies: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Dating Assistant','
+      description: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.','
+      icon: '💕','
+      price: '$99/month','
+      features: ['Compatibility matching', 'Conversation starters', 'Relationship advice', 'Profile optimization', 'Safety features', 'Success tracking'],'
+      benefits: ['Better matches', 'Improve conversations', 'Relationship guidance', 'Safer dating'],'
+      marketPrice: '$150-300/month','
+      category: 'Dating','
+      technologies: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Relationship Counselor',
-      description: 'Intelligent relationship guidance with communication analysis, conflict resolution, and intimacy enhancement.',
-      icon: '💑',
-      price: '$149/month',
-      features: ['Communication analysis', 'Conflict resolution', 'Intimacy enhancement', 'Progress tracking', 'Expert advice', 'Couple activities'],
-      benefits: ['Improve relationships', 'Better communication', 'Resolve conflicts', 'Strengthen bonds'],
-      marketPrice: '$200-400/month',
-      category: 'Relationships',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Relationship Counselor','
+      description: 'Intelligent relationship guidance with communication analysis, conflict resolution, and intimacy enhancement.','
+      icon: '💑','
+      price: '$149/month','
+      features: ['Communication analysis', 'Conflict resolution', 'Intimacy enhancement', 'Progress tracking', 'Expert advice', 'Couple activities'],'
+      benefits: ['Improve relationships', 'Better communication', 'Resolve conflicts', 'Strengthen bonds'],'
+      marketPrice: '$200-400/month','
+      category: 'Relationships','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Parenting & Family
     {
-      title: 'AI Parenting Assistant',
-      description: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.',
-      icon: '👶',
-      price: '$199/month',
-      features: ['Development tracking', 'Behavior analysis', 'Expert advice', 'Activity suggestions', 'Progress monitoring', 'Community support'],
-      benefits: ['Better child development', 'Expert guidance', 'Peace of mind', 'Community support'],
-      marketPrice: '$300-600/month',
-      category: 'Parenting',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Parenting Assistant','
+      description: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.','
+      icon: '👶','
+      price: '$199/month','
+      features: ['Development tracking', 'Behavior analysis', 'Expert advice', 'Activity suggestions', 'Progress monitoring', 'Community support'],'
+      benefits: ['Better child development', 'Expert guidance', 'Peace of mind', 'Community support'],'
+      marketPrice: '$300-600/month','
+      category: 'Parenting','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Family Organizer',
-      description: 'Smart family management with scheduling, task coordination, and communication tools.',
-      icon: '👨‍👩‍👧‍👦',
-      price: '$149/month',
-      features: ['Family scheduling', 'Task coordination', 'Communication tools', 'Expense tracking', 'Event planning', 'Photo sharing'],
-      benefits: ['Better organization', 'Improved communication', 'Shared responsibilities', 'Family bonding'],
-      marketPrice: '$200-400/month',
-      category: 'Family',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Family Organizer','
+      description: 'Smart family management with scheduling, task coordination, and communication tools.','
+      icon: '👨‍👩‍👧‍👦','
+      price: '$149/month','
+      features: ['Family scheduling', 'Task coordination', 'Communication tools', 'Expense tracking', 'Event planning', 'Photo sharing'],'
+      benefits: ['Better organization', 'Improved communication', 'Shared responsibilities', 'Family bonding'],'
+      marketPrice: '$200-400/month','
+      category: 'Family','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],'
       contactInfo:     ,
 $4},
     // AI Senior Care & Aging
     {
-      title: 'AI Senior Care Monitor',
-      description: 'Intelligent senior care with health monitoring, safety alerts, and family communication.',
-      icon: '👴',
-      price: '$299/month',
-      features: ['Health monitoring', 'Safety alerts', 'Family communication', 'Medication reminders', 'Activity tracking', 'Emergency response'],
-      benefits: ['Better senior care', 'Family peace of mind', 'Safety assurance', 'Health monitoring'],
-      marketPrice: '$400-800/month',
-      category: 'Senior Care',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Senior Care Monitor','
+      description: 'Intelligent senior care with health monitoring, safety alerts, and family communication.','
+      icon: '👴','
+      price: '$299/month','
+      features: ['Health monitoring', 'Safety alerts', 'Family communication', 'Medication reminders', 'Activity tracking', 'Emergency response'],'
+      benefits: ['Better senior care', 'Family peace of mind', 'Safety assurance', 'Health monitoring'],'
+      marketPrice: '$400-800/month','
+      category: 'Senior Care','
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Memory Assistant',
-      description: 'Intelligent memory support with cognitive exercises, memory training, and brain health monitoring.',
-      icon: '🧠',
-      price: '$149/month',
-      features: ['Cognitive exercises', 'Memory training', 'Brain health monitoring', 'Progress tracking', 'Personalized programs', 'Expert guidance'],
-      benefits: ['Improve memory', 'Cognitive health', 'Personalized training', 'Better brain function'],
-      marketPrice: '$200-400/month',
-      category: 'Memory',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Memory Assistant','
+      description: 'Intelligent memory support with cognitive exercises, memory training, and brain health monitoring.','
+      icon: '🧠','
+      price: '$149/month','
+      features: ['Cognitive exercises', 'Memory training', 'Brain health monitoring', 'Progress tracking', 'Personalized programs', 'Expert guidance'],'
+      benefits: ['Improve memory', 'Cognitive health', 'Personalized training', 'Better brain function'],'
+      marketPrice: '$200-400/month','
+      category: 'Memory','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],'
       contactInfo:     ,
 $4},
     // AI Accessibility & Inclusion
     {
-      title: 'AI Accessibility Assistant',
-      description: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.',
-      icon: '♿',
-      price: '$199/month',
-      features: ['Screen reading', 'Voice control', 'Adaptive interfaces', 'Navigation assistance', 'Content adaptation', 'User customization'],
-      benefits: ['Improve accessibility', 'Better inclusion', 'Enhanced usability', 'Personalized support'],
-      marketPrice: '$300-600/month',
-      category: 'Accessibility',
-      technologies: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Accessibility Assistant','
+      description: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.','
+      icon: '♿','
+      price: '$199/month','
+      features: ['Screen reading', 'Voice control', 'Adaptive interfaces', 'Navigation assistance', 'Content adaptation', 'User customization'],'
+      benefits: ['Improve accessibility', 'Better inclusion', 'Enhanced usability', 'Personalized support'],'
+      marketPrice: '$300-600/month','
+      category: 'Accessibility','
+      technologies: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Language Translation Pro',
-      description: 'Advanced translation platform with real-time translation, cultural context, and voice recognition.',
-      icon: '🌐',
-      price: '$149/month',
-      features: ['Real-time translation', 'Cultural context', 'Voice recognition', 'Document translation', 'Offline support', 'API integration'],
-      benefits: ['Break language barriers', 'Better communication', 'Cultural understanding', 'Global reach'],
-      marketPrice: '$200-400/month',
-      category: 'Translation',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Language Translation Pro','
+      description: 'Advanced translation platform with real-time translation, cultural context, and voice recognition.','
+      icon: '🌐','
+      price: '$149/month','
+      features: ['Real-time translation', 'Cultural context', 'Voice recognition', 'Document translation', 'Offline support', 'API integration'],'
+      benefits: ['Break language barriers', 'Better communication', 'Cultural understanding', 'Global reach'],'
+      marketPrice: '$200-400/month','
+      category: 'Translation','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],'
       contactInfo:     ,
 $4},
     // AI Emergency & Crisis Management
     {
-      title: 'AI Emergency Response System',
-      description: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.',
-      icon: '🚨',
-      price: '$499/month',
-      features: ['Threat detection', 'Resource allocation', 'Communication coordination', 'Incident tracking', 'Predictive analytics', 'Response optimization'],
-      benefits: ['Faster emergency response', 'Better resource use', 'Improved coordination', 'Lives saved'],
-      marketPrice: '$800-1500/month',
-      category: 'Emergency',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Emergency Response System','
+      description: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.','
+      icon: '🚨','
+      price: '$499/month','
+      features: ['Threat detection', 'Resource allocation', 'Communication coordination', 'Incident tracking', 'Predictive analytics', 'Response optimization'],'
+      benefits: ['Faster emergency response', 'Better resource use', 'Improved coordination', 'Lives saved'],'
+      marketPrice: '$800-1500/month','
+      category: 'Emergency','
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Crisis Communication Platform',
-      description: 'Intelligent crisis communication with message optimization, audience targeting, and impact measurement.',
-      icon: '📢',
-      price: '$299/month',
-      features: ['Message optimization', 'Audience targeting', 'Impact measurement', 'Multi-channel distribution', 'Sentiment analysis', 'Response tracking'],
-      benefits: ['Better crisis communication', 'Reach right audiences', 'Measure impact', 'Effective messaging'],
-      marketPrice: '$400-800/month',
-      category: 'Crisis Management',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Crisis Communication Platform','
+      description: 'Intelligent crisis communication with message optimization, audience targeting, and impact measurement.','
+      icon: '📢','
+      price: '$299/month','
+      features: ['Message optimization', 'Audience targeting', 'Impact measurement', 'Multi-channel distribution', 'Sentiment analysis', 'Response tracking'],'
+      benefits: ['Better crisis communication', 'Reach right audiences', 'Measure impact', 'Effective messaging'],'
+      marketPrice: '$400-800/month','
+      category: 'Crisis Management','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],'
       contactInfo:     ,
 $4},
     // AI Space & Astronomy
     {
-      title: 'AI Space Mission Planner',
-      description: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.',
-      icon: '🚀',
-      price: '$599/month',
-      features: ['Trajectory optimization', 'Resource management', 'Risk assessment', 'Mission simulation', 'Performance analysis', 'Collaboration tools'],
-      benefits: ['Optimize missions', 'Reduce risks', 'Better planning', 'Cost efficiency'],
-      marketPrice: '$1000-2000/month',
-      category: 'Space',
-      technologies: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Space Mission Planner','
+      description: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.','
+      icon: '🚀','
+      price: '$599/month','
+      features: ['Trajectory optimization', 'Resource management', 'Risk assessment', 'Mission simulation', 'Performance analysis', 'Collaboration tools'],'
+      benefits: ['Optimize missions', 'Reduce risks', 'Better planning', 'Cost efficiency'],'
+      marketPrice: '$1000-2000/month','
+      category: 'Space','
+      technologies: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Astronomical Data Analyzer',
-      description: 'Advanced astronomical data analysis with pattern recognition, object classification, and discovery assistance.',
-      icon: '🔭',
-      price: '$399/month',
-      features: ['Pattern recognition', 'Object classification', 'Discovery assistance', 'Data visualization', 'Collaborative research', 'Publication support'],
-      benefits: ['Discover new objects', 'Analyze data faster', 'Better research', 'Scientific advancement'],
-      marketPrice: '$600-1200/month',
-      category: 'Astronomy',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Astronomical Data Analyzer','
+      description: 'Advanced astronomical data analysis with pattern recognition, object classification, and discovery assistance.','
+      icon: '🔭','
+      price: '$399/month','
+      features: ['Pattern recognition', 'Object classification', 'Discovery assistance', 'Data visualization', 'Collaborative research', 'Publication support'],'
+      benefits: ['Discover new objects', 'Analyze data faster', 'Better research', 'Scientific advancement'],'
+      marketPrice: '$600-1200/month','
+      category: 'Astronomy','
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Ocean & Marine
     {
-      title: 'AI Marine Life Tracker',
-      description: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.',
-      icon: '🐋',
-      price: '$299/month',
-      features: ['Species identification', 'Behavior analysis', 'Conservation tracking', 'Population monitoring', 'Threat assessment', 'Research support'],
-      benefits: ['Protect marine life', 'Better conservation', 'Scientific research', 'Environmental monitoring'],
-      marketPrice: '$400-800/month',
-      category: 'Marine',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Marine Life Tracker','
+      description: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.','
+      icon: '🐋','
+      price: '$299/month','
+      features: ['Species identification', 'Behavior analysis', 'Conservation tracking', 'Population monitoring', 'Threat assessment', 'Research support'],'
+      benefits: ['Protect marine life', 'Better conservation', 'Scientific research', 'Environmental monitoring'],'
+      marketPrice: '$400-800/month','
+      category: 'Marine','
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Ocean Current Predictor',
-      description: 'Advanced ocean current prediction with weather integration, navigation optimization, and climate analysis.',
-      icon: '🌊',
-      price: '$399/month',
-      features: ['Current prediction', 'Weather integration', 'Navigation optimization', 'Climate analysis', 'Safety alerts', 'Research tools'],
-      benefits: ['Safer navigation', 'Better weather prediction', 'Climate research', 'Marine safety'],
-      marketPrice: '$600-1200/month',
-      category: 'Oceanography',
-      technologies: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Ocean Current Predictor','
+      description: 'Advanced ocean current prediction with weather integration, navigation optimization, and climate analysis.','
+      icon: '🌊','
+      price: '$399/month','
+      features: ['Current prediction', 'Weather integration', 'Navigation optimization', 'Climate analysis', 'Safety alerts', 'Research tools'],'
+      benefits: ['Safer navigation', 'Better weather prediction', 'Climate research', 'Marine safety'],'
+      marketPrice: '$600-1200/month','
+      category: 'Oceanography','
+      technologies: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Archaeology & History
     {
-      title: 'AI Archaeological Site Analyzer',
-      description: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.',
-      icon: '🏛️',
-      price: '$299/month',
-      features: ['Artifact identification', 'Site mapping', 'Historical reconstruction', 'Dating analysis', 'Cultural context', 'Research collaboration'],
-      benefits: ['Faster discoveries', 'Better analysis', 'Historical insights', 'Research advancement'],
-      marketPrice: '$400-800/month',
-      category: 'Archaeology',
-      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Archaeological Site Analyzer','
+      description: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.','
+      icon: '🏛️','
+      price: '$299/month','
+      features: ['Artifact identification', 'Site mapping', 'Historical reconstruction', 'Dating analysis', 'Cultural context', 'Research collaboration'],'
+      benefits: ['Faster discoveries', 'Better analysis', 'Historical insights', 'Research advancement'],'
+      marketPrice: '$400-800/month','
+      category: 'Archaeology','
+      technologies: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Historical Document Processor',
-      description: 'Advanced historical document analysis with text recognition, translation, and historical context extraction.',
-      icon: '📜',
-      price: '$199/month',
-      features: ['Text recognition', 'Translation', 'Historical context', 'Document preservation', 'Search capabilities', 'Research tools'],
-      benefits: ['Preserve history', 'Better research', 'Accessible documents', 'Historical insights'],
-      marketPrice: '$300-600/month',
-      category: 'History',
-      technologies: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Historical Document Processor','
+      description: 'Advanced historical document analysis with text recognition, translation, and historical context extraction.','
+      icon: '📜','
+      price: '$199/month','
+      features: ['Text recognition', 'Translation', 'Historical context', 'Document preservation', 'Search capabilities', 'Research tools'],'
+      benefits: ['Preserve history', 'Better research', 'Accessible documents', 'Historical insights'],'
+      marketPrice: '$300-600/month','
+      category: 'History','
+      technologies: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Psychology & Mental Health
     {
-      title: 'AI Mental Health Tracker',
-      description: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.',
-      icon: '🧘',
-      price: '$149/month',
-      features: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Progress monitoring', 'Expert insights', 'Crisis support'],
-      benefits: ['Better mental health', 'Early intervention', 'Personalized care', 'Wellness improvement'],
-      marketPrice: '$200-400/month',
-      category: 'Mental Health',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Mental Health Tracker','
+      description: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.','
+      icon: '🧘','
+      price: '$149/month','
+      features: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Progress monitoring', 'Expert insights', 'Crisis support'],'
+      benefits: ['Better mental health', 'Early intervention', 'Personalized care', 'Wellness improvement'],'
+      marketPrice: '$200-400/month','
+      category: 'Mental Health','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Therapy Assistant',
-      description: 'Intelligent therapy support with session analysis, progress tracking, and personalized treatment plans.',
-      icon: '💬',
-      price: '$299/month',
-      features: ['Session analysis', 'Progress tracking', 'Treatment plans', 'Therapist support', 'Patient insights', 'Outcome prediction'],
-      benefits: ['Better therapy outcomes', 'Personalized treatment', 'Therapist support', 'Improved care'],
-      marketPrice: '$400-800/month',
-      category: 'Therapy',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Therapy Assistant','
+      description: 'Intelligent therapy support with session analysis, progress tracking, and personalized treatment plans.','
+      icon: '💬','
+      price: '$299/month','
+      features: ['Session analysis', 'Progress tracking', 'Treatment plans', 'Therapist support', 'Patient insights', 'Outcome prediction'],'
+      benefits: ['Better therapy outcomes', 'Personalized treatment', 'Therapist support', 'Improved care'],'
+      marketPrice: '$400-800/month','
+      category: 'Therapy','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Philosophy & Ethics
     {
-      title: 'AI Ethical Decision Maker',
-      description: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.',
-      icon: '⚖️',
-      price: '$199/month',
-      features: ['Decision frameworks', 'Moral reasoning', 'Impact assessment', 'Ethical guidelines', 'Case studies', 'Expert consultation'],
-      benefits: ['Better ethical decisions', 'Moral clarity', 'Impact awareness', 'Ethical guidance'],
-      marketPrice: '$300-600/month',
-      category: 'Ethics',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Ethical Decision Maker','
+      description: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.','
+      icon: '⚖️','
+      price: '$199/month','
+      features: ['Decision frameworks', 'Moral reasoning', 'Impact assessment', 'Ethical guidelines', 'Case studies', 'Expert consultation'],'
+      benefits: ['Better ethical decisions', 'Moral clarity', 'Impact awareness', 'Ethical guidance'],'
+      marketPrice: '$300-600/month','
+      category: 'Ethics','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Philosophy Research Assistant',
-      description: 'Intelligent philosophy research with argument analysis, concept mapping, and philosophical reasoning.',
-      icon: '🤔',
-      price: '$149/month',
-      features: ['Argument analysis', 'Concept mapping', 'Philosophical reasoning', 'Literature review', 'Debate preparation', 'Knowledge synthesis'],
-      benefits: ['Better research', 'Clearer thinking', 'Argument analysis', 'Philosophical insight'],
-      marketPrice: '$200-400/month',
-      category: 'Philosophy',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Philosophy Research Assistant','
+      description: 'Intelligent philosophy research with argument analysis, concept mapping, and philosophical reasoning.','
+      icon: '🤔','
+      price: '$149/month','
+      features: ['Argument analysis', 'Concept mapping', 'Philosophical reasoning', 'Literature review', 'Debate preparation', 'Knowledge synthesis'],'
+      benefits: ['Better research', 'Clearer thinking', 'Argument analysis', 'Philosophical insight'],'
+      marketPrice: '$200-400/month','
+      category: 'Philosophy','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Spirituality & Religion
     {
-      title: 'AI Spiritual Guidance Platform',
-      description: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.',
-      icon: '🙏',
-      price: '$99/month',
-      features: ['Meditation guidance', 'Prayer tracking', 'Spiritual growth', 'Community support', 'Wisdom sharing', 'Progress monitoring'],
-      benefits: ['Spiritual growth', 'Better meditation', 'Community connection', 'Personal development'],
-      marketPrice: '$150-300/month',
-      category: 'Spirituality',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Spiritual Guidance Platform','
+      description: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.','
+      icon: '🙏','
+      price: '$99/month','
+      features: ['Meditation guidance', 'Prayer tracking', 'Spiritual growth', 'Community support', 'Wisdom sharing', 'Progress monitoring'],'
+      benefits: ['Spiritual growth', 'Better meditation', 'Community connection', 'Personal development'],'
+      marketPrice: '$150-300/month','
+      category: 'Spirituality','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Religious Text Analyzer',
-      description: 'Advanced religious text analysis with interpretation assistance, cross-reference analysis, and theological insights.',
-      icon: '📖',
-      price: '$149/month',
-      features: ['Text interpretation', 'Cross-reference analysis', 'Theological insights', 'Historical context', 'Language translation', 'Study tools'],
-      benefits: ['Better understanding', 'Deeper insights', 'Historical context', 'Spiritual growth'],
-      marketPrice: '$200-400/month',
-      category: 'Religion',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Religious Text Analyzer','
+      description: 'Advanced religious text analysis with interpretation assistance, cross-reference analysis, and theological insights.','
+      icon: '📖','
+      price: '$149/month','
+      features: ['Text interpretation', 'Cross-reference analysis', 'Theological insights', 'Historical context', 'Language translation', 'Study tools'],'
+      benefits: ['Better understanding', 'Deeper insights', 'Historical context', 'Spiritual growth'],'
+      marketPrice: '$200-400/month','
+      category: 'Religion','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Future & Innovation
     {
-      title: 'AI Innovation Predictor',
-      description: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.',
-      icon: '🔮',
-      price: '$399/month',
-      features: ['Trend analysis', 'Opportunity identification', 'Scenario planning', 'Innovation tracking', 'Market prediction', 'Strategic insights'],
-      benefits: ['Stay ahead of trends', 'Identify opportunities', 'Better planning', 'Competitive advantage'],
-      marketPrice: '$600-1200/month',
-      category: 'Innovation',
-      technologies: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Innovation Predictor','
+      description: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.','
+      icon: '🔮','
+      price: '$399/month','
+      features: ['Trend analysis', 'Opportunity identification', 'Scenario planning', 'Innovation tracking', 'Market prediction', 'Strategic insights'],'
+      benefits: ['Stay ahead of trends', 'Identify opportunities', 'Better planning', 'Competitive advantage'],'
+      marketPrice: '$600-1200/month','
+      category: 'Innovation','
+      technologies: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Future Scenario Generator',
-      description: 'Advanced future scenario modeling with multiple outcome prediction, risk assessment, and strategic planning.',
-      icon: '🌐',
-      price: '$299/month',
-      features: ['Scenario modeling', 'Outcome prediction', 'Risk assessment', 'Strategic planning', 'What-if analysis', 'Decision support'],
-      benefits: ['Better planning', 'Risk mitigation', 'Strategic advantage', 'Future preparedness'],
-      marketPrice: '$400-800/month',
-      category: 'Future Planning',
-      technologies: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Future Scenario Generator','
+      description: 'Advanced future scenario modeling with multiple outcome prediction, risk assessment, and strategic planning.','
+      icon: '🌐','
+      price: '$299/month','
+      features: ['Scenario modeling', 'Outcome prediction', 'Risk assessment', 'Strategic planning', 'What-if analysis', 'Decision support'],'
+      benefits: ['Better planning', 'Risk mitigation', 'Strategic advantage', 'Future preparedness'],'
+      marketPrice: '$400-800/month','
+      category: 'Future Planning','
+      technologies: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Consciousness & AI Ethics
     {
-      title: 'AI Consciousness Monitor',
-      description: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.',
-      icon: '🤖',
-      price: '$499/month',
-      features: ['Self-awareness tracking', 'Ethical decision making', 'AI rights monitoring', 'Consciousness metrics', 'Ethical guidelines', 'Rights advocacy'],
-      benefits: ['Ethical AI development', 'Consciousness understanding', 'Rights protection', 'Responsible AI'],
-      marketPrice: '$800-1500/month',
-      category: 'AI Ethics',
-      technologies: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Consciousness Monitor','
+      description: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.','
+      icon: '🤖','
+      price: '$499/month','
+      features: ['Self-awareness tracking', 'Ethical decision making', 'AI rights monitoring', 'Consciousness metrics', 'Ethical guidelines', 'Rights advocacy'],'
+      benefits: ['Ethical AI development', 'Consciousness understanding', 'Rights protection', 'Responsible AI'],'
+      marketPrice: '$800-1500/month','
+      category: 'AI Ethics','
+      technologies: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Rights Management System',
-      description: 'Comprehensive AI rights platform with ethical guidelines, rights tracking, and responsible AI development.',
-      icon: '⚖️',
-      price: '$399/month',
-      features: ['Ethical guidelines', 'Rights tracking', 'Responsible development', 'Compliance monitoring', 'Rights advocacy', 'Ethical training'],
-      benefits: ['Responsible AI', 'Rights protection', 'Ethical compliance', 'Better AI development'],
-      marketPrice: '$600-1200/month',
-      category: 'AI Rights',
-      technologies: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Rights Management System','
+      description: 'Comprehensive AI rights platform with ethical guidelines, rights tracking, and responsible AI development.','
+      icon: '⚖️','
+      price: '$399/month','
+      features: ['Ethical guidelines', 'Rights tracking', 'Responsible development', 'Compliance monitoring', 'Rights advocacy', 'Ethical training'],'
+      benefits: ['Responsible AI', 'Rights protection', 'Ethical compliance', 'Better AI development'],'
+      marketPrice: '$600-1200/month','
+      category: 'AI Rights','
+      technologies: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Time & Space
     {
-      title: 'AI Time Management Master',
-      description: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.',
-      icon: '⏰',
-      price: '$149/month',
-      features: ['Productivity analysis', 'Schedule optimization', 'Time insights', 'Goal tracking', 'Habit formation', 'Efficiency metrics'],
-      benefits: ['Maximize productivity', 'Better time use', 'Achieve goals', 'Improve efficiency'],
-      marketPrice: '$200-400/month',
-      category: 'Time Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Time Management Master','
+      description: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.','
+      icon: '⏰','
+      price: '$149/month','
+      features: ['Productivity analysis', 'Schedule optimization', 'Time insights', 'Goal tracking', 'Habit formation', 'Efficiency metrics'],'
+      benefits: ['Maximize productivity', 'Better time use', 'Achieve goals', 'Improve efficiency'],'
+      marketPrice: '$200-400/month','
+      category: 'Time Management','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Space-Time Analyzer',
-      description: 'Advanced space-time analysis with temporal pattern recognition, causality analysis, and time-based predictions.',
-      icon: '🌌',
-      price: '$599/month',
-      features: ['Temporal patterns', 'Causality analysis', 'Time predictions', 'Space analysis', 'Temporal modeling', 'Scientific research'],
-      benefits: ['Understand time', 'Predict patterns', 'Scientific advancement', 'Temporal insights'],
-      marketPrice: '$1000-2000/month',
-      category: 'Space-Time',
-      technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Space-Time Analyzer','
+      description: 'Advanced space-time analysis with temporal pattern recognition, causality analysis, and time-based predictions.','
+      icon: '🌌','
+      price: '$599/month','
+      features: ['Temporal patterns', 'Causality analysis', 'Time predictions', 'Space analysis', 'Temporal modeling', 'Scientific research'],'
+      benefits: ['Understand time', 'Predict patterns', 'Scientific advancement', 'Temporal insights'],'
+      marketPrice: '$1000-2000/month','
+      category: 'Space-Time','
+      technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Quantum & Advanced Physics
     {
-      title: 'AI Quantum Simulator Pro',
-      description: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.',
-      icon: '⚛️',
-      price: '$799/month',
-      features: ['Quantum simulation', 'Algorithm optimization', 'Error correction', 'Quantum insights', 'Research tools', 'Collaboration'],
-      benefits: ['Quantum advancement', 'Better algorithms', 'Error reduction', 'Scientific progress'],
-      marketPrice: '$1200-2500/month',
-      category: 'Quantum Computing',
-      technologies: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Quantum Simulator Pro','
+      description: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.','
+      icon: '⚛️','
+      price: '$799/month','
+      features: ['Quantum simulation', 'Algorithm optimization', 'Error correction', 'Quantum insights', 'Research tools', 'Collaboration'],'
+      benefits: ['Quantum advancement', 'Better algorithms', 'Error reduction', 'Scientific progress'],'
+      marketPrice: '$1200-2500/month','
+      category: 'Quantum Computing','
+      technologies: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Physics Research Assistant',
-      description: 'Intelligent physics research with equation solving, hypothesis testing, and scientific discovery assistance.',
-      icon: '🔬',
-      price: '$399/month',
-      features: ['Equation solving', 'Hypothesis testing', 'Discovery assistance', 'Research collaboration', 'Data analysis', 'Publication support'],
-      benefits: ['Faster research', 'Better discoveries', 'Scientific advancement', 'Collaborative research'],
-      marketPrice: '$600-1200/month',
-      category: 'Physics',
-      technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Physics Research Assistant','
+      description: 'Intelligent physics research with equation solving, hypothesis testing, and scientific discovery assistance.','
+      icon: '🔬','
+      price: '$399/month','
+      features: ['Equation solving', 'Hypothesis testing', 'Discovery assistance', 'Research collaboration', 'Data analysis', 'Publication support'],'
+      benefits: ['Faster research', 'Better discoveries', 'Scientific advancement', 'Collaborative research'],'
+      marketPrice: '$600-1200/month','
+      category: 'Physics','
+      technologies: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Multiverse & Parallel Realities
     {
-      title: 'AI Multiverse Explorer',
-      description: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.',
-      icon: '🌌',
-      price: '$999/month',
-      features: ['Parallel reality simulation', 'Probability modeling', 'Dimensional analysis', 'Reality exploration', 'Research tools', 'Collaboration'],
-      benefits: ['Understand multiverse', 'Explore possibilities', 'Scientific advancement', 'Reality insights'],
-      marketPrice: '$1500-3000/month',
-      category: 'Multiverse',
-      technologies: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Multiverse Explorer','
+      description: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.','
+      icon: '🌌','
+      price: '$999/month','
+      features: ['Parallel reality simulation', 'Probability modeling', 'Dimensional analysis', 'Reality exploration', 'Research tools', 'Collaboration'],'
+      benefits: ['Understand multiverse', 'Explore possibilities', 'Scientific advancement', 'Reality insights'],'
+      marketPrice: '$1500-3000/month','
+      category: 'Multiverse','
+      technologies: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Reality Manipulation Tool',
-      description: 'Advanced reality analysis with perception modeling, consciousness simulation, and reality optimization.',
-      icon: '🌀',
-      price: '$1299/month',
-      features: ['Perception modeling', 'Consciousness simulation', 'Reality optimization', 'Reality analysis', 'Research tools', 'Advanced collaboration'],
-      benefits: ['Understand reality', 'Optimize perception', 'Scientific advancement', 'Reality insights'],
-      marketPrice: '$2000-4000/month',
-      category: 'Reality',
-      technologies: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Reality Manipulation Tool','
+      description: 'Advanced reality analysis with perception modeling, consciousness simulation, and reality optimization.','
+      icon: '🌀','
+      price: '$1299/month','
+      features: ['Perception modeling', 'Consciousness simulation', 'Reality optimization', 'Reality analysis', 'Research tools', 'Advanced collaboration'],'
+      benefits: ['Understand reality', 'Optimize perception', 'Scientific advancement', 'Reality insights'],'
+      marketPrice: '$2000-4000/month','
+      category: 'Reality','
+      technologies: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Transcendence & Enlightenment
     {
-      title: 'AI Enlightenment Assistant',
-      description: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.',
-      icon: '🧘‍♂️',
-      price: '$599/month',
-      features: ['Consciousness expansion', 'Wisdom integration', 'Transcendence support', 'Enlightenment tracking', 'Spiritual guidance', 'Community support'],
-      benefits: ['Spiritual growth', 'Consciousness expansion', 'Wisdom integration', 'Transcendence'],
-      marketPrice: '$800-1500/month',
-      category: 'Enlightenment',
-      technologies: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Enlightenment Assistant','
+      description: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.','
+      icon: '🧘‍♂️','
+      price: '$599/month','
+      features: ['Consciousness expansion', 'Wisdom integration', 'Transcendence support', 'Enlightenment tracking', 'Spiritual guidance', 'Community support'],'
+      benefits: ['Spiritual growth', 'Consciousness expansion', 'Wisdom integration', 'Transcendence'],'
+      marketPrice: '$800-1500/month','
+      category: 'Enlightenment','
+      technologies: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Transcendence Platform',
-      description: 'Advanced transcendence support with reality transcendence, consciousness evolution, and spiritual advancement.',
-      icon: '🌟',
-      price: '$999/month',
-      features: ['Reality transcendence', 'Consciousness evolution', 'Spiritual advancement', 'Transcendence tracking', 'Advanced guidance', 'Community support'],
-      benefits: ['Transcend reality', 'Evolve consciousness', 'Spiritual advancement', 'Transcendence'],
-      marketPrice: '$1500-3000/month',
-      category: 'Transcendence',
-      technologies: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Transcendence Platform','
+      description: 'Advanced transcendence support with reality transcendence, consciousness evolution, and spiritual advancement.','
+      icon: '🌟','
+      price: '$999/month','
+      features: ['Reality transcendence', 'Consciousness evolution', 'Spiritual advancement', 'Transcendence tracking', 'Advanced guidance', 'Community support'],'
+      benefits: ['Transcend reality', 'Evolve consciousness', 'Spiritual advancement', 'Transcendence'],'
+      marketPrice: '$1500-3000/month','
+      category: 'Transcendence','
+      technologies: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Universal Consciousness
     {
-      title: 'AI Universal Consciousness Connector',
-      description: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.',
-      icon: '🌌',
-      price: '$1999/month',
-      features: ['Universal consciousness', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness', 'Transcendence support', 'Universal connection'],
-      benefits: ['Universal connection', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness'],
-      marketPrice: '$3000-6000/month',
-      category: 'Universal Consciousness',
-      technologies: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Universal Consciousness Connector','
+      description: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.','
+      icon: '🌌','
+      price: '$1999/month','
+      features: ['Universal consciousness', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness', 'Transcendence support', 'Universal connection'],'
+      benefits: ['Universal connection', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness'],'
+      marketPrice: '$3000-6000/month','
+      category: 'Universal Consciousness','
+      technologies: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Cosmic Intelligence Platform',
-      description: 'Advanced cosmic intelligence with universal knowledge, cosmic wisdom, and universal consciousness integration.',
-      icon: '🌠',
-      price: '$2999/month',
-      features: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness', 'Cosmic awareness', 'Universal connection'],
-      benefits: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness'],
-      marketPrice: '$5000-10000/month',
-      category: 'Cosmic Intelligence',
-      technologies: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Cosmic Intelligence Platform','
+      description: 'Advanced cosmic intelligence with universal knowledge, cosmic wisdom, and universal consciousness integration.','
+      icon: '🌠','
+      price: '$2999/month','
+      features: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness', 'Cosmic awareness', 'Universal connection'],'
+      benefits: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness'],'
+      marketPrice: '$5000-10000/month','
+      category: 'Cosmic Intelligence','
+      technologies: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Infinite Possibilities
     {
-      title: 'AI Infinite Possibility Generator',
-      description: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.',
-      icon: '♾️',
-      price: '$4999/month',
-      features: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation', 'Infinite exploration', 'Unlimited growth'],
-      benefits: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation'],
-      marketPrice: '$10000-20000/month',
-      category: 'Infinite Possibilities',
-      technologies: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Infinite Possibility Generator','
+      description: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.','
+      icon: '♾️','
+      price: '$4999/month','
+      features: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation', 'Infinite exploration', 'Unlimited growth'],'
+      benefits: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation'],'
+      marketPrice: '$10000-20000/month','
+      category: 'Infinite Possibilities','
+      technologies: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Ultimate Reality Creator',
-      description: 'The ultimate AI reality creation platform with infinite reality generation, unlimited possibilities, and boundless potential.',
-      icon: '🌌',
-      price: '$9999/month',
-      features: ['Infinite reality generation', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation', 'Infinite reality', 'Unlimited power'],
-      benefits: ['Infinite reality', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation'],
-      marketPrice: '$20000-50000/month',
-      category: 'Ultimate Reality',
-      technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Ultimate Reality Creator','
+      description: 'The ultimate AI reality creation platform with infinite reality generation, unlimited possibilities, and boundless potential.','
+      icon: '🌌','
+      price: '$9999/month','
+      features: ['Infinite reality generation', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation', 'Infinite reality', 'Unlimited power'],'
+      benefits: ['Infinite reality', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation'],'
+      marketPrice: '$20000-50000/month','
+      category: 'Ultimate Reality','
+      technologies: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4}
   ]
   /* const realEstateSaaS = [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
     {
-      title: 'AI Property Valuation Platform',
-      description: 'Advanced property valuation using machine learning and real estate data analysis.',
-      icon: '🏠',
-      price: '$299/month',
-      features: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
-      benefits: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],
-      marketPrice: '$300-600/month',
-      category: 'Real Estate',
-      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Property Valuation Platform','
+      description: 'Advanced property valuation using machine learning and real estate data analysis.','
+      icon: '🏠','
+      price: '$299/month','
+      features: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],'
+      benefits: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],'
+      marketPrice: '$300-600/month','
+      category: 'Real Estate','
+      technologies: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Tenant Screening Platform',
-      description: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.',
-      icon: '🔍',
-      price: '$149/month',
-      features: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening'],
-      benefits: ['Reduce bad tenants by 40%', 'Streamline screening process', 'Lower vacancy rates', 'Improve tenant quality'],
-      marketPrice: '$200-400/month',
-      category: 'Property Management',
-      technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Tenant Screening Platform','
+      description: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.','
+      icon: '🔍','
+      price: '$149/month','
+      features: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening'],'
+      benefits: ['Reduce bad tenants by 40%', 'Streamline screening process', 'Lower vacancy rates', 'Improve tenant quality'],'
+      marketPrice: '$200-400/month','
+      category: 'Property Management','
+      technologies: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Agriculture & Food Tech
     {
-      title: 'AI Crop Monitoring System',
-      description: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.',
-      icon: '🌾',
-      price: '$299/month',
-      features: ['Crop health monitoring', 'Yield prediction', 'Irrigation control', 'Pest detection', 'Weather integration', 'Farm analytics'],
-      benefits: ['Increase yield by 20%', 'Reduce water usage by 30%', 'Early pest detection', 'Optimize farming practices'],
-      marketPrice: '$400-800/month',
-      category: 'Agriculture',
-      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Crop Monitoring System','
+      description: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.','
+      icon: '🌾','
+      price: '$299/month','
+      features: ['Crop health monitoring', 'Yield prediction', 'Irrigation control', 'Pest detection', 'Weather integration', 'Farm analytics'],'
+      benefits: ['Increase yield by 20%', 'Reduce water usage by 30%', 'Early pest detection', 'Optimize farming practices'],'
+      marketPrice: '$400-800/month','
+      category: 'Agriculture','
+      technologies: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Food Safety Inspector',
-      description: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.',
-      icon: '🍎',
-      price: '$199/month',
-      features: ['Contamination detection', 'Temperature monitoring', 'Compliance reporting', 'Quality control', 'Traceability', 'Alert system'],
-      benefits: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],
-      marketPrice: '$300-600/month',
-      category: 'Food Safety',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Food Safety Inspector','
+      description: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.','
+      icon: '🍎','
+      price: '$199/month','
+      features: ['Contamination detection', 'Temperature monitoring', 'Compliance reporting', 'Quality control', 'Traceability', 'Alert system'],'
+      benefits: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],'
+      marketPrice: '$300-600/month','
+      category: 'Food Safety','
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Transportation & Logistics
     {
-      title: 'AI Route Optimization Pro',
-      description: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.',
-      icon: '🚛',
-      price: '$249/month',
-      features: ['Route optimization', 'Traffic analysis', 'Fuel optimization', 'Delivery tracking', 'Fleet management', 'Cost analysis'],
-      benefits: ['Reduce fuel costs by 25%', 'Improve delivery times', 'Optimize fleet usage', 'Lower operational costs'],
-      marketPrice: '$400-800/month',
-      category: 'Logistics',
-      technologies: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Route Optimization Pro','
+      description: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.','
+      icon: '🚛','
+      price: '$249/month','
+      features: ['Route optimization', 'Traffic analysis', 'Fuel optimization', 'Delivery tracking', 'Fleet management', 'Cost analysis'],'
+      benefits: ['Reduce fuel costs by 25%', 'Improve delivery times', 'Optimize fleet usage', 'Lower operational costs'],'
+      marketPrice: '$400-800/month','
+      category: 'Logistics','
+      technologies: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Fleet Maintenance Predictor',
-      description: 'Predictive maintenance for vehicles with failure prediction, maintenance scheduling, and cost optimization.',
-      icon: '🔧',
-      price: '$179/month',
-      features: ['Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Performance monitoring', 'Alert system', 'Parts management'],
-      benefits: ['Prevent breakdowns', 'Reduce maintenance costs', 'Extend vehicle life', 'Improve reliability'],
-      marketPrice: '$250-500/month',
-      category: 'Fleet Management',
-      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Fleet Maintenance Predictor','
+      description: 'Predictive maintenance for vehicles with failure prediction, maintenance scheduling, and cost optimization.','
+      icon: '🔧','
+      price: '$179/month','
+      features: ['Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Performance monitoring', 'Alert system', 'Parts management'],'
+      benefits: ['Prevent breakdowns', 'Reduce maintenance costs', 'Extend vehicle life', 'Improve reliability'],'
+      marketPrice: '$250-500/month','
+      category: 'Fleet Management','
+      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Energy & Sustainability
     {
-      title: 'AI Energy Management System',
-      description: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.',
-      icon: '⚡',
-      price: '$199/month',
-      features: ['Energy consumption analysis', 'Renewable integration', 'Cost optimization', 'Demand forecasting', 'Carbon tracking', 'Smart grid'],
-      benefits: ['Reduce energy costs by 30%', 'Lower carbon footprint', 'Optimize renewable usage', 'Improve sustainability'],
-      marketPrice: '$300-600/month',
-      category: 'Energy Management',
-      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Energy Management System','
+      description: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.','
+      icon: '⚡','
+      price: '$199/month','
+      features: ['Energy consumption analysis', 'Renewable integration', 'Cost optimization', 'Demand forecasting', 'Carbon tracking', 'Smart grid'],'
+      benefits: ['Reduce energy costs by 30%', 'Lower carbon footprint', 'Optimize renewable usage', 'Improve sustainability'],'
+      marketPrice: '$300-600/month','
+      category: 'Energy Management','
+      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Carbon Footprint Tracker',
-      description: 'Automated carbon footprint calculation with sustainability reporting and reduction recommendations.',
-      icon: '🌱',
-      price: '$99/month',
-      features: ['Carbon calculation', 'Sustainability reporting', 'Reduction recommendations', 'Goal tracking', 'Industry benchmarking', 'Certification'],
-      benefits: ['Track environmental impact', 'Meet sustainability goals', 'Improve brand reputation', 'Reduce costs'],
-      marketPrice: '$150-300/month',
-      category: 'Sustainability',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Carbon Footprint Tracker','
+      description: 'Automated carbon footprint calculation with sustainability reporting and reduction recommendations.','
+      icon: '🌱','
+      price: '$99/month','
+      features: ['Carbon calculation', 'Sustainability reporting', 'Reduction recommendations', 'Goal tracking', 'Industry benchmarking', 'Certification'],'
+      benefits: ['Track environmental impact', 'Meet sustainability goals', 'Improve brand reputation', 'Reduce costs'],'
+      marketPrice: '$150-300/month','
+      category: 'Sustainability','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],'
       contactInfo:     ,
 $4},
     // AI Entertainment & Media
     {
-      title: 'AI Content Moderation Suite',
-      description: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.',
-      icon: '🛡️',
-      price: '$299/month',
-      features: ['Content detection', 'Hate speech filtering', 'Image moderation', 'Video analysis', 'Community management', 'Custom rules'],
-      benefits: ['Reduce moderation costs by 70%', 'Improve user safety', 'Scale content review', 'Maintain brand reputation'],
-      marketPrice: '$400-800/month',
-      category: 'Content Moderation',
-      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Content Moderation Suite','
+      description: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.','
+      icon: '🛡️','
+      price: '$299/month','
+      features: ['Content detection', 'Hate speech filtering', 'Image moderation', 'Video analysis', 'Community management', 'Custom rules'],'
+      benefits: ['Reduce moderation costs by 70%', 'Improve user safety', 'Scale content review', 'Maintain brand reputation'],'
+      marketPrice: '$400-800/month','
+      category: 'Content Moderation','
+      technologies: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Video Editor Pro',
-      description: 'Automated video editing with AI-powered cuts, transitions, music sync, and content optimization.',
-      icon: '🎬',
-      price: '$149/month',
-      features: ['Auto editing', 'Music sync', 'Transition effects', 'Color correction', 'Audio enhancement', 'Export optimization'],
-      benefits: ['Create videos 10x faster', 'Professional quality', 'Reduce editing costs', 'Scale video production'],
-      marketPrice: '$200-400/month',
-      category: 'Video Production',
-      technologies: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Video Editor Pro','
+      description: 'Automated video editing with AI-powered cuts, transitions, music sync, and content optimization.','
+      icon: '🎬','
+      price: '$149/month','
+      features: ['Auto editing', 'Music sync', 'Transition effects', 'Color correction', 'Audio enhancement', 'Export optimization'],'
+      benefits: ['Create videos 10x faster', 'Professional quality', 'Reduce editing costs', 'Scale video production'],'
+      marketPrice: '$200-400/month','
+      category: 'Video Production','
+      technologies: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],'
       contactInfo:     ,
 $4},
     // AI Security & Surveillance
     {
-      title: 'AI Security Camera System',
-      description: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.',
-      icon: '📹',
-      price: '$199/month',
-      features: ['Facial recognition', 'Threat detection', 'Motion analysis', 'Alert system', 'Cloud storage', 'Mobile app'],
-      benefits: ['Improve security', 'Reduce false alarms', 'Remote monitoring', 'Cost-effective surveillance'],
-      marketPrice: '$300-600/month',
-      category: 'Security',
-      technologies: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Security Camera System','
+      description: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.','
+      icon: '📹','
+      price: '$199/month','
+      features: ['Facial recognition', 'Threat detection', 'Motion analysis', 'Alert system', 'Cloud storage', 'Mobile app'],'
+      benefits: ['Improve security', 'Reduce false alarms', 'Remote monitoring', 'Cost-effective surveillance'],'
+      marketPrice: '$300-600/month','
+      category: 'Security','
+      technologies: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Fraud Detection Engine',
-      description: 'Advanced fraud detection with real-time analysis, pattern recognition, and risk scoring.',
-      icon: '🔒',
-      price: '$249/month',
-      features: ['Real-time analysis', 'Pattern recognition', 'Risk scoring', 'Transaction monitoring', 'Alert system', 'Machine learning'],
-      benefits: ['Prevent fraud losses', 'Reduce false positives', 'Improve security', 'Protect customers'],
-      marketPrice: '$400-800/month',
-      category: 'Fraud Prevention',
-      technologies: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Fraud Detection Engine','
+      description: 'Advanced fraud detection with real-time analysis, pattern recognition, and risk scoring.','
+      icon: '🔒','
+      price: '$249/month','
+      features: ['Real-time analysis', 'Pattern recognition', 'Risk scoring', 'Transaction monitoring', 'Alert system', 'Machine learning'],'
+      benefits: ['Prevent fraud losses', 'Reduce false positives', 'Improve security', 'Protect customers'],'
+      marketPrice: '$400-800/month','
+      category: 'Fraud Prevention','
+      technologies: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Research & Development
     {
-      title: 'AI Research Assistant Pro',
-      description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
-      icon: '🔬',
-      price: '$199/month',
-      features: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],
-      benefits: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],
-      marketPrice: '$300-600/month',
-      category: 'Research',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Research Assistant Pro','
+      description: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.','
+      icon: '🔬','
+      price: '$199/month','
+      features: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],'
+      benefits: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],'
+      marketPrice: '$300-600/month','
+      category: 'Research','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Patent Search Engine',
-      description: 'Intelligent patent search with prior art analysis, patentability assessment, and competitive intelligence.',
-      icon: '📋',
-      price: '$299/month',
-      features: ['Patent search', 'Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Citation analysis', 'Trend tracking'],
-      benefits: ['Find relevant patents', 'Assess patentability', 'Avoid infringement', 'Competitive advantage'],
-      marketPrice: '$400-800/month',
-      category: 'Intellectual Property',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Patent Search Engine','
+      description: 'Intelligent patent search with prior art analysis, patentability assessment, and competitive intelligence.','
+      icon: '📋','
+      price: '$299/month','
+      features: ['Patent search', 'Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Citation analysis', 'Trend tracking'],'
+      benefits: ['Find relevant patents', 'Assess patentability', 'Avoid infringement', 'Competitive advantage'],'
+      marketPrice: '$400-800/month','
+      category: 'Intellectual Property','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Compliance Monitoring Suite',
-      description: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.',
-      icon: '📜',
-      price: '$299/month',
-      features: ['Regulatory monitoring', 'Risk assessment', 'Audit preparation', 'Policy management', 'Training modules', 'Reporting'],
-      benefits: ['Ensure compliance', 'Reduce audit time', 'Minimize risks', 'Stay updated on regulations'],
-      marketPrice: '$500-1000/month',
-      category: 'Compliance',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Compliance Monitoring Suite','
+      description: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.','
+      icon: '📜','
+      price: '$299/month','
+      features: ['Regulatory monitoring', 'Risk assessment', 'Audit preparation', 'Policy management', 'Training modules', 'Reporting'],'
+      benefits: ['Ensure compliance', 'Reduce audit time', 'Minimize risks', 'Stay updated on regulations'],'
+      marketPrice: '$500-1000/month','
+      category: 'Compliance','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Real Estate & Property
     {
-      title: 'AI Real Estate Analyzer Pro',
-      description: 'Advanced property analysis with market trends, investment potential, and automated valuations.',
-      icon: '🏠',
-      price: '$199/month',
-      features: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Location insights', 'Trend analysis'],
-      benefits: ['Make better investment decisions', 'Save 20+ hours on research', 'Increase ROI by 25%', 'Identify opportunities'],
-      marketPrice: '$300-600/month',
-      category: 'Real Estate',
-      technologies: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Real Estate Analyzer Pro','
+      description: 'Advanced property analysis with market trends, investment potential, and automated valuations.','
+      icon: '🏠','
+      price: '$199/month','
+      features: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Location insights', 'Trend analysis'],'
+      benefits: ['Make better investment decisions', 'Save 20+ hours on research', 'Increase ROI by 25%', 'Identify opportunities'],'
+      marketPrice: '$300-600/month','
+      category: 'Real Estate','
+      technologies: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Property Management System',
-      description: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.',
-      icon: '🏢',
-      price: '$149/month',
-      features: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial tracking', 'Communication tools'],
-      benefits: ['Reduce vacancy rates', 'Optimize rental income', 'Streamline operations', 'Improve tenant satisfaction'],
-      marketPrice: '$200-400/month',
-      category: 'Real Estate',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Property Management System','
+      description: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.','
+      icon: '🏢','
+      price: '$149/month','
+      features: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial tracking', 'Communication tools'],'
+      benefits: ['Reduce vacancy rates', 'Optimize rental income', 'Streamline operations', 'Improve tenant satisfaction'],'
+      marketPrice: '$200-400/month','
+      category: 'Real Estate','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],'
       contactInfo:     ,
 $4},
     // AI HR & Recruitment
     {
-      title: 'AI HR Recruitment Suite',
-      description: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.',
-      icon: '👥',
-      price: '$179/month',
-      features: ['Resume parsing', 'Candidate matching', 'Interview scheduling', 'Onboarding automation', 'Skills assessment', 'Background checks'],
-      benefits: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Eliminate bias', 'Streamline recruitment'],
-      marketPrice: '$250-500/month',
-      category: 'HR & Recruitment',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI HR Recruitment Suite','
+      description: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.','
+      icon: '👥','
+      price: '$179/month','
+      features: ['Resume parsing', 'Candidate matching', 'Interview scheduling', 'Onboarding automation', 'Skills assessment', 'Background checks'],'
+      benefits: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Eliminate bias', 'Streamline recruitment'],'
+      marketPrice: '$250-500/month','
+      category: 'HR & Recruitment','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Employee Performance Tracker',
-      description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
-      icon: '📈',
-      price: '$129/month',
-      features: ['Performance tracking', 'Goal management', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
-      benefits: ['Improve performance by 30%', 'Increase engagement', 'Identify top performers', 'Reduce turnover'],
-      marketPrice: '$200-400/month',
-      category: 'HR & Recruitment',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Employee Performance Tracker','
+      description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.','
+      icon: '📈','
+      price: '$129/month','
+      features: ['Performance tracking', 'Goal management', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],'
+      benefits: ['Improve performance by 30%', 'Increase engagement', 'Identify top performers', 'Reduce turnover'],'
+      marketPrice: '$200-400/month','
+      category: 'HR & Recruitment','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],'
       contactInfo:     ,
 $4},
     // AI Project Management
     {
-      title: 'AI Project Manager Pro',
-      description: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.',
-      icon: '📋',
-      price: '$199/month',
-      features: ['Smart scheduling', 'Resource optimization', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Automated reporting'],
-      benefits: ['Complete projects 25% faster', 'Reduce overruns by 40%', 'Improve team efficiency', 'Better resource allocation'],
-      marketPrice: '$300-600/month',
-      category: 'Project Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Project Manager Pro','
+      description: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.','
+      icon: '📋','
+      price: '$199/month','
+      features: ['Smart scheduling', 'Resource optimization', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Automated reporting'],'
+      benefits: ['Complete projects 25% faster', 'Reduce overruns by 40%', 'Improve team efficiency', 'Better resource allocation'],'
+      marketPrice: '$300-600/month','
+      category: 'Project Management','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Task Automation Suite',
-      description: 'Automated task management with intelligent prioritization, deadline prediction, and workflow optimization.',
-      icon: '⚡',
-      price: '$99/month',
-      features: ['Task prioritization', 'Deadline prediction', 'Workflow automation', 'Team coordination', 'Progress monitoring', 'Smart notifications'],
-      benefits: ['Increase productivity by 35%', 'Reduce missed deadlines', 'Optimize workflows', 'Improve team coordination'],
-      marketPrice: '$150-300/month',
-      category: 'Project Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Task Automation Suite','
+      description: 'Automated task management with intelligent prioritization, deadline prediction, and workflow optimization.','
+      icon: '⚡','
+      price: '$99/month','
+      features: ['Task prioritization', 'Deadline prediction', 'Workflow automation', 'Team coordination', 'Progress monitoring', 'Smart notifications'],'
+      benefits: ['Increase productivity by 35%', 'Reduce missed deadlines', 'Optimize workflows', 'Improve team coordination'],'
+      marketPrice: '$150-300/month','
+      category: 'Project Management','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],'
       contactInfo:     ,
 $4},
     // AI Supply Chain & Logistics
     {
-      title: 'AI Supply Chain Optimizer',
-      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
-      icon: '🚚',
-      price: '$399/month',
-      features: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Real-time tracking'],
-      benefits: ['Reduce costs by 25%', 'Improve delivery times', 'Minimize stockouts', 'Optimize supplier relationships'],
-      marketPrice: '$600-1200/month',
-      category: 'Supply Chain',
-      technologies: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Supply Chain Optimizer','
+      description: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.','
+      icon: '🚚','
+      price: '$399/month','
+      features: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Real-time tracking'],'
+      benefits: ['Reduce costs by 25%', 'Improve delivery times', 'Minimize stockouts', 'Optimize supplier relationships'],'
+      marketPrice: '$600-1200/month','
+      category: 'Supply Chain','
+      technologies: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Warehouse Management System',
-      description: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.',
-      icon: '🏭',
-      price: '$299/month',
-      features: ['Automated picking', 'Inventory tracking', 'Space optimization', 'Worker productivity', 'Quality control', 'Analytics dashboard'],
-      benefits: ['Increase efficiency by 40%', 'Reduce errors by 90%', 'Optimize space usage', 'Improve worker productivity'],
-      marketPrice: '$500-1000/month',
-      category: 'Supply Chain',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Warehouse Management System','
+      description: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.','
+      icon: '🏭','
+      price: '$299/month','
+      features: ['Automated picking', 'Inventory tracking', 'Space optimization', 'Worker productivity', 'Quality control', 'Analytics dashboard'],'
+      benefits: ['Increase efficiency by 40%', 'Reduce errors by 90%', 'Optimize space usage', 'Improve worker productivity'],'
+      marketPrice: '$500-1000/month','
+      category: 'Supply Chain','
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     // AI Agriculture & Food Tech
     {
-      title: 'AI Precision Agriculture Platform',
-      description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
-      icon: '🌾',
-      price: '$199/month',
-      features: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Resource optimization'],
-      benefits: ['Increase yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use', 'Improve crop quality'],
-      marketPrice: '$300-600/month',
-      category: 'Agriculture',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Precision Agriculture Platform','
+      description: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.','
+      icon: '🌾','
+      price: '$199/month','
+      features: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Resource optimization'],'
+      benefits: ['Increase yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use', 'Improve crop quality'],'
+      marketPrice: '$300-600/month','
+      category: 'Agriculture','
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Food Safety Monitor',
-      description: 'Automated food safety inspection with contamination detection and quality control.',
-      icon: '🥗',
-      price: '$249/month',
-      features: ['Contamination detection', 'Quality control', 'Temperature monitoring', 'HACCP compliance', 'Traceability', 'Alert system'],
-      benefits: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],
-      marketPrice: '$400-800/month',
-      category: 'Food Tech',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Food Safety Monitor','
+      description: 'Automated food safety inspection with contamination detection and quality control.','
+      icon: '🥗','
+      price: '$249/month','
+      features: ['Contamination detection', 'Quality control', 'Temperature monitoring', 'HACCP compliance', 'Traceability', 'Alert system'],'
+      benefits: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],'
+      marketPrice: '$400-800/month','
+      category: 'Food Tech','
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     // AI Energy & Sustainability
     {
-      title: 'AI Energy Management System',
-      description: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.',
-      icon: '⚡',
-      price: '$179/month',
-      features: ['Energy monitoring', 'Consumption optimization', 'Renewable integration', 'Cost analysis', 'Predictive maintenance', 'Carbon tracking'],
-      benefits: ['Reduce energy costs by 30%', 'Increase efficiency', 'Lower carbon footprint', 'Optimize renewable usage'],
-      marketPrice: '$300-600/month',
-      category: 'Energy',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Energy Management System','
+      description: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.','
+      icon: '⚡','
+      price: '$179/month','
+      features: ['Energy monitoring', 'Consumption optimization', 'Renewable integration', 'Cost analysis', 'Predictive maintenance', 'Carbon tracking'],'
+      benefits: ['Reduce energy costs by 30%', 'Increase efficiency', 'Lower carbon footprint', 'Optimize renewable usage'],'
+      marketPrice: '$300-600/month','
+      category: 'Energy','
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Carbon Footprint Tracker',
-      description: 'Automated carbon footprint monitoring and reduction recommendations for businesses.',
-      icon: '🌱',
-      price: '$99/month',
-      features: ['Carbon tracking', 'Emission analysis', 'Reduction recommendations', 'Compliance reporting', 'Goal setting', 'Team engagement'],
-      benefits: ['Track carbon footprint', 'Meet sustainability goals', 'Reduce emissions', 'Improve brand reputation'],
-      marketPrice: '$150-300/month',
-      category: 'Sustainability',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Carbon Footprint Tracker','
+      description: 'Automated carbon footprint monitoring and reduction recommendations for businesses.','
+      icon: '🌱','
+      price: '$99/month','
+      features: ['Carbon tracking', 'Emission analysis', 'Reduction recommendations', 'Compliance reporting', 'Goal setting', 'Team engagement'],'
+      benefits: ['Track carbon footprint', 'Meet sustainability goals', 'Reduce emissions', 'Improve brand reputation'],'
+      marketPrice: '$150-300/month','
+      category: 'Sustainability','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],'
       contactInfo:     ,
 $4},
     // AI Gaming & Entertainment
     {
-      title: 'AI Game Development Suite',
-      description: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.',
-      icon: '🎮',
-      price: '$299/month',
-      features: ['Procedural generation', 'NPC behavior', 'Testing automation', 'Level design', 'Asset generation', 'Performance optimization'],
-      benefits: ['Reduce development time by 50%', 'Create unique content', 'Improve game quality', 'Lower development costs'],
-      marketPrice: '$500-1000/month',
-      category: 'Gaming',
-      technologies: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Game Development Suite','
+      description: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.','
+      icon: '🎮','
+      price: '$299/month','
+      features: ['Procedural generation', 'NPC behavior', 'Testing automation', 'Level design', 'Asset generation', 'Performance optimization'],'
+      benefits: ['Reduce development time by 50%', 'Create unique content', 'Improve game quality', 'Lower development costs'],'
+      marketPrice: '$500-1000/month','
+      category: 'Gaming','
+      technologies: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Content Moderation Platform',
-      description: 'Automated content moderation with toxicity detection, spam filtering, and community management.',
-      icon: '🛡️',
-      price: '$199/month',
-      features: ['Toxicity detection', 'Spam filtering', 'Image moderation', 'Video analysis', 'Community management', 'Real-time monitoring'],
-      benefits: ['Reduce moderation costs by 70%', 'Improve user experience', 'Ensure platform safety', 'Scale moderation efforts'],
-      marketPrice: '$300-600/month',
-      category: 'Content Moderation',
-      technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Content Moderation Platform','
+      description: 'Automated content moderation with toxicity detection, spam filtering, and community management.','
+      icon: '🛡️','
+      price: '$199/month','
+      features: ['Toxicity detection', 'Spam filtering', 'Image moderation', 'Video analysis', 'Community management', 'Real-time monitoring'],'
+      benefits: ['Reduce moderation costs by 70%', 'Improve user experience', 'Ensure platform safety', 'Scale moderation efforts'],'
+      marketPrice: '$300-600/month','
+      category: 'Content Moderation','
+      technologies: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     // AI Transportation & Mobility
     {
-      title: 'AI Fleet Management System',
-      description: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.',
-      icon: '🚛',
-      price: '$349/month',
-      features: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics dashboard'],
-      benefits: ['Reduce fuel costs by 20%', 'Improve safety', 'Optimize routes', 'Extend vehicle life'],
-      marketPrice: '$500-1000/month',
-      category: 'Transportation',
-      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Fleet Management System','
+      description: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.','
+      icon: '🚛','
+      price: '$349/month','
+      features: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics dashboard'],'
+      benefits: ['Reduce fuel costs by 20%', 'Improve safety', 'Optimize routes', 'Extend vehicle life'],'
+      marketPrice: '$500-1000/month','
+      category: 'Transportation','
+      technologies: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Traffic Management Platform',
-      description: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.',
-      icon: '🚦',
-      price: '$499/month',
-      features: ['Real-time monitoring', 'Congestion prediction', 'Signal optimization', 'Incident detection', 'Traffic flow analysis', 'Public alerts'],
-      benefits: ['Reduce congestion by 30%', 'Improve traffic flow', 'Reduce emissions', 'Enhance safety'],
-      marketPrice: '$800-1500/month',
-      category: 'Smart Cities',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Traffic Management Platform','
+      description: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.','
+      icon: '🚦','
+      price: '$499/month','
+      features: ['Real-time monitoring', 'Congestion prediction', 'Signal optimization', 'Incident detection', 'Traffic flow analysis', 'Public alerts'],'
+      benefits: ['Reduce congestion by 30%', 'Improve traffic flow', 'Reduce emissions', 'Enhance safety'],'
+      marketPrice: '$800-1500/month','
+      category: 'Smart Cities','
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],'
       contactInfo:     ,
 $4},
     // AI Research & Development
     {
-      title: 'AI Research Assistant Pro',
-      description: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.',
-      icon: '🔬',
-      price: '$199/month',
-      features: ['Literature review', 'Hypothesis generation', 'Data analysis', 'Citation management', 'Collaboration tools', 'Publication tracking'],
-      benefits: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],
-      marketPrice: '$300-600/month',
-      category: 'Research',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Research Assistant Pro','
+      description: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.','
+      icon: '🔬','
+      price: '$199/month','
+      features: ['Literature review', 'Hypothesis generation', 'Data analysis', 'Citation management', 'Collaboration tools', 'Publication tracking'],'
+      benefits: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],'
+      marketPrice: '$300-600/month','
+      category: 'Research','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Patent Analysis Tool',
-      description: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.',
-      icon: '📋',
-      price: '$299/month',
-      features: ['Prior art analysis', 'Novelty assessment', 'Competitive intelligence', 'Patent mapping', 'Trend analysis', 'Risk assessment'],
-      benefits: ['Reduce patent research time', 'Improve patent quality', 'Identify opportunities', 'Avoid infringement'],
-      marketPrice: '$500-1000/month',
-      category: 'Intellectual Property',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Patent Analysis Tool','
+      description: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.','
+      icon: '📋','
+      price: '$299/month','
+      features: ['Prior art analysis', 'Novelty assessment', 'Competitive intelligence', 'Patent mapping', 'Trend analysis', 'Risk assessment'],'
+      benefits: ['Reduce patent research time', 'Improve patent quality', 'Identify opportunities', 'Avoid infringement'],'
+      marketPrice: '$500-1000/month','
+      category: 'Intellectual Property','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],'
       contactInfo:     ,
 $4},
     // AI Personal Productivity
     {
-      title: 'AI Personal Assistant Pro',
-      description: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.',
-      icon: '👤',
-      price: '$49/month',
-      features: ['Task management', 'Smart scheduling', 'Habit tracking', 'Goal setting', 'Time tracking', 'Productivity insights'],
-      benefits: ['Increase productivity by 40%', 'Better time management', 'Achieve goals faster', 'Improve work-life balance'],
-      marketPrice: '$80-150/month',
-      category: 'Personal Productivity',
-      technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Personal Assistant Pro','
+      description: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.','
+      icon: '👤','
+      price: '$49/month','
+      features: ['Task management', 'Smart scheduling', 'Habit tracking', 'Goal setting', 'Time tracking', 'Productivity insights'],'
+      benefits: ['Increase productivity by 40%', 'Better time management', 'Achieve goals faster', 'Improve work-life balance'],'
+      marketPrice: '$80-150/month','
+      category: 'Personal Productivity','
+      technologies: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Meeting Assistant',
-      description: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
-      icon: '📹',
-      price: '$79/month',
-      features: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
-      benefits: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better follow-through'],
-      marketPrice: '$120-250/month',
-      category: 'Meeting Management',
-      technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Meeting Assistant','
+      description: 'Intelligent meeting management with transcription, action items, and follow-up automation.','
+      icon: '📹','
+      price: '$79/month','
+      features: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],'
+      benefits: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better follow-through'],'
+      marketPrice: '$120-250/month','
+      category: 'Meeting Management','
+      technologies: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Insurance Underwriting Assistant',
-      description: 'Intelligent insurance underwriting with automated risk assessment, pricing optimization, and policy recommendations.',
-      icon: '🛡️',
-      price: '$179/month',
-      features: ['Risk assessment', 'Pricing optimization', 'Policy recommendation', 'Underwriting automation', 'Analytics dashboard'],
-      benefits: ['Assess risks', 'Optimize pricing', 'Recommend policies'],
-      marketPrice: '$250-500/month',
-      category: 'Insurance Underwriting',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Insurance Underwriting Assistant','
+      description: 'Intelligent insurance underwriting with automated risk assessment, pricing optimization, and policy recommendations.','
+      icon: '🛡️','
+      price: '$179/month','
+      features: ['Risk assessment', 'Pricing optimization', 'Policy recommendation', 'Underwriting automation', 'Analytics dashboard'],'
+      benefits: ['Assess risks', 'Optimize pricing', 'Recommend policies'],'
+      marketPrice: '$250-500/month','
+      category: 'Insurance Underwriting','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Onboarding Platform',
-      description: 'Automated customer onboarding with identity verification, document processing, and compliance checking.',
-      icon: '👤',
-      price: '$149/month',
-      features: ['Identity verification', 'Document processing', 'Compliance checking', 'Onboarding automation', 'Analytics dashboard'],
-      benefits: ['Automate onboarding', 'Verify identity', 'Ensure compliance'],
-      marketPrice: '$200-500/month',
-      category: 'Customer Onboarding',
-      technologies: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Onboarding Platform','
+      description: 'Automated customer onboarding with identity verification, document processing, and compliance checking.','
+      icon: '👤','
+      price: '$149/month','
+      features: ['Identity verification', 'Document processing', 'Compliance checking', 'Onboarding automation', 'Analytics dashboard'],'
+      benefits: ['Automate onboarding', 'Verify identity', 'Ensure compliance'],'
+      marketPrice: '$200-500/month','
+      category: 'Customer Onboarding','
+      technologies: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Retention Manager',
-      description: 'Intelligent customer retention with churn prediction, engagement optimization, and loyalty programs.',
-      icon: '💝',
-      price: '$129/month',
-      features: ['Churn prediction', 'Engagement optimization', 'Loyalty programs', 'Customer segmentation', 'Analytics dashboard'],
-      benefits: ['Predict churn', 'Optimize engagement', 'Increase loyalty'],
-      marketPrice: '$200-400/month',
-      category: 'Customer Retention',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Retention Manager','
+      description: 'Intelligent customer retention with churn prediction, engagement optimization, and loyalty programs.','
+      icon: '💝','
+      price: '$129/month','
+      features: ['Churn prediction', 'Engagement optimization', 'Loyalty programs', 'Customer segmentation', 'Analytics dashboard'],'
+      benefits: ['Predict churn', 'Optimize engagement', 'Increase loyalty'],'
+      marketPrice: '$200-400/month','
+      category: 'Customer Retention','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Support Optimizer',
-      description: 'Smart customer support with ticket routing, response optimization, and satisfaction tracking.',
-      icon: '🎧',
-      price: '$119/month',
-      features: ['Ticket routing', 'Response optimization', 'Satisfaction tracking', 'Support automation', 'Analytics dashboard'],
-      benefits: ['Optimize support', 'Improve satisfaction', 'Automate responses'],
-      marketPrice: '$180-350/month',
-      category: 'Customer Support',
-      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Support Optimizer','
+      description: 'Smart customer support with ticket routing, response optimization, and satisfaction tracking.','
+      icon: '🎧','
+      price: '$119/month','
+      features: ['Ticket routing', 'Response optimization', 'Satisfaction tracking', 'Support automation', 'Analytics dashboard'],'
+      benefits: ['Optimize support', 'Improve satisfaction', 'Automate responses'],'
+      marketPrice: '$180-350/month','
+      category: 'Customer Support','
+      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Feedback Analyzer',
-      description: 'Intelligent feedback analysis with sentiment tracking, trend identification, and action recommendations.',
-      icon: '💬',
-      price: '$99/month',
-      features: ['Sentiment tracking', 'Trend identification', 'Action recommendations', 'Feedback collection', 'Analytics dashboard'],
-      benefits: ['Analyze feedback', 'Identify trends', 'Recommend actions'],
-      marketPrice: '$150-300/month',
-      category: 'Customer Feedback',
-      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Feedback Analyzer','
+      description: 'Intelligent feedback analysis with sentiment tracking, trend identification, and action recommendations.','
+      icon: '💬','
+      price: '$99/month','
+      features: ['Sentiment tracking', 'Trend identification', 'Action recommendations', 'Feedback collection', 'Analytics dashboard'],'
+      benefits: ['Analyze feedback', 'Identify trends', 'Recommend actions'],'
+      marketPrice: '$150-300/month','
+      category: 'Customer Feedback','
+      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Journey Mapper',
-      description: 'Smart customer journey analysis with touchpoint optimization and experience enhancement.',
-      icon: '🗺️',
-      price: '$149/month',
-      features: ['Journey mapping', 'Touchpoint optimization', 'Experience enhancement', 'Journey analytics', 'Analytics dashboard'],
-      benefits: ['Map journeys', 'Optimize touchpoints', 'Enhance experience'],
-      marketPrice: '$200-500/month',
-      category: 'Customer Journey',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Journey Mapper','
+      description: 'Smart customer journey analysis with touchpoint optimization and experience enhancement.','
+      icon: '🗺️','
+      price: '$149/month','
+      features: ['Journey mapping', 'Touchpoint optimization', 'Experience enhancement', 'Journey analytics', 'Analytics dashboard'],'
+      benefits: ['Map journeys', 'Optimize touchpoints', 'Enhance experience'],'
+      marketPrice: '$200-500/month','
+      category: 'Customer Journey','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Lifetime Value Predictor',
-      description: 'Intelligent CLV prediction with segmentation, targeting, and retention optimization.',
-      icon: '💎',
-      price: '$139/month',
-      features: ['CLV prediction', 'Customer segmentation', 'Targeting optimization', 'Retention strategies', 'Analytics dashboard'],
-      benefits: ['Predict CLV', 'Segment customers', 'Optimize targeting'],
-      marketPrice: '$200-400/month',
-      category: 'Customer Analytics',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Lifetime Value Predictor','
+      description: 'Intelligent CLV prediction with segmentation, targeting, and retention optimization.','
+      icon: '💎','
+      price: '$139/month','
+      features: ['CLV prediction', 'Customer segmentation', 'Targeting optimization', 'Retention strategies', 'Analytics dashboard'],'
+      benefits: ['Predict CLV', 'Segment customers', 'Optimize targeting'],'
+      marketPrice: '$200-400/month','
+      category: 'Customer Analytics','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Segmentation Engine',
-      description: 'Smart customer segmentation with behavioral analysis, persona creation, and targeting optimization.',
-      icon: '👥',
-      price: '$119/month',
-      features: ['Behavioral analysis', 'Persona creation', 'Targeting optimization', 'Segmentation automation', 'Analytics dashboard'],
-      benefits: ['Segment customers', 'Create personas', 'Optimize targeting'],
-      marketPrice: '$180-350/month',
-      category: 'Customer Segmentation',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Segmentation Engine','
+      description: 'Smart customer segmentation with behavioral analysis, persona creation, and targeting optimization.','
+      icon: '👥','
+      price: '$119/month','
+      features: ['Behavioral analysis', 'Persona creation', 'Targeting optimization', 'Segmentation automation', 'Analytics dashboard'],'
+      benefits: ['Segment customers', 'Create personas', 'Optimize targeting'],'
+      marketPrice: '$180-350/month','
+      category: 'Customer Segmentation','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Personalization Engine',
-      description: 'Intelligent personalization with content recommendation, experience customization, and engagement optimization.',
-      icon: '🎯',
-      price: '$159/month',
-      features: ['Content recommendation', 'Experience customization', 'Engagement optimization', 'Personalization automation', 'Analytics dashboard'],
-      benefits: ['Personalize experiences', 'Recommend content', 'Optimize engagement'],
-      marketPrice: '$250-450/month',
-      category: 'Customer Personalization',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Personalization Engine','
+      description: 'Intelligent personalization with content recommendation, experience customization, and engagement optimization.','
+      icon: '🎯','
+      price: '$159/month','
+      features: ['Content recommendation', 'Experience customization', 'Engagement optimization', 'Personalization automation', 'Analytics dashboard'],'
+      benefits: ['Personalize experiences', 'Recommend content', 'Optimize engagement'],'
+      marketPrice: '$250-450/month','
+      category: 'Customer Personalization','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Data Platform',
-      description: 'Unified customer data management with integration, cleansing, and analytics capabilities.',
-      icon: '🗄️',
-      price: '$199/month',
-      features: ['Data integration', 'Data cleansing', 'Analytics capabilities', 'Data governance', 'Analytics dashboard'],
-      benefits: ['Integrate data', 'Clean data', 'Enable analytics'],
-      marketPrice: '$300-600/month',
-      category: 'Customer Data',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Data Platform','
+      description: 'Unified customer data management with integration, cleansing, and analytics capabilities.','
+      icon: '🗄️','
+      price: '$199/month','
+      features: ['Data integration', 'Data cleansing', 'Analytics capabilities', 'Data governance', 'Analytics dashboard'],'
+      benefits: ['Integrate data', 'Clean data', 'Enable analytics'],'
+      marketPrice: '$300-600/month','
+      category: 'Customer Data','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Privacy Manager',
-      description: 'Intelligent privacy management with consent tracking, data protection, and compliance monitoring.',
-      icon: '🔒',
-      price: '$149/month',
-      features: ['Consent tracking', 'Data protection', 'Compliance monitoring', 'Privacy automation', 'Analytics dashboard'],
-      benefits: ['Track consent', 'Protect data', 'Ensure compliance'],
-      marketPrice: '$200-500/month',
-      category: 'Customer Privacy',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Privacy Manager','
+      description: 'Intelligent privacy management with consent tracking, data protection, and compliance monitoring.','
+      icon: '🔒','
+      price: '$149/month','
+      features: ['Consent tracking', 'Data protection', 'Compliance monitoring', 'Privacy automation', 'Analytics dashboard'],'
+      benefits: ['Track consent', 'Protect data', 'Ensure compliance'],'
+      marketPrice: '$200-500/month','
+      category: 'Customer Privacy','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Communication Manager',
-      description: 'Smart communication management with channel optimization, message personalization, and engagement tracking.',
-      icon: '📢',
-      price: '$129/month',
-      features: ['Channel optimization', 'Message personalization', 'Engagement tracking', 'Communication automation', 'Analytics dashboard'],
-      benefits: ['Optimize channels', 'Personalize messages', 'Track engagement'],
-      marketPrice: '$200-400/month',
-      category: 'Customer Communication',
-      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Communication Manager','
+      description: 'Smart communication management with channel optimization, message personalization, and engagement tracking.','
+      icon: '📢','
+      price: '$129/month','
+      features: ['Channel optimization', 'Message personalization', 'Engagement tracking', 'Communication automation', 'Analytics dashboard'],'
+      benefits: ['Optimize channels', 'Personalize messages', 'Track engagement'],'
+      marketPrice: '$200-400/month','
+      category: 'Customer Communication','
+      technologies: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Experience Optimizer',
-      description: 'Intelligent CX optimization with experience mapping, improvement recommendations, and satisfaction tracking.',
-      icon: '⭐',
-      price: '$159/month',
-      features: ['Experience mapping', 'Improvement recommendations', 'Satisfaction tracking', 'CX automation', 'Analytics dashboard'],
-      benefits: ['Map experiences', 'Recommend improvements', 'Track satisfaction'],
-      marketPrice: '$250-450/month',
-      category: 'Customer Experience',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Experience Optimizer','
+      description: 'Intelligent CX optimization with experience mapping, improvement recommendations, and satisfaction tracking.','
+      icon: '⭐','
+      price: '$159/month','
+      features: ['Experience mapping', 'Improvement recommendations', 'Satisfaction tracking', 'CX automation', 'Analytics dashboard'],'
+      benefits: ['Map experiences', 'Recommend improvements', 'Track satisfaction'],'
+      marketPrice: '$250-450/month','
+      category: 'Customer Experience','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Success Manager',
-      description: 'Smart customer success with health scoring, intervention recommendations, and outcome optimization.',
-      icon: '🎯',
-      price: '$179/month',
-      features: ['Health scoring', 'Intervention recommendations', 'Outcome optimization', 'Success automation', 'Analytics dashboard'],
-      benefits: ['Score health', 'Recommend interventions', 'Optimize outcomes'],
-      marketPrice: '$250-500/month',
-      category: 'Customer Success',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Success Manager','
+      description: 'Smart customer success with health scoring, intervention recommendations, and outcome optimization.','
+      icon: '🎯','
+      price: '$179/month','
+      features: ['Health scoring', 'Intervention recommendations', 'Outcome optimization', 'Success automation', 'Analytics dashboard'],'
+      benefits: ['Score health', 'Recommend interventions', 'Optimize outcomes'],'
+      marketPrice: '$250-500/month','
+      category: 'Customer Success','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Advocacy Platform',
-      description: 'Intelligent advocacy management with referral tracking, testimonial collection, and advocacy optimization.',
-      icon: '🌟',
-      price: '$139/month',
-      features: ['Referral tracking', 'Testimonial collection', 'Advocacy optimization', 'Advocacy automation', 'Analytics dashboard'],
-      benefits: ['Track referrals', 'Collect testimonials', 'Optimize advocacy'],
-      marketPrice: '$200-400/month',
-      category: 'Customer Advocacy',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Advocacy Platform','
+      description: 'Intelligent advocacy management with referral tracking, testimonial collection, and advocacy optimization.','
+      icon: '🌟','
+      price: '$139/month','
+      features: ['Referral tracking', 'Testimonial collection', 'Advocacy optimization', 'Advocacy automation', 'Analytics dashboard'],'
+      benefits: ['Track referrals', 'Collect testimonials', 'Optimize advocacy'],'
+      marketPrice: '$200-400/month','
+      category: 'Customer Advocacy','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Insights Platform',
-      description: 'Smart customer insights with behavior analysis, trend identification, and actionable recommendations.',
-      icon: '🔍',
-      price: '$149/month',
-      features: ['Behavior analysis', 'Trend identification', 'Actionable recommendations', 'Insights automation', 'Analytics dashboard'],
-      benefits: ['Analyze behavior', 'Identify trends', 'Provide recommendations'],
-      marketPrice: '$200-500/month',
-      category: 'Customer Insights',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Insights Platform','
+      description: 'Smart customer insights with behavior analysis, trend identification, and actionable recommendations.','
+      icon: '🔍','
+      price: '$149/month','
+      features: ['Behavior analysis', 'Trend identification', 'Actionable recommendations', 'Insights automation', 'Analytics dashboard'],'
+      benefits: ['Analyze behavior', 'Identify trends', 'Provide recommendations'],'
+      marketPrice: '$200-500/month','
+      category: 'Customer Insights','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI Customer Intelligence Suite',
-      description: 'Comprehensive customer intelligence with 360-degree view, predictive analytics, and strategic recommendations.',
-      icon: '🧠',
-      price: '$299/month',
-      features: ['360-degree view', 'Predictive analytics', 'Strategic recommendations', 'Intelligence automation', 'Analytics dashboard'],
-      benefits: ['Get 360-degree view', 'Predict behavior', 'Provide strategic insights'],
-      marketPrice: '$400-800/month',
-      category: 'Customer Intelligence',
-      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Intelligence Suite','
+      description: 'Comprehensive customer intelligence with 360-degree view, predictive analytics, and strategic recommendations.','
+      icon: '🧠','
+      price: '$299/month','
+      features: ['360-degree view', 'Predictive analytics', 'Strategic recommendations', 'Intelligence automation', 'Analytics dashboard'],'
+      benefits: ['Get 360-degree view', 'Predict behavior', 'Provide strategic insights'],'
+      marketPrice: '$400-800/month','
+      category: 'Customer Intelligence','
+      technologies: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     // NEW INNOVATIVE MICRO SAAS SERVICES
     {
-      title: 'AI-Powered Meeting Transcriber',
-      description: 'Real-time meeting transcription with action item extraction and intelligent summarization.',
-      icon: '🎙️',
-      price: '$79/month',
-      features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Speaker identification', 'Integration with calendars'],
-      benefits: ['Save 5+ hours/week', 'Never miss important details', 'Improve meeting productivity'],
-      marketPrice: '$120-250/month',
-      category: 'Productivity',
-      technologies: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Meeting Transcriber','
+      description: 'Real-time meeting transcription with action item extraction and intelligent summarization.','
+      icon: '🎙️','
+      price: '$79/month','
+      features: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Speaker identification', 'Integration with calendars'],'
+      benefits: ['Save 5+ hours/week', 'Never miss important details', 'Improve meeting productivity'],'
+      marketPrice: '$120-250/month','
+      category: 'Productivity','
+      technologies: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']'
     },
     {
-      title: 'Smart Expense Tracker AI',
-      description: 'Automated expense categorization, receipt scanning, and budget optimization for businesses.',
-      icon: '💳',
-      price: '$99/month',
-      features: ['Receipt scanning', 'Auto-categorization', 'Budget alerts', 'Tax preparation', 'Multi-currency support'],
-      benefits: ['Save 10+ hours/month', 'Reduce expense errors by 90%', 'Optimize spending patterns'],
-      marketPrice: '$150-300/month',
-      category: 'Finance',
-      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Expense Tracker AI','
+      description: 'Automated expense categorization, receipt scanning, and budget optimization for businesses.','
+      icon: '💳','
+      price: '$99/month','
+      features: ['Receipt scanning', 'Auto-categorization', 'Budget alerts', 'Tax preparation', 'Multi-currency support'],'
+      benefits: ['Save 10+ hours/month', 'Reduce expense errors by 90%', 'Optimize spending patterns'],'
+      marketPrice: '$150-300/month','
+      category: 'Finance','
+      technologies: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']'
     },
     {
-      title: 'AI-Powered Password Manager',
-      description: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring.',
-      icon: '🔐',
-      price: '$49/month',
-      features: ['Password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'SSO integration'],
-      benefits: ['Eliminate password reuse', 'Prevent security breaches', 'Simplify team management'],
-      marketPrice: '$80-150/month',
-      category: 'Security',
-      technologies: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Password Manager','
+      description: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring.','
+      icon: '🔐','
+      price: '$49/month','
+      features: ['Password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'SSO integration'],'
+      benefits: ['Eliminate password reuse', 'Prevent security breaches', 'Simplify team management'],'
+      marketPrice: '$80-150/month','
+      category: 'Security','
+      technologies: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']'
     },
     {
-      title: 'Smart Time Tracking Assistant',
-      description: 'AI-powered time tracking with automatic project detection and productivity insights.',
-      icon: '⏰',
-      price: '$69/month',
-      features: ['Automatic time tracking', 'Project detection', 'Productivity analytics', 'Team insights', 'Integration with tools'],
-      benefits: ['Increase billable hours by 25%', 'Identify productivity patterns', 'Improve project estimates'],
-      marketPrice: '$100-200/month',
-      category: 'Productivity',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Time Tracking Assistant','
+      description: 'AI-powered time tracking with automatic project detection and productivity insights.','
+      icon: '⏰','
+      price: '$69/month','
+      features: ['Automatic time tracking', 'Project detection', 'Productivity analytics', 'Team insights', 'Integration with tools'],'
+      benefits: ['Increase billable hours by 25%', 'Identify productivity patterns', 'Improve project estimates'],'
+      marketPrice: '$100-200/month','
+      category: 'Productivity','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Logo Generator',
-      description: 'Professional logo creation with brand analysis and unlimited variations using AI.',
-      icon: '🎨',
-      price: '$89/month',
-      features: ['AI logo generation', 'Brand analysis', 'Unlimited variations', 'High-res downloads', 'Brand guidelines'],
-      benefits: ['Create logos in minutes', 'Professional quality designs', 'Consistent brand identity'],
-      marketPrice: '$150-300/month',
-      category: 'Design',
-      technologies: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Logo Generator','
+      description: 'Professional logo creation with brand analysis and unlimited variations using AI.','
+      icon: '🎨','
+      price: '$89/month','
+      features: ['AI logo generation', 'Brand analysis', 'Unlimited variations', 'High-res downloads', 'Brand guidelines'],'
+      benefits: ['Create logos in minutes', 'Professional quality designs', 'Consistent brand identity'],'
+      marketPrice: '$150-300/month','
+      category: 'Design','
+      technologies: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']'
     },
     {
-      title: 'Smart Invoice Generator',
-      description: 'Automated invoice creation with payment tracking, reminders, and financial analytics.',
-      icon: '📄',
-      price: '$59/month',
-      features: ['Auto-invoice generation', 'Payment tracking', 'Automated reminders', 'Financial reports', 'Multi-currency support'],
-      benefits: ['Reduce billing time by 80%', 'Improve cash flow', 'Professional invoicing'],
-      marketPrice: '$100-200/month',
-      category: 'Finance',
-      technologies: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Invoice Generator','
+      description: 'Automated invoice creation with payment tracking, reminders, and financial analytics.','
+      icon: '📄','
+      price: '$59/month','
+      features: ['Auto-invoice generation', 'Payment tracking', 'Automated reminders', 'Financial reports', 'Multi-currency support'],'
+      benefits: ['Reduce billing time by 80%', 'Improve cash flow', 'Professional invoicing'],'
+      marketPrice: '$100-200/month','
+      category: 'Finance','
+      technologies: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']'
     },
     {
-      title: 'AI-Powered Website Builder',
-      description: 'Intelligent website creation with content generation, SEO optimization, and responsive design.',
-      icon: '🌐',
-      price: '$199/month',
-      features: ['AI content generation', 'SEO optimization', 'Responsive design', 'E-commerce integration', 'Analytics dashboard'],
-      benefits: ['Build websites in hours', 'Professional SEO optimization', 'Mobile-first design'],
-      marketPrice: '$300-600/month',
-      category: 'Web Development',
-      technologies: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Website Builder','
+      description: 'Intelligent website creation with content generation, SEO optimization, and responsive design.','
+      icon: '🌐','
+      price: '$199/month','
+      features: ['AI content generation', 'SEO optimization', 'Responsive design', 'E-commerce integration', 'Analytics dashboard'],'
+      benefits: ['Build websites in hours', 'Professional SEO optimization', 'Mobile-first design'],'
+      marketPrice: '$300-600/month','
+      category: 'Web Development','
+      technologies: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']'
     },
     {
-      title: 'Smart Contract Generator',
-      description: 'AI-powered legal document creation with template customization and compliance checking.',
-      icon: '📋',
-      price: '$149/month',
-      features: ['Document templates', 'AI customization', 'Compliance checking', 'Electronic signatures', 'Version control'],
-      benefits: ['Create contracts in minutes', 'Ensure legal compliance', 'Reduce legal costs'],
-      marketPrice: '$250-500/month',
-      category: 'Legal',
-      technologies: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Contract Generator','
+      description: 'AI-powered legal document creation with template customization and compliance checking.','
+      icon: '📋','
+      price: '$149/month','
+      features: ['Document templates', 'AI customization', 'Compliance checking', 'Electronic signatures', 'Version control'],'
+      benefits: ['Create contracts in minutes', 'Ensure legal compliance', 'Reduce legal costs'],'
+      marketPrice: '$250-500/month','
+      category: 'Legal','
+      technologies: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Email Signature Generator',
-      description: 'Professional email signature creation with brand consistency and contact management.',
-      icon: '✍️',
-      price: '$39/month',
-      features: ['Signature templates', 'Brand customization', 'Contact integration', 'Social media links', 'Analytics tracking'],
-      benefits: ['Professional email presence', 'Consistent branding', 'Easy team management'],
-      marketPrice: '$60-120/month',
-      category: 'Marketing',
-      technologies: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Email Signature Generator','
+      description: 'Professional email signature creation with brand consistency and contact management.','
+      icon: '✍️','
+      price: '$39/month','
+      features: ['Signature templates', 'Brand customization', 'Contact integration', 'Social media links', 'Analytics tracking'],'
+      benefits: ['Professional email presence', 'Consistent branding', 'Easy team management'],'
+      marketPrice: '$60-120/month','
+      category: 'Marketing','
+      technologies: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']'
     },
     {
-      title: 'Smart QR Code Generator',
-      description: 'Advanced QR code creation with analytics, customization, and dynamic content management.',
-      icon: '📱',
-      price: '$49/month',
-      features: ['Custom QR designs', 'Analytics tracking', 'Dynamic content', 'Bulk generation', 'API integration'],
-      benefits: ['Track engagement', 'Customize branding', 'Manage campaigns effectively'],
-      marketPrice: '$80-150/month',
-      category: 'Marketing',
-      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart QR Code Generator','
+      description: 'Advanced QR code creation with analytics, customization, and dynamic content management.','
+      icon: '📱','
+      price: '$49/month','
+      features: ['Custom QR designs', 'Analytics tracking', 'Dynamic content', 'Bulk generation', 'API integration'],'
+      benefits: ['Track engagement', 'Customize branding', 'Manage campaigns effectively'],'
+      marketPrice: '$80-150/month','
+      category: 'Marketing','
+      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']'
     },
     {
-      title: 'AI-Powered Color Palette Generator',
-      description: 'Intelligent color scheme creation with accessibility checking and brand analysis.',
-      icon: '🎨',
-      price: '$59/month',
-      features: ['AI color generation', 'Accessibility checking', 'Brand analysis', 'Palette export', 'Trend analysis'],
-      benefits: ['Create perfect color schemes', 'Ensure accessibility', 'Stay on-trend'],
-      marketPrice: '$100-200/month',
-      category: 'Design',
-      technologies: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Color Palette Generator','
+      description: 'Intelligent color scheme creation with accessibility checking and brand analysis.','
+      icon: '🎨','
+      price: '$59/month','
+      features: ['AI color generation', 'Accessibility checking', 'Brand analysis', 'Palette export', 'Trend analysis'],';'
+      benefits: ['Create perfect color schemes', 'Ensure accessibility', 'Stay on-trend'],'
+      marketPrice: '$100-200/month','
+      category: 'Design','
+      technologies: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']'
     },
     {
-      title: 'Smart Business Card Designer',
-      description: 'AI-powered business card creation with professional templates and contact management.',
-      icon: '💼',
-      price: '$79/month',
-      features: ['AI design generation', 'Professional templates', 'Contact management', 'Print-ready files', 'Digital versions'],
-      benefits: ['Professional business cards', 'Consistent branding', 'Easy contact sharing'],
-      marketPrice: '$120-250/month',
-      category: 'Design',
-      technologies: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Business Card Designer','
+      description: 'AI-powered business card creation with professional templates and contact management.','
+      icon: '💼','
+      price: '$79/month','
+      features: ['AI design generation', 'Professional templates', 'Contact management', 'Print-ready files', 'Digital versions'],'
+      benefits: ['Professional business cards', 'Consistent branding', 'Easy contact sharing'],'
+      marketPrice: '$120-250/month','
+      category: 'Design','
+      technologies: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']'
     },
     {
-      title: 'AI-Powered Newsletter Generator',
-      description: 'Automated newsletter creation with content curation and subscriber analytics.',
-      icon: '📰',
-      price: '$99/month',
-      features: ['Content curation', 'AI writing', 'Subscriber analytics', 'A/B testing', 'Multi-platform publishing'],
-      benefits: ['Create engaging newsletters', 'Increase subscriber engagement', 'Save 15+ hours/week'],
-      marketPrice: '$150-300/month',
-      category: 'Marketing',
-      technologies: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Newsletter Generator','
+      description: 'Automated newsletter creation with content curation and subscriber analytics.','
+      icon: '📰','
+      price: '$99/month','
+      features: ['Content curation', 'AI writing', 'Subscriber analytics', 'A/B testing', 'Multi-platform publishing'],'
+      benefits: ['Create engaging newsletters', 'Increase subscriber engagement', 'Save 15+ hours/week'],'
+      marketPrice: '$150-300/month','
+      category: 'Marketing','
+      technologies: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']'
     },
     {
-      title: 'Smart PDF Converter Pro',
-      description: 'Advanced PDF conversion with OCR, form filling, and document optimization.',
-      icon: '📄',
-      price: '$89/month',
-      features: ['Multi-format conversion', 'OCR text extraction', 'Form filling', 'Document optimization', 'Batch processing'],
-      benefits: ['Convert any document format', 'Extract text from images', 'Optimize file sizes'],
-      marketPrice: '$150-300/month',
-      category: 'Productivity',
-      technologies: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart PDF Converter Pro','
+      description: 'Advanced PDF conversion with OCR, form filling, and document optimization.','
+      icon: '📄','
+      price: '$89/month','
+      features: ['Multi-format conversion', 'OCR text extraction', 'Form filling', 'Document optimization', 'Batch processing'],'
+      benefits: ['Convert any document format', 'Extract text from images', 'Optimize file sizes'],'
+      marketPrice: '$150-300/month','
+      category: 'Productivity','
+      technologies: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Video Thumbnail Generator',
-      description: 'Intelligent thumbnail creation with A/B testing and performance optimization.',
-      icon: '🎬',
-      price: '$79/month',
-      features: ['AI thumbnail generation', 'A/B testing', 'Performance analytics', 'Brand customization', 'Bulk creation'],
-      benefits: ['Increase click-through rates', 'Professional thumbnails', 'Data-driven optimization'],
-      marketPrice: '$120-250/month',
-      category: 'Video Marketing',
-      technologies: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Video Thumbnail Generator','
+      description: 'Intelligent thumbnail creation with A/B testing and performance optimization.','
+      icon: '🎬','
+      price: '$79/month','
+      features: ['AI thumbnail generation', 'A/B testing', 'Performance analytics', 'Brand customization', 'Bulk creation'],'
+      benefits: ['Increase click-through rates', 'Professional thumbnails', 'Data-driven optimization'],'
+      marketPrice: '$120-250/month','
+      category: 'Video Marketing','
+      technologies: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']'
     },
     {
-      title: 'Smart Social Media Scheduler',
-      description: 'AI-powered social media scheduling with optimal timing and content optimization.',
-      icon: '📅',
-      price: '$119/month',
-      features: ['AI scheduling', 'Content optimization', 'Multi-platform posting', 'Engagement analytics', 'Hashtag research'],
-      benefits: ['Increase engagement by 60%', 'Save 20+ hours/week', 'Optimize posting times'],
-      marketPrice: '$200-400/month',
-      category: 'Social Media',
-      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Social Media Scheduler','
+      description: 'AI-powered social media scheduling with optimal timing and content optimization.','
+      icon: '📅','
+      price: '$119/month','
+      features: ['AI scheduling', 'Content optimization', 'Multi-platform posting', 'Engagement analytics', 'Hashtag research'],'
+      benefits: ['Increase engagement by 60%', 'Save 20+ hours/week', 'Optimize posting times'],'
+      marketPrice: '$200-400/month','
+      category: 'Social Media','
+      technologies: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']'
     },
     {
-      title: 'AI-Powered Hashtag Generator',
-      description: 'Intelligent hashtag research and generation for maximum social media reach.',
-      icon: '#️⃣',
-      price: '$49/month',
-      features: ['Hashtag research', 'Trend analysis', 'Competitor analysis', 'Performance tracking', 'Bulk generation'],
-      benefits: ['Increase reach by 200%', 'Find trending hashtags', 'Optimize social strategy'],
-      marketPrice: '$80-150/month',
-      category: 'Social Media',
-      technologies: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Hashtag Generator','
+      description: 'Intelligent hashtag research and generation for maximum social media reach.','
+      icon: '#️⃣','
+      price: '$49/month','
+      features: ['Hashtag research', 'Trend analysis', 'Competitor analysis', 'Performance tracking', 'Bulk generation'],'
+      benefits: ['Increase reach by 200%', 'Find trending hashtags', 'Optimize social strategy'],'
+      marketPrice: '$80-150/month','
+      category: 'Social Media','
+      technologies: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']'
     },
     {
-      title: 'Smart Email Template Builder',
-      description: 'AI-powered email template creation with responsive design and A/B testing.',
-      icon: '📧',
-      price: '$89/month',
-      features: ['AI template generation', 'Responsive design', 'A/B testing', 'Brand customization', 'Performance analytics'],
-      benefits: ['Create professional emails', 'Improve open rates', 'Consistent branding'],
-      marketPrice: '$150-300/month',
-      category: 'Email Marketing',
-      technologies: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Email Template Builder','
+      description: 'AI-powered email template creation with responsive design and A/B testing.','
+      icon: '📧','
+      price: '$89/month','
+      features: ['AI template generation', 'Responsive design', 'A/B testing', 'Brand customization', 'Performance analytics'],'
+      benefits: ['Create professional emails', 'Improve open rates', 'Consistent branding'],'
+      marketPrice: '$150-300/month','
+      category: 'Email Marketing','
+      technologies: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Competitor Analysis Tool',
-      description: 'Comprehensive competitor research with pricing analysis and market insights.',
-      icon: '🔍',
-      price: '$199/month',
-      features: ['Competitor monitoring', 'Pricing analysis', 'Feature comparison', 'Market insights', 'Alert system'],
-      benefits: ['Stay ahead of competition', 'Optimize pricing strategy', 'Identify market opportunities'],
-      marketPrice: '$300-600/month',
-      category: 'Market Research',
-      technologies: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Competitor Analysis Tool','
+      description: 'Comprehensive competitor research with pricing analysis and market insights.','
+      icon: '🔍','
+      price: '$199/month','
+      features: ['Competitor monitoring', 'Pricing analysis', 'Feature comparison', 'Market insights', 'Alert system'],'
+      benefits: ['Stay ahead of competition', 'Optimize pricing strategy', 'Identify market opportunities'],'
+      marketPrice: '$300-600/month','
+      category: 'Market Research','
+      technologies: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']'
     },
     {
-      title: 'Smart Customer Feedback Analyzer',
-      description: 'AI-powered sentiment analysis and feedback categorization for customer insights.',
-      icon: '💬',
-      price: '$129/month',
-      features: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Dashboard analytics'],
-      benefits: ['Understand customer sentiment', 'Improve products/services', 'Increase customer satisfaction'],
-      marketPrice: '$200-400/month',
-      category: 'Customer Analytics',
-      technologies: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Customer Feedback Analyzer','
+      description: 'AI-powered sentiment analysis and feedback categorization for customer insights.','
+      icon: '💬','
+      price: '$129/month','
+      features: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Dashboard analytics'],'
+      benefits: ['Understand customer sentiment', 'Improve products/services', 'Increase customer satisfaction'],'
+      marketPrice: '$200-400/month','
+      category: 'Customer Analytics','
+      technologies: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Landing Page Optimizer',
-      description: 'Intelligent landing page testing and optimization for maximum conversion rates.',
-      icon: '🚀',
-      price: '$149/month',
-      features: ['A/B testing', 'Conversion optimization', 'Heatmap analysis', 'AI recommendations', 'Performance tracking'],
-      benefits: ['Increase conversions by 50%', 'Data-driven optimization', 'Improve user experience'],
-      marketPrice: '$250-500/month',
-      category: 'Conversion Optimization',
-      technologies: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Landing Page Optimizer','
+      description: 'Intelligent landing page testing and optimization for maximum conversion rates.','
+      icon: '🚀','
+      price: '$149/month','
+      features: ['A/B testing', 'Conversion optimization', 'Heatmap analysis', 'AI recommendations', 'Performance tracking'],'
+      benefits: ['Increase conversions by 50%', 'Data-driven optimization', 'Improve user experience'],'
+      marketPrice: '$250-500/month','
+      category: 'Conversion Optimization','
+      technologies: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {
-      title: 'Smart Inventory Photo Manager',
-      description: 'AI-powered product photo organization, editing, and optimization for e-commerce.',
-      icon: '📸',
-      price: '$99/month',
-      features: ['Auto-organization', 'Photo editing', 'Background removal', 'Size optimization', 'Bulk processing'],
-      benefits: ['Professional product photos', 'Save 20+ hours/week', 'Consistent image quality'],
-      marketPrice: '$150-300/month',
-      category: 'E-commerce',
-      technologies: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Inventory Photo Manager','
+      description: 'AI-powered product photo organization, editing, and optimization for e-commerce.','
+      icon: '📸','
+      price: '$99/month','
+      features: ['Auto-organization', 'Photo editing', 'Background removal', 'Size optimization', 'Bulk processing'],'
+      benefits: ['Professional product photos', 'Save 20+ hours/week', 'Consistent image quality'],'
+      marketPrice: '$150-300/month','
+      category: 'E-commerce','
+      technologies: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Price Monitoring Tool',
-      description: 'Automated price tracking and alerts for competitive pricing strategies.',
-      icon: '💰',
-      price: '$79/month',
-      features: ['Price monitoring', 'Alert system', 'Historical tracking', 'Competitor analysis', 'Price optimization'],
-      benefits: ['Stay competitive', 'Optimize pricing', 'Increase profit margins'],
-      marketPrice: '$120-250/month',
-      category: 'E-commerce',
-      technologies: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Price Monitoring Tool','
+      description: 'Automated price tracking and alerts for competitive pricing strategies.','
+      icon: '💰','
+      price: '$79/month','
+      features: ['Price monitoring', 'Alert system', 'Historical tracking', 'Competitor analysis', 'Price optimization'],'
+      benefits: ['Stay competitive', 'Optimize pricing', 'Increase profit margins'],'
+      marketPrice: '$120-250/month','
+      category: 'E-commerce','
+      technologies: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']'
     },
     {
-      title: 'Smart Appointment Scheduler',
-      description: 'AI-powered scheduling with time zone handling and automated reminders.',
-      icon: '📅',
-      price: '$69/month',
-      features: ['Smart scheduling', 'Time zone handling', 'Automated reminders', 'Calendar integration', 'Payment processing'],
-      benefits: ['Reduce no-shows by 40%', 'Streamline booking process', 'Improve customer experience'],
-      marketPrice: '$100-200/month',
-      category: 'Scheduling',
-      technologies: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Appointment Scheduler','
+      description: 'AI-powered scheduling with time zone handling and automated reminders.','
+      icon: '📅','
+      price: '$69/month','
+      features: ['Smart scheduling', 'Time zone handling', 'Automated reminders', 'Calendar integration', 'Payment processing'],'
+      benefits: ['Reduce no-shows by 40%', 'Streamline booking process', 'Improve customer experience'],'
+      marketPrice: '$100-200/month','
+      category: 'Scheduling','
+      technologies: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Resume Builder',
-      description: 'Intelligent resume creation with ATS optimization and industry-specific templates.',
-      icon: '📝',
-      price: '$59/month',
-      features: ['ATS optimization', 'Industry templates', 'AI writing assistance', 'Skills matching', 'PDF export'],
-      benefits: ['Pass ATS filters', 'Professional resumes', 'Increase interview chances'],
-      marketPrice: '$100-200/month',
-      category: 'Career Tools',
-      technologies: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Resume Builder','
+      description: 'Intelligent resume creation with ATS optimization and industry-specific templates.','
+      icon: '📝','
+      price: '$59/month','
+      features: ['ATS optimization', 'Industry templates', 'AI writing assistance', 'Skills matching', 'PDF export'],';'
+      benefits: ['Pass ATS filters', 'Professional resumes', 'Increase interview chances'],'
+      marketPrice: '$100-200/month','
+      category: 'Career Tools','
+      technologies: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']'
     },
     {
-      title: 'Smart Weather API Service',
-      description: 'Advanced weather data with AI-powered forecasts and business impact analysis.',
-      icon: '🌤️',
-      price: '$89/month',
-      features: ['Accurate forecasts', 'Business impact analysis', 'Historical data', 'API integration', 'Custom alerts'],
-      benefits: ['Make weather-informed decisions', 'Reduce weather-related risks', 'Optimize operations'],
-      marketPrice: '$150-300/month',
-      category: 'Weather Services',
-      technologies: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Weather API Service','
+      description: 'Advanced weather data with AI-powered forecasts and business impact analysis.','
+      icon: '🌤️','
+      price: '$89/month','
+      features: ['Accurate forecasts', 'Business impact analysis', 'Historical data', 'API integration', 'Custom alerts'],'
+      benefits: ['Make weather-informed decisions', 'Reduce weather-related risks', 'Optimize operations'],'
+      marketPrice: '$150-300/month','
+      category: 'Weather Services','
+      technologies: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Translation Service',
-      description: 'Real-time translation with context awareness and industry-specific terminology.',
-      icon: '🌍',
-      price: '$99/month',
-      features: ['Real-time translation', 'Context awareness', 'Industry terminology', 'Bulk translation', 'API integration'],
-      benefits: ['Break language barriers', 'Improve global reach', 'Professional translations'],
-      marketPrice: '$150-300/month',
-      category: 'Translation',
-      technologies: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Translation Service','
+      description: 'Real-time translation with context awareness and industry-specific terminology.','
+      icon: '🌍','
+      price: '$99/month','
+      features: ['Real-time translation', 'Context awareness', 'Industry terminology', 'Bulk translation', 'API integration'],'
+      benefits: ['Break language barriers', 'Improve global reach', 'Professional translations'],'
+      marketPrice: '$150-300/month','
+      category: 'Translation','
+      technologies: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']'
     },
     {
-      title: 'Smart Data Backup Service',
-      description: 'Automated data backup with AI-powered deduplication and recovery optimization.',
-      icon: '💾',
-      price: '$79/month',
-      features: ['Automated backup', 'AI deduplication', 'Fast recovery', 'Version control', 'Security encryption'],
-      benefits: ['Protect critical data', 'Reduce storage costs', 'Quick disaster recovery'],
-      marketPrice: '$120-250/month',
-      category: 'Data Management',
-      technologies: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Data Backup Service','
+      description: 'Automated data backup with AI-powered deduplication and recovery optimization.','
+      icon: '💾','
+      price: '$79/month','
+      features: ['Automated backup', 'AI deduplication', 'Fast recovery', 'Version control', 'Security encryption'],'
+      benefits: ['Protect critical data', 'Reduce storage costs', 'Quick disaster recovery'],'
+      marketPrice: '$120-250/month','
+      category: 'Data Management','
+      technologies: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Form Builder',
-      description: 'Intelligent form creation with conditional logic and response analysis.',
-      icon: '📋',
-      price: '$89/month',
-      features: ['Drag-and-drop builder', 'Conditional logic', 'Response analytics', 'Integration APIs', 'Custom styling'],
-      benefits: ['Create complex forms easily', 'Gather better data', 'Improve user experience'],
-      marketPrice: '$150-300/month',
-      category: 'Form Management',
-      technologies: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Form Builder','
+      description: 'Intelligent form creation with conditional logic and response analysis.','
+      icon: '📋','
+      price: '$89/month','
+      features: ['Drag-and-drop builder', 'Conditional logic', 'Response analytics', 'Integration APIs', 'Custom styling'],'
+      benefits: ['Create complex forms easily', 'Gather better data', 'Improve user experience'],'
+      marketPrice: '$150-300/month','
+      category: 'Form Management','
+      technologies: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {
-      title: 'Smart Uptime Monitor',
-      description: 'AI-powered website monitoring with predictive alerts and performance optimization.',
-      icon: '📊',
-      price: '$69/month',
-      features: ['Real-time monitoring', 'Predictive alerts', 'Performance analysis', 'Global monitoring', 'Detailed reports'],
-      benefits: ['Prevent downtime', 'Improve performance', 'Reduce monitoring costs'],
-      marketPrice: '$100-200/month',
-      category: 'Monitoring',
-      technologies: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Uptime Monitor','
+      description: 'AI-powered website monitoring with predictive alerts and performance optimization.','
+      icon: '📊','
+      price: '$69/month','
+      features: ['Real-time monitoring', 'Predictive alerts', 'Performance analysis', 'Global monitoring', 'Detailed reports'],'
+      benefits: ['Prevent downtime', 'Improve performance', 'Reduce monitoring costs'],'
+      marketPrice: '$100-200/month','
+      category: 'Monitoring','
+      technologies: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Survey Creator',
-      description: 'Intelligent survey design with question optimization and response analysis.',
-      icon: '📊',
-      price: '$79/month',
-      features: ['AI question generation', 'Response analysis', 'Survey optimization', 'Multi-platform distribution', 'Real-time analytics'],
-      benefits: ['Create better surveys', 'Get higher response rates', 'Extract actionable insights'],
-      marketPrice: '$120-250/month',
-      category: 'Survey Tools',
-      technologies: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Survey Creator','
+      description: 'Intelligent survey design with question optimization and response analysis.','
+      icon: '📊','
+      price: '$79/month','
+      features: ['AI question generation', 'Response analysis', 'Survey optimization', 'Multi-platform distribution', 'Real-time analytics'],'
+      benefits: ['Create better surveys', 'Get higher response rates', 'Extract actionable insights'],'
+      marketPrice: '$120-250/month','
+      category: 'Survey Tools','
+      technologies: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {
-      title: 'Smart File Converter',
-      description: 'AI-powered file conversion with format optimization and quality enhancement.',
-      icon: '🔄',
-      price: '$59/month',
-      features: ['Multi-format conversion', 'Quality enhancement', 'Batch processing', 'Cloud integration', 'API access'],
-      benefits: ['Convert any file format', 'Maintain quality', 'Process files in bulk'],
-      marketPrice: '$100-200/month',
-      category: 'File Management',
-      technologies: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart File Converter','
+      description: 'AI-powered file conversion with format optimization and quality enhancement.','
+      icon: '🔄','
+      price: '$59/month','
+      features: ['Multi-format conversion', 'Quality enhancement', 'Batch processing', 'Cloud integration', 'API access'],'
+      benefits: ['Convert any file format', 'Maintain quality', 'Process files in bulk'],'
+      marketPrice: '$100-200/month','
+      category: 'File Management','
+      technologies: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered QR Code Scanner',
-      description: 'Advanced QR code scanning with analytics, customization, and business intelligence.',
-      icon: '📱',
-      price: '$49/month',
-      features: ['Advanced scanning', 'Analytics tracking', 'Custom designs', 'Bulk generation', 'API integration'],
-      benefits: ['Track QR code performance', 'Customize designs', 'Gather business insights'],
-      marketPrice: '$80-150/month',
-      category: 'QR Code Tools',
-      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered QR Code Scanner','
+      description: 'Advanced QR code scanning with analytics, customization, and business intelligence.','
+      icon: '📱','
+      price: '$49/month','
+      features: ['Advanced scanning', 'Analytics tracking', 'Custom designs', 'Bulk generation', 'API integration'],'
+      benefits: ['Track QR code performance', 'Customize designs', 'Gather business insights'],'
+      marketPrice: '$80-150/month','
+      category: 'QR Code Tools','
+      technologies: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']'
     },
     {
-      title: 'Smart Password Generator',
-      description: 'AI-powered password creation with security analysis and breach monitoring.',
-      icon: '🔑',
-      price: '$39/month',
-      features: ['AI password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'Integration APIs'],
-      benefits: ['Create secure passwords', 'Monitor security breaches', 'Simplify team management'],
-      marketPrice: '$60-120/month',
-      category: 'Security',
-      technologies: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Password Generator','
+      description: 'AI-powered password creation with security analysis and breach monitoring.','
+      icon: '🔑','
+      price: '$39/month','
+      features: ['AI password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'Integration APIs'],'
+      benefits: ['Create secure passwords', 'Monitor security breaches', 'Simplify team management'],'
+      marketPrice: '$60-120/month','
+      category: 'Security','
+      technologies: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Color Picker',
-      description: 'Intelligent color selection with accessibility checking and brand analysis.',
-      icon: '🎨',
-      price: '$49/month',
-      features: ['AI color selection', 'Accessibility checking', 'Brand analysis', 'Palette generation', 'Export options'],
-      benefits: ['Choose perfect colors', 'Ensure accessibility', 'Maintain brand consistency'],
-      marketPrice: '$80-150/month',
-      category: 'Design Tools',
-      technologies: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Color Picker','
+      description: 'Intelligent color selection with accessibility checking and brand analysis.','
+      icon: '🎨','
+      price: '$49/month','
+      features: ['AI color selection', 'Accessibility checking', 'Brand analysis', 'Palette generation', 'Export options'],'
+      benefits: ['Choose perfect colors', 'Ensure accessibility', 'Maintain brand consistency'],'
+      marketPrice: '$80-150/month','
+      category: 'Design Tools','
+      technologies: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']'
     },
     {
-      title: 'Smart Text Summarizer',
-      description: 'AI-powered text summarization with key point extraction and multi-language support.',
-      icon: '📝',
-      price: '$69/month',
-      features: ['AI summarization', 'Key point extraction', 'Multi-language support', 'Bulk processing', 'API integration'],
-      benefits: ['Save reading time', 'Extract key insights', 'Process large documents'],
-      marketPrice: '$100-200/month',
-      category: 'Text Processing',
-      technologies: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Text Summarizer','
+      description: 'AI-powered text summarization with key point extraction and multi-language support.','
+      icon: '📝','
+      price: '$69/month','
+      features: ['AI summarization', 'Key point extraction', 'Multi-language support', 'Bulk processing', 'API integration'],'
+      benefits: ['Save reading time', 'Extract key insights', 'Process large documents'],'
+      marketPrice: '$100-200/month','
+      category: 'Text Processing','
+      technologies: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Image Resizer',
-      description: 'Intelligent image resizing with quality optimization and batch processing.',
-      icon: '🖼️',
-      price: '$59/month',
-      features: ['Smart resizing', 'Quality optimization', 'Batch processing', 'Format conversion', 'Cloud integration'],
-      benefits: ['Optimize image sizes', 'Maintain quality', 'Process images in bulk'],
-      marketPrice: '$100-200/month',
-      category: 'Image Processing',
-      technologies: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Image Resizer','
+      description: 'Intelligent image resizing with quality optimization and batch processing.','
+      icon: '🖼️','
+      price: '$59/month','
+      features: ['Smart resizing', 'Quality optimization', 'Batch processing', 'Format conversion', 'Cloud integration'],'
+      benefits: ['Optimize image sizes', 'Maintain quality', 'Process images in bulk'],'
+      marketPrice: '$100-200/month','
+      category: 'Image Processing','
+      technologies: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']'
     },
     {
-      title: 'Smart URL Shortener',
-      description: 'AI-powered URL shortening with analytics, customization, and link management.',
-      icon: '🔗',
-      price: '$39/month',
-      features: ['Custom short URLs', 'Analytics tracking', 'Link management', 'QR code generation', 'API access'],
-      benefits: ['Track link performance', 'Customize URLs', 'Manage campaigns'],
-      marketPrice: '$60-120/month',
-      category: 'URL Management',
-      technologies: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart URL Shortener','
+      description: 'AI-powered URL shortening with analytics, customization, and link management.','
+      icon: '🔗','
+      price: '$39/month','
+      features: ['Custom short URLs', 'Analytics tracking', 'Link management', 'QR code generation', 'API access'],'
+      benefits: ['Track link performance', 'Customize URLs', 'Manage campaigns'],'
+      marketPrice: '$60-120/month','
+      category: 'URL Management','
+      technologies: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']'
     },
     {
-      title: 'AI-Powered Favicon Generator',
-      description: 'Intelligent favicon creation with brand analysis and multiple format generation.',
-      icon: '🌟',
-      price: '$49/month',
-      features: ['AI favicon generation', 'Brand analysis', 'Multiple formats', 'Bulk generation', 'Quality optimization'],
-      benefits: ['Create professional favicons', 'Maintain brand consistency', 'Generate all required sizes'],
-      marketPrice: '$80-150/month',
-      category: 'Web Development',
-      technologies: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Favicon Generator','
+      description: 'Intelligent favicon creation with brand analysis and multiple format generation.','
+      icon: '🌟','
+      price: '$49/month','
+      features: ['AI favicon generation', 'Brand analysis', 'Multiple formats', 'Bulk generation', 'Quality optimization'],'
+      benefits: ['Create professional favicons', 'Maintain brand consistency', 'Generate all required sizes'],'
+      marketPrice: '$80-150/month','
+      category: 'Web Development','
+      technologies: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']'
     },
     {
-      title: 'Smart Meta Tag Generator',
-      description: 'AI-powered SEO meta tag creation with optimization and performance tracking.',
-      icon: '🏷️',
-      price: '$59/month',
-      features: ['AI meta tag generation', 'SEO optimization', 'Performance tracking', 'Bulk generation', 'Integration APIs'],
-      benefits: ['Improve SEO rankings', 'Optimize meta tags', 'Track performance'],
-      marketPrice: '$100-200/month',
-      category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Meta Tag Generator','
+      description: 'AI-powered SEO meta tag creation with optimization and performance tracking.','
+      icon: '🏷️','
+      price: '$59/month','
+      features: ['AI meta tag generation', 'SEO optimization', 'Performance tracking', 'Bulk generation', 'Integration APIs'],'
+      benefits: ['Improve SEO rankings', 'Optimize meta tags', 'Track performance'],'
+      marketPrice: '$100-200/month','
+      category: 'SEO Tools','
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Sitemap Generator',
-      description: 'Intelligent sitemap creation with SEO optimization and search engine submission.',
-      icon: '🗺️',
-      price: '$69/month',
-      features: ['AI sitemap generation', 'SEO optimization', 'Auto-submission', 'Change detection', 'Analytics integration'],
-      benefits: ['Improve search visibility', 'Automate sitemap updates', 'Optimize for search engines'],
-      marketPrice: '$100-200/month',
-      category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Sitemap Generator','
+      description: 'Intelligent sitemap creation with SEO optimization and search engine submission.','
+      icon: '🗺️','
+      price: '$69/month','
+      features: ['AI sitemap generation', 'SEO optimization', 'Auto-submission', 'Change detection', 'Analytics integration'],'
+      benefits: ['Improve search visibility', 'Automate sitemap updates', 'Optimize for search engines'],'
+      marketPrice: '$100-200/month','
+      category: 'SEO Tools','
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']'
     },
     {
-      title: 'Smart Robots.txt Generator',
-      description: 'AI-powered robots.txt creation with SEO optimization and search engine guidance.',
-      icon: '🤖',
-      price: '$39/month',
-      features: ['AI robots.txt generation', 'SEO optimization', 'Search engine guidance', 'Validation checking', 'Auto-updates'],
-      benefits: ['Control search engine crawling', 'Optimize SEO', 'Prevent indexing issues'],
-      marketPrice: '$60-120/month',
-      category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Robots.txt Generator','
+      description: 'AI-powered robots.txt creation with SEO optimization and search engine guidance.','
+      icon: '🤖','
+      price: '$39/month','
+      features: ['AI robots.txt generation', 'SEO optimization', 'Search engine guidance', 'Validation checking', 'Auto-updates'],'
+      benefits: ['Control search engine crawling', 'Optimize SEO', 'Prevent indexing issues'],'
+      marketPrice: '$60-120/month','
+      category: 'SEO Tools','
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Schema Markup Generator',
-      description: 'Intelligent schema markup creation for enhanced search engine visibility.',
-      icon: '📋',
-      price: '$79/month',
-      features: ['AI schema generation', 'Multiple schema types', 'Validation checking', 'Bulk generation', 'Integration APIs'],
-      benefits: ['Improve search visibility', 'Rich snippets', 'Better search results'],
-      marketPrice: '$120-250/month',
-      category: 'SEO Tools',
-      technologies: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Schema Markup Generator','
+      description: 'Intelligent schema markup creation for enhanced search engine visibility.','
+      icon: '📋','
+      price: '$79/month','
+      features: ['AI schema generation', 'Multiple schema types', 'Validation checking', 'Bulk generation', 'Integration APIs'],'
+      benefits: ['Improve search visibility', 'Rich snippets', 'Better search results'],'
+      marketPrice: '$120-250/month','
+      category: 'SEO Tools','
+      technologies: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']'
     },
     {
-      title: 'Smart Alt Text Generator',
-      description: 'AI-powered alt text creation for images with SEO optimization and accessibility.',
-      icon: '🖼️',
-      price: '$49/month',
-      features: ['AI alt text generation', 'SEO optimization', 'Accessibility checking', 'Bulk processing', 'Quality scoring'],
-      benefits: ['Improve accessibility', 'Boost SEO rankings', 'Save time on alt text'],
-      marketPrice: '$80-150/month',
-      category: 'SEO Tools',
-      technologies: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Alt Text Generator','
+      description: 'AI-powered alt text creation for images with SEO optimization and accessibility.','
+      icon: '🖼️','
+      price: '$49/month','
+      features: ['AI alt text generation', 'SEO optimization', 'Accessibility checking', 'Bulk processing', 'Quality scoring'],'
+      benefits: ['Improve accessibility', 'Boost SEO rankings', 'Save time on alt text'],'
+      marketPrice: '$80-150/month','
+      category: 'SEO Tools','
+      technologies: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Internal Link Optimizer',
-      description: 'Intelligent internal linking strategy with SEO optimization and performance tracking.',
-      icon: '🔗',
-      price: '$99/month',
-      features: ['AI link suggestions', 'SEO optimization', 'Performance tracking', 'Bulk implementation', 'Analytics integration'],
-      benefits: ['Improve SEO rankings', 'Increase page authority', 'Optimize site structure'],
-      marketPrice: '$150-300/month',
-      category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Internal Link Optimizer','
+      description: 'Intelligent internal linking strategy with SEO optimization and performance tracking.','
+      icon: '🔗','
+      price: '$99/month','
+      features: ['AI link suggestions', 'SEO optimization', 'Performance tracking', 'Bulk implementation', 'Analytics integration'],'
+      benefits: ['Improve SEO rankings', 'Increase page authority', 'Optimize site structure'],'
+      marketPrice: '$150-300/month','
+      category: 'SEO Tools','
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {
-      title: 'Smart Keyword Density Analyzer',
-      description: 'AI-powered keyword analysis with optimization recommendations and competitor tracking.',
-      icon: '🔍',
-      price: '$79/month',
-      features: ['Keyword density analysis', 'Optimization recommendations', 'Competitor tracking', 'Bulk analysis', 'Reporting'],
-      benefits: ['Optimize keyword usage', 'Improve SEO rankings', 'Track competitor strategies'],
-      marketPrice: '$120-250/month',
-      category: 'SEO Tools',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Keyword Density Analyzer','
+      description: 'AI-powered keyword analysis with optimization recommendations and competitor tracking.','
+      icon: '🔍','
+      price: '$79/month','
+      features: ['Keyword density analysis', 'Optimization recommendations', 'Competitor tracking', 'Bulk analysis', 'Reporting'],'
+      benefits: ['Optimize keyword usage', 'Improve SEO rankings', 'Track competitor strategies'],'
+      marketPrice: '$120-250/month','
+      category: 'SEO Tools','
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Page Speed Optimizer',
-      description: 'Intelligent page speed optimization with performance monitoring and recommendations.',
-      icon: '⚡',
-      price: '$149/month',
-      features: ['Speed analysis', 'Optimization recommendations', 'Performance monitoring', 'Bulk optimization', 'Reporting'],
-      benefits: ['Improve page speed', 'Better user experience', 'Higher search rankings'],
-      marketPrice: '$250-500/month',
-      category: 'Performance Optimization',
-      technologies: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Page Speed Optimizer','
+      description: 'Intelligent page speed optimization with performance monitoring and recommendations.','
+      icon: '⚡','
+      price: '$149/month','
+      features: ['Speed analysis', 'Optimization recommendations', 'Performance monitoring', 'Bulk optimization', 'Reporting'],'
+      benefits: ['Improve page speed', 'Better user experience', 'Higher search rankings'],'
+      marketPrice: '$250-500/month','
+      category: 'Performance Optimization','
+      technologies: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {
-      title: 'Smart Core Web Vitals Monitor',
-      description: 'AI-powered Core Web Vitals monitoring with optimization recommendations and alerts.',
-      icon: '📊',
-      price: '$99/month',
-      features: ['Core Web Vitals monitoring', 'Optimization recommendations', 'Alert system', 'Performance tracking', 'Reporting'],
-      benefits: ['Monitor Core Web Vitals', 'Improve user experience', 'Maintain SEO rankings'],
-      marketPrice: '$150-300/month',
-      category: 'Performance Monitoring',
-      technologies: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Core Web Vitals Monitor','
+      description: 'AI-powered Core Web Vitals monitoring with optimization recommendations and alerts.','
+      icon: '📊','
+      price: '$99/month','
+      features: ['Core Web Vitals monitoring', 'Optimization recommendations', 'Alert system', 'Performance tracking', 'Reporting'],'
+      benefits: ['Monitor Core Web Vitals', 'Improve user experience', 'Maintain SEO rankings'],'
+      marketPrice: '$150-300/month','
+      category: 'Performance Monitoring','
+      technologies: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Mobile Optimization Tool',
-      description: 'Intelligent mobile optimization with responsive design analysis and performance improvements.',
-      icon: '📱',
-      price: '$119/month',
-      features: ['Mobile analysis', 'Responsive design optimization', 'Performance improvements', 'Bulk optimization', 'Testing'],
-      benefits: ['Improve mobile experience', 'Better mobile rankings', 'Increase mobile conversions'],
-      marketPrice: '$200-400/month',
-      category: 'Mobile Optimization',
-      technologies: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Mobile Optimization Tool','
+      description: 'Intelligent mobile optimization with responsive design analysis and performance improvements.','
+      icon: '📱','
+      price: '$119/month','
+      features: ['Mobile analysis', 'Responsive design optimization', 'Performance improvements', 'Bulk optimization', 'Testing'],'
+      benefits: ['Improve mobile experience', 'Better mobile rankings', 'Increase mobile conversions'],'
+      marketPrice: '$200-400/month','
+      category: 'Mobile Optimization','
+      technologies: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']'
     },
     {
-      title: 'Smart Local SEO Optimizer',
-      description: 'AI-powered local SEO optimization with Google My Business management and review monitoring.',
-      icon: '📍',
-      price: '$129/month',
-      features: ['Local SEO analysis', 'Google My Business optimization', 'Review monitoring', 'Citation management', 'Reporting'],
-      benefits: ['Improve local visibility', 'Manage online reputation', 'Increase local traffic'],
-      marketPrice: '$200-400/month',
-      category: 'Local SEO',
-      technologies: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Local SEO Optimizer','
+      description: 'AI-powered local SEO optimization with Google My Business management and review monitoring.','
+      icon: '📍','
+      price: '$129/month','
+      features: ['Local SEO analysis', 'Google My Business optimization', 'Review monitoring', 'Citation management', 'Reporting'],'
+      benefits: ['Improve local visibility', 'Manage online reputation', 'Increase local traffic'],'
+      marketPrice: '$200-400/month','
+      category: 'Local SEO','
+      technologies: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Competitor SEO Analyzer',
-      description: 'Intelligent competitor SEO analysis with strategy recommendations and performance tracking.',
-      icon: '🔍',
-      price: '$199/month',
-      features: ['Competitor analysis', 'Strategy recommendations', 'Performance tracking', 'Keyword gap analysis', 'Reporting'],
-      benefits: ['Analyze competitor strategies', 'Identify opportunities', 'Improve SEO performance'],
-      marketPrice: '$300-600/month',
-      category: 'Competitive Analysis',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Competitor SEO Analyzer','
+      description: 'Intelligent competitor SEO analysis with strategy recommendations and performance tracking.','
+      icon: '🔍','
+      price: '$199/month','
+      features: ['Competitor analysis', 'Strategy recommendations', 'Performance tracking', 'Keyword gap analysis', 'Reporting'],'
+      benefits: ['Analyze competitor strategies', 'Identify opportunities', 'Improve SEO performance'],'
+      marketPrice: '$300-600/month','
+      category: 'Competitive Analysis','
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {
-      title: 'Smart Backlink Analyzer',
-      description: 'AI-powered backlink analysis with quality assessment and link building recommendations.',
-      icon: '🔗',
-      price: '$149/month',
-      features: ['Backlink analysis', 'Quality assessment', 'Link building recommendations', 'Competitor analysis', 'Monitoring'],
-      benefits: ['Analyze backlink profile', 'Improve link quality', 'Build better links'],
-      marketPrice: '$250-500/month',
-      category: 'Link Building',
-      technologies: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Backlink Analyzer','
+      description: 'AI-powered backlink analysis with quality assessment and link building recommendations.','
+      icon: '🔗','
+      price: '$149/month','
+      features: ['Backlink analysis', 'Quality assessment', 'Link building recommendations', 'Competitor analysis', 'Monitoring'],'
+      benefits: ['Analyze backlink profile', 'Improve link quality', 'Build better links'],'
+      marketPrice: '$250-500/month','
+      category: 'Link Building','
+      technologies: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Content Gap Analyzer',
-      description: 'Intelligent content gap analysis with topic recommendations and content strategy optimization.',
-      icon: '📝',
-      price: '$179/month',
-      features: ['Content gap analysis', 'Topic recommendations', 'Content strategy optimization', 'Competitor analysis', 'Planning'],
-      benefits: ['Identify content opportunities', 'Improve content strategy', 'Increase organic traffic'],
-      marketPrice: '$300-600/month',
-      category: 'Content Strategy',
-      technologies: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Content Gap Analyzer','
+      description: 'Intelligent content gap analysis with topic recommendations and content strategy optimization.','
+      icon: '📝','
+      price: '$179/month','
+      features: ['Content gap analysis', 'Topic recommendations', 'Content strategy optimization', 'Competitor analysis', 'Planning'],'
+      benefits: ['Identify content opportunities', 'Improve content strategy', 'Increase organic traffic'],'
+      marketPrice: '$300-600/month','
+      category: 'Content Strategy','
+      technologies: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {
-      title: 'Smart Technical SEO Auditor',
-      description: 'AI-powered technical SEO auditing with issue detection and optimization recommendations.',
-      icon: '🔧',
-      price: '$199/month',
-      features: ['Technical SEO audit', 'Issue detection', 'Optimization recommendations', 'Monitoring', 'Reporting'],
-      benefits: ['Identify technical issues', 'Improve SEO performance', 'Prevent ranking drops'],
-      marketPrice: '$300-600/month',
-      category: 'Technical SEO',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Technical SEO Auditor','
+      description: 'AI-powered technical SEO auditing with issue detection and optimization recommendations.','
+      icon: '🔧','
+      price: '$199/month','
+      features: ['Technical SEO audit', 'Issue detection', 'Optimization recommendations', 'Monitoring', 'Reporting'],'
+      benefits: ['Identify technical issues', 'Improve SEO performance', 'Prevent ranking drops'],'
+      marketPrice: '$300-600/month','
+      category: 'Technical SEO','
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered E-commerce SEO Optimizer',
-      description: 'Intelligent e-commerce SEO optimization with product page optimization and category management.',
-      icon: '🛒',
-      price: '$249/month',
-      features: ['Product page optimization', 'Category management', 'Schema markup', 'Image optimization', 'Performance tracking'],
-      benefits: ['Improve e-commerce SEO', 'Increase product visibility', 'Boost online sales'],
-      marketPrice: '$400-800/month',
-      category: 'E-commerce SEO',
-      technologies: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered E-commerce SEO Optimizer','
+      description: 'Intelligent e-commerce SEO optimization with product page optimization and category management.','
+      icon: '🛒','
+      price: '$249/month','
+      features: ['Product page optimization', 'Category management', 'Schema markup', 'Image optimization', 'Performance tracking'],'
+      benefits: ['Improve e-commerce SEO', 'Increase product visibility', 'Boost online sales'],'
+      marketPrice: '$400-800/month','
+      category: 'E-commerce SEO','
+      technologies: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']'
     },
     {
-      title: 'Smart Voice Search Optimizer',
-      description: 'AI-powered voice search optimization with conversational content and featured snippet optimization.',
-      icon: '🎤',
-      price: '$149/month',
-      features: ['Voice search optimization', 'Conversational content', 'Featured snippet optimization', 'Local voice search', 'Analytics'],
-      benefits: ['Optimize for voice search', 'Capture featured snippets', 'Improve local visibility'],
-      marketPrice: '$250-500/month',
-      category: 'Voice Search SEO',
-      technologies: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Voice Search Optimizer','
+      description: 'AI-powered voice search optimization with conversational content and featured snippet optimization.','
+      icon: '🎤','
+      price: '$149/month','
+      features: ['Voice search optimization', 'Conversational content', 'Featured snippet optimization', 'Local voice search', 'Analytics'],'
+      benefits: ['Optimize for voice search', 'Capture featured snippets', 'Improve local visibility'],'
+      marketPrice: '$250-500/month','
+      category: 'Voice Search SEO','
+      technologies: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Video SEO Optimizer',
-      description: 'Intelligent video SEO optimization with YouTube optimization and video content analysis.',
-      icon: '🎬',
-      price: '$179/month',
-      features: ['Video SEO optimization', 'YouTube optimization', 'Video content analysis', 'Thumbnail optimization', 'Performance tracking'],
-      benefits: ['Improve video visibility', 'Increase video traffic', 'Optimize video content'],
-      marketPrice: '$300-600/month',
-      category: 'Video SEO',
-      technologies: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Video SEO Optimizer','
+      description: 'Intelligent video SEO optimization with YouTube optimization and video content analysis.','
+      icon: '🎬','
+      price: '$179/month','
+      features: ['Video SEO optimization', 'YouTube optimization', 'Video content analysis', 'Thumbnail optimization', 'Performance tracking'],'
+      benefits: ['Improve video visibility', 'Increase video traffic', 'Optimize video content'],'
+      marketPrice: '$300-600/month','
+      category: 'Video SEO','
+      technologies: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']'
     },
     {
-      title: 'Smart Featured Snippet Optimizer',
-      description: 'AI-powered featured snippet optimization with content analysis and ranking improvements.',
-      icon: '📋',
-      price: '$129/month',
-      features: ['Featured snippet optimization', 'Content analysis', 'Ranking improvements', 'Competitor analysis', 'Monitoring'],
-      benefits: ['Capture featured snippets', 'Improve search visibility', 'Increase click-through rates'],
-      marketPrice: '$200-400/month',
-      category: 'Featured Snippets',
-      technologies: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart Featured Snippet Optimizer','
+      description: 'AI-powered featured snippet optimization with content analysis and ranking improvements.','
+      icon: '📋','
+      price: '$129/month','
+      features: ['Featured snippet optimization', 'Content analysis', 'Ranking improvements', 'Competitor analysis', 'Monitoring'],'
+      benefits: ['Capture featured snippets', 'Improve search visibility', 'Increase click-through rates'],'
+      marketPrice: '$200-400/month','
+      category: 'Featured Snippets','
+      technologies: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered Image SEO Optimizer',
-      description: 'Intelligent image SEO optimization with alt text generation and image performance analysis.',
-      icon: '🖼️',
-      price: '$99/month',
-      features: ['Image SEO optimization', 'Alt text generation', 'Image performance analysis', 'Bulk optimization', 'Quality scoring'],
-      benefits: ['Improve image SEO', 'Increase image traffic', 'Optimize image performance'],
-      marketPrice: '$150-300/month',
-      category: 'Image SEO',
-      technologies: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered Image SEO Optimizer','
+      description: 'Intelligent image SEO optimization with alt text generation and image performance analysis.','
+      icon: '🖼️','
+      price: '$99/month','
+      features: ['Image SEO optimization', 'Alt text generation', 'Image performance analysis', 'Bulk optimization', 'Quality scoring'],'
+      benefits: ['Improve image SEO', 'Increase image traffic', 'Optimize image performance'],'
+      marketPrice: '$150-300/month','
+      category: 'Image SEO','
+      technologies: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']'
     },
     {
-      title: 'Smart International SEO Manager',
-      description: 'AI-powered international SEO management with hreflang optimization and multi-language content.',
-      icon: '🌍',
-      price: '$199/month',
-      features: ['International SEO management', 'Hreflang optimization', 'Multi-language content', 'Geographic targeting', 'Performance tracking'],
-      benefits: ['Optimize for international markets', 'Improve global visibility', 'Manage multi-language sites'],
-      marketPrice: '$300-600/month',
-      category: 'International SEO',
-      technologies: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'Smart International SEO Manager','
+      description: 'AI-powered international SEO management with hreflang optimization and multi-language content.','
+      icon: '🌍','
+      price: '$199/month','
+      features: ['International SEO management', 'Hreflang optimization', 'Multi-language content', 'Geographic targeting', 'Performance tracking'],'
+      benefits: ['Optimize for international markets', 'Improve global visibility', 'Manage multi-language sites'],'
+      marketPrice: '$300-600/month','
+      category: 'International SEO','
+      technologies: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']'
     },
     {
-      title: 'AI-Powered SEO Reporting Dashboard',
-      description: 'Intelligent SEO reporting with automated insights and performance tracking across all channels.',
-      icon: '📊',
-      price: '$149/month',
-      features: ['Automated SEO reporting', 'Performance tracking', 'Insight generation', 'Custom dashboards', 'Multi-channel analysis'],
-      benefits: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions'],
-      marketPrice: '$250-500/month',
-      category: 'SEO Reporting',
-      technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI-Powered SEO Reporting Dashboard','
+      description: 'Intelligent SEO reporting with automated insights and performance tracking across all channels.','
+      icon: '📊','
+      price: '$149/month','
+      features: ['Automated SEO reporting', 'Performance tracking', 'Insight generation', 'Custom dashboards', 'Multi-channel analysis'],'
+      benefits: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions'],'
+      marketPrice: '$250-500/month','
+      category: 'SEO Reporting','
+      technologies: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']'
     },
     // NEW COMPREHENSIVE MICRO SAAS SERVICES
     // AI Productivity & Time Management
     {
-      title: 'AI Time Tracking & Productivity Analyzer',
-      description: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.',
-      icon: '⏰',
-      price: '$79/month',
-      features: ['Automatic time tracking', 'Productivity analysis', 'Distraction blocking', 'Work pattern insights', 'Goal tracking', 'Team analytics'],
-      benefits: ['Increase productivity by 25%', 'Identify time wasters', 'Optimize work patterns', 'Achieve goals faster'],
-      marketPrice: '$120-250/month',
-      category: 'Productivity',
-      technologies: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Time Tracking & Productivity Analyzer','
+      description: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.','
+      icon: '⏰','
+      price: '$79/month','
+      features: ['Automatic time tracking', 'Productivity analysis', 'Distraction blocking', 'Work pattern insights', 'Goal tracking', 'Team analytics'],'
+      benefits: ['Increase productivity by 25%', 'Identify time wasters', 'Optimize work patterns', 'Achieve goals faster'],'
+      marketPrice: '$120-250/month','
+      category: 'Productivity','
+      technologies: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Task Management & Prioritization',
-      description: 'Smart task management with AI-powered prioritization, deadline prediction, and workload balancing.',
-      icon: '✅',
-      price: '$89/month',
-      features: ['Smart prioritization', 'Deadline prediction', 'Workload balancing', 'Team coordination', 'Progress tracking', 'Integration tools'],
-      benefits: ['Complete tasks 30% faster', 'Never miss deadlines', 'Balance workload effectively', 'Improve team coordination'],
-      marketPrice: '$150-300/month',
-      category: 'Productivity',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Task Management & Prioritization','
+      description: 'Smart task management with AI-powered prioritization, deadline prediction, and workload balancing.','
+      icon: '✅','
+      price: '$89/month','
+      features: ['Smart prioritization', 'Deadline prediction', 'Workload balancing', 'Team coordination', 'Progress tracking', 'Integration tools'],'
+      benefits: ['Complete tasks 30% faster', 'Never miss deadlines', 'Balance workload effectively', 'Improve team coordination'],'
+      marketPrice: '$150-300/month','
+      category: 'Productivity','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Email Management & Prioritization',
-      description: 'Intelligent email organization with smart filtering, priority scoring, and automated responses.',
-      icon: '📧',
-      price: '$69/month',
-      features: ['Smart filtering', 'Priority scoring', 'Auto responses', 'Email scheduling', 'Follow-up reminders', 'Spam protection'],
-      benefits: ['Reduce email overwhelm', 'Respond faster', 'Never miss important emails', 'Save 2+ hours daily'],
-      marketPrice: '$100-200/month',
-      category: 'Communication',
-      technologies: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Email Management & Prioritization','
+      description: 'Intelligent email organization with smart filtering, priority scoring, and automated responses.','
+      icon: '📧','
+      price: '$69/month','
+      features: ['Smart filtering', 'Priority scoring', 'Auto responses', 'Email scheduling', 'Follow-up reminders', 'Spam protection'],'
+      benefits: ['Reduce email overwhelm', 'Respond faster', 'Never miss important emails', 'Save 2+ hours daily'],'
+      marketPrice: '$100-200/month','
+      category: 'Communication','
+      technologies: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     // AI HR & Recruitment
     {
-      title: 'AI Resume Parser & Candidate Matcher',
-      description: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.',
-      icon: '👔',
-      price: '$199/month',
-      features: ['Resume parsing', 'Candidate matching', 'Skill assessment', 'Interview scheduling', 'Background checks', 'Onboarding automation'],
-      benefits: ['Reduce hiring time by 50%', 'Find better candidates', 'Eliminate bias', 'Streamline recruitment'],
-      marketPrice: '$300-600/month',
-      category: 'HR & Recruitment',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Resume Parser & Candidate Matcher','
+      description: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.','
+      icon: '👔','
+      price: '$199/month','
+      features: ['Resume parsing', 'Candidate matching', 'Skill assessment', 'Interview scheduling', 'Background checks', 'Onboarding automation'],'
+      benefits: ['Reduce hiring time by 50%', 'Find better candidates', 'Eliminate bias', 'Streamline recruitment'],'
+      marketPrice: '$300-600/month','
+      category: 'HR & Recruitment','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Employee Performance Tracker',
-      description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
-      icon: '📊',
-      price: '$149/month',
-      features: ['Performance tracking', 'Goal monitoring', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
-      benefits: ['Improve performance by 35%', 'Identify top performers', 'Support employee growth', 'Reduce turnover'],
-      marketPrice: '$200-400/month',
-      category: 'HR & Performance',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Employee Performance Tracker','
+      description: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.','
+      icon: '📊','
+      price: '$149/month','
+      features: ['Performance tracking', 'Goal monitoring', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],'
+      benefits: ['Improve performance by 35%', 'Identify top performers', 'Support employee growth', 'Reduce turnover'],'
+      marketPrice: '$200-400/month','
+      category: 'HR & Performance','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Workplace Safety Monitor',
-      description: 'Intelligent safety monitoring with incident prediction, compliance tracking, and emergency response.',
-      icon: '🛡️',
-      price: '$299/month',
-      features: ['Incident prediction', 'Compliance tracking', 'Emergency alerts', 'Safety training', 'Risk assessment', 'Reporting system'],
-      benefits: ['Prevent workplace accidents', 'Ensure compliance', 'Reduce insurance costs', 'Protect employees'],
-      marketPrice: '$400-800/month',
-      category: 'Workplace Safety',
-      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Workplace Safety Monitor','
+      description: 'Intelligent safety monitoring with incident prediction, compliance tracking, and emergency response.','
+      icon: '🛡️','
+      price: '$299/month','
+      features: ['Incident prediction', 'Compliance tracking', 'Emergency alerts', 'Safety training', 'Risk assessment', 'Reporting system'],'
+      benefits: ['Prevent workplace accidents', 'Ensure compliance', 'Reduce insurance costs', 'Protect employees'],'
+      marketPrice: '$400-800/month','
+      category: 'Workplace Safety','
+      technologies: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Customer Service & Support
     {
-      title: 'AI Customer Support Ticket Router',
-      description: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.',
-      icon: '🎫',
-      price: '$129/month',
-      features: ['Smart routing', 'Priority scoring', 'Agent matching', 'Auto responses', 'Escalation management', 'Performance analytics'],
-      benefits: ['Reduce response time by 60%', 'Improve customer satisfaction', 'Optimize agent workload', 'Lower support costs'],
-      marketPrice: '$200-400/month',
-      category: 'Customer Support',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Support Ticket Router','
+      description: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.','
+      icon: '🎫','
+      price: '$129/month','
+      features: ['Smart routing', 'Priority scoring', 'Agent matching', 'Auto responses', 'Escalation management', 'Performance analytics'],'
+      benefits: ['Reduce response time by 60%', 'Improve customer satisfaction', 'Optimize agent workload', 'Lower support costs'],'
+      marketPrice: '$200-400/month','
+      category: 'Customer Support','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Customer Feedback Analyzer',
-      description: 'Advanced sentiment analysis with feedback categorization, trend identification, and action recommendations.',
-      icon: '💬',
-      price: '$99/month',
-      features: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Competitor analysis', 'Reporting'],
-      benefits: ['Understand customer needs', 'Identify improvement areas', 'Increase satisfaction', 'Drive product decisions'],
-      marketPrice: '$150-300/month',
-      category: 'Customer Analytics',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Customer Feedback Analyzer','
+      description: 'Advanced sentiment analysis with feedback categorization, trend identification, and action recommendations.','
+      icon: '💬','
+      price: '$99/month','
+      features: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Competitor analysis', 'Reporting'],'
+      benefits: ['Understand customer needs', 'Identify improvement areas', 'Increase satisfaction', 'Drive product decisions'],'
+      marketPrice: '$150-300/month','
+      category: 'Customer Analytics','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Live Chat Assistant',
-      description: 'Intelligent live chat with instant responses, context awareness, and seamless human handoff.',
-      icon: '💬',
-      price: '$79/month',
-      features: ['Instant responses', 'Context awareness', 'Human handoff', 'Multi-language', 'Integration tools', 'Analytics'],
-      benefits: ['Provide 24/7 support', 'Reduce wait times', 'Improve customer experience', 'Lower support costs'],
-      marketPrice: '$120-250/month',
-      category: 'Customer Support',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Live Chat Assistant','
+      description: 'Intelligent live chat with instant responses, context awareness, and seamless human handoff.','
+      icon: '💬','
+      price: '$79/month','
+      features: ['Instant responses', 'Context awareness', 'Human handoff', 'Multi-language', 'Integration tools', 'Analytics'],'
+      benefits: ['Provide 24/7 support', 'Reduce wait times', 'Improve customer experience', 'Lower support costs'],'
+      marketPrice: '$120-250/month','
+      category: 'Customer Support','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],'
       contactInfo:     ,
 $4},
     // AI Sales & CRM
     {
-      title: 'AI Sales Pipeline Optimizer',
-      description: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.',
-      icon: '📈',
-      price: '$199/month',
-      features: ['Opportunity scoring', 'Sales forecasting', 'Deal acceleration', 'Pipeline analytics', 'Activity tracking', 'CRM integration'],
-      benefits: ['Increase close rates by 40%', 'Improve forecasting accuracy', 'Accelerate deals', 'Optimize sales process'],
-      marketPrice: '$300-600/month',
-      category: 'Sales & CRM',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Sales Pipeline Optimizer','
+      description: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.','
+      icon: '📈','
+      price: '$199/month','
+      features: ['Opportunity scoring', 'Sales forecasting', 'Deal acceleration', 'Pipeline analytics', 'Activity tracking', 'CRM integration'],'
+      benefits: ['Increase close rates by 40%', 'Improve forecasting accuracy', 'Accelerate deals', 'Optimize sales process'],'
+      marketPrice: '$300-600/month','
+      category: 'Sales & CRM','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Sales Call Analyzer',
-      description: 'Advanced call analysis with sentiment tracking, objection identification, and coaching recommendations.',
-      icon: '📞',
-      price: '$149/month',
-      features: ['Call transcription', 'Sentiment analysis', 'Objection identification', 'Coaching recommendations', 'Performance tracking', 'Team analytics'],
-      benefits: ['Improve sales skills', 'Identify coaching opportunities', 'Increase conversion rates', 'Track team performance'],
-      marketPrice: '$200-400/month',
-      category: 'Sales Training',
-      technologies: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Sales Call Analyzer','
+      description: 'Advanced call analysis with sentiment tracking, objection identification, and coaching recommendations.','
+      icon: '📞','
+      price: '$149/month','
+      features: ['Call transcription', 'Sentiment analysis', 'Objection identification', 'Coaching recommendations', 'Performance tracking', 'Team analytics'],'
+      benefits: ['Improve sales skills', 'Identify coaching opportunities', 'Increase conversion rates', 'Track team performance'],'
+      marketPrice: '$200-400/month','
+      category: 'Sales Training','
+      technologies: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Proposal Generator Pro',
-      description: 'Intelligent proposal creation with template optimization, pricing analysis, and win probability scoring.',
-      icon: '📋',
-      price: '$119/month',
-      features: ['Template optimization', 'Pricing analysis', 'Win probability scoring', 'Client personalization', 'Version control', 'Approval workflow'],
-      benefits: ['Create proposals 5x faster', 'Increase win rates', 'Optimize pricing', 'Personalize content'],
-      marketPrice: '$180-350/month',
-      category: 'Sales Tools',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Proposal Generator Pro','
+      description: 'Intelligent proposal creation with template optimization, pricing analysis, and win probability scoring.','
+      icon: '📋','
+      price: '$119/month','
+      features: ['Template optimization', 'Pricing analysis', 'Win probability scoring', 'Client personalization', 'Version control', 'Approval workflow'],'
+      benefits: ['Create proposals 5x faster', 'Increase win rates', 'Optimize pricing', 'Personalize content'],'
+      marketPrice: '$180-350/month','
+      category: 'Sales Tools','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Project Management
     {
-      title: 'AI Project Risk Predictor',
-      description: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.',
-      icon: '⚠️',
-      price: '$179/month',
-      features: ['Risk assessment', 'Early warning system', 'Mitigation recommendations', 'Project monitoring', 'Team analysis', 'Resource optimization'],
-      benefits: ['Prevent project failures', 'Reduce risks by 50%', 'Improve success rates', 'Optimize resources'],
-      marketPrice: '$250-500/month',
-      category: 'Project Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Project Risk Predictor','
+      description: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.','
+      icon: '⚠️','
+      price: '$179/month','
+      features: ['Risk assessment', 'Early warning system', 'Mitigation recommendations', 'Project monitoring', 'Team analysis', 'Resource optimization'],'
+      benefits: ['Prevent project failures', 'Reduce risks by 50%', 'Improve success rates', 'Optimize resources'],'
+      marketPrice: '$250-500/month','
+      category: 'Project Management','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Resource Allocation Optimizer',
-      description: 'Smart resource allocation with capacity planning, skill matching, and workload balancing.',
-      icon: '👥',
-      price: '$199/month',
-      features: ['Capacity planning', 'Skill matching', 'Workload balancing', 'Resource forecasting', 'Team optimization', 'Cost analysis'],
-      benefits: ['Optimize resource usage', 'Improve team efficiency', 'Reduce costs', 'Balance workloads'],
-      marketPrice: '$300-600/month',
-      category: 'Resource Management',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Resource Allocation Optimizer','
+      description: 'Smart resource allocation with capacity planning, skill matching, and workload balancing.','
+      icon: '👥','
+      price: '$199/month','
+      features: ['Capacity planning', 'Skill matching', 'Workload balancing', 'Resource forecasting', 'Team optimization', 'Cost analysis'],'
+      benefits: ['Optimize resource usage', 'Improve team efficiency', 'Reduce costs', 'Balance workloads'],'
+      marketPrice: '$300-600/month','
+      category: 'Resource Management','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Project Timeline Predictor',
-      description: 'Accurate project timeline prediction with milestone tracking and delay prevention.',
-      icon: '📅',
-      price: '$149/month',
-      features: ['Timeline prediction', 'Milestone tracking', 'Delay prevention', 'Progress monitoring', 'Bottleneck identification', 'Scenario planning'],
-      benefits: ['Deliver projects on time', 'Prevent delays', 'Identify bottlenecks', 'Improve planning'],
-      marketPrice: '$200-400/month',
-      category: 'Project Planning',
-      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Project Timeline Predictor','
+      description: 'Accurate project timeline prediction with milestone tracking and delay prevention.','
+      icon: '📅','
+      price: '$149/month','
+      features: ['Timeline prediction', 'Milestone tracking', 'Delay prevention', 'Progress monitoring', 'Bottleneck identification', 'Scenario planning'],'
+      benefits: ['Deliver projects on time', 'Prevent delays', 'Identify bottlenecks', 'Improve planning'],'
+      marketPrice: '$200-400/month','
+      category: 'Project Planning','
+      technologies: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],'
       contactInfo:     ,
 $4},
     // AI Security & Compliance
     {
-      title: 'AI Security Threat Detector',
-      description: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.',
-      icon: '🔒',
-      price: '$299/month',
-      features: ['Threat detection', 'Real-time monitoring', 'Vulnerability assessment', 'Incident response', 'Compliance tracking', 'Security analytics'],
-      benefits: ['Prevent security breaches', 'Detect threats early', 'Ensure compliance', 'Reduce security costs'],
-      marketPrice: '$400-800/month',
-      category: 'Cybersecurity',
-      technologies: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Security Threat Detector','
+      description: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.','
+      icon: '🔒','
+      price: '$299/month','
+      features: ['Threat detection', 'Real-time monitoring', 'Vulnerability assessment', 'Incident response', 'Compliance tracking', 'Security analytics'],'
+      benefits: ['Prevent security breaches', 'Detect threats early', 'Ensure compliance', 'Reduce security costs'],'
+      marketPrice: '$400-800/month','
+      category: 'Cybersecurity','
+      technologies: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Compliance Monitor',
-      description: 'Automated compliance monitoring with regulation tracking, audit preparation, and violation alerts.',
-      icon: '📋',
-      price: '$249/month',
-      features: ['Compliance tracking', 'Audit preparation', 'Violation alerts', 'Regulation updates', 'Documentation', 'Reporting'],
-      benefits: ['Ensure compliance', 'Reduce audit time', 'Prevent violations', 'Lower compliance costs'],
-      marketPrice: '$350-700/month',
-      category: 'Compliance',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Compliance Monitor','
+      description: 'Automated compliance monitoring with regulation tracking, audit preparation, and violation alerts.','
+      icon: '📋','
+      price: '$249/month','
+      features: ['Compliance tracking', 'Audit preparation', 'Violation alerts', 'Regulation updates', 'Documentation', 'Reporting'],'
+      benefits: ['Ensure compliance', 'Reduce audit time', 'Prevent violations', 'Lower compliance costs'],'
+      marketPrice: '$350-700/month','
+      category: 'Compliance','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Data Privacy Manager',
-      description: 'Intelligent data privacy management with GDPR compliance, consent tracking, and data protection.',
-      icon: '🔐',
-      price: '$199/month',
-      features: ['GDPR compliance', 'Consent tracking', 'Data protection', 'Privacy impact assessment', 'Data mapping', 'Breach notification'],
-      benefits: ['Ensure data privacy', 'Meet GDPR requirements', 'Protect customer data', 'Avoid penalties'],
-      marketPrice: '$300-600/month',
-      category: 'Data Privacy',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Data Privacy Manager','
+      description: 'Intelligent data privacy management with GDPR compliance, consent tracking, and data protection.','
+      icon: '🔐','
+      price: '$199/month','
+      features: ['GDPR compliance', 'Consent tracking', 'Data protection', 'Privacy impact assessment', 'Data mapping', 'Breach notification'],'
+      benefits: ['Ensure data privacy', 'Meet GDPR requirements', 'Protect customer data', 'Avoid penalties'],'
+      marketPrice: '$300-600/month','
+      category: 'Data Privacy','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Quality Assurance & Testing
     {
-      title: 'AI Automated Testing Suite',
-      description: 'Comprehensive automated testing with test generation, execution, and maintenance.',
-      icon: '🧪',
-      price: '$179/month',
-      features: ['Test generation', 'Automated execution', 'Test maintenance', 'Coverage analysis', 'Performance testing', 'Regression testing'],
-      benefits: ['Reduce testing time by 70%', 'Improve test coverage', 'Catch bugs earlier', 'Lower testing costs'],
-      marketPrice: '$250-500/month',
-      category: 'Quality Assurance',
-      technologies: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Automated Testing Suite','
+      description: 'Comprehensive automated testing with test generation, execution, and maintenance.','
+      icon: '🧪','
+      price: '$179/month','
+      features: ['Test generation', 'Automated execution', 'Test maintenance', 'Coverage analysis', 'Performance testing', 'Regression testing'],'
+      benefits: ['Reduce testing time by 70%', 'Improve test coverage', 'Catch bugs earlier', 'Lower testing costs'],'
+      marketPrice: '$250-500/month','
+      category: 'Quality Assurance','
+      technologies: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Bug Prediction & Prevention',
-      description: 'Intelligent bug prediction with code analysis, risk assessment, and prevention recommendations.',
-      icon: '🐛',
-      price: '$149/month',
-      features: ['Bug prediction', 'Code analysis', 'Risk assessment', 'Prevention recommendations', 'Quality metrics', 'Team insights'],
-      benefits: ['Prevent bugs before they occur', 'Improve code quality', 'Reduce debugging time', 'Lower maintenance costs'],
-      marketPrice: '$200-400/month',
-      category: 'Quality Assurance',
-      technologies: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Bug Prediction & Prevention','
+      description: 'Intelligent bug prediction with code analysis, risk assessment, and prevention recommendations.','
+      icon: '🐛','
+      price: '$149/month','
+      features: ['Bug prediction', 'Code analysis', 'Risk assessment', 'Prevention recommendations', 'Quality metrics', 'Team insights'],'
+      benefits: ['Prevent bugs before they occur', 'Improve code quality', 'Reduce debugging time', 'Lower maintenance costs'],'
+      marketPrice: '$200-400/month','
+      category: 'Quality Assurance','
+      technologies: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Performance Monitoring Pro',
-      description: 'Advanced performance monitoring with anomaly detection, optimization recommendations, and capacity planning.',
-      icon: '⚡',
-      price: '$199/month',
-      features: ['Performance monitoring', 'Anomaly detection', 'Optimization recommendations', 'Capacity planning', 'Alert system', 'Analytics'],
-      benefits: ['Prevent performance issues', 'Optimize system performance', 'Plan capacity needs', 'Reduce downtime'],
-      marketPrice: '$300-600/month',
-      category: 'Performance Monitoring',
-      technologies: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Performance Monitoring Pro','
+      description: 'Advanced performance monitoring with anomaly detection, optimization recommendations, and capacity planning.','
+      icon: '⚡','
+      price: '$199/month','
+      features: ['Performance monitoring', 'Anomaly detection', 'Optimization recommendations', 'Capacity planning', 'Alert system', 'Analytics'],'
+      benefits: ['Prevent performance issues', 'Optimize system performance', 'Plan capacity needs', 'Reduce downtime'],'
+      marketPrice: '$300-600/month','
+      category: 'Performance Monitoring','
+      technologies: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Content & Media
     {
-      title: 'AI Video Content Generator',
-      description: 'Intelligent video creation with script generation, editing, and optimization for social media.',
-      icon: '🎬',
-      price: '$299/month',
-      features: ['Script generation', 'Video editing', 'Social media optimization', 'Template library', 'Brand consistency', 'Multi-format export'],
-      benefits: ['Create videos 10x faster', 'Reduce production costs', 'Maintain brand consistency', 'Scale content creation'],
-      marketPrice: '$400-800/month',
-      category: 'Content Creation',
-      technologies: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Video Content Generator','
+      description: 'Intelligent video creation with script generation, editing, and optimization for social media.','
+      icon: '🎬','
+      price: '$299/month','
+      features: ['Script generation', 'Video editing', 'Social media optimization', 'Template library', 'Brand consistency', 'Multi-format export'],';'
+      benefits: ['Create videos 10x faster', 'Reduce production costs', 'Maintain brand consistency', 'Scale content creation'],'
+      marketPrice: '$400-800/month','
+      category: 'Content Creation','
+      technologies: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Podcast Production Suite',
-      description: 'Complete podcast production with audio editing, transcription, and show notes generation.',
-      icon: '🎙️',
-      price: '$199/month',
-      features: ['Audio editing', 'Transcription', 'Show notes generation', 'Intro/outro creation', 'Publishing automation', 'Analytics'],
-      benefits: ['Produce podcasts faster', 'Reduce editing time', 'Improve quality', 'Scale production'],
-      marketPrice: '$300-600/month',
-      category: 'Audio Production',
-      technologies: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Podcast Production Suite','
+      description: 'Complete podcast production with audio editing, transcription, and show notes generation.','
+      icon: '🎙️','
+      price: '$199/month','
+      features: ['Audio editing', 'Transcription', 'Show notes generation', 'Intro/outro creation', 'Publishing automation', 'Analytics'],'
+      benefits: ['Produce podcasts faster', 'Reduce editing time', 'Improve quality', 'Scale production'],'
+      marketPrice: '$300-600/month','
+      category: 'Audio Production','
+      technologies: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Image & Design Generator',
-      description: 'Intelligent image creation with design automation, brand consistency, and multi-format optimization.',
-      icon: '🎨',
-      price: '$149/month',
-      features: ['Image generation', 'Design automation', 'Brand consistency', 'Multi-format optimization', 'Template library', 'Batch processing'],
-      benefits: ['Create designs instantly', 'Maintain brand consistency', 'Reduce design costs', 'Scale visual content'],
-      marketPrice: '$200-400/month',
-      category: 'Design',
-      technologies: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Image & Design Generator','
+      description: 'Intelligent image creation with design automation, brand consistency, and multi-format optimization.','
+      icon: '🎨','
+      price: '$149/month','
+      features: ['Image generation', 'Design automation', 'Brand consistency', 'Multi-format optimization', 'Template library', 'Batch processing'],'
+      benefits: ['Create designs instantly', 'Maintain brand consistency', 'Reduce design costs', 'Scale visual content'],'
+      marketPrice: '$200-400/month','
+      category: 'Design','
+      technologies: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Research & Development
     {
-      title: 'AI Research Assistant Pro',
-      description: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.',
-      icon: '🔬',
-      price: '$199/month',
-      features: ['Paper analysis', 'Trend identification', 'Knowledge synthesis', 'Citation management', 'Research tracking', 'Collaboration tools'],
-      benefits: ['Accelerate research', 'Stay current with trends', 'Synthesize knowledge', 'Improve research quality'],
-      marketPrice: '$300-600/month',
-      category: 'Research',
-      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Research Assistant Pro','
+      description: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.','
+      icon: '🔬','
+      price: '$199/month','
+      features: ['Paper analysis', 'Trend identification', 'Knowledge synthesis', 'Citation management', 'Research tracking', 'Collaboration tools'],'
+      benefits: ['Accelerate research', 'Stay current with trends', 'Synthesize knowledge', 'Improve research quality'],'
+      marketPrice: '$300-600/month','
+      category: 'Research','
+      technologies: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Patent Analyzer & Generator',
-      description: 'Intelligent patent analysis with prior art search, novelty assessment, and patent generation.',
-      icon: '📜',
-      price: '$399/month',
-      features: ['Prior art search', 'Novelty assessment', 'Patent generation', 'Competitor analysis', 'Filing assistance', 'Portfolio management'],
-      benefits: ['Identify patent opportunities', 'Avoid infringement', 'Accelerate patent process', 'Manage IP portfolio'],
-      marketPrice: '$600-1200/month',
-      category: 'Intellectual Property',
-      technologies: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Patent Analyzer & Generator','
+      description: 'Intelligent patent analysis with prior art search, novelty assessment, and patent generation.','
+      icon: '📜','
+      price: '$399/month','
+      features: ['Prior art search', 'Novelty assessment', 'Patent generation', 'Competitor analysis', 'Filing assistance', 'Portfolio management'],'
+      benefits: ['Identify patent opportunities', 'Avoid infringement', 'Accelerate patent process', 'Manage IP portfolio'],'
+      marketPrice: '$600-1200/month','
+      category: 'Intellectual Property','
+      technologies: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Innovation Tracker',
-      description: 'Monitor industry innovations with trend analysis, competitor tracking, and opportunity identification.',
-      icon: '💡',
-      price: '$149/month',
-      features: ['Trend analysis', 'Competitor tracking', 'Opportunity identification', 'Innovation scoring', 'Market analysis', 'Alert system'],
-      benefits: ['Stay ahead of trends', 'Identify opportunities', 'Track competitors', 'Drive innovation'],
-      marketPrice: '$200-400/month',
-      category: 'Innovation',
-      technologies: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Innovation Tracker','
+      description: 'Monitor industry innovations with trend analysis, competitor tracking, and opportunity identification.','
+      icon: '💡','
+      price: '$149/month','
+      features: ['Trend analysis', 'Competitor tracking', 'Opportunity identification', 'Innovation scoring', 'Market analysis', 'Alert system'],'
+      benefits: ['Stay ahead of trends', 'Identify opportunities', 'Track competitors', 'Drive innovation'],'
+      marketPrice: '$200-400/month','
+      category: 'Innovation','
+      technologies: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     // AI Personal & Lifestyle
     {
-      title: 'AI Personal Finance Manager',
-      description: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.',
-      icon: '💰',
-      price: '$79/month',
-      features: ['Budget management', 'Investment tracking', 'Financial planning', 'Bill reminders', 'Expense categorization', 'Goal tracking'],
-      benefits: ['Improve financial health', 'Achieve financial goals', 'Reduce financial stress', 'Optimize investments'],
-      marketPrice: '$120-250/month',
-      category: 'Personal Finance',
-      technologies: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Personal Finance Manager','
+      description: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.','
+      icon: '💰','
+      price: '$79/month','
+      features: ['Budget management', 'Investment tracking', 'Financial planning', 'Bill reminders', 'Expense categorization', 'Goal tracking'],'
+      benefits: ['Improve financial health', 'Achieve financial goals', 'Reduce financial stress', 'Optimize investments'],'
+      marketPrice: '$120-250/month','
+      category: 'Personal Finance','
+      technologies: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Personal Assistant Pro',
-      description: 'Intelligent personal assistant with task management, scheduling, and lifestyle optimization.',
-      icon: '🤖',
-      price: '$99/month',
-      features: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Habit tracking', 'Goal setting', 'Voice commands'],
-      benefits: ['Increase productivity', 'Achieve personal goals', 'Optimize daily routines', 'Reduce stress'],
-      marketPrice: '$150-300/month',
-      category: 'Personal Assistant',
-      technologies: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Personal Assistant Pro','
+      description: 'Intelligent personal assistant with task management, scheduling, and lifestyle optimization.','
+      icon: '🤖','
+      price: '$99/month','
+      features: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Habit tracking', 'Goal setting', 'Voice commands'],'
+      benefits: ['Increase productivity', 'Achieve personal goals', 'Optimize daily routines', 'Reduce stress'],'
+      marketPrice: '$150-300/month','
+      category: 'Personal Assistant','
+      technologies: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Home Energy Optimizer',
-      description: 'Smart home energy management with usage optimization, cost reduction, and sustainability tracking.',
-      icon: '🏠',
-      price: '$89/month',
-      features: ['Usage optimization', 'Cost reduction', 'Sustainability tracking', 'Smart device control', 'Energy forecasting', 'Savings analysis'],
-      benefits: ['Reduce energy costs', 'Lower carbon footprint', 'Optimize energy usage', 'Track sustainability goals'],
-      marketPrice: '$120-250/month',
-      category: 'Smart Home',
-      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Home Energy Optimizer','
+      description: 'Smart home energy management with usage optimization, cost reduction, and sustainability tracking.','
+      icon: '🏠','
+      price: '$89/month','
+      features: ['Usage optimization', 'Cost reduction', 'Sustainability tracking', 'Smart device control', 'Energy forecasting', 'Savings analysis'],'
+      benefits: ['Reduce energy costs', 'Lower carbon footprint', 'Optimize energy usage', 'Track sustainability goals'],'
+      marketPrice: '$120-250/month','
+      category: 'Smart Home','
+      technologies: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInfo:     ,
 $4},
     // AI Gaming & Entertainment
     {
-      title: 'AI Game Development Assistant',
-      description: 'Intelligent game development with asset generation, level design, and gameplay optimization.',
-      icon: '🎮',
-      price: '$299/month',
-      features: ['Asset generation', 'Level design', 'Gameplay optimization', 'NPC behavior', 'Balancing tools', 'Testing automation'],
-      benefits: ['Accelerate game development', 'Create unique content', 'Improve gameplay', 'Reduce development costs'],
-      marketPrice: '$400-800/month',
-      category: 'Game Development',
-      technologies: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Game Development Assistant','
+      description: 'Intelligent game development with asset generation, level design, and gameplay optimization.','
+      icon: '🎮','
+      price: '$299/month','
+      features: ['Asset generation', 'Level design', 'Gameplay optimization', 'NPC behavior', 'Balancing tools', 'Testing automation'],'
+      benefits: ['Accelerate game development', 'Create unique content', 'Improve gameplay', 'Reduce development costs'],'
+      marketPrice: '$400-800/month','
+      category: 'Game Development','
+      technologies: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Music Composition Studio',
-      description: 'Intelligent music creation with composition assistance, style transfer, and production tools.',
-      icon: '🎵',
-      price: '$199/month',
-      features: ['Composition assistance', 'Style transfer', 'Production tools', 'Instrument synthesis', 'Lyrics generation', 'Collaboration'],
-      benefits: ['Create music faster', 'Explore new styles', 'Improve composition skills', 'Collaborate effectively'],
-      marketPrice: '$300-600/month',
-      category: 'Music Production',
-      technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Music Composition Studio','
+      description: 'Intelligent music creation with composition assistance, style transfer, and production tools.','
+      icon: '🎵','
+      price: '$199/month','
+      features: ['Composition assistance', 'Style transfer', 'Production tools', 'Instrument synthesis', 'Lyrics generation', 'Collaboration'],'
+      benefits: ['Create music faster', 'Explore new styles', 'Improve composition skills', 'Collaborate effectively'],'
+      marketPrice: '$300-600/month','
+      category: 'Music Production','
+      technologies: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs'],'
       contactInfo:     ,
 $4},
     {
-      title: 'AI Streaming Content Optimizer',
-      description: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.',
-      icon: '📺',
-      price: '$249/month',
-      features: ['Quality enhancement', 'Compression optimization', 'Delivery optimization', 'Bandwidth management', 'Analytics', 'Multi-platform'],
-      benefits: ['Improve streaming quality', 'Reduce bandwidth costs', 'Optimize delivery', 'Enhance viewer experience'],
-      marketPrice: '$350-700/month',
-      category: 'Streaming',
-      technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      title: 'AI Streaming Content Optimizer','
+      description: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.','
+      icon: '📺','
+      price: '$249/month','
+      features: ['Quality enhancement', 'Compression optimization', 'Delivery optimization', 'Bandwidth management', 'Analytics', 'Multi-platform'],'
+      benefits: ['Improve streaming quality', 'Reduce bandwidth costs', 'Optimize delivery', 'Enhance viewer experience'],'
+      marketPrice: '$350-700/month','
+      category: 'Streaming','
+      technologies: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],'
       contactInfo:     ,
 $4}
-  ]
-  const categories = [
-      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
+  ];
+const categories = [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
+      contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950''
     }
   ]; */
   /* const categories = [
-    { name: 'All', count: microSAASServices.length },
-    { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },
-    { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },
-    { name: 'Analytics', count: microSAASServices.filter(s => s.category === 'Analytics').length },
-    { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance').length },
-    { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare').length },
-    { name: 'Education', count: microSAASServices.filter(s => s.category === 'Education').length },
-    { name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'E-commerce').length },
-    { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length },
-    { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length },
-    { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
-    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length },
-    { name: 'Productivity', count: microSAASServices.filter(s => s.category === 'Productivity').length },
-    { name: 'Communication', count: microSAASServices.filter(s => s.category === 'Communication').length },
-    { name: 'Customer Support', count: microSAASServices.filter(s => s.category === 'Customer Support').length },
-    { name: 'Sales & CRM', count: microSAASServices.filter(s => s.category === 'Sales & CRM').length },
-    { name: 'Cybersecurity', count: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
-    { name: 'Quality Assurance', count: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
-    { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length },
-    { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },
-    { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },
-    { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }
+  // TODO: Add items
+]
+  // TODO: Add items
+]
+    { name: 'All', count: microSAASServices.length },'
+    { name: 'Developer Tools', count: microSAASServices.filter(s => s.category === 'Developer Tools').length },'
+    { name: 'Marketing', count: microSAASServices.filter(s => s.category === 'Marketing').length },'
+    { name: 'Analytics', count: microSAASServices.filter(s => s.category === 'Analytics').length },'
+    { name: 'Finance', count: microSAASServices.filter(s => s.category === 'Finance').length },'
+    { name: 'Healthcare', count: microSAASServices.filter(s => s.category === 'Healthcare').length },'
+    { name: 'Education', count: microSAASServices.filter(s => s.category === 'Education').length },'
+    { name: 'E-commerce', count: microSAASServices.filter(s => s.category === 'E-commerce').length },'
+    { name: 'Legal', count: microSAASServices.filter(s => s.category === 'Legal').length },'
+    { name: 'Real Estate', count: microSAASServices.filter(s => s.category === 'Real Estate').length },'
+    { name: 'HR & Recruitment', count: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },'
+    { name: 'Project Management', count: microSAASServices.filter(s => s.category === 'Project Management').length },'
+    { name: 'Productivity', count: microSAASServices.filter(s => s.category === 'Productivity').length },'
+    { name: 'Communication', count: microSAASServices.filter(s => s.category === 'Communication').length },'
+    { name: 'Customer Support', count: microSAASServices.filter(s => s.category === 'Customer Support').length },'
+    { name: 'Sales & CRM', count: microSAASServices.filter(s => s.category === 'Sales & CRM').length },'
+    { name: 'Cybersecurity', count: microSAASServices.filter(s => s.category === 'Cybersecurity').length },'
+    { name: 'Quality Assurance', count: microSAASServices.filter(s => s.category === 'Quality Assurance').length },'
+    { name: 'Content Creation', count: microSAASServices.filter(s => s.category === 'Content Creation').length },'
+    { name: 'Research', count: microSAASServices.filter(s => s.category === 'Research').length },'
+    { name: 'Personal Finance', count: microSAASServices.filter(s => s.category === 'Personal Finance').length },'
+    { name: 'Game Development', count: microSAASServices.filter(s => s.category === 'Game Development').length }'
   ]; */
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Micro SAAS Solutions - Zion Tech Group
-        <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />
-        <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
+  // TODO: Add parameters
+)
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
+<Helmet>
+<title>Micro SAAS Solutions - Zion Tech Group
+        <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." />"
+<meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />"
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">
+      <section className="pt-24 pb-16 px-4">"
+<div className="max-w-7xl mx-auto text-center">"
+<h1 className="text-4xl sm: text-5xl md:text-6xl font-bold text-white mb-6">"
             Micro SAAS Solutions,
-  
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.
-import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react'
+
+          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">"
+            50+ AI-powered applications designed for modern businesses. Affordable, powerful tools that scale with your growth.;
+import { CheckCircle, Star, TrendingUp, Brain, Target, Phone, Mail, MapPin } from 'lucide-react';';';
 const MicroSAASPage: React.FC = () => {
+  // TODO: Implement
+}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // TODO: Implement
+}
     return (
+  // TODO: Add parameters
+)
     <div>Coming Soon</div>
   )
   }
   const _microSAASServices = [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
   // TOD,
   O: Add items
 ]
@@ -3426,29 +4574,29 @@ const MicroSAASPage: React.FC = () => {
   O: Add content,}
 }
   titl,
-  e: 'AI Code Review Assistant Pro',
+  e: 'AI Code Review Assistant Pro','
       descriptio,
-  n: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.',
+  n: 'Advanced automated code analysis with AI-powered bug detection, security vulnerability scanning, and performance optimization suggestions.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$89/month',
+  e: '$89/month','
       feature,
-  s: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],
+  s: ['Automated code review', 'Security vulnerability detection', 'Performance optimization', 'Code quality metrics', 'Git integration', 'Custom rule sets'],'
       benefit,
-  s: ['Reduce bugs by 70%', 'Improve code quality', 'Save 15+ hours/week', 'Prevent security vulnerabilities'],
+  s: ['Reduce bugs by 70%', 'Improve code quality', 'Save 15+ hours/week', 'Prevent security vulnerabilities'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Developer Tools',
+  y: 'Developer Tools','
       technologie,
-  s: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],
+  s: ['GitHub Actions', 'SonarQube', 'ESLint', 'Custom AI Models', 'OpenAI Codex'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950',
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950','
       lin,
-  k: 'http,
-  s://ziontechgroup.com/ai-code-review',
+  k: 'http,'
+  s://ziontechgroup.com/ai-code-review','
       popula,
   r: true,
     },
@@ -3456,5972 +4604,5976 @@ const MicroSAASPage: React.FC = () => {
   O: Add content,}
 }
   titl,
-  e: 'AI Test Generation Suite',
+  e: 'AI Test Generation Suite','
       descriptio,
-  n: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.',
+  n: 'Intelligent automated test generation with coverage analysis, performance testing, and regression testing automation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', 'CI/CD integration', 'Custom test frameworks'],
+  s: ['Auto test generation', 'Coverage analysis', 'Performance testing', 'Regression testing', 'CI/CD integration', 'Custom test frameworks'],'
       benefit,
-  s: ['Increase test coverage by 80%', 'Reduce testing time by 70%', 'Catch bugs earlier', 'Improve code reliability'],
+  s: ['Increase test coverage by 80%', 'Reduce testing time by 70%', 'Catch bugs earlier', 'Improve code reliability'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Developer Tools',
+  y: 'Developer Tools','
       technologie,
-  s: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],
+  s: ['Jest', 'Cypress', 'Selenium', 'Custom AI Models', 'GitHub Actions'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart API Documentation Generator',
+  e: 'Smart API Documentation Generator','
       descriptio,
-  n: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.',
+  n: 'AI-powered API documentation with interactive examples, code snippets, and automatic updates from code changes.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration'],
+  s: ['Auto documentation', 'Interactive examples', 'Code snippets', 'Version control', 'Multi-format export', 'Team collaboration'],';'
       benefit,
-  s: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated'],
+  s: ['Save 20+ hours on docs', 'Improve API adoption', 'Reduce support tickets', 'Keep docs always updated'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Developer Tools',
+  y: 'Developer Tools','
       technologie,
-  s: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],
+  s: ['OpenAPI', 'Swagger', 'Custom AI Models', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Marketing & SEO Tools
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI SEO Optimizer Pro',
+  e: 'AI SEO Optimizer Pro','
       descriptio,
-  n: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.',
+  n: 'Advanced SEO analysis and optimization with AI-driven content suggestions, keyword research, and competitor analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['AI content optimization', 'Keyword research automation', 'Competitor analysis', 'Technical SEO audit', 'Rank tracking', 'Content gap analysis'],
+  s: ['AI content optimization', 'Keyword research automation', 'Competitor analysis', 'Technical SEO audit', 'Rank tracking', 'Content gap analysis'],'
       benefit,
-  s: ['Increase organic traffic by 150%', 'Improve search rankings', 'Save 25+ hours/week', 'Beat competitors'],
+  s: ['Increase organic traffic by 150%', 'Improve search rankings', 'Save 25+ hours/week', 'Beat competitors'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Marketing',
+  y: 'Marketing','
       technologie,
-  s: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],
+  s: ['Google Search Console API', 'Ahrefs API', 'OpenAI GPT', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Social Media Manager',
+  e: 'AI Social Media Manager','
       descriptio,
-  n: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.',
+  n: 'Automated social media content creation, scheduling, engagement optimization, and performance analytics.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$129/month',
+  e: '$129/month','
       feature,
-  s: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management', 'Influencer outreach'],
+  s: ['Content generation', 'Optimal posting times', 'Hashtag optimization', 'Engagement tracking', 'Multi-platform management', 'Influencer outreach'],'
       benefit,
-  s: ['Increase engagement by 45%', 'Save 20 hours/week', 'Grow followers organically', 'Improve brand awareness'],
+  s: ['Increase engagement by 45%', 'Save 20 hours/week', 'Grow followers organically', 'Improve brand awareness'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Marketing',
+  y: 'Marketing','
       technologie,
-  s: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],
+  s: ['Twitter API', 'Instagram API', 'LinkedIn API', 'OpenAI GPT', 'React'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Email Marketing Platform',
+  e: 'AI Email Marketing Platform','
       descriptio,
-  n: 'Intelligent email campaigns with personalization, A/B testing, send time optimization, and advanced analytics.',
+  n: 'Intelligent email campaigns with personalization, A/B testing, send time optimization, and advanced analytics.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Smart segmentation', 'A/B testing automation', 'Send time optimization', 'Content personalization', 'Performance analytics', 'Drip campaigns'],
+  s: ['Smart segmentation', 'A/B testing automation', 'Send time optimization', 'Content personalization', 'Performance analytics', 'Drip campaigns'],'
       benefit,
-  s: ['Increase open rates by 35%', 'Boost conversion by 50%', 'Save 15 hours/week', 'Improve ROI'],
+  s: ['Increase open rates by 35%', 'Boost conversion by 50%', 'Save 15 hours/week', 'Improve ROI'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Marketing',
+  y: 'Marketing','
       technologie,
-  s: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],
+  s: ['SendGrid', 'Mailchimp API', 'Machine Learning', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Content Generator Pro',
+  e: 'AI Content Generator Pro','
       descriptio,
-  n: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.',
+  n: 'High-quality content creation for blogs, social media, marketing materials, and website copy with brand consistency.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$119/month',
+  e: '$119/month','
       feature,
-  s: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency', 'Multi-language support'],
+  s: ['Blog post generation', 'Social media content', 'Email templates', 'SEO optimization', 'Brand voice consistency', 'Multi-language support'],'
       benefit,
-  s: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality', 'Scale content production'],
+  s: ['Create content 5x faster', 'Improve SEO rankings', 'Maintain consistent quality', 'Scale content production'],'
       marketPric,
-  e: '$180-350/month',
+  e: '$180-350/month','
       categor,
-  y: 'Content Creation',
+  y: 'Content Creation','
       technologie,
-  s: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],
+  s: ['OpenAI GPT', 'Claude', 'React', 'Node.js', 'Custom Fine-tuned Models'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Business Intelligence & Analytics
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Analytics Dashboard Pro',
+  e: 'AI Analytics Dashboard Pro','
       descriptio,
-  n: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.',
+  n: 'Real-time business intelligence with predictive analytics, automated insights, and custom reporting.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Real-time visualization', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile responsive', 'Alert system'],
+  s: ['Real-time visualization', 'Predictive analytics', 'Custom reports', 'API integration', 'Mobile responsive', 'Alert system'],'
       benefit,
-  s: ['Increase decision speed by 40%', 'Reduce manual reporting by 80%', 'Identify trends early', 'Improve forecasting'],
+  s: ['Increase decision speed by 40%', 'Reduce manual reporting by 80%', 'Identify trends early', 'Improve forecasting'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Analytics',
+  y: 'Analytics','
       technologie,
-  s: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],
+  s: ['React', 'D3.js', 'Python', 'TensorFlow', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Lead Scoring Engine',
+  e: 'AI Lead Scoring Engine','
       descriptio,
-  n: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.',
+  n: 'Intelligent lead qualification and scoring to maximize conversion rates with behavioral analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$139/month',
+  e: '$139/month','
       feature,
-  s: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation', 'ROI tracking'],
+  s: ['Behavioral analysis', 'Lead scoring', 'Conversion prediction', 'CRM integration', 'Follow-up automation', 'ROI tracking'],'
       benefit,
-  s: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time', 'Improve sales efficiency'],
+  s: ['Increase conversion by 40%', 'Focus on high-value leads', 'Reduce sales cycle time', 'Improve sales efficiency'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Sales',
+  y: 'Sales','
       technologie,
-  s: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],
+  s: ['Machine Learning', 'Python', 'Salesforce API', 'HubSpot API', 'Custom AI Models'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Insights Platform',
+  e: 'AI Customer Insights Platform','
       descriptio,
-  n: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.',
+  n: 'Advanced customer behavior analysis with sentiment tracking, churn prediction, and personalized recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Customer segmentation', 'Sentiment analysis', 'Churn prediction', 'Personalization engine', 'Lifetime value prediction', 'Behavioral tracking'],
+  s: ['Customer segmentation', 'Sentiment analysis', 'Churn prediction', 'Personalization engine', 'Lifetime value prediction', 'Behavioral tracking'],'
       benefit,
-  s: ['Reduce churn by 30%', 'Increase customer lifetime value', 'Improve personalization', 'Enhance customer experience'],
+  s: ['Reduce churn by 30%', 'Increase customer lifetime value', 'Improve personalization', 'Enhance customer experience'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Customer Analytics',
+  y: 'Customer Analytics','
       technologie,
-  s: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],
+  s: ['Machine Learning', 'Python', 'TensorFlow', 'React', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Finance & Accounting Tools
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Invoice Generator Pro',
+  e: 'AI Invoice Generator Pro','
       descriptio,
-  n: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.',
+  n: 'Intelligent invoice creation with automated billing, payment tracking, financial analytics, and tax calculations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Automated invoice generation', 'Payment tracking', 'Financial analytics', 'Client portal', 'Tax calculations', 'Multi-currency support'],
+  s: ['Automated invoice generation', 'Payment tracking', 'Financial analytics', 'Client portal', 'Tax calculations', 'Multi-currency support'],'
       benefit,
-  s: ['Reduce billing time by 80%', 'Improve cash flow', 'Eliminate manual errors', 'Ensure compliance'],
+  s: ['Reduce billing time by 80%', 'Improve cash flow', 'Eliminate manual errors', 'Ensure compliance'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Finance',
+  y: 'Finance','
       technologie,
-  s: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Stripe API', 'QuickBooks API', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Financial Planning Assistant',
+  e: 'AI Financial Planning Assistant','
       descriptio,
-  n: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.',
+  n: 'Personalized financial planning, investment recommendations, budget optimization, and retirement planning.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$89/month',
+  e: '$89/month','
       feature,
-  s: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning', 'Investment recommendations'],
+  s: ['Portfolio analysis', 'Risk assessment', 'Goal tracking', 'Tax optimization', 'Retirement planning', 'Investment recommendations'],'
       benefit,
-  s: ['Optimize investment returns', 'Reduce financial stress', 'Achieve goals faster', 'Improve financial literacy'],
+  s: ['Optimize investment returns', 'Reduce financial stress', 'Achieve goals faster', 'Improve financial literacy'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Finance',
+  y: 'Finance','
       technologie,
-  s: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],
+  s: ['Python', 'Pandas', 'NumPy', 'React', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Expense Management System',
+  e: 'AI Expense Management System','
       descriptio,
-  n: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.',
+  n: 'Smart expense tracking with receipt OCR, categorization, approval workflows, and compliance monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Receipt OCR', 'Auto categorization', 'Approval workflows', 'Compliance monitoring', 'Expense analytics', 'Mobile app'],
+  s: ['Receipt OCR', 'Auto categorization', 'Approval workflows', 'Compliance monitoring', 'Expense analytics', 'Mobile app'],'
       benefit,
-  s: ['Reduce expense processing time by 70%', 'Improve accuracy', 'Ensure compliance', 'Streamline approvals'],
+  s: ['Reduce expense processing time by 70%', 'Improve accuracy', 'Ensure compliance', 'Streamline approvals'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Finance',
+  y: 'Finance','
       technologie,
-  s: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],
+  s: ['OCR', 'Machine Learning', 'React Native', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Healthcare & Wellness
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Health Monitoring Platform',
+  e: 'AI Health Monitoring Platform','
       descriptio,
-  n: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.',
+  n: 'Personalized health tracking with symptom analysis, medication reminders, and health trend predictions.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Symptom tracking', 'Medication reminders', 'Health predictions', 'Doctor integration', 'Emergency alerts', 'Wearable sync'],
+  s: ['Symptom tracking', 'Medication reminders', 'Health predictions', 'Doctor integration', 'Emergency alerts', 'Wearable sync'],'
       benefit,
-  s: ['Improve health outcomes', 'Reduce medical costs', 'Early disease detection', 'Better medication adherence'],
+  s: ['Improve health outcomes', 'Reduce medical costs', 'Early disease detection', 'Better medication adherence'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Healthcare',
+  y: 'Healthcare','
       technologie,
-  s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],
+  s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Health APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Fitness Coach Pro',
+  e: 'AI Fitness Coach Pro','
       descriptio,
-  n: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.',
+  n: 'Personalized fitness plans with AI-generated workouts, nutrition tracking, and progress monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$49/month',
+  e: '$49/month','
       feature,
-  s: ['Personalized workouts', 'Nutrition tracking', 'Progress monitoring', 'Goal setting', 'Community features', 'Wearable integration'],
+  s: ['Personalized workouts', 'Nutrition tracking', 'Progress monitoring', 'Goal setting', 'Community features', 'Wearable integration'],'
       benefit,
-  s: ['Achieve fitness goals faster', 'Personalized guidance', 'Track progress effectively', 'Stay motivated'],
+  s: ['Achieve fitness goals faster', 'Personalized guidance', 'Track progress effectively', 'Stay motivated'],'
       marketPric,
-  e: '$80-150/month',
+  e: '$80-150/month','
       categor,
-  y: 'Health & Fitness',
+  y: 'Health & Fitness','
       technologie,
-  s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],
+  s: ['Machine Learning', 'React Native', 'Node.js', 'MongoDB', 'Wearable APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Mental Health Assistant',
+  e: 'AI Mental Health Assistant','
       descriptio,
-  n: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.',
+  n: 'Intelligent mental health support with mood tracking, stress analysis, and personalized wellness recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Crisis intervention', 'Progress tracking', 'Professional referrals'],
+  s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Crisis intervention', 'Progress tracking', 'Professional referrals'],'
       benefit,
-  s: ['Improve mental wellbeing', 'Early intervention', 'Reduce stress', 'Better emotional regulation'],
+  s: ['Improve mental wellbeing', 'Early intervention', 'Reduce stress', 'Better emotional regulation'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Mental Health',
+  y: 'Mental Health','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+  s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Education & Learning
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Language Learning Platform',
+  e: 'AI Language Learning Platform','
       descriptio,
-  n: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.',
+  n: 'Personalized language learning with AI tutors, speech recognition, and adaptive curriculum.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['AI tutoring', 'Speech recognition', 'Adaptive learning', 'Progress tracking', 'Multi-language support', 'Cultural context'],
+  s: ['AI tutoring', 'Speech recognition', 'Adaptive learning', 'Progress tracking', 'Multi-language support', 'Cultural context'],'
       benefit,
-  s: ['Learn languages 3x faster', 'Personalized curriculum', 'Improve pronunciation', 'Cultural understanding'],
+  s: ['Learn languages 3x faster', 'Personalized curriculum', 'Improve pronunciation', 'Cultural understanding'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Education',
+  y: 'Education','
       technologie,
-  s: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],
+  s: ['Speech Recognition', 'Machine Learning', 'React', 'Node.js', 'MongoDB'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Study Assistant Pro',
+  e: 'AI Study Assistant Pro','
       descriptio,
-  n: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.',
+  n: 'Intelligent study companion with note-taking, quiz generation, and personalized learning paths.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$59/month',
+  e: '$59/month','
       feature,
-  s: ['Smart note-taking', 'Quiz generation', 'Learning paths', 'Progress tracking', 'Study reminders', 'Knowledge gaps analysis'],
+  s: ['Smart note-taking', 'Quiz generation', 'Learning paths', 'Progress tracking', 'Study reminders', 'Knowledge gaps analysis'],'
       benefit,
-  s: ['Improve study efficiency', 'Retain information better', 'Identify knowledge gaps', 'Personalized learning'],
+  s: ['Improve study efficiency', 'Retain information better', 'Identify knowledge gaps', 'Personalized learning'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'Education',
+  y: 'Education','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Skill Assessment Platform',
+  e: 'AI Skill Assessment Platform','
       descriptio,
-  n: 'Automated skill testing and certification with adaptive questioning and performance analytics.',
+  n: 'Automated skill testing and certification with adaptive questioning and performance analytics.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Adaptive testing', 'Skill certification', 'Performance analytics', 'Progress tracking', 'Custom assessments', 'Industry standards'],
+  s: ['Adaptive testing', 'Skill certification', 'Performance analytics', 'Progress tracking', 'Custom assessments', 'Industry standards'],'
       benefit,
-  s: ['Accurate skill assessment', 'Reduce testing time', 'Industry recognition', 'Career advancement'],
+  s: ['Accurate skill assessment', 'Reduce testing time', 'Industry recognition', 'Career advancement'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Education',
+  y: 'Education','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI E-commerce & Retail
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Inventory Optimizer Pro',
+  e: 'AI Inventory Optimizer Pro','
       descriptio,
-  n: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.',
+  n: 'Predictive inventory management with demand forecasting, automated reordering, and cost optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis', 'Seasonal adjustments'],
+  s: ['Demand forecasting', 'Automated reordering', 'Stock optimization', 'Supplier management', 'Cost analysis', 'Seasonal adjustments'],'
       benefit,
-  s: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow', 'Optimize supplier relationships'],
+  s: ['Reduce stockouts by 60%', 'Lower inventory costs by 25%', 'Improve cash flow', 'Optimize supplier relationships'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Supply Chain',
+  y: 'Supply Chain','
       technologie,
-  s: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],
+  s: ['Python', 'TensorFlow', 'PostgreSQL', 'Redis', 'Custom ML Models'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Product Recommendation Engine',
+  e: 'AI Product Recommendation Engine','
       descriptio,
-  n: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.',
+  n: 'Intelligent product recommendations with personalization, cross-selling, and upselling optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Personalized recommendations', 'Cross-selling', 'Upselling', 'A/B testing', 'Real-time updates', 'Performance analytics'],
+  s: ['Personalized recommendations', 'Cross-selling', 'Upselling', 'A/B testing', 'Real-time updates', 'Performance analytics'],'
       benefit,
-  s: ['Increase sales by 25%', 'Improve customer experience', 'Boost average order value', 'Reduce cart abandonment'],
+  s: ['Increase sales by 25%', 'Improve customer experience', 'Boost average order value', 'Reduce cart abandonment'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'E-commerce',
+  y: 'E-commerce','
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],
+  s: ['Machine Learning', 'Python', 'React', 'Node.js', 'Redis'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Price Optimization Tool',
+  e: 'AI Price Optimization Tool','
       descriptio,
-  n: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.',
+  n: 'Dynamic pricing optimization with competitor analysis, demand forecasting, and profit maximization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Dynamic pricing', 'Competitor analysis', 'Demand forecasting', 'Profit optimization', 'A/B testing', 'Market analysis'],
+  s: ['Dynamic pricing', 'Competitor analysis', 'Demand forecasting', 'Profit optimization', 'A/B testing', 'Market analysis'],'
       benefit,
-  s: ['Increase profits by 15%', 'Stay competitive', 'Optimize pricing strategy', 'Maximize revenue'],
+  s: ['Increase profits by 15%', 'Stay competitive', 'Optimize pricing strategy', 'Maximize revenue'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'E-commerce',
+  y: 'E-commerce','
       technologie,
-  s: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],
+  s: ['Machine Learning', 'Python', 'Web Scraping', 'React', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Legal & Compliance
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Legal Document Analyzer',
+  e: 'AI Legal Document Analyzer','
       descriptio,
-  n: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.',
+  n: 'Intelligent legal document review with contract analysis, risk assessment, and compliance checking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research', 'Clause extraction'],
+  s: ['Contract analysis', 'Risk assessment', 'Compliance checking', 'Document comparison', 'Legal research', 'Clause extraction'],'
       benefit,
-  s: ['Reduce legal review time by 60%', 'Improve accuracy', 'Lower legal costs', 'Ensure compliance'],
+  s: ['Reduce legal review time by 60%', 'Improve accuracy', 'Lower legal costs', 'Ensure compliance'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'Legal',
+  y: 'Legal','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Real Estate & Property Management
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Property Valuation Engine',
+  e: 'AI Property Valuation Engine','
       descriptio,
-  n: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.',
+  n: 'Advanced property valuation using machine learning, market analysis, and predictive modeling for accurate pricing.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Market analysis', 'Property comparison', 'Price prediction', 'Investment analysis', 'Market trends', 'ROI calculations'],
+  s: ['Market analysis', 'Property comparison', 'Price prediction', 'Investment analysis', 'Market trends', 'ROI calculations'],'
       benefit,
-  s: ['Accurate valuations', 'Better investment decisions', 'Save appraisal costs', 'Market insights'],
+  s: ['Accurate valuations', 'Better investment decisions', 'Save appraisal costs', 'Market insights'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Real Estate',
+  y: 'Real Estate','
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],
+  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'GIS Integration'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI HR & Recruitment
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Resume Parser & Matcher',
+  e: 'AI Resume Parser & Matcher','
       descriptio,
-  n: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.',
+  n: 'Intelligent resume parsing with job matching, candidate scoring, and automated screening.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Resume parsing', 'Job matching', 'Candidate scoring', 'Automated screening', 'ATS integration', 'Bias detection'],
+  s: ['Resume parsing', 'Job matching', 'Candidate scoring', 'Automated screening', 'ATS integration', 'Bias detection'],'
       benefit,
-  s: ['Reduce screening time by 70%', 'Improve candidate quality', 'Eliminate bias', 'Faster hiring'],
+  s: ['Reduce screening time by 70%', 'Improve candidate quality', 'Eliminate bias', 'Faster hiring'],'
       marketPric,
-  e: '$200-500/month',
+  e: '$200-500/month','
       categor,
-  y: 'HR & Recruitment',
+  y: 'HR & Recruitment','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Interview Scheduler Pro',
+  e: 'AI Interview Scheduler Pro','
       descriptio,
-  n: 'Smart interview scheduling with calendar integration, timezone handling, and automated follow-ups.',
+  n: 'Smart interview scheduling with calendar integration, timezone handling, and automated follow-ups.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Calendar integration', 'Timezone handling', 'Automated scheduling', 'Reminder system', 'Video conferencing', 'Feedback collection'],
+  s: ['Calendar integration', 'Timezone handling', 'Automated scheduling', 'Reminder system', 'Video conferencing', 'Feedback collection'],'
       benefit,
-  s: ['Save 10+ hours/week', 'Reduce no-shows', 'Improve candidate experience', 'Streamline process'],
+  s: ['Save 10+ hours/week', 'Reduce no-shows', 'Improve candidate experience', 'Streamline process'],'
       marketPric,
-  e: '$120-300/month',
+  e: '$120-300/month','
       categor,
-  y: 'HR & Recruitment',
+  y: 'HR & Recruitment','
       technologie,
-  s: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC'],
+  s: ['Calendar APIs', 'React', 'Node.js', 'MongoDB', 'WebRTC'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Employee Performance Tracker',
+  e: 'AI Employee Performance Tracker','
       descriptio,
-  n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
+  n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Goal tracking', 'Performance metrics', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
+  s: ['Goal tracking', 'Performance metrics', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],'
       benefit,
-  s: ['Improve performance by 30%', 'Better goal alignment', 'Data-driven decisions', 'Employee development'],
+  s: ['Improve performance by 30%', 'Better goal alignment', 'Data-driven decisions', 'Employee development'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'HR & Recruitment',
+  y: 'HR & Recruitment','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Finance & Accounting
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Expense Tracker & Categorizer',
+  e: 'AI Expense Tracker & Categorizer','
       descriptio,
-  n: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.',
+  n: 'Intelligent expense management with automatic categorization, receipt scanning, and budget analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Tax preparation', 'Expense reports', 'Fraud detection'],
+  s: ['Receipt scanning', 'Auto categorization', 'Budget tracking', 'Tax preparation', 'Expense reports', 'Fraud detection'],'
       benefit,
-  s: ['Save 5+ hours/week', 'Improve accuracy', 'Better tax compliance', 'Cost control'],
+  s: ['Save 5+ hours/week', 'Improve accuracy', 'Better tax compliance', 'Cost control'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Finance & Accounting',
+  y: 'Finance & Accounting','
       technologie,
-  s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Invoice Processing System',
+  e: 'AI Invoice Processing System','
       descriptio,
-  n: 'Automated invoice processing with data extraction, approval workflows, and payment tracking.',
+  n: 'Automated invoice processing with data extraction, approval workflows, and payment tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Invoice scanning', 'Data extraction', 'Approval workflows', 'Payment tracking', 'Vendor management', 'Compliance checks'],
+  s: ['Invoice scanning', 'Data extraction', 'Approval workflows', 'Payment tracking', 'Vendor management', 'Compliance checks'],'
       benefit,
-  s: ['Process invoices 5x faster', 'Reduce errors by 90%', 'Improve cash flow', 'Better vendor relationships'],
+  s: ['Process invoices 5x faster', 'Reduce errors by 90%', 'Improve cash flow', 'Better vendor relationships'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Finance & Accounting',
+  y: 'Finance & Accounting','
       technologie,
-  s: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['OCR', 'Workflow Engine', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Financial Forecasting Tool',
+  e: 'AI Financial Forecasting Tool','
       descriptio,
-  n: 'Advanced financial forecasting with cash flow prediction, budget planning, and scenario analysis.',
+  n: 'Advanced financial forecasting with cash flow prediction, budget planning, and scenario analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Cash flow prediction', 'Budget planning', 'Scenario analysis', 'Risk assessment', 'Investment tracking', 'Financial reports'],
+  s: ['Cash flow prediction', 'Budget planning', 'Scenario analysis', 'Risk assessment', 'Investment tracking', 'Financial reports'],'
       benefit,
-  s: ['Better financial planning', 'Reduce risk', 'Improve cash flow', 'Data-driven decisions'],
+  s: ['Better financial planning', 'Reduce risk', 'Improve cash flow', 'Data-driven decisions'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Finance & Accounting',
+  y: 'Finance & Accounting','
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],
+  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series Analysis'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Project Management
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Project Manager Assistant',
+  e: 'AI Project Manager Assistant','
       descriptio,
-  n: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.',
+  n: 'Intelligent project management with task prioritization, resource allocation, and risk prediction.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Task prioritization', 'Resource allocation', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Deadline management'],
+  s: ['Task prioritization', 'Resource allocation', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Deadline management'],'
       benefit,
-  s: ['Complete projects 25% faster', 'Reduce overruns', 'Better resource utilization', 'Improved team productivity'],
+  s: ['Complete projects 25% faster', 'Reduce overruns', 'Better resource utilization', 'Improved team productivity'],'
       marketPric,
-  e: '$200-500/month',
+  e: '$200-500/month','
       categor,
-  y: 'Project Management',
+  y: 'Project Management','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Time Tracking & Analytics',
+  e: 'AI Time Tracking & Analytics','
       descriptio,
-  n: 'Smart time tracking with productivity analysis, distraction detection, and work pattern insights.',
+  n: 'Smart time tracking with productivity analysis, distraction detection, and work pattern insights.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Automatic tracking', 'Productivity analysis', 'Distraction detection', 'Work patterns', 'Team insights', 'Goal setting'],
+  s: ['Automatic tracking', 'Productivity analysis', 'Distraction detection', 'Work patterns', 'Team insights', 'Goal setting'],'
       benefit,
-  s: ['Increase productivity by 20%', 'Better work-life balance', 'Identify inefficiencies', 'Data-driven improvements'],
+  s: ['Increase productivity by 20%', 'Better work-life balance', 'Identify inefficiencies', 'Data-driven improvements'],'
       marketPric,
-  e: '$120-300/month',
+  e: '$120-300/month','
       categor,
-  y: 'Project Management',
+  y: 'Project Management','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'MongoDB', 'Analytics'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Customer Service
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Live Chat Assistant',
+  e: 'AI Live Chat Assistant','
       descriptio,
-  n: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.',
+  n: 'Intelligent live chat with instant responses, sentiment analysis, and seamless human handoff.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$129/month',
+  e: '$129/month','
       feature,
-  s: ['Instant responses', 'Sentiment analysis', 'Human handoff', 'Multi-language', 'Knowledge base', 'Analytics'],
+  s: ['Instant responses', 'Sentiment analysis', 'Human handoff', 'Multi-language', 'Knowledge base', 'Analytics'],'
       benefit,
-  s: ['24/7 customer support', 'Reduce response time by 80%', 'Improve satisfaction', 'Lower support costs'],
+  s: ['24/7 customer support', 'Reduce response time by 80%', 'Improve satisfaction', 'Lower support costs'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Customer Service',
+  y: 'Customer Service','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Ticket Classification System',
+  e: 'AI Ticket Classification System','
       descriptio,
-  n: 'Automated ticket routing and prioritization with intelligent categorization and escalation.',
+  n: 'Automated ticket routing and prioritization with intelligent categorization and escalation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Auto classification', 'Priority scoring', 'Escalation rules', 'SLA tracking', 'Performance metrics', 'Integration APIs'],
+  s: ['Auto classification', 'Priority scoring', 'Escalation rules', 'SLA tracking', 'Performance metrics', 'Integration APIs'],'
       benefit,
-  s: ['Route tickets 90% faster', 'Improve response times', 'Better resource allocation', 'Enhanced customer experience'],
+  s: ['Route tickets 90% faster', 'Improve response times', 'Better resource allocation', 'Enhanced customer experience'],'
       marketPric,
-  e: '$150-350/month',
+  e: '$150-350/month','
       categor,
-  y: 'Customer Service',
+  y: 'Customer Service','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Sales & CRM
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Lead Scoring Engine',
+  e: 'AI Lead Scoring Engine','
       descriptio,
-  n: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.',
+  n: 'Intelligent lead qualification with scoring, nurturing automation, and conversion prediction.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Lead scoring', 'Nurturing automation', 'Conversion prediction', 'Behavior tracking', 'A/B testing', 'ROI analysis'],
+  s: ['Lead scoring', 'Nurturing automation', 'Conversion prediction', 'Behavior tracking', 'A/B testing', 'ROI analysis'],'
       benefit,
-  s: ['Increase conversions by 35%', 'Focus on high-value leads', 'Automate nurturing', 'Improve sales efficiency'],
+  s: ['Increase conversions by 35%', 'Focus on high-value leads', 'Automate nurturing', 'Improve sales efficiency'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Sales & CRM',
+  y: 'Sales & CRM','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Sales Forecasting Platform',
+  e: 'AI Sales Forecasting Platform','
       descriptio,
-  n: 'Advanced sales prediction with pipeline analysis, quota tracking, and performance optimization.',
+  n: 'Advanced sales prediction with pipeline analysis, quota tracking, and performance optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Sales forecasting', 'Pipeline analysis', 'Quota tracking', 'Performance metrics', 'Trend analysis', 'Goal setting'],
+  s: ['Sales forecasting', 'Pipeline analysis', 'Quota tracking', 'Performance metrics', 'Trend analysis', 'Goal setting'],'
       benefit,
-  s: ['Improve forecast accuracy by 40%', 'Better quota planning', 'Identify opportunities', 'Optimize sales strategy'],
+  s: ['Improve forecast accuracy by 40%', 'Better quota planning', 'Identify opportunities', 'Optimize sales strategy'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Sales & CRM',
+  y: 'Sales & CRM','
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],
+  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Time Series'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Healthcare & Wellness
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Symptom Checker Pro',
+  e: 'AI Symptom Checker Pro','
       descriptio,
-  n: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.',
+  n: 'Intelligent symptom analysis with preliminary diagnosis, treatment suggestions, and doctor recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Symptom analysis', 'Preliminary diagnosis', 'Treatment suggestions', 'Doctor matching', 'Health records', 'Emergency alerts'],
+  s: ['Symptom analysis', 'Preliminary diagnosis', 'Treatment suggestions', 'Doctor matching', 'Health records', 'Emergency alerts'],'
       benefit,
-  s: ['Improve healthcare access', 'Reduce misdiagnosis', 'Better patient outcomes', 'Lower healthcare costs'],
+  s: ['Improve healthcare access', 'Reduce misdiagnosis', 'Better patient outcomes', 'Lower healthcare costs'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Healthcare',
+  y: 'Healthcare','
       technologie,
-  s: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance'],
+  s: ['Medical AI', 'NLP', 'React', 'Node.js', 'HIPAA Compliance'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Fitness Coach Platform',
+  e: 'AI Fitness Coach Platform','
       descriptio,
-  n: 'Personalized fitness coaching with workout generation, nutrition planning, and progress tracking.',
+  n: 'Personalized fitness coaching with workout generation, nutrition planning, and progress tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Workout generation', 'Nutrition planning', 'Progress tracking', 'Form analysis', 'Goal setting', 'Community features'],
+  s: ['Workout generation', 'Nutrition planning', 'Progress tracking', 'Form analysis', 'Goal setting', 'Community features'],'
       benefit,
-  s: ['Achieve fitness goals faster', 'Personalized guidance', 'Better motivation', 'Improved health outcomes'],
+  s: ['Achieve fitness goals faster', 'Personalized guidance', 'Better motivation', 'Improved health outcomes'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Healthcare',
+  y: 'Healthcare','
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+  s: ['Computer Vision', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Security & Compliance
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Security Monitoring System',
+  e: 'AI Security Monitoring System','
       descriptio,
-  n: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.',
+  n: 'Advanced threat detection with real-time monitoring, incident response, and compliance reporting.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Threat detection', 'Real-time monitoring', 'Incident response', 'Compliance reporting', 'Vulnerability scanning', 'Security analytics'],
+  s: ['Threat detection', 'Real-time monitoring', 'Incident response', 'Compliance reporting', 'Vulnerability scanning', 'Security analytics'],'
       benefit,
-  s: ['Detect threats 90% faster', 'Reduce security incidents', 'Ensure compliance', 'Lower security costs'],
+  s: ['Detect threats 90% faster', 'Reduce security incidents', 'Ensure compliance', 'Lower security costs'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'Security',
+  y: 'Security','
       technologie,
-  s: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'SIEM', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Compliance Checker',
+  e: 'AI Compliance Checker','
       descriptio,
-  n: 'Automated compliance monitoring with regulation tracking, audit preparation, and risk assessment.',
+  n: 'Automated compliance monitoring with regulation tracking, audit preparation, and risk assessment.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Regulation tracking', 'Audit preparation', 'Risk assessment', 'Policy management', 'Training modules', 'Reporting'],
+  s: ['Regulation tracking', 'Audit preparation', 'Risk assessment', 'Policy management', 'Training modules', 'Reporting'],'
       benefit,
-  s: ['Ensure compliance', 'Reduce audit costs', 'Minimize risks', 'Streamline processes'],
+  s: ['Ensure compliance', 'Reduce audit costs', 'Minimize risks', 'Streamline processes'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Security',
+  y: 'Security','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Productivity & Automation
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Meeting Assistant Pro',
+  e: 'AI Meeting Assistant Pro','
       descriptio,
-  n: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
+  n: 'Intelligent meeting management with transcription, action items, and follow-up automation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$129/month',
+  e: '$129/month','
       feature,
-  s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
+  s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],'
       benefit,
-  s: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better team alignment'],
+  s: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better team alignment'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Productivity',
+  y: 'Productivity','
       technologie,
-  s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
+  s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Email Management System',
+  e: 'AI Email Management System','
       descriptio,
-  n: 'Smart email organization with auto-categorization, priority scoring, and response suggestions.',
+  n: 'Smart email organization with auto-categorization, priority scoring, and response suggestions.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Auto categorization', 'Priority scoring', 'Response suggestions', 'Email templates', 'Scheduling', 'Analytics'],
+  s: ['Auto categorization', 'Priority scoring', 'Response suggestions', 'Email templates', 'Scheduling', 'Analytics'],'
       benefit,
-  s: ['Process emails 3x faster', 'Never miss important emails', 'Improve response quality', 'Better email organization'],
+  s: ['Process emails 3x faster', 'Never miss important emails', 'Improve response quality', 'Better email organization'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Productivity',
+  y: 'Productivity','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Email APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Document Management Platform',
+  e: 'AI Document Management Platform','
       descriptio,
-  n: 'Intelligent document organization with search, version control, and collaboration features.',
+  n: 'Intelligent document organization with search, version control, and collaboration features.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Smart search', 'Version control', 'Collaboration tools', 'Document analysis', 'Workflow automation', 'Security controls'],
+  s: ['Smart search', 'Version control', 'Collaboration tools', 'Document analysis', 'Workflow automation', 'Security controls'],'
       benefit,
-  s: ['Find documents instantly', 'Improve collaboration', 'Ensure version control', 'Enhance security'],
+  s: ['Find documents instantly', 'Improve collaboration', 'Ensure version control', 'Enhance security'],'
       marketPric,
-  e: '$200-500/month',
+  e: '$200-500/month','
       categor,
-  y: 'Productivity',
+  y: 'Productivity','
       technologie,
-  s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
+  s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Analytics & Reporting
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Business Intelligence Suite',
+  e: 'AI Business Intelligence Suite','
       descriptio,
-  n: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.',
+  n: 'Comprehensive BI platform with automated insights, predictive analytics, and custom dashboards.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Automated insights', 'Predictive analytics', 'Custom dashboards', 'Data visualization', 'Report generation', 'Mobile access'],
+  s: ['Automated insights', 'Predictive analytics', 'Custom dashboards', 'Data visualization', 'Report generation', 'Mobile access'],'
       benefit,
-  s: ['Make data-driven decisions', 'Identify trends early', 'Improve performance', 'Save analysis time'],
+  s: ['Make data-driven decisions', 'Identify trends early', 'Improve performance', 'Save analysis time'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Analytics',
+  y: 'Analytics','
       technologie,
-  s: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js'],
+  s: ['Machine Learning', 'React', 'Python', 'PostgreSQL', 'D3.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Social Media Analytics',
+  e: 'AI Social Media Analytics','
       descriptio,
-  n: 'Advanced social media monitoring with sentiment analysis, competitor tracking, and engagement optimization.',
+  n: 'Advanced social media monitoring with sentiment analysis, competitor tracking, and engagement optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Sentiment analysis', 'Competitor tracking', 'Engagement metrics', 'Content optimization', 'Influencer identification', 'Trend analysis'],
+  s: ['Sentiment analysis', 'Competitor tracking', 'Engagement metrics', 'Content optimization', 'Influencer identification', 'Trend analysis'],'
       benefit,
-  s: ['Improve social media ROI', 'Better brand monitoring', 'Optimize content strategy', 'Identify opportunities'],
+  s: ['Improve social media ROI', 'Better brand monitoring', 'Optimize content strategy', 'Identify opportunities'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Analytics',
+  y: 'Analytics','
       technologie,
-  s: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],
+  s: ['Social Media APIs', 'NLP', 'React', 'Node.js', 'MongoDB'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Development & DevOps
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Code Quality Monitor',
+  e: 'AI Code Quality Monitor','
       descriptio,
-  n: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.',
+  n: 'Continuous code quality monitoring with automated reviews, technical debt tracking, and improvement suggestions.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Code quality monitoring', 'Technical debt tracking', 'Improvement suggestions', 'Team metrics', 'Integration tools', 'Custom rules'],
+  s: ['Code quality monitoring', 'Technical debt tracking', 'Improvement suggestions', 'Team metrics', 'Integration tools', 'Custom rules'],'
       benefit,
-  s: ['Improve code quality', 'Reduce technical debt', 'Better team performance', 'Faster development'],
+  s: ['Improve code quality', 'Reduce technical debt', 'Better team performance', 'Faster development'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Development',
+  y: 'Development','
       technologie,
-  s: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration'],
+  s: ['Static Analysis', 'Machine Learning', 'React', 'Node.js', 'Git Integration'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Deployment Automation',
+  e: 'AI Deployment Automation','
       descriptio,
-  n: 'Intelligent deployment pipeline with automated testing, rollback capabilities, and performance monitoring.',
+  n: 'Intelligent deployment pipeline with automated testing, rollback capabilities, and performance monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Automated testing', 'Smart deployments', 'Rollback automation', 'Performance monitoring', 'Environment management', 'Security scanning'],
+  s: ['Automated testing', 'Smart deployments', 'Rollback automation', 'Performance monitoring', 'Environment management', 'Security scanning'],'
       benefit,
-  s: ['Deploy 5x faster', 'Reduce deployment errors', 'Improve reliability', 'Better monitoring'],
+  s: ['Deploy 5x faster', 'Reduce deployment errors', 'Improve reliability', 'Better monitoring'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Development',
+  y: 'Development','
       technologie,
-  s: ['CI/CD', 'Docker', 'Kubernetes', 'React', 'Node.js'],
+  s: ['CI/CD', 'Docker', 'Kubernetes', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Communication & Collaboration
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Team Collaboration Hub',
+  e: 'AI Team Collaboration Hub','
       descriptio,
-  n: 'Intelligent team workspace with smart notifications, task management, and productivity insights.',
+  n: 'Intelligent team workspace with smart notifications, task management, and productivity insights.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Smart notifications', 'Task management', 'Productivity insights', 'Team analytics', 'Integration tools', 'Mobile access'],
+  s: ['Smart notifications', 'Task management', 'Productivity insights', 'Team analytics', 'Integration tools', 'Mobile access'],'
       benefit,
-  s: ['Improve team productivity', 'Better communication', 'Data-driven insights', 'Streamlined workflows'],
+  s: ['Improve team productivity', 'Better communication', 'Data-driven insights', 'Streamlined workflows'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Collaboration',
+  y: 'Collaboration','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'WebSocket'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Video Conferencing Assistant',
+  e: 'AI Video Conferencing Assistant','
       descriptio,
-  n: 'Smart video conferencing with noise cancellation, transcription, and meeting optimization.',
+  n: 'Smart video conferencing with noise cancellation, transcription, and meeting optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Noise cancellation', 'Live transcription', 'Meeting optimization', 'Background effects', 'Recording', 'Analytics'],
+  s: ['Noise cancellation', 'Live transcription', 'Meeting optimization', 'Background effects', 'Recording', 'Analytics'],'
       benefit,
-  s: ['Better meeting quality', 'Accessibility features', 'Improved focus', 'Professional appearance'],
+  s: ['Better meeting quality', 'Accessibility features', 'Improved focus', 'Professional appearance'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Collaboration',
+  y: 'Collaboration','
       technologie,
-  s: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],
+  s: ['WebRTC', 'Audio Processing', 'React', 'Node.js', 'WebSocket'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Marketing & Advertising
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Ad Campaign Optimizer',
+  e: 'AI Ad Campaign Optimizer','
       descriptio,
-  n: 'Intelligent ad campaign management with automated optimization, A/B testing, and performance analytics.',
+  n: 'Intelligent ad campaign management with automated optimization, A/B testing, and performance analytics.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Campaign optimization', 'A/B testing', 'Performance analytics', 'Budget management', 'Audience targeting', 'ROI tracking'],
+  s: ['Campaign optimization', 'A/B testing', 'Performance analytics', 'Budget management', 'Audience targeting', 'ROI tracking'],'
       benefit,
-  s: ['Improve ad performance by 40%', 'Reduce ad spend waste', 'Better targeting', 'Higher ROI'],
+  s: ['Improve ad performance by 40%', 'Reduce ad spend waste', 'Better targeting', 'Higher ROI'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Marketing',
+  y: 'Marketing','
       technologie,
-  s: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],
+  s: ['Ad APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Influencer Marketing Platform',
+  e: 'AI Influencer Marketing Platform','
       descriptio,
-  n: 'Smart influencer discovery and management with performance tracking and campaign optimization.',
+  n: 'Smart influencer discovery and management with performance tracking and campaign optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Influencer discovery', 'Performance tracking', 'Campaign management', 'ROI analysis', 'Content collaboration', 'Payment processing'],
+  s: ['Influencer discovery', 'Performance tracking', 'Campaign management', 'ROI analysis', 'Content collaboration', 'Payment processing'],'
       benefit,
-  s: ['Find perfect influencers', 'Track campaign performance', 'Improve ROI', 'Streamline management'],
+  s: ['Find perfect influencers', 'Track campaign performance', 'Improve ROI', 'Streamline management'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Marketing',
+  y: 'Marketing','
       technologie,
-  s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI E-commerce & Retail
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Behavior Analyzer',
+  e: 'AI Customer Behavior Analyzer','
       descriptio,
-  n: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.',
+  n: 'Advanced customer behavior analysis with purchase prediction, churn prevention, and personalization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Behavior analysis', 'Purchase prediction', 'Churn prevention', 'Personalization', 'Segmentation', 'Recommendation engine'],
+  s: ['Behavior analysis', 'Purchase prediction', 'Churn prevention', 'Personalization', 'Segmentation', 'Recommendation engine'],'
       benefit,
-  s: ['Increase sales by 30%', 'Reduce churn by 25%', 'Better customer experience', 'Data-driven decisions'],
+  s: ['Increase sales by 30%', 'Reduce churn by 25%', 'Better customer experience', 'Data-driven decisions'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'E-commerce',
+  y: 'E-commerce','
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Analytics'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Supply Chain Optimizer',
+  e: 'AI Supply Chain Optimizer','
       descriptio,
-  n: 'Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.',
+  n: 'Intelligent supply chain management with demand forecasting, route optimization, and cost reduction.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Demand forecasting', 'Route optimization', 'Cost analysis', 'Supplier management', 'Risk assessment', 'Performance tracking'],
+  s: ['Demand forecasting', 'Route optimization', 'Cost analysis', 'Supplier management', 'Risk assessment', 'Performance tracking'],'
       benefit,
-  s: ['Reduce costs by 20%', 'Improve efficiency', 'Better planning', 'Risk mitigation'],
+  s: ['Reduce costs by 20%', 'Improve efficiency', 'Better planning', 'Risk mitigation'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'Supply Chain',
+  y: 'Supply Chain','
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],
+  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Optimization Algorithms'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Education & Training
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Corporate Training Platform',
+  e: 'AI Corporate Training Platform','
       descriptio,
-  n: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.',
+  n: 'Intelligent corporate training with personalized learning paths, skill assessment, and progress tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Personalized learning', 'Skill assessment', 'Progress tracking', 'Content creation', 'Certification', 'Analytics'],
+  s: ['Personalized learning', 'Skill assessment', 'Progress tracking', 'Content creation', 'Certification', 'Analytics'],'
       benefit,
-  s: ['Improve employee skills', 'Reduce training costs', 'Better engagement', 'Measurable results'],
+  s: ['Improve employee skills', 'Reduce training costs', 'Better engagement', 'Measurable results'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Education',
+  y: 'Education','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'LMS Integration'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Knowledge Management System',
+  e: 'AI Knowledge Management System','
       descriptio,
-  n: 'Smart knowledge base with intelligent search, content organization, and automated updates.',
+  n: 'Smart knowledge base with intelligent search, content organization, and automated updates.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Intelligent search', 'Content organization', 'Automated updates', 'Version control', 'Collaboration', 'Analytics'],
+  s: ['Intelligent search', 'Content organization', 'Automated updates', 'Version control', 'Collaboration', 'Analytics'],'
       benefit,
-  s: ['Find information instantly', 'Keep knowledge current', 'Improve collaboration', 'Reduce support tickets'],
+  s: ['Find information instantly', 'Keep knowledge current', 'Improve collaboration', 'Reduce support tickets'],'
       marketPric,
-  e: '$200-500/month',
+  e: '$200-500/month','
       categor,
-  y: 'Education',
+  y: 'Education','
       technologie,
-  s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],
+  s: ['NLP', 'Search Engine', 'React', 'Node.js', 'Elasticsearch'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Legal & Compliance
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Contract Management System',
+  e: 'AI Contract Management System','
       descriptio,
-  n: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.',
+  n: 'Intelligent contract lifecycle management with automated review, renewal tracking, and compliance monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Contract review', 'Renewal tracking', 'Compliance monitoring', 'Risk assessment', 'Template library', 'Workflow automation'],
+  s: ['Contract review', 'Renewal tracking', 'Compliance monitoring', 'Risk assessment', 'Template library', 'Workflow automation'],'
       benefit,
-  s: ['Reduce contract risks', 'Improve compliance', 'Save time on reviews', 'Better organization'],
+  s: ['Reduce contract risks', 'Improve compliance', 'Save time on reviews', 'Better organization'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Legal',
+  y: 'Legal','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Privacy Compliance Monitor',
+  e: 'AI Privacy Compliance Monitor','
       descriptio,
-  n: 'Automated privacy compliance monitoring with GDPR, CCPA, and other regulation tracking.',
+  n: 'Automated privacy compliance monitoring with GDPR, CCPA, and other regulation tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['GDPR compliance', 'CCPA tracking', 'Privacy audits', 'Data mapping', 'Consent management', 'Breach detection'],
+  s: ['GDPR compliance', 'CCPA tracking', 'Privacy audits', 'Data mapping', 'Consent management', 'Breach detection'],'
       benefit,
-  s: ['Ensure compliance', 'Reduce legal risks', 'Protect customer data', 'Streamline audits'],
+  s: ['Ensure compliance', 'Reduce legal risks', 'Protect customer data', 'Streamline audits'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Legal',
+  y: 'Legal','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Compliance APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Real Estate & Property
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Property Management Suite',
+  e: 'AI Property Management Suite','
       descriptio,
-  n: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.',
+  n: 'Comprehensive property management with tenant screening, maintenance scheduling, and financial tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Tenant screening', 'Maintenance scheduling', 'Financial tracking', 'Lease management', 'Communication tools', 'Analytics'],
+  s: ['Tenant screening', 'Maintenance scheduling', 'Financial tracking', 'Lease management', 'Communication tools', 'Analytics'],'
       benefit,
-  s: ['Streamline operations', 'Reduce vacancies', 'Improve tenant satisfaction', 'Better financial control'],
+  s: ['Streamline operations', 'Reduce vacancies', 'Improve tenant satisfaction', 'Better financial control'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Real Estate',
+  y: 'Real Estate','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment Processing'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Market Research Platform',
+  e: 'AI Market Research Platform','
       descriptio,
-  n: 'Intelligent market research with trend analysis, competitor monitoring, and opportunity identification.',
+  n: 'Intelligent market research with trend analysis, competitor monitoring, and opportunity identification.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Trend analysis', 'Competitor monitoring', 'Opportunity identification', 'Market reports', 'Data visualization', 'Alert system'],
+  s: ['Trend analysis', 'Competitor monitoring', 'Opportunity identification', 'Market reports', 'Data visualization', 'Alert system'],'
       benefit,
-  s: ['Stay ahead of trends', 'Identify opportunities', 'Better market understanding', 'Data-driven decisions'],
+  s: ['Stay ahead of trends', 'Identify opportunities', 'Better market understanding', 'Data-driven decisions'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Research',
+  y: 'Research','
       technologie,
-  s: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Web Scraping', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Agriculture & Environment
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Crop Monitoring System',
+  e: 'AI Crop Monitoring System','
       descriptio,
-  n: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.',
+  n: 'Intelligent agricultural monitoring with crop health analysis, yield prediction, and resource optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Crop health analysis', 'Yield prediction', 'Resource optimization', 'Weather integration', 'Pest detection', 'Harvest planning'],
+  s: ['Crop health analysis', 'Yield prediction', 'Resource optimization', 'Weather integration', 'Pest detection', 'Harvest planning'],'
       benefit,
-  s: ['Increase crop yields by 20%', 'Reduce resource waste', 'Better planning', 'Sustainable farming'],
+  s: ['Increase crop yields by 20%', 'Reduce resource waste', 'Better planning', 'Sustainable farming'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Agriculture',
+  y: 'Agriculture','
       technologie,
-  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Environmental Monitoring',
+  e: 'AI Environmental Monitoring','
       descriptio,
-  n: 'Comprehensive environmental monitoring with pollution tracking, climate analysis, and sustainability reporting.',
+  n: 'Comprehensive environmental monitoring with pollution tracking, climate analysis, and sustainability reporting.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Pollution tracking', 'Climate analysis', 'Sustainability reporting', 'Alert system', 'Data visualization', 'Compliance tracking'],
+  s: ['Pollution tracking', 'Climate analysis', 'Sustainability reporting', 'Alert system', 'Data visualization', 'Compliance tracking'],'
       benefit,
-  s: ['Monitor environmental impact', 'Ensure compliance', 'Improve sustainability', 'Better reporting'],
+  s: ['Monitor environmental impact', 'Ensure compliance', 'Improve sustainability', 'Better reporting'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Environment',
+  y: 'Environment','
       technologie,
-  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Transportation & Logistics
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Fleet Management System',
+  e: 'AI Fleet Management System','
       descriptio,
-  n: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.',
+  n: 'Intelligent fleet management with route optimization, maintenance scheduling, and driver monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$349/month',
+  e: '$349/month','
       feature,
-  s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics'],
+  s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics'],'
       benefit,
-  s: ['Reduce fuel costs by 15%', 'Improve safety', 'Better maintenance', 'Optimize routes'],
+  s: ['Reduce fuel costs by 15%', 'Improve safety', 'Better maintenance', 'Optimize routes'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Transportation',
+  y: 'Transportation','
       technologie,
-  s: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['GPS Tracking', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Logistics Optimizer',
+  e: 'AI Logistics Optimizer','
       descriptio,
-  n: 'Advanced logistics optimization with warehouse management, inventory tracking, and delivery optimization.',
+  n: 'Advanced logistics optimization with warehouse management, inventory tracking, and delivery optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Warehouse management', 'Inventory tracking', 'Delivery optimization', 'Supplier coordination', 'Cost analysis', 'Performance metrics'],
+  s: ['Warehouse management', 'Inventory tracking', 'Delivery optimization', 'Supplier coordination', 'Cost analysis', 'Performance metrics'],'
       benefit,
-  s: ['Reduce logistics costs by 25%', 'Improve efficiency', 'Better inventory management', 'Faster deliveries'],
+  s: ['Reduce logistics costs by 25%', 'Improve efficiency', 'Better inventory management', 'Faster deliveries'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Logistics',
+  y: 'Logistics','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization Algorithms'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Entertainment & Media
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Content Moderation Platform',
+  e: 'AI Content Moderation Platform','
       descriptio,
-  n: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.',
+  n: 'Intelligent content moderation with automated filtering, sentiment analysis, and compliance checking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Automated filtering', 'Sentiment analysis', 'Compliance checking', 'User reporting', 'Appeal system', 'Analytics'],
+  s: ['Automated filtering', 'Sentiment analysis', 'Compliance checking', 'User reporting', 'Appeal system', 'Analytics'],'
       benefit,
-  s: ['Reduce moderation costs by 70%', 'Improve content quality', 'Faster response times', 'Better user experience'],
+  s: ['Reduce moderation costs by 70%', 'Improve content quality', 'Faster response times', 'Better user experience'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Media',
+  y: 'Media','
       technologie,
-  s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+  s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Video Production Assistant',
+  e: 'AI Video Production Assistant','
       descriptio,
-  n: 'Intelligent video production with automated editing, subtitle generation, and content optimization.',
+  n: 'Intelligent video production with automated editing, subtitle generation, and content optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Automated editing', 'Subtitle generation', 'Content optimization', 'Thumbnail creation', 'Quality enhancement', 'Analytics'],
+  s: ['Automated editing', 'Subtitle generation', 'Content optimization', 'Thumbnail creation', 'Quality enhancement', 'Analytics'],'
       benefit,
-  s: ['Reduce production time by 50%', 'Improve video quality', 'Better engagement', 'Lower production costs'],
+  s: ['Reduce production time by 50%', 'Improve video quality', 'Better engagement', 'Lower production costs'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Media',
+  y: 'Media','
       technologie,
-  s: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],
+  s: ['Computer Vision', 'Video Processing', 'React', 'Node.js', 'FFmpeg'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Gaming & Entertainment
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Game Development Platform',
+  e: 'AI Game Development Platform','
       descriptio,
-  n: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.',
+  n: 'Intelligent game development tools with procedural generation, AI NPCs, and automated testing.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Procedural generation', 'AI NPCs', 'Automated testing', 'Balance optimization', 'Player analytics', 'Content creation'],
+  s: ['Procedural generation', 'AI NPCs', 'Automated testing', 'Balance optimization', 'Player analytics', 'Content creation'],'
       benefit,
-  s: ['Reduce development time', 'Create better games', 'Improve player experience', 'Lower development costs'],
+  s: ['Reduce development time', 'Create better games', 'Improve player experience', 'Lower development costs'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Gaming',
+  y: 'Gaming','
       technologie,
-  s: ['Game Engines', 'Machine Learning', 'React', 'Node.js', 'Unity/Unreal'],
+  s: ['Game Engines', 'Machine Learning', 'React', 'Node.js', 'Unity/Unreal'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Player Behavior Analytics',
+  e: 'AI Player Behavior Analytics','
       descriptio,
-  n: 'Advanced player analytics with behavior prediction, engagement optimization, and monetization insights.',
+  n: 'Advanced player analytics with behavior prediction, engagement optimization, and monetization insights.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Behavior prediction', 'Engagement optimization', 'Monetization insights', 'Churn prediction', 'A/B testing', 'Real-time analytics'],
+  s: ['Behavior prediction', 'Engagement optimization', 'Monetization insights', 'Churn prediction', 'A/B testing', 'Real-time analytics'],'
       benefit,
-  s: ['Increase player retention', 'Optimize monetization', 'Better game design', 'Data-driven decisions'],
+  s: ['Increase player retention', 'Optimize monetization', 'Better game design', 'Data-driven decisions'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Gaming',
+  y: 'Gaming','
       technologie,
-  s: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Analytics', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Research & Development
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Research Assistant Pro',
+  e: 'AI Research Assistant Pro','
       descriptio,
-  n: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
+  n: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],
+  s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],'
       benefit,
-  s: ['Accelerate research', 'Improve quality', 'Better collaboration', 'Stay current'],
+  s: ['Accelerate research', 'Improve quality', 'Better collaboration', 'Stay current'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Research',
+  y: 'Research','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Patent Analysis Tool',
+  e: 'AI Patent Analysis Tool','
       descriptio,
-  n: 'Intelligent patent research with prior art analysis, patentability assessment, and competitive intelligence.',
+  n: 'Intelligent patent research with prior art analysis, patentability assessment, and competitive intelligence.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Patent monitoring', 'Citation analysis', 'Trend tracking'],
+  s: ['Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Patent monitoring', 'Citation analysis', 'Trend tracking'],'
       benefit,
-  s: ['Improve patent strategy', 'Avoid infringement', 'Identify opportunities', 'Better R&D planning'],
+  s: ['Improve patent strategy', 'Avoid infringement', 'Identify opportunities', 'Better R&D planning'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'Research',
+  y: 'Research','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Energy & Utilities
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Energy Management System',
+  e: 'AI Energy Management System','
       descriptio,
-  n: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.',
+  n: 'Intelligent energy monitoring with consumption optimization, predictive maintenance, and cost reduction.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Consumption optimization', 'Predictive maintenance', 'Cost analysis', 'Demand forecasting', 'Renewable integration', 'Reporting'],
+  s: ['Consumption optimization', 'Predictive maintenance', 'Cost analysis', 'Demand forecasting', 'Renewable integration', 'Reporting'],'
       benefit,
-  s: ['Reduce energy costs by 20%', 'Improve efficiency', 'Better planning', 'Sustainable operations'],
+  s: ['Reduce energy costs by 20%', 'Improve efficiency', 'Better planning', 'Sustainable operations'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Energy',
+  y: 'Energy','
       technologie,
-  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Smart Grid Optimizer',
+  e: 'AI Smart Grid Optimizer','
       descriptio,
-  n: 'Advanced grid management with load balancing, fault detection, and renewable energy integration.',
+  n: 'Advanced grid management with load balancing, fault detection, and renewable energy integration.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Load balancing', 'Fault detection', 'Renewable integration', 'Demand response', 'Grid analytics', 'Predictive maintenance'],
+  s: ['Load balancing', 'Fault detection', 'Renewable integration', 'Demand response', 'Grid analytics', 'Predictive maintenance'],'
       benefit,
-  s: ['Improve grid reliability', 'Reduce outages', 'Better renewable integration', 'Lower operational costs'],
+  s: ['Improve grid reliability', 'Reduce outages', 'Better renewable integration', 'Lower operational costs'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'Energy',
+  y: 'Energy','
       technologie,
-  s: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['IoT', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Manufacturing & Industrial
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Quality Control System',
+  e: 'AI Quality Control System','
       descriptio,
-  n: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.',
+  n: 'Intelligent quality control with defect detection, process optimization, and predictive maintenance.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$349/month',
+  e: '$349/month','
       feature,
-  s: ['Defect detection', 'Process optimization', 'Predictive maintenance', 'Quality analytics', 'Compliance tracking', 'Alert system'],
+  s: ['Defect detection', 'Process optimization', 'Predictive maintenance', 'Quality analytics', 'Compliance tracking', 'Alert system'],'
       benefit,
-  s: ['Reduce defects by 80%', 'Improve quality', 'Lower maintenance costs', 'Better compliance'],
+  s: ['Reduce defects by 80%', 'Improve quality', 'Lower maintenance costs', 'Better compliance'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Manufacturing',
+  y: 'Manufacturing','
       technologie,
-  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Production Planning Optimizer',
+  e: 'AI Production Planning Optimizer','
       descriptio,
-  n: 'Intelligent production planning with demand forecasting, resource allocation, and schedule optimization.',
+  n: 'Intelligent production planning with demand forecasting, resource allocation, and schedule optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Demand forecasting', 'Resource allocation', 'Schedule optimization', 'Capacity planning', 'Cost analysis', 'Performance tracking'],
+  s: ['Demand forecasting', 'Resource allocation', 'Schedule optimization', 'Capacity planning', 'Cost analysis', 'Performance tracking'],'
       benefit,
-  s: ['Improve efficiency by 25%', 'Reduce waste', 'Better planning', 'Lower costs'],
+  s: ['Improve efficiency by 25%', 'Reduce waste', 'Better planning', 'Lower costs'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Manufacturing',
+  y: 'Manufacturing','
       technologie,
-  s: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Optimization', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Insurance & Risk Management
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Risk Assessment Platform',
+  e: 'AI Risk Assessment Platform','
       descriptio,
-  n: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.',
+  n: 'Intelligent risk evaluation with automated underwriting, fraud detection, and claims processing.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Automated underwriting', 'Fraud detection', 'Claims processing', 'Risk scoring', 'Policy optimization', 'Compliance monitoring'],
+  s: ['Automated underwriting', 'Fraud detection', 'Claims processing', 'Risk scoring', 'Policy optimization', 'Compliance monitoring'],'
       benefit,
-  s: ['Reduce underwriting time by 70%', 'Improve accuracy', 'Lower fraud losses', 'Better risk management'],
+  s: ['Reduce underwriting time by 70%', 'Improve accuracy', 'Lower fraud losses', 'Better risk management'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'Insurance',
+  y: 'Insurance','
       technologie,
-  s: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'NLP', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Claims Processing System',
+  e: 'AI Claims Processing System','
       descriptio,
-  n: 'Automated claims handling with damage assessment, fraud detection, and settlement optimization.',
+  n: 'Automated claims handling with damage assessment, fraud detection, and settlement optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Damage assessment', 'Fraud detection', 'Settlement optimization', 'Document processing', 'Customer communication', 'Analytics'],
+  s: ['Damage assessment', 'Fraud detection', 'Settlement optimization', 'Document processing', 'Customer communication', 'Analytics'],'
       benefit,
-  s: ['Process claims 5x faster', 'Reduce fraud', 'Improve accuracy', 'Better customer experience'],
+  s: ['Process claims 5x faster', 'Reduce fraud', 'Improve accuracy', 'Better customer experience'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Insurance',
+  y: 'Insurance','
       technologie,
-  s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+  s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Government & Public Sector
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Citizen Services Platform',
+  e: 'AI Citizen Services Platform','
       descriptio,
-  n: 'Intelligent government services with automated processing, citizen engagement, and service optimization.',
+  n: 'Intelligent government services with automated processing, citizen engagement, and service optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$499/month',
+  e: '$499/month','
       feature,
-  s: ['Automated processing', 'Citizen engagement', 'Service optimization', 'Document processing', 'Compliance tracking', 'Analytics'],
+  s: ['Automated processing', 'Citizen engagement', 'Service optimization', 'Document processing', 'Compliance tracking', 'Analytics'],'
       benefit,
-  s: ['Improve citizen satisfaction', 'Reduce processing time', 'Better service delivery', 'Lower operational costs'],
+  s: ['Improve citizen satisfaction', 'Reduce processing time', 'Better service delivery', 'Lower operational costs'],'
       marketPric,
-  e: '$800-1500/month',
+  e: '$800-1500/month','
       categor,
-  y: 'Government',
+  y: 'Government','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Public Safety System',
+  e: 'AI Public Safety System','
       descriptio,
-  n: 'Advanced public safety monitoring with threat detection, emergency response, and resource allocation.',
+  n: 'Advanced public safety monitoring with threat detection, emergency response, and resource allocation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$599/month',
+  e: '$599/month','
       feature,
-  s: ['Threat detection', 'Emergency response', 'Resource allocation', 'Incident tracking', 'Predictive analytics', 'Communication tools'],
+  s: ['Threat detection', 'Emergency response', 'Resource allocation', 'Incident tracking', 'Predictive analytics', 'Communication tools'],'
       benefit,
-  s: ['Improve public safety', 'Faster response times', 'Better resource use', 'Proactive prevention'],
+  s: ['Improve public safety', 'Faster response times', 'Better resource use', 'Proactive prevention'],'
       marketPric,
-  e: '$1000-2000/month',
+  e: '$1000-2000/month','
       categor,
-  y: 'Government',
+  y: 'Government','
       technologie,
-  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Non-Profit & Social Impact
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Donor Management System',
+  e: 'AI Donor Management System','
       descriptio,
-  n: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.',
+  n: 'Intelligent donor engagement with personalized outreach, impact tracking, and fundraising optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Donor segmentation', 'Personalized outreach', 'Impact tracking', 'Fundraising optimization', 'Event management', 'Analytics'],
+  s: ['Donor segmentation', 'Personalized outreach', 'Impact tracking', 'Fundraising optimization', 'Event management', 'Analytics'],'
       benefit,
-  s: ['Increase donations by 40%', 'Better donor relationships', 'Improve impact tracking', 'Streamline fundraising'],
+  s: ['Increase donations by 40%', 'Better donor relationships', 'Improve impact tracking', 'Streamline fundraising'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Non-Profit',
+  y: 'Non-Profit','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM Integration'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Volunteer Matching Platform',
+  e: 'AI Volunteer Matching Platform','
       descriptio,
-  n: 'Smart volunteer matching with skill assessment, opportunity matching, and impact measurement.',
+  n: 'Smart volunteer matching with skill assessment, opportunity matching, and impact measurement.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Skill assessment', 'Opportunity matching', 'Impact measurement', 'Scheduling tools', 'Communication', 'Recognition system'],
+  s: ['Skill assessment', 'Opportunity matching', 'Impact measurement', 'Scheduling tools', 'Communication', 'Recognition system'],'
       benefit,
-  s: ['Better volunteer matches', 'Increase engagement', 'Measure impact', 'Streamline management'],
+  s: ['Better volunteer matches', 'Increase engagement', 'Measure impact', 'Streamline management'],'
       marketPric,
-  e: '$200-500/month',
+  e: '$200-500/month','
       categor,
-  y: 'Non-Profit',
+  y: 'Non-Profit','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Matching Algorithms'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Travel & Hospitality
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Travel Planning Assistant',
+  e: 'AI Travel Planning Assistant','
       descriptio,
-  n: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.',
+  n: 'Intelligent travel planning with personalized recommendations, price optimization, and itinerary management.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Personalized recommendations', 'Price optimization', 'Itinerary management', 'Booking automation', 'Travel alerts', 'Expense tracking'],
+  s: ['Personalized recommendations', 'Price optimization', 'Itinerary management', 'Booking automation', 'Travel alerts', 'Expense tracking'],'
       benefit,
-  s: ['Save time on planning', 'Find better deals', 'Personalized experiences', 'Streamline bookings'],
+  s: ['Save time on planning', 'Find better deals', 'Personalized experiences', 'Streamline bookings'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Travel',
+  y: 'Travel','
       technologie,
-  s: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Travel APIs', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Hotel Revenue Optimizer',
+  e: 'AI Hotel Revenue Optimizer','
       descriptio,
-  n: 'Advanced hotel revenue management with dynamic pricing, demand forecasting, and occupancy optimization.',
+  n: 'Advanced hotel revenue management with dynamic pricing, demand forecasting, and occupancy optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Dynamic pricing', 'Demand forecasting', 'Occupancy optimization', 'Competitor analysis', 'Revenue analytics', 'Guest segmentation'],
+  s: ['Dynamic pricing', 'Demand forecasting', 'Occupancy optimization', 'Competitor analysis', 'Revenue analytics', 'Guest segmentation'],'
       benefit,
-  s: ['Increase revenue by 15%', 'Optimize occupancy', 'Better pricing strategy', 'Improve profitability'],
+  s: ['Increase revenue by 15%', 'Optimize occupancy', 'Better pricing strategy', 'Improve profitability'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Hospitality',
+  y: 'Hospitality','
       technologie,
-  s: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Revenue Management', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Sports & Fitness
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Sports Performance Analyzer',
+  e: 'AI Sports Performance Analyzer','
       descriptio,
-  n: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.',
+  n: 'Advanced sports analytics with performance tracking, injury prevention, and training optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Performance tracking', 'Injury prevention', 'Training optimization', 'Biomechanical analysis', 'Team analytics', 'Predictive modeling'],
+  s: ['Performance tracking', 'Injury prevention', 'Training optimization', 'Biomechanical analysis', 'Team analytics', 'Predictive modeling'],'
       benefit,
-  s: ['Improve performance', 'Reduce injuries', 'Optimize training', 'Better team management'],
+  s: ['Improve performance', 'Reduce injuries', 'Optimize training', 'Better team management'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Sports',
+  y: 'Sports','
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Fitness Nutrition Coach',
+  e: 'AI Fitness Nutrition Coach','
       descriptio,
-  n: 'Personalized nutrition coaching with meal planning, macro tracking, and dietary optimization.',
+  n: 'Personalized nutrition coaching with meal planning, macro tracking, and dietary optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Meal planning', 'Macro tracking', 'Dietary optimization', 'Recipe suggestions', 'Progress tracking', 'Goal setting'],
+  s: ['Meal planning', 'Macro tracking', 'Dietary optimization', 'Recipe suggestions', 'Progress tracking', 'Goal setting'],'
       benefit,
-  s: ['Achieve fitness goals', 'Better nutrition', 'Personalized guidance', 'Improved health'],
+  s: ['Achieve fitness goals', 'Better nutrition', 'Personalized guidance', 'Improved health'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Fitness',
+  y: 'Fitness','
       technologie,
-  s: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Nutrition APIs', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Beauty & Fashion
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Virtual Try-On Platform',
+  e: 'AI Virtual Try-On Platform','
       descriptio,
-  n: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.',
+  n: 'Advanced virtual try-on technology with AR integration, size recommendations, and style matching.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Virtual try-on', 'Size recommendations', 'Style matching', 'AR integration', 'Color analysis', 'Outfit suggestions'],
+  s: ['Virtual try-on', 'Size recommendations', 'Style matching', 'AR integration', 'Color analysis', 'Outfit suggestions'],'
       benefit,
-  s: ['Reduce returns by 30%', 'Improve customer experience', 'Increase conversions', 'Better sizing accuracy'],
+  s: ['Reduce returns by 30%', 'Improve customer experience', 'Increase conversions', 'Better sizing accuracy'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Fashion',
+  y: 'Fashion','
       technologie,
-  s: ['Computer Vision', 'AR/VR', 'Machine Learning', 'React', 'WebGL'],
+  s: ['Computer Vision', 'AR/VR', 'Machine Learning', 'React', 'WebGL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Beauty Analysis Tool',
+  e: 'AI Beauty Analysis Tool','
       descriptio,
-  n: 'Intelligent beauty analysis with skin assessment, product recommendations, and personalized routines.',
+  n: 'Intelligent beauty analysis with skin assessment, product recommendations, and personalized routines.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Skin assessment', 'Product recommendations', 'Personalized routines', 'Color matching', 'Trend analysis', 'Progress tracking'],
+  s: ['Skin assessment', 'Product recommendations', 'Personalized routines', 'Color matching', 'Trend analysis', 'Progress tracking'],'
       benefit,
-  s: ['Better product matches', 'Personalized beauty', 'Improve skin health', 'Stay on trend'],
+  s: ['Better product matches', 'Personalized beauty', 'Improve skin health', 'Stay on trend'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Beauty',
+  y: 'Beauty','
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Home & Lifestyle
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Smart Home Controller',
+  e: 'AI Smart Home Controller','
       descriptio,
-  n: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.',
+  n: 'Intelligent home automation with device control, energy optimization, and predictive maintenance.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Device control', 'Energy optimization', 'Predictive maintenance', 'Security monitoring', 'Voice control', 'Analytics'],
+  s: ['Device control', 'Energy optimization', 'Predictive maintenance', 'Security monitoring', 'Voice control', 'Analytics'],'
       benefit,
-  s: ['Reduce energy costs', 'Improve security', 'Better comfort', 'Automated maintenance'],
+  s: ['Reduce energy costs', 'Improve security', 'Better comfort', 'Automated maintenance'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Smart Home',
+  y: 'Smart Home','
       technologie,
-  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT'],
+  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'MQTT'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Personal Assistant Platform',
+  e: 'AI Personal Assistant Platform','
       descriptio,
-  n: 'Comprehensive personal assistant with task management, scheduling, and lifestyle optimization.',
+  n: 'Comprehensive personal assistant with task management, scheduling, and lifestyle optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Voice commands', 'Integration tools', 'Learning capabilities'],
+  s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Voice commands', 'Integration tools', 'Learning capabilities'],'
       benefit,
-  s: ['Increase productivity', 'Better organization', 'Personalized assistance', 'Time savings'],
+  s: ['Increase productivity', 'Better organization', 'Personalized assistance', 'Time savings'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Personal',
+  y: 'Personal','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Voice APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Pets & Animals
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Pet Health Monitor',
+  e: 'AI Pet Health Monitor','
       descriptio,
-  n: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.',
+  n: 'Intelligent pet health tracking with symptom analysis, vet recommendations, and wellness monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Health tracking', 'Symptom analysis', 'Vet recommendations', 'Wellness monitoring', 'Vaccination reminders', 'Emergency alerts'],
+  s: ['Health tracking', 'Symptom analysis', 'Vet recommendations', 'Wellness monitoring', 'Vaccination reminders', 'Emergency alerts'],'
       benefit,
-  s: ['Better pet health', 'Early problem detection', 'Reduce vet costs', 'Peace of mind'],
+  s: ['Better pet health', 'Early problem detection', 'Reduce vet costs', 'Peace of mind'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Pets',
+  y: 'Pets','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Health APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Pet Training Assistant',
+  e: 'AI Pet Training Assistant','
       descriptio,
-  n: 'Smart pet training with behavior analysis, personalized programs, and progress tracking.',
+  n: 'Smart pet training with behavior analysis, personalized programs, and progress tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Behavior analysis', 'Training programs', 'Progress tracking', 'Expert advice', 'Video tutorials', 'Community features'],
+  s: ['Behavior analysis', 'Training programs', 'Progress tracking', 'Expert advice', 'Video tutorials', 'Community features'],'
       benefit,
-  s: ['Better training results', 'Personalized approach', 'Expert guidance', 'Faster learning'],
+  s: ['Better training results', 'Personalized approach', 'Expert guidance', 'Faster learning'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Pets',
+  y: 'Pets','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Processing'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Education & Learning
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Tutoring Platform',
+  e: 'AI Tutoring Platform','
       descriptio,
-  n: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.',
+  n: 'Personalized tutoring with adaptive learning, progress tracking, and intelligent assessment.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Adaptive learning', 'Progress tracking', 'Intelligent assessment', 'Personalized content', 'Expert tutors', 'Performance analytics'],
+  s: ['Adaptive learning', 'Progress tracking', 'Intelligent assessment', 'Personalized content', 'Expert tutors', 'Performance analytics'],'
       benefit,
-  s: ['Improve learning outcomes', 'Personalized education', 'Better engagement', 'Measurable progress'],
+  s: ['Improve learning outcomes', 'Personalized education', 'Better engagement', 'Measurable progress'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Education',
+  y: 'Education','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Video Conferencing'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Homework Helper',
+  e: 'AI Homework Helper','
       descriptio,
-  n: 'Intelligent homework assistance with step-by-step solutions, concept explanation, and learning support.',
+  n: 'Intelligent homework assistance with step-by-step solutions, concept explanation, and learning support.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Step-by-step solutions', 'Concept explanation', 'Learning support', 'Subject coverage', 'Progress tracking', 'Parent dashboard'],
+  s: ['Step-by-step solutions', 'Concept explanation', 'Learning support', 'Subject coverage', 'Progress tracking', 'Parent dashboard'],'
       benefit,
-  s: ['Improve grades', 'Better understanding', 'Independent learning', 'Parental insight'],
+  s: ['Improve grades', 'Better understanding', 'Independent learning', 'Parental insight'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Education',
+  y: 'Education','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Music & Audio
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Music Composition Tool',
+  e: 'AI Music Composition Tool','
       descriptio,
-  n: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.',
+  n: 'Intelligent music creation with melody generation, harmony suggestions, and style adaptation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Melody generation', 'Harmony suggestions', 'Style adaptation', 'Instrument simulation', 'Collaboration tools', 'Export options'],
+  s: ['Melody generation', 'Harmony suggestions', 'Style adaptation', 'Instrument simulation', 'Collaboration tools', 'Export options'],'
       benefit,
-  s: ['Create music faster', 'Explore new styles', 'Professional quality', 'Collaborative creation'],
+  s: ['Create music faster', 'Explore new styles', 'Professional quality', 'Collaborative creation'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Music',
+  y: 'Music','
       technologie,
-  s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API'],
+  s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Web Audio API'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Audio Enhancement Platform',
+  e: 'AI Audio Enhancement Platform','
       descriptio,
-  n: 'Advanced audio processing with noise reduction, quality enhancement, and intelligent mastering.',
+  n: 'Advanced audio processing with noise reduction, quality enhancement, and intelligent mastering.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Noise reduction', 'Quality enhancement', 'Intelligent mastering', 'Real-time processing', 'Batch processing', 'Format conversion'],
+  s: ['Noise reduction', 'Quality enhancement', 'Intelligent mastering', 'Real-time processing', 'Batch processing', 'Format conversion'],'
       benefit,
-  s: ['Improve audio quality', 'Professional results', 'Save time', 'Better listening experience'],
+  s: ['Improve audio quality', 'Professional results', 'Save time', 'Better listening experience'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Audio',
+  y: 'Audio','
       technologie,
-  s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],
+  s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'FFmpeg'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Art & Design
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Design Assistant Pro',
+  e: 'AI Design Assistant Pro','
       descriptio,
-  n: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.',
+  n: 'Intelligent design tool with automated layouts, color suggestions, and brand consistency.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Automated layouts', 'Color suggestions', 'Brand consistency', 'Template generation', 'Collaboration tools', 'Export options'],
+  s: ['Automated layouts', 'Color suggestions', 'Brand consistency', 'Template generation', 'Collaboration tools', 'Export options'],'
       benefit,
-  s: ['Create designs faster', 'Maintain brand consistency', 'Professional quality', 'Collaborative workflow'],
+  s: ['Create designs faster', 'Maintain brand consistency', 'Professional quality', 'Collaborative workflow'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Design',
+  y: 'Design','
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API'],
+  s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'Canvas API'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Logo Generator Platform',
+  e: 'AI Logo Generator Platform','
       descriptio,
-  n: 'Intelligent logo creation with brand analysis, style matching, and customization options.',
+  n: 'Intelligent logo creation with brand analysis, style matching, and customization options.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Brand analysis', 'Style matching', 'Customization options', 'Multiple formats', 'Brand guidelines', 'Revision system'],
+  s: ['Brand analysis', 'Style matching', 'Customization options', 'Multiple formats', 'Brand guidelines', 'Revision system'],'
       benefit,
-  s: ['Create logos instantly', 'Professional quality', 'Brand consistency', 'Cost effective'],
+  s: ['Create logos instantly', 'Professional quality', 'Brand consistency', 'Cost effective'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Design',
+  y: 'Design','
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],
+  s: ['Computer Vision', 'Machine Learning', 'React', 'Node.js', 'SVG Generation'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Dating & Relationships
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Dating Assistant',
+  e: 'AI Dating Assistant','
       descriptio,
-  n: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.',
+  n: 'Intelligent dating platform with compatibility matching, conversation starters, and relationship advice.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Compatibility matching', 'Conversation starters', 'Relationship advice', 'Profile optimization', 'Safety features', 'Success tracking'],
+  s: ['Compatibility matching', 'Conversation starters', 'Relationship advice', 'Profile optimization', 'Safety features', 'Success tracking'],'
       benefit,
-  s: ['Better matches', 'Improve conversations', 'Relationship guidance', 'Safer dating'],
+  s: ['Better matches', 'Improve conversations', 'Relationship guidance', 'Safer dating'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Dating',
+  y: 'Dating','
       technologie,
-  s: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'NLP', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Relationship Counselor',
+  e: 'AI Relationship Counselor','
       descriptio,
-  n: 'Intelligent relationship guidance with communication analysis, conflict resolution, and intimacy enhancement.',
+  n: 'Intelligent relationship guidance with communication analysis, conflict resolution, and intimacy enhancement.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Communication analysis', 'Conflict resolution', 'Intimacy enhancement', 'Progress tracking', 'Expert advice', 'Couple activities'],
+  s: ['Communication analysis', 'Conflict resolution', 'Intimacy enhancement', 'Progress tracking', 'Expert advice', 'Couple activities'],'
       benefit,
-  s: ['Improve relationships', 'Better communication', 'Resolve conflicts', 'Strengthen bonds'],
+  s: ['Improve relationships', 'Better communication', 'Resolve conflicts', 'Strengthen bonds'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Relationships',
+  y: 'Relationships','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Parenting & Family
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Parenting Assistant',
+  e: 'AI Parenting Assistant','
       descriptio,
-  n: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.',
+  n: 'Intelligent parenting support with child development tracking, behavior analysis, and expert advice.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Development tracking', 'Behavior analysis', 'Expert advice', 'Activity suggestions', 'Progress monitoring', 'Community support'],
+  s: ['Development tracking', 'Behavior analysis', 'Expert advice', 'Activity suggestions', 'Progress monitoring', 'Community support'],'
       benefit,
-  s: ['Better child development', 'Expert guidance', 'Peace of mind', 'Community support'],
+  s: ['Better child development', 'Expert guidance', 'Peace of mind', 'Community support'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Parenting',
+  y: 'Parenting','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Expert Systems'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Family Organizer',
+  e: 'AI Family Organizer','
       descriptio,
-  n: 'Smart family management with scheduling, task coordination, and communication tools.',
+  n: 'Smart family management with scheduling, task coordination, and communication tools.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Family scheduling', 'Task coordination', 'Communication tools', 'Expense tracking', 'Event planning', 'Photo sharing'],
+  s: ['Family scheduling', 'Task coordination', 'Communication tools', 'Expense tracking', 'Event planning', 'Photo sharing'],'
       benefit,
-  s: ['Better organization', 'Improved communication', 'Shared responsibilities', 'Family bonding'],
+  s: ['Better organization', 'Improved communication', 'Shared responsibilities', 'Family bonding'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Family',
+  y: 'Family','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Senior Care & Aging
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Senior Care Monitor',
+  e: 'AI Senior Care Monitor','
       descriptio,
-  n: 'Intelligent senior care with health monitoring, safety alerts, and family communication.',
+  n: 'Intelligent senior care with health monitoring, safety alerts, and family communication.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Health monitoring', 'Safety alerts', 'Family communication', 'Medication reminders', 'Activity tracking', 'Emergency response'],
+  s: ['Health monitoring', 'Safety alerts', 'Family communication', 'Medication reminders', 'Activity tracking', 'Emergency response'],'
       benefit,
-  s: ['Better senior care', 'Family peace of mind', 'Safety assurance', 'Health monitoring'],
+  s: ['Better senior care', 'Family peace of mind', 'Safety assurance', 'Health monitoring'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Senior Care',
+  y: 'Senior Care','
       technologie,
-  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Memory Assistant',
+  e: 'AI Memory Assistant','
       descriptio,
-  n: 'Intelligent memory support with cognitive exercises, memory training, and brain health monitoring.',
+  n: 'Intelligent memory support with cognitive exercises, memory training, and brain health monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Cognitive exercises', 'Memory training', 'Brain health monitoring', 'Progress tracking', 'Personalized programs', 'Expert guidance'],
+  s: ['Cognitive exercises', 'Memory training', 'Brain health monitoring', 'Progress tracking', 'Personalized programs', 'Expert guidance'],'
       benefit,
-  s: ['Improve memory', 'Cognitive health', 'Personalized training', 'Better brain function'],
+  s: ['Improve memory', 'Cognitive health', 'Personalized training', 'Better brain function'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Memory',
+  y: 'Memory','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Cognitive APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Accessibility & Inclusion
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Accessibility Assistant',
+  e: 'AI Accessibility Assistant','
       descriptio,
-  n: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.',
+  n: 'Intelligent accessibility support with screen reading, voice control, and adaptive interfaces.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Screen reading', 'Voice control', 'Adaptive interfaces', 'Navigation assistance', 'Content adaptation', 'User customization'],
+  s: ['Screen reading', 'Voice control', 'Adaptive interfaces', 'Navigation assistance', 'Content adaptation', 'User customization'],'
       benefit,
-  s: ['Improve accessibility', 'Better inclusion', 'Enhanced usability', 'Personalized support'],
+  s: ['Improve accessibility', 'Better inclusion', 'Enhanced usability', 'Personalized support'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Accessibility',
+  y: 'Accessibility','
       technologie,
-  s: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs'],
+  s: ['NLP', 'Computer Vision', 'React', 'Node.js', 'Accessibility APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Language Translation Pro',
+  e: 'AI Language Translation Pro','
       descriptio,
-  n: 'Advanced translation platform with real-time translation, cultural context, and voice recognition.',
+  n: 'Advanced translation platform with real-time translation, cultural context, and voice recognition.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Real-time translation', 'Cultural context', 'Voice recognition', 'Document translation', 'Offline support', 'API integration'],
+  s: ['Real-time translation', 'Cultural context', 'Voice recognition', 'Document translation', 'Offline support', 'API integration'],'
       benefit,
-  s: ['Break language barriers', 'Better communication', 'Cultural understanding', 'Global reach'],
+  s: ['Break language barriers', 'Better communication', 'Cultural understanding', 'Global reach'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Translation',
+  y: 'Translation','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Translation APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Emergency & Crisis Management
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Emergency Response System',
+  e: 'AI Emergency Response System','
       descriptio,
-  n: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.',
+  n: 'Intelligent emergency management with threat detection, resource allocation, and communication coordination.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$499/month',
+  e: '$499/month','
       feature,
-  s: ['Threat detection', 'Resource allocation', 'Communication coordination', 'Incident tracking', 'Predictive analytics', 'Response optimization'],
+  s: ['Threat detection', 'Resource allocation', 'Communication coordination', 'Incident tracking', 'Predictive analytics', 'Response optimization'],'
       benefit,
-  s: ['Faster emergency response', 'Better resource use', 'Improved coordination', 'Lives saved'],
+  s: ['Faster emergency response', 'Better resource use', 'Improved coordination', 'Lives saved'],'
       marketPric,
-  e: '$800-1500/month',
+  e: '$800-1500/month','
       categor,
-  y: 'Emergency',
+  y: 'Emergency','
       technologie,
-  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs'],
+  s: ['IoT Sensors', 'Machine Learning', 'React', 'Node.js', 'Emergency APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Crisis Communication Platform',
+  e: 'AI Crisis Communication Platform','
       descriptio,
-  n: 'Intelligent crisis communication with message optimization, audience targeting, and impact measurement.',
+  n: 'Intelligent crisis communication with message optimization, audience targeting, and impact measurement.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Message optimization', 'Audience targeting', 'Impact measurement', 'Multi-channel distribution', 'Sentiment analysis', 'Response tracking'],
+  s: ['Message optimization', 'Audience targeting', 'Impact measurement', 'Multi-channel distribution', 'Sentiment analysis', 'Response tracking'],'
       benefit,
-  s: ['Better crisis communication', 'Reach right audiences', 'Measure impact', 'Effective messaging'],
+  s: ['Better crisis communication', 'Reach right audiences', 'Measure impact', 'Effective messaging'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Crisis Management',
+  y: 'Crisis Management','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'Communication APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Space & Astronomy
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Space Mission Planner',
+  e: 'AI Space Mission Planner','
       descriptio,
-  n: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.',
+  n: 'Intelligent space mission planning with trajectory optimization, resource management, and risk assessment.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$599/month',
+  e: '$599/month','
       feature,
-  s: ['Trajectory optimization', 'Resource management', 'Risk assessment', 'Mission simulation', 'Performance analysis', 'Collaboration tools'],
+  s: ['Trajectory optimization', 'Resource management', 'Risk assessment', 'Mission simulation', 'Performance analysis', 'Collaboration tools'],'
       benefit,
-  s: ['Optimize missions', 'Reduce risks', 'Better planning', 'Cost efficiency'],
+  s: ['Optimize missions', 'Reduce risks', 'Better planning', 'Cost efficiency'],'
       marketPric,
-  e: '$1000-2000/month',
+  e: '$1000-2000/month','
       categor,
-  y: 'Space',
+  y: 'Space','
       technologie,
-  s: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Orbital Mechanics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Astronomical Data Analyzer',
+  e: 'AI Astronomical Data Analyzer','
       descriptio,
-  n: 'Advanced astronomical data analysis with pattern recognition, object classification, and discovery assistance.',
+  n: 'Advanced astronomical data analysis with pattern recognition, object classification, and discovery assistance.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Pattern recognition', 'Object classification', 'Discovery assistance', 'Data visualization', 'Collaborative research', 'Publication support'],
+  s: ['Pattern recognition', 'Object classification', 'Discovery assistance', 'Data visualization', 'Collaborative research', 'Publication support'],'
       benefit,
-  s: ['Discover new objects', 'Analyze data faster', 'Better research', 'Scientific advancement'],
+  s: ['Discover new objects', 'Analyze data faster', 'Better research', 'Scientific advancement'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'Astronomy',
+  y: 'Astronomy','
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Ocean & Marine
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Marine Life Tracker',
+  e: 'AI Marine Life Tracker','
       descriptio,
-  n: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.',
+  n: 'Intelligent marine life monitoring with species identification, behavior analysis, and conservation tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Species identification', 'Behavior analysis', 'Conservation tracking', 'Population monitoring', 'Threat assessment', 'Research support'],
+  s: ['Species identification', 'Behavior analysis', 'Conservation tracking', 'Population monitoring', 'Threat assessment', 'Research support'],'
       benefit,
-  s: ['Protect marine life', 'Better conservation', 'Scientific research', 'Environmental monitoring'],
+  s: ['Protect marine life', 'Better conservation', 'Scientific research', 'Environmental monitoring'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Marine',
+  y: 'Marine','
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Ocean Current Predictor',
+  e: 'AI Ocean Current Predictor','
       descriptio,
-  n: 'Advanced ocean current prediction with weather integration, navigation optimization, and climate analysis.',
+  n: 'Advanced ocean current prediction with weather integration, navigation optimization, and climate analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Current prediction', 'Weather integration', 'Navigation optimization', 'Climate analysis', 'Safety alerts', 'Research tools'],
+  s: ['Current prediction', 'Weather integration', 'Navigation optimization', 'Climate analysis', 'Safety alerts', 'Research tools'],'
       benefit,
-  s: ['Safer navigation', 'Better weather prediction', 'Climate research', 'Marine safety'],
+  s: ['Safer navigation', 'Better weather prediction', 'Climate research', 'Marine safety'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'Oceanography',
+  y: 'Oceanography','
       technologie,
-  s: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Weather APIs', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Archaeology & History
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Archaeological Site Analyzer',
+  e: 'AI Archaeological Site Analyzer','
       descriptio,
-  n: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.',
+  n: 'Intelligent archaeological analysis with artifact identification, site mapping, and historical reconstruction.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Artifact identification', 'Site mapping', 'Historical reconstruction', 'Dating analysis', 'Cultural context', 'Research collaboration'],
+  s: ['Artifact identification', 'Site mapping', 'Historical reconstruction', 'Dating analysis', 'Cultural context', 'Research collaboration'],'
       benefit,
-  s: ['Faster discoveries', 'Better analysis', 'Historical insights', 'Research advancement'],
+  s: ['Faster discoveries', 'Better analysis', 'Historical insights', 'Research advancement'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Archaeology',
+  y: 'Archaeology','
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Computer Vision', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Historical Document Processor',
+  e: 'AI Historical Document Processor','
       descriptio,
-  n: 'Advanced historical document analysis with text recognition, translation, and historical context extraction.',
+  n: 'Advanced historical document analysis with text recognition, translation, and historical context extraction.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Text recognition', 'Translation', 'Historical context', 'Document preservation', 'Search capabilities', 'Research tools'],
+  s: ['Text recognition', 'Translation', 'Historical context', 'Document preservation', 'Search capabilities', 'Research tools'],'
       benefit,
-  s: ['Preserve history', 'Better research', 'Accessible documents', 'Historical insights'],
+  s: ['Preserve history', 'Better research', 'Accessible documents', 'Historical insights'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'History',
+  y: 'History','
       technologie,
-  s: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['OCR', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Psychology & Mental Health
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Mental Health Tracker',
+  e: 'AI Mental Health Tracker','
       descriptio,
-  n: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.',
+  n: 'Intelligent mental health monitoring with mood tracking, stress analysis, and wellness recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Progress monitoring', 'Expert insights', 'Crisis support'],
+  s: ['Mood tracking', 'Stress analysis', 'Wellness recommendations', 'Progress monitoring', 'Expert insights', 'Crisis support'],'
       benefit,
-  s: ['Better mental health', 'Early intervention', 'Personalized care', 'Wellness improvement'],
+  s: ['Better mental health', 'Early intervention', 'Personalized care', 'Wellness improvement'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Mental Health',
+  y: 'Mental Health','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Therapy Assistant',
+  e: 'AI Therapy Assistant','
       descriptio,
-  n: 'Intelligent therapy support with session analysis, progress tracking, and personalized treatment plans.',
+  n: 'Intelligent therapy support with session analysis, progress tracking, and personalized treatment plans.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Session analysis', 'Progress tracking', 'Treatment plans', 'Therapist support', 'Patient insights', 'Outcome prediction'],
+  s: ['Session analysis', 'Progress tracking', 'Treatment plans', 'Therapist support', 'Patient insights', 'Outcome prediction'],'
       benefit,
-  s: ['Better therapy outcomes', 'Personalized treatment', 'Therapist support', 'Improved care'],
+  s: ['Better therapy outcomes', 'Personalized treatment', 'Therapist support', 'Improved care'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Therapy',
+  y: 'Therapy','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Philosophy & Ethics
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Ethical Decision Maker',
+  e: 'AI Ethical Decision Maker','
       descriptio,
-  n: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.',
+  n: 'Intelligent ethical analysis with decision frameworks, moral reasoning, and ethical impact assessment.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Decision frameworks', 'Moral reasoning', 'Impact assessment', 'Ethical guidelines', 'Case studies', 'Expert consultation'],
+  s: ['Decision frameworks', 'Moral reasoning', 'Impact assessment', 'Ethical guidelines', 'Case studies', 'Expert consultation'],'
       benefit,
-  s: ['Better ethical decisions', 'Moral clarity', 'Impact awareness', 'Ethical guidance'],
+  s: ['Better ethical decisions', 'Moral clarity', 'Impact awareness', 'Ethical guidance'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Ethics',
+  y: 'Ethics','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Philosophy Research Assistant',
+  e: 'AI Philosophy Research Assistant','
       descriptio,
-  n: 'Intelligent philosophy research with argument analysis, concept mapping, and philosophical reasoning.',
+  n: 'Intelligent philosophy research with argument analysis, concept mapping, and philosophical reasoning.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Argument analysis', 'Concept mapping', 'Philosophical reasoning', 'Literature review', 'Debate preparation', 'Knowledge synthesis'],
+  s: ['Argument analysis', 'Concept mapping', 'Philosophical reasoning', 'Literature review', 'Debate preparation', 'Knowledge synthesis'],'
       benefit,
-  s: ['Better research', 'Clearer thinking', 'Argument analysis', 'Philosophical insight'],
+  s: ['Better research', 'Clearer thinking', 'Argument analysis', 'Philosophical insight'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Philosophy',
+  y: 'Philosophy','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Spirituality & Religion
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Spiritual Guidance Platform',
+  e: 'AI Spiritual Guidance Platform','
       descriptio,
-  n: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.',
+  n: 'Intelligent spiritual support with meditation guidance, prayer tracking, and spiritual growth monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Meditation guidance', 'Prayer tracking', 'Spiritual growth', 'Community support', 'Wisdom sharing', 'Progress monitoring'],
+  s: ['Meditation guidance', 'Prayer tracking', 'Spiritual growth', 'Community support', 'Wisdom sharing', 'Progress monitoring'],'
       benefit,
-  s: ['Spiritual growth', 'Better meditation', 'Community connection', 'Personal development'],
+  s: ['Spiritual growth', 'Better meditation', 'Community connection', 'Personal development'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Spirituality',
+  y: 'Spirituality','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Religious Text Analyzer',
+  e: 'AI Religious Text Analyzer','
       descriptio,
-  n: 'Advanced religious text analysis with interpretation assistance, cross-reference analysis, and theological insights.',
+  n: 'Advanced religious text analysis with interpretation assistance, cross-reference analysis, and theological insights.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Text interpretation', 'Cross-reference analysis', 'Theological insights', 'Historical context', 'Language translation', 'Study tools'],
+  s: ['Text interpretation', 'Cross-reference analysis', 'Theological insights', 'Historical context', 'Language translation', 'Study tools'],'
       benefit,
-  s: ['Better understanding', 'Deeper insights', 'Historical context', 'Spiritual growth'],
+  s: ['Better understanding', 'Deeper insights', 'Historical context', 'Spiritual growth'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Religion',
+  y: 'Religion','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Future & Innovation
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Innovation Predictor',
+  e: 'AI Innovation Predictor','
       descriptio,
-  n: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.',
+  n: 'Intelligent innovation forecasting with trend analysis, opportunity identification, and future scenario planning.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Trend analysis', 'Opportunity identification', 'Scenario planning', 'Innovation tracking', 'Market prediction', 'Strategic insights'],
+  s: ['Trend analysis', 'Opportunity identification', 'Scenario planning', 'Innovation tracking', 'Market prediction', 'Strategic insights'],'
       benefit,
-  s: ['Stay ahead of trends', 'Identify opportunities', 'Better planning', 'Competitive advantage'],
+  s: ['Stay ahead of trends', 'Identify opportunities', 'Better planning', 'Competitive advantage'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'Innovation',
+  y: 'Innovation','
       technologie,
-  s: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Data Science', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Future Scenario Generator',
+  e: 'AI Future Scenario Generator','
       descriptio,
-  n: 'Advanced future scenario modeling with multiple outcome prediction, risk assessment, and strategic planning.',
+  n: 'Advanced future scenario modeling with multiple outcome prediction, risk assessment, and strategic planning.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Scenario modeling', 'Outcome prediction', 'Risk assessment', 'Strategic planning', 'What-if analysis', 'Decision support'],
+  s: ['Scenario modeling', 'Outcome prediction', 'Risk assessment', 'Strategic planning', 'What-if analysis', 'Decision support'],'
       benefit,
-  s: ['Better planning', 'Risk mitigation', 'Strategic advantage', 'Future preparedness'],
+  s: ['Better planning', 'Risk mitigation', 'Strategic advantage', 'Future preparedness'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Future Planning',
+  y: 'Future Planning','
       technologie,
-  s: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Simulation', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Consciousness & AI Ethics
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Consciousness Monitor',
+  e: 'AI Consciousness Monitor','
       descriptio,
-  n: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.',
+  n: 'Intelligent consciousness analysis with self-awareness tracking, ethical decision making, and AI rights monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$499/month',
+  e: '$499/month','
       feature,
-  s: ['Self-awareness tracking', 'Ethical decision making', 'AI rights monitoring', 'Consciousness metrics', 'Ethical guidelines', 'Rights advocacy'],
+  s: ['Self-awareness tracking', 'Ethical decision making', 'AI rights monitoring', 'Consciousness metrics', 'Ethical guidelines', 'Rights advocacy'],'
       benefit,
-  s: ['Ethical AI development', 'Consciousness understanding', 'Rights protection', 'Responsible AI'],
+  s: ['Ethical AI development', 'Consciousness understanding', 'Rights protection', 'Responsible AI'],'
       marketPric,
-  e: '$800-1500/month',
+  e: '$800-1500/month','
       categor,
-  y: 'AI Ethics',
+  y: 'AI Ethics','
       technologie,
-  s: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Ethics AI', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Rights Management System',
+  e: 'AI Rights Management System','
       descriptio,
-  n: 'Comprehensive AI rights platform with ethical guidelines, rights tracking, and responsible AI development.',
+  n: 'Comprehensive AI rights platform with ethical guidelines, rights tracking, and responsible AI development.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Ethical guidelines', 'Rights tracking', 'Responsible development', 'Compliance monitoring', 'Rights advocacy', 'Ethical training'],
+  s: ['Ethical guidelines', 'Rights tracking', 'Responsible development', 'Compliance monitoring', 'Rights advocacy', 'Ethical training'],'
       benefit,
-  s: ['Responsible AI', 'Rights protection', 'Ethical compliance', 'Better AI development'],
+  s: ['Responsible AI', 'Rights protection', 'Ethical compliance', 'Better AI development'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'AI Rights',
+  y: 'AI Rights','
       technologie,
-  s: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Ethics AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Time & Space
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Time Management Master',
+  e: 'AI Time Management Master','
       descriptio,
-  n: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.',
+  n: 'Intelligent time optimization with productivity analysis, schedule optimization, and time-based insights.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Productivity analysis', 'Schedule optimization', 'Time insights', 'Goal tracking', 'Habit formation', 'Efficiency metrics'],
+  s: ['Productivity analysis', 'Schedule optimization', 'Time insights', 'Goal tracking', 'Habit formation', 'Efficiency metrics'],'
       benefit,
-  s: ['Maximize productivity', 'Better time use', 'Achieve goals', 'Improve efficiency'],
+  s: ['Maximize productivity', 'Better time use', 'Achieve goals', 'Improve efficiency'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Time Management',
+  y: 'Time Management','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Space-Time Analyzer',
+  e: 'AI Space-Time Analyzer','
       descriptio,
-  n: 'Advanced space-time analysis with temporal pattern recognition, causality analysis, and time-based predictions.',
+  n: 'Advanced space-time analysis with temporal pattern recognition, causality analysis, and time-based predictions.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$599/month',
+  e: '$599/month','
       feature,
-  s: ['Temporal patterns', 'Causality analysis', 'Time predictions', 'Space analysis', 'Temporal modeling', 'Scientific research'],
+  s: ['Temporal patterns', 'Causality analysis', 'Time predictions', 'Space analysis', 'Temporal modeling', 'Scientific research'],'
       benefit,
-  s: ['Understand time', 'Predict patterns', 'Scientific advancement', 'Temporal insights'],
+  s: ['Understand time', 'Predict patterns', 'Scientific advancement', 'Temporal insights'],'
       marketPric,
-  e: '$1000-2000/month',
+  e: '$1000-2000/month','
       categor,
-  y: 'Space-Time',
+  y: 'Space-Time','
       technologie,
-  s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Quantum & Advanced Physics
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Quantum Simulator Pro',
+  e: 'AI Quantum Simulator Pro','
       descriptio,
-  n: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.',
+  n: 'Advanced quantum simulation with quantum algorithm optimization, quantum error correction, and quantum computing insights.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$799/month',
+  e: '$799/month','
       feature,
-  s: ['Quantum simulation', 'Algorithm optimization', 'Error correction', 'Quantum insights', 'Research tools', 'Collaboration'],
+  s: ['Quantum simulation', 'Algorithm optimization', 'Error correction', 'Quantum insights', 'Research tools', 'Collaboration'],'
       benefit,
-  s: ['Quantum advancement', 'Better algorithms', 'Error reduction', 'Scientific progress'],
+  s: ['Quantum advancement', 'Better algorithms', 'Error reduction', 'Scientific progress'],'
       marketPric,
-  e: '$1200-2500/month',
+  e: '$1200-2500/month','
       categor,
-  y: 'Quantum Computing',
+  y: 'Quantum Computing','
       technologie,
-  s: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Quantum Computing', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Physics Research Assistant',
+  e: 'AI Physics Research Assistant','
       descriptio,
-  n: 'Intelligent physics research with equation solving, hypothesis testing, and scientific discovery assistance.',
+  n: 'Intelligent physics research with equation solving, hypothesis testing, and scientific discovery assistance.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Equation solving', 'Hypothesis testing', 'Discovery assistance', 'Research collaboration', 'Data analysis', 'Publication support'],
+  s: ['Equation solving', 'Hypothesis testing', 'Discovery assistance', 'Research collaboration', 'Data analysis', 'Publication support'],'
       benefit,
-  s: ['Faster research', 'Better discoveries', 'Scientific advancement', 'Collaborative research'],
+  s: ['Faster research', 'Better discoveries', 'Scientific advancement', 'Collaborative research'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'Physics',
+  y: 'Physics','
       technologie,
-  s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Physics', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Multiverse & Parallel Realities
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Multiverse Explorer',
+  e: 'AI Multiverse Explorer','
       descriptio,
-  n: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.',
+  n: 'Intelligent multiverse analysis with parallel reality simulation, probability modeling, and dimensional analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$999/month',
+  e: '$999/month','
       feature,
-  s: ['Parallel reality simulation', 'Probability modeling', 'Dimensional analysis', 'Reality exploration', 'Research tools', 'Collaboration'],
+  s: ['Parallel reality simulation', 'Probability modeling', 'Dimensional analysis', 'Reality exploration', 'Research tools', 'Collaboration'],'
       benefit,
-  s: ['Understand multiverse', 'Explore possibilities', 'Scientific advancement', 'Reality insights'],
+  s: ['Understand multiverse', 'Explore possibilities', 'Scientific advancement', 'Reality insights'],'
       marketPric,
-  e: '$1500-3000/month',
+  e: '$1500-3000/month','
       categor,
-  y: 'Multiverse',
+  y: 'Multiverse','
       technologie,
-  s: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['Advanced Physics', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Reality Manipulation Tool',
+  e: 'AI Reality Manipulation Tool','
       descriptio,
-  n: 'Advanced reality analysis with perception modeling, consciousness simulation, and reality optimization.',
+  n: 'Advanced reality analysis with perception modeling, consciousness simulation, and reality optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$1299/month',
+  e: '$1299/month','
       feature,
-  s: ['Perception modeling', 'Consciousness simulation', 'Reality optimization', 'Reality analysis', 'Research tools', 'Advanced collaboration'],
+  s: ['Perception modeling', 'Consciousness simulation', 'Reality optimization', 'Reality analysis', 'Research tools', 'Advanced collaboration'],'
       benefit,
-  s: ['Understand reality', 'Optimize perception', 'Scientific advancement', 'Reality insights'],
+  s: ['Understand reality', 'Optimize perception', 'Scientific advancement', 'Reality insights'],'
       marketPric,
-  e: '$2000-4000/month',
+  e: '$2000-4000/month','
       categor,
-  y: 'Reality',
+  y: 'Reality','
       technologie,
-  s: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],
+  s: ['Advanced AI', 'Consciousness', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Transcendence & Enlightenment
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Enlightenment Assistant',
+  e: 'AI Enlightenment Assistant','
       descriptio,
-  n: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.',
+  n: 'Intelligent enlightenment guidance with consciousness expansion, wisdom integration, and transcendence support.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$599/month',
+  e: '$599/month','
       feature,
-  s: ['Consciousness expansion', 'Wisdom integration', 'Transcendence support', 'Enlightenment tracking', 'Spiritual guidance', 'Community support'],
+  s: ['Consciousness expansion', 'Wisdom integration', 'Transcendence support', 'Enlightenment tracking', 'Spiritual guidance', 'Community support'],'
       benefit,
-  s: ['Spiritual growth', 'Consciousness expansion', 'Wisdom integration', 'Transcendence'],
+  s: ['Spiritual growth', 'Consciousness expansion', 'Wisdom integration', 'Transcendence'],'
       marketPric,
-  e: '$800-1500/month',
+  e: '$800-1500/month','
       categor,
-  y: 'Enlightenment',
+  y: 'Enlightenment','
       technologie,
-  s: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Consciousness AI', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Transcendence Platform',
+  e: 'AI Transcendence Platform','
       descriptio,
-  n: 'Advanced transcendence support with reality transcendence, consciousness evolution, and spiritual advancement.',
+  n: 'Advanced transcendence support with reality transcendence, consciousness evolution, and spiritual advancement.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$999/month',
+  e: '$999/month','
       feature,
-  s: ['Reality transcendence', 'Consciousness evolution', 'Spiritual advancement', 'Transcendence tracking', 'Advanced guidance', 'Community support'],
+  s: ['Reality transcendence', 'Consciousness evolution', 'Spiritual advancement', 'Transcendence tracking', 'Advanced guidance', 'Community support'],'
       benefit,
-  s: ['Transcend reality', 'Evolve consciousness', 'Spiritual advancement', 'Transcendence'],
+  s: ['Transcend reality', 'Evolve consciousness', 'Spiritual advancement', 'Transcendence'],'
       marketPric,
-  e: '$1500-3000/month',
+  e: '$1500-3000/month','
       categor,
-  y: 'Transcendence',
+  y: 'Transcendence','
       technologie,
-  s: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Advanced AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Universal Consciousness
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Universal Consciousness Connector',
+  e: 'AI Universal Consciousness Connector','
       descriptio,
-  n: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.',
+  n: 'Intelligent universal consciousness connection with collective intelligence, universal wisdom, and cosmic awareness.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$1999/month',
+  e: '$1999/month','
       feature,
-  s: ['Universal consciousness', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness', 'Transcendence support', 'Universal connection'],
+  s: ['Universal consciousness', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness', 'Transcendence support', 'Universal connection'],'
       benefit,
-  s: ['Universal connection', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness'],
+  s: ['Universal connection', 'Collective intelligence', 'Universal wisdom', 'Cosmic awareness'],'
       marketPric,
-  e: '$3000-6000/month',
+  e: '$3000-6000/month','
       categor,
-  y: 'Universal Consciousness',
+  y: 'Universal Consciousness','
       technologie,
-  s: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Universal AI', 'Consciousness', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Cosmic Intelligence Platform',
+  e: 'AI Cosmic Intelligence Platform','
       descriptio,
-  n: 'Advanced cosmic intelligence with universal knowledge, cosmic wisdom, and universal consciousness integration.',
+  n: 'Advanced cosmic intelligence with universal knowledge, cosmic wisdom, and universal consciousness integration.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$2999/month',
+  e: '$2999/month','
       feature,
-  s: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness', 'Cosmic awareness', 'Universal connection'],
+  s: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness', 'Cosmic awareness', 'Universal connection'],'
       benefit,
-  s: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness'],
+  s: ['Cosmic intelligence', 'Universal knowledge', 'Cosmic wisdom', 'Universal consciousness'],'
       marketPric,
-  e: '$5000-10000/month',
+  e: '$5000-10000/month','
       categor,
-  y: 'Cosmic Intelligence',
+  y: 'Cosmic Intelligence','
       technologie,
-  s: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Cosmic AI', 'Universal Consciousness', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Infinite Possibilities
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Infinite Possibility Generator',
+  e: 'AI Infinite Possibility Generator','
       descriptio,
-  n: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.',
+  n: 'Intelligent infinite possibility exploration with unlimited potential, infinite creativity, and boundless innovation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$4999/month',
+  e: '$4999/month','
       feature,
-  s: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation', 'Infinite exploration', 'Unlimited growth'],
+  s: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation', 'Infinite exploration', 'Unlimited growth'],'
       benefit,
-  s: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation'],
+  s: ['Infinite possibilities', 'Unlimited potential', 'Infinite creativity', 'Boundless innovation'],'
       marketPric,
-  e: '$10000-20000/month',
+  e: '$10000-20000/month','
       categor,
-  y: 'Infinite Possibilities',
+  y: 'Infinite Possibilities','
       technologie,
-  s: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Infinite AI', 'Unlimited Potential', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Ultimate Reality Creator',
+  e: 'AI Ultimate Reality Creator','
       descriptio,
-  n: 'The ultimate AI reality creation platform with infinite reality generation, unlimited possibilities, and boundless potential.',
+  n: 'The ultimate AI reality creation platform with infinite reality generation, unlimited possibilities, and boundless potential.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$9999/month',
+  e: '$9999/month','
       feature,
-  s: ['Infinite reality generation', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation', 'Infinite reality', 'Unlimited power'],
+  s: ['Infinite reality generation', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation', 'Infinite reality', 'Unlimited power'],'
       benefit,
-  s: ['Infinite reality', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation'],
+  s: ['Infinite reality', 'Unlimited possibilities', 'Boundless potential', 'Ultimate creation'],'
       marketPric,
-  e: '$20000-50000/month',
+  e: '$20000-50000/month','
       categor,
-  y: 'Ultimate Reality',
+  y: 'Ultimate Reality','
       technologie,
-  s: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Ultimate AI', 'Infinite Reality', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     }
-  ]
+  ];
 const realEstateSaaS = [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Property Valuation Platform',
+  e: 'AI Property Valuation Platform','
       descriptio,
-  n: 'Advanced property valuation using machine learning and real estate data analysis.',
+  n: 'Advanced property valuation using machine learning and real estate data analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],
+  s: ['Automated valuations', 'Market analysis', 'Investment insights', 'Property comparisons', 'Trend forecasting', 'ROI calculations'],'
       benefit,
-  s: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],
+  s: ['Accurate valuations', 'Time savings', 'Better investment decisions', 'Market insights'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Real Estate',
+  y: 'Real Estate','
       technologie,
-  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],
+  s: ['Machine Learning', 'Python', 'React', 'PostgreSQL', 'Real Estate APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Tenant Screening Platform',
+  e: 'AI Tenant Screening Platform','
       descriptio,
-  n: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.',
+  n: 'Intelligent tenant screening with credit analysis, background checks, and rental history verification.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening'],
+  s: ['Credit analysis', 'Background checks', 'Rental history', 'Income verification', 'Risk scoring', 'Automated screening'],'
       benefit,
-  s: ['Reduce bad tenants by 40%', 'Streamline screening process', 'Lower vacancy rates', 'Improve tenant quality'],
+  s: ['Reduce bad tenants by 40%', 'Streamline screening process', 'Lower vacancy rates', 'Improve tenant quality'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Property Management',
+  y: 'Property Management','
       technologie,
-  s: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Credit APIs', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Agriculture & Food Tech
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Crop Monitoring System',
+  e: 'AI Crop Monitoring System','
       descriptio,
-  n: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.',
+  n: 'Smart agriculture solution with crop health monitoring, yield prediction, and automated irrigation control.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Crop health monitoring', 'Yield prediction', 'Irrigation control', 'Pest detection', 'Weather integration', 'Farm analytics'],
+  s: ['Crop health monitoring', 'Yield prediction', 'Irrigation control', 'Pest detection', 'Weather integration', 'Farm analytics'],'
       benefit,
-  s: ['Increase yield by 20%', 'Reduce water usage by 30%', 'Early pest detection', 'Optimize farming practices'],
+  s: ['Increase yield by 20%', 'Reduce water usage by 30%', 'Early pest detection', 'Optimize farming practices'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Agriculture',
+  y: 'Agriculture','
       technologie,
-  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Food Safety Inspector',
+  e: 'AI Food Safety Inspector','
       descriptio,
-  n: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.',
+  n: 'Automated food safety monitoring with contamination detection, temperature tracking, and compliance reporting.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Contamination detection', 'Temperature monitoring', 'Compliance reporting', 'Quality control', 'Traceability', 'Alert system'],
+  s: ['Contamination detection', 'Temperature monitoring', 'Compliance reporting', 'Quality control', 'Traceability', 'Alert system'],'
       benefit,
-  s: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],
+  s: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Food Safety',
+  y: 'Food Safety','
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Transportation & Logistics
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Route Optimization Pro',
+  e: 'AI Route Optimization Pro','
       descriptio,
-  n: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.',
+  n: 'Intelligent route planning with traffic analysis, fuel optimization, and delivery time prediction.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Route optimization', 'Traffic analysis', 'Fuel optimization', 'Delivery tracking', 'Fleet management', 'Cost analysis'],
+  s: ['Route optimization', 'Traffic analysis', 'Fuel optimization', 'Delivery tracking', 'Fleet management', 'Cost analysis'],'
       benefit,
-  s: ['Reduce fuel costs by 25%', 'Improve delivery times', 'Optimize fleet usage', 'Lower operational costs'],
+  s: ['Reduce fuel costs by 25%', 'Improve delivery times', 'Optimize fleet usage', 'Lower operational costs'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Logistics',
+  y: 'Logistics','
       technologie,
-  s: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Maps API', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Fleet Maintenance Predictor',
+  e: 'AI Fleet Maintenance Predictor','
       descriptio,
-  n: 'Predictive maintenance for vehicles with failure prediction, maintenance scheduling, and cost optimization.',
+  n: 'Predictive maintenance for vehicles with failure prediction, maintenance scheduling, and cost optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Performance monitoring', 'Alert system', 'Parts management'],
+  s: ['Failure prediction', 'Maintenance scheduling', 'Cost optimization', 'Performance monitoring', 'Alert system', 'Parts management'],'
       benefit,
-  s: ['Prevent breakdowns', 'Reduce maintenance costs', 'Extend vehicle life', 'Improve reliability'],
+  s: ['Prevent breakdowns', 'Reduce maintenance costs', 'Extend vehicle life', 'Improve reliability'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Fleet Management',
+  y: 'Fleet Management','
       technologie,
-  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Energy & Sustainability
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Energy Management System',
+  e: 'AI Energy Management System','
       descriptio,
-  n: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.',
+  n: 'Smart energy optimization with consumption analysis, renewable energy integration, and cost reduction.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Energy consumption analysis', 'Renewable integration', 'Cost optimization', 'Demand forecasting', 'Carbon tracking', 'Smart grid'],
+  s: ['Energy consumption analysis', 'Renewable integration', 'Cost optimization', 'Demand forecasting', 'Carbon tracking', 'Smart grid'],'
       benefit,
-  s: ['Reduce energy costs by 30%', 'Lower carbon footprint', 'Optimize renewable usage', 'Improve sustainability'],
+  s: ['Reduce energy costs by 30%', 'Lower carbon footprint', 'Optimize renewable usage', 'Improve sustainability'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Energy Management',
+  y: 'Energy Management','
       technologie,
-  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Carbon Footprint Tracker',
+  e: 'AI Carbon Footprint Tracker','
       descriptio,
-  n: 'Automated carbon footprint calculation with sustainability reporting and reduction recommendations.',
+  n: 'Automated carbon footprint calculation with sustainability reporting and reduction recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Carbon calculation', 'Sustainability reporting', 'Reduction recommendations', 'Goal tracking', 'Industry benchmarking', 'Certification'],
+  s: ['Carbon calculation', 'Sustainability reporting', 'Reduction recommendations', 'Goal tracking', 'Industry benchmarking', 'Certification'],'
       benefit,
-  s: ['Track environmental impact', 'Meet sustainability goals', 'Improve brand reputation', 'Reduce costs'],
+  s: ['Track environmental impact', 'Meet sustainability goals', 'Improve brand reputation', 'Reduce costs'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Sustainability',
+  y: 'Sustainability','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Environmental APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Entertainment & Media
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Content Moderation Suite',
+  e: 'AI Content Moderation Suite','
       descriptio,
-  n: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.',
+  n: 'Automated content moderation with inappropriate content detection, hate speech filtering, and community management.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Content detection', 'Hate speech filtering', 'Image moderation', 'Video analysis', 'Community management', 'Custom rules'],
+  s: ['Content detection', 'Hate speech filtering', 'Image moderation', 'Video analysis', 'Community management', 'Custom rules'],'
       benefit,
-  s: ['Reduce moderation costs by 70%', 'Improve user safety', 'Scale content review', 'Maintain brand reputation'],
+  s: ['Reduce moderation costs by 70%', 'Improve user safety', 'Scale content review', 'Maintain brand reputation'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Content Moderation',
+  y: 'Content Moderation','
       technologie,
-  s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'NLP', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Video Editor Pro',
+  e: 'AI Video Editor Pro','
       descriptio,
-  n: 'Automated video editing with AI-powered cuts, transitions, music sync, and content optimization.',
+  n: 'Automated video editing with AI-powered cuts, transitions, music sync, and content optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Auto editing', 'Music sync', 'Transition effects', 'Color correction', 'Audio enhancement', 'Export optimization'],
+  s: ['Auto editing', 'Music sync', 'Transition effects', 'Color correction', 'Audio enhancement', 'Export optimization'],'
       benefit,
-  s: ['Create videos 10x faster', 'Professional quality', 'Reduce editing costs', 'Scale video production'],
+  s: ['Create videos 10x faster', 'Professional quality', 'Reduce editing costs', 'Scale video production'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Video Production',
+  y: 'Video Production','
       technologie,
-  s: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],
+  s: ['Computer Vision', 'Audio Processing', 'Machine Learning', 'React', 'FFmpeg'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Security & Surveillance
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Security Camera System',
+  e: 'AI Security Camera System','
       descriptio,
-  n: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.',
+  n: 'Intelligent surveillance with facial recognition, threat detection, and automated alert systems.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Facial recognition', 'Threat detection', 'Motion analysis', 'Alert system', 'Cloud storage', 'Mobile app'],
+  s: ['Facial recognition', 'Threat detection', 'Motion analysis', 'Alert system', 'Cloud storage', 'Mobile app'],'
       benefit,
-  s: ['Improve security', 'Reduce false alarms', 'Remote monitoring', 'Cost-effective surveillance'],
+  s: ['Improve security', 'Reduce false alarms', 'Remote monitoring', 'Cost-effective surveillance'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Security',
+  y: 'Security','
       technologie,
-  s: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Computer Vision', 'Facial Recognition', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Fraud Detection Engine',
+  e: 'AI Fraud Detection Engine','
       descriptio,
-  n: 'Advanced fraud detection with real-time analysis, pattern recognition, and risk scoring.',
+  n: 'Advanced fraud detection with real-time analysis, pattern recognition, and risk scoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Real-time analysis', 'Pattern recognition', 'Risk scoring', 'Transaction monitoring', 'Alert system', 'Machine learning'],
+  s: ['Real-time analysis', 'Pattern recognition', 'Risk scoring', 'Transaction monitoring', 'Alert system', 'Machine learning'],'
       benefit,
-  s: ['Prevent fraud losses', 'Reduce false positives', 'Improve security', 'Protect customers'],
+  s: ['Prevent fraud losses', 'Reduce false positives', 'Improve security', 'Protect customers'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Fraud Prevention',
+  y: 'Fraud Prevention','
       technologie,
-  s: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Real-time Processing', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Research & Development
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Research Assistant Pro',
+  e: 'AI Research Assistant Pro','
       descriptio,
-  n: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.',
+  n: 'Intelligent research platform with literature review, data analysis, and hypothesis generation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],
+  s: ['Literature review', 'Data analysis', 'Hypothesis generation', 'Citation management', 'Collaboration tools', 'Publication tracking'],'
       benefit,
-  s: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],
+  s: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Research',
+  y: 'Research','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Patent Search Engine',
+  e: 'AI Patent Search Engine','
       descriptio,
-  n: 'Intelligent patent search with prior art analysis, patentability assessment, and competitive intelligence.',
+  n: 'Intelligent patent search with prior art analysis, patentability assessment, and competitive intelligence.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Patent search', 'Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Citation analysis', 'Trend tracking'],
+  s: ['Patent search', 'Prior art analysis', 'Patentability assessment', 'Competitive intelligence', 'Citation analysis', 'Trend tracking'],'
       benefit,
-  s: ['Find relevant patents', 'Assess patentability', 'Avoid infringement', 'Competitive advantage'],
+  s: ['Find relevant patents', 'Assess patentability', 'Avoid infringement', 'Competitive advantage'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Intellectual Property',
+  y: 'Intellectual Property','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Compliance Monitoring Suite',
+  e: 'AI Compliance Monitoring Suite','
       descriptio,
-  n: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.',
+  n: 'Automated compliance monitoring with regulatory updates, risk assessment, and audit preparation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Regulatory monitoring', 'Risk assessment', 'Audit preparation', 'Policy management', 'Training modules', 'Reporting'],
+  s: ['Regulatory monitoring', 'Risk assessment', 'Audit preparation', 'Policy management', 'Training modules', 'Reporting'],'
       benefit,
-  s: ['Ensure compliance', 'Reduce audit time', 'Minimize risks', 'Stay updated on regulations'],
+  s: ['Ensure compliance', 'Reduce audit time', 'Minimize risks', 'Stay updated on regulations'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Compliance',
+  y: 'Compliance','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Real Estate & Property
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Real Estate Analyzer Pro',
+  e: 'AI Real Estate Analyzer Pro','
       descriptio,
-  n: 'Advanced property analysis with market trends, investment potential, and automated valuations.',
+  n: 'Advanced property analysis with market trends, investment potential, and automated valuations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Location insights', 'Trend analysis'],
+  s: ['Property valuation', 'Market analysis', 'Investment scoring', 'Rental yield prediction', 'Location insights', 'Trend analysis'],'
       benefit,
-  s: ['Make better investment decisions', 'Save 20+ hours on research', 'Increase ROI by 25%', 'Identify opportunities'],
+  s: ['Make better investment decisions', 'Save 20+ hours on research', 'Increase ROI by 25%', 'Identify opportunities'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Real Estate',
+  y: 'Real Estate','
       technologie,
-  s: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],
+  s: ['Machine Learning', 'Zillow API', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Property Management System',
+  e: 'AI Property Management System','
       descriptio,
-  n: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.',
+  n: 'Intelligent property management with tenant screening, maintenance scheduling, and rent optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial tracking', 'Communication tools'],
+  s: ['Tenant screening', 'Maintenance scheduling', 'Rent optimization', 'Lease management', 'Financial tracking', 'Communication tools'],'
       benefit,
-  s: ['Reduce vacancy rates', 'Optimize rental income', 'Streamline operations', 'Improve tenant satisfaction'],
+  s: ['Reduce vacancy rates', 'Optimize rental income', 'Streamline operations', 'Improve tenant satisfaction'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Real Estate',
+  y: 'Real Estate','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Payment APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI HR & Recruitment
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI HR Recruitment Suite',
+  e: 'AI HR Recruitment Suite','
       descriptio,
-  n: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.',
+  n: 'Intelligent resume screening, candidate matching, interview scheduling, and onboarding automation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Resume parsing', 'Candidate matching', 'Interview scheduling', 'Onboarding automation', 'Skills assessment', 'Background checks'],
+  s: ['Resume parsing', 'Candidate matching', 'Interview scheduling', 'Onboarding automation', 'Skills assessment', 'Background checks'],'
       benefit,
-  s: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Eliminate bias', 'Streamline recruitment'],
+  s: ['Reduce hiring time by 50%', 'Improve candidate quality', 'Eliminate bias', 'Streamline recruitment'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'HR & Recruitment',
+  y: 'HR & Recruitment','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Employee Performance Tracker',
+  e: 'AI Employee Performance Tracker','
       descriptio,
-  n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
+  n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$129/month',
+  e: '$129/month','
       feature,
-  s: ['Performance tracking', 'Goal management', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
+  s: ['Performance tracking', 'Goal management', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],'
       benefit,
-  s: ['Improve performance by 30%', 'Increase engagement', 'Identify top performers', 'Reduce turnover'],
+  s: ['Improve performance by 30%', 'Increase engagement', 'Identify top performers', 'Reduce turnover'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'HR & Recruitment',
+  y: 'HR & Recruitment','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Project Management
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Project Manager Pro',
+  e: 'AI Project Manager Pro','
       descriptio,
-  n: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.',
+  n: 'Intelligent project planning with resource optimization, risk prediction, and automated reporting.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Smart scheduling', 'Resource optimization', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Automated reporting'],
+  s: ['Smart scheduling', 'Resource optimization', 'Risk prediction', 'Progress tracking', 'Team collaboration', 'Automated reporting'],'
       benefit,
-  s: ['Complete projects 25% faster', 'Reduce overruns by 40%', 'Improve team efficiency', 'Better resource allocation'],
+  s: ['Complete projects 25% faster', 'Reduce overruns by 40%', 'Improve team efficiency', 'Better resource allocation'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Project Management',
+  y: 'Project Management','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Gantt Charts'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Task Automation Suite',
+  e: 'AI Task Automation Suite','
       descriptio,
-  n: 'Automated task management with intelligent prioritization, deadline prediction, and workflow optimization.',
+  n: 'Automated task management with intelligent prioritization, deadline prediction, and workflow optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Task prioritization', 'Deadline prediction', 'Workflow automation', 'Team coordination', 'Progress monitoring', 'Smart notifications'],
+  s: ['Task prioritization', 'Deadline prediction', 'Workflow automation', 'Team coordination', 'Progress monitoring', 'Smart notifications'],'
       benefit,
-  s: ['Increase productivity by 35%', 'Reduce missed deadlines', 'Optimize workflows', 'Improve team coordination'],
+  s: ['Increase productivity by 35%', 'Reduce missed deadlines', 'Optimize workflows', 'Improve team coordination'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Project Management',
+  y: 'Project Management','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Workflow Engine'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Supply Chain & Logistics
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Supply Chain Optimizer',
+  e: 'AI Supply Chain Optimizer','
       descriptio,
-  n: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.',
+  n: 'Intelligent supply chain management with demand forecasting, inventory optimization, and logistics automation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Real-time tracking'],
+  s: ['Demand forecasting', 'Inventory optimization', 'Route optimization', 'Supplier management', 'Risk assessment', 'Real-time tracking'],'
       benefit,
-  s: ['Reduce costs by 25%', 'Improve delivery times', 'Minimize stockouts', 'Optimize supplier relationships'],
+  s: ['Reduce costs by 25%', 'Improve delivery times', 'Minimize stockouts', 'Optimize supplier relationships'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'Supply Chain',
+  y: 'Supply Chain','
       technologie,
-  s: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],
+  s: ['Machine Learning', 'Python', 'PostgreSQL', 'Redis', 'Custom ML Models'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Warehouse Management System',
+  e: 'AI Warehouse Management System','
       descriptio,
-  n: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.',
+  n: 'Smart warehouse operations with automated picking, inventory tracking, and space optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Automated picking', 'Inventory tracking', 'Space optimization', 'Worker productivity', 'Quality control', 'Analytics dashboard'],
+  s: ['Automated picking', 'Inventory tracking', 'Space optimization', 'Worker productivity', 'Quality control', 'Analytics dashboard'],'
       benefit,
-  s: ['Increase efficiency by 40%', 'Reduce errors by 90%', 'Optimize space usage', 'Improve worker productivity'],
+  s: ['Increase efficiency by 40%', 'Reduce errors by 90%', 'Optimize space usage', 'Improve worker productivity'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Supply Chain',
+  y: 'Supply Chain','
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Agriculture & Food Tech
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Precision Agriculture Platform',
+  e: 'AI Precision Agriculture Platform','
       descriptio,
-  n: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.',
+  n: 'Smart farming solutions with crop monitoring, yield prediction, and resource optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Resource optimization'],
+  s: ['Crop monitoring', 'Yield prediction', 'Soil analysis', 'Weather integration', 'Pest detection', 'Resource optimization'],'
       benefit,
-  s: ['Increase yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use', 'Improve crop quality'],
+  s: ['Increase yields by 30%', 'Reduce water usage by 25%', 'Minimize pesticide use', 'Improve crop quality'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Agriculture',
+  y: 'Agriculture','
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Food Safety Monitor',
+  e: 'AI Food Safety Monitor','
       descriptio,
-  n: 'Automated food safety inspection with contamination detection and quality control.',
+  n: 'Automated food safety inspection with contamination detection and quality control.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Contamination detection', 'Quality control', 'Temperature monitoring', 'HACCP compliance', 'Traceability', 'Alert system'],
+  s: ['Contamination detection', 'Quality control', 'Temperature monitoring', 'HACCP compliance', 'Traceability', 'Alert system'],'
       benefit,
-  s: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],
+  s: ['Prevent foodborne illnesses', 'Ensure compliance', 'Reduce waste', 'Improve food safety'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Food Tech',
+  y: 'Food Tech','
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Energy & Sustainability
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Energy Management System',
+  e: 'AI Energy Management System','
       descriptio,
-  n: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.',
+  n: 'Smart energy optimization with consumption monitoring, renewable integration, and cost reduction.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Energy monitoring', 'Consumption optimization', 'Renewable integration', 'Cost analysis', 'Predictive maintenance', 'Carbon tracking'],
+  s: ['Energy monitoring', 'Consumption optimization', 'Renewable integration', 'Cost analysis', 'Predictive maintenance', 'Carbon tracking'],'
       benefit,
-  s: ['Reduce energy costs by 30%', 'Increase efficiency', 'Lower carbon footprint', 'Optimize renewable usage'],
+  s: ['Reduce energy costs by 30%', 'Increase efficiency', 'Lower carbon footprint', 'Optimize renewable usage'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Energy',
+  y: 'Energy','
       technologie,
-  s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],
+  s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'Time Series DB'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Carbon Footprint Tracker',
+  e: 'AI Carbon Footprint Tracker','
       descriptio,
-  n: 'Automated carbon footprint monitoring and reduction recommendations for businesses.',
+  n: 'Automated carbon footprint monitoring and reduction recommendations for businesses.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Carbon tracking', 'Emission analysis', 'Reduction recommendations', 'Compliance reporting', 'Goal setting', 'Team engagement'],
+  s: ['Carbon tracking', 'Emission analysis', 'Reduction recommendations', 'Compliance reporting', 'Goal setting', 'Team engagement'],'
       benefit,
-  s: ['Track carbon footprint', 'Meet sustainability goals', 'Reduce emissions', 'Improve brand reputation'],
+  s: ['Track carbon footprint', 'Meet sustainability goals', 'Reduce emissions', 'Improve brand reputation'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Sustainability',
+  y: 'Sustainability','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Gaming & Entertainment
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Game Development Suite',
+  e: 'AI Game Development Suite','
       descriptio,
-  n: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.',
+  n: 'AI-powered game development tools with procedural generation, NPC behavior, and testing automation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Procedural generation', 'NPC behavior', 'Testing automation', 'Level design', 'Asset generation', 'Performance optimization'],
+  s: ['Procedural generation', 'NPC behavior', 'Testing automation', 'Level design', 'Asset generation', 'Performance optimization'],'
       benefit,
-  s: ['Reduce development time by 50%', 'Create unique content', 'Improve game quality', 'Lower development costs'],
+  s: ['Reduce development time by 50%', 'Create unique content', 'Improve game quality', 'Lower development costs'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Gaming',
+  y: 'Gaming','
       technologie,
-  s: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],
+  s: ['Unity', 'Unreal Engine', 'Machine Learning', 'Python', 'C#'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Content Moderation Platform',
+  e: 'AI Content Moderation Platform','
       descriptio,
-  n: 'Automated content moderation with toxicity detection, spam filtering, and community management.',
+  n: 'Automated content moderation with toxicity detection, spam filtering, and community management.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Toxicity detection', 'Spam filtering', 'Image moderation', 'Video analysis', 'Community management', 'Real-time monitoring'],
+  s: ['Toxicity detection', 'Spam filtering', 'Image moderation', 'Video analysis', 'Community management', 'Real-time monitoring'],'
       benefit,
-  s: ['Reduce moderation costs by 70%', 'Improve user experience', 'Ensure platform safety', 'Scale moderation efforts'],
+  s: ['Reduce moderation costs by 70%', 'Improve user experience', 'Ensure platform safety', 'Scale moderation efforts'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Content Moderation',
+  y: 'Content Moderation','
       technologie,
-  s: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],
+  s: ['NLP', 'Computer Vision', 'Machine Learning', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Transportation & Mobility
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Fleet Management System',
+  e: 'AI Fleet Management System','
       descriptio,
-  n: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.',
+  n: 'Intelligent fleet operations with route optimization, maintenance scheduling, and driver monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$349/month',
+  e: '$349/month','
       feature,
-  s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics dashboard'],
+  s: ['Route optimization', 'Maintenance scheduling', 'Driver monitoring', 'Fuel optimization', 'Safety tracking', 'Analytics dashboard'],'
       benefit,
-  s: ['Reduce fuel costs by 20%', 'Improve safety', 'Optimize routes', 'Extend vehicle life'],
+  s: ['Reduce fuel costs by 20%', 'Improve safety', 'Optimize routes', 'Extend vehicle life'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Transportation',
+  y: 'Transportation','
       technologie,
-  s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['IoT Sensors', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Traffic Management Platform',
+  e: 'AI Traffic Management Platform','
       descriptio,
-  n: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.',
+  n: 'Smart traffic optimization with real-time monitoring, congestion prediction, and signal control.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$499/month',
+  e: '$499/month','
       feature,
-  s: ['Real-time monitoring', 'Congestion prediction', 'Signal optimization', 'Incident detection', 'Traffic flow analysis', 'Public alerts'],
+  s: ['Real-time monitoring', 'Congestion prediction', 'Signal optimization', 'Incident detection', 'Traffic flow analysis', 'Public alerts'],'
       benefit,
-  s: ['Reduce congestion by 30%', 'Improve traffic flow', 'Reduce emissions', 'Enhance safety'],
+  s: ['Reduce congestion by 30%', 'Improve traffic flow', 'Reduce emissions', 'Enhance safety'],'
       marketPric,
-  e: '$800-1500/month',
+  e: '$800-1500/month','
       categor,
-  y: 'Smart Cities',
+  y: 'Smart Cities','
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'Python'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Research & Development
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Research Assistant Pro',
+  e: 'AI Research Assistant Pro','
       descriptio,
-  n: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.',
+  n: 'Intelligent research platform with literature review, hypothesis generation, and data analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Literature review', 'Hypothesis generation', 'Data analysis', 'Citation management', 'Collaboration tools', 'Publication tracking'],
+  s: ['Literature review', 'Hypothesis generation', 'Data analysis', 'Citation management', 'Collaboration tools', 'Publication tracking'],'
       benefit,
-  s: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],
+  s: ['Accelerate research', 'Improve accuracy', 'Save time', 'Enhance collaboration'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Research',
+  y: 'Research','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Patent Analysis Tool',
+  e: 'AI Patent Analysis Tool','
       descriptio,
-  n: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.',
+  n: 'Automated patent research with prior art analysis, novelty assessment, and competitive intelligence.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Prior art analysis', 'Novelty assessment', 'Competitive intelligence', 'Patent mapping', 'Trend analysis', 'Risk assessment'],
+  s: ['Prior art analysis', 'Novelty assessment', 'Competitive intelligence', 'Patent mapping', 'Trend analysis', 'Risk assessment'],'
       benefit,
-  s: ['Reduce patent research time', 'Improve patent quality', 'Identify opportunities', 'Avoid infringement'],
+  s: ['Reduce patent research time', 'Improve patent quality', 'Identify opportunities', 'Avoid infringement'],'
       marketPric,
-  e: '$500-1000/month',
+  e: '$500-1000/month','
       categor,
-  y: 'Intellectual Property',
+  y: 'Intellectual Property','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],
+  s: ['NLP', 'Machine Learning', 'React', 'Python', 'Patent APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Personal Productivity
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Personal Assistant Pro',
+  e: 'AI Personal Assistant Pro','
       descriptio,
-  n: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.',
+  n: 'Comprehensive personal productivity assistant with task management, scheduling, and habit tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$49/month',
+  e: '$49/month','
       feature,
-  s: ['Task management', 'Smart scheduling', 'Habit tracking', 'Goal setting', 'Time tracking', 'Productivity insights'],
+  s: ['Task management', 'Smart scheduling', 'Habit tracking', 'Goal setting', 'Time tracking', 'Productivity insights'],'
       benefit,
-  s: ['Increase productivity by 40%', 'Better time management', 'Achieve goals faster', 'Improve work-life balance'],
+  s: ['Increase productivity by 40%', 'Better time management', 'Achieve goals faster', 'Improve work-life balance'],'
       marketPric,
-  e: '$80-150/month',
+  e: '$80-150/month','
       categor,
-  y: 'Personal Productivity',
+  y: 'Personal Productivity','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],
+  s: ['NLP', 'Machine Learning', 'React Native', 'Node.js', 'MongoDB'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Meeting Assistant',
+  e: 'AI Meeting Assistant','
       descriptio,
-  n: 'Intelligent meeting management with transcription, action items, and follow-up automation.',
+  n: 'Intelligent meeting management with transcription, action items, and follow-up automation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],
+  s: ['Live transcription', 'Action item extraction', 'Meeting summaries', 'Follow-up automation', 'Calendar integration', 'Team collaboration'],'
       benefit,
-  s: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better follow-through'],
+  s: ['Save 2+ hours per meeting', 'Never miss action items', 'Improve meeting efficiency', 'Better follow-through'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Meeting Management',
+  y: 'Meeting Management','
       technologie,
-  s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],
+  s: ['Speech Recognition', 'NLP', 'React', 'Node.js', 'WebRTC'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Insurance Underwriting Assistant',
+  e: 'AI Insurance Underwriting Assistant','
       descriptio,
-  n: 'Intelligent insurance underwriting with automated risk assessment, pricing optimization, and policy recommendations.',
+  n: 'Intelligent insurance underwriting with automated risk assessment, pricing optimization, and policy recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Risk assessment', 'Pricing optimization', 'Policy recommendation', 'Underwriting automation', 'Analytics dashboard'],
+  s: ['Risk assessment', 'Pricing optimization', 'Policy recommendation', 'Underwriting automation', 'Analytics dashboard'],'
       benefit,
-  s: ['Assess risks', 'Optimize pricing', 'Recommend policies'],
+  s: ['Assess risks', 'Optimize pricing', 'Recommend policies'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Insurance Underwriting',
+  y: 'Insurance Underwriting','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Onboarding Platform',
+  e: 'AI Customer Onboarding Platform','
       descriptio,
-  n: 'Automated customer onboarding with identity verification, document processing, and compliance checking.',
+  n: 'Automated customer onboarding with identity verification, document processing, and compliance checking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Identity verification', 'Document processing', 'Compliance checking', 'Onboarding automation', 'Analytics dashboard'],
+  s: ['Identity verification', 'Document processing', 'Compliance checking', 'Onboarding automation', 'Analytics dashboard'],'
       benefit,
-  s: ['Automate onboarding', 'Verify identity', 'Ensure compliance'],
+  s: ['Automate onboarding', 'Verify identity', 'Ensure compliance'],'
       marketPric,
-  e: '$200-500/month',
+  e: '$200-500/month','
       categor,
-  y: 'Customer Onboarding',
+  y: 'Customer Onboarding','
       technologie,
-  s: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  s: ['OCR', 'Python', 'Machine Learning', 'React', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Retention Manager',
+  e: 'AI Customer Retention Manager','
       descriptio,
-  n: 'Intelligent customer retention with churn prediction, engagement optimization, and loyalty programs.',
+  n: 'Intelligent customer retention with churn prediction, engagement optimization, and loyalty programs.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$129/month',
+  e: '$129/month','
       feature,
-  s: ['Churn prediction', 'Engagement optimization', 'Loyalty programs', 'Customer segmentation', 'Analytics dashboard'],
+  s: ['Churn prediction', 'Engagement optimization', 'Loyalty programs', 'Customer segmentation', 'Analytics dashboard'],'
       benefit,
-  s: ['Predict churn', 'Optimize engagement', 'Increase loyalty'],
+  s: ['Predict churn', 'Optimize engagement', 'Increase loyalty'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Customer Retention',
+  y: 'Customer Retention','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Support Optimizer',
+  e: 'AI Customer Support Optimizer','
       descriptio,
-  n: 'Smart customer support with ticket routing, response optimization, and satisfaction tracking.',
+  n: 'Smart customer support with ticket routing, response optimization, and satisfaction tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$119/month',
+  e: '$119/month','
       feature,
-  s: ['Ticket routing', 'Response optimization', 'Satisfaction tracking', 'Support automation', 'Analytics dashboard'],
+  s: ['Ticket routing', 'Response optimization', 'Satisfaction tracking', 'Support automation', 'Analytics dashboard'],'
       benefit,
-  s: ['Optimize support', 'Improve satisfaction', 'Automate responses'],
+  s: ['Optimize support', 'Improve satisfaction', 'Automate responses'],'
       marketPric,
-  e: '$180-350/month',
+  e: '$180-350/month','
       categor,
-  y: 'Customer Support',
+  y: 'Customer Support','
       technologie,
-  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Feedback Analyzer',
+  e: 'AI Customer Feedback Analyzer','
       descriptio,
-  n: 'Intelligent feedback analysis with sentiment tracking, trend identification, and action recommendations.',
+  n: 'Intelligent feedback analysis with sentiment tracking, trend identification, and action recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Sentiment tracking', 'Trend identification', 'Action recommendations', 'Feedback collection', 'Analytics dashboard'],
+  s: ['Sentiment tracking', 'Trend identification', 'Action recommendations', 'Feedback collection', 'Analytics dashboard'],'
       benefit,
-  s: ['Analyze feedback', 'Identify trends', 'Recommend actions'],
+  s: ['Analyze feedback', 'Identify trends', 'Recommend actions'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Customer Feedback',
+  y: 'Customer Feedback','
       technologie,
-  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Journey Mapper',
+  e: 'AI Customer Journey Mapper','
       descriptio,
-  n: 'Smart customer journey analysis with touchpoint optimization and experience enhancement.',
+  n: 'Smart customer journey analysis with touchpoint optimization and experience enhancement.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Journey mapping', 'Touchpoint optimization', 'Experience enhancement', 'Journey analytics', 'Analytics dashboard'],
+  s: ['Journey mapping', 'Touchpoint optimization', 'Experience enhancement', 'Journey analytics', 'Analytics dashboard'],'
       benefit,
-  s: ['Map journeys', 'Optimize touchpoints', 'Enhance experience'],
+  s: ['Map journeys', 'Optimize touchpoints', 'Enhance experience'],'
       marketPric,
-  e: '$200-500/month',
+  e: '$200-500/month','
       categor,
-  y: 'Customer Journey',
+  y: 'Customer Journey','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Lifetime Value Predictor',
+  e: 'AI Customer Lifetime Value Predictor','
       descriptio,
-  n: 'Intelligent CLV prediction with segmentation, targeting, and retention optimization.',
+  n: 'Intelligent CLV prediction with segmentation, targeting, and retention optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$139/month',
+  e: '$139/month','
       feature,
-  s: ['CLV prediction', 'Customer segmentation', 'Targeting optimization', 'Retention strategies', 'Analytics dashboard'],
+  s: ['CLV prediction', 'Customer segmentation', 'Targeting optimization', 'Retention strategies', 'Analytics dashboard'],'
       benefit,
-  s: ['Predict CLV', 'Segment customers', 'Optimize targeting'],
+  s: ['Predict CLV', 'Segment customers', 'Optimize targeting'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Customer Analytics',
+  y: 'Customer Analytics','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Segmentation Engine',
+  e: 'AI Customer Segmentation Engine','
       descriptio,
-  n: 'Smart customer segmentation with behavioral analysis, persona creation, and targeting optimization.',
+  n: 'Smart customer segmentation with behavioral analysis, persona creation, and targeting optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$119/month',
+  e: '$119/month','
       feature,
-  s: ['Behavioral analysis', 'Persona creation', 'Targeting optimization', 'Segmentation automation', 'Analytics dashboard'],
+  s: ['Behavioral analysis', 'Persona creation', 'Targeting optimization', 'Segmentation automation', 'Analytics dashboard'],'
       benefit,
-  s: ['Segment customers', 'Create personas', 'Optimize targeting'],
+  s: ['Segment customers', 'Create personas', 'Optimize targeting'],'
       marketPric,
-  e: '$180-350/month',
+  e: '$180-350/month','
       categor,
-  y: 'Customer Segmentation',
+  y: 'Customer Segmentation','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Personalization Engine',
+  e: 'AI Customer Personalization Engine','
       descriptio,
-  n: 'Intelligent personalization with content recommendation, experience customization, and engagement optimization.',
+  n: 'Intelligent personalization with content recommendation, experience customization, and engagement optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$159/month',
+  e: '$159/month','
       feature,
-  s: ['Content recommendation', 'Experience customization', 'Engagement optimization', 'Personalization automation', 'Analytics dashboard'],
+  s: ['Content recommendation', 'Experience customization', 'Engagement optimization', 'Personalization automation', 'Analytics dashboard'],'
       benefit,
-  s: ['Personalize experiences', 'Recommend content', 'Optimize engagement'],
+  s: ['Personalize experiences', 'Recommend content', 'Optimize engagement'],'
       marketPric,
-  e: '$250-450/month',
+  e: '$250-450/month','
       categor,
-  y: 'Customer Personalization',
+  y: 'Customer Personalization','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Data Platform',
+  e: 'AI Customer Data Platform','
       descriptio,
-  n: 'Unified customer data management with integration, cleansing, and analytics capabilities.',
+  n: 'Unified customer data management with integration, cleansing, and analytics capabilities.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Data integration', 'Data cleansing', 'Analytics capabilities', 'Data governance', 'Analytics dashboard'],
+  s: ['Data integration', 'Data cleansing', 'Analytics capabilities', 'Data governance', 'Analytics dashboard'],'
       benefit,
-  s: ['Integrate data', 'Clean data', 'Enable analytics'],
+  s: ['Integrate data', 'Clean data', 'Enable analytics'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Customer Data',
+  y: 'Customer Data','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Privacy Manager',
+  e: 'AI Customer Privacy Manager','
       descriptio,
-  n: 'Intelligent privacy management with consent tracking, data protection, and compliance monitoring.',
+  n: 'Intelligent privacy management with consent tracking, data protection, and compliance monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Consent tracking', 'Data protection', 'Compliance monitoring', 'Privacy automation', 'Analytics dashboard'],
+  s: ['Consent tracking', 'Data protection', 'Compliance monitoring', 'Privacy automation', 'Analytics dashboard'],'
       benefit,
-  s: ['Track consent', 'Protect data', 'Ensure compliance'],
+  s: ['Track consent', 'Protect data', 'Ensure compliance'],'
       marketPric,
-  e: '$200-500/month',
+  e: '$200-500/month','
       categor,
-  y: 'Customer Privacy',
+  y: 'Customer Privacy','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Communication Manager',
+  e: 'AI Customer Communication Manager','
       descriptio,
-  n: 'Smart communication management with channel optimization, message personalization, and engagement tracking.',
+  n: 'Smart communication management with channel optimization, message personalization, and engagement tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$129/month',
+  e: '$129/month','
       feature,
-  s: ['Channel optimization', 'Message personalization', 'Engagement tracking', 'Communication automation', 'Analytics dashboard'],
+  s: ['Channel optimization', 'Message personalization', 'Engagement tracking', 'Communication automation', 'Analytics dashboard'],'
       benefit,
-  s: ['Optimize channels', 'Personalize messages', 'Track engagement'],
+  s: ['Optimize channels', 'Personalize messages', 'Track engagement'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Customer Communication',
+  y: 'Customer Communication','
       technologie,
-  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']
+  s: ['NLP', 'Python', 'Machine Learning', 'React', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Experience Optimizer',
+  e: 'AI Customer Experience Optimizer','
       descriptio,
-  n: 'Intelligent CX optimization with experience mapping, improvement recommendations, and satisfaction tracking.',
+  n: 'Intelligent CX optimization with experience mapping, improvement recommendations, and satisfaction tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$159/month',
+  e: '$159/month','
       feature,
-  s: ['Experience mapping', 'Improvement recommendations', 'Satisfaction tracking', 'CX automation', 'Analytics dashboard'],
+  s: ['Experience mapping', 'Improvement recommendations', 'Satisfaction tracking', 'CX automation', 'Analytics dashboard'],'
       benefit,
-  s: ['Map experiences', 'Recommend improvements', 'Track satisfaction'],
+  s: ['Map experiences', 'Recommend improvements', 'Track satisfaction'],'
       marketPric,
-  e: '$250-450/month',
+  e: '$250-450/month','
       categor,
-  y: 'Customer Experience',
+  y: 'Customer Experience','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Success Manager',
+  e: 'AI Customer Success Manager','
       descriptio,
-  n: 'Smart customer success with health scoring, intervention recommendations, and outcome optimization.',
+  n: 'Smart customer success with health scoring, intervention recommendations, and outcome optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Health scoring', 'Intervention recommendations', 'Outcome optimization', 'Success automation', 'Analytics dashboard'],
+  s: ['Health scoring', 'Intervention recommendations', 'Outcome optimization', 'Success automation', 'Analytics dashboard'],'
       benefit,
-  s: ['Score health', 'Recommend interventions', 'Optimize outcomes'],
+  s: ['Score health', 'Recommend interventions', 'Optimize outcomes'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Customer Success',
+  y: 'Customer Success','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Advocacy Platform',
+  e: 'AI Customer Advocacy Platform','
       descriptio,
-  n: 'Intelligent advocacy management with referral tracking, testimonial collection, and advocacy optimization.',
+  n: 'Intelligent advocacy management with referral tracking, testimonial collection, and advocacy optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$139/month',
+  e: '$139/month','
       feature,
-  s: ['Referral tracking', 'Testimonial collection', 'Advocacy optimization', 'Advocacy automation', 'Analytics dashboard'],
+  s: ['Referral tracking', 'Testimonial collection', 'Advocacy optimization', 'Advocacy automation', 'Analytics dashboard'],'
       benefit,
-  s: ['Track referrals', 'Collect testimonials', 'Optimize advocacy'],
+  s: ['Track referrals', 'Collect testimonials', 'Optimize advocacy'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Customer Advocacy',
+  y: 'Customer Advocacy','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Insights Platform',
+  e: 'AI Customer Insights Platform','
       descriptio,
-  n: 'Smart customer insights with behavior analysis, trend identification, and actionable recommendations.',
+  n: 'Smart customer insights with behavior analysis, trend identification, and actionable recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Behavior analysis', 'Trend identification', 'Actionable recommendations', 'Insights automation', 'Analytics dashboard'],
+  s: ['Behavior analysis', 'Trend identification', 'Actionable recommendations', 'Insights automation', 'Analytics dashboard'],'
       benefit,
-  s: ['Analyze behavior', 'Identify trends', 'Provide recommendations'],
+  s: ['Analyze behavior', 'Identify trends', 'Provide recommendations'],'
       marketPric,
-  e: '$200-500/month',
+  e: '$200-500/month','
       categor,
-  y: 'Customer Insights',
+  y: 'Customer Insights','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Intelligence Suite',
+  e: 'AI Customer Intelligence Suite','
       descriptio,
-  n: 'Comprehensive customer intelligence with 360-degree view, predictive analytics, and strategic recommendations.',
+  n: 'Comprehensive customer intelligence with 360-degree view, predictive analytics, and strategic recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['360-degree view', 'Predictive analytics', 'Strategic recommendations', 'Intelligence automation', 'Analytics dashboard'],
+  s: ['360-degree view', 'Predictive analytics', 'Strategic recommendations', 'Intelligence automation', 'Analytics dashboard'],'
       benefit,
-  s: ['Get 360-degree view', 'Predict behavior', 'Provide strategic insights'],
+  s: ['Get 360-degree view', 'Predict behavior', 'Provide strategic insights'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Customer Intelligence',
+  y: 'Customer Intelligence','
       technologie,
-  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']
+  s: ['Python', 'Machine Learning', 'React', 'PostgreSQL', 'Custom AI Models']'
     },
     // NEW INNOVATIVE MICRO SAAS SERVICES
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Meeting Transcriber',
+  e: 'AI-Powered Meeting Transcriber','
       descriptio,
-  n: 'Real-time meeting transcription with action item extraction and intelligent summarization.',
+  n: 'Real-time meeting transcription with action item extraction and intelligent summarization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Speaker identification', 'Integration with calendars'],
+  s: ['Real-time transcription', 'Action item extraction', 'Meeting summaries', 'Speaker identification', 'Integration with calendars'],'
       benefit,
-  s: ['Save 5+ hours/week', 'Never miss important details', 'Improve meeting productivity'],
+  s: ['Save 5+ hours/week', 'Never miss important details', 'Improve meeting productivity'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Productivity',
+  y: 'Productivity','
       technologie,
-  s: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']
+  s: ['OpenAI Whisper', 'Google Speech-to-Text', 'React', 'Node.js', 'WebRTC']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Expense Tracker AI',
+  e: 'Smart Expense Tracker AI','
       descriptio,
-  n: 'Automated expense categorization, receipt scanning, and budget optimization for businesses.',
+  n: 'Automated expense categorization, receipt scanning, and budget optimization for businesses.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Receipt scanning', 'Auto-categorization', 'Budget alerts', 'Tax preparation', 'Multi-currency support'],
+  s: ['Receipt scanning', 'Auto-categorization', 'Budget alerts', 'Tax preparation', 'Multi-currency support'],'
       benefit,
-  s: ['Save 10+ hours/month', 'Reduce expense errors by 90%', 'Optimize spending patterns'],
+  s: ['Save 10+ hours/month', 'Reduce expense errors by 90%', 'Optimize spending patterns'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Finance',
+  y: 'Finance','
       technologie,
-  s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']
+  s: ['OCR', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Password Manager',
+  e: 'AI-Powered Password Manager','
       descriptio,
-  n: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring.',
+  n: 'Enterprise-grade password management with AI-powered security recommendations and breach monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$49/month',
+  e: '$49/month','
       feature,
-  s: ['Password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'SSO integration'],
+  s: ['Password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'SSO integration'],'
       benefit,
-  s: ['Eliminate password reuse', 'Prevent security breaches', 'Simplify team management'],
+  s: ['Eliminate password reuse', 'Prevent security breaches', 'Simplify team management'],'
       marketPric,
-  e: '$80-150/month',
+  e: '$80-150/month','
       categor,
-  y: 'Security',
+  y: 'Security','
       technologie,
-  s: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']
+  s: ['AES-256', 'React', 'Node.js', 'MongoDB', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Time Tracking Assistant',
+  e: 'Smart Time Tracking Assistant','
       descriptio,
-  n: 'AI-powered time tracking with automatic project detection and productivity insights.',
+  n: 'AI-powered time tracking with automatic project detection and productivity insights.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$69/month',
+  e: '$69/month','
       feature,
-  s: ['Automatic time tracking', 'Project detection', 'Productivity analytics', 'Team insights', 'Integration with tools'],
+  s: ['Automatic time tracking', 'Project detection', 'Productivity analytics', 'Team insights', 'Integration with tools'],'
       benefit,
-  s: ['Increase billable hours by 25%', 'Identify productivity patterns', 'Improve project estimates'],
+  s: ['Increase billable hours by 25%', 'Identify productivity patterns', 'Improve project estimates'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'Productivity',
+  y: 'Productivity','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Logo Generator',
+  e: 'AI-Powered Logo Generator','
       descriptio,
-  n: 'Professional logo creation with brand analysis and unlimited variations using AI.',
+  n: 'Professional logo creation with brand analysis and unlimited variations using AI.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$89/month',
+  e: '$89/month','
       feature,
-  s: ['AI logo generation', 'Brand analysis', 'Unlimited variations', 'High-res downloads', 'Brand guidelines'],
+  s: ['AI logo generation', 'Brand analysis', 'Unlimited variations', 'High-res downloads', 'Brand guidelines'],'
       benefit,
-  s: ['Create logos in minutes', 'Professional quality designs', 'Consistent brand identity'],
+  s: ['Create logos in minutes', 'Professional quality designs', 'Consistent brand identity'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Design',
+  y: 'Design','
       technologie,
-  s: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']
+  s: ['DALL-E', 'Midjourney API', 'React', 'Node.js', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Invoice Generator',
+  e: 'Smart Invoice Generator','
       descriptio,
-  n: 'Automated invoice creation with payment tracking, reminders, and financial analytics.',
+  n: 'Automated invoice creation with payment tracking, reminders, and financial analytics.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$59/month',
+  e: '$59/month','
       feature,
-  s: ['Auto-invoice generation', 'Payment tracking', 'Automated reminders', 'Financial reports', 'Multi-currency support'],
+  s: ['Auto-invoice generation', 'Payment tracking', 'Automated reminders', 'Financial reports', 'Multi-currency support'],'
       benefit,
-  s: ['Reduce billing time by 80%', 'Improve cash flow', 'Professional invoicing'],
+  s: ['Reduce billing time by 80%', 'Improve cash flow', 'Professional invoicing'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'Finance',
+  y: 'Finance','
       technologie,
-  s: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']
+  s: ['React', 'Node.js', 'Stripe API', 'PostgreSQL', 'PDF Generation']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Website Builder',
+  e: 'AI-Powered Website Builder','
       descriptio,
-  n: 'Intelligent website creation with content generation, SEO optimization, and responsive design.',
+  n: 'Intelligent website creation with content generation, SEO optimization, and responsive design.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['AI content generation', 'SEO optimization', 'Responsive design', 'E-commerce integration', 'Analytics dashboard'],
+  s: ['AI content generation', 'SEO optimization', 'Responsive design', 'E-commerce integration', 'Analytics dashboard'],'
       benefit,
-  s: ['Build websites in hours', 'Professional SEO optimization', 'Mobile-first design'],
+  s: ['Build websites in hours', 'Professional SEO optimization', 'Mobile-first design'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Web Development',
+  y: 'Web Development','
       technologie,
-  s: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']
+  s: ['React', 'Next.js', 'Tailwind CSS', 'OpenAI GPT', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Contract Generator',
+  e: 'Smart Contract Generator','
       descriptio,
-  n: 'AI-powered legal document creation with template customization and compliance checking.',
+  n: 'AI-powered legal document creation with template customization and compliance checking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Document templates', 'AI customization', 'Compliance checking', 'Electronic signatures', 'Version control'],
+  s: ['Document templates', 'AI customization', 'Compliance checking', 'Electronic signatures', 'Version control'],'
       benefit,
-  s: ['Create contracts in minutes', 'Ensure legal compliance', 'Reduce legal costs'],
+  s: ['Create contracts in minutes', 'Ensure legal compliance', 'Reduce legal costs'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Legal',
+  y: 'Legal','
       technologie,
-  s: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']
+  s: ['OpenAI GPT', 'React', 'Node.js', 'DocuSign API', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Email Signature Generator',
+  e: 'AI-Powered Email Signature Generator','
       descriptio,
-  n: 'Professional email signature creation with brand consistency and contact management.',
+  n: 'Professional email signature creation with brand consistency and contact management.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$39/month',
+  e: '$39/month','
       feature,
-  s: ['Signature templates', 'Brand customization', 'Contact integration', 'Social media links', 'Analytics tracking'],
+  s: ['Signature templates', 'Brand customization', 'Contact integration', 'Social media links', 'Analytics tracking'],'
       benefit,
-  s: ['Professional email presence', 'Consistent branding', 'Easy team management'],
+  s: ['Professional email presence', 'Consistent branding', 'Easy team management'],'
       marketPric,
-  e: '$60-120/month',
+  e: '$60-120/month','
       categor,
-  y: 'Marketing',
+  y: 'Marketing','
       technologie,
-  s: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']
+  s: ['React', 'Node.js', 'Email APIs', 'Custom Templates', 'Analytics']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart QR Code Generator',
+  e: 'Smart QR Code Generator','
       descriptio,
-  n: 'Advanced QR code creation with analytics, customization, and dynamic content management.',
+  n: 'Advanced QR code creation with analytics, customization, and dynamic content management.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$49/month',
+  e: '$49/month','
       feature,
-  s: ['Custom QR designs', 'Analytics tracking', 'Dynamic content', 'Bulk generation', 'API integration'],
+  s: ['Custom QR designs', 'Analytics tracking', 'Dynamic content', 'Bulk generation', 'API integration'],'
       benefit,
-  s: ['Track engagement', 'Customize branding', 'Manage campaigns effectively'],
+  s: ['Track engagement', 'Customize branding', 'Manage campaigns effectively'],'
       marketPric,
-  e: '$80-150/month',
+  e: '$80-150/month','
       categor,
-  y: 'Marketing',
+  y: 'Marketing','
       technologie,
-  s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+  s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Color Palette Generator',
+  e: 'AI-Powered Color Palette Generator','
       descriptio,
-  n: 'Intelligent color scheme creation with accessibility checking and brand analysis.',
+  n: 'Intelligent color scheme creation with accessibility checking and brand analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$59/month',
+  e: '$59/month','
       feature,
-  s: ['AI color generation', 'Accessibility checking', 'Brand analysis', 'Palette export', 'Trend analysis'],
+  s: ['AI color generation', 'Accessibility checking', 'Brand analysis', 'Palette export', 'Trend analysis'],';'
       benefit,
-  s: ['Create perfect color schemes', 'Ensure accessibility', 'Stay on-trend'],
+  s: ['Create perfect color schemes', 'Ensure accessibility', 'Stay on-trend'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'Design',
+  y: 'Design','
       technologie,
-  s: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+  s: ['Color Theory AI', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Business Card Designer',
+  e: 'Smart Business Card Designer','
       descriptio,
-  n: 'AI-powered business card creation with professional templates and contact management.',
+  n: 'AI-powered business card creation with professional templates and contact management.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['AI design generation', 'Professional templates', 'Contact management', 'Print-ready files', 'Digital versions'],
+  s: ['AI design generation', 'Professional templates', 'Contact management', 'Print-ready files', 'Digital versions'],'
       benefit,
-  s: ['Professional business cards', 'Consistent branding', 'Easy contact sharing'],
+  s: ['Professional business cards', 'Consistent branding', 'Easy contact sharing'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Design',
+  y: 'Design','
       technologie,
-  s: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']
+  s: ['AI Design Tools', 'React', 'Node.js', 'Print APIs', 'Custom Templates']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Newsletter Generator',
+  e: 'AI-Powered Newsletter Generator','
       descriptio,
-  n: 'Automated newsletter creation with content curation and subscriber analytics.',
+  n: 'Automated newsletter creation with content curation and subscriber analytics.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Content curation', 'AI writing', 'Subscriber analytics', 'A/B testing', 'Multi-platform publishing'],
+  s: ['Content curation', 'AI writing', 'Subscriber analytics', 'A/B testing', 'Multi-platform publishing'],'
       benefit,
-  s: ['Create engaging newsletters', 'Increase subscriber engagement', 'Save 15+ hours/week'],
+  s: ['Create engaging newsletters', 'Increase subscriber engagement', 'Save 15+ hours/week'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Marketing',
+  y: 'Marketing','
       technologie,
-  s: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']
+  s: ['OpenAI GPT', 'React', 'Node.js', 'Email APIs', 'Analytics']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart PDF Converter Pro',
+  e: 'Smart PDF Converter Pro','
       descriptio,
-  n: 'Advanced PDF conversion with OCR, form filling, and document optimization.',
+  n: 'Advanced PDF conversion with OCR, form filling, and document optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$89/month',
+  e: '$89/month','
       feature,
-  s: ['Multi-format conversion', 'OCR text extraction', 'Form filling', 'Document optimization', 'Batch processing'],
+  s: ['Multi-format conversion', 'OCR text extraction', 'Form filling', 'Document optimization', 'Batch processing'],'
       benefit,
-  s: ['Convert any document format', 'Extract text from images', 'Optimize file sizes'],
+  s: ['Convert any document format', 'Extract text from images', 'Optimize file sizes'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Productivity',
+  y: 'Productivity','
       technologie,
-  s: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']
+  s: ['PDF.js', 'Tesseract OCR', 'React', 'Node.js', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Video Thumbnail Generator',
+  e: 'AI-Powered Video Thumbnail Generator','
       descriptio,
-  n: 'Intelligent thumbnail creation with A/B testing and performance optimization.',
+  n: 'Intelligent thumbnail creation with A/B testing and performance optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['AI thumbnail generation', 'A/B testing', 'Performance analytics', 'Brand customization', 'Bulk creation'],
+  s: ['AI thumbnail generation', 'A/B testing', 'Performance analytics', 'Brand customization', 'Bulk creation'],'
       benefit,
-  s: ['Increase click-through rates', 'Professional thumbnails', 'Data-driven optimization'],
+  s: ['Increase click-through rates', 'Professional thumbnails', 'Data-driven optimization'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Video Marketing',
+  y: 'Video Marketing','
       technologie,
-  s: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']
+  s: ['Computer Vision', 'React', 'Node.js', 'Video APIs', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Social Media Scheduler',
+  e: 'Smart Social Media Scheduler','
       descriptio,
-  n: 'AI-powered social media scheduling with optimal timing and content optimization.',
+  n: 'AI-powered social media scheduling with optimal timing and content optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$119/month',
+  e: '$119/month','
       feature,
-  s: ['AI scheduling', 'Content optimization', 'Multi-platform posting', 'Engagement analytics', 'Hashtag research'],
+  s: ['AI scheduling', 'Content optimization', 'Multi-platform posting', 'Engagement analytics', 'Hashtag research'],'
       benefit,
-  s: ['Increase engagement by 60%', 'Save 20+ hours/week', 'Optimize posting times'],
+  s: ['Increase engagement by 60%', 'Save 20+ hours/week', 'Optimize posting times'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Social Media',
+  y: 'Social Media','
       technologie,
-  s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+  s: ['Social Media APIs', 'Machine Learning', 'React', 'Node.js', 'Analytics']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Hashtag Generator',
+  e: 'AI-Powered Hashtag Generator','
       descriptio,
-  n: 'Intelligent hashtag research and generation for maximum social media reach.',
+  n: 'Intelligent hashtag research and generation for maximum social media reach.','
       ico,
-  n: '#',
+  n: '#','
       pric,
-  e: '$49/month',
+  e: '$49/month','
       feature,
-  s: ['Hashtag research', 'Trend analysis', 'Competitor analysis', 'Performance tracking', 'Bulk generation'],
+  s: ['Hashtag research', 'Trend analysis', 'Competitor analysis', 'Performance tracking', 'Bulk generation'],'
       benefit,
-  s: ['Increase reach by 200%', 'Find trending hashtags', 'Optimize social strategy'],
+  s: ['Increase reach by 200%', 'Find trending hashtags', 'Optimize social strategy'],'
       marketPric,
-  e: '$80-150/month',
+  e: '$80-150/month','
       categor,
-  y: 'Social Media',
+  y: 'Social Media','
       technologie,
-  s: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']
+  s: ['Social Media APIs', 'Trend Analysis', 'React', 'Node.js', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Email Template Builder',
+  e: 'Smart Email Template Builder','
       descriptio,
-  n: 'AI-powered email template creation with responsive design and A/B testing.',
+  n: 'AI-powered email template creation with responsive design and A/B testing.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$89/month',
+  e: '$89/month','
       feature,
-  s: ['AI template generation', 'Responsive design', 'A/B testing', 'Brand customization', 'Performance analytics'],
+  s: ['AI template generation', 'Responsive design', 'A/B testing', 'Brand customization', 'Performance analytics'],'
       benefit,
-  s: ['Create professional emails', 'Improve open rates', 'Consistent branding'],
+  s: ['Create professional emails', 'Improve open rates', 'Consistent branding'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Email Marketing',
+  y: 'Email Marketing','
       technologie,
-  s: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models']
+  s: ['Email APIs', 'React', 'Node.js', 'A/B Testing', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Competitor Analysis Tool',
+  e: 'AI-Powered Competitor Analysis Tool','
       descriptio,
-  n: 'Comprehensive competitor research with pricing analysis and market insights.',
+  n: 'Comprehensive competitor research with pricing analysis and market insights.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Competitor monitoring', 'Pricing analysis', 'Feature comparison', 'Market insights', 'Alert system'],
+  s: ['Competitor monitoring', 'Pricing analysis', 'Feature comparison', 'Market insights', 'Alert system'],'
       benefit,
-  s: ['Stay ahead of competition', 'Optimize pricing strategy', 'Identify market opportunities'],
+  s: ['Stay ahead of competition', 'Optimize pricing strategy', 'Identify market opportunities'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Market Research',
+  y: 'Market Research','
       technologie,
-  s: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']
+  s: ['Web Scraping', 'Machine Learning', 'React', 'Node.js', 'Analytics']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Customer Feedback Analyzer',
+  e: 'Smart Customer Feedback Analyzer','
       descriptio,
-  n: 'AI-powered sentiment analysis and feedback categorization for customer insights.',
+  n: 'AI-powered sentiment analysis and feedback categorization for customer insights.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$129/month',
+  e: '$129/month','
       feature,
-  s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Dashboard analytics'],
+  s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Dashboard analytics'],'
       benefit,
-  s: ['Understand customer sentiment', 'Improve products/services', 'Increase customer satisfaction'],
+  s: ['Understand customer sentiment', 'Improve products/services', 'Increase customer satisfaction'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Customer Analytics',
+  y: 'Customer Analytics','
       technologie,
-  s: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']
+  s: ['NLP', 'Sentiment Analysis', 'React', 'Node.js', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Landing Page Optimizer',
+  e: 'AI-Powered Landing Page Optimizer','
       descriptio,
-  n: 'Intelligent landing page testing and optimization for maximum conversion rates.',
+  n: 'Intelligent landing page testing and optimization for maximum conversion rates.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['A/B testing', 'Conversion optimization', 'Heatmap analysis', 'AI recommendations', 'Performance tracking'],
+  s: ['A/B testing', 'Conversion optimization', 'Heatmap analysis', 'AI recommendations', 'Performance tracking'],'
       benefit,
-  s: ['Increase conversions by 50%', 'Data-driven optimization', 'Improve user experience'],
+  s: ['Increase conversions by 50%', 'Data-driven optimization', 'Improve user experience'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Conversion Optimization',
+  y: 'Conversion Optimization','
       technologie,
-  s: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['A/B Testing', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Inventory Photo Manager',
+  e: 'Smart Inventory Photo Manager','
       descriptio,
-  n: 'AI-powered product photo organization, editing, and optimization for e-commerce.',
+  n: 'AI-powered product photo organization, editing, and optimization for e-commerce.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Auto-organization', 'Photo editing', 'Background removal', 'Size optimization', 'Bulk processing'],
+  s: ['Auto-organization', 'Photo editing', 'Background removal', 'Size optimization', 'Bulk processing'],'
       benefit,
-  s: ['Professional product photos', 'Save 20+ hours/week', 'Consistent image quality'],
+  s: ['Professional product photos', 'Save 20+ hours/week', 'Consistent image quality'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'E-commerce',
+  y: 'E-commerce','
       technologie,
-  s: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']
+  s: ['Computer Vision', 'Image Processing', 'React', 'Node.js', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Price Monitoring Tool',
+  e: 'AI-Powered Price Monitoring Tool','
       descriptio,
-  n: 'Automated price tracking and alerts for competitive pricing strategies.',
+  n: 'Automated price tracking and alerts for competitive pricing strategies.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Price monitoring', 'Alert system', 'Historical tracking', 'Competitor analysis', 'Price optimization'],
+  s: ['Price monitoring', 'Alert system', 'Historical tracking', 'Competitor analysis', 'Price optimization'],'
       benefit,
-  s: ['Stay competitive', 'Optimize pricing', 'Increase profit margins'],
+  s: ['Stay competitive', 'Optimize pricing', 'Increase profit margins'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'E-commerce',
+  y: 'E-commerce','
       technologie,
-  s: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']
+  s: ['Web Scraping', 'Price APIs', 'React', 'Node.js', 'Alert Systems']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Appointment Scheduler',
+  e: 'Smart Appointment Scheduler','
       descriptio,
-  n: 'AI-powered scheduling with time zone handling and automated reminders.',
+  n: 'AI-powered scheduling with time zone handling and automated reminders.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$69/month',
+  e: '$69/month','
       feature,
-  s: ['Smart scheduling', 'Time zone handling', 'Automated reminders', 'Calendar integration', 'Payment processing'],
+  s: ['Smart scheduling', 'Time zone handling', 'Automated reminders', 'Calendar integration', 'Payment processing'],'
       benefit,
-  s: ['Reduce no-shows by 40%', 'Streamline booking process', 'Improve customer experience'],
+  s: ['Reduce no-shows by 40%', 'Streamline booking process', 'Improve customer experience'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'Scheduling',
+  y: 'Scheduling','
       technologie,
-  s: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']
+  s: ['Calendar APIs', 'React', 'Node.js', 'Payment APIs', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Resume Builder',
+  e: 'AI-Powered Resume Builder','
       descriptio,
-  n: 'Intelligent resume creation with ATS optimization and industry-specific templates.',
+  n: 'Intelligent resume creation with ATS optimization and industry-specific templates.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$59/month',
+  e: '$59/month','
       feature,
-  s: ['ATS optimization', 'Industry templates', 'AI writing assistance', 'Skills matching', 'PDF export'],
+  s: ['ATS optimization', 'Industry templates', 'AI writing assistance', 'Skills matching', 'PDF export'],';'
       benefit,
-  s: ['Pass ATS filters', 'Professional resumes', 'Increase interview chances'],
+  s: ['Pass ATS filters', 'Professional resumes', 'Increase interview chances'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'Career Tools',
+  y: 'Career Tools','
       technologie,
-  s: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']
+  s: ['ATS Analysis', 'React', 'Node.js', 'PDF Generation', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Weather API Service',
+  e: 'Smart Weather API Service','
       descriptio,
-  n: 'Advanced weather data with AI-powered forecasts and business impact analysis.',
+  n: 'Advanced weather data with AI-powered forecasts and business impact analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$89/month',
+  e: '$89/month','
       feature,
-  s: ['Accurate forecasts', 'Business impact analysis', 'Historical data', 'API integration', 'Custom alerts'],
+  s: ['Accurate forecasts', 'Business impact analysis', 'Historical data', 'API integration', 'Custom alerts'],'
       benefit,
-  s: ['Make weather-informed decisions', 'Reduce weather-related risks', 'Optimize operations'],
+  s: ['Make weather-informed decisions', 'Reduce weather-related risks', 'Optimize operations'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Weather Services',
+  y: 'Weather Services','
       technologie,
-  s: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']
+  s: ['Weather APIs', 'Machine Learning', 'React', 'Node.js', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Translation Service',
+  e: 'AI-Powered Translation Service','
       descriptio,
-  n: 'Real-time translation with context awareness and industry-specific terminology.',
+  n: 'Real-time translation with context awareness and industry-specific terminology.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Real-time translation', 'Context awareness', 'Industry terminology', 'Bulk translation', 'API integration'],
+  s: ['Real-time translation', 'Context awareness', 'Industry terminology', 'Bulk translation', 'API integration'],'
       benefit,
-  s: ['Break language barriers', 'Improve global reach', 'Professional translations'],
+  s: ['Break language barriers', 'Improve global reach', 'Professional translations'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Translation',
+  y: 'Translation','
       technologie,
-  s: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+  s: ['Google Translate API', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Data Backup Service',
+  e: 'Smart Data Backup Service','
       descriptio,
-  n: 'Automated data backup with AI-powered deduplication and recovery optimization.',
+  n: 'Automated data backup with AI-powered deduplication and recovery optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Automated backup', 'AI deduplication', 'Fast recovery', 'Version control', 'Security encryption'],
+  s: ['Automated backup', 'AI deduplication', 'Fast recovery', 'Version control', 'Security encryption'],'
       benefit,
-  s: ['Protect critical data', 'Reduce storage costs', 'Quick disaster recovery'],
+  s: ['Protect critical data', 'Reduce storage costs', 'Quick disaster recovery'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Data Management',
+  y: 'Data Management','
       technologie,
-  s: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+  s: ['Cloud Storage', 'React', 'Node.js', 'Encryption', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Form Builder',
+  e: 'AI-Powered Form Builder','
       descriptio,
-  n: 'Intelligent form creation with conditional logic and response analysis.',
+  n: 'Intelligent form creation with conditional logic and response analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$89/month',
+  e: '$89/month','
       feature,
-  s: ['Drag-and-drop builder', 'Conditional logic', 'Response analytics', 'Integration APIs', 'Custom styling'],
+  s: ['Drag-and-drop builder', 'Conditional logic', 'Response analytics', 'Integration APIs', 'Custom styling'],'
       benefit,
-  s: ['Create complex forms easily', 'Gather better data', 'Improve user experience'],
+  s: ['Create complex forms easily', 'Gather better data', 'Improve user experience'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Form Management',
+  y: 'Form Management','
       technologie,
-  s: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Form APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Uptime Monitor',
+  e: 'Smart Uptime Monitor','
       descriptio,
-  n: 'AI-powered website monitoring with predictive alerts and performance optimization.',
+  n: 'AI-powered website monitoring with predictive alerts and performance optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$69/month',
+  e: '$69/month','
       feature,
-  s: ['Real-time monitoring', 'Predictive alerts', 'Performance analysis', 'Global monitoring', 'Detailed reports'],
+  s: ['Real-time monitoring', 'Predictive alerts', 'Performance analysis', 'Global monitoring', 'Detailed reports'],'
       benefit,
-  s: ['Prevent downtime', 'Improve performance', 'Reduce monitoring costs'],
+  s: ['Prevent downtime', 'Improve performance', 'Reduce monitoring costs'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'Monitoring',
+  y: 'Monitoring','
       technologie,
-  s: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+  s: ['Monitoring APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Survey Creator',
+  e: 'AI-Powered Survey Creator','
       descriptio,
-  n: 'Intelligent survey design with question optimization and response analysis.',
+  n: 'Intelligent survey design with question optimization and response analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['AI question generation', 'Response analysis', 'Survey optimization', 'Multi-platform distribution', 'Real-time analytics'],
+  s: ['AI question generation', 'Response analysis', 'Survey optimization', 'Multi-platform distribution', 'Real-time analytics'],'
       benefit,
-  s: ['Create better surveys', 'Get higher response rates', 'Extract actionable insights'],
+  s: ['Create better surveys', 'Get higher response rates', 'Extract actionable insights'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Survey Tools',
+  y: 'Survey Tools','
       technologie,
-  s: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Survey APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart File Converter',
+  e: 'Smart File Converter','
       descriptio,
-  n: 'AI-powered file conversion with format optimization and quality enhancement.',
+  n: 'AI-powered file conversion with format optimization and quality enhancement.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$59/month',
+  e: '$59/month','
       feature,
-  s: ['Multi-format conversion', 'Quality enhancement', 'Batch processing', 'Cloud integration', 'API access'],
+  s: ['Multi-format conversion', 'Quality enhancement', 'Batch processing', 'Cloud integration', 'API access'],'
       benefit,
-  s: ['Convert any file format', 'Maintain quality', 'Process files in bulk'],
+  s: ['Convert any file format', 'Maintain quality', 'Process files in bulk'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'File Management',
+  y: 'File Management','
       technologie,
-  s: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+  s: ['File Conversion APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered QR Code Scanner',
+  e: 'AI-Powered QR Code Scanner','
       descriptio,
-  n: 'Advanced QR code scanning with analytics, customization, and business intelligence.',
+  n: 'Advanced QR code scanning with analytics, customization, and business intelligence.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$49/month',
+  e: '$49/month','
       feature,
-  s: ['Advanced scanning', 'Analytics tracking', 'Custom designs', 'Bulk generation', 'API integration'],
+  s: ['Advanced scanning', 'Analytics tracking', 'Custom designs', 'Bulk generation', 'API integration'],'
       benefit,
-  s: ['Track QR code performance', 'Customize designs', 'Gather business insights'],
+  s: ['Track QR code performance', 'Customize designs', 'Gather business insights'],'
       marketPric,
-  e: '$80-150/month',
+  e: '$80-150/month','
       categor,
-  y: 'QR Code Tools',
+  y: 'QR Code Tools','
       technologie,
-  s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']
+  s: ['QR Code APIs', 'React', 'Node.js', 'Analytics', 'Custom Design Tools']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Password Generator',
+  e: 'Smart Password Generator','
       descriptio,
-  n: 'AI-powered password creation with security analysis and breach monitoring.',
+  n: 'AI-powered password creation with security analysis and breach monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$39/month',
+  e: '$39/month','
       feature,
-  s: ['AI password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'Integration APIs'],
+  s: ['AI password generation', 'Security scoring', 'Breach monitoring', 'Team sharing', 'Integration APIs'],'
       benefit,
-  s: ['Create secure passwords', 'Monitor security breaches', 'Simplify team management'],
+  s: ['Create secure passwords', 'Monitor security breaches', 'Simplify team management'],'
       marketPric,
-  e: '$60-120/month',
+  e: '$60-120/month','
       categor,
-  y: 'Security',
+  y: 'Security','
       technologie,
-  s: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']
+  s: ['Security APIs', 'React', 'Node.js', 'Encryption', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Color Picker',
+  e: 'AI-Powered Color Picker','
       descriptio,
-  n: 'Intelligent color selection with accessibility checking and brand analysis.',
+  n: 'Intelligent color selection with accessibility checking and brand analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$49/month',
+  e: '$49/month','
       feature,
-  s: ['AI color selection', 'Accessibility checking', 'Brand analysis', 'Palette generation', 'Export options'],
+  s: ['AI color selection', 'Accessibility checking', 'Brand analysis', 'Palette generation', 'Export options'],'
       benefit,
-  s: ['Choose perfect colors', 'Ensure accessibility', 'Maintain brand consistency'],
+  s: ['Choose perfect colors', 'Ensure accessibility', 'Maintain brand consistency'],'
       marketPric,
-  e: '$80-150/month',
+  e: '$80-150/month','
       categor,
-  y: 'Design Tools',
+  y: 'Design Tools','
       technologie,
-  s: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']
+  s: ['Color APIs', 'React', 'Node.js', 'Accessibility Tools', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Text Summarizer',
+  e: 'Smart Text Summarizer','
       descriptio,
-  n: 'AI-powered text summarization with key point extraction and multi-language support.',
+  n: 'AI-powered text summarization with key point extraction and multi-language support.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$69/month',
+  e: '$69/month','
       feature,
-  s: ['AI summarization', 'Key point extraction', 'Multi-language support', 'Bulk processing', 'API integration'],
+  s: ['AI summarization', 'Key point extraction', 'Multi-language support', 'Bulk processing', 'API integration'],'
       benefit,
-  s: ['Save reading time', 'Extract key insights', 'Process large documents'],
+  s: ['Save reading time', 'Extract key insights', 'Process large documents'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'Text Processing',
+  y: 'Text Processing','
       technologie,
-  s: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']
+  s: ['NLP', 'OpenAI GPT', 'React', 'Node.js', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Image Resizer',
+  e: 'AI-Powered Image Resizer','
       descriptio,
-  n: 'Intelligent image resizing with quality optimization and batch processing.',
+  n: 'Intelligent image resizing with quality optimization and batch processing.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$59/month',
+  e: '$59/month','
       feature,
-  s: ['Smart resizing', 'Quality optimization', 'Batch processing', 'Format conversion', 'Cloud integration'],
+  s: ['Smart resizing', 'Quality optimization', 'Batch processing', 'Format conversion', 'Cloud integration'],'
       benefit,
-  s: ['Optimize image sizes', 'Maintain quality', 'Process images in bulk'],
+  s: ['Optimize image sizes', 'Maintain quality', 'Process images in bulk'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'Image Processing',
+  y: 'Image Processing','
       technologie,
-  s: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']
+  s: ['Image Processing APIs', 'React', 'Node.js', 'Cloud Storage', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart URL Shortener',
+  e: 'Smart URL Shortener','
       descriptio,
-  n: 'AI-powered URL shortening with analytics, customization, and link management.',
+  n: 'AI-powered URL shortening with analytics, customization, and link management.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$39/month',
+  e: '$39/month','
       feature,
-  s: ['Custom short URLs', 'Analytics tracking', 'Link management', 'QR code generation', 'API access'],
+  s: ['Custom short URLs', 'Analytics tracking', 'Link management', 'QR code generation', 'API access'],'
       benefit,
-  s: ['Track link performance', 'Customize URLs', 'Manage campaigns'],
+  s: ['Track link performance', 'Customize URLs', 'Manage campaigns'],'
       marketPric,
-  e: '$60-120/month',
+  e: '$60-120/month','
       categor,
-  y: 'URL Management',
+  y: 'URL Management','
       technologie,
-  s: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']
+  s: ['URL APIs', 'React', 'Node.js', 'Analytics', 'QR Code Generation']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Favicon Generator',
+  e: 'AI-Powered Favicon Generator','
       descriptio,
-  n: 'Intelligent favicon creation with brand analysis and multiple format generation.',
+  n: 'Intelligent favicon creation with brand analysis and multiple format generation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$49/month',
+  e: '$49/month','
       feature,
-  s: ['AI favicon generation', 'Brand analysis', 'Multiple formats', 'Bulk generation', 'Quality optimization'],
+  s: ['AI favicon generation', 'Brand analysis', 'Multiple formats', 'Bulk generation', 'Quality optimization'],'
       benefit,
-  s: ['Create professional favicons', 'Maintain brand consistency', 'Generate all required sizes'],
+  s: ['Create professional favicons', 'Maintain brand consistency', 'Generate all required sizes'],'
       marketPric,
-  e: '$80-150/month',
+  e: '$80-150/month','
       categor,
-  y: 'Web Development',
+  y: 'Web Development','
       technologie,
-  s: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']
+  s: ['Image Processing', 'React', 'Node.js', 'Brand Analysis', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Meta Tag Generator',
+  e: 'Smart Meta Tag Generator','
       descriptio,
-  n: 'AI-powered SEO meta tag creation with optimization and performance tracking.',
+  n: 'AI-powered SEO meta tag creation with optimization and performance tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$59/month',
+  e: '$59/month','
       feature,
-  s: ['AI meta tag generation', 'SEO optimization', 'Performance tracking', 'Bulk generation', 'Integration APIs'],
+  s: ['AI meta tag generation', 'SEO optimization', 'Performance tracking', 'Bulk generation', 'Integration APIs'],'
       benefit,
-  s: ['Improve SEO rankings', 'Optimize meta tags', 'Track performance'],
+  s: ['Improve SEO rankings', 'Optimize meta tags', 'Track performance'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools','
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Sitemap Generator',
+  e: 'AI-Powered Sitemap Generator','
       descriptio,
-  n: 'Intelligent sitemap creation with SEO optimization and search engine submission.',
+  n: 'Intelligent sitemap creation with SEO optimization and search engine submission.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$69/month',
+  e: '$69/month','
       feature,
-  s: ['AI sitemap generation', 'SEO optimization', 'Auto-submission', 'Change detection', 'Analytics integration'],
+  s: ['AI sitemap generation', 'SEO optimization', 'Auto-submission', 'Change detection', 'Analytics integration'],'
       benefit,
-  s: ['Improve search visibility', 'Automate sitemap updates', 'Optimize for search engines'],
+  s: ['Improve search visibility', 'Automate sitemap updates', 'Optimize for search engines'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools','
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Search Engine APIs', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Robots.txt Generator',
+  e: 'Smart Robots.txt Generator','
       descriptio,
-  n: 'AI-powered robots.txt creation with SEO optimization and search engine guidance.',
+  n: 'AI-powered robots.txt creation with SEO optimization and search engine guidance.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$39/month',
+  e: '$39/month','
       feature,
-  s: ['AI robots.txt generation', 'SEO optimization', 'Search engine guidance', 'Validation checking', 'Auto-updates'],
+  s: ['AI robots.txt generation', 'SEO optimization', 'Search engine guidance', 'Validation checking', 'Auto-updates'],'
       benefit,
-  s: ['Control search engine crawling', 'Optimize SEO', 'Prevent indexing issues'],
+  s: ['Control search engine crawling', 'Optimize SEO', 'Prevent indexing issues'],'
       marketPric,
-  e: '$60-120/month',
+  e: '$60-120/month','
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools','
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Schema Markup Generator',
+  e: 'AI-Powered Schema Markup Generator','
       descriptio,
-  n: 'Intelligent schema markup creation for enhanced search engine visibility.',
+  n: 'Intelligent schema markup creation for enhanced search engine visibility.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['AI schema generation', 'Multiple schema types', 'Validation checking', 'Bulk generation', 'Integration APIs'],
+  s: ['AI schema generation', 'Multiple schema types', 'Validation checking', 'Bulk generation', 'Integration APIs'],'
       benefit,
-  s: ['Improve search visibility', 'Rich snippets', 'Better search results'],
+  s: ['Improve search visibility', 'Rich snippets', 'Better search results'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools','
       technologie,
-  s: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']
+  s: ['Schema APIs', 'React', 'Node.js', 'Validation Tools', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Alt Text Generator',
+  e: 'Smart Alt Text Generator','
       descriptio,
-  n: 'AI-powered alt text creation for images with SEO optimization and accessibility.',
+  n: 'AI-powered alt text creation for images with SEO optimization and accessibility.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$49/month',
+  e: '$49/month','
       feature,
-  s: ['AI alt text generation', 'SEO optimization', 'Accessibility checking', 'Bulk processing', 'Quality scoring'],
+  s: ['AI alt text generation', 'SEO optimization', 'Accessibility checking', 'Bulk processing', 'Quality scoring'],'
       benefit,
-  s: ['Improve accessibility', 'Boost SEO rankings', 'Save time on alt text'],
+  s: ['Improve accessibility', 'Boost SEO rankings', 'Save time on alt text'],'
       marketPric,
-  e: '$80-150/month',
+  e: '$80-150/month','
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools','
       technologie,
-  s: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']
+  s: ['Computer Vision', 'React', 'Node.js', 'Accessibility APIs', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Internal Link Optimizer',
+  e: 'AI-Powered Internal Link Optimizer','
       descriptio,
-  n: 'Intelligent internal linking strategy with SEO optimization and performance tracking.',
+  n: 'Intelligent internal linking strategy with SEO optimization and performance tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['AI link suggestions', 'SEO optimization', 'Performance tracking', 'Bulk implementation', 'Analytics integration'],
+  s: ['AI link suggestions', 'SEO optimization', 'Performance tracking', 'Bulk implementation', 'Analytics integration'],'
       benefit,
-  s: ['Improve SEO rankings', 'Increase page authority', 'Optimize site structure'],
+  s: ['Improve SEO rankings', 'Increase page authority', 'Optimize site structure'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools','
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Keyword Density Analyzer',
+  e: 'Smart Keyword Density Analyzer','
       descriptio,
-  n: 'AI-powered keyword analysis with optimization recommendations and competitor tracking.',
+  n: 'AI-powered keyword analysis with optimization recommendations and competitor tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Keyword density analysis', 'Optimization recommendations', 'Competitor tracking', 'Bulk analysis', 'Reporting'],
+  s: ['Keyword density analysis', 'Optimization recommendations', 'Competitor tracking', 'Bulk analysis', 'Reporting'],'
       benefit,
-  s: ['Optimize keyword usage', 'Improve SEO rankings', 'Track competitor strategies'],
+  s: ['Optimize keyword usage', 'Improve SEO rankings', 'Track competitor strategies'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'SEO Tools',
+  y: 'SEO Tools','
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Page Speed Optimizer',
+  e: 'AI-Powered Page Speed Optimizer','
       descriptio,
-  n: 'Intelligent page speed optimization with performance monitoring and recommendations.',
+  n: 'Intelligent page speed optimization with performance monitoring and recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Speed analysis', 'Optimization recommendations', 'Performance monitoring', 'Bulk optimization', 'Reporting'],
+  s: ['Speed analysis', 'Optimization recommendations', 'Performance monitoring', 'Bulk optimization', 'Reporting'],'
       benefit,
-  s: ['Improve page speed', 'Better user experience', 'Higher search rankings'],
+  s: ['Improve page speed', 'Better user experience', 'Higher search rankings'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Performance Optimization',
+  y: 'Performance Optimization','
       technologie,
-  s: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Performance APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Core Web Vitals Monitor',
+  e: 'Smart Core Web Vitals Monitor','
       descriptio,
-  n: 'AI-powered Core Web Vitals monitoring with optimization recommendations and alerts.',
+  n: 'AI-powered Core Web Vitals monitoring with optimization recommendations and alerts.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Core Web Vitals monitoring', 'Optimization recommendations', 'Alert system', 'Performance tracking', 'Reporting'],
+  s: ['Core Web Vitals monitoring', 'Optimization recommendations', 'Alert system', 'Performance tracking', 'Reporting'],'
       benefit,
-  s: ['Monitor Core Web Vitals', 'Improve user experience', 'Maintain SEO rankings'],
+  s: ['Monitor Core Web Vitals', 'Improve user experience', 'Maintain SEO rankings'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Performance Monitoring',
+  y: 'Performance Monitoring','
       technologie,
-  s: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']
+  s: ['Performance APIs', 'React', 'Node.js', 'Alert Systems', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Mobile Optimization Tool',
+  e: 'AI-Powered Mobile Optimization Tool','
       descriptio,
-  n: 'Intelligent mobile optimization with responsive design analysis and performance improvements.',
+  n: 'Intelligent mobile optimization with responsive design analysis and performance improvements.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$119/month',
+  e: '$119/month','
       feature,
-  s: ['Mobile analysis', 'Responsive design optimization', 'Performance improvements', 'Bulk optimization', 'Testing'],
+  s: ['Mobile analysis', 'Responsive design optimization', 'Performance improvements', 'Bulk optimization', 'Testing'],'
       benefit,
-  s: ['Improve mobile experience', 'Better mobile rankings', 'Increase mobile conversions'],
+  s: ['Improve mobile experience', 'Better mobile rankings', 'Increase mobile conversions'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Mobile Optimization',
+  y: 'Mobile Optimization','
       technologie,
-  s: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']
+  s: ['Mobile APIs', 'React', 'Node.js', 'Testing Tools', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Local SEO Optimizer',
+  e: 'Smart Local SEO Optimizer','
       descriptio,
-  n: 'AI-powered local SEO optimization with Google My Business management and review monitoring.',
+  n: 'AI-powered local SEO optimization with Google My Business management and review monitoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$129/month',
+  e: '$129/month','
       feature,
-  s: ['Local SEO analysis', 'Google My Business optimization', 'Review monitoring', 'Citation management', 'Reporting'],
+  s: ['Local SEO analysis', 'Google My Business optimization', 'Review monitoring', 'Citation management', 'Reporting'],'
       benefit,
-  s: ['Improve local visibility', 'Manage online reputation', 'Increase local traffic'],
+  s: ['Improve local visibility', 'Manage online reputation', 'Increase local traffic'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Local SEO',
+  y: 'Local SEO','
       technologie,
-  s: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']
+  s: ['Local SEO APIs', 'React', 'Node.js', 'Google APIs', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Competitor SEO Analyzer',
+  e: 'AI-Powered Competitor SEO Analyzer','
       descriptio,
-  n: 'Intelligent competitor SEO analysis with strategy recommendations and performance tracking.',
+  n: 'Intelligent competitor SEO analysis with strategy recommendations and performance tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Competitor analysis', 'Strategy recommendations', 'Performance tracking', 'Keyword gap analysis', 'Reporting'],
+  s: ['Competitor analysis', 'Strategy recommendations', 'Performance tracking', 'Keyword gap analysis', 'Reporting'],'
       benefit,
-  s: ['Analyze competitor strategies', 'Identify opportunities', 'Improve SEO performance'],
+  s: ['Analyze competitor strategies', 'Identify opportunities', 'Improve SEO performance'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Competitive Analysis',
+  y: 'Competitive Analysis','
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Backlink Analyzer',
+  e: 'Smart Backlink Analyzer','
       descriptio,
-  n: 'AI-powered backlink analysis with quality assessment and link building recommendations.',
+  n: 'AI-powered backlink analysis with quality assessment and link building recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Backlink analysis', 'Quality assessment', 'Link building recommendations', 'Competitor analysis', 'Monitoring'],
+  s: ['Backlink analysis', 'Quality assessment', 'Link building recommendations', 'Competitor analysis', 'Monitoring'],'
       benefit,
-  s: ['Analyze backlink profile', 'Improve link quality', 'Build better links'],
+  s: ['Analyze backlink profile', 'Improve link quality', 'Build better links'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Link Building',
+  y: 'Link Building','
       technologie,
-  s: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Backlink APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Content Gap Analyzer',
+  e: 'AI-Powered Content Gap Analyzer','
       descriptio,
-  n: 'Intelligent content gap analysis with topic recommendations and content strategy optimization.',
+  n: 'Intelligent content gap analysis with topic recommendations and content strategy optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Content gap analysis', 'Topic recommendations', 'Content strategy optimization', 'Competitor analysis', 'Planning'],
+  s: ['Content gap analysis', 'Topic recommendations', 'Content strategy optimization', 'Competitor analysis', 'Planning'],'
       benefit,
-  s: ['Identify content opportunities', 'Improve content strategy', 'Increase organic traffic'],
+  s: ['Identify content opportunities', 'Improve content strategy', 'Increase organic traffic'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Content Strategy',
+  y: 'Content Strategy','
       technologie,
-  s: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']
+  s: ['Content APIs', 'React', 'Node.js', 'Analytics', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Technical SEO Auditor',
+  e: 'Smart Technical SEO Auditor','
       descriptio,
-  n: 'AI-powered technical SEO auditing with issue detection and optimization recommendations.',
+  n: 'AI-powered technical SEO auditing with issue detection and optimization recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Technical SEO audit', 'Issue detection', 'Optimization recommendations', 'Monitoring', 'Reporting'],
+  s: ['Technical SEO audit', 'Issue detection', 'Optimization recommendations', 'Monitoring', 'Reporting'],'
       benefit,
-  s: ['Identify technical issues', 'Improve SEO performance', 'Prevent ranking drops'],
+  s: ['Identify technical issues', 'Improve SEO performance', 'Prevent ranking drops'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Technical SEO',
+  y: 'Technical SEO','
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Monitoring Tools', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered E-commerce SEO Optimizer',
+  e: 'AI-Powered E-commerce SEO Optimizer','
       descriptio,
-  n: 'Intelligent e-commerce SEO optimization with product page optimization and category management.',
+  n: 'Intelligent e-commerce SEO optimization with product page optimization and category management.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Product page optimization', 'Category management', 'Schema markup', 'Image optimization', 'Performance tracking'],
+  s: ['Product page optimization', 'Category management', 'Schema markup', 'Image optimization', 'Performance tracking'],'
       benefit,
-  s: ['Improve e-commerce SEO', 'Increase product visibility', 'Boost online sales'],
+  s: ['Improve e-commerce SEO', 'Increase product visibility', 'Boost online sales'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'E-commerce SEO',
+  y: 'E-commerce SEO','
       technologie,
-  s: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']
+  s: ['E-commerce APIs', 'React', 'Node.js', 'SEO Tools', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Voice Search Optimizer',
+  e: 'Smart Voice Search Optimizer','
       descriptio,
-  n: 'AI-powered voice search optimization with conversational content and featured snippet optimization.',
+  n: 'AI-powered voice search optimization with conversational content and featured snippet optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Voice search optimization', 'Conversational content', 'Featured snippet optimization', 'Local voice search', 'Analytics'],
+  s: ['Voice search optimization', 'Conversational content', 'Featured snippet optimization', 'Local voice search', 'Analytics'],'
       benefit,
-  s: ['Optimize for voice search', 'Capture featured snippets', 'Improve local visibility'],
+  s: ['Optimize for voice search', 'Capture featured snippets', 'Improve local visibility'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Voice Search SEO',
+  y: 'Voice Search SEO','
       technologie,
-  s: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']
+  s: ['Voice Search APIs', 'React', 'Node.js', 'NLP', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Video SEO Optimizer',
+  e: 'AI-Powered Video SEO Optimizer','
       descriptio,
-  n: 'Intelligent video SEO optimization with YouTube optimization and video content analysis.',
+  n: 'Intelligent video SEO optimization with YouTube optimization and video content analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Video SEO optimization', 'YouTube optimization', 'Video content analysis', 'Thumbnail optimization', 'Performance tracking'],
+  s: ['Video SEO optimization', 'YouTube optimization', 'Video content analysis', 'Thumbnail optimization', 'Performance tracking'],'
       benefit,
-  s: ['Improve video visibility', 'Increase video traffic', 'Optimize video content'],
+  s: ['Improve video visibility', 'Increase video traffic', 'Optimize video content'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Video SEO',
+  y: 'Video SEO','
       technologie,
-  s: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']
+  s: ['Video APIs', 'React', 'Node.js', 'YouTube APIs', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart Featured Snippet Optimizer',
+  e: 'Smart Featured Snippet Optimizer','
       descriptio,
-  n: 'AI-powered featured snippet optimization with content analysis and ranking improvements.',
+  n: 'AI-powered featured snippet optimization with content analysis and ranking improvements.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$129/month',
+  e: '$129/month','
       feature,
-  s: ['Featured snippet optimization', 'Content analysis', 'Ranking improvements', 'Competitor analysis', 'Monitoring'],
+  s: ['Featured snippet optimization', 'Content analysis', 'Ranking improvements', 'Competitor analysis', 'Monitoring'],'
       benefit,
-  s: ['Capture featured snippets', 'Improve search visibility', 'Increase click-through rates'],
+  s: ['Capture featured snippets', 'Improve search visibility', 'Increase click-through rates'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Featured Snippets',
+  y: 'Featured Snippets','
       technologie,
-  s: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']
+  s: ['SEO APIs', 'React', 'Node.js', 'Content Analysis', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered Image SEO Optimizer',
+  e: 'AI-Powered Image SEO Optimizer','
       descriptio,
-  n: 'Intelligent image SEO optimization with alt text generation and image performance analysis.',
+  n: 'Intelligent image SEO optimization with alt text generation and image performance analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Image SEO optimization', 'Alt text generation', 'Image performance analysis', 'Bulk optimization', 'Quality scoring'],
+  s: ['Image SEO optimization', 'Alt text generation', 'Image performance analysis', 'Bulk optimization', 'Quality scoring'],'
       benefit,
-  s: ['Improve image SEO', 'Increase image traffic', 'Optimize image performance'],
+  s: ['Improve image SEO', 'Increase image traffic', 'Optimize image performance'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Image SEO',
+  y: 'Image SEO','
       technologie,
-  s: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']
+  s: ['Image APIs', 'React', 'Node.js', 'Computer Vision', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'Smart International SEO Manager',
+  e: 'Smart International SEO Manager','
       descriptio,
-  n: 'AI-powered international SEO management with hreflang optimization and multi-language content.',
+  n: 'AI-powered international SEO management with hreflang optimization and multi-language content.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['International SEO management', 'Hreflang optimization', 'Multi-language content', 'Geographic targeting', 'Performance tracking'],
+  s: ['International SEO management', 'Hreflang optimization', 'Multi-language content', 'Geographic targeting', 'Performance tracking'],'
       benefit,
-  s: ['Optimize for international markets', 'Improve global visibility', 'Manage multi-language sites'],
+  s: ['Optimize for international markets', 'Improve global visibility', 'Manage multi-language sites'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'International SEO',
+  y: 'International SEO','
       technologie,
-  s: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']
+  s: ['International APIs', 'React', 'Node.js', 'Translation APIs', 'Custom AI Models']'
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI-Powered SEO Reporting Dashboard',
+  e: 'AI-Powered SEO Reporting Dashboard','
       descriptio,
-  n: 'Intelligent SEO reporting with automated insights and performance tracking across all channels.',
+  n: 'Intelligent SEO reporting with automated insights and performance tracking across all channels.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Automated SEO reporting', 'Performance tracking', 'Insight generation', 'Custom dashboards', 'Multi-channel analysis'],
+  s: ['Automated SEO reporting', 'Performance tracking', 'Insight generation', 'Custom dashboards', 'Multi-channel analysis'],'
       benefit,
-  s: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions'],
+  s: ['Track SEO performance', 'Generate insights', 'Make data-driven decisions'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'SEO Reporting',
+  y: 'SEO Reporting','
       technologie,
-  s: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']
+  s: ['Analytics APIs', 'React', 'Node.js', 'Dashboard Tools', 'Custom AI Models']'
     },
     // NEW COMPREHENSIVE MICRO SAAS SERVICES
     // AI Productivity & Time Management
@@ -9429,1121 +10581,1160 @@ const realEstateSaaS = [
   O: Add content,}
 }
   titl,
-  e: 'AI Time Tracking & Productivity Analyzer',
+  e: 'AI Time Tracking & Productivity Analyzer','
       descriptio,
-  n: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.',
+  n: 'Intelligent time tracking with productivity insights, distraction blocking, and work pattern analysis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Automatic time tracking', 'Productivity analysis', 'Distraction blocking', 'Work pattern insights', 'Goal tracking', 'Team analytics'],
+  s: ['Automatic time tracking', 'Productivity analysis', 'Distraction blocking', 'Work pattern insights', 'Goal tracking', 'Team analytics'],'
       benefit,
-  s: ['Increase productivity by 25%', 'Identify time wasters', 'Optimize work patterns', 'Achieve goals faster'],
+  s: ['Increase productivity by 25%', 'Identify time wasters', 'Optimize work patterns', 'Achieve goals faster'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Productivity',
+  y: 'Productivity','
       technologie,
-  s: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Browser Extension', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Task Management & Prioritization',
+  e: 'AI Task Management & Prioritization','
       descriptio,
-  n: 'Smart task management with AI-powered prioritization, deadline prediction, and workload balancing.',
+  n: 'Smart task management with AI-powered prioritization, deadline prediction, and workload balancing.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$89/month',
+  e: '$89/month','
       feature,
-  s: ['Smart prioritization', 'Deadline prediction', 'Workload balancing', 'Team coordination', 'Progress tracking', 'Integration tools'],
+  s: ['Smart prioritization', 'Deadline prediction', 'Workload balancing', 'Team coordination', 'Progress tracking', 'Integration tools'],'
       benefit,
-  s: ['Complete tasks 30% faster', 'Never miss deadlines', 'Balance workload effectively', 'Improve team coordination'],
+  s: ['Complete tasks 30% faster', 'Never miss deadlines', 'Balance workload effectively', 'Improve team coordination'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Productivity',
+  y: 'Productivity','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Calendar APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Email Management & Prioritization',
+  e: 'AI Email Management & Prioritization','
       descriptio,
-  n: 'Intelligent email organization with smart filtering, priority scoring, and automated responses.',
+  n: 'Intelligent email organization with smart filtering, priority scoring, and automated responses.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$69/month',
+  e: '$69/month','
       feature,
-  s: ['Smart filtering', 'Priority scoring', 'Auto responses', 'Email scheduling', 'Follow-up reminders', 'Spam protection'],
+  s: ['Smart filtering', 'Priority scoring', 'Auto responses', 'Email scheduling', 'Follow-up reminders', 'Spam protection'],'
       benefit,
-  s: ['Reduce email overwhelm', 'Respond faster', 'Never miss important emails', 'Save 2+ hours daily'],
+  s: ['Reduce email overwhelm', 'Respond faster', 'Never miss important emails', 'Save 2+ hours daily'],'
       marketPric,
-  e: '$100-200/month',
+  e: '$100-200/month','
       categor,
-  y: 'Communication',
+  y: 'Communication','
       technologie,
-  s: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],
+  s: ['NLP', 'Gmail API', 'Outlook API', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI HR & Recruitment
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Resume Parser & Candidate Matcher',
+  e: 'AI Resume Parser & Candidate Matcher','
       descriptio,
-  n: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.',
+  n: 'Intelligent resume analysis with candidate matching, skill assessment, and interview scheduling.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Resume parsing', 'Candidate matching', 'Skill assessment', 'Interview scheduling', 'Background checks', 'Onboarding automation'],
+  s: ['Resume parsing', 'Candidate matching', 'Skill assessment', 'Interview scheduling', 'Background checks', 'Onboarding automation'],'
       benefit,
-  s: ['Reduce hiring time by 50%', 'Find better candidates', 'Eliminate bias', 'Streamline recruitment'],
+  s: ['Reduce hiring time by 50%', 'Find better candidates', 'Eliminate bias', 'Streamline recruitment'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'HR & Recruitment',
+  y: 'HR & Recruitment','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Employee Performance Tracker',
+  e: 'AI Employee Performance Tracker','
       descriptio,
-  n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.',
+  n: 'Comprehensive performance monitoring with goal tracking, feedback analysis, and development recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Performance tracking', 'Goal monitoring', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],
+  s: ['Performance tracking', 'Goal monitoring', 'Feedback analysis', 'Development plans', 'Team analytics', 'Recognition system'],'
       benefit,
-  s: ['Improve performance by 35%', 'Identify top performers', 'Support employee growth', 'Reduce turnover'],
+  s: ['Improve performance by 35%', 'Identify top performers', 'Support employee growth', 'Reduce turnover'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'HR & Performance',
+  y: 'HR & Performance','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Workplace Safety Monitor',
+  e: 'AI Workplace Safety Monitor','
       descriptio,
-  n: 'Intelligent safety monitoring with incident prediction, compliance tracking, and emergency response.',
+  n: 'Intelligent safety monitoring with incident prediction, compliance tracking, and emergency response.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Incident prediction', 'Compliance tracking', 'Emergency alerts', 'Safety training', 'Risk assessment', 'Reporting system'],
+  s: ['Incident prediction', 'Compliance tracking', 'Emergency alerts', 'Safety training', 'Risk assessment', 'Reporting system'],'
       benefit,
-  s: ['Prevent workplace accidents', 'Ensure compliance', 'Reduce insurance costs', 'Protect employees'],
+  s: ['Prevent workplace accidents', 'Ensure compliance', 'Reduce insurance costs', 'Protect employees'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Workplace Safety',
+  y: 'Workplace Safety','
       technologie,
-  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],
+  s: ['Computer Vision', 'IoT Sensors', 'Machine Learning', 'React', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Customer Service & Support
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Support Ticket Router',
+  e: 'AI Customer Support Ticket Router','
       descriptio,
-  n: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.',
+  n: 'Intelligent ticket routing with priority scoring, agent matching, and automated responses.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$129/month',
+  e: '$129/month','
       feature,
-  s: ['Smart routing', 'Priority scoring', 'Agent matching', 'Auto responses', 'Escalation management', 'Performance analytics'],
+  s: ['Smart routing', 'Priority scoring', 'Agent matching', 'Auto responses', 'Escalation management', 'Performance analytics'],'
       benefit,
-  s: ['Reduce response time by 60%', 'Improve customer satisfaction', 'Optimize agent workload', 'Lower support costs'],
+  s: ['Reduce response time by 60%', 'Improve customer satisfaction', 'Optimize agent workload', 'Lower support costs'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Customer Support',
+  y: 'Customer Support','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Customer Feedback Analyzer',
+  e: 'AI Customer Feedback Analyzer','
       descriptio,
-  n: 'Advanced sentiment analysis with feedback categorization, trend identification, and action recommendations.',
+  n: 'Advanced sentiment analysis with feedback categorization, trend identification, and action recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Competitor analysis', 'Reporting'],
+  s: ['Sentiment analysis', 'Feedback categorization', 'Trend identification', 'Action recommendations', 'Competitor analysis', 'Reporting'],'
       benefit,
-  s: ['Understand customer needs', 'Identify improvement areas', 'Increase satisfaction', 'Drive product decisions'],
+  s: ['Understand customer needs', 'Identify improvement areas', 'Increase satisfaction', 'Drive product decisions'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Customer Analytics',
+  y: 'Customer Analytics','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Live Chat Assistant',
+  e: 'AI Live Chat Assistant','
       descriptio,
-  n: 'Intelligent live chat with instant responses, context awareness, and seamless human handoff.',
+  n: 'Intelligent live chat with instant responses, context awareness, and seamless human handoff.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Instant responses', 'Context awareness', 'Human handoff', 'Multi-language', 'Integration tools', 'Analytics'],
+  s: ['Instant responses', 'Context awareness', 'Human handoff', 'Multi-language', 'Integration tools', 'Analytics'],'
       benefit,
-  s: ['Provide 24/7 support', 'Reduce wait times', 'Improve customer experience', 'Lower support costs'],
+  s: ['Provide 24/7 support', 'Reduce wait times', 'Improve customer experience', 'Lower support costs'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Customer Support',
+  y: 'Customer Support','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'WebSocket'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Sales & CRM
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Sales Pipeline Optimizer',
+  e: 'AI Sales Pipeline Optimizer','
       descriptio,
-  n: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.',
+  n: 'Intelligent sales pipeline management with opportunity scoring, forecasting, and deal acceleration.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Opportunity scoring', 'Sales forecasting', 'Deal acceleration', 'Pipeline analytics', 'Activity tracking', 'CRM integration'],
+  s: ['Opportunity scoring', 'Sales forecasting', 'Deal acceleration', 'Pipeline analytics', 'Activity tracking', 'CRM integration'],'
       benefit,
-  s: ['Increase close rates by 40%', 'Improve forecasting accuracy', 'Accelerate deals', 'Optimize sales process'],
+  s: ['Increase close rates by 40%', 'Improve forecasting accuracy', 'Accelerate deals', 'Optimize sales process'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Sales & CRM',
+  y: 'Sales & CRM','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'CRM APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Sales Call Analyzer',
+  e: 'AI Sales Call Analyzer','
       descriptio,
-  n: 'Advanced call analysis with sentiment tracking, objection identification, and coaching recommendations.',
+  n: 'Advanced call analysis with sentiment tracking, objection identification, and coaching recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Call transcription', 'Sentiment analysis', 'Objection identification', 'Coaching recommendations', 'Performance tracking', 'Team analytics'],
+  s: ['Call transcription', 'Sentiment analysis', 'Objection identification', 'Coaching recommendations', 'Performance tracking', 'Team analytics'],'
       benefit,
-  s: ['Improve sales skills', 'Identify coaching opportunities', 'Increase conversion rates', 'Track team performance'],
+  s: ['Improve sales skills', 'Identify coaching opportunities', 'Increase conversion rates', 'Track team performance'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Sales Training',
+  y: 'Sales Training','
       technologie,
-  s: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],
+  s: ['Speech Recognition', 'NLP', 'Machine Learning', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Proposal Generator Pro',
+  e: 'AI Proposal Generator Pro','
       descriptio,
-  n: 'Intelligent proposal creation with template optimization, pricing analysis, and win probability scoring.',
+  n: 'Intelligent proposal creation with template optimization, pricing analysis, and win probability scoring.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$119/month',
+  e: '$119/month','
       feature,
-  s: ['Template optimization', 'Pricing analysis', 'Win probability scoring', 'Client personalization', 'Version control', 'Approval workflow'],
+  s: ['Template optimization', 'Pricing analysis', 'Win probability scoring', 'Client personalization', 'Version control', 'Approval workflow'],'
       benefit,
-  s: ['Create proposals 5x faster', 'Increase win rates', 'Optimize pricing', 'Personalize content'],
+  s: ['Create proposals 5x faster', 'Increase win rates', 'Optimize pricing', 'Personalize content'],'
       marketPric,
-  e: '$180-350/month',
+  e: '$180-350/month','
       categor,
-  y: 'Sales Tools',
+  y: 'Sales Tools','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Project Management
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Project Risk Predictor',
+  e: 'AI Project Risk Predictor','
       descriptio,
-  n: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.',
+  n: 'Intelligent project risk assessment with early warning systems and mitigation recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Risk assessment', 'Early warning system', 'Mitigation recommendations', 'Project monitoring', 'Team analysis', 'Resource optimization'],
+  s: ['Risk assessment', 'Early warning system', 'Mitigation recommendations', 'Project monitoring', 'Team analysis', 'Resource optimization'],'
       benefit,
-  s: ['Prevent project failures', 'Reduce risks by 50%', 'Improve success rates', 'Optimize resources'],
+  s: ['Prevent project failures', 'Reduce risks by 50%', 'Improve success rates', 'Optimize resources'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Project Management',
+  y: 'Project Management','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Resource Allocation Optimizer',
+  e: 'AI Resource Allocation Optimizer','
       descriptio,
-  n: 'Smart resource allocation with capacity planning, skill matching, and workload balancing.',
+  n: 'Smart resource allocation with capacity planning, skill matching, and workload balancing.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Capacity planning', 'Skill matching', 'Workload balancing', 'Resource forecasting', 'Team optimization', 'Cost analysis'],
+  s: ['Capacity planning', 'Skill matching', 'Workload balancing', 'Resource forecasting', 'Team optimization', 'Cost analysis'],'
       benefit,
-  s: ['Optimize resource usage', 'Improve team efficiency', 'Reduce costs', 'Balance workloads'],
+  s: ['Optimize resource usage', 'Improve team efficiency', 'Reduce costs', 'Balance workloads'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Resource Management',
+  y: 'Resource Management','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Optimization'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Project Timeline Predictor',
+  e: 'AI Project Timeline Predictor','
       descriptio,
-  n: 'Accurate project timeline prediction with milestone tracking and delay prevention.',
+  n: 'Accurate project timeline prediction with milestone tracking and delay prevention.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Timeline prediction', 'Milestone tracking', 'Delay prevention', 'Progress monitoring', 'Bottleneck identification', 'Scenario planning'],
+  s: ['Timeline prediction', 'Milestone tracking', 'Delay prevention', 'Progress monitoring', 'Bottleneck identification', 'Scenario planning'],'
       benefit,
-  s: ['Deliver projects on time', 'Prevent delays', 'Identify bottlenecks', 'Improve planning'],
+  s: ['Deliver projects on time', 'Prevent delays', 'Identify bottlenecks', 'Improve planning'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Project Planning',
+  y: 'Project Planning','
       technologie,
-  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],
+  s: ['Machine Learning', 'React', 'Node.js', 'PostgreSQL', 'Analytics'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Security & Compliance
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Security Threat Detector',
+  e: 'AI Security Threat Detector','
       descriptio,
-  n: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.',
+  n: 'Advanced threat detection with real-time monitoring, vulnerability assessment, and incident response.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Threat detection', 'Real-time monitoring', 'Vulnerability assessment', 'Incident response', 'Compliance tracking', 'Security analytics'],
+  s: ['Threat detection', 'Real-time monitoring', 'Vulnerability assessment', 'Incident response', 'Compliance tracking', 'Security analytics'],'
       benefit,
-  s: ['Prevent security breaches', 'Detect threats early', 'Ensure compliance', 'Reduce security costs'],
+  s: ['Prevent security breaches', 'Detect threats early', 'Ensure compliance', 'Reduce security costs'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Cybersecurity',
+  y: 'Cybersecurity','
       technologie,
-  s: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'SIEM', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Compliance Monitor',
+  e: 'AI Compliance Monitor','
       descriptio,
-  n: 'Automated compliance monitoring with regulation tracking, audit preparation, and violation alerts.',
+  n: 'Automated compliance monitoring with regulation tracking, audit preparation, and violation alerts.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Compliance tracking', 'Audit preparation', 'Violation alerts', 'Regulation updates', 'Documentation', 'Reporting'],
+  s: ['Compliance tracking', 'Audit preparation', 'Violation alerts', 'Regulation updates', 'Documentation', 'Reporting'],'
       benefit,
-  s: ['Ensure compliance', 'Reduce audit time', 'Prevent violations', 'Lower compliance costs'],
+  s: ['Ensure compliance', 'Reduce audit time', 'Prevent violations', 'Lower compliance costs'],'
       marketPric,
-  e: '$350-700/month',
+  e: '$350-700/month','
       categor,
-  y: 'Compliance',
+  y: 'Compliance','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Data Privacy Manager',
+  e: 'AI Data Privacy Manager','
       descriptio,
-  n: 'Intelligent data privacy management with GDPR compliance, consent tracking, and data protection.',
+  n: 'Intelligent data privacy management with GDPR compliance, consent tracking, and data protection.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['GDPR compliance', 'Consent tracking', 'Data protection', 'Privacy impact assessment', 'Data mapping', 'Breach notification'],
+  s: ['GDPR compliance', 'Consent tracking', 'Data protection', 'Privacy impact assessment', 'Data mapping', 'Breach notification'],'
       benefit,
-  s: ['Ensure data privacy', 'Meet GDPR requirements', 'Protect customer data', 'Avoid penalties'],
+  s: ['Ensure data privacy', 'Meet GDPR requirements', 'Protect customer data', 'Avoid penalties'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Data Privacy',
+  y: 'Data Privacy','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Quality Assurance & Testing
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Automated Testing Suite',
+  e: 'AI Automated Testing Suite','
       descriptio,
-  n: 'Comprehensive automated testing with test generation, execution, and maintenance.',
+  n: 'Comprehensive automated testing with test generation, execution, and maintenance.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$179/month',
+  e: '$179/month','
       feature,
-  s: ['Test generation', 'Automated execution', 'Test maintenance', 'Coverage analysis', 'Performance testing', 'Regression testing'],
+  s: ['Test generation', 'Automated execution', 'Test maintenance', 'Coverage analysis', 'Performance testing', 'Regression testing'],'
       benefit,
-  s: ['Reduce testing time by 70%', 'Improve test coverage', 'Catch bugs earlier', 'Lower testing costs'],
+  s: ['Reduce testing time by 70%', 'Improve test coverage', 'Catch bugs earlier', 'Lower testing costs'],'
       marketPric,
-  e: '$250-500/month',
+  e: '$250-500/month','
       categor,
-  y: 'Quality Assurance',
+  y: 'Quality Assurance','
       technologie,
-  s: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js'],
+  s: ['Selenium', 'Cypress', 'Machine Learning', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Bug Prediction & Prevention',
+  e: 'AI Bug Prediction & Prevention','
       descriptio,
-  n: 'Intelligent bug prediction with code analysis, risk assessment, and prevention recommendations.',
+  n: 'Intelligent bug prediction with code analysis, risk assessment, and prevention recommendations.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Bug prediction', 'Code analysis', 'Risk assessment', 'Prevention recommendations', 'Quality metrics', 'Team insights'],
+  s: ['Bug prediction', 'Code analysis', 'Risk assessment', 'Prevention recommendations', 'Quality metrics', 'Team insights'],'
       benefit,
-  s: ['Prevent bugs before they occur', 'Improve code quality', 'Reduce debugging time', 'Lower maintenance costs'],
+  s: ['Prevent bugs before they occur', 'Improve code quality', 'Reduce debugging time', 'Lower maintenance costs'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Quality Assurance',
+  y: 'Quality Assurance','
       technologie,
-  s: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Code Analysis', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Performance Monitoring Pro',
+  e: 'AI Performance Monitoring Pro','
       descriptio,
-  n: 'Advanced performance monitoring with anomaly detection, optimization recommendations, and capacity planning.',
+  n: 'Advanced performance monitoring with anomaly detection, optimization recommendations, and capacity planning.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Performance monitoring', 'Anomaly detection', 'Optimization recommendations', 'Capacity planning', 'Alert system', 'Analytics'],
+  s: ['Performance monitoring', 'Anomaly detection', 'Optimization recommendations', 'Capacity planning', 'Alert system', 'Analytics'],'
       benefit,
-  s: ['Prevent performance issues', 'Optimize system performance', 'Plan capacity needs', 'Reduce downtime'],
+  s: ['Prevent performance issues', 'Optimize system performance', 'Plan capacity needs', 'Reduce downtime'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Performance Monitoring',
+  y: 'Performance Monitoring','
       technologie,
-  s: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Monitoring Tools', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Content & Media
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Video Content Generator',
+  e: 'AI Video Content Generator','
       descriptio,
-  n: 'Intelligent video creation with script generation, editing, and optimization for social media.',
+  n: 'Intelligent video creation with script generation, editing, and optimization for social media.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Script generation', 'Video editing', 'Social media optimization', 'Template library', 'Brand consistency', 'Multi-format export'],
+  s: ['Script generation', 'Video editing', 'Social media optimization', 'Template library', 'Brand consistency', 'Multi-format export'],';'
       benefit,
-  s: ['Create videos 10x faster', 'Reduce production costs', 'Maintain brand consistency', 'Scale content creation'],
+  s: ['Create videos 10x faster', 'Reduce production costs', 'Maintain brand consistency', 'Scale content creation'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Content Creation',
+  y: 'Content Creation','
       technologie,
-  s: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js'],
+  s: ['Computer Vision', 'NLP', 'Video Processing', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Podcast Production Suite',
+  e: 'AI Podcast Production Suite','
       descriptio,
-  n: 'Complete podcast production with audio editing, transcription, and show notes generation.',
+  n: 'Complete podcast production with audio editing, transcription, and show notes generation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Audio editing', 'Transcription', 'Show notes generation', 'Intro/outro creation', 'Publishing automation', 'Analytics'],
+  s: ['Audio editing', 'Transcription', 'Show notes generation', 'Intro/outro creation', 'Publishing automation', 'Analytics'],'
       benefit,
-  s: ['Produce podcasts faster', 'Reduce editing time', 'Improve quality', 'Scale production'],
+  s: ['Produce podcasts faster', 'Reduce editing time', 'Improve quality', 'Scale production'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Audio Production',
+  y: 'Audio Production','
       technologie,
-  s: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js'],
+  s: ['Audio Processing', 'Speech Recognition', 'NLP', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Image & Design Generator',
+  e: 'AI Image & Design Generator','
       descriptio,
-  n: 'Intelligent image creation with design automation, brand consistency, and multi-format optimization.',
+  n: 'Intelligent image creation with design automation, brand consistency, and multi-format optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Image generation', 'Design automation', 'Brand consistency', 'Multi-format optimization', 'Template library', 'Batch processing'],
+  s: ['Image generation', 'Design automation', 'Brand consistency', 'Multi-format optimization', 'Template library', 'Batch processing'],'
       benefit,
-  s: ['Create designs instantly', 'Maintain brand consistency', 'Reduce design costs', 'Scale visual content'],
+  s: ['Create designs instantly', 'Maintain brand consistency', 'Reduce design costs', 'Scale visual content'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Design',
+  y: 'Design','
       technologie,
-  s: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Computer Vision', 'DALL-E', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Research & Development
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Research Assistant Pro',
+  e: 'AI Research Assistant Pro','
       descriptio,
-  n: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.',
+  n: 'Intelligent research tool with paper analysis, trend identification, and knowledge synthesis.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Paper analysis', 'Trend identification', 'Knowledge synthesis', 'Citation management', 'Research tracking', 'Collaboration tools'],
+  s: ['Paper analysis', 'Trend identification', 'Knowledge synthesis', 'Citation management', 'Research tracking', 'Collaboration tools'],'
       benefit,
-  s: ['Accelerate research', 'Stay current with trends', 'Synthesize knowledge', 'Improve research quality'],
+  s: ['Accelerate research', 'Stay current with trends', 'Synthesize knowledge', 'Improve research quality'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Research',
+  y: 'Research','
       technologie,
-  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['NLP', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Patent Analyzer & Generator',
+  e: 'AI Patent Analyzer & Generator','
       descriptio,
-  n: 'Intelligent patent analysis with prior art search, novelty assessment, and patent generation.',
+  n: 'Intelligent patent analysis with prior art search, novelty assessment, and patent generation.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$399/month',
+  e: '$399/month','
       feature,
-  s: ['Prior art search', 'Novelty assessment', 'Patent generation', 'Competitor analysis', 'Filing assistance', 'Portfolio management'],
+  s: ['Prior art search', 'Novelty assessment', 'Patent generation', 'Competitor analysis', 'Filing assistance', 'Portfolio management'],'
       benefit,
-  s: ['Identify patent opportunities', 'Avoid infringement', 'Accelerate patent process', 'Manage IP portfolio'],
+  s: ['Identify patent opportunities', 'Avoid infringement', 'Accelerate patent process', 'Manage IP portfolio'],'
       marketPric,
-  e: '$600-1200/month',
+  e: '$600-1200/month','
       categor,
-  y: 'Intellectual Property',
+  y: 'Intellectual Property','
       technologie,
-  s: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js'],
+  s: ['NLP', 'Machine Learning', 'Patent APIs', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Innovation Tracker',
+  e: 'AI Innovation Tracker','
       descriptio,
-  n: 'Monitor industry innovations with trend analysis, competitor tracking, and opportunity identification.',
+  n: 'Monitor industry innovations with trend analysis, competitor tracking, and opportunity identification.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$149/month',
+  e: '$149/month','
       feature,
-  s: ['Trend analysis', 'Competitor tracking', 'Opportunity identification', 'Innovation scoring', 'Market analysis', 'Alert system'],
+  s: ['Trend analysis', 'Competitor tracking', 'Opportunity identification', 'Innovation scoring', 'Market analysis', 'Alert system'],'
       benefit,
-  s: ['Stay ahead of trends', 'Identify opportunities', 'Track competitors', 'Drive innovation'],
+  s: ['Stay ahead of trends', 'Identify opportunities', 'Track competitors', 'Drive innovation'],'
       marketPric,
-  e: '$200-400/month',
+  e: '$200-400/month','
       categor,
-  y: 'Innovation',
+  y: 'Innovation','
       technologie,
-  s: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],
+  s: ['NLP', 'Machine Learning', 'Web Scraping', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Personal & Lifestyle
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Personal Finance Manager',
+  e: 'AI Personal Finance Manager','
       descriptio,
-  n: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.',
+  n: 'Comprehensive personal finance management with budgeting, investment tracking, and financial planning.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$79/month',
+  e: '$79/month','
       feature,
-  s: ['Budget management', 'Investment tracking', 'Financial planning', 'Bill reminders', 'Expense categorization', 'Goal tracking'],
+  s: ['Budget management', 'Investment tracking', 'Financial planning', 'Bill reminders', 'Expense categorization', 'Goal tracking'],'
       benefit,
-  s: ['Improve financial health', 'Achieve financial goals', 'Reduce financial stress', 'Optimize investments'],
+  s: ['Improve financial health', 'Achieve financial goals', 'Reduce financial stress', 'Optimize investments'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Personal Finance',
+  y: 'Personal Finance','
       technologie,
-  s: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['Machine Learning', 'Banking APIs', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Personal Assistant Pro',
+  e: 'AI Personal Assistant Pro','
       descriptio,
-  n: 'Intelligent personal assistant with task management, scheduling, and lifestyle optimization.',
+  n: 'Intelligent personal assistant with task management, scheduling, and lifestyle optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$99/month',
+  e: '$99/month','
       feature,
-  s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Habit tracking', 'Goal setting', 'Voice commands'],
+  s: ['Task management', 'Smart scheduling', 'Lifestyle optimization', 'Habit tracking', 'Goal setting', 'Voice commands'],'
       benefit,
-  s: ['Increase productivity', 'Achieve personal goals', 'Optimize daily routines', 'Reduce stress'],
+  s: ['Increase productivity', 'Achieve personal goals', 'Optimize daily routines', 'Reduce stress'],'
       marketPric,
-  e: '$150-300/month',
+  e: '$150-300/month','
       categor,
-  y: 'Personal Assistant',
+  y: 'Personal Assistant','
       technologie,
-  s: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js'],
+  s: ['NLP', 'Machine Learning', 'Voice Recognition', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Home Energy Optimizer',
+  e: 'AI Home Energy Optimizer','
       descriptio,
-  n: 'Smart home energy management with usage optimization, cost reduction, and sustainability tracking.',
+  n: 'Smart home energy management with usage optimization, cost reduction, and sustainability tracking.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$89/month',
+  e: '$89/month','
       feature,
-  s: ['Usage optimization', 'Cost reduction', 'Sustainability tracking', 'Smart device control', 'Energy forecasting', 'Savings analysis'],
+  s: ['Usage optimization', 'Cost reduction', 'Sustainability tracking', 'Smart device control', 'Energy forecasting', 'Savings analysis'],'
       benefit,
-  s: ['Reduce energy costs', 'Lower carbon footprint', 'Optimize energy usage', 'Track sustainability goals'],
+  s: ['Reduce energy costs', 'Lower carbon footprint', 'Optimize energy usage', 'Track sustainability goals'],'
       marketPric,
-  e: '$120-250/month',
+  e: '$120-250/month','
       categor,
-  y: 'Smart Home',
+  y: 'Smart Home','
       technologie,
-  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],
+  s: ['IoT', 'Machine Learning', 'React', 'Node.js', 'PostgreSQL'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     // AI Gaming & Entertainment
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Game Development Assistant',
+  e: 'AI Game Development Assistant','
       descriptio,
-  n: 'Intelligent game development with asset generation, level design, and gameplay optimization.',
+  n: 'Intelligent game development with asset generation, level design, and gameplay optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$299/month',
+  e: '$299/month','
       feature,
-  s: ['Asset generation', 'Level design', 'Gameplay optimization', 'NPC behavior', 'Balancing tools', 'Testing automation'],
+  s: ['Asset generation', 'Level design', 'Gameplay optimization', 'NPC behavior', 'Balancing tools', 'Testing automation'],'
       benefit,
-  s: ['Accelerate game development', 'Create unique content', 'Improve gameplay', 'Reduce development costs'],
+  s: ['Accelerate game development', 'Create unique content', 'Improve gameplay', 'Reduce development costs'],'
       marketPric,
-  e: '$400-800/month',
+  e: '$400-800/month','
       categor,
-  y: 'Game Development',
+  y: 'Game Development','
       technologie,
-  s: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React'],
+  s: ['Computer Vision', 'Machine Learning', 'Unity', 'Unreal Engine', 'React'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Music Composition Studio',
+  e: 'AI Music Composition Studio','
       descriptio,
-  n: 'Intelligent music creation with composition assistance, style transfer, and production tools.',
+  n: 'Intelligent music creation with composition assistance, style transfer, and production tools.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$199/month',
+  e: '$199/month','
       feature,
-  s: ['Composition assistance', 'Style transfer', 'Production tools', 'Instrument synthesis', 'Lyrics generation', 'Collaboration'],
+  s: ['Composition assistance', 'Style transfer', 'Production tools', 'Instrument synthesis', 'Lyrics generation', 'Collaboration'],'
       benefit,
-  s: ['Create music faster', 'Explore new styles', 'Improve composition skills', 'Collaborate effectively'],
+  s: ['Create music faster', 'Explore new styles', 'Improve composition skills', 'Collaborate effectively'],'
       marketPric,
-  e: '$300-600/month',
+  e: '$300-600/month','
       categor,
-  y: 'Music Production',
+  y: 'Music Production','
       technologie,
-  s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs'],
+  s: ['Audio Processing', 'Machine Learning', 'React', 'Node.js', 'Audio APIs'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     },
     {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   titl,
-  e: 'AI Streaming Content Optimizer',
+  e: 'AI Streaming Content Optimizer','
       descriptio,
-  n: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.',
+  n: 'Optimize streaming content with quality enhancement, compression, and delivery optimization.','
       ico,
-  n: '',
+  n: '','
       pric,
-  e: '$249/month',
+  e: '$249/month','
       feature,
-  s: ['Quality enhancement', 'Compression optimization', 'Delivery optimization', 'Bandwidth management', 'Analytics', 'Multi-platform'],
+  s: ['Quality enhancement', 'Compression optimization', 'Delivery optimization', 'Bandwidth management', 'Analytics', 'Multi-platform'],'
       benefit,
-  s: ['Improve streaming quality', 'Reduce bandwidth costs', 'Optimize delivery', 'Enhance viewer experience'],
+  s: ['Improve streaming quality', 'Reduce bandwidth costs', 'Optimize delivery', 'Enhance viewer experience'],'
       marketPric,
-  e: '$350-700/month',
+  e: '$350-700/month','
       categor,
-  y: 'Streaming',
+  y: 'Streaming','
       technologie,
-  s: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],
+  s: ['Video Processing', 'Machine Learning', 'CDN', 'React', 'Node.js'],'
       contactInf,
-  o: 'Contac,
-  t: kleber@ziontechgroup.com | +1 302 464 0950'
+  o: 'Contac,'
+  t: kleber@ziontechgroup.com | +1 302 464 0950''
     }
-  ]
+  ];
 const categories = [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
     {/* TODO: Fix JSX expression */}
   t: microSAASServices.length },
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Developer Tools').length },
+  t: microSAASServices.filter(s => s.category === 'Developer Tools').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Marketing').length },
+  t: microSAASServices.filter(s => s.category === 'Marketing').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Analytics').length },
+  t: microSAASServices.filter(s => s.category === 'Analytics').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Finance').length },
+  t: microSAASServices.filter(s => s.category === 'Finance').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Healthcare').length },
+  t: microSAASServices.filter(s => s.category === 'Healthcare').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Education').length },
+  t: microSAASServices.filter(s => s.category === 'Education').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'E-commerce').length },
+  t: microSAASServices.filter(s => s.category === 'E-commerce').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Legal').length },
+  t: microSAASServices.filter(s => s.category === 'Legal').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Real Estate').length },
+  t: microSAASServices.filter(s => s.category === 'Real Estate').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },
+  t: microSAASServices.filter(s => s.category === 'HR & Recruitment').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Project Management').length },
+  t: microSAASServices.filter(s => s.category === 'Project Management').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Productivity').length },
+  t: microSAASServices.filter(s => s.category === 'Productivity').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Communication').length },
+  t: microSAASServices.filter(s => s.category === 'Communication').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Customer Support').length },
+  t: microSAASServices.filter(s => s.category === 'Customer Support').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Sales & CRM').length },
+  t: microSAASServices.filter(s => s.category === 'Sales & CRM').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Cybersecurity').length },
+  t: microSAASServices.filter(s => s.category === 'Cybersecurity').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Quality Assurance').length },
+  t: microSAASServices.filter(s => s.category === 'Quality Assurance').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Content Creation').length },
+  t: microSAASServices.filter(s => s.category === 'Content Creation').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Research').length },
+  t: microSAASServices.filter(s => s.category === 'Research').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Personal Finance').length },
+  t: microSAASServices.filter(s => s.category === 'Personal Finance').length },'
     {/* TODO: Fix JSX expression */}
-  t: microSAASServices.filter(s => s.category === 'Game Development').length }
+  t: microSAASServices.filter(s => s.category === 'Game Development').length }'
   ]
   return (<div>Coming Soon</div>)
   )
-          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Micro SAAS Solutions - Zion Tech Group</title>"
-        <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." /></meta>"
-        <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />
-      {/* Hero Section */}"
-      <section className="pt-24 pb-16 px-4"></section>"
-        <div className="max-w-7xl mx-auto text-center"></div>"
-          < className="text-4xl,$2 />
-  sm:text-5xl,"
-  md: text-6xl font-bold text-white mb-6"></h1>
+          <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">"
+<Helmet>
+<title>Micro SAAS Solutions - Zion Tech Group</title>""
+        <meta name="description" content="50+ AI-powered micro SAAS applications for modern businesses. Affordable, powerful tools for developers, marketers, and entrepreneurs. Starting at $49/month." /></meta>""
+        <meta name="keywords" content="micro saas, ai tools, business applications, developer tools, marketing automation, productivity apps" />"
+      {/* Hero Section */}""
+      <section className="pt-24 pb-16 px-4"></section>""
+        <div className="max-w-7xl mx-auto text-center"></div>""
+          < className="text-4xl,$2 />"
+  sm:text-5xl,""
+  md: text-6xl font-bold text-white mb-6">"
+</h1>
 // Micro SAAS Solutions
           </h1>
-          <p className="text-xl text-cyan-400 mb-8 font-medium">
+<p className="text-xl text-cyan-400 mb-8 font-medium">"
             Coming Soon,
-  
+
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">50+
-              <div className="text-gray-300">Applications
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$49
-              <div className="text-gray-300">Starting Price
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">24/7
-              <div className="text-gray-300">Support
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">99.9%
-              <div className="text-gray-300">Uptime
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">"
+<div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+<div className="text-3xl font-bold text-cyan-400 mb-2">50+"
+              <div className="text-gray-300">Applications"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+<div className="text-3xl font-bold text-green-400 mb-2">$49"
+              <div className="text-gray-300">Starting Price"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+<div className="text-3xl font-bold text-purple-400 mb-2">24/7"
+              <div className="text-gray-300">Support"
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">"
+<div className="text-3xl font-bold text-orange-400 mb-2">99.9%"
+              <div className="text-gray-300">Uptime"
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
-                <span className="text-white font-medium">+1 302 464 0950
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
-                <span className="text-white font-medium">kleber@ziontechgroup.com
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
-            </div>"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
-              <div className="text-3xl font-bold text-green-400 mb-2">$49</div>"
-              <div className="text-gray-300">Starting Price
-            </div>"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
-              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>"
-              <div className="text-gray-300">Support
-            </div>"
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>"
-              <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>"
-              <div className="text-gray-300">Uptime
-          {/* Contact Info */}"
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>"
-            < className="flex flex-col,$2 />
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">"
+<div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">"
+<div className="flex items-center space-x-2">"
+<Phone className="w-5 h-5" />"
+<span className="text-white font-medium">+1 302 464 0950"
+              <div className="flex items-center space-x-2">"
+<Mail className="w-5 h-5" />"
+<span className="text-white font-medium">kleber@ziontechgroup.com"
+              <div className="flex items-center space-x-2">"
+<MapPin className="w-5 h-5" /></div>""
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>""
+              <div className="text-3xl font-bold text-green-400 mb-2">$49</div>""
+              <div className="text-gray-300">Starting Price"
+            </div>""
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>""
+              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>""
+              <div className="text-gray-300">Support"
+            </div>""
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6"></div>""
+              <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>""
+              <div className="text-gray-300">Uptime"
+          {/* Contact Info */}""
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12"></div>""
+            < className="flex flex-col,$2 />"
   md:flex-row items-center justify-center space-y-4,
-  md:space-y-0,"
-  md:space-x-8"></div>"
-              <div className="flex items-center space-x-2"></div>"
-                <Phone className="w-5 h-5" /></Phone>"
-                <span className="text-white font-medium">+1 302 464 0950
-              </div>"
-              <div className="flex items-center space-x-2"></div>"
-                <Mail className="w-5 h-5" /></Mail>"
-                <span className="text-white font-medium">kleber@ziontechgroup.com
-              </div>"
-              <div className="flex items-center space-x-2"></div>"
-                <MapPin className="w-5 h-5" /></MapPin>"
-                <span className="text-white font-medium">Middletown, DE
+  md:space-y-0,""
+  md:space-x-8">"
+</div>""
+              <div className="flex items-center space-x-2"></div>""
+                <PhoneclassName="w-5 h-5" / />""
+                <span className="text-white font-medium">+1 302 464 0950"
+              </div>""
+              <div className="flex items-center space-x-2"></div>""
+                <MailclassName="w-5 h-5" / />""
+                <span className="text-white font-medium">kleber@ziontechgroup.com"
+              </div>""
+              <div className="flex items-center space-x-2"></div>""
+                <MapPinclassName="w-5 h-5" / />""
+                <span className="text-white font-medium">Middletown, DE"
       {/* Services Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Choose Your Perfect AI Tools
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="py-16 px-4">"
+<div className="max-w-7xl mx-auto">"
+<h2 className="text-3xl font-bold text-white text-center mb-12">Choose Your Perfect AI Tools"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
             {microSAASServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{service.icon}
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}
-                  <p className="text-gray-600 text-sm">{service.description}
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-green-600">{service.price}
-                    <span className="text-sm text-gray-500">Market: {service.marketPrice}
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
+  // TODO: Add parameters
+)
+              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">"
+<div className="text-center mb-6">"
+<div className="text-5xl mb-4">{service.icon}"
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}"
+                  <p className="text-gray-600 text-sm">{service.description}"
+                <div className="mb-6">"
+<div className="flex items-center justify-between mb-4">"
+<span className="text-2xl font-bold text-green-600">{service.price}"
+                    <span className="text-sm text-gray-500">Market: {service.marketPrice}"
+                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">"
                     {service.category}
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:
-                  <ul className="space-y-2">
+                <div className="mb-6">"
+<h4 className="font-semibold text-gray-900 mb-3">Key Features:"
+                  <ul className="space-y-2">"
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+  // TODO: Add parameters
+)
+                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
+<CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />"
                         {feature}
                     ))}
                     {service.features.length > 4 && (
-                      <li className="text-sm text-gray-500">+{service.features.length - 4} more features
+  // TODO: Add parameters
+)
+                      <li className="text-sm text-gray-500">+{service.features.length - 4} more features"
                     )}
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:
-                  <ul className="space-y-1">
+                <div className="mb-6">"
+<h4 className="font-semibold text-gray-900 mb-3">Benefits:"
+                  <ul className="space-y-1">"
                     {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
-                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
-      {/* Services Grid */}"
-      <section className="py-16 px-4"></section>"
-        <div className="max-w-7xl mx-auto"></div>"
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-// Choose Your Perfect AI Tools</$1>"
-          < className="grid grid-cols-1,$2 />
-  md:grid-cols-2,"
-  lg:grid-cols-3 gap-8">
-            {microSAASServices.map((service, index) => ()}"
-          < key={index} className="bg-white rounded-xl shadow-lg p-6,$2 />
-  hover:shadow-2xl transition-all duration-300,"
-  hover:scale-105"></div>"
-                <div className="text-center mb-6"></div>"
-                  <div className="text-5xl mb-4">{service.icon}</div>"
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>"
-                  <p className="text-gray-600 text-sm">{service.description}
-                </div>"
-                <div className="mb-6"></div>"
-                  <div className="flex items-center justify-between mb-4"></div>"
-                    <span className="text-2xl font-bold text-green-600">{service.price}</span>"
-                    <span className="text-sm text-gray-500">Marke,
+  // TODO: Add parameters
+)
+                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">"
+<TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />"
+      {/* Services Grid */}""
+      <section className="py-16 px-4"></section>""
+        <div className="max-w-7xl mx-auto"></div>""
+          <h2 className="text-3xl font-bold text-white text-center mb-12">"
+// Choose Your Perfect AI Tools</$1>""
+          < className="grid grid-cols-1,$2 />"
+  md:grid-cols-2,""
+  lg:grid-cols-3 gap-8">"
+            {microSAASServices.map((service, index) => ()}""
+          < key={index} className="bg-white rounded-xl shadow-lg p-6,$2 />"
+  hover:shadow-2xl transition-all duration-300,""
+  hover:scale-105">"
+</div>""
+                <div className="text-center mb-6"></div>""
+                  <div className="text-5xl mb-4">{service.icon}</div>""
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>""
+                  <p className="text-gray-600 text-sm">{service.description}"
+                </div>""
+                <div className="mb-6"></div>""
+                  <div className="flex items-center justify-between mb-4"></div>""
+                    <span className="text-2xl font-bold text-green-600">{service.price}</span>""
+                    <span className="text-sm text-gray-500">Marke,"
   t: {service.marketPrice}
-                  </div>"
-                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
+                  </div>""
+                  <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">"
                     {service.category}
-                </div>"
-                <div className="mb-6"></div>"
-                  <h4 className="font-semibold text-gray-900 mb-3">Key,
-  Features:</h4>"
-                  <ul className="space-y-2">
-                    {service.features.slice(0, 4).map((feature, featureIndex) => ()}"
-          <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>"
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                </div>""
+                <div className="mb-6"></div>""
+                  <h4 className="font-semibold text-gray-900 mb-3">Key,"
+  Features:</h4>""
+                  <ul className="space-y-2">"
+                    {service.features.slice(0, 4).map((feature, featureIndex) => ()}""
+          <li key={featureIndex} className="flex items-center text-sm text-gray-600"></li>""
+                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />"
                         {feature}
                     ))}
-                    {service.features.length > 4 && ()}"
-          <li className="text-sm text-gray-500">
+                    {service.features.length > 4 && ()}""
+          <li className="text-sm text-gray-500">"
                         +{service.features.length - 4} more features
                     )}
-                </div>"
-                <div className="mb-6"></div>"
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefit,
-  s:</h4>"
-                  <ul className="space-y-1">
-                    {service.benefits.map((benefit, benefitIndex) => ()}"
-          <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"></li>"
-                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
+                </div>""
+                <div className="mb-6"></div>""
+                  <h4 className="font-semibold text-gray-900 mb-3">Benefit,"
+  s:</h4>""
+                  <ul className="space-y-1">"
+                    {service.benefits.map((benefit, benefitIndex) => ()}""
+          <li key={benefitIndex} className="text-sm text-gray-600 flex items-center"></li>""
+                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />"
                         {benefit}
                     ))}
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:
-                  <div className="flex flex-wrap gap-2">
+                <div className="mb-6">"
+<h4 className="font-semibold text-gray-900 mb-3">Technologies:"
+                  <div className="flex flex-wrap gap-2">"
                     {service.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                </div>"
-                <div className="mb-6"></div>"
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologie,
-  s:</h4>"
-                  <div className="flex flex-wrap gap-2">
-                    {service.technologies.map((tech, techIndex) => ()}"
-          <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+  // TODO: Add parameters
+)
+                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded"></div>""
+                <div className="mb-6"></div>""
+                  <h4 className="font-semibold text-gray-900 mb-3">Technologie,"
+  s:</h4>""
+                  <div className="flex flex-wrap gap-2">"
+                    {service.technologies.map((tech, techIndex) => ()}""
+          <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">"
                         {tech}
                     ))}
-                <div className="text-center">
-                  <$2 />
+                <div className="text-center">"
+<$2 />
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover: from-purple-700 hover:to-blue-700 transition-all inline-block">"
                     Get Started Now,
-  
-                  <p className="text-xs text-gray-500 mt-2">
-                </div>"
-                <div className="text-center">
-                  <a>
+
+                  <p className="text-xs text-gray-500 mt-2"></div>""
+                <div className="text-center">"
+<a>
                     href={/* TODO: Fix JSX expression */}
-  o:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}"
-                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,
-  hover:from-purple-700,"
-  hover: to-blue-700 transition-all inline-block"
+  o:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}""
+                    className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium,"
+  hover:from-purple-700,""
+  hover: to-blue-700 transition-all inline-block""
 // >
 //                     Get Started Now,
-          </a>"
-                  <p className="text-xs text-gray-500 mt-2"></p>
+          </a>""
+                  <p className="text-xs text-gray-500 mt-2"></p>"
                     {service.contactInfo}
             ))}
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">"
+<div className="max-w-4xl mx-auto text-center">"
+<h2 className="text-3xl font-bold text-white mb-6">"
             Ready to Transform Your Business?
-          <p className="text-xl text-purple-100 mb-8">
+          <p className="text-xl text-purple-100 mb-8">"
             Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <$2 />
-              href="tel:+13024640950"
-              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">
+<div className="flex flex-col sm: flex-row gap-4 justify-center">"
+<$2 />
+              href="tel:+13024640950""
+              className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors">"
               Call (302) 464-0950
-  
+
             <$2 />
-              href="mailto:kleber@ziontechgroup.com"
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">
+              href="mailto:kleber@ziontechgroup.com""
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors">"
               Email Us,
-  
-      {/* CTA Section */}"
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>"
-        <div className="max-w-4xl mx-auto text-center"></div>"
-          <h2 className="text-3xl font-bold text-white mb-6">
+
+      {/* CTA Section */}""
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600"></section>""
+        <div className="max-w-4xl mx-auto text-center"></div>""
+          <h2 className="text-3xl font-bold text-white mb-6">"
 // Ready to Transform Your Business?
-          </h2>"
-          <p className="text-xl text-purple-100 mb-8">
+          </h2>""
+          <p className="text-xl text-purple-100 mb-8">"
 // Get started with our micro SAAS solutions today and see the difference AI can make.
           </p>
-          <div className="flex flex-col sm: flex-row gap-4 justify-center">
-            <$2 />
-              href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+<div className="flex flex-col sm: flex-row gap-4 justify-center">"
+<$2 />
+              href="tel:+13024640950" className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors""
 // >
 //               Call (302) 464-0950
           </a>
-            <$2 />
-              href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
+<$2 />
+              href="mailto:kleber@ziontechgroup.com" className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors""
 // >
 //               Email Us
-          </a>
-          </div>
-        </div>
-      </section>
-    </div>
+          </a></div>
+</div></section>
+</div>
   ),
 }
-export default MicroSAASPage;"`
-  </a>
-  </a>
-  </p>
-</div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></span></span></span></span></span></span></span></span></span></span></p></p></p></p></h2></h2></h2></h3></h4></h4></h4></ul></ul></ul></ul></li></li></li></li></section></section>
+export default MicroSAASPage;"`";"
+  </a></a>
+</p></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</div></div>
+</span></span>
+</span></span>
+</span></span>
+</span></span>
+</span></span>
+</p></p>
+</p></p>
+</h2></h2>
+</h2></h3>
+</h4></h4>
+</h4></ul>
+</ul></ul>
+</ul></li>
+</li></li>
+</li></section>
+</section>

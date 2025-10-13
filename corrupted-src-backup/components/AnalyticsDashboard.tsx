@@ -1,6 +1,10 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';'
 :corrupted-src-backup/components/AnalyticsDashboard.tsx
 interface AnalyticsData {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     pageViews: number
   uniqueVisitors: number
   bounceRate: number
@@ -19,4 +23,4 @@ interface AnalyticsData {/* TODO: Fix JSX expression */}
   s: Array<{/* TODO: Fix JSX expression */}
   }>
 }
-export default AnalyticsDashboard
+export default AnalyticsDashboard;

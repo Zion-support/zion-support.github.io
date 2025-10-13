@@ -1,52 +1,62 @@
-import { NextResponse } from "next/server"
-import type { NextRequest } from "next/server"
+import { NextResponse } from "next/server";";
+import type { NextRequest } from "next/server";"
   // Security headers
-  response.headers.set('X-Frame-Options', 'DENY')
-  response.headers.set('X-Content-Type-Options', 'nosniff')
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin')
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')
+  response.headers.set('X-Frame-Options', 'DENY')'
+  response.headers.set('X-Content-Type-Options', 'nosniff')'
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin')'
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')'
   // CSP header
   response.headers.set(
-    'Content-Security-Policy',
-    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+  // TODO: Add parameters
+)
+    'Content-Security-Policy','
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"'"
   )
   // Permissions Policy
   response.headers.set(
-    'Permissions-Policy',
-    'camera=(), microphone=(), geolocation=(), interest-cohort=()'
+  // TODO: Add parameters
+)
+    'Permissions-Policy','
+    'camera=(), microphone=(), geolocation=(), interest-cohort=()''
   )
   // Cache Control for static assets
-  if (request.nextUrl.pathname.startsWith('/_next/static/')) {
-    response.headers.set('Cache-Control', 'public, max-age=31536000, immutable')
+  if (request.nextUrl.pathname.startsWith('/_next/static/')) {'
+    response.headers.set('Cache-Control', 'public, max-age=31536000, immutable')'
   }
   // Cache Control for images
   if (request.nextUrl.pathname.match(/\.(jpg|jpeg|png|gif|ico|svg|webp)$/)) {
-    response.headers.set('Cache-Control', 'public, max-age=86400')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    response.headers.set('Cache-Control', 'public, max-age=86400')'
   }
-  // Rate limiting headers (basic implementation)
-  const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown'
-  response.headers.set('X-RateLimit-Limit', '100')
-  response.headers.set('X-RateLimit-Remaining', '99')
-  response.headers.set('X-RateLimit-Reset', new Date(Date.now() + 3600000).toISOString())
+  // Rate limiting headers (basic implementation);
+const ip = request.ip || request.headers.get('x-forwarded-for') || 'unknown''
+  response.headers.set('X-RateLimit-Limit', '100')'
+  response.headers.set('X-RateLimit-Remaining', '99')'
+  response.headers.set('X-RateLimit-Reset', new Date(Date.now() + 3600000).toISOString())'
   // CORS headers
-  response.headers.set('Access-Control-Allow-Origin', request.nextUrl.origin)
-  response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
-  response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization')
+  response.headers.set('Access-Control-Allow-Origin', request.nextUrl.origin)'
+  response.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')'
+  response.headers.set('Access-Control-Allow-Headers', 'Content-Type, Authorization')'
   // Remove server information
-  response.headers.delete('X-Powered-By')
-  response.headers.delete('Server')
+  response.headers.delete('X-Powered-By')'
+  response.headers.delete('Server')'
   return response
 }
 ursor/fix-lint-push-and-merge-to-main-ae4e
   // Security headers
-  response.headers.set('X-Frame-Options', 'DENY')
-  response.headers.set('X-Content-Type-Options', 'nosniff')
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin')
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')
+  response.headers.set('X-Frame-Options', 'DENY')'
+  response.headers.set('X-Content-Type-Options', 'nosniff')'
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin')'
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')'
   // CSP header
   response.headers.set(
-    'Content-Security-Policy',
-    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+  // TODO: Add parameters
+)
+    'Content-Security-Policy','
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"'"
   )
   return response
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
@@ -54,25 +64,35 @@ ursor/fix-lint-push-and-merge-to-main-ae4e
   return response
     return response
   // Security headers
-  response.headers.set('X-Frame-Options', 'DENY')
-  response.headers.set('X-Content-Type-Options', 'nosniff')
-  response.headers.set('Referrer-Policy', 'origin-when-cross-origin')
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')
+  response.headers.set('X-Frame-Options', 'DENY')'
+  response.headers.set('X-Content-Type-Options', 'nosniff')'
+  response.headers.set('Referrer-Policy', 'origin-when-cross-origin')'
+  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')'
   // CSP header
   response.headers.set(
-    'Content-Security-Policy',
-    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"
+  // TODO: Add parameters
+)
+    'Content-Security-Policy','
+    "default-src 'self'; script-src 'self' 'unsafe-eval' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https:;"'"
   )
   return response
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 return response
 }
-origin/main
+origin/main;
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]
+  // TODO: Add properties
 }
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  // TODO: Add properties
+}
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"]"
+}
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],"
 }
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],"
 }

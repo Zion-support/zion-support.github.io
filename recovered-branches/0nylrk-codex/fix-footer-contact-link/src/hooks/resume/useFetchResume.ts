@@ -1,35 +1,59 @@
-import { useState } from 'react'
-import { supabase } from '@/integrations/supabase/client'
-import { Resume } from '@/types/resume'
-import { useAuth } from '@/hooks/useAuth'
-export function useFetchResume() {
-  const { user } = useAuth()
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const [resume, setResume] = useState<Resume | null>(null)
-  const fetchResume = async (resumeId?: string) => {
+import { useState } from 'react';';
+import { supabase } from '@/integrations/supabase/client';';
+import { Resume } from '@/types/resume';';
+import { useAuth } from '@/hooks/useAuth';';';
+export function useFetchResume() {;
+const { user } = useAuth();
+const [isLoading, setIsLoading] = useState(false);
+const [error, setError] = useState<string | null>(null);
+const [resume, setResume] = useState<Resume | null>(null);
+const fetchResume = async (resumeId?: string) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     if (!user) {
-      setError('You must be logged in to access resumes')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      setError('You must be logged in to access resumes')'
       return null
     }
     setIsLoading(true)
     setError(null)
     try {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       // If resumeId is provided, fetch that specific resume
-      // Otherwise, fetch the user's active resume or most recent resume
-      let resumeQuery = supabase.from('talent_resumes').select('*')
+      // Otherwise, fetch the user's active resume or most recent resume;';
+let resumeQuery = supabase.from('talent_resumes').select('*')'
       if (resumeId) {
-        resumeQuery = resumeQuery.eq('id', resumeId)
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        resumeQuery = resumeQuery.eq('id', resumeId)'
       } else {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         resumeQuery = resumeQuery
-          .eq('user_id', user.id)
-          .order('is_active', { ascending: false })
-          .order('created_at', { ascending: false })
+          .eq('user_id', user.id)'
+          .order('is_active', { ascending: false })'
+          .order('created_at', { ascending: false })'
           .limit(1)
       }
       const { data: resumeData, error: resumeError } = await resumeQuery.single()
       if (resumeError) {
-        if (resumeError.code === 'PGRST116') {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        if (resumeError.code === 'PGRST116') {'
           // No resume found, this is not a critical error for a new user
           setResume(null)
           setIsLoading(false)
@@ -37,38 +61,46 @@ export function useFetchResume() {
         }
         throw resumeError
       }
-      // Fetch work experience
-      const { data: workData, error: workError } = await supabase
-        .from('work_history')
-        .select('*')
-        .eq('resume_id', resumeData.id)
-        .order('is_current', { ascending: false })
-        .order('start_date', { ascending: false })
+      // Fetch work experience;
+const { data: workData, error: workError } = await supabase
+        .from('work_history')'
+        .select('*')'
+        .eq('resume_id', resumeData.id)'
+        .order('is_current', { ascending: false })'
+        .order('start_date', { ascending: false })'
       if (workError) throw workError
-      // Fetch education
-      const { data: educationData, error: educationError } = await supabase
-        .from('education')
-        .select('*')
-        .eq('resume_id', resumeData.id)
-        .order('is_current', { ascending: false })
-        .order('start_date', { ascending: false })
+      // Fetch education;
+const { data: educationData, error: educationError } = await supabase
+        .from('education')'
+        .select('*')'
+        .eq('resume_id', resumeData.id)'
+        .order('is_current', { ascending: false })'
+        .order('start_date', { ascending: false })'
       if (educationError) throw educationError
-      // Fetch skills
-      const { data: skillsData, error: skillsError } = await supabase
-        .from('resume_skills')
-        .select('*')
-        .eq('resume_id', resumeData.id)
+      // Fetch skills;
+const { data: skillsData, error: skillsError } = await supabase
+        .from('resume_skills')'
+        .select('*')'
+        .eq('resume_id', resumeData.id)'
       if (skillsError) throw skillsError
-      // Fetch certifications
-      const { data: certData, error: certError } = await supabase
-        .from('certifications')
-        .select('*')
-        .eq('resume_id', resumeData.id)
-      if (certError) throw certError
-      const fullResume: Resume = {
+      // Fetch certifications;
+const { data: certData, error: certError } = await supabase
+        .from('certifications')'
+        .select('*')'
+        .eq('resume_id', resumeData.id)'
+      if (certError) throw certError;
+const fullResume: Resume = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         id: resumeData.id,
         user_id: resumeData.user_id,
         basic_info: {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
           id: resumeData.id,
           title: resumeData.title,
           headline: resumeData.headline,
@@ -83,14 +115,26 @@ export function useFetchResume() {
       setResume(fullResume)
       return fullResume
     } catch (e: any) {
-      console.error('Error fetching resume:', e)
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      console.error('Error fetching resume:', e)'
       setError(e.message)
       return null
     } finally {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       setIsLoading(false)
     }
   }
   return {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     isLoading,
     error,
     resume,

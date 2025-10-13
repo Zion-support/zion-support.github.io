@@ -1,2 +1,2 @@
-import React from 'react'
-export default ApiDocumentation
+import React from 'react';';';
+export default ApiDocumentation;

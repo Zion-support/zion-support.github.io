@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';'
 interface ContentItem {/* TODO: Fix JSX expression */}
 }
-export default ContentShowcase
+export default ContentShowcase;

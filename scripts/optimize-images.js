@@ -1,7 +1,7 @@
 
-import sharp from 'sharp'
-import fs from 'fs'
-import path from 'path'
+import sharp from 'sharp';';
+import fs from 'fs';';
+import path from 'path';'
 class ImageOptimizer {/* TODO: Fix JSX expression */}
   }
 
@@ -11,9 +11,9 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
     if (!fs.existsSync(this.outputDir)) {/* TODO: Fix JSX expression */}
   e: true })
     }
-
-    const _files = fs.readdirSync(this.inputDir)
-    const imageFiles = files.filter(file => )
+;
+const _files = fs.readdirSync(this.inputDir);
+const imageFiles = files.filter(file => )
       /.(jpg|jpeg|png|webp)$/i.test(file)
     )
     for (const file of imageFiles) {/* TODO: Fix JSX expression */}
@@ -33,7 +33,7 @@ class ImageOptimizer {/* TODO: Fix JSX expression */}
     }
   }
 }
-
+;
 const _optimizer = new ImageOptimizer()
 optimizer.optimizeImages()
 `

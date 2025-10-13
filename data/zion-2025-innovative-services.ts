@@ -16,14 +16,16 @@ export interface ZionInnovativeService2025 {/* TODO: Fix JSX expression */}
   rating: number
   reviews: number,
 }
-export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
+export const zionInnovativeServices2025: ZionInnovativeService2025[] = [;
+  // TODO: Add items
+]
   // AI-Powered Quantum Edge Computing,
-    id: 'quantum-edge-ai-platform',
-    name: 'Quantum Edge AI Platform',
-    tagline: 'Quantum computing meets edge AI for real-time intelligence',
-    price: '$4,999',
-    period: '/month',
-    description: 'Revolutionary platform combining quantum computing with edge AI to deliver real-time intelligence processing at the network edge, enabling instant decision-making for autonomous systems.',
+    id: 'quantum-edge-ai-platform','
+    name: 'Quantum Edge AI Platform','
+    tagline: 'Quantum computing meets edge AI for real-time intelligence','
+    price: '$4,999','
+    period: '/month','
+    description: 'Revolutionary platform combining quantum computing with edge AI to deliver real-time intelligence processing at the network edge, enabling instant decision-making for autonomous systems.','
     features: [,
   realImplementatio,
   n: boolean,
@@ -49,114 +51,114 @@ export const zionInnovativeServices2025: ZionInnovativeService2025[] = [
   g: number,
   review,
   s: number}
-export const,
+export const,;
   zionInnovativeServices2025: ZionInnovativeService2025[] = [,
   // AI-Powered Quantum Edge Computing,
-  id: 'quantum-edge-ai-platform',
+  id: 'quantum-edge-ai-platform','
     nam,
-  e: 'Quantum Edge AI Platform',
+  e: 'Quantum Edge AI Platform','
     taglin,
-  e: 'Quantum computing meets edge AI for real-time intelligence',
+  e: 'Quantum computing meets edge AI for real-time intelligence','
     pric,
-  e: '$4,999',
+  e: '$4,999','
     perio,
-  d: '/month',
+  d: '/month','
     descriptio,
-  n: 'Revolutionary platform combining quantum computing with edge AI to deliver real-time intelligence processing at the network edge, enabling instant decision-making for autonomous systems.',
+  n: 'Revolutionary platform combining quantum computing with edge AI to deliver real-time intelligence processing at the network edge, enabling instant decision-making for autonomous systems.','
     feature,
   s: [,
-      'Quantum-enhanced edge computing',
-      'Real-time AI inference at edge',
-      'Quantum error correction',
-      'Edge-to-cloud quantum synchronization',
-      'Autonomous decision making',
-      'Low-latency processing',
-      'Quantum-secure communications',
-      'Edge device optimization'
+      'Quantum-enhanced edge computing','
+      'Real-time AI inference at edge','
+      'Quantum error correction','
+      'Edge-to-cloud quantum synchronization','
+      'Autonomous decision making','
+      'Low-latency processing','
+      'Quantum-secure communications','
+      'Edge device optimization''
     ],
     benefit,
   s: [,
-      '1000x faster edge processing',
-      'Real-time autonomous decisions',
-      'Quantum-level security',
-      'Reduced cloud dependency',
-      'Enhanced IoT capabilities'
+      '1000x faster edge processing','
+      'Real-time autonomous decisions','
+      'Quantum-level security','
+      'Reduced cloud dependency','
+      'Enhanced IoT capabilities''
     ],
-    marketPrice: '$4,999/month (Enterprise), $2,499/month (Professional), $999/month (Starter)',
-    category: 'Quantum'
-    icon: ''
+    marketPrice: '$4,999/month (Enterprise), $2,499/month (Professional), $999/month (Starter)','
+    category: 'Quantum''
+    icon: '''
     isPopular: true
     isNew: true
-    link: 'https://ziontechgroup.com/services/quantum-edge-ai-platform'
+    link: 'https://ziontechgroup.com/services/quantum-edge-ai-platform''
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      mobile: '+1 302 464 0950''
+      email: 'kleber@ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709','
+      website: 'https://ziontechgroup.com'},'
     realImplementation: true,
-    technology: ['IBM Qiskit', 'Google Cirq', 'TensorFlow Quantum', 'Edge Computing', '5G Networks'],
-    integrations: ['AWS IoT Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Kubernetes Edge'],
-    useCases: ['Autonomous vehicles', 'Smart cities', 'Industrial IoT', 'Healthcare monitoring', 'Financial trading'],
-    roi: 'Average customer sees 90% reduction in latency and 80% improvement in decision accuracy',
-    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],
-    marketSize: '$2.1B quantum edge computing market'
-    growthRate: '45.3% annual growth'
-    launchDate: '2024-03-15'
+    technology: ['IBM Qiskit', 'Google Cirq', 'TensorFlow Quantum', 'Edge Computing', '5G Networks'],'
+    integrations: ['AWS IoT Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Kubernetes Edge'],'
+    useCases: ['Autonomous vehicles', 'Smart cities', 'Industrial IoT', 'Healthcare monitoring', 'Financial trading'],'
+    roi: 'Average customer sees 90% reduction in latency and 80% improvement in decision accuracy','
+    competitors: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],'
+    marketSize: '$2.1B quantum edge computing market''
+    growthRate: '45.3% annual growth''
+    launchDate: '2024-03-15''
     customers: 28
     rating: 4.9
     reviews: 15,
   },
   // AI-Powered Carbon Footprint Analytics
-    id: 'ai-carbon-intelligence-suite',
-    name: 'AI Carbon Intelligence Suite',
-    tagline: 'Intelligent carbon footprint tracking and optimization',
-    price: '$1,299',
-    period: '/month',
-    description: 'Advanced AI-powered platform that automatically tracks, analyzes, and optimizes carbon footprints across organizations, providing actionable insights for sustainability initiatives.',
+    id: 'ai-carbon-intelligence-suite','
+    name: 'AI Carbon Intelligence Suite','
+    tagline: 'Intelligent carbon footprint tracking and optimization','
+    price: '$1,299','
+    period: '/month','
+    description: 'Advanced AI-powered platform that automatically tracks, analyzes, and optimizes carbon footprints across organizations, providing actionable insights for sustainability initiatives.','
     features: [,
     marketPric,
-  e: '$4,999/month (Enterprise), $2,499/month (Professional), $999/month (Starter)',
+  e: '$4,999/month (Enterprise), $2,499/month (Professional), $999/month (Starter)','
     categor,
-  y: 'Quantum',
+  y: 'Quantum','
     ico,
-  n: '',
+  n: '','
     isPopula,
   r: true,
     isNe,
   w: true,
     lin,
-  k: 'http,
-  s://ziontechgroup.com/services/quantum-edge-ai-platform',
+  k: 'http,'
+  s://ziontechgroup.com/services/quantum-edge-ai-platform','
     contactInf,
   o: unknown,
       mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950','
       emai,
-  l: 'kleber@ziontechgroup.com',
+  l: 'kleber@ziontechgroup.com','
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
+  s: '364 E Main St STE 1008 Middletown DE 19709','
       websit,
-  e: 'http,
-  s://ziontechgroup.com'
+  e: 'http,'
+  s://ziontechgroup.com''
     },
     realImplementatio,
   n: true,
     technolog,
-  y: ['IBM Qiskit', 'Google Cirq', 'TensorFlow Quantum', 'Edge Computing', '5G Networks'],
+  y: ['IBM Qiskit', 'Google Cirq', 'TensorFlow Quantum', 'Edge Computing', '5G Networks'],'
     integration,
-  s: ['AWS IoT Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Kubernetes Edge'],
+  s: ['AWS IoT Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Kubernetes Edge'],'
     useCase,
-  s: ['Autonomous vehicles', 'Smart cities', 'Industrial IoT', 'Healthcare monitoring', 'Financial trading'],
+  s: ['Autonomous vehicles', 'Smart cities', 'Industrial IoT', 'Healthcare monitoring', 'Financial trading'],'
     ro,
-  i: 'Average customer sees 90% reduction in latency and 80% improvement in decision accuracy',
+  i: 'Average customer sees 90% reduction in latency and 80% improvement in decision accuracy','
     competitor,
-  s: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],
+  s: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],'
     marketSiz,
-  e: '$2.1B quantum edge computing market',
+  e: '$2.1B quantum edge computing market','
     growthRat,
-  e: '45.3% annual growth',
+  e: '45.3% annual growth','
     launchDat,
-  e: '2024-03-15',
+  e: '2024-03-15','
     customer,
   s: 28,
     ratin,
@@ -164,111 +166,111 @@ export const,
     review,
   s: 15},
   // AI-Powered Carbon Footprint Analytics,
-  id: 'ai-carbon-intelligence-suite',
+  id: 'ai-carbon-intelligence-suite','
     nam,
-  e: 'AI Carbon Intelligence Suite',
+  e: 'AI Carbon Intelligence Suite','
     taglin,
-  e: 'Intelligent carbon footprint tracking and optimization',
+  e: 'Intelligent carbon footprint tracking and optimization','
     pric,
-  e: '$1,299',
+  e: '$1,299','
     perio,
-  d: '/month',
+  d: '/month','
     descriptio,
-  n: 'Advanced AI-powered platform that automatically tracks, analyzes, and optimizes carbon footprints across organizations, providing actionable insights for sustainability initiatives.',
+  n: 'Advanced AI-powered platform that automatically tracks, analyzes, and optimizes carbon footprints across organizations, providing actionable insights for sustainability initiatives.','
     feature,
   s: [,
-      'Automated carbon tracking',
-      'AI-powered optimization recommendations',
-      'Real-time sustainability metrics',
-      'Supply chain carbon mapping',
-      'ESG compliance reporting',
-      'Carbon credit management',
-      'Predictive sustainability modeling',
-      'Stakeholder communication tools'
+      'Automated carbon tracking','
+      'AI-powered optimization recommendations','
+      'Real-time sustainability metrics','
+      'Supply chain carbon mapping','
+      'ESG compliance reporting','
+      'Carbon credit management','
+      'Predictive sustainability modeling','
+      'Stakeholder communication tools''
     ],
     benefit,
   s: [,
-      'Reduce carbon footprint by 30-50%',
-      'Achieve ESG compliance automatically',
-      'Improve brand reputation',
-      'Access to carbon markets',
-      'Cost savings through optimization'
+      'Reduce carbon footprint by 30-50%','
+      'Achieve ESG compliance automatically','
+      'Improve brand reputation','
+      'Access to carbon markets','
+      'Cost savings through optimization''
     ],
-    marketPrice: '$1,299/month (Enterprise), $699/month (Professional), $299/month (Starter)',
-    category: 'GreenTech'
-    icon: ''
+    marketPrice: '$1,299/month (Enterprise), $699/month (Professional), $299/month (Starter)','
+    category: 'GreenTech''
+    icon: '''
     isPopular: true
     isNew: true
-    link: 'https://ziontechgroup.com/services/ai-carbon-intelligence-suite'
+    link: 'https://ziontechgroup.com/services/ai-carbon-intelligence-suite''
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      mobile: '+1 302 464 0950''
+      email: 'kleber@ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709','
+      website: 'https://ziontechgroup.com'},'
     realImplementation: true,
-    technology: ['Machine Learning', 'IoT Sensors', 'Blockchain', 'Cloud Computing', 'Data Analytics'],
-    integrations: ['ERP Systems', 'Supply Chain Platforms', 'ESG Reporting Tools', 'Carbon Markets'],
-    useCases: ['Corporate sustainability', 'Supply chain optimization', 'ESG compliance', 'Carbon trading', 'Green finance'],
-    roi: 'Average customer achieves 40% carbon reduction and $500 K+ annual savings',
-    competitors: ['Watershed', 'Normative', 'Carbon Analytics'],
-    marketSize: '$1.8B carbon management market'
-    growthRate: '38.7% annual growth'
-    launchDate: '2024-02-20'
+    technology: ['Machine Learning', 'IoT Sensors', 'Blockchain', 'Cloud Computing', 'Data Analytics'],'
+    integrations: ['ERP Systems', 'Supply Chain Platforms', 'ESG Reporting Tools', 'Carbon Markets'],'
+    useCases: ['Corporate sustainability', 'Supply chain optimization', 'ESG compliance', 'Carbon trading', 'Green finance'],'
+    roi: 'Average customer achieves 40% carbon reduction and $500 K+ annual savings','
+    competitors: ['Watershed', 'Normative', 'Carbon Analytics'],'
+    marketSize: '$1.8B carbon management market''
+    growthRate: '38.7% annual growth''
+    launchDate: '2024-02-20''
     customers: 156
     rating: 4.8
     reviews: 89,
   },
   // Autonomous AI DevOps Platform
-    id: 'autonomous-ai-devops-platform',
-    name: 'Autonomous AI DevOps Platform',
-    tagline: 'Self-healing infrastructure with AI-powered automation',
-    price: '$2,499',
-    period: '/month',
-    description: 'Next-generation DevOps platform that uses AI to autonomously manage, monitor, and optimize infrastructure, automatically resolving issues before they impact users.',
+    id: 'autonomous-ai-devops-platform','
+    name: 'Autonomous AI DevOps Platform','
+    tagline: 'Self-healing infrastructure with AI-powered automation','
+    price: '$2,499','
+    period: '/month','
+    description: 'Next-generation DevOps platform that uses AI to autonomously manage, monitor, and optimize infrastructure, automatically resolving issues before they impact users.','
     features: [,
     marketPric,
-  e: '$1,299/month (Enterprise), $699/month (Professional), $299/month (Starter)',
+  e: '$1,299/month (Enterprise), $699/month (Professional), $299/month (Starter)','
     categor,
-  y: 'GreenTech',
+  y: 'GreenTech','
     ico,
-  n: '',
+  n: '','
     isPopula,
   r: true,
     isNe,
   w: true,
     lin,
-  k: 'http,
-  s://ziontechgroup.com/services/ai-carbon-intelligence-suite',
+  k: 'http,'
+  s://ziontechgroup.com/services/ai-carbon-intelligence-suite','
     contactInf,
   o: unknown,
       mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950','
       emai,
-  l: 'kleber@ziontechgroup.com',
+  l: 'kleber@ziontechgroup.com','
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
+  s: '364 E Main St STE 1008 Middletown DE 19709','
       websit,
-  e: 'http,
-  s://ziontechgroup.com'
+  e: 'http,'
+  s://ziontechgroup.com''
     },
     realImplementatio,
   n: true,
     technolog,
-  y: ['Machine Learning', 'IoT Sensors', 'Blockchain', 'Cloud Computing', 'Data Analytics'],
+  y: ['Machine Learning', 'IoT Sensors', 'Blockchain', 'Cloud Computing', 'Data Analytics'],'
     integration,
-  s: ['ERP Systems', 'Supply Chain Platforms', 'ESG Reporting Tools', 'Carbon Markets'],
+  s: ['ERP Systems', 'Supply Chain Platforms', 'ESG Reporting Tools', 'Carbon Markets'],'
     useCase,
-  s: ['Corporate sustainability', 'Supply chain optimization', 'ESG compliance', 'Carbon trading', 'Green finance'],
+  s: ['Corporate sustainability', 'Supply chain optimization', 'ESG compliance', 'Carbon trading', 'Green finance'],'
     ro,
-  i: 'Average customer achieves 40% carbon reduction and $500K+ annual savings',
+  i: 'Average customer achieves 40% carbon reduction and $500K+ annual savings','
     competitor,
-  s: ['Watershed', 'Normative', 'Carbon Analytics'],
+  s: ['Watershed', 'Normative', 'Carbon Analytics'],'
     marketSiz,
-  e: '$1.8B carbon management market',
+  e: '$1.8B carbon management market','
     growthRat,
-  e: '38.7% annual growth',
+  e: '38.7% annual growth','
     launchDat,
-  e: '2024-02-20',
+  e: '2024-02-20','
     customer,
   s: 156,
     ratin,
@@ -276,111 +278,111 @@ export const,
     review,
   s: 89},
   // Autonomous AI DevOps Platform,
-  id: 'autonomous-ai-devops-platform',
+  id: 'autonomous-ai-devops-platform','
     nam,
-  e: 'Autonomous AI DevOps Platform',
+  e: 'Autonomous AI DevOps Platform','
     taglin,
-  e: 'Self-healing infrastructure with AI-powered automation',
+  e: 'Self-healing infrastructure with AI-powered automation','
     pric,
-  e: '$2,499',
+  e: '$2,499','
     perio,
-  d: '/month',
+  d: '/month','
     descriptio,
-  n: 'Next-generation DevOps platform that uses AI to autonomously manage, monitor, and optimize infrastructure, automatically resolving issues before they impact users.',
+  n: 'Next-generation DevOps platform that uses AI to autonomously manage, monitor, and optimize infrastructure, automatically resolving issues before they impact users.','
     feature,
   s: [,
-      'AI-powered incident prediction',
-      'Autonomous problem resolution',
-      'Self-optimizing infrastructure',
-      'Intelligent scaling decisions',
-      'Predictive maintenance',
-      'Automated security patching',
-      'Performance optimization',
-      'Cost optimization'
+      'AI-powered incident prediction','
+      'Autonomous problem resolution','
+      'Self-optimizing infrastructure','
+      'Intelligent scaling decisions','
+      'Predictive maintenance','
+      'Automated security patching','
+      'Performance optimization','
+      'Cost optimization''
     ],
     benefit,
   s: [,
-      '99.99% uptime guarantee',
-      '90% reduction in manual interventions',
-      '50% faster deployment cycles',
-      '30% infrastructure cost savings',
-      'Zero-downtime deployments'
+      '99.99% uptime guarantee','
+      '90% reduction in manual interventions','
+      '50% faster deployment cycles','
+      '30% infrastructure cost savings','
+      'Zero-downtime deployments''
     ],
-    marketPrice: '$2,499/month (Enterprise), $1,299/month (Professional), $599/month (Starter)',
-    category: 'Automation'
-    icon: ''
+    marketPrice: '$2,499/month (Enterprise), $1,299/month (Professional), $599/month (Starter)','
+    category: 'Automation''
+    icon: '''
     isPopular: true
     isNew: true
-    link: 'https://ziontechgroup.com/services/autonomous-ai-devops-platform'
+    link: 'https://ziontechgroup.com/services/autonomous-ai-devops-platform''
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      mobile: '+1 302 464 0950''
+      email: 'kleber@ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709','
+      website: 'https://ziontechgroup.com'},'
     realImplementation: true,
-    technology: ['Machine Learning', 'Kubernetes', 'Docker', 'Terraform', 'Prometheus', 'Grafana'],
-    integrations: ['AWS', 'Azure', 'GCP', 'GitHub', 'GitLab', 'Jira', 'Slack'],
-    useCases: ['Cloud infrastructure management', 'Microservices deployment', 'CI/CD automation', 'Monitoring and alerting', 'Security compliance'],
-    roi: 'Average customer sees 90% reduction in downtime and 60% faster deployments',
-    competitors: ['HashiCorp', 'GitLab', 'CircleCI', 'Jenkins'],
-    marketSize: '$8.2B DevOps market'
-    growthRate: '24.5% annual growth'
-    launchDate: '2024-01-10'
+    technology: ['Machine Learning', 'Kubernetes', 'Docker', 'Terraform', 'Prometheus', 'Grafana'],'
+    integrations: ['AWS', 'Azure', 'GCP', 'GitHub', 'GitLab', 'Jira', 'Slack'],'
+    useCases: ['Cloud infrastructure management', 'Microservices deployment', 'CI/CD automation', 'Monitoring and alerting', 'Security compliance'],'
+    roi: 'Average customer sees 90% reduction in downtime and 60% faster deployments','
+    competitors: ['HashiCorp', 'GitLab', 'CircleCI', 'Jenkins'],'
+    marketSize: '$8.2B DevOps market''
+    growthRate: '24.5% annual growth''
+    launchDate: '2024-01-10''
     customers: 342
     rating: 4.9
     reviews: 234,
   },
   // AI-Powered Financial Crime Detection
-    id: 'ai-financial-crime-detection',
-    name: 'AI Financial Crime Detection',
-    tagline: 'Real-time fraud detection with 99.9% accuracy',
-    price: '$3,999',
-    period: '/month',
-    description: 'Advanced AI platform that detects financial crimes, fraud, and money laundering in real-time using machine learning and behavioral analysis.',
+    id: 'ai-financial-crime-detection','
+    name: 'AI Financial Crime Detection','
+    tagline: 'Real-time fraud detection with 99.9% accuracy','
+    price: '$3,999','
+    period: '/month','
+    description: 'Advanced AI platform that detects financial crimes, fraud, and money laundering in real-time using machine learning and behavioral analysis.','
     features: [,
     marketPric,
-  e: '$2,499/month (Enterprise), $1,299/month (Professional), $599/month (Starter)',
+  e: '$2,499/month (Enterprise), $1,299/month (Professional), $599/month (Starter)','
     categor,
-  y: 'Automation',
+  y: 'Automation','
     ico,
-  n: '',
+  n: '','
     isPopula,
   r: true,
     isNe,
   w: true,
     lin,
-  k: 'http,
-  s://ziontechgroup.com/services/autonomous-ai-devops-platform',
+  k: 'http,'
+  s://ziontechgroup.com/services/autonomous-ai-devops-platform','
     contactInf,
   o: unknown,
       mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950','
       emai,
-  l: 'kleber@ziontechgroup.com',
+  l: 'kleber@ziontechgroup.com','
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
+  s: '364 E Main St STE 1008 Middletown DE 19709','
       websit,
-  e: 'http,
-  s://ziontechgroup.com'
+  e: 'http,'
+  s://ziontechgroup.com''
     },
     realImplementatio,
   n: true,
     technolog,
-  y: ['Machine Learning', 'Kubernetes', 'Docker', 'Terraform', 'Prometheus', 'Grafana'],
+  y: ['Machine Learning', 'Kubernetes', 'Docker', 'Terraform', 'Prometheus', 'Grafana'],'
     integration,
-  s: ['AWS', 'Azure', 'GCP', 'GitHub', 'GitLab', 'Jira', 'Slack'],
+  s: ['AWS', 'Azure', 'GCP', 'GitHub', 'GitLab', 'Jira', 'Slack'],'
     useCase,
-  s: ['Cloud infrastructure management', 'Microservices deployment', 'CI/CD automation', 'Monitoring and alerting', 'Security compliance'],
+  s: ['Cloud infrastructure management', 'Microservices deployment', 'CI/CD automation', 'Monitoring and alerting', 'Security compliance'],'
     ro,
-  i: 'Average customer sees 90% reduction in downtime and 60% faster deployments',
+  i: 'Average customer sees 90% reduction in downtime and 60% faster deployments','
     competitor,
-  s: ['HashiCorp', 'GitLab', 'CircleCI', 'Jenkins'],
+  s: ['HashiCorp', 'GitLab', 'CircleCI', 'Jenkins'],'
     marketSiz,
-  e: '$8.2B DevOps market',
+  e: '$8.2B DevOps market','
     growthRat,
-  e: '24.5% annual growth',
+  e: '24.5% annual growth','
     launchDat,
-  e: '2024-01-10',
+  e: '2024-01-10','
     customer,
   s: 342,
     ratin,
@@ -388,111 +390,111 @@ export const,
     review,
   s: 234},
   // AI-Powered Financial Crime Detection,
-  id: 'ai-financial-crime-detection',
+  id: 'ai-financial-crime-detection','
     nam,
-  e: 'AI Financial Crime Detection',
+  e: 'AI Financial Crime Detection','
     taglin,
-  e: 'Real-time fraud detection with 99.9% accuracy',
+  e: 'Real-time fraud detection with 99.9% accuracy','
     pric,
-  e: '$3,999',
+  e: '$3,999','
     perio,
-  d: '/month',
+  d: '/month','
     descriptio,
-  n: 'Advanced AI platform that detects financial crimes, fraud, and money laundering in real-time using machine learning and behavioral analysis.',
+  n: 'Advanced AI platform that detects financial crimes, fraud, and money laundering in real-time using machine learning and behavioral analysis.','
     feature,
   s: [,
-      'Real-time transaction monitoring',
-      'Behavioral pattern analysis',
-      'Anomaly detection',
-      'Risk scoring algorithms',
-      'Compliance reporting',
-      'Multi-channel monitoring',
-      'Machine learning models',
-      'Regulatory compliance'
+      'Real-time transaction monitoring','
+      'Behavioral pattern analysis','
+      'Anomaly detection','
+      'Risk scoring algorithms','
+      'Compliance reporting','
+      'Multi-channel monitoring','
+      'Machine learning models','
+      'Regulatory compliance''
     ],
     benefit,
   s: [,
-      '99.9% fraud detection accuracy',
-      'Real-time threat prevention',
-      'Regulatory compliance',
-      'Reduced false positives',
-      'Cost-effective compliance'
+      '99.9% fraud detection accuracy','
+      'Real-time threat prevention','
+      'Regulatory compliance','
+      'Reduced false positives','
+      'Cost-effective compliance''
     ],
-    marketPrice: '$3,999/month (Enterprise), $1,999/month (Professional), $999/month (Starter)',
-    category: 'Fintech'
-    icon: ''
+    marketPrice: '$3,999/month (Enterprise), $1,999/month (Professional), $999/month (Starter)','
+    category: 'Fintech''
+    icon: '''
     isPopular: true
     isNew: false
-    link: 'https://ziontechgroup.com/services/ai-financial-crime-detection'
+    link: 'https://ziontechgroup.com/services/ai-financial-crime-detection''
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      mobile: '+1 302 464 0950''
+      email: 'kleber@ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709','
+      website: 'https://ziontechgroup.com'},'
     realImplementation: true,
-    technology: ['Machine Learning', 'Deep Learning', 'NLP', 'Graph Databases', 'Real-time Processing'],
-    integrations: ['Banking Systems', 'Payment Processors', 'Regulatory Platforms', 'Compliance Tools'],
-    useCases: ['Banking fraud detection', 'Payment security', 'AML compliance', 'Credit card fraud', 'Insurance fraud'],
-    roi: 'Average customer prevents $2 M+ in fraud annually and achieves 100% compliance',
-    competitors: ['Sift', 'Signifyd', 'Forter', 'Riskified'],
-    marketSize: '$15.3B fraud detection market'
-    growthRate: '22.8% annual growth'
-    launchDate: '2023-11-15'
+    technology: ['Machine Learning', 'Deep Learning', 'NLP', 'Graph Databases', 'Real-time Processing'],'
+    integrations: ['Banking Systems', 'Payment Processors', 'Regulatory Platforms', 'Compliance Tools'],'
+    useCases: ['Banking fraud detection', 'Payment security', 'AML compliance', 'Credit card fraud', 'Insurance fraud'],'
+    roi: 'Average customer prevents $2 M+ in fraud annually and achieves 100% compliance','
+    competitors: ['Sift', 'Signifyd', 'Forter', 'Riskified'],'
+    marketSize: '$15.3B fraud detection market''
+    growthRate: '22.8% annual growth''
+    launchDate: '2023-11-15''
     customers: 189
     rating: 4.8
     reviews: 156,
   },
   // Quantum-Secure Communication Network
-    id: 'quantum-secure-communication',
-    name: 'Quantum-Secure Communication Network',
-    tagline: 'Unbreakable quantum encryption for secure communications',
-    price: '$5,999',
-    period: '/month',
-    description: 'Revolutionary quantum-secured communication network that provides unbreakable encryption using quantum key distribution and post-quantum cryptography.',
+    id: 'quantum-secure-communication','
+    name: 'Quantum-Secure Communication Network','
+    tagline: 'Unbreakable quantum encryption for secure communications','
+    price: '$5,999','
+    period: '/month','
+    description: 'Revolutionary quantum-secured communication network that provides unbreakable encryption using quantum key distribution and post-quantum cryptography.','
     features: [,
     marketPric,
-  e: '$3,999/month (Enterprise), $1,999/month (Professional), $999/month (Starter)',
+  e: '$3,999/month (Enterprise), $1,999/month (Professional), $999/month (Starter)','
     categor,
-  y: 'Fintech',
+  y: 'Fintech','
     ico,
-  n: '',
+  n: '','
     isPopula,
   r: true,
     isNe,
   w: false,
     lin,
-  k: 'http,
-  s://ziontechgroup.com/services/ai-financial-crime-detection',
+  k: 'http,'
+  s://ziontechgroup.com/services/ai-financial-crime-detection','
     contactInf,
   o: unknown,
       mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950','
       emai,
-  l: 'kleber@ziontechgroup.com',
+  l: 'kleber@ziontechgroup.com','
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
+  s: '364 E Main St STE 1008 Middletown DE 19709','
       websit,
-  e: 'http,
-  s://ziontechgroup.com'
+  e: 'http,'
+  s://ziontechgroup.com''
     },
     realImplementatio,
   n: true,
     technolog,
-  y: ['Machine Learning', 'Deep Learning', 'NLP', 'Graph Databases', 'Real-time Processing'],
+  y: ['Machine Learning', 'Deep Learning', 'NLP', 'Graph Databases', 'Real-time Processing'],'
     integration,
-  s: ['Banking Systems', 'Payment Processors', 'Regulatory Platforms', 'Compliance Tools'],
+  s: ['Banking Systems', 'Payment Processors', 'Regulatory Platforms', 'Compliance Tools'],'
     useCase,
-  s: ['Banking fraud detection', 'Payment security', 'AML compliance', 'Credit card fraud', 'Insurance fraud'],
+  s: ['Banking fraud detection', 'Payment security', 'AML compliance', 'Credit card fraud', 'Insurance fraud'],'
     ro,
-  i: 'Average customer prevents $2M+ in fraud annually and achieves 100% compliance',
+  i: 'Average customer prevents $2M+ in fraud annually and achieves 100% compliance','
     competitor,
-  s: ['Sift', 'Signifyd', 'Forter', 'Riskified'],
+  s: ['Sift', 'Signifyd', 'Forter', 'Riskified'],'
     marketSiz,
-  e: '$15.3B fraud detection market',
+  e: '$15.3B fraud detection market','
     growthRat,
-  e: '22.8% annual growth',
+  e: '22.8% annual growth','
     launchDat,
-  e: '2023-11-15',
+  e: '2023-11-15','
     customer,
   s: 189,
     ratin,
@@ -500,111 +502,111 @@ export const,
     review,
   s: 156},
   // Quantum-Secure Communication Network,
-  id: 'quantum-secure-communication',
+  id: 'quantum-secure-communication','
     nam,
-  e: 'Quantum-Secure Communication Network',
+  e: 'Quantum-Secure Communication Network','
     taglin,
-  e: 'Unbreakable quantum encryption for secure communications',
+  e: 'Unbreakable quantum encryption for secure communications','
     pric,
-  e: '$5,999',
+  e: '$5,999','
     perio,
-  d: '/month',
+  d: '/month','
     descriptio,
-  n: 'Revolutionary quantum-secured communication network that provides unbreakable encryption using quantum key distribution and post-quantum cryptography.',
+  n: 'Revolutionary quantum-secured communication network that provides unbreakable encryption using quantum key distribution and post-quantum cryptography.','
     feature,
   s: [,
-      'Quantum key distribution',
-      'Post-quantum cryptography',
-      'End-to-end encryption',
-      'Quantum-resistant algorithms',
-      'Secure key management',
-      'Multi-protocol support',
-      'Quantum network monitoring',
-      'Compliance certifications'
+      'Quantum key distribution','
+      'Post-quantum cryptography','
+      'End-to-end encryption','
+      'Quantum-resistant algorithms','
+      'Secure key management','
+      'Multi-protocol support','
+      'Quantum network monitoring','
+      'Compliance certifications''
     ],
     benefit,
   s: [,
-      'Unbreakable encryption',
-      'Future-proof security',
-      'Regulatory compliance',
-      'Global secure communication',
-      'Quantum advantage'
+      'Unbreakable encryption','
+      'Future-proof security','
+      'Regulatory compliance','
+      'Global secure communication','
+      'Quantum advantage''
     ],
-    marketPrice: '$5,999/month (Enterprise), $2,999/month (Professional), $1,499/month (Starter)',
-    category: 'Security'
-    icon: ''
+    marketPrice: '$5,999/month (Enterprise), $2,999/month (Professional), $1,499/month (Starter)','
+    category: 'Security''
+    icon: '''
     isPopular: true
     isNew: true
-    link: 'https://ziontechgroup.com/services/quantum-secure-communication'
+    link: 'https://ziontechgroup.com/services/quantum-secure-communication''
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      mobile: '+1 302 464 0950''
+      email: 'kleber@ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709','
+      website: 'https://ziontechgroup.com'},'
     realImplementation: true,
-    technology: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Networks', 'Quantum Sensors'],
-    integrations: ['Enterprise Systems', 'Cloud Platforms', 'IoT Devices', 'Government Networks'],
-    useCases: ['Government communications', 'Financial transactions', 'Healthcare data', 'Military communications', 'Critical infrastructure'],
-    roi: 'Average customer achieves 100% security compliance and zero security breaches',
-    competitors: ['ID Quantique', 'Qrypt', 'Quantum Xchange'],
-    marketSize: '$3.2B quantum security market'
-    growthRate: '52.1% annual growth'
-    launchDate: '2024-04-01'
+    technology: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Networks', 'Quantum Sensors'],'
+    integrations: ['Enterprise Systems', 'Cloud Platforms', 'IoT Devices', 'Government Networks'],'
+    useCases: ['Government communications', 'Financial transactions', 'Healthcare data', 'Military communications', 'Critical infrastructure'],'
+    roi: 'Average customer achieves 100% security compliance and zero security breaches','
+    competitors: ['ID Quantique', 'Qrypt', 'Quantum Xchange'],'
+    marketSize: '$3.2B quantum security market''
+    growthRate: '52.1% annual growth''
+    launchDate: '2024-04-01''
     customers: 45
     rating: 4.9
     reviews: 23,
   },
   // AI-Powered Healthcare Predictive Analytics
-    id: 'ai-healthcare-predictive-analytics',
-    name: 'AI Healthcare Predictive Analytics',
-    tagline: 'Predict and prevent health issues before they occur',
-    price: '$2,999',
-    period: '/month',
-    description: 'Advanced AI platform that analyzes patient data to predict health issues, recommend preventive measures, and optimize treatment plans.',
+    id: 'ai-healthcare-predictive-analytics','
+    name: 'AI Healthcare Predictive Analytics','
+    tagline: 'Predict and prevent health issues before they occur','
+    price: '$2,999','
+    period: '/month','
+    description: 'Advanced AI platform that analyzes patient data to predict health issues, recommend preventive measures, and optimize treatment plans.','
     features: [,
     marketPric,
-  e: '$5,999/month (Enterprise), $2,999/month (Professional), $1,499/month (Starter)',
+  e: '$5,999/month (Enterprise), $2,999/month (Professional), $1,499/month (Starter)','
     categor,
-  y: 'Security',
+  y: 'Security','
     ico,
-  n: '',
+  n: '','
     isPopula,
   r: true,
     isNe,
   w: true,
     lin,
-  k: 'http,
-  s://ziontechgroup.com/services/quantum-secure-communication',
+  k: 'http,'
+  s://ziontechgroup.com/services/quantum-secure-communication','
     contactInf,
   o: unknown,
       mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950','
       emai,
-  l: 'kleber@ziontechgroup.com',
+  l: 'kleber@ziontechgroup.com','
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
+  s: '364 E Main St STE 1008 Middletown DE 19709','
       websit,
-  e: 'http,
-  s://ziontechgroup.com'
+  e: 'http,'
+  s://ziontechgroup.com''
     },
     realImplementatio,
   n: true,
     technolog,
-  y: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Networks', 'Quantum Sensors'],
+  y: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Networks', 'Quantum Sensors'],'
     integration,
-  s: ['Enterprise Systems', 'Cloud Platforms', 'IoT Devices', 'Government Networks'],
+  s: ['Enterprise Systems', 'Cloud Platforms', 'IoT Devices', 'Government Networks'],'
     useCase,
-  s: ['Government communications', 'Financial transactions', 'Healthcare data', 'Military communications', 'Critical infrastructure'],
+  s: ['Government communications', 'Financial transactions', 'Healthcare data', 'Military communications', 'Critical infrastructure'],'
     ro,
-  i: 'Average customer achieves 100% security compliance and zero security breaches',
+  i: 'Average customer achieves 100% security compliance and zero security breaches','
     competitor,
-  s: ['ID Quantique', 'Qrypt', 'Quantum Xchange'],
+  s: ['ID Quantique', 'Qrypt', 'Quantum Xchange'],'
     marketSiz,
-  e: '$3.2B quantum security market',
+  e: '$3.2B quantum security market','
     growthRat,
-  e: '52.1% annual growth',
+  e: '52.1% annual growth','
     launchDat,
-  e: '2024-04-01',
+  e: '2024-04-01','
     customer,
   s: 45,
     ratin,
@@ -612,111 +614,111 @@ export const,
     review,
   s: 23},
   // AI-Powered Healthcare Predictive Analytics,
-  id: 'ai-healthcare-predictive-analytics',
+  id: 'ai-healthcare-predictive-analytics','
     nam,
-  e: 'AI Healthcare Predictive Analytics',
+  e: 'AI Healthcare Predictive Analytics','
     taglin,
-  e: 'Predict and prevent health issues before they occur',
+  e: 'Predict and prevent health issues before they occur','
     pric,
-  e: '$2,999',
+  e: '$2,999','
     perio,
-  d: '/month',
+  d: '/month','
     descriptio,
-  n: 'Advanced AI platform that analyzes patient data to predict health issues, recommend preventive measures, and optimize treatment plans.',
+  n: 'Advanced AI platform that analyzes patient data to predict health issues, recommend preventive measures, and optimize treatment plans.','
     feature,
   s: [,
-      'Predictive health modeling',
-      'Patient risk assessment',
-      'Treatment optimization',
-      'Drug interaction analysis',
-      'Population health insights',
-      'Clinical decision support',
-      'Real-time monitoring',
-      'HIPAA compliance'
+      'Predictive health modeling','
+      'Patient risk assessment','
+      'Treatment optimization','
+      'Drug interaction analysis','
+      'Population health insights','
+      'Clinical decision support','
+      'Real-time monitoring','
+      'HIPAA compliance''
     ],
     benefit,
   s: [,
-      'Early disease detection',
-      'Improved patient outcomes',
-      'Reduced healthcare costs',
-      'Personalized medicine',
-      'Preventive care focus'
+      'Early disease detection','
+      'Improved patient outcomes','
+      'Reduced healthcare costs','
+      'Personalized medicine','
+      'Preventive care focus''
     ],
-    marketPrice: '$2,999/month (Enterprise), $1,499/month (Professional), $699/month (Starter)',
-    category: 'Healthcare'
-    icon: ''
+    marketPrice: '$2,999/month (Enterprise), $1,499/month (Professional), $699/month (Starter)','
+    category: 'Healthcare''
+    icon: '''
     isPopular: true
     isNew: false
-    link: 'https://ziontechgroup.com/services/ai-healthcare-predictive-analytics'
+    link: 'https://ziontechgroup.com/services/ai-healthcare-predictive-analytics''
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      mobile: '+1 302 464 0950''
+      email: 'kleber@ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709','
+      website: 'https://ziontechgroup.com'},'
     realImplementation: true,
-    technology: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Big Data Analytics'],
-    integrations: ['EHR Systems', 'Medical Devices', 'Wearables', 'Pharmacy Systems', 'Insurance Platforms'],
-    useCases: ['Disease prediction', 'Treatment optimization', 'Drug discovery', 'Population health', 'Clinical trials'],
-    roi: 'Average customer reduces readmissions by 40% and improves patient outcomes by 35%',
-    competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare'],
-    marketSize: '$45.2B AI healthcare market'
-    growthRate: '28.9% annual growth'
-    launchDate: '2023-09-20'
+    technology: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Big Data Analytics'],'
+    integrations: ['EHR Systems', 'Medical Devices', 'Wearables', 'Pharmacy Systems', 'Insurance Platforms'],'
+    useCases: ['Disease prediction', 'Treatment optimization', 'Drug discovery', 'Population health', 'Clinical trials'],'
+    roi: 'Average customer reduces readmissions by 40% and improves patient outcomes by 35%','
+    competitors: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare'],'
+    marketSize: '$45.2B AI healthcare market''
+    growthRate: '28.9% annual growth''
+    launchDate: '2023-09-20''
     customers: 267
     rating: 4.8
     reviews: 189,
   },
   // Edge AI IoT Platform
-    id: 'edge-ai-iot-platform',
-    name: 'Edge AI IoT Platform',
-    tagline: 'Intelligent IoT with edge AI processing',
-    price: '$1,999',
-    period: '/month',
-    description: 'Comprehensive IoT platform that processes AI algorithms at the edge, enabling real-time intelligence and decision-making for connected devices.',
+    id: 'edge-ai-iot-platform','
+    name: 'Edge AI IoT Platform','
+    tagline: 'Intelligent IoT with edge AI processing','
+    price: '$1,999','
+    period: '/month','
+    description: 'Comprehensive IoT platform that processes AI algorithms at the edge, enabling real-time intelligence and decision-making for connected devices.','
     features: [,
     marketPric,
-  e: '$2,999/month (Enterprise), $1,499/month (Professional), $699/month (Starter)',
+  e: '$2,999/month (Enterprise), $1,499/month (Professional), $699/month (Starter)','
     categor,
-  y: 'Healthcare',
+  y: 'Healthcare','
     ico,
-  n: '',
+  n: '','
     isPopula,
   r: true,
     isNe,
   w: false,
     lin,
-  k: 'http,
-  s://ziontechgroup.com/services/ai-healthcare-predictive-analytics',
+  k: 'http,'
+  s://ziontechgroup.com/services/ai-healthcare-predictive-analytics','
     contactInf,
   o: unknown,
       mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950','
       emai,
-  l: 'kleber@ziontechgroup.com',
+  l: 'kleber@ziontechgroup.com','
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
+  s: '364 E Main St STE 1008 Middletown DE 19709','
       websit,
-  e: 'http,
-  s://ziontechgroup.com'
+  e: 'http,'
+  s://ziontechgroup.com''
     },
     realImplementatio,
   n: true,
     technolog,
-  y: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Big Data Analytics'],
+  y: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Big Data Analytics'],'
     integration,
-  s: ['EHR Systems', 'Medical Devices', 'Wearables', 'Pharmacy Systems', 'Insurance Platforms'],
+  s: ['EHR Systems', 'Medical Devices', 'Wearables', 'Pharmacy Systems', 'Insurance Platforms'],'
     useCase,
-  s: ['Disease prediction', 'Treatment optimization', 'Drug discovery', 'Population health', 'Clinical trials'],
+  s: ['Disease prediction', 'Treatment optimization', 'Drug discovery', 'Population health', 'Clinical trials'],'
     ro,
-  i: 'Average customer reduces readmissions by 40% and improves patient outcomes by 35%',
+  i: 'Average customer reduces readmissions by 40% and improves patient outcomes by 35%','
     competitor,
-  s: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare'],
+  s: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare'],'
     marketSiz,
-  e: '$45.2B AI healthcare market',
+  e: '$45.2B AI healthcare market','
     growthRat,
-  e: '28.9% annual growth',
+  e: '28.9% annual growth','
     launchDat,
-  e: '2023-09-20',
+  e: '2023-09-20','
     customer,
   s: 267,
     ratin,
@@ -724,111 +726,111 @@ export const,
     review,
   s: 189},
   // Edge AI IoT Platform,
-  id: 'edge-ai-iot-platform',
+  id: 'edge-ai-iot-platform','
     nam,
-  e: 'Edge AI IoT Platform',
+  e: 'Edge AI IoT Platform','
     taglin,
-  e: 'Intelligent IoT with edge AI processing',
+  e: 'Intelligent IoT with edge AI processing','
     pric,
-  e: '$1,999',
+  e: '$1,999','
     perio,
-  d: '/month',
+  d: '/month','
     descriptio,
-  n: 'Comprehensive IoT platform that processes AI algorithms at the edge, enabling real-time intelligence and decision-making for connected devices.',
+  n: 'Comprehensive IoT platform that processes AI algorithms at the edge, enabling real-time intelligence and decision-making for connected devices.','
     feature,
   s: [,
-      'Edge AI processing',
-      'Real-time analytics',
-      'Device management',
-      'Predictive maintenance',
-      'Energy optimization',
-      'Security monitoring',
-      'Scalable architecture',
-      'Multi-protocol support'
+      'Edge AI processing','
+      'Real-time analytics','
+      'Device management','
+      'Predictive maintenance','
+      'Energy optimization','
+      'Security monitoring','
+      'Scalable architecture','
+      'Multi-protocol support''
     ],
     benefit,
   s: [,
-      'Real-time decision making',
-      'Reduced latency',
-      'Lower bandwidth costs',
-      'Enhanced security',
-      'Scalable IoT deployment'
+      'Real-time decision making','
+      'Reduced latency','
+      'Lower bandwidth costs','
+      'Enhanced security','
+      'Scalable IoT deployment''
     ],
-    marketPrice: '$1,999/month (Enterprise), $999/month (Professional), $499/month (Starter)',
-    category: 'IoT'
-    icon: ''
+    marketPrice: '$1,999/month (Enterprise), $999/month (Professional), $499/month (Starter)','
+    category: 'IoT''
+    icon: '''
     isPopular: true
     isNew: false
-    link: 'https://ziontechgroup.com/services/edge-ai-iot-platform'
+    link: 'https://ziontechgroup.com/services/edge-ai-iot-platform''
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      mobile: '+1 302 464 0950''
+      email: 'kleber@ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709','
+      website: 'https://ziontechgroup.com'},'
     realImplementation: true,
-    technology: ['Edge Computing', 'Machine Learning', 'IoT Protocols', '5G Networks', 'Cloud Computing'],
-    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Industrial Systems', 'Smart City Platforms'],
-    useCases: ['Smart cities', 'Industrial IoT', 'Smart homes', 'Connected vehicles', 'Energy management'],
-    roi: 'Average customer reduces operational costs by 35% and improves efficiency by 45%',
-    competitors: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Particle'],
-    marketSize: '$12.8B edge computing market'
-    growthRate: '37.4% annual growth'
-    launchDate: '2023-12-10'
+    technology: ['Edge Computing', 'Machine Learning', 'IoT Protocols', '5G Networks', 'Cloud Computing'],'
+    integrations: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Industrial Systems', 'Smart City Platforms'],'
+    useCases: ['Smart cities', 'Industrial IoT', 'Smart homes', 'Connected vehicles', 'Energy management'],'
+    roi: 'Average customer reduces operational costs by 35% and improves efficiency by 45%','
+    competitors: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Particle'],'
+    marketSize: '$12.8B edge computing market''
+    growthRate: '37.4% annual growth''
+    launchDate: '2023-12-10''
     customers: 423
     rating: 4.7
     reviews: 298,
   },
   // AI-Powered Content Generation Suite
-    id: 'ai-content-generation-suite',
-    name: 'AI Content Generation Suite',
-    tagline: 'Create engaging content with AI assistance',
-    price: '$899',
-    period: '/month',
-    description: 'Comprehensive AI platform that generates high-quality, engaging content across multiple formats including articles, videos, social media posts, and marketing materials.',
+    id: 'ai-content-generation-suite','
+    name: 'AI Content Generation Suite','
+    tagline: 'Create engaging content with AI assistance','
+    price: '$899','
+    period: '/month','
+    description: 'Comprehensive AI platform that generates high-quality, engaging content across multiple formats including articles, videos, social media posts, and marketing materials.','
     features: [,
     marketPric,
-  e: '$1,999/month (Enterprise), $999/month (Professional), $499/month (Starter)',
+  e: '$1,999/month (Enterprise), $999/month (Professional), $499/month (Starter)','
     categor,
-  y: 'IoT',
+  y: 'IoT','
     ico,
-  n: '',
+  n: '','
     isPopula,
   r: true,
     isNe,
   w: false,
     lin,
-  k: 'http,
-  s://ziontechgroup.com/services/edge-ai-iot-platform',
+  k: 'http,'
+  s://ziontechgroup.com/services/edge-ai-iot-platform','
     contactInf,
   o: unknown,
       mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950','
       emai,
-  l: 'kleber@ziontechgroup.com',
+  l: 'kleber@ziontechgroup.com','
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
+  s: '364 E Main St STE 1008 Middletown DE 19709','
       websit,
-  e: 'http,
-  s://ziontechgroup.com'
+  e: 'http,'
+  s://ziontechgroup.com''
     },
     realImplementatio,
   n: true,
     technolog,
-  y: ['Edge Computing', 'Machine Learning', 'IoT Protocols', '5G Networks', 'Cloud Computing'],
+  y: ['Edge Computing', 'Machine Learning', 'IoT Protocols', '5G Networks', 'Cloud Computing'],'
     integration,
-  s: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Industrial Systems', 'Smart City Platforms'],
+  s: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Industrial Systems', 'Smart City Platforms'],'
     useCase,
-  s: ['Smart cities', 'Industrial IoT', 'Smart homes', 'Connected vehicles', 'Energy management'],
+  s: ['Smart cities', 'Industrial IoT', 'Smart homes', 'Connected vehicles', 'Energy management'],'
     ro,
-  i: 'Average customer reduces operational costs by 35% and improves efficiency by 45%',
+  i: 'Average customer reduces operational costs by 35% and improves efficiency by 45%','
     competitor,
-  s: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Particle'],
+  s: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Particle'],'
     marketSiz,
-  e: '$12.8B edge computing market',
+  e: '$12.8B edge computing market','
     growthRat,
-  e: '37.4% annual growth',
+  e: '37.4% annual growth','
     launchDat,
-  e: '2023-12-10',
+  e: '2023-12-10','
     customer,
   s: 423,
     ratin,
@@ -836,111 +838,111 @@ export const,
     review,
   s: 298},
   // AI-Powered Content Generation Suite,
-  id: 'ai-content-generation-suite',
+  id: 'ai-content-generation-suite','
     nam,
-  e: 'AI Content Generation Suite',
+  e: 'AI Content Generation Suite','
     taglin,
-  e: 'Create engaging content with AI assistance',
+  e: 'Create engaging content with AI assistance','
     pric,
-  e: '$899',
+  e: '$899','
     perio,
-  d: '/month',
+  d: '/month','
     descriptio,
-  n: 'Comprehensive AI platform that generates high-quality, engaging content across multiple formats including articles, videos, social media posts, and marketing materials.',
+  n: 'Comprehensive AI platform that generates high-quality, engaging content across multiple formats including articles, videos, social media posts, and marketing materials.','
     feature,
   s: [,
-      'Multi-format content generation',
-      'SEO optimization',
-      'Brand voice consistency',
-      'Content planning tools',
-      'Performance analytics',
-      'Multi-language support',
-      'Plagiarism detection',
-      'Content scheduling'
+      'Multi-format content generation','
+      'SEO optimization','
+      'Brand voice consistency','
+      'Content planning tools','
+      'Performance analytics','
+      'Multi-language support','
+      'Plagiarism detection','
+      'Content scheduling''
     ],
     benefit,
   s: [,
-      '10x faster content creation',
-      'Improved SEO performance',
-      'Consistent brand messaging',
-      'Cost-effective content production',
-      'Multi-platform distribution'
+      '10x faster content creation','
+      'Improved SEO performance','
+      'Consistent brand messaging','
+      'Cost-effective content production','
+      'Multi-platform distribution''
     ],
-    marketPrice: '$899/month (Enterprise), $499/month (Professional), $199/month (Starter)',
-    category: 'AI'
-    icon: ''
+    marketPrice: '$899/month (Enterprise), $499/month (Professional), $199/month (Starter)','
+    category: 'AI''
+    icon: '''
     isPopular: true
     isNew: false
-    link: 'https://ziontechgroup.com/services/ai-content-generation-suite'
+    link: 'https://ziontechgroup.com/services/ai-content-generation-suite''
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      mobile: '+1 302 464 0950''
+      email: 'kleber@ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709','
+      website: 'https://ziontechgroup.com'},'
     realImplementation: true,
-    technology: ['GPT Models', 'Natural Language Processing', 'Computer Vision', 'Machine Learning', 'Content Analytics'],
-    integrations: ['CMS Platforms', 'Social Media APIs', 'Marketing Tools', 'SEO Platforms', 'Analytics Tools'],
-    useCases: ['Content marketing', 'Social media management', 'SEO content', 'Email marketing', 'Video creation'],
-    roi: 'Average customer increases content output by 500% and improves engagement by 40%',
-    competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot'],
-    marketSize: '$8.7B AI content generation market'
-    growthRate: '26.3% annual growth'
-    launchDate: '2023-10-15'
+    technology: ['GPT Models', 'Natural Language Processing', 'Computer Vision', 'Machine Learning', 'Content Analytics'],'
+    integrations: ['CMS Platforms', 'Social Media APIs', 'Marketing Tools', 'SEO Platforms', 'Analytics Tools'],'
+    useCases: ['Content marketing', 'Social media management', 'SEO content', 'Email marketing', 'Video creation'],'
+    roi: 'Average customer increases content output by 500% and improves engagement by 40%','
+    competitors: ['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot'],'
+    marketSize: '$8.7B AI content generation market''
+    growthRate: '26.3% annual growth''
+    launchDate: '2023-10-15''
     customers: 567
     rating: 4.6
     reviews: 423,
   },
   // Blockchain Supply Chain Transparency
-    id: 'blockchain-supply-chain-transparency',
-    name: 'Blockchain Supply Chain Transparency',
-    tagline: 'End-to-end supply chain visibility with blockchain',
-    price: '$2,299',
-    period: '/month',
-    description: 'Blockchain-powered platform that provides complete transparency and traceability across supply chains, ensuring authenticity and compliance.',
+    id: 'blockchain-supply-chain-transparency','
+    name: 'Blockchain Supply Chain Transparency','
+    tagline: 'End-to-end supply chain visibility with blockchain','
+    price: '$2,299','
+    period: '/month','
+    description: 'Blockchain-powered platform that provides complete transparency and traceability across supply chains, ensuring authenticity and compliance.','
     features: [,
     marketPric,
-  e: '$899/month (Enterprise), $499/month (Professional), $199/month (Starter)',
+  e: '$899/month (Enterprise), $499/month (Professional), $199/month (Starter)','
     categor,
-  y: 'AI',
+  y: 'AI','
     ico,
-  n: '',
+  n: '','
     isPopula,
   r: true,
     isNe,
   w: false,
     lin,
-  k: 'http,
-  s://ziontechgroup.com/services/ai-content-generation-suite',
+  k: 'http,'
+  s://ziontechgroup.com/services/ai-content-generation-suite','
     contactInf,
   o: unknown,
       mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950','
       emai,
-  l: 'kleber@ziontechgroup.com',
+  l: 'kleber@ziontechgroup.com','
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
+  s: '364 E Main St STE 1008 Middletown DE 19709','
       websit,
-  e: 'http,
-  s://ziontechgroup.com'
+  e: 'http,'
+  s://ziontechgroup.com''
     },
     realImplementatio,
   n: true,
     technolog,
-  y: ['GPT Models', 'Natural Language Processing', 'Computer Vision', 'Machine Learning', 'Content Analytics'],
+  y: ['GPT Models', 'Natural Language Processing', 'Computer Vision', 'Machine Learning', 'Content Analytics'],'
     integration,
-  s: ['CMS Platforms', 'Social Media APIs', 'Marketing Tools', 'SEO Platforms', 'Analytics Tools'],
+  s: ['CMS Platforms', 'Social Media APIs', 'Marketing Tools', 'SEO Platforms', 'Analytics Tools'],'
     useCase,
-  s: ['Content marketing', 'Social media management', 'SEO content', 'Email marketing', 'Video creation'],
+  s: ['Content marketing', 'Social media management', 'SEO content', 'Email marketing', 'Video creation'],'
     ro,
-  i: 'Average customer increases content output by 500% and improves engagement by 40%',
+  i: 'Average customer increases content output by 500% and improves engagement by 40%','
     competitor,
-  s: ['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot'],
+  s: ['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot'],'
     marketSiz,
-  e: '$8.7B AI content generation market',
+  e: '$8.7B AI content generation market','
     growthRat,
-  e: '26.3% annual growth',
+  e: '26.3% annual growth','
     launchDat,
-  e: '2023-10-15',
+  e: '2023-10-15','
     customer,
   s: 567,
     ratin,
@@ -948,111 +950,111 @@ export const,
     review,
   s: 423},
   // Blockchain Supply Chain Transparency,
-  id: 'blockchain-supply-chain-transparency',
+  id: 'blockchain-supply-chain-transparency','
     nam,
-  e: 'Blockchain Supply Chain Transparency',
+  e: 'Blockchain Supply Chain Transparency','
     taglin,
-  e: 'End-to-end supply chain visibility with blockchain',
+  e: 'End-to-end supply chain visibility with blockchain','
     pric,
-  e: '$2,299',
+  e: '$2,299','
     perio,
-  d: '/month',
+  d: '/month','
     descriptio,
-  n: 'Blockchain-powered platform that provides complete transparency and traceability across supply chains, ensuring authenticity and compliance.',
+  n: 'Blockchain-powered platform that provides complete transparency and traceability across supply chains, ensuring authenticity and compliance.','
     feature,
   s: [,
-      'End-to-end traceability',
-      'Smart contract automation',
-      'Real-time tracking',
-      'Compliance reporting',
-      'Quality assurance',
-      'Sustainability tracking',
-      'Multi-stakeholder access',
-      'Immutable records'
+      'End-to-end traceability','
+      'Smart contract automation','
+      'Real-time tracking','
+      'Compliance reporting','
+      'Quality assurance','
+      'Sustainability tracking','
+      'Multi-stakeholder access','
+      'Immutable records''
     ],
     benefit,
   s: [,
-      'Complete supply chain visibility',
-      'Reduced fraud and counterfeiting',
-      'Improved compliance',
-      'Enhanced customer trust',
-      'Operational efficiency'
+      'Complete supply chain visibility','
+      'Reduced fraud and counterfeiting','
+      'Improved compliance','
+      'Enhanced customer trust','
+      'Operational efficiency''
     ],
-    marketPrice: '$2,299/month (Enterprise), $1,199/month (Professional), $599/month (Starter)',
-    category: 'Blockchain'
-    icon: ''
+    marketPrice: '$2,299/month (Enterprise), $1,199/month (Professional), $599/month (Starter)','
+    category: 'Blockchain''
+    icon: '''
     isPopular: true
     isNew: false
-    link: 'https://ziontechgroup.com/services/blockchain-supply-chain-transparency'
+    link: 'https://ziontechgroup.com/services/blockchain-supply-chain-transparency''
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      mobile: '+1 302 464 0950''
+      email: 'kleber@ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709','
+      website: 'https://ziontechgroup.com'},'
     realImplementation: true,
-    technology: ['Blockchain', 'Smart Contracts', 'IoT Sensors', 'Cloud Computing', 'Data Analytics'],
-    integrations: ['ERP Systems', 'WMS Platforms', 'Logistics Systems', 'Retail Platforms', 'Government Systems'],
-    useCases: ['Food safety', 'Pharmaceutical tracking', 'Luxury goods authentication', 'Sustainable sourcing', 'Regulatory compliance'],
-    roi: 'Average customer reduces supply chain costs by 25% and improves compliance by 100%',
-    competitors: ['IBM Food Trust', 'VeChain', 'OriginTrail', 'Provenance'],
-    marketSize: '$9.8B blockchain supply chain market'
-    growthRate: '31.2% annual growth'
-    launchDate: '2023-08-20'
+    technology: ['Blockchain', 'Smart Contracts', 'IoT Sensors', 'Cloud Computing', 'Data Analytics'],'
+    integrations: ['ERP Systems', 'WMS Platforms', 'Logistics Systems', 'Retail Platforms', 'Government Systems'],'
+    useCases: ['Food safety', 'Pharmaceutical tracking', 'Luxury goods authentication', 'Sustainable sourcing', 'Regulatory compliance'],'
+    roi: 'Average customer reduces supply chain costs by 25% and improves compliance by 100%','
+    competitors: ['IBM Food Trust', 'VeChain', 'OriginTrail', 'Provenance'],'
+    marketSize: '$9.8B blockchain supply chain market''
+    growthRate: '31.2% annual growth''
+    launchDate: '2023-08-20''
     customers: 234
     rating: 4.7
     reviews: 167,
   },
   // AI-Powered Customer Experience Platform
-    id: 'ai-customer-experience-platform',
-    name: 'AI Customer Experience Platform',
-    tagline: 'Personalized customer experiences with AI',
-    price: '$1,799',
-    period: '/month',
-    description: 'Intelligent platform that uses AI to deliver personalized customer experiences across all touchpoints, improving satisfaction and loyalty.',
+    id: 'ai-customer-experience-platform','
+    name: 'AI Customer Experience Platform','
+    tagline: 'Personalized customer experiences with AI','
+    price: '$1,799','
+    period: '/month','
+    description: 'Intelligent platform that uses AI to deliver personalized customer experiences across all touchpoints, improving satisfaction and loyalty.','
     features: [,
     marketPric,
-  e: '$2,299/month (Enterprise), $1,199/month (Professional), $599/month (Starter)',
+  e: '$2,299/month (Enterprise), $1,199/month (Professional), $599/month (Starter)','
     categor,
-  y: 'Blockchain',
+  y: 'Blockchain','
     ico,
-  n: '',
+  n: '','
     isPopula,
   r: true,
     isNe,
   w: false,
     lin,
-  k: 'http,
-  s://ziontechgroup.com/services/blockchain-supply-chain-transparency',
+  k: 'http,'
+  s://ziontechgroup.com/services/blockchain-supply-chain-transparency','
     contactInf,
   o: unknown,
       mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950','
       emai,
-  l: 'kleber@ziontechgroup.com',
+  l: 'kleber@ziontechgroup.com','
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
+  s: '364 E Main St STE 1008 Middletown DE 19709','
       websit,
-  e: 'http,
-  s://ziontechgroup.com'
+  e: 'http,'
+  s://ziontechgroup.com''
     },
     realImplementatio,
   n: true,
     technolog,
-  y: ['Blockchain', 'Smart Contracts', 'IoT Sensors', 'Cloud Computing', 'Data Analytics'],
+  y: ['Blockchain', 'Smart Contracts', 'IoT Sensors', 'Cloud Computing', 'Data Analytics'],'
     integration,
-  s: ['ERP Systems', 'WMS Platforms', 'Logistics Systems', 'Retail Platforms', 'Government Systems'],
+  s: ['ERP Systems', 'WMS Platforms', 'Logistics Systems', 'Retail Platforms', 'Government Systems'],'
     useCase,
-  s: ['Food safety', 'Pharmaceutical tracking', 'Luxury goods authentication', 'Sustainable sourcing', 'Regulatory compliance'],
+  s: ['Food safety', 'Pharmaceutical tracking', 'Luxury goods authentication', 'Sustainable sourcing', 'Regulatory compliance'],'
     ro,
-  i: 'Average customer reduces supply chain costs by 25% and improves compliance by 100%',
+  i: 'Average customer reduces supply chain costs by 25% and improves compliance by 100%','
     competitor,
-  s: ['IBM Food Trust', 'VeChain', 'OriginTrail', 'Provenance'],
+  s: ['IBM Food Trust', 'VeChain', 'OriginTrail', 'Provenance'],'
     marketSiz,
-  e: '$9.8B blockchain supply chain market',
+  e: '$9.8B blockchain supply chain market','
     growthRat,
-  e: '31.2% annual growth',
+  e: '31.2% annual growth','
     launchDat,
-  e: '2023-08-20',
+  e: '2023-08-20','
     customer,
   s: 234,
     ratin,
@@ -1060,110 +1062,110 @@ export const,
     review,
   s: 167},
   // AI-Powered Customer Experience Platform,
-  id: 'ai-customer-experience-platform',
+  id: 'ai-customer-experience-platform','
     nam,
-  e: 'AI Customer Experience Platform',
+  e: 'AI Customer Experience Platform','
     taglin,
-  e: 'Personalized customer experiences with AI',
+  e: 'Personalized customer experiences with AI','
     pric,
-  e: '$1,799',
+  e: '$1,799','
     perio,
-  d: '/month',
+  d: '/month','
     descriptio,
-  n: 'Intelligent platform that uses AI to deliver personalized customer experiences across all touchpoints, improving satisfaction and loyalty.',
+  n: 'Intelligent platform that uses AI to deliver personalized customer experiences across all touchpoints, improving satisfaction and loyalty.','
     feature,
   s: [,
-      'Customer behavior analysis',
-      'Personalized recommendations',
-      'Omnichannel engagement',
-      'Sentiment analysis',
-      'Predictive customer service',
-      'Customer journey mapping',
-      'Real-time personalization',
-      'Performance analytics'
+      'Customer behavior analysis','
+      'Personalized recommendations','
+      'Omnichannel engagement','
+      'Sentiment analysis','
+      'Predictive customer service','
+      'Customer journey mapping','
+      'Real-time personalization','
+      'Performance analytics''
     ],
     benefit,
   s: [,
-      'Improved customer satisfaction',
-      'Increased customer loyalty',
-      'Higher conversion rates',
-      'Reduced customer churn',
-      'Personalized marketing'
+      'Improved customer satisfaction','
+      'Increased customer loyalty','
+      'Higher conversion rates','
+      'Reduced customer churn','
+      'Personalized marketing''
     ],
-    marketPrice: '$1,799/month (Enterprise), $899/month (Professional), $399/month (Starter)',
-    category: 'AI'
-    icon: ''
+    marketPrice: '$1,799/month (Enterprise), $899/month (Professional), $399/month (Starter)','
+    category: 'AI''
+    icon: '''
     isPopular: true
     isNew: false
-    link: 'https://ziontechgroup.com/services/ai-customer-experience-platform'
+    link: 'https://ziontechgroup.com/services/ai-customer-experience-platform''
     contactInfo: unknown,
-      mobile: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'},
+      mobile: '+1 302 464 0950''
+      email: 'kleber@ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709','
+      website: 'https://ziontechgroup.com'},'
     realImplementation: true,
-    technology: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Customer Data Platforms'],
-    integrations: ['CRM Systems', 'Marketing Platforms', 'E-commerce Platforms', 'Social Media', 'Email Systems'],
-    useCases: ['E-commerce personalization', 'Customer service automation', 'Marketing automation', 'Customer retention', 'Product recommendations'],
-    roi: 'Average customer increases customer lifetime value by 35% and reduces churn by 40%',
-    competitors: ['Segment', 'Amplitude', 'Mixpanel', 'Hotjar'],
-    marketSize: '$11.9B customer experience market'
-    growthRate: '23.7% annual growth'
-    launchDate: '2023-07-15'
+    technology: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Customer Data Platforms'],'
+    integrations: ['CRM Systems', 'Marketing Platforms', 'E-commerce Platforms', 'Social Media', 'Email Systems'],'
+    useCases: ['E-commerce personalization', 'Customer service automation', 'Marketing automation', 'Customer retention', 'Product recommendations'],'
+    roi: 'Average customer increases customer lifetime value by 35% and reduces churn by 40%','
+    competitors: ['Segment', 'Amplitude', 'Mixpanel', 'Hotjar'],'
+    marketSize: '$11.9B customer experience market''
+    growthRate: '23.7% annual growth''
+    launchDate: '2023-07-15''
     customers: 445
     rating: 4.8
     reviews: 312,
     marketPric,
-  e: '$1,799/month (Enterprise), $899/month (Professional), $399/month (Starter)',
+  e: '$1,799/month (Enterprise), $899/month (Professional), $399/month (Starter)','
     categor,
-  y: 'AI',
+  y: 'AI','
     ico,
-  n: '',
+  n: '','
     isPopula,
   r: true,
     isNe,
   w: false,
     lin,
-  k: 'http,
-  s://ziontechgroup.com/services/ai-customer-experience-platform',
+  k: 'http,'
+  s://ziontechgroup.com/services/ai-customer-experience-platform','
     contactInf,
   o: unknown,
       mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950','
       emai,
-  l: 'kleber@ziontechgroup.com',
+  l: 'kleber@ziontechgroup.com','
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',
+  s: '364 E Main St STE 1008 Middletown DE 19709','
       websit,
-  e: 'http,
-  s://ziontechgroup.com'
+  e: 'http,'
+  s://ziontechgroup.com''
     },
     realImplementatio,
   n: true,
     technolog,
-  y: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Customer Data Platforms'],
+  y: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Customer Data Platforms'],'
     integration,
-  s: ['CRM Systems', 'Marketing Platforms', 'E-commerce Platforms', 'Social Media', 'Email Systems'],
+  s: ['CRM Systems', 'Marketing Platforms', 'E-commerce Platforms', 'Social Media', 'Email Systems'],'
     useCase,
-  s: ['E-commerce personalization', 'Customer service automation', 'Marketing automation', 'Customer retention', 'Product recommendations'],
+  s: ['E-commerce personalization', 'Customer service automation', 'Marketing automation', 'Customer retention', 'Product recommendations'],'
     ro,
-  i: 'Average customer increases customer lifetime value by 35% and reduces churn by 40%',
+  i: 'Average customer increases customer lifetime value by 35% and reduces churn by 40%','
     competitor,
-  s: ['Segment', 'Amplitude', 'Mixpanel', 'Hotjar'],
+  s: ['Segment', 'Amplitude', 'Mixpanel', 'Hotjar'],'
     marketSiz,
-  e: '$11.9B customer experience market',
+  e: '$11.9B customer experience market','
     growthRat,
-  e: '23.7% annual growth',
+  e: '23.7% annual growth','
     launchDat,
-  e: '2023-07-15',
+  e: '2023-07-15','
     customer,
   s: 445,
     ratin,
   g: 4.8,
     review,
   s: 312}
-]
-export interface ZionInnovativeService2025,
+];
+export interface ZionInnovativeService2025,;
   id: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -1173,7 +1175,7 @@ export interface ZionInnovativeService2025,
   s: string[], benefit,
   s: string[], marketPric,
   e: string, categor,
-  y: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'IoT' | 'Blockchain' | 'Quantum' | 'Edge' | 'GreenTech' ico,
+  y: 'AI' | 'IT' | 'SAAS' | 'Development' | 'Cloud' | 'Security' | 'Analytics' | 'Automation' | 'Fintech' | 'Healthcare' | 'IoT' | 'Blockchain' | 'Quantum' | 'Edge' | 'GreenTech' ico,'
   n: string; isPopular?: boolean; isNew?: boolean, lin,
   k: string, contactInf,
   o: mobil,
@@ -1192,335 +1194,335 @@ export interface ZionInnovativeService2025,
   e: string, customer,
   s: number, ratin,
   g: number, review,
-  s: number} export const,
-  zionInnovativeServices2025: ZionInnovativeService2025[] = [ // AI-Powered Quantum Edge Computing ' i,
-  d: 'quantum-edge-ai-platform',' nam,
-  e: 'Quantum Edge AI Platform',' taglin,
-  e: 'Quantum computing meets edge AI for real-time intelligence',' pric,
-  e: '$4,999',' perio,
-  d: '/month',' descriptio,
-  n: 'Revolutionary platform combining quantum computing with edge AI to deliver real-time intelligence processing at the network edge, enabling instant decision-making for autonomous systems.', feature,
-  s: [' 'Quantum-enhanced edge computing',' 'Real-time AI inference at edge',' 'Quantum error correction',' 'Edge-to-cloud quantum synchronization',' 'Autonomous decision making',' 'Low-latency processing',' 'Quantum-secure communications',' 'Edge device optimization' ], benefit,
-  s: [' '1000x faster edge processing',' 'Real-time autonomous decisions',' 'Quantum-level security',' 'Reduced cloud dependency',' 'Enhanced IoT capabilities' ],' marketPric,
-  e: '$4,999/month (Enterprise), $2,499/month (Professional), $999/month (Starter)',' categor,
-  y: 'Quantum',' ico,
-  n: '⚛️', isPopula,
+  s: number} export const,;
+  zionInnovativeServices2025: ZionInnovativeService2025[] = [ // AI-Powered Quantum Edge Computing ' i,'
+  d: 'quantum-edge-ai-platform',' nam,'
+  e: 'Quantum Edge AI Platform',' taglin,'
+  e: 'Quantum computing meets edge AI for real-time intelligence',' pric,'
+  e: '$4,999',' perio,'
+  d: '/month',' descriptio,'
+  n: 'Revolutionary platform combining quantum computing with edge AI to deliver real-time intelligence processing at the network edge, enabling instant decision-making for autonomous systems.', feature,'
+  s: [' 'Quantum-enhanced edge computing',' 'Real-time AI inference at edge',' 'Quantum error correction',' 'Edge-to-cloud quantum synchronization',' 'Autonomous decision making',' 'Low-latency processing',' 'Quantum-secure communications',' 'Edge device optimization' ], benefit,'
+  s: [' '1000x faster edge processing',' 'Real-time autonomous decisions',' 'Quantum-level security',' 'Reduced cloud dependency',' 'Enhanced IoT capabilities' ],' marketPric,'
+  e: '$4,999/month (Enterprise), $2,499/month (Professional), $999/month (Starter)',' categor,'
+  y: 'Quantum',' ico,'
+  n: '⚛️', isPopula,'
   r: true, isNe,
-  w: true,' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/quantum-edge-ai-platform', contactInf,
-  o: ' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
-  n: true,' technolog,
-  y: ['IBM Qiskit', 'Google Cirq', 'TensorFlow Quantum', 'Edge Computing', '5G Networks'],' integration,
-  s: ['AWS IoT Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Kubernetes Edge'],' useCase,
-  s: ['Autonomous vehicles', 'Smart cities', 'Industrial IoT', 'Healthcare monitoring', 'Financial trading'],' ro,
-  i: 'Average customer sees 90% reduction in latency and 80% improvement in decision accuracy',' competitor,
-  s: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],' marketSiz,
-  e: '$2.1B quantum edge computing market',' growthRat,
-  e: '45.3% annual growth',' launchDat,
-  e: '2024-03-15', customer,
+  w: true,' lin,'
+  k: 'http,'
+  s://ziontechgroup.com/services/quantum-edge-ai-platform', contactInf,'
+  o: ' mobil,'
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,'
+  e: 'http,'
+  s://ziontechgroup.com' }, realImplementatio,'
+  n: true,' technolog,'
+  y: ['IBM Qiskit', 'Google Cirq', 'TensorFlow Quantum', 'Edge Computing', '5G Networks'],' integration,'
+  s: ['AWS IoT Greengrass', 'Azure IoT Edge', 'Google Cloud IoT', 'Kubernetes Edge'],' useCase,'
+  s: ['Autonomous vehicles', 'Smart cities', 'Industrial IoT', 'Healthcare monitoring', 'Financial trading'],' ro,'
+  i: 'Average customer sees 90% reduction in latency and 80% improvement in decision accuracy',' competitor,'
+  s: ['IBM Quantum', 'Google Quantum AI', 'Microsoft Azure Quantum'],' marketSiz,'
+  e: '$2.1B quantum edge computing market',' growthRat,'
+  e: '45.3% annual growth',' launchDat,'
+  e: '2024-03-15', customer,'
   s: 28, ratin,
   g: 4.9, review,
-  s: 15 }, // AI-Powered Carbon Footprint Analytics ' i,
-  d: 'ai-carbon-intelligence-suite',' nam,
-  e: 'AI Carbon Intelligence Suite',' taglin,
-  e: 'Intelligent carbon footprint tracking and optimization',' pric,
-  e: '$1,299',' perio,
-  d: '/month',' descriptio,
-  n: 'Advanced AI-powered platform that automatically tracks, analyzes, and optimizes carbon footprints across organizations, providing actionable insights for sustainability initiatives.', feature,
-  s: [' 'Automated carbon tracking',' 'AI-powered optimization recommendations',' 'Real-time sustainability metrics',' 'Supply chain carbon mapping',' 'ESG compliance reporting',' 'Carbon credit management',' 'Predictive sustainability modeling',' 'Stakeholder communication tools' ], benefit,
-  s: [' 'Reduce carbon footprint by 30-50%',' 'Achieve ESG compliance automatically',' 'Improve brand reputation',' 'Access to carbon markets',' 'Cost savings through optimization' ],' marketPric,
-  e: '$1,299/month (Enterprise), $699/month (Professional), $299/month (Starter)',' categor,
-  y: 'GreenTech',' ico,
-  n: '🌱', isPopula,
+  s: 15 }, // AI-Powered Carbon Footprint Analytics ' i,'
+  d: 'ai-carbon-intelligence-suite',' nam,'
+  e: 'AI Carbon Intelligence Suite',' taglin,'
+  e: 'Intelligent carbon footprint tracking and optimization',' pric,'
+  e: '$1,299',' perio,'
+  d: '/month',' descriptio,'
+  n: 'Advanced AI-powered platform that automatically tracks, analyzes, and optimizes carbon footprints across organizations, providing actionable insights for sustainability initiatives.', feature,'
+  s: [' 'Automated carbon tracking',' 'AI-powered optimization recommendations',' 'Real-time sustainability metrics',' 'Supply chain carbon mapping',' 'ESG compliance reporting',' 'Carbon credit management',' 'Predictive sustainability modeling',' 'Stakeholder communication tools' ], benefit,'
+  s: [' 'Reduce carbon footprint by 30-50%',' 'Achieve ESG compliance automatically',' 'Improve brand reputation',' 'Access to carbon markets',' 'Cost savings through optimization' ],' marketPric,'
+  e: '$1,299/month (Enterprise), $699/month (Professional), $299/month (Starter)',' categor,'
+  y: 'GreenTech',' ico,'
+  n: '🌱', isPopula,'
   r: true, isNe,
-  w: true,' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/ai-carbon-intelligence-suite', contactInf,
-  o: ' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
-  n: true,' technolog,
-  y: ['Machine Learning', 'IoT Sensors', 'Blockchain', 'Cloud Computing', 'Data Analytics'],' integration,
-  s: ['ERP Systems', 'Supply Chain Platforms', 'ESG Reporting Tools', 'Carbon Markets'],' useCase,
-  s: ['Corporate sustainability', 'Supply chain optimization', 'ESG compliance', 'Carbon trading', 'Green finance'],' ro,
-  i: 'Average customer achieves 40% carbon reduction and $500K+ annual savings',' competitor,
-  s: ['Watershed', 'Normative', 'Carbon Analytics'],' marketSiz,
-  e: '$1.8B carbon management market',' growthRat,
-  e: '38.7% annual growth',' launchDat,
-  e: '2024-02-20', customer,
+  w: true,' lin,'
+  k: 'http,'
+  s://ziontechgroup.com/services/ai-carbon-intelligence-suite', contactInf,'
+  o: ' mobil,'
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,'
+  e: 'http,'
+  s://ziontechgroup.com' }, realImplementatio,'
+  n: true,' technolog,'
+  y: ['Machine Learning', 'IoT Sensors', 'Blockchain', 'Cloud Computing', 'Data Analytics'],' integration,'
+  s: ['ERP Systems', 'Supply Chain Platforms', 'ESG Reporting Tools', 'Carbon Markets'],' useCase,'
+  s: ['Corporate sustainability', 'Supply chain optimization', 'ESG compliance', 'Carbon trading', 'Green finance'],' ro,'
+  i: 'Average customer achieves 40% carbon reduction and $500K+ annual savings',' competitor,'
+  s: ['Watershed', 'Normative', 'Carbon Analytics'],' marketSiz,'
+  e: '$1.8B carbon management market',' growthRat,'
+  e: '38.7% annual growth',' launchDat,'
+  e: '2024-02-20', customer,'
   s: 156, ratin,
   g: 4.8, review,
-  s: 89 }, // Autonomous AI DevOps Platform ' i,
-  d: 'autonomous-ai-devops-platform',' nam,
-  e: 'Autonomous AI DevOps Platform',' taglin,
-  e: 'Self-healing infrastructure with AI-powered automation',' pric,
-  e: '$2,499',' perio,
-  d: '/month',' descriptio,
-  n: 'Next-generation DevOps platform that uses AI to autonomously manage, monitor, and optimize infrastructure, automatically resolving issues before they impact users.', feature,
-  s: [' 'AI-powered incident prediction',' 'Autonomous problem resolution',' 'Self-optimizing infrastructure',' 'Intelligent scaling decisions',' 'Predictive maintenance',' 'Automated security patching',' 'Performance optimization',' 'Cost optimization' ], benefit,
-  s: [' '99.99% uptime guarantee',' '90% reduction in manual interventions',' '50% faster deployment cycles',' '30% infrastructure cost savings',' 'Zero-downtime deployments' ],' marketPric,
-  e: '$2,499/month (Enterprise), $1,299/month (Professional), $599/month (Starter)',' categor,
-  y: 'Automation',' ico,
-  n: '🤖', isPopula,
+  s: 89 }, // Autonomous AI DevOps Platform ' i,'
+  d: 'autonomous-ai-devops-platform',' nam,'
+  e: 'Autonomous AI DevOps Platform',' taglin,'
+  e: 'Self-healing infrastructure with AI-powered automation',' pric,'
+  e: '$2,499',' perio,'
+  d: '/month',' descriptio,'
+  n: 'Next-generation DevOps platform that uses AI to autonomously manage, monitor, and optimize infrastructure, automatically resolving issues before they impact users.', feature,'
+  s: [' 'AI-powered incident prediction',' 'Autonomous problem resolution',' 'Self-optimizing infrastructure',' 'Intelligent scaling decisions',' 'Predictive maintenance',' 'Automated security patching',' 'Performance optimization',' 'Cost optimization' ], benefit,'
+  s: [' '99.99% uptime guarantee',' '90% reduction in manual interventions',' '50% faster deployment cycles',' '30% infrastructure cost savings',' 'Zero-downtime deployments' ],' marketPric,'
+  e: '$2,499/month (Enterprise), $1,299/month (Professional), $599/month (Starter)',' categor,'
+  y: 'Automation',' ico,'
+  n: '🤖', isPopula,'
   r: true, isNe,
-  w: true,' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/autonomous-ai-devops-platform', contactInf,
-  o: ' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
-  n: true,' technolog,
-  y: ['Machine Learning', 'Kubernetes', 'Docker', 'Terraform', 'Prometheus', 'Grafana'],' integration,
-  s: ['AWS', 'Azure', 'GCP', 'GitHub', 'GitLab', 'Jira', 'Slack'],' useCase,
-  s: ['Cloud infrastructure management', 'Microservices deployment', 'CI/CD automation', 'Monitoring and alerting', 'Security compliance'],' ro,
-  i: 'Average customer sees 90% reduction in downtime and 60% faster deployments',' competitor,
-  s: ['HashiCorp', 'GitLab', 'CircleCI', 'Jenkins'],' marketSiz,
-  e: '$8.2B DevOps market',' growthRat,
-  e: '24.5% annual growth',' launchDat,
-  e: '2024-01-10', customer,
+  w: true,' lin,'
+  k: 'http,'
+  s://ziontechgroup.com/services/autonomous-ai-devops-platform', contactInf,'
+  o: ' mobil,'
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,'
+  e: 'http,'
+  s://ziontechgroup.com' }, realImplementatio,'
+  n: true,' technolog,'
+  y: ['Machine Learning', 'Kubernetes', 'Docker', 'Terraform', 'Prometheus', 'Grafana'],' integration,'
+  s: ['AWS', 'Azure', 'GCP', 'GitHub', 'GitLab', 'Jira', 'Slack'],' useCase,'
+  s: ['Cloud infrastructure management', 'Microservices deployment', 'CI/CD automation', 'Monitoring and alerting', 'Security compliance'],' ro,'
+  i: 'Average customer sees 90% reduction in downtime and 60% faster deployments',' competitor,'
+  s: ['HashiCorp', 'GitLab', 'CircleCI', 'Jenkins'],' marketSiz,'
+  e: '$8.2B DevOps market',' growthRat,'
+  e: '24.5% annual growth',' launchDat,'
+  e: '2024-01-10', customer,'
   s: 342, ratin,
   g: 4.9, review,
-  s: 234 }, // AI-Powered Financial Crime Detection ' i,
-  d: 'ai-financial-crime-detection',' nam,
-  e: 'AI Financial Crime Detection',' taglin,
-  e: 'Real-time fraud detection with 99.9% accuracy',' pric,
-  e: '$3,999',' perio,
-  d: '/month',' descriptio,
-  n: 'Advanced AI platform that detects financial crimes, fraud, and money laundering in real-time using machine learning and behavioral analysis.', feature,
-  s: [' 'Real-time transaction monitoring',' 'Behavioral pattern analysis',' 'Anomaly detection',' 'Risk scoring algorithms',' 'Compliance reporting',' 'Multi-channel monitoring',' 'Machine learning models',' 'Regulatory compliance' ], benefit,
-  s: [' '99.9% fraud detection accuracy',' 'Real-time threat prevention',' 'Regulatory compliance',' 'Reduced false positives',' 'Cost-effective compliance' ],' marketPric,
-  e: '$3,999/month (Enterprise), $1,999/month (Professional), $999/month (Starter)',' categor,
-  y: 'Fintech',' ico,
-  n: '🕵️', isPopula,
+  s: 234 }, // AI-Powered Financial Crime Detection ' i,'
+  d: 'ai-financial-crime-detection',' nam,'
+  e: 'AI Financial Crime Detection',' taglin,'
+  e: 'Real-time fraud detection with 99.9% accuracy',' pric,'
+  e: '$3,999',' perio,'
+  d: '/month',' descriptio,'
+  n: 'Advanced AI platform that detects financial crimes, fraud, and money laundering in real-time using machine learning and behavioral analysis.', feature,'
+  s: [' 'Real-time transaction monitoring',' 'Behavioral pattern analysis',' 'Anomaly detection',' 'Risk scoring algorithms',' 'Compliance reporting',' 'Multi-channel monitoring',' 'Machine learning models',' 'Regulatory compliance' ], benefit,'
+  s: [' '99.9% fraud detection accuracy',' 'Real-time threat prevention',' 'Regulatory compliance',' 'Reduced false positives',' 'Cost-effective compliance' ],' marketPric,'
+  e: '$3,999/month (Enterprise), $1,999/month (Professional), $999/month (Starter)',' categor,'
+  y: 'Fintech',' ico,'
+  n: '🕵️', isPopula,'
   r: true, isNe,
-  w: false,' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/ai-financial-crime-detection', contactInf,
-  o: ' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
-  n: true,' technolog,
-  y: ['Machine Learning', 'Deep Learning', 'NLP', 'Graph Databases', 'Real-time Processing'],' integration,
-  s: ['Banking Systems', 'Payment Processors', 'Regulatory Platforms', 'Compliance Tools'],' useCase,
-  s: ['Banking fraud detection', 'Payment security', 'AML compliance', 'Credit card fraud', 'Insurance fraud'],' ro,
-  i: 'Average customer prevents $2M+ in fraud annually and achieves 100% compliance',' competitor,
-  s: ['Sift', 'Signifyd', 'Forter', 'Riskified'],' marketSiz,
-  e: '$15.3B fraud detection market',' growthRat,
-  e: '22.8% annual growth',' launchDat,
-  e: '2023-11-15', customer,
+  w: false,' lin,'
+  k: 'http,'
+  s://ziontechgroup.com/services/ai-financial-crime-detection', contactInf,'
+  o: ' mobil,'
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,'
+  e: 'http,'
+  s://ziontechgroup.com' }, realImplementatio,'
+  n: true,' technolog,'
+  y: ['Machine Learning', 'Deep Learning', 'NLP', 'Graph Databases', 'Real-time Processing'],' integration,'
+  s: ['Banking Systems', 'Payment Processors', 'Regulatory Platforms', 'Compliance Tools'],' useCase,'
+  s: ['Banking fraud detection', 'Payment security', 'AML compliance', 'Credit card fraud', 'Insurance fraud'],' ro,'
+  i: 'Average customer prevents $2M+ in fraud annually and achieves 100% compliance',' competitor,'
+  s: ['Sift', 'Signifyd', 'Forter', 'Riskified'],' marketSiz,'
+  e: '$15.3B fraud detection market',' growthRat,'
+  e: '22.8% annual growth',' launchDat,'
+  e: '2023-11-15', customer,'
   s: 189, ratin,
   g: 4.8, review,
-  s: 156 }, // Quantum-Secure Communication Network ' i,
-  d: 'quantum-secure-communication',' nam,
-  e: 'Quantum-Secure Communication Network',' taglin,
-  e: 'Unbreakable quantum encryption for secure communications',' pric,
-  e: '$5,999',' perio,
-  d: '/month',' descriptio,
-  n: 'Revolutionary quantum-secured communication network that provides unbreakable encryption using quantum key distribution and post-quantum cryptography.', feature,
-  s: [' 'Quantum key distribution',' 'Post-quantum cryptography',' 'End-to-end encryption',' 'Quantum-resistant algorithms',' 'Secure key management',' 'Multi-protocol support',' 'Quantum network monitoring',' 'Compliance certifications' ], benefit,
-  s: [' 'Unbreakable encryption',' 'Future-proof security',' 'Regulatory compliance',' 'Global secure communication',' 'Quantum advantage' ],' marketPric,
-  e: '$5,999/month (Enterprise), $2,999/month (Professional), $1,499/month (Starter)',' categor,
-  y: 'Security',' ico,
-  n: '🔐', isPopula,
+  s: 156 }, // Quantum-Secure Communication Network ' i,'
+  d: 'quantum-secure-communication',' nam,'
+  e: 'Quantum-Secure Communication Network',' taglin,'
+  e: 'Unbreakable quantum encryption for secure communications',' pric,'
+  e: '$5,999',' perio,'
+  d: '/month',' descriptio,'
+  n: 'Revolutionary quantum-secured communication network that provides unbreakable encryption using quantum key distribution and post-quantum cryptography.', feature,'
+  s: [' 'Quantum key distribution',' 'Post-quantum cryptography',' 'End-to-end encryption',' 'Quantum-resistant algorithms',' 'Secure key management',' 'Multi-protocol support',' 'Quantum network monitoring',' 'Compliance certifications' ], benefit,'
+  s: [' 'Unbreakable encryption',' 'Future-proof security',' 'Regulatory compliance',' 'Global secure communication',' 'Quantum advantage' ],' marketPric,'
+  e: '$5,999/month (Enterprise), $2,999/month (Professional), $1,499/month (Starter)',' categor,'
+  y: 'Security',' ico,'
+  n: '🔐', isPopula,'
   r: true, isNe,
-  w: true,' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/quantum-secure-communication', contactInf,
-  o: ' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
-  n: true,' technolog,
-  y: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Networks', 'Quantum Sensors'],' integration,
-  s: ['Enterprise Systems', 'Cloud Platforms', 'IoT Devices', 'Government Networks'],' useCase,
-  s: ['Government communications', 'Financial transactions', 'Healthcare data', 'Military communications', 'Critical infrastructure'],' ro,
-  i: 'Average customer achieves 100% security compliance and zero security breaches',' competitor,
-  s: ['ID Quantique', 'Qrypt', 'Quantum Xchange'],' marketSiz,
-  e: '$3.2B quantum security market',' growthRat,
-  e: '52.1% annual growth',' launchDat,
-  e: '2024-04-01', customer,
+  w: true,' lin,'
+  k: 'http,'
+  s://ziontechgroup.com/services/quantum-secure-communication', contactInf,'
+  o: ' mobil,'
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,'
+  e: 'http,'
+  s://ziontechgroup.com' }, realImplementatio,'
+  n: true,' technolog,'
+  y: ['Quantum Key Distribution', 'Post-Quantum Cryptography', 'Quantum Networks', 'Quantum Sensors'],' integration,'
+  s: ['Enterprise Systems', 'Cloud Platforms', 'IoT Devices', 'Government Networks'],' useCase,'
+  s: ['Government communications', 'Financial transactions', 'Healthcare data', 'Military communications', 'Critical infrastructure'],' ro,'
+  i: 'Average customer achieves 100% security compliance and zero security breaches',' competitor,'
+  s: ['ID Quantique', 'Qrypt', 'Quantum Xchange'],' marketSiz,'
+  e: '$3.2B quantum security market',' growthRat,'
+  e: '52.1% annual growth',' launchDat,'
+  e: '2024-04-01', customer,'
   s: 45, ratin,
   g: 4.9, review,
-  s: 23 }, // AI-Powered Healthcare Predictive Analytics ' i,
-  d: 'ai-healthcare-predictive-analytics',' nam,
-  e: 'AI Healthcare Predictive Analytics',' taglin,
-  e: 'Predict and prevent health issues before they occur',' pric,
-  e: '$2,999',' perio,
-  d: '/month',' descriptio,
-  n: 'Advanced AI platform that analyzes patient data to predict health issues, recommend preventive measures, and optimize treatment plans.', feature,
-  s: [' 'Predictive health modeling',' 'Patient risk assessment',' 'Treatment optimization',' 'Drug interaction analysis',' 'Population health insights',' 'Clinical decision support',' 'Real-time monitoring',' 'HIPAA compliance' ], benefit,
-  s: [' 'Early disease detection',' 'Improved patient outcomes',' 'Reduced healthcare costs',' 'Personalized medicine',' 'Preventive care focus' ],' marketPric,
-  e: '$2,999/month (Enterprise), $1,499/month (Professional), $699/month (Starter)',' categor,
-  y: 'Healthcare',' ico,
-  n: '🏥', isPopula,
+  s: 23 }, // AI-Powered Healthcare Predictive Analytics ' i,'
+  d: 'ai-healthcare-predictive-analytics',' nam,'
+  e: 'AI Healthcare Predictive Analytics',' taglin,'
+  e: 'Predict and prevent health issues before they occur',' pric,'
+  e: '$2,999',' perio,'
+  d: '/month',' descriptio,'
+  n: 'Advanced AI platform that analyzes patient data to predict health issues, recommend preventive measures, and optimize treatment plans.', feature,'
+  s: [' 'Predictive health modeling',' 'Patient risk assessment',' 'Treatment optimization',' 'Drug interaction analysis',' 'Population health insights',' 'Clinical decision support',' 'Real-time monitoring',' 'HIPAA compliance' ], benefit,'
+  s: [' 'Early disease detection',' 'Improved patient outcomes',' 'Reduced healthcare costs',' 'Personalized medicine',' 'Preventive care focus' ],' marketPric,'
+  e: '$2,999/month (Enterprise), $1,499/month (Professional), $699/month (Starter)',' categor,'
+  y: 'Healthcare',' ico,'
+  n: '🏥', isPopula,'
   r: true, isNe,
-  w: false,' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/ai-healthcare-predictive-analytics', contactInf,
-  o: ' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
-  n: true,' technolog,
-  y: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Big Data Analytics'],' integration,
-  s: ['EHR Systems', 'Medical Devices', 'Wearables', 'Pharmacy Systems', 'Insurance Platforms'],' useCase,
-  s: ['Disease prediction', 'Treatment optimization', 'Drug discovery', 'Population health', 'Clinical trials'],' ro,
-  i: 'Average customer reduces readmissions by 40% and improves patient outcomes by 35%',' competitor,
-  s: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare'],' marketSiz,
-  e: '$45.2B AI healthcare market',' growthRat,
-  e: '28.9% annual growth',' launchDat,
-  e: '2023-09-20', customer,
+  w: false,' lin,'
+  k: 'http,'
+  s://ziontechgroup.com/services/ai-healthcare-predictive-analytics', contactInf,'
+  o: ' mobil,'
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,'
+  e: 'http,'
+  s://ziontechgroup.com' }, realImplementatio,'
+  n: true,' technolog,'
+  y: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'Big Data Analytics'],' integration,'
+  s: ['EHR Systems', 'Medical Devices', 'Wearables', 'Pharmacy Systems', 'Insurance Platforms'],' useCase,'
+  s: ['Disease prediction', 'Treatment optimization', 'Drug discovery', 'Population health', 'Clinical trials'],' ro,'
+  i: 'Average customer reduces readmissions by 40% and improves patient outcomes by 35%',' competitor,'
+  s: ['IBM Watson Health', 'Google Health', 'Microsoft Healthcare'],' marketSiz,'
+  e: '$45.2B AI healthcare market',' growthRat,'
+  e: '28.9% annual growth',' launchDat,'
+  e: '2023-09-20', customer,'
   s: 267, ratin,
   g: 4.8, review,
-  s: 189 }, // Edge AI IoT Platform ' i,
-  d: 'edge-ai-iot-platform',' nam,
-  e: 'Edge AI IoT Platform',' taglin,
-  e: 'Intelligent IoT with edge AI processing',' pric,
-  e: '$1,999',' perio,
-  d: '/month',' descriptio,
-  n: 'Comprehensive IoT platform that processes AI algorithms at the edge, enabling real-time intelligence and decision-making for connected devices.', feature,
-  s: [' 'Edge AI processing',' 'Real-time analytics',' 'Device management',' 'Predictive maintenance',' 'Energy optimization',' 'Security monitoring',' 'Scalable architecture',' 'Multi-protocol support' ], benefit,
-  s: [' 'Real-time decision making',' 'Reduced latency',' 'Lower bandwidth costs',' 'Enhanced security',' 'Scalable IoT deployment' ],' marketPric,
-  e: '$1,999/month (Enterprise), $999/month (Professional), $499/month (Starter)',' categor,
-  y: 'IoT',' ico,
-  n: '🌐', isPopula,
+  s: 189 }, // Edge AI IoT Platform ' i,'
+  d: 'edge-ai-iot-platform',' nam,'
+  e: 'Edge AI IoT Platform',' taglin,'
+  e: 'Intelligent IoT with edge AI processing',' pric,'
+  e: '$1,999',' perio,'
+  d: '/month',' descriptio,'
+  n: 'Comprehensive IoT platform that processes AI algorithms at the edge, enabling real-time intelligence and decision-making for connected devices.', feature,'
+  s: [' 'Edge AI processing',' 'Real-time analytics',' 'Device management',' 'Predictive maintenance',' 'Energy optimization',' 'Security monitoring',' 'Scalable architecture',' 'Multi-protocol support' ], benefit,'
+  s: [' 'Real-time decision making',' 'Reduced latency',' 'Lower bandwidth costs',' 'Enhanced security',' 'Scalable IoT deployment' ],' marketPric,'
+  e: '$1,999/month (Enterprise), $999/month (Professional), $499/month (Starter)',' categor,'
+  y: 'IoT',' ico,'
+  n: '🌐', isPopula,'
   r: true, isNe,
-  w: false,' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/edge-ai-iot-platform', contactInf,
-  o: ' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
-  n: true,' technolog,
-  y: ['Edge Computing', 'Machine Learning', 'IoT Protocols', '5G Networks', 'Cloud Computing'],' integration,
-  s: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Industrial Systems', 'Smart City Platforms'],' useCase,
-  s: ['Smart cities', 'Industrial IoT', 'Smart homes', 'Connected vehicles', 'Energy management'],' ro,
-  i: 'Average customer reduces operational costs by 35% and improves efficiency by 45%',' competitor,
-  s: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Particle'],' marketSiz,
-  e: '$12.8B edge computing market',' growthRat,
-  e: '37.4% annual growth',' launchDat,
-  e: '2023-12-10', customer,
+  w: false,' lin,'
+  k: 'http,'
+  s://ziontechgroup.com/services/edge-ai-iot-platform', contactInf,'
+  o: ' mobil,'
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,'
+  e: 'http,'
+  s://ziontechgroup.com' }, realImplementatio,'
+  n: true,' technolog,'
+  y: ['Edge Computing', 'Machine Learning', 'IoT Protocols', '5G Networks', 'Cloud Computing'],' integration,'
+  s: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Industrial Systems', 'Smart City Platforms'],' useCase,'
+  s: ['Smart cities', 'Industrial IoT', 'Smart homes', 'Connected vehicles', 'Energy management'],' ro,'
+  i: 'Average customer reduces operational costs by 35% and improves efficiency by 45%',' competitor,'
+  s: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'Particle'],' marketSiz,'
+  e: '$12.8B edge computing market',' growthRat,'
+  e: '37.4% annual growth',' launchDat,'
+  e: '2023-12-10', customer,'
   s: 423, ratin,
   g: 4.7, review,
-  s: 298 }, // AI-Powered Content Generation Suite ' i,
-  d: 'ai-content-generation-suite',' nam,
-  e: 'AI Content Generation Suite',' taglin,
-  e: 'Create engaging content with AI assistance',' pric,
-  e: '$899',' perio,
-  d: '/month',' descriptio,
-  n: 'Comprehensive AI platform that generates high-quality, engaging content across multiple formats including articles, videos, social media posts, and marketing materials.', feature,
-  s: [' 'Multi-format content generation',' 'SEO optimization',' 'Brand voice consistency',' 'Content planning tools',' 'Performance analytics',' 'Multi-language support',' 'Plagiarism detection',' 'Content scheduling' ], benefit,
-  s: [' '10x faster content creation',' 'Improved SEO performance',' 'Consistent brand messaging',' 'Cost-effective content production',' 'Multi-platform distribution' ],' marketPric,
-  e: '$899/month (Enterprise), $499/month (Professional), $199/month (Starter)',' categor,
-  y: 'AI',' ico,
-  n: '✍️', isPopula,
+  s: 298 }, // AI-Powered Content Generation Suite ' i,'
+  d: 'ai-content-generation-suite',' nam,'
+  e: 'AI Content Generation Suite',' taglin,'
+  e: 'Create engaging content with AI assistance',' pric,'
+  e: '$899',' perio,'
+  d: '/month',' descriptio,'
+  n: 'Comprehensive AI platform that generates high-quality, engaging content across multiple formats including articles, videos, social media posts, and marketing materials.', feature,'
+  s: [' 'Multi-format content generation',' 'SEO optimization',' 'Brand voice consistency',' 'Content planning tools',' 'Performance analytics',' 'Multi-language support',' 'Plagiarism detection',' 'Content scheduling' ], benefit,'
+  s: [' '10x faster content creation',' 'Improved SEO performance',' 'Consistent brand messaging',' 'Cost-effective content production',' 'Multi-platform distribution' ],' marketPric,'
+  e: '$899/month (Enterprise), $499/month (Professional), $199/month (Starter)',' categor,'
+  y: 'AI',' ico,'
+  n: '✍️', isPopula,'
   r: true, isNe,
-  w: false,' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/ai-content-generation-suite', contactInf,
-  o: ' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
-  n: true,' technolog,
-  y: ['GPT Models', 'Natural Language Processing', 'Computer Vision', 'Machine Learning', 'Content Analytics'],' integration,
-  s: ['CMS Platforms', 'Social Media APIs', 'Marketing Tools', 'SEO Platforms', 'Analytics Tools'],' useCase,
-  s: ['Content marketing', 'Social media management', 'SEO content', 'Email marketing', 'Video creation'],' ro,
-  i: 'Average customer increases content output by 500% and improves engagement by 40%',' competitor,
-  s: ['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot'],' marketSiz,
-  e: '$8.7B AI content generation market',' growthRat,
-  e: '26.3% annual growth',' launchDat,
-  e: '2023-10-15', customer,
+  w: false,' lin,'
+  k: 'http,'
+  s://ziontechgroup.com/services/ai-content-generation-suite', contactInf,'
+  o: ' mobil,'
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,'
+  e: 'http,'
+  s://ziontechgroup.com' }, realImplementatio,'
+  n: true,' technolog,'
+  y: ['GPT Models', 'Natural Language Processing', 'Computer Vision', 'Machine Learning', 'Content Analytics'],' integration,'
+  s: ['CMS Platforms', 'Social Media APIs', 'Marketing Tools', 'SEO Platforms', 'Analytics Tools'],' useCase,'
+  s: ['Content marketing', 'Social media management', 'SEO content', 'Email marketing', 'Video creation'],' ro,'
+  i: 'Average customer increases content output by 500% and improves engagement by 40%',' competitor,'
+  s: ['Jasper', 'Copy.ai', 'Writesonic', 'ContentBot'],' marketSiz,'
+  e: '$8.7B AI content generation market',' growthRat,'
+  e: '26.3% annual growth',' launchDat,'
+  e: '2023-10-15', customer,'
   s: 567, ratin,
   g: 4.6, review,
-  s: 423 }, // Blockchain Supply Chain Transparency ' i,
-  d: 'blockchain-supply-chain-transparency',' nam,
-  e: 'Blockchain Supply Chain Transparency',' taglin,
-  e: 'End-to-end supply chain visibility with blockchain',' pric,
-  e: '$2,299',' perio,
-  d: '/month',' descriptio,
-  n: 'Blockchain-powered platform that provides complete transparency and traceability across supply chains, ensuring authenticity and compliance.', feature,
-  s: [' 'End-to-end traceability',' 'Smart contract automation',' 'Real-time tracking',' 'Compliance reporting',' 'Quality assurance',' 'Sustainability tracking',' 'Multi-stakeholder access',' 'Immutable records' ], benefit,
-  s: [' 'Complete supply chain visibility',' 'Reduced fraud and counterfeiting',' 'Improved compliance',' 'Enhanced customer trust',' 'Operational efficiency' ],' marketPric,
-  e: '$2,299/month (Enterprise), $1,199/month (Professional), $599/month (Starter)',' categor,
-  y: 'Blockchain',' ico,
-  n: '⛓️', isPopula,
+  s: 423 }, // Blockchain Supply Chain Transparency ' i,'
+  d: 'blockchain-supply-chain-transparency',' nam,'
+  e: 'Blockchain Supply Chain Transparency',' taglin,'
+  e: 'End-to-end supply chain visibility with blockchain',' pric,'
+  e: '$2,299',' perio,'
+  d: '/month',' descriptio,'
+  n: 'Blockchain-powered platform that provides complete transparency and traceability across supply chains, ensuring authenticity and compliance.', feature,'
+  s: [' 'End-to-end traceability',' 'Smart contract automation',' 'Real-time tracking',' 'Compliance reporting',' 'Quality assurance',' 'Sustainability tracking',' 'Multi-stakeholder access',' 'Immutable records' ], benefit,'
+  s: [' 'Complete supply chain visibility',' 'Reduced fraud and counterfeiting',' 'Improved compliance',' 'Enhanced customer trust',' 'Operational efficiency' ],' marketPric,'
+  e: '$2,299/month (Enterprise), $1,199/month (Professional), $599/month (Starter)',' categor,'
+  y: 'Blockchain',' ico,'
+  n: '⛓️', isPopula,'
   r: true, isNe,
-  w: false,' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/blockchain-supply-chain-transparency', contactInf,
-  o: ' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
-  n: true,' technolog,
-  y: ['Blockchain', 'Smart Contracts', 'IoT Sensors', 'Cloud Computing', 'Data Analytics'],' integration,
-  s: ['ERP Systems', 'WMS Platforms', 'Logistics Systems', 'Retail Platforms', 'Government Systems'],' useCase,
-  s: ['Food safety', 'Pharmaceutical tracking', 'Luxury goods authentication', 'Sustainable sourcing', 'Regulatory compliance'],' ro,
-  i: 'Average customer reduces supply chain costs by 25% and improves compliance by 100%',' competitor,
-  s: ['IBM Food Trust', 'VeChain', 'OriginTrail', 'Provenance'],' marketSiz,
-  e: '$9.8B blockchain supply chain market',' growthRat,
-  e: '31.2% annual growth',' launchDat,
-  e: '2023-08-20', customer,
+  w: false,' lin,'
+  k: 'http,'
+  s://ziontechgroup.com/services/blockchain-supply-chain-transparency', contactInf,'
+  o: ' mobil,'
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,'
+  e: 'http,'
+  s://ziontechgroup.com' }, realImplementatio,'
+  n: true,' technolog,'
+  y: ['Blockchain', 'Smart Contracts', 'IoT Sensors', 'Cloud Computing', 'Data Analytics'],' integration,'
+  s: ['ERP Systems', 'WMS Platforms', 'Logistics Systems', 'Retail Platforms', 'Government Systems'],' useCase,'
+  s: ['Food safety', 'Pharmaceutical tracking', 'Luxury goods authentication', 'Sustainable sourcing', 'Regulatory compliance'],' ro,'
+  i: 'Average customer reduces supply chain costs by 25% and improves compliance by 100%',' competitor,'
+  s: ['IBM Food Trust', 'VeChain', 'OriginTrail', 'Provenance'],' marketSiz,'
+  e: '$9.8B blockchain supply chain market',' growthRat,'
+  e: '31.2% annual growth',' launchDat,'
+  e: '2023-08-20', customer,'
   s: 234, ratin,
   g: 4.7, review,
-  s: 167 }, // AI-Powered Customer Experience Platform ' i,
-  d: 'ai-customer-experience-platform',' nam,
-  e: 'AI Customer Experience Platform',' taglin,
-  e: 'Personalized customer experiences with AI',' pric,
-  e: '$1,799',' perio,
-  d: '/month',' descriptio,
-  n: 'Intelligent platform that uses AI to deliver personalized customer experiences across all touchpoints, improving satisfaction and loyalty.', feature,
-  s: [' 'Customer behavior analysis',' 'Personalized recommendations',' 'Omnichannel engagement',' 'Sentiment analysis',' 'Predictive customer service',' 'Customer journey mapping',' 'Real-time personalization',' 'Performance analytics' ], benefit,
-  s: [' 'Improved customer satisfaction',' 'Increased customer loyalty',' 'Higher conversion rates',' 'Reduced customer churn',' 'Personalized marketing' ],' marketPric,
-  e: '$1,799/month (Enterprise), $899/month (Professional), $399/month (Starter)',' categor,
-  y: 'AI',' ico,
-  n: '💬', isPopula,
+  s: 167 }, // AI-Powered Customer Experience Platform ' i,'
+  d: 'ai-customer-experience-platform',' nam,'
+  e: 'AI Customer Experience Platform',' taglin,'
+  e: 'Personalized customer experiences with AI',' pric,'
+  e: '$1,799',' perio,'
+  d: '/month',' descriptio,'
+  n: 'Intelligent platform that uses AI to deliver personalized customer experiences across all touchpoints, improving satisfaction and loyalty.', feature,'
+  s: [' 'Customer behavior analysis',' 'Personalized recommendations',' 'Omnichannel engagement',' 'Sentiment analysis',' 'Predictive customer service',' 'Customer journey mapping',' 'Real-time personalization',' 'Performance analytics' ], benefit,'
+  s: [' 'Improved customer satisfaction',' 'Increased customer loyalty',' 'Higher conversion rates',' 'Reduced customer churn',' 'Personalized marketing' ],' marketPric,'
+  e: '$1,799/month (Enterprise), $899/month (Professional), $399/month (Starter)',' categor,'
+  y: 'AI',' ico,'
+  n: '💬', isPopula,'
   r: true, isNe,
-  w: false,' lin,
-  k: 'http,
-  s://ziontechgroup.com/services/ai-customer-experience-platform', contactInf,
-  o: ' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,
-  e: 'http,
-  s://ziontechgroup.com' }, realImplementatio,
-  n: true,' technolog,
-  y: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Customer Data Platforms'],' integration,
-  s: ['CRM Systems', 'Marketing Platforms', 'E-commerce Platforms', 'Social Media', 'Email Systems'],' useCase,
-  s: ['E-commerce personalization', 'Customer service automation', 'Marketing automation', 'Customer retention', 'Product recommendations'],' ro,
-  i: 'Average customer increases customer lifetime value by 35% and reduces churn by 40%',' competitor,
-  s: ['Segment', 'Amplitude', 'Mixpanel', 'Hotjar'],' marketSiz,
-  e: '$11.9B customer experience market',' growthRat,
-  e: '23.7% annual growth',' launchDat,
-  e: '2023-07-15', customer,
+  w: false,' lin,'
+  k: 'http,'
+  s://ziontechgroup.com/services/ai-customer-experience-platform', contactInf,'
+  o: ' mobil,'
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
+  s: '364 E Main St STE 1008 Middletown DE 19709',' websit,'
+  e: 'http,'
+  s://ziontechgroup.com' }, realImplementatio,'
+  n: true,' technolog,'
+  y: ['Machine Learning', 'Natural Language Processing', 'Predictive Analytics', 'Customer Data Platforms'],' integration,'
+  s: ['CRM Systems', 'Marketing Platforms', 'E-commerce Platforms', 'Social Media', 'Email Systems'],' useCase,'
+  s: ['E-commerce personalization', 'Customer service automation', 'Marketing automation', 'Customer retention', 'Product recommendations'],' ro,'
+  i: 'Average customer increases customer lifetime value by 35% and reduces churn by 40%',' competitor,'
+  s: ['Segment', 'Amplitude', 'Mixpanel', 'Hotjar'],' marketSiz,'
+  e: '$11.9B customer experience market',' growthRat,'
+  e: '23.7% annual growth',' launchDat,'
+  e: '2023-07-15', customer,'
   s: 445, ratin,
   g: 4.8, review,
   s: 312 } ];'

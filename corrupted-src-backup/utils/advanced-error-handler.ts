@@ -1,8 +1,12 @@
 const errorHandler = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   setReportingEnabled: (enabled: boolean) => {,
     //     },
 
-  handleError: (error: unknown) => {,
+  handleError: (error: unknown) => {,;
 const errorHandler = {/* TODO: Fix JSX expression */}
     //     },
 
@@ -10,5 +14,5 @@ const errorHandler = {/* TODO: Fix JSX expression */}
   r: (erro)
   r: unknown) => {/* TODO: Fix JSX expression */}
     //     }}
-
+;
 export default errorHandler

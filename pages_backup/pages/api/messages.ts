@@ -1,26 +1,40 @@
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import type { NextApiRequest, NextApiResponse } from "next"
-import { v4 as uuidv4 } from "uuid"
-import { readJsonFile, writeJsonFile } from "../../utils/db"
-import type { Conversation, Message } from "../../utils/types"
-import { rateLimit } from "../../utils/rateLimit"
-const FILE = "conversations && conversations.json"
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
+import type { NextApiRequest, NextApiResponse } from "next";";
+import { v4 as uuidv4 } from "uuid";";
+import { readJsonFile, writeJsonFile } from "../../utils/db";";
+import type { Conversation, Message } from "../../utils/types";";
+import { rateLimit } from "../../utils/rateLimit";";";
+const FILE = "conversations && conversations.json";";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   if (!rateLimit(req, res)) return
-  if (req && req.method === "POST") {
-    const { conversationId, sender, text, attachments } = req && req.body || {}
+  if (req && req.method === "POST") {;";
+const { conversationId, sender, text, attachments } = req && req.body || {}
     if (
+  // TODO: Add parameters
+)
       !conversationId ||
       !sender ||
       (!text && (!attachments || attachments && attachments.length === 0))
     ) {
-      res && res.status(400).json({ error: "Invalid message" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      res && res.status(400).json({ error: "Invalid message" })"
       return
     }
-    const conversations = readJsonFile<Conversation[]>(FILE, [])
-    const idx = conversations && conversations.findIndex((c) => c && c.id === String(conversationId))
+    const conversations = readJsonFile<Conversation[]>(FILE, []);
+const idx = conversations && conversations.findIndex((c) => c && c.id === String(conversationId))
     if (idx === -1) {
-      res && res.status(404).json({ error: "Conversation not found" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      res && res.status(404).json({ error: "Conversation not found" })"
       return
       id: uuidv4()
       conversationId: String(conversationId)
@@ -30,8 +44,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       createdAtIso: now
       readBy: [{ participantId: String(sender.id), readAtIso: now }]
     }
-    const now = new Date().toISOString()
-    const msg: Message = {
+    const now = new Date().toISOString();
+const msg: Message = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       id: uuidv4()
       conversationId: String(conversationId)
       sender: { type: sender.type, id: String(sender.id) }
@@ -40,22 +58,34 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       createdAtIso: now
       readBy: [{ participantId: String(sender.id), readAtIso: now }]
     }
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { v4 as uuidv4 } from 'uuid'
-import { readJsonFile, writeJsonFile } from '../../utils/db'
-import type { Conversation, Message } from '../../utils/types'
-import { rateLimit } from '../../utils/rateLimit'
-const FILE = 'conversations.json'
+import type { NextApiRequest, NextApiResponse } from 'next';';
+import { v4 as uuidv4 } from 'uuid';';
+import { readJsonFile, writeJsonFile } from '../../utils/db';';
+import type { Conversation, Message } from '../../utils/types';';
+import { rateLimit } from '../../utils/rateLimit';';';
+const FILE = 'conversations.json';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   if (!rateLimit(req, res)) return
-  if (req.method === 'POST') {
-    const { conversationId, sender, text, attachments } = req.body || {}
+  if (req.method === 'POST') {;';
+const { conversationId, sender, text, attachments } = req.body || {}
     if (!conversationId || !sender || (!text && (!attachments || attachments.length === 0))) {
-      res.status(400).json({ error: 'Invalid message' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      res.status(400).json({ error: 'Invalid message' })'
       return
     }
-    const now = new Date().toISOString()
-    const msg: Message = {
+    const now = new Date().toISOString();
+const msg: Message = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       id: uuidv4(),
       conversationId: String(conversationId),
       sender: { type: sender.type, id: String(sender.id) },
@@ -66,78 +96,142 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     }
     conversations[idx].messages.push(msg)
     conversations[idx].updatedAtIso = now
-    writeJsonFile<Conversation[]>(FILE, conversations)
-import type { NextApiRequest, NextApiResponse } from 'next'
+    writeJsonFile<Conversation[]>(FILE, conversations);
+import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (req.method === 'GET') {'
     res.status(200).json({ messages: [] })
-  } else if (req.method === 'POST') {
-    res.status(201).json({ message: 'Message sent' })
+  } else if (req.method === 'POST') {'
+    res.status(201).json({ message: 'Message sent' })'
   } else {
-    res.setHeader('Allow', ['GET', 'POST'])
-    res.status(405).end('Method Not Allowed')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    res.setHeader('Allow', ['GET', 'POST'])'
+    res.status(405).end('Method Not Allowed')'
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { v4 as uuidv4 } from 'uuid'
-import { readJsonFile, writeJsonFile } from '../../utils/db'
-import type { Conversation, Message } from '../../utils/types'
-import { rateLimit } from '../../utils/rateLimit'
-const FILE = 'conversations.json'
+import type { NextApiRequest, NextApiResponse } from 'next';';
+import { v4 as uuidv4 } from 'uuid';';
+import { readJsonFile, writeJsonFile } from '../../utils/db';';
+import type { Conversation, Message } from '../../utils/types';';
+import { rateLimit } from '../../utils/rateLimit';';';
+const FILE = 'conversations.json';';
 export default function handler(req, res) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   try {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   if (!rateLimit(req, res)) return,
-  if (req.method === 'GET') {
-    const { conversationId, sender, text, attachments } = req.body || {}
+  if (req.method === 'GET') {;';
+const { conversationId, sender, text, attachments } = req.body || {}
     if (!conversationId || !sender || (!text && (!attachments || attachments.length === 0))) {
-      res.status(400).json({ error: 'Invalid message' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      res.status(400).json({ error: 'Invalid message' })'
       return
       } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
-
-    const conversations = readJsonFile<Conversation[]>(FILE, []),
-    const idx = conversations.findIndex((c) => c.id === String(conversationId))
+;
+const conversations = readJsonFile<Conversation[]>(FILE, []),;
+const idx = conversations.findIndex((c) => c.id === String(conversationId))
     if (idx === -1) {
-      res.status(404).json({ error: 'Conversation not found' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      res.status(404).json({ error: 'Conversation not found' })'
       return
       } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
-
-    const now = new Date().toISOString()
-    const msg: Message = {
+;
+const now = new Date().toISOString();
+const msg: Message = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       id: uuidv4()
       conversationId: String(conversationId)
       sender: { type: sender.type, id: String(sender.id) },
@@ -151,10 +245,10 @@ export default function handler(req, res) {
     res.status(201).json({ message: msg })
     return
   }
-  if (req.method === "GET") {
-  if (req.method === 'GET') {
-    const { conversationId } = req.query
-    const conversations = readJsonFile<Conversation[]>(FILE, [])
+  if (req.method === "GET") {"
+  if (req.method === 'GET') {;';
+const { conversationId } = req.query;
+const conversations = readJsonFile<Conversation[]>(FILE, [])
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return
@@ -164,45 +258,65 @@ export default function handler(req, res) {
   }
     const conv = conversations.find((c) => c.id === String(conversationId))
     if (!conv) {
-      res.status(404).json({ error: "Conversation not found" })
-      res.status(404).json({ error: 'Conversation not found' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      res.status(404).json({ error: "Conversation not found" })"
+      res.status(404).json({ error: 'Conversation not found' })'
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 
-  if (req.method === 'GET') {
-    const { conversationId } = req.query
-    const conversations = readJsonFile<Conversation[]>(FILE, []),
-    const conv = conversations.find((c) => c.id === String(conversationId))
+  if (req.method === 'GET') {;';
+const { conversationId } = req.query;
+const conversations = readJsonFile<Conversation[]>(FILE, []),;
+const conv = conversations.find((c) => c.id === String(conversationId))
     if (!conv) {
-      res.status(404).json({ error: 'Conversation not found' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      res.status(404).json({ error: 'Conversation not found' })'
       return
     }
     res.status(200).json({ conversation: conv })
     return
   }
-  res && res.setHeader("AllowGET, POST")
-  res && res.status(405).end("Method Not Allowed")
+  res && res.setHeader("AllowGET, POST")"
+  res && res.status(405).end("Method Not Allowed")"
 }
-res.setHeader("AllowGET, POST")
-  res.status(405).end("Method Not Allowed")
+res.setHeader("AllowGET, POST")"
+  res.status(405).end("Method Not Allowed")"
 }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 
-  res.setHeader('AllowGET, POST')
-  res.status(405).end('Method Not Allowed')
+  res.setHeader('AllowGET, POST')'
+  res.status(405).end('Method Not Allowed')'
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

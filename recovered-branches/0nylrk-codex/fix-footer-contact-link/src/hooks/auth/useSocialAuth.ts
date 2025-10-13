@@ -1,75 +1,159 @@
-import { supabase } from "@/integrations/supabase/client"
-import { toast } from "@/hooks/use-toast"
-export const useSocialAuth = () => {
-  const loginWithGoogle = async () => {
-    try {
-      const { error } = await supabase.auth.signInWithOAuth({
-        provider: "google"})
-        provider: "google",
+import { supabase } from "@/integrations/supabase/client";";
+import { toast } from "@/hooks/use-toast";";";
+export const useSocialAuth = () => {;
+const loginWithGoogle = async () => {
+  // TODO: Implement
+}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // TODO: Implement
+}
+    try {;
+const { error } = await supabase.auth.signInWithOAuth({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        provider: "google"})"
+        provider: "google","
       })
       if (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         toast({
-          title: "Google login failed",
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+          title: "Google login failed","
           description: error.message,
-          variant: "destructive"})
-          variant: "destructive",
+          variant: "destructive"})"
+          variant: "destructive","
         })
       }
     } catch (error: any) {
-      console.error("Google login error:", error)
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      console.error("Google login error:", error)"
       toast({
-        title: "Google login failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"})
-        variant: "destructive",
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        title: "Google login failed","
+        description: error.message || "An unexpected error occurred","
+        variant: "destructive"})"
+        variant: "destructive","
       })
     }
   }
   const loginWithFacebook = async () => {
-    try {
-      const { error } = await supabase.auth.signInWithOAuth({
-        provider: "facebook"})
-        provider: "facebook",
+  // TODO: Implement
+}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // TODO: Implement
+}
+    try {;
+const { error } = await supabase.auth.signInWithOAuth({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        provider: "facebook"})"
+        provider: "facebook","
       })
       if (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         toast({
-          title: "Facebook login failed",
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+          title: "Facebook login failed","
           description: error.message,
-          variant: "destructive"})
-          variant: "destructive",
+          variant: "destructive"})"
+          variant: "destructive","
         })
       }
     } catch (error: any) {
-      console.error("Facebook login error:", error)
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      console.error("Facebook login error:", error)"
       toast({
-        title: "Facebook login failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"})
-        variant: "destructive",
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        title: "Facebook login failed","
+        description: error.message || "An unexpected error occurred","
+        variant: "destructive"})"
+        variant: "destructive","
       })
     }
   }
   const loginWithTwitter = async () => {
-    try {
-      const { error } = await supabase.auth.signInWithOAuth({
-        provider: "twitter"})
-        provider: "twitter",
+  // TODO: Implement
+}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // TODO: Implement
+}
+    try {;
+const { error } = await supabase.auth.signInWithOAuth({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        provider: "twitter"})"
+        provider: "twitter","
       })
       if (error) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         toast({
-          title: "Twitter login failed",
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+          title: "Twitter login failed","
           description: error.message,
-          variant: "destructive"})
-          variant: "destructive",
+          variant: "destructive"})"
+          variant: "destructive","
         })
       }
     } catch (error: any) {
-      console.error("Twitter login error:", error)
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      console.error("Twitter login error:", error)"
       toast({
-        title: "Twitter login failed",
-        description: error.message || "An unexpected error occurred",
-        variant: "destructive"})
-        variant: "destructive",
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        title: "Twitter login failed","
+        description: error.message || "An unexpected error occurred","
+        variant: "destructive"})"
+        variant: "destructive","
       })
     }
   }

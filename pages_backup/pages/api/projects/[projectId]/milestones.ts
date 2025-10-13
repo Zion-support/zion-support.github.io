@@ -1,79 +1,135 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { requireUser } from '../../../../utils/api/auth'
-import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects'
-import { Milestone } from '../../../../utils/types/milestones'
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const user = requireUser(req, res)
-  if (!user) return
-  const { projectId } = req && req.query as { projectId: string }
+import type { NextApiRequest, NextApiResponse } from 'next';';
+import { requireUser } from '../../../../utils/api/auth';';
+import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';';
+import { Milestone } from '../../../../utils/types/milestones';';';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
+const user = requireUser(req, res)
+  if (!user) return;
+const { projectId } = req && req.query as { projectId: string }
   const project = getProject(projectId)
   if (!project) {
-    res.status(404).json({ error: 'Project not found' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    res.status(404).json({ error: 'Project not found' })'
     return
   }
   if (!assertParticipantOrAdmin(project, user)) {
-    res.status(403).json({ error: 'Forbidden' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    res.status(403).json({ error: 'Forbidden' })'
     return
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 
-  if (req.method === 'GET') {
+  if (req.method === 'GET') {'
     res.status(200).json({ milestones: project.milestones })
     return
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 
-  if (req.method === 'GET') {
+  if (req.method === 'GET') {'
     if (!isClient(project, user)) {
-      res.status( error: 'Only client (or admin) can add milestones' ).json({$2})
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      res.status( error: 'Only client (or admin) can add milestones' ).json({$2})'
       return
       } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
     const body = req.body as Partial<Milestone>
-    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {
-      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' })
+    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {'
+      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' })'
       return
       } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
     const created = addMilestone(project, {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       title: body.title,
       description: body.description,
       dueDate: body.dueDate,
@@ -82,65 +138,107 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(201).json({ milestone: created })
     return
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 
-  res.setHeader('AllowGET, POST')
-  res.status(405).end('Method Not Allowed')
+  res.setHeader('AllowGET, POST')'
+  res.status(405).end('Method Not Allowed')'
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
-  if (req.method === "GET") {
+  if (req.method === "GET") {"
     res.status(200).json({ milestones: project.milestones })
     return
   }
-  if (req.method === "POST") {
+  if (req.method === "POST") {"
     if (!isClient(project, user)) {
-      res.status(403).json({ error: 'Only client (or admin) can add milestones' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      res.status(403).json({ error: 'Only client (or admin) can add milestones' })'
       return
     }
     const body = req.body as Partial<Milestone>
     if (
+  // TODO: Add parameters
+)
       !body |
       !body.title |
       !body.dueDate |
-      typeof body.amountUsd !== "number"
+      typeof body.amountUsd !== "number""
     ) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       res
         .status(400)
-        .json({ error: "Missing required fields: title, dueDate, amountUsd" })
+        .json({ error: "Missing required fields: title, dueDate, amountUsd" })"
       return
     }
     const created = addMilestone(project, {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       title: body.title
       description: body.description
       dueDate: body.dueDate
       amountUsd: body.amountUsd
       attachments: body.attachments |[]
-    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {
-      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' })
+    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {'
+      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' })'
       return
     }
     const created = addMilestone(project, {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       title: body.title,
       description: body.description,
       dueDate: body.dueDate,
@@ -150,26 +248,34 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(201).json({ milestone: created })
     return
   }
-  res.setHeader("Allow", "GET, POST")
-  res.status(405).end("Method Not Allowed")
+  res.setHeader("Allow", "GET, POST")"
+  res.status(405).end("Method Not Allowed")"
 }
-  res.setHeader('AllowGET, POST')
-  res.status(405).end('Method Not Allowed')
+  res.setHeader('AllowGET, POST')'
+  res.status(405).end('Method Not Allowed')'
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-    res.status (404).json ({ error: "Project not found" })
+    res.status (404).json ({ error: "Project not found" })"
     return
   }
   if () {) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
-    res.status (403).json ({ error: "Forbidden" })
+    res.status (403).json ({ error: "Forbidden" })"
     return
   }
   // Check condition
 if ( {) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
     res.status (200).json ({ milestones: project.milestones })
@@ -177,27 +283,43 @@ if ( {) {
   }
   // Check condition
 if ( {) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
     if () {) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
       res
         .status (403)
-        .json ({ error: "Only client (or admin) can add milestones" })
+        .json ({ error: "Only client (or admin) can add milestones" })"
       return
     }
     const body = req.body as Partial < Milestone>
     // Check condition
 if ( {) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
       res
         .status (400)
-        .json ({ error: "Missing required fields: title, due_date, amount_usd" })
+        .json ({ error: "Missing required fields: title, due_date, amount_usd" })"
       return
     }
     const created = add_milestone (project, {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       title: body.title,
       description: body.description,
       due_date: body.due_date,
@@ -207,6 +329,6 @@ if ( {) {
     res.status (201).json ({ milestone: created })
     return
   }
-  res.set_header ("Allow", "GET, POST")
-  res.status (405).end ("Method Not Allowed")
+  res.set_header ("Allow", "GET, POST")"
+  res.status (405).end ("Method Not Allowed")"
 }

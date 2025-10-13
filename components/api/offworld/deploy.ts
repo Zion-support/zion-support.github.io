@@ -1,55 +1,111 @@
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next';'
   try {
-    // Ensure export
-    const outDir = path && path.resolve(process && process.cwd(), 'out')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    // Ensure export;
+const outDir = path && path.resolve(process && process.cwd(), 'out')'
     try {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     } catch (e) {
-      // attempt minimal static export
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      // attempt minimal static export;
       try {
-        execSync('next build && next export', { stdio: 'inherit' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        execSync('next build && next export', { stdio: 'inherit' })'
     }
-    const { cid, provider } = await addDirectory(outDir)
-import { execSync } from 'child_process'
-import path from 'path'
-import fs from 'fs'
-import { addDirectory } from '@/utils/offworld/ipfs'
+    const { cid, provider } = await addDirectory(outDir);
+import { execSync } from 'child_process';';
+import path from 'path';';
+import fs from 'fs';';
+import { addDirectory } from '@/utils/offworld/ipfs';';';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' })'
   try {
-    // Ensure export
-    const outDir = path.resolve(process.cwd(), 'out')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    // Ensure export;
+const outDir = path.resolve(process.cwd(), 'out')'
     try {
-      execSync('npm run export', { stdio: 'inherit' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      execSync('npm run export', { stdio: 'inherit' })'
     } catch (e) {
-      // attempt minimal static export
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      // attempt minimal static export;
       try {
-        execSync('next build && next export', { stdio: 'inherit' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        execSync('next build && next export', { stdio: 'inherit' })'
       } catch (e2) {}
     }
     if (!fs.existsSync(outDir)) {
-      return res.status(500).json({ error: 'Export failed, no out/ directory found' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      return res.status(500).json({ error: 'Export failed, no out/ directory found' })'
     }
     const { cid, provider } = await addDirectory(outDir)
-    if (!cid) return res.status(500).json({ error: 'IPFS upload failed' })
+    if (!cid) return res.status(500).json({ error: 'IPFS upload failed' })'
     return res.status(200).json({ cid, provider })
   } catch (error: any) {
-    return res.status(500).json({ error: error?.message |'Unknown error' })
-    return res.status(500).json({ error: error?.message || 'Unknown error' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    return res.status(500).json({ error: error?.message |'Unknown error' })'
+    return res.status(500).json({ error: error?.message || 'Unknown error' })'
   }    return res.status(200).json({ cid, provider })
   } catch (error: any) {
-    return res.status(500).json({ error: error?.message |'Unknown error' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    return res.status(500).json({ error: error?.message |'Unknown error' })'
 }
 }
     return res && res.status(200).json({ cid, provider })
   } catch (error: any) {
-    return res && res.status(500).json({ error: error?.message || 'Unknown error' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' })'
   }    return res && res.status(200).json({ cid, provider })
   } catch (error: any) {
-    return res && res.status(500).json({ error: error?.message || 'Unknown error' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' })'
   }
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-    return res.status(500).json({ error: error?.message || 'Unknown error' })
+    return res.status(500).json({ error: error?.message || 'Unknown error' })'
   }
 }

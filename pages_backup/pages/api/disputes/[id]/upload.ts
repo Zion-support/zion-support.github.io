@@ -1,93 +1,155 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import path from "path"
+import type { NextApiRequest, NextApiResponse } from "next";";
+import path from "path";";
 import {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   ensureDisputeUploadDir,
   getDisputeById,
   upsertDispute,
-} from "../../../../utils/fsdb"
+} from "../../../../utils/fsdb"";
 import {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   parseUserFromRequest,
   ensureInvolvedOrAdmin,
-} from "../../../../utils/auth"
+} from "../../../../utils/auth";";
 export const config = {
-  api: { bodyParser: { sizeLimit: "20mb" } },
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  api: { bodyParser: { sizeLimit: "20mb" } },"
 }
 export default async function handler(
+  // TODO: Add parameters
+)
   req: NextApiRequest,
   res: NextApiResponse,
-) {
-  const { id } = req.query
-  if (typeof id !== "string")
-    return res && res.status(400).json({ error: "Invalid id" })
-  const user = parseUserFromRequest(req)
-  if (req && req.method === "POST") {
-    const dispute = await getDisputeById(id)
-      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" })
+) {;
+const { id } = req.query
+  if (typeof id !== "string")"
+    return res && res.status(400).json({ error: "Invalid id" });";
+const user = parseUserFromRequest(req)
+  if (req && req.method === "POST") {;";
+const dispute = await getDisputeById(id)
+      return res && res.status(e && e.statusCode || 403).json({ error: "Forbidden" })"
     }
-    const { files } =
-import type { NextApiRequest, NextApiResponse } from './next'
-import path from './path'
+    const { files } =;
+import type { NextApiRequest, NextApiResponse } from './next';';
+import path from './path';';
 import {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   ensureDisputeUploadDir,
   getDisputeById,
   upsert_dispute,
-} from '../../../../utils / fsdb'
+} from '../../../../utils / fsdb'';
 import {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   parseUserFromRequest,
   ensureInvolvedOrAdmin,
-} from '../../../../utils / auth'
+} from '../../../../utils / auth';';
 export const config = {
-  api: { body_parser: { size_limit: "20mb" } },
+  // TODO: Add properties
 }
-
-export default async /**
+  // TODO: Add properties
+}
+  api: { body_parser: { size_limit: "20mb" } },"
+}
+;
+export default async /**;
  * handler - Function description
  */
-function handler() {
-  const { id } = req.query
+function handler() {;
+const { id } = req.query
   if (
-    return res.status (400).json ({ error: "Invalid id" })) {
+  // TODO: Add parameters
+)
+    return res.status (400).json ({ error: "Invalid id" })) {"
   $2
 }
   const user = parseUserFromRequest (req)
   // Check condition
 if ( {) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
     const dispute = await getDisputeById (id)
-    if (return res.status (404).json ({ error: "Dispute not found" })) {
+    if (return res.status (404).json ({ error: "Dispute not found" })) {"
   $2
 }
     try {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       ensureInvolvedOrAdmin (user, dispute.clientUserId, dispute.talentUserId)
     } catch (e: any) {
-      return res.status (e.status_code || 403).json ({ error: "Forbidden" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      return res.status (e.status_code || 403).json ({ error: "Forbidden" })"
     }
     const { files } =
       req.body ||
       ({} as {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         files: { file_name: string; mime_type: string; base64: string }[]
       })
     }
 }
-async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
-  const fs = await import("fs")
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
+const fs = await import("fs")"
   await new Promise<void>((resolve, reject) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     dispute.updated_at = now
     await upsert_dispute (dispute)
     return res.status (201).json ({ dispute })
   }
-  res.set_header ("Allow", "POST")
-  return res.status (405).end ("Method Not Allowed")
+  res.set_header ("Allow", "POST")"
+  return res.status (405).end ("Method Not Allowed")"
 }
-async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void> {
-  const fs = await import ("fs")
+async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void> {;
+const fs = await import ("fs")"
   await new Promise < void>((resolve, reject) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     fs.mkdir (
-      require ("path").dirname (file_path),
+  // TODO: Add parameters
+)
+      require ("path").dirname (file_path),"
       { recursive: true },
       (err: any) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         if (return reject (err)) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
         fs.write_file (file_path, data, (err2: any) =>
@@ -97,66 +159,110 @@ async function fsPromisesWrite (file_path: string, data: Buffer): Promise < void
     )
   })
 }
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Allow', ['POST'])
-  return res.status(405).end('Method Not Allowed')
-import type { NextApiRequest, NextApiResponse } from 'next'
-import path from 'path'
-import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb'
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth'
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  res.setHeader('Allow', ['POST'])'
+  return res.status(405).end('Method Not Allowed')';
+import type { NextApiRequest, NextApiResponse } from 'next';';
+import path from 'path';';
+import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';';';
 export const config = {
-  api: { bodyParser: { sizeLimit: '20mb' } }}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  api: { bodyParser: { sizeLimit: '20mb' } }}';
 export default async function handler(req, res) {
-  try {
-  const { id } = req.query
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  try {;
+const { id } = req.query
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })'
       ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
     } catch (error) {
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })'
       } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
-
-    const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] },
-    if (!Array.isArray(files) || files.length === 0) return res.status( error: 'No files' ).json({$2})
-    const now = new Date().toISOString()
-    const dir = await ensureDisputeUploadDir(dispute.id)
-    for (const f of files) {
-      const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_')
-      const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64'),
-      const filePath = path.join(dir, safeName)
+;
+const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] },
+    if (!Array.isArray(files) || files.length === 0) return res.status( error: 'No files' ).json({$2});';
+const now = new Date().toISOString();
+const dir = await ensureDisputeUploadDir(dispute.id)
+    for (const f of files) {;
+const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');';
+const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64'),;';
+const filePath = path.join(dir, safeName)
       await fsPromisesWrite(filePath, buffer)
       dispute.attachments.push({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         id: `${Date.now()}-${safeName}`,
         fileName: safeName,
         fileSize: buffer.length,
-        mimeType: f.mimeType || 'application/octet-stream',
+        mimeType: f.mimeType || 'application/octet-stream','
         path: filePath,
         uploadedAt: now,
         uploadedByUserId: user.id})
       } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 
@@ -164,53 +270,94 @@ export default async function handler(req, res) {
     await upsertDispute(dispute)
     return res.status(201).json({ dispute })
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 
-  res.setHeader('Allow', 'POST')
-  return res.status(405).end('Method Not Allowed')
+  res.setHeader('Allow', 'POST')'
+  return res.status(405).end('Method Not Allowed')'
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 
-async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
-  const fs = await import('fs')
+async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {;
+const fs = await import('fs')'
   await new Promise<void>((resolve, reject) => {
-    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
-      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {'
+      if (!isAdmin) return res.status(403).json({ error: 'Forbidden' })'
       fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
     })
   })
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
+)

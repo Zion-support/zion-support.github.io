@@ -1,6 +1,6 @@
 
 
-// Type definitions for Next.js compatibility in Vite
+// Type definitions for Next.js compatibility in Vite;
 export interface Metadata {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -69,9 +69,9 @@ export interface Metadata {/* TODO: Fix JSX expression */}
 }
       index?: boolean
       follow?: boolean
-      'max-video-preview'?: number
-      'max-image-preview'?: string
-      'max-snippet'?: number
+      'max-video-preview'?: number'
+      'max-image-preview'?: string'
+      'max-snippet'?: number'
     }
   }
   verification?: {/* TODO: Fix JSX expression */}
@@ -87,14 +87,14 @@ export interface MetadataRoute {/* TODO: Fix JSX expression */}
   robots?: string
   manifest?: string
 }
-export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest'
+export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';';';
 export interface MetadataRouteSitemap {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
   ur,
   l: string
   lastModified?: Date | string
-  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never'
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never''
   priority?: number,
 
 }

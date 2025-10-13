@@ -1,8 +1,16 @@
 
-'use client'
+'use client';';
 export const usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
-import { useEffect, useCallback } from 'react'
+import { useEffect, useCallback } from 'react';';';
 export const _usePerformanceMonitoring = () => {
+  // TODO: Implement
+}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // TODO: Implement
+}
     // TODO: Add content
   }
 
@@ -11,8 +19,8 @@ export const _usePerformanceMonitoring = () => {
   c: any) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    const body = JSON.stringify(metric)
-    const url = '/api/analytics'
+    const body = JSON.stringify(metric);
+const url = '/api/analytics''
     if (navigator.sendBeacon) {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -31,10 +39,10 @@ export const _usePerformanceMonitoring = () => {
   useEffect(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (typeof window !== 'undefined' && 'performance' in window) {/* TODO: Fix JSX expression */}
+    if (typeof window !== 'undefined' && 'performance' in window) {/* TODO: Fix JSX expression */}'
   O: Add content,}
 }
-      // Monitor Core Web Vitals
+      // Monitor Core Web Vitals;
 const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -48,7 +56,7 @@ const observer = new PerformanceObserver((list) => {/* TODO: Fix JSX expression 
   name: entry.name,
             value: entry.startTime,
             timestamp: Date.now()
-      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] }
+      observer.observe({ entryTypes: ['navigation', 'paint', 'largest-contentful-paint'] }'
 
   )
       return () => observer.disconnect()

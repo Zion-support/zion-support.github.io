@@ -7,10 +7,9 @@
  * - Value proposition (higher $ value gets priority)
  * - User engagement metrics
  * - Performance considerations,
- */
-
+ */;
 export interface BannerMetadata {,
   id: string,
-,
+,;
 export interface BannerMetadata {/* TODO: Fix JSX expression */}
 }

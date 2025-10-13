@@ -1,93 +1,157 @@
-import { useState } from 'react'
-import { supabase } from '@/integrations/supabase/client'
-import { Resume, ResumeBasicInfo } from '@/types/resume'
-import { useAuth } from '@/hooks/useAuth'
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils'
-export function useResumeActions() {
-  const { user } = useAuth()
-  const [isLoading, setIsLoading] = useState(false)
-  const [error, setError] = useState<string | null>(null)
-  const createResume = async (basicInfo: ResumeBasicInfo): Promise<string | null> => {
+import { useState } from 'react';';
+import { supabase } from '@/integrations/supabase/client';';
+import { Resume, ResumeBasicInfo } from '@/types/resume';';
+import { useAuth } from '@/hooks/useAuth';';
+import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';';';
+export function useResumeActions() {;
+const { user } = useAuth();
+const [isLoading, setIsLoading] = useState(false);
+const [error, setError] = useState<string | null>(null);
+const createResume = async (basicInfo: ResumeBasicInfo): Promise<string | null> => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     if (!user) {
-      setError('You must be logged in to create a resume')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      setError('You must be logged in to create a resume')'
       return null
     }
     setIsLoading(true)
     setError(null)
-    try {
-      const { data, error } = await supabase
-        .from('talent_resumes')
+    try {;
+const { data, error } = await supabase
+        .from('talent_resumes')'
         .insert({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
           user_id: user.id,
           title: basicInfo.title,
           headline: basicInfo.headline,
           summary: basicInfo.summary
         })
-        .select('id')
+        .select('id')'
         .single()
       if (error) throw error
-      showSuccessToast("Resume created", "Your resume has been created successfully")
+      showSuccessToast("Resume created", "Your resume has been created successfully")"
       return data.id
     } catch (e: any) {
-      return handleResumeError(e, 'Could not create resume') ? null : null
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      return handleResumeError(e, 'Could not create resume') ? null : null'
     } finally {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       setIsLoading(false)
     }
   }
   const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     if (!user) {
-      setError('You must be logged in to update a resume')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      setError('You must be logged in to update a resume')'
       return false
     }
     setIsLoading(true)
     setError(null)
-    try {
-      const { error } = await supabase
-        .from('talent_resumes')
+    try {;
+const { error } = await supabase
+        .from('talent_resumes')'
         .update({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
           title: basicInfo.title,
           headline: basicInfo.headline,
           summary: basicInfo.summary
         })
-        .eq('id', resumeId)
-        .eq('user_id', user.id)
+        .eq('id', resumeId)'
+        .eq('user_id', user.id)'
       if (error) throw error
-      return showSuccessToast("Resume updated", "Your resume information has been updated")
+      return showSuccessToast("Resume updated", "Your resume information has been updated")"
     } catch (e: any) {
-      return handleResumeError(e, 'Could not update resume')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      return handleResumeError(e, 'Could not update resume')'
     } finally {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       setIsLoading(false)
     }
   }
   const setActiveResume = async (resumeId: string): Promise<boolean> => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     if (!user) {
-      setError('You must be logged in to set active resume')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      setError('You must be logged in to set active resume')'
       return false
     }
     setIsLoading(true)
     setError(null)
     try {
-      // First, set all user's resumes to inactive
-      const { error: resetError } = await supabase
-        .from('talent_resumes')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      // First, set all user's resumes to inactive;';
+const { error: resetError } = await supabase
+        .from('talent_resumes')'
         .update({ is_active: false })
-        .eq('user_id', user.id)
+        .eq('user_id', user.id)'
       if (resetError) throw resetError
-      // Then, set the selected resume as active
-      const { error } = await supabase
-        .from('talent_resumes')
+      // Then, set the selected resume as active;
+const { error } = await supabase
+        .from('talent_resumes')'
         .update({ is_active: true })
-        .eq('id', resumeId)
-        .eq('user_id', user.id)
+        .eq('id', resumeId)'
+        .eq('user_id', user.id)'
       if (error) throw error
-      return showSuccessToast("Active resume set", "Your selected resume is now marked as active")
+      return showSuccessToast("Active resume set", "Your selected resume is now marked as active")"
     } catch (e: any) {
-      return handleResumeError(e, 'Could not set active resume')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      return handleResumeError(e, 'Could not set active resume')'
     } finally {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       setIsLoading(false)
     }
   }
   return {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     isLoading,
     error,
     createResume,

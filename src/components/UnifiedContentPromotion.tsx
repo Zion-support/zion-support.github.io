@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';'
 interface UnifiedContentPromotionProps {/* TODO: Fix JSX expression */}
 }
 const,
@@ -7,4 +7,4 @@ const,
     </div>
   )
 }
-export default UnifiedContentPromotion</UnifiedContentPromotionProps>
+export default UnifiedContentPromotion</UnifiedContentPromotionProps>;

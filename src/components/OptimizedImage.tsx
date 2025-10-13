@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';'
 interface OptimizedImageProps {/* TODO: Fix JSX expression */}
 }
 const,
@@ -9,16 +9,16 @@ const,
       width={width}
       height={height}
       className={`${className}`}
-      loading={priority ? 'eager' : 'lazy'}
-      decoding="async"
+      loading={priority ? 'eager' : 'lazy'}'
+      decoding="async""
       style={/* TODO: Fix JSX expression */}`
-  h: width ? `${width}px` : 'auto',
+  h: width ? `${width}px` : 'auto','
         heigh,`
-  t: height ? `${height}px` : 'auto'
+  t: height ? `${height}px` : 'auto''
       }}
     />
   )
 }
-export default OptimizedImage
-"`
+export default OptimizedImage;
+"`"
   </OptimizedImageProps>

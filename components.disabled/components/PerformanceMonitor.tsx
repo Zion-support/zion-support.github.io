@@ -1,7 +1,7 @@
-'use client'
+'use client''
 interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   b: number | null}
   loadTim,
   e: number | null}
 }
-export default PerformanceMonitor
+export default PerformanceMonitor;

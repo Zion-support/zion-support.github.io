@@ -1,3 +1,3 @@
-describe('Header', () => {/* TODO: Fix JSX expression */}
+describe('Header', () => {/* TODO: Fix JSX expression */}'
   })
 })

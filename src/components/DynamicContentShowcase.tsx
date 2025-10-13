@@ -1,2 +1,2 @@
-import React from 'react'
-export default DynamicContentShowcase
+import React from 'react';';';
+export default DynamicContentShowcase;

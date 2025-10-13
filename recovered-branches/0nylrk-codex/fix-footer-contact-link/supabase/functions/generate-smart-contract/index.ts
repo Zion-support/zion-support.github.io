@@ -1,23 +1,43 @@
-import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
-import "https://deno.land/x/xhr@0.1.0/mod.ts"
+import { serve } from "https://deno.land/std@0.168.0/http/server.ts";";
+import "https://deno.land/x/xhr@0.1.0/mod.ts";";
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*',
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}
-  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  'Access-Control-Allow-Origin': '*','
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'}'
+  'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type','
 }
 serve(async (req) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   // Handle CORS preflight requests
-  if (req.method === 'OPTIONS') {
+  if (req.method === 'OPTIONS') {'
     return new Response(null, { headers: corsHeaders })
   }
   try {
-    // Get the OpenAI API key from environment variables
-    const apiKey = Deno.env.get('OPENAI_API_KEY')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    // Get the OpenAI API key from environment variables;
+const apiKey = Deno.env.get('OPENAI_API_KEY')'
     if (!apiKey) {
-      throw new Error('OPENAI_API_KEY is not set')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      throw new Error('OPENAI_API_KEY is not set')'
     }
-    // Parse request body
-    const {
+    // Parse request body;
+const {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       talentName,
       clientName,
       projectName,
@@ -29,13 +49,13 @@ serve(async (req) => {
       additionalClauses} = await req.json()
       additionalClauses,
     } = await req.json()
-    // Create the smart contract prompt for OpenAI
-    let prompt = `
+    // Create the smart contract prompt for OpenAI;
+let prompt = `
     Please generate a Solidity smart contract for a freelance project between ${clientName} (Client) and ${talentName} (Talent) with the following details:
     Project Name: ${projectName}
     Project Scope: ${scopeSummary}
     Start Date: ${new Date(startDate).toLocaleDateString()}
-    ${endDate ? `End Date: ${new Date(endDate).toLocaleDateString()}` : 'End Date: To be determined based on project completion'}
+    ${endDate ? `End Date: ${new Date(endDate).toLocaleDateString()}` : 'End Date: To be determined based on project completion'}'
     Payment Terms: ${paymentTerms}
     Payment Amount: ${paymentAmount}
     The contract should implement a standard escrow pattern where:
@@ -47,68 +67,122 @@ serve(async (req) => {
     Make the contract as gas-efficient as possible.
     `
     if (additionalClauses && additionalClauses.length > 0) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       prompt += `
       Please also include the following additional clauses as on-chain functionality where possible:
-      ${additionalClauses.includes('nda') ? '- Confidentiality flag that can be verified on-chain' : ''}
-      ${additionalClauses.includes('ip') ? '- Intellectual Property transfer receipts' : ''}
-      ${additionalClauses.includes('termination') ? '- Termination conditions with automatic refund features' : ''}
-      ${additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : ''}
+      ${additionalClauses.includes('nda') ? '- Confidentiality flag that can be verified on-chain' : '}''
+      ${additionalClauses.includes('ip') ? '- Intellectual Property transfer receipts' : '}''
+      ${additionalClauses.includes('termination') ? '- Termination conditions with automatic refund features' : '}''
+      ${additionalClauses.includes('revisions') ? '- Revision tracking mechanism' : '}''
       `
     }
     prompt += `
     Format the code properly with comments explaining each section. Include a simple deployment script.
     `
-    // Call OpenAI API
-    const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST',
+    // Call OpenAI API;
+const response = await fetch('https://api.openai.com/v1/chat/completions', {'
+      method: 'POST','
       headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`},
-        'Authorization': `Bearer ${apiKey}`,
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        'Content-Type': 'application/json','
+        'Authorization': `Bearer ${apiKey}`},'
+        'Authorization': `Bearer ${apiKey}`,'
       },
       body: JSON.stringify({
-        model: 'gpt-4o',
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        model: 'gpt-4o','
         messages: [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
           {
-            role: 'system',
-            content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'},
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+            role: 'system','
+            content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.'},'
           {
-            role: 'user',
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+            role: 'user','
             content: prompt}],
         temperature: 0.7})})
-            content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.',
+            content: 'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.','
           },
           {
-            role: 'user',
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+            role: 'user','
             content: prompt,
           },
         ],
         temperature: 0.7,
       }),
-    })
-    const data = await response.json()
+    });
+const data = await response.json()
     if (!response.ok) {
-      throw new Error(data.error?.message || 'Failed to generate smart contract')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      throw new Error(data.error?.message || 'Failed to generate smart contract')'
     }
     const solidityCode = data.choices[0].message.content.trim()
-    return new Response(JSON.stringify({ 
-      success: true, 
-      solidityCode 
+    return new Response(JSON.stringify({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      success: true,
+      solidityCode
     }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' }})'
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },'
     })
   } catch (error) {
-    console.error('Error generating smart contract:', error)
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error('Error generating smart contract:', error)'
     return new Response(
-      JSON.stringify({ 
-        success: false, 
-        error: error.message || 'Failed to generate smart contract' 
+  // TODO: Add parameters
+)
+      JSON.stringify({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        success: false,
+        error: error.message || 'Failed to generate smart contract' '
       }),
-      { 
-        status: 500, 
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' }}'
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },'
       }
     )
   }

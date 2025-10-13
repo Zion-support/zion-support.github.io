@@ -4,6 +4,10 @@
  */
 
 interface GtagEvent {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     // TODO: Add content
   }
 
@@ -14,7 +18,7 @@ interface GtagEvent {
   [ke,
   y: string]: unknown,
 }
-type GtagCommand = 'config' | 'set' | 'event' | 'js'
+type GtagCommand = 'config' | 'set' | 'event' | 'js''
 interface Window {/* TODO: Fix JSX expression */}
   O: Add content,}
 }

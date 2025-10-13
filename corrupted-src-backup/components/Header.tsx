@@ -1,2 +1,2 @@
-import React, { useState } from 'react'
-export default Header
+import React, { useState } from 'react';';';
+export default Header;

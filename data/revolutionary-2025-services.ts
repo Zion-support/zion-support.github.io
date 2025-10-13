@@ -1,5 +1,9 @@
-import { ServiceVariant } from '../types/service-variants'
+import { ServiceVariant } from '../types/service-variants';';';
 export interface Revolutionary2025Service {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   id: string
   name: string
   tagline: string
@@ -33,7 +37,7 @@ export interface Revolutionary2025Service {
   realImplementation: boolean
   contactInfo: unknown
     mobile: string
-    email: string,
+    email: string,;
 export interface Revolutionary2025Service {,
     address: string}
   i,
@@ -52,7 +56,7 @@ export interface Revolutionary2025Service {,
   realImplementation: boolean
   contactInfo: unknown
     mobile: string
-    email: string
+    email: string;
 export interface Revolutionary2025Service {;,
     address: string}
   i,
@@ -78,7 +82,7 @@ export interface Revolutionary2025Service {;,
     mobil,
   e: string,
     emai,
-  l: string,
+  l: string,;
 export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
   s: string}
 }
@@ -107,7 +111,7 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
+      address: "364 E Main St STE 1008 Middletown DE 19709"}"
   }
 ]
   id: string, name: string,
@@ -120,29 +124,29 @@ export interface Revolutionary2025Service {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const revolutionary2025 Services: Revolutionary2025 Service[] = [,
-    id: "revolutionary-ai-platform", name: "Revolutionary AI Platform",
-    tagline: "Next-generation AI capabilities", price: "$199/month"
-    description: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence."
+export const revolutionary2025 Services: Revolutionary2025 Service[] = [,;
+    id: "revolutionary-ai-platform", name: "Revolutionary AI Platform","
+    tagline: "Next-generation AI capabilities", price: "$199/month""
+    description: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence."'"
     features: [,
-      "Advanced AI models"
-      "Revolutionary algorithms"
-      "Breakthrough capabilities"
-      "Future-ready architecture",
-      "Cutting-edge features"],
-    link: "/services/revolutionary-ai-platform", category: "Revolutionary 2025 Services",
+      "Advanced AI models""
+      "Revolutionary algorithms""
+      "Breakthrough capabilities""
+      "Future-ready architecture","
+      "Cutting-edge features"],"
+    link: "/services/revolutionary-ai-platform", category: "Revolutionary 2025 Services","
     realImplementation: true,
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
+    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}"
   }
 ]
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com","
+      address: "364 E Main St STE 1008 Middletown DE 19709"}"
   }
 ]
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
+      email: "kleber@ziontechgroup.com","
+      address: "364 E Main St STE 1008 Middletown DE 19709","
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
 ]
@@ -168,125 +172,125 @@ export const revolutionary2025 Services: Revolutionary2025 Service[] = [,
     addres,
   s: string}
 }
-export const,
+export const,;
   revolutionary2025Services: Revolutionary2025Service[] = [,
-    i,"
-  d: "revolutionary-ai-platform", nam,"
-  e: "Revolutionary AI Platform",
-    taglin,"
-  e: "Next-generation AI capabilities", pric,"
-  e: "$199/month",
-    descriptio,"
-  n: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.",
+    i,""
+  d: "revolutionary-ai-platform", nam,""
+  e: "Revolutionary AI Platform","
+    taglin,""
+  e: "Next-generation AI capabilities", pric,""
+  e: "$199/month","
+    descriptio,""
+  n: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.","'"
     feature,
-  s: [,"
-      "Advanced AI models""
-      "Revolutionary algorithms""
-      "Breakthrough capabilities""
-      "Future-ready architecture""
-      "Cutting-edge features"
+  s: [,""
+      "Advanced AI models"""
+      "Revolutionary algorithms"""
+      "Breakthrough capabilities"""
+      "Future-ready architecture"""
+      "Cutting-edge features""
     ],
-    lin,"
-  k: "/services/revolutionary-ai-platform", categor,"
-  y: "Revolutionary 2025 Services",
+    lin,""
+  k: "/services/revolutionary-ai-platform", categor,""
+  y: "Revolutionary 2025 Services","
     realImplementatio,
   n: true,
     contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  o: addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
 ]
-      mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      mobil,""
+  e: "+1 302 464 0950", emai,""
+  l: "kleber@ziontechgroup.com","
+      addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
 ]
-      emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      emai,""
+  l: "kleber@ziontechgroup.com","
+  addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
 ]
-id: "revolutionary-ai-platform"
-    id: "revolutionary-ai-platform",
+id: "revolutionary-ai-platform""
+    id: "revolutionary-ai-platform","
 ]
-    id: "revolutionary-ai-platform"
-    name: "Revolutionary AI Platform",
-    tagline: "Next-generation AI capabilities",
-    price: "$199/month",
-    description: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.",
+    id: "revolutionary-ai-platform""
+    name: "Revolutionary AI Platform","
+    tagline: "Next-generation AI capabilities","
+    price: "$199/month","
+    description: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.","'"
     features: [,
-      "Advanced AI models",
-      "Revolutionary algorithms",
-      "Breakthrough capabilities",
-      "Future-ready architecture",
-      "Cutting-edge features"
-    ],
-    link: "/services/revolutionary-ai-platform"
-    category: "Revolutionary 2025 Services"
-    realImplementation: true
-    contactInfo: unknown,
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}
-];      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
-  d: "revolutionary-ai-platform",
-    nam,"
-  e: "Revolutionary AI Platform",
-    taglin,"
-  e: "Next-generation AI capabilities",
-    pric,"
-  e: "$199/month",
-    descriptio,"
-  n: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.",
-    feature,
-  s: [,"
       "Advanced AI models","
       "Revolutionary algorithms","
       "Breakthrough capabilities","
       "Future-ready architecture","
-      "Cutting-edge features"
+      "Cutting-edge features""
     ],
-    lin,"
-  k: "/services/revolutionary-ai-platform",
-    categor,"
-  y: "Revolutionary 2025 Services",
+    link: "/services/revolutionary-ai-platform""
+    category: "Revolutionary 2025 Services""
+    realImplementation: true
+    contactInfo: unknown,
+      mobile: "+1 302 464 0950""
+      email: "kleber@ziontechgroup.com""
+      mobile: '+1 302 464 0950','
+      email: 'kleber@ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}'
+];      mobile: "+1 302 464 0950","
+      email: "kleber@ziontechgroup.com","
+      mobile: "+1 302 464 0950","
+      email: "kleber@ziontechgroup.com","
+      address: "364 E Main St STE 1008 Middletown DE 19709","
+    i,""
+  d: "revolutionary-ai-platform","
+    nam,""
+  e: "Revolutionary AI Platform","
+    taglin,""
+  e: "Next-generation AI capabilities","
+    pric,""
+  e: "$199/month","
+    descriptio,""
+  n: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.","'"
+    feature,
+  s: [,""
+      "Advanced AI models",""
+      "Revolutionary algorithms",""
+      "Breakthrough capabilities",""
+      "Future-ready architecture",""
+      "Cutting-edge features""
+    ],
+    lin,""
+  k: "/services/revolutionary-ai-platform","
+    categor,""
+  y: "Revolutionary 2025 Services","
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
-  l: "kleber@ziontechgroup.com",
+      mobil,""
+  e: "+1 302 464 0950","
+      emai,""
+  l: "kleber@ziontechgroup.com","
       mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950','
       emai,
-  l: 'kleber@ziontechgroup.com',
+  l: 'kleber@ziontechgroup.com','
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}
-];      mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}'
+];      mobil,""
+  e: "+1 302 464 0950","
+  emai,""
+  l: "kleber@ziontechgroup.com""
+      mobil,""
+  e: "+1 302 464 0950","
+      emai,""
+  l: "kleber@ziontechgroup.com","
+      addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
 ]
@@ -315,8 +319,8 @@ i,
   n: boolean, contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  s: string} } } addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -329,43 +333,43 @@ i,
   o: mobil,
   e: string, emai,
   l: string, addres,
-  s: string } } export const,
-  revolutionary2025Services: Revolutionary2025Service[] = [ i,"
-  d: "revolutionary-ai-platform", nam,"
-  e: "Revolutionary AI Platform", taglin,"
-  e: "Next-generation AI capabilities", pric,"
-  e: "$199/month", descriptio,"
-  n: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.", feature,"
-  s: [ "Advanced AI models" "Revolutionary algorithms" "Breakthrough capabilities" "Future-ready architecture" "Cutting-edge features" ], lin,"
-  k: "/services/revolutionary-ai-platform", categor,"
-  y: "Revolutionary 2025 Services", realImplementatio,
+  s: string } } export const,;
+  revolutionary2025Services: Revolutionary2025Service[] = [ i,""
+  d: "revolutionary-ai-platform", nam,""
+  e: "Revolutionary AI Platform", taglin,""
+  e: "Next-generation AI capabilities", pric,""
+  e: "$199/month", descriptio,""
+  n: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.", feature,"'"
+  s: [ "Advanced AI models" "Revolutionary algorithms" "Breakthrough capabilities" "Future-ready architecture" "Cutting-edge features" ], lin,""
+  k: "/services/revolutionary-ai-platform", categor,""
+  y: "Revolutionary 2025 Services", realImplementatio,"
   n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "revolutionary-ai-platform", nam,"
-  e: "Revolutionary AI Platform", taglin,"
-  e: "Next-generation AI capabilities", pric,"
-  e: "$199/month",' descriptio,"
-  n: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.", feature,"
-  s: [ "Advanced AI models", "Revolutionary algorithms", "Breakthrough capabilities", "Future-ready architecture", "Cutting-edge features" ], lin,"
-  k: "/services/revolutionary-ai-platform", categor,"
-  y: "Revolutionary 2025 Services", realImplementatio,
+  o: addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,""
+  e: "+1 302 464 0950", emai,""
+  l: "kleber@ziontechgroup.com", addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,""
+  l: "kleber@ziontechgroup.com","
+  addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,""
+  d: "revolutionary-ai-platform", nam,""
+  e: "Revolutionary AI Platform", taglin,""
+  e: "Next-generation AI capabilities", pric,""
+  e: "$199/month",' descriptio,"'"
+  n: "Revolutionary AI platform that pushes the boundaries of what's possible with artificial intelligence.", feature,"'"
+  s: [ "Advanced AI models", "Revolutionary algorithms", "Breakthrough capabilities", "Future-ready architecture", "Cutting-edge features" ], lin,""
+  k: "/services/revolutionary-ai-platform", categor,""
+  y: "Revolutionary 2025 Services", realImplementatio,"
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com",' mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
+  o: mobil,""
+  e: "+1 302 464 0950", emai,""
+  l: "kleber@ziontechgroup.com",' mobil,'"
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
+  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"'"
+  e: "+1 302 464 0950","
+  emai,""
+  l: "kleber@ziontechgroup.com" mobil,""
+  e: "+1 302 464 0950", emai,""
+  l: "kleber@ziontechgroup.com", addres,""
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"

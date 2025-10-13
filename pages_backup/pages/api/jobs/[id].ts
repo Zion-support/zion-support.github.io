@@ -1,152 +1,262 @@
-import type { NextApiRequest, NextApiResponse } from "next"
-import { readJsonFile, writeJsonFile } from "../../../utils/db"
-import type { Job } from "../../../utils/types"
-import { rateLimit } from "../../../utils/rateLimit"
-import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth"
+import type { NextApiRequest, NextApiResponse } from "next";";
+import { readJsonFile, writeJsonFile } from "../../../utils/db";";
+import type { Job } from "../../../utils/types";";
+import { rateLimit } from "../../../utils/rateLimit";";
+import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";";";
+export default function handler(req: NextApiRequest, res: NextApiResponse) {;
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return
-  const { id } = req && req.query
-  const jobs = readJsonFile<Job[]>(FILE, [])
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (!rateLimit(req, res)) return;
+const { id } = req && req.query;
+const jobs = readJsonFile<Job[]>(FILE, [])
   if (idx === -1) {
-    res.status(404).json({ error: "Job not found" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    res.status(404).json({ error: "Job not found" })"
     return
   }
-  if (req.method === "GET") {
+  if (req.method === "GET") {"
     res.status(200).json({ job: jobs[idx] })
     return
   }
-  if (req && req.method === "GET") {
+  if (req && req.method === "GET") {"
     res && res.status(200).json({ job: jobs[idx] })
     return
   }
-  if (req && req.method === "PATCH") {
-    const userEmail = getRequestUserEmail(req)
-    const job = jobs[idx]
-    const isOwner = userEmail && userEmail === job && job.clientEmail
+  if (req && req.method === "PATCH") {;";
+const userEmail = getRequestUserEmail(req);
+const job = jobs[idx];
+const isOwner = userEmail && userEmail === job && job.clientEmail
     if (!isOwner && !isAdminEmail(userEmail)) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       return
     }
     const {
-import type { NextApiRequest, NextApiResponse } from 'next'
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+import type { NextApiRequest, NextApiResponse } from 'next';';';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (req.method === 'GET') {'
     res.status(200).json({ job: { id: req.query.id } })
-  } else if (req.method === 'PATCH') {
-    res.status(200).json({ message: 'Job updated' })
+  } else if (req.method === 'PATCH') {'
+    res.status(200).json({ message: 'Job updated' })'
   } else {
-    res.setHeader('Allow', ['GET', 'PATCH'])
-    res.status(405).end('Method Not Allowed')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    res.setHeader('Allow', ['GET', 'PATCH'])'
+    res.status(405).end('Method Not Allowed')'
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
-import type { NextApiRequest, NextApiResponse } from 'next'
-import { readJsonFile, writeJsonFile } from '../../../utils/db'
-import type { Job } from '../../../utils/types'
-import { rateLimit } from '../../../utils/rateLimit'
-import { getRequestUserEmail, isAdminEmail } from '../../../utils/auth'
-const FILE = 'jobs.json'
+import type { NextApiRequest, NextApiResponse } from 'next';';
+import { readJsonFile, writeJsonFile } from '../../../utils/db';';
+import type { Job } from '../../../utils/types';';
+import { rateLimit } from '../../../utils/rateLimit';';
+import { getRequestUserEmail, isAdminEmail } from '../../../utils/auth';';';
+const FILE = 'jobs.json';';
 export default function handler(req, res) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   try {
-  if (!rateLimit(req, res)) return,
-  const { id } = req.query
-  const jobs = readJsonFile<Job[]>(FILE, []),
-  const idx = jobs.findIndex((j) => j.id === id)
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (!rateLimit(req, res)) return,;
+const { id } = req.query;
+const jobs = readJsonFile<Job[]>(FILE, []),;
+const idx = jobs.findIndex((j) => j.id === id)
   if (idx === -1) {
-    res.status(404).json({ error: 'Job not found' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    res.status(404).json({ error: 'Job not found' })'
     return
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 
-  if (req.method === 'GET') {
+  if (req.method === 'GET') {'
     res.status(200).json({ job: jobs[idx] })
     return
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 
-  if (req.method === 'GET') {
-    const userEmail = getRequestUserEmail(req)
-    const job = jobs[idx]
-    const isOwner = userEmail && userEmail === job.clientEmail
+  if (req.method === 'GET') {;';
+const userEmail = getRequestUserEmail(req);
+const job = jobs[idx];
+const isOwner = userEmail && userEmail === job.clientEmail
     if (!isOwner && !isAdminEmail(userEmail)) {
-      res.status(403).json({ error: 'Forbidden' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      res.status(403).json({ error: 'Forbidden' })'
       return
     }
     const { title, description, category, requiredSkills, budgetMinUsd, budgetMaxUsd, deliveryDeadlineIso, status } = req.body || {}
-    if (typeof title === 'string') job.title = title
-    if (typeof description === 'string') job.description = description
-    if (typeof category === 'string') job.category = category
+    if (typeof title === 'string') job.title = title'
+    if (typeof description === 'string') job.description = description'
+    if (typeof category === 'string') job.category = category'
     if (Array.isArray(requiredSkills)) job.requiredSkills = requiredSkills.map(String)
-    if (typeof budgetMinUsd === 'number' || budgetMinUsd === null) job.budgetMinUsd = budgetMinUsd ?? undefined
-    if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined
-    if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined
-    if (typeof status === 'string') job.status = status as Job['status']
+    if (typeof budgetMinUsd === 'number' || budgetMinUsd === null) job.budgetMinUsd = budgetMinUsd ?? undefined'
+    if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined'
+    if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined'
+    if (typeof status === 'string') job.status = status as Job['status']'
     } = req.body || {}
     // Check condition
 if (job.title = title) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
     // Check condition
 if (job.description = description) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
     // Check condition
 if (job.category = category) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
     if ()) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
       job.required_skills = required_skills.map (String)
     // Check condition
 if (
+  // TODO: Add parameters
+)
       job.budgetMinUsd = budgetMinUsd ?? undefined) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
     // Check condition
 if (
+  // TODO: Add parameters
+)
       job.budgetMaxUsd = budgetMaxUsd ?? undefined) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
     // Check condition
 if (
+  // TODO: Add parameters
+)
       job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
     // Check condition
-if (job.status = status as Job["status"]) {
+if (job.status = status as Job["status"]) {"
   $2
 }
     job.updatedAtIso = new Date ().toISOString ()
@@ -155,8 +265,8 @@ if (job.status = status as Job["status"]) {
     res.status (200).json ({ job })
     return
   }
-  res.set_header ("Allow", "GET, PATCH")
-  res.status (405).end ("Method Not Allowed")
+  res.set_header ("Allow", "GET, PATCH")"
+  res.status (405).end ("Method Not Allowed")"
 }
     job.updatedAtIso = new Date().toISOString()
     jobs[idx] = job,
@@ -164,35 +274,63 @@ if (job.status = status as Job["status"]) {
     res.status(200).json({ job })
     return
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
 
-  res.setHeader('AllowGET, PATCH')
-  res.status(405).end('Method Not Allowed')
+  res.setHeader('AllowGET, PATCH')'
+  res.status(405).end('Method Not Allowed')'
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
     } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
   } catch (error) {
-    console.error("Error:", error)
-    return res.status(500).json({ error: "Internal server error" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    console.error("Error:", error)"
+    return res.status(500).json({ error: "Internal server error" })"
   }
 }
     const {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       title,
       description,
       category,
@@ -202,22 +340,22 @@ if (job.status = status as Job["status"]) {
       deliveryDeadlineIso,
       status,
     } = req.body || {}
-    if (typeof title === "string") job.title = title
-    if (typeof description === "string") job.description = description
-    if (typeof category === "string") job.category = category
+    if (typeof title === "string") job.title = title"
+    if (typeof description === "string") job.description = description"
+    if (typeof category === "string") job.category = category"
     if (Array.isArray(requiredSkills))
       job.requiredSkills = requiredSkills.map(String)
-    if (typeof budgetMinUsd === "number" || budgetMinUsd === null)
+    if (typeof budgetMinUsd === "number" || budgetMinUsd === null)"
       job.budgetMinUsd = budgetMinUsd ?? undefined
-    if (typeof budgetMaxUsd === "number" || budgetMaxUsd === null)
+    if (typeof budgetMaxUsd === "number" || budgetMaxUsd === null)"
       job.budgetMaxUsd = budgetMaxUsd ?? undefined
-    if (typeof deliveryDeadlineIso === "string" || deliveryDeadlineIso === null)
+    if (typeof deliveryDeadlineIso === "string" || deliveryDeadlineIso === null)"
       job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined
-    if (typeof status === "string") job.status = status as Job["status"]
+    if (typeof status === "string") job.status = status as Job["status"]"
     res.status(200).json({ job })
     return
   }
-res.setHeader("Allow", "GET, PATCH")
-  res.status(405).end("Method Not Allowed")
+res.setHeader("Allow", "GET, PATCH")"
+  res.status(405).end("Method Not Allowed")"
 }
 }

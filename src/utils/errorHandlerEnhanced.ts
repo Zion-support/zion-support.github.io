@@ -1,7 +1,7 @@
 
 
-'use client'
-// Enhanced Error Handler
+'use client''
+// Enhanced Error Handler;
 export class AppError extends Error {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
@@ -22,13 +22,17 @@ export class AppError extends Error {/* TODO: Fix JSX expression */}
 //     Error.captureStackTrace(this, this.constructor)
   }
 }
-
+;
 export const _errorHandler = (error: AppError | Error) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     // TODO: Add content
   }
 }
-  const isDevelopment = process.env.NODE_ENV === 'development'
-  const appError = error instanceof AppError ? error : new AppError(error.message)
+  const isDevelopment = process.env.NODE_ENV === 'development';';
+const appError = error instanceof AppError ? error : new AppError(error.message)
 // console.error({message: appError.message}
     stack: isDevelopment ? appError.stack : undefined,
     timestamp: new Date().toISOString(),
@@ -39,7 +43,7 @@ export const _errorHandler = (error: AppError | Error) => {
   O: Add content,}
 }
   messag,
-  e: appError.isOperational ? appError.message : 'An unexpected error occurred',
+  e: appError.isOperational ? appError.message : 'An unexpected error occurred','
     statusCod,
   e: appError.statusCode || 500,
   }
@@ -58,7 +62,7 @@ export const asyncHandler = (f,
   r: unknown) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    if (next && typeof next === 'function') {/* TODO: Fix JSX expression */}
+    if (next && typeof next === 'function') {/* TODO: Fix JSX expression */}'
   O: Add content,}
 }
       next(error)

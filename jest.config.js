@@ -1,84 +1,92 @@
-<<<<<<< HEAD
 export default {
-=======
-module.exports = {
-  preset: 'ts-jest',
->>>>>>> origin/main
-  testEnvironment: 'jsdom',
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  testEnvironment: 'jsdom','
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],'
   moduleNameMapper: {
-    '^@/(.*)$': '<rootDir>/app/$1',
-    '^@/components/(.*)$': '<rootDir>/app/components/$1',
-    '^@/pages/(.*)$': '<rootDir>/app/$1',
-    '^@/utils/(.*)$': '<rootDir>/utils/$1',
-    '^@/types/(.*)$': '<rootDir>/types/$1',
-    '^@/hooks/(.*)$': '<rootDir>/hooks/$1',
-    '^@/config/(.*)$': '<rootDir>/config/$1',
-    '^@/data/(.*)$': '<rootDir>/data/$1',
-    '^@/content/(.*)$': '<rootDir>/content/$1'
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    '^@/(.*)$': '<rootDir>/app/$1','
+    '^@/components/(.*)$': '<rootDir>/app/components/$1','
+    '^@/pages/(.*)$': '<rootDir>/app/$1','
+    '^@/utils/(.*)$': '<rootDir>/utils/$1','
+    '^@/types/(.*)$': '<rootDir>/types/$1','
+    '^@/hooks/(.*)$': '<rootDir>/hooks/$1','
+    '^@/config/(.*)$': '<rootDir>/config/$1','
+    '^@/data/(.*)$': '<rootDir>/data/$1','
+    '^@/content/(.*)$': '<rootDir>/content/$1''
   },
   transform: {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    '^.+\\.(ts|tsx)$': ['ts-jest', {
-      tsconfig: 'tsconfig.json',
-      useESM: true
-    }],
-    '^.+\\.(js|jsx)$': 'babel-jest'
-=======
-<<<<<<< HEAD
-=======
-
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
 >>>>>>> origin/main
->>>>>>> origin/main
-    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {
+    '^.+\\.(ts|tsx|js|jsx)$': ['babel-jest', {'
       presets: [
-        ['@babel/preset-env', { targets: { node: 'current' } }],
-        ['@babel/preset-react', { runtime: 'automatic' }],
-        '@babel/preset-typescript'
+  // TODO: Add items
+]
+  // TODO: Add items
+]
+        ['@babel/preset-env', { targets: { node: 'current' } }],'
+        ['@babel/preset-react', { runtime: 'automatic' }],'
+        '@babel/preset-typescript''
       ]
     }]
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/main
 >>>>>>> origin/main
 >>>>>>> origin/main
   },
   testMatch: [
-    '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)',
-    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)'
+  // TODO: Add items
+]
+  // TODO: Add items
+]
+    '<rootDir>/__tests__/**/*.(ts|tsx|js|jsx)','
+    '<rootDir>/app/**/*.(test|spec).(ts|tsx|js|jsx)''
   ],
   collectCoverageFrom: [
-    'app/**/*.{ts,tsx}',
-    '!app/**/*.d.ts',
-    '!app/**/*.stories.{ts,tsx}',
-    '!app/**/index.{ts,tsx}'
+  // TODO: Add items
+]
+  // TODO: Add items
+]
+    'app/**/*.{ts,tsx}','
+    '!app/**/*.d.ts','
+    '!app/**/*.stories.{ts,tsx}','
+    '!app/**/index.{ts,tsx}''
   ],
-  coverageDirectory: 'coverage',
-  coverageReporters: ['text', 'lcov', 'html'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
+  coverageDirectory: 'coverage','
+  coverageReporters: ['text', 'lcov', 'html'],'
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],'
   testPathIgnorePatterns: [
-    '<rootDir>/node_modules/',
-    '<rootDir>/dist/',
-    '<rootDir>/.next/',
-    '<rootDir>/out/'
+  // TODO: Add items
+]
+  // TODO: Add items
+]
+    '<rootDir>/node_modules/','
+    '<rootDir>/dist/','
+    '<rootDir>/.next/','
+    '<rootDir>/out/''
   ],
   transformIgnorePatterns: [
-    'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))'
-<<<<<<< HEAD
+  // TODO: Add items
+]
+  // TODO: Add items
+]
+    'node_modules/(?!(.*\\.mjs$|lucide-react|framer-motion))''
   ],
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
+  extensionsToTreatAsEsm: ['.ts', '.tsx'],'
   globals: {
-    'ts-jest': {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    'ts-jest': {'
       useESM: true
     }
   }
 };
-=======
-  ]
-}
->>>>>>> origin/main

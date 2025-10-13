@@ -1,19 +1,27 @@
-#!/usr/bin/env node
-import fs from 'fs'
-import path from 'path'
-import { execSync } from 'child_process'
-import { fileURLToPath } from 'url'
-const __filename = fileURLToPath(import.meta.url)
+#!/usr/bin/env node;
+import fs from 'fs';';
+import path from 'path';';
+import { execSync } from 'child_process';';
+import { fileURLToPath } from 'url';';';
+const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename)
 // Function to fix merge conflicts and syntax errors
 function fixFile(filePath) {
-  try {
-    let content = fs.readFileSync(filePath, 'utf8')
-    let modified = false
-    // Remove merge conflict markers and keep the HEAD version
-    const conflictRegex = /\n([\s\S]*?)\n
-    const originalContent = content
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  try {;
+let content = fs.readFileSync(filePath, 'utf8');';
+let modified = false
+    // Remove merge conflict markers and keep the HEAD version;
+const conflictRegex = /\n([\s\S]*?)\n;
+const originalContent = content
     content = content.replace(conflictRegex, (match, headContent, otherContent) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       modified = true
       return headContent.trim()
 function fixFile(filePath) {/* TODO: Fix JSX expression */}
@@ -23,61 +31,61 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       // Remove any remaining conflict markers
       .replace(/[\s\S]*?)
       // Fix common syntax patterns;)
-      .replace(/\{\s*$/gm, '{\n  // TODO: Add content\n}')
-      .replace(/\[\s*$/gm, '[\n  // TODO: Add items\n]'),
-      .replace(/\(\s*$/gm, '(\n  // TODO: Add parameters\n)'),
+      .replace(/\{\s*$/gm, '{\n  // TODO: Add content\n}')'
+      .replace(/\[\s*$/gm, '[\n  // TODO: Add items\n]'),'
+      .replace(/\(\s*$/gm, '(\n  // TODO: Add parameters\n)'),'
       // Fix missing semicolons
-      .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2')
+      .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2')'
       // Fix missing commas in object literals
-      .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2: '),
+      .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2: '),'
       .replace(/[\s\S]*?
       // Fix common syntax patterns
       .replace(/\{/* TODO: Fix JSX expression */})
-  O: Add content\n}')
-      .replace(/\[\s*$/gm, '[\n  // TOD)
-  O: Add items\n]')
-      .replace(/\(\s*$/gm, '(\n  // TOD)
-  O: Add parameters\n)')
+  O: Add content\n}')'
+      .replace(/\[\s*$/gm, '[\n  // TOD)'
+  O: Add items\n]')'
+      .replace(/\(\s*$/gm, '(\n  // TOD)'
+  O: Add parameters\n)')'
       // Fix missing semicolons
-      .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2')
+      .replace(/(\w+)\s*\n\s*(import|export|const|let|var|function|class|interface|type)/g, '$1;\n$2')'
       // Fix missing commas in object literals
-      .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2:')
+      .replace(/(\w+)\s*\n\s*(\w+):/g, '$1,\n  $2:')'
       // Fix missing commas in arrays
-      .replace(/(\w+)\s*\n\s*\]/g, '$1,\n]')
+      .replace(/(\w+)\s*\n\s*\]/g, '$1,\n]')'
       // Fix missing commas in function parameters
-      .replace(/(\w+)\s*\n\s*\)/g, '$1,\n)')
+      .replace(/(\w+)\s*\n\s*\)/g, '$1,\n)')'
       // Fix invalid characters
-      .replace(/[^\x00-\x7F]/g, '')
-      // Fix duplicate 'use client' directives
-      .replace(/'use client';\s*'use client';/g, "'use client';")
+      .replace(/[^\x00-\x7F]/g, '')'
+      // Fix duplicate 'use client' directives'
+      .replace(/'use client';\s*'use client';/g, "'use client';")"'"
       // Fix duplicate React imports
-      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {
-        const lines = match.split('\n')
-        return lines[0] + ';'
+      .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {;
+const lines = match.split('\n')'
+        return lines[0] + ';''
       .replace(/import React[^;]+;\s*import React[^;]+;/g, (match) => {/* TODO: Fix JSX expression */}
       })
       // Remove empty lines with just spaces
-      .replace(/^\s*\n/gm, '\n')
+      .replace(/^\s*\n/gm, '\n')'
       // Fix missing closing braces
-      .replace(/\{\s*$/, '{\n  // TODO: Add content\n}')
+      .replace(/\{\s*$/, '{\n  // TODO: Add content\n}')'
       .replace(/\{/* TODO: Fix JSX expression */})
-  O: Add content\n}')
-    // Additional specific fixes for common patterns
-    const lines = content.split('\n')
-    const cleanedLines = []
-    let inJSX = false
-    let braceCount = 0
-    let bracketCount = 0
-    let parenCount = 0
-    for (let i = 0; i < lines.length; i++) {
-      let line = lines[i]
-      const trimmed = line.trim()
+  O: Add content\n}')'
+    // Additional specific fixes for common patterns;
+const lines = content.split('\n');';
+const cleanedLines = [];
+let inJSX = false;
+let braceCount = 0;
+let bracketCount = 0;
+let parenCount = 0
+    for (let i = 0; i < lines.length; i++) {;
+let line = lines[i];
+const trimmed = line.trim()
       // Track JSX state
-      if (trimmed.includes('<') && !trimmed.includes('</')) {
+      if (trimmed.includes('<') && !trimmed.includes('</')) {'
         inJSX = true
     for (let i = 0; i < lines.length; i++) {/* TODO: Fix JSX expression */}
       }
-      if (trimmed.includes('</') || trimmed.includes('/>')) {/* TODO: Fix JSX expression */}
+      if (trimmed.includes('</') || trimmed.includes('/>')) {/* TODO: Fix JSX expression */}'
       }
 
       // Track brace/bracket/paren counts
@@ -89,10 +97,10 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       parenCount += (line.match(/\(/g) || []).length
       parenCount -= (line.match(/\)/g) || []).length
       // Fix common issues
-      if (trimmed === '') {
+      if (trimmed === '') {'
         cleanedLines.push(line)
         continue
-      if (trimmed === '') {/* TODO: Fix JSX expression */}
+      if (trimmed === '') {/* TODO: Fix JSX expression */}'
       }
 
       // Fix missing commas in object literals (not in JSX)
@@ -101,27 +109,47 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       }
 
       // Fix missing semicolons
-      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {
+      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {'
         if (i === lines.length - 1 || lines[i + 1].trim().match(/^(import|export|const|let|var|function|class|interface|type)/)) {
-          line = line.replace(/\s*$/, ';')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+          line = line.replace(/\s*$/, ';')'
           modified = true
-      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {/* TODO: Fix JSX expression */}
+      if (!inJSX && trimmed.match(/^\w+.*[^;{}]$/) && !trimmed.includes('return') && !trimmed.includes('if') && !trimmed.includes('for') && !trimmed.includes('while')) {/* TODO: Fix JSX expression */}'
         }
       }
 
       // Fix missing closing braces
       if (braceCount > 0 && i === lines.length - 1) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         for (let j = 0; j < braceCount; j++) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       if (braceCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
-          line += '\n}'
+          line += '\n}''
         }
         modified = true
       }
 
       // Fix missing closing brackets
       if (bracketCount > 0 && i === lines.length - 1) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         for (let j = 0; j < bracketCount; j++) {
-          line += '\n]'
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+          line += '\n]''
       if (bracketCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
         }
         modified = true
@@ -129,8 +157,16 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 
       // Fix missing closing parentheses
       if (parenCount > 0 && i === lines.length - 1) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         for (let j = 0; j < parenCount; j++) {
-          line += '\n)'
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+          line += '\n)''
       if (parenCount > 0 && i === lines.length - 1) {/* TODO: Fix JSX expression */}
         }
         modified = true
@@ -139,20 +175,24 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
       cleanedLines.push(line)
     }
 
-    content = cleanedLines.join('\n')
+    content = cleanedLines.join('\n')'
     // Final cleanup
     content = content
-      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive empty lines
-      .replace(/^\s*\n/gm, '\n') // Remove empty lines with just spaces
-      .replace(/\s+$/gm, ''); // Remove trailing spaces
+      .replace(/\n\s*\n\s*\n/g, '\n\n') // Remove excessive empty lines'
+      .replace(/^\s*\n/gm, '\n') // Remove empty lines with just spaces'
+      .replace(/\s+$/gm, ''); // Remove trailing spaces'
     if (modified || content !== originalContent) {
-      fs.writeFileSync(filePath, content, 'utf8')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      fs.writeFileSync(filePath, content, 'utf8')'
       console.log(`Fixed: ${filePath}`)
     if (modified || content !== originalContent) {/* TODO: Fix JSX expression */}
   d: ${filePath}`)
       return true
     }
-    
+
     return false
   } catch (error) {/* TODO: Fix JSX expression */}`
     console.error(`Error fixing ${filePath}:`, error.message)
@@ -161,32 +201,36 @@ function fixFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 // Function to find all TypeScript/React files
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
-  const files = []
-  function traverse(currentDir) {
-    const items = fs.readdirSync(currentDir)
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item)
-      const stat = fs.statSync(fullPath)
-      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {;';
+const files = []
+  function traverse(currentDir) {;
+const items = fs.readdirSync(currentDir)
+    for (const item of items) {;
+const fullPath = path.join(currentDir, item);
+const stat = fs.statSync(fullPath)
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {'
         traverse(fullPath)
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         files.push(fullPath)
-function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {/* TODO: Fix JSX expression */}'
       } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {/* TODO: Fix JSX expression */}
       }
     }
   }
-  
+
   traverse(dir)
   return files
 }
 
 // Main execution
-console.log('Starting proper merge conflict resolution...')
-const srcDir = path.join(__dirname, 'src')
-const files = findFiles(srcDir)
-let fixedCount = 0
+console.log('Starting proper merge conflict resolution...');';
+const srcDir = path.join(__dirname, 'src');';
+const files = findFiles(srcDir);
+let fixedCount = 0;
 let errorCount = 0
 for (const file of files) {/* TODO: Fix JSX expression */}
     }
@@ -209,9 +253,9 @@ console.log(`- Files processed: ${files.length}`)
 console.log(`- Files fixed: ${fixedCount}`)
 console.log(`- Errors: ${errorCount}`)
 // Run linting to check for remaining issues
-console.log('\nRunning linting to check for remaining issues...')
+console.log('\nRunning linting to check for remaining issues...')'
 try {/* TODO: Fix JSX expression */}
-  o: 'inherit' })
-  console.log('Linting passed!')
+  o: 'inherit' })'
+  console.log('Linting passed!')'
 } catch (error) {/* TODO: Fix JSX expression */}
 }"`

@@ -1,8 +1,12 @@
 
-// / 
+// /
 
-          <reference types="vite/client" />
+          <reference types="vite/client" />"
 interface ImportMetaEnv {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     // TODO: Add content
   }
 }
@@ -13,6 +17,10 @@ interface ImportMetaEnv {
 }
 
 interface ImportMeta {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     // TODO: Add content
   }
 }

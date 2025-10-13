@@ -1,6 +1,10 @@
-// Redis-based caching system
+// Redis-based caching system;
 export class RedisCache {constructor(redisClient) {
-    this.client = redisClient
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    this.client = redisClient;
 export class RedisCache {/* TODO: Fix JSX expression */}
     this.defaultTTL = 3600} // 1 hour
   }

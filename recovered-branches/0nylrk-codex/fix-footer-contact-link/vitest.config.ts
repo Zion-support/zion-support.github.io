@@ -1,19 +1,39 @@
-import { defineConfig } from 'vitest/config'
-import path from 'node:path'
+import { defineConfig } from 'vitest/config';';
+import path from 'node:path';';';
 export default defineConfig({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   resolve: {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     alias: {
-      '@': path.resolve(__dirname, './src')}},
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+      '@': path.resolve(__dirname, './src')}},'
   test: {
-    environment: 'jsdom',
-    setupFiles: './tests/setup.ts',
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    environment: 'jsdom','
+    setupFiles: './tests/setup.ts','
     globals: true}})
-      '@': path.resolve(__dirname, './src'),
+      '@': path.resolve(__dirname, './src'),'
     },
   },
   test: {
-    environment: 'jsdom',
-    setupFiles: './tests/setup.ts',
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    environment: 'jsdom','
+    setupFiles: './tests/setup.ts','
     globals: true,
   },
 })

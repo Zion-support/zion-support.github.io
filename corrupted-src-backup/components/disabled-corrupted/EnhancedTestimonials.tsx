@@ -1,2 +1,2 @@
-import React from 'react'
-export default EnhancedTestimonials
+import React from 'react';';';
+export default EnhancedTestimonials;

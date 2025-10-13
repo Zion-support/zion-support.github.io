@@ -1,8 +1,16 @@
-'use client'
-export   }, [])
-    }, [])
-import { useCallback } from 'react'
+'use client';';
+export   }, []);
+    }, []);
+import { useCallback } from 'react';';';
 export const _useRouter = () => {
+  // TODO: Implement
+}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // TODO: Implement
+}
     // TODO: Add content
   }
 }
@@ -10,21 +18,21 @@ export const _useRouter = () => {
   l: string) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.location.href = url
-  const replace = useCallback((ur)
+    window.location.href = url;
+const replace = useCallback((ur)
   l: string) => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.location.replace(url)
-  const back = useCallback(() => {/* TODO: Fix JSX expression */}
+    window.location.replace(url);
+const back = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.history.back()
-  const forward = useCallback(() => {/* TODO: Fix JSX expression */}
+    window.history.back();
+const forward = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
-    window.history.forward()
-  const refresh = useCallback(() => {/* TODO: Fix JSX expression */}
+    window.history.forward();
+const refresh = useCallback(() => {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
     window.location.reload()
@@ -34,6 +42,7 @@ export const _useRouter = () => {
     forward,
     refresh
   }
-export }
-export const rateLimitingMiddleware = params
+export };
+export const rateLimitingMiddleware = params;
 export default { useRouter, usePathname, useSearchParams }
+)

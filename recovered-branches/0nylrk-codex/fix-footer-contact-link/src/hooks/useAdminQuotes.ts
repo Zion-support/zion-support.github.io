@@ -1,124 +1,218 @@
-import { useState } from 'react'
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
-import { quoteRequestService } from '@/services/quoteRequestService'
-import type { QuoteRequest, QuoteStatus } from '@/types/quotes'
-import { useToast } from '@/components/ui/use-toast'
-import type { DateRange } from '@/types/dateRange'
-export const useAdminQuotes = () => {
-  const { toast } = useToast()
-  const queryClient = useQueryClient()
-  const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all')
-  const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active')
-  const [searchQuery, setSearchQuery] = useState('')
-  const [dateRange, setDateRange] = useState<DateRange | undefined>(undefined)
-  // Fetch all quote requests
-  const { data: allQuotes = [], isLoading, error } = useQuery({
-    queryKey: ['quotes', 'admin'],
+import { useState } from 'react';';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';';
+import { quoteRequestService } from '@/services/quoteRequestService';';
+import type { QuoteRequest, QuoteStatus } from '@/types/quotes';';
+import { useToast } from '@/components/ui/use-toast';';
+import type { DateRange } from '@/types/dateRange';';';
+export const useAdminQuotes = () => {;
+const { toast } = useToast();
+const queryClient = useQueryClient();
+const [statusFilter, setStatusFilter] = useState<QuoteStatus | 'all'>('all');';
+const [archiveFilter, setArchiveFilter] = useState<'active' | 'archived' | 'all'>('active');';
+const [searchQuery, setSearchQuery] = useState('');';
+const [dateRange, setDateRange] = useState<DateRange | undefined>(undefined)
+  // Fetch all quote requests;
+const { data: allQuotes = [], isLoading, error } = useQuery({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    queryKey: ['quotes', 'admin'],'
     queryFn: () => quoteRequestService.getAll(),
     enabled: true})
     enabled: true,
   })
-  // Filter quotes based on selected filters
-  const filteredQuotes = allQuotes.filter((quote) => {
+  // Filter quotes based on selected filters;
+const filteredQuotes = allQuotes.filter((quote) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     // Status filter
-    if (statusFilter !== 'all' && quote.status !== statusFilter) {
+    if (statusFilter !== 'all' && quote.status !== statusFilter) {'
       return false
     }
     // Archive filter
-    if (archiveFilter === 'active' && quote.is_archived) {
+    if (archiveFilter === 'active' && quote.is_archived) {'
       return false
     }
-    if (archiveFilter === 'archived' && !quote.is_archived) {
+    if (archiveFilter === 'archived' && !quote.is_archived) {'
       return false
     }
     // Search filter
-    if (searchQuery) {
-      const query = searchQuery.toLowerCase()
+    if (searchQuery) {;
+const query = searchQuery.toLowerCase()
       if (
+  // TODO: Add parameters
+)
         !quote.requester_name.toLowerCase().includes(query) &&
         !quote.project_name.toLowerCase().includes(query) &&
         !quote.project_summary.toLowerCase().includes(query) &&
         !(quote.talent_name && quote.talent_name.toLowerCase().includes(query))
       ) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         return false
       }
     }
     // Date range filter
-    if (dateRange?.from) {
-      const createdAt = new Date(quote.created_at)
+    if (dateRange?.from) {;
+const createdAt = new Date(quote.created_at)
       if (createdAt < dateRange.from) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         return false
       }
     }
-    if (dateRange?.to) {
-      const createdAt = new Date(quote.created_at)
-      const endDate = new Date(dateRange.to)
+    if (dateRange?.to) {;
+const createdAt = new Date(quote.created_at);
+const endDate = new Date(dateRange.to)
       endDate.setHours(23, 59, 59, 999); // End of day
       if (createdAt > endDate) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         return false
       }
     }
     return true
   })
-  // Update quote status mutation
-  const updateStatusMutation = useMutation({
-    mutationFn: ({ id, status }: { id: string; status: QuoteStatus }) => 
+  // Update quote status mutation;
+const updateStatusMutation = useMutation({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    mutationFn: ({ id, status }: { id: string; status: QuoteStatus }) =>
       quoteRequestService.updateStatus(id, status),
     onSuccess: () => {
+  // TODO: Implement
+}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // TODO: Implement
+}
       toast({
-        title: "Status updated",
-        description: "The quote request status has been updated"
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        title: "Status updated","
+        description: "The quote request status has been updated""
       })
-      queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] })
+      queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] })'
     },
     onError: (error: Error) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       toast({
-        title: "Error",
-        description: "Failed to update status: " + error.message,
-        variant: "destructive"
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        title: "Error","
+        description: "Failed to update status: " + error.message,"
+        variant: "destructive""
       })
     }
   })
-  // Archive/Unarchive mutation
-  const toggleArchiveMutation = useMutation({
-    mutationFn: ({ id, isArchived }: { id: string; isArchived: boolean }) => 
+  // Archive/Unarchive mutation;
+const toggleArchiveMutation = useMutation({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    mutationFn: ({ id, isArchived }: { id: string; isArchived: boolean }) =>
       quoteRequestService.toggleArchive(id, isArchived),
     onSuccess: (_, variables) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       toast({
-        title: variables.isArchived ? "Quote archived" : "Quote unarchived",
-        description: variables.isArchived 
-          ? "The quote request has been archived" 
-          : "The quote request has been moved back to active quotes"
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        title: variables.isArchived ? "Quote archived" : "Quote unarchived","
+        description: variables.isArchived
+          ? "The quote request has been archived" "
+          : "The quote request has been moved back to active quotes""
       })
-      queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] })
+      queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] })'
     },
     onError: (error: Error) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       toast({
-        title: "Error",
-        description: "Failed to update quote: " + error.message,
-        variant: "destructive"
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        title: "Error","
+        description: "Failed to update quote: " + error.message,"
+        variant: "destructive""
       })
     }
   })
-  // Delete mutation
-  const deleteMutation = useMutation({
+  // Delete mutation;
+const deleteMutation = useMutation({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     mutationFn: (id: string) => quoteRequestService.delete(id),
     onSuccess: () => {
+  // TODO: Implement
+}
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  // TODO: Implement
+}
       toast({
-        title: "Quote deleted",
-        description: "The quote request has been permanently deleted"
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        title: "Quote deleted","
+        description: "The quote request has been permanently deleted""
       })
-      queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] })
+      queryClient.invalidateQueries({ queryKey: ['quotes', 'admin'] })'
     },
     onError: (error: Error) => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       toast({
-        title: "Error",
-        description: "Failed to delete quote: " + error.message,
-        variant: "destructive"
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        title: "Error","
+        description: "Failed to delete quote: " + error.message,"
+        variant: "destructive""
       })
     }
   })
   return {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     quotes: filteredQuotes,
     isLoading,
     error,
@@ -130,9 +224,9 @@ export const useAdminQuotes = () => {
     setSearchQuery,
     dateRange,
     setDateRange,
-    updateStatus: (id: string, status: QuoteStatus) => 
+    updateStatus: (id: string, status: QuoteStatus) =>
       updateStatusMutation.mutate({ id, status }),
-    toggleArchive: (id: string, isArchived: boolean) => 
+    toggleArchive: (id: string, isArchived: boolean) =>
       toggleArchiveMutation.mutate({ id, isArchived }),
     deleteQuote: (id: string) => deleteMutation.mutate(id)}
     deleteQuote: (id: string) => deleteMutation.mutate(id),

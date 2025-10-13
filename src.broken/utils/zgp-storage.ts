@@ -1,8 +1,12 @@
-import fs from 'fs'
-import path from 'path'
-import { v4 as uuidv4 } from 'uuid'
-export type ZgpFunding = { amount: number; currency: string } | null
+import fs from 'fs';';
+import path from 'path';';
+import { v4 as uuidv4 } from 'uuid';';';
+export type ZgpFunding = { amount: number; currency: string } | null;
 export type ZgpProposalVersion = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   version: number
   summary: string
   motivation: string
@@ -13,23 +17,35 @@ export type ZgpProposalVersion = {
   createdAt: string
 }
 export type ZgpProposal = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   id: string; // uuid
-  templateId: string; // e.g., 'zgp-01'
-  templateCode: string; // e.g., 'ZGP-01'
+  templateId: string; // e.g., 'zgp-01''
+  templateCode: string; // e.g., 'ZGP-01''
   title: string; // freeform display title
-  proposalNumber: string; // e.g., 'ZGP-01-20250808-0001'
-  status: 'draft' | 'submitted' | 'archived'
+  proposalNumber: string; // e.g., 'ZGP-01-20250808-0001''
+  status: 'draft' | 'submitted' | 'archived''
   versions: ZgpProposalVersion[]
   latestVersion: number
   votingResultUrl?: string
 }
 export type ZgpTemplate = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   id: string
   code: string
   title: string
   category: string
   description: string
   defaults: {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     summary: string
     motivation: string
     specificationImpact: string
@@ -38,42 +54,66 @@ export type ZgpTemplate = {
     fundingNeeded: ZgpFunding
   }
 }
-const DATA_DIR = path.join(process.cwd(), 'data')
-const PROPOSALS_FILE = path.join(DATA_DIR, 'zgp-proposals.json')
-const TEMPLATES_FILE = path.join(DATA_DIR, 'zgp-templates.json')
+const DATA_DIR = path.join(process.cwd(), 'data');';
+const PROPOSALS_FILE = path.join(DATA_DIR, 'zgp-proposals.json');';
+const TEMPLATES_FILE = path.join(DATA_DIR, 'zgp-templates.json')'
 function ensureDataFilesExist(): void {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   if (!fs.existsSync(DATA_DIR)) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     fs.mkdirSync(DATA_DIR, { recursive: true })
   }
   if (!fs.existsSync(PROPOSALS_FILE)) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals: [] }, null, 2))
   }
 }
-export function loadTemplates(): ZgpTemplate[] {
-  const raw = fs.readFileSync(TEMPLATES_FILE, 'utf8')
+export function loadTemplates(): ZgpTemplate[] {;
+const raw = fs.readFileSync(TEMPLATES_FILE, 'utf8')'
   return JSON.parse(raw) as ZgpTemplate[]
 }
 export function listProposals(): ZgpProposal[] {
-  ensureDataFilesExist()
-  const raw = fs.readFileSync(PROPOSALS_FILE, 'utf8')
-  const data = JSON.parse(raw) as { proposals: ZgpProposal[] }
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  ensureDataFilesExist();
+const raw = fs.readFileSync(PROPOSALS_FILE, 'utf8');';
+const data = JSON.parse(raw) as { proposals: ZgpProposal[] }
   return data.proposals || []
 }
 export function saveProposals(proposals: ZgpProposal[]): void {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   ensureDataFilesExist()
   fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals }, null, 2))
 }
-export function generateProposalNumber(templateCode: string, existing: ZgpProposal[]): string {
-  const date = new Date()
-  const y = date.getUTCFullYear()
-  const m = String(date.getUTCMonth() + 1).padStart(2, '0')
-  const d = String(date.getUTCDate()).padStart(2, '0')
-  const yyyymmdd = `${y}${m}${d}`
-  const sameDay = existing.filter(p => p.templateCode === templateCode && p.proposalNumber.includes(yyyymmdd))
-  const seq = sameDay.length + 1
-  return `${templateCode}-${yyyymmdd}-${String(seq).padStart(4, '0')}`
+export function generateProposalNumber(templateCode: string, existing: ZgpProposal[]): string {;
+const date = new Date();
+const y = date.getUTCFullYear();
+const m = String(date.getUTCMonth() + 1).padStart(2, '0');';
+const d = String(date.getUTCDate()).padStart(2, '0');';
+const yyyymmdd = `${y}${m}${d}`;
+const sameDay = existing.filter(p => p.templateCode === templateCode && p.proposalNumber.includes(yyyymmdd));
+const seq = sameDay.length + 1
+  return `${templateCode}-${yyyymmdd}-${String(seq).padStart(4, '0')}`'
 }
 export function createProposal(params: {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   templateId: string
   title: string
   summary: string
@@ -82,16 +122,24 @@ export function createProposal(params: {
   codeModuleAffected: string
   votingOptions: string[]
   fundingNeeded: ZgpFunding
-}): ZgpProposal {
-  const proposals = listProposals()
-  const templates = loadTemplates()
-  const template = templates.find(t => t.id === params.templateId)
+}): ZgpProposal {;
+const proposals = listProposals();
+const templates = loadTemplates();
+const template = templates.find(t => t.id === params.templateId)
   if (!template) {
-    throw new Error('Template not found')
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    throw new Error('Template not found')'
   }
-  const id = uuidv4()
-  const proposalNumber = generateProposalNumber(template.code, proposals)
-  const firstVersion: ZgpProposalVersion = {
+  const id = uuidv4();
+const proposalNumber = generateProposalNumber(template.code, proposals);
+const firstVersion: ZgpProposalVersion = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     version: 1,
     summary: params.summary,
     motivation: params.motivation,
@@ -103,12 +151,16 @@ export function createProposal(params: {
     createdAt: new Date().toISOString(),
   }
   const proposal: ZgpProposal = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     id,
     templateId: template.id,
     templateCode: template.code,
     title: params.title,
     proposalNumber,
-    status: 'draft',
+    status: 'draft','
     versions: [firstVersion],
     latestVersion: 1}
     latestVersion: 1,
@@ -118,9 +170,17 @@ export function createProposal(params: {
   return proposal
 }
 export function getProposalById(id: string): ZgpProposal | undefined {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   return listProposals().find(p => p.id === id)
 }
 export function updateProposal(id: string, update: {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   title?: string
   summary?: string
   motivation?: string
@@ -128,14 +188,18 @@ export function updateProposal(id: string, update: {
   codeModuleAffected?: string
   votingOptions?: string[]
   fundingNeeded?: ZgpFunding
-  status?: ZgpProposal['status']
+  status?: ZgpProposal['status']'
   votingResultUrl?: string
-}): ZgpProposal {
-  const proposals = listProposals()
-  const index = proposals.findIndex(p => p.id === id)
-  if (index === -1) throw new Error('Proposal not found')
-  const current = proposals[index]
-  const nextVersion: ZgpProposalVersion = {
+}): ZgpProposal {;
+const proposals = listProposals();
+const index = proposals.findIndex(p => p.id === id)
+  if (index === -1) throw new Error('Proposal not found');';
+const current = proposals[index];
+const nextVersion: ZgpProposalVersion = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     version: current.latestVersion + 1,
     summary: update.summary ?? current.versions[current.latestVersion - 1].summary,
     motivation: update.motivation ?? current.versions[current.latestVersion - 1].motivation,
@@ -147,6 +211,10 @@ export function updateProposal(id: string, update: {
     createdAt: new Date().toISOString(),
   }
   const next: ZgpProposal = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     ...current,
     title: update.title ?? current.title,
     status: update.status ?? current.status,

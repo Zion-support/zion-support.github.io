@@ -1,72 +1,128 @@
 export default async function handler(
+  // TODO: Add parameters
+)
   req: NextApiRequest
   res: NextApiResponse
 ) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST')
-    return res.status(405).json({ error: 'Method Not Allowed' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (req.method !== 'POST') {'
+    res.setHeader('Allow', 'POST')'
+    return res.status(405).json({ error: 'Method Not Allowed' })'
   }
   const { apiKey, ttlSeconds } = req.body |{}
   if (!apiKey) {
-    return res.status(400).json({ error: 'apiKey required' })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    return res.status(400).json({ error: 'apiKey required' })'
   }
   const match = await findPartnerByApiKey(apiKey)
   if (!match) {
-    return res.status(401).json({ error: 'Invalid API key' });  }
-  const { partner, apiKey: key } = match
-  const token = signJwt(
-    {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    return res.status(401).json({ error: 'Invalid API key' });  }';
+const { partner, apiKey: key } = match;
+const token = signJwt(
+  // TODO: Add parameters
+)
+    {;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   try {
-  if (req && req.method !== "POST") {
-    res && res.setHeader("Allow", "POST")
-    return res && res.status(405).json({ error: "Method Not Allowed" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (req && req.method !== "POST") {"
+    res && res.setHeader("Allow", "POST")"
+    return res && res.status(405).json({ error: "Method Not Allowed" })"
   }
   const { apiKey, ttlSeconds } = req && req.body || {}
   if (!apiKey) {
-    return res && res.status(400).json({ error: "apiKey required" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    return res && res.status(400).json({ error: "apiKey required" })"
   }
   const match = await findPartnerByApiKey(apiKey)
   if (!match) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   }
-  const { partner, apiKey: key } = match
-  const token = signJwt(
-    {
-export default async /**
+  const { partner, apiKey: key } = match;
+const token = signJwt(
+  // TODO: Add parameters
+)
+    {;
+export default async /**;
  * handler - Function description
  */
 function handler() {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   // Check condition
 if ( {) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
-    res.set_header ("Allow", "POST")
-    return res.status (405).json ({ error: "Method Not Allowed" })
+    res.set_header ("Allow", "POST")"
+    return res.status (405).json ({ error: "Method Not Allowed" })"
   }
   const { api_key, ttl_seconds } = req.body || {}
   // Check condition
 if ( {) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
-    return res.status (400).json ({ error: "api_key required" })
+    return res.status (400).json ({ error: "api_key required" })"
   }
   const match = await findPartnerByApiKey (api_key)
   // Check condition
 if ( {) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   $2
 }
-    return res.status (401).json ({ error: "Invalid API key" })
+    return res.status (401).json ({ error: "Invalid API key" })"
   }
-  const { partner, api_key: key } = match
-  const token = sign_jwt (
+  const { partner, api_key: key } = match;
+const token = sign_jwt (
+  // TODO: Add parameters
+)
     {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       sub: partner && partner.id,
       apiKeyId: key && key.id,
       name: partner && partner.name,
       entityType: partner && partner.entityType,
       useCaseType: partner && partner.useCaseType,
     } as any,
-    typeof ttlSeconds === 'number'
+    typeof ttlSeconds === 'number''
       ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds))
       : 3600
   )
@@ -75,7 +131,7 @@ if ( {) {
       sub: partner.id, apiKeyId: key.id,
       name: partner.name, entityType: partner.entityType,
       useCaseType: partner.useCaseType} as any
-    typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
+    typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600"
   )
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
@@ -84,41 +140,67 @@ if ( {) {
       name: partner && partner.name
       entityType: partner && partner.entityType,
       useCaseType: partner && partner.useCaseType} as any
-    typeof ttlSeconds === "number" ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds)) : 3600
+    typeof ttlSeconds === "number" ? Math && Math.max(300, Math && Math.min(86400, ttlSeconds)) : 3600"
   )
   return res && res.status(200).json({ token, partner: { id: partner && partner.id, name: partner && partner.name } })
 }
 }
   }
-  const { partner, apiKey: key } = match
-  const token = signJwt(
+  const { partner, apiKey: key } = match;
+const token = signJwt(
+  // TODO: Add parameters
+)
     {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-import type { NextApiRequest, NextApiResponse } from "next"
-import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth"
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662;
+import type { NextApiRequest, NextApiResponse } from "next";";
+import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";";";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== "POST") {
-    res.setHeader("Allow", "POST")
-    return res.status(405).json({ error: "Method Not Allowed" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+  if (req.method !== "POST") {"
+    res.setHeader("Allow", "POST")"
+    return res.status(405).json({ error: "Method Not Allowed" })"
   }
   const { apiKey, ttlSeconds } = req.body || {}
   if (!apiKey) {
-    return res.status(400).json({ error: "apiKey required" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    return res.status(400).json({ error: "apiKey required" })"
   }
   const match = await findPartnerByApiKey(apiKey)
   if (!match) {
-    return res.status(401).json({ error: "Invalid API key" })
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    return res.status(401).json({ error: "Invalid API key" })"
   }
-  const { partner, apiKey: key } = match
-  const token = signJwt(
+  const { partner, apiKey: key } = match;
+const token = signJwt(
+  // TODO: Add parameters
+)
     {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       sub: partner.id,
       apiKeyId: key.id,
       name: partner.name,
       entityType: partner.entityType,
       useCaseType: partner.useCaseType,
     } as any,
-    typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
+    typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600"
   )
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
+
+})

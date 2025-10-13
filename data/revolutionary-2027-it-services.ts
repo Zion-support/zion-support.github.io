@@ -10,7 +10,7 @@
   realImplementation: boolean
   contactInfo: unknown
     mobile: string
-    email: string,
+    email: string,;
 export interface Revolutionary2027ItService {,
     address: string}
   i,
@@ -36,7 +36,7 @@ export interface Revolutionary2027ItService {,
     mobil,
   e: string,
     emai,
-  l: string,
+  l: string,;
 export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
   s: string}
 }
@@ -65,7 +65,7 @@ export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
   s: string}
   }
 }
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
+      address: "364 E Main St STE 1008 Middletown DE 19709"}"
   }
 ]
   id: string, name: string,
@@ -78,29 +78,29 @@ export interface Revolutionary2027ItService {/* TODO: Fix JSX expression */}
     address: string,
   }
 }
-export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,
-    id: "2027-revolutionary-it", name: "2027 Revolutionary IT Platform",
-    tagline: "Revolutionary IT for 2027", price: "$349/month"
-    description: "Revolutionary IT platform that transforms how businesses manage technology in 2027."
+export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,;
+    id: "2027-revolutionary-it", name: "2027 Revolutionary IT Platform","
+    tagline: "Revolutionary IT for 2027", price: "$349/month""
+    description: "Revolutionary IT platform that transforms how businesses manage technology in 2027.""
     features: [,
-      "Revolutionary IT"
-      "Transformative technology"
-      "Advanced capabilities"
-      "Innovation platform",
-      "Future-ready solutions"],
-    link: "/services/2027-revolutionary-it", category: "Revolutionary 2027 IT",
+      "Revolutionary IT""
+      "Transformative technology""
+      "Advanced capabilities""
+      "Innovation platform","
+      "Future-ready solutions"],"
+    link: "/services/2027-revolutionary-it", category: "Revolutionary 2027 IT","
     realImplementation: true,
-    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}
+    contactInfo: address: "364 E Main St STE 1008 Middletown DE 19709"}"
   }
 ]
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709"}
+      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com","
+      address: "364 E Main St STE 1008 Middletown DE 19709"}"
   }
 ]
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
+      email: "kleber@ziontechgroup.com","
+      address: "364 E Main St STE 1008 Middletown DE 19709","
       addres,
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
 ]
@@ -126,125 +126,125 @@ export const revolutionary2027 ITServices: Revolutionary2027 ItService[] = [,
     addres,
   s: string}
 }
-export const,
+export const,;
   revolutionary2027ITServices: Revolutionary2027ItService[] = [,
-    i,"
-  d: "2027-revolutionary-it", nam,"
-  e: "2027 Revolutionary IT Platform",
-    taglin,"
-  e: "Revolutionary IT for 2027", pric,"
-  e: "$349/month",
-    descriptio,"
-  n: "Revolutionary IT platform that transforms how businesses manage technology in 2027.",
+    i,""
+  d: "2027-revolutionary-it", nam,""
+  e: "2027 Revolutionary IT Platform","
+    taglin,""
+  e: "Revolutionary IT for 2027", pric,""
+  e: "$349/month","
+    descriptio,""
+  n: "Revolutionary IT platform that transforms how businesses manage technology in 2027.","
     feature,
-  s: [,"
-      "Revolutionary IT""
-      "Transformative technology""
-      "Advanced capabilities""
-      "Innovation platform""
-      "Future-ready solutions"
+  s: [,""
+      "Revolutionary IT"""
+      "Transformative technology"""
+      "Advanced capabilities"""
+      "Innovation platform"""
+      "Future-ready solutions""
     ],
-    lin,"
-  k: "/services/2027-revolutionary-it", categor,"
-  y: "Revolutionary 2027 IT",
+    lin,""
+  k: "/services/2027-revolutionary-it", categor,""
+  y: "Revolutionary 2027 IT","
     realImplementatio,
   n: true,
     contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  o: addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
 ]
-      mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      mobil,""
+  e: "+1 302 464 0950", emai,""
+  l: "kleber@ziontechgroup.com","
+      addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
 ]
-      emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+      emai,""
+  l: "kleber@ziontechgroup.com","
+  addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
 ]
-id: "2027-revolutionary-it"
-    id: "2027-revolutionary-it",
+id: "2027-revolutionary-it""
+    id: "2027-revolutionary-it","
 ]
-    id: "2027-revolutionary-it"
-    name: "2027 Revolutionary IT Platform",
-    tagline: "Revolutionary IT for 2027",
-    price: "$349/month",
-    description: "Revolutionary IT platform that transforms how businesses manage technology in 2027.",
+    id: "2027-revolutionary-it""
+    name: "2027 Revolutionary IT Platform","
+    tagline: "Revolutionary IT for 2027","
+    price: "$349/month","
+    description: "Revolutionary IT platform that transforms how businesses manage technology in 2027.","
     features: [,
-      "Revolutionary IT",
-      "Transformative technology",
-      "Advanced capabilities",
-      "Innovation platform",
-      "Future-ready solutions"
-    ],
-    link: "/services/2027-revolutionary-it"
-    category: "Revolutionary 2027 IT"
-    realImplementation: true
-    contactInfo: unknown,
-      mobile: "+1 302 464 0950"
-      email: "kleber@ziontechgroup.com"
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}
-];      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-      address: "364 E Main St STE 1008 Middletown DE 19709",
-    i,"
-  d: "2027-revolutionary-it",
-    nam,"
-  e: "2027 Revolutionary IT Platform",
-    taglin,"
-  e: "Revolutionary IT for 2027",
-    pric,"
-  e: "$349/month",
-    descriptio,"
-  n: "Revolutionary IT platform that transforms how businesses manage technology in 2027.",
-    feature,
-  s: [,"
       "Revolutionary IT","
       "Transformative technology","
       "Advanced capabilities","
       "Innovation platform","
-      "Future-ready solutions"
+      "Future-ready solutions""
     ],
-    lin,"
-  k: "/services/2027-revolutionary-it",
-    categor,"
-  y: "Revolutionary 2027 IT",
+    link: "/services/2027-revolutionary-it""
+    category: "Revolutionary 2027 IT""
+    realImplementation: true
+    contactInfo: unknown,
+      mobile: "+1 302 464 0950""
+      email: "kleber@ziontechgroup.com""
+      mobile: '+1 302 464 0950','
+      email: 'kleber@ziontechgroup.com','
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}'
+];      mobile: "+1 302 464 0950","
+      email: "kleber@ziontechgroup.com","
+      mobile: "+1 302 464 0950","
+      email: "kleber@ziontechgroup.com","
+      address: "364 E Main St STE 1008 Middletown DE 19709","
+    i,""
+  d: "2027-revolutionary-it","
+    nam,""
+  e: "2027 Revolutionary IT Platform","
+    taglin,""
+  e: "Revolutionary IT for 2027","
+    pric,""
+  e: "$349/month","
+    descriptio,""
+  n: "Revolutionary IT platform that transforms how businesses manage technology in 2027.","
+    feature,
+  s: [,""
+      "Revolutionary IT",""
+      "Transformative technology",""
+      "Advanced capabilities",""
+      "Innovation platform",""
+      "Future-ready solutions""
+    ],
+    lin,""
+  k: "/services/2027-revolutionary-it","
+    categor,""
+  y: "Revolutionary 2027 IT","
     realImplementatio,
   n: true,
     contactInf,
   o: unknown,
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
-  l: "kleber@ziontechgroup.com",
+      mobil,""
+  e: "+1 302 464 0950","
+      emai,""
+  l: "kleber@ziontechgroup.com","
       mobil,
-  e: '+1 302 464 0950',
+  e: '+1 302 464 0950','
       emai,
-  l: 'kleber@ziontechgroup.com',
+  l: 'kleber@ziontechgroup.com','
       addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}}
-];      mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com"
-      mobil,"
-  e: "+1 302 464 0950",
-      emai,"
-  l: "kleber@ziontechgroup.com",
-      addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709"
+  s: '364 E Main St STE 1008 Middletown DE 19709'}}'
+];      mobil,""
+  e: "+1 302 464 0950","
+  emai,""
+  l: "kleber@ziontechgroup.com""
+      mobil,""
+  e: "+1 302 464 0950","
+      emai,""
+  l: "kleber@ziontechgroup.com","
+      addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709""
     }
   }
 ]
@@ -273,8 +273,8 @@ i,
   n: boolean, contactInf,
   o: {/* TODO: Fix JSX expression */}
   l: string} addres,
-  s: string} } } addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,
+  s: string} } } addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
   d: string, nam,
   e: string, taglin,
   e: string, pric,
@@ -287,43 +287,43 @@ i,
   o: mobil,
   e: string, emai,
   l: string, addres,
-  s: string } } export const,
-  revolutionary2027ITServices: Revolutionary2027ItService[] = [ i,"
-  d: "2027-revolutionary-it", nam,"
-  e: "2027 Revolutionary IT Platform", taglin,"
-  e: "Revolutionary IT for 2027", pric,"
-  e: "$349/month", descriptio,"
-  n: "Revolutionary IT platform that transforms how businesses manage technology in 2027.", feature,"
-  s: [ "Revolutionary IT" "Transformative technology" "Advanced capabilities" "Innovation platform" "Future-ready solutions" ], lin,"
-  k: "/services/2027-revolutionary-it", categor,"
-  y: "Revolutionary 2027 IT", realImplementatio,
+  s: string } } export const,;
+  revolutionary2027ITServices: Revolutionary2027ItService[] = [ i,""
+  d: "2027-revolutionary-it", nam,""
+  e: "2027 Revolutionary IT Platform", taglin,""
+  e: "Revolutionary IT for 2027", pric,""
+  e: "$349/month", descriptio,""
+  n: "Revolutionary IT platform that transforms how businesses manage technology in 2027.", feature,""
+  s: [ "Revolutionary IT" "Transformative technology" "Advanced capabilities" "Innovation platform" "Future-ready solutions" ], lin,""
+  k: "/services/2027-revolutionary-it", categor,""
+  y: "Revolutionary 2027 IT", realImplementatio,"
   n: true, contactInf,
-  o: addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,"
-  l: "kleber@ziontechgroup.com",
-  addres,"
-  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,"
-  d: "2027-revolutionary-it", nam,"
-  e: "2027 Revolutionary IT Platform", taglin,"
-  e: "Revolutionary IT for 2027", pric,"
-  e: "$349/month", descriptio,"
-  n: "Revolutionary IT platform that transforms how businesses manage technology in 2027.", feature,"
-  s: [ "Revolutionary IT", "Transformative technology", "Advanced capabilities", "Innovation platform", "Future-ready solutions" ], lin,"
-  k: "/services/2027-revolutionary-it", categor,"
-  y: "Revolutionary 2027 IT", realImplementatio,
+  o: addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; mobil,""
+  e: "+1 302 464 0950", emai,""
+  l: "kleber@ziontechgroup.com", addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; emai,""
+  l: "kleber@ziontechgroup.com","
+  addres,""
+  s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; i,""
+  d: "2027-revolutionary-it", nam,""
+  e: "2027 Revolutionary IT Platform", taglin,""
+  e: "Revolutionary IT for 2027", pric,""
+  e: "$349/month", descriptio,""
+  n: "Revolutionary IT platform that transforms how businesses manage technology in 2027.", feature,""
+  s: [ "Revolutionary IT", "Transformative technology", "Advanced capabilities", "Innovation platform", "Future-ready solutions" ], lin,""
+  k: "/services/2027-revolutionary-it", categor,""
+  y: "Revolutionary 2027 IT", realImplementatio,"
   n: true, contactInf,
-  o: mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", mobil,
-  e: '+1 302 464 0950',' emai,
-  l: 'kleber@ziontechgroup.com',' addres,
-  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,"
-  e: "+1 302 464 0950",
-  emai,"
-  l: "kleber@ziontechgroup.com" mobil,"
-  e: "+1 302 464 0950", emai,"
-  l: "kleber@ziontechgroup.com", addres,"
+  o: mobil,""
+  e: "+1 302 464 0950", emai,""
+  l: "kleber@ziontechgroup.com", mobil,"
+  e: '+1 302 464 0950',' emai,'
+  l: 'kleber@ziontechgroup.com',' addres,'
+  s: '364 E Main St STE 1008 Middletown DE 19709'}} ]; mobil,""'"
+  e: "+1 302 464 0950","
+  emai,""
+  l: "kleber@ziontechgroup.com" mobil,""
+  e: "+1 302 464 0950", emai,""
+  l: "kleber@ziontechgroup.com", addres,""
   s: "364 E Main St STE 1008 Middletown DE 19709" } } ]; '"

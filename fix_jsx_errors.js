@@ -1,33 +1,74 @@
-#!/usr/bin/env node
-import fs from 'fs'
+#!/usr/bin/env node;
+import fs from 'fs';'
 function fixJSXErrors(filePath) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   try {
-    //Fix malformed JSX elements like: className="..." <span> -> className="..." /> <span>
-    const patterns = [
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    //Fix malformed JSX elements like: className="..." <span> -> className="..." />"
+<span>;
+const patterns = [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
       {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         //Fix CheckCircleIcon and similar patterns
         pattern: /(<CheckCircleIcon[^>]*>)\s*</g,$2 />
-        replacement: '$1 />\n                  <'},$2 />
+        replacement: '$1 />\n                  <'},$2 />'
       {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         //Fix other icon patterns
         pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<[^/]/g,
-        replacement: '$1 />\n                <'},
+        replacement: '$1 />\n                <'},'
       {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         //Fix closing tag issues
         pattern: /(<[A-Z][a-zA-Z]*Icon[^>]*>)\s*<\/[^>]*>/g,
-        replacement: '$1 />\n              </'},
+        replacement: '$1 />\n              </'},'
       {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         //Fix ArrowRightIcon patterns
         pattern: /(<ArrowRightIcon[^>]*>)\s*<\/Link>/g,
-        replacement: '$1 />\n            </Link>'},
+        replacement: '$1 />\n            </Link>'},'
       {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         //Fix TruckIcon patterns
         pattern: /(<TruckIcon[^>]*>)\s*<\/div>/g,
-        replacement: '$1 />\n          </div>'}]
+        replacement: '$1 />\n          </div>'}]'
     patterns.forEach(fix => {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     )
       //       const newContent = content.replace(fix.pattern, fix.replacement)
       if (newContent !== content) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         content = newContent
         modified = true
   }

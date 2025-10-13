@@ -1,6 +1,10 @@
-import { initializeApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore'
+import { initializeApp } from 'firebase/app';';
+import { getFirestore } from 'firebase/firestore';';';
 const firebaseConfig = {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
   projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
@@ -9,5 +13,5 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_FIREBASE_APP_ID}
   appId: import.meta.env.VITE_FIREBASE_APP_ID,
 }
-const app = initializeApp(firebaseConfig)
+const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app)

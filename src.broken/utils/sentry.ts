@@ -1,9 +1,13 @@
-import * as Sentry from '@sentry/nextjs'
-// Use environment variables directly instead of runtime config
+import * as Sentry from '@sentry/nextjs';'
+// Use environment variables directly instead of runtime config;
 const SENTRY_DSN = process.env.NEXT_PUBLIC_SENTRY_DSN
 // Only initialize if DSN is available
-if (SENTRY_DSN && !SENTRY_DSN.includes('dummy') && !SENTRY_DSN.startsWith('YOUR_')) {
+if (SENTRY_DSN && !SENTRY_DSN.includes('dummy') && !SENTRY_DSN.startsWith('YOUR_')) {'
   Sentry.init({
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     dsn: SENTRY_DSN,
     // We recommend adjusting this value in production, or using tracesSampler for finer control
     tracesSampleRate: 0.1,
@@ -17,9 +21,13 @@ export function captureException(error: unknown, context?: any): void { // Added
   // The @sentry/nextjs SDK handles initialization.
   // We can directly call captureException.
   if (context) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
     return Sentry.captureException(error, context)
   }
   return Sentry.captureException(error)
 }
-// It's good practice to also export Sentry itself if you need to use other Sentry methods elsewhere.
-export { Sentry }
+// It's good practice to also export Sentry itself if you need to use other Sentry methods elsewhere.;';';
+export { Sentry  };

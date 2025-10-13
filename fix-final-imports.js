@@ -1,33 +1,61 @@
-import fs from 'fs'
-import { fileURLToPath } from 'url'
+import fs from 'fs';';
+import { fileURLToPath } from 'url';'
 function processFile(filePath) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   try {
-    // Fix remaining import path issues
-    const replacements = [
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+    // Fix remaining import path issues;
+const replacements = [
+  // TODO: Add items
+]
+  // TODO: Add items
+]
       // Fix SEOOptimizer component
       {
-        pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
-        replacement: "import { useRouter } from '../utils/navigation';"},
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        pattern: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,';'
+        replacement: "import { useRouter } from '../utils/navigation';"},";'"
       // Fix root-level files
       {
-        pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacement: "import { Metadata } from './types/next';"},
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        pattern: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,';'
+        replacement: "import { Metadata } from './types/next';"},";'"
       {
-        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g
-        replacement: "import Link from './utils/link';"},
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
+        pattern: /import\s+Link\s+from\s+'\.\/utils\/link';/g';'
+        replacement: "import Link from './utils/link';"},";'"
       // Fix MetadataRoute namespace issue
       {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         pattern: /MetadataRoute\./g
-        replacement: 'MetadataRoute',
+        replacement: 'MetadataRoute','
 function processFile(filePath) {/* TODO: Fix JSX expression */}
-  n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,
+  n: /import\s+{\s*useRouter\s*}\s+from\s+'\.\.\/\.\.\/utils\/navigation';/g,';'
         replacemen,
-  t: "import { useRouter } from '../utils/navigation';"},
+  t: "import { useRouter } from '../utils/navigation';"},";'"
       // Fix root-level files
       {/* TODO: Fix JSX expression */}
-  n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,
-        replacemen,"
-  t: "import { Metadata } from './types/next';"},
+  n: /import\s+{\s*Metadata\s*}\s+from\s+'\.\/types\/next';/g,';'
+        replacemen,""
+  t: "import { Metadata } from './types/next';"},";'"
       {/* TODO: Fix JSX expression */}
       },
       // Fix MetadataRoute namespace issue
@@ -44,16 +72,27 @@ function processFile(filePath) {/* TODO: Fix JSX expression */}
 }
 
 function processDirectory(dirPath) {
-
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
   items.forEach(item => {)
 )
     if (stat.isDirectory()) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
       totalFixed += processDirectory(fullPath)
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {'
       if (processFile(fullPath)) {
+  // TODO: Add properties
+}
+  // TODO: Add properties
+}
         totalFixed++
 function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
-    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}
+    } else if (item.endsWith('.tsx') || item.endsWith('.ts')) {/* TODO: Fix JSX expression */}'
       }
     }
   })
@@ -61,4 +100,4 @@ function processDirectory(dirPath) {/* TODO: Fix JSX expression */}
 }
 
 // Process the app directory
-// Process the app directory;"
+// Process the app directory;""
