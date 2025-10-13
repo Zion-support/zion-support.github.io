@@ -1,110 +1,110 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
-  Brain, 
-  BarChart3, 
-  TrendingUp, 
-  Target, 
+  Shield, 
+  Lock, 
+  Eye, 
+  AlertTriangle, 
   CheckCircle,
   ArrowRight,
   Star,
+  TrendingUp,
   Users,
+  Server,
   Database,
-  Zap,
-  Eye,
-  Lightbulb,
-  Settings,
-  Download,
   Globe,
   Smartphone,
   Laptop,
+  Cloud,
+  Zap,
+  Target,
   Activity,
-  PieChart
+  Settings
 } from "lucide-react";
 
-const AIBusinessIntelligencePro = () => {
-  const features = [
+const CybersecurityAdvancedSolutions = () => {
+  const services = [
     {
-      title: "AI-Powered Analytics",
-      description: "Advanced machine learning algorithms automatically analyze your data to uncover hidden insights and trends",
-      icon: <Brain className="w-8 h-8" />,
+      title: "Advanced Threat Detection",
+      description: "AI-powered threat detection and response system that identifies and neutralizes cyber threats in real-time",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
-      features: ["Predictive modeling", "Pattern recognition", "Anomaly detection", "Automated insights"]
+      features: ["Real-time monitoring", "AI threat analysis", "Automated response", "24/7 surveillance"]
     },
     {
-      title: "Real-Time Dashboards",
-      description: "Interactive, customizable dashboards that update in real-time with key business metrics and KPIs",
-      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Zero Trust Architecture",
+      description: "Implement zero trust security model with continuous verification and least privilege access",
+      icon: <Lock className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
-      features: ["Live data visualization", "Custom widgets", "Mobile responsive", "Drill-down capabilities"]
+      features: ["Identity verification", "Micro-segmentation", "Continuous monitoring", "Risk assessment"]
     },
     {
-      title: "Natural Language Queries",
-      description: "Ask questions about your data in plain English and get instant, intelligent answers",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Cloud Security Management",
+      description: "Comprehensive cloud security solutions for AWS, Azure, and Google Cloud platforms",
+      icon: <Cloud className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      features: ["Voice commands", "Text queries", "Smart suggestions", "Contextual answers"]
+      features: ["Cloud compliance", "Data encryption", "Access controls", "Security monitoring"]
     },
     {
-      title: "Automated Reporting",
-      description: "Generate comprehensive business reports automatically with AI-driven insights and recommendations",
-      icon: <Target className="w-8 h-8" />,
+      title: "Incident Response & Recovery",
+      description: "Rapid incident response and disaster recovery services to minimize business impact",
+      icon: <AlertTriangle className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
-      features: ["Scheduled reports", "Custom templates", "Executive summaries", "Actionable recommendations"]
+      features: ["24/7 response team", "Forensic analysis", "Recovery planning", "Business continuity"]
     }
   ];
 
   const industries = [
-    { name: "Retail", icon: "🛍️", useCase: "Customer behavior analysis, inventory optimization" },
-    { name: "Healthcare", icon: "🏥", useCase: "Patient outcomes, operational efficiency" },
-    { name: "Finance", icon: "🏦", useCase: "Risk assessment, fraud detection" },
-    { name: "Manufacturing", icon: "🏭", useCase: "Quality control, predictive maintenance" },
-    { name: "E-commerce", icon: "🛒", useCase: "Sales forecasting, customer segmentation" },
-    { name: "Education", icon: "🎓", useCase: "Student performance, resource allocation" }
+    { name: "Healthcare", icon: "🏥", threats: "HIPAA compliance, patient data protection" },
+    { name: "Finance", icon: "🏦", threats: "PCI DSS, financial fraud prevention" },
+    { name: "E-commerce", icon: "🛒", threats: "Payment security, customer data protection" },
+    { name: "Government", icon: "🏛️", threats: "FISMA compliance, national security" },
+    { name: "Education", icon: "🎓", threats: "FERPA compliance, student data protection" },
+    { name: "Manufacturing", icon: "🏭", threats: "Industrial control systems, supply chain security" }
   ];
 
   const pricingPlans = [
     {
-      name: "AI Insights Starter",
-      price: "$199",
+      name: "Essential Security",
+      price: "$2,999",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Basic security for small businesses",
       features: [
-        "Up to 5 data sources",
-        "Basic AI analytics",
-        "Standard dashboards",
-        "Monthly reports",
-        "Email support"
+        "Basic threat monitoring",
+        "Firewall management",
+        "Email security",
+        "Monthly security reports",
+        "Phone support"
       ],
       popular: false
     },
     {
-      name: "AI Intelligence Pro",
-      price: "$599",
+      name: "Professional Security",
+      price: "$7,999",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Advanced security for growing companies",
       features: [
-        "Unlimited data sources",
-        "Advanced AI analytics",
-        "Custom dashboards",
-        "Real-time reporting",
+        "Advanced threat detection",
+        "Zero trust implementation",
+        "Cloud security management",
+        "Real-time monitoring",
         "Priority support",
-        "API access"
+        "Compliance assistance"
       ],
       popular: true
     },
     {
-      name: "AI Enterprise Suite",
-      price: "$1,999",
+      name: "Enterprise Security",
+      price: "$19,999",
       period: "/month",
-      description: "For large organizations",
+      description: "Comprehensive security for large organizations",
       features: [
-        "Everything in Pro",
-        "Custom AI models",
-        "White-label dashboards",
-        "24/7 dedicated support",
-        "On-premise deployment",
-        "Custom integrations"
+        "Full security suite",
+        "Custom security policies",
+        "24/7 dedicated team",
+        "Incident response",
+        "Compliance management",
+        "Security training"
       ],
       popular: false
     }
@@ -112,24 +112,24 @@ const AIBusinessIntelligencePro = () => {
 
   const testimonials = [
     {
-      name: "Dr. Emily Rodriguez",
-      role: "Chief Data Officer",
-      company: "Healthcare Innovations",
-      content: "Zion's AI Business Intelligence platform transformed our data analysis. We discovered insights that improved patient outcomes by 25% and reduced costs by 30%.",
+      name: "Dr. Sarah Williams",
+      role: "CISO",
+      company: "MedTech Solutions",
+      content: "Zion's cybersecurity solutions helped us achieve HIPAA compliance and prevented 3 major security incidents. Their 24/7 monitoring gives us peace of mind.",
       rating: 5
     },
     {
-      name: "James Thompson",
-      role: "VP of Analytics",
-      company: "RetailMax Corp",
-      content: "The natural language queries feature is incredible. Our executives can now ask complex questions about sales data and get instant, accurate answers.",
+      name: "Michael Rodriguez",
+      role: "IT Director",
+      company: "Financial Services Inc.",
+      content: "The zero trust architecture implementation was seamless. We've seen a 90% reduction in security incidents and improved our compliance posture significantly.",
       rating: 5
     },
     {
-      name: "Maria Santos",
+      name: "Jennifer Chen",
       role: "CEO",
-      company: "Manufacturing Solutions",
-      content: "The predictive analytics helped us optimize our production schedule and reduce waste by 40%. The ROI was evident within the first month.",
+      company: "E-commerce Plus",
+      content: "Their incident response team saved us from a potential data breach that could have cost millions. The recovery time was incredible - only 2 hours.",
       rating: 5
     }
   ];
@@ -137,14 +137,14 @@ const AIBusinessIntelligencePro = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Business Intelligence Pro - Advanced Analytics Platform</title>
+        <title>Advanced Cybersecurity Solutions - Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered business intelligence platform with predictive analytics, natural language queries, and automated insights for data-driven decision making."
+          content="Comprehensive cybersecurity solutions including threat detection, zero trust architecture, cloud security, and incident response for enterprise protection."
         />
         <meta
           name="keywords"
-          content="AI business intelligence, predictive analytics, natural language queries, automated reporting, data visualization"
+          content="cybersecurity, threat detection, zero trust, cloud security, incident response, enterprise security"
         />
       </Helmet>
 
@@ -152,20 +152,20 @@ const AIBusinessIntelligencePro = () => {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Brain className="w-5 h-5 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 font-semibold">AI-Powered Business Intelligence</span>
+            <Shield className="w-5 h-5 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 font-semibold">Advanced Cybersecurity Solutions</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transform Data into
+            Protect Your Business with
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              {" "}Intelligent Insights
+              {" "}Advanced Security
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Revolutionize your business intelligence with AI-powered analytics, natural language queries, 
-            and automated insights. Make data-driven decisions faster and more accurately than ever before.
+            Comprehensive cybersecurity solutions that protect your business from evolving threats. 
+            From threat detection to incident response, we provide enterprise-grade security services.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -173,73 +173,73 @@ const AIBusinessIntelligencePro = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25"
             >
-              Start Free Trial
+              Get Security Assessment
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              Watch Demo
+              Schedule Demo
             </Link>
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">75%</div>
-              <div className="text-gray-300">Faster Insights</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Threat Detection Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
-              <div className="text-gray-300">Prediction Accuracy</div>
+              <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
+              <div className="text-gray-300">Security Monitoring</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
-              <div className="text-gray-300">Time Saved</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">2hr</div>
+              <div className="text-gray-300">Average Response Time</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-orange-400 mb-2">500+</div>
-              <div className="text-gray-300">Happy Customers</div>
+              <div className="text-gray-300">Secured Organizations</div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Services Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced AI Features
+              Comprehensive Security Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge AI technology to unlock the full potential of your business data.
+              Protect your business with our advanced cybersecurity solutions designed for modern threats.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {features.map((feature, index) => (
+            {services.map((service, index) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
               >
                 <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
-                  {feature.icon}
+                  {service.icon}
                 </div>
                 <h3 className="text-2xl font-semibold text-white mb-4 text-center">
-                  {feature.title}
+                  {service.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-6">
-                  {feature.description}
+                  {service.description}
                 </p>
                 <ul className="space-y-2">
-                  {feature.features.map((featureItem, featureIndex) => (
+                  {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {featureItem}
+                      {feature}
                     </li>
                   ))}
                 </ul>
@@ -254,10 +254,10 @@ const AIBusinessIntelligencePro = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry-Specific Solutions
+              Industry-Specific Security Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored AI business intelligence solutions for different industries and use cases.
+              Tailored cybersecurity solutions for different industries and compliance requirements.
             </p>
           </div>
           
@@ -269,10 +269,8 @@ const AIBusinessIntelligencePro = () => {
               >
                 <div className="text-center">
                   <div className="text-4xl mb-4">{industry.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {industry.name}
-                  </h3>
-                  <p className="text-gray-300 text-sm">{industry.useCase}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{industry.name}</h3>
+                  <p className="text-gray-300 text-sm">{industry.threats}</p>
                 </div>
               </div>
             ))}
@@ -285,10 +283,10 @@ const AIBusinessIntelligencePro = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+              Flexible Security Packages
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the AI business intelligence plan that fits your organization's needs and data volume.
+              Choose the security package that fits your organization's size and requirements.
             </p>
           </div>
           
@@ -349,10 +347,10 @@ const AIBusinessIntelligencePro = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Data Leaders
+              Trusted by Security Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about their experience with AI Business Intelligence Pro.
+              See what our clients say about our cybersecurity solutions and services.
             </p>
           </div>
           
@@ -382,17 +380,17 @@ const AIBusinessIntelligencePro = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Data into Intelligence?
+            Ready to Secure Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of companies already using AI Business Intelligence Pro to make smarter, data-driven decisions.
+            Don't wait for a security breach. Get a comprehensive security assessment and protect your business today.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25"
             >
-              Start Your Free Trial
+              Get Security Assessment
               <ArrowRight className="w-5 h-5 ml-2" />
             </Link>
             <Link
@@ -408,4 +406,4 @@ const AIBusinessIntelligencePro = () => {
   );
 };
 
-export default AIBusinessIntelligencePro;
+export default CybersecurityAdvancedSolutions;

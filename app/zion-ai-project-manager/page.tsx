@@ -2,109 +2,92 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
   Brain, 
+  Calendar, 
+  Users, 
   BarChart3, 
-  TrendingUp, 
-  Target, 
+  Zap, 
+  Shield, 
+  Clock, 
   CheckCircle,
   ArrowRight,
   Star,
-  Users,
-  Database,
-  Zap,
-  Eye,
+  TrendingUp,
+  Target,
   Lightbulb,
   Settings,
-  Download,
-  Globe,
-  Smartphone,
-  Laptop,
-  Activity,
-  PieChart
+  Download
 } from "lucide-react";
 
-const AIBusinessIntelligencePro = () => {
+const ZionAIProjectManager = () => {
   const features = [
     {
-      title: "AI-Powered Analytics",
-      description: "Advanced machine learning algorithms automatically analyze your data to uncover hidden insights and trends",
+      title: "AI-Powered Task Management",
+      description: "Intelligent task prioritization and automated scheduling based on project goals and team capacity",
       icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      features: ["Predictive modeling", "Pattern recognition", "Anomaly detection", "Automated insights"]
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-Time Dashboards",
-      description: "Interactive, customizable dashboards that update in real-time with key business metrics and KPIs",
+      title: "Smart Resource Allocation",
+      description: "AI analyzes team skills and workload to optimize resource distribution across projects",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Predictive Analytics",
+      description: "Forecast project completion dates and identify potential risks before they impact delivery",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      features: ["Live data visualization", "Custom widgets", "Mobile responsive", "Drill-down capabilities"]
-    },
-    {
-      title: "Natural Language Queries",
-      description: "Ask questions about your data in plain English and get instant, intelligent answers",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      features: ["Voice commands", "Text queries", "Smart suggestions", "Contextual answers"]
+      color: "from-purple-500 to-pink-500"
     },
     {
       title: "Automated Reporting",
-      description: "Generate comprehensive business reports automatically with AI-driven insights and recommendations",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500",
-      features: ["Scheduled reports", "Custom templates", "Executive summaries", "Actionable recommendations"]
+      description: "Generate comprehensive project reports and stakeholder updates automatically",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500"
     }
-  ];
-
-  const industries = [
-    { name: "Retail", icon: "🛍️", useCase: "Customer behavior analysis, inventory optimization" },
-    { name: "Healthcare", icon: "🏥", useCase: "Patient outcomes, operational efficiency" },
-    { name: "Finance", icon: "🏦", useCase: "Risk assessment, fraud detection" },
-    { name: "Manufacturing", icon: "🏭", useCase: "Quality control, predictive maintenance" },
-    { name: "E-commerce", icon: "🛒", useCase: "Sales forecasting, customer segmentation" },
-    { name: "Education", icon: "🎓", useCase: "Student performance, resource allocation" }
   ];
 
   const pricingPlans = [
     {
-      name: "AI Insights Starter",
-      price: "$199",
+      name: "Starter",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams",
       features: [
-        "Up to 5 data sources",
-        "Basic AI analytics",
-        "Standard dashboards",
-        "Monthly reports",
-        "Email support"
+        "Up to 5 projects",
+        "10 team members",
+        "Basic AI insights",
+        "Email support",
+        "Standard templates"
       ],
       popular: false
     },
     {
-      name: "AI Intelligence Pro",
-      price: "$599",
+      name: "Professional",
+      price: "$79",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Ideal for growing businesses",
       features: [
-        "Unlimited data sources",
+        "Unlimited projects",
+        "50 team members",
         "Advanced AI analytics",
-        "Custom dashboards",
-        "Real-time reporting",
         "Priority support",
-        "API access"
+        "Custom integrations",
+        "Advanced reporting"
       ],
       popular: true
     },
     {
-      name: "AI Enterprise Suite",
-      price: "$1,999",
+      name: "Enterprise",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Everything in Pro",
-        "Custom AI models",
-        "White-label dashboards",
+        "Unlimited everything",
+        "Unlimited team members",
+        "Full AI suite",
         "24/7 dedicated support",
-        "On-premise deployment",
-        "Custom integrations"
+        "Custom AI training",
+        "White-label options"
       ],
       popular: false
     }
@@ -112,24 +95,24 @@ const AIBusinessIntelligencePro = () => {
 
   const testimonials = [
     {
-      name: "Dr. Emily Rodriguez",
-      role: "Chief Data Officer",
-      company: "Healthcare Innovations",
-      content: "Zion's AI Business Intelligence platform transformed our data analysis. We discovered insights that improved patient outcomes by 25% and reduced costs by 30%.",
+      name: "Sarah Johnson",
+      role: "Project Manager",
+      company: "TechCorp Inc.",
+      content: "Zion AI Project Manager has revolutionized how we handle complex projects. The AI insights have helped us deliver 40% faster.",
       rating: 5
     },
     {
-      name: "James Thompson",
-      role: "VP of Analytics",
-      company: "RetailMax Corp",
-      content: "The natural language queries feature is incredible. Our executives can now ask complex questions about sales data and get instant, accurate answers.",
+      name: "Michael Chen",
+      role: "CTO",
+      company: "StartupXYZ",
+      content: "The predictive analytics feature saved us from multiple project delays. It's like having a crystal ball for project management.",
       rating: 5
     },
     {
-      name: "Maria Santos",
-      role: "CEO",
-      company: "Manufacturing Solutions",
-      content: "The predictive analytics helped us optimize our production schedule and reduce waste by 40%. The ROI was evident within the first month.",
+      name: "Emily Rodriguez",
+      role: "Operations Director",
+      company: "Global Solutions",
+      content: "Our team productivity increased by 60% since implementing Zion AI. The automated reporting alone saves us 10 hours per week.",
       rating: 5
     }
   ];
@@ -137,14 +120,14 @@ const AIBusinessIntelligencePro = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Business Intelligence Pro - Advanced Analytics Platform</title>
+        <title>Zion AI Project Manager - Intelligent Project Management Platform</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered business intelligence platform with predictive analytics, natural language queries, and automated insights for data-driven decision making."
+          content="Revolutionary AI-powered project management platform that automates task prioritization, resource allocation, and predictive analytics for optimal project delivery."
         />
         <meta
           name="keywords"
-          content="AI business intelligence, predictive analytics, natural language queries, automated reporting, data visualization"
+          content="AI project management, intelligent task management, predictive analytics, resource allocation, project automation"
         />
       </Helmet>
 
@@ -153,19 +136,19 @@ const AIBusinessIntelligencePro = () => {
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Brain className="w-5 h-5 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 font-semibold">AI-Powered Business Intelligence</span>
+            <span className="text-cyan-400 font-semibold">AI-Powered Project Management</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transform Data into
+            Zion AI
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              {" "}Intelligent Insights
+              {" "}Project Manager
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Revolutionize your business intelligence with AI-powered analytics, natural language queries, 
-            and automated insights. Make data-driven decisions faster and more accurately than ever before.
+            Transform your project management with AI-powered insights, automated task prioritization, 
+            and predictive analytics. Deliver projects 40% faster with intelligent resource allocation.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -185,21 +168,17 @@ const AIBusinessIntelligencePro = () => {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">75%</div>
-              <div className="text-gray-300">Faster Insights</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+              <div className="text-gray-300">Faster Delivery</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
-              <div className="text-gray-300">Prediction Accuracy</div>
+              <div className="text-gray-300">Accuracy Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
-              <div className="text-gray-300">Time Saved</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-orange-400 mb-2">500+</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">10k+</div>
               <div className="text-gray-300">Happy Customers</div>
             </div>
           </div>
@@ -211,69 +190,30 @@ const AIBusinessIntelligencePro = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced AI Features
+              Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge AI technology to unlock the full potential of your business data.
+              Leverage cutting-edge AI technology to optimize every aspect of your project management workflow.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
-              <div
-                key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
-              >
-                <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                >
-                  {feature.icon}
-                </div>
-                <h3 className="text-2xl font-semibold text-white mb-4 text-center">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-center mb-6">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2">
-                  {feature.features.map((featureItem, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {featureItem}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry-Specific Solutions
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored AI business intelligence solutions for different industries and use cases.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
               <div
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
               >
-                <div className="text-center">
-                  <div className="text-4xl mb-4">{industry.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {industry.name}
-                  </h3>
-                  <p className="text-gray-300 text-sm">{industry.useCase}</p>
+                <div
+                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                >
+                  {feature.icon}
                 </div>
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 text-center">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -281,14 +221,14 @@ const AIBusinessIntelligencePro = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the AI business intelligence plan that fits your organization's needs and data volume.
+              Choose the plan that fits your team size and project complexity. All plans include our core AI features.
             </p>
           </div>
           
@@ -345,14 +285,14 @@ const AIBusinessIntelligencePro = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Data Leaders
+              Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about their experience with AI Business Intelligence Pro.
+              See what our customers say about their experience with Zion AI Project Manager.
             </p>
           </div>
           
@@ -382,10 +322,10 @@ const AIBusinessIntelligencePro = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Data into Intelligence?
+            Ready to Transform Your Project Management?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of companies already using AI Business Intelligence Pro to make smarter, data-driven decisions.
+            Join thousands of teams already using Zion AI Project Manager to deliver projects faster and more efficiently.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -408,4 +348,4 @@ const AIBusinessIntelligencePro = () => {
   );
 };
 
-export default AIBusinessIntelligencePro;
+export default ZionAIProjectManager;

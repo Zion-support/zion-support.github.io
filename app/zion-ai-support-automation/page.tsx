@@ -1,110 +1,108 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { 
-  Brain, 
+  Bot, 
+  MessageCircle, 
+  Zap, 
   BarChart3, 
-  TrendingUp, 
-  Target, 
+  Clock, 
   CheckCircle,
   ArrowRight,
   Star,
+  TrendingUp,
   Users,
-  Database,
-  Zap,
-  Eye,
-  Lightbulb,
+  Headphones,
+  Smartphone,
+  Globe,
+  Shield,
   Settings,
   Download,
-  Globe,
-  Smartphone,
-  Laptop,
-  Activity,
-  PieChart
+  Mail,
+  Phone,
+  Chat
 } from "lucide-react";
 
-const AIBusinessIntelligencePro = () => {
+const ZionAISupportAutomation = () => {
   const features = [
     {
-      title: "AI-Powered Analytics",
-      description: "Advanced machine learning algorithms automatically analyze your data to uncover hidden insights and trends",
-      icon: <Brain className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      features: ["Predictive modeling", "Pattern recognition", "Anomaly detection", "Automated insights"]
+      title: "Intelligent Chatbots",
+      description: "AI-powered chatbots that understand context and provide accurate, personalized responses 24/7",
+      icon: <Bot className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-Time Dashboards",
-      description: "Interactive, customizable dashboards that update in real-time with key business metrics and KPIs",
+      title: "Multi-Channel Support",
+      description: "Seamlessly handle support across email, chat, phone, and social media from one unified platform",
+      icon: <MessageCircle className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Sentiment Analysis",
+      description: "Real-time analysis of customer emotions to prioritize urgent issues and improve satisfaction",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      features: ["Live data visualization", "Custom widgets", "Mobile responsive", "Drill-down capabilities"]
+      color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Natural Language Queries",
-      description: "Ask questions about your data in plain English and get instant, intelligent answers",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      features: ["Voice commands", "Text queries", "Smart suggestions", "Contextual answers"]
-    },
-    {
-      title: "Automated Reporting",
-      description: "Generate comprehensive business reports automatically with AI-driven insights and recommendations",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500",
-      features: ["Scheduled reports", "Custom templates", "Executive summaries", "Actionable recommendations"]
+      title: "Auto-Escalation",
+      description: "Smart routing of complex issues to the right human agents based on expertise and workload",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500"
     }
   ];
 
-  const industries = [
-    { name: "Retail", icon: "🛍️", useCase: "Customer behavior analysis, inventory optimization" },
-    { name: "Healthcare", icon: "🏥", useCase: "Patient outcomes, operational efficiency" },
-    { name: "Finance", icon: "🏦", useCase: "Risk assessment, fraud detection" },
-    { name: "Manufacturing", icon: "🏭", useCase: "Quality control, predictive maintenance" },
-    { name: "E-commerce", icon: "🛒", useCase: "Sales forecasting, customer segmentation" },
-    { name: "Education", icon: "🎓", useCase: "Student performance, resource allocation" }
+  const integrations = [
+    { name: "Slack", icon: "💬" },
+    { name: "Microsoft Teams", icon: "🔗" },
+    { name: "Zendesk", icon: "🎫" },
+    { name: "Salesforce", icon: "☁️" },
+    { name: "HubSpot", icon: "🎯" },
+    { name: "Intercom", icon: "💬" },
+    { name: "Freshdesk", icon: "🆕" },
+    { name: "Help Scout", icon: "📧" }
   ];
 
   const pricingPlans = [
     {
-      name: "AI Insights Starter",
-      price: "$199",
+      name: "Starter",
+      price: "$49",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 5 data sources",
-        "Basic AI analytics",
-        "Standard dashboards",
-        "Monthly reports",
+        "1,000 conversations/month",
+        "Basic AI chatbot",
+        "Email & chat support",
+        "Basic analytics",
         "Email support"
       ],
       popular: false
     },
     {
-      name: "AI Intelligence Pro",
-      price: "$599",
+      name: "Professional",
+      price: "$149",
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "Unlimited data sources",
-        "Advanced AI analytics",
-        "Custom dashboards",
-        "Real-time reporting",
+        "10,000 conversations/month",
+        "Advanced AI with learning",
+        "Multi-channel support",
+        "Advanced analytics",
         "Priority support",
-        "API access"
+        "Custom integrations"
       ],
       popular: true
     },
     {
-      name: "AI Enterprise Suite",
-      price: "$1,999",
+      name: "Enterprise",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Everything in Pro",
-        "Custom AI models",
-        "White-label dashboards",
+        "Unlimited conversations",
+        "Custom AI training",
+        "All channels included",
+        "Real-time analytics",
         "24/7 dedicated support",
-        "On-premise deployment",
-        "Custom integrations"
+        "White-label options"
       ],
       popular: false
     }
@@ -112,24 +110,24 @@ const AIBusinessIntelligencePro = () => {
 
   const testimonials = [
     {
-      name: "Dr. Emily Rodriguez",
-      role: "Chief Data Officer",
-      company: "Healthcare Innovations",
-      content: "Zion's AI Business Intelligence platform transformed our data analysis. We discovered insights that improved patient outcomes by 25% and reduced costs by 30%.",
+      name: "Jennifer Martinez",
+      role: "Customer Success Manager",
+      company: "E-commerce Plus",
+      content: "Our response time improved by 80% and customer satisfaction increased to 95%. The AI handles 70% of inquiries automatically.",
       rating: 5
     },
     {
-      name: "James Thompson",
-      role: "VP of Analytics",
-      company: "RetailMax Corp",
-      content: "The natural language queries feature is incredible. Our executives can now ask complex questions about sales data and get instant, accurate answers.",
+      name: "David Kim",
+      role: "VP of Operations",
+      company: "TechStart Inc.",
+      content: "The sentiment analysis feature helps us identify frustrated customers before they churn. It's been a game-changer for retention.",
       rating: 5
     },
     {
-      name: "Maria Santos",
-      role: "CEO",
-      company: "Manufacturing Solutions",
-      content: "The predictive analytics helped us optimize our production schedule and reduce waste by 40%. The ROI was evident within the first month.",
+      name: "Lisa Thompson",
+      role: "Head of Support",
+      company: "Global Services",
+      content: "We reduced our support team size by 40% while improving response quality. The AI learns from every interaction.",
       rating: 5
     }
   ];
@@ -137,14 +135,14 @@ const AIBusinessIntelligencePro = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>AI Business Intelligence Pro - Advanced Analytics Platform</title>
+        <title>Zion AI Support Automation - Intelligent Customer Support Platform</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered business intelligence platform with predictive analytics, natural language queries, and automated insights for data-driven decision making."
+          content="Revolutionary AI-powered customer support automation platform with intelligent chatbots, multi-channel support, and sentiment analysis for exceptional customer experiences."
         />
         <meta
           name="keywords"
-          content="AI business intelligence, predictive analytics, natural language queries, automated reporting, data visualization"
+          content="AI customer support, intelligent chatbots, multi-channel support, sentiment analysis, customer service automation"
         />
       </Helmet>
 
@@ -152,20 +150,20 @@ const AIBusinessIntelligencePro = () => {
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Brain className="w-5 h-5 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 font-semibold">AI-Powered Business Intelligence</span>
+            <Bot className="w-5 h-5 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 font-semibold">AI-Powered Support Automation</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Transform Data into
+            Zion AI
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              {" "}Intelligent Insights
+              {" "}Support Automation
             </span>
           </h1>
           
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Revolutionize your business intelligence with AI-powered analytics, natural language queries, 
-            and automated insights. Make data-driven decisions faster and more accurately than ever before.
+            Transform your customer support with AI-powered chatbots, multi-channel automation, 
+            and intelligent sentiment analysis. Reduce response time by 80% while improving satisfaction.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -187,20 +185,20 @@ const AIBusinessIntelligencePro = () => {
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">75%</div>
-              <div className="text-gray-300">Faster Insights</div>
+              <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
+              <div className="text-gray-300">Faster Response</div>
             </div>
             <div className="text-center">
               <div className="text-3xl font-bold text-purple-400 mb-2">95%</div>
-              <div className="text-gray-300">Prediction Accuracy</div>
+              <div className="text-gray-300">Satisfaction Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
-              <div className="text-gray-300">Time Saved</div>
+              <div className="text-3xl font-bold text-green-400 mb-2">70%</div>
+              <div className="text-gray-300">Auto-Resolved</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-orange-400 mb-2">500+</div>
-              <div className="text-gray-300">Happy Customers</div>
+              <div className="text-3xl font-bold text-orange-400 mb-2">24/7</div>
+              <div className="text-gray-300">Availability</div>
             </div>
           </div>
         </div>
@@ -211,68 +209,57 @@ const AIBusinessIntelligencePro = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced AI Features
+              Powerful AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge AI technology to unlock the full potential of your business data.
+              Leverage advanced AI technology to provide exceptional customer support experiences.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
               >
                 <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
                 </div>
-                <h3 className="text-2xl font-semibold text-white mb-4 text-center">
+                <h3 className="text-xl font-semibold text-white mb-3 text-center">
                   {feature.title}
                 </h3>
-                <p className="text-gray-300 text-center mb-6">
+                <p className="text-gray-300 text-center">
                   {feature.description}
                 </p>
-                <ul className="space-y-2">
-                  {feature.features.map((featureItem, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-                      {featureItem}
-                    </li>
-                  ))}
-                </ul>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Industries Section */}
+      {/* Integrations Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-800/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry-Specific Solutions
+              Seamless Integrations
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Tailored AI business intelligence solutions for different industries and use cases.
+              Connect with your existing tools and workflows for a unified support experience.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {integrations.map((integration, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 group"
+                className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300 text-center group"
               >
-                <div className="text-center">
-                  <div className="text-4xl mb-4">{industry.icon}</div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {industry.name}
-                  </h3>
-                  <p className="text-gray-300 text-sm">{industry.useCase}</p>
+                <div className="text-2xl mb-2">{integration.icon}</div>
+                <div className="text-sm text-gray-300 group-hover:text-white transition-colors">
+                  {integration.name}
                 </div>
               </div>
             ))}
@@ -285,10 +272,10 @@ const AIBusinessIntelligencePro = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Flexible Pricing Plans
+              Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the AI business intelligence plan that fits your organization's needs and data volume.
+              Choose the plan that fits your support volume and team size. All plans include our core AI features.
             </p>
           </div>
           
@@ -349,10 +336,10 @@ const AIBusinessIntelligencePro = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Data Leaders
+              Trusted by Support Teams Worldwide
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers say about their experience with AI Business Intelligence Pro.
+              See what our customers say about their experience with Zion AI Support Automation.
             </p>
           </div>
           
@@ -382,10 +369,10 @@ const AIBusinessIntelligencePro = () => {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Data into Intelligence?
+            Ready to Revolutionize Your Customer Support?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of companies already using AI Business Intelligence Pro to make smarter, data-driven decisions.
+            Join thousands of companies already using Zion AI Support Automation to deliver exceptional customer experiences.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -408,4 +395,4 @@ const AIBusinessIntelligencePro = () => {
   );
 };
 
-export default AIBusinessIntelligencePro;
+export default ZionAISupportAutomation;

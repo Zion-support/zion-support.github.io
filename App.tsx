@@ -110,6 +110,18 @@ const WorkflowAutomationPage = React.lazy(
 const CloudNativeSecurityPage = React.lazy(
   () => import("./app/cloud-native-security/page"),
 );
+const CybersecurityAdvancedSolutionsPage = React.lazy(
+  () => import("./app/cybersecurity-advanced-solutions/page"),
+);
+const CloudInfrastructureEnterprisePage = React.lazy(
+  () => import("./app/cloud-infrastructure-enterprise/page"),
+);
+const AIBusinessIntelligenceProPage = React.lazy(
+  () => import("./app/ai-business-intelligence-pro/page"),
+);
+const AIContentGenerationProPage = React.lazy(
+  () => import("./app/ai-content-generation-pro/page"),
+);
 
 // Micro SAAS Pages
 const ZionAnalyticsProPage = React.lazy(
@@ -151,6 +163,15 @@ const ZionComplianceManagerPage = React.lazy(
 );
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
+);
+const ZionAIProjectManagerPage = React.lazy(
+  () => import("./app/zion-ai-project-manager/page"),
+);
+const ZionAISupportAutomationPage = React.lazy(
+  () => import("./app/zion-ai-support-automation/page"),
+);
+const ZionAIDataInsightsPage = React.lazy(
+  () => import("./app/zion-ai-data-insights/page"),
 );
 
 // 5G Solutions Pages
@@ -305,6 +326,22 @@ function App() {
                     path="/cloud-native-security"
                     element={<CloudNativeSecurityPage />}
                   />
+                  <Route
+                    path="/cybersecurity-advanced-solutions"
+                    element={<CybersecurityAdvancedSolutionsPage />}
+                  />
+                  <Route
+                    path="/cloud-infrastructure-enterprise"
+                    element={<CloudInfrastructureEnterprisePage />}
+                  />
+                  <Route
+                    path="/ai-business-intelligence-pro"
+                    element={<AIBusinessIntelligenceProPage />}
+                  />
+                  <Route
+                    path="/ai-content-generation-pro"
+                    element={<AIContentGenerationProPage />}
+                  />
 
                   {/* Micro SAAS Routes */}
                   <Route
@@ -362,6 +399,18 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-project-manager"
+                    element={<ZionAIProjectManagerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-support-automation"
+                    element={<ZionAISupportAutomationPage />}
+                  />
+                  <Route
+                    path="/zion-ai-data-insights"
+                    element={<ZionAIDataInsightsPage />}
                   />
 
                   {/* 5G Solutions Routes */}
