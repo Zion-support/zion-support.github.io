@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-<<<<<<< HEAD
 // Define all routes for the sitemap
 const routes = [
   // Main pages
@@ -10,10 +9,8 @@ const routes = [
   { url: '/contact', priority: '0.9', changefreq: 'monthly' },
   { url: '/services', priority: '0.9', changefreq: 'weekly' },
   { url: '/pricing', priority: '0.8', changefreq: 'monthly' },
-  { url: '/case-studies', priority: '0.7', changefreq: 'weekly' },
-  { url: '/careers', priority: '0.6', changefreq: 'weekly' },
+  { url: '/blog', priority: '0.7', changefreq: 'weekly' },
   { url: '/tutorials', priority: '0.7', changefreq: 'weekly' },
-  { url: '/consultation', priority: '0.8', changefreq: 'monthly' },
   { url: '/demo', priority: '0.8', changefreq: 'monthly' },
   { url: '/support', priority: '0.7', changefreq: 'weekly' },
   { url: '/privacy', priority: '0.5', changefreq: 'yearly' },
@@ -47,45 +44,15 @@ const routes = [
   { url: '/database-management', priority: '0.8', changefreq: 'weekly' },
   { url: '/custom-software', priority: '0.8', changefreq: 'weekly' },
   { url: '/network-infrastructure', priority: '0.8', changefreq: 'weekly' },
-  { url: '/cloud-native-development', priority: '0.8', changefreq: 'weekly' },
-  { url: '/blockchain-development', priority: '0.8', changefreq: 'weekly' },
-  { url: '/e-commerce-development', priority: '0.8', changefreq: 'weekly' },
-  { url: '/data-engineering', priority: '0.8', changefreq: 'weekly' },
-  { url: '/cybersecurity-advanced', priority: '0.8', changefreq: 'weekly' },
-  { url: '/cloud-migration-advanced', priority: '0.8', changefreq: 'weekly' },
-  { url: '/machine-learning-ops', priority: '0.8', changefreq: 'weekly' },
-  { url: '/enterprise-integration', priority: '0.8', changefreq: 'weekly' },
-  { url: '/performance-optimization', priority: '0.8', changefreq: 'weekly' },
-  { url: '/disaster-recovery-advanced', priority: '0.8', changefreq: 'weekly' },
-  { url: '/compliance-automation', priority: '0.8', changefreq: 'weekly' },
-  { url: '/cloud-cost-optimization', priority: '0.8', changefreq: 'weekly' },
-  { url: '/security-automation', priority: '0.8', changefreq: 'weekly' },
-  { url: '/data-visualization', priority: '0.8', changefreq: 'weekly' },
-  { url: '/workflow-automation', priority: '0.8', changefreq: 'weekly' },
-  { url: '/cloud-native-security', priority: '0.8', changefreq: 'weekly' },
-  { url: '/data-analytics', priority: '0.8', changefreq: 'weekly' },
-  { url: '/iot-solutions', priority: '0.8', changefreq: 'weekly' },
-  { url: '/devops-solutions', priority: '0.8', changefreq: 'weekly' },
-  { url: '/machine-learning', priority: '0.8', changefreq: 'weekly' },
-  { url: '/quantum-computing', priority: '0.8', changefreq: 'weekly' },
-  { url: '/robotics', priority: '0.8', changefreq: 'weekly' },
 
   // Micro SAAS
   { url: '/micro-saas', priority: '0.9', changefreq: 'weekly' },
   { url: '/zion-analytics-pro', priority: '0.8', changefreq: 'weekly' },
   { url: '/zion-security-shield', priority: '0.8', changefreq: 'weekly' },
   { url: '/zion-cloud-vault', priority: '0.8', changefreq: 'weekly' },
-  { url: '/zion-content-studio', priority: '0.8', changefreq: 'weekly' },
-  { url: '/zion-data-sync', priority: '0.8', changefreq: 'weekly' },
-  { url: '/zion-lead-magnet', priority: '0.8', changefreq: 'weekly' },
-  { url: '/zion-project-master', priority: '0.8', changefreq: 'weekly' },
-  { url: '/zion-email-automation', priority: '0.8', changefreq: 'weekly' },
-  { url: '/zion-social-scheduler', priority: '0.8', changefreq: 'weekly' },
-  { url: '/zion-workflow-automation', priority: '0.8', changefreq: 'weekly' },
-  { url: '/zion-invoice-genius', priority: '0.8', changefreq: 'weekly' },
-  { url: '/zion-inventory-smart', priority: '0.8', changefreq: 'weekly' },
-  { url: '/zion-compliance-manager', priority: '0.8', changefreq: 'weekly' },
-  { url: '/zion-performance-monitor', priority: '0.8', changefreq: 'weekly' },
+  { url: '/zion-ai-crm-pro', priority: '0.8', changefreq: 'weekly' },
+  { url: '/zion-ai-marketing-automation-pro', priority: '0.8', changefreq: 'weekly' },
+  { url: '/zion-ai-project-manager-pro', priority: '0.8', changefreq: 'weekly' },
 
   // 5G Solutions
   { url: '/5g-solutions', priority: '0.9', changefreq: 'weekly' },
@@ -96,6 +63,7 @@ const routes = [
   { url: '/5g-network-infrastructure', priority: '0.8', changefreq: 'weekly' },
   { url: '/5g-private-networks', priority: '0.8', changefreq: 'weekly' },
   { url: '/5g-smart-city-solutions', priority: '0.8', changefreq: 'weekly' },
+  { url: '/5g-iot-solutions', priority: '0.8', changefreq: 'weekly' },
 ];
 
 const baseUrl = 'https://ziontechgroup.com';
@@ -151,10 +119,8 @@ Allow: /5g-solutions/
 Allow: /about/
 Allow: /contact/
 Allow: /pricing/
-Allow: /case-studies/
-Allow: /careers/
+Allow: /blog/
 Allow: /tutorials/
-Allow: /consultation/
 Allow: /demo/
 Allow: /support/
 
@@ -219,70 +185,3 @@ fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsContent);
 
 console.log(`Generated sitemap with ${routes.length} routes`);
 console.log('Generated robots.txt');
-=======
-// Get all page routes from the app directory
-function getRoutes(dir, basePath = '') {
-  const routes = [];
-  const items = fs.readdirSync(dir);
-
-  items.forEach(item => {
-    const fullPath = path.join(dir, item);
-    const stat = fs.statSync(fullPath);
-
-    if (stat.isDirectory()) {
-      // Check if directory has a page.tsx file
-      const pagePath = path.join(fullPath, 'page.tsx');
-      if (fs.existsSync(pagePath)) {
-        const route = basePath + '/' + item;
-        routes.push(route);
-      }
-      
-      // Recursively check subdirectories
-      const subRoutes = getRoutes(fullPath, basePath + '/' + item);
-      routes.push(...subRoutes);
-    }
-  });
-
-  return routes;
-}
-
-// Generate sitemap
-function generateSitemap() {
-  const appDir = path.join(__dirname, '..', 'app');
-  const routes = getRoutes(appDir);
-  
-  // Add root route
-  routes.unshift('');
-  
-  const baseUrl = 'https://ziontechgroup.com';
-  const currentDate = new Date().toISOString();
-  
-  const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${routes.map(route => {
-  const url = route === '' ? baseUrl : `${baseUrl}${route}`;
-  const priority = route === '' ? '1.0' : route.includes('/ai-') || route.includes('/zion-') ? '0.9' : '0.8';
-  const changefreq = route === '' ? 'daily' : 'weekly';
-  
-  return `  <url>
-    <loc>${url}</loc>
-    <lastmod>${currentDate}</lastmod>
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
-  </url>`;
-}).join('\n')}
-</urlset>`;
-
-  // Write sitemap to public directory
-  const publicDir = path.join(__dirname, '..', 'public');
-  if (!fs.existsSync(publicDir)) {
-    fs.mkdirSync(publicDir, { recursive: true });
-  }
-  
-  fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-  console.log('Sitemap generated successfully!');
-  console.log(`Found ${routes.length} routes`);
-}
-
-generateSitemap();
->>>>>>> cursor/analyze-improve-and-deploy-application-c36b
