@@ -1,0 +1,68 @@
+{
+  "timestamp": "2025-10-13T09:20:11.133Z",
+  "stats": {
+    "totalFiles": 18,
+    "totalSize": 583856,
+    "jsFiles": 14,
+    "jsSize": 560859,
+    "cssFiles": 1,
+    "cssSize": 1811,
+    "imageFiles": 0,
+    "imageSize": 0,
+    "chunks": {
+      "sw.js": 1100,
+      "assets/5g": 9323,
+      "assets/ai": 52807,
+      "assets/index": 54370,
+      "assets/main": 122737,
+      "assets/performance": 6067,
+      "assets/react": 212707,
+      "assets/zion": 101748
+    }
+  },
+  "recommendations": [
+    {
+      "type": "warning",
+      "message": "Chunk \"assets/react\" is 207.7KB. Consider splitting further."
+    },
+    {
+      "type": "success",
+      "message": "Bundle size is optimized! Great job!"
+    }
+  ],
+  "optimizations": {
+    "bundleOptimization": {
+      "maxChunkSize": 150000,
+      "criticalChunks": [
+        "react-core",
+        "react-dom",
+        "main-core"
+      ],
+      "lazyChunks": [
+        "ai-other",
+        "zion-other",
+        "5g-services"
+      ]
+    },
+    "imageOptimization": {
+      "formats": [
+        "webp",
+        "avif"
+      ],
+      "quality": 85,
+      "maxWidth": 1920,
+      "maxHeight": 1080
+    },
+    "codeSplitting": {
+      "routeBased": true,
+      "componentBased": true,
+      "vendorSplitting": true
+    },
+    "caching": {
+      "staticAssets": "1y",
+      "html": "1h",
+      "js": "1y",
+      "css": "1y"
+    }
+  }
+}
