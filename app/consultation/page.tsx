@@ -24,7 +24,10 @@ export default function Consultation() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+    // In production, this would be sent to your backend
+    if (process.env.NODE_ENV === 'development') {
+      console.log('Form submitted:', formData);
+    }
   };
 
   const consultationTypes = [

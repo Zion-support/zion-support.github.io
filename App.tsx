@@ -25,6 +25,8 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
+import EnhancedSEOHead from "./app/components/EnhancedSEOHead";
+import EnhancedPerformanceMonitor from "./app/components/EnhancedPerformanceMonitor";
 import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
 
 // Lazy load pages for better performance
@@ -500,6 +502,8 @@ function App() {
                     <PerformanceEnhancer />
                     <SEOOptimizer />
                     <EnhancedSEO />
+                    <EnhancedPerformanceMonitor />
+                    <EnhancedSEOHead />
                   </div>
                 </AnalyticsProvider>
               </div>

@@ -82,6 +82,7 @@ export default defineConfig({
         tryCatchDeoptimization: false,
       },
       output: {
+        
         manualChunks: (id) => {
           // Core React libraries
           if (id.includes('react') || id.includes('react-dom')) {
