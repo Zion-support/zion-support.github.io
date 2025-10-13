@@ -73,7 +73,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
 
   return (
     <nav 
-      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
+      className="nav-cyberpunk-advanced text-white shadow-2xl"
       role="navigation"
       aria-label="Main navigation"
     >

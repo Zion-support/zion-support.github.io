@@ -24,17 +24,21 @@ const Footer = React.memo(() => {
   ], []);
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5 animate-pulse"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.1),transparent_50%)]"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 hover:scale-110">
                 <span className="text-white font-bold text-lg">Z</span>
               </div>
-              <span className="text-xl font-bold">Zion Tech Group</span>
+              <span className="text-xl font-bold text-cyberpunk-advanced">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm max-w-md">
               Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
@@ -47,7 +51,7 @@ const Footer = React.memo(() => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/25 p-2 rounded-lg hover:bg-cyan-500/10"
                   aria-label={link.name}
                 >
                   {link.icon}
@@ -58,12 +62,12 @@ const Footer = React.memo(() => {
 
           {/* AI Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-cyan-400">AI Services</h4>
+            <h4 className="text-lg font-semibold mb-4 text-cyan-400 neon-advanced-glow">AI Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
                   to="/ai-services"
-                  className="text-gray-400 hover:text-cyan-400 transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:translate-x-1"
                 >
                   AI Services Overview
                 </Link>
@@ -113,7 +117,7 @@ const Footer = React.memo(() => {
 
           {/* IT Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-green-400">IT Services</h4>
+            <h4 className="text-lg font-semibold mb-4 text-green-400 neon-advanced-glow">IT Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -168,7 +172,7 @@ const Footer = React.memo(() => {
 
           {/* Micro SAAS */}
           <div>
-            <h4 className="text-lg font-semibold mb-4 text-purple-400">Micro SAAS</h4>
+            <h4 className="text-lg font-semibold mb-4 text-purple-400 neon-advanced-glow">Micro SAAS</h4>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -340,7 +344,7 @@ const Footer = React.memo(() => {
         </div>
 
         {/* Bottom Footer */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-cyan-500/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
@@ -348,19 +352,19 @@ const Footer = React.memo(() => {
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link
                 to="/privacy"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:translate-x-1 text-sm"
               >
                 Privacy Policy
               </Link>
               <Link
                 to="/terms"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:translate-x-1 text-sm"
               >
                 Terms of Service
               </Link>
               <Link
                 to="/cookies"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
+                className="text-gray-400 hover:text-cyan-400 transition-all duration-300 hover:translate-x-1 text-sm"
               >
                 Cookie Policy
               </Link>

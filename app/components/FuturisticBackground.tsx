@@ -1,37 +1,204 @@
-import React from "react";
+import React, { useEffect, useRef } from 'react';
 
 interface FuturisticBackgroundProps {
   children: React.ReactNode;
-  className?: string;
 }
 
-const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({
-  children,
-  className = "",
-}) => {
+const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children }) => {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let animationId: number;
+    let particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;
+    }> = [];
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
+
+    const createParticle = () => {
+      const colors = ['#00d4ff', '#ff0080', '#00ff88', '#a855f7', '#ff6b35'];
+      return {
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        size: Math.random() * 2 + 1,
+        opacity: Math.random() * 0.5 + 0.1,
+        color: colors[Math.floor(Math.random() * colors.length)]
+      };
+    };
+
+    const initParticles = () => {
+      particles = [];
+      for (let i = 0; i < 50; i++) {
+        particles.push(createParticle());
+      }
+    };
+
+    const drawParticles = () => {
+      particles.forEach(particle => {
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+        ctx.fillStyle = particle.color + Math.floor(particle.opacity * 255).toString(16).padStart(2, '0');
+        ctx.fill();
+      });
+    };
+
+    const drawConnections = () => {
+      particles.forEach((particle, i) => {
+        particles.slice(i + 1).forEach(otherParticle => {
+          const dx = particle.x - otherParticle.x;
+          const dy = particle.y - otherParticle.y;
+          const distance = Math.sqrt(dx * dx + dy * dy);
+
+          if (distance < 100) {
+            ctx.beginPath();
+            ctx.moveTo(particle.x, particle.y);
+            ctx.lineTo(otherParticle.x, otherParticle.y);
+            ctx.strokeStyle = `rgba(0, 212, 255, ${0.1 * (1 - distance / 100)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        });
+      });
+    };
+
+    const drawGrid = () => {
+      const gridSize = 50;
+      const offsetX = (Date.now() * 0.01) % gridSize;
+      const offsetY = (Date.now() * 0.01) % gridSize;
+
+      ctx.strokeStyle = 'rgba(0, 212, 255, 0.1)';
+      ctx.lineWidth = 0.5;
+
+      // Vertical lines
+      for (let x = -offsetX; x < canvas.width + gridSize; x += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(x, 0);
+        ctx.lineTo(x, canvas.height);
+        ctx.stroke();
+      }
+
+      // Horizontal lines
+      for (let y = -offsetY; y < canvas.height + gridSize; y += gridSize) {
+        ctx.beginPath();
+        ctx.moveTo(0, y);
+        ctx.lineTo(canvas.width, y);
+        ctx.stroke();
+      }
+    };
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      // Draw grid
+      drawGrid();
+
+      // Update and draw particles
+      particles.forEach(particle => {
+        particle.x += particle.vx;
+        particle.y += particle.vy;
+
+        // Wrap around screen
+        if (particle.x < 0) particle.x = canvas.width;
+        if (particle.x > canvas.width) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height;
+        if (particle.y > canvas.height) particle.y = 0;
+
+        // Fade in/out
+        particle.opacity += (Math.random() - 0.5) * 0.02;
+        particle.opacity = Math.max(0.1, Math.min(0.6, particle.opacity));
+      });
+
+      drawParticles();
+      drawConnections();
+
+      animationId = requestAnimationFrame(animate);
+    };
+
+    const handleResize = () => {
+      resizeCanvas();
+      initParticles();
+    };
+
+    resizeCanvas();
+    initParticles();
+    animate();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+      cancelAnimationFrame(animationId);
+    };
+  }, []);
+
   return (
-    <div
-      className={`relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 ${className}`}
-    >
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-500"></div>
-      </div>
-
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 opacity-20">
-        <div
-          className="w-full h-full"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-          }}
-        ></div>
-      </div>
-
+    <div className="relative min-h-screen">
+      {/* Animated Canvas Background */}
+      <canvas
+        ref={canvasRef}
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        style={{ zIndex: 1 }}
+      />
+      
+      {/* Gradient Overlay */}
+      <div 
+        className="absolute inset-0 w-full h-full pointer-events-none"
+        style={{
+          background: `
+            radial-gradient(circle at 20% 30%, rgba(0, 212, 255, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(0, 255, 136, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.05) 0%, transparent 50%)
+          `,
+          zIndex: 2
+        }}
+      />
+      
+      {/* Scan Lines Effect */}
+      <div 
+        className="absolute inset-0 w-full h-full pointer-events-none opacity-30"
+        style={{
+          background: `
+            linear-gradient(90deg, transparent 0%, rgba(0, 255, 136, 0.1) 50%, transparent 100%),
+            linear-gradient(0deg, transparent 0%, rgba(0, 212, 255, 0.1) 50%, transparent 100%)
+          `,
+          backgroundSize: '100px 100px',
+          animation: 'matrixMove 20s linear infinite',
+          zIndex: 3
+        }}
+      />
+      
       {/* Content */}
-      <div className="relative z-10">{children}</div>
+      <div className="relative" style={{ zIndex: 10 }}>
+        {children}
+      </div>
+
+      <style>{`
+        @keyframes matrixMove {
+          0% {
+            transform: translateY(-100px);
+          }
+          100% {
+            transform: translateY(100vh);
+          }
+        }
+      `}</style>
     </div>
   );
 };

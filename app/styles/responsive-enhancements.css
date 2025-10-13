@@ -1,0 +1,424 @@
+/* Responsive Enhancements for Zion Tech Group */
+
+/* Mobile First Approach */
+@media (max-width: 640px) {
+  /* Typography */
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-6xl {
+    font-size: 3rem;
+  }
+  
+  .text-7xl {
+    font-size: 3.5rem;
+  }
+  
+  /* Spacing */
+  .py-20 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .px-8 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  /* Grid adjustments */
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  /* Cards */
+  .holographic-card-advanced {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Buttons */
+  .btn-quantum-advanced {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.875rem;
+    letter-spacing: 1px;
+  }
+  
+  /* Navigation */
+  .nav-cyberpunk-advanced .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+  
+  /* Footer */
+  .grid-cols-7 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .lg\\:col-span-2 {
+    grid-column: span 1;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 641px) and (max-width: 1024px) {
+  /* Typography */
+  .text-6xl {
+    font-size: 4rem;
+  }
+  
+  .text-7xl {
+    font-size: 5rem;
+  }
+  
+  /* Grid adjustments */
+  .grid-cols-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  /* Cards */
+  .holographic-card-advanced {
+    padding: 1.5rem;
+  }
+  
+  /* Footer */
+  .grid-cols-7 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .lg\\:col-span-2 {
+    grid-column: span 1;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  /* Ensure proper spacing */
+  .max-w-7xl {
+    max-width: 80rem;
+  }
+  
+  /* Enhanced hover effects for larger screens */
+  .hover-quantum-advanced:hover {
+    transform: translateY(-15px) scale(1.05);
+  }
+  
+  .holographic-card-advanced:hover {
+    transform: translateY(-15px) scale(1.03);
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1536px) {
+  .max-w-7xl {
+    max-width: 90rem;
+  }
+  
+  /* Enhanced spacing for ultra-wide */
+  .py-20 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Ensure crisp text rendering */
+  .text-cyberpunk-advanced {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  /* Enhanced shadows for high DPI */
+  .neon-advanced-glow {
+    text-shadow:
+      0 0 10px currentColor,
+      0 0 20px currentColor,
+      0 0 30px currentColor,
+      0 0 40px currentColor;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 600px) {
+  /* Reduce vertical spacing in landscape */
+  .py-20 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .pt-20 {
+    padding-top: 2rem;
+  }
+  
+  .pb-16 {
+    padding-bottom: 2rem;
+  }
+}
+
+/* Print styles */
+@media print {
+  /* Hide animated elements */
+  .quantum-field-advanced,
+  .plasma-effect-advanced,
+  .holographic-grid-advanced,
+  .data-stream-advanced {
+    display: none;
+  }
+  
+  /* Ensure good contrast for printing */
+  .text-gray-300 {
+    color: #000 !important;
+  }
+  
+  .text-gray-400 {
+    color: #333 !important;
+  }
+  
+  /* Remove shadows and effects */
+  .holographic-card-advanced,
+  .btn-quantum-advanced {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  /* Disable all animations */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  /* Keep essential hover states but remove transforms */
+  .hover-quantum-advanced:hover,
+  .holographic-card-advanced:hover {
+    transform: none !important;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  /* Increase contrast for better visibility */
+  .text-gray-300 {
+    color: #fff !important;
+  }
+  
+  .text-gray-400 {
+    color: #e5e7eb !important;
+  }
+  
+  .bg-white\/10 {
+    background-color: rgba(255, 255, 255, 0.2) !important;
+  }
+  
+  .border-white\/20 {
+    border-color: rgba(255, 255, 255, 0.4) !important;
+  }
+  
+  /* Enhanced borders */
+  .holographic-card-advanced {
+    border: 2px solid currentColor !important;
+  }
+  
+  .btn-quantum-advanced {
+    border: 2px solid currentColor !important;
+  }
+}
+
+/* Focus management for accessibility */
+@media (prefers-reduced-motion: no-preference) {
+  /* Enhanced focus indicators */
+  .focus\\:ring-2:focus {
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5) !important;
+  }
+  
+  .focus\\:ring-cyan-500:focus {
+    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.5) !important;
+  }
+}
+
+/* Container queries for component-level responsiveness */
+@container (max-width: 400px) {
+  .card-content {
+    padding: 0.75rem;
+  }
+  
+  .card-title {
+    font-size: 1.125rem;
+  }
+  
+  .card-description {
+    font-size: 0.875rem;
+  }
+}
+
+@container (min-width: 401px) and (max-width: 600px) {
+  .card-content {
+    padding: 1rem;
+  }
+  
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
+
+@container (min-width: 601px) {
+  .card-content {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Larger touch targets */
+  .btn-quantum-advanced {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  .nav-link {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Remove hover effects that don't work on touch */
+  .hover-quantum-advanced:hover,
+  .holographic-card-advanced:hover {
+    transform: none;
+  }
+  
+  /* Add active states for touch */
+  .btn-quantum-advanced:active {
+    transform: scale(0.95);
+  }
+  
+  .holographic-card-advanced:active {
+    transform: scale(0.98);
+  }
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  /* Ensure proper contrast in dark mode */
+  .text-gray-300 {
+    color: #f3f4f6;
+  }
+  
+  .text-gray-400 {
+    color: #d1d5db;
+  }
+  
+  /* Enhanced glow effects for dark mode */
+  .neon-advanced-glow {
+    text-shadow:
+      0 0 10px currentColor,
+      0 0 20px currentColor,
+      0 0 30px currentColor,
+      0 0 40px currentColor,
+      0 0 50px currentColor;
+  }
+}
+
+/* Light mode optimizations */
+@media (prefers-color-scheme: light) {
+  /* Adjust colors for light mode */
+  .bg-gradient-to-r.from-slate-900 {
+    background: linear-gradient(to right, #1e293b, #7c3aed, #1e293b);
+  }
+  
+  .text-white {
+    color: #1f2937;
+  }
+  
+  /* Reduce glow intensity in light mode */
+  .neon-advanced-glow {
+    text-shadow:
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor;
+  }
+}
+
+/* Performance optimizations */
+@media (max-width: 768px) {
+  /* Reduce complex animations on mobile */
+  .quantum-field-advanced {
+    animation: none;
+  }
+  
+  .plasma-effect-advanced::before {
+    animation: none;
+  }
+  
+  .holographic-grid-advanced {
+    animation: none;
+  }
+  
+  .data-stream-advanced::before {
+    animation: none;
+  }
+}
+
+/* Loading state optimizations */
+.loading-skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading-skeleton 1.5s infinite;
+}
+
+@keyframes loading-skeleton {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Error state styling */
+.error-state {
+  border: 2px solid #ef4444;
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.error-state::before {
+  content: "⚠️";
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.25rem;
+}
+
+/* Success state styling */
+.success-state {
+  border: 2px solid #10b981;
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+.success-state::before {
+  content: "✓";
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  font-size: 1.25rem;
+  color: #10b981;
+}
