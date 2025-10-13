@@ -1,124 +1,104 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useState, useCallback } from 'react';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
-  loadTime: number
-  firstContentfulPaint: number
-  largestContentfulPaint: number
-  firstInputDelay: number
-  cumulativeLayoutShift: number
-  timeToInteractive: number
+  loadTime?: number;
+  firstContentfulPaint?: number;
+  largestContentfulPaint?: number;
+  interactionToNextPaint?: number;
+  cumulativeLayoutShift?: number;
+  timeToFirstByte?: number;
 }
 
-export const usePerformanceMonitor = () => {
-  const metricsRef = useRef<PerformanceMetrics>({
-    loadTime: 0,
-    firstContentfulPaint: 0,
-    largestContentfulPaint: 0,
-    firstInputDelay: 0,
-    cumulativeLayoutShift: 0,
-    timeToInteractive: 0
-  })
+interface UsePerformanceMonitorOptions {
+  enabled?: boolean;
+  onMetricUpdate?: (metric: PerformanceMetrics) => void;
+  debug?: boolean;
+}
+
+export const usePerformanceMonitor = (options: UsePerformanceMonitorOptions = {}) => {
+  const { enabled = true, onMetricUpdate, debug = false } = options;
+  const [metrics, setMetrics] = useState<PerformanceMetrics>({});
+  const [isVisible, setIsVisible] = useState(false);
+
+  const updateMetric = useCallback((metric: any) => {
+    if (!enabled) return;
+
+    const metricName = metric.name === 'CLS' ? 'cumulativeLayoutShift' : 
+                      metric.name === 'INP' ? 'interactionToNextPaint' :
+                      metric.name === 'FCP' ? 'firstContentfulPaint' :
+                      metric.name === 'LCP' ? 'largestContentfulPaint' :
+                      metric.name === 'TTFB' ? 'timeToFirstByte' : 'loadTime';
+
+    setMetrics(prev => {
+      const newMetrics = {
+        ...prev,
+        [metricName]: metric.value
+      };
+      
+      onMetricUpdate?.(newMetrics);
+      
+      if (debug) {
+        console.log(`Performance metric updated: ${metricName}`, metric.value);
+      }
+      
+      return newMetrics;
+    });
+  }, [enabled, onMetricUpdate, debug]);
 
   useEffect(() => {
+    if (!enabled || typeof window === 'undefined') return;
+
+    // Measure Core Web Vitals
+    onCLS(updateMetric);
+    onINP(updateMetric);
+    onFCP(updateMetric);
+    onLCP(updateMetric);
+    onTTFB(updateMetric);
+
     const measurePerformance = () => {
-      if (typeof window === 'undefined' || !window.performance) return
-
-      // Measure page load time
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      
       if (navigation) {
-        metricsRef.current.loadTime = navigation.loadEventEnd - navigation.loadEventStart
+        const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+        updateMetric({ name: 'loadTime', value: loadTime });
       }
+    };
 
-      // Measure Core Web Vitals
-      const measureWebVitals = () => {
-        // First Contentful Paint (FCP)
-        const fcpEntry = performance.getEntriesByName('first-contentful-paint')[0]
-        if (fcpEntry) {
-          metricsRef.current.firstContentfulPaint = fcpEntry.startTime
-        }
-
-        // Largest Contentful Paint (LCP)
-        const lcpObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1]
-          metricsRef.current.largestContentfulPaint = lastEntry.startTime
-        })
-        lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] })
-
-        // First Input Delay (FID)
-        const fidObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry: any) => {
-            metricsRef.current.firstInputDelay = entry.processingStart - entry.startTime
-          })
-        })
-        fidObserver.observe({ entryTypes: ['first-input'] })
-
-        // Cumulative Layout Shift (CLS)
-        let clsValue = 0
-        const clsObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          entries.forEach((entry: any) => {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value
-            }
-          })
-          metricsRef.current.cumulativeLayoutShift = clsValue
-        })
-        clsObserver.observe({ entryTypes: ['layout-shift'] })
-
-        // Time to Interactive (TTI) - approximation
-        const ttiObserver = new PerformanceObserver((list) => {
-          const entries = list.getEntries()
-          const lastEntry = entries[entries.length - 1]
-          metricsRef.current.timeToInteractive = lastEntry.startTime
-        })
-        ttiObserver.observe({ entryTypes: ['measure'] })
-
-        // Cleanup observers after 10 seconds
-        setTimeout(() => {
-          lcpObserver.disconnect()
-          fidObserver.disconnect()
-          clsObserver.disconnect()
-          ttiObserver.disconnect()
-        }, 10000)
-      }
-
-      // Log performance metrics
-      const logMetrics = () => {
-        // Send to analytics service
-        if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'performance_metrics', {
-            load_time: metricsRef.current.loadTime,
-            first_contentful_paint: metricsRef.current.firstContentfulPaint,
-            largest_contentful_paint: metricsRef.current.largestContentfulPaint,
-            first_input_delay: metricsRef.current.firstInputDelay,
-            cumulative_layout_shift: metricsRef.current.cumulativeLayoutShift,
-            time_to_interactive: metricsRef.current.timeToInteractive
-          })
-        }
-      }
-
-      // Start measuring after page load
-      if (document.readyState === 'complete') {
-        measureWebVitals()
-      } else {
-        window.addEventListener('load', measureWebVitals)
-      }
-
-      // Log metrics after 5 seconds
-      setTimeout(logMetrics, 5000)
+    // Measure after page load
+    if (document.readyState === 'complete') {
+      measurePerformance();
+    } else {
+      window.addEventListener('load', measurePerformance);
     }
-
-    measurePerformance()
 
     // Cleanup
     return () => {
-      // Cleanup is handled by the setTimeout in measureWebVitals
-    }
-  }, [])
+      window.removeEventListener('load', measurePerformance);
+    };
+  }, [enabled, updateMetric]);
 
-  return metricsRef.current
-}
+  const getMetricColor = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'text-green-600';
+    if (value <= thresholds.poor) return 'text-yellow-600';
+    return 'text-red-600';
+  };
 
-export default usePerformanceMonitor
+  const getMetricStatus = (value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'good';
+    if (value <= thresholds.poor) return 'needs-improvement';
+    return 'poor';
+  };
+
+  const toggleVisibility = useCallback(() => {
+    setIsVisible(prev => !prev);
+  }, []);
+
+  return {
+    metrics,
+    isVisible,
+    toggleVisibility,
+    getMetricColor,
+    getMetricStatus
+  };
+};

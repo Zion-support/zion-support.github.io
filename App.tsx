@@ -1,5 +1,5 @@
 "use client";
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
@@ -22,6 +22,9 @@ import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
 import { usePerformanceOptimization } from "./hooks/usePerformanceOptimization";
+import { usePerformanceMonitor } from "./app/hooks/usePerformanceMonitor";
+import LazyImage from "./app/components/LazyImage";
+import SkeletonLoader from "./app/components/SkeletonLoader";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -211,6 +214,25 @@ function App() {
     enableCodeSplitting: true,
     enableCaching: true,
   });
+
+  // Initialize performance monitoring
+  const { metrics, isVisible, toggleVisibility } = usePerformanceMonitor({
+    enabled: process.env.NODE_ENV === 'development',
+    debug: true
+  });
+
+  // Register service worker
+  useEffect(() => {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
+  }, []);
 
   return (
     <ErrorHandler>

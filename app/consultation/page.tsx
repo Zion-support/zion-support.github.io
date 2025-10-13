@@ -168,15 +168,8 @@ export default function Consultation() {
           content="free consultation, technology advisory, AI strategy, digital transformation, cybersecurity audit, cloud migration, technology planning"
         />
       </Helmet>
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Consultation</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional consultation services coming soon.
-=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -360,8 +353,7 @@ export default function Consultation() {
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Services Section */}
       <section className="py-16 px-4">
@@ -429,40 +421,11 @@ export default function Consultation() {
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Schedule a consultation with our experts and discover how technology can drive your success.
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
           </p>
-=======
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(120,119,198,0.3),transparent_50%)]"></div>
-        
-        {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-block">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
-                Free
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                  {" "}Consultation
-                </span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
-              </h1>
-            </div>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Get expert guidance on your technology initiatives. Our free consultations help you 
-              make informed decisions about AI, digital transformation, and technology investments.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="#consultation-form"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-              >
-                Schedule Now
-                <Calendar className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <Link
-                to="/contact"
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Contact Us
@@ -471,7 +434,6 @@ export default function Consultation() {
             </div>
           </div>
         </section>
->>>>>>> cursor/website-audit-and-update-with-deployment-6e33
 
         {/* Consultation Types */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
