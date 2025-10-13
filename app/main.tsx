@@ -26,6 +26,4 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
- origin/cursor/analyze-improve-and-deploy-application-1232;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

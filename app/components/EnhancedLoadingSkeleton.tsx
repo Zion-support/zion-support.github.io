@@ -3,7 +3,6 @@ import React from 'react';
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from "react-helmet-async";
 const EnhancedLoadingSkeletonPage: React.FC = () => {
   const features = [
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -19,5 +18,4 @@ const EnhancedLoadingSkeletonPage: React.FC = () => {
 description: 'Worldwide deployment and support for international businesses'
   }
     }
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

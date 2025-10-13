@@ -5,7 +5,6 @@ import FuturisticBackground from '../components/FuturisticBackground';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 const ZionAIEmailAnalyzerPage: React.FC = () => {
-=======
 import { Link , Mail, Brain, BarChart3, Shield, Zap, ArrowRight, CheckCircle, Star, Users, Award, Clock, Target  } from "react-router-dom";
 import EnhancedSEO from "../components/EnhancedSEO";
 import FuturisticCard from "../components/FuturisticCard";
@@ -45,7 +44,6 @@ const ZionAIEmailAnalyzerPage = () => {
     "Automated compliance monitoring",
     "Real-time performance analytics",
     "Advanced threat detection"
-  ]; origin/cursor/analyze-improve-and-deploy-application-1579
 ;
   const pricingPlans = [
     {
@@ -263,5 +261,4 @@ price: "$99",
     </div>
   );
 };
-export default ZionAIEmailAnalyzerPage; origin/cursor/analyze-improve-and-deploy-application-1579
 ;

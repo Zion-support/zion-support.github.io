@@ -1,4 +1,3 @@
- origin/cursor/analyze-improve-and-deploy-application-1232;
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
@@ -21,7 +20,6 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
                     </div><div;
                       key={service.title}
                       className="cyber-card group hover:scale-105 transition-all duration-300"
-                      style={{ animationDelay: `${index * 100}ms` }} origin/cursor/analyze-improve-and-deploy-application-1247;
                      /><div className="p-8" /><div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform">,</div>
                           <service.icon className="w-8 h-8 text-white" />
                         </div>
@@ -46,7 +44,6 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
               </div>
             </section>
             {/* Features Section */}
-            <section className="py-20" /><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> origin/cursor/analyze-improve-and-deploy-application-1247;
                 </div><div className="text-center mb-16" /><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
                     Why Choose Zion Tech Group?
                   </h2>
@@ -72,7 +69,6 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
               </div>
             </section>
             {/* Testimonials Section */}
-            <section className="py-20 bg-slate-900/50" /><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> origin/cursor/analyze-improve-and-deploy-application-1247;
                 </div><div className="text-center mb-16" /><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
                     What Our Clients Say;
                   </h2>
@@ -115,7 +111,6 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
               </div>
             </section>
             {/* CTA Section */}
-            <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600" /><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" /><h2 className="text-3xl md:text-4xl font-bold text-white mb-6"> origin/cursor/analyze-improve-and-deploy-application-1247;
                   Ready to Transform Your Business?</h2>
                 </h2>
                 <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">Let's discuss how our AI and IT solutions can drive your digital transformation and accelerate growth.</p>
@@ -164,5 +159,4 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer';
   )
 }
 HomePage.displayName = 'HomePage'
-export default HomePage origin/cursor/analyze-improve-and-deploy-application-1247
 ;

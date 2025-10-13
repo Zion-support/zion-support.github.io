@@ -1,7 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 const ItSupportPage: React.FC = () => {
- origin/cursor/analyze-improve-and-deploy-application-1247;
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -13,10 +12,7 @@ const ItSupportPage: React.FC = () => {
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
 benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
- origin/cursor/analyze-improve-and-deploy-application-1247;
         <title>Page - Zion Tech Group</title>
         <meta />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
       </Helmet>
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

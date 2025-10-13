@@ -2,7 +2,6 @@
   ]
 </span>
               <br /><span className="text-white">Solutions</span>
-            </h1> origin/cursor/analyze-improve-and-deploy-application-1232;
             <p>Transform your business with our advanced systemmonitor solutions.;</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
@@ -71,10 +70,8 @@
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
     </div>
     </>
   );
 };
-export default SystemMonitor; origin/cursor/analyze-improve-and-deploy-application-1247
 ;

@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
- origin/cursor/analyze-improve-and-deploy-application-1232;
     {
       icon: Zap,
       title: 'High Performance',
@@ -85,7 +84,6 @@ return (
                   Learn More,</button>
   </
               </div>
- origin/cursor/analyze-improve-and-deploy-application-1247;
           </div>
         </div>
       </section>
@@ -175,5 +173,4 @@ export default GlobalErrorPage;
   </h2>
   </button>
   </button>
-  </h1> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

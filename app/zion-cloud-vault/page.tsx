@@ -63,7 +63,6 @@ export default function ZionCloudVault() {
       ],
       popular: false;
     }
-=======
 'use client';
 import React from 'react';
 import { Helmet , ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock  } from "react-helmet-async";
@@ -96,7 +95,6 @@ const ZionCloudVaultPage: React.FC = () => {
     'Enhanced decision-making capabilities',
     '24/7 monitoring and support',
     'Easy integration with existing systems',
-    'Proven ROI within 90 days' origin/cursor/analyze-improve-and-deploy-application-1232;
   ];
   const testimonials = [
     {
@@ -110,7 +108,6 @@ name: 'Sarah Johnson',
       name: 'Michael Chen',
       company: 'DataFlow Systems',
       role: 'CEO',
-      content: 'The performance improvements we\'ve seen are remarkable. Excellent service!', origin/cursor/analyze-improve-and-deploy-application-1232;
       rating: 5;
     }
   ];
@@ -184,7 +181,6 @@ const getGradientColors = () => {
             {/* Testimonials */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {testimonials.map((testimonial, index) => (
-                </div><div key={index} className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10"> origin/cursor/analyze-improve-and-deploy-application-1232;
                   </div><div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       </div><Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
@@ -192,7 +188,6 @@ const getGradientColors = () => {
                   </div>
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div /><p className="text-white font-semibold">{testimonial.name}</p>
-                    <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p> origin/cursor/analyze-improve-and-deploy-application-1232;
                   </div>
                 </div>
               ))}
@@ -217,5 +212,4 @@ const getGradientColors = () => {
     </React.Fragment>
   );
 };
-export default ZionCloudVaultPage; origin/cursor/analyze-improve-and-deploy-application-1232
 ;

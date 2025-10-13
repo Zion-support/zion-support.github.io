@@ -6,7 +6,6 @@ import { Helmet , CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarC
       icon: Brain,
       title: 'AI-Powered Intelligence',
       description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: BarChart,
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -16,7 +15,6 @@ import { Helmet , CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarC
 benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']
     },
     {
- origin/cursor/analyze-improve-and-deploy-application-1247;
       <Helmet /><title>Loading - Zion Tech Group</title>
       <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">{/* Hero Section */</main>} <section className="relative py-20 px-4 sm: px-6 lg:px-8">,</section>
           <div className="max-w-7xl mx-auto" /><div className="text-center" /><h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
@@ -62,5 +60,4 @@ export default LoadingPage;
   </h2>
   </button>
   </button>
-  </h1> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

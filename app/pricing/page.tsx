@@ -1,9 +1,6 @@
-'use client'; origin/cursor/analyze-improve-and-deploy-application-1247;
 import React from 'react';
 import { Helmet , ArrowRight, CheckCircle, Brain, Zap, Globe  } from "react-helmet-async";
-import { Helmet , Link  } from "react-helmet-async"; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;
- origin/cursor/analyze-improve-and-deploy-application-1232;
 const PricingPage: React.FC = () => {
   const plans: PricingPlan[] = [
     {
@@ -24,7 +21,6 @@ const PricingPage: React.FC = () => {
       cta: 'Get Started',
       icon: Users;
     },
-    { origin/cursor/analyze-improve-and-deploy-application-1247;
       name: 'Professional',
       price: '$7,999',
       period: '/month',
@@ -44,7 +40,6 @@ const PricingPage: React.FC = () => {
       cta: 'Start Free Trial',
       icon: Building;
     },
-    { origin/cursor/analyze-improve-and-deploy-application-1247;
       name: 'Enterprise',
       price: 'Custom',
       period: '',
@@ -60,21 +55,17 @@ const PricingPage: React.FC = () => {
         'Dedicated Team',
         'On-premise Deployment',
         'Custom Training',
-        'Compliance Support' origin/cursor/analyze-improve-and-deploy-application-1247;
       ],
       popular: false,
       cta: 'Contact Sales',
       icon: Shield;
     }
   ];
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;
 return (
     <React.Fragment>
- origin/cursor/analyze-improve-and-deploy-application-1247</React>
       </Helmet>
 <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
- origin/cursor/analyze-improve-and-deploy-application-1460
 ;
 export default PricingPage;
             </div><p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -179,12 +170,10 @@ export default PricingPage;
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-400 mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center" /><span className="text-5xl font-bold text-white">{plan.price}</span>
-                      <span className="text-gray-400 ml-2">{plan.period}</span> origin/cursor/analyze-improve-and-deploy-application-1247;
                     </div>
                   </div>
                   <ul className="space-y-4 mb-8">
                     {plan.features.map((feature, featureIndex) => (
-</ul><li key={featureIndex} className="flex items-start" /><CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" /> origin/cursor/analyze-improve-and-deploy-application-1247;
                         <span className="text-gray-300">{feature}</span>
                       </li>
                     ))}
@@ -199,7 +188,6 @@ export default PricingPage;
                   >
                     {plan.cta}
                     </Link><ArrowRight className="w-5 h-5 ml-2" />
-                  </Link> origin/cursor/analyze-improve-and-deploy-application-1247;
                 </div>
               ))}
             </div>
@@ -281,7 +269,6 @@ export default PricingPage;
               >
                 Contact Sales;
                 </Link><ArrowRight className="w-5 h-5 ml-2" />
-              </Link> origin/cursor/analyze-improve-and-deploy-application-1247;
             </div>
           </div>
         </section>
@@ -339,21 +326,15 @@ export default PricingPage;
                 </a>
               </div>
 export default PricingPage;
- origin/cursor/analyze-improve-and-deploy-application-1009;
   return (
     <>
       <Helmet /><title>Pricing - Zion Tech Group</title>
- origin/cursor/analyze-improve-and-deploy-application-0fac;
         </div>
       </div>
- origin/cursor/analyze-improve-and-deploy-application-1507;
     </React.Fragment>
   )
 }
 export default PricingPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c;
- origin/cursor/analyze-improve-and-deploy-application-1460;
   );
 };
-export default PricingPage; origin/cursor/analyze-improve-and-deploy-application-1247
 ;

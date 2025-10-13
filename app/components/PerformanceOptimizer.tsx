@@ -1,20 +1,14 @@
 'use client';
- origin/cursor/analyze-improve-and-deploy-application-0fac;
- origin/cursor/analyze-improve-and-deploy-application-0fdb
 ;
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
- origin/cursor/analyze-improve-and-deploy-application-0e37;
 }
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
 const [isOptimized, setIsOptimized] = useState(false);
- origin/cursor/analyze-improve-and-deploy-application-1247;
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
- origin/cursor/analyze-improve-and-deploy-application-0ff3;
- origin/cursor/analyze-improve-and-deploy-application-15ad;
 };
 // Lazy load non-critical components;
     const lazyLoadComponents = () => {
@@ -68,6 +62,3 @@ const [isOptimized, setIsOptimized] = useState(false);
   }, [metrics])
   return null;
 }
-export default PerformanceOptimizer origin/cursor/analyze-improve-and-deploy-application-0e37;
- origin/cursor/analyze-improve-and-deploy-application-0f1c;
- origin/cursor/analyze-improve-and-deploy-application-1247</PerformanceOptimizerProps>

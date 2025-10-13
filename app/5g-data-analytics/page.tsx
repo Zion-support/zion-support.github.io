@@ -16,5 +16,4 @@ const FiveGDataAnalyticsPage = () => {
     </div>
   );
 };
-export default FiveGDataAnalyticsPage; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

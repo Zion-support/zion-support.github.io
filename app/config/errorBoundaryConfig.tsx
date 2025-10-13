@@ -29,7 +29,6 @@ const ErrorboundaryconfigPage = () => {
               Learn More</Link>
             </Link>
           </div>
-=======
 /**
  * Error Boundary Configuration;
  * Centralized configuration for error handling across the application;
@@ -150,7 +149,6 @@ function DefaultErrorFallback({
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
             Go Home</button>
-          </button> origin/cursor/analyze-improve-and-deploy-application-1247;
         </div>
       </div>
     </div>
@@ -261,4 +259,3 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',
   };
 }
-export default getErrorBoundaryConfig; origin/cursor/analyze-improve-and-deploy-application-1247</string>

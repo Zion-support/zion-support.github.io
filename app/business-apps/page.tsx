@@ -4,14 +4,11 @@ description: 'Seamless cloud integration and deployment solutions'
     },
     {
       icon: Brain,
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1460;
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
 {/* Hero Section */}
-      <section className="relative py-20 px-4" /><div className="max-w-7xl mx-auto text-center" /><h1 className="text-4xl md: text-6xl font-bold text-white mb-6"> origin/cursor/analyze-improve-and-deploy-application-1247;
             Business Apps,</h1>
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced business app solutions.</p>
@@ -34,7 +31,6 @@ description: 'Seamless cloud integration and deployment solutions'
         </div>
       </section>
 {/* Features Section */}
-      <section className="py-16 px-4" /><div className="max-w-7xl mx-auto"> origin/cursor/analyze-improve-and-deploy-application-1247;
           </div><div className="text-center mb-12" /><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
               Why Choose Our Business Apps?
             </h2>
@@ -98,7 +94,6 @@ description: 'Seamless cloud integration and deployment solutions'
         </div>
       </section>
 {/* CTA Section */}
-      <section className="py-16 px-4" /><div className="max-w-4xl mx-auto text-center" /><h2 className="text-3xl md: text-4xl font-bold text-white mb-4"> origin/cursor/analyze-improve-and-deploy-application-1247;
             Ready to Get Started?</h2>
           </h2>
           <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your business app needs and get a customized solution.</p>
@@ -111,9 +106,7 @@ description: 'Seamless cloud integration and deployment solutions'
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
               <Mail className="mr-2 h-5 w-5" />
 Email Us cursor/website-audit-and-update-with-deployment-c0e8;
- origin/cursor/analyze-improve-and-deploy-application-1247;
   </
- origin/cursor/analyze-improve-and-deploy-application-1460;
           </div>
         </div>
         <div className="text-center" /><h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -170,10 +163,8 @@ Email Us cursor/website-audit-and-update-with-deployment-c0e8;
       </div>
     </div>
 </>
-  ); origin/cursor/analyze-improve-and-deploy-application-1507;
 };
 export default BusinessAppsPage;
- origin/cursor/analyze-improve-and-deploy-application-1247;
   </button>
   </button>
   </button>

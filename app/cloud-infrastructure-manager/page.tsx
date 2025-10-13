@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Cloud,
       title: 'Multi-Cloud Management',
@@ -13,7 +12,6 @@ import React from 'react';
       description: 'Advanced analytics and recommendations to reduce cloud costs while maintaining performance.',},
     {icon: Zap,
       title: 'DevOps Integration',
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Centralized cloud infrastructure management',
@@ -24,12 +22,10 @@ const benefits = [
     'Easy deployment and configuration',
     'Multi-cloud support',
     'Expert technical support'
- origin/cursor/analyze-improve-and-deploy-application-1247;
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
 <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">Cloud Infrastructure Manager</h1>
               <p>
-                Streamline your cloud operations with our comprehensive infrastructure management platform. origin/cursor/analyze-improve-and-deploy-application-1247;
                 Monitor, optimize, and scale your cloud resources across multiple providers.</p>
               </p>
               <div className="flex flex-col sm: flex-row gap-4 justify-center" />,
@@ -60,7 +56,6 @@ const benefits = [
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300" />
                   <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4" />
                     <feature.icon className="w-8 h-8 text-white" />
- origin/cursor/analyze-improve-and-deploy-application-1247;
                   <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description</p>}</p>
                 </div>
@@ -68,13 +63,11 @@ const benefits = [
             </div>
           </div>
         </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
                 </div>
               ))}
             </div>
           </div>
         </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
                 </button>
               </div>
             </div>
@@ -84,5 +77,4 @@ const benefits = [
 )
 }
 export default CloudInfrastructureManagerPage;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

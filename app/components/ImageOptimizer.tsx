@@ -26,7 +26,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const imgRef = useRef</ImageOptimizerProps><HTMLImageElement>(null);
-=======
 'use client';
 import React, { useState, useEffect } from 'react';
 interface OptimizedImageProps {
@@ -49,7 +48,6 @@ const OptimizedImage: React.FC</HTMLImageElement><OptimizedImageProps> = ({
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
-  const [hasError, setHasError] = useState(false); origin/cursor/analyze-improve-and-deploy-application-1232
 ;
   useEffect(() => {
     if (priority) return;
@@ -89,7 +87,6 @@ const imgRef = document.querySelector(`[data-src="${src}"]`);
         </div><div ;
           className="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-300 animate-pulse"
           style={{ backgroundImage: `url(${placeholder})`, backgroundSize: 'cover' }}
-        /> origin/cursor/analyze-improve-and-deploy-application-1232;
       )}
       {isInView && (
         <img;
@@ -111,10 +108,8 @@ isLoaded ? 'opacity-100' : 'opacity-0'
         <div ;
           data-src={src}
           className="absolute inset-0 bg-gray-200 animate-pulse"
-        /> origin/cursor/analyze-improve-and-deploy-application-1232;
       )}
     </div>
   );
 };
-export default OptimizedImage; origin/cursor/analyze-improve-and-deploy-application-1232
 ;

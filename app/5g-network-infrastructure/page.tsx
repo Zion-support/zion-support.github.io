@@ -16,5 +16,4 @@ const FiveGNetworkInfrastructurePage = () => {
     </div>
   );
 };
-export default FiveGNetworkInfrastructurePage; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

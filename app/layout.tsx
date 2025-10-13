@@ -23,15 +23,12 @@ description: 'Bank-level security with encryption and compliance standards'
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
     '24/7 technical support',
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
     'Easy integration with existing systems',
- origin/cursor/analyze-improve-and-deploy-application-10c6
 ;
 import MobileNavigation from "./components/MobileNavigation";
 import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;
     'Cost-effective pricing plans',
 return (
@@ -56,7 +53,6 @@ return (
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced layout solutions.</p>
               Powered by cutting-edge AI technology and industry expertise.
             </p>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
               <button className="bg-gradient-to-r from-purple-600 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover: from-purple-700 hover:to-blue-700 transition-all duration-300 flex items-center gap-2">,</button>
                 Get Started;
@@ -171,7 +167,6 @@ return (
         />
       </head>
       <body className='antialiased'>
- origin/cursor/analyze-improve-and-deploy-application-0f74;
  cursor/website-audit-and-update-with-deployment-c0e8;
               Contact our experts to discuss your layout needs and get a customized solution.</body>
             </p>
@@ -191,12 +186,9 @@ return (
       </section>
     </div>
  cursor/fix-errors-and-merge-to-main-e1a2;
- origin/cursor/analyze-improve-and-deploy-application-1507;
   );
 >>>>>>> cursor/fix-errors-and-merge-to-main-cd7c;
  cursor/website-audit-and-update-with-deployment-c0e8;
 };
 export default LayoutPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

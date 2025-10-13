@@ -14,20 +14,9 @@
     "jsxImportSource": "react",
     "strict": true,
     "strictNullChecks": true,
-<<<<<<< HEAD
-<<<<<<< HEAD
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-=======
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
     "noFallthroughCasesInSwitch": true,
-=======
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": false,
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": ".",

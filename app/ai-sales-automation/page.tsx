@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -17,7 +16,6 @@ import React from 'react';
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -26,16 +24,11 @@ const benefits = [
     'Scale operations without proportional staff increases',
 'use client';
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1256;
         </div>
       </div>
     </>
 'Gain competitive advantage with advanced technology'
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1448;
- origin/cursor/analyze-improve-and-deploy-application-1573;
   );
 };
 export default SalesAutomationPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
 ;

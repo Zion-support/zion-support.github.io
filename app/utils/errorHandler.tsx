@@ -6,7 +6,6 @@
 import React, { ErrorInfo, useCallback } from 'react';
 // Error types;
 export enum ErrorType {// Error types;}}export enum ErrorType {}}RUNTIME = 'RUNTIME',
-=======
 /**
  * Advanced Error Handler;
  * Comprehensive error handling utilities for React applications;
@@ -14,7 +13,6 @@ export enum ErrorType {// Error types;}}export enum ErrorType {}}RUNTIME = 'RUNT
 import React, { ErrorInfo, useCallback } from 'react';
 // Error types;
 export enum ErrorType {
-  RUNTIME = 'RUNTIME', origin/cursor/analyze-improve-and-deploy-application-1247;
   NETWORK = 'NETWORK',
   VALIDATION = 'VALIDATION',
   AUTHENTICATION = 'AUTHENTICATION',
@@ -36,7 +34,6 @@ export interface AppError {
   id: string;
   type: ErrorType;
   severity: ErrorSeverity;
-  message: string; origin/cursor/analyze-improve-and-deploy-application-1247;
   stack?: string;
   timestamp: Date;
   userId?: string;
@@ -57,13 +54,11 @@ export interface ErrorHandlerConfig {
   retryDelay: number;
   enableUserNotification: boolean;
   enableConsoleLogging: boolean;
-  enableNetworkLogging: boolean; origin/cursor/analyze-improve-and-deploy-application-1247;
   reportEndpoint?: string;
   logLevel: 'debug' | 'info' | 'warn' | 'error';
 }
 // Default configuration;
 export const defaultErrorHandlerConfig: ErrorHandlerConfig = {
-  enableLogging: true, origin/cursor/analyze-improve-and-deploy-application-1247;
   enableReporting: true,
   enableRetry: true,
   maxRetries: 3,
@@ -91,7 +86,6 @@ export class ErrorHandler {
   // Handle error;
   handleError(error: Error, errorInfo?: ErrorInfo, context?: Record</ErrorHandlerConfig><string, unknown>): AppError {
     const appError: AppError = {
-      id: this.generateErrorId(), origin/cursor/analyze-improve-and-deploy-application-1247;
       type: this.determineErrorType(error),
       severity: this.determineErrorSeverity(error),
       message: error.message,
@@ -115,14 +109,12 @@ componentStack: errorInfo?.componentStack ?? undefined,
       this.notifyUser(appError);
     }
     if (this.config.enableRetry && this.shouldRetry(appError)) {
-      this.scheduleRetry(appError); origin/cursor/analyze-improve-and-deploy-application-1247;
     }
     return appError;
   }
 // Handle network error;
   handleNetworkError(error: Error, url: string, status?: number): AppError {
     const appError: AppError = {
-      id: this.generateErrorId(), origin/cursor/analyze-improve-and-deploy-application-1247;
       type: ErrorType.NETWORK,
       severity: this.determineNetworkErrorSeverity(status),
       message: error.message,
@@ -130,7 +122,6 @@ componentStack: errorInfo?.componentStack ?? undefined,
 timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined,
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
-      context: { networkUrl: url, statusCode: status }, origin/cursor/analyze-improve-and-deploy-application-1247;
       resolved: false,
       retryCount: 0,
     };
@@ -139,7 +130,6 @@ if (this.config.enableLogging) {
       this.logError(appError);
     }
     if (this.config.enableReporting) {
-      this.reportError(appError); origin/cursor/analyze-improve-and-deploy-application-1247;
     }
     return appError;
   }
@@ -152,13 +142,11 @@ if (this.config.enableLogging) {
       message: `Validation error in ${field}: ${message}`,
       timestamp: new Date(),
       url: typeof window !== 'undefined' ? window.location.href : undefined,
-      context: { field, value }, origin/cursor/analyze-improve-and-deploy-application-1247;
       resolved: false,
       retryCount: 0,
     };
     this.errors.push(appError);
 if (this.config.enableLogging) {
-      this.logError(appError); origin/cursor/analyze-improve-and-deploy-application-1247;
     }
     return appError;
   }
@@ -189,7 +177,6 @@ if (this.config.enableLogging) {
       return ErrorType.SERVER;
     }
     if (stack.includes('react') || stack.includes('component')) {
-      return ErrorType.CLIENT; origin/cursor/analyze-improve-and-deploy-application-1247;
     }
     return ErrorType.UNKNOWN;
   }
@@ -203,13 +190,11 @@ if (this.config.enableLogging) {
       return ErrorSeverity.HIGH;
     }
     if (message.includes('warning') || message.includes('deprecated')) {
-      return ErrorSeverity.MEDIUM; origin/cursor/analyze-improve-and-deploy-application-1247;
     }
     return ErrorSeverity.LOW;
   }
 // Determine network error severity;
   private determineNetworkErrorSeverity(status?: number): ErrorSeverity {
-    if (!status) return ErrorSeverity.MEDIUM; origin/cursor/analyze-improve-and-deploy-application-1247;
     if (status >= 500) return ErrorSeverity.HIGH;
     if (status >= 400) return ErrorSeverity.MEDIUM;
     return ErrorSeverity.LOW;
@@ -378,7 +363,6 @@ if (this.config.enableLogging) {
   markErrorResolved(errorId: string): boolean {
     const error = this.errors.find(e => e.id === errorId);
     if (error) {
-      error.resolved = true; origin/cursor/analyze-improve-and-deploy-application-1247;
       return true;
     }
     return false;
@@ -466,7 +450,6 @@ export class ErrorBoundary extends React.Component<
           >
             Try again</button>
           </button>
-        </div> origin/cursor/analyze-improve-and-deploy-application-1247;
       );
     }
     return this.props.children;
@@ -485,7 +468,6 @@ export const useErrorHandler = () => {
     return errorHandler.handleValidationError(field, message, value);
   }, [errorHandler]);
   return {
-    handleError, origin/cursor/analyze-improve-and-deploy-application-1247;
     handleNetworkError,
     handleValidationError,
     getErrors: () => errorHandler.getErrors(),
@@ -493,4 +475,3 @@ export const useErrorHandler = () => {
 clearResolvedErrors: () => errorHandler.clearResolvedErrors(),
   };
 };
-export default ErrorHandler; origin/cursor/analyze-improve-and-deploy-application-1247</string>

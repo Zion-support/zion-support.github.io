@@ -257,5 +257,4 @@ const AIQuantumComputingSimulator: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AIQuantumComputingSimulator; origin/cursor/analyze-improve-and-deploy-application-1232
 ;

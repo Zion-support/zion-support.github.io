@@ -37,13 +37,11 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
               imageObserver.unobserve(img);
             }
           }
- origin/cursor/analyze-improve-and-deploy-application-0fac;
     }
     return () => {
       document.removeEventListener('DOMContentLoaded', optimizeImages);
     };
   }, [enableImageOptimization]);
-import React, { useEffect, useState, useCallback } from 'react'; origin/cursor/analyze-improve-and-deploy-application-1232;
 interface PerformanceOptimizerProps {children: React.ReactNode,}
   enableOptimizations?: boolean;}const AdvancedPerformanceOptimizer: React.FC</AdvancedPerformanceOptimizerProps><PerformanceOptimizerProps> = ({,
   children,
@@ -121,7 +119,6 @@ interface PerformanceOptimizerProps {children: React.ReactNode,}
               Our advancedperformanceoptimizer solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
- origin/cursor/analyze-improve-and-deploy-application-0fac
 ;
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', lazyLoadComponents);
@@ -328,6 +325,3 @@ return () => {
   }, [performanceOptimizations]);
   return null;
 };
-export default AdvancedPerformanceOptimizer; origin/cursor/analyze-improve-and-deploy-application-0fac;
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1507</string>

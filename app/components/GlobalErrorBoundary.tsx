@@ -1,4 +1,3 @@
- origin/cursor/analyze-improve-and-deploy-application-0f1c;
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from "react-helmet-async";
 const GlobalErrorBoundaryPage: React.FC = () => {
   const features = [
@@ -78,7 +77,6 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
               </button>
               <button /><Mail>
                 Email Us;
- origin/cursor/analyze-improve-and-deploy-application-1247</Mail>
               </button>
             </div>
             {this.state.errorCount >= 3 && (
@@ -97,6 +95,4 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
               </Link>
             </div>
           </div>
-        </div> origin/cursor/analyze-improve-and-deploy-application-0e37;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

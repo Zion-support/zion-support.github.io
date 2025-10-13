@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet , BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target, CheckCircle, ArrowRight  } from "react-helmet-async";
- origin/cursor/analyze-improve-and-deploy-application-1232;
       description: 'Monitor and optimize conversion funnels to increase sales and reduce cart abandonment.',}]
   return(<React.Fragment>)</React.Fragment>
       </React><Helmet />
@@ -31,5 +30,4 @@ import { Helmet , BarChart, TrendingUp, Users, ShoppingCart, DollarSign, Target,
   )
 }
 export default EcommerceAnalyticsProPage;
-  </h1> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

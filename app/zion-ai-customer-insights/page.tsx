@@ -29,7 +29,6 @@ const ZionAICustomerInsightsPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><Helmet /><title>Zion AI Customer Insights - Understand Your Customers Better</title>
         <meta name="description" content="Gain deep insights into your customers with our AI-powered analytics platform. Understand behavior, predict trends, and boost engagement." />
         <meta name="keywords" content="customer insights, AI analytics, customer behavior, predictive analytics, customer segmentation" />
-=======
 import { 
   Brain, 
   BarChart3, 
@@ -181,7 +180,6 @@ const ZionAiCustomerInsights = () => {
         <title>Zion AI Customer Insights - AI-Powered Customer Analytics Platform | Zion Tech Group</title>
         <meta name="description" content="Transform customer data into actionable insights with Zion AI Customer Insights. Predictive analytics, sentiment analysis, and automated recommendations. Start your free trial!" />
         <meta name="keywords" content="customer insights, AI analytics, sentiment analysis, predictive analytics, customer behavior, churn prediction, customer experience" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-customer-insights" /> origin/cursor/analyze-improve-and-deploy-application-1091;
       </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
@@ -277,7 +275,6 @@ const ZionAiCustomerInsights = () => {
               Start with a free trial and scale as your business grows</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"> origin/cursor/analyze-improve-and-deploy-application-1091;
             {pricingPlans.map((plan, index) => (
               </div><div;
                 key={index}
@@ -373,5 +370,4 @@ const ZionAiCustomerInsights = () => {
               </FuturisticButton>
             </div>
             <div className="mt-8 text-sm text-gray-400" /><p>14-day free trial • No credit card required • Cancel anytime</p>
-export default ZionAiCustomerInsights; origin/cursor/analyze-improve-and-deploy-application-1091
 ;

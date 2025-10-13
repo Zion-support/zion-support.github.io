@@ -1,9 +1,7 @@
 'use client';
- origin/cursor/analyze-improve-and-deploy-application-1232;
     </div>
   );
 }
- origin/cursor/analyze-improve-and-deploy-application-1247;
   const handleLoad = useCallback(() => {
     setIsLoaded(true);
     onLoad?.();
@@ -48,5 +46,4 @@ return (
   );
 });
 OptimizedImage.displayName = 'OptimizedImage';
-export default OptimizedImage; origin/cursor/analyze-improve-and-deploy-application-1247
 ;

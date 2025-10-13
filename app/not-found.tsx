@@ -28,6 +28,4 @@ const NotFoundPage = () => {
             >
               Learn More</Link>
             </Link>
- origin/cursor/analyze-improve-and-deploy-application-0ff3;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

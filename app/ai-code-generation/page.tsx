@@ -4,7 +4,6 @@ export default function AICodeGenerationZionTechGroup() {
   return (
     <>
       <Helmet /><title>AI Code Generation - Zion Tech Group</title>
- origin/cursor/analyze-improve-and-deploy-application-1256;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -21,7 +20,6 @@ export default function AICodeGenerationZionTechGroup() {
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -117,7 +115,6 @@ const benefits = [
       <section className="pt-24 pb-16 px-4" /><div className="max-w-7xl mx-auto text-center" /><div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6" /><Code className="w-4 h-4 mr-2" />
             Revolutionary Coding Technology;
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6"> origin/cursor/analyze-improve-and-deploy-application-1256;
             AI Code Generation</h1>
           </h1>
           <p className="text-lg text-gray-300 mb-8">
@@ -156,6 +153,4 @@ const benefits = [
           </div>
 </React.Fragment>)
 export default AiCodeGenerationPage; cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1256
 ;

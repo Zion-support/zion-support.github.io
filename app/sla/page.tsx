@@ -7,7 +7,5 @@ const SLAPage = () => {
           name="description"
           content="Our commitment to service quality and reliability"
         />
- origin/cursor/analyze-improve-and-deploy-application-1232;
       </Helmet>
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

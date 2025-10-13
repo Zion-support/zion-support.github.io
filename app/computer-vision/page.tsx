@@ -56,5 +56,4 @@ const benefits = [
 </>
   );
 };
-export default PagePage; origin/cursor/analyze-improve-and-deploy-application-1507
 ;

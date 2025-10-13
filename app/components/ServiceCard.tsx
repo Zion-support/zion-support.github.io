@@ -1,5 +1,4 @@
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1507;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><Helmet /><title>ServiceCard | Zion Tech Group</title>
         <meta name="description" content="Professional ServiceCard services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -24,7 +23,6 @@ import React from 'react';
                 Learn More</button>
               </button>
             </div>
- origin/cursor/analyze-improve-and-deploy-application-1232;
           </div>
         </div>
       </section>
@@ -60,5 +58,4 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         {description}</p>
       </p>
     </article>
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

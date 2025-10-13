@@ -1,8 +1,6 @@
 import React, { memo, useMemo } from 'react';
 interface OptimizedLoadingSpinnerProps {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'; origin/cursor/analyze-improve-and-deploy-application-1247;
   variant?: 'dots' | 'pulse' | 'spinner' | 'skeleton' | 'bars';
- origin/cursor/analyze-improve-and-deploy-application-0ff3;
   text?: string;
   className?: string;
   color?: 'blue' | 'gray' | 'green' | 'red' | 'purple';
@@ -118,7 +116,6 @@ variant = 'spinner',
     return (
       <div className={containerClasses} /><div className='text-center'>
           {renderSpinner}
-          {text && ( origin/cursor/analyze-improve-and-deploy-application-1247;
             </div><p className={`mt-2 text-gray-600 ${textSizeClasses[size]}`}>
               {text}</p>
             </p>

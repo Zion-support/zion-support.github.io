@@ -34,5 +34,4 @@ const SearchPage = () => {
     </div>
   );
 };
-export default SearchPage; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

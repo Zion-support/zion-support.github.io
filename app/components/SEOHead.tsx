@@ -19,7 +19,6 @@ const defaultStructuredData = {
 };
 }
     "@context": "https://schema.org", cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
     "@type": "Organization",
     "name": "Zion Tech Group",
     "description": "Leading provider of AI and IT solutions",
@@ -45,8 +44,6 @@ const defaultStructuredData = {
       "https://facebook.com/ziontechgroup",
       "https://instagram.com/ziontechgroup",
       "https://youtube.com/@ziontechgroup"
- origin/cursor/analyze-improve-and-deploy-application-0e37;
-=======
       </SEOHeadProps><meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
       {/* Additional Meta Tags */}
@@ -81,5 +78,4 @@ const defaultStructuredData = {
     </Helmet>
   )
 }
-export default SEOHead origin/cursor/analyze-improve-and-deploy-application-1247
 ;

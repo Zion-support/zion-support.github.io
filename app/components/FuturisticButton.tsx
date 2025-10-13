@@ -1,8 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; origin/cursor/analyze-improve-and-deploy-application-1091
 ;
 // import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;
 const FuturisticButton: React.FC<FuturisticButtonProps> = ({
   children,
@@ -55,5 +53,4 @@ const FuturisticButton: React.FC<FuturisticButtonProps> = ({
     </button>
   );
 };
-export default FuturisticButton; origin/cursor/analyze-improve-and-deploy-application-1091
 ;

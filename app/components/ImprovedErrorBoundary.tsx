@@ -1,6 +1,5 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { Link } from 'react-router-dom';
- origin/cursor/analyze-improve-and-deploy-application-1247;
     // Call custom error handler if provided;
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
@@ -51,7 +50,6 @@ import { Link } from 'react-router-dom';
   };
   render(): ReactNode {
     if (this.state.hasError) {
-      // Use custom fallback if provided origin/cursor/analyze-improve-and-deploy-application-1247;
       if (this.props.fallback) {
         return this.props.fallback;
       }
@@ -75,7 +73,6 @@ import { Link } from 'react-router-dom';
                     <pre style={styles.stack} /><strong>Component Stack:</strong>
                       {this.state.errorInfo.componentStack}
                     </pre>
-                  )} origin/cursor/analyze-improve-and-deploy-application-1247;
                 </div>
               </details>
             )}
@@ -105,7 +102,6 @@ import { Link } from 'react-router-dom';
               <p style={styles.errorCount}>
                 This error has occurred {this.state.errorCount} times</p>
               </p>
-            )} origin/cursor/analyze-improve-and-deploy-application-1247;
           </div>
         </div>
       );
@@ -113,6 +109,4 @@ import { Link } from 'react-router-dom';
     return this.props.children;
   }
 }
- origin/cursor/analyze-improve-and-deploy-application-1091;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

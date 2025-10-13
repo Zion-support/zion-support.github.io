@@ -1,44 +1,21 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
- origin/cursor/analyze-improve-and-deploy-application-1247;
-    {
-      icon: Brain,
-      title: 'AI-Powered Intelligence',
-      description: 'Advanced AI algorithms that provide intelligent insights and recommendations.',
-      benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
-    {icon: BarChart,
-      title: 'Advanced Analytics',
-      description: 'Comprehensive analytics dashboard with real-time data visualization.',
-      benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
-    {icon: Target,
-      title: 'Precision Targeting',
-      description: 'Target specific goals and objectives with precision and accuracy.',
-      benefits: ['Goal tracking', 'Performance optimization', 'Strategic planning', 'Success metrics']},
-    {icon: TrendingUp,
-      title: 'Growth Optimization',
-description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247;
-const benefits = [
-];
-    'Increase efficiency by up to 50%',
-    'Reduce costs by 30% with automation',
-    'Improve decision-making with AI insights',
-    'Scale operations without proportional staff increases',
-'Gain competitive advantage with advanced technology'
- origin/cursor/analyze-improve-and-deploy-application-1247;
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
+
+const Page: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group services page" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Page</h1>
+          <p className="text-xl text-gray-300 mb-8">Coming Soon</p>
+        </div>
       </div>
-<Footer />
- origin/cursor/analyze-improve-and-deploy-application-1247
-;
+    </>
+  );
+};
+
+export default Page;

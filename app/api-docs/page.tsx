@@ -1,10 +1,7 @@
 'use client';
-import React, { useState } from 'react'; origin/cursor/analyze-improve-and-deploy-application-10c6;
 import Link from 'next/link';
 import React from 'react'
-import { Helmet } from 'react-helmet-async' origin/cursor/analyze-improve-and-deploy-application-0f1c
 ;
- origin/cursor/analyze-improve-and-deploy-application-1256;
 const ApiDocsPage: React.FC = () => {
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
   const copyToClipboard = (code: string, id: string) => {
@@ -14,18 +11,15 @@ const ApiDocsPage: React.FC = () => {
   };
   const apiEndpoints = [
     {
- origin/cursor/analyze-improve-and-deploy-application-1247;
       title: 'AI Services',
       description: 'Access our AI-powered services through RESTful APIs',
       endpoints: [
- origin/cursor/analyze-improve-and-deploy-application-1247;
     ...category,
     endpoints: category.endpoints.filter(endpoint => ,)
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       endpoint.path.toLowerCase().includes(searchQuery.toLowerCase())
 )
- origin/cursor/analyze-improve-and-deploy-application-1247</string>
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Complete API documentation for Zion Tech Group's AI and IT solutions.</p>
             Explore endpoints, authentication, and integration guides.
@@ -45,21 +39,18 @@ const ApiDocsPage: React.FC = () => {
 <button className="text-purple-400 hover:text-purple-300 font-medium" /> cursor/fix-errors-and-merge-to-main-e1a2;
                 Get API Key →
 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
- origin/cursor/analyze-improve-and-deploy-application-1247</div>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3" />2. Make Request</h3>
               <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
 <button className="text-purple-400 hover:text-purple-300 font-medium" /> cursor/fix-errors-and-merge-to-main-e1a2;
                 View Examples →
 <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
- origin/cursor/analyze-improve-and-deploy-application-1247</div>
               </div>
               <h3 className="text-xl font-semibold text-white mb-3" />3. Integrate</h3>
               <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
 <button className="text-purple-400 hover:text-purple-300 font-medium" /> cursor/fix-errors-and-merge-to-main-e1a2;
                 Start Building →
 {/* API Endpoints */}
- origin/cursor/analyze-improve-and-deploy-application-1247;
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">{filteredEndpoints.map((category, categoryIndex) => (</div>
               <div key={categoryIndex}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10" /><div className="flex items-center gap-4 mb-8" /><div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
@@ -95,7 +86,6 @@ return (
                     >
                       {copiedCode === endpoint.id ? </button><Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                       <span>{copiedCode === endpoint.id ? 'Copied!' : 'Copy'}</span>
-                    </button> origin/cursor/analyze-improve-and-deploy-application-1256;
                   </div>
                   <div /><h3 className="text-2xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">{category.description</p>}</p>
@@ -104,13 +94,11 @@ return (
 <div className="space-y-6">
                   {category.endpoints.map((endpoint, endpointIndex) => (
                     </div><div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
- origin/cursor/analyze-improve-and-deploy-application-1247;
                       </div><div className="flex items-center justify-between mb-4" /><div className="flex items-center gap-4" /><span className={`px-3 py-1 rounded-full text-sm font-medium ${
                             endpoint.method === 'POST' 
                               ? 'bg-green-500/20 text-green-400' 
 : 'bg-blue-500/20 text-blue-400'
                           }`}>
- origin/cursor/analyze-improve-and-deploy-application-1247;
                           </span><code className="text-purple-400 font-mono">{endpoint.path}</code>
                         </div>
                         <button;
@@ -122,7 +110,6 @@ return (
                               Copied!
                             </React.Fragment>
                           ) : (
-                            <React .Fragment> origin/cursor/analyze-improve-and-deploy-application-1247;
                               </React><Copy className="w-4 h-4" />
                               Copy;
  cursor/fix-errors-and-merge-to-main-e1a2;
@@ -131,22 +118,18 @@ return (
                         </button>
                       </div>
 <p className="text-gray-300 mb-4">{endpoint.description}</p>
- origin/cursor/analyze-improve-and-deploy-application-1247;
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto" /><pre className="text-gray-300 text-sm" /><code>{endpoint.code}</code>
  cursor/fix-errors-and-merge-to-main-e1a2;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
                         </pre>
                       </div>
                     </div>
                   ))}
                 </div>
- origin/cursor/analyze-improve-and-deploy-application-1256;
               </div>
             ))}
           </div>
 </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center" /><a;
               href="mailto:dev@ziontechgroup.com"
@@ -164,5 +147,4 @@ return (
         </section>
       </main>
       <Footer />
- origin/cursor/analyze-improve-and-deploy-application-1256
 ;

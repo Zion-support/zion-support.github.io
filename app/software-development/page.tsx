@@ -1,4 +1,3 @@
-======= origin/cursor/analyze-improve-and-deploy-application-1091;
 import { Helmet , Link  } from "react-helmet-async";
 import { ArrowRight } from "lucide-react";
 export default function Softwaredevelopment() {
@@ -22,5 +21,4 @@ export default function Softwaredevelopment() {
             </Link><ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
- origin/cursor/analyze-improve-and-deploy-application-1091
 ;

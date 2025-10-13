@@ -300,5 +300,4 @@ const SmartInventoryOptimizerPage = () => {
     </div>
   );
 };
-export default SmartInventoryOptimizerPage; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

@@ -1,5 +1,4 @@
 import { Helmet , Link  } from "react-helmet-async";
-import { ArrowRight } from "lucide-react"; origin/cursor/analyze-improve-and-deploy-application-0ff3;
 export default function MobileOptimizer() {
   useEffect(() => {
     // Add viewport meta tag if not present;
@@ -38,5 +37,4 @@ export default function MobileOptimizer() {
   }, []);
   return null;
 }
- origin/cursor/analyze-improve-and-deploy-application-0fdb
 ;

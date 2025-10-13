@@ -5,7 +5,6 @@ export default function ZionAiAnalyticsPro() {
     {
       name: "Starter",
       price: "$299",
-=======
   CheckCircle, 
   Star, 
   Users, 
@@ -75,7 +74,6 @@ export default function ZionAiAnalyticsPro() {
       title: "White-label Solutions",
       description: "Rebrand our analytics platform as your own with complete white-label customization options for agencies and resellers.",
       icon: <Settings className="w-8 h-8" />,
-      benefits: ["Custom branding", "Domain mapping", "API access", "Reseller tools"] origin/cursor/analyze-improve-and-deploy-application-1091;
       period: "month",
       description: "Perfect for small businesses getting started with analytics",
       features: [
@@ -84,7 +82,6 @@ export default function ZionAiAnalyticsPro() {
         "Standard reports",
         "Email support",
         "1 user account"
- origin/cursor/analyze-improve-and-deploy-application-1091;
       period: "month",
       description: "Ideal for growing businesses with advanced analytics needs",
       features: [
@@ -95,7 +92,6 @@ export default function ZionAiAnalyticsPro() {
         "Up to 10 user accounts",
         "API access",
         "Mobile apps"
- origin/cursor/analyze-improve-and-deploy-application-1091;
       period: "month",
       description: "Complete solution for large organizations",
       features: [
@@ -107,7 +103,6 @@ export default function ZionAiAnalyticsPro() {
         "White-label options",
 content: "Zion AI Analytics Pro transformed our decision-making process. We can now see trends before they happen and make data-driven decisions with confidence.",
       content: "The predictive analytics feature helped us increase our sales by 40% in just 3 months. The ROI was immediate and substantial.",
-      content: "The real-time dashboards give us instant visibility into campaign performance. Our team productivity increased by 60%.", origin/cursor/analyze-improve-and-deploy-application-1091;
     { number: "40%", label: "Increase in Decision Speed", icon: <Zap className="w-6 h-6" /> },
     { number: "60%", label: "Reduction in Manual Reporting", icon: <FileText className="w-6 h-6" /> },
     { number: "99.9%", label: "Data Accuracy", icon: <Award className="w-6 h-6" /> },
@@ -122,7 +117,6 @@ content: "Zion AI Analytics Pro transformed our decision-making process. We can 
         <meta;
           name="keywords"
           content="AI analytics, business intelligence, predictive analytics, real-time dashboards, data visualization, business reporting, AI insights, data analytics platform"
- origin/cursor/analyze-improve-and-deploy-application-1091;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         </meta><div className="absolute inset-0 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 animate-pulse" />
@@ -363,5 +357,4 @@ content: "Zion AI Analytics Pro transformed our decision-making process. We can 
     </React.Fragment>
   );
 }
- origin/cursor/analyze-improve-and-deploy-application-1091
 ;

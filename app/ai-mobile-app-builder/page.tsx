@@ -4,7 +4,6 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiMobileAppBuilderPage: React.FC = () => {
-const features = [ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -22,19 +21,16 @@ const features = [ origin/cursor/analyze-improve-and-deploy-application-1247;
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',      benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
     }
-  }]; origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-'Gain competitive advantage with advanced technology' origin/cursor/analyze-improve-and-deploy-application-1247;
   ]
 return (
     <>
   <Helmet />
         <title>Ai Mobile App Builder - Zion Tech Group</title>
-<meta name="description" content="Advanced AI solutions" /> origin/cursor/analyze-improve-and-deploy-application-1247;
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation />
@@ -54,7 +50,6 @@ return (
             <div className="flex flex-col sm: flex-row gap-4 justify-center" />
               <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Get Started</button>
               </button>
-              <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">View Demo, origin/cursor/analyze-improve-and-deploy-application-1247</button>
               </button>
             </div>
           </div>
@@ -80,7 +75,6 @@ return (
                   <h3 className="text-xl font-bold text-white mb-4">{feature.title}</h3>
                   <p className="text-gray-300 mb-4">{feature.description}</p>
                   {
-    feature.benefits && ( origin/cursor/analyze-improve-and-deploy-application-1247;
                     <ul>
                       {feature.benefits.map((benefit, idx) => (} </ul><li /><CheckCircle />
                           {benefit} </li>
@@ -110,7 +104,6 @@ return (
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" />
                     <CheckCircle />
                   </div>
-                  <p className="text-lg text-white font-medium">{benefit}</p> origin/cursor/analyze-improve-and-deploy-application-1247;
                 </div>
               ))}
             </div>
@@ -128,7 +121,6 @@ return (
               <div className="flex flex-col sm: flex-row gap-4 justify-center" />
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Contact Us</button>
                 </button>
-                <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Learn More origin/cursor/analyze-improve-and-deploy-application-1247</button>
                 </button>
               </div>
             </div>
@@ -138,5 +130,4 @@ return (
 <Footer />
   )
 }
-export default AiMobileAppBuilderPage origin/cursor/analyze-improve-and-deploy-application-1247
 ;

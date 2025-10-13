@@ -1,11 +1,8 @@
 import React from "react";
 import { ArrowRight, Star, Zap, Target, Monitor , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../components/SEOOptimizer"; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;
 import React from 'react;
- origin/cursor/analyze-improve-and-deploy-application-1256;
- origin/cursor/analyze-improve-and-deploy-application-1448;
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
@@ -43,14 +40,11 @@ import React from 'react;
     },
     {
 import React from 'react'
-import { Helmet } from 'react-helmet-async' origin/cursor/analyze-improve-and-deploy-application-0f1c
 ;
- origin/cursor/analyze-improve-and-deploy-application-1247;
   return (
     <React.Fragment>
  cursor/fix-errors-and-merge-to-main-6ce7;
       </React><Helmet /><title>IT Services - Zion Tech Group</title>
- origin/cursor/analyze-improve-and-deploy-application-1247;
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -82,7 +76,6 @@ import { Helmet } from 'react-helmet-async' origin/cursor/analyze-improve-and-de
                   </p>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
-</ul><li key={featureIndex} className="flex items-center text-sm text-gray-300" /><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /> origin/cursor/analyze-improve-and-deploy-application-1256;
                         {feature}
                       </li>
                     ))}
@@ -114,11 +107,8 @@ import { Helmet } from 'react-helmet-async' origin/cursor/analyze-improve-and-de
             </a>
           </div>
         </section>
- origin/cursor/analyze-improve-and-deploy-application-1256;
     </React.Fragment>
   );
 };
-export default ITServicesPage; origin/cursor/analyze-improve-and-deploy-application-0e37;
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

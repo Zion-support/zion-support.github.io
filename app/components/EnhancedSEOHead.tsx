@@ -1,27 +1,22 @@
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-0e37
 ;
 import React from 'react;
 import { Helmet } from react-helmet-async;
 interface EnhancedSEOHeadProps {}
   keywords?: string[];
 import { Helmet } from 'react-helmet-async';
- origin/cursor/analyze-improve-and-deploy-application-1247;
   canonicalUrl?: string;
   ogImage?: string;
- origin/cursor/analyze-improve-and-deploy-application-1460;
   ogImage?: string;
   ogType?: string;
   twitterCard?: string;
   structuredData?: object;
- origin/cursor/analyze-improve-and-deploy-application-1460;
 }
 const EnhancedSEOHead: React.FC<SEOHeadProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
 description = 'Leading provider of AI and IT solutions. Transform your business with cutting-edge technology, cloud services, cybersecurity, and digital transformation solutions.',
   keywords = 'AI solutions, IT services, cloud computing, cybersecurity, digital transformation, machine learning, artificial intelligence, business automation',
   canonicalUrl = 'https://ziontechgroup.com',
-  ogImage = 'https://ziontechgroup.com/images/og-image.jpg', origin/cursor/analyze-improve-and-deploy-application-1460;
   ogType = 'website',
   twitterCard = 'summary_large_image',
   structuredData;
@@ -52,8 +47,6 @@ const EnhancedSEOHead: React.FC</SEOHeadProps><SEOHeadProps> = ({
   tags = ["AI", "IT", "Technology", "Digital Transformation"]
 }) => {
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : 'https://ziontechgroup.com');
-  const currentTime = new Date().toISOString(); origin/cursor/analyze-improve-and-deploy-application-0e37;
- origin/cursor/analyze-improve-and-deploy-application-1460;
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -72,8 +65,6 @@ const EnhancedSEOHead: React.FC</SEOHeadProps><SEOHeadProps> = ({
       "contactType": "customer service",
       "email": "kleber@ziontechgroup.com",
       "availableLanguage": "English"
-    }, origin/cursor/analyze-improve-and-deploy-application-0e37;
- origin/cursor/analyze-improve-and-deploy-application-1460;
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "364 E Main St STE 1008",
@@ -89,7 +80,6 @@ const EnhancedSEOHead: React.FC</SEOHeadProps><SEOHeadProps> = ({
       "email": "kleber@ziontechgroup.com"
     },
     "sameAs": [
- origin/cursor/analyze-improve-and-deploy-application-1460;
       "https://twitter.com/ziontechgroup",
       "https://linkedin.com/company/ziontechgroup"
     ],
@@ -124,19 +114,15 @@ const EnhancedSEOHead: React.FC</SEOHeadProps><SEOHeadProps> = ({
           "priceCurrency": "USD",
           "unitText": "PROJECT"
         }
-      } origin/cursor/analyze-improve-and-deploy-application-0e37;
- origin/cursor/analyze-improve-and-deploy-application-1460;
     ]
   };
   const finalStructuredData = structuredData || defaultStructuredData;
- origin/cursor/analyze-improve-and-deploy-application-1460;
   return (
     </SEOHeadProps><Helmet>
       {/* Basic Meta Tags */}
       </Helmet><title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
- origin/cursor/analyze-improve-and-deploy-application-1460;
       <meta name="author" content="Zion Tech Group" />
       <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
       <meta name="googlebot" content="index, follow" />
@@ -147,15 +133,12 @@ const EnhancedSEOHead: React.FC</SEOHeadProps><SEOHeadProps> = ({
       <meta name="language" content="en-US" />
       <meta name="revisit-after" content="7 days" />
       <meta name="distribution" content="global" />
-      <meta name="rating" content="general" /> origin/cursor/analyze-improve-and-deploy-application-0e37;
- origin/cursor/analyze-improve-and-deploy-application-1460
       ;
       {/* Canonical URL */}
       <link rel="canonical" href={canonicalUrl} />
       {/* Open Graph Meta Tags */}
 <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:type" content={ogType} /> origin/cursor/analyze-improve-and-deploy-application-1460;
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
@@ -163,14 +146,12 @@ const EnhancedSEOHead: React.FC</SEOHeadProps><SEOHeadProps> = ({
       <meta property="og:image:alt" content={title} />
       <meta property="og:site_name" content="Zion Tech Group" />
       <meta property="og:locale" content="en_US" />
- origin/cursor/analyze-improve-and-deploy-application-0e37
       ;
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
- origin/cursor/analyze-improve-and-deploy-application-1460;
       <meta name="twitter:image:alt" content={title} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
@@ -438,7 +419,6 @@ const EnhancedSEOHead: React.FC</string><EnhancedSEOHeadProps> = ({
       {/* Additional SEO */}
       <link rel="canonical" href={canonicalUrl} />
       <meta name="robots" content={`${noIndex ? 'noindex' : 'index'}, ${noFollow ? 'nofollow' : 'follow'}`} />
-      {/* Favicon and Icons */} origin/cursor/analyze-improve-and-deploy-application-0fac;
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -477,9 +457,6 @@ const EnhancedSEOHead: React.FC</string><EnhancedSEOHeadProps> = ({
             ]
           })
         }}
-      /> origin/cursor/analyze-improve-and-deploy-application-0e37;
- origin/cursor/analyze-improve-and-deploy-application-0fac;
- origin/cursor/analyze-improve-and-deploy-application-1247
       ;
       {/* Favicon and Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -495,11 +472,7 @@ const EnhancedSEOHead: React.FC</string><EnhancedSEOHeadProps> = ({
       )}
 {/* Default Organization Structured Data */}
       <script type="application/ld+json">
- origin/cursor/analyze-improve-and-deploy-application-1460</script>
     </Helmet>
   );
 };
-export default EnhancedSEOHead; origin/cursor/analyze-improve-and-deploy-application-0e37;
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1460
 ;

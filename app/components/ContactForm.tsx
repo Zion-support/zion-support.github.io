@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 interface FormData {name: string,}
- origin/cursor/analyze-improve-and-deploy-application-1247;
     email: '',
     company: '',
     phone: '',
@@ -53,10 +52,8 @@ const ContactForm: React.FC = () => {
         message: "",
         service: "",
       });
- origin/cursor/analyze-improve-and-deploy-application-13a2;
     } finally {
       setIsSubmitting(false);
  cursor/fix-errors-and-merge-to-main-6ce7;
 }
 export default ContactForm;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247</FormData>

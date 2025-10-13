@@ -58,5 +58,4 @@ const ServiceTemplate: React.FC<ServiceTemplateProps> = ({
     </div>
   );
 };
-export default ServiceTemplate; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

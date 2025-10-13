@@ -30,5 +30,4 @@ export const useSearchParams = () => {
   const params = new URLSearchParams(window.location.search);
   return params;
 };
-export default { useRouter, usePathname, useSearchParams }; origin/cursor/analyze-improve-and-deploy-application-1247
 ;

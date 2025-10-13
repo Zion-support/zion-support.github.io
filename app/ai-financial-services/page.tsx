@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 export default function AiFinancialServicesZionTechGroup() {
   return (
     <React.Fragment /><Helmet /><title>AiFinancialServices - Zion Tech Group</title>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 const AiFinancialServicesPage: React.FC = () => {
@@ -12,7 +11,6 @@ const AiFinancialServicesPage: React.FC = () => {
   <Helmet />
         <title>AI Financial Services - Zion Tech Group</title>
         <meta name="description" content="Advanced AI-powered financial services including fraud detection, risk assessment, algorithmic trading, and financial forecasting solutions." />
-        <meta name="keywords" content="AI financial services, fintech AI, fraud detection, risk assessment, algorithmic trading, financial forecasting" /> origin/cursor/analyze-improve-and-deploy-application-1232;
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center" /><div className="text-center" /><h1 className="text-4xl font-bold text-white mb-6">
             AiFinancialServices</h1>
@@ -32,5 +30,4 @@ const AiFinancialServicesPage: React.FC = () => {
     </React.Fragment>
   )
 }
-export default AiFinancialServicesPage origin/cursor/analyze-improve-and-deploy-application-1247
 ;

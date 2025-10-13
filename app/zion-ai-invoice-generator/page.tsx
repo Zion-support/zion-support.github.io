@@ -309,5 +309,4 @@ const ZionAIInvoiceGeneratorPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default ZionAIInvoiceGeneratorPage; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

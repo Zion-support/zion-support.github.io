@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 export default function AiHrSolutionsZionTechGroup() {
   return (
     <React.Fragment /><Helmet /><title>AiHrSolutions - Zion Tech Group</title>
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
 const AiHrSolutionsPage: React.FC = () => {
@@ -12,7 +11,6 @@ const AiHrSolutionsPage: React.FC = () => {
   <Helmet />
         <title>AI HR Solutions - Zion Tech Group</title>
         <meta name="description" content="Transform your HR operations with AI-powered solutions for recruitment, employee management, performance analytics, and workforce optimization." />
-        <meta name="keywords" content="AI HR solutions, HR automation, recruitment AI, employee management, performance analytics, workforce optimization" /> origin/cursor/analyze-improve-and-deploy-application-1232;
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center" /><div className="text-center" /><h1 className="text-4xl font-bold text-white mb-6">AiHrSolutions</h1>
           <p className="text-lg text-gray-300 mb-8">
@@ -30,5 +28,4 @@ const AiHrSolutionsPage: React.FC = () => {
     </React.Fragment>
   )
 }
-export default AiHrSolutionsPage origin/cursor/analyze-improve-and-deploy-application-1247
 ;

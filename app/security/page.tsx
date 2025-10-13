@@ -12,7 +12,6 @@ const benefits = [
 ];
   return (
     <>
- origin/cursor/analyze-improve-and-deploy-application-1507;
       <Helmet /><title>Page | Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -26,12 +25,10 @@ const benefits = [
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300" />
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4" />
                   <feature.icon className="w-8 h-8 text-white" />
- origin/cursor/analyze-improve-and-deploy-application-1247;
                 <p className="text-gray-300 text-lg">{benefit}</p>
               ))
           </div>
         </div>
       </section>
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

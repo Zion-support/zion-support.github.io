@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet , Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRight, Zap, Brain  } from "react-helmet-async";
- origin/cursor/analyze-improve-and-deploy-application-1232;
       description: 'End-to-end encryption, secure backups, and multi-factor authentication to protect sensitive medical data.'}]
   return(<React.Fragment>)</React.Fragment>
       </React><Helmet />
@@ -31,5 +30,4 @@ import { Helmet , Shield, FileText, Users, Lock, BarChart, CheckCircle, ArrowRig
   )
 }
 export default MedicalRecordsManagerPage;
-  </h1> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

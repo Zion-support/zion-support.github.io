@@ -113,5 +113,4 @@ const ErrorFallback: React.FC<ErrorFallbackProps> = ({
     </div>
   );
 };
-export default ErrorFallback; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

@@ -154,5 +154,4 @@ export const BlurImage: React.FC<ImprovedImageProps & { blurDataURL?: string }> 
     />
   );
 };
-export default ImprovedImage; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

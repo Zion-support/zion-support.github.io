@@ -1,6 +1,5 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
- origin/cursor/analyze-improve-and-deploy-application-1247;
   return (
     <React.Fragment /><Helmet /><title>Status - Zion Tech Group</title>
         <meta name="description" content="Zion Tech Group - Status page" />
@@ -10,7 +9,6 @@ import { Helmet } from 'react-helmet-async'
               Status</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              This page is under construction. Please check back soon. origin/cursor/analyze-improve-and-deploy-application-1009</p>
             </p>
           </div>
         </div>
@@ -19,6 +17,4 @@ import { Helmet } from 'react-helmet-async'
     </React.Fragment>
 );
 };
-export default StatusPage; origin/cursor/analyze-improve-and-deploy-application-1009;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

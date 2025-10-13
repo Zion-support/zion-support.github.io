@@ -1,29 +1,21 @@
-'use client';
 import React from 'react';
- cursor/fix-errors-and-merge-to-main-6ce7;
-          </div>
+import { Helmet } from 'react-helmet-async';
+
+const Page: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content="Zion Tech Group services page" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-6">Page</h1>
+          <p className="text-xl text-gray-300 mb-8">Coming Soon</p>
         </div>
-      </section>
-          </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-{/* Benefits Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5" /><div className="max-w-7xl mx-auto" /><div className="text-center mb-16" /><h2 className="text-3xl md:text-4xl font-bold text-white mb-4"> cursor/fix-errors-and-merge-to-main-6ce7;
-              Key Benefits</h2>
-            </h2>
-            <p>
-              Experience the power of our page solutions for your business.</p>
-            </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-</>
+      </div>
+    </>
   );
 };
-export default PagePage; origin/cursor/analyze-improve-and-deploy-application-1507
-;
+
+export default Page;

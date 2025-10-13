@@ -257,5 +257,4 @@ const AINeuralInterface: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AINeuralInterface; origin/cursor/analyze-improve-and-deploy-application-1232
 ;

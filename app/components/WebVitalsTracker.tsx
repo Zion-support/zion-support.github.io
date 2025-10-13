@@ -57,5 +57,4 @@ const sendToAnalytics = (metric: WebVitalsData) => {
           navigationType: 'reload',
         });
       }
-    } origin/cursor/analyze-improve-and-deploy-application-1091
 ;

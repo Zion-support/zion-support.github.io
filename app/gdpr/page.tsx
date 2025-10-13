@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1247;
           </div>
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
@@ -32,5 +31,4 @@ import React from 'react';
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

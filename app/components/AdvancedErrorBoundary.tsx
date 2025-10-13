@@ -20,7 +20,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
       hasError: true, 
       error,
       errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
- origin/cursor/analyze-improve-and-deploy-application-13a2;
     // Example: Send to your error reporting service;
     // You could send this to your backend:
     // fetch('/api/error-report', {
@@ -45,11 +44,9 @@ class AdvancedErrorBoundary extends Component<Props, State> {
     const body = `Error: ${error?.message}\n\nStack: ${error?.stack}\n\nPlease describe what you were doing when this error occurred:`;
     const mailtoLink = `mailto:support@ziontechgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     window.open(mailtoLink);
- origin/cursor/analyze-improve-and-deploy-application-1247;
   };
   render() {
     if (this.state.hasError) {
-// Custom fallback UI origin/cursor/analyze-improve-and-deploy-application-1247;
       if (this.props.fallback) {
         return this.props.fallback;
       }
@@ -134,7 +131,6 @@ class AdvancedErrorBoundary extends Component<Props, State> {
                     kleber@ziontechgroup.com</Link>
                   </Link>
                 </p>
-              </div> origin/cursor/analyze-improve-and-deploy-application-1247;
             </div>
           </div>
         </div>
@@ -144,5 +140,4 @@ class AdvancedErrorBoundary extends Component<Props, State> {
   }
 }
 export default AdvancedErrorBoundary;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

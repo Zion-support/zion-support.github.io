@@ -762,5 +762,4 @@ const ImprovedNavigation = () => {
     </React.Fragment>
   );
 };
-export default ImprovedNavigation; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

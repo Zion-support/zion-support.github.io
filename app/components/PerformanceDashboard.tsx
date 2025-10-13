@@ -23,7 +23,6 @@ const PerformanceDashboard: React.FC = () => {
   useEffect(() => {
     const updateMetrics = () => {
       const navigation = performance.getEntriesByType(
-        'navigation' origin/cursor/analyze-improve-and-deploy-application-1247;
       )[0] as PerformanceNavigationTiming;
       const loadTime = navigation;
         ? navigation.loadEventEnd - navigation.fetchStart;
@@ -31,7 +30,6 @@ const PerformanceDashboard: React.FC = () => {
 // Measure render time;
       const renderStart = performance.now();
       const renderTime = performance.now() - renderStart;
-      // Measure memory usage origin/cursor/analyze-improve-and-deploy-application-1247;
       let memoryUsage = 0;
       if ('memory' in performance) {
         const memory = (performance as {memory?: { usedJSHeapSize: number ,}}}).memory;
@@ -42,7 +40,6 @@ let fps = 0;
       if ('requestAnimationFrame' in window) {
         let lastTime = performance.now();
         let frameCount = 0;
-        const measureFPS = (currentTime: number) => { origin/cursor/analyze-improve-and-deploy-application-1247;
           frameCount++;
           if (currentTime - lastTime >= 1000) {
             fps = Math.round((frameCount * 1000) / (currentTime - lastTime));
@@ -56,19 +53,16 @@ lastTime = currentTime;
       setMetrics({
         loadTime,
         renderTime,
-        memoryUsage, origin/cursor/analyze-improve-and-deploy-application-1247;
         fps,
       });
     };
     updateMetrics();
 // Update metrics every 5 seconds;
     const interval = setInterval(updateMetrics, 5000);
-    return () => clearInterval(interval); origin/cursor/analyze-improve-and-deploy-application-1247;
   }, []);
   if (!isVisible) {
     return (
       </PerformanceMetrics><button;
-onClick={() => setIsVisible(true)} origin/cursor/analyze-improve-and-deploy-application-1247;
         className="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
       >
         Show Performance</button>
@@ -78,7 +72,6 @@ onClick={() => setIsVisible(true)} origin/cursor/analyze-improve-and-deploy-appl
   return (
     <div className="fixed bottom-4 right-4 bg-white border border-gray-300 rounded-lg shadow-lg p-4 w-80 max-h-96 overflow-y-auto" /><div className="flex justify-between items-center mb-4" /><h3 className="text-lg font-semibold text-gray-800">Performance Dashboard</h3>
         <button;
-onClick={() => setIsVisible(false)} origin/cursor/analyze-improve-and-deploy-application-1247;
           className="text-gray-500 hover:text-gray-700"
         >
           ×</button>
@@ -105,7 +98,6 @@ onClick={() => setIsVisible(false)} origin/cursor/analyze-improve-and-deploy-app
         <div className="pt-2 border-t border-gray-200" /><div className="text-xs text-gray-500">
             Last updated: {new Date().toLocaleTimeString()}</div>
           </div>
-        </div> origin/cursor/analyze-improve-and-deploy-application-1247;
       </div>
     </div>
     </>

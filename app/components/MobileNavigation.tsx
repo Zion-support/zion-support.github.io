@@ -106,5 +106,4 @@ const MobileNavigation: React.FC = () => {
     </React.Fragment>
   );
 };
-export default MobileNavigation; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

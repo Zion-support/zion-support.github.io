@@ -14,5 +14,4 @@ export function dynamic<T extends ComponentType<unknown>>(
     </Suspense>
   );
 }
-export default dynamic; origin/cursor/analyze-improve-and-deploy-application-1247
 ;

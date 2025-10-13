@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet , Home, Users, DollarSign, BarChart, Shield, Zap  } from "react-helmet-async";
- origin/cursor/analyze-improve-and-deploy-application-1232;
     { icon: Home, title: 'Property Portfolio Management', description: 'Comprehensive management of multiple properties with AI insights.' ,},
     {icon: Users, title: 'Tenant Management', description: 'Automated tenant screening, communication, and relationship management.'},
     {icon: DollarSign, title: 'Rent Optimization', description: 'AI-powered rent pricing and revenue optimization strategies.' ,},
@@ -27,5 +26,4 @@ import { Helmet , Home, Users, DollarSign, BarChart, Shield, Zap  } from "react-
     </React.Fragment>
   )
 }
-export default PropertyManagementAIPage origin/cursor/analyze-improve-and-deploy-application-1247
 ;

@@ -1,5 +1,4 @@
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1091;
   title: string;
   description: string;
   keywords?: string;
@@ -7,7 +6,6 @@ import React from 'react';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 interface EnhancedSEOProps {
- origin/cursor/analyze-improve-and-deploy-application-1507
 ;
   return (
     <Helmet>
@@ -25,21 +23,17 @@ interface EnhancedSEOProps {
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonicalUrl || 'https://ziontechgroup.com'} />
-      <meta property="og:title" content={fullTitle} /> origin/cursor/analyze-improve-and-deploy-application-1507;
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
 {keywords && <meta name="keywords" content={keywords} />}
- origin/cursor/analyze-improve-and-deploy-application-13a2;
- origin/cursor/analyze-improve-and-deploy-application-1507;
       {/* Structured Data */}
       {structuredData && (
         <script type="application/ld+json">
           {JSON.stringify(structuredData)}</script>
         </script>
       )}
- origin/cursor/analyze-improve-and-deploy-application-1507
       ;
       {/* Additional Structured Data for Organization */}
       <script type="application/ld+json">
@@ -59,7 +53,6 @@ interface EnhancedSEOProps {
             "contactType": "Customer Service",
             "areaServed": "US",
             "availableLanguage": "en"
-          }, origin/cursor/analyze-improve-and-deploy-application-1507;
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "364 E Main St STE 1008",
@@ -68,21 +61,13 @@ interface EnhancedSEOProps {
             "postalCode": "19709",
             "addressCountry": "US"
           },
- origin/cursor/analyze-improve-and-deploy-application-1507;
           "sameAs": [
             "https://twitter.com/ziontechgroup",
             "https://linkedin.com/company/ziontechgroup"
           ]
         })}</script>
       </script>
- origin/cursor/analyze-improve-and-deploy-application-1091;
- origin/cursor/analyze-improve-and-deploy-application-13a2;
- origin/cursor/analyze-improve-and-deploy-application-1507;
     </Helmet>
   );
 };
- origin/cursor/analyze-improve-and-deploy-application-0fdb;
- origin/cursor/analyze-improve-and-deploy-application-1091;
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1507
 ;

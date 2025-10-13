@@ -1,6 +1,4 @@
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from "react-helmet-async";const ServiceCardSkeletonPage: React.FC = () => {
-const features = [ origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -15,7 +13,6 @@ const features = [ origin/cursor/analyze-improve-and-deploy-application-1247;
       title: 'Global Reach',
 import { Helmet , Link  } from "react-helmet-async";
 import { ArrowRight } from "lucide-react";
-export default function ComponentsPage() { origin/cursor/analyze-improve-and-deploy-application-0ff3;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><Helmet /><title>ServiceCardSkeleton | Zion Tech Group</title>
         <meta name="description" content="Professional ServiceCardSkeleton services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -100,5 +97,4 @@ export default function ComponentsPage() { origin/cursor/analyze-improve-and-dep
   );
 };
 export default ServiceCardSkeletonPage;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

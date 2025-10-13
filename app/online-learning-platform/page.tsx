@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet , BookOpen, Users, BarChart, Zap, Shield, CheckCircle  } from "react-helmet-async";
- origin/cursor/analyze-improve-and-deploy-application-1232;
     { icon: BookOpen, title: 'Course Management', description: 'Create, organize, and manage educational content with AI-powered course recommendations.'},
     {icon: Users, title: 'Student Analytics', description: 'Track student progress and engagement with detailed analytics and insights.' ,},
     {icon: BarChart, title: 'Performance Tracking', description: 'Monitor learning outcomes and identify areas for improvement.' ,},
@@ -27,5 +26,4 @@ import { Helmet , BookOpen, Users, BarChart, Zap, Shield, CheckCircle  } from "r
     </React.Fragment>
   )
 }
-export default OnlineLearningPlatformPage origin/cursor/analyze-improve-and-deploy-application-1247
 ;

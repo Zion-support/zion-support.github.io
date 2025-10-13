@@ -1,6 +1,5 @@
 import { Helmet , Link  } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Zap, Globe, Phone } from "lucide-react";
-=======
   CheckCircle, 
   Star, 
   Users, 
@@ -38,7 +37,6 @@ import { ArrowRight, CheckCircle, Star, Zap, Globe, Phone } from "lucide-react";
   Fingerprint,
   Search,
   Activity;
-} from "lucide-react"; origin/cursor/analyze-improve-and-deploy-application-1091;
 export default function ZionSecurityShieldPro() {
   const securityStats = [
     { number: "99.9%", label: "Threat Detection Accuracy", icon: <Shield className="w-6 h-6" /> },
@@ -46,7 +44,6 @@ export default function ZionSecurityShieldPro() {
     { number: "24/7", label: "Security Monitoring", icon: <Eye className="w-6 h-6" /> },
     { number: "100%", label: "Compliance Coverage", icon: <Award className="w-6 h-6" /> }
   ];
- origin/cursor/analyze-improve-and-deploy-application-1091;
       period: "month",
       description: "Core security features for small to medium businesses",
       features: [
@@ -55,7 +52,6 @@ export default function ZionSecurityShieldPro() {
         "Firewall management",
         "Standard support",
         "Up to 50 users"
- origin/cursor/analyze-improve-and-deploy-application-1091;
       price: "$799",
       period: "month",
       description: "Advanced security features for growing businesses",
@@ -67,7 +63,6 @@ export default function ZionSecurityShieldPro() {
         "Priority support",
         "Up to 200 users",
         "Mobile app access"
- origin/cursor/analyze-improve-and-deploy-application-1091;
       price: "$1299",
       period: "month",
       description: "Complete security solution for large organizations",
@@ -80,7 +75,6 @@ export default function ZionSecurityShieldPro() {
         "Unlimited users",
         "White-label options",
         "On-premise deployment"
- origin/cursor/analyze-improve-and-deploy-application-1091;
       name: "David Martinez",
       company: "Financial Services Corp",
       role: "CISO",
@@ -114,7 +108,6 @@ export default function ZionSecurityShieldPro() {
         <meta;
           name="keywords"
           content="cybersecurity, AI security, threat detection, automated response, 24/7 monitoring, compliance reporting, vulnerability assessment, multi-factor authentication"
- origin/cursor/analyze-improve-and-deploy-application-1091;
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
         </meta><div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-orange-500/10 to-yellow-500/10 animate-pulse" />
@@ -356,5 +349,4 @@ export default function ZionSecurityShieldPro() {
     </React.Fragment>
   );
 }
- origin/cursor/analyze-improve-and-deploy-application-1091
 ;

@@ -1,11 +1,7 @@
 
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-<<<<<<< HEAD
 import { visualizer } from 'rollup-plugin-visualizer';
-=======
-
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1460
 export default defineConfig({
   plugins: [react()],
   build: {

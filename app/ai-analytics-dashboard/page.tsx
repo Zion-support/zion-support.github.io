@@ -1,5 +1,4 @@
 'use client';
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -16,7 +15,6 @@
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -24,7 +22,6 @@ const benefits = [
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
- origin/cursor/analyze-improve-and-deploy-application-1247;
                   </div>
                   <p className="text-lg text-white font-medium">{benefit</p>}</p>
                 </div>
@@ -32,7 +29,6 @@ const benefits = [
             </div>
           </div>
         </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
                 </button>
               </div>
             </div>
@@ -43,5 +39,4 @@ const benefits = [
 </React.Fragment>)
 export default AiAnalyticsDashboardPage;
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

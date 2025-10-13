@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1247;
         </div>
       </section>
       {/* Benefits Section */} <section className="py-20 px-4" /><div className="max-w-7xl mx-auto" /><div className="text-center mb-16" /><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
@@ -12,7 +11,6 @@ import React from 'react';
               Our enhancedperformancemonitor solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
- origin/cursor/analyze-improve-and-deploy-application-1247;
                 <Phone>
                 Call Now;</Phone>
               </button>
@@ -24,6 +22,4 @@ import React from 'react';
         </div>
 )
 }
-export default EnhancedPerformanceMonitorPage origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1507
 ;

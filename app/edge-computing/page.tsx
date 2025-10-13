@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Cpu,
       title: 'Edge Processing',
@@ -25,7 +24,6 @@ import { Helmet } from 'react-helmet-async';
       benefits: ['Device management', 'Protocol support', 'Data collection', 'Real-time monitoring']},
     {icon: Server,
       title: 'Edge Infrastructure',
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Ultra-Low Latency',
@@ -52,7 +50,6 @@ const useCases = [
                 <div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group" />
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" />
                   <feature.icon className="w-8 h-8 text-white" />
-                </div> origin/cursor/analyze-improve-and-deploy-application-1247;
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description</p>}</p>
                 <ul>
@@ -82,7 +79,6 @@ const useCases = [
     services.map((service, index) => (
   }
               <div key={index} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-all duration-300" />
- origin/cursor/analyze-improve-and-deploy-application-1247;
                 <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description</p>}</p>
               </div>
@@ -90,7 +86,6 @@ const useCases = [
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
                 <h3 className="text-xl font-semibold text-white mb-3">{useCase.title}</h3>
                 <p className="text-gray-300">{useCase.description</p>}</p>
               </div>
@@ -98,7 +93,6 @@ const useCases = [
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ))}
@@ -106,5 +100,4 @@ const useCases = [
         </div>
       </section>
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

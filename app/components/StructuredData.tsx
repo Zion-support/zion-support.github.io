@@ -2,7 +2,6 @@
 import React from 'react'
 interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness'
-  data?: Record<string, unknown> origin/cursor/analyze-improve-and-deploy-application-1247;
 }
 const StructuredData: React.FC</string><StructuredDataProps> = ({ type = 'Organization', data }) => {
   const getStructuredData = () => {
@@ -101,7 +100,6 @@ const StructuredData: React.FC</string><StructuredDataProps> = ({ type = 'Organi
             ]
           }
         };
-const structuredData = data || getDefaultData() origin/cursor/analyze-improve-and-deploy-application-1247;
   return (
     </StructuredDataProps><script;
       type="application/ld+json"
@@ -110,6 +108,5 @@ const structuredData = data || getDefaultData() origin/cursor/analyze-improve-an
       }}
     />
 )
-} origin/cursor/analyze-improve-and-deploy-application-1247
 ;
 export default StructuredData;

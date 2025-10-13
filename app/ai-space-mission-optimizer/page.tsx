@@ -257,5 +257,4 @@ const AISpaceMissionOptimizer: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AISpaceMissionOptimizer; origin/cursor/analyze-improve-and-deploy-application-1232
 ;

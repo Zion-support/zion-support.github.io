@@ -1,6 +1,5 @@
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from "react-helmet-async";
 {icon: Brain,
- origin/cursor/analyze-improve-and-deploy-application-1247;
       title: 'AI-Powered Solutions',
       description: 'Advanced AI technology to transform your business operations and improve efficiency',},
     {icon: Zap,
@@ -11,7 +10,6 @@ import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Bra
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Advanced AI technology integration',
@@ -37,7 +35,6 @@ const ItInfrastructurePage: React.FC = () => {
     </React.Fragment>
   )
 }
-export default ItInfrastructurePage origin/cursor/analyze-improve-and-deploy-application-0f1c;
  cursor/fix-errors-and-merge-to-main-6ce7;
           </div>
         </div>
@@ -64,6 +61,4 @@ export default ItInfrastructurePage origin/cursor/analyze-improve-and-deploy-app
       </section>
 </div>)
 export default PagePage; cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1507
 ;

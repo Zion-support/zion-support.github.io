@@ -23,6 +23,4 @@ import { Helmet , Link  } from "react-helmet-async";},
   ]
   const testimonials = [
     {
-} origin/cursor/analyze-improve-and-deploy-application-0e37;
- origin/cursor/analyze-improve-and-deploy-application-1091
 ;

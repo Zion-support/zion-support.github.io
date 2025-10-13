@@ -13,11 +13,9 @@ const BusinessIntelligencePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
- origin/cursor/analyze-improve-and-deploy-application-1247;
         <title>Business Intelligence | Zion Tech Group</title>
         <meta name="description" content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business." />
 <h1 className="text-5xl font-bold text-white mb-6">
- origin/cursor/analyze-improve-and-deploy-application-1247</h1>
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced business intelligence solutions.</p>
             Powered by cutting-edge AI technology and industry expertise.
@@ -25,7 +23,6 @@ const BusinessIntelligencePage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our business intelligence solutions deliver unmatched performance, security, and scalability.</p>
           </p>
         </div>
- origin/cursor/analyze-improve-and-deploy-application-1460;
               </div>
             ))}
           </div>
@@ -33,7 +30,6 @@ const BusinessIntelligencePage: React.FC = () => {
 </section>
       {/* Benefits Section */}; cursor/fix-errors-and-merge-to-main-6ce7;
       <section className="py-16 px-4 bg-white/5" /><div className="max-w-7xl mx-auto">
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
           </div><div className="text-center mb-12" /><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our BI Solutions?</h2>
             </h2>
@@ -98,7 +94,6 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let our BI experts help you unlock the full potential of your business data</p>
@@ -136,11 +131,8 @@ const BusinessIntelligencePage: React.FC = () => {
           ))}
         </section>
       </div>
- origin/cursor/analyze-improve-and-deploy-application-1460;
     </div>
-</> origin/cursor/analyze-improve-and-deploy-application-1507;
   );
 };
 export default BusinessIntelligencePage;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

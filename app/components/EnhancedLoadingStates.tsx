@@ -1,9 +1,7 @@
 'use client';
-import { Loader2, Brain, Cloud, Shield, Code } from 'lucide-react'; origin/cursor/analyze-improve-and-deploy-application-1232
 ;
 interface LoadingSpinnerProps {size?: 'sm' | 'md' | 'lg';}
   text?: string;}export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({,
- origin/cursor/analyze-improve-and-deploy-application-1247;
   size = 'md', 
   text = 'Loading...'}) => {const sizeClasses = {
     sm: 'w-4 h-4',
@@ -13,10 +11,8 @@ interface LoadingPageProps {
   message?: string;
   showProgress?: boolean;
   progress?: number;
-} origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;
 export const ServiceCardSkeleton: React.FC = () => (,
-=======
     lg: 'w-12 h-12'
   }
   return (
@@ -35,7 +31,6 @@ export const PageLoader: React.FC = () => (
     </div>
   </div>
 )
-export const ServiceCardSkeleton: React.FC = () => ( origin/cursor/analyze-improve-and-deploy-application-1247;
   <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 animate-pulse" /><div className="w-16 h-16 bg-gray-600 rounded-2xl mb-6" />
     <div className="h-6 bg-gray-600 rounded mb-4" />
     <div className="h-4 bg-gray-600 rounded mb-4" />
@@ -55,7 +50,6 @@ export const ServiceCardSkeleton: React.FC = () => (
       <div className="h-8 bg-gray-300/20 rounded w-24" />
     </div>
   </div>
-=======
 )
 export const StatsSkeleton: React.FC = () => (
   <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -66,7 +60,6 @@ export const StatsSkeleton: React.FC = () => (
     ))}
   </div>
 )
-export const ContentSkeleton: React.FC = () => ( origin/cursor/analyze-improve-and-deploy-application-1247;
   <div className="space-y-6 animate-pulse" /><div className="h-8 bg-gray-600 rounded w-3/4" />
 export const StatsSkeleton: React.FC = () => (
   <div className="text-center animate-pulse" role="status" aria-label="Loading statistics" /><div className="w-16 h-16 bg-gray-300/20 rounded-2xl mx-auto mb-4" />
@@ -85,5 +78,4 @@ export const BlogCardSkeleton: React.FC = () => (
       </div>
     </div>
   </div>
-) origin/cursor/analyze-improve-and-deploy-application-1247
 ;

@@ -268,5 +268,4 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     </div>
   );
 };
-export default ImprovedSidebar; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

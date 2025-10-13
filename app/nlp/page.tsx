@@ -34,8 +34,6 @@ const NLPage = () => {
     </div>
   );
 };
-export default NLPage; origin/cursor/analyze-improve-and-deploy-application-0ff3;
-=======
 'use client';
 import React from 'react'
   ]
@@ -94,5 +92,4 @@ const benefits = [
 </>
   );
 };
-export default PagePage; origin/cursor/analyze-improve-and-deploy-application-1507
 ;

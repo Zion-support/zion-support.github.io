@@ -41,9 +41,7 @@
                   </div>
                 </div>
               </div>
- origin/cursor/analyze-improve-and-deploy-application-1247;
                       placeholder="Tell us about your project or requirements"
-<button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Send Message, origin/cursor/analyze-improve-and-deploy-application-1247</button>
                   </button>
                 </form>
               </div>
@@ -87,5 +85,4 @@ export default HomePage;
   </AccessibilityEnhancer>
   </PerformanceOptimizer>
   </SEOOptimizer>
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

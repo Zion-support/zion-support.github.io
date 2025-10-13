@@ -16,6 +16,5 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { performanceOptimizer, lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics , logger  } from "./utils/performanceOptimizer";
 const App: React.FC = () => {
   useEffect(() => {
- origin/cursor/analyze-improve-and-deploy-application-1247;
  cursor/fix-errors-and-merge-to-main-f512
 ;

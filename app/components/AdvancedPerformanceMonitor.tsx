@@ -10,7 +10,6 @@ interface PerformanceMetrics {
   loadTime: number | null;
 }
 const AdvancedPerformanceMonitor = () => {
- origin/cursor/analyze-improve-and-deploy-application-1232;
     fcp: null,
     lcp: null,
     fid: null,
@@ -36,21 +35,18 @@ memory: null,
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         observers.push(lcpObserver);
       } catch (error) {
- origin/cursor/analyze-improve-and-deploy-application-1256;
     // Cleanup observers;
     return () => {
       observers.forEach(observer => {
         try {
           observer.disconnect();
         } catch (error) {
-} origin/cursor/analyze-improve-and-deploy-application-1256;
       });
     };
   }, []);
   const measureResourceTiming = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) return;
 // eslint-disable-next-line no-console;
-      console.log('Slow resources:', slowResources.map(r => ({ origin/cursor/analyze-improve-and-deploy-application-1256;
           name: r.name,
           duration: r.duration,
           size: r.transferSize,
@@ -95,7 +91,6 @@ memory: null,
   }, []);
   useEffect(() => {
     if (!enableRealTimeMonitoring) return;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
     const cleanup = measureWebVitals();
     measureResourceTiming();
     measureCoreWebVitals();
@@ -103,8 +98,4 @@ memory: null,
     const interval = setInterval(() => {
       measureResourceTiming();
     }, 5000);
-export default AdvancedPerformanceMonitor origin/cursor/analyze-improve-and-deploy-application-0f9e;
- origin/cursor/analyze-improve-and-deploy-application-0ff3;
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-13a2
 ;

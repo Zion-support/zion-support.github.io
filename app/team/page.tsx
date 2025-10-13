@@ -3,11 +3,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
- origin/cursor/analyze-improve-and-deploy-application-13a2;
       </div>
     </>
   )
- origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             ))}
           </div>
@@ -166,6 +164,4 @@ import Footer from '../components/Footer';
           </div>
         </div>
         <Footer />
- origin/cursor/analyze-improve-and-deploy-application-1009;
- origin/cursor/analyze-improve-and-deploy-application-13a2
 ;

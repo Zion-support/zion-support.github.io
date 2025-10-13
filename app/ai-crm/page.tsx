@@ -4,7 +4,6 @@ export default function AiCrmZionTechGroup() {
   return (
     <>
       <Helmet /><title>AiCrm - Zion Tech Group</title>
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
 title: 'AI-Powered Lead Scoring',
@@ -43,7 +42,6 @@ title: 'AI-Powered Lead Scoring',
       icon: Mail,
       stats: '40% higher open rates'
     },
-    { origin/cursor/analyze-improve-and-deploy-application-1256;
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -54,7 +52,6 @@ title: 'AI-Powered Lead Scoring',
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -78,5 +75,3 @@ const benefits = [
               Advanced AI-powered ai crm solution for modern businesses.
             <
             </p><div className="flex flex-col sm:flex-row gap-4 justify-center">
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1256</div>

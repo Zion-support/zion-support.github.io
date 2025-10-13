@@ -9,7 +9,6 @@ const Analytics: React.FC<AnalyticsProps> = ({,
   enablePerformanceMonitoring = true,
   enableErrorTracking = true,
   enableUserBehaviorTracking = true;}}) => {useEffect(() => {
- origin/cursor/analyze-improve-and-deploy-application-1247;
     if (enableGoogleAnalytics) {
       initializeGoogleAnalytics()}}
 if (enablePerformanceMonitoring) {initializePerformanceMonitoring()}}
@@ -32,4 +31,3 @@ const script = document.createElement('script')
     }
     (window as any).gtag = gtag;
 gtag('js', new Date())
- origin/cursor/analyze-improve-and-deploy-application-1232</AnalyticsProps>

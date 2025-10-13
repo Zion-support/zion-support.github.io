@@ -1,7 +1,6 @@
 import { ArrowRight , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
 export default function AiDocumentProcessingZionTechGroup() {
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -18,7 +17,6 @@ export default function AiDocumentProcessingZionTechGroup() {
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -26,5 +24,4 @@ const benefits = [
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
 'Gain competitive advantage with advanced technology'
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

@@ -1,5 +1,4 @@
 import { Link , ArrowRight  } from "react-router-dom";
-export default function EnhancedSkipLink() { origin/cursor/analyze-improve-and-deploy-application-0ff3;
   return (
     <a;
       href="#main-content"
@@ -9,14 +8,11 @@ export default function EnhancedSkipLink() { origin/cursor/analyze-improve-and-d
         const main = document.querySelector('#main-content');
         if (main) {
 main.focus()
-          main.scrollIntoView({ behavior: 'smooth' }) origin/cursor/analyze-improve-and-deploy-application-1247;
         }
       }}
- origin/cursor/analyze-improve-and-deploy-application-1232;
     >
       Skip to main content</a>
     </a>
 )
 }
-export default EnhancedSkipLink origin/cursor/analyze-improve-and-deploy-application-1247
 ;

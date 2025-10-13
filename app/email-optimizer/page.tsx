@@ -13,5 +13,4 @@ const benefits = [
     'Cost-effective pricing plans',
     'Proven track record of success'
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

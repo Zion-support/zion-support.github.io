@@ -1,6 +1,4 @@
 'use client';
- origin/cursor/analyze-improve-and-deploy-application-0fac;
- origin/cursor/analyze-improve-and-deploy-application-1091;
 interface AnalyticsProviderProps {
 'use client;
 const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
@@ -13,5 +11,3 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
       });
     }
   }, []);
- origin/cursor/analyze-improve-and-deploy-application-1091;
- origin/cursor/analyze-improve-and-deploy-application-1247</AnalyticsProviderProps>

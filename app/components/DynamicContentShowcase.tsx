@@ -14,11 +14,9 @@ const DynamicContentShowcase: React.FC = () => {
             <p className="text-gray-200 mb-4">Next-generation computing power for complex problem solving.</p>
             <button className="bg-white text-cyan-600 px-6 py-2 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
               Explore</button>
-            </button> origin/cursor/analyze-improve-and-deploy-application-1573;
  cursor/fix-errors-and-merge-to-main-cd7c;
  cursor/website-audit-and-update-with-deployment-c0e8;
   const [currentFeature, setCurrentFeature] = useState(0);
- origin/cursor/analyze-improve-and-deploy-application-1247;
   const features = [
     {
       id: 1,
@@ -52,7 +50,6 @@ const DynamicContentShowcase: React.FC = () => {
 ;
   const testimonials = [
     {name: 'Sarah Johnson',
- origin/cursor/analyze-improve-and-deploy-application-1247;
       company: 'TechCorp Inc.',
       role: 'CTO',
       content: 'This solution transformed our operations completely. The AI insights are incredible.',
@@ -75,11 +72,9 @@ const DynamicContentShowcase: React.FC = () => {
 }, 5000); cursor/analyze-improve-and-deploy-application-8fa5;
  cursor/fix-errors-and-merge-to-main-cd7c;
  cursor/website-audit-and-update-with-deployment-c0e8;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 ;
   useEffect(() => {
  cursor/website-audit-and-update-with-deployment-c0e8;
- origin/cursor/analyze-improve-and-deploy-application-1247;
   return (
     <div className="py-16 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><div className="max-w-7xl mx-auto">
         {/* Header */}
@@ -88,7 +83,6 @@ const DynamicContentShowcase: React.FC = () => {
             Dynamic </h2><span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Solutions</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the power of our AI and IT solutions through interactive demonstrations and real-world applications.</p>
- origin/cursor/analyze-improve-and-deploy-application-1460;
           </p>
         </div>
  cursor/fix-errors-and-merge-to-main-cd7c;
@@ -98,7 +92,6 @@ const DynamicContentShowcase: React.FC = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
  cursor/analyze-improve-and-deploy-application-8fa5;
  cursor/fix-errors-and-merge-to-main-cd7c;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
             </div>
           </div>
         </div>
@@ -136,8 +129,6 @@ const DynamicContentShowcase: React.FC = () => {
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1460;
- origin/cursor/analyze-improve-and-deploy-application-1573
 ;
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
@@ -150,9 +141,7 @@ const DynamicContentShowcase: React.FC = () => {
           ))}
         </div>
       </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507;
     </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac;
   );
 };
 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -169,7 +158,4 @@ const DynamicContentShowcase: React.FC = () => {
 </div>
       </div>
     </div>
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1460;
- origin/cursor/analyze-improve-and-deploy-application-1573
 ;

@@ -79,5 +79,4 @@ const CriticalResourcePreloader: React.FC = () => {
   }, []);
   return null;
 };
-export default CriticalResourcePreloader; origin/cursor/analyze-improve-and-deploy-application-13a2
 ;

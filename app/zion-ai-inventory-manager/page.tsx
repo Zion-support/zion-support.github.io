@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link , ArrowRight, CheckCircle, Star, Zap, TrendingUp  } from "react-router-dom"; origin/cursor/analyze-improve-and-deploy-application-0ff3;
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -14,7 +13,6 @@ import EnhancedSEO from '../components/EnhancedSEO';
     },
     {
       title: "Real-Time Inventory Tracking",
-      description: "Monitor stock levels across multiple locations with live updates", origin/cursor/analyze-improve-and-deploy-application-1091;
       icon: <Package className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
@@ -55,7 +53,6 @@ import EnhancedSEO from '../components/EnhancedSEO';
             <button className="border border-gray-300 text-gray-300 hover:bg-white/10 px-8 py-4 rounded-lg font-semibold transition-colors duration-300">
               Learn More</button>
             </button>
- origin/cursor/analyze-improve-and-deploy-application-0ff3;
           </div>
         </div>
 <div className="max-w-7xl mx-auto" /><div className="text-center mb-16" /><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
@@ -194,5 +191,4 @@ import EnhancedSEO from '../components/EnhancedSEO';
               Schedule Demo</Link>
             </Link>
           </div>
-        </div> origin/cursor/analyze-improve-and-deploy-application-1091
 ;

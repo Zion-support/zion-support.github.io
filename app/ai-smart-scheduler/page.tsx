@@ -225,5 +225,4 @@ export default function AISmartScheduler() {
       </section>
     </Layout>
   );
-} origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

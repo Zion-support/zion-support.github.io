@@ -1,4 +1,3 @@
-import { X, Globe, Users, Code, Mail, Brain, Shield, Zap } from 'lucide-react'; origin/cursor/analyze-improve-and-deploy-application-1091
 ;
   const toggleSection = (section: string) => {
     const newExpanded = new Set(expandedSections);
@@ -32,11 +31,9 @@ const handleResize = () => {
     const newExpanded = new Set(expandedSections);
     if (newExpanded.has(section)) {
       newExpanded.delete(section)] cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
     } else {
       newExpanded.add(section);
     }
 import { Brain, Zap, Globe } from "lucide-react";
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

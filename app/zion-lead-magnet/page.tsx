@@ -15,7 +15,6 @@ export default function ZionLeadMagnetZionTechGroup() {
             Contact Us;
             </Link><ArrowRight className="ml-2 h-5 w-5" />
           </Link>
-=======
 'use client';
 import React from 'react';
 import { Helmet , ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock  } from "react-helmet-async";
@@ -163,11 +162,9 @@ const ZionLeadMagnetPage: React.FC = () => {
                 </button>
               </div>
             </div>
-          </div> origin/cursor/analyze-improve-and-deploy-application-1232;
         </div>
       </div>
     </React.Fragment>
   );
 };
-export default ZionLeadMagnetPage; origin/cursor/analyze-improve-and-deploy-application-1232
 ;

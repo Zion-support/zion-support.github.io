@@ -1,7 +1,5 @@
 import { Helmet , Link  } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Globe, TrendingUp, Phone } from "lucide-react"; origin/cursor/analyze-improve-and-deploy-application-0ff3;
 export default function MicroSaasServices() {
- origin/cursor/analyze-improve-and-deploy-application-0f1c;
     },
     {
       icon: MessageSquare,
@@ -41,7 +39,6 @@ export default function MicroSaasServices() {
         <meta name="keywords" content="micro saas, business tools, productivity software, AI applications, cloud solutions" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
- origin/cursor/analyze-improve-and-deploy-application-0f1c;
                   >
                     Get Started</div>
                   </Link>
@@ -104,15 +101,10 @@ export default function MicroSaasServices() {
                     to="/pricing" 
                     className="group border-2 border-white text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all duration-300 flex items-center justify-center space-x-2 backdrop-blur-sm"
                    /><span>View Pricing</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" /> origin/cursor/analyze-improve-and-deploy-application-0f1c;
                   </Link>
                 </div>
               </div>
             </div>
           </div>
 };
-export default MicroSaasServicesPage; origin/cursor/analyze-improve-and-deploy-application-0e37;
- origin/cursor/analyze-improve-and-deploy-application-0f1c;
- origin/cursor/analyze-improve-and-deploy-application-1091;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

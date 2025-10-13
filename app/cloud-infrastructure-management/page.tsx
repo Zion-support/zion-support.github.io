@@ -47,5 +47,4 @@ export default function CloudInfrastructureManagement() {
     },
   ];
   const managementFeatures = [
-    { origin/cursor/analyze-improve-and-deploy-application-1091
 ;

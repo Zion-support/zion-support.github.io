@@ -1,6 +1,5 @@
 'use client';
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1247;
   </
           </div>
         </div>
@@ -59,7 +58,6 @@ import React from 'react';
     </div>
 )
 }
-export default CloudSecurityPage origin/cursor/analyze-improve-and-deploy-application-1247;
   </button>
   </button>
   </button>
@@ -69,5 +67,4 @@ export default CloudSecurityPage origin/cursor/analyze-improve-and-deploy-applic
   </section>
   </h1>
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

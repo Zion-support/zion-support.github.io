@@ -9,7 +9,6 @@ interface LazyImageProps {
   priority?: boolean;
   sizes?: string;
   quality?: number;
-=======
 'use client';
 import React from 'react';
  cursor/fix-errors-and-merge-to-main-6ce7;
@@ -77,5 +76,4 @@ import React from 'react';
 </>
   );
 };
-export default LazyImagePage; origin/cursor/analyze-improve-and-deploy-application-1507
 ;

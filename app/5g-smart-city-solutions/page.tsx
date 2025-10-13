@@ -26,5 +26,4 @@ export default function SmartCitySolutions5GPage() {
       </div>
     </React.Fragment>
   );
-} origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

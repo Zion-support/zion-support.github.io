@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -16,14 +15,12 @@ import { Helmet } from 'react-helmet-async';
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-<Navigation /> origin/cursor/analyze-improve-and-deploy-application-1256;
         {/* Hero Section */}
         <section className="relative overflow-hidden bg-gradient-to-r from-indigo-600 to-purple-700 text-white py-20" /><div className="absolute inset-0 bg-black opacity-20" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /><div className="text-center" /><h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -37,14 +34,11 @@ const benefits = [
                 </button>
                 <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
                   View Trading Demo;
- origin/cursor/analyze-improve-and-deploy-application-1247</button>
                 </button>
               </div>
             </div>
           </div>
         </section>
-</div> origin/cursor/analyze-improve-and-deploy-application-1448;
- origin/cursor/analyze-improve-and-deploy-application-1573;
       <Footer />
     </div>
   );
@@ -68,7 +62,4 @@ const AiFintechPage: React.FC = () => {
     </React.Fragment>
   )
 }
-export default AiFintechPage origin/cursor/analyze-improve-and-deploy-application-0f1c;
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1256
 ;

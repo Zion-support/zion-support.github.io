@@ -2,13 +2,10 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
- origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'Get deep insights into API usage, performance metrics, and user behavior with AI-powered analytics.',
 benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictive analytics']
     },
- origin/cursor/analyze-improve-and-deploy-application-1232
 ;
- origin/cursor/analyze-improve-and-deploy-application-0ff3;
   return (
     <>
       <Helmet /><title>Page | Zion Tech Group</title>
@@ -23,7 +20,6 @@ benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictiv
  cursor/fix-errors-and-merge-to-main-e1a2;
               View Demo,
   </
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
           </div>
         </div>
       </section>
@@ -34,7 +30,6 @@ benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictiv
         </div>
       </section>
 {/* Features Section */}
-      <section className="py-20 px-4" /><div className="max-w-7xl mx-auto"> origin/cursor/analyze-improve-and-deploy-application-1247;
           </div><div className="text-center mb-16" /><h2 className="text-4xl font-bold text-white mb-4">Page Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced solutions designed for modern business needs</p>
@@ -50,7 +45,6 @@ benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictiv
                   {feature.benefits.map((benefit, benefitIndex) => (
 </ul><li key={benefitIndex}className="flex items-center text-gray-300" /><CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       <span>{benefit</span>}</span>
- origin/cursor/analyze-improve-and-deploy-application-1232;
                     </li>
                   ))}
                 </ul>
@@ -59,7 +53,6 @@ benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictiv
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
           <div className="text-center mb-16" /><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Experience the benefits of our proven solutions</p>
@@ -79,13 +72,10 @@ benefits: ['Usage analytics', 'Performance metrics', 'User insights', 'Predictiv
  cursor/fix-errors-and-merge-to-main-e1a2;
               </button>
             </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
           </div>
         </div>
       </section>
 <Footer / />
     </div>
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1460
 ;

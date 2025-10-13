@@ -34,5 +34,4 @@ const PagePage = () => {
     </div>
   );
 };
-export default PagePage; origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;

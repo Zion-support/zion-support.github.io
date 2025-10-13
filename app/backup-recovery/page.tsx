@@ -1,20 +1,15 @@
 'use client';
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1460;
     'Enterprise-grade security and compliance',
     'Scalable and flexible backup solutions',
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
- origin/cursor/analyze-improve-and-deploy-application-1247;
         <title>Backup & Recovery | Zion Tech Group</title>
         <meta name="description" content="Professional Backup & Recovery services by Zion Tech Group. Advanced AI and IT solutions for your business." />
 <h1 className="text-5xl font-bold text-white mb-6">
- origin/cursor/analyze-improve-and-deploy-application-1460;
             Backup & Recovery;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247</h1>
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced backup and recovery solutions.</p>
             Powered by cutting-edge AI technology and industry expertise.
@@ -47,7 +42,6 @@ import React from 'react';
             Transform your business with our advanced backup and recovery solutions. 
             Powered by cutting-edge AI technology and industry expertise.</p>
           </p>
- origin/cursor/analyze-improve-and-deploy-application-1247;
               Why Choose Our Backup & Recovery?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto" />
@@ -57,14 +51,12 @@ import React from 'react';
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" />
             {features.map((feature, index) => (
 <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10" /><feature .icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3> origin/cursor/analyze-improve-and-deploy-application-1247;
                 <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
           <div className="text-center mb-12" /><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
               Key Benefits,
   </
@@ -96,7 +88,6 @@ import React from 'react';
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
             Ready to Get Started?
           </h2>
           <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your backup and recovery needs and get a customized solution.</p>
@@ -109,9 +100,7 @@ import React from 'react';
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
               <Mail className="mr-2 h-5 w-5" />
 Email Us cursor/website-audit-and-update-with-deployment-c0e8;
- origin/cursor/analyze-improve-and-deploy-application-1247;
   </
- origin/cursor/analyze-improve-and-deploy-application-1460;
           </div>
         </div>
         <div className="text-center" /><h2 className="text-3xl font-bold text-white mb-6">Ready to Get Started?</h2>
@@ -168,10 +157,8 @@ Email Us cursor/website-audit-and-update-with-deployment-c0e8;
       </div>
     </div>
 </>
-  ); origin/cursor/analyze-improve-and-deploy-application-1507;
 };
 export default BackupRecoveryPage;
- origin/cursor/analyze-improve-and-deploy-application-1247;
   </button>
   </button>
   </button>
@@ -179,5 +166,4 @@ export default BackupRecoveryPage;
   </section>
   </h2>
   </h1>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 ;

@@ -1,5 +1,4 @@
 import { Helmet , Link  } from "react-helmet-async";
-import { ArrowRight } from "lucide-react"; origin/cursor/analyze-improve-and-deploy-application-0ff3;
 export default function AiChatbotBuilder() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100" /><Helmet /><title>AI Chatbot Builder - Zion Tech Group</title>
@@ -22,8 +21,6 @@ export default function AiChatbotBuilder() {
     </div>
   );
 }
- origin/cursor/analyze-improve-and-deploy-application-0d10;
- origin/cursor/analyze-improve-and-deploy-application-0f1c;
                 </div>
               ))}
             </div>
@@ -38,7 +35,6 @@ export default function AiChatbotBuilder() {
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Contact Us</button>
                 </button>
                 <button className="bg-gradient-to-r from-teal-500 to-blue-600 text-white px-8 py-4 rounded-full font-semibold hover:from-teal-600 hover:to-blue-700 transition-all duration-300">Learn More</button>
-                </button> origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             </div>
           </div>
@@ -46,6 +42,4 @@ export default function AiChatbotBuilder() {
       </div>
 </div>
       </section>
-    </> origin/cursor/analyze-improve-and-deploy-application-0f1c;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

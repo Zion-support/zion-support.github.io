@@ -4,7 +4,6 @@ export default function AIAccountingAssistantZionTechGroup() {
   return (
     <>
       <Helmet /><title>AI Accounting Assistant - Zion Tech Group</title>
-=======
 'use client';
 import React from 'react';
 import { Helmet , Calculator, BarChart, FileText, Shield, Zap, CheckCircle  } from "react-helmet-async";const AIAccountingAssistantPage: React.FC = () => {
@@ -19,7 +18,6 @@ import { Helmet , Calculator, BarChart, FileText, Shield, Zap, CheckCircle  } fr
       </React><Helmet />
         <title>AI Accounting Assistant | Zion Tech Group - Intelligent Financial Management</title>
         <meta name="description" content="Streamline your accounting with AI-powered financial management tools. Automated bookkeeping, tax preparation, and financial analytics." />
-        <meta name="keywords" content="AI accounting, financial management, bookkeeping automation, tax preparation, accounting software" /> origin/cursor/analyze-improve-and-deploy-application-1232;
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center" /><div className="text-center" /><h1 className="text-4xl font-bold text-white mb-6">
             AI Accounting Assistant</h1>
@@ -39,5 +37,4 @@ import { Helmet , Calculator, BarChart, FileText, Shield, Zap, CheckCircle  } fr
 </React.Fragment>
   )
 }
-export default AIAccountingAssistantPage origin/cursor/analyze-improve-and-deploy-application-1247
 ;

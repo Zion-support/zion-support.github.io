@@ -22,7 +22,6 @@ const [isOpen, setIsOpen] = useState(false)
     window.removeEventListener('resize', handleResize)
       window.removeEventListener('scroll', handleScroll)
   }
-  }, []); origin/cursor/analyze-improve-and-deploy-application-1247
 ;
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleServices = () => setServicesOpen(!servicesOpen);
@@ -46,7 +45,6 @@ const closeAllMenus = () => {
     { name: 'AI Data Analytics', href: '/ai-data-analytics', icon: Database, description: 'Data-driven insights' },
     { name: 'AI Healthcare', href: '/ai-healthcare', icon: Heart, description: 'Medical AI solutions' },
     { name: 'AI Fintech', href: '/ai-fintech', icon: DollarSign, description: 'Financial technology' }
-  ] origin/cursor/analyze-improve-and-deploy-application-1247;
   const itServices = [
     {name: 'Cloud Infrastructure', href: '/ai-cloud-infrastructure', icon: Cloud, description: 'Scalable cloud solutions' ,},
     {name: 'API Management', href: '/ai-api-management', icon: Code, description: 'API development & management' ,},
@@ -280,5 +278,4 @@ kleber@ziontechgroup.com;
     </nav>
   )
 }
-export default Navigation origin/cursor/analyze-improve-and-deploy-application-1247
 ;

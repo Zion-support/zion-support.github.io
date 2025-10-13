@@ -256,6 +256,4 @@ export default function ZionAnalyticsPro() {
       </div>
     </React.Fragment>
   );
-} origin/cursor/analyze-improve-and-deploy-application-0ff3;
- origin/cursor/analyze-improve-and-deploy-application-1232
 ;

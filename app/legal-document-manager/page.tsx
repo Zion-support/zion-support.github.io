@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet , FileText, Search, Shield, Zap, BarChart, CheckCircle  } from "react-helmet-async";
- origin/cursor/analyze-improve-and-deploy-application-1232;
     { icon: FileText, title: 'Document Management', description: 'Organized storage and management of legal documents with smart categorization.' ,},
     {icon: Search, title: 'AI Document Search', description: 'Powerful AI-powered search across all legal documents and contracts.' ,},
     {icon: Shield, title: 'Compliance Tracking', description: 'Automated compliance monitoring and regulatory requirement tracking.' ,},
@@ -27,5 +26,4 @@ import { Helmet , FileText, Search, Shield, Zap, BarChart, CheckCircle  } from "
     </React.Fragment>
   )
 }
-export default LegalDocumentManagerPage origin/cursor/analyze-improve-and-deploy-application-1247
 ;

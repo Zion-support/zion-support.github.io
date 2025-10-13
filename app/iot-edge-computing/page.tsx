@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from "react-helmet-async";const features = [
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Advanced AI technology integration',
@@ -12,7 +11,6 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
- origin/cursor/analyze-improve-and-deploy-application-1247;
             </p>
           </div>
         </div>
@@ -24,6 +22,4 @@ const benefits = [
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1507
 ;

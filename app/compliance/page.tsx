@@ -24,7 +24,4 @@ import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Bra
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
- origin/cursor/analyze-improve-and-deploy-application-0f9e;
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-13a2
 ;

@@ -22,7 +22,6 @@ const registration = await navigator.serviceWorker.register('/sw.js');
       }
       // Cache API responses;
       const cacheAPIResponses = async (request: Request) => {
-        try { origin/cursor/analyze-improve-and-deploy-application-0f9e;
           const cache = await caches.open(CACHE_NAME)
           await cache.addAll(CACHE_URLS)
           } catch (error) {
@@ -79,5 +78,4 @@ return response;
               imageObserver.unobserve(img)
             }
           }
- origin/cursor/analyze-improve-and-deploy-application-0f9e
 ;

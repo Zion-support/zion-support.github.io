@@ -1,12 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react'; origin/cursor/analyze-improve-and-deploy-application-0ff3;
- origin/cursor/analyze-improve-and-deploy-application-1247;
 import { Helmet } from 'react-helmet-async';
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 ;
 event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(_perfData.loadEventEnd - _perfData.fetchStart),})
-=======
 interface SEOData {
   title: string;
   description: string;
@@ -201,7 +197,6 @@ const AdvancedSEOOptimizer: React.FC</string><AdvancedSEOOptimizerProps> = ({
             event_category: 'Performance',
             event_label: 'Page Load',
             value: Math.round(perfData.loadEventEnd - perfData.fetchStart),
-          }); origin/cursor/analyze-improve-and-deploy-application-1247;
         }
       });
     }
@@ -235,7 +230,6 @@ const AdvancedSEOOptimizer: React.FC</string><AdvancedSEOOptimizerProps> = ({
           <meta name="twitter:site" content="@ziontechgroup" />
           <meta name="twitter:creator" content="@ziontechgroup" />
         </React.Fragment>
-      )} origin/cursor/analyze-improve-and-deploy-application-1247
 ;
       {/* Additional SEO Meta Tags */} <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview: -1" />,
       <meta name="googlebot" content="index, follow" />
@@ -275,7 +269,6 @@ const AdvancedSEOOptimizer: React.FC</string><AdvancedSEOOptimizerProps> = ({
       <link rel="dns-prefetch" href="//www.googletagmanager.com" />
     </Helmet>
   );
-}; origin/cursor/analyze-improve-and-deploy-application-1247
 ;
       {/* Structured Data */} <script type="application/ld+json">
         {JSON.stringify(generateStructuredData())} </script>

@@ -1,7 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: DollarSign,
       title: 'SOX Compliance',
@@ -15,7 +14,6 @@ benefits: ['Automated controls', 'Compliance reporting', 'Audit trails']
       benefits: ['Data encryption', 'Access controls', 'Security monitoring']
   },
     {
-    icon: Clock, origin/cursor/analyze-improve-and-deploy-application-1247;
       title: 'Real-time Processing',
       description: 'High-frequency trading and real-time financial data processing capabilities.',
       benefits: ['Low latency', 'High throughput', 'Real-time analytics']},
@@ -25,13 +23,11 @@ benefits: ['Automated controls', 'Compliance reporting', 'Audit trails']
 benefits: ['Multi-regulation support', 'Automated compliance', 'Risk management']
   },
     {
-    icon: Shield, origin/cursor/analyze-improve-and-deploy-application-1247;
       title: 'Fraud Detection',
       description: 'Advanced AI-powered fraud detection and prevention systems for financial transactions.',
       benefits: ['Real-time detection', 'Machine learning', 'Risk scoring']},
     {icon: BarChart,
       title: 'Financial Analytics',
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'SOX Compliance Ready',
@@ -40,9 +36,7 @@ const benefits = [
     'Regulatory Compliance',
     'Fraud Prevention',
     'Advanced Analytics'
- origin/cursor/analyze-improve-and-deploy-application-1507;
         <title>Financial IT Solutions | Zion Tech Group</title>
-<meta name="description" content="Advanced AI solutions" /> origin/cursor/analyze-improve-and-deploy-application-1247;
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       <Navigation />
@@ -55,7 +49,6 @@ const benefits = [
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' ,}} / />
         <div className="relative max-w-7xl mx-auto text-center" />
 <h1>
- origin/cursor/analyze-improve-and-deploy-application-1247;
                 </h1><h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
                 <p className="text-gray-300">{service.description</p>}</p>
               </div>
@@ -63,7 +56,6 @@ const benefits = [
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
             ))}
@@ -71,5 +63,4 @@ const benefits = [
         </div>
       </section>
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

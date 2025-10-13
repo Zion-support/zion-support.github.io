@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link , ArrowRight, CheckCircle, Star, Brain  } from "react-router-dom"; origin/cursor/analyze-improve-and-deploy-application-0ff3;
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
@@ -92,7 +91,6 @@ const ZionAIAccountingSuite = () => {
     {
       title: "Invoice Management",
       description: "Automated invoice creation, processing, and payment tracking with AI-powered data extraction",
-      icon: <FileText className="w-8 h-8" />, origin/cursor/analyze-improve-and-deploy-application-0ff3;
       color: "from-blue-500 to-cyan-500"
     },
     {

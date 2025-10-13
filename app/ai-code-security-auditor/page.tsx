@@ -21,15 +21,12 @@ export default function AICodeSecurityAuditorZionTechGroup() {
       </div>
     </React.Fragment>
   );
-} origin/cursor/analyze-improve-and-deploy-application-0ff3;
- origin/cursor/analyze-improve-and-deploy-application-1247;
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-const AiCodeSecurityAuditorPage: React.FC = () => { origin/cursor/analyze-improve-and-deploy-application-1247;
   const features = [
     {
       icon: Brain,
@@ -147,7 +144,6 @@ return (
 {/* Benefits Section */}
       <section className="py-20 px-4" /><div className="max-w-7xl mx-auto" /><div className="text-center mb-16" /><h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Experience the benefits of our proven solutions origin/cursor/analyze-improve-and-deploy-application-1247</p>
   </
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,</div>
@@ -164,7 +160,6 @@ return (
 {/* CTA Section */}
       <section className="py-20 px-4" /><div className="max-w-4xl mx-auto text-center" /><h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">
-            Transform your business with our page solutions today origin/cursor/analyze-improve-and-deploy-application-1247</p>
   </
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">,</button>
@@ -177,13 +172,11 @@ return (
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1460;
       <Footer />
  cursor/fix-errors-and-merge-to-main-e1a2;
     </React.Fragment>
 )
 }
-export default AiCodeSecurityAuditorPage origin/cursor/analyze-improve-and-deploy-application-1247;
   </button>
   </button>
   </p>
@@ -196,8 +189,5 @@ export default AiCodeSecurityAuditorPage origin/cursor/analyze-improve-and-deplo
   </main>
  cursor/fix-errors-and-merge-to-main-e1a2;
  cursor/website-audit-and-update-with-deployment-c0e8;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1460
 ;

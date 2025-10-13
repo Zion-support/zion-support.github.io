@@ -204,7 +204,6 @@ export default function AIHealthcareDiagnostics() {
                       Get Started;
                       </Link><ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
-=======
 'use client';
 import React from 'react';
 import { Helmet , ArrowRight, CheckCircle, Star, Users, Zap, Shield, Brain, Globe, Database, Cpu, Target, BarChart, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckSquare, ShoppingCart, Settings, Calendar, TrendingUp, Lock  } from "react-helmet-async";
@@ -333,7 +332,6 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
                   </div>
                   <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div /><p className="text-white font-semibold">{testimonial.name}</p>
-                    <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p> origin/cursor/analyze-improve-and-deploy-application-1232;
                   </div>
                 </div>
               ))}
@@ -358,5 +356,4 @@ const AiHealthcareDiagnosticsPage: React.FC = () => {
     </React.Fragment>
   );
 };
-export default AiHealthcareDiagnosticsPage; origin/cursor/analyze-improve-and-deploy-application-1232
 ;

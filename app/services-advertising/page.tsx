@@ -12,7 +12,6 @@ const benefits = [
 '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
- origin/cursor/analyze-improve-and-deploy-application-1247;
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
@@ -22,7 +21,6 @@ const benefits = [
         </div>
       </section>
 {/* Benefits Section */};
-              </div> origin/cursor/analyze-improve-and-deploy-application-1247;
             ))}
           </div>
         </div>
@@ -34,5 +32,4 @@ const benefits = [
     </div>
   )
 }
-export default PagePage origin/cursor/analyze-improve-and-deploy-application-1247
 ;

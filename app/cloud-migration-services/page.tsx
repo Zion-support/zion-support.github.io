@@ -2,7 +2,6 @@
 import React from 'react';
  cursor/fix-errors-and-merge-to-main-6ce7;
     {
- origin/cursor/analyze-improve-and-deploy-application-1460;
     }
   ];
   const benefits = [
@@ -10,17 +9,13 @@ import React from 'react';
     'Real-time migration monitoring',
     'Enterprise-grade security and compliance',
     'Scalable and flexible migration solutions',
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1460;
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
- origin/cursor/analyze-improve-and-deploy-application-1247;
         <title>Cloud Migration Services | Zion Tech Group</title>
         <meta name="description" content="Professional Cloud Migration Services by Zion Tech Group. Advanced AI and IT solutions for your business." />
 <h1 className="text-5xl font-bold text-white mb-6">
- origin/cursor/analyze-improve-and-deploy-application-1247</h1>
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced cloud migration services.</p>
             Powered by cutting-edge AI technology and industry expertise.
@@ -28,7 +23,6 @@ import React from 'react';
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our cloud migration solutions deliver unmatched performance, security, and scalability.</p>
           </p>
         </div>
- origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             ))}
           </div>
@@ -44,11 +38,9 @@ import React from 'react';
   </
             <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover: bg-white hover:text-purple-600 transition-all duration-300 flex items-center justify-center">,</button>
               <Mail className="mr-2 h-5 w-5" />
- origin/cursor/analyze-improve-and-deploy-application-1460;
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
           <div className="text-center mb-12" /><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
               Key Benefits,
   </
@@ -64,7 +56,6 @@ import React from 'react';
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
             Ready to Get Started?
           </h2>
           <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your cloud migration needs and get a customized solution.</p>
@@ -83,10 +74,8 @@ import React from 'react';
       </section>
     </div>
 </>
-  ); origin/cursor/analyze-improve-and-deploy-application-1507;
 };
 export default CloudMigrationServicesPage;
- origin/cursor/analyze-improve-and-deploy-application-1247;
   </button>
   </button>
   </h2>
@@ -94,5 +83,4 @@ export default CloudMigrationServicesPage;
   </button>
   </h1>
   </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 ;

@@ -1,6 +1,7 @@
 "use client";
-import React, { Suspense, useEffect, useState, useCallback } from "react";
-import { BrowserRouter as Router, Routes, Route , HelmetProvider  } from "react-router-dom";
+import React, { Suspense, useEffect, useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
 import Navigation from "./app/components/Navigation";
@@ -21,7 +22,8 @@ import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
 import ServiceWorker from "./app/components/ServiceWorker";
 import SecurityHeaders from "./app/components/SecurityHeaders";
-// Lazy load pages for better performance;
+
+// Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
@@ -44,18 +46,23 @@ const DocsPage = React.lazy(() => import("./app/docs/page"));
 const HealthPage = React.lazy(() => import("./app/health/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
-// Performance monitoring component;
+
+// Performance monitoring component
 const PerformanceWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
   }, []);
+
   if (!isLoaded) {
     return <LoadingPage />;
   }
+
   return (
-    <React.Fragment /><PerformanceMonitor />
+    <React.Fragment>
+      <PerformanceMonitor />
       <PerformanceOptimizer />
       <AccessibilityEnhancer />
       <EnhancedAccessibility />
@@ -67,21 +74,34 @@ const PerformanceWrapper: React.FC<{ children: React.ReactNode }> = ({ children 
     </React.Fragment>
   );
 };
-// Main App component;
+
+// Main App component
 const App: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
+
   useEffect(() => {
     setIsClient(true);
   }, []);
+
   if (!isClient) {
     return <LoadingPage />;
   }
+
   return (
-    <HelmetProvider /><GlobalErrorBoundary /><EnhancedErrorBoundary /><AnalyticsProvider /><Router /><PerformanceWrapper /><FuturisticBackground />
-                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><Navigation />
+    <HelmetProvider>
+      <GlobalErrorBoundary>
+        <EnhancedErrorBoundary>
+          <AnalyticsProvider>
+            <Router>
+              <PerformanceWrapper>
+                <FuturisticBackground />
+                <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+                  <Navigation />
                   <Breadcrumb />
-                  <main className="relative z-10" /><Suspense fallback={<LoadingPage />}>
-                      <Routes /><Route path="/" element={<HomePage />} />
+                  <main className="relative z-10">
+                    <Suspense fallback={<LoadingPage />}>
+                      <Routes>
+                        <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<AboutPage />} />
                         <Route path="/contact" element={<ContactPage />} />
                         <Route path="/services" element={<ServicesPage />} />
@@ -104,17 +124,23 @@ const App: React.FC = () => {
                         <Route path="/health" element={<HealthPage />} />
                         <Route path="/demo" element={<DemoPage />} />
                         <Route path="/consultation" element={<ConsultationPage />} />
+                        
                         {/* AI Services Routes */}
                         <Route path="/ai-services/*" element={<AISolutionsPage />} />
+                        
                         {/* IT Services Routes */}
                         <Route path="/it-services/*" element={<ITConsultingPage />} />
+                        
                         {/* Micro SaaS Services Routes */}
                         <Route path="/micro-saas-services/*" element={<AISolutionsPage />} />
+                        
                         {/* Catch all route for 404 */}
-                        <Route path="*" element={<div className="min-h-screen flex items-center justify-center" /><div className="text-center" /><h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+                        <Route path="*" element={<div className="min-h-screen flex items-center justify-center">
+                          <div className="text-center">
+                            <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
                             <p className="text-gray-300 mb-8">The page you're looking for doesn't exist.</p>
                             <a href="/" className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300">
-                              Go Home</a>
+                              Go Home
                             </a>
                           </div>
                         </div>} />
@@ -131,4 +157,5 @@ const App: React.FC = () => {
     </HelmetProvider>
   );
 };
+
 export default App;

@@ -297,7 +297,6 @@ import { Helmet , Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Sett
             </div>
           </section>
           {/* Support */}
-          <section className="mb-16" /><div className="cyber-card-enhanced p-8 text-center"> origin/cursor/analyze-improve-and-deploy-application-1247;
               </div><h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
               <p className="text-gray-300 mb-6">Our developer support team is here to help you integrate our APIs successfully.</p>
               </p>
@@ -327,5 +326,4 @@ import { Helmet , Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Sett
     </React.Fragment>
 )
 }
-export default ApiPage origin/cursor/analyze-improve-and-deploy-application-1247
 ;

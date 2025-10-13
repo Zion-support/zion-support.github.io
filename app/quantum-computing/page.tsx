@@ -1,4 +1,3 @@
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Advanced AI technology integration',
@@ -7,7 +6,6 @@ const benefits = [
     'Scalable and flexible solutions',
 import { ArrowRight , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function QuantumComputingZionTechGroup() { origin/cursor/analyze-improve-and-deploy-application-0ff3;
   return (
     <React.Fragment /><Helmet /><title>Quantum Computing - Zion Tech Group</title>
         <meta name="description" content="Quantum Computing services by Zion Tech Group. Advanced AI and IT solutions for your business." />
@@ -26,5 +24,4 @@ export default function QuantumComputingZionTechGroup() { origin/cursor/analyze-
 }
 export default QuantumComputingPage;
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

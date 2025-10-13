@@ -107,7 +107,6 @@ export default function ZionAIVoiceAssistantPro() {
     }
   ];
   return (
-    <> origin/cursor/analyze-improve-and-deploy-application-0ff3;
       <Helmet /><title>ZionAiVoiceAssistantPro - Zion Tech Group</title>
         <meta name="description" content="Advanced zionaivoiceassistantpro solutions" />
       </Helmet>

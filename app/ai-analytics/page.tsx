@@ -7,7 +7,6 @@ export default function AiAnalytics() {
     { number: "60%", label: "Cost Reduction", icon: <TrendingDown className="w-6 h-6" /> },
     { number: "24/7", label: "Automated Monitoring", icon: <Monitor className="w-6 h-6" /> }
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
           <div className="max-w-7xl mx-auto" /><div className="text-center" /><h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
                 AI Analytics;
   </
@@ -33,7 +32,6 @@ export default function AiAnalytics() {
             </div>
           </div>
         </section>
- origin/cursor/analyze-improve-and-deploy-application-1256;
       <Footer />
     </React.Fragment>
 )
@@ -44,7 +42,6 @@ export default AiAnalyticsPage;
   </button>
   </button>
   </h1>
-=======
         {/* Benefits Section */};
         <section className="py-20" /><div className="container mx-auto px-4" /><div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" /><div /><h2 className="text-4xl font-bold text-white mb-6">Why Choose Our AI Analytics?</h2>
                 <p className="text-lg text-gray-300 mb-8">
@@ -103,5 +100,4 @@ export default AiAnalyticsPage;
     </>
   );
 };
- origin/cursor/analyze-improve-and-deploy-application-1256
 ;

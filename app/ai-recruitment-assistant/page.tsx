@@ -48,5 +48,4 @@ import { Helmet , Users, Search, Brain, Target, CheckCircle, ArrowRight, Zap, Sh
         </section>
       </div>
     </React.Fragment>
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

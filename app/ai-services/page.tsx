@@ -1,13 +1,9 @@
 import { Helmet , Link  } from "react-helmet-async";
 import { ArrowRight, Zap } from "lucide-react";
 const AIServicesPage = () => {
-  const aiServices = [ origin/cursor/analyze-improve-and-deploy-application-0ff3;
- origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;
 <>
       <Helmet>
- origin/cursor/analyze-improve-and-deploy-application-0f1c;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;
   return (
     <>
@@ -31,7 +27,6 @@ const AIServicesPage = () => {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full px-6 py-4 bg-slate-800 border border-slate-700 rounded-lg text-white placeholder-gray-400 focus:border-cyan-400 focus:outline-none"
                 />
-                </input><Brain className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" /> origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             </div>
           </div>
@@ -44,7 +39,6 @@ const AIServicesPage = () => {
               </span>
               <span className="flex items-center" /><TrendingUp className="w-4 h-4 mr-2 text-blue-400" />
                 60% Cost Reduction;
-              </span> origin/cursor/analyze-improve-and-deploy-application-1247;
             </div>
           </div>
         </section>
@@ -72,7 +66,6 @@ const AIServicesPage = () => {
                 >
                   {category === 'all' ? 'All Services' : category}</button>
                 </button>
-              ))} origin/cursor/analyze-improve-and-deploy-application-1247;
             </div>
           </div>
         </section>
@@ -120,7 +113,6 @@ const AIServicesPage = () => {
                     >
                       Learn More;
                       </Link><ArrowRight className="w-4 h-4 ml-1" />
-                    </Link> origin/cursor/analyze-improve-and-deploy-application-1247;
                   </div>
                 </div>
               ))}
@@ -136,7 +128,6 @@ const AIServicesPage = () => {
                   className="text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   Clear filters</button>
-                </button> origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             )}
           </div>
@@ -234,11 +225,8 @@ const AIServicesPage = () => {
               </Link>
             </div>
           </div>
-        </div> origin/cursor/analyze-improve-and-deploy-application-1091;
       </div>
     </div>
   );
 };
-export default AIServicesPage; origin/cursor/analyze-improve-and-deploy-application-1091;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

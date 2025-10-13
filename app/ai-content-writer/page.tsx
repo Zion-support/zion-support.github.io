@@ -1,14 +1,11 @@
- origin/cursor/analyze-improve-and-deploy-application-1232;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, PenTool, Zap, Users, BarChart3 } from 'lucide-react'
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const AIContentWriterPage: React.FC = () => {
 const features = [
 ];
 };
     {
- origin/cursor/analyze-improve-and-deploy-application-0ff3
 ;
   const benefits = [
     'Increase content production by 10x',
@@ -57,14 +54,12 @@ const features = [
             ))}
           </div>
         </div>
-      </section> origin/cursor/analyze-improve-and-deploy-application-1247;
       {/* Features Section */}
       <section className="py-20 px-4" /><div className="max-w-7xl mx-auto" /><div className="text-center mb-16" /><h2 className="text-4xl font-bold text-white mb-4">AI Content Writer Features</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Advanced solutions designed for modern business needs</p>
             </p>
           </div>
-<div className="grid md:grid-cols-3 gap-8"> origin/cursor/analyze-improve-and-deploy-application-1247;
             {features.map((feature, index) => (
               </div><div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group" /><div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" /><CheckCircle className="w-6 h-6 text-white" />
                 </div>
@@ -111,11 +106,9 @@ const features = [
               <button className="border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
                 Learn More</button>
               </button>
-            </div> origin/cursor/analyze-improve-and-deploy-application-1247;
           </div>
         </div>
       </section>
-import Footer from '../components/Footer'; origin/cursor/analyze-improve-and-deploy-application-1460;
           <div className="max-w-7xl mx-auto">
                   )}
           </div><div className="max-w-7xl mx-auto" /><div className="text-center mb-16" /><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -144,6 +137,4 @@ import Footer from '../components/Footer'; origin/cursor/analyze-improve-and-dep
   )
 }
 export default AIContentWriterPage;
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1460
 ;

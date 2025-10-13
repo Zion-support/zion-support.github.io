@@ -1,19 +1,15 @@
 'use client';
- origin/cursor/analyze-improve-and-deploy-application-1009;
- origin/cursor/analyze-improve-and-deploy-application-1460
 ;
 interface FAQ {
   question: string;
   answer: string;
   category: string;
 }
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;
 const SupportPage: React.FC = () => {
 const SupportPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null); origin/cursor/analyze-improve-and-deploy-application-0fac;
  cursor/fix-errors-and-merge-to-main-cd7c;
  cursor/website-audit-and-update-with-deployment-c0e8;
  cursor/website-audit-and-update-with-deployment-a217;
@@ -22,7 +18,6 @@ const SupportPage: React.FC = () => {
 const faqs: FAQ[] = [
     {
  cursor/website-audit-and-update-with-deployment-c0e8;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
   const supportChannels = [
     {
 icon: Phone,
@@ -38,7 +33,6 @@ icon: Phone,
       contact: 'support@ziontechgroup.com',
       availability: 'Response within 4 hours'
     },
-    { origin/cursor/analyze-improve-and-deploy-application-1247;
       icon: MessageCircle,
       title: 'Live Chat',
       description: 'Chat with our support team in real-time',
@@ -71,7 +65,6 @@ icon: Phone,
       link: '/status'
     }
   ];
- origin/cursor/analyze-improve-and-deploy-application-0fac
 ;
   return (
     </number><div className="min-h-screen bg-gradient-to-br from-slate-900 via-cyan-900 to-slate-900" /><Helmet /><title>Support - Zion Tech Group</title>
@@ -122,7 +115,6 @@ icon: Phone,
               </button>
     </div>
 export default SupportPage;
- origin/cursor/analyze-improve-and-deploy-application-1247;
                 />
               </div>
             </div>
@@ -199,7 +191,6 @@ export default SupportPage;
                   <p className="text-gray-400">{faq.answer}</p>
                   <span className="inline-block mt-3 bg-slate-700 text-gray-300 px-3 py-1 rounded-full text-xs">
                     {faq.category}</span>
-                  </span> origin/cursor/analyze-improve-and-deploy-application-1247;
                 </div>
               ))}
             </div>
@@ -215,7 +206,6 @@ export default SupportPage;
                   className="mt-4 text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   Clear filters</button>
-                </button> origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             )}
           </div>
@@ -224,7 +214,6 @@ export default SupportPage;
                   <div className="text-cyan-400 font-semibold mb-2">{channel.contact</div>}</div>
                   <div className="text-sm text-gray-400 flex items-center justify-center" /><Clock className="w-4 h-4 mr-2" />
                     {channel.availability} </div>
- origin/cursor/analyze-improve-and-deploy-application-1232;
                 </div>
               ))}
             </div>
@@ -240,7 +229,6 @@ export default SupportPage;
 <button className="border border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 px-8 py-4 rounded-lg font-medium transition-all duration-300 flex items-center justify-center gap-2">
                   Schedule Call;
                   </button><Phone className="w-5 h-5" /> cursor/website-audit-and-update-with-deployment-a217;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
                 </button>
               </div>
             </div>
@@ -261,15 +249,11 @@ export default SupportPage;
             </div>
           </div>
         </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac;
       </div>
     </>
 );
-}; origin/cursor/analyze-improve-and-deploy-application-1247
 ;
 export default SupportPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c;
- origin/cursor/analyze-improve-and-deploy-application-1232;
               </button>
             ))}
           </div>
@@ -367,7 +351,6 @@ export default SupportPage;
               >
                 Call Us Now</a>
               </a>
- origin/cursor/analyze-improve-and-deploy-application-1460;
             </div>
           </div>
         </div>
@@ -387,12 +370,7 @@ export default SupportPage;
         </div>
         <Footer />
       </div>
-    </React.Fragment> origin/cursor/analyze-improve-and-deploy-application-1009;
- origin/cursor/analyze-improve-and-deploy-application-1460;
   );
 };
 export default SupportPage;
- origin/cursor/analyze-improve-and-deploy-application-1009;
- origin/cursor/analyze-improve-and-deploy-application-1232;
- origin/cursor/analyze-improve-and-deploy-application-1460
 ;

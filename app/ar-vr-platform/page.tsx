@@ -7,7 +7,6 @@ import React from 'react';
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
- origin/cursor/analyze-improve-and-deploy-application-1247;
         <title>AR/VR Platform | Zion Tech Group</title>
         <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
@@ -33,7 +32,6 @@ import React from 'react';
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
           <div className="text-center mb-16" /><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
               Why Choose Our AR/VR Platform?
             </h2>
@@ -41,8 +39,6 @@ import React from 'react';
 Our AR/VR solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1460;
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
@@ -61,10 +57,8 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.</p
               </div>
             ))}
           </div>
- origin/cursor/analyze-improve-and-deploy-application-1460;
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your AR/VR platform needs and get a customized solution.</p>
@@ -84,14 +78,11 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.</p
       </section>
     </div>
 </>
-  ); origin/cursor/analyze-improve-and-deploy-application-1507;
 };
 export default ARVRPlatformPage;
- origin/cursor/analyze-improve-and-deploy-application-1247;
   </button>
   </button>
   </h2>
   </button>
   </span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 ;

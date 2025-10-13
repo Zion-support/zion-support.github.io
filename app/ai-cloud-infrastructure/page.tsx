@@ -6,7 +6,6 @@ import React from 'react';
           </div>
         </section>
 {/* Features Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8"> origin/cursor/analyze-improve-and-deploy-application-1247;
           </section><div className="max-w-7xl mx-auto" /><div className="text-center mb-16" /><h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">,</h2>
                 Powerful AI Features,
   </
@@ -27,8 +26,6 @@ import React from 'react';
                     ))}
                   </ul>
  cursor/website-audit-and-update-with-deployment-c0e8;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
- origin/cursor/analyze-improve-and-deploy-application-1460;
                 </div>
                 <h3 className="text-lg font-semibold text-white">{benefit}</h3>
               </div>
@@ -47,10 +44,8 @@ import React from 'react';
               Contact Sales</button>
             </button>
           </div>
- origin/cursor/analyze-improve-and-deploy-application-1460;
       <Footer />
     </div>
   );
 };
- origin/cursor/analyze-improve-and-deploy-application-1460
 ;

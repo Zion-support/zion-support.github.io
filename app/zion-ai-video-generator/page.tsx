@@ -9,7 +9,6 @@ const ZionAIVideoGeneratorPage = () => {
       period: "per month",
       features: ["5 videos/month", "HD quality", "Basic templates", "Email support"],
       popular: false;
-=======
 import { 
   Play, 
   Download, 
@@ -70,7 +69,6 @@ const ZionAiVideoGenerator = () => {
         "Watermark included"
       ],
       popular: false,
-      cta: "Start Free Trial" origin/cursor/analyze-improve-and-deploy-application-1091;
     },
     {
       name: "Professional",
@@ -128,7 +126,6 @@ period: "/month",
         <title>Zion AI Video Generator - AI-Powered Video Creation Platform | Zion Tech Group</title>
         <meta name="description" content="Create professional videos in minutes with Zion AI Video Generator. AI-powered script generation, voice synthesis, and smart editing. Start your free trial today!" />
         <meta name="keywords" content="AI video generator, video creation, automated video, voice synthesis, video editing, content creation, marketing videos" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-generator" /> origin/cursor/analyze-improve-and-deploy-application-1091;
       </Helmet>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {/* Header */}
@@ -234,7 +231,6 @@ period: "/month",
               Choose the plan that fits your needs. All plans include a 14-day free trial.</p>
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto"> origin/cursor/analyze-improve-and-deploy-application-1091;
             {pricingPlans.map((plan, index) => (
               </div><div;
                 key={index}
@@ -301,5 +297,4 @@ period: "/month",
               </FuturisticButton>
             </div>
             <div className="mt-8 text-sm text-gray-400" /><p>14-day free trial • No credit card required • Cancel anytime</p>
-export default ZionAiVideoGenerator; origin/cursor/analyze-improve-and-deploy-application-1091
 ;

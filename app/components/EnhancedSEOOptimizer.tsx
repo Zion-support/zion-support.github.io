@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from "react-helmet-async";const EnhancedSEOOptimizerPage: React.FC = () => {
-const features = [ origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -15,7 +13,6 @@ const features = [ origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
- origin/cursor/analyze-improve-and-deploy-application-1247;
         <div className="max-w-7xl mx-auto" /><div className="text-center" /><h1 className="text-4xl md:text-6xl font-bold text-white mb-6" /><span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
 <
               </span><br ;
@@ -79,7 +76,6 @@ Learn More;
           </div>
         </div>
       </section>
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6"> origin/cursor/analyze-improve-and-deploy-application-1507;
             {benefits.map((benefit, index) => (
                 </div><div key={index} className="flex items-start space-x-3" />
                 <CheckCircle /><p className="text-gray-300 text-lg">{benefit}</p>
@@ -98,7 +94,6 @@ Learn More;
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center" />
               <button>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
                 </button><Phone>
                 Call Now;</Phone>
               </button>
@@ -110,10 +105,8 @@ Learn More;
         </div>
       </section>
     </div>
-</> origin/cursor/analyze-improve-and-deploy-application-1507;
   );
 };
 export default EnhancedSEOOptimizerPage;
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

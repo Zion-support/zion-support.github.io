@@ -1,6 +1,4 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async' origin/cursor/analyze-improve-and-deploy-application-0f1c;
- origin/cursor/analyze-improve-and-deploy-application-13a2
 ;
 const PrivacyPage = () => {
   return (
@@ -18,7 +16,6 @@ const PrivacyPage = () => {
     </>
   )
 }
-export default PrivacyPage origin/cursor/analyze-improve-and-deploy-application-0f1c;
  cursor/fix-errors-and-merge-to-main-e1a2;
       description: 'Limit how we process your data',
       icon: Lock;,},
@@ -33,7 +30,6 @@ address: '364 E Main St STE 1008, Middletown, DE 19709'
     <React.Fragment /><Helmet />
         <title />Privacy Policy - Zion Tech Group</title>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2;
- origin/cursor/analyze-improve-and-deploy-application-1247;
             </div>
           </div>
         </div>
@@ -149,13 +145,9 @@ address: '364 E Main St STE 1008, Middletown, DE 19709'
             </div>
           </div>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
         <Footer />
       </div>
     </React.Fragment>
   );
 } cursor/website-audit-and-update-with-deployment-a217;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-13a2
 ;

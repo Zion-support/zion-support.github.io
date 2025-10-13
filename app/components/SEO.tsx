@@ -142,5 +142,4 @@ export const SEO: React.FC</string><SEOProps> = ({
     </Helmet>
   );
 };
-export default SEO; origin/cursor/analyze-improve-and-deploy-application-1247
 ;

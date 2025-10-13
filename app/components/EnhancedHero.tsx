@@ -1,5 +1,4 @@
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from "react-helmet-async";
- origin/cursor/analyze-improve-and-deploy-application-1232
 ;
 const EnhancedHeroPage: React.FC = () => {
   const features = [
@@ -43,11 +42,9 @@ const benefits = [
     'Proven track record of success'
 ];
   return (
-    <React.Fragment> origin/cursor/analyze-improve-and-deploy-application-1507;
       </React><Helmet /><title>EnhancedHero | Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
       </Helmet>
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8" /><div className="max-w-7xl mx-auto" /><div className="text-center" /><h1 className="text-4xl md:text-6xl font-bold text-white mb-6" /><span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
@@ -88,16 +85,13 @@ const benefits = [
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300" />
                 <div className="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg mb-4" />
                   <feature.icon className="w-8 h-8 text-white" />
- origin/cursor/analyze-improve-and-deploy-application-1247;
               </button>
             </div>
           </div>
         </div>
       </section>
-</React.Fragment> origin/cursor/analyze-improve-and-deploy-application-1507;
   );
 };
 export default EnhancedHeroPage;
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

@@ -2,7 +2,6 @@ import React from 'react';
 import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from "react-helmet-async";
 const BlockchainWeb3Page: React.FC = () => {
   const features = [
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Zap,
       title: 'Smart Contracts',
@@ -10,7 +9,6 @@ const BlockchainWeb3Page: React.FC = () => {
 benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', 'Enhanced security']
   },
     {
-    icon: Shield, origin/cursor/analyze-improve-and-deploy-application-1247;
       title: 'Decentralized Security',
       description: 'Enhanced security through decentralized architecture and cryptographic protection.',
       benefits: ['Immutable records', 'Cryptographic security', 'Distributed consensus', 'Tamper-proof data']},
@@ -21,7 +19,6 @@ benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', '
     {icon: Globe,
       title: 'Global Access',
       description: 'Access blockchain services from anywhere in the world with global connectivity.',
- origin/cursor/analyze-improve-and-deploy-application-1247;
         <title>Blockchain & Web3 Solutions - Zion Tech Group</title>
         <meta />
       </Helmet>
@@ -35,7 +32,6 @@ benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', '
                 <div className="flex items-start space-x-4 mb-6" />
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg flex items-center justify-center flex-shrink-0" />
                     <feature.icon className="w-8 h-8 text-white" />
-                  </div> origin/cursor/analyze-improve-and-deploy-application-1247;
                   <div />
                     <h3 className="text-2xl font-bold text-white mb-2">{feature.title}</h3>
                     <p className="text-gray-300 mb-4">{feature.description</p>}</p>
@@ -44,10 +40,8 @@ benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', '
                 <ul>
                   {feature.benefits.map((benefit, benefitIndex) => (} </ul><li /><CheckCircle />
 {benefit}
- origin/cursor/analyze-improve-and-deploy-application-1247;
                   ))}
                 </ul>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
               </div>
             </div>
           </div>
@@ -205,5 +199,4 @@ benefits: ['Automated execution', 'Transparent transactions', 'Reduced costs', '
 )
 }
 export default BlockchainWeb3Page;
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;

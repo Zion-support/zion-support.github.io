@@ -21,7 +21,6 @@ export default function UtilsPage() {
             </Link><ArrowRight className="w-5 h-5 ml-2" />
           </Link>
         </div>
-=======
 'use client';
 import React from 'react';
 'use client';
@@ -36,11 +35,9 @@ interface ImageProps {src: string,}
   _quality?: number,
   src: string,
   alt: string,
-=======
 import React, { useState, useCallback } from 'react';
 interface ImageProps {
   src: string;
-  alt: string; origin/cursor/analyze-improve-and-deploy-application-1247;
   width?: number;
   height?: number;
   className?: string;
@@ -55,7 +52,6 @@ interface ImageProps {
   onError?: () => void;
 }
 export const Image: React.FC<ImageProps> = ({
-  src, origin/cursor/analyze-improve-and-deploy-application-1247;
   alt,
   width,
   height,
@@ -63,7 +59,6 @@ export const Image: React.FC<ImageProps> = ({
   priority = false,
 _quality = 75,
   _placeholder = 'empty',
-  _blurDataURL, origin/cursor/analyze-improve-and-deploy-application-1247;
   fill = false,
   sizes,
   style,
@@ -118,5 +113,4 @@ onError,
     />
   );
 };
-export default Image; origin/cursor/analyze-improve-and-deploy-application-1247
 ;

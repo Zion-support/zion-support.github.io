@@ -1,10 +1,8 @@
 import { ArrowRight , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
-export default function AICustomerSupportZionTechGroup() { origin/cursor/analyze-improve-and-deploy-application-0ff3;
   return (
     <React.Fragment /><Helmet /><title>AI Customer Support - Zion Tech Group</title>
         <meta name="description" content="AI Customer Support services by Zion Tech Group. Advanced AI and IT solutions for your business." />
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -21,7 +19,6 @@ export default function AICustomerSupportZionTechGroup() { origin/cursor/analyze
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -30,7 +27,6 @@ const benefits = [
     'Scale operations without proportional staff increases',
 'use client';
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1573;
   const stats = [
     { number: '95%', label: 'Customer Satisfaction' },
     { number: '60%', label: 'Faster Resolution' },
@@ -106,7 +102,6 @@ import React from 'react';
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
               >
                 Learn More</a>
-              </a> origin/cursor/analyze-improve-and-deploy-application-1448;
             </div>
           </section>
           {/* Features Section */}
@@ -144,7 +139,6 @@ import React from 'react';
                   }`}
                 >
                   {plan.popular && (
-                    </div><div className="absolute -top-4 left-1/2 transform -translate-x-1/2" /><span className="bg-cyan-400 text-slate-900 px-4 py-1 rounded-full text-sm font-bold"> origin/cursor/analyze-improve-and-deploy-application-1448;
                         Most Popular</span>
                       </span>
                     </div>
@@ -174,7 +168,6 @@ import React from 'react';
                 Ready to Transform Your Customer Support?</h2>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join 500+ companies already using our AI customer support solutions origin/cursor/analyze-improve-and-deploy-application-1448</p>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" /><a;
                   href="tel:+13024640950"
@@ -189,19 +182,13 @@ import React from 'react';
                   kleber@ziontechgroup.com;
                 </a>
               </div>
- origin/cursor/analyze-improve-and-deploy-application-1573;
             </div>
           </section>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256;
         </div>
       </div>
     </React.Fragment>
 'Gain competitive advantage with advanced technology'
- origin/cursor/analyze-improve-and-deploy-application-1247;
- origin/cursor/analyze-improve-and-deploy-application-1448;
- origin/cursor/analyze-improve-and-deploy-application-1573;
   );
 };
 export default AICustomerSupportPage;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
 ;

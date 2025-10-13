@@ -1,4 +1,3 @@
- origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Advanced AI technology integration',
@@ -9,7 +8,6 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
- origin/cursor/analyze-improve-and-deploy-application-1507;
       <Helmet /><title>Page | Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
@@ -37,5 +35,4 @@ const benefits = [
       </section>
     </div>)
  cursor/fix-errors-and-merge-to-main-6ce7;
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 ;

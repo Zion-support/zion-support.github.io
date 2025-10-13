@@ -5,10 +5,8 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiWebsiteBuilderPage: React.FC = () => {
- origin/cursor/analyze-improve-and-deploy-application-1232;
       </div>
 <Footer />
   )
 }
-export default AiWebsiteBuilderPage origin/cursor/analyze-improve-and-deploy-application-1247
 ;

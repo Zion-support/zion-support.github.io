@@ -2,7 +2,6 @@ import React from 'react'
 import { Helmet , Link  } from "react-helmet-async";import { FileText, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, CreditCard, Clock } from 'lucide-react'
 import Layout from '../layout'
 export default function AIInvoiceGenerator() {
- origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: 'AI-Powered Generation',
@@ -36,19 +35,16 @@ icon: TrendingUp,
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />
- origin/cursor/analyze-improve-and-deploy-application-1247;
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
- origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             </div>
           </div>
         </section>
       </div>
 <Footer />
- origin/cursor/analyze-improve-and-deploy-application-1247
 ;
