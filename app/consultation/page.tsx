@@ -1,12 +1,125 @@
-<<<<<<< HEAD
-import { ArrowRight, Calendar, Users, CheckCircle, Brain, Shield, Zap, Mail, Smartphone, Globe, Target, Award, TrendingUp } from "lucide-react";
-=======
-import { ArrowRight } from "lucide-react";
->>>>>>> cursor/fix-errors-and-merge-to-main-f2e0
+import { ArrowRight, Calendar, CheckCircle, Zap, Mail, Smartphone, Globe, Target, Shield, TrendingUp, Users } from "lucide-react";
+import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
+// Consultation types data
+const consultationTypes = [
+  {
+    title: "AI Strategy",
+    description: "Strategic planning for AI implementation and digital transformation",
+    icon: <Zap className="w-8 h-8 text-white" />,
+    color: "from-blue-500 to-cyan-500",
+    price: "Free",
+    duration: "60 minutes",
+    features: ["Strategic assessment", "AI roadmap planning", "Implementation guidance", "Risk analysis"]
+  },
+  {
+    title: "Cloud Migration",
+    description: "Expert guidance on cloud infrastructure and migration strategies",
+    icon: <Globe className="w-8 h-8 text-white" />,
+    color: "from-purple-500 to-pink-500",
+    price: "Free",
+    duration: "90 minutes",
+    features: ["Infrastructure analysis", "Migration strategy", "Cost optimization", "Security planning"]
+  },
+  {
+    title: "Cybersecurity Audit",
+    description: "Comprehensive security assessment and vulnerability analysis",
+    icon: <CheckCircle className="w-8 h-8 text-white" />,
+    color: "from-green-500 to-emerald-500",
+    price: "Free",
+    duration: "120 minutes",
+    features: ["Security assessment", "Vulnerability analysis", "Compliance review", "Remediation plan"]
+  },
+  {
+    title: "Digital Transformation",
+    description: "End-to-end digital transformation planning and execution",
+    icon: <ArrowRight className="w-8 h-8 text-white" />,
+    color: "from-orange-500 to-red-500",
+    price: "Free",
+    duration: "90 minutes",
+    features: ["Digital strategy", "Technology roadmap", "Change management", "ROI analysis"]
+  }
+];
+
+// Benefits data
+const benefits = [
+  {
+    title: "Free expert consultation",
+    description: "No cost, no obligation expert advice",
+    icon: <CheckCircle className="w-8 h-8 text-cyan-400" />
+  },
+  {
+    title: "Customized technology roadmap",
+    description: "Tailored solutions for your specific needs",
+    icon: <Target className="w-8 h-8 text-cyan-400" />
+  },
+  {
+    title: "Risk assessment and mitigation",
+    description: "Identify and address potential challenges",
+    icon: <Shield className="w-8 h-8 text-cyan-400" />
+  },
+  {
+    title: "Implementation timeline planning",
+    description: "Clear roadmap with realistic timelines",
+    icon: <Calendar className="w-8 h-8 text-cyan-400" />
+  },
+  {
+    title: "Cost optimization strategies",
+    description: "Maximize ROI and minimize expenses",
+    icon: <TrendingUp className="w-8 h-8 text-cyan-400" />
+  },
+  {
+    title: "Ongoing support and guidance",
+    description: "Continued assistance throughout implementation",
+    icon: <Users className="w-8 h-8 text-cyan-400" />
+  }
+];
+
+// Industries data
+const industries = [
+  "Healthcare", "Finance", "Manufacturing", "Retail", "Education", "Government", "Technology", "Other"
+];
+
+// Project sizes data
+const projectSizes = [
+  "Small (1-10 employees)", "Medium (11-100 employees)", "Large (101-500 employees)", "Enterprise (500+ employees)"
+];
+
+// Timelines data
+const timelines = [
+  "Immediate (within 1 month)", "Short-term (1-3 months)", "Medium-term (3-6 months)", "Long-term (6+ months)"
+];
+
 export default function Consultation() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    consultationType: "",
+    industry: "",
+    projectSize: "",
+    timeline: "",
+    message: ""
+  });
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted:", formData);
+    setIsSubmitted(true);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -21,7 +134,6 @@ export default function Consultation() {
           content="free consultation, technology advisory, AI strategy, digital transformation, cybersecurity audit, cloud migration, technology planning"
         />
       </Helmet>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Consultation Types */}
@@ -353,24 +465,7 @@ export default function Consultation() {
             </div>
           </div>
         </section>
-=======
 
-      <div className="flex items-center justify-center">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">Consultation</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Professional consultation services coming soon.
-          </p>
-
-          <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
-          >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
-        </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-f2e0
       </div>
     </div>
   );
