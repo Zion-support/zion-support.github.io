@@ -492,4 +492,7 @@ export default function AdvancedPerformanceMonitor({ className = '', children }:
     </div>
   );
 }
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-9be1
+=======
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd

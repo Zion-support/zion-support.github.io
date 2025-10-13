@@ -1,5 +1,6 @@
 interface AccessibilityUtilsConfig {
   enabled: boolean;
+<<<<<<< HEAD
   highContrast: boolean;
 <<<<<<< HEAD
   fontSize: 'small' | 'medium' | 'large';
@@ -7,6 +8,8 @@ interface AccessibilityUtilsConfig {
   fontSize: number;
 >>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
   screenReader: boolean;
+=======
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
 }
 
 export class AccessibilityUtils {
@@ -28,9 +31,13 @@ export class AccessibilityUtils {
 
   init(): void {
     if (this.config.enabled) {
+<<<<<<< HEAD
       console.log('Accessibility utils initialized');
 <<<<<<< HEAD
       this.applyAccessibilitySettings();
+=======
+      console.log('AccessibilityUtils initialized');
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
     }
   }
 
@@ -54,6 +61,7 @@ export class AccessibilityUtils {
   }
 }
 
+<<<<<<< HEAD
 // Focus management utilities;
 export const focusManagement = {
   // TODO: Add properties
@@ -506,3 +514,7 @@ export default accessibilityUtils;
 export const accessibilityUtils = new AccessibilityUtils();
 export default accessibilityUtils;
 >>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
+=======
+export const accessibilityUtils = new AccessibilityUtils();
+export default accessibilityUtils;
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd

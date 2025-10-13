@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, { Suspense, lazy } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { X, Menu, Home, Users, Settings, Brain, Cloud, Shield, Zap, Globe } from 'lucide-react';
+=======
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { X, Home, Shield, Zap, Brain, Globe } from 'lucide-react';
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
 
 interface SidebarProps {
   isOpen: boolean;

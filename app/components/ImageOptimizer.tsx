@@ -2,7 +2,10 @@ import React from 'react';
 
 interface ImageOptimizerProps {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
   src: string;
   alt: string;
   className?: string;
@@ -12,6 +15,7 @@ interface ImageOptimizerProps {
   placeholder?: string;
 }
 
+<<<<<<< HEAD
 >>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
 export default function ImageOptimizer({
   src,
@@ -24,6 +28,13 @@ export default function ImageOptimizer({
   format = 'webp',
 >>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
   placeholder
+=======
+export default function ImageOptimizer({ 
+  src, 
+  alt, 
+  className = '', 
+  lazy = true
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
 }: ImageOptimizerProps) {
   return (
     <img
@@ -31,6 +42,7 @@ export default function ImageOptimizer({
       alt={alt}
       className={className}
       loading={lazy ? 'lazy' : 'eager'}
+<<<<<<< HEAD
       style={{
 <<<<<<< HEAD
         backgroundImage: placeholder ? `url(${placeholder})` : undefined,
@@ -40,6 +52,8 @@ export default function ImageOptimizer({
         backgroundColor: placeholder || '#f3f4f6'
 >>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
       }}
+=======
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
     />
   );
 }

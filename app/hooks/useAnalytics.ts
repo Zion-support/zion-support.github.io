@@ -7,4 +7,8 @@ export const useAnalytics = () => {
     throw new Error('useAnalytics must be used within an AnalyticsProvider');
   }
   return context;
+<<<<<<< HEAD
 };
+=======
+};
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd

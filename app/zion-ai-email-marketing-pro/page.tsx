@@ -9,10 +9,21 @@ import {
   CheckCircle, 
   Star, 
   Clock, 
+<<<<<<< HEAD
   Zap, 
   Sparkles,
   MousePointer,
   Shield
+=======
+  Sparkles,
+  Cpu,
+  Send,
+  Heart,
+  MousePointer,
+  Shield,
+  Zap,
+  TrendingUp
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
 } from 'lucide-react';
 
 const ZionAIEmailMarketingProPage: React.FC = () => {

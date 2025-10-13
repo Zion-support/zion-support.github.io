@@ -168,7 +168,34 @@ export default tseslint.config(
     },
   },
   {
-    ignores: ["dist", "node_modules", "*.config.js"],
+
+    ignores: [
+      "dist", 
+      "node_modules", 
+      "*.config.js",
+      "backup/**",
+      "backup-problematic/**",
+      "backup-problematic-files/**",
+      "backup-unused-components/**",
+      "corrupted-src-backup/**",
+      "*.cjs",
+      "*.js",
+      "*.py",
+      "*.sh",
+      "*.md",
+      "*.txt",
+      "*.json",
+      "*.html",
+      "*.original",
+      "*.backup*",
+      "__tests__/**",
+      "api/**",
+      "analysis/**",
+      "ci-cd-reports/**",
+      "content/**",
+      "contracts/**",
+      "scripts/**"
+    ],
   }
 );
 

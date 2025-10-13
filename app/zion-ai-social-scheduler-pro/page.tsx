@@ -8,11 +8,19 @@ import {
   CheckCircle, 
   Star, 
   Clock, 
+<<<<<<< HEAD
   Users,
   Target, 
   Sparkles,
   Cpu,
   Globe
+=======
+  Target, 
+  Sparkles,
+  Cpu,
+  Globe,
+  Users
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
 } from 'lucide-react';
 
 const ZionAISocialSchedulerProPage: React.FC = () => {

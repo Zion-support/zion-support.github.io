@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface PerformanceUtilsConfig {
 =======
 interface PerformanceConfig {
@@ -22,12 +23,25 @@ export class PerformanceUtils {
       enabled: true,
       monitoring: true,
       optimization: true,
+=======
+interface PerformanceUtilsConfig {
+  enabled: boolean;
+}
+
+export class PerformanceUtils {
+  private config: PerformanceUtilsConfig;
+
+  constructor(config: Partial<PerformanceUtilsConfig> = {}) {
+    this.config = {
+      enabled: true,
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
       ...config
     };
   }
 
   init(): void {
     if (this.config.enabled) {
+<<<<<<< HEAD
       console.log('Performance utils initialized');
     }
   }
@@ -46,10 +60,14 @@ export class PerformanceUtils {
   optimizeImages(): void {
     if (this.config.optimization) {
       console.log('Optimizing images...');
+=======
+      console.log('PerformanceUtils initialized');
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
     }
   }
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /**
  * Performance utility functions
@@ -176,3 +194,7 @@ export default performanceUtils;
 export const performanceUtils = new PerformanceUtils();
 export default performanceUtils;
 >>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
+=======
+export const performanceUtils = new PerformanceUtils();
+export default performanceUtils;
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd

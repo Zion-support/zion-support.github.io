@@ -2,22 +2,35 @@ import React from 'react';
 import { render, screen, waitFor, act } from '@testing-library/react';
 import OptimizedImage from '../../app/components/OptimizedImage';
 
-const defaultProps = {
-  src: 'test-image.jpg',
-  alt: 'Test image',
-  width: 300,
-  height: 200,
-};
+// Mock framer-motion
+jest.mock('framer-motion', () => ({
+  motion: {
+    img: ({ children, ...props }: any) => <img {...props}>{children}</img>,
+  },
+}));
 
-describe('OptimizedImage Component', () => {
-  it('renders with default props', () => {
-    const { container } = render(<OptimizedImage {...defaultProps} />);
-    expect(container.firstChild).toBeInTheDocument();
+describe('OptimizedImage', () => {
+  const defaultProps = {
+    src: 'https://example.com/image.jpg',
+    alt: 'Test image',
+  };
+
+  it('renders with basic props', () => {
+    render(<OptimizedImage {...defaultProps} />);
+    expect(screen.getByAltText('Test image')).toBeInTheDocument();
   });
 
   it('renders with custom className', () => {
-    const { container } = render(<OptimizedImage {...defaultProps} className="test-class" />);
-    expect(container.firstChild).toHaveClass('test-class');
+    render(<OptimizedImage {...defaultProps} className="custom-class" />);
+    const container = screen.getByAltText('Test image').parentElement;
+    expect(container).toHaveClass('custom-class');
+  });
+
+  it('renders with width and height', () => {
+    render(<OptimizedImage {...defaultProps} width={300} height={200} />);
+    const img = screen.getByAltText('Test image');
+    expect(img).toHaveAttribute('width', '300');
+    expect(img).toHaveAttribute('height', '200');
   });
 
   it('shows loading skeleton initially', () => {

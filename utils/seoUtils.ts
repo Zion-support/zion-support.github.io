@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface SEOUtilsConfig {
   enabled: boolean;
   analytics: boolean;
@@ -29,12 +30,25 @@ export class SeoUtils {
       metaTags: true,
       structuredData: true,
 >>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
+=======
+interface SeoUtilsConfig {
+  enabled: boolean;
+}
+
+export class SeoUtils {
+  private config: SeoUtilsConfig;
+
+  constructor(config: Partial<SeoUtilsConfig> = {}) {
+    this.config = {
+      enabled: true,
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
       ...config
     };
   }
 
   init(): void {
     if (this.config.enabled) {
+<<<<<<< HEAD
       console.log('SEO utils initialized');
     }
   }
@@ -135,3 +149,12 @@ export default seoUtils;
 export const seoUtils = new SeoUtils();
 export default seoUtils;
 >>>>>>> 01a7da73ce4c3be8c79b6cf84a9d7a13c7877ac0
+=======
+      console.log('SeoUtils initialized');
+    }
+  }
+}
+
+export const seoUtils = new SeoUtils();
+export default seoUtils;
+>>>>>>> 8b3c36c8a79bdf97a6a44b765072850456aacdcd
