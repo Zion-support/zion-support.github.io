@@ -40,6 +40,60 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion Quantum AI",
+      description: "Revolutionary quantum-powered AI platform",
+      price: "From $299/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-quantum-ai",
+      featured: true,
+      new: true
+    },
+    {
+      name: "Zion Blockchain AI",
+      description: "Advanced blockchain analytics and security",
+      price: "From $199/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-blockchain-ai",
+      featured: true,
+      new: true
+    },
+    {
+      name: "Zion IoT AI",
+      description: "Smart IoT management and analytics",
+      price: "From $149/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-iot-ai",
+      featured: true,
+      new: true
+    },
+    {
+      name: "Zion Cyber AI",
+      description: "AI-powered cybersecurity suite",
+      price: "From $299/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-cyber-ai",
+      featured: true,
+      new: true
+    },
+    {
+      name: "Zion Climate AI",
+      description: "Climate intelligence and sustainability",
+      price: "From $199/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-climate-ai",
+      featured: true,
+      new: true
+    },
+    {
+      name: "Zion Space AI",
+      description: "Space technology and satellite management",
+      price: "From $499/month",
+      icon: <Star className="w-6 h-6" />,
+      link: "/zion-space-ai",
+      featured: true,
+      new: true
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $29/month",

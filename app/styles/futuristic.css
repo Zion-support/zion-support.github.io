@@ -7,6 +7,9 @@
   --primary-green: #10b981;
   --primary-orange: #f59e0b;
   --primary-red: #ef4444;
+  --primary-indigo: #6366f1;
+  --primary-emerald: #10b981;
+  --primary-yellow: #eab308;
 
   --dark-bg: #0f172a;
   --darker-bg: #020617;
@@ -21,6 +24,21 @@
   --glow-pink: 0 0 20px rgba(236, 72, 153, 0.3);
   --glow-cyan: 0 0 20px rgba(6, 182, 212, 0.3);
   --glow-green: 0 0 20px rgba(16, 185, 129, 0.3);
+  --glow-blue: 0 0 20px rgba(59, 130, 246, 0.3);
+  --glow-orange: 0 0 20px rgba(245, 158, 11, 0.3);
+  --glow-red: 0 0 20px rgba(239, 68, 68, 0.3);
+  --glow-indigo: 0 0 20px rgba(99, 102, 241, 0.3);
+  --glow-emerald: 0 0 20px rgba(16, 185, 129, 0.3);
+  --glow-yellow: 0 0 20px rgba(234, 179, 8, 0.3);
+
+  /* Enhanced neon effects */
+  --neon-purple: 0 0 5px #8b5cf6, 0 0 10px #8b5cf6, 0 0 15px #8b5cf6, 0 0 20px #8b5cf6;
+  --neon-cyan: 0 0 5px #06b6d4, 0 0 10px #06b6d4, 0 0 15px #06b6d4, 0 0 20px #06b6d4;
+  --neon-green: 0 0 5px #10b981, 0 0 10px #10b981, 0 0 15px #10b981, 0 0 20px #10b981;
+  --neon-pink: 0 0 5px #ec4899, 0 0 10px #ec4899, 0 0 15px #ec4899, 0 0 20px #ec4899;
+  --neon-blue: 0 0 5px #3b82f6, 0 0 10px #3b82f6, 0 0 15px #3b82f6, 0 0 20px #3b82f6;
+  --neon-orange: 0 0 5px #f59e0b, 0 0 10px #f59e0b, 0 0 15px #f59e0b, 0 0 20px #f59e0b;
+  --neon-red: 0 0 5px #ef4444, 0 0 10px #ef4444, 0 0 15px #ef4444, 0 0 20px #ef4444;
 }
 
 /* Base Styles */
@@ -40,6 +58,31 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Animated background particles */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+  animation: backgroundShift 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+@keyframes backgroundShift {
+  0%, 100% { transform: translateX(0) translateY(0) scale(1); }
+  25% { transform: translateX(-20px) translateY(-10px) scale(1.05); }
+  50% { transform: translateX(20px) translateY(10px) scale(0.95); }
+  75% { transform: translateX(-10px) translateY(20px) scale(1.02); }
 }
 
 /* Cyber Grid Background */
@@ -478,6 +521,186 @@ body {
 
   .text-cyber {
     letter-spacing: 1px;
+  }
+}
+
+/* Enhanced Neon Effects */
+.neon-text {
+  text-shadow: var(--neon-purple);
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+.neon-cyan {
+  text-shadow: var(--neon-cyan);
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+.neon-green {
+  text-shadow: var(--neon-green);
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+.neon-pink {
+  text-shadow: var(--neon-pink);
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+.neon-blue {
+  text-shadow: var(--neon-blue);
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+.neon-orange {
+  text-shadow: var(--neon-orange);
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+.neon-red {
+  text-shadow: var(--neon-red);
+  animation: neonPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes neonPulse {
+  from {
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor;
+  }
+  to {
+    text-shadow: 
+      0 0 2px currentColor,
+      0 0 5px currentColor,
+      0 0 8px currentColor,
+      0 0 12px currentColor;
+  }
+}
+
+/* Holographic Effects */
+.holographic {
+  background: linear-gradient(
+    45deg,
+    #8b5cf6,
+    #06b6d4,
+    #ec4899,
+    #10b981,
+    #f59e0b,
+    #ef4444
+  );
+  background-size: 400% 400%;
+  animation: holographicShift 3s ease-in-out infinite;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes holographicShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Glitch Effects */
+.glitch {
+  position: relative;
+  animation: glitch 2s infinite;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 0.5s infinite;
+  color: #ff0000;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 0.5s infinite;
+  color: #00ff00;
+  z-index: -2;
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch-1 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(2px, -2px); }
+  40% { transform: translate(-2px, 2px); }
+  60% { transform: translate(-2px, -2px); }
+  80% { transform: translate(2px, 2px); }
+}
+
+@keyframes glitch-2 {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(-2px, -2px); }
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+  position: relative;
+  overflow: hidden;
+}
+
+.matrix-rain::before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 255, 0, 0.1) 50%,
+    transparent 100%
+  );
+  animation: matrixFall 3s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes matrixFall {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Floating Elements */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Pulse Glow */
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
   }
 }
 

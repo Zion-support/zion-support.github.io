@@ -199,6 +199,14 @@ const FiveGSmartCitySolutionsPage = React.lazy(
 );
 const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 
+// New Advanced Micro SAAS Pages
+const ZionQuantumAIPage = React.lazy(() => import("./app/zion-quantum-ai/page"));
+const ZionBlockchainAIPage = React.lazy(() => import("./app/zion-blockchain-ai/page"));
+const ZionIoTAIPage = React.lazy(() => import("./app/zion-iot-ai/page"));
+const ZionCyberAIPage = React.lazy(() => import("./app/zion-cyber-ai/page"));
+const ZionClimateAIPage = React.lazy(() => import("./app/zion-climate-ai/page"));
+const ZionSpaceAIPage = React.lazy(() => import("./app/zion-space-ai/page"));
+
 // Main App Component
 function App() {
   return (
@@ -442,6 +450,32 @@ function App() {
                   <Route
                     path="/5g-solutions"
                     element={<FiveGSolutionsPage />}
+                  />
+
+                  {/* New Advanced Micro SAAS Routes */}
+                  <Route
+                    path="/zion-quantum-ai"
+                    element={<ZionQuantumAIPage />}
+                  />
+                  <Route
+                    path="/zion-blockchain-ai"
+                    element={<ZionBlockchainAIPage />}
+                  />
+                  <Route
+                    path="/zion-iot-ai"
+                    element={<ZionIoTAIPage />}
+                  />
+                  <Route
+                    path="/zion-cyber-ai"
+                    element={<ZionCyberAIPage />}
+                  />
+                  <Route
+                    path="/zion-climate-ai"
+                    element={<ZionClimateAIPage />}
+                  />
+                  <Route
+                    path="/zion-space-ai"
+                    element={<ZionSpaceAIPage />}
                   />
                       </Routes>
                     </Suspense>

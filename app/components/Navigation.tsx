@@ -1,6 +1,6 @@
 import React, { useState, useCallback, useMemo } from 'react'
 import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight } from 'lucide-react'
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Globe } from 'lucide-react'
 
 const Navigation = React.memo(() => {
   const [isOpen, setIsOpen] = useState(false)
@@ -29,14 +29,20 @@ const Navigation = React.memo(() => {
   ], [])
 
   const microSaasServices = useMemo(() => [
-    { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
-    { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
-    { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
-    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
-    { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
-    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
+    { name: 'Zion Quantum AI', path: '/zion-quantum-ai', icon: <Brain className="w-4 h-4" />, featured: true, new: true },
+    { name: 'Zion Blockchain AI', path: '/zion-blockchain-ai', icon: <Shield className="w-4 h-4" />, featured: true, new: true },
+    { name: 'Zion IoT AI', path: '/zion-iot-ai', icon: <Zap className="w-4 h-4" />, featured: true, new: true },
+    { name: 'Zion Cyber AI', path: '/zion-cyber-ai', icon: <Shield className="w-4 h-4" />, featured: true, new: true },
+    { name: 'Zion Climate AI', path: '/zion-climate-ai', icon: <Globe className="w-4 h-4" />, featured: true, new: true },
+    { name: 'Zion Space AI', path: '/zion-space-ai', icon: <Star className="w-4 h-4" />, featured: true, new: true },
+    { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: false },
+    { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: false },
+    { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: false },
+    { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" />, featured: false },
+    { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" />, featured: false },
+    { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" />, featured: false },
+    { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" />, featured: false },
+    { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" />, featured: false }
   ], [])
 
   const mainNavItems = useMemo(() => [
