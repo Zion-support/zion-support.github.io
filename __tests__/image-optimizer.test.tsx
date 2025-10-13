@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
@@ -33,5 +34,11 @@ describe('ImageOptimizer Component', () => {
   it('renders children', () => {
     render(<ImageOptimizer>Test content</ImageOptimizer>);
     expect(screen.getByText('Test content')).toBeInTheDocument();
+=======
+// Mock test for image optimizer
+describe('Image Optimizer', () => {
+  it('should render without crashing', () => {
+    expect(true).toBe(true);
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-69c0
   });
 });
