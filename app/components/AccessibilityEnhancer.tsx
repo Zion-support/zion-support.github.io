@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3f37
 import React, { useEffect, useState } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-16fc
 
-<<<<<<< HEAD
-const AccessibilityEnhancer: React.FC = () => {
-  return null; // This component enhances accessibility but doesn't render anything visible
-=======
 interface AccessibilityEnhancerProps {
   children: React.ReactNode;
 }
@@ -32,8 +21,8 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     const contrastQuery = window.matchMedia('(prefers-contrast: high)');
 
-    const handleMotionChange = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
-    const handleContrastChange = (e: MediaQueryListEvent) => setIsHighContrast(e.matches);
+    const handleMotionChange = (e: any) => setIsReducedMotion(e.matches);
+    const handleContrastChange = (e: any) => setIsHighContrast(e.matches);
 
     motionQuery.addEventListener('change', handleMotionChange);
     contrastQuery.addEventListener('change', handleContrastChange);
@@ -72,12 +61,12 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
   // Keyboard navigation enhancements
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyDown = (e: any) => {
       // Skip to main content
       if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
         const mainContent = document.querySelector('main, [role="main"]');
         if (mainContent) {
-          (mainContent as HTMLElement).focus();
+          (mainContent as any).focus();
           e.preventDefault();
         }
       }
@@ -86,7 +75,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       if (e.key === 'Tab' && !e.shiftKey && e.target === document.body) {
         const navigation = document.querySelector('nav, [role="navigation"]');
         if (navigation) {
-          (navigation as HTMLElement).focus();
+          (navigation as any).focus();
           e.preventDefault();
         }
       }
@@ -102,27 +91,27 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     );
 
-    const handleFocus = (e: Event) => {
-      const target = e.target as HTMLElement;
+    const handleFocus = (e: any) => {
+      const target = e.target as any;
       target.style.outline = '2px solid #0066cc';
       target.style.outlineOffset = '2px';
     };
 
-    const handleBlur = (e: Event) => {
-      const target = e.target as HTMLElement;
+    const handleBlur = (e: any) => {
+      const target = e.target as any;
       target.style.outline = '';
       target.style.outlineOffset = '';
     };
 
     focusableElements.forEach(element => {
-      element.addEventListener('focus', handleFocus as EventListener);
-      element.addEventListener('blur', handleBlur as EventListener);
+      element.addEventListener('focus', handleFocus);
+      element.addEventListener('blur', handleBlur);
     });
 
     return () => {
       focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus as EventListener);
-        element.removeEventListener('blur', handleBlur as EventListener);
+        element.removeEventListener('focus', handleFocus);
+        element.removeEventListener('blur', handleBlur);
       });
     };
   }, []);
@@ -173,13 +162,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-0bb0
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-16fc
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3f37
 };
 
 export default AccessibilityEnhancer;

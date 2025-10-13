@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-16fc
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3f37
 import React, { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
@@ -28,7 +20,7 @@ const PerformanceMonitor: React.FC = () => {
   useEffect(() => {
     if (typeof window !== 'undefined' && 'performance' in window) {
       // Monitor Core Web Vitals
-      const observer = new PerformanceObserver((list) => {
+      const observer = new (window as any).PerformanceObserver((list: any) => {
         for (const entry of list.getEntries()) {
           if (entry.entryType === 'paint') {
             if (entry.name === 'first-contentful-paint') {
@@ -38,13 +30,9 @@ const PerformanceMonitor: React.FC = () => {
             setMetrics(prev => ({ ...prev, lcp: entry.startTime }));
           } else if (entry.entryType === 'first-input') {
             const inputEntry = entry as any;
-<<<<<<< HEAD
-            setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
-=======
             if (inputEntry.processingStart && inputEntry.startTime) {
               setMetrics(prev => ({ ...prev, fid: inputEntry.processingStart - inputEntry.startTime }));
             }
->>>>>>> cursor/fix-errors-and-merge-to-main-3f37
           } else if (entry.entryType === 'layout-shift') {
             setMetrics(prev => ({ ...prev, cls: (prev.cls || 0) + (entry as any).value }));
           }
@@ -54,7 +42,7 @@ const PerformanceMonitor: React.FC = () => {
       observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] });
 
       // Monitor TTFB
-      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigationEntry = (window as any).performance.getEntriesByType('navigation')[0] as any;
       if (navigationEntry) {
         setMetrics(prev => ({ ...prev, ttfb: navigationEntry.responseStart - navigationEntry.requestStart }));
       }
@@ -84,10 +72,3 @@ const PerformanceMonitor: React.FC = () => {
 };
 
 export default PerformanceMonitor;
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-0bb0
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-16fc
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-3f37
