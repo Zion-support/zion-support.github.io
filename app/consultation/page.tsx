@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import { ArrowRight, Calendar, Users, CheckCircle, Brain, Shield, Zap, Mail, Smartphone, Globe, Target, Award, TrendingUp } from "lucide-react";
-=======
-import { ArrowRight } from "lucide-react";
->>>>>>> cursor/fix-errors-and-merge-to-main-f2e0
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 

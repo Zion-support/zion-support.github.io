@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -107,7 +106,6 @@ export default function CaseStudies() {
         />
       </Helmet>
 
-<<<<<<< HEAD
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900">
         {/* Hero Section */}
         <section className="flex items-center justify-center py-20 px-4">
@@ -286,10 +284,6 @@ export default function CaseStudies() {
       <Footer />
     </div>
   );
-<<<<<<< HEAD
 };
 
 export default CaseStudiesPage;
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-f2e0
