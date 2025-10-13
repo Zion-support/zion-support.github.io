@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Mic } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Mic, Camera, Clock, Eye } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
@@ -90,11 +90,59 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
-      name: "Zion AI Neural Interface",
-      description: "Revolutionary brain-computer interface for thought-to-text conversion and mind control",
-      price: "From $199/month",
+      name: "AI Holographic Presenter",
+      description: "Revolutionary 3D holographic presentations with gesture control and real-time collaboration",
+      price: "From $99/month",
+      icon: <Camera className="w-6 h-6" />,
+      link: "/ai-holographic-presenter",
+      featured: true
+    },
+    {
+      name: "AI Quantum Encryption",
+      description: "Unbreakable quantum encryption with military-grade security and zero-knowledge architecture",
+      price: "From $49/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/ai-quantum-encryption",
+      featured: true
+    },
+    {
+      name: "AI Neural Interface Pro",
+      description: "Direct brain-computer interface with 99.7% accuracy for thought-to-text conversion",
+      price: "From $299/month",
       icon: <Brain className="w-6 h-6" />,
-      link: "/zion-ai-neural-interface",
+      link: "/ai-neural-interface-pro",
+      featured: true
+    },
+    {
+      name: "AI Time Travel Simulator",
+      description: "Experience historical periods and future scenarios with 99.9% accuracy using quantum computing",
+      price: "From $199/month",
+      icon: <Clock className="w-6 h-6" />,
+      link: "/ai-time-travel-simulator",
+      featured: true
+    },
+    {
+      name: "AI Mind Reading Analyzer",
+      description: "Real-time thought analysis and emotion detection with 98.7% accuracy using neural patterns",
+      price: "From $149/month",
+      icon: <Eye className="w-6 h-6" />,
+      link: "/ai-mind-reading-analyzer",
+      featured: true
+    },
+    {
+      name: "AI Teleportation Simulator",
+      description: "Instant global travel with quantum entanglement technology and 99.9% accuracy",
+      price: "From $299/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/ai-teleportation-simulator",
+      featured: true
+    },
+    {
+      name: "AI Climate Control Master",
+      description: "Control global weather patterns with precision climate management and disaster prevention",
+      price: "From $999/month",
+      icon: <Cloud className="w-6 h-6" />,
+      link: "/ai-climate-control-master",
       featured: true
     },
     {
@@ -103,7 +151,7 @@ const HomePage = () => {
       price: "From $29/month",
       icon: <Mic className="w-6 h-6" />,
       link: "/ai-voice-cloning-studio",
-      featured: true
+      featured: false
     },
     {
       name: "AI Quantum Financial Oracle",
@@ -111,30 +159,6 @@ const HomePage = () => {
       price: "From $199/month",
       icon: <BarChart3 className="w-6 h-6" />,
       link: "/ai-quantum-financial-oracle",
-      featured: true
-    },
-    {
-      name: "AI Space Mission Optimizer",
-      description: "Advanced space mission optimization with 99.9% trajectory accuracy",
-      price: "From $499/month",
-      icon: <Globe className="w-6 h-6" />,
-      link: "/ai-space-mission-optimizer",
-      featured: true
-    },
-    {
-      name: "Zion Analytics Pro",
-      description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
-      price: "From $299/month",
-      icon: <BarChart3 className="w-6 h-6" />,
-      link: "/zion-analytics-pro",
-      featured: false
-    },
-    {
-      name: "Zion Security Shield",
-      description: "Advanced cybersecurity protection with AI-powered threat detection and automated response",
-      price: "From $499/month",
-      icon: <Shield className="w-6 h-6" />,
-      link: "/zion-security-shield",
       featured: false
     }
   ];
@@ -182,11 +206,27 @@ const HomePage = () => {
       <FuturisticBackground />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        {/* Animated Background Elements */}
+      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden ultra-cyber-grid">
+        {/* Ultra Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 ultra-animated-gradient rounded-full blur-3xl ultra-float"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 ultra-animated-gradient rounded-full blur-3xl ultra-float" style={{animationDelay: '2s'}}></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 ultra-holographic rounded-full blur-3xl ultra-pulse-glow"></div>
+        </div>
+        
+        {/* Ultra Particle System */}
+        <div className="ultra-particles">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="ultra-particle"
+              style={{
+                left: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 20}s`,
+                animationDuration: `${15 + Math.random() * 10}s`
+              }}
+            />
+          ))}
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
@@ -195,10 +235,8 @@ const HomePage = () => {
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Welcome to Zion Tech Group
-            </span>
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight ultra-text-gradient ultra-text-cyber ultra-glitch">
+            Welcome to Zion Tech Group
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed text-center">
@@ -207,33 +245,25 @@ const HomePage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Sparkles className="w-5 h-5" />}
-            >
+            <button className="ultra-btn-futuristic ultra-neon-glow ultra-hover-glow">
+              <Sparkles className="w-5 h-5 mr-2" />
               Get Started Today
-            </FuturisticButton>
-            <FuturisticButton
-              href="/demo"
-              variant="outline"
-              size="lg"
-              icon={<Monitor className="w-5 h-5" />}
-            >
+            </button>
+            <button className="ultra-btn-futuristic ultra-neon-glow ultra-hover-glow" style={{background: 'linear-gradient(45deg, transparent, rgba(34, 211, 238, 0.8), transparent)', border: '2px solid rgba(34, 211, 238, 0.6)'}}>
+              <Monitor className="w-5 h-5 mr-2" />
               Watch Demo
-            </FuturisticButton>
+            </button>
           </div>
           
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <div key={index} className="text-center group ultra-glass-card rounded-2xl p-6 ultra-hover-lift">
+                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full ultra-animated-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300 ultra-pulse-glow">
                   {stat.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 ultra-text-gradient ultra-neon-glow">{stat.number}</div>
+                <div className="text-gray-300 text-xs md:text-sm ultra-text-cyber">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -241,10 +271,10 @@ const HomePage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 ultra-matrix-rain">
         <ResponsiveContainer>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 ultra-text-gradient ultra-text-cyber">
               Our Core Services
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -256,7 +286,7 @@ const HomePage = () => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                className="group ultra-glass-card rounded-2xl p-6 ultra-hover-lift ultra-scan-lines cursor-pointer"
               >
                 <Link
                   to={feature.link}
@@ -264,19 +294,19 @@ const HomePage = () => {
                   aria-label={`Learn more about ${feature.title}`}
                 >
                   <div
-                    className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                    className={`w-12 h-12 md:w-16 md:h-16 rounded-lg ultra-animated-gradient flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 ultra-pulse-glow`}
                     aria-hidden="true"
                   >
                     {feature.icon}
                   </div>
-                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors ultra-text-gradient">
                     {feature.title}
                   </h3>
                   <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
                     {feature.description}
                   </p>
                   <div className="text-center">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs md:text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs md:text-sm font-medium ultra-neon-glow ultra-text-cyber">
                       {feature.stats}
                     </span>
                   </div>
@@ -291,42 +321,42 @@ const HomePage = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 ultra-text-gradient ultra-text-cyber ultra-glitch">
               Featured Micro SAAS Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group ultra-glass-card rounded-2xl p-6 ultra-hover-lift relative overflow-hidden ultra-scan-lines"
               >
                 {saas.featured && (
-                  <div className="absolute top-4 right-4">
-                    <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className="ultra-neon-glow bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold ultra-text-cyber">
                       Featured
                     </span>
                   </div>
                 )}
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                  <div className="w-14 h-14 rounded-xl ultra-animated-gradient flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform ultra-pulse-glow">
                     {saas.icon}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors ultra-text-gradient">
                       {saas.name}
                     </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    <p className="text-cyan-400 font-medium ultra-neon-cyan">{saas.price}</p>
                   </div>
                 </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">
                   {saas.description}
                 </p>
-                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
+                <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors ultra-neon-cyan">
                   Learn More
                   <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                 </div>
@@ -334,22 +364,19 @@ const HomePage = () => {
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link
-              to="/micro-saas"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
-            >
+            <button className="ultra-btn-futuristic ultra-neon-glow ultra-hover-glow">
               View All Micro SAAS Solutions
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 ultra-neural-network-bg">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 ultra-text-gradient ultra-text-cyber">
               Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -360,16 +387,16 @@ const HomePage = () => {
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group ultra-glass-card rounded-2xl p-6 ultra-hover-lift ultra-scan-lines relative overflow-hidden"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current ultra-neon-glow" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                <p className="text-gray-300 mb-4 italic leading-relaxed ultra-text-cyber">"{testimonial.content}"</p>
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
+                  <div className="font-semibold text-white ultra-text-gradient">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                 </div>
               </div>
@@ -379,9 +406,9 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 ultra-holographic">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 ultra-text-gradient ultra-text-cyber ultra-glitch">
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -391,44 +418,38 @@ const HomePage = () => {
           
           {/* Contact Information */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <div className="text-center ultra-glass-card rounded-2xl p-6 ultra-hover-lift">
+              <div className="w-12 h-12 ultra-animated-gradient rounded-lg flex items-center justify-center mx-auto mb-3 ultra-pulse-glow">
                 <Mail className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-white font-semibold mb-2">Email</h3>
-              <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+              <h3 className="text-white font-semibold mb-2 ultra-text-gradient">Email</h3>
+              <p className="text-cyan-400 ultra-neon-cyan">kleber@ziontechgroup.com</p>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <div className="text-center ultra-glass-card rounded-2xl p-6 ultra-hover-lift">
+              <div className="w-12 h-12 ultra-animated-gradient rounded-lg flex items-center justify-center mx-auto mb-3 ultra-pulse-glow">
                 <Smartphone className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-white font-semibold mb-2">Phone</h3>
-              <p className="text-cyan-400">+1 302 464 0950</p>
+              <h3 className="text-white font-semibold mb-2 ultra-text-gradient">Phone</h3>
+              <p className="text-cyan-400 ultra-neon-cyan">+1 302 464 0950</p>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <div className="text-center ultra-glass-card rounded-2xl p-6 ultra-hover-lift">
+              <div className="w-12 h-12 ultra-animated-gradient rounded-lg flex items-center justify-center mx-auto mb-3 ultra-pulse-glow">
                 <Globe className="w-6 h-6 text-white" />
               </div>
-              <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <h3 className="text-white font-semibold mb-2 ultra-text-gradient">Address</h3>
+              <p className="text-cyan-400 text-sm ultra-neon-cyan">364 E Main St STE 1008<br />Middletown DE 19709</p>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
-            >
+            <button className="ultra-btn-futuristic ultra-neon-glow ultra-hover-glow">
               Start Your Journey
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
-            >
-              Explore Services
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
+            <button className="ultra-btn-futuristic ultra-neon-glow ultra-hover-glow" style={{background: 'linear-gradient(45deg, transparent, rgba(34, 211, 238, 0.8), transparent)', border: '2px solid rgba(34, 211, 238, 0.6)'}}>
+              View Our Services
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </button>
           </div>
         </div>
       </section>

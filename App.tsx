@@ -4,6 +4,7 @@ import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
 import "./app/styles/futuristic-advanced.css";
+import "./app/styles/futuristic-ultra.css";
 import "./app/styles/accessibility-enhanced.css";
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
@@ -42,6 +43,13 @@ const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
 const AIVoiceCloningStudioPage = React.lazy(() => import("./app/ai-voice-cloning-studio/page"));
 const AIQuantumFinancialOraclePage = React.lazy(() => import("./app/ai-quantum-financial-oracle/page"));
 const AISpaceMissionOptimizerPage = React.lazy(() => import("./app/ai-space-mission-optimizer/page"));
+const AIHolographicPresenterPage = React.lazy(() => import("./app/ai-holographic-presenter/page"));
+const AIQuantumEncryptionPage = React.lazy(() => import("./app/ai-quantum-encryption/page"));
+const AINeuralInterfaceProPage = React.lazy(() => import("./app/ai-neural-interface-pro/page"));
+const AITimeTravelSimulatorPage = React.lazy(() => import("./app/ai-time-travel-simulator/page"));
+const AIMindReadingAnalyzerPage = React.lazy(() => import("./app/ai-mind-reading-analyzer/page"));
+const AITeleportationSimulatorPage = React.lazy(() => import("./app/ai-teleportation-simulator/page"));
+const AIClimateControlMasterPage = React.lazy(() => import("./app/ai-climate-control-master/page"));
 
 // New IT Services
 const QuantumComputingSolutionsPage = React.lazy(() => import("./app/quantum-computing-solutions/page"));
@@ -158,6 +166,13 @@ function App() {
                         <Route path="/ai-voice-cloning-studio" element={<AIVoiceCloningStudioPage />} />
                         <Route path="/ai-quantum-financial-oracle" element={<AIQuantumFinancialOraclePage />} />
                         <Route path="/ai-space-mission-optimizer" element={<AISpaceMissionOptimizerPage />} />
+                        <Route path="/ai-holographic-presenter" element={<AIHolographicPresenterPage />} />
+                        <Route path="/ai-quantum-encryption" element={<AIQuantumEncryptionPage />} />
+                        <Route path="/ai-neural-interface-pro" element={<AINeuralInterfaceProPage />} />
+                        <Route path="/ai-time-travel-simulator" element={<AITimeTravelSimulatorPage />} />
+                        <Route path="/ai-mind-reading-analyzer" element={<AIMindReadingAnalyzerPage />} />
+                        <Route path="/ai-teleportation-simulator" element={<AITeleportationSimulatorPage />} />
+                        <Route path="/ai-climate-control-master" element={<AIClimateControlMasterPage />} />
 
                         {/* New IT Services */}
                         <Route path="/quantum-computing-solutions" element={<QuantumComputingSolutionsPage />} />

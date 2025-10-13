@@ -1,0 +1,696 @@
+/* Ultra Advanced Futuristic Design System */
+:root {
+  /* Ultra Color Palette */
+  --ultra-purple: #a855f7;
+  --ultra-pink: #f472b6;
+  --ultra-cyan: #22d3ee;
+  --ultra-blue: #60a5fa;
+  --ultra-green: #34d399;
+  --ultra-orange: #fb923c;
+  --ultra-red: #f87171;
+  --ultra-yellow: #facc15;
+  --ultra-indigo: #818cf8;
+  --ultra-violet: #c084fc;
+  --ultra-emerald: #6ee7b7;
+  --ultra-rose: #fb7185;
+  
+  /* Ultra Dark Theme */
+  --ultra-dark: #000000;
+  --ultra-darker: #0a0a0a;
+  --ultra-card: rgba(20, 20, 20, 0.95);
+  --ultra-border: rgba(168, 85, 247, 0.4);
+  --ultra-glow: rgba(168, 85, 247, 0.6);
+  
+  /* Ultra Text Colors */
+  --ultra-text: #ffffff;
+  --ultra-text-dim: #e5e7eb;
+  --ultra-text-muted: #9ca3af;
+  --ultra-text-accent: #22d3ee;
+  
+  /* Ultra Glow Effects */
+  --glow-ultra-purple: 0 0 30px rgba(168, 85, 247, 0.8);
+  --glow-ultra-pink: 0 0 30px rgba(244, 114, 182, 0.8);
+  --glow-ultra-cyan: 0 0 30px rgba(34, 211, 238, 0.8);
+  --glow-ultra-green: 0 0 30px rgba(52, 211, 153, 0.8);
+  --glow-ultra-blue: 0 0 30px rgba(96, 165, 250, 0.8);
+  
+  /* Ultra Animation Variables */
+  --ultra-speed: 0.2s;
+  --ultra-easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Ultra Cyber Grid with Holographic Overlay */
+.ultra-cyber-grid {
+  background-image: 
+    linear-gradient(rgba(168, 85, 247, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(168, 85, 247, 0.3) 1px, transparent 1px),
+    linear-gradient(rgba(34, 211, 238, 0.2) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 211, 238, 0.2) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  position: relative;
+  animation: ultraGridPulse 6s ease-in-out infinite;
+}
+
+@keyframes ultraGridPulse {
+  0%, 100% { 
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  25% { 
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+  50% { 
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+  75% { 
+    opacity: 0.6;
+    transform: scale(1.02);
+  }
+}
+
+.ultra-cyber-grid::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 10% 20%, rgba(168, 85, 247, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(244, 114, 182, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.2) 0%, transparent 40%),
+    radial-gradient(circle at 30% 70%, rgba(52, 211, 153, 0.2) 0%, transparent 40%);
+  animation: ultraNeuralPulse 18s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes ultraNeuralPulse {
+  0%, 100% { 
+    opacity: 0.4;
+    transform: scale(1) rotate(0deg);
+  }
+  25% { 
+    opacity: 0.7;
+    transform: scale(1.08) rotate(2deg);
+  }
+  50% { 
+    opacity: 0.9;
+    transform: scale(1.15) rotate(0deg);
+  }
+  75% { 
+    opacity: 0.7;
+    transform: scale(1.08) rotate(-2deg);
+  }
+}
+
+/* Ultra Matrix Rain with Enhanced Effects */
+.ultra-matrix-rain {
+  position: relative;
+  overflow: hidden;
+}
+
+.ultra-matrix-rain::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(90deg, transparent 0%, rgba(52, 211, 153, 0.2) 25%, rgba(34, 211, 238, 0.2) 50%, rgba(168, 85, 247, 0.2) 75%, transparent 100%),
+    linear-gradient(0deg, transparent 0%, rgba(52, 211, 153, 0.2) 25%, rgba(34, 211, 238, 0.2) 50%, rgba(168, 85, 247, 0.2) 75%, transparent 100%);
+  background-size: 150px 150px, 150px 150px;
+  animation: ultraMatrixMove 30s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes ultraMatrixMove {
+  0% { 
+    transform: translateY(-100px) translateX(0px) rotate(0deg);
+  }
+  25% { 
+    transform: translateY(-50px) translateX(25px) rotate(1deg);
+  }
+  50% { 
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+  75% { 
+    transform: translateY(50px) translateX(-25px) rotate(-1deg);
+  }
+  100% { 
+    transform: translateY(100vh) translateX(0px) rotate(0deg);
+  }
+}
+
+/* Ultra Neon Glow Effects */
+.ultra-neon-glow {
+  box-shadow: 
+    0 0 5px currentColor,
+    0 0 10px currentColor,
+    0 0 15px currentColor,
+    0 0 20px currentColor,
+    0 0 35px currentColor,
+    0 0 40px currentColor,
+    0 0 50px currentColor,
+    0 0 60px currentColor;
+  animation: ultraNeonFlicker 4s ease-in-out infinite alternate;
+}
+
+@keyframes ultraNeonFlicker {
+  0%, 100% { 
+    opacity: 1;
+    filter: brightness(1);
+  }
+  25% { 
+    opacity: 0.8;
+    filter: brightness(1.2);
+  }
+  50% { 
+    opacity: 0.9;
+    filter: brightness(1.1);
+  }
+  75% { 
+    opacity: 0.7;
+    filter: brightness(1.3);
+  }
+}
+
+.ultra-neon-purple {
+  color: var(--ultra-purple);
+  text-shadow: 
+    0 0 5px var(--ultra-purple),
+    0 0 10px var(--ultra-purple),
+    0 0 15px var(--ultra-purple),
+    0 0 20px var(--ultra-purple),
+    0 0 25px var(--ultra-purple),
+    0 0 30px var(--ultra-purple);
+  animation: ultraNeonPulse 4s ease-in-out infinite;
+}
+
+.ultra-neon-pink {
+  color: var(--ultra-pink);
+  text-shadow: 
+    0 0 5px var(--ultra-pink),
+    0 0 10px var(--ultra-pink),
+    0 0 15px var(--ultra-pink),
+    0 0 20px var(--ultra-pink),
+    0 0 25px var(--ultra-pink),
+    0 0 30px var(--ultra-pink);
+  animation: ultraNeonPulse 4s ease-in-out infinite 0.5s;
+}
+
+.ultra-neon-cyan {
+  color: var(--ultra-cyan);
+  text-shadow: 
+    0 0 5px var(--ultra-cyan),
+    0 0 10px var(--ultra-cyan),
+    0 0 15px var(--ultra-cyan),
+    0 0 20px var(--ultra-cyan),
+    0 0 25px var(--ultra-cyan),
+    0 0 30px var(--ultra-cyan);
+  animation: ultraNeonPulse 4s ease-in-out infinite 1s;
+}
+
+.ultra-neon-green {
+  color: var(--ultra-green);
+  text-shadow: 
+    0 0 5px var(--ultra-green),
+    0 0 10px var(--ultra-green),
+    0 0 15px var(--ultra-green),
+    0 0 20px var(--ultra-green),
+    0 0 25px var(--ultra-green),
+    0 0 30px var(--ultra-green);
+  animation: ultraNeonPulse 4s ease-in-out infinite 1.5s;
+}
+
+@keyframes ultraNeonPulse {
+  0%, 100% { 
+    text-shadow: 
+      0 0 5px currentColor,
+      0 0 10px currentColor,
+      0 0 15px currentColor,
+      0 0 20px currentColor,
+      0 0 25px currentColor,
+      0 0 30px currentColor;
+  }
+  50% { 
+    text-shadow: 
+      0 0 2px currentColor,
+      0 0 5px currentColor,
+      0 0 8px currentColor,
+      0 0 12px currentColor,
+      0 0 18px currentColor,
+      0 0 25px currentColor,
+      0 0 35px currentColor;
+  }
+}
+
+/* Ultra Animated Gradients */
+.ultra-animated-gradient {
+  background: linear-gradient(
+    -45deg,
+    #a855f7, #f472b6, #22d3ee, #34d399, 
+    #fb923c, #f87171, #facc15, #818cf8,
+    #c084fc, #6ee7b7, #fb7185, #a855f7
+  );
+  background-size: 600% 600%;
+  animation: ultraGradientShift 25s ease infinite;
+}
+
+@keyframes ultraGradientShift {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 100% 50%; }
+  50% { background-position: 100% 100%; }
+  75% { background-position: 0% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Ultra Holographic Effects */
+.ultra-holographic {
+  background: linear-gradient(
+    45deg,
+    rgba(168, 85, 247, 0.2) 0%,
+    rgba(244, 114, 182, 0.2) 8.33%,
+    rgba(34, 211, 238, 0.2) 16.66%,
+    rgba(52, 211, 153, 0.2) 25%,
+    rgba(251, 146, 60, 0.2) 33.33%,
+    rgba(248, 113, 113, 0.2) 41.66%,
+    rgba(250, 204, 21, 0.2) 50%,
+    rgba(129, 140, 248, 0.2) 58.33%,
+    rgba(192, 132, 252, 0.2) 66.66%,
+    rgba(110, 231, 183, 0.2) 75%,
+    rgba(251, 113, 133, 0.2) 83.33%,
+    rgba(168, 85, 247, 0.2) 91.66%,
+    rgba(168, 85, 247, 0.2) 100%
+  );
+  background-size: 300% 300%;
+  animation: ultraHolographicShift 6s ease-in-out infinite;
+}
+
+@keyframes ultraHolographicShift {
+  0%, 100% { background-position: 0% 50%; }
+  25% { background-position: 50% 0%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 100%; }
+}
+
+/* Ultra Glass Morphism */
+.ultra-glass {
+  background: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 0 1px rgba(168, 85, 247, 0.1);
+}
+
+.ultra-glass-card {
+  background: rgba(20, 20, 20, 0.5);
+  backdrop-filter: blur(50px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 0 1px rgba(168, 85, 247, 0.2),
+    0 0 20px rgba(168, 85, 247, 0.1);
+}
+
+/* Ultra Floating Animation */
+.ultra-float {
+  animation: ultraFloat 10s ease-in-out infinite;
+}
+
+@keyframes ultraFloat {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg) scale(1);
+  }
+  25% { 
+    transform: translateY(-20px) rotate(2deg) scale(1.02);
+  }
+  50% { 
+    transform: translateY(-35px) rotate(0deg) scale(1.05);
+  }
+  75% { 
+    transform: translateY(-20px) rotate(-2deg) scale(1.02);
+  }
+}
+
+/* Ultra Pulse Animation */
+.ultra-pulse-glow {
+  animation: ultraPulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes ultraPulseGlow {
+  0%, 100% { 
+    box-shadow: 0 0 5px currentColor;
+    transform: scale(1);
+  }
+  25% { 
+    box-shadow: 0 0 15px currentColor, 0 0 25px currentColor;
+    transform: scale(1.02);
+  }
+  50% { 
+    box-shadow: 0 0 25px currentColor, 0 0 40px currentColor, 0 0 55px currentColor, 0 0 70px currentColor;
+    transform: scale(1.08);
+  }
+  75% { 
+    box-shadow: 0 0 15px currentColor, 0 0 25px currentColor;
+    transform: scale(1.02);
+  }
+}
+
+/* Ultra Scan Line Effect */
+.ultra-scan-lines {
+  position: relative;
+  overflow: hidden;
+}
+
+.ultra-scan-lines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    transparent 0%,
+    rgba(52, 211, 153, 0.2) 25%,
+    rgba(34, 211, 238, 0.2) 50%,
+    rgba(168, 85, 247, 0.2) 75%,
+    transparent 100%
+  );
+  background-size: 100% 6px;
+  animation: ultraScanMove 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes ultraScanMove {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100vh); }
+}
+
+/* Ultra Hover Effects */
+.ultra-hover-lift {
+  transition: all var(--ultra-speed) var(--ultra-easing);
+}
+
+.ultra-hover-lift:hover {
+  transform: translateY(-15px) scale(1.05) rotate(1deg);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.6),
+    0 0 40px rgba(168, 85, 247, 0.5),
+    0 0 60px rgba(34, 211, 238, 0.3);
+}
+
+.ultra-hover-glow:hover {
+  box-shadow: 
+    0 0 20px currentColor,
+    0 0 30px currentColor,
+    0 0 40px currentColor,
+    0 0 50px currentColor,
+    0 0 60px currentColor;
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* Ultra Text Effects */
+.ultra-text-gradient {
+  background: linear-gradient(
+    45deg,
+    var(--ultra-purple),
+    var(--ultra-pink),
+    var(--ultra-cyan),
+    var(--ultra-green),
+    var(--ultra-orange),
+    var(--ultra-red),
+    var(--ultra-yellow),
+    var(--ultra-purple)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 300% 300%;
+  animation: ultraTextGradientShift 6s ease infinite;
+}
+
+@keyframes ultraTextGradientShift {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 0%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
+.ultra-text-cyber {
+  font-family: "Courier New", monospace;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 
+    0 0 20px currentColor,
+    0 0 40px currentColor;
+  animation: ultraCyberFlicker 3s ease-in-out infinite alternate;
+}
+
+@keyframes ultraCyberFlicker {
+  0%, 100% { 
+    opacity: 1;
+    filter: brightness(1);
+  }
+  25% { 
+    opacity: 0.8;
+    filter: brightness(1.3);
+  }
+  50% { 
+    opacity: 0.9;
+    filter: brightness(1.1);
+  }
+  75% { 
+    opacity: 0.7;
+    filter: brightness(1.4);
+  }
+}
+
+/* Ultra Button Styles */
+.ultra-btn-futuristic {
+  position: relative;
+  background: linear-gradient(45deg, var(--ultra-purple), var(--ultra-pink), var(--ultra-cyan));
+  border: none;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  overflow: hidden;
+  transition: all var(--ultra-speed) var(--ultra-easing);
+  box-shadow: 
+    0 8px 25px rgba(168, 85, 247, 0.5),
+    0 0 20px rgba(168, 85, 247, 0.3);
+}
+
+.ultra-btn-futuristic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  transition: left 1s ease;
+}
+
+.ultra-btn-futuristic:hover::before {
+  left: 100%;
+}
+
+.ultra-btn-futuristic:hover {
+  transform: translateY(-6px) scale(1.08) rotate(2deg);
+  box-shadow: 
+    0 25px 50px rgba(168, 85, 247, 0.6),
+    0 0 40px rgba(168, 85, 247, 0.8),
+    0 0 60px rgba(34, 211, 238, 0.4);
+}
+
+/* Ultra Card Styles */
+.ultra-card-futuristic {
+  background: var(--ultra-card);
+  border: 1px solid var(--ultra-border);
+  border-radius: 25px;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all var(--ultra-speed) var(--ultra-easing);
+  backdrop-filter: blur(20px);
+}
+
+.ultra-card-futuristic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--ultra-purple),
+    var(--ultra-pink),
+    var(--ultra-cyan),
+    var(--ultra-green),
+    var(--ultra-orange),
+    var(--ultra-red),
+    var(--ultra-yellow),
+    var(--ultra-purple)
+  );
+  background-size: 300% 100%;
+  animation: ultraBorderGradient 6s ease infinite;
+}
+
+@keyframes ultraBorderGradient {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 0%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 100%; }
+  100% { background-position: 0% 50%; }
+}
+
+.ultra-card-futuristic:hover {
+  transform: translateY(-15px) scale(1.03) rotate(1deg);
+  border-color: var(--ultra-purple);
+  box-shadow: 
+    0 30px 60px rgba(168, 85, 247, 0.4),
+    0 0 0 2px rgba(168, 85, 247, 0.3),
+    0 0 30px rgba(34, 211, 238, 0.2);
+}
+
+/* Ultra Particle System */
+.ultra-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.ultra-particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: var(--ultra-cyan);
+  border-radius: 50%;
+  animation: ultraParticleFloat 20s linear infinite;
+  box-shadow: 0 0 10px currentColor;
+}
+
+@keyframes ultraParticleFloat {
+  0% { 
+    transform: translateY(100vh) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% { 
+    opacity: 1;
+  }
+  90% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: translateY(-100px) translateX(150px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Ultra Glitch Effect */
+.ultra-glitch {
+  position: relative;
+  animation: ultraGlitch 4s infinite;
+}
+
+@keyframes ultraGlitch {
+  0%, 100% { 
+    transform: translate(0);
+    filter: hue-rotate(0deg);
+  }
+  20% { 
+    transform: translate(-5px, 5px);
+    filter: hue-rotate(90deg);
+  }
+  40% { 
+    transform: translate(-5px, -5px);
+    filter: hue-rotate(180deg);
+  }
+  60% { 
+    transform: translate(5px, 5px);
+    filter: hue-rotate(270deg);
+  }
+  80% { 
+    transform: translate(5px, -5px);
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Ultra Responsive Design */
+@media (max-width: 768px) {
+  .ultra-cyber-grid {
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+  }
+  
+  .ultra-matrix-rain::after {
+    background-size: 75px 75px, 75px 75px;
+  }
+  
+  .ultra-text-cyber {
+    letter-spacing: 1.5px;
+  }
+  
+  .ultra-card-futuristic {
+    padding: 30px;
+  }
+  
+  .ultra-btn-futuristic {
+    padding: 16px 32px;
+  }
+}
+
+/* Ultra Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Ultra High Contrast Mode */
+@media (prefers-contrast: high) {
+  :root {
+    --ultra-text: #ffffff;
+    --ultra-text-dim: #e5e7eb;
+    --ultra-border: #a78bfa;
+  }
+}
+
+/* Ultra Dark Mode Enhancements */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ultra-dark: #000000;
+    --ultra-darker: #000000;
+  }
+}
+
+/* Ultra Print Styles */
+@media print {
+  .ultra-cyber-grid,
+  .ultra-matrix-rain,
+  .ultra-particles,
+  .ultra-scan-lines {
+    display: none;
+  }
+}
