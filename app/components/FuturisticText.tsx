@@ -1,57 +1,63 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 interface FuturisticTextProps {
   text: string;
-  className?: string;
   delay?: number;
   speed?: number;
+  className?: string;
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
+  gradient?: boolean;
+  glow?: boolean;
 }
 
-const FuturisticText: React.FC<FuturisticTextProps> = ({ 
-  text, 
-  className = '', 
-  delay = 0, 
-  speed = 100 
+const FuturisticText: React.FC<FuturisticTextProps> = ({
+  text,
+  delay = 0,
+  speed = 100,
+  className = '',
+  as: Component = 'span',
+  gradient = false,
+  glow = false
 }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isComplete, setIsComplete] = useState(false);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     if (currentIndex < text.length) {
-      intervalRef.current = setTimeout(() => {
+      const timeout = setTimeout(() => {
         setDisplayedText(prev => prev + text[currentIndex]);
         setCurrentIndex(prev => prev + 1);
       }, speed);
-    } else {
-      setIsComplete(true);
-    }
 
-    return () => {
-      if (intervalRef.current) {
-        clearTimeout(intervalRef.current);
-      }
-    };
+      return () => clearTimeout(timeout);
+    }
   }, [currentIndex, text, speed]);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCurrentIndex(0);
-      setDisplayedText('');
-      setIsComplete(false);
-    }, delay);
-
-    return () => clearTimeout(timer);
-  }, [delay]);
+  const textClasses = `
+    ${gradient ? 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400' : 'text-white'}
+    ${glow ? 'drop-shadow-[0_0_20px_rgba(34,211,238,0.5)]' : ''}
+    ${className}
+  `;
 
   return (
-    <span className={`${className} ${isComplete ? 'animate-pulse' : ''}`}>
-      {displayedText}
-      {!isComplete && (
-        <span className="inline-block w-0.5 h-6 bg-cyan-400 animate-pulse ml-1"></span>
-      )}
-    </span>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay }}
+      className="inline-block"
+    >
+      <Component className={textClasses}>
+        {displayedText}
+        {currentIndex < text.length && (
+          <motion.span
+            animate={{ opacity: [1, 0, 1] }}
+            transition={{ duration: 0.8, repeat: Infinity }}
+            className="inline-block w-0.5 h-6 bg-cyan-400 ml-1"
+          />
+        )}
+      </Component>
+    </motion.div>
   );
 };
 

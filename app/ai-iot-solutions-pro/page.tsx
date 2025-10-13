@@ -2,13 +2,10 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
-  Atom, 
+  Wifi, 
   Zap, 
-  Shield, 
   BarChart3, 
-  Cpu, 
-  Database, 
-  Lock, 
+  Shield, 
   Globe, 
   ArrowRight, 
   CheckCircle, 
@@ -18,125 +15,168 @@ import {
   Clock,
   Mail,
   Phone,
-  MapPin
+  MapPin,
+  Database,
+  Cpu,
+  Smartphone,
+  TrendingUp,
+  Home,
+  Car,
+  Factory,
+  Heart
 } from 'lucide-react';
 
-export default function AIQuantumComputing() {
+export default function AIIoTSolutionsPro() {
   const features = [
     {
-      title: "Quantum Machine Learning",
-      description: "Leverage quantum algorithms for exponentially faster machine learning model training and optimization.",
-      icon: <Atom className="w-8 h-8" />,
-      benefits: ["1000x faster training", "Quantum advantage", "Advanced optimization", "Scalable algorithms"]
-    },
-    {
-      title: "Quantum Cryptography",
-      description: "Unbreakable encryption using quantum key distribution and quantum-resistant algorithms.",
-      icon: <Lock className="w-8 h-8" />,
-      benefits: ["Unbreakable security", "Quantum key distribution", "Future-proof encryption", "Zero-knowledge proofs"]
-    },
-    {
-      title: "Quantum Optimization",
-      description: "Solve complex optimization problems in logistics, finance, and resource allocation with quantum algorithms.",
+      title: "AI-Powered Edge Computing",
+      description: "Intelligent edge devices that process data locally using AI algorithms for real-time decision making.",
       icon: <Cpu className="w-8 h-8" />,
-      benefits: ["Complex problem solving", "Real-time optimization", "Cost reduction", "Resource efficiency"]
+      benefits: ["Real-time processing", "Reduced latency", "Privacy protection", "Cost efficiency"]
     },
     {
-      title: "Quantum Simulation",
-      description: "Simulate molecular structures, chemical reactions, and material properties with unprecedented accuracy.",
-      icon: <Database className="w-8 h-8" />,
-      benefits: ["Molecular modeling", "Drug discovery", "Material science", "Chemical simulation"]
+      title: "Predictive Maintenance AI",
+      description: "Machine learning algorithms that predict equipment failures before they occur, reducing downtime and costs.",
+      icon: <Shield className="w-8 h-8" />,
+      benefits: ["Preventive maintenance", "Cost reduction", "Increased uptime", "Asset optimization"]
+    },
+    {
+      title: "Smart City Integration",
+      description: "Comprehensive IoT solutions for smart cities including traffic management, energy optimization, and public safety.",
+      icon: <Globe className="w-8 h-8" />,
+      benefits: ["Traffic optimization", "Energy efficiency", "Public safety", "Citizen services"]
+    },
+    {
+      title: "Industrial IoT Analytics",
+      description: "Advanced analytics platform for industrial IoT data with real-time monitoring and optimization capabilities.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      benefits: ["Real-time monitoring", "Performance optimization", "Quality control", "Process automation"]
     }
   ];
 
-  const useCases = [
+  const industries = [
     {
-      industry: "Financial Services",
-      applications: ["Portfolio optimization", "Risk analysis", "Fraud detection", "Algorithmic trading"],
-      savings: "40-60% cost reduction"
+      name: "Smart Manufacturing",
+      icon: <Factory className="w-8 h-8" />,
+      applications: [
+        "Predictive maintenance",
+        "Quality control automation",
+        "Supply chain optimization",
+        "Energy management"
+      ],
+      benefits: "30-50% efficiency gains",
+      color: "from-blue-500 to-cyan-500"
     },
     {
-      industry: "Healthcare & Pharma",
-      applications: ["Drug discovery", "Protein folding", "Genomic analysis", "Treatment optimization"],
-      savings: "5-10 years faster research"
+      name: "Smart Healthcare",
+      icon: <Heart className="w-8 h-8" />,
+      applications: [
+        "Patient monitoring",
+        "Medical device integration",
+        "Health data analytics",
+        "Remote diagnostics"
+      ],
+      benefits: "40-60% cost reduction",
+      color: "from-green-500 to-emerald-500"
     },
     {
-      industry: "Logistics & Supply Chain",
-      applications: ["Route optimization", "Inventory management", "Demand forecasting", "Resource allocation"],
-      savings: "30-50% efficiency gains"
+      name: "Smart Transportation",
+      icon: <Car className="w-8 h-8" />,
+      applications: [
+        "Fleet management",
+        "Traffic optimization",
+        "Predictive maintenance",
+        "Route optimization"
+      ],
+      benefits: "25-40% fuel savings",
+      color: "from-purple-500 to-pink-500"
     },
     {
-      industry: "Energy & Utilities",
-      applications: ["Grid optimization", "Renewable energy", "Carbon capture", "Smart grid management"],
-      savings: "25-40% energy savings"
+      name: "Smart Buildings",
+      icon: <Home className="w-8 h-8" />,
+      applications: [
+        "Energy management",
+        "Occupancy optimization",
+        "Security systems",
+        "Climate control"
+      ],
+      benefits: "20-35% energy savings",
+      color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingTiers = [
     {
-      name: "Quantum Starter",
-      price: "$2,999",
+      name: "IoT Starter",
+      price: "$1,999",
       period: "month",
-      description: "Perfect for small teams exploring quantum computing",
+      description: "Perfect for small businesses starting their IoT journey",
       features: [
-        "10 quantum computing hours/month",
-        "Basic quantum algorithms library",
-        "Standard support",
-        "API access",
-        "Documentation & tutorials"
+        "Up to 100 connected devices",
+        "Basic AI analytics",
+        "Cloud dashboard",
+        "Email support",
+        "Standard security"
       ],
       popular: false
     },
     {
-      name: "Quantum Professional",
-      price: "$7,999",
+      name: "IoT Professional",
+      price: "$4,999",
       period: "month",
-      description: "Ideal for growing businesses with complex optimization needs",
+      description: "Ideal for growing businesses with complex IoT needs",
       features: [
-        "50 quantum computing hours/month",
-        "Advanced quantum algorithms",
+        "Up to 1,000 connected devices",
+        "Advanced AI analytics",
+        "Edge computing capabilities",
+        "Custom integrations",
         "Priority support",
-        "Custom algorithm development",
-        "Integration assistance",
-        "Performance monitoring"
+        "Real-time monitoring"
       ],
       popular: true
     },
     {
-      name: "Quantum Enterprise",
+      name: "IoT Enterprise",
       price: "Custom",
       period: "pricing",
-      description: "Tailored solutions for large-scale quantum computing needs",
+      description: "Tailored solutions for large-scale IoT implementations",
       features: [
-        "Unlimited quantum computing hours",
-        "Custom quantum algorithms",
-        "Dedicated support team",
-        "On-premise deployment options",
+        "Unlimited connected devices",
+        "Custom AI algorithms",
+        "On-premise deployment",
         "White-label solutions",
+        "Dedicated support team",
         "Training & certification"
       ],
       popular: false
     }
   ];
 
+  const stats = [
+    { number: "10,000+", label: "Connected Devices", icon: <Wifi className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
+    { number: "50+", label: "Industry Solutions", icon: <Factory className="w-6 h-6" /> },
+    { number: "24/7", label: "AI Monitoring", icon: <Cpu className="w-6 h-6" /> }
+  ];
+
   return (
     <>
       <Helmet>
-        <title>AI Quantum Computing Solutions - Zion Tech Group | Next-Gen Quantum AI</title>
+        <title>AI IoT Solutions Pro - Zion Tech Group | Smart IoT with AI</title>
         <meta
           name="description"
-          content="Revolutionary AI-powered quantum computing solutions for optimization, cryptography, machine learning, and simulation. Transform your business with quantum advantage."
+          content="Revolutionary AI-powered IoT solutions for smart manufacturing, healthcare, transportation, and buildings. Transform your business with intelligent connected devices."
         />
         <meta
           name="keywords"
-          content="quantum computing, quantum AI, quantum machine learning, quantum cryptography, quantum optimization, quantum simulation, quantum algorithms, quantum advantage"
+          content="AI IoT, smart IoT, industrial IoT, edge computing, predictive maintenance, smart cities, IoT analytics, connected devices, IoT solutions"
         />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "name": "AI Quantum Computing Solutions",
-            "description": "Revolutionary AI-powered quantum computing solutions for optimization, cryptography, machine learning, and simulation",
+            "name": "AI IoT Solutions Pro",
+            "description": "Revolutionary AI-powered IoT solutions for smart manufacturing, healthcare, transportation, and buildings",
             "provider": {
               "@type": "Organization",
               "name": "Zion Tech Group",
@@ -144,11 +184,11 @@ export default function AIQuantumComputing() {
             },
             "offers": {
               "@type": "Offer",
-              "price": "2999",
+              "price": "1999",
               "priceCurrency": "USD",
               "priceSpecification": {
                 "@type": "PriceSpecification",
-                "price": "2999",
+                "price": "1999",
                 "priceCurrency": "USD",
                 "billingIncrement": "P1M"
               }
@@ -166,22 +206,21 @@ export default function AIQuantumComputing() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Atom className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">Next-Generation Quantum AI</span>
+              <Wifi className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">Intelligent IoT Solutions</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
-              AI Quantum Computing
+              AI IoT Solutions
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Solutions
+                {" "}Pro
               </span>
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Harness the power of quantum computing combined with artificial intelligence to solve 
-              complex problems that are impossible for classical computers. Transform your business 
-              with quantum advantage in optimization, cryptography, and machine learning.
+              Transform your business with AI-powered IoT solutions. From smart manufacturing to intelligent cities, 
+              we provide comprehensive IoT platforms enhanced with artificial intelligence for maximum efficiency and innovation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -189,35 +228,28 @@ export default function AIQuantumComputing() {
                 to="/contact"
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Quantum Journey
+                Start IoT Journey
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
-                Watch Quantum Demo
+                View Live Demo
               </Link>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">1000x</div>
-                <div className="text-gray-300 text-sm">Faster Processing</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">99.9%</div>
-                <div className="text-gray-300 text-sm">Security Level</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Quantum Algorithms</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Quantum Access</div>
-              </div>
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center group">
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    {stat.icon}
+                  </div>
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-gray-300 text-sm">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -228,11 +260,11 @@ export default function AIQuantumComputing() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Quantum AI Capabilities
+                  AI IoT Capabilities
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover the revolutionary capabilities of quantum computing enhanced with artificial intelligence
+                Discover the revolutionary capabilities of AI-enhanced IoT technology
               </p>
             </div>
             
@@ -272,30 +304,34 @@ export default function AIQuantumComputing() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
+        {/* Industries Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Industry Applications
+                Industry Solutions
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how quantum AI is transforming industries across the globe
+                AI-powered IoT solutions for every industry
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
+              {industries.map((industry, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
                 >
-                  <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-cyan-300 transition-colors">
-                    {useCase.industry}
+                  <div className={`w-16 h-16 rounded-lg bg-gradient-to-r ${industry.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}>
+                    {industry.icon}
+                  </div>
+                  
+                  <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-cyan-300 transition-colors">
+                    {industry.name}
                   </h3>
                   
-                  <div className="space-y-3 mb-4">
-                    {useCase.applications.map((app, idx) => (
+                  <div className="space-y-3 mb-6">
+                    {industry.applications.map((app, idx) => (
                       <div key={idx} className="flex items-center text-sm text-gray-300">
                         <Zap className="w-3 h-3 mr-2 text-cyan-400" />
                         {app}
@@ -304,8 +340,8 @@ export default function AIQuantumComputing() {
                   </div>
                   
                   <div className="text-center">
-                    <div className="text-cyan-400 font-bold text-lg">{useCase.savings}</div>
-                    <div className="text-gray-400 text-sm">Average Savings</div>
+                    <div className="text-cyan-400 font-bold text-lg">{industry.benefits}</div>
+                    <div className="text-gray-400 text-sm">Average Benefits</div>
                   </div>
                 </div>
               ))}
@@ -318,10 +354,10 @@ export default function AIQuantumComputing() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Quantum Computing Plans
+                IoT AI Plans
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect quantum computing solution for your business needs
+                Choose the perfect IoT AI solution for your business needs
               </p>
             </div>
             
@@ -383,11 +419,11 @@ export default function AIQuantumComputing() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Experience Quantum Advantage?
+              Ready to Transform with AI IoT?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join the quantum revolution and transform your business with AI-powered quantum computing solutions. 
-              Contact our quantum experts today for a personalized consultation.
+              Join the IoT revolution and transform your business with AI-powered connected devices. 
+              Contact our IoT experts today for a personalized consultation.
             </p>
             
             {/* Contact Information */}
@@ -420,14 +456,14 @@ export default function AIQuantumComputing() {
                 to="/contact"
                 className="group bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Quantum Journey
+                Start IoT Journey
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
-                Schedule Quantum Demo
+                Schedule Demo
                 <Globe className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>

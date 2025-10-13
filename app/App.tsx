@@ -10,6 +10,7 @@ import LoadingSpinner from "./components/LoadingSpinner";
 import CriticalResourcePreloader from "./components/CriticalResourcePreloader";
 import CacheManager from "./components/CacheManager";
 import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
+import MainLayout from "./components/MainLayout";
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"));
@@ -44,6 +45,11 @@ const FiveGSmartCitySolutionsPage = lazy(
 );
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
+// Advanced AI Solutions Pages
+const AIQuantumComputingPage = lazy(() => import("./ai-quantum-computing/page"));
+const AIBlockchainSolutionsProPage = lazy(() => import("./ai-blockchain-solutions-pro/page"));
+const AIIoTSolutionsProPage = lazy(() => import("./ai-iot-solutions-pro/page"));
+
 // Main App Component
 function App() {
   return (
@@ -55,8 +61,9 @@ function App() {
             <CriticalResourcePreloader />
             <CacheManager />
             <AdvancedPerformanceMonitor />
-            <Suspense fallback={<LoadingSpinner />}>
-            <Routes>
+            <MainLayout>
+              <Suspense fallback={<LoadingSpinner />}>
+                <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
@@ -104,8 +111,23 @@ function App() {
                 element={<FiveGSmartCitySolutionsPage />}
               />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
-            </Routes>
-            </Suspense>
+
+              {/* Advanced AI Solutions Routes */}
+              <Route
+                path="/ai-quantum-computing"
+                element={<AIQuantumComputingPage />}
+              />
+              <Route
+                path="/ai-blockchain-solutions-pro"
+                element={<AIBlockchainSolutionsProPage />}
+              />
+              <Route
+                path="/ai-iot-solutions-pro"
+                element={<AIIoTSolutionsProPage />}
+              />
+                </Routes>
+              </Suspense>
+            </MainLayout>
           </AccessibilityEnhancer>
         </ErrorBoundary>
       </BrowserRouter>

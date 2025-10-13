@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 import FuturisticBackground from "./components/FuturisticBackground";
@@ -9,10 +8,6 @@ import FuturisticText from "./components/FuturisticText";
 import ResponsiveContainer from "./components/ResponsiveContainer";
 import ResponsiveGrid from "./components/ResponsiveGrid";
 import ResponsiveText from "./components/ResponsiveText";
-=======
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
-import EnhancedSEO from "./components/EnhancedSEO";
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
 
 const HomePage = () => {
   const structuredData = {
@@ -95,6 +90,27 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "AI Quantum Computing",
+      description: "Revolutionary quantum computing with AI",
+      price: "From $2,999/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/ai-quantum-computing"
+    },
+    {
+      name: "AI Blockchain Pro",
+      description: "Advanced blockchain with AI smart contracts",
+      price: "From $2,999/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/ai-blockchain-solutions-pro"
+    },
+    {
+      name: "AI IoT Solutions Pro",
+      description: "Intelligent IoT with edge computing",
+      price: "From $1,999/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/ai-iot-solutions-pro"
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $299/month",
@@ -149,14 +165,9 @@ const HomePage = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <FuturisticBackground />
       <SEOOptimizer
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <EnhancedSEO
->>>>>>> cursor/analyze-improve-and-deploy-application-6f9f
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
@@ -297,7 +308,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
@@ -420,8 +431,7 @@ const HomePage = () => {
           </div>
         </div>
       </section>
-      </div>
-    </>
+    </div>
   );
 };
 

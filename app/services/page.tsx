@@ -1,4 +1,4 @@
-import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail } from "lucide-react";
+import { ArrowRight, Brain, Shield, Globe, Code, Smartphone, Cloud, BarChart3, Bot, Wifi, Target, Users, TrendingUp, FileText, Mail, Atom } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
@@ -111,6 +111,33 @@ export default function Services() {
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
       features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+    },
+    {
+      title: "AI Quantum Computing",
+      description: "Revolutionary quantum computing solutions for optimization, cryptography, machine learning, and simulation with quantum advantage.",
+      icon: <Atom className="w-8 h-8" />,
+      path: "/ai-quantum-computing",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $2,999/month",
+      features: ["Quantum ML", "Quantum Cryptography", "Quantum Optimization", "Quantum Simulation"]
+    },
+    {
+      title: "AI Blockchain Solutions Pro",
+      description: "Advanced blockchain solutions with AI-powered smart contracts, DeFi protocols, NFT marketplaces, and Web3 applications.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/ai-blockchain-solutions-pro",
+      color: "from-blue-500 to-cyan-500",
+      price: "Starting at $2,999/month",
+      features: ["Smart Contracts", "DeFi Protocols", "NFT Marketplaces", "Web3 Apps"]
+    },
+    {
+      title: "AI IoT Solutions Pro",
+      description: "Intelligent IoT solutions for smart manufacturing, healthcare, transportation, and buildings with edge computing and AI.",
+      icon: <Wifi className="w-8 h-8" />,
+      path: "/ai-iot-solutions-pro",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $1,999/month",
+      features: ["Edge Computing", "Predictive Maintenance", "Smart Cities", "Industrial IoT"]
     }
   ];
 

@@ -33,7 +33,7 @@ const FuturisticBackground = () => {
         this.vy = (Math.random() - 0.5) * 0.5;
         this.size = Math.random() * 2 + 1;
         this.opacity = Math.random() * 0.5 + 0.2;
-        this.color = Math.random() > 0.5 ? '#06b6d4' : '#8b5cf6';
+        this.color = `hsl(${200 + Math.random() * 60}, 70%, 60%)`;
         this.life = 0;
         this.maxLife = Math.random() * 200 + 100;
       }
@@ -54,12 +54,20 @@ const FuturisticBackground = () => {
           this.vy += (dy / distance) * force * 0.01;
         }
 
-        // Boundary check
+        // Bounce off edges
         if (this.x < 0 || this.x > canvas.width) this.vx *= -1;
         if (this.y < 0 || this.y > canvas.height) this.vy *= -1;
 
-        // Fade out
-        this.opacity = Math.max(0, this.opacity - 0.002);
+        // Fade out over time
+        this.opacity = Math.max(0, (this.maxLife - this.life) / this.maxLife) * 0.7;
+
+        if (this.life > this.maxLife) {
+          this.x = Math.random() * canvas.width;
+          this.y = Math.random() * canvas.height;
+          this.life = 0;
+          this.vx = (Math.random() - 0.5) * 0.5;
+          this.vy = (Math.random() - 0.5) * 0.5;
+        }
       }
 
       draw() {
@@ -68,18 +76,22 @@ const FuturisticBackground = () => {
         ctx.save();
         ctx.globalAlpha = this.opacity;
         ctx.fillStyle = this.color;
-        ctx.shadowBlur = 10;
-        ctx.shadowColor = this.color;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+        
+        // Add glow effect
+        ctx.shadowBlur = 10;
+        ctx.shadowColor = this.color;
+        ctx.fill();
         ctx.restore();
       }
-
-      isDead() {
-        return this.life >= this.maxLife || this.opacity <= 0;
-      }
     }
+
+    const resizeCanvas = () => {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
 
     const initParticles = () => {
       particles = [];
@@ -89,12 +101,18 @@ const FuturisticBackground = () => {
     };
 
     const animate = () => {
-      if (!ctx || !canvas) return;
-
+      if (!ctx) return;
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Draw particles
+      particles.forEach(particle => {
+        particle.update();
+        particle.draw();
+      });
 
-      // Draw connections
-      ctx.strokeStyle = 'rgba(139, 92, 246, 0.1)';
+      // Draw connections between nearby particles
+      ctx.strokeStyle = 'rgba(100, 200, 255, 0.1)';
       ctx.lineWidth = 1;
       
       for (let i = 0; i < particles.length; i++) {
@@ -112,24 +130,7 @@ const FuturisticBackground = () => {
         }
       }
 
-      // Update and draw particles
-      particles.forEach((particle, index) => {
-        particle.update();
-        particle.draw();
-        
-        if (particle.isDead()) {
-          particles[index] = new Particle();
-        }
-      });
-
       animationId = requestAnimationFrame(animate);
-    };
-
-    const handleResize = () => {
-      if (!canvas) return;
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      initParticles();
     };
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -137,56 +138,33 @@ const FuturisticBackground = () => {
       mouseY = e.clientY;
     };
 
+    const handleResize = () => {
+      resizeCanvas();
+      initParticles();
+    };
+
     // Initialize
-    handleResize();
+    resizeCanvas();
     initParticles();
     animate();
 
     // Event listeners
-    window.addEventListener('resize', handleResize);
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('resize', handleResize);
 
     return () => {
       cancelAnimationFrame(animationId);
-      window.removeEventListener('resize', handleResize);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
-      <canvas
-        ref={canvasRef}
-        className="w-full h-full"
-        style={{ background: 'transparent' }}
-      />
-      
-      {/* Additional futuristic elements */}
-      <div className="absolute inset-0">
-        {/* Animated gradient orbs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 right-1/3 w-64 h-64 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        
-        {/* Grid pattern */}
-        <div 
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(6, 182, 212, 0.1) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(6, 182, 212, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: '50px 50px'
-          }}
-        ></div>
-        
-        {/* Scanning lines */}
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse delay-1000"></div>
-        </div>
-      </div>
-    </div>
+    <canvas
+      ref={canvasRef}
+      className="absolute inset-0 w-full h-full pointer-events-none"
+      style={{ zIndex: 1 }}
+    />
   );
 };
 
