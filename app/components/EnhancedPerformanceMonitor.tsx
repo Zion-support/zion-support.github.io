@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { onCLS, onFID, onFCP, onLCP, onTTFB } from 'web-vitals';
+import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
 
 interface PerformanceMetrics {
   cls: number | null;
-  fid: number | null;
+  inp: number | null;
   fcp: number | null;
   lcp: number | null;
   ttfb: number | null;
@@ -21,7 +21,7 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     cls: null,
-    fid: null,
+    inp: null,
     fcp: null,
     lcp: null,
     ttfb: null,
@@ -77,27 +77,27 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (typeof window === 'undefined') return;
 
     // Measure Core Web Vitals
-    getCLS((metric) => {
+    onCLS((metric) => {
       updateMetric('cls', metric.value);
       reportMetric('CLS', metric.value);
     });
 
-    getFID((metric) => {
-      updateMetric('fid', metric.value);
-      reportMetric('FID', metric.value);
+    onINP((metric) => {
+      updateMetric('inp', metric.value);
+      reportMetric('INP', metric.value);
     });
 
-    getFCP((metric) => {
+    onFCP((metric) => {
       updateMetric('fcp', metric.value);
       reportMetric('FCP', metric.value);
     });
 
-    getLCP((metric) => {
+    onLCP((metric) => {
       updateMetric('lcp', metric.value);
       reportMetric('LCP', metric.value);
     });
 
-    getTTFB((metric) => {
+    onTTFB((metric) => {
       updateMetric('ttfb', metric.value);
       reportMetric('TTFB', metric.value);
     });
@@ -147,8 +147,8 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     if (metrics.lcp !== null) {
       scores.push(metrics.lcp < 2500 ? 100 : metrics.lcp < 4000 ? 80 : 60);
     }
-    if (metrics.fid !== null) {
-      scores.push(metrics.fid < 100 ? 100 : metrics.fid < 300 ? 80 : 60);
+    if (metrics.inp !== null) {
+      scores.push(metrics.inp < 100 ? 100 : metrics.inp < 300 ? 80 : 60);
     }
     if (metrics.cls !== null) {
       scores.push(metrics.cls < 0.1 ? 100 : metrics.cls < 0.25 ? 80 : 60);
@@ -195,10 +195,10 @@ const EnhancedPerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>
         )}
         
-        {metrics.fid !== null && (
+        {metrics.inp !== null && (
           <div className="flex justify-between">
-            <span>FID:</span>
-            <span className="font-mono">{Math.round(metrics.fid)}ms</span>
+            <span>INP:</span>
+            <span className="font-mono">{Math.round(metrics.inp)}ms</span>
           </div>
         )}
         
