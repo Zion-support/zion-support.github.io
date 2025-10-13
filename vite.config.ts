@@ -47,12 +47,17 @@ export default defineConfig({
 =======
     // Performance optimizations
 <<<<<<< HEAD
+<<<<<<< HEAD
     chunkSizeWarningLimit: 500,
     assetsInlineLimit: 2048,
 =======
     chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-031e
+=======
+    chunkSizeWarningLimit: 150, // Optimized threshold for better chunking
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0544
     // Enable compression
     reportCompressedSize: true,
     // Additional optimizations for production
@@ -122,9 +127,49 @@ export default defineConfig({
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
           }
+<<<<<<< HEAD
           // Service pages
           if (id.includes('/ai-') || id.includes('/zion-')) {
             return 'services'
+=======
+          // Zion service pages - group by category
+          if (id.includes('/zion-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/zion-')[1]?.split('/')[0];
+            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
+              return 'zion-analytics'
+            }
+            if (serviceName?.includes('ai-')) {
+              return 'zion-ai'
+            }
+            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
+              return 'zion-security'
+            }
+            return 'zion-other'
+          }
+          // 5G service pages - group together
+          if (id.includes('/5g-') && id.includes('/page.tsx')) {
+            return '5g-services'
+          }
+          // Micro SAAS pages
+          if (id.includes('/micro-') && id.includes('/page.tsx')) {
+            return 'micro-saas'
+          }
+          // Main pages - keep core pages together
+          if (id.includes('/app/') && id.includes('/page.tsx') && 
+              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') && !id.includes('/micro-')) {
+            return 'main-pages'
+          }
+          // Large vendor libraries
+          if (id.includes('node_modules')) {
+            // Group large libraries separately
+            if (id.includes('axios') || id.includes('lodash')) {
+              return 'http-utils'
+            }
+            if (id.includes('date-fns') || id.includes('moment')) {
+              return 'date-utils'
+            }
+            return 'vendor'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0544
           }
           // Default chunk for other modules
           return 'vendor'
@@ -173,6 +218,7 @@ export default defineConfig({
   define: {
     __APP_VERSION__: JSON.stringify(process.env.npm_package_version),
   },
+<<<<<<< HEAD
 });
 =======
             if (id.includes('framer-motion')) {
@@ -209,3 +255,6 @@ export default defineConfig({
           if (id.includes('/src/utils/')) {
             return 'utils';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+});
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0544
