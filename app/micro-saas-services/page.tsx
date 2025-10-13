@@ -2,6 +2,7 @@ import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Globe, Settings } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-033b
@@ -122,10 +123,20 @@ const MicroSAASServicesPage: React.FC = () => {
     }
   ];
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
+=======
+import { CheckCircle, ArrowRight, Zap, Clock, DollarSign, Star, Users, Shield, Brain, Settings } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+
+export default function MicroSAASServicesPage() {
+  const microSaasServices = [
+    {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
+<<<<<<< HEAD
 <<<<<<< HEAD
         <title>Micro SAAS Services - Zion Tech Group</title>
         <meta name="description" content="Discover our powerful micro SAAS applications designed to streamline your business operations with AI-powered tools." />
@@ -484,3 +495,6 @@ export const contactInfo = {phone: '+1 302 464 0950',
 
 export default MicroSAASServicesPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
+=======
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

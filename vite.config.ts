@@ -1,16 +1,36 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { resolve } from "path";
+=======
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
+import { visualizer } from 'rollup-plugin-visualizer'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react({
       // Enable JSX runtime
+<<<<<<< HEAD
       jsxRuntime: "automatic",
     }),
   ],
+=======
+      jsxRuntime: 'automatic',
+    }),
+    // Bundle analyzer
+    process.env.ANALYZE && visualizer({
+      filename: 'dist/stats.html',
+      open: true,
+      gzipSize: true,
+      brotliSize: true,
+    })
+  ].filter(Boolean),
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
   resolve: {
     alias: {
       "@": resolve(__dirname, "./app"),
@@ -20,6 +40,7 @@ export default defineConfig({
     },
   },
   build: {
+<<<<<<< HEAD
     target: "esnext",
     minify: "terser",
     sourcemap: true,
@@ -127,6 +148,17 @@ export default defineConfig({
       global: 'globalThis',
     },
     
+=======
+    outDir: 'dist',
+    sourcemap: false,
+    minify: 'esbuild',
+    target: 'es2020',
+    cssCodeSplit: true,
+    // Enable compression
+    reportCompressedSize: true,
+    // Optimize chunk size
+    chunkSizeWarningLimit: 500,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
     
     rollupOptions: {
       output: {
@@ -352,12 +384,15 @@ export default defineConfig({
     },
     // Enable tree shaking
     treeshake: true,
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-and-fix-application-errors-5651
 =======
     chunkSizeWarningLimit: 1000,
     target: 'esnext',
     cssCodeSplit: true,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0440
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
   },
   server: {
     port: 3000,

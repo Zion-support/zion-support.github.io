@@ -6,6 +6,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Link } from 'react-router-dom';
 =======
@@ -373,6 +374,12 @@ import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, 
 =======
 import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, Star, TrendingUp, Settings, Globe, Target } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
+=======
+'use client';
+import React, { useState, useEffect, useCallback } from 'react';
+import { Link } from 'react-router-dom';
+import { ChevronDown, Phone, Mail, MapPin, Menu, X, Brain, Cloud, Shield, Code, BarChart, Users, Zap, ArrowRight, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 
 const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -476,7 +483,6 @@ export default function Navigation() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-<<<<<<< HEAD
   // Close mobile menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -586,6 +592,7 @@ export default function Navigation() {
 <<<<<<< HEAD
 <<<<<<< HEAD
   const aiServices = [
+<<<<<<< HEAD
 <<<<<<< HEAD
     { name: 'AI Solutions', href: '/ai-services', icon: Brain, description: 'Core AI Solutions' },
     { name: 'AI Marketing Automation', href: '/ai-marketing', icon: Target, description: 'AI-Powered Marketing' },
@@ -2012,6 +2019,8 @@ export default function Navigation() {
               Get Started
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
 =======
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
     { name: 'AI Analytics', href: '/ai-analytics', icon: BarChart, description: 'Advanced data insights' },
     { name: 'AI Automation', href: '/ai-automation', icon: Zap, description: 'Streamline workflows' },
     { name: 'AI Chatbot', href: '/ai-chatbot-builder', icon: MessageCircle, description: 'Intelligent conversations' },
@@ -2101,6 +2110,22 @@ export default function Navigation() {
     { name: 'Zion AI Translator Pro', href: '/zion-ai-translator-pro', icon: Globe, description: 'Advanced translation' }
   ];
 
+<<<<<<< HEAD
+=======
+  const emergingTech = [
+    { name: '5G Implementation', href: '/5g-implementation', icon: Zap, description: 'Next-gen connectivity' },
+    { name: 'AI 3D Generation', href: '/ai-3d-generation', icon: Box, description: '3D content creation' },
+    { name: 'AI Holographic Workspace', href: '/ai-holographic-workspace', icon: Monitor, description: 'Immersive work environments' },
+    { name: 'AI Autonomous Systems', href: '/ai-autonomous-systems', icon: Cpu, description: 'Self-operating systems' },
+    { name: 'AI Blockchain Solutions', href: '/ai-blockchain-solutions', icon: LinkIcon, description: 'Decentralized AI' },
+    { name: 'AI Edge Computing', href: '/ai-edge-computing', icon: Server, description: 'Distributed processing' },
+    { name: 'Quantum Computing', href: '/quantum-computing', icon: Cpu, description: 'Quantum processing power' },
+    { name: 'AR/VR Solutions', href: '/ar-vr-solutions', icon: Monitor, description: 'Immersive experiences' },
+    { name: 'IoT Integration', href: '/iot-integration', icon: Wifi, description: 'Internet of Things' },
+    { name: 'Machine Learning', href: '/machine-learning', icon: Brain, description: 'Advanced ML algorithms' }
+  ];
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
@@ -2128,6 +2153,7 @@ export default function Navigation() {
             >
               Home
             </Link>
+<<<<<<< HEAD
 =======
           <div className="hidden lg:flex items-center space-x-8">
             {navigationItems.map((item) => (
@@ -2294,6 +2320,8 @@ export default function Navigation() {
               </Link>
             ))}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c2e
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
             
             <Link 
               to="/about" 
@@ -2372,14 +2400,23 @@ export default function Navigation() {
                       </Link>
                     ))}
                   </div>
+<<<<<<< HEAD
                   <div className="mt-4 pt-4 border-t border-gray-700">
+=======
+                  <div className="mt-4 pt-4 border-t border-cyan-500/20">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
                     <Link
                       to="/ai-services"
                       className="flex items-center justify-center space-x-2 text-cyan-400 hover:text-cyan-300 transition-colors duration-200 font-medium"
                       onClick={closeAllMenus}
                     >
+<<<<<<< HEAD
                       <span>View All AI Services</span>
                       <ArrowRight className="w-4 h-4" />
+=======
+                      View All AI Services
+                      <ArrowRight className="w-4 h-4 ml-2" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
                     </Link>
                   </div>
                 </div>
@@ -2414,7 +2451,11 @@ export default function Navigation() {
                       </Link>
                     ))}
                   </div>
+<<<<<<< HEAD
                   <div className="mt-4 pt-4 border-t border-gray-700">
+=======
+                  <div className="mt-4 pt-4 border-t border-purple-500/20">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
                     <Link
                       to="/it-services"
                       className="flex items-center justify-center space-x-2 text-purple-400 hover:text-purple-300 transition-colors duration-200 font-medium"
@@ -2428,6 +2469,7 @@ export default function Navigation() {
               )}
             </div>
 
+<<<<<<< HEAD
             {/* Micro SaaS Dropdown */}
             <div className="relative">
               <button
@@ -2464,12 +2506,57 @@ export default function Navigation() {
                     >
                       <span>View All Micro SaaS</span>
                       <ArrowRight className="w-4 h-4" />
+=======
+            {/* Micro SAAS Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={toggleMicroSaas}
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                <Cpu className="w-4 h-4" />
+                <span>Micro SAAS</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${microSaasOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {microSaasOpen && (
+                <div className="absolute top-full left-0 mt-3 w-[500px] bg-slate-900/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-green-500/30 p-6 cyber-card-enhanced holographic-card-enhanced">
+                  <div className="mb-4">
+                    <h3 className="text-lg font-bold text-green-400 neon-text-enhanced">Micro SAAS Solutions</h3>
+                    <p className="text-sm text-gray-400">Ready-to-use business tools with AI and automation</p>
+                  </div>
+                  <div className="grid grid-cols-1 gap-3 max-h-96 overflow-y-auto custom-scrollbar">
+                    {microSaasServices.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="flex items-center space-x-4 p-4 rounded-xl hover:bg-green-500/10 transition-all duration-300 group cyber-card-enhanced"
+                        onClick={closeAllMenus}
+                      >
+                        <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
+                          <service.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="text-white font-semibold group-hover:text-green-300 transition-colors">{service.name}</div>
+                          <div className="text-xs text-gray-400 group-hover:text-gray-300">{service.description}</div>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-green-400 ml-auto group-hover:translate-x-1 transition-all" />
+                      </Link>
+                    ))}
+                  </div>
+                  <div className="mt-4 pt-4 border-t border-green-500/20">
+                    <Link
+                      to="/micro-saas"
+                      className="flex items-center justify-center w-full py-2 px-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg font-medium hover:from-green-600 hover:to-emerald-700 transition-all duration-300"
+                      onClick={closeAllMenus}
+                    >
+                      View All Micro SAAS
+                      <ArrowRight className="w-4 h-4 ml-2" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
                     </Link>
                   </div>
                 </div>
               )}
             </div>
 
+<<<<<<< HEAD
 <<<<<<< HEAD
             <Link 
               to="/pricing" 
@@ -2497,6 +2584,56 @@ export default function Navigation() {
               className="text-white hover:text-cyan-400 transition-colors duration-200 font-medium"
               onClick={closeAllMenus}
             >
+=======
+            {/* Emerging Technologies Dropdown */}
+            <div className="relative group">
+              <button
+                onClick={toggleServices}
+                className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+                <Zap className="w-4 h-4" />
+                <span>Emerging Tech</span>
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              {servicesOpen && (
+                <div className="absolute top-full left-0 mt-3 w-[400px] bg-slate-900/98 backdrop-blur-xl rounded-2xl shadow-2xl border border-orange-500/30 p-6 cyber-card-enhanced holographic-card-enhanced">
+                  <div className="mb-4">
+                    <h3 className="text-lg font-bold text-orange-400 neon-text-enhanced">Emerging Technologies</h3>
+                    <p className="text-sm text-gray-400">Cutting-edge technology solutions for the future</p>
+                  </div>
+                  <div className="grid grid-cols-1 gap-3 max-h-80 overflow-y-auto custom-scrollbar">
+                    {emergingTech.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.href}
+                        className="flex items-center space-x-4 p-4 rounded-xl hover:bg-orange-500/10 transition-all duration-300 group cyber-card-enhanced"
+                        onClick={closeAllMenus}
+                      >
+                        <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 via-purple-600 to-pink-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-all duration-300 shadow-lg shadow-cyan-500/25">
+                          <service.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <div className="flex-1">
+                          <div className="text-white font-semibold group-hover:text-orange-300 transition-colors">{service.name}</div>
+                          <div className="text-xs text-gray-400 group-hover:text-gray-300">{service.description}</div>
+                        </div>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-orange-400 ml-auto group-hover:translate-x-1 transition-all" />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link to="/about" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              About
+            </Link>
+            <Link to="/pricing" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Pricing
+            </Link>
+            <Link to="/blog" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+              Blog
+            </Link>
+            <Link to="/contact" className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
               Contact
             </Link>
 
@@ -2523,8 +2660,8 @@ export default function Navigation() {
               <SidebarIcon className="w-6 h-6" />
             </button>
             <button
-<<<<<<< HEAD
               onClick={toggleMenu}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className="p-2 text-gray-300 hover:text-white hover:bg-white/10 rounded-md transition-all duration-300"
 <<<<<<< HEAD
@@ -2535,6 +2672,9 @@ export default function Navigation() {
 =======
               className="text-gray-900 hover:text-purple-600 p-2"
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0aab
+=======
+              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
 =======
@@ -2653,6 +2793,9 @@ export default function Navigation() {
         {isOpen && (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
           <div className="lg:hidden mt-4 pb-4 border-t border-cyan-500/20">
             <div className="pt-4 space-y-4">
               <Link href="/" className="block text-gray-300 hover:text-cyan-400 transition-colors duration-300 font-medium" onClick={closeAllMenus}>
@@ -2800,6 +2943,7 @@ export default function Navigation() {
                   <span className="text-sm">364 E Main St STE 1008, Middletown DE 19709</span>
                 </div>
               </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
           <div className="md:hidden">
@@ -3398,6 +3542,8 @@ Navigation.displayName = 'Navigation';
                 Contact
               </Link>
 <<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
             </div>
           </div>
         )}
@@ -3667,8 +3813,12 @@ export default Navigation;
 =======
 };
 
+<<<<<<< HEAD
 export default Navigation;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
 =======
 export default Navigation;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0c5f
+=======
+export default Navigation;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

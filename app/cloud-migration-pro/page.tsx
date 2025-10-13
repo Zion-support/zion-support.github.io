@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -40,10 +41,26 @@ const CloudMigrationProPage = () => {
         "Basic migration planning",
         "Email support",
         "Standard documentation",
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+    },
+    {
+      icon: <Shield className="w-6 h-6 text-purple-400" />,
+      title: 'Security-First Approach',
+    }
+  ]
+
+  const pricingPlans = [
+    {
+      name: 'Small Business',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
       ],
       popular: false,
     },
     {
+<<<<<<< HEAD
       name: "Professional",
       price: "$7,999",
       period: "/project",
@@ -55,10 +72,14 @@ const CloudMigrationProPage = () => {
         "Custom integrations",
         "Performance optimization",
         "Security assessment",
+=======
+      name: 'Enterprise',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
       ],
       popular: true,
     },
     {
+<<<<<<< HEAD
       name: "Enterprise",
       price: "Custom",
       period: "",
@@ -71,6 +92,8 @@ const CloudMigrationProPage = () => {
         "API access",
         "Custom reporting",
         "24/7 monitoring",
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
       ],
       popular: false
     }
@@ -85,6 +108,7 @@ const CloudMigrationProPage = () => {
 
   const testimonials = [
     {
+<<<<<<< HEAD
       name: "Sarah Johnson",
       role: "CTO",
       company: "TechCorp Inc.",
@@ -320,3 +344,6 @@ const CloudMigrationProPage = () => {
 
 export default CloudMigrationProPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
+=======
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

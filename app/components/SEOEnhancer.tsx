@@ -12,6 +12,7 @@ const SEOEnhancerPage: React.FC = () => {
   ];];];
     'Proven track record of success'
   ];
+<<<<<<< HEAD
 
       {/* Hero Section */}
       <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -153,3 +154,6 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
 };
 
 export default SEOEnhancerPage;
+=======
+  return (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

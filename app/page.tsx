@@ -5,7 +5,13 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
+=======
+'use client';
+import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 import { Link } from 'react-router-dom';
 import { ArrowRight, Brain, Shield, Users, Zap, Globe, Lock } from 'lucide-react';
 =======

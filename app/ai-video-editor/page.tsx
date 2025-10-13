@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 import React from 'react';
@@ -37,6 +38,127 @@ const AiVideoEditorPage: React.FC = () => {,
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+=======
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { Link } from 'react-router-dom'
+import { Video, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Play, Scissors } from 'lucide-react'
+import Layout from '../layout'
+
+export default function AIVideoEditor() {
+  const features = [
+    {
+      icon: <Brain className="w-6 h-6 text-cyan-400" />,
+      title: 'AI-Powered Editing',
+      description: 'Automatically edit videos with intelligent scene detection, color correction, and audio enhancement'
+    },
+    {
+      icon: <Scissors className="w-6 h-6 text-purple-400" />,
+      title: 'Smart Cut Detection',
+      description: 'AI automatically identifies the best moments and creates seamless cuts and transitions'
+    },
+    {
+      icon: <Play className="w-6 h-6 text-yellow-400" />,
+      title: 'Auto-Generated Content',
+      description: 'Create engaging videos from text, images, and audio with AI-generated animations and effects'
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 text-green-400" />,
+      title: 'Performance Analytics',
+      description: 'Track video performance, engagement metrics, and optimize content for better results'
+    }
+  ]
+
+  const editingFeatures = [
+    {
+      category: 'AI Editing',
+      items: ['Auto Scene Detection', 'Smart Cuts', 'Color Correction', 'Audio Enhancement', 'Stabilization', 'Background Removal']
+    },
+    {
+      category: 'Content Creation',
+      items: ['Text to Video', 'Image Animation', 'Voice Synthesis', 'Music Generation', 'Template Library', 'Custom Branding']
+    },
+    {
+      category: 'Export & Sharing',
+      items: ['Multiple Formats', 'Social Media Optimization', 'Cloud Storage', 'Direct Publishing', 'Collaboration Tools', 'Version Control']
+    },
+    {
+      category: 'Analytics',
+      items: ['View Metrics', 'Engagement Tracking', 'A/B Testing', 'Performance Reports', 'Audience Insights', 'ROI Analysis']
+    }
+  ]
+
+  const pricingPlans = [
+    {
+      name: 'Creator',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for content creators and influencers',
+      features: [
+        'Up to 10 hours of video/month',
+        'Basic AI features',
+        'Standard templates',
+        'Email support',
+        'Basic analytics',
+        'Mobile app access'
+      ],
+      popular: false
+    },
+    {
+      name: 'Professional',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for businesses and agencies',
+      features: [
+        'Up to 50 hours of video/month',
+        'Advanced AI features',
+        'Custom templates',
+        'Priority support',
+        'Advanced analytics',
+        'Team collaboration',
+        'API access'
+      ],
+      popular: true
+    },
+    {
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations',
+      features: [
+        'Unlimited video processing',
+        'Custom AI training',
+        'White-label solution',
+        'Dedicated support',
+        'Custom integrations',
+        'Advanced analytics',
+        'SLA guarantee'
+      ],
+      popular: false
+    }
+  ]
+
+  const testimonials = [
+    {
+      name: 'Alex Rodriguez',
+      company: 'YouTube Creator',
+      content: 'AI Video Editor cut my editing time by 70%. The auto-generated content is incredibly engaging.',
+      rating: 5
+    },
+    {
+      name: 'Sarah Kim',
+      company: 'Marketing Agency',
+      content: 'Creating professional videos for clients is now effortless. The AI quality is outstanding.',
+      rating: 5
+    },
+    {
+      name: 'Mike Johnson',
+      company: 'E-learning Platform',
+      content: 'The analytics help us understand what content performs best. Our engagement increased by 150%.',
+      rating: 5
+    }
+  ]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -225,6 +347,7 @@ export default PagePage;
         {/* CTA Section */}
         <section className="py-20 px-4">
         </section>
+<<<<<<< HEAD
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -245,3 +368,7 @@ export default PagePage;
 
 export default AiVideoEditorPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
+=======
+      </div>
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

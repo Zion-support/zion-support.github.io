@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 import React from 'react';
@@ -7,6 +8,10 @@ import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
 
 const PagePage: React.FC = () => {
+=======
+
+function AIVoiceAssistant() {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
   const features = [
     {
       icon: Brain,
@@ -371,6 +376,7 @@ const AIVoiceAssistantPage: React.FC = () => {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </div>
       </section>
 
@@ -487,3 +493,11 @@ const AIVoiceAssistantPage: React.FC = () => {
 
 export default AIVoiceAssistantPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-08e3
+=======
+        </section>
+      </div>
+    </Layout>
+  )
+}
+export default AiVoiceAssistantPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa

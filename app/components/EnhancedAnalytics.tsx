@@ -1,8 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 import React, { useEffect } from 'react';
+=======
+'use client';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
 
 interface EnhancedAnalyticsProps {
   children: React.ReactNode;
@@ -44,6 +50,7 @@ interface AnalyticsProviderProps {
   trackingId?: string;
 }
 
+<<<<<<< HEAD
 export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
   children,
   trackingId = 'G-XXXXXXXXXX'
@@ -166,6 +173,87 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
   };
 
+=======
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  const [userId, setUserId] = useState<string | null>(null);
+  const [sessionId, setSessionId] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Generate session ID
+    const newSessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+    setSessionId(newSessionId);
+    
+    // Load user ID from localStorage
+    const storedUserId = localStorage.getItem('analytics_user_id');
+    if (storedUserId) {
+      setUserId(storedUserId);
+    }
+  }, []);
+
+  const trackEvent = (event: string, properties?: Record<string, any>) => {
+    const eventData = {
+      event,
+      properties: {
+        ...properties,
+        userId,
+        sessionId,
+        timestamp: new Date().toISOString(),
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+      },
+    };
+
+    // Send to analytics service
+    if (typeof window !== 'undefined') {
+      // Google Analytics 4
+      if (window.gtag) {
+        window.gtag('event', event, {
+          event_category: properties?.category || 'general',
+          event_label: properties?.label || '',
+          value: properties?.value || 0,
+          ...properties,
+        });
+      }
+
+      // Custom analytics endpoint
+      fetch('/api/analytics', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(eventData),
+      }).catch(error => {
+        console.warn('Analytics tracking failed:', error);
+      });
+    }
+
+    console.log('Analytics Event:', eventData);
+  };
+
+  const trackPageView = (page: string) => {
+    trackEvent('page_view', {
+      page,
+      title: document.title,
+    });
+  };
+
+  const setUser = (newUserId: string, properties?: Record<string, any>) => {
+    setUserId(newUserId);
+    localStorage.setItem('analytics_user_id', newUserId);
+    
+    trackEvent('user_identified', {
+      userId: newUserId,
+      ...properties,
+    });
+  };
+
+  const value: AnalyticsContextType = {
+    trackEvent,
+    trackPageView,
+    setUser,
+  };
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
   return (
     <AnalyticsContext.Provider value={value}>
       {children}
@@ -174,6 +262,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-03c6
 };
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default EnhancedAnalytics;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
@@ -214,3 +303,6 @@ declare global {
   }
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
+=======
+export default AnalyticsProvider;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0caa
