@@ -1,9 +1,9 @@
-'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import ../components/ from '../components/';
 import Footer from '../components/Footer';
 import {Circle, Right, Star, }}from 'lucide-react';
+'use client';
 const PageBackupPage: React.FC = () => {,
       benefits: ['Smart recommendations', 'Predictive analytics', 'Automated insights', 'Real-time analysis']},
     {icon: benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},

@@ -1,8 +1,8 @@
-#!/usr/bin// Fixed regex
-
 import fs from 'fs'
 import path from 'path'
 import { execSync } from 'child_process'
+#!/usr/bin// Fixed regex
+
     const result = execSync('npx tsc --noEmit --skipLibCheck 2>&1', { encoding: 'utf8'
   console.error('Error:'
     const lines = output.split('\n'

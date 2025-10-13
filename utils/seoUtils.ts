@@ -31,7 +31,7 @@ interface SEOConfig {
     href: string;
     hreflang: string;
   }>;
-  structuredData?: any;
+  defaultStructuredData?: any;
 }
 
 export const defaultSEOConfig: SEOConfig = {
@@ -74,7 +74,7 @@ export const defaultSEOConfig: SEOConfig = {
     { href: 'https://zion.app/en', hreflang: 'en' },
     { href: 'https://zion.app/es', hreflang: 'es' }
   ],
-  structuredData: {
+  defaultStructuredData: {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',
@@ -118,7 +118,7 @@ export const generateSEOMeta = (config: SEOConfig) => {
 };
 
 export const generateStructuredData = (config: SEOConfig) => {
-  return config.structuredData ? JSON.stringify(config.structuredData) : '';
+  return config.defaultStructuredData ? JSON.stringify(config.defaultStructuredData) : '';
 };
 
 export const generateImageAlt = (imagePath: string, alt: string) => {

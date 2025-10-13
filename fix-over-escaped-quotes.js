@@ -1,7 +1,7 @@
-#!/usr/bin// Fixed regex
-
 import fs from 'fs'
 import path from 'path'
+#!/usr/bin// Fixed regex
+
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules'
     } else if (file.endsWith('.tsx') || file.endsWith('.jsx'
         const content = fs.readFileSync(filePath, 'utf8'

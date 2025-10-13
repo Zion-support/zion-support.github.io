@@ -1,7 +1,10 @@
+import { execSync } from 'child_process';
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react'
 // import fs from 'fs';
 // import path from 'path';
 // import { fileURLToPath } from 'url';
-import { execSync } from 'child_process';
 
 // const __filename = fileURLToPath(import.meta.url);
 // const __dirname = path.dirname(__filename);
@@ -28,9 +31,6 @@ function processTypeCheckOutput() {
 }
 
 const createGenericPage = (serviceName, title, description) => `'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react'
 
 export default function ${serviceName}() {
   const features = [

@@ -1,7 +1,7 @@
-#!/usr/bin// Fixed regex
-
 import fs from 'fs'
 import path from 'path'
+#!/usr/bin// Fixed regex
+
     let content = fs.readFileSync(filePath, 'utf8'
       if (!match.includes('
       if (value.includes('"') && !value.includes("'

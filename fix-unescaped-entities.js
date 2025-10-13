@@ -1,7 +1,7 @@
-#!/usr/bin// Fixed regex
-
 import fs from 'fs'
 import path from 'path'
+#!/usr/bin// Fixed regex
+
   return content.replace(/(?<!&)(?<!&#)(?<!&apos;)(?<!&lsquo;)(?<!&rsquo;)(?<!&quot;)(?<!&lt;)(?<!&gt;)(?<!&amp;)'
     if (stat.isDirectory() && !file.startsWith('.') && file !== 'node_modules'
     } else if (file.endsWith('.tsx') || file.endsWith('.jsx'

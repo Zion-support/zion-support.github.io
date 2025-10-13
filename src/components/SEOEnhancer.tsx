@@ -1,4 +1,4 @@
-import { Node } from 'react';
+import { ReactNode } from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOEnhancerProps {
@@ -6,7 +6,7 @@ interface SEOEnhancerProps {
   description: string;
   keywords: string[];
   noIndex?: boolean;
-  structuredData?: unknown;
+  defaultStructuredData?: unknown;
   children?: Node;
 }
 
@@ -15,7 +15,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   description,
   keywords,
   noIndex = false,
-  structuredData,
+  defaultStructuredData,
   children
 }) => {
   const defaultStructuredData = {
@@ -32,7 +32,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     }
   };
 
-  const finalStructuredData = structuredData || defaultStructuredData;
+  const finalStructuredData = defaultStructuredData || defaultStructuredData;
 
   return (
     <.Fragment>

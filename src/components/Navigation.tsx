@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { } from 'react-router-dom';
-import { ChevronDown, Menu, X, Right, Star, Square, } from 'lucide-react';
+import { ChevronDown, Menu, X, ChevronRight, Star, Square,  } from 'lucide-react';
 
-const : React.FC = () => {
+const LinkPage: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [aiServicesOpen, setAiServicesOpen] = useState(false);
@@ -82,4 +82,4 @@ const : React.FC = () => {
   );
 };
 
-export default ;
+export default LinkPage;

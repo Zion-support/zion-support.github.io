@@ -1,49 +1,29 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Play, Right, Circle, Star } from 'lucide-react';
-=======
-import { Play, Right, Star, BarChart3, Shield } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+import { Play, ChevronRight, Circle, Star } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
   const features = [
     {
-<<<<<<< HEAD
       icon: 'Analytics',
-=======
-      icon: BarChart3,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
       demo: 'Live Demo'
     },
     {
-<<<<<<< HEAD
       icon: 'Security',
-=======
-      icon: Shield,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Advanced Security',
       description: 'Experience our enterprise-grade security features',
       demo: 'Demo'
     },
     {
-<<<<<<< HEAD
       icon: 'Intelligence',
-=======
-      icon: BarChart3,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Business Intelligence',
       description: 'Explore our comprehensive BI dashboard',
       demo: 'BI Demo'
     },
     {
-<<<<<<< HEAD
       icon: 'Collaboration',
-=======
-      icon: Play,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'Team Collaboration',
       description: 'See how teams work together seamlessly',
       demo: 'Collaboration Demo'
@@ -190,7 +170,7 @@ const DemoPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Schedule Live Demo
-                <Right className="w-5 h-5 ml-2 inline" />
+                <ChevronRight className="w-5 h-5 ml-2 inline" />
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Contact Sales

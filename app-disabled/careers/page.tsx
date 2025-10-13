@@ -1,15 +1,16 @@
 import { useState } from 'react;
-
 import { Helmet } from 'react-helmet-async;
-
 import { Right, Circle, Star, } from 'lucide-react;
+import { Right, Circle, } from 'lucide-react;
+import { ChevronRight, Circle, Star,  } from 'lucide-react';
+
+
 
 interface JobPosition {
   // Add properties here
 }
   id: number;
 
-import { Right, Circle, } from 'lucide-react;
 
 const PagePage: React.FC = () => {}
   title: string;
@@ -94,7 +95,6 @@ const eersPage: React.FC = () => {
     </div>
   );
 };
-import { Right, Circle, Star, } from 'lucide-react';
     },
     {}
       id: 3,
@@ -285,15 +285,8 @@ import { Right, Circle, Star, } from 'lucide-react';
                 {departments.map((dept) => (
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-<<<<<<< HEAD
-<<<<<<< HEAD
               Be part of a team that's shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
-=======
-              Be part of a team that&apos;s shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
               Be part of a team that's shaping the future of AI and IT solutions. We're looking for passionate individuals who want to make a difference.
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
           {/* Why Work With Us */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
@@ -319,7 +312,6 @@ import { Right, Circle, Star, } from 'lucide-react';
         </section>
   return (<div>
         <title>eers - Zion Tech Group | Join Our Team<
-        <meta name="description" content="Join Zion Tech Group and work on cutting-edge AI and IT solutions. Explore open positions, benefits, and our company culture. 
         <meta name="keywords" content="careers, jobs, AI engineer, cloud architect, data scientist, DevOps, remote work, tech jobs 
       <
         <section className="py-20 px-4">
@@ -331,9 +323,6 @@ import { Right, Circle, Star, } from 'lucide-react';
                       <h3 className="text-xl font-bold text-white mb-2">{position.title}</h3>
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
         <section className="relative py-20 px-4 overflow-hidden>)
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse 
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s }}
-
           <div className="relative max-w-7xl mx-auto text-center>
             <h1 className="text-4xl md: text-6xl font-bold text-white mb-6>
               Join Our Team

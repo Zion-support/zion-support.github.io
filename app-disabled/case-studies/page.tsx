@@ -1,12 +1,12 @@
 import React from 'react';
 import react;
-
 import from  from 'react;
-
 import from 'react';
 import { Helmet } from 'react-helmet-async';
 import { } from 'react-router-dom';
-import { Right, Star, } from 'lucide-react';
+import { ChevronRight, Star,  } from 'lucide-react';
+
+
     {
       id: '1,
       title: 'AI-Powered Customer Service Transformation,

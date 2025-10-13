@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
+import FuturisticBackground from '../components/FuturisticBackground';
+import NeonButton from '../components/NeonButton';
+import AnimatedCard from '../components/AnimatedCard';
+import { services } from '../data/servicesData';
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -15,28 +19,18 @@ import {
   SparklesIcon,
   BoltIcon
 } from '@heroicons/react/24/outline';
-import FuturisticBackground from '../components/FuturisticBackground';
-import NeonButton from '../components/NeonButton';
-import AnimatedCard from '../components/AnimatedCard';
-import { services } from '../data/servicesData';
 
 export default function HomePage() {
-<<<<<<< HEAD
   const featuredServices = services.slice(0, 6);
-=======
+  
   const structuredData = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
+    "@type": "Organization",
     "name": "Zion Tech Group",
+    "description": "Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide.",
     "url": "https://ziontechgroup.com",
-    "description": "Advanced AI and IT solutions provider specializing in cybersecurity, cloud infrastructure, and digital transformation.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://ziontechgroup.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "logo": "https://ziontechgroup.com/logo.png"
   };
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
 
   return (
     <>

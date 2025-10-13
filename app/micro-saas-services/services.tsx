@@ -1,6 +1,6 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+'use client';
 
 const Services: React.FC = () => {
   return (

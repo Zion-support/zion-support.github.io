@@ -1,15 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { } from 'react-router-dom';
+import { User, ChevronRight, Filter } from 'lucide-react';
+import Footer from '../components/Footer';
 
 export default function Blog() {
 interface BlogPost {
   id: number;  title: string;
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { } from 'react-router-dom';
-import { User, Right, Filter } from 'lucide-react';
-import Footer from '../components/Footer';
 
 const BlogPage: React.FC = () => {
   const blogPosts = [
@@ -47,8 +45,6 @@ const categories = [
 
   ];
 'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const BlogPage: React.FC = () => {
   const [searchQuery, setSearchQuery] = useState(');

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, Play, User, Star, Circle, Clock } from 'lucide-react';
+import { ChevronRight, Play, User, Star, Circle, Clock } from 'lucide-react';
 
 const TutorialsPage: React.FC = () => {
   const tutorials = [
@@ -168,7 +168,7 @@ const TutorialsPage: React.FC = () => {
                     <span className="text-cyan-400 text-sm font-medium">{tutorial.instructor}</span>
                     <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
                       Start Tutorial
-                      <Right className="w-4 h-4 ml-1" />
+                      <ChevronRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ const TutorialsPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Get Started Free
-                <Right className="w-5 h-5 ml-2 inline" />
+                <ChevronRight className="w-5 h-5 ml-2 inline" />
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 View All Tutorials

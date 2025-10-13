@@ -1,6 +1,6 @@
-&apos;use client&apos;;
 import { useEffect, useCallback, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
+&apos;use client&apos;;
 
 interface SEOData {
   title: string;
@@ -9,7 +9,7 @@ interface SEOData {
   canonicalUrl?: string;
   ogImage?: string;
   noIndex?: boolean;
-  structuredData?: unknown;
+  defaultStructuredData?: unknown;
 }
 
 interface AdvancedSEOOptimizerProps {
@@ -28,7 +28,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     canonicalUrl,
     ogImage,
     noIndex = false,
-    structuredData
+    defaultStructuredData
   } = seoData;
 
   const baseStructuredData = {
@@ -45,7 +45,7 @@ const AdvancedSEOOptimizer: React.FC<AdvancedSEOOptimizerProps> = ({
     }
   };
 
-  const finalStructuredData = structuredData || baseStructuredData;
+  const finalStructuredData = defaultStructuredData || baseStructuredData;
 
   return (
     <.Fragment>

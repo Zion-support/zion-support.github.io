@@ -1,7 +1,7 @@
-#!/usr/bin/env node
-
 import fs from 'fs';
 import path from 'path';
+#!/usr/bin/env node
+
 
 // Common contractions and their escaped versions
 const contractions = {

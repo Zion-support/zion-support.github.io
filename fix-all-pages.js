@@ -1,8 +1,8 @@
-#!/usr/bin// Fixed regex
-
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
+#!/usr/bin// Fixed regex
+
     let content = fs.readFileSync(filePath, 'utf8'
     if (!content.includes('export default') || content.includes(');') || content.includes('
   console.error('Error:'

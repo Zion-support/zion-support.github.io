@@ -1,8 +1,8 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+'use client';
 
-const : React.FC = () => {
+const LinkPage: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>
@@ -85,4 +85,4 @@ const : React.FC = () => {
   );
 };
 
-export default ;
+export default LinkPage;

@@ -1,8 +1,10 @@
-#!/usr/bin// Fixed regex
-
 import fs from 'fs'
 import path from 'path'
 import { execSync } from 'child_process'
+import React from 'react'
+import { Helmet } from 'react-helmet-async'
+#!/usr/bin// Fixed regex
+
 console.log('Starting comprehensive file corruption fix...'
     const output = execSync('npx tsc --noEmit --skipLibCheck 2>&1 || true', { encoding: 'utf8'
   console.error('Error:'
@@ -13,5 +15,3 @@ console.log('Starting comprehensive file corruption fix...'
     console.error('Error finding corrupted files:'
   const fileName = path.basename(filePath, '.tsx'
   return `'use client'
-import React from 'react'
-import { Helmet } from 'react-helmet-async'

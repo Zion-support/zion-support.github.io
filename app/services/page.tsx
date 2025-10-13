@@ -1,14 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Circle, Star, Right, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe } from 'lucide-react';
-=======
-import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
-import { Circle, Star, Right } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
+import { Circle, Star, ChevronRight, Brain, Zap, Shield, Cloud, Smartphone, Database, Globe } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
@@ -97,7 +89,7 @@ const ServicesPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Get Started
-                <Right className="w-5 h-5 ml-2 inline" />
+                <ChevronRight className="w-5 h-5 ml-2 inline" />
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Learn More
@@ -178,7 +170,7 @@ const ServicesPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Start Your Project
-                <Right className="w-5 h-5 ml-2 inline" />
+                <ChevronRight className="w-5 h-5 ml-2 inline" />
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Schedule Consultation

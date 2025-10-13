@@ -8,7 +8,7 @@ interface SEOHeadProps {
   image?: string;
   url?: string;
   type?: string;
-  structuredData?: object;
+  defaultStructuredData?: object;
   canonical?: string;
   noindex?: boolean;
 }
@@ -20,7 +20,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   image = '/og-image.jpg',
   url = 'https://ziontechgroup.com',
   type = 'website',
-  structuredData,
+  defaultStructuredData,
   canonical,
   noindex = false
 }) => {
@@ -28,7 +28,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullUrl = canonical || `${url}${typeof window !== 'undefined' ? window.location.pathname : ''}`;
   const fullImage = image.startsWith('http') ? image : `${url}${image}`;
 
-  const defaultStructuredData = {
+  const structuredData = defaultStructuredData || {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Zion Tech Group",
@@ -114,7 +114,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
+        {JSON.stringify(defaultStructuredData || defaultStructuredData)}
       </script>
     </Helmet>
   );

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
 import { 
   PhoneIcon, 
   EnvelopeIcon, 
@@ -8,9 +7,6 @@ import {
   ArrowRightIcon,
   HeartIcon
 } from '@heroicons/react/24/outline';
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -24,7 +20,6 @@ const Footer: React.FC = () => {
     { name: '5G Solutions', href: '/5g-solutions' },
   ];
 
-<<<<<<< HEAD
   const company = [
     { name: 'About Us', href: '/about' },
     { name: 'Our Team', href: '/team' },
@@ -50,13 +45,6 @@ const Footer: React.FC = () => {
     { name: 'GDPR', href: '/gdpr' },
     { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' },
-=======
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github }
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
   ];
 
   return (

@@ -1,4 +1,4 @@
-import { Right, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
+import { ChevronRight, Circle, Workflow, Brain, Settings, Zap, Play } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 import FuturisticCard from '../components/FuturisticCard';
@@ -15,55 +15,19 @@ const AIAutomationPlatform = () => {
     {
       title: "Smart Decision Making",
       description: "AI-driven decision making for automated business processes",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: <Circle className="w-6 h-6" />,
-=======
-      icon: <Brain className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-=======
-      icon: <Circle className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-=======
       icon: <div className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
       color: "from-green-500 to-emerald-500"
     },
     {
       title: "Process Optimization",
       description: "Continuously optimize processes using machine learning",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: <Circle className="w-6 h-6" />,
-=======
-      icon: <Settings className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-=======
-      icon: <Circle className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-=======
       icon: <div className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
       color: "from-purple-500 to-pink-500"
     },
     {
       title: "Integration Hub",
       description: "Connect and automate across all your business systems",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: <Circle className="w-6 h-6" />,
-=======
-      icon: <Zap className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-=======
-      icon: <Circle className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-=======
       icon: <div className="w-6 h-6" />,
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -92,19 +56,9 @@ const AIAutomationPlatform = () => {
           <ResponsiveContainer>
             <div className="relative z-10 text-center py-20">
               <div className="flex items-center justify-center mb-6">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <Circle className="w-4 h-4 text-cyan-400 mr-2" />
-=======
-                <Brain className="w-4 h-4 text-cyan-400 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-=======
                 <Circle className="w-4 h-4 text-cyan-400 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-=======
                 <div className="w-4 h-4 text-cyan-400 mr-2" />
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
                 <span className="text-cyan-400 text-sm font-medium">Intelligent Automation</span>
               </div>
               
@@ -119,25 +73,15 @@ const AIAutomationPlatform = () => {
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <FuturisticButton
-                  icon={<Right className="w-5 h-5" />}
+                  icon={<ChevronRight className="w-5 h-5" />}
                 >
                   Get Started Today
                 </FuturisticButton>
                 <FuturisticButton
                   variant="outline"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  icon={<Right className="w-5 h-5" />}
-=======
-                  icon={<Play className="w-5 h-5" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-=======
+                  icon={<ChevronRight className="w-5 h-5" />}
                   icon={<Circle className="w-5 h-5" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-=======
                   icon={<div className="w-5 h-5" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
                 >
                   View Demo
                 </FuturisticButton>
@@ -211,19 +155,9 @@ const AIAutomationPlatform = () => {
               </p>
               <FuturisticButton
                 size="lg"
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-                icon={<Right className="w-6 h-6" />}
-=======
-                icon={<Zap className="w-6 h-6" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
-=======
+                icon={<ChevronRight className="w-6 h-6" />}
                 icon={<Circle className="w-6 h-6" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-3299
-=======
                 icon={<div className="w-6 h-6" />}
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
               >
                 Start Your Automation Journey
               </FuturisticButton>

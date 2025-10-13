@@ -1,6 +1,6 @@
-'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+'use client';
 
 export default function ZionSmartExpenseCategorizer() {
   return (

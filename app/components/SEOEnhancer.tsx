@@ -7,7 +7,7 @@ interface SEOEnhancerProps {
   image?: string;
   url?: string;
   type?: string;
-  structuredData?: unknown;
+  defaultStructuredData?: unknown;
 }
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   title = 'Zion Tech Group - Advanced AI and IT Solutions',
@@ -16,14 +16,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   image = '/images/og-image.jpg',
   url = typeof window !== 'undefined' ? window.location.href : '',
   type = 'website',
-  structuredData
+  defaultStructuredData
 }) => {
   useEffect(() => {
     // Add structured data to the page
-    if (structuredData) {
+    if (defaultStructuredData) {
       const script = document.createElement('script');
       script.type = 'application/ld+json';
-      script.text = JSON.stringify(structuredData);
+      script.text = JSON.stringify(defaultStructuredData);
       document.head.appendChild(script);
       return () => {
         if (document.head.contains(script)) {
@@ -32,7 +32,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       };
     }
     return undefined;
-  }, [structuredData]);
+  }, [defaultStructuredData]);
   // Generate meta tags
   const metaTags = [
     { name: 'description', content: description },
@@ -81,7 +81,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   );
 };
 // Default structured data for the organization
-const  {
+const defaultStructuredData = {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Zion Tech Group",

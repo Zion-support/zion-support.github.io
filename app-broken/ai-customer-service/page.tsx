@@ -18,11 +18,7 @@ export default function AiCustomerService() {
           </p>
         </div>
         <div className="text-center">
-<<<<<<< HEAD
           <p className="text-gray-300">Coming Soon - AiCustomerService Solutions</p>
-=======
-          <p className="text-gray-300">Coming Soon - AI Customer Service Solutions</p>
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
         </div>
       </div>
     </div>

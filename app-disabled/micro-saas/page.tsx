@@ -1,12 +1,17 @@
 import react;
-
 import { Helmet } from  from 'react;
-
 import { Helmet } from 'react-helmet-async;
-
 import { } from 'react-router-dom;
-
 import { Circle, Right, Star, 3, } from 'lucide-react;
+import React from 'react';
+import { Circle, ChevronRight,  } from 'lucide-react'
+import { Helmet } from 'react-helmet-async';
+import { } from 'react-router-dom';
+import { ChevronRight, Circle, Star,  } from 'lucide-react';
+
+
+
+
 
 interface MicroSaasProduct {
   // Add properties here
@@ -41,15 +46,9 @@ const MicroSaasPage: React.FC = () => {}
       features: ['Real-time dashboards', 'Predictive analytics', 'Custom reports', 'Mobile app', 'API integration],
       price: '$99/month,
       users: 'Up to 50 users,
-import React from 'react';
 
 const MicroSaasPage: React.FC = () => {
-import { Circle, Right, } from 'lucide-react'
 
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { } from 'react-router-dom';
-import { Right, Circle, Star, } from 'lucide-react';
       users: 'Up to 50 users',
       popular: true,
       category: 'Analytics
@@ -111,11 +110,6 @@ import { Right, Circle, Star, } from 'lucide-react';
     {}
       icon: value: '24/7,
       label: 'Support,
-      description: Always here when you need us
-  const features = [;;
-
-    {
-      icon: title: 'Fast Setup,
       description: Get up and running in minutes with our streamlined onboarding process
     },
     {
@@ -153,14 +147,7 @@ import { Right, Circle, Star, } from 'lucide-react';
                 <button
                   key={category}
 
-                  className={px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
-                    category === All
-                      ? bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900
-                      : bg-white/10 text-gray-300 hover:bg-white/20
-                  }}
-
-
-        <section className="py-16 px-4>
+                  className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
             <div className="text-center mb-16>
               <h2 className="text-3xl font-bold text-white mb-6>Our Micro SaaS Products</h2>
