@@ -390,7 +390,6 @@ import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star, Heart } from 'luci
 
                     setSelectedLocation('all);
 
-
                   className={bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20
                   } hover:border-purple-400 transition-all duration-300 group}

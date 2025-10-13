@@ -1,60 +1,62 @@
-const fs = require('fs');
-const path = require('path');
+#!/usr/bin/env node
 
-// List of files with JSX errors
-const filesToFix = [
-  'app/ai-automated-reporting/page.tsx',
-  'app/ai-data-analytics-pro/page.tsx',
-  'app/ai-email-assistant/page.tsx',
-  'app/ai-email-marketing-automation/page.tsx',
-  'app/ai-expense-tracker/page.tsx',
-  'app/ai-financial-analysis/page.tsx',
-  'app/ai-fraud-detection/page.tsx',
-  'app/ai-hr-recruitment-pro/page.tsx',
-  'app/ai-image-recognition-pro/page.tsx',
-  'app/ai-invoice-generator/page.tsx',
-  'app/ai-predictive-analytics/page.tsx',
-  'app/ai-recommendation-engine/page.tsx'
-];
+import fs from 'fs';
+import path from 'path';
 
-function fixJSXFile(filePath) {
+// Function to fix JSX errors in a file
+function fixJSXErrors(filePath) {
   try {
     let content = fs.readFileSync(filePath, 'utf8');
     
-    // Fix common JSX syntax issues
-    content = content
-      // Fix unclosed JSX elements by adding proper closing tags
-      .replace(/<div([^>]*)>(?!.*<\/div>)/g, (match, attrs) => {
-        // This is a complex fix, let's handle it differently
-        return match;
-      })
-      // Fix malformed JSX fragments
-      .replace(/<>([^<]*?)(?!<\/>)/g, '<React.Fragment>$1</React.Fragment>')
-      // Fix unclosed JSX tags
-      .replace(/<([a-zA-Z][a-zA-Z0-9]*)([^>]*)>(?!.*<\/\1>)/g, (match, tagName, attrs) => {
-        // This is too complex for regex, let's handle it case by case
-        return match;
-      })
-      // Fix malformed template literals in JSX
-      .replace(/\$\{([^}]*)\}/g, '{$1}')
-      // Fix missing semicolons after JSX
-      .replace(/(<\/[a-zA-Z][a-zA-Z0-9]*>)\s*$/gm, '$1;')
-      // Fix malformed JSX expressions
-      .replace(/\{([^}]*)\}/g, (match, content) => {
-        if (content.includes('`') && content.includes('${')) {
-          return `{${content.replace(/`/g, '').replace(/\$\{/g, '{').replace(/\}/g, '}')}}`;
-        }
-        return match;
-      });
-
-    // Write the fixed content back
-    fs.writeFileSync(filePath, content);
-    console.log(`Fixed: ${filePath}`);
+    // Fix missing closing div tags before the closing of the function
+    // Look for patterns like "  );" that should be "        </div>\n      </div>\n    </div>\n  );"
+    content = content.replace(/(\s+)(\s+)(\s+)(\s+)(\s+)(\s+)(\s+)(\s+)\);/g, (match, spaces) => {
+      // Count the indentation level
+      const indentLevel = spaces.length;
+      const closingDivs = '        </div>\n      </div>\n    </div>\n  );';
+      return closingDivs;
+    });
+    
+    // More specific fix for the pattern we saw
+    content = content.replace(/(\s+)(\s+)(\s+)(\s+)(\s+)(\s+)(\s+)(\s+)\);/g, (match) => {
+      return '        </div>\n      </div>\n    </div>\n  );';
+    });
+    
+    // Fix the specific pattern where we have missing closing divs
+    content = content.replace(/(\s+)(\s+)(\s+)(\s+)(\s+)(\s+)(\s+)(\s+)\);/g, (match) => {
+      return '        </div>\n      </div>\n    </div>\n  );';
+    });
+    
+    fs.writeFileSync(filePath, content, 'utf8');
+    console.log(`Fixed JSX errors in: ${filePath}`);
+    return true;
   } catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message);
+    return false;
   }
 }
 
-// Fix all files
-filesToFix.forEach(fixJSXFile);
-console.log('JSX fixes completed');
+// List of files that need JSX fixes
+const filesToFix = [
+  'app/zion-ai-inventory-manager/page.tsx',
+  'app/zion-ai-performance-optimizer/page.tsx',
+  'app/zion-ai-social-media-manager/page.tsx',
+  'app/zion-ai-voice-assistant-pro/page.tsx',
+  'app/zion-smart-expense-categorizer/page.tsx',
+  'app/zion-smart-inventory-optimizer/page.tsx'
+];
+
+console.log('Fixing JSX errors...');
+let fixedCount = 0;
+
+for (const file of filesToFix) {
+  if (fs.existsSync(file)) {
+    if (fixJSXErrors(file)) {
+      fixedCount++;
+    }
+  } else {
+    console.log(`File not found: ${file}`);
+  }
+}
+
+console.log(`Fixed ${fixedCount} files.`);

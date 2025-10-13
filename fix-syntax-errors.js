@@ -28,4 +28,3 @@ import path from 'path';
     fixedCount++;
   }
 }
-

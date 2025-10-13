@@ -132,7 +132,6 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
 
   ];
 
-
     <>
       <Helmet>
         <title>Micro SaaS Solutions - Zion Tech Group | Ready-to-Use Business Tools</title>
@@ -160,7 +159,6 @@ import { ArrowRight, CheckCircle, Star, Zap, Users, BarChart, Shield, Cloud, Dat
                       ? bg-gradient-to-r from-cyan-400 to-purple-400 text-slate-900
                       : bg-white/10 text-gray-300 hover:bg-white/20
                   }}
-
 
         <section className="py-16 px-4>
           <div className="max-w-7xl mx-auto>
