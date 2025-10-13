@@ -165,6 +165,33 @@ const ZionComplianceManagerPage = React.lazy(
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
+const ZionAiInvoiceGeniusPage = React.lazy(
+  () => import("./app/zion-ai-invoice-genius/page"),
+);
+const ZionAiTranslatorProPage = React.lazy(
+  () => import("./app/zion-ai-translator-pro/page"),
+);
+const ZionAiSurveyBuilderPage = React.lazy(
+  () => import("./app/zion-ai-survey-builder/page"),
+);
+const ZionAiVideoEditorPage = React.lazy(
+  () => import("./app/zion-ai-video-editor/page"),
+);
+const ZionAiEnergyManagerPage = React.lazy(
+  () => import("./app/zion-ai-energy-manager/page"),
+);
+const ZionAiFraudDetectorPage = React.lazy(
+  () => import("./app/zion-ai-fraud-detector/page"),
+);
+const ZionAiPredictiveMaintenancePage = React.lazy(
+  () => import("./app/zion-ai-predictive-maintenance/page"),
+);
+const ZionAiRecruitmentProPage = React.lazy(
+  () => import("./app/zion-ai-recruitment-pro/page"),
+);
+const ZionAiSupplyChainOptimizerPage = React.lazy(
+  () => import("./app/zion-ai-supply-chain-optimizer/page"),
+);
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
@@ -540,17 +567,9 @@ const ZionAiCustomerServiceProPage = React.lazy(() => import("./app/zion-ai-cust
 const ZionAiDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleaner/page"));
 const ZionAiDocumentAiPage = React.lazy(() => import("./app/zion-ai-document-ai/page"));
 const ZionAiEmailAssistantPage = React.lazy(() => import("./app/zion-ai-email-assistant/page"));
-const ZionAiEnergyManagerPage = React.lazy(() => import("./app/zion-ai-energy-manager/page"));
-const ZionAiFraudDetectorPage = React.lazy(() => import("./app/zion-ai-fraud-detector/page"));
 const ZionAiMarketingAutomationPage = React.lazy(() => import("./app/zion-ai-marketing-automation/page"));
 const ZionAiMeetingAssistantPage = React.lazy(() => import("./app/zion-ai-meeting-assistant/page"));
-const ZionAiPredictiveMaintenancePage = React.lazy(() => import("./app/zion-ai-predictive-maintenance/page"));
-const ZionAiRecruitmentProPage = React.lazy(() => import("./app/zion-ai-recruitment-pro/page"));
 const ZionAiSeoOptimizerPage = React.lazy(() => import("./app/zion-ai-seo-optimizer/page"));
-const ZionAiSupplyChainOptimizerPage = React.lazy(() => import("./app/zion-ai-supply-chain-optimizer/page"));
-const ZionAiSurveyBuilderPage = React.lazy(() => import("./app/zion-ai-survey-builder/page"));
-const ZionAiTranslatorProPage = React.lazy(() => import("./app/zion-ai-translator-pro/page"));
-const ZionAiVideoEditorPage = React.lazy(() => import("./app/zion-ai-video-editor/page"));
 const ZionChatAiPage = React.lazy(() => import("./app/zion-chat-ai/page"));
 const ZionCrmIntelligencePage = React.lazy(() => import("./app/zion-crm-intelligence/page"));
 const ZionCustomerInsightsPage = React.lazy(() => import("./app/zion-customer-insights/page"));

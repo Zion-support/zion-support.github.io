@@ -111,6 +111,114 @@ export default function Services() {
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
       features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+    },
+    {
+      title: "Enterprise Cloud Migration",
+      description: "Complete cloud migration services with zero-downtime deployment, data security, and performance optimization.",
+      icon: <Cloud className="w-8 h-8" />,
+      path: "/cloud-migration-advanced",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $2,500/month",
+      features: ["Zero-Downtime Migration", "Data Security", "Performance Optimization", "24/7 Support"]
+    },
+    {
+      title: "Advanced Cybersecurity Suite",
+      description: "Comprehensive security solutions including threat detection, incident response, and compliance management.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/cybersecurity-advanced",
+      color: "from-red-500 to-pink-500",
+      price: "Starting at $1,800/month",
+      features: ["Threat Detection", "Incident Response", "Compliance Management", "Security Training"]
+    },
+    {
+      title: "Machine Learning Operations (MLOps)",
+      description: "End-to-end ML pipeline management with model deployment, monitoring, and automated retraining.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/machine-learning-ops",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $2,200/month",
+      features: ["Model Deployment", "Performance Monitoring", "Automated Retraining", "A/B Testing"]
+    },
+    {
+      title: "Enterprise Integration Services",
+      description: "Seamless integration of business systems with APIs, data synchronization, and workflow automation.",
+      icon: <Settings className="w-8 h-8" />,
+      path: "/enterprise-integration",
+      color: "from-green-500 to-emerald-500",
+      price: "Starting at $1,600/month",
+      features: ["API Development", "Data Synchronization", "Workflow Automation", "System Monitoring"]
+    },
+    {
+      title: "Performance Optimization",
+      description: "Application and infrastructure optimization for maximum speed, scalability, and cost efficiency.",
+      icon: <Zap className="w-8 h-8" />,
+      path: "/performance-optimization",
+      color: "from-yellow-500 to-orange-500",
+      price: "Starting at $1,400/month",
+      features: ["Speed Optimization", "Scalability Planning", "Cost Reduction", "Performance Monitoring"]
+    },
+    {
+      title: "Disaster Recovery Solutions",
+      description: "Comprehensive backup and disaster recovery with automated failover and data protection.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/disaster-recovery-advanced",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $1,200/month",
+      features: ["Automated Backup", "Failover Systems", "Data Protection", "Recovery Testing"]
+    },
+    {
+      title: "Compliance Automation",
+      description: "Automated compliance monitoring and reporting for GDPR, HIPAA, SOX, and industry regulations.",
+      icon: <FileText className="w-8 h-8" />,
+      path: "/compliance-automation",
+      color: "from-blue-500 to-indigo-500",
+      price: "Starting at $1,000/month",
+      features: ["Regulatory Compliance", "Automated Reporting", "Risk Assessment", "Audit Support"]
+    },
+    {
+      title: "Cloud Cost Optimization",
+      description: "Intelligent cloud resource management to reduce costs while maintaining performance and reliability.",
+      icon: <DollarSign className="w-8 h-8" />,
+      path: "/cloud-cost-optimization",
+      color: "from-green-500 to-teal-500",
+      price: "Starting at $800/month",
+      features: ["Cost Analysis", "Resource Optimization", "Automated Scaling", "Budget Management"]
+    },
+    {
+      title: "Security Automation",
+      description: "Automated security monitoring, threat response, and vulnerability management with AI-powered insights.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/security-automation",
+      color: "from-red-500 to-orange-500",
+      price: "Starting at $1,500/month",
+      features: ["Threat Detection", "Automated Response", "Vulnerability Management", "Security Analytics"]
+    },
+    {
+      title: "Data Visualization Platform",
+      description: "Interactive dashboards and data visualization tools for business intelligence and decision making.",
+      icon: <BarChart3 className="w-8 h-8" />,
+      path: "/data-visualization",
+      color: "from-purple-500 to-pink-500",
+      price: "Starting at $900/month",
+      features: ["Interactive Dashboards", "Real-time Analytics", "Custom Visualizations", "Mobile Access"]
+    },
+    {
+      title: "Workflow Automation",
+      description: "Business process automation with intelligent workflows, approval systems, and task management.",
+      icon: <Settings className="w-8 h-8" />,
+      path: "/workflow-automation",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $1,100/month",
+      features: ["Process Automation", "Approval Workflows", "Task Management", "Integration APIs"]
+    },
+    {
+      title: "Cloud-Native Security",
+      description: "Specialized security solutions for cloud-native applications and containerized environments.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/cloud-native-security",
+      color: "from-indigo-500 to-purple-500",
+      price: "Starting at $1,700/month",
+      features: ["Container Security", "Kubernetes Protection", "API Security", "Runtime Monitoring"]
     }
   ];
 

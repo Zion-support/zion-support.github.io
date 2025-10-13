@@ -1,57 +1,57 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, Package, DollarSign, Clock, Shield, Zap, Users, BarChart3, CreditCard, Globe, Smartphone, Mail, Phone, MapPin, Award, TrendingUp, Target, Settings, Monitor, Database, Cloud, Lock, Eye, Download, Upload, Share, Bell, Calendar, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone as PhoneIcon, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
+import { ArrowRight, CheckCircle, Star, FileText, DollarSign, Clock, Shield, Zap, Users, BarChart3, CreditCard, Globe, Smartphone, Mail, Phone, MapPin, Award, TrendingUp, Target, Settings, Monitor, Database, Cloud, Lock, Eye, Download, Upload, Share, Bell, Calendar, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone as PhoneIcon, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
-export default function ZionInventorySmart() {
+export default function ZionAiInvoiceGenius() {
   const features = [
     {
-      title: "AI Demand Forecasting",
-      description: "Predict future demand with machine learning algorithms and historical data analysis",
-      icon: <TrendingUp className="w-8 h-8" />,
-      color: "from-amber-500 to-orange-500"
+      title: "AI-Powered Invoice Generation",
+      description: "Automatically generate professional invoices with AI-powered content suggestions and formatting",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-emerald-500 to-teal-500"
     },
     {
-      title: "Automated Reorder Points",
-      description: "Smart reorder triggers based on lead times, demand patterns, and safety stock levels",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Automated Payment Reminders",
+      description: "Smart reminder system that sends personalized payment notifications based on client behavior",
+      icon: <Bell className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Location Tracking",
-      description: "Manage inventory across multiple warehouses, stores, and distribution centers",
-      icon: <Map className="w-8 h-8" />,
+      title: "Multi-Currency Support",
+      description: "Handle international clients with automatic currency conversion and localized formatting",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Barcode Scanning Integration",
-      description: "Mobile barcode scanning for quick inventory updates and cycle counting",
-      icon: <Smartphone className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      title: "Payment Tracking & Analytics",
+      description: "Real-time payment tracking with detailed analytics and financial insights",
+      icon: <BarChart3 className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500"
     },
     {
-      title: "Supplier Management",
-      description: "Track supplier performance, lead times, and manage vendor relationships",
-      icon: <Users className="w-8 h-8" />,
+      title: "Client Portal Access",
+      description: "Secure client portal for invoice viewing, payment processing, and communication",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-indigo-500 to-blue-500"
     },
     {
-      title: "Cost Optimization Analytics",
-      description: "Identify cost-saving opportunities and optimize inventory investment",
-      icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-red-500 to-orange-500"
+      title: "Tax Calculation & Reporting",
+      description: "Automated tax calculations and comprehensive reporting for compliance",
+      icon: <Calculator className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Stock Level Alerts",
-      description: "Real-time notifications for low stock, overstock, and expiring items",
-      icon: <Bell className="w-8 h-8" />,
+      title: "Recurring Billing Automation",
+      description: "Set up automated recurring billing for subscription services and regular clients",
+      icon: <Zap className="w-8 h-8" />,
       color: "from-yellow-500 to-orange-500"
     },
     {
-      title: "E-commerce Integration",
-      description: "Seamless integration with Shopify, WooCommerce, Amazon, and other platforms",
-      icon: <Globe className="w-8 h-8" />,
+      title: "Accounting Software Integration",
+      description: "Seamless integration with QuickBooks, Xero, and other popular accounting platforms",
+      icon: <Database className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
@@ -59,16 +59,16 @@ export default function ZionInventorySmart() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$32",
+      price: "$16",
       period: "month",
-      originalPrice: "$55",
-      discount: "42% OFF",
-      description: "Perfect for small businesses and startups",
+      originalPrice: "$28",
+      discount: "43% OFF",
+      description: "Perfect for freelancers and small businesses",
       features: [
-        "Up to 1,000 SKUs",
-        "Basic demand forecasting",
-        "Single location tracking",
-        "Mobile app access",
+        "Up to 50 invoices/month",
+        "Basic AI invoice generation",
+        "Payment tracking",
+        "Client portal",
         "Email support",
         "Basic reporting"
       ],
@@ -76,36 +76,36 @@ export default function ZionInventorySmart() {
     },
     {
       name: "Professional",
-      price: "$64",
+      price: "$32",
       period: "month",
-      originalPrice: "$110",
+      originalPrice: "$55",
       discount: "42% OFF",
-      description: "Ideal for growing businesses with multiple locations",
+      description: "Ideal for growing businesses and agencies",
       features: [
-        "Up to 10,000 SKUs",
-        "Advanced AI forecasting",
-        "Multi-location tracking",
-        "Barcode scanning",
-        "Supplier management",
-        "Priority support",
+        "Up to 200 invoices/month",
+        "Advanced AI features",
+        "Multi-currency support",
+        "Automated reminders",
         "Advanced analytics",
+        "Priority support",
+        "Custom branding",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$128",
+      price: "$64",
       period: "month",
-      originalPrice: "$220",
+      originalPrice: "$110",
       discount: "42% OFF",
-      description: "For large organizations with complex supply chains",
+      description: "For large organizations with complex needs",
       features: [
-        "Unlimited SKUs",
+        "Unlimited invoices",
         "Full AI capabilities",
-        "Global location tracking",
         "Advanced integrations",
         "Custom workflows",
+        "White-label options",
         "Dedicated support",
         "Custom reporting",
         "SLA guarantee"
@@ -116,50 +116,50 @@ export default function ZionInventorySmart() {
 
   const testimonials = [
     {
-      name: "Jennifer Liu",
-      company: "Retail Chain",
-      role: "Operations Manager",
-      content: "Zion Inventory Smart has transformed our supply chain. We've reduced stockouts by 70% and lowered inventory costs by 25% in just 6 months.",
+      name: "Sarah Mitchell",
+      company: "Creative Agency",
+      role: "Owner",
+      content: "Zion AI Invoice Genius has revolutionized our billing process. We've reduced invoice creation time by 85% and improved payment collection by 60%.",
       rating: 5,
-      avatar: "JL"
+      avatar: "SM"
     },
     {
-      name: "Robert Martinez",
-      company: "E-commerce Store",
+      name: "David Chen",
+      company: "Tech Consulting",
       role: "CEO",
-      content: "The AI demand forecasting is incredibly accurate. We've improved our cash flow significantly by optimizing our inventory levels.",
+      content: "The AI-powered features are incredible. It automatically suggests the right content and formatting for each client. Highly recommended!",
       rating: 5,
-      avatar: "RM"
+      avatar: "DC"
     },
     {
-      name: "Amanda Thompson",
-      company: "Manufacturing Co.",
-      role: "Supply Chain Director",
-      content: "The multi-location tracking and supplier management features have streamlined our entire operation. Highly recommended!",
+      name: "Maria Rodriguez",
+      company: "Freelance Designer",
+      role: "Designer",
+      content: "As a freelancer, this tool has been a game-changer. The automated reminders and payment tracking have significantly improved my cash flow.",
       rating: 5,
-      avatar: "AT"
+      avatar: "MR"
     }
   ];
 
   const benefits = [
     {
-      title: "Reduce Stockouts by 70%",
-      description: "AI-powered demand forecasting prevents inventory shortages",
-      icon: <Shield className="w-6 h-6" />
+      title: "Reduce Invoicing Time by 85%",
+      description: "AI-powered automation eliminates manual data entry and formatting",
+      icon: <Clock className="w-6 h-6" />
     },
     {
-      title: "Lower Inventory Costs by 25%",
-      description: "Optimize stock levels and reduce carrying costs",
-      icon: <DollarSign className="w-6 h-6" />
-    },
-    {
-      title: "Improve Cash Flow",
-      description: "Better inventory management frees up working capital",
+      title: "Improve Payment Collection by 60%",
+      description: "Smart reminders and payment tracking increase collection rates",
       icon: <TrendingUp className="w-6 h-6" />
     },
     {
-      title: "Optimize Supply Chain Efficiency",
-      description: "Streamline operations with automated processes and insights",
+      title: "Eliminate Billing Errors",
+      description: "Automated calculations and validation prevent costly mistakes",
+      icon: <Shield className="w-6 h-6" />
+    },
+    {
+      title: "Streamline Financial Workflows",
+      description: "Seamless integration with accounting software and payment processors",
       icon: <Settings className="w-6 h-6" />
     }
   ];
@@ -167,42 +167,42 @@ export default function ZionInventorySmart() {
   return (
     <>
       <Helmet>
-        <title>Zion Inventory Smart - AI-Powered Inventory Management | Zion Tech Group</title>
+        <title>Zion AI Invoice Genius - AI-Powered Invoice Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your inventory management with Zion Inventory Smart. AI-driven demand forecasting, automated reordering, multi-location tracking, and supply chain optimization. Start free trial today!"
+          content="Transform your invoicing with Zion AI Invoice Genius. AI-powered invoice generation, automated payment reminders, multi-currency support, and financial insights. Start free trial today!"
         />
         <meta
           name="keywords"
-          content="inventory management, demand forecasting, supply chain optimization, stock management, barcode scanning, multi-location tracking, inventory analytics"
+          content="AI invoice generation, automated billing, payment tracking, invoice management, financial software, accounting integration, multi-currency invoicing"
         />
       </Helmet>
       <SEOOptimizer
-        title="Zion Inventory Smart - AI-Powered Inventory Management | Zion Tech Group"
-        description="Transform your inventory management with Zion Inventory Smart. AI-driven demand forecasting, automated reordering, multi-location tracking, and supply chain optimization. Start free trial today!"
+        title="Zion AI Invoice Genius - AI-Powered Invoice Management | Zion Tech Group"
+        description="Transform your invoicing with Zion AI Invoice Genius. AI-powered invoice generation, automated payment reminders, multi-currency support, and financial insights. Start free trial today!"
       />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
         <div className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-red-500/10 animate-pulse"></div>
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(245,158,11,0.1),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10 animate-pulse"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(16,185,129,0.1),transparent_50%)]"></div>
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div className="text-center">
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 border border-amber-500/30 mb-6">
-                <Star className="w-4 h-4 text-amber-400 mr-2" />
-                <span className="text-amber-400 text-sm font-medium">Featured Micro SAAS Solution</span>
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 mb-6">
+                <Star className="w-4 h-4 text-emerald-400 mr-2" />
+                <span className="text-emerald-400 text-sm font-medium">Featured Micro SAAS Solution</span>
               </div>
               
               <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-red-400">
-                  Zion Inventory Smart
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-400 to-cyan-400">
+                  Zion AI Invoice Genius
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Revolutionize your inventory management with AI-driven demand forecasting, automated reordering, 
-                and comprehensive supply chain optimization. Reduce costs and improve efficiency.
+                Transform your invoicing process with AI-powered invoice generation, automated payment reminders, 
+                and comprehensive financial insights. Streamline billing and improve cash flow.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -227,7 +227,7 @@ export default function ZionInventorySmart() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   to="/contact"
-                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:from-amber-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                 >
                   Start Free Trial
                   <ArrowRight className="ml-2 h-5 w-5" />
@@ -249,12 +249,12 @@ export default function ZionInventorySmart() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
                   Powerful Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Everything you need to optimize your inventory management and supply chain operations
+                Everything you need to streamline your invoicing process and improve financial management
               </p>
             </div>
 
@@ -280,12 +280,12 @@ export default function ZionInventorySmart() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
-                  Why Choose Zion Inventory Smart?
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
+                  Why Choose Zion AI Invoice Genius?
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Transform your inventory management and achieve significant cost savings
+                Transform your invoicing process and improve your business financial health
               </p>
             </div>
 
@@ -295,8 +295,8 @@ export default function ZionInventorySmart() {
                   key={index}
                   className="text-center group"
                 >
-                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <div className="text-amber-400">{benefit.icon}</div>
+                  <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-emerald-500/20 to-teal-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="text-emerald-400">{benefit.icon}</div>
                   </div>
                   <h3 className="text-xl font-bold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
@@ -311,7 +311,7 @@ export default function ZionInventorySmart() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
                   Simple, Transparent Pricing
                 </span>
               </h2>
@@ -326,13 +326,13 @@ export default function ZionInventorySmart() {
                   key={index}
                   className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-8 border transition-all duration-300 hover:transform hover:scale-105 ${
                     plan.popular
-                      ? "border-amber-500/50 shadow-2xl shadow-amber-500/10"
+                      ? "border-emerald-500/50 shadow-2xl shadow-emerald-500/10"
                       : "border-white/10 hover:border-white/20"
                   }`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <div className="bg-gradient-to-r from-amber-500 to-orange-500 text-white text-sm font-bold px-4 py-2 rounded-full">
+                      <div className="bg-gradient-to-r from-emerald-500 to-teal-500 text-white text-sm font-bold px-4 py-2 rounded-full">
                         Most Popular
                       </div>
                     </div>
@@ -347,14 +347,14 @@ export default function ZionInventorySmart() {
                     </div>
                     <div className="flex items-center justify-center">
                       <span className="text-sm text-gray-400 line-through mr-2">${plan.originalPrice}</span>
-                      <span className="text-sm text-amber-400 font-semibold">{plan.discount}</span>
+                      <span className="text-sm text-emerald-400 font-semibold">{plan.discount}</span>
                     </div>
                   </div>
 
                   <ul className="space-y-3 mb-8">
                     {plan.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-300">
-                        <CheckCircle className="w-5 h-5 text-amber-400 mr-3 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -364,7 +364,7 @@ export default function ZionInventorySmart() {
                     to="/contact"
                     className={`w-full inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-300 ${
                       plan.popular
-                        ? "bg-gradient-to-r from-amber-500 to-orange-500 text-white hover:from-amber-400 hover:to-orange-400 transform hover:scale-105"
+                        ? "bg-gradient-to-r from-emerald-500 to-teal-500 text-white hover:from-emerald-400 hover:to-teal-400 transform hover:scale-105"
                         : "border border-white/20 text-white hover:bg-white/10"
                     }`}
                   >
@@ -382,12 +382,12 @@ export default function ZionInventorySmart() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-400">
                   What Our Customers Say
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Join thousands of satisfied customers who trust Zion Inventory Smart
+                Join thousands of satisfied customers who trust Zion AI Invoice Genius
               </p>
             </div>
 
@@ -398,7 +398,7 @@ export default function ZionInventorySmart() {
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm rounded-2xl p-6 border border-white/10"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold">
                       {testimonial.avatar}
                     </div>
                     <div className="ml-4">
@@ -421,10 +421,10 @@ export default function ZionInventorySmart() {
         </div>
 
         {/* CTA Section */}
-        <div className="py-16 bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-red-500/10">
+        <div className="py-16 bg-gradient-to-r from-emerald-500/10 via-teal-500/10 to-cyan-500/10">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold text-white mb-4">
-              Ready to Optimize Your Inventory?
+              Ready to Transform Your Invoicing?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
               Start your free 14-day trial today. No credit card required. Cancel anytime.
@@ -433,7 +433,7 @@ export default function ZionInventorySmart() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-semibold rounded-lg hover:from-amber-400 hover:to-orange-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold rounded-lg hover:from-emerald-400 hover:to-teal-400 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 Start Free Trial
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -448,7 +448,7 @@ export default function ZionInventorySmart() {
             </div>
 
             <div className="mt-8 text-sm text-gray-400">
-              <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-amber-400 hover:text-amber-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-amber-400 hover:text-amber-300">+1 302 464 0950</a></p>
+              <p>Questions? Contact us at <a href="mailto:kleber@ziontechgroup.com" className="text-emerald-400 hover:text-emerald-300">kleber@ziontechgroup.com</a> or call <a href="tel:+13024640950" className="text-emerald-400 hover:text-emerald-300">+1 302 464 0950</a></p>
               <p className="mt-2">Address: 364 E Main St STE 1008, Middletown DE 19709</p>
             </div>
           </div>

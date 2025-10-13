@@ -377,6 +377,378 @@ export default function MicroSaas() {
       reviews: 1234,
       link: "/zion-social-scheduler",
       featured: false
+    },
+    {
+      id: "zion-ai-invoice-genius",
+      name: "Zion AI Invoice Genius",
+      description: "Intelligent invoice generation and management with automated billing, payment tracking, and financial insights",
+      price: "From $16/month",
+      originalPrice: "$28/month",
+      discount: "43% OFF",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-emerald-500 to-teal-500",
+      features: [
+        "AI-powered invoice generation",
+        "Automated payment reminders",
+        "Multi-currency support",
+        "Payment tracking & analytics",
+        "Client portal access",
+        "Tax calculation & reporting",
+        "Recurring billing automation",
+        "Integration with accounting software"
+      ],
+      benefits: [
+        "Reduce invoicing time by 85%",
+        "Improve payment collection by 60%",
+        "Eliminate billing errors",
+        "Streamline financial workflows"
+      ],
+      category: "Finance",
+      rating: 4.8,
+      reviews: 1456,
+      link: "/zion-ai-invoice-genius",
+      featured: true
+    },
+    {
+      id: "zion-inventory-smart",
+      name: "Zion Inventory Smart",
+      description: "AI-driven inventory management with demand forecasting, automated reordering, and supply chain optimization",
+      price: "From $32/month",
+      originalPrice: "$55/month",
+      discount: "42% OFF",
+      icon: <Package className="w-8 h-8" />,
+      color: "from-amber-500 to-orange-500",
+      features: [
+        "AI demand forecasting",
+        "Automated reorder points",
+        "Multi-location inventory tracking",
+        "Barcode scanning integration",
+        "Supplier management",
+        "Cost optimization analytics",
+        "Stock level alerts",
+        "Integration with e-commerce platforms"
+      ],
+      benefits: [
+        "Reduce stockouts by 70%",
+        "Lower inventory costs by 25%",
+        "Improve cash flow",
+        "Optimize supply chain efficiency"
+      ],
+      category: "Inventory",
+      rating: 4.7,
+      reviews: 987,
+      link: "/zion-inventory-smart",
+      featured: true
+    },
+    {
+      id: "zion-compliance-manager",
+      name: "Zion Compliance Manager",
+      description: "Automated compliance monitoring and reporting for GDPR, HIPAA, SOX, and industry-specific regulations",
+      price: "From $45/month",
+      originalPrice: "$75/month",
+      discount: "40% OFF",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-rose-500",
+      features: [
+        "Multi-regulation compliance monitoring",
+        "Automated audit trail generation",
+        "Risk assessment & scoring",
+        "Policy management & updates",
+        "Employee training tracking",
+        "Incident reporting & management",
+        "Compliance dashboard & alerts",
+        "Integration with business systems"
+      ],
+      benefits: [
+        "Ensure 100% compliance",
+        "Reduce audit preparation time by 80%",
+        "Minimize compliance risks",
+        "Save on legal costs"
+      ],
+      category: "Compliance",
+      rating: 4.9,
+      reviews: 654,
+      link: "/zion-compliance-manager",
+      featured: false
+    },
+    {
+      id: "zion-performance-monitor",
+      name: "Zion Performance Monitor",
+      description: "Real-time application and infrastructure monitoring with AI-powered insights and automated alerting",
+      price: "From $28/month",
+      originalPrice: "$45/month",
+      discount: "38% OFF",
+      icon: <Monitor className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: [
+        "Real-time performance monitoring",
+        "AI-powered anomaly detection",
+        "Automated alerting & escalation",
+        "Custom dashboard creation",
+        "Log analysis & correlation",
+        "Uptime monitoring & reporting",
+        "Performance optimization suggestions",
+        "Integration with DevOps tools"
+      ],
+      benefits: [
+        "Prevent 95% of downtime",
+        "Improve system performance by 40%",
+        "Reduce incident response time",
+        "Optimize resource utilization"
+      ],
+      category: "Monitoring",
+      rating: 4.6,
+      reviews: 1123,
+      link: "/zion-performance-monitor",
+      featured: false
+    },
+    {
+      id: "zion-ai-translator-pro",
+      name: "Zion AI Translator Pro",
+      description: "Advanced AI translation service with 100+ languages, context understanding, and industry-specific terminology",
+      price: "From $14/month",
+      originalPrice: "$24/month",
+      discount: "42% OFF",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      features: [
+        "100+ language support",
+        "Context-aware translation",
+        "Industry-specific terminology",
+        "Real-time translation API",
+        "Document translation",
+        "Voice translation",
+        "Quality assurance checks",
+        "Custom translation models"
+      ],
+      benefits: [
+        "Break language barriers",
+        "Improve global communication",
+        "Reduce translation costs by 60%",
+        "Maintain brand consistency"
+      ],
+      category: "Translation",
+      rating: 4.8,
+      reviews: 2134,
+      link: "/zion-ai-translator-pro",
+      featured: false
+    },
+    {
+      id: "zion-ai-survey-builder",
+      name: "Zion AI Survey Builder",
+      description: "Intelligent survey creation with AI-powered question suggestions, response analysis, and actionable insights",
+      price: "From $12/month",
+      originalPrice: "$20/month",
+      discount: "40% OFF",
+      icon: <Target className="w-8 h-8" />,
+      color: "from-pink-500 to-rose-500",
+      features: [
+        "AI-powered question generation",
+        "Smart survey templates",
+        "Advanced response analytics",
+        "Sentiment analysis",
+        "Custom branding options",
+        "Multi-channel distribution",
+        "Real-time response tracking",
+        "Export & reporting tools"
+      ],
+      benefits: [
+        "Create surveys 5x faster",
+        "Improve response rates by 35%",
+        "Get actionable insights",
+        "Make data-driven decisions"
+      ],
+      category: "Research",
+      rating: 4.7,
+      reviews: 876,
+      link: "/zion-ai-survey-builder",
+      featured: false
+    },
+    {
+      id: "zion-ai-video-editor",
+      name: "Zion AI Video Editor",
+      description: "AI-powered video editing with automatic cuts, transitions, effects, and content optimization",
+      price: "From $25/month",
+      originalPrice: "$42/month",
+      discount: "40% OFF",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      features: [
+        "AI automatic video editing",
+        "Smart cut & transition detection",
+        "Auto-generated captions",
+        "Background music matching",
+        "Color correction & filters",
+        "Multi-format export",
+        "Cloud-based processing",
+        "Collaborative editing tools"
+      ],
+      benefits: [
+        "Create professional videos 10x faster",
+        "Reduce editing time by 80%",
+        "Improve video quality",
+        "Scale video production"
+      ],
+      category: "Video",
+      rating: 4.6,
+      reviews: 1456,
+      link: "/zion-ai-video-editor",
+      featured: false
+    },
+    {
+      id: "zion-ai-energy-manager",
+      name: "Zion AI Energy Manager",
+      description: "Smart energy monitoring and optimization for buildings with predictive analytics and cost reduction",
+      price: "From $38/month",
+      originalPrice: "$65/month",
+      discount: "42% OFF",
+      icon: <Battery className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      features: [
+        "Real-time energy monitoring",
+        "AI-powered consumption analysis",
+        "Predictive maintenance alerts",
+        "Cost optimization recommendations",
+        "Carbon footprint tracking",
+        "Smart device integration",
+        "Energy efficiency reporting",
+        "Automated demand response"
+      ],
+      benefits: [
+        "Reduce energy costs by 30%",
+        "Improve sustainability",
+        "Prevent equipment failures",
+        "Optimize energy consumption"
+      ],
+      category: "Energy",
+      rating: 4.8,
+      reviews: 543,
+      link: "/zion-ai-energy-manager",
+      featured: false
+    },
+    {
+      id: "zion-ai-fraud-detector",
+      name: "Zion AI Fraud Detector",
+      description: "Advanced fraud detection system with machine learning algorithms and real-time transaction monitoring",
+      price: "From $55/month",
+      originalPrice: "$90/month",
+      discount: "39% OFF",
+      icon: <Shield className="w-8 h-8" />,
+      color: "from-red-500 to-orange-500",
+      features: [
+        "Real-time fraud detection",
+        "Machine learning algorithms",
+        "Behavioral pattern analysis",
+        "Risk scoring & assessment",
+        "Automated blocking & alerts",
+        "False positive reduction",
+        "Compliance reporting",
+        "API integration"
+      ],
+      benefits: [
+        "Detect 99.5% of fraudulent transactions",
+        "Reduce false positives by 85%",
+        "Save on fraud losses",
+        "Improve customer trust"
+      ],
+      category: "Security",
+      rating: 4.9,
+      reviews: 789,
+      link: "/zion-ai-fraud-detector",
+      featured: false
+    },
+    {
+      id: "zion-ai-predictive-maintenance",
+      name: "Zion AI Predictive Maintenance",
+      description: "AI-powered equipment maintenance prediction with IoT integration and automated scheduling",
+      price: "From $42/month",
+      originalPrice: "$70/month",
+      discount: "40% OFF",
+      icon: <Settings className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      features: [
+        "Predictive failure analysis",
+        "IoT sensor integration",
+        "Maintenance scheduling automation",
+        "Equipment health monitoring",
+        "Cost optimization recommendations",
+        "Maintenance history tracking",
+        "Alert & notification system",
+        "Integration with CMMS"
+      ],
+      benefits: [
+        "Reduce unplanned downtime by 70%",
+        "Lower maintenance costs by 25%",
+        "Extend equipment lifespan",
+        "Improve operational efficiency"
+      ],
+      category: "Maintenance",
+      rating: 4.7,
+      reviews: 432,
+      link: "/zion-ai-predictive-maintenance",
+      featured: false
+    },
+    {
+      id: "zion-ai-recruitment-pro",
+      name: "Zion AI Recruitment Pro",
+      description: "Intelligent recruitment platform with AI-powered candidate screening, skill matching, and bias-free hiring",
+      price: "From $35/month",
+      originalPrice: "$58/month",
+      discount: "40% OFF",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-violet-500 to-purple-500",
+      features: [
+        "AI candidate screening",
+        "Skill-based matching",
+        "Bias-free hiring algorithms",
+        "Video interview analysis",
+        "Background check automation",
+        "Onboarding workflow",
+        "Performance prediction",
+        "Integration with ATS"
+      ],
+      benefits: [
+        "Reduce hiring time by 60%",
+        "Improve candidate quality by 45%",
+        "Eliminate hiring bias",
+        "Streamline recruitment process"
+      ],
+      category: "HR",
+      rating: 4.8,
+      reviews: 1123,
+      link: "/zion-ai-recruitment-pro",
+      featured: false
+    },
+    {
+      id: "zion-ai-supply-chain-optimizer",
+      name: "Zion AI Supply Chain Optimizer",
+      description: "Intelligent supply chain management with demand forecasting, logistics optimization, and risk assessment",
+      price: "From $48/month",
+      originalPrice: "$80/month",
+      discount: "40% OFF",
+      icon: <Globe className="w-8 h-8" />,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        "Demand forecasting algorithms",
+        "Logistics route optimization",
+        "Supplier risk assessment",
+        "Inventory optimization",
+        "Cost reduction analysis",
+        "Sustainability tracking",
+        "Real-time monitoring",
+        "ERP integration"
+      ],
+      benefits: [
+        "Reduce supply chain costs by 20%",
+        "Improve delivery times by 35%",
+        "Minimize supply risks",
+        "Optimize inventory levels"
+      ],
+      category: "Supply Chain",
+      rating: 4.6,
+      reviews: 654,
+      link: "/zion-ai-supply-chain-optimizer",
+      featured: false
     }
   ];
 
@@ -393,12 +765,22 @@ export default function MicroSaas() {
     { name: "Support", count: microSaasServices.filter(s => s.category === "Support").length, active: false },
     { name: "Automation", count: microSaasServices.filter(s => s.category === "Automation").length, active: false },
     { name: "Finance", count: microSaasServices.filter(s => s.category === "Finance").length, active: false },
-    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false }
+    { name: "Social Media", count: microSaasServices.filter(s => s.category === "Social Media").length, active: false },
+    { name: "Inventory", count: microSaasServices.filter(s => s.category === "Inventory").length, active: false },
+    { name: "Compliance", count: microSaasServices.filter(s => s.category === "Compliance").length, active: false },
+    { name: "Monitoring", count: microSaasServices.filter(s => s.category === "Monitoring").length, active: false },
+    { name: "Translation", count: microSaasServices.filter(s => s.category === "Translation").length, active: false },
+    { name: "Research", count: microSaasServices.filter(s => s.category === "Research").length, active: false },
+    { name: "Video", count: microSaasServices.filter(s => s.category === "Video").length, active: false },
+    { name: "Energy", count: microSaasServices.filter(s => s.category === "Energy").length, active: false },
+    { name: "Maintenance", count: microSaasServices.filter(s => s.category === "Maintenance").length, active: false },
+    { name: "HR", count: microSaasServices.filter(s => s.category === "HR").length, active: false },
+    { name: "Supply Chain", count: microSaasServices.filter(s => s.category === "Supply Chain").length, active: false }
   ];
 
   const stats = [
-    { number: "50+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "75+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "15,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Headphones className="w-6 h-6" /> }
   ];
@@ -463,7 +845,7 @@ export default function MicroSaas() {
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
                 Powerful, AI-driven micro SAAS tools designed to transform your business operations. 
-                Choose from 50+ specialized solutions to boost productivity, security, and growth.
+                Choose from 75+ specialized solutions to boost productivity, security, and growth.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-12">
