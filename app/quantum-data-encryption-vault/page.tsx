@@ -1,15 +1,7 @@
-import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
+import React from 'react';
+import { ArrowRight, Users, Award, Star, Shield, CheckCircle, Globe, Lock, Mic, Eye, Mail, User, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Mic } from 'lucide-react';
 
 const QuantumDataEncryptionVault = () => {
   const features = [
@@ -22,7 +14,7 @@ const QuantumDataEncryptionVault = () => {
     {
       title: "Zero-Knowledge Architecture",
       description: "Complete data sovereignty with zero-knowledge architecture that ensures even we cannot access your data.",
-      icon: <Lock className="w-8 h-8" />,
+      icon: <div className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
@@ -136,7 +128,7 @@ const QuantumDataEncryptionVault = () => {
   const stats = [
     { number: "256-bit", label: "Quantum Key Length", icon: <Key className="w-6 h-6" /> },
     { number: "99.999%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
-    { number: "Zero", label: "Data Breaches", icon: <Lock className="w-6 h-6" /> },
+    { number: "Zero", label: "Data Breaches", icon: <div className="w-6 h-6" /> },
     { number: "50+", label: "Compliance Standards", icon: <Award className="w-6 h-6" /> }
   ];
 
@@ -195,9 +187,9 @@ const QuantumDataEncryptionVault = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
+                  {stat.value}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
@@ -226,7 +218,7 @@ const QuantumDataEncryptionVault = () => {
                 <div
                   className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
-                  {feature.icon}
+                  {feature.value}
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
                   {feature.title}
@@ -358,12 +350,12 @@ const QuantumDataEncryptionVault = () => {
                   </div>
                   <div className="ml-4">
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "TechCorp"}</div>
                   </div>
                 </div>
                 
                 <div className="flex items-center mb-3">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
                   ))}
                 </div>

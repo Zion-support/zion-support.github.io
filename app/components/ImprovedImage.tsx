@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Cloud } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 interface ImprovedImageProps {
   src: string;
@@ -98,7 +99,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
               className="w-full h-full object-cover opacity-50"
             />
           ) : (
-            <ImageIcon className="w-8 h-8 text-gray-400" />
+            <div className="w-8 h-8 text-gray-400" />
           )}
         </div>
       )}
@@ -107,7 +108,7 @@ const ImprovedImage: React.FC<ImprovedImageProps> = ({
       {hasError && (
         <div className="absolute inset-0 bg-slate-800 flex items-center justify-center">
           <div className="text-center">
-            <ImageIcon className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+            <div className="w-8 h-8 text-gray-400 mx-auto mb-2" />
             <p className="text-gray-400 text-sm">Failed to load image</p>
           </div>
         </div>

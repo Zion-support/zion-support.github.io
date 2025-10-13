@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 interface EnhancedAnalyticsProps {
   children: React.ReactNode;

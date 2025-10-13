@@ -1,19 +1,7 @@
 import React, { useState } from 'react';
-import { CheckCircle, Clock, Star, Globe, Shield, Zap, Brain, Smartphone, Mail, Calendar, MapPin, Phone, Network } from 'lucide-react';
+import { CheckCircle, Clock, Star, Globe, Shield, Zap, Brain, Smartphone, Mail, Calendar, MapPin, Phone, Network, Users, User } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Clock } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
+import { useState } from 'react';
 
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({
@@ -171,7 +159,7 @@ export default function ConsultationPage() {
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {benefit.icon}
+                    {benefit.value}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>
@@ -205,7 +193,7 @@ export default function ConsultationPage() {
                   
                   <div className="relative z-10">
                     <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                      {type.icon}
+                      {type.value}
                     </div>
                     
                     <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
@@ -310,7 +298,7 @@ export default function ConsultationPage() {
                         type="text"
                         id="company"
                         name="company"
-                        value={formData.company}
+                        value={formData.company || "TechCorp"}
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                         placeholder="Your company name"

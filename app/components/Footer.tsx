@@ -1,4 +1,7 @@
 import React, { useMemo } from "react";
+import { Brain, Shield, Zap, Globe, Cloud, Code, BarChart3, Award, Users, Clock, Mail, Phone, MapPin, Twitter, Linkedin, Github, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { useMemo } from 'react';
 
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
@@ -116,7 +119,7 @@ const Footer = React.memo(() => {
                       className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors group"
                     >
                       <span className="mr-2 group-hover:scale-110 transition-transform duration-300">
-                        {service.icon}
+                        {service.value}
                       </span>
                       <span className="text-sm">{service.name}</span>
                     </Link>
@@ -182,9 +185,9 @@ const Footer = React.memo(() => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
+                  {stat.value}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
@@ -201,7 +204,7 @@ const Footer = React.memo(() => {
                 className="text-gray-400 hover:text-cyan-400 transition-colors duration-300 hover:scale-110"
                 aria-label={social.name}
               >
-                {social.icon}
+                {social.value}
               </a>
             ))}
           </div>

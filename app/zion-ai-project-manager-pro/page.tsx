@@ -1,23 +1,9 @@
-import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
+import FuturisticCard from '../components/FuturisticCard';
+import React from 'react';
 import ResponsiveContainer from '../components/ResponsiveContainer';
-import { Users } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
-import { FileText } from 'lucide-react';
+import { Award, BarChart3, Brain, Calendar, CheckCircle, FileText, MessageSquare, Monitor, Shield, Sparkles, Star, Target, TrendingUp, Users, Workflow, Lightbulb, Zap, Mail, User, X } from 'lucide-react';
 
 const ZionAIProjectManagerProPage = () => {
   const testimonials = [
@@ -324,7 +310,7 @@ const ZionAIProjectManagerProPage = () => {
                 <div
                   className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${capability.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
-                  {capability.icon}
+                  {capability.value}
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
                   {capability.title}
@@ -358,7 +344,7 @@ const ZionAIProjectManagerProPage = () => {
                 <div
                   className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
                 >
-                  {feature.icon}
+                  {feature.value}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {feature.title}
@@ -392,7 +378,7 @@ const ZionAIProjectManagerProPage = () => {
                 <div
                   className={`w-12 h-12 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
                 >
-                  {useCase.icon}
+                  {useCase.value}
                 </div>
                 <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {useCase.title}
@@ -482,7 +468,7 @@ const ZionAIProjectManagerProPage = () => {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -493,7 +479,7 @@ const ZionAIProjectManagerProPage = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "TechCorp"}</div>
                   </div>
                 </div>
               </div>

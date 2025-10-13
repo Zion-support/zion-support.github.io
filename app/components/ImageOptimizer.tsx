@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Box } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 interface ImageOptimizerProps {
   src: string;
@@ -13,7 +14,7 @@ interface ImageOptimizerProps {
   placeholder?: string;
 }
 
-const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
+const ImageOptimizer: React.FC<props> = ({
   src,
   alt,
   width,

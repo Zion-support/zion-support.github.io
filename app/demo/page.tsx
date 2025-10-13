@@ -1,17 +1,8 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle, Star, Hand, Play, Pause, Calendar, Network } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Hand, Play, Pause, Calendar, Network, Cloud, Monitor, Users, Clock, Zap, User } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Pause } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Hand } from 'lucide-react';
-import { Cloud } from 'lucide-react';
+import { useState } from 'react';
 
 export default function DemoPage() {
   const [currentDemo, setCurrentDemo] = useState(0);
@@ -171,7 +162,7 @@ export default function DemoPage() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">
-                    {stat.number}
+                    {stat.value}
                   </div>
                   <div className="text-gray-300 text-sm md:text-base">
                     {stat.label}
@@ -200,7 +191,7 @@ export default function DemoPage() {
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {benefit.icon}
+                    {benefit.value}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>

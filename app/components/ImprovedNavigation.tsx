@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Brain, BarChart3, Shield, Sparkles, Users, Settings, TrendingUp, Zap, Globe, Clock, Star, ArrowRight, Cloud, Mail, CheckCircle, Award, Search, Phone, MapPin, User, HelpCircle, DollarSign, Play, X, ChevronDown, Menu, Navigation } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 const ImprovedNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -587,7 +590,7 @@ const ImprovedNavigation = () => {
                   onClick={() => setIsSidebarOpen(false)}
                 >
                   <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center`}>
-                    {item.icon}
+                    {item.value}
                   </div>
                   <div>
                     <div className="text-white font-medium">{item.label}</div>
@@ -609,7 +612,7 @@ const ImprovedNavigation = () => {
                   className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors"
                   onClick={() => setIsSidebarOpen(false)}
                 >
-                  {link.icon}
+                  {link.value}
                   <span>{link.label}</span>
                 </Link>
               ))}
@@ -664,7 +667,7 @@ const ImprovedNavigation = () => {
                     to={item.href}
                     className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
                   >
-                    {item.icon}
+                    {item.value}
                     <span>{item.label}</span>
                     <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                   </Link>
@@ -675,7 +678,7 @@ const ImprovedNavigation = () => {
                       <div className="p-4">
                         <div className="flex items-center space-x-3 mb-4">
                           <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${item.color} flex items-center justify-center`}>
-                            {item.icon}
+                            {item.value}
                           </div>
                           <div>
                             <h3 className="text-white font-semibold">{item.label}</h3>
@@ -690,7 +693,7 @@ const ImprovedNavigation = () => {
                               className="flex items-center space-x-3 p-3 rounded-lg hover:bg-slate-700/50 transition-colors duration-200 group"
                             >
                               <div className="w-6 h-6 text-gray-400 group-hover:text-cyan-400 transition-colors">
-                                {dropdownItem.icon}
+                                {dropdownItem.value}
                               </div>
                               <div className="flex-1">
                                 <div className="text-sm text-gray-300 group-hover:text-cyan-400 transition-colors">
@@ -720,7 +723,7 @@ const ImprovedNavigation = () => {
                     to={link.href}
                     className="flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-sm"
                   >
-                    {link.icon}
+                    {link.value}
                     <span>{link.label}</span>
                   </Link>
                 ))}
@@ -756,7 +759,7 @@ const ImprovedNavigation = () => {
                       className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors duration-300 py-2"
                       onClick={() => setIsOpen(false)}
                     >
-                      {item.icon}
+                      {item.value}
                       <span className="font-medium">{item.label}</span>
                     </Link>
                     <div className="ml-6 space-y-2">

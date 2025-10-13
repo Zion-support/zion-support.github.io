@@ -1,5 +1,6 @@
-import { Star } from 'lucide-react';
-import { Monitor } from 'lucide-react';
+import { Star, Monitor, Send, Navigation } from 'lucide-react';
+import { useEffect } from 'react';
+declare const gtag: (...args: any[]) => void;
 
 
 interface PerformanceMetrics {

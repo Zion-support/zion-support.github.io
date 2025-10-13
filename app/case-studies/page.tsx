@@ -1,5 +1,5 @@
-import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
+import React from 'react';
 
 export default function CaseStudies() {
 

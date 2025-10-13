@@ -1,17 +1,13 @@
-import EnhancedSEO from "../components/EnhancedSEO";
-import StructuredData from "../components/StructuredData";
-import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
-import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
-import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
-import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
+import EnhancedSEO from "../components/EnhancedSEO";
+import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
+import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
+import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
+import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { FileText } from 'lucide-react';
+import ResponsiveContainer from "../components/ResponsiveContainer";
+import StructuredData from "../components/StructuredData";
+import { ArrowRight, CheckCircle, FileText, PenTool, Video, Sparkles, Star, Mail, X } from 'lucide-react';
 
 const AIContentStudioZionTechGroup = () => {
   const testimonials = [
@@ -77,7 +73,7 @@ const AIContentStudioZionTechGroup = () => {
     {
       title: "Image Creation",
       description: "Generate stunning visuals, graphics, and artwork using cutting-edge AI image models",
-      icon: <Image className="w-8 h-8" />,
+      icon: <img className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
@@ -149,7 +145,7 @@ const AIContentStudioZionTechGroup = () => {
             description="Advanced AI-powered content creation platform with automated writing, design, and video generation. Create professional content at scale with cutting-edge AI technology."
             keywords="AI content creation, content generation, AI writing, video generation, image creation, content marketing, AI content studio"
             canonical="https://ziontechgroup.com/ai-content-studio"
-            structuredData={structuredData}
+            
           />
           
           <StructuredData type="SoftwareApplication" data={structuredData} />
@@ -222,7 +218,7 @@ const AIContentStudioZionTechGroup = () => {
                       <div
                         className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                         aria-hidden="true">
-                        {feature.icon}
+                        {feature.value}
                       </div>
                       <h3 className="text-lg md:text-xl font-semibold text-white mb-3 group-hover:text-purple-400 transition-colors">
                         {feature.title}
@@ -306,14 +302,14 @@ const AIContentStudioZionTechGroup = () => {
                       key={index}
                       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10 relative overflow-hidden">
                       <div className="flex items-center mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
+                        {[...Array(testimonial.rating || 5)].map((_, i) => (
                           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                         ))}
                       </div>
                       <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                       <div>
                         <div className="font-semibold text-white">{testimonial.name}</div>
-                        <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                        <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "TechCorp"}</div>
                       </div>
                     </div>
                   ))}

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Brain, Shield, Zap, Globe, Users, Award, ArrowRight, Phone, Mail, MapPin, CheckCircle, Twitter, Linkedin, Github, Facebook, Instagram, Youtube, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ImprovedFooter = () => {
@@ -168,9 +169,9 @@ const ImprovedFooter = () => {
           {stats.map((stat, index) => (
             <div key={index} className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                {stat.icon}
+                {stat.value}
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
               <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
             </div>
           ))}
@@ -182,7 +183,7 @@ const ImprovedFooter = () => {
             <div key={index} className="space-y-6">
               <div className="flex items-center space-x-3">
                 <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
-                  {category.icon}
+                  {category.value}
                 </div>
                 <h3 className="text-lg font-semibold text-white">{category.title}</h3>
               </div>
@@ -247,7 +248,7 @@ const ImprovedFooter = () => {
                     className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center text-gray-300 hover:text-cyan-400 hover:bg-white/20 transition-all duration-300 group"
                     aria-label={social.label}
                   >
-                    {social.icon}
+                    {social.value}
                   </a>
                 ))}
               </div>

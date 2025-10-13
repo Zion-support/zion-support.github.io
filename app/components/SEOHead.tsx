@@ -1,5 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Twitter } from 'lucide-react';
 
 interface SEOHeadProps {
   title: string;

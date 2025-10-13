@@ -1,3 +1,6 @@
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Mail, Target, BarChart3, Users, Zap, ArrowRight, Smartphone, Globe, Share2, User, Monitor, Star, Phone } from 'lucide-react';
 
 export default function AIMarketingAutomation() {
   const features = [
@@ -171,7 +174,7 @@ export default function AIMarketingAutomation() {
                     <div
                       className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
-                      {feature.icon}
+                      {feature.value}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-pink-300 transition-colors">
                       {feature.title}
@@ -277,7 +280,7 @@ export default function AIMarketingAutomation() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Email className="w-6 h-6 text-white" />
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
                   <p className="text-pink-400">kleber@ziontechgroup.com</p>

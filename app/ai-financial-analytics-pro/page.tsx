@@ -1,12 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
+import { Star, Shield, CheckCircle, Brain, Monitor, Target, BarChart3, Mail, User } from 'lucide-react';
 
 "use client";
 
@@ -203,7 +197,7 @@ export default function AiFinancialAnalyticsProPage() {
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
               >
-                <div className="flex justify-center mb-4">{feature.icon}</div>
+                <div className="flex justify-center mb-4">{feature.value}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
@@ -321,7 +315,7 @@ export default function AiFinancialAnalyticsProPage() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star
                         className="w-5 h-5 text-yellow-400 fill-current"
                         key={i}
@@ -336,7 +330,7 @@ export default function AiFinancialAnalyticsProPage() {
                       {testimonial.name}
                     </p>
                     <p className="text-gray-400 text-sm">
-                      {testimonial.company}
+                      {testimonial.company || "TechCorp"}
                     </p>
                   </div>
                 </div>

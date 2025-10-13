@@ -1,13 +1,6 @@
 import Layout from "../layout";
+import { Clock, Users, Star, CheckCircle, Zap, Brain, Globe, Calendar, Mail, User } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Calendar } from 'lucide-react';
 
 export default function AISmartScheduler() {
   const features = [
@@ -130,7 +123,7 @@ export default function AISmartScheduler() {
             {features.map((feature, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg">
                 <div className="flex items-center mb-4">
-                  {feature.icon}
+                  {feature.value}
                   <h3 className="text-xl font-semibold text-white ml-3">
                     {feature.title}
                   </h3>
@@ -218,7 +211,7 @@ export default function AISmartScheduler() {
             {testimonials.map((testimonial, index) => (
               <div key={index} className="bg-gray-800 p-6 rounded-lg">
                 <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Clock key={i} className="w-5 h-5 text-yellow-400" />
                   ))}
                 </div>
@@ -227,7 +220,7 @@ export default function AISmartScheduler() {
                   {testimonial.name}
                 </div>
                 <div className="text-sm text-gray-400">
-                  {testimonial.company}
+                  {testimonial.company || "TechCorp"}
                 </div>
               </div>
             ))}

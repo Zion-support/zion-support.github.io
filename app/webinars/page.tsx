@@ -1,4 +1,5 @@
 import React from 'react';
+import { Brain, Shield, Globe, Sparkles, ArrowRight, Play } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
@@ -129,7 +130,7 @@ const WebinarsPage = () => {
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {webinar.icon}
+                    {webinar.value}
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
@@ -176,7 +177,7 @@ const WebinarsPage = () => {
               >
                 <div className="flex items-center mb-4">
                   <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {webinar.icon}
+                    {webinar.value}
                   </div>
                   <div className="flex-1">
                     <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">

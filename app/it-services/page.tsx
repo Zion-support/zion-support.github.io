@@ -1,21 +1,7 @@
 import React from "react";
-import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Headphones } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { Cloud } from 'lucide-react';
+import { User, X, ArrowRight, Monitor, Zap, Star } from 'lucide-react';
 
 export default function ITServices() {
   const itServices = [
@@ -405,7 +391,7 @@ export default function ITServices() {
         <link rel="canonical" href="https://ziontechgroup.com/it-services" />
       </Helmet>
       
-      <SEOOptimizer />
+      
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -464,7 +450,7 @@ export default function ITServices() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    {service.icon}
+                    {service.value}
                   </div>
                   <h3 className="text-lg md:text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                     {service.name}
@@ -476,7 +462,7 @@ export default function ITServices() {
                     <span className="text-cyan-400 font-semibold">{service.price}</span>
                     <div className="flex items-center">
                       <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                      <span className="text-gray-300 ml-1 text-sm">{service.rating}</span>
+                      <span className="text-gray-300 ml-1 text-sm">{service.rating || 5}</span>
                     </div>
                   </div>
                   <Link
@@ -508,7 +494,7 @@ export default function ITServices() {
               {processSteps.map((step, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                    {step.icon}
+                    {step.value}
                   </div>
                   <div className="text-cyan-400 font-bold text-lg mb-2">{step.step}</div>
                   <h3 className="text-white font-semibold mb-2">{step.title}</h3>

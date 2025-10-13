@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Workflow, Target, TrendingUp, Settings, BarChart3, Users, Cloud, CheckCircle, Sparkles, ArrowRight, User, Star } from 'lucide-react';
 
 const AIAutomationPlatformPage = () => {
   const features = [
@@ -150,7 +151,7 @@ const AIAutomationPlatformPage = () => {
                 <div
                   className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
-                  {feature.icon}
+                  {feature.value}
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
                   {feature.title}
@@ -180,7 +181,7 @@ const AIAutomationPlatformPage = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-4 bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20">
                 <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white flex-shrink-0">
-                  {benefit.icon}
+                  {benefit.value}
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">{benefit.title}</h3>
@@ -212,7 +213,7 @@ const AIAutomationPlatformPage = () => {
               >
                 <div className="flex items-center mb-4">
                   <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {useCase.icon}
+                    {useCase.value}
                   </div>
                   <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
                     {useCase.industry}

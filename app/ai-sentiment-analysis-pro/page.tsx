@@ -1,17 +1,9 @@
-import React from 'react';
 import EnhancedSEO from '../components/EnhancedSEO';
-import ResponsiveContainer from '../components/ResponsiveContainer';
-import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
+import FuturisticCard from '../components/FuturisticCard';
+import React from 'react';
+import ResponsiveContainer from '../components/ResponsiveContainer';
+import { ArrowRight, Star, CheckCircle, TrendingUp, Globe, Monitor, Target, BarChart3, MessageSquare } from 'lucide-react';
 
 const AISentimentAnalysisPro = () => {
   const features = [
@@ -124,7 +116,7 @@ const AISentimentAnalysisPro = () => {
                 <div
                   className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
-                  {feature.icon}
+                  {feature.value}
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
                   {feature.title}

@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 interface LazyImageProps {
   src: string;
@@ -75,7 +76,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
               className="w-full h-full object-cover opacity-50"
             />
           ) : (
-            <ImageIcon className="w-8 h-8 text-gray-400" />
+            <div className="w-8 h-8 text-gray-400" />
           )}
         </div>
       )}
@@ -84,7 +85,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {hasError && (
         <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
           <div className="text-center">
-            <ImageIcon className="w-8 h-8 text-gray-400 mx-auto mb-2" />
+            <div className="w-8 h-8 text-gray-400 mx-auto mb-2" />
             <p className="text-xs text-gray-500">Failed to load image</p>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Cloud, Shield, Zap, Globe, BarChart3, Database, CheckCircle, ArrowRight, Star } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const CloudServicesPage: React.FC = () => {
@@ -104,7 +105,7 @@ const CloudServicesPage: React.FC = () => {
             {services.map((service, index) => (
               <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
                 <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                  {service.icon}
+                  {service.value}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                   {service.title}
@@ -134,7 +135,7 @@ const CloudServicesPage: React.FC = () => {
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                  {benefit.icon}
+                  {benefit.value}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {benefit.title}

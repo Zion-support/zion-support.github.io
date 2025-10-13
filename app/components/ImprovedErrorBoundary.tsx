@@ -1,9 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Home, AlertTriangle, Mail, Hand, RefreshCw } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Hand } from 'lucide-react';
 
 interface Props {
   children: ReactNode;

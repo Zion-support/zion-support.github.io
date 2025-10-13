@@ -1,4 +1,5 @@
 import React from "react";
+import { Email } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
 const ZionAiEmailAnalyzer = () => {

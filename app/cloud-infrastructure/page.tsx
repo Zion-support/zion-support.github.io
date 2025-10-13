@@ -1,21 +1,9 @@
-import React from 'react';
-import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
+import FuturisticCard from '../components/FuturisticCard';
+import React from 'react';
 import ResponsiveContainer from '../components/ResponsiveContainer';
+import { ArrowRight, Star, Shield, CheckCircle, Settings, Globe, Network, Lock, Code, Monitor, BarChart3, Activity, Cloud, X } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Lock } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Activity } from 'lucide-react';
-import { Cloud } from 'lucide-react';
 
 const CloudInfrastructure = () => {
   const testimonials = [
@@ -149,7 +137,7 @@ const CloudInfrastructure = () => {
     {
       title: "Security First",
       description: "Implement enterprise-grade security measures to protect your cloud infrastructure",
-      icon: <Lock className="w-6 h-6" />,
+      icon: <div className="w-6 h-6" />,
       stats: "Zero security incidents"
     },
     {
@@ -217,9 +205,9 @@ const CloudInfrastructure = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
+                  {stat.value}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
               </div>
             ))}
@@ -246,7 +234,7 @@ const CloudInfrastructure = () => {
                 className="group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {capability.icon}
+                  {capability.value}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
                   {capability.title}
@@ -284,7 +272,7 @@ const CloudInfrastructure = () => {
                 className="group hover:scale-105 transition-all duration-300"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-xl flex items-center justify-center mb-6 mx-auto group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+                  {service.value}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4 text-center group-hover:text-blue-400 transition-colors">
                   {service.title}
@@ -388,7 +376,7 @@ const CloudInfrastructure = () => {
                 className="group hover:scale-105 transition-all duration-300"
               >
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
@@ -401,7 +389,7 @@ const CloudInfrastructure = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "TechCorp"}</div>
                   </div>
                 </div>
               </FuturisticCard>

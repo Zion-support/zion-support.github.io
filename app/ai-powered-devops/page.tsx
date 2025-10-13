@@ -1,22 +1,7 @@
 import React from "react";
-import SEOOptimizer from "../../components/SEOOptimizer";
+import { Eye, Mail, MessageSquare, DollarSign, CheckCircle, Rocket, TrendingUp, Brain, ArrowRight, Monitor, Zap, Award, Star, Phone, Globe } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Rocket } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
-import { Plus } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Cloud } from 'lucide-react';
 
 export default function AiPoweredDevops() {
   const features = [
@@ -134,10 +119,7 @@ export default function AiPoweredDevops() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
       </Helmet>
-      <SEOOptimizer
-        title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
-        description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
-      />
+      
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -264,7 +246,7 @@ export default function AiPoweredDevops() {
                   <div
                     className={`w-16 h-16 rounded-lg bg-gradient-to-r ${capability.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                   >
-                    {capability.icon}
+                    {capability.value}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {capability.title}
@@ -360,7 +342,7 @@ export default function AiPoweredDevops() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -371,7 +353,7 @@ export default function AiPoweredDevops() {
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "TechCorp"}</div>
                     </div>
                   </div>
                 </div>

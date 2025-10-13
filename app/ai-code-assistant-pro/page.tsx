@@ -1,20 +1,13 @@
-import EnhancedSEO from "../components/EnhancedSEO";
-import StructuredData from "../components/StructuredData";
-import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
-import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
-import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
-import ResponsiveContainer from "../components/ResponsiveContainer";
 import EnhancedAccessibility from "../components/EnhancedAccessibility";
+import EnhancedSEO from "../components/EnhancedSEO";
+import FuturisticBackgroundEnhanced from "../components/FuturisticBackgroundEnhanced";
+import FuturisticButtonEnhanced from "../components/FuturisticButtonEnhanced";
+import FuturisticCardEnhanced from "../components/FuturisticCardEnhanced";
+import FuturisticTextEnhanced from "../components/FuturisticTextEnhanced";
 import PerformanceOptimizer from "../components/PerformanceOptimizer";
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Code } from 'lucide-react';
+import ResponsiveContainer from "../components/ResponsiveContainer";
+import StructuredData from "../components/StructuredData";
+import { ArrowRight, Star, Shield, CheckCircle, Zap, Brain, Globe, Code, Mail, X } from 'lucide-react';
 
 const AICodeAssistantProZionTechGroup = () => {
   const testimonials = [
@@ -149,7 +142,7 @@ const AICodeAssistantProZionTechGroup = () => {
             description="Advanced AI-powered code generation, debugging, and optimization tool supporting 50+ programming languages. Boost developer productivity with intelligent coding assistance."
             keywords="AI code assistant, code generation, debugging, programming, software development, AI coding, developer tools, code optimization"
             canonical="https://ziontechgroup.com/ai-code-assistant-pro"
-            structuredData={structuredData}
+            
           />
           
           <StructuredData type="SoftwareApplication" data={structuredData} />
@@ -223,7 +216,7 @@ const AICodeAssistantProZionTechGroup = () => {
                       <div
                         className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                         aria-hidden="true">
-                        {feature.icon}
+                        {feature.value}
                       </div>
                       <h3 className="text-lg md:text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
                         {feature.title}
@@ -307,14 +300,14 @@ const AICodeAssistantProZionTechGroup = () => {
                       key={index}
                       className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 relative overflow-hidden">
                       <div className="flex items-center mb-4">
-                        {[...Array(testimonial.rating)].map((_, i) => (
+                        {[...Array(testimonial.rating || 5)].map((_, i) => (
                           <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                         ))}
                       </div>
                       <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
                       <div>
                         <div className="font-semibold text-white">{testimonial.name}</div>
-                        <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                        <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "TechCorp"}</div>
                       </div>
                     </div>
                   ))}

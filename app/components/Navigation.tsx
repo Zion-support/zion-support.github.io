@@ -1,4 +1,7 @@
 import React, { useState, useCallback, useMemo } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Star, Brain, Shield, Zap, Globe, Users, Mail, Monitor, Sparkles, User, X, ChevronDown, Menu, Navigation } from 'lucide-react';
+import { useState, useCallback, useMemo } from 'react';
 
 interface NavigationProps {
   onSidebarToggle: () => void;
@@ -142,7 +145,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   onMouseEnter={() => item.dropdown && setActiveDropdown(item.label)}
                   onMouseLeave={() => item.dropdown && setActiveDropdown(null)}
                 >
-                  {item.icon}
+                  {item.value}
                   <span>{item.label}</span>
                   {item.dropdown && <ChevronDown className="w-4 h-4" />}
                 </Link>
@@ -221,7 +224,7 @@ const Navigation: React.FC<NavigationProps> = ({ onSidebarToggle }) => {
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {item.icon}
+                  {item.value}
                   <span>{item.label}</span>
                 </Link>
                 

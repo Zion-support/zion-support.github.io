@@ -1,5 +1,6 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Code, Globe, Smartphone, Zap, Database, BarChart3, ArrowRight, Mail, User, Star, Phone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function CustomDevelopment() {
   const services = [
@@ -138,7 +139,7 @@ export default function CustomDevelopment() {
                     <div
                       className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
-                      {service.icon}
+                      {service.value}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
                       {service.title}

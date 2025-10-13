@@ -1,33 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Home } from 'lucide-react';
-import { Search } from 'lucide-react';
-import { Clock } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { MapPin } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Code } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { Mic } from 'lucide-react';
-import { Cloud } from 'lucide-react';
+import { ArrowRight, Home, Search, Clock, Users, Star, MapPin, Shield, CheckCircle, TrendingUp, Zap, Brain, Settings, Globe, Network, Calendar, Code, BarChart3, Mail, MessageSquare, Play, DollarSign, Phone, FileText, Mic, Cloud, ChevronDown, ChevronRight, HelpCircle, X, BookOpen, User, Navigation } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { ArrowRight, ChevronDown, ChevronRight, Brain, Shield, Zap, Globe, BarChart3, Cloud, Settings, Search, Star, TrendingUp, Users, Clock, CheckCircle, HelpCircle, Phone, Mail, MapPin, X, Home, BookOpen, FileText, MessageSquare, Calendar, DollarSign, Play, Mic, Code, Network } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -228,7 +202,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   className="flex items-center space-x-3 p-2 rounded-lg hover:bg-white/10 transition-colors"
                   onClick={onClose}
                 >
-                  {link.icon}
+                  {link.value}
                   <span className="text-gray-300">{link.label}</span>
                 </Link>
               ))}
@@ -245,7 +219,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 >
                   <div className="flex items-center space-x-3">
                     <div className={`w-8 h-8 rounded-lg bg-gradient-to-r ${section.color} flex items-center justify-center`}>
-                      {section.icon}
+                      {section.value}
                     </div>
                     <div className="text-left">
                       <div className="text-white font-medium">{section.title}</div>
@@ -269,7 +243,7 @@ const ImprovedSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                         onClick={onClose}
                       >
                         <div className="text-gray-400 group-hover:text-cyan-400 transition-colors">
-                          {item.icon}
+                          {item.value}
                         </div>
                         <span className="text-gray-300 group-hover:text-cyan-400 transition-colors text-sm">
                           {item.label}

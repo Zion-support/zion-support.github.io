@@ -1,3 +1,6 @@
+import { ArrowRight, Star } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 const NotFoundPage = () => {
   return (

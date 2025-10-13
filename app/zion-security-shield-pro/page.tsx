@@ -1,19 +1,6 @@
+import { ArrowRight, Search, Award, Star, Shield, CheckCircle, Zap, Brain, Sparkles, Globe, Monitor, Mail, Phone, FileText, Eye } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Search } from 'lucide-react';
-import { Award } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Monitor } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { FileText } from 'lucide-react';
 
 
 export default function ZionSecurityShieldPro() {
@@ -176,9 +163,9 @@ export default function ZionSecurityShieldPro() {
                   {securityStats.map((stat, index) => (
                     <div key={index} className="text-center group">
                       <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-red-500/20 to-orange-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        {stat.icon}
+                        {stat.value}
                       </div>
-                      <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
+                      <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
                       <div className="text-gray-300 text-sm">{stat.label}</div>
                     </div>
                   ))}
@@ -250,7 +237,7 @@ export default function ZionSecurityShieldPro() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
                 >
                   <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
-                    {feature.icon}
+                    {feature.value}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-red-300 transition-colors">
                     {feature.title}
@@ -360,7 +347,7 @@ export default function ZionSecurityShieldPro() {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-red-500/10"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -371,7 +358,7 @@ export default function ZionSecurityShieldPro() {
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "TechCorp"}</div>
                     </div>
                   </div>
                 </div>

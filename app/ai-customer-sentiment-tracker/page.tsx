@@ -1,5 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+import { Users, CheckCircle, Clock, Zap, Brain, Target, BarChart3, AlertCircle, Heart, ArrowRight, Globe, Mail, Monitor, Star } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const AICustomerSentimentTrackerPage = () => {
   const benefits = [
@@ -181,7 +183,7 @@ const AICustomerSentimentTrackerPage = () => {
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
+                  {stat.value}
                 </div>
                 <div className="text-gray-400 font-medium">
                   {stat.label}
@@ -219,7 +221,7 @@ const AICustomerSentimentTrackerPage = () => {
                 className="text-center"
               >
                 <div className="mb-6 flex justify-center">
-                  {benefit.icon}
+                  {benefit.value}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {benefit.title}
@@ -261,7 +263,7 @@ const AICustomerSentimentTrackerPage = () => {
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
               >
                 <div className="mb-6">
-                  {feature.icon}
+                  {feature.value}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {feature.title}

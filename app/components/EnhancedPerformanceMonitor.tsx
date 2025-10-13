@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Star } from 'lucide-react';
+import { Star, Send, Navigation, Monitor } from 'lucide-react';
+import { onFCP, onLCP, onINP, onCLS, onTTFB } from 'web-vitals';
+import { useState, useEffect } from 'react';
+declare const gtag: (...args: any[]) => void;
 
 interface PerformanceMetrics {
   loadTime: number;

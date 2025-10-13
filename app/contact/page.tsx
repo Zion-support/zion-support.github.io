@@ -1,3 +1,7 @@
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Mail, Smartphone, MapPin, Clock, CheckCircle, ArrowRight, Globe, Send, Phone } from 'lucide-react';
+import { useState } from 'react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -129,7 +133,7 @@ export default function Contact() {
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {info.icon}
+                      {info.value}
                     </div>
                     <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                       {info.title}
@@ -207,7 +211,7 @@ export default function Contact() {
                           type="text"
                           id="company"
                           name="company"
-                          value={formData.company}
+                          value={formData.company || "TechCorp"}
                           onChange={handleInputChange}
                           className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                           placeholder="Your company name"

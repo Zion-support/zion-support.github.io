@@ -1,3 +1,6 @@
+import { BarChart3, Brain, Shield, Zap, Code, Database, Cloud, Home, Users, Settings, Phone, Mail, MapPin, Star, ArrowRight, ChevronRight, User, X, ChevronDown, Navigation } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
+import { useState, useCallback, useMemo } from 'react';
 
 interface SidebarProps {
   isOpen: boolean
@@ -115,7 +118,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                 }`}
                 onClick={onClose}
               >
-                {item.icon}
+                {item.value}
                 <span className="font-medium">{item.name}</span>
               </Link>
             ))}
@@ -151,7 +154,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     }`}
                     onClick={onClose}
                   >
-                    {service.icon}
+                    {service.value}
                     <span className="text-sm">{service.name}</span>
                   </Link>
                 ))}
@@ -189,7 +192,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     }`}
                     onClick={onClose}
                   >
-                    {service.icon}
+                    {service.value}
                     <span className="text-sm">{service.name}</span>
                   </Link>
                 ))}
@@ -227,7 +230,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     }`}
                     onClick={onClose}
                   >
-                    {service.icon}
+                    {service.value}
                     <div className="flex-1 flex items-center justify-between">
                       <span className="text-sm">{service.name}</span>
                       {service.featured && (
@@ -246,7 +249,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <div className="space-y-3">
               {contactInfo.map((info, index) => (
                 <div key={index} className="flex items-center space-x-3 text-sm text-gray-300">
-                  <div className="w-5 h-5 text-cyan-400">{info.icon}</div>
+                  <div className="w-5 h-5 text-cyan-400">{info.value}</div>
                   <span>{info.text}</span>
                 </div>
               ))}

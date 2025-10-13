@@ -1,25 +1,8 @@
 import React, { useState } from 'react';
+import { ArrowRight, Users, Star, Download, Database, CheckCircle, Brain, Settings, Sparkles, Globe, Target, BarChart3, Mail, Play, Headphones, Phone, Smartphone, FileText, Hand, User, X } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Download } from 'lucide-react';
-import { Database } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { Play } from 'lucide-react';
-import { Headphones } from 'lucide-react';
-import { Phone } from 'lucide-react';
-import { Smartphone } from 'lucide-react';
-import { FileText } from 'lucide-react';
-import { Hand } from 'lucide-react';
+import { useState } from 'react';
 
 const ZionAIInvoiceGeneratorPage = () => {
   const testimonials = [
@@ -271,9 +254,9 @@ const ZionAIInvoiceGeneratorPage = () => {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-green-500/20 to-emerald-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
+                    {stat.value}
                   </div>
-                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
                 </div>
               ))}
@@ -305,7 +288,7 @@ const ZionAIInvoiceGeneratorPage = () => {
                   
                   <div className="relative z-10">
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                      {feature.icon}
+                      {feature.value}
                     </div>
                     
                     <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-300 transition-colors">
@@ -340,7 +323,7 @@ const ZionAIInvoiceGeneratorPage = () => {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 relative overflow-hidden"
                 >
                   <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    {useCase.icon}
+                    {useCase.value}
                   </div>
                   
                   <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-green-300 transition-colors">
@@ -450,7 +433,7 @@ const ZionAIInvoiceGeneratorPage = () => {
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10 relative overflow-hidden"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
@@ -461,7 +444,7 @@ const ZionAIInvoiceGeneratorPage = () => {
                     </div>
                     <div>
                       <div className="font-semibold text-white">{testimonial.name}</div>
-                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "TechCorp"}</div>
                     </div>
                   </div>
                 </div>

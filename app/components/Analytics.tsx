@@ -1,5 +1,8 @@
 import React, { useEffect } from 'react';
-import { Star } from 'lucide-react';
+import { Star, X } from 'lucide-react';
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+declare const gtag: (...args: any[]) => void;
 
 declare global {
   interface Window {

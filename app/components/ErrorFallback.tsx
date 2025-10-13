@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
+import { Home, AlertTriangle, Mail, Bug, RefreshCw, Send } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { Home } from 'lucide-react';
-import { AlertTriangle } from 'lucide-react';
-import { Mail } from 'lucide-react';
+import { useEffect } from 'react';
+declare const gtag: (...args: any[]) => void;
 
 interface ErrorFallbackProps {
   error: Error;

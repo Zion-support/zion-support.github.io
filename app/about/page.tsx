@@ -1,3 +1,6 @@
+import { Brain, Shield, Users, Award, ArrowRight, Mail, Smartphone, Globe, User, Star, Phone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function AboutPage() {
 
@@ -183,7 +186,7 @@ export default function AboutPage() {
                   <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <div className="relative z-10">
                     <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                      {value.icon}
+                      {value.value}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
                       {value.title}

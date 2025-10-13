@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
-import { Code } from 'lucide-react';
+import { Cloud, Code, X } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { Code } from 'lucide-react';
-import { Cloud } from 'lucide-react';
+import { useEffect } from 'react';
 
 interface SEOOptimizerProps {
   children: React.ReactNode;

@@ -1,3 +1,6 @@
+import { ArrowRight, Zap, Brain, CheckCircle, Shield, Cloud, Mail, Smartphone, Globe, Scan, Calendar, Monitor, Star, Phone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function Pricing() {
   const aiServicesPricing = [

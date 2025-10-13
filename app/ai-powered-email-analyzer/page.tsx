@@ -1,17 +1,7 @@
 import React from 'react';
-import { Users, ArrowRight, CheckCircle, Star, Globe, Shield, Zap, Brain, BarChart3, Target, Mail } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
-import { ArrowRight } from 'lucide-react';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Globe } from 'lucide-react';
-import { Target } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
+import { Users, ArrowRight, CheckCircle, Star, Globe, Shield, Zap, Brain, BarChart3, Target, Mail } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const AIPoweredEmailAnalyzerPage = () => {
   const stats = [
@@ -170,7 +160,7 @@ const AIPoweredEmailAnalyzerPage = () => {
                 className="text-center"
               >
                 <div className="text-4xl md:text-5xl font-bold text-white mb-2">
-                  {stat.number}
+                  {stat.value}
                 </div>
                 <div className="text-gray-400 font-medium">
                   {stat.label}
@@ -209,7 +199,7 @@ const AIPoweredEmailAnalyzerPage = () => {
                 className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
               >
                 <div className="mb-6">
-                  {feature.icon}
+                  {feature.value}
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">
                   {feature.title}

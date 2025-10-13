@@ -1,15 +1,7 @@
 import React from 'react';
-import { TrendingUp, Sparkles, ArrowRight, CheckCircle, Star, Zap, Brain, PieChart } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { PieChart } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Sparkles } from 'lucide-react';
+import { TrendingUp, Sparkles, ArrowRight, CheckCircle, Star, Zap, Brain, PieChart, Users, Clock, User } from 'lucide-react';
 
 const AIDataAnalyticsProPage = () => {
   const benefits = [
@@ -136,7 +128,7 @@ const AIDataAnalyticsProPage = () => {
                 <div
                   className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
-                  {feature.icon}
+                  {feature.value}
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
                   {feature.title}

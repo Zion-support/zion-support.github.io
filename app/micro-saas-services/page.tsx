@@ -1,3 +1,6 @@
+import { Heart, Sparkles, ArrowRight, CheckCircle, Phone, Globe, Scan, Mail, Package, Calendar, Monitor, Star } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function MicroSaasServices() {
   const microSaasServices = [
@@ -167,7 +170,7 @@ export default function MicroSaasServices() {
       id: "zion-ai-email-analyzer-pro",
       name: "Zion AI Email Analyzer Pro",
       description: "Intelligent email analysis with sentiment detection, priority scoring, and automated response suggestions. Transform your email productivity.",
-      icon: <EmailIcon className="w-8 h-8" />,
+      icon: <MailIcon className="w-8 h-8" />,
       price: "From $79/month",
       originalPrice: "$159/month",
       features: [
@@ -388,9 +391,9 @@ export default function MicroSaasServices() {
               {stats.map((stat, index) => (
                 <div key={index} className="text-center group">
                   <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    {stat.icon}
+                    {stat.value}
                   </div>
-                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
+                  <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.value}</div>
                   <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
                 </div>
               ))}
@@ -414,7 +417,7 @@ export default function MicroSaasServices() {
                   className="flex items-center space-x-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer group"
                 >
                   <span className="text-cyan-400 group-hover:text-cyan-300 transition-colors">
-                    {category.icon}
+                    {category.value}
                   </span>
                   <span className="text-white text-sm font-medium">{category.name}</span>
                   <span className="text-cyan-400 text-xs bg-cyan-500/20 px-2 py-1 rounded-full">
@@ -460,7 +463,7 @@ export default function MicroSaasServices() {
                   <div className="relative z-10">
                     <div className="flex items-center mb-4">
                       <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                        {service.icon}
+                        {service.value}
                       </div>
                       <div className="flex-1">
                         <div className="text-center mb-2">
@@ -548,7 +551,7 @@ export default function MicroSaasServices() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <EmailIcon className="w-6 h-6 text-white" />
+                    <MailIcon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
                   <p className="text-cyan-400">kleber@ziontechgroup.com</p>

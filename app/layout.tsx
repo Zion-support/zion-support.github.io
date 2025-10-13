@@ -1,13 +1,15 @@
-import React, { useState } from "react";
 import AnalyticsProvider from "./components/AnalyticsProvider";
 import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor";
-// import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
 import ErrorFallback from "./components/ErrorFallback";
-import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedFooter from "./components/ImprovedFooter";
+import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedSidebar from "./components/ImprovedSidebar";
-import { Helmet } from 'react-helmet-async';
-import { Monitor } from 'lucide-react';
+import React, { useState } from "react";
+import { BrowserRouter, Route } from 'react-router-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Monitor, Navigation } from 'lucide-react';
+import { useState } from 'react';
+// import LoadingSpinner from "./components/LoadingSpinner"; // Removed unused import
 
 interface LayoutProps {
   children: React.ReactNode;

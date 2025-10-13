@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Send, Navigation, Monitor, Star } from 'lucide-react';
+import { useState, useEffect } from 'react';
+declare const gtag: (...args: any[]) => void;
 
 interface PerformanceMetrics {
   fcp: number | null;
@@ -69,8 +72,8 @@ const PerformanceMonitor: React.FC = () => {
         setMetrics(prev => ({ 
           ...prev, 
           ttfb: navigationEntry.responseStart - navigationEntry.requestStart,
-          loadTime: navigationEntry.loadEventEnd - navigationEntry.navigationStart,
-          domContentLoaded: navigationEntry.domContentLoadedEventEnd - navigationEntry.navigationStart
+          loadTime: navigationEntry.loadEventEnd - navigationEntry.fetchStart,
+          domContentLoaded: navigationEntry.domContentLoadedEventEnd - navigationEntry.fetchStart
         }));
       }
     };

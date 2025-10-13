@@ -1,13 +1,7 @@
 import React from "react";
-import SEOOptimizer from "../components/SEOOptimizer";
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
-import { Search } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { Calendar } from 'lucide-react';
-import { Mic } from 'lucide-react';
+import { Mail, Calendar, CheckCircle, ArrowRight, Star } from 'lucide-react';
 
 export default function ZionAIMeetingTranscriber() {
   const features = [
@@ -93,7 +87,7 @@ export default function ZionAIMeetingTranscriber() {
         <meta name="keywords" content="AI meeting transcriber, real-time transcription, meeting notes, speaker identification, action items, Zoom integration, Teams integration" />
         <link rel="canonical" href="https://ziontechgroup.com/zion-ai-meeting-transcriber" />
       </Helmet>
-      <SEOOptimizer />
+      
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
@@ -282,14 +276,14 @@ export default function ZionAIMeetingTranscriber() {
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
+                  {[...Array(testimonial.rating || 5)].map((_, i) => (
                     <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                   ))}
                 </div>
                 <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company || "TechCorp"}</div>
                 </div>
               </div>
             ))}

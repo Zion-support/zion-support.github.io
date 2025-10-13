@@ -1,3 +1,6 @@
+import { Brain, Bot, Shield, Cloud, BarChart3, Code, Target, Users, TrendingUp, Globe, Zap, Database, Monitor, Server, Settings, Phone, Network, Cpu, ArrowRight, Mail, Smartphone, FileText, Calendar, Bug, User, X, Star } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link, Route } from 'react-router-dom';
 
 export default function Services() {
   const services = [
@@ -205,7 +208,7 @@ export default function Services() {
     {
       title: "Advanced Network Security Solutions",
       description: "Comprehensive network security with firewall management, intrusion detection, VPN solutions, and threat intelligence for enterprise networks.",
-      icon: <Lock className="w-8 h-8" />,
+      icon: <div className="w-8 h-8" />,
       path: "/network-security",
       color: "from-red-500 to-pink-500",
       price: "Starting at $249/month",
@@ -423,7 +426,7 @@ export default function Services() {
                     <div
                       className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
-                      {service.icon}
+                      {service.value}
                     </div>
                     
                     <div className="text-center mb-4">

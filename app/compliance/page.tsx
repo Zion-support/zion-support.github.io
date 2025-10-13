@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import { Shield, Globe, Award, Users, ArrowRight, CheckCircle, FileText, User, Monitor, Star } from 'lucide-react';
 
 export default function Compliance() {
   const complianceFrameworks = [
@@ -14,7 +15,7 @@ export default function Compliance() {
       name: "ISO 27001",
       description: "Information security management system certification",
       status: "Certified",
-      icon: <Lock className="w-8 h-8" />
+      icon: <div className="w-8 h-8" />
     },
     {
       name: "GDPR",
@@ -125,7 +126,7 @@ export default function Compliance() {
                 <div key={index} className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700 hover:border-cyan-400 transition-all duration-300">
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-cyan-400">
-                      {framework.icon}
+                      {framework.value}
                     </div>
                     <span className="px-3 py-1 bg-green-500/20 text-green-400 text-sm rounded-full">
                       {framework.status}
@@ -182,7 +183,7 @@ export default function Compliance() {
               {benefits.map((benefit, index) => (
                 <div key={index} className="text-center">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full mb-4">
-                    {benefit.icon}
+                    {benefit.value}
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
                   <p className="text-gray-300">{benefit.description}</p>

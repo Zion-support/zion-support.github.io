@@ -1,14 +1,6 @@
+import { BarChart3, Bot, Brain, CheckCircle, DollarSign, Receipt, Shield, Star, TrendingUp, Users, Scan, Mail, User } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { CheckCircle } from 'lucide-react';
-import { TrendingUp } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { DollarSign } from 'lucide-react';
-import { Receipt } from 'lucide-react';
 
 "use client";
 
@@ -162,7 +154,7 @@ export default function AIExpenseTracker() {
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
               >
-                <div className="flex justify-center mb-4">{feature.icon}</div>
+                <div className="flex justify-center mb-4">{feature.value}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
@@ -183,7 +175,7 @@ export default function AIExpenseTracker() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
                 >
                   <div className="flex justify-center mb-4">
-                    {capability.icon}
+                    {capability.value}
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {capability.title}
@@ -262,7 +254,7 @@ export default function AIExpenseTracker() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star
                         className="w-5 h-5 text-yellow-400 fill-current"
                         key={i}
@@ -277,7 +269,7 @@ export default function AIExpenseTracker() {
                       {testimonial.name}
                     </p>
                     <p className="text-gray-400 text-sm">
-                      {testimonial.company}
+                      {testimonial.company || "TechCorp"}
                     </p>
                   </div>
                 </div>

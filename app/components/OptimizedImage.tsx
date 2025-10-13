@@ -1,5 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { Box } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 interface OptimizedImageProps {
   src: string;

@@ -1,3 +1,6 @@
+import { Brain, Users, Shield, BarChart3, Sparkles, ArrowRight, CheckCircle, Mail, Smartphone, Globe, User, X, Star, Phone } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
 
 export default function AIHealthcareDiagnostics() {
   const features = [
@@ -156,7 +159,7 @@ export default function AIHealthcareDiagnostics() {
                 >
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-rose-500 to-pink-500 flex items-center justify-center text-white group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                      {feature.icon}
+                      {feature.value}
                     </div>
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-rose-300 transition-colors">

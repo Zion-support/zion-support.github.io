@@ -104,7 +104,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
         e.preventDefault();
         const main = document.querySelector('#main-content') || document.querySelector('main');
         if (main) {
-          main.focus();
+          (main as HTMLElement).focus();
           main.scrollIntoView();
         }
       }}

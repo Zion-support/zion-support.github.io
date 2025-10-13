@@ -1,6 +1,6 @@
 import React from 'react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { ArrowRight } from 'lucide-react';
 
 interface FuturisticButtonProps {
   href?: string;

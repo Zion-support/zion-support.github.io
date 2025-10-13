@@ -1,3 +1,6 @@
+import { Helmet } from 'react-helmet-async';
+import { Link } from 'react-router-dom';
+import { Shield, Database, Users, ArrowRight, Mail, Smartphone, Globe, Eye, Scan, User, Monitor, Star, Phone } from 'lucide-react';
 
 export default function Cybersecurity() {
   const services = [
@@ -13,7 +16,7 @@ export default function Cybersecurity() {
     {
       title: "Cybersecurity Solutions",
       description: "Comprehensive security solutions including vulnerability assessments, penetration testing, and security architecture design.",
-      icon: <Lock className="w-8 h-8" />,
+      icon: <div className="w-8 h-8" />,
       path: "/cybersecurity-solutions",
       color: "from-blue-500 to-cyan-500",
       price: "Starting at $299/month",
@@ -135,7 +138,7 @@ export default function Cybersecurity() {
                     <div
                       className={`w-16 h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
-                      {service.icon}
+                      {service.value}
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-red-300 transition-colors">
                       {service.title}

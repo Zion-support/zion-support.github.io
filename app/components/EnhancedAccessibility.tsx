@@ -13,7 +13,7 @@ const EnhancedAccessibility: React.FC<AccessibilityEnhancerProps> = ({ children 
       if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {
         const mainContent = document.querySelector('main');
         if (mainContent) {
-          mainContent.focus();
+          (mainContent as HTMLElement).focus();
           mainContent.scrollIntoView({ behavior: 'smooth' });
         }
       }

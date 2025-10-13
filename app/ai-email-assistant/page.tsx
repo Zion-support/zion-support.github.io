@@ -1,15 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Users } from 'lucide-react';
-import { Star } from 'lucide-react';
-import { Shield } from 'lucide-react';
-import { Zap } from 'lucide-react';
-import { Brain } from 'lucide-react';
-import { Settings } from 'lucide-react';
-import { BarChart3 } from 'lucide-react';
-import { Mail } from 'lucide-react';
-import { MessageSquare } from 'lucide-react';
-import { Hand } from 'lucide-react';
+import { Users, Star, Shield, Zap, Brain, Settings, BarChart3, Mail, MessageSquare, Hand } from 'lucide-react';
 
 "use client";
 
@@ -163,7 +154,7 @@ export default function AIEmailAssistant() {
                 key={index}
                 className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
               >
-                <div className="flex justify-center mb-4">{feature.icon}</div>
+                <div className="flex justify-center mb-4">{feature.value}</div>
                 <h3 className="text-xl font-semibold text-white mb-2">
                   {feature.title}
                 </h3>
@@ -183,7 +174,7 @@ export default function AIEmailAssistant() {
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
                 >
-                  <div className="flex justify-center mb-4">{useCase.icon}</div>
+                  <div className="flex justify-center mb-4">{useCase.value}</div>
                   <h3 className="text-xl font-semibold text-white mb-2">
                     {useCase.title}
                   </h3>
@@ -261,7 +252,7 @@ export default function AIEmailAssistant() {
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6"
                 >
                   <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
+                    {[...Array(testimonial.rating || 5)].map((_, i) => (
                       <Star
                         key={i}
                         className="w-5 h-5 text-yellow-400 fill-current"
@@ -276,7 +267,7 @@ export default function AIEmailAssistant() {
                       {testimonial.name}
                     </p>
                     <p className="text-gray-400 text-sm">
-                      {testimonial.company}
+                      {testimonial.company || "TechCorp"}
                     </p>
                   </div>
                 </div>

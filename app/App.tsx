@@ -1,16 +1,16 @@
+import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
+import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
+import CacheManager from "./components/CacheManager";
+import CriticalResourcePreloader from "./components/CriticalResourcePreloader";
+import ErrorBoundary from "./components/ErrorBoundary";
+import LoadingSpinner from "./components/LoadingSpinner";
+import PerformanceMonitor from "./components/PerformanceMonitor";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Home, Monitor, Network } from 'lucide-react';
+import { Suspense, lazy } from 'react';
 "use client";
 
-import ErrorBoundary from "./components/ErrorBoundary";
-import PerformanceMonitor from "./components/PerformanceMonitor";
-import AccessibilityEnhancer from "./components/AccessibilityEnhancer";
-import LoadingSpinner from "./components/LoadingSpinner";
-import CriticalResourcePreloader from "./components/CriticalResourcePreloader";
-import CacheManager from "./components/CacheManager";
-import AdvancedPerformanceMonitor from "./components/AdvancedPerformanceMonitor";
-import { Helmet } from 'react-helmet-async';
-import { Home } from 'lucide-react';
-import { Network } from 'lucide-react';
-import { Monitor } from 'lucide-react';
 
 // Lazy load pages for better performance
 const HomePage = lazy(() => import("./page"));
