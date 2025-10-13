@@ -3,7 +3,7 @@
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
-    const content = fs.readFileSync(filePath, 'utf8'
+    const content = fs.readFileSync(filePath, 'utf8');
     if (content.includes('<<<<<<< HEAD') || content.includes('=======') || content.includes('>>>>>>>'
   console.error('Error:'
 function findFiles(dir, extensions = ['.ts', '.tsx', '.js', '.jsx'
