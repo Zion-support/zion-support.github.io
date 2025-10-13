@@ -1,52 +1,37 @@
-import React, { Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { HelmetProvider } from 'react-helmet-async';
-
+import React, { Suspense } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 // Components
-<<<<<<< HEAD
-import Navigation from './app/components/Navigation';
-import Footer from './app/components/Footer';
-import ErrorBoundary from './app/components/ErrorBoundary';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
-<<<<<<< HEAD
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-=======
-import Header from './app/components/Header';
-import Footer from './app/components/Footer';
-import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary';
-import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
-import LoadingSpinner from './app/components/LoadingSpinner';
-import PerformanceMonitor from './app/components/PerformanceMonitor';
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-
+import Header from './app/components/Header'
+import Footer from './app/components/Footer'
+import EnhancedErrorBoundary from './app/components/EnhancedErrorBoundary'
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer'
+import LoadingSpinner from './app/components/LoadingSpinner'
+import PerformanceMonitor from './app/components/PerformanceMonitor'
 // Page Components
-import HomePage from './app/page';
-import AboutPage from './app/pages/AboutPage';
-import ContactPage from './app/pages/ContactPage';
-import ServicesPage from './app/pages/ServicesPage';
-import BlogPage from './app/pages/BlogPage';
-import TutorialsPage from './app/pages/TutorialsPage';
-import DemoPage from './app/pages/DemoPage';
-import SupportPage from './app/pages/SupportPage';
-import PrivacyPage from './app/pages/PrivacyPage';
-import TermsPage from './app/pages/TermsPage';
-import PricingPage from './app/pages/PricingPage';
-import SolutionsPage from './app/pages/SolutionsPage';
-import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
-import AISolutionsPage from './app/ai-solutions/page';
-import ITSolutionsPage from './app/it-solutions/page';
-
+import HomePage from './app/page'
+import AboutPage from './app/pages/AboutPage'
+import ContactPage from './app/pages/ContactPage'
+import ServicesPage from './app/pages/ServicesPage'
+import BlogPage from './app/pages/BlogPage'
+import TutorialsPage from './app/pages/TutorialsPage'
+import DemoPage from './app/pages/DemoPage'
+import SupportPage from './app/pages/SupportPage'
+import PrivacyPage from './app/pages/PrivacyPage'
+import TermsPage from './app/pages/TermsPage'
+import PricingPage from './app/pages/PricingPage'
+import SolutionsPage from './app/pages/SolutionsPage'
+import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page'
+import AISolutionsPage from './app/ai-solutions/page'
+import ITSolutionsPage from './app/it-solutions/page'
 // Service Pages
-import AIServicesPage from './app/pages/AIServicesPage';
-import ITServicesPage from './app/pages/ITServicesPage';
-import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage';
-import DigitalTransformationPage from './app/pages/DigitalTransformationPage';
-import CaseStudiesPage from './app/pages/CaseStudiesPage';
-import CareersPage from './app/pages/CareersPage';
-
-// Error fallback component
+import AIServicesPage from './app/pages/AIServicesPage'
+import ITServicesPage from './app/pages/ITServicesPage'
+import CloudInfrastructurePage from './app/pages/CloudInfrastructurePage'
+import DigitalTransformationPage from './app/pages/DigitalTransformationPage'
+import CaseStudiesPage from './app/pages/CaseStudiesPage'
+import CareersPage from './app/pages/CareersPage'
+// Error fallback component;
 export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
   <div className="min-h-screen flex items-center justify-center bg-gray-50">
     <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
@@ -71,27 +56,9 @@ export const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; res
       </div>
     </div>
   </div>
-);
-
+)
 function App() {
-  return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <HelmetProvider>
-<<<<<<< HEAD
-      <Router>
-        <div className="min-h-screen bg-slate-900">
-          <Navigation />
-          <main className="relative z-10" id="main-content" role="main">
-=======
-      <ErrorBoundary>
-        <Router>
-          <div className="min-h-screen bg-slate-900">
-            <Navigation />
-            <main className="relative z-10" id="main-content" role="main">
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-            <Routes>
-=======
+  return (<//div>
     <HelmetProvider>
       <EnhancedErrorBoundary>
         <AccessibilityEnhancer>
@@ -99,55 +66,45 @@ function App() {
             <div className="min-h-screen bg-slate-900">
               <Header />
               <main className="relative z-10" id="main-content" role="main">
-                <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}>
+                <Suspense fallback={<LoadingSpinner fullScreen text="Loading page..." />}></Suspense>
                   <Routes>
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-              {/* Main Pages */}
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/services" element={<ServicesPage />} />
-              <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
-              <Route path="/ai-solutions" element={<AISolutionsPage />} />
-              <Route path="/it-solutions" element={<ITSolutionsPage />} />
-              <Route path="/blog" element={<BlogPage />} />
-              <Route path="/tutorials" element={<TutorialsPage />} />
-              <Route path="/demo" element={<DemoPage />} />
-              <Route path="/support" element={<SupportPage />} />
-              <Route path="/privacy" element={<PrivacyPage />} />
-              <Route path="/terms" element={<TermsPage />} />
-              <Route path="/pricing" element={<PricingPage />} />
+              {/* Main Pages */}</Routes>
+              <Route path="/" element={<HomePage />} /></Route>
+              <Route path="/about" element={<AboutPage />} /></Route>
+              <Route path="/contact" element={<ContactPage />} /></Route>
+              <Route path="/services" element={<ServicesPage />} /></Route>
+              <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} /></Route>
+              <Route path="/ai-solutions" element={<AISolutionsPage />} /></Route>
+              <Route path="/it-solutions" element={<ITSolutionsPage />} /></Route>
+              <Route path="/blog" element={<BlogPage />} /></Route>
+              <Route path="/tutorials" element={<TutorialsPage />} /></Route>
+              <Route path="/demo" element={<DemoPage />} /></Route>
+              <Route path="/support" element={<SupportPage />} /></Route>
+              <Route path="/privacy" element={<PrivacyPage />} /></Route>
+              <Route path="/terms" element={<TermsPage />} /></Route>
+              <Route path="/pricing" element={<PricingPage />} /></Route>
               <Route path="/solutions" element={<SolutionsPage />} />
               
-              {/* Service Pages */}
-              <Route path="/ai-services" element={<AIServicesPage />} />
-              <Route path="/it-services" element={<ITServicesPage />} />
-              <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
-              <Route path="/digital-transformation" element={<DigitalTransformationPage />} />
-              <Route path="/case-studies" element={<CaseStudiesPage />} />
+              {/* Service Pages */}</Route>
+              <Route path="/ai-services" element={<AIServicesPage />} /></Route>
+              <Route path="/it-services" element={<ITServicesPage />} /></Route>
+              <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} /></Route>
+              <Route path="/digital-transformation" element={<DigitalTransformationPage />} /></Route>
+              <Route path="/case-studies" element={<CaseStudiesPage />} /></Route>
               <Route path="/careers" element={<CareersPage />} />
               
-              {/* Catch all route */}
+              {/* Catch all route */}</Route>
               <Route path="*" element={
                 <div className="min-h-screen flex items-center justify-center bg-slate-900">
                   <div className="text-center">
                     <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
                     <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
                     <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
-                      Go Home
+                      Go Home</a>
                     </a>
                   </div>
                 </div>
-              } />
-<<<<<<< HEAD
-            </Routes>
-            </main>
-            <Footer />
-            <PerformanceMonitor />
-          </div>
-        </Router>
-      </ErrorBoundary>
-=======
+              } /><//div>
                   </Routes>
                 </Suspense>
               </main>
@@ -157,55 +114,8 @@ function App() {
           </Router>
         </AccessibilityEnhancer>
       </EnhancedErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
     </HelmetProvider>
-=======
-    <ErrorBoundary>
-      <HelmetProvider>
-        <Router>
-          <div className="min-h-screen bg-slate-900">
-            <Navigation />
-            <main className="relative z-10" id="main-content" role="main">
-              <ErrorBoundary>
-                <Routes>
-                  {/* Main Pages */}
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                  <Route path="/contact" element={<ContactPage />} />
-                  <Route path="/services" element={<ServicesPage />} />
-                  <Route path="/blog" element={<BlogPage />} />
-                  <Route path="/tutorials" element={<TutorialsPage />} />
-                  <Route path="/demo" element={<DemoPage />} />
-                  <Route path="/support" element={<SupportPage />} />
-                  <Route path="/privacy" element={<PrivacyPage />} />
-                  <Route path="/terms" element={<TermsPage />} />
-                  <Route path="/pricing" element={<PricingPage />} />
-                  <Route path="/solutions" element={<SolutionsPage />} />
-                  
-                  {/* Catch all route */}
-                  <Route path="*" element={
-                    <div className="min-h-screen flex items-center justify-center bg-slate-900">
-                      <div className="text-center">
-                        <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
-                        <p className="text-gray-300 mb-8">The page you&apos;re looking for doesn&apos;t exist.</p>
-                        <a href="/" className="bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-2 px-4 rounded transition-all duration-300">
-                          Go Home
-                        </a>
-                      </div>
-                    </div>
-                  } />
-                </Routes>
-              </ErrorBoundary>
-            </main>
-            <Footer />
-            <PerformanceMonitor />
-            <AccessibilityEnhancer />
-          </div>
-        </Router>
-      </HelmetProvider>
-    </ErrorBoundary>
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-  );
+  )
 }
 
-export default App;
+export default App<//HelmetProvider>
