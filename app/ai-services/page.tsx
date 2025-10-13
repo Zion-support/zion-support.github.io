@@ -50,7 +50,18 @@ import React from 'react';
                   <div
                     className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                     aria-hidden="true"
-      {/* CTA Section */}
+                  >
+                    <service.icon className="w-6 h-6 md:w-8 md:h-8 text-white" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{service.title}</h3>
+                  <p className="text-gray-300 text-sm text-center">{service.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
       <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-6">
