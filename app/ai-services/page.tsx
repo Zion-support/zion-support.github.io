@@ -1,6 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
 import { 
   Brain, 
   Zap, 
@@ -21,7 +19,6 @@ import {
   Award,
   Clock
 } from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
@@ -128,7 +125,6 @@ const AIServices = () => {
     }
   ];
 
-  const testimonials = [
     {
       name: "Sarah Chen",
       company: "TechStart Inc.",
@@ -155,7 +151,6 @@ const AIServices = () => {
     }
   ];
 
-  const stats = [
     { number: "500+", label: "AI Models Deployed", icon: <Brain className="w-6 h-6" /> },
     { number: "10,000+", label: "Businesses Transformed", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },

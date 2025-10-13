@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { 
   Cloud, 
   Server, 
@@ -21,7 +20,6 @@ import {
   HardDrive,
   Network
 } from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
@@ -140,7 +138,6 @@ const CloudInfrastructure = () => {
     }
   ];
 
-  const testimonials = [
     {
       name: "David Chen",
       company: "TechStart Solutions",
@@ -167,7 +164,6 @@ const CloudInfrastructure = () => {
     }
   ];
 
-  const stats = [
     { number: "500+", label: "Infrastructure Projects", icon: <Server className="w-6 h-6" /> },
     { number: "99.99%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
     { number: "40%", label: "Average Cost Savings", icon: <BarChart3 className="w-6 h-6" /> },

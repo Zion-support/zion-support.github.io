@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { 
   Shield, 
   Lock, 
@@ -21,12 +20,10 @@ import {
   FileText,
   Settings
 } from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAiCybersecuritySuitePro = () => {
-  const features = [
     {
       title: "AI-Powered Threat Detection",
       description: "Advanced machine learning algorithms detect and prevent sophisticated cyber threats in real-time",
@@ -154,7 +151,6 @@ const ZionAiCybersecuritySuitePro = () => {
     }
   ];
 
-  const testimonials = [
     {
       name: "Robert Chen",
       company: "Financial Services Corp",
@@ -181,7 +177,6 @@ const ZionAiCybersecuritySuitePro = () => {
     }
   ];
 
-  const stats = [
     { number: "10,000+", label: "Organizations Protected", icon: <Shield className="w-6 h-6" /> },
     { number: "99.9%", label: "Threat Detection Accuracy", icon: <Award className="w-6 h-6" /> },
     { number: "2min", label: "Average Response Time", icon: <Clock className="w-6 h-6" /> },

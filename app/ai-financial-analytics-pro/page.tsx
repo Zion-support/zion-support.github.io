@@ -7,11 +7,8 @@ import {
   Target,
   BarChart3,
 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function AiFinancialAnalyticsProPage() {
-  const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: "AI-Powered Insights",
@@ -158,7 +155,6 @@ export default function AiFinancialAnalyticsProPage() {
     },
   ];
 
-  const testimonials = [
     {
       name: "David Chen",
       company: "CFO, TechCorp",

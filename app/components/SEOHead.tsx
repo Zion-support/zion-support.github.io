@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface SEOHeadProps {
   title?: string;
@@ -28,7 +27,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   section,
   tags = []
 }) => {
-  const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Zion Tech Group',

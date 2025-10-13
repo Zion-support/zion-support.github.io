@@ -1,11 +1,7 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, BarChart3, TrendingUp, Users, Award, Shield, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Database, Mail, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ZionAnalyticsPro() {
-  const features = [
     "Real-time dashboard analytics",
     "Predictive business insights",
     "Automated report generation",
@@ -20,7 +16,6 @@ export default function ZionAnalyticsPro() {
     "Custom metrics & KPIs"
   ];
 
-  const benefits = [
     "Increase revenue by 25%",
     "Reduce reporting time by 80%",
     "Make data-driven decisions",
@@ -56,7 +51,6 @@ export default function ZionAnalyticsPro() {
     }
   ];
 
-  const testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechStart Inc.",

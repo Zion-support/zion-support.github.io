@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 
 interface AdvancedSEOProps {
   title: string;
@@ -60,7 +59,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   const fullOgImage = ogImage || 'https://ziontechgroup.com/api/placeholder/1200/630';
   const fullTwitterImage = twitterImage || fullOgImage;
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-  const currentDate = new Date().toISOString();
 
   // Default structured data for organization
   const defaultStructuredData = {

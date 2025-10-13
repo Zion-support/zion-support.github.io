@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
   Package, 
@@ -21,7 +20,6 @@ import {
 } from 'lucide-react';
 
 const SmartInventoryOptimizerPage = () => {
-  const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: "AI-Powered Demand Forecasting",
@@ -104,7 +102,6 @@ const SmartInventoryOptimizerPage = () => {
     }
   ];
 
-  const benefits = [
     {
       icon: <DollarSign className="w-12 h-12 text-green-400" />,
       title: "Reduce Inventory Costs",
@@ -127,7 +124,6 @@ const SmartInventoryOptimizerPage = () => {
     }
   ];
 
-  const stats = [
     { number: "30%", label: "Cost Reduction" },
     { number: "95%", label: "Forecast Accuracy" },
     { number: "25%", label: "Faster Fulfillment" },

@@ -1,5 +1,3 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { 
   ArrowRight, 
   Cloud, 
@@ -45,7 +43,6 @@ import {
 } from "lucide-react";
 
 export default function ZionCloudVaultPro() {
-  const features = [
     {
       title: "End-to-End Encryption",
       description: "Military-grade encryption protects your data at rest and in transit, ensuring only you can access your files.",
@@ -143,7 +140,6 @@ export default function ZionCloudVaultPro() {
     }
   ];
 
-  const testimonials = [
     {
       name: "Jennifer Lee",
       company: "Creative Agency",

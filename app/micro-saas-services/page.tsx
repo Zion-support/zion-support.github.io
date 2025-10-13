@@ -1,5 +1,3 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { 
   ArrowRight, 
   Brain, 
@@ -389,7 +387,6 @@ export default function MicroSaasServices() {
     }
   ];
 
-  const categories = [
     { name: "AI Analytics", icon: <AnalyticsIcon className="w-5 h-5" />, count: 2 },
     { name: "Cybersecurity", icon: <ProtectionIcon className="w-5 h-5" />, count: 1 },
     { name: "Cloud Storage", icon: <CloudIcon className="w-5 h-5" />, count: 1 },
@@ -404,7 +401,6 @@ export default function MicroSaasServices() {
     { name: "DevOps & Automation", icon: <ConfigIcon className="w-5 h-5" />, count: 1 }
   ];
 
-  const stats = [
     { number: "12+", label: "Micro SAAS Solutions", icon: <Rocket className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <SupportIcon className="w-6 h-6" /> },

@@ -1,6 +1,3 @@
-import { ArrowRight, Calendar, CheckCircle, Zap, Mail, Smartphone, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 export default function Consultation() {
@@ -90,7 +87,6 @@ export default function Consultation() {
     }
   ];
 
-  const benefits = [
     {
       title: "Expert Guidance",
       description: "Get insights from certified technology professionals with years of experience.",

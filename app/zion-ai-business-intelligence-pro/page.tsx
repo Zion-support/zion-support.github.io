@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { 
   BarChart3, 
   TrendingUp, 
@@ -21,12 +20,10 @@ import {
   Eye,
   Settings
 } from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAiBusinessIntelligencePro = () => {
-  const features = [
     {
       title: "AI-Powered Insights",
       description: "Automatically generate actionable business insights using advanced machine learning and natural language processing",
@@ -155,7 +152,6 @@ const ZionAiBusinessIntelligencePro = () => {
     }
   ];
 
-  const testimonials = [
     {
       name: "Sarah Johnson",
       company: "Retail Analytics Corp",
@@ -182,7 +178,6 @@ const ZionAiBusinessIntelligencePro = () => {
     }
   ];
 
-  const stats = [
     { number: "500+", label: "Enterprise Customers", icon: <Users className="w-6 h-6" /> },
     { number: "1B+", label: "Data Points Processed", icon: <Database className="w-6 h-6" /> },
     { number: "95%", label: "Insight Accuracy", icon: <Award className="w-6 h-6" /> },

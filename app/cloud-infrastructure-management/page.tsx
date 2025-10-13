@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import {
   Cloud,
   Shield,
@@ -8,10 +7,8 @@ import {
   BarChart3,
   ArrowRight,
 } from "lucide-react";
-import Layout from "../layout";
 
 export default function CloudInfrastructureManagement() {
-  const features = [
     {
       icon: <Cloud className="w-6 h-6 text-cyan-400" />,
       title: "Multi-Cloud Management",
@@ -50,7 +47,6 @@ export default function CloudInfrastructureManagement() {
     },
   ];
 
-  const managementFeatures = [
     {
       title: "Infrastructure Monitoring",
       description: "Real-time monitoring and alerting for all cloud resources"

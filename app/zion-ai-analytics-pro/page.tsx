@@ -1,5 +1,3 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { 
   ArrowRight, 
   BarChart3, 
@@ -39,7 +37,6 @@ import {
 } from "lucide-react";
 
 export default function ZionAiAnalyticsPro() {
-  const features = [
     {
       title: "Real-time Analytics Dashboard",
       description: "Monitor your business performance with live dashboards that update in real-time, providing instant insights into key metrics and KPIs.",
@@ -128,7 +125,6 @@ export default function ZionAiAnalyticsPro() {
     }
   ];
 
-  const testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechStart Inc.",
@@ -155,7 +151,6 @@ export default function ZionAiAnalyticsPro() {
     }
   ];
 
-  const stats = [
     { number: "40%", label: "Increase in Decision Speed", icon: <Zap className="w-6 h-6" /> },
     { number: "60%", label: "Reduction in Manual Reporting", icon: <FileText className="w-6 h-6" /> },
     { number: "99.9%", label: "Data Accuracy", icon: <Award className="w-6 h-6" /> },

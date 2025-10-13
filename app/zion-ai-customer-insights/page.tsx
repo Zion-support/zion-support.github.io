@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { 
   Brain, 
   BarChart3, 
@@ -21,12 +20,10 @@ import {
   PieChart,
   Activity
 } from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAiCustomerInsights = () => {
-  const features = [
     {
       title: "Real-Time Sentiment Analysis",
       description: "Analyze customer emotions and sentiment across all touchpoints in real-time using advanced NLP",
@@ -130,7 +127,6 @@ const ZionAiCustomerInsights = () => {
     }
   ];
 
-  const testimonials = [
     {
       name: "Jennifer Martinez",
       company: "RetailMax",

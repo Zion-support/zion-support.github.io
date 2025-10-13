@@ -1,5 +1,3 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { 
   ArrowRight, 
   BarChart3, 
@@ -20,7 +18,6 @@ import {
 } from "lucide-react";
 
 export default function AiAnalytics() {
-  const features = [
     {
       title: "Real-time Data Processing",
       description: "Process and analyze data in real-time with our advanced AI algorithms that provide instant insights and actionable intelligence.",
@@ -118,7 +115,6 @@ export default function AiAnalytics() {
     }
   ];
 
-  const testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechStart Inc.",

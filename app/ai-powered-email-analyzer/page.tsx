@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
   Mail, 
@@ -18,7 +17,6 @@ import {
 } from 'lucide-react';
 
 const AIPoweredEmailAnalyzerPage = () => {
-  const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: "AI-Powered Sentiment Analysis",
@@ -101,7 +99,6 @@ const AIPoweredEmailAnalyzerPage = () => {
     }
   ];
 
-  const stats = [
     { number: "95%", label: "Accuracy Rate" },
     { number: "2.5x", label: "Faster Response Time" },
     { number: "40%", label: "Increase in Engagement" },

@@ -1,9 +1,5 @@
-import { Link } from "react-router-dom";
-import { Brain, Users, Zap, Globe, Clock, CheckCircle } from "lucide-react";
-import Layout from "../layout";
 
 export default function AISmartScheduler() {
-  const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: "AI-Powered Scheduling",
@@ -76,7 +72,6 @@ export default function AISmartScheduler() {
     },
   ];
 
-  const testimonials = [
     {
       name: "Sarah Chen",
       company: "TechStart Inc.",

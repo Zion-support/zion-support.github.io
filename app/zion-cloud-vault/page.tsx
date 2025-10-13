@@ -1,9 +1,5 @@
-import { ArrowRight, Cloud, Lock, Shield, Zap, Globe, CheckCircle, Star, Database } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function ZionCloudVault() {
-  const features = [
     {
       icon: <Cloud className="w-6 h-6" />,
       title: "Secure Cloud Storage",
@@ -101,7 +97,6 @@ export default function ZionCloudVault() {
     }
   ];
 
-  const testimonials = [
     {
       name: "Jennifer Adams",
       company: "Creative Agency",

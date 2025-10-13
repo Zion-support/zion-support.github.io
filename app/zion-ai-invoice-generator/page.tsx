@@ -1,11 +1,7 @@
 import React from "react";
-import { ArrowRight, CheckCircle, Star, FileText, Calculator, CreditCard, Clock, DollarSign, Globe, Smartphone, Lock, Settings, Target, Users, Award, Shield, Mail, Headphones, Mic, Video, Image, Music, BookOpen, Lightbulb, Puzzle, Gamepad2, ShoppingCart, CreditCard as CreditCardIcon, Wallet, Banknote, Coins, Gift, Tag, Percent, Calculator as CalculatorIcon, PieChart, LineChart, Activity, Layers, Grid, List, Map, Compass, Navigation, Globe2, WifiOff, Signal, Bluetooth, Usb, HardDrive, MemoryStick, Printer, Scanner, Fax, Phone, Voicemail, Headset, Speaker, Volume2, VolumeX, Play, Pause, Stop, SkipBack, SkipForward, RotateCcw, RotateCw, Shuffle, Repeat, Repeat1, Shuffle2, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Diamond, Star as StarIcon, Moon, Sun, Sunrise, Sunset, CloudRain, CloudSnow, CloudLightning, Wind, Droplets, Thermometer, Gauge, Timer, Stopwatch, Hourglass } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function ZionAIInvoiceGenerator() {
-  const features = [
     "AI-powered invoice generation from contracts",
     "Automated payment tracking and reminders",
     "Multi-currency support (100+ currencies)",
@@ -20,7 +16,6 @@ export default function ZionAIInvoiceGenerator() {
     "API integration with accounting software"
   ];
 
-  const benefits = [
     "Reduce invoicing time by 90%",
     "Improve payment collection by 40%",
     "Eliminate manual data entry errors",
@@ -56,7 +51,6 @@ export default function ZionAIInvoiceGenerator() {
     }
   ];
 
-  const testimonials = [
     {
       name: "Sarah Johnson",
       company: "Freelance Designer",

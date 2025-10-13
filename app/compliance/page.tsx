@@ -1,7 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, CheckCircle, FileText, Lock, Users, Globe, Award, Clock } from 'lucide-react';
 
 export default function Compliance() {
   const complianceFrameworks = [
@@ -66,7 +63,6 @@ export default function Compliance() {
     }
   ];
 
-  const benefits = [
     { icon: <Shield className="w-6 h-6" />, title: 'Risk Mitigation', description: 'Reduce regulatory and security risks with comprehensive compliance programs' },
     { icon: <CheckCircle className="w-6 h-6" />, title: 'Audit Readiness', description: 'Stay prepared for audits with ongoing monitoring and documentation' },
     { icon: <Users className="w-6 h-6" />, title: 'Trust & Credibility', description: 'Build customer trust with certified compliance and security measures' },

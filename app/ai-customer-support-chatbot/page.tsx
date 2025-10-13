@@ -1,7 +1,4 @@
 "use client";
-import { Brain, Clock, Target, BarChart3 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function AICustomerSupportChatbot() {
   const chatbotFeatures = [
@@ -61,7 +58,6 @@ export default function AICustomerSupportChatbot() {
     },
   ];
 
-  const testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechCorp",
@@ -79,7 +75,6 @@ export default function AICustomerSupportChatbot() {
         "Our response times have improved dramatically with this solution.",
     },
   ];
-  const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: "Natural Language Processing",

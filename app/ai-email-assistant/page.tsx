@@ -1,6 +1,4 @@
 "use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import {
   MessageSquare,
   Brain,
@@ -14,7 +12,6 @@ import {
 } from "lucide-react";
 
 export default function AIEmailAssistant() {
-  const features = [
     {
       icon: <Mail className="w-6 h-6 text-cyan-400" />,
       title: "Smart Classification",
@@ -118,7 +115,6 @@ export default function AIEmailAssistant() {
     },
   ];
 
-  const testimonials = [
     {
       name: "Jennifer Smith",
       company: "Customer Service Manager",

@@ -1,11 +1,7 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, Target, Star, Globe, Shield, CheckCircle, TrendingUp, Zap, BarChart3, Clock } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 export default function CaseStudies() {
-  const caseStudies = [
     {
       id: 1,
       title: "E-commerce Platform AI Transformation",
@@ -117,7 +113,6 @@ export default function CaseStudies() {
     }
   ];
 
-  const stats = [
     { number: "50+", label: "Projects Completed", icon: <CheckCircle className="w-6 h-6" /> },
     { number: "95%", label: "Client Satisfaction", icon: <TrendingUp className="w-6 h-6" /> },
     { number: "40%", label: "Average Cost Reduction", icon: <BarChart3 className="w-6 h-6" /> },

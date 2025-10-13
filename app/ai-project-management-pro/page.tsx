@@ -1,6 +1,4 @@
 "use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import {
   CheckCircle,
   Star,
@@ -11,7 +9,6 @@ import {
 } from "lucide-react";
 
 export default function AIProjectManagementPro() {
-  const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: "AI-Powered Planning",
@@ -134,7 +131,6 @@ export default function AIProjectManagementPro() {
     },
   ];
 
-  const testimonials = [
     {
       name: "Sarah Johnson",
       company: "Project Manager, TechCorp",

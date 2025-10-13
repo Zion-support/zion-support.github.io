@@ -1,10 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Users, Brain, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Smartphone, Globe, Database, Settings, FileText, TrendingUp, AlertCircle, Calendar, Heart } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ZionHRAssistantPro = () => {
-  const features = [
     {
       title: "AI-Powered Resume Screening",
       description: "Automatically screen and rank candidates with 95% accuracy using advanced NLP and machine learning",
@@ -96,7 +93,6 @@ const ZionHRAssistantPro = () => {
     }
   ];
 
-  const testimonials = [
     {
       name: "Jennifer Martinez",
       company: "TechStart Solutions",
@@ -123,7 +119,6 @@ const ZionHRAssistantPro = () => {
     }
   ];
 
-  const stats = [
     { number: "65%", label: "Faster Hiring", icon: <Clock className="w-6 h-6" /> },
     { number: "95%", label: "Screening Accuracy", icon: <Brain className="w-6 h-6" /> },
     { number: "50%", label: "Faster Onboarding", icon: <Users className="w-6 h-6" /> },

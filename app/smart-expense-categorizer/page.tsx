@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
   Receipt, 
@@ -21,7 +20,6 @@ import {
 } from 'lucide-react';
 
 const SmartExpenseCategorizerPage = () => {
-  const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: "AI-Powered Categorization",
@@ -104,7 +102,6 @@ const SmartExpenseCategorizerPage = () => {
     }
   ];
 
-  const benefits = [
     {
       icon: <DollarSign className="w-12 h-12 text-green-400" />,
       title: "Save Time & Money",
@@ -127,7 +124,6 @@ const SmartExpenseCategorizerPage = () => {
     }
   ];
 
-  const stats = [
     { number: "80%", label: "Time Saved" },
     { number: "98%", label: "Accuracy Rate" },
     { number: "50%", label: "Error Reduction" },

@@ -1,5 +1,4 @@
 import React, { useState, useCallback, useMemo, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
 import { 
   Menu, 
   X, 
@@ -45,15 +44,12 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
     setIsOpen(!isOpen)
   }, [isOpen])
 
-  const toggleServices = useCallback(() => {
     setIsServicesOpen(!isServicesOpen)
   }, [isServicesOpen])
 
-  const toggleMicroSaas = useCallback(() => {
     setIsMicroSaasOpen(!isMicroSaasOpen)
   }, [isMicroSaasOpen])
 
-  const toggleItServices = useCallback(() => {
     setIsItServicesOpen(!isItServicesOpen)
   }, [isItServicesOpen])
 
@@ -120,7 +116,6 @@ const NavigationEnhanced = React.memo<NavigationEnhancedProps>(({ onSidebarToggl
     { name: 'Contact', path: '/contact' }
   ], [])
 
-  const serviceCategories = useMemo(() => [
     {
       name: 'AI Services',
       path: '/ai-services',

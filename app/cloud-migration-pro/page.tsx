@@ -1,5 +1,3 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import {
   Cloud,
   Shield,
@@ -9,8 +7,6 @@ import {
   Star,
 } from "lucide-react";
 
-const CloudMigrationProPage = () => {
-  const features = [
     {
       title: "Automated Migration",
       description: "Streamlined migration process with minimal downtime"

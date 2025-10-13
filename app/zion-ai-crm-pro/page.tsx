@@ -1,5 +1,3 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { 
   ArrowRight, 
   Users, 
@@ -55,7 +53,6 @@ import {
 } from "lucide-react";
 
 export default function ZionAiCrmPro() {
-  const features = [
     {
       title: "AI Lead Scoring & Qualification",
       description: "Automatically score and qualify leads using advanced AI algorithms that analyze behavior, engagement, and demographic data.",
@@ -153,7 +150,6 @@ export default function ZionAiCrmPro() {
     }
   ];
 
-  const testimonials = [
     {
       name: "Alex Rodriguez",
       company: "Sales Solutions Inc.",

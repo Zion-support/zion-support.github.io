@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
   Heart, 
@@ -18,7 +17,6 @@ import {
 } from 'lucide-react';
 
 const AICustomerSentimentTrackerPage = () => {
-  const features = [
     {
       icon: <Brain className="w-8 h-8 text-cyan-400" />,
       title: "Real-time Sentiment Analysis",
@@ -101,7 +99,6 @@ const AICustomerSentimentTrackerPage = () => {
     }
   ];
 
-  const benefits = [
     {
       icon: <Smile className="w-12 h-12 text-green-400" />,
       title: "Improve Customer Satisfaction",
@@ -124,7 +121,6 @@ const AICustomerSentimentTrackerPage = () => {
     }
   ];
 
-  const stats = [
     { number: "35%", label: "Satisfaction Increase" },
     { number: "40%", label: "Churn Reduction" },
     { number: "95%", label: "Accuracy Rate" },

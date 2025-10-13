@@ -1,9 +1,5 @@
-import { ArrowRight, Shield, Lock, Eye, AlertTriangle, CheckCircle, Star, Zap, Brain } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function ZionSecurityShield() {
-  const features = [
     {
       icon: <Shield className="w-6 h-6" />,
       title: "Advanced Threat Detection",
@@ -102,7 +98,6 @@ export default function ZionSecurityShield() {
     }
   ];
 
-  const testimonials = [
     {
       name: "David Martinez",
       company: "Financial Services Corp",

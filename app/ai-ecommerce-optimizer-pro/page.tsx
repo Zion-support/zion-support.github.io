@@ -7,11 +7,8 @@ import {
   BarChart3,
   TrendingUp,
 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 
 export default function AIEcommerceOptimizerPro() {
-  const features = [
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: "AI-Powered Optimization",
@@ -135,7 +132,6 @@ export default function AIEcommerceOptimizerPro() {
     },
   ];
 
-  const testimonials = [
     {
       name: "Maria Rodriguez",
       company: "Fashion Store",

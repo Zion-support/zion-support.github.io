@@ -7,7 +7,6 @@ import {
   CheckCircle,
   ArrowRight,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 
 const EnhancedServicesShowcase: React.FC = () => {
   const services = [

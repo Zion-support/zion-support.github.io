@@ -1,10 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { BarChart3, Package, TrendingUp, AlertTriangle, Users, Clock, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Smartphone, Globe, Database, Settings } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ZionAIInventoryManager = () => {
-  const features = [
     {
       title: "AI-Powered Demand Forecasting",
       description: "Predict inventory needs with 95% accuracy using machine learning algorithms",
@@ -95,7 +92,6 @@ const ZionAIInventoryManager = () => {
     }
   ];
 
-  const testimonials = [
     {
       name: "Sarah Johnson",
       company: "TechGear Solutions",
@@ -122,7 +118,6 @@ const ZionAIInventoryManager = () => {
     }
   ];
 
-  const stats = [
     { number: "95%", label: "Forecast Accuracy", icon: <TrendingUp className="w-6 h-6" /> },
     { number: "60%", label: "Reduction in Stockouts", icon: <AlertTriangle className="w-6 h-6" /> },
     { number: "40%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },

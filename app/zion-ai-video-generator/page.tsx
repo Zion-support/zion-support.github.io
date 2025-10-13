@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { 
   Play, 
   Download, 
@@ -21,12 +20,10 @@ import {
   Globe,
   BarChart3
 } from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
 const ZionAiVideoGenerator = () => {
-  const features = [
     {
       title: "AI-Powered Script Generation",
       description: "Generate compelling video scripts using advanced AI that understands your brand voice and target audience",
@@ -130,7 +127,6 @@ const ZionAiVideoGenerator = () => {
     }
   ];
 
-  const testimonials = [
     {
       name: "Sarah Chen",
       company: "Digital Marketing Pro",

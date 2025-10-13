@@ -1,6 +1,4 @@
 "use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import {
   Receipt,
   Bot,
@@ -14,7 +12,6 @@ import {
 } from "lucide-react";
 
 export default function AIExpenseTracker() {
-  const features = [
     {
       icon: <Brain className="w-12 h-12 text-cyan-400" />,
       title: "AI-Powered Analysis",
@@ -118,7 +115,6 @@ export default function AIExpenseTracker() {
     },
   ];
 
-  const testimonials = [
     {
       name: "Sarah Johnson",
       company: "Freelance Designer",

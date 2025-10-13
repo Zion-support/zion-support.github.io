@@ -1,7 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Users, Globe, Shield, Zap } from 'lucide-react';
 
 export default function Partners() {
   const partners = [
@@ -49,7 +46,6 @@ export default function Partners() {
     }
   ];
 
-  const benefits = [
     {
       icon: <Users className="w-8 h-8" />,
       title: "Joint Marketing",

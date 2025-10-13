@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
 import { 
   Shield, 
   Lock, 
@@ -21,7 +20,6 @@ import {
   Network,
   FileText
 } from 'lucide-react';
-import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
@@ -140,7 +138,6 @@ const CybersecuritySolutions = () => {
     }
   ];
 
-  const testimonials = [
     {
       name: "Jennifer Martinez",
       company: "Financial Services Inc",
@@ -167,7 +164,6 @@ const CybersecuritySolutions = () => {
     }
   ];
 
-  const stats = [
     { number: "1000+", label: "Security Incidents Prevented", icon: <Shield className="w-6 h-6" /> },
     { number: "99.9%", label: "Threat Detection Accuracy", icon: <Award className="w-6 h-6" /> },
     { number: "24/7", label: "Security Monitoring", icon: <Clock className="w-6 h-6" /> },

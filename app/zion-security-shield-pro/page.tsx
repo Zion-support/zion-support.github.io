@@ -1,5 +1,3 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
 import { 
   ArrowRight, 
   Shield, 
@@ -44,7 +42,6 @@ import {
 } from "lucide-react";
 
 export default function ZionSecurityShieldPro() {
-  const features = [
     {
       title: "AI-Powered Threat Detection",
       description: "Advanced machine learning algorithms continuously monitor your network for threats, detecting and preventing attacks before they can cause damage.",
@@ -140,7 +137,6 @@ export default function ZionSecurityShieldPro() {
     }
   ];
 
-  const testimonials = [
     {
       name: "David Martinez",
       company: "Financial Services Corp",

@@ -1,10 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Calculator, Brain, Shield, Zap, ArrowRight, CheckCircle, Star, DollarSign, Smartphone, Globe, Database, Settings, FileText, TrendingUp, AlertCircle, Calendar, Receipt, BarChart3, CreditCard, PieChart, Clock } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
 const ZionAIAccountingSuite = () => {
-  const features = [
     {
       title: "AI-Powered Invoice Processing",
       description: "Automatically extract data from invoices, receipts, and documents with 99.5% accuracy using OCR and machine learning",
@@ -96,7 +93,6 @@ const ZionAIAccountingSuite = () => {
     }
   ];
 
-  const testimonials = [
     {
       name: "Robert Kim",
       company: "Digital Marketing Agency",
@@ -123,7 +119,6 @@ const ZionAIAccountingSuite = () => {
     }
   ];
 
-  const stats = [
     { number: "99.5%", label: "Invoice Accuracy", icon: <Receipt className="w-6 h-6" /> },
     { number: "90%", label: "Time Saved", icon: <Clock className="w-6 h-6" /> },
     { number: "95%", label: "Auto-Categorization", icon: <PieChart className="w-6 h-6" /> },
