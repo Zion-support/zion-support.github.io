@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Circle, Star, Right, 3, 3, 2, as as as as Star as Circle as Right as as Icon, as Icon, as } from 'lucide-react';
+import { Circle, Star, Right, Zap, Shield, Code } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
@@ -45,7 +45,7 @@ const ServicesPage: React.FC = () => {
       name: "Sarah Johnson",
       company: "TechCorp Inc.",
       role: "CTO",
-      content: "Zion Tech Group transformed our infrastructure with their AI solutions. We've seen a 40% increase in efficiency.",
+      content: "Zion Tech Group transformed our infrastructure with their AI solutions. We&apos;ve seen a 40% increase in efficiency.",
       rating: 5
     },
     {
@@ -84,7 +84,7 @@ const ServicesPage: React.FC = () => {
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive AI and IT solutions to transform your business. 
-              From machine learning to cloud migration, we've got you covered.
+              From machine learning to cloud migration, we&apos;ve got you covered.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
@@ -165,7 +165,7 @@ const ServicesPage: React.FC = () => {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-gray-300 mb-8">
-              Let's discuss how our services can help you achieve your goals.
+              Let&apos;s discuss how our services can help you achieve your goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">

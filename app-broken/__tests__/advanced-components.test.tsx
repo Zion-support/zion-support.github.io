@@ -138,7 +138,7 @@ describe('AdvancedErrorBoundary', () => {
     );
 
     expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();
-    // The mock error boundary doesn't actually catch errors, so we just check for the error message
+    // The mock error boundary doesn&apos;t actually catch errors, so we just check for the error message
 
     consoleSpy.mockRestore();
   });
@@ -157,7 +157,7 @@ describe('AdvancedErrorBoundary', () => {
       </MemoryRouter>
     );
 
-    // Since the mock doesn't actually catch errors, we just verify it renders
+    // Since the mock doesn&apos;t actually catch errors, we just verify it renders
     expect(screen.getByText('Test content')).toBeInTheDocument();
     consoleSpy.mockRestore();
   });

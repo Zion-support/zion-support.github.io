@@ -1,30 +1,34 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { } from 'react-router-dom';
-import { Right, Circle, } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Right, Circle } from 'lucide-react';
 
 const SupportPage: React.FC = () => {
   const supportOptions = [
     {
-      icon: title: 'Live Chat',
+      icon: 'Chat',
+      title: 'Live Chat',
       description: 'Get instant help from our support team',
       action: 'Start Chat',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: title: 'Support',
+      icon: 'Phone',
+      title: 'Phone Support',
       description: 'Call us for immediate assistance',
       action: 'Call Now',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: title: 'Email Support',
+      icon: 'Email',
+      title: 'Email Support',
       description: 'Send us a detailed message',
       action: 'Send Email',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: title: 'Documentation',
+      icon: 'Book',
+      title: 'Documentation',
       description: 'Browse our comprehensive guides',
       action: 'View Docs',
       color: 'from-orange-500 to-red-500'
@@ -126,19 +130,19 @@ const SupportPage: React.FC = () => {
             </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center">
-                <className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <Circle className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2"></h3>
                 <p className="text-cyan-400 font-medium">+1 (555) 123-4567</p>
                 <p className="text-gray-400 text-sm">Mon-Fri 9AM-6PM EST</p>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center">
-                <className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <Circle className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Email</h3>
                 <p className="text-cyan-400 font-medium">support@ziontechgroup.com</p>
                 <p className="text-gray-400 text-sm">24/7 Support</p>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 text-center">
-                <className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+                <Circle className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">Address</h3>
                 <p className="text-cyan-400 font-medium">123 Tech Street</p>
                 <p className="text-gray-400 text-sm">San Francisco, CA 94105</p>

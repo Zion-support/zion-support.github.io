@@ -1,38 +1,43 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, 3, Star } from 'lucide-react';
+import { Right, Star, Zap } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 
 const AiServicesPage: React.FC = () => {
   const services = [
     {
-      icon: title: 'AI Consulting',
+      icon: Star,
+      title: 'AI Consulting',
       description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
       color: 'from-purple-500 to-pink-500'
     },
     {
-      icon: 3,
+      icon: Zap,
       title: 'AI Analytics',
       description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      icon: title: 'AI Automation',
+      icon: Star,
+      title: 'AI Automation',
       description: 'Intelligent automation solutions to streamline your business processes.',
       color: 'from-green-500 to-emerald-500'
     },
     {
-      icon: title: 'AI Content Generation',
+      icon: Zap,
+      title: 'AI Content Generation',
       description: 'AI-powered content creation for marketing, documentation, and communication.',
       color: 'from-orange-500 to-red-500'
     },
     {
-      icon: title: 'AI Customer Service',
+      icon: Star,
+      title: 'AI Customer Service',
       description: 'Intelligent chatbots and customer service solutions powered by AI.',
       color: 'from-indigo-500 to-purple-500'
     },
     {
-      icon: title: 'AI ',
+      icon: Zap,
+      title: 'AI Security',
       description: 'AI-powered security solutions to protect your business and data.',
       color: 'from-cyan-500 to-blue-500'
     }
