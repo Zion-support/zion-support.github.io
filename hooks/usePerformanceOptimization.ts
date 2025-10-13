@@ -13,10 +13,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
     enableLazyLoading = true,
     enablePreloading = true,
     enableImageOptimization = true,
-<<<<<<< HEAD
-    // enableCodeSplitting = true,
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-462b
+    enableCodeSplitting = true,
     enableCaching = true,
   } = options;
 
@@ -117,10 +114,10 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
           .then((registration) => {
-            console.log('SW registered: ', registration);
+            // Service worker registered successfully
           })
           .catch((registrationError) => {
-            console.log('SW registration failed: ', registrationError);
+            // Service worker registration failed
           });
       });
     }
@@ -135,7 +132,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
       const observer = new PerformanceObserver((list) => {
         for (const entry of list.getEntries()) {
           if (entry.duration > 50) {
-            console.warn('Long task detected:', entry);
+            // Long task detected - consider optimization
           }
         }
       });
@@ -155,7 +152,7 @@ export const usePerformanceOptimization = (options: PerformanceOptimizationOptio
         const totalMB = Math.round(memory.totalJSHeapSize / 1048576);
         
         if (usedMB / totalMB > 0.8) {
-          console.warn('High memory usage detected:', { usedMB, totalMB });
+          // High memory usage detected - consider optimization
         }
       };
       
