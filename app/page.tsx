@@ -176,7 +176,6 @@ const HomePage = () => {
   ];
 
   return (
-<<<<<<< HEAD
     <PerformanceOptimizer>
       <EnhancedAccessibility>
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -184,14 +183,6 @@ const HomePage = () => {
             title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
             description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
             keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
-            canonical="https://ziontechgroup.com"
-          />
-=======
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
         canonical="https://ziontechgroup.com"
         structuredData={structuredData}
       />
@@ -210,7 +201,6 @@ const HomePage = () => {
           }
         }} 
       />
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 
       {/* Main Content */}
       <main id="main-content" role="main" aria-label="Main content">

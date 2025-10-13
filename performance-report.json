@@ -1,28 +1,10 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T09:02:12.194Z",
-  "buildStats": {
-    "totalFiles": 17,
-    "totalSize": 531352,
-    "jsFiles": 14,
-    "jsSize": 522390,
-=======
-  "timestamp": "2025-10-13T09:04:40.055Z",
+  "timestamp": "2025-10-13T09:52:00.058Z",
   "buildStats": {
     "totalFiles": 18,
-    "totalSize": 576758,
+    "totalSize": 605707,
     "jsFiles": 14,
-    "jsSize": 555173,
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
-=======
-  "timestamp": "2025-10-13T09:08:10.314Z",
-  "buildStats": {
-    "totalFiles": 18,
-    "totalSize": 558046,
-    "jsFiles": 14,
-    "jsSize": 535049,
->>>>>>> cursor/website-audit-and-update-with-deployment-6c87
+    "jsSize": 582710,
     "cssFiles": 1,
     "cssSize": 1811,
     "imageFiles": 0,

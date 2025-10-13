@@ -53,6 +53,9 @@ const Footer: React.FC = () => {
     { name: "Contact", path: "/contact" },
     { name: "Demo", path: "/demo" },
     { name: "Consultation", path: "/consultation" },
+    { name: "Support", path: "/support" },
+    { name: "Blog", path: "/blog" },
+    { name: "Tutorials", path: "/tutorials" },
   ];
 
   const services = [
@@ -60,10 +63,21 @@ const Footer: React.FC = () => {
     { name: "AI Cybersecurity", path: "/ai-cybersecurity" },
     { name: "AI Content Generation", path: "/ai-content-generation" },
     { name: "AI Customer Support", path: "/ai-customer-support" },
+    { name: "AI Data Analytics", path: "/ai-data-analytics" },
+    { name: "AI Marketing Automation", path: "/ai-marketing-automation" },
+    { name: "AI Predictive Analytics", path: "/ai-predictive-analytics" },
+    { name: "AI Voice Assistant", path: "/ai-voice-assistant" },
+  ];
+
+  const itServices = [
     { name: "Cloud Migration", path: "/cloud-migration" },
     { name: "Web Development", path: "/web-development" },
     { name: "DevOps", path: "/devops" },
     { name: "IT Consulting", path: "/it-consulting" },
+    { name: "Network Security", path: "/network-security" },
+    { name: "Custom Software", path: "/custom-software" },
+    { name: "System Integration", path: "/system-integration" },
+    { name: "Mobile Development", path: "/mobile-development" },
   ];
 
   const microSaasServices = [
@@ -107,7 +121,7 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
@@ -158,6 +172,24 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold text-white mb-4">AI Services</h3>
             <ul className="space-y-2">
               {services.map((service) => (
+                <li key={service.name}>
+                  <Link
+                    to={service.path}
+                    className="text-gray-300 hover:text-cyan-400 transition-colors flex items-center"
+                  >
+                    <ArrowRight className="w-4 h-4 mr-2" />
+                    {service.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-4">IT Services</h3>
+            <ul className="space-y-2">
+              {itServices.map((service) => (
                 <li key={service.name}>
                   <Link
                     to={service.path}

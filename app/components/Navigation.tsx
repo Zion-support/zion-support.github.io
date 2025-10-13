@@ -6,13 +6,8 @@ import {
   Brain, 
   Shield, 
   Zap, 
-<<<<<<< HEAD
-  Globe,
-  ChevronDown,
-=======
   Globe, 
   ChevronDown
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 } from 'lucide-react';
 
 interface NavigationProps {
@@ -56,17 +51,20 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     {
       name: 'AI Services',
       path: '/ai-services',
-      icon: <Brain className="w-4 h-4" />
+      icon: <Brain className="w-4 h-4" />,
+      hasDropdown: true
     },
     {
       name: 'Micro SAAS',
       path: '/micro-saas',
-      icon: <Zap className="w-4 h-4" />
+      icon: <Zap className="w-4 h-4" />,
+      hasDropdown: true
     },
     {
       name: '5G Solutions',
       path: '/5g-solutions',
-      icon: <Globe className="w-4 h-4" />
+      icon: <Globe className="w-4 h-4" />,
+      hasDropdown: true
     },
     {
       name: 'Contact',
@@ -108,6 +106,105 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
     }
   ];
 
+  const aiServicesDropdownItems = [
+    {
+      name: 'AI Analytics',
+      path: '/ai-analytics',
+      description: 'Advanced data analytics and insights'
+    },
+    {
+      name: 'AI Content Generation',
+      path: '/ai-content-generation',
+      description: 'AI-powered content creation'
+    },
+    {
+      name: 'AI Customer Support',
+      path: '/ai-customer-support',
+      description: 'Intelligent customer service'
+    },
+    {
+      name: 'AI Cybersecurity',
+      path: '/ai-cybersecurity',
+      description: 'AI-powered security solutions'
+    },
+    {
+      name: 'AI Data Analytics',
+      path: '/ai-data-analytics',
+      description: 'Advanced data processing'
+    },
+    {
+      name: 'AI Marketing Automation',
+      path: '/ai-marketing-automation',
+      description: 'Automated marketing campaigns'
+    }
+  ];
+
+  const microSaasDropdownItems = [
+    {
+      name: 'Zion Analytics Pro',
+      path: '/zion-analytics-pro',
+      description: 'AI-powered business intelligence'
+    },
+    {
+      name: 'Zion AI CRM Pro',
+      path: '/zion-ai-crm-pro',
+      description: 'Intelligent customer management'
+    },
+    {
+      name: 'Zion AI Video Generator',
+      path: '/zion-ai-video-generator',
+      description: 'AI-powered video creation'
+    },
+    {
+      name: 'Zion AI Marketing',
+      path: '/zion-ai-marketing-automation',
+      description: 'Automated marketing solutions'
+    },
+    {
+      name: 'Zion Security Shield',
+      path: '/zion-security-shield-pro',
+      description: 'Advanced cybersecurity protection'
+    },
+    {
+      name: 'Zion Cloud Vault',
+      path: '/zion-cloud-vault-pro',
+      description: 'Secure cloud storage solution'
+    }
+  ];
+
+  const fiveGSolutionsDropdownItems = [
+    {
+      name: '5G Network Infrastructure',
+      path: '/5g-network-infrastructure',
+      description: 'Complete 5G network setup'
+    },
+    {
+      name: '5G Edge Computing',
+      path: '/5g-edge-computing',
+      description: 'Edge computing solutions'
+    },
+    {
+      name: '5G IoT Solutions',
+      path: '/5g-iot-solutions',
+      description: 'Internet of Things integration'
+    },
+    {
+      name: '5G Smart City',
+      path: '/5g-smart-city-solutions',
+      description: 'Smart city infrastructure'
+    },
+    {
+      name: '5G Private Networks',
+      path: '/5g-private-networks',
+      description: 'Private 5G network solutions'
+    },
+    {
+      name: '5G Mobile Apps',
+      path: '/5g-mobile-applications',
+      description: '5G-enabled mobile applications'
+    }
+  ];
+
   return (
     <nav className="bg-slate-900/95 backdrop-blur-sm border-b border-cyan-500/20 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,13 +236,22 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                   )}
                 </Link>
                 
-                {/* Services Dropdown */}
+                {/* Dropdown Menus */}
                 {item.hasDropdown && (
                   <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
                     <div className="p-4">
-                      <h3 className="text-white font-semibold mb-3 text-sm">Popular Services</h3>
+                      <h3 className="text-white font-semibold mb-3 text-sm">
+                        {item.name === 'Services' ? 'Popular Services' : 
+                         item.name === 'AI Services' ? 'AI Solutions' :
+                         item.name === 'Micro SAAS' ? 'Micro SAAS Products' :
+                         item.name === '5G Solutions' ? '5G Solutions' : 'Services'}
+                      </h3>
                       <div className="grid grid-cols-1 gap-2">
-                        {serviceDropdownItems.map((service) => (
+                        {(item.name === 'Services' ? serviceDropdownItems :
+                          item.name === 'AI Services' ? aiServicesDropdownItems :
+                          item.name === 'Micro SAAS' ? microSaasDropdownItems :
+                          item.name === '5G Solutions' ? fiveGSolutionsDropdownItems :
+                          serviceDropdownItems).map((service) => (
                           <Link
                             key={service.name}
                             to={service.path}
@@ -162,10 +268,10 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                       </div>
                       <div className="mt-3 pt-3 border-t border-cyan-500/20">
                         <Link
-                          to="/services"
+                          to={item.path}
                           className="block text-center text-cyan-400 hover:text-cyan-300 font-medium text-sm transition-colors"
                         >
-                          View All Services →
+                          View All {item.name} →
                         </Link>
                       </div>
                     </div>
