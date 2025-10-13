@@ -192,8 +192,7 @@ const FiveGPrivateNetworksPage = React.lazy(
 const FiveGSmartCitySolutionsPage = React.lazy(
   () => import("./app/5g-smart-city-solutions/page"),
 );
-const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
-const FiveG5gIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
+  const FiveG5gIotSolutionsPage = React.lazy(() => import("./app/5g-iot-solutions/page"));
 const AccessibilityPage = React.lazy(() => import("./app/accessibility/page"));
 const AccessibilityPagePage = React.lazy(() => import("./app/accessibility-page/page"));
 const AdvancedSecuritySuitePage = React.lazy(() => import("./app/advanced-security-suite/page"));
