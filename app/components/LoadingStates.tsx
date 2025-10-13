@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { Loader2, Zap, Brain, Shield, Globe } from "lucide-react";
 
@@ -10,45 +9,25 @@ interface LoadingSpinnerProps {
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
   size = "md",
   className = "",
-=======
-import React from 'react';
-import { Loader2, Zap, Brain, Shield, Globe } from 'lucide-react';
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-}
-
-export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  className = '' 
->>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
+    sm: "w-4 h-4",
+    md: "w-6 h-6",
+    lg: "w-8 h-8",
   };
 
   return (
-<<<<<<< HEAD
     <div className="flex items-center justify-center">
       <Loader2 
         className={`${sizeClasses[size]} animate-spin text-cyan-400 ${className}`} 
         aria-label="Loading"
       />
     </div>
-=======
-    <Loader2 
-      className={`animate-spin ${sizeClasses[size]} ${className}`} 
-    />
->>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
   );
 };
 
 interface LoadingPageProps {
   message?: string;
-<<<<<<< HEAD
   showProgress?: boolean;
 }
 
@@ -125,40 +104,6 @@ export const LoadingPage: React.FC<LoadingPageProps> = ({
             Initializing advanced AI systems...
           </p>
         </div>
-=======
-}
-
-export const LoadingPage: React.FC<LoadingPageProps> = ({ 
-  message = 'Loading...' 
-}) => {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        <div className="relative mb-8">
-          {/* Animated background circles */}
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 animate-pulse"></div>
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-24 h-24 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20 animate-pulse delay-1000"></div>
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-r from-pink-500/20 to-cyan-500/20 animate-pulse delay-2000"></div>
-          </div>
-          
-          {/* Main spinner */}
-          <div className="relative z-10">
-            <LoadingSpinner size="lg" className="text-cyan-400" />
-          </div>
-        </div>
-        
-        <h2 className="text-2xl font-bold text-white mb-2">
-          {message}
-        </h2>
-        <p className="text-gray-300">
-          Please wait while we prepare everything for you...
-        </p>
->>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
       </div>
     </div>
   );

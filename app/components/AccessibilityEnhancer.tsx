@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-<<<<<<< HEAD
 import { Eye, EyeOff, Volume2, VolumeX, Type, Contrast } from 'lucide-react';
 
 interface AccessibilitySettings {
@@ -10,7 +9,11 @@ interface AccessibilitySettings {
   focusVisible: boolean;
 }
 
-const AccessibilityEnhancer: React.FC = () => {
+interface AccessibilityEnhancerProps {
+  children?: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
   const [settings, setSettings] = useState<AccessibilitySettings>({
     highContrast: false,
     largeText: false,
@@ -28,56 +31,24 @@ const AccessibilityEnhancer: React.FC = () => {
       setSettings(JSON.parse(savedSettings));
     }
 
-    // Apply initial settings
-    applyAccessibilitySettings(settings);
-  }, []);
-
-  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
-    const root = document.documentElement;
-    
-    // High contrast mode
-    if (newSettings.highContrast) {
-      root.classList.add('high-contrast');
-    } else {
-      root.classList.remove('high-contrast');
-    }
-
-    // Large text mode
-    if (newSettings.largeText) {
-      root.classList.add('large-text');
-    } else {
-      root.classList.remove('large-text');
-=======
-
-interface AccessibilityEnhancerProps {
-  children: React.ReactNode;
-}
-
-const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
-  const [isHighContrast, setIsHighContrast] = useState(false);
-  const [isLargeText, setIsLargeText] = useState(false);
-  const [isReducedMotion, setIsReducedMotion] = useState(false);
-  const [focusVisible, setFocusVisible] = useState(false);
-
-  useEffect(() => {
     // Check for user preferences
     const checkPreferences = () => {
       // High contrast mode
       if (window.matchMedia('(prefers-contrast: high)').matches) {
-        setIsHighContrast(true);
+        setSettings(prev => ({ ...prev, highContrast: true }));
         document.documentElement.classList.add('high-contrast');
       }
 
       // Reduced motion
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        setIsReducedMotion(true);
+        setSettings(prev => ({ ...prev, reducedMotion: true }));
         document.documentElement.classList.add('reduced-motion');
       }
 
       // Large text preference
       const savedLargeText = localStorage.getItem('large-text');
       if (savedLargeText === 'true') {
-        setIsLargeText(true);
+        setSettings(prev => ({ ...prev, largeText: true }));
         document.documentElement.classList.add('large-text');
       }
     };
@@ -89,7 +60,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     const handleHighContrastChange = (e: MediaQueryListEvent) => {
-      setIsHighContrast(e.matches);
+      setSettings(prev => ({ ...prev, highContrast: e.matches }));
       if (e.matches) {
         document.documentElement.classList.add('high-contrast');
       } else {
@@ -98,7 +69,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
 
     const handleReducedMotionChange = (e: MediaQueryListEvent) => {
-      setIsReducedMotion(e.matches);
+      setSettings(prev => ({ ...prev, reducedMotion: e.matches }));
       if (e.matches) {
         document.documentElement.classList.add('reduced-motion');
       } else {
@@ -112,13 +83,13 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     // Keyboard navigation enhancement
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
-        setFocusVisible(true);
+        setSettings(prev => ({ ...prev, focusVisible: true }));
         document.body.classList.add('keyboard-navigation');
       }
     };
 
     const handleMouseDown = () => {
-      setFocusVisible(false);
+      setSettings(prev => ({ ...prev, focusVisible: false }));
       document.body.classList.remove('keyboard-navigation');
     };
 
@@ -148,20 +119,23 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
   }, []);
 
-  const toggleLargeText = () => {
-    const newValue = !isLargeText;
-    setIsLargeText(newValue);
-    localStorage.setItem('large-text', newValue.toString());
+  const applyAccessibilitySettings = (newSettings: AccessibilitySettings) => {
+    const root = document.documentElement;
     
-    if (newValue) {
-      document.documentElement.classList.add('large-text');
+    // High contrast mode
+    if (newSettings.highContrast) {
+      root.classList.add('high-contrast');
     } else {
-      document.documentElement.classList.remove('large-text');
->>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
+      root.classList.remove('high-contrast');
     }
-  };
 
-<<<<<<< HEAD
+    // Large text mode
+    if (newSettings.largeText) {
+      root.classList.add('large-text');
+    } else {
+      root.classList.remove('large-text');
+    }
+
     // Reduced motion
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion');
@@ -196,22 +170,20 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
     };
     setSettings(defaultSettings);
     applyAccessibilitySettings(defaultSettings);
-=======
+  };
+
+  const toggleLargeText = () => {
+    updateSetting('largeText', !settings.largeText);
+  };
+
   const toggleHighContrast = () => {
-    const newValue = !isHighContrast;
-    setIsHighContrast(newValue);
-    
-    if (newValue) {
-      document.documentElement.classList.add('high-contrast');
-    } else {
-      document.documentElement.classList.remove('high-contrast');
-    }
->>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
+    updateSetting('highContrast', !settings.highContrast);
   };
 
   return (
     <>
-<<<<<<< HEAD
+      {children}
+      
       {/* Accessibility Toggle Button */}
       <button
         onClick={() => setIsVisible(!isVisible)}
@@ -348,73 +320,6 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
 
       {/* CSS for accessibility features */}
       <style jsx global>{`
-        .high-contrast {
-          --tw-bg-opacity: 1;
-          --tw-text-opacity: 1;
-        }
-        
-        .high-contrast * {
-          background-color: var(--tw-bg-opacity) !important;
-          color: var(--tw-text-opacity) !important;
-        }
-        
-        .large-text {
-          font-size: 1.125rem;
-        }
-        
-        .large-text h1 { font-size: 2.5rem; }
-        .large-text h2 { font-size: 2rem; }
-        .large-text h3 { font-size: 1.75rem; }
-        .large-text h4 { font-size: 1.5rem; }
-        .large-text h5 { font-size: 1.25rem; }
-        .large-text h6 { font-size: 1.125rem; }
-        
-        .reduced-motion * {
-          animation-duration: 0.01ms !important;
-          animation-iteration-count: 1 !important;
-          transition-duration: 0.01ms !important;
-        }
-        
-        .focus-visible *:focus {
-          outline: 2px solid #8b5cf6 !important;
-          outline-offset: 2px !important;
-        }
-      `}</style>
-    </>
-  );
-};
-
-export default AccessibilityEnhancer;
-=======
-      {children}
-      
-      {/* Accessibility Controls */}
-      <div className="accessibility-controls fixed bottom-4 left-4 z-50 space-y-2">
-        <button
-          onClick={toggleLargeText}
-          className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
-          title={isLargeText ? 'Disable large text' : 'Enable large text'}
-          aria-label={isLargeText ? 'Disable large text' : 'Enable large text'}
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-        
-        <button
-          onClick={toggleHighContrast}
-          className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
-          title={isHighContrast ? 'Disable high contrast' : 'Enable high contrast'}
-          aria-label={isHighContrast ? 'Disable high contrast' : 'Enable high contrast'}
-        >
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </button>
-      </div>
-
-      {/* Skip Links Styles */}
-      <style jsx>{`
         .skip-links {
           position: absolute;
           top: -40px;
@@ -458,22 +363,22 @@ export default AccessibilityEnhancer;
           font-size: 1.125rem;
         }
         
-        .large-text h1 {
-          font-size: 2.5rem;
-        }
-        
-        .large-text h2 {
-          font-size: 2rem;
-        }
-        
-        .large-text h3 {
-          font-size: 1.75rem;
-        }
+        .large-text h1 { font-size: 2.5rem; }
+        .large-text h2 { font-size: 2rem; }
+        .large-text h3 { font-size: 1.75rem; }
+        .large-text h4 { font-size: 1.5rem; }
+        .large-text h5 { font-size: 1.25rem; }
+        .large-text h6 { font-size: 1.125rem; }
         
         .reduced-motion * {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
+        }
+        
+        .focus-visible *:focus {
+          outline: 2px solid #8b5cf6 !important;
+          outline-offset: 2px !important;
         }
       `}</style>
     </>
@@ -481,4 +386,3 @@ export default AccessibilityEnhancer;
 };
 
 export default AccessibilityEnhancer;
->>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72

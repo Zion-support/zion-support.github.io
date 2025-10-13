@@ -3,15 +3,6 @@ import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 
 interface SEOOptimizerProps {
-<<<<<<< HEAD
-  title?: string
-  description?: string
-  keywords?: string
-  canonical?: string
-  ogImage?: string
-  structuredData?: any
-  noIndex?: boolean
-=======
   title?: string;
   description?: string;
   keywords?: string;
@@ -19,7 +10,6 @@ interface SEOOptimizerProps {
   ogImage?: string;
   noIndex?: boolean;
   structuredData?: any;
->>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
 }
 
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
@@ -28,11 +18,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   keywords = "AI solutions, IT services, cybersecurity, cloud computing, digital transformation, technology services, Zion Tech Group, machine learning, 5G solutions, micro SaaS",
   canonical,
   ogImage = "https://ziontechgroup.com/og-image.jpg",
-<<<<<<< HEAD
-  structuredData,
-  noIndex = false
-}: SEOOptimizerProps) => {
-=======
   noIndex = false,
   structuredData
 }) => {
@@ -76,7 +61,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
   };
 
   // Default structured data
->>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -105,7 +89,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       "https://linkedin.com/company/ziontechgroup",
       "https://twitter.com/ziontechgroup",
       "https://github.com/ziontechgroup"
-<<<<<<< HEAD
     ],
     "service": [
       {
@@ -128,28 +111,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         "name": "Micro SaaS Solutions",
         "description": "Ready-to-use software solutions for immediate deployment and business growth"
       }
-    ]
-  }
-
-  const finalStructuredData = structuredData || defaultStructuredData
-
-  useEffect(() => {
-    // Add structured data for better SEO
-    const script = document.createElement('script')
-    script.type = 'application/ld+json'
-    script.text = JSON.stringify(finalStructuredData)
-    script.id = 'seo-structured-data'
-    document.head.appendChild(script)
-
-    // Cleanup
-    return () => {
-      const existingScript = document.getElementById('seo-structured-data')
-      if (existingScript) {
-        existingScript.remove()
-      }
-    }
-  }, [finalStructuredData])
-=======
     ]
   };
 
@@ -212,7 +173,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       });
     }
   }, [title, currentUrl]);
->>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
 
   return (
     <Helmet>
@@ -239,7 +199,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={finalCanonical} />
->>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
@@ -251,11 +210,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       
       {/* Twitter Card */}
       <meta name="twitter:card" content="summary_large_image" />
-<<<<<<< HEAD
-      <meta name="twitter:url" content={canonical || "https://ziontechgroup.com"} />
-=======
       <meta name="twitter:url" content={finalCanonical} />
->>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={ogImage} />
@@ -269,8 +224,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-<<<<<<< HEAD
-=======
       
       {/* Language and Geo Tags */}
       <meta name="language" content="en-US" />
@@ -301,7 +254,6 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <link rel="dns-prefetch" href="//fonts.googleapis.com" />
       <link rel="dns-prefetch" href="//fonts.gstatic.com" />
       <link rel="dns-prefetch" href="//www.google-analytics.com" />
->>>>>>> 21551cb181cdeee46dca6404d5278e39d7edab72
     </Helmet>
   );
 };
