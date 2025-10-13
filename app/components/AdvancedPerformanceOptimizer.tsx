@@ -1,6 +1,6 @@
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
-import { Zap, CheckCircle, AlertTriangle, Settings, Activity } from 'lucide-react';
+import { Zap, Settings, Activity } from 'lucide-react';
 
 interface OptimizationSettings {
   imageOptimization: boolean;

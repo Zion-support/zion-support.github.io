@@ -110,23 +110,8 @@ const PerformanceMonitor: React.FC = () => {
           <div className="space-y-3 text-sm">
             <div className="flex justify-between items-center">
               <span className="text-gray-600">Load Time:</span>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
-=======
               <span className={`font-mono ${getMetricColor(metrics.loadTime || 0, { good: 1000, poor: 3000 })}`}>
                 {metrics.loadTime?.toFixed(0) || 'N/A'}ms
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
-=======
-              <span className={`font-mono ${metrics.loadTime ? getMetricColor(metrics.loadTime, { good: 1000, poor: 3000 }) : 'text-gray-400'}`}>
-                {metrics.loadTime ? `${metrics.loadTime.toFixed(0)}ms` : 'N/A'}
->>>>>>> cursor/analyze-improve-and-deploy-application-952e
-=======
-              <span className={`font-mono ${getMetricColor(metrics.loadTime || 0, { good: 1000, poor: 3000 })}`}>
-                {metrics.loadTime?.toFixed(0) || 'N/A'}ms
->>>>>>> cursor/website-audit-and-update-with-deployment-6e33
               </span>
             </div>
             <div className="flex justify-between items-center">

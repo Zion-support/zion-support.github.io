@@ -7,54 +7,39 @@ describe('LoadingSpinner', () => {
   it('renders with default props', () => {
     render(<LoadingSpinner />);
     
-<<<<<<< HEAD
-<<<<<<< HEAD
-    // Check that the spinner icon is rendered
-    const spinner = screen.getByTestId('loading-spinner');
-    expect(spinner).toBeInTheDocument();
-=======
     // Should render the spinner icon but no text by default
     expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
     expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
-=======
-    // Should render the spinner icon but no text by default
-    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
-    expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
->>>>>>> cursor/website-audit-and-update-with-deployment-6e33
   });
 
   it('renders with custom text', () => {
     render(<LoadingSpinner text="Please wait..." />);
     
+    expect(screen.getByTestId('loading-spinner')).toBeInTheDocument();
     expect(screen.getByText('Please wait...')).toBeInTheDocument();
   });
 
-  it('renders with different sizes', () => {
-    const { rerender } = render(<LoadingSpinner size="sm" />);
-    const spinner = screen.getByTestId('loading-spinner');
-    expect(spinner).toHaveClass('w-4 h-4');
-
-    rerender(<LoadingSpinner size="md" />);
-    expect(spinner).toHaveClass('w-6 h-6');
-
-    rerender(<LoadingSpinner size="lg" />);
-    expect(spinner).toHaveClass('w-8 h-8');
-  });
-
-  it('renders without text when text is empty', () => {
-    render(<LoadingSpinner text="" />);
+  it('renders with custom size', () => {
+    render(<LoadingSpinner size="large" />);
     
-    // Check that the spinner icon is rendered but no text
     const spinner = screen.getByTestId('loading-spinner');
     expect(spinner).toBeInTheDocument();
-    expect(screen.queryByText('Loading...')).not.toBeInTheDocument();
+    expect(spinner).toHaveClass('w-12', 'h-12');
+  });
+
+  it('renders with custom color', () => {
+    render(<LoadingSpinner color="red" />);
+    
+    const spinner = screen.getByTestId('loading-spinner');
+    expect(spinner).toBeInTheDocument();
+    expect(spinner).toHaveClass('text-red-500');
   });
 
   it('applies custom className', () => {
     render(<LoadingSpinner className="custom-class" />);
     
-    const container = screen.getByTestId('loading-spinner').parentElement;
-    expect(container).toHaveClass('custom-class');
+    const spinner = screen.getByTestId('loading-spinner');
+    expect(spinner).toBeInTheDocument();
+    expect(spinner).toHaveClass('custom-class');
   });
 });
