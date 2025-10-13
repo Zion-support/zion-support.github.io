@@ -4,25 +4,34 @@ interface ImageOptimizerProps {
   src: string;
   alt: string;
   className?: string;
-  width?: number;
-  height?: number;
+  lazy?: boolean;
+  quality?: number;
+  format?: 'webp' | 'jpeg' | 'png';
+  placeholder?: string;
 }
 
 export default function ImageOptimizer({ 
   src, 
   alt, 
   className = '', 
-  width, 
-  height 
+  lazy = true,
+  quality,
+  format,
+  placeholder
 }: ImageOptimizerProps) {
+  // Note: quality, format, and placeholder are available for future implementation
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _unused = { quality, format, placeholder };
+  
   return (
     <img
       src={src}
       alt={alt}
-      className={`optimized-image ${className}`}
-      width={width}
-      height={height}
-      loading="lazy"
+      className={className}
+      loading={lazy ? 'lazy' : 'eager'}
+      style={{
+        backgroundColor: placeholder || '#f3f4f6'
+      }}
     />
   );
 }
