@@ -1,32 +1,63 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Play, Scissors, Zap, Download, Star, Users, Clock, Shield, ArrowRight, CheckCircle, Video, Film, Sparkles } from 'lucide-react';
+import { Code, Zap, Shield, BarChart3, Cloud, GitBranch, Monitor, Settings, Star, ArrowRight, CheckCircle, Activity, Database, Server } from 'lucide-react';
 
-export default function ZionAIVideoEditor() {
+export default function AIPoweredDevOpsAutomation() {
   const features = [
     {
-      title: "AI-Powered Auto-Editing",
-      description: "Automatically edit videos with intelligent scene detection, color correction, and audio enhancement",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "AI-Powered CI/CD Pipeline",
+      description: "Intelligent continuous integration and deployment with automated testing, code quality checks, and smart rollback capabilities",
+      icon: <GitBranch className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-time Collaboration",
-      description: "Work with your team in real-time with live editing, comments, and version control",
-      icon: <Users className="w-6 h-6" />,
+      title: "Automated Infrastructure Management",
+      description: "Self-healing infrastructure with AI-driven scaling, monitoring, and optimization based on real-time performance data",
+      icon: <Server className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Smart Templates",
-      description: "Choose from 1000+ AI-generated templates that adapt to your content automatically",
-      icon: <Film className="w-6 h-6" />,
+      title: "Intelligent Monitoring & Alerting",
+      description: "Advanced anomaly detection and predictive alerting to prevent issues before they impact your systems",
+      icon: <Monitor className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Cloud Rendering",
-      description: "Render videos 10x faster with our cloud infrastructure and GPU acceleration",
+      title: "Security Automation",
+      description: "Automated security scanning, vulnerability assessment, and compliance checking with AI-powered threat detection",
+      icon: <Shield className="w-6 h-6" />,
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const benefits = [
+    {
+      title: "Deployment Speed",
+      value: "10x",
+      description: "Faster deployments with AI-optimized pipelines",
       icon: <Zap className="w-6 h-6" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Uptime Improvement",
+      value: "99.99%",
+      description: "Higher availability with predictive maintenance",
+      icon: <Activity className="w-6 h-6" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Cost Reduction",
+      value: "40%",
+      description: "Lower infrastructure costs through optimization",
+      icon: <BarChart3 className="w-6 h-6" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Security Incidents",
+      value: "85%",
+      description: "Reduction in security vulnerabilities",
+      icon: <Shield className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -34,46 +65,47 @@ export default function ZionAIVideoEditor() {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$299",
       period: "/month",
-      description: "Perfect for content creators and small teams",
+      description: "Perfect for small teams getting started with DevOps automation",
       features: [
-        "Up to 10 hours of video per month",
-        "Basic AI editing tools",
-        "HD export quality",
-        "5GB cloud storage",
-        "Email support"
+        "Up to 5 applications",
+        "Basic CI/CD pipelines",
+        "Standard monitoring",
+        "Email support",
+        "Cloud deployment (AWS/Azure/GCP)"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$799",
       period: "/month",
-      description: "Advanced features for professional video editors",
+      description: "Advanced features for growing development teams",
       features: [
-        "Unlimited video hours",
-        "Advanced AI editing suite",
-        "4K/8K export quality",
-        "100GB cloud storage",
-        "Real-time collaboration",
+        "Up to 25 applications",
+        "Advanced AI automation",
+        "Comprehensive monitoring",
         "Priority support",
-        "Custom branding"
+        "Multi-cloud deployment",
+        "Custom integrations",
+        "Team collaboration tools"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$1,999",
       period: "/month",
       description: "Complete solution for large organizations",
       features: [
+        "Unlimited applications",
         "Everything in Professional",
-        "Unlimited cloud storage",
-        "Advanced analytics",
-        "API access",
+        "Advanced AI models",
+        "Custom reporting & analytics",
         "Dedicated account manager",
-        "Custom integrations",
+        "On-premise deployment",
+        "White-label options",
         "SLA guarantee"
       ],
       popular: false
@@ -82,42 +114,42 @@ export default function ZionAIVideoEditor() {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      company: "Creative Studio Pro",
-      role: "Video Director",
-      content: "Zion AI Video Editor has revolutionized our workflow. We can now produce 3x more content with the same team.",
+      name: "Alex Chen",
+      company: "FinTech Startup",
+      role: "CTO",
+      content: "Zion's AI DevOps automation has revolutionized our deployment process. We've reduced deployment time by 90% and eliminated manual errors completely.",
       rating: 5,
-      avatar: "SC"
+      avatar: "AC"
     },
     {
-      name: "Marcus Johnson",
-      company: "Digital Marketing Agency",
-      role: "Creative Director",
-      content: "The AI auto-editing feature saves us hours every day. The quality is incredible and our clients love the results.",
+      name: "Sarah Johnson",
+      company: "E-commerce Platform",
+      role: "DevOps Lead",
+      content: "The intelligent monitoring and auto-scaling features are incredible. Our infrastructure now self-optimizes based on traffic patterns.",
       rating: 5,
-      avatar: "MJ"
+      avatar: "SJ"
     },
     {
-      name: "Elena Rodriguez",
-      company: "E-learning Platform",
-      role: "Content Manager",
-      content: "Perfect for educational content. The templates are professional and the collaboration features are game-changing.",
+      name: "Michael Rodriguez",
+      company: "SaaS Company",
+      role: "VP of Engineering",
+      content: "The security automation has given us peace of mind. We've caught and fixed vulnerabilities before they became issues.",
       rating: 5,
-      avatar: "ER"
+      avatar: "MR"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Zion AI Video Editor - Professional AI-Powered Video Editing Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your video editing workflow with Zion AI Video Editor. AI-powered auto-editing, real-time collaboration, smart templates, and cloud rendering. Starting at $29/month." />
-        <meta name="keywords" content="AI video editor, video editing software, cloud video editing, AI video templates, video collaboration, professional video editing" />
-        <meta property="og:title" content="Zion AI Video Editor - Professional AI-Powered Video Editing Platform" />
-        <meta property="og:description" content="Transform your video editing workflow with AI-powered tools, real-time collaboration, and cloud rendering." />
+        <title>AI-Powered DevOps Automation - Intelligent CI/CD & Infrastructure Management | Zion Tech Group</title>
+        <meta name="description" content="Transform your DevOps with AI-powered automation. Intelligent CI/CD pipelines, automated infrastructure management, and predictive monitoring. Starting at $299/month." />
+        <meta name="keywords" content="AI DevOps automation, CI/CD automation, infrastructure automation, DevOps AI, automated deployment, intelligent monitoring, DevOps optimization" />
+        <meta property="og:title" content="AI-Powered DevOps Automation - Intelligent CI/CD & Infrastructure Management" />
+        <meta property="og:description" content="Transform your DevOps with AI-powered automation and intelligent infrastructure management." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-video-editor" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-editor" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-powered-devops-automation" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops-automation" />
       </Helmet>
 
       {/* Hero Section */}
@@ -125,23 +157,23 @@ export default function ZionAIVideoEditor() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
-              <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
-              <span className="text-blue-300 font-medium">AI-Powered Video Editing</span>
+              <Code className="w-5 h-5 text-blue-400 mr-2" />
+              <span className="text-blue-300 font-medium">AI-Powered DevOps</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Zion AI Video Editor
+                AI-Powered DevOps Automation
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional video editing powered by artificial intelligence. Create stunning videos 10x faster with our advanced AI tools, real-time collaboration, and cloud rendering.
+              Transform your DevOps with intelligent automation. AI-powered CI/CD pipelines, self-healing infrastructure, and predictive monitoring for modern development teams.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
-                <Play className="w-5 h-5 mr-2" />
+                <Zap className="w-5 h-5 mr-2" />
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
@@ -149,8 +181,8 @@ export default function ZionAIVideoEditor() {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
-                <Video className="w-5 h-5 mr-2" />
-                Watch Demo
+                <Settings className="w-5 h-5 mr-2" />
+                Schedule Demo
               </Link>
             </div>
           </div>
@@ -159,19 +191,19 @@ export default function ZionAIVideoEditor() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">10x</div>
-              <div className="text-gray-300">Faster Editing</div>
+              <div className="text-gray-300">Faster Deployments</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">1000+</div>
-              <div className="text-gray-300">AI Templates</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">50K+</div>
-              <div className="text-gray-300">Active Users</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
+              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">99.99%</div>
               <div className="text-gray-300">Uptime SLA</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">40%</div>
+              <div className="text-gray-300">Cost Reduction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">85%</div>
+              <div className="text-gray-300">Fewer Incidents</div>
             </div>
           </div>
         </div>
@@ -183,11 +215,11 @@ export default function ZionAIVideoEditor() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Powerful AI Features
+                Intelligent DevOps Features
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge AI technology to create professional videos with minimal effort
+              Leverage AI to automate and optimize your entire DevOps workflow
             </p>
           </div>
 
@@ -208,17 +240,49 @@ export default function ZionAIVideoEditor() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Benefits Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-slate-800/30 to-slate-900/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Simple, Transparent Pricing
+                Measurable Results
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your video editing needs. All plans include our core AI features.
+              See the impact of AI-powered DevOps automation on your organization
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 text-center"
+              >
+                <div className={`inline-flex p-4 rounded-xl bg-gradient-to-r ${benefit.color} mb-4`}>
+                  {benefit.icon}
+                </div>
+                <h3 className="text-3xl font-bold text-white mb-2">{benefit.value}</h3>
+                <h4 className="text-lg font-semibold text-gray-300 mb-2">{benefit.title}</h4>
+                <p className="text-gray-400 text-sm">{benefit.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Choose Your Plan
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Start with our free trial and scale as your team grows
             </p>
           </div>
 
@@ -272,16 +336,16 @@ export default function ZionAIVideoEditor() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-br from-slate-800/30 to-slate-900/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Trusted by Creators Worldwide
+                Trusted by Development Teams
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers are saying about Zion AI Video Editor
+              See what our customers are saying about AI-Powered DevOps Automation
             </p>
           </div>
 
@@ -317,25 +381,25 @@ export default function ZionAIVideoEditor() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Ready to Transform Your Video Editing?
+              Ready to Automate Your DevOps?
             </span>
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of creators who are already using Zion AI Video Editor to produce amazing content.
+            Join hundreds of development teams using AI-powered DevOps automation to accelerate their delivery.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/demo"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
-              <Play className="w-5 h-5 mr-2" />
+              <Zap className="w-5 h-5 mr-2" />
               Start Free Trial
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
             >
-              <Video className="w-5 h-5 mr-2" />
+              <Settings className="w-5 h-5 mr-2" />
               Schedule Demo
             </Link>
           </div>

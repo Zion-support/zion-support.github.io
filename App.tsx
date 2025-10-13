@@ -17,6 +17,7 @@ import EnhancedSEO from "./app/components/EnhancedSEO";
 import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import FuturisticBackgroundEnhanced from "./app/components/FuturisticBackgroundEnhanced";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
@@ -175,6 +176,27 @@ const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
 
+// New Micro SAAS Pages
+const ZionAIVideoEditorPage = React.lazy(
+  () => import("./app/zion-ai-video-editor/page"),
+);
+const ZionAISocialMediaManagerPage = React.lazy(
+  () => import("./app/zion-ai-social-media-manager/page"),
+);
+const ZionAICustomerInsightsProPage = React.lazy(
+  () => import("./app/zion-ai-customer-insights-pro/page"),
+);
+
+// New IT Services Pages
+const AIPoweredDevOpsAutomationPage = React.lazy(
+  () => import("./app/ai-powered-devops-automation/page"),
+);
+
+// New AI Services Pages
+const AIQuantumComputingSolutionsPage = React.lazy(
+  () => import("./app/ai-quantum-computing-solutions/page"),
+);
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
   () => import("./app/5g-data-analytics/page"),
@@ -208,7 +230,7 @@ function App() {
           <AccessibilityEnhancer>
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <FuturisticBackground>
+                <FuturisticBackgroundEnhanced>
                   <Navigation />
                   <Breadcrumb />
                   <main id="main-content" role="main">
@@ -410,6 +432,32 @@ function App() {
                     element={<ZionPerformanceMonitorPage />}
                   />
 
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-video-editor"
+                    element={<ZionAIVideoEditorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-social-media-manager"
+                    element={<ZionAISocialMediaManagerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-customer-insights-pro"
+                    element={<ZionAICustomerInsightsProPage />}
+                  />
+
+                  {/* New IT Services Routes */}
+                  <Route
+                    path="/ai-powered-devops-automation"
+                    element={<AIPoweredDevOpsAutomationPage />}
+                  />
+
+                  {/* New AI Services Routes */}
+                  <Route
+                    path="/ai-quantum-computing-solutions"
+                    element={<AIQuantumComputingSolutionsPage />}
+                  />
+
                   {/* 5G Solutions Routes */}
                   <Route
                     path="/5g-data-analytics"
@@ -451,7 +499,7 @@ function App() {
                   <EnhancedAccessibility>
                     <div></div>
                   </EnhancedAccessibility>
-                </FuturisticBackground>
+                </FuturisticBackgroundEnhanced>
                 <AnalyticsProvider>
                   <div>
                     <PerformanceMonitor />

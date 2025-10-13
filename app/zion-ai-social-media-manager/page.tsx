@@ -1,80 +1,89 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Play, Scissors, Zap, Download, Star, Users, Clock, Shield, ArrowRight, CheckCircle, Video, Film, Sparkles } from 'lucide-react';
+import { Share2, TrendingUp, Calendar, BarChart3, Users, Zap, Target, Clock, Star, ArrowRight, CheckCircle, Smartphone, Instagram, Twitter, Linkedin } from 'lucide-react';
 
-export default function ZionAIVideoEditor() {
+export default function ZionAISocialMediaManager() {
   const features = [
     {
-      title: "AI-Powered Auto-Editing",
-      description: "Automatically edit videos with intelligent scene detection, color correction, and audio enhancement",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "AI Content Generation",
+      description: "Generate engaging posts, captions, and hashtags using advanced AI that understands your brand voice",
+      icon: <Share2 className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-time Collaboration",
-      description: "Work with your team in real-time with live editing, comments, and version control",
-      icon: <Users className="w-6 h-6" />,
+      title: "Smart Scheduling",
+      description: "AI-powered optimal posting times based on your audience behavior and engagement patterns",
+      icon: <Calendar className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Smart Templates",
-      description: "Choose from 1000+ AI-generated templates that adapt to your content automatically",
-      icon: <Film className="w-6 h-6" />,
+      title: "Multi-Platform Management",
+      description: "Manage Instagram, Twitter, LinkedIn, Facebook, and TikTok from one unified dashboard",
+      icon: <Smartphone className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Cloud Rendering",
-      description: "Render videos 10x faster with our cloud infrastructure and GPU acceleration",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive insights and performance tracking with AI-powered recommendations",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
+  ];
+
+  const platforms = [
+    { name: "Instagram", icon: <Instagram className="w-6 h-6" />, color: "from-pink-500 to-purple-500" },
+    { name: "Twitter", icon: <Twitter className="w-6 h-6" />, color: "from-blue-400 to-cyan-400" },
+    { name: "LinkedIn", icon: <Linkedin className="w-6 h-6" />, color: "from-blue-600 to-blue-800" },
+    { name: "Facebook", icon: <Users className="w-6 h-6" />, color: "from-blue-500 to-indigo-500" },
+    { name: "TikTok", icon: <Zap className="w-6 h-6" />, color: "from-black to-gray-800" }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$39",
       period: "/month",
-      description: "Perfect for content creators and small teams",
+      description: "Perfect for small businesses and influencers",
       features: [
-        "Up to 10 hours of video per month",
-        "Basic AI editing tools",
-        "HD export quality",
-        "5GB cloud storage",
+        "Up to 3 social media accounts",
+        "AI content generation (50 posts/month)",
+        "Basic scheduling",
+        "Essential analytics",
         "Email support"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$99",
       period: "/month",
-      description: "Advanced features for professional video editors",
+      description: "Advanced features for growing businesses",
       features: [
-        "Unlimited video hours",
-        "Advanced AI editing suite",
-        "4K/8K export quality",
-        "100GB cloud storage",
-        "Real-time collaboration",
+        "Up to 10 social media accounts",
+        "Unlimited AI content generation",
+        "Advanced scheduling & automation",
+        "Comprehensive analytics",
+        "Hashtag research & optimization",
         "Priority support",
-        "Custom branding"
+        "Team collaboration (3 users)"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$299",
       period: "/month",
       description: "Complete solution for large organizations",
       features: [
+        "Unlimited social media accounts",
         "Everything in Professional",
-        "Unlimited cloud storage",
-        "Advanced analytics",
+        "Advanced AI insights",
+        "Custom reporting",
         "API access",
         "Dedicated account manager",
-        "Custom integrations",
-        "SLA guarantee"
+        "Unlimited team members",
+        "White-label options"
       ],
       popular: false
     }
@@ -82,42 +91,42 @@ export default function ZionAIVideoEditor() {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      company: "Creative Studio Pro",
-      role: "Video Director",
-      content: "Zion AI Video Editor has revolutionized our workflow. We can now produce 3x more content with the same team.",
+      name: "Jessica Martinez",
+      company: "Fashion Brand",
+      role: "Marketing Director",
+      content: "Zion AI Social Media Manager has increased our engagement by 300%. The AI content suggestions are spot-on and save us hours every week.",
       rating: 5,
-      avatar: "SC"
+      avatar: "JM"
     },
     {
-      name: "Marcus Johnson",
-      company: "Digital Marketing Agency",
-      role: "Creative Director",
-      content: "The AI auto-editing feature saves us hours every day. The quality is incredible and our clients love the results.",
+      name: "David Kim",
+      company: "Tech Startup",
+      role: "Growth Manager",
+      content: "The multi-platform management is incredible. We can now maintain a consistent presence across all channels without the hassle.",
       rating: 5,
-      avatar: "MJ"
+      avatar: "DK"
     },
     {
-      name: "Elena Rodriguez",
-      company: "E-learning Platform",
-      role: "Content Manager",
-      content: "Perfect for educational content. The templates are professional and the collaboration features are game-changing.",
+      name: "Amanda Foster",
+      company: "E-commerce Store",
+      role: "Social Media Manager",
+      content: "The analytics and insights are game-changing. We finally understand what content resonates with our audience.",
       rating: 5,
-      avatar: "ER"
+      avatar: "AF"
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Zion AI Video Editor - Professional AI-Powered Video Editing Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your video editing workflow with Zion AI Video Editor. AI-powered auto-editing, real-time collaboration, smart templates, and cloud rendering. Starting at $29/month." />
-        <meta name="keywords" content="AI video editor, video editing software, cloud video editing, AI video templates, video collaboration, professional video editing" />
-        <meta property="og:title" content="Zion AI Video Editor - Professional AI-Powered Video Editing Platform" />
-        <meta property="og:description" content="Transform your video editing workflow with AI-powered tools, real-time collaboration, and cloud rendering." />
+        <title>Zion AI Social Media Manager - AI-Powered Social Media Management Platform | Zion Tech Group</title>
+        <meta name="description" content="Transform your social media strategy with Zion AI Social Media Manager. AI content generation, smart scheduling, multi-platform management, and advanced analytics. Starting at $39/month." />
+        <meta name="keywords" content="AI social media manager, social media automation, AI content generation, social media scheduling, social media analytics, multi-platform management" />
+        <meta property="og:title" content="Zion AI Social Media Manager - AI-Powered Social Media Management Platform" />
+        <meta property="og:description" content="Transform your social media strategy with AI-powered content generation and management tools." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-video-editor" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-editor" />
+        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-social-media-manager" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-social-media-manager" />
       </Helmet>
 
       {/* Hero Section */}
@@ -125,23 +134,23 @@ export default function ZionAIVideoEditor() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
-              <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
-              <span className="text-blue-300 font-medium">AI-Powered Video Editing</span>
+              <TrendingUp className="w-5 h-5 text-blue-400 mr-2" />
+              <span className="text-blue-300 font-medium">AI-Powered Social Media</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Zion AI Video Editor
+                Zion AI Social Media Manager
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional video editing powered by artificial intelligence. Create stunning videos 10x faster with our advanced AI tools, real-time collaboration, and cloud rendering.
+              Master social media with AI-powered content generation, smart scheduling, and comprehensive analytics. Manage all platforms from one dashboard.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
-                <Play className="w-5 h-5 mr-2" />
+                <Share2 className="w-5 h-5 mr-2" />
                 Start Free Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
@@ -149,8 +158,8 @@ export default function ZionAIVideoEditor() {
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
-                <Video className="w-5 h-5 mr-2" />
-                Watch Demo
+                <BarChart3 className="w-5 h-5 mr-2" />
+                View Analytics Demo
               </Link>
             </div>
           </div>
@@ -158,20 +167,20 @@ export default function ZionAIVideoEditor() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">10x</div>
-              <div className="text-gray-300">Faster Editing</div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">300%</div>
+              <div className="text-gray-300">Engagement Boost</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">1000+</div>
-              <div className="text-gray-300">AI Templates</div>
+              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">5</div>
+              <div className="text-gray-300">Platforms Supported</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">50K+</div>
+              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">10K+</div>
               <div className="text-gray-300">Active Users</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime SLA</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">24/7</div>
+              <div className="text-gray-300">AI Monitoring</div>
             </div>
           </div>
         </div>
@@ -187,7 +196,7 @@ export default function ZionAIVideoEditor() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge AI technology to create professional videos with minimal effort
+              Leverage AI to create, schedule, and optimize your social media content across all platforms
             </p>
           </div>
 
@@ -208,17 +217,47 @@ export default function ZionAIVideoEditor() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Platforms Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-slate-800/30 to-slate-900/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Simple, Transparent Pricing
+                All Platforms, One Dashboard
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your video editing needs. All plans include our core AI features.
+              Manage all your social media accounts from a single, powerful interface
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
+            {platforms.map((platform, index) => (
+              <div
+                key={index}
+                className="group p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105 text-center"
+              >
+                <div className={`inline-flex p-4 rounded-xl bg-gradient-to-r ${platform.color} mb-4`}>
+                  {platform.icon}
+                </div>
+                <h3 className="text-lg font-semibold text-white">{platform.name}</h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Choose Your Plan
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Start with our free trial and scale as you grow. All plans include our core AI features.
             </p>
           </div>
 
@@ -272,16 +311,16 @@ export default function ZionAIVideoEditor() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-br from-slate-800/30 to-slate-900/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Trusted by Creators Worldwide
+                Trusted by Marketers Worldwide
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers are saying about Zion AI Video Editor
+              See what our customers are saying about Zion AI Social Media Manager
             </p>
           </div>
 
@@ -317,25 +356,25 @@ export default function ZionAIVideoEditor() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Ready to Transform Your Video Editing?
+              Ready to Transform Your Social Media?
             </span>
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of creators who are already using Zion AI Video Editor to produce amazing content.
+            Join thousands of marketers who are already using Zion AI Social Media Manager to grow their presence.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/demo"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
-              <Play className="w-5 h-5 mr-2" />
+              <Share2 className="w-5 h-5 mr-2" />
               Start Free Trial
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
             >
-              <Video className="w-5 h-5 mr-2" />
+              <BarChart3 className="w-5 h-5 mr-2" />
               Schedule Demo
             </Link>
           </div>

@@ -1,80 +1,105 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { Play, Scissors, Zap, Download, Star, Users, Clock, Shield, ArrowRight, CheckCircle, Video, Film, Sparkles } from 'lucide-react';
+import { Atom, Brain, Zap, Shield, BarChart3, Cpu, Database, Target, Star, ArrowRight, CheckCircle, Activity, Lock, Globe } from 'lucide-react';
 
-export default function ZionAIVideoEditor() {
+export default function AIQuantumComputingSolutions() {
   const features = [
     {
-      title: "AI-Powered Auto-Editing",
-      description: "Automatically edit videos with intelligent scene detection, color correction, and audio enhancement",
-      icon: <Scissors className="w-6 h-6" />,
+      title: "Quantum Machine Learning",
+      description: "Leverage quantum algorithms for exponentially faster machine learning and pattern recognition across massive datasets",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-time Collaboration",
-      description: "Work with your team in real-time with live editing, comments, and version control",
-      icon: <Users className="w-6 h-6" />,
+      title: "Quantum Cryptography",
+      description: "Unbreakable encryption using quantum key distribution and quantum-resistant security protocols",
+      icon: <Shield className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Smart Templates",
-      description: "Choose from 1000+ AI-generated templates that adapt to your content automatically",
-      icon: <Film className="w-6 h-6" />,
+      title: "Quantum Optimization",
+      description: "Solve complex optimization problems in logistics, finance, and resource allocation with quantum algorithms",
+      icon: <Target className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Cloud Rendering",
-      description: "Render videos 10x faster with our cloud infrastructure and GPU acceleration",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Quantum Simulation",
+      description: "Simulate molecular structures, chemical reactions, and physical systems with unprecedented accuracy",
+      icon: <Atom className="w-6 h-6" />,
+      color: "from-orange-500 to-red-500"
+    }
+  ];
+
+  const applications = [
+    {
+      title: "Financial Modeling",
+      description: "Quantum algorithms for portfolio optimization, risk analysis, and high-frequency trading",
+      icon: <BarChart3 className="w-6 h-6" />,
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Drug Discovery",
+      description: "Accelerate pharmaceutical research with quantum molecular simulation and drug design",
+      icon: <Atom className="w-6 h-6" />,
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      title: "Climate Modeling",
+      description: "Advanced climate prediction and environmental impact analysis using quantum computing",
+      icon: <Globe className="w-6 h-6" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Supply Chain Optimization",
+      description: "Optimize complex logistics networks and supply chain operations with quantum algorithms",
+      icon: <Activity className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$29",
+      name: "Research",
+      price: "$2,999",
       period: "/month",
-      description: "Perfect for content creators and small teams",
+      description: "Perfect for research institutions and academic projects",
       features: [
-        "Up to 10 hours of video per month",
-        "Basic AI editing tools",
-        "HD export quality",
-        "5GB cloud storage",
-        "Email support"
+        "Up to 10 quantum computing hours/month",
+        "Basic quantum algorithms",
+        "Standard support",
+        "Research collaboration tools",
+        "Academic pricing available"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$79",
+      name: "Enterprise",
+      price: "$9,999",
       period: "/month",
-      description: "Advanced features for professional video editors",
+      description: "Advanced quantum solutions for large organizations",
       features: [
-        "Unlimited video hours",
-        "Advanced AI editing suite",
-        "4K/8K export quality",
-        "100GB cloud storage",
-        "Real-time collaboration",
+        "Up to 100 quantum computing hours/month",
+        "Advanced quantum algorithms",
         "Priority support",
-        "Custom branding"
+        "Custom quantum applications",
+        "Dedicated quantum engineers",
+        "API access"
       ],
       popular: true
     },
     {
-      name: "Enterprise",
-      price: "$199",
-      period: "/month",
-      description: "Complete solution for large organizations",
+      name: "Custom",
+      price: "Contact",
+      period: "us",
+      description: "Tailored quantum computing solutions",
       features: [
-        "Everything in Professional",
-        "Unlimited cloud storage",
-        "Advanced analytics",
-        "API access",
-        "Dedicated account manager",
-        "Custom integrations",
-        "SLA guarantee"
+        "Unlimited quantum computing access",
+        "Everything in Enterprise",
+        "Custom quantum hardware",
+        "Dedicated quantum team",
+        "White-label solutions",
+        "On-premise deployment"
       ],
       popular: false
     }
@@ -82,26 +107,26 @@ export default function ZionAIVideoEditor() {
 
   const testimonials = [
     {
-      name: "Sarah Chen",
-      company: "Creative Studio Pro",
-      role: "Video Director",
-      content: "Zion AI Video Editor has revolutionized our workflow. We can now produce 3x more content with the same team.",
+      name: "Dr. Sarah Chen",
+      company: "Quantum Research Institute",
+      role: "Director of Quantum Computing",
+      content: "Zion's quantum computing solutions have revolutionized our research capabilities. We've achieved breakthroughs that would have taken years with classical computing.",
       rating: 5,
       avatar: "SC"
     },
     {
       name: "Marcus Johnson",
-      company: "Digital Marketing Agency",
-      role: "Creative Director",
-      content: "The AI auto-editing feature saves us hours every day. The quality is incredible and our clients love the results.",
+      company: "Global Investment Bank",
+      role: "Head of Quantitative Research",
+      content: "The quantum optimization algorithms have transformed our trading strategies. We've seen significant improvements in portfolio performance and risk management.",
       rating: 5,
       avatar: "MJ"
     },
     {
-      name: "Elena Rodriguez",
-      company: "E-learning Platform",
-      role: "Content Manager",
-      content: "Perfect for educational content. The templates are professional and the collaboration features are game-changing.",
+      name: "Dr. Elena Rodriguez",
+      company: "Pharmaceutical Company",
+      role: "Chief Scientific Officer",
+      content: "Quantum molecular simulation has accelerated our drug discovery process by 10x. We're now able to explore chemical spaces that were previously impossible.",
       rating: 5,
       avatar: "ER"
     }
@@ -110,14 +135,14 @@ export default function ZionAIVideoEditor() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>Zion AI Video Editor - Professional AI-Powered Video Editing Platform | Zion Tech Group</title>
-        <meta name="description" content="Transform your video editing workflow with Zion AI Video Editor. AI-powered auto-editing, real-time collaboration, smart templates, and cloud rendering. Starting at $29/month." />
-        <meta name="keywords" content="AI video editor, video editing software, cloud video editing, AI video templates, video collaboration, professional video editing" />
-        <meta property="og:title" content="Zion AI Video Editor - Professional AI-Powered Video Editing Platform" />
-        <meta property="og:description" content="Transform your video editing workflow with AI-powered tools, real-time collaboration, and cloud rendering." />
+        <title>AI Quantum Computing Solutions - Next-Generation Quantum AI Platform | Zion Tech Group</title>
+        <meta name="description" content="Revolutionize your business with AI-powered quantum computing solutions. Quantum machine learning, cryptography, optimization, and simulation. Starting at $2,999/month." />
+        <meta name="keywords" content="quantum computing AI, quantum machine learning, quantum cryptography, quantum optimization, quantum simulation, quantum algorithms" />
+        <meta property="og:title" content="AI Quantum Computing Solutions - Next-Generation Quantum AI Platform" />
+        <meta property="og:description" content="Revolutionize your business with AI-powered quantum computing solutions and advanced quantum algorithms." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ziontechgroup.com/zion-ai-video-editor" />
-        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-editor" />
+        <meta property="og:url" content="https://ziontechgroup.com/ai-quantum-computing-solutions" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-quantum-computing-solutions" />
       </Helmet>
 
       {/* Hero Section */}
@@ -125,32 +150,32 @@ export default function ZionAIVideoEditor() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30 mb-6">
-              <Sparkles className="w-5 h-5 text-blue-400 mr-2" />
-              <span className="text-blue-300 font-medium">AI-Powered Video Editing</span>
+              <Atom className="w-5 h-5 text-blue-400 mr-2" />
+              <span className="text-blue-300 font-medium">Quantum AI Solutions</span>
             </div>
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Zion AI Video Editor
+                AI Quantum Computing Solutions
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Professional video editing powered by artificial intelligence. Create stunning videos 10x faster with our advanced AI tools, real-time collaboration, and cloud rendering.
+              Harness the power of quantum computing combined with artificial intelligence to solve the world's most complex problems. Experience exponential speedup in optimization, simulation, and machine learning.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/demo"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
               >
-                <Play className="w-5 h-5 mr-2" />
-                Start Free Trial
+                <Atom className="w-5 h-5 mr-2" />
+                Start Quantum Trial
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
                 to="/contact"
                 className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
               >
-                <Video className="w-5 h-5 mr-2" />
-                Watch Demo
+                <Brain className="w-5 h-5 mr-2" />
+                Schedule Consultation
               </Link>
             </div>
           </div>
@@ -158,20 +183,20 @@ export default function ZionAIVideoEditor() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">10x</div>
-              <div className="text-gray-300">Faster Editing</div>
+              <div className="text-3xl md:text-4xl font-bold text-blue-400 mb-2">10^18</div>
+              <div className="text-gray-300">Operations/Second</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">1000+</div>
-              <div className="text-gray-300">AI Templates</div>
+              <div className="text-3xl md:text-4xl font-bold text-purple-400 mb-2">1000x</div>
+              <div className="text-gray-300">Faster Processing</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">50K+</div>
-              <div className="text-gray-300">Active Users</div>
+              <div className="text-3xl md:text-4xl font-bold text-pink-400 mb-2">99.9%</div>
+              <div className="text-gray-300">Accuracy Rate</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">99.9%</div>
-              <div className="text-gray-300">Uptime SLA</div>
+              <div className="text-3xl md:text-4xl font-bold text-cyan-400 mb-2">50+</div>
+              <div className="text-gray-300">Quantum Algorithms</div>
             </div>
           </div>
         </div>
@@ -183,11 +208,11 @@ export default function ZionAIVideoEditor() {
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Powerful AI Features
+                Quantum AI Capabilities
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Leverage cutting-edge AI technology to create professional videos with minimal effort
+              Leverage the combined power of quantum computing and artificial intelligence
             </p>
           </div>
 
@@ -208,17 +233,48 @@ export default function ZionAIVideoEditor() {
         </div>
       </section>
 
-      {/* Pricing Section */}
+      {/* Applications Section */}
       <section className="py-20 px-4 bg-gradient-to-br from-slate-800/30 to-slate-900/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Simple, Transparent Pricing
+                Real-World Applications
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the perfect plan for your video editing needs. All plans include our core AI features.
+              Transform industries with quantum computing solutions
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {applications.map((application, index) => (
+              <div
+                key={index}
+                className="group relative p-6 rounded-2xl bg-gradient-to-br from-slate-800/50 to-slate-900/50 border border-slate-700/50 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+              >
+                <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${application.color} mb-4`}>
+                  {application.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-3 text-white">{application.title}</h3>
+                <p className="text-gray-300">{application.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Quantum Computing Plans
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Access cutting-edge quantum computing resources and AI algorithms
             </p>
           </div>
 
@@ -272,16 +328,16 @@ export default function ZionAIVideoEditor() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4">
+      <section className="py-20 px-4 bg-gradient-to-br from-slate-800/30 to-slate-900/30">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Trusted by Creators Worldwide
+                Trusted by Quantum Pioneers
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what our customers are saying about Zion AI Video Editor
+              See what our customers are saying about AI Quantum Computing Solutions
             </p>
           </div>
 
@@ -317,26 +373,26 @@ export default function ZionAIVideoEditor() {
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-              Ready to Transform Your Video Editing?
+              Ready to Enter the Quantum Era?
             </span>
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join thousands of creators who are already using Zion AI Video Editor to produce amazing content.
+            Join the quantum revolution and unlock unprecedented computational power for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/demo"
               className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
             >
-              <Play className="w-5 h-5 mr-2" />
-              Start Free Trial
+              <Atom className="w-5 h-5 mr-2" />
+              Start Quantum Trial
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center px-8 py-4 border border-blue-400 text-blue-400 font-semibold rounded-lg hover:bg-blue-400 hover:text-white transition-all duration-300"
             >
-              <Video className="w-5 h-5 mr-2" />
-              Schedule Demo
+              <Brain className="w-5 h-5 mr-2" />
+              Schedule Consultation
             </Link>
           </div>
         </div>
