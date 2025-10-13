@@ -70,7 +70,7 @@ const Footer = React.memo(() => {
     { name: "Documentation", path: "/docs" },
     { name: "Tutorials", path: "/tutorials" },
     { name: "Demo", path: "/demo" },
-    { name: "Pricing", path: "/pricing" }
+    { name: "Consultation", path: "/consultation" }
   ], []);
 
   const legalLinks = useMemo(() => [
@@ -78,7 +78,6 @@ const Footer = React.memo(() => {
     { name: "Terms of Service", path: "/terms" },
     { name: "Cookie Policy", path: "/cookies" },
     { name: "GDPR Compliance", path: "/gdpr" },
-    { name: "Security", path: "/security" },
     { name: "Sitemap", path: "/sitemap" }
   ], []);
 
@@ -242,10 +241,10 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/ai-cybersecurity"
+                  to="/ai-fraud-detection"
                   className="text-gray-400 hover:text-cyan-400 transition-colors"
                 >
-                  AI Cybersecurity
+                  AI Fraud Detection
                 </Link>
               </li>
             </ul>
@@ -344,18 +343,18 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/zion-data-sync"
+                  to="/zion-ai-neural-interface"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Data Sync
+                  Zion AI Neural Interface
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/zion-project-master"
+                  to="/ai-voice-cloning-studio"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Project Master
+                  AI Voice Cloning Studio
                 </Link>
               </li>
             </ul>
@@ -426,14 +425,6 @@ const Footer = React.memo(() => {
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   Pricing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/consultation"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Consultation
                 </Link>
               </li>
             </ul>
