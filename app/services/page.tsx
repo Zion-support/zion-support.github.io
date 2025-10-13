@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Shield, Cloud, BarChart3, Globe, Zap } from 'lucide-react';
-=======
-import { Brain, Bot, FileText, Shield, Wifi, Cloud, BarChart3, Code, Target, Users, TrendingUp, Globe, Zap, Database, Monitor, Lock, Server, Settings, HardDrive, Phone, Laptop, Headphones, Network, Cpu } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d
+import { Brain, Shield, Cloud, Zap, Database, Smartphone, Globe, BarChart3 } from 'lucide-react';
 
 export default function ServicesPage() {
   const services = [
@@ -30,66 +25,43 @@ export default function ServicesPage() {
       icon: <Zap className="w-8 h-8" />,
       title: "Micro SAAS",
       description: "Ready-to-use software solutions that can transform your business operations immediately.",
-      features: ["AI Tools", "Business Automation", "Quick Deployment", "No Setup Required"]
+      features: ["Quick Deployment", "Custom Solutions", "API Integration", "Scalable Architecture"]
+    },
+    {
+      icon: <Database className="w-8 h-8" />,
+      title: "Data Analytics",
+      description: "Unlock insights from your data with our advanced analytics and business intelligence solutions.",
+      features: ["Data Visualization", "Real-time Analytics", "Predictive Modeling", "Custom Dashboards"]
+    },
+    {
+      icon: <Smartphone className="w-8 h-8" />,
+      title: "Mobile Development",
+      description: "Create powerful mobile applications for iOS and Android with our expert development team.",
+      features: ["Native Apps", "Cross-platform", "UI/UX Design", "App Store Optimization"]
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "5G Solutions",
-      description: "Leverage the power of 5G technology for next-generation connectivity and IoT solutions.",
-      features: ["5G Infrastructure", "IoT Solutions", "Edge Computing", "Smart Cities"]
+      title: "Web Development",
+      description: "Build modern, responsive websites and web applications that drive business growth.",
+      features: ["Responsive Design", "SEO Optimization", "Performance", "Security"]
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
-      title: "Data Analytics",
-      description: "Unlock insights from your data with our advanced analytics and business intelligence solutions.",
-      features: ["Business Intelligence", "Data Visualization", "Predictive Modeling", "Real-time Analytics"]
+      title: "Business Intelligence",
+      description: "Make data-driven decisions with our comprehensive business intelligence and reporting solutions.",
+      features: ["Custom Reports", "Data Integration", "Real-time Dashboards", "Advanced Analytics"]
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-<<<<<<< HEAD
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
-        <meta name="description" content="Comprehensive AI and IT services by Zion Tech Group" />
-      </Helmet>
-      
-      <div className="container mx-auto px-4 py-20">
+    <div className="min-h-screen bg-gray-900 text-white py-20">
+      <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-white mb-8">Our Services</h1>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive technology services designed to accelerate your digital transformation and drive business growth.
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <div key={index} className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105">
-              <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform">
-                {service.icon}
-              </div>
-              <h3 className="text-2xl font-semibold text-white mb-4 group-hover:text-cyan-400 transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-gray-300 mb-6 leading-relaxed">
-                {service.description}
-              </p>
-              <ul className="space-y-2">
-                {service.features.map((feature, featureIndex) => (
-                  <li key={featureIndex} className="flex items-center text-gray-300">
-                    <div className="w-2 h-2 bg-cyan-400 rounded-full mr-3 flex-shrink-0"></div>
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-=======
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+            Our Services
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive range of AI-powered solutions and IT services designed to transform your business
+            Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
           </p>
         </div>
 
@@ -97,72 +69,44 @@ export default function ServicesPage() {
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:border-white/40 transition-all duration-300 hover:transform hover:scale-105 group"
+              className="bg-gray-800 rounded-lg p-6 hover:bg-gray-700 transition-colors duration-300 border border-gray-700 hover:border-blue-500"
             >
-              <div className={`inline-flex p-3 rounded-xl bg-gradient-to-r ${service.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
+              <div className="text-blue-400 mb-4">
                 {service.icon}
               </div>
-              
-              <div className="mb-4">
-                {service.popular && (
-                  <span className="inline-block bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full mb-3">
-                    POPULAR
-                  </span>
-                )}
-                <span className="inline-block bg-white/20 text-white text-xs font-medium px-3 py-1 rounded-full">
-                  {service.category}
-                </span>
-              </div>
-
-              <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-400 transition-all duration-300">
+              <h3 className="text-xl font-semibold mb-3 text-white">
                 {service.title}
               </h3>
-              
-              <p className="text-gray-300 mb-6 leading-relaxed">
+              <p className="text-gray-300 mb-4">
                 {service.description}
               </p>
-
-              <div className="mb-6">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-2xl font-bold text-white">{service.price}</span>
-                  {service.originalPrice && (
-                    <span className="text-lg text-gray-400 line-through">{service.originalPrice}</span>
-                  )}
-                </div>
-              </div>
-
-              <div className="mb-6">
-                <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features:</h4>
-                <ul className="space-y-2">
-                  {service.features.slice(0, 3).map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full mr-3 flex-shrink-0"></div>
-                      {feature}
-                    </li>
-                  ))}
-                  {service.features.length > 3 && (
-                    <li className="text-sm text-gray-400">
-                      +{service.features.length - 3} more features
-                    </li>
-                  )}
-                </ul>
-              </div>
-
-              <a
-                href={service.path}
-                className="block w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl text-center transition-all duration-300 hover:transform hover:scale-105 hover:shadow-lg"
-              >
-                Learn More
-              </a>
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d
+              <ul className="space-y-2">
+                {service.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="text-sm text-gray-400 flex items-center">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mr-3"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-16">
+          <h2 className="text-3xl font-bold mb-6">Ready to Get Started?</h2>
+          <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+            Let's discuss how our services can help transform your business. Contact us today for a free consultation.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300">
+              Get Free Consultation
+            </button>
+            <button className="border border-gray-600 hover:border-gray-500 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300">
+              View Our Portfolio
+            </button>
+          </div>
         </div>
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-e61d

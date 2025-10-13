@@ -1,14 +1,8 @@
 #!/bin/bash
 
-echo "================================================"
-echo "Complete Solution: Fix All Errors and Merge PRs"
-echo "================================================"
-
-# Step 1: Clean all remaining merge conflict markers
-echo "Step 1: Cleaning merge conflict markers..."
-sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' /workspace/app/components/ErrorBoundary.tsx
-sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' /workspace/app/components/UnifiedContentPromotion.tsx
-sed -i '/^<<<<<<< /d; /^=======/d; /^>>>>>>> /d' /workspace/app/contact/page.tsx
+echo "
+sed -i '/^<<<<<<< /d; /^
+sed -i '/^<<<<<<< /d; /^
 
 # Step 2: Verify type-check passes
 echo "Step 2: Running type-check..."

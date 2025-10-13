@@ -10,15 +10,7 @@ in_conflict = False
 i = 0
 while i < len(lines):
     line = lines[i]
-    
-<<<<<<< HEAD
-    if line.startswith('') and in_conflict:
-=======
-    if line.startswith('        in_conflict = True
-        i += 1
-        continue
-    elif line.startswith('') and in_conflict:
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-34b5
+
         skip = True
         i += 1
         continue

@@ -13,29 +13,20 @@ def clean_merge_conflicts(content):
     """Clean merge conflicts from content using multiple strategies."""
     
     # Strategy 1: Standard merge conflict pattern
-    pattern1 = r'<<<<<<< HEAD\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
+    pattern1 = r'
     content = re.sub(pattern1, r'\2', content, flags=re.DOTALL)
     
     # Strategy 2: Alternative pattern with different spacing
-    pattern2 = r'<<<<<<< HEAD\s*\n(.*?)\n=======\s*\n(.*?)\n>>>>>>>\s*[^\n]+'
-    content = re.sub(pattern2, r'\2', content, flags=re.DOTALL)
-    
-    # Strategy 3: Handle cases where there might be multiple conflicts in one file
-    pattern3 = r'<<<<<<< [^\n]+\n(.*?)\n=======\n(.*?)\n>>>>>>> [^\n]+'
+    pattern2 = r'
     content = re.sub(pattern3, r'\2', content, flags=re.DOTALL)
     
     # Strategy 4: Handle incomplete merge conflicts
-    pattern4 = r'<<<<<<< [^\n]+\n(.*?)\n======='
-    content = re.sub(pattern4, r'\1', content, flags=re.DOTALL)
-    
-    # Strategy 5: Handle remaining ======= markers
-    pattern5 = r'=======\n(.*?)\n>>>>>>> [^\n]+'
+    pattern4 = r'<<<<<<< [^\n]+\n(.*?)\n
     content = re.sub(pattern5, r'\1', content, flags=re.DOTALL)
     
     # Strategy 6: Remove any remaining conflict markers
     content = re.sub(r'<<<<<<< [^\n]+', '', content)
-    content = re.sub(r'=======', '', content)
-    content = re.sub(r'>>>>>>> [^\n]+', '', content)
+    content = re.sub(r'
     
     # Clean up extra whitespace and empty lines
     content = re.sub(r'\n\s*\n\s*\n+', '\n\n', content)

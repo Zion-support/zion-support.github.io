@@ -1,7 +1,7 @@
 }
 
 export class SEOUtils {
-  private config: SEOConfig;
+private config: SEOConfig;
 
 }
 
