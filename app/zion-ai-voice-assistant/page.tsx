@@ -1,123 +1,123 @@
-import { ArrowRight, Wrench, BarChart3, Zap, Shield, Clock, CheckCircle, Star, Sparkles, AlertTriangle, TrendingUp, Settings } from "lucide-react";
+import { ArrowRight, Mic, Volume2, Headphones, Zap, Globe, Shield, Clock, CheckCircle, Star, Sparkles, Phone, MessageSquare } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIPredictiveMaintenance() {
+export default function ZionAIVoiceAssistant() {
   const features = [
     {
-      title: "IoT Sensor Integration",
-      description: "Connect and monitor thousands of sensors across your equipment for real-time data collection and analysis",
-      icon: <Settings className="w-6 h-6" />,
+      title: "Natural Voice Processing",
+      description: "Advanced speech recognition and natural language understanding with 99.5% accuracy across 40+ languages",
+      icon: <Mic className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Machine Learning Models",
-      description: "Advanced ML algorithms that learn from historical data to predict equipment failures with 95% accuracy",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Multi-Channel Support",
+      description: "Deploy across phone calls, mobile apps, smart speakers, and web platforms with unified voice experience",
+      icon: <Phone className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Real-Time Monitoring",
-      description: "24/7 monitoring of equipment health with instant alerts and automated notifications",
-      icon: <Clock className="w-6 h-6" />,
+      title: "Real-Time Processing",
+      description: "Ultra-low latency voice processing with sub-200ms response times for natural conversations",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Predictive Analytics",
-      description: "Forecast equipment failures weeks or months in advance to prevent costly downtime",
-      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Emotion Recognition",
+      description: "Detect customer emotions and adapt responses accordingly for more personalized interactions",
+      icon: <Volume2 className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Automated Work Orders",
-      description: "Generate maintenance work orders automatically based on predicted failure risks and schedules",
-      icon: <Wrench className="w-6 h-6" />,
+      title: "Voice Analytics",
+      description: "Comprehensive voice analytics including sentiment analysis, call quality metrics, and performance insights",
+      icon: <Headphones className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Cost Optimization",
-      description: "Optimize maintenance schedules to reduce costs while maximizing equipment uptime",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Enterprise Security",
+      description: "Bank-level encryption, GDPR compliance, and secure voice data processing with audit trails",
+      icon: <Shield className="w-6 h-6" />,
       color: "from-red-500 to-pink-500"
     }
   ];
 
-  const industries = [
+  const useCases = [
     {
-      industry: "Manufacturing",
-      description: "Prevent production line failures and optimize manufacturing equipment maintenance",
-      icon: <Settings className="w-8 h-8" />,
+      title: "Customer Service",
+      description: "Handle 80% of customer inquiries automatically with intelligent voice routing and escalation",
+      icon: <MessageSquare className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
-      savings: "30% cost reduction"
+      benefits: ["24/7 availability", "Reduced wait times", "Consistent service quality"]
     },
     {
-      industry: "Energy & Utilities",
-      description: "Monitor power plants, wind turbines, and electrical infrastructure for optimal performance",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Sales Automation",
+      description: "Qualify leads, schedule appointments, and process orders through natural voice interactions",
+      icon: <Phone className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
-      savings: "25% downtime reduction"
+      benefits: ["Higher conversion rates", "Automated lead scoring", "Seamless handoff to humans"]
     },
     {
-      industry: "Transportation",
-      description: "Maintain fleets of vehicles, aircraft, and railway systems with predictive insights",
-      icon: <AlertTriangle className="w-8 h-8" />,
+      title: "Healthcare Support",
+      description: "Provide patient assistance, appointment scheduling, and medical information through voice",
+      icon: <Headphones className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      savings: "40% maintenance efficiency"
+      benefits: ["HIPAA compliance", "Multilingual support", "Emergency escalation"]
     },
     {
-      industry: "Healthcare",
-      description: "Ensure critical medical equipment reliability and prevent service interruptions",
+      title: "Financial Services",
+      description: "Handle account inquiries, transaction support, and fraud detection through secure voice channels",
       icon: <Shield className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
-      savings: "50% equipment uptime"
+      benefits: ["PCI compliance", "Voice biometrics", "Real-time fraud detection"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$49",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 50 devices",
-        "Basic predictive models",
+        "Up to 1,000 voice minutes/month",
+        "Basic voice recognition",
         "Email support",
-        "Standard monitoring",
-        "5 users",
-        "Basic reporting"
+        "Standard voice quality",
+        "1 integration",
+        "Basic analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$149",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 500 devices",
-        "Advanced ML models",
+        "Up to 10,000 voice minutes/month",
+        "Advanced voice recognition",
         "Priority support",
-        "Real-time monitoring",
-        "25 users",
+        "HD voice quality",
+        "5 integrations",
         "Advanced analytics",
-        "API access"
+        "Custom voice training"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited devices",
-        "Custom ML models",
+        "Unlimited voice minutes",
+        "Premium voice recognition",
         "Dedicated support manager",
-        "White-label solution",
-        "Unlimited users",
         "Custom integrations",
-        "SLA guarantee"
+        "Advanced security features",
+        "SLA guarantee",
+        "White-label solution"
       ],
       popular: false
     }
@@ -125,44 +125,44 @@ export default function AIPredictiveMaintenance() {
 
   const testimonials = [
     {
-      name: "Michael Rodriguez",
-      company: "Industrial Manufacturing Corp",
-      role: "Maintenance Director",
-      content: "Zion AI Predictive Maintenance reduced our unplanned downtime by 60% and saved us over $2M in the first year alone.",
+      name: "Jennifer Walsh",
+      company: "Healthcare Plus",
+      role: "Patient Services Director",
+      content: "Zion AI Voice Assistant reduced our call center workload by 60% while improving patient satisfaction scores.",
       rating: 5,
-      avatar: "MR"
+      avatar: "JW"
     },
     {
-      name: "Sarah Chen",
-      company: "Power Generation Ltd",
+      name: "Robert Kim",
+      company: "Financial Services Corp",
+      role: "Customer Experience Manager",
+      content: "The voice biometrics and fraud detection features have significantly improved our security while maintaining excellent customer experience.",
+      rating: 5,
+      avatar: "RK"
+    },
+    {
+      name: "Lisa Thompson",
+      company: "Retail Solutions Inc",
       role: "Operations Manager",
-      content: "The predictive accuracy is incredible. We've prevented 3 major equipment failures that would have cost us millions.",
+      content: "Our sales team loves the automated lead qualification. Conversion rates increased by 35% in the first quarter.",
       rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "David Thompson",
-      company: "Airlines Group",
-      role: "Fleet Manager",
-      content: "Our aircraft maintenance efficiency improved by 40% and we've reduced maintenance costs by 25% across our entire fleet.",
-      rating: 5,
-      avatar: "DT"
+      avatar: "LT"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Smart Equipment Monitoring | Zion Tech Group</title>
+        <title>Zion AI Voice Assistant - Intelligent Voice AI Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Prevent equipment failures with AI-powered predictive maintenance. Reduce downtime by 60% and save millions with intelligent monitoring and maintenance scheduling."
+          content="Deploy intelligent voice assistants with natural language processing, emotion recognition, and multi-channel support. Transform customer interactions with AI-powered voice technology."
         />
         <meta
           name="keywords"
-          content="AI predictive maintenance, equipment monitoring, IoT sensors, machine learning, maintenance optimization, equipment failure prediction, industrial IoT, smart maintenance"
+          content="AI voice assistant, voice AI, speech recognition, voice automation, conversational AI, voice analytics, voice biometrics, customer service automation"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-predictive-maintenance" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-voice-assistant" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -175,19 +175,19 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 AI Predictive Maintenance Platform</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 Voice AI Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                AI Predictive Maintenance
+                Zion AI Voice Assistant
               </span>
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Prevent equipment failures before they happen with AI-powered predictive maintenance. 
-              Reduce downtime by 60%, save millions in costs, and optimize your maintenance operations with intelligent monitoring.
+              Transform customer interactions with intelligent voice assistants that understand, respond, and learn. 
+              Deploy across multiple channels with natural voice processing and emotion recognition.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -209,20 +209,20 @@ export default function AIPredictiveMaintenance() {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300 text-sm">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">99.5%</div>
+                <div className="text-gray-300 text-sm">Voice Recognition Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-                <div className="text-gray-300 text-sm">Downtime Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">&lt;200ms</div>
+                <div className="text-gray-300 text-sm">Response Time</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">30%</div>
-                <div className="text-gray-300 text-sm">Cost Savings</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">40+</div>
+                <div className="text-gray-300 text-sm">Languages Supported</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Monitoring</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
+                <div className="text-gray-300 text-sm">Cost Reduction</div>
               </div>
             </div>
           </div>
@@ -234,11 +234,11 @@ export default function AIPredictiveMaintenance() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Advanced Predictive Features
+                  Advanced Voice AI Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI capabilities that monitor, analyze, and predict equipment behavior for optimal maintenance outcomes.
+                Cutting-edge voice technology that understands context, emotion, and intent for natural conversations.
               </p>
             </div>
             
@@ -269,7 +269,7 @@ export default function AIPredictiveMaintenance() {
           </div>
         </section>
 
-        {/* Industries Section */}
+        {/* Use Cases Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
@@ -279,32 +279,37 @@ export default function AIPredictiveMaintenance() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven solutions across multiple industries with specialized predictive maintenance capabilities.
+                Deploy voice AI across various industries with specialized features and compliance requirements.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {industries.map((industry, index) => (
+              {useCases.map((useCase, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   <div className="flex items-start space-x-4">
                     <div
-                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${industry.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${useCase.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
-                      {industry.icon}
+                      {useCase.icon}
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                          {industry.industry}
-                        </h3>
-                        <span className="text-cyan-400 font-bold text-lg">{industry.savings}</span>
-                      </div>
-                      <p className="text-gray-300 leading-relaxed">
-                        {industry.description}
+                      <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                        {useCase.title}
+                      </h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+                        {useCase.description}
                       </p>
+                      <ul className="space-y-2">
+                        {useCase.benefits.map((benefit, idx) => (
+                          <li key={idx} className="flex items-center text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                            <span className="text-sm">{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -323,7 +328,7 @@ export default function AIPredictiveMaintenance() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your predictive maintenance needs. Scale up or down as your operations grow.
+                Choose the perfect plan for your voice AI needs. Scale up or down as your business grows.
               </p>
             </div>
             
@@ -388,7 +393,7 @@ export default function AIPredictiveMaintenance() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how organizations are transforming their maintenance operations with AI
+                See how industry leaders are transforming their customer experience with voice AI
               </p>
             </div>
             
@@ -424,11 +429,11 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Maintenance?
+                Ready to Transform Voice Interactions?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of organizations using AI Predictive Maintenance to prevent failures and optimize operations. 
-                Start your free trial today and see the power of intelligent maintenance.
+                Join thousands of businesses using Zion AI Voice Assistant to provide exceptional voice experiences. 
+                Start your free trial today and experience the future of voice AI.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

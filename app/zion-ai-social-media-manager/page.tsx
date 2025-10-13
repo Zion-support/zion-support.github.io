@@ -1,123 +1,123 @@
-import { ArrowRight, Wrench, BarChart3, Zap, Shield, Clock, CheckCircle, Star, Sparkles, AlertTriangle, TrendingUp, Settings } from "lucide-react";
+import { ArrowRight, Share2, BarChart3, Zap, Users, Globe, Clock, CheckCircle, Star, Sparkles, MessageSquare, TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIPredictiveMaintenance() {
+export default function ZionAISocialMediaManager() {
   const features = [
     {
-      title: "IoT Sensor Integration",
-      description: "Connect and monitor thousands of sensors across your equipment for real-time data collection and analysis",
-      icon: <Settings className="w-6 h-6" />,
+      title: "AI Content Generation",
+      description: "Generate engaging posts, captions, and hashtags using advanced AI that understands your brand voice and audience",
+      icon: <MessageSquare className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Machine Learning Models",
-      description: "Advanced ML algorithms that learn from historical data to predict equipment failures with 95% accuracy",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Smart Scheduling",
+      description: "Automatically schedule posts at optimal times based on your audience's activity patterns and engagement data",
+      icon: <Clock className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Real-Time Monitoring",
-      description: "24/7 monitoring of equipment health with instant alerts and automated notifications",
-      icon: <Clock className="w-6 h-6" />,
+      title: "Multi-Platform Management",
+      description: "Manage Facebook, Instagram, Twitter, LinkedIn, TikTok, and YouTube from a single dashboard",
+      icon: <Globe className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Predictive Analytics",
-      description: "Forecast equipment failures weeks or months in advance to prevent costly downtime",
-      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Track performance across all platforms with detailed insights, ROI analysis, and competitor benchmarking",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Automated Work Orders",
-      description: "Generate maintenance work orders automatically based on predicted failure risks and schedules",
-      icon: <Wrench className="w-6 h-6" />,
+      title: "Engagement Automation",
+      description: "Automatically respond to comments, DMs, and mentions with AI-powered responses that match your brand tone",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Cost Optimization",
-      description: "Optimize maintenance schedules to reduce costs while maximizing equipment uptime",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Influencer Discovery",
+      description: "Find and connect with relevant influencers using AI-powered matching based on audience demographics and interests",
+      icon: <Users className="w-6 h-6" />,
       color: "from-red-500 to-pink-500"
     }
   ];
 
-  const industries = [
+  const platforms = [
     {
-      industry: "Manufacturing",
-      description: "Prevent production line failures and optimize manufacturing equipment maintenance",
-      icon: <Settings className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
-      savings: "30% cost reduction"
+      name: "Facebook",
+      description: "Posts, Stories, Reels, and Live content management",
+      icon: <Share2 className="w-8 h-8" />,
+      color: "from-blue-600 to-blue-500",
+      features: ["Page management", "Ad integration", "Event promotion"]
     },
     {
-      industry: "Energy & Utilities",
-      description: "Monitor power plants, wind turbines, and electrical infrastructure for optimal performance",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
-      savings: "25% downtime reduction"
+      name: "Instagram",
+      description: "Feed posts, Stories, IGTV, and Reels optimization",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "from-pink-600 to-purple-500",
+      features: ["Visual content", "Hashtag optimization", "Story highlights"]
     },
     {
-      industry: "Transportation",
-      description: "Maintain fleets of vehicles, aircraft, and railway systems with predictive insights",
-      icon: <AlertTriangle className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
-      savings: "40% maintenance efficiency"
+      name: "Twitter",
+      description: "Tweets, threads, and real-time engagement",
+      icon: <MessageSquare className="w-8 h-8" />,
+      color: "from-cyan-500 to-blue-500",
+      features: ["Thread management", "Trend monitoring", "Real-time responses"]
     },
     {
-      industry: "Healthcare",
-      description: "Ensure critical medical equipment reliability and prevent service interruptions",
-      icon: <Shield className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500",
-      savings: "50% equipment uptime"
+      name: "LinkedIn",
+      description: "Professional content and B2B engagement",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-blue-700 to-blue-600",
+      features: ["Company updates", "Thought leadership", "Lead generation"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$29",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 50 devices",
-        "Basic predictive models",
+        "Up to 3 social accounts",
+        "Basic AI content generation",
         "Email support",
-        "Standard monitoring",
-        "5 users",
-        "Basic reporting"
+        "Standard analytics",
+        "5 posts per day",
+        "Basic scheduling"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$79",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 500 devices",
-        "Advanced ML models",
+        "Up to 10 social accounts",
+        "Advanced AI content generation",
         "Priority support",
-        "Real-time monitoring",
-        "25 users",
         "Advanced analytics",
-        "API access"
+        "Unlimited posts",
+        "Smart scheduling",
+        "Engagement automation"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$199",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited devices",
-        "Custom ML models",
+        "Unlimited social accounts",
+        "Custom AI training",
         "Dedicated support manager",
         "White-label solution",
-        "Unlimited users",
-        "Custom integrations",
-        "SLA guarantee"
+        "Team collaboration",
+        "Advanced security",
+        "API access"
       ],
       popular: false
     }
@@ -125,44 +125,44 @@ export default function AIPredictiveMaintenance() {
 
   const testimonials = [
     {
-      name: "Michael Rodriguez",
-      company: "Industrial Manufacturing Corp",
-      role: "Maintenance Director",
-      content: "Zion AI Predictive Maintenance reduced our unplanned downtime by 60% and saved us over $2M in the first year alone.",
+      name: "Emma Rodriguez",
+      company: "Digital Marketing Agency",
+      role: "Social Media Manager",
+      content: "Zion AI Social Media Manager increased our client engagement by 150% and saved us 20 hours per week on content creation.",
       rating: 5,
-      avatar: "MR"
+      avatar: "ER"
     },
     {
-      name: "Sarah Chen",
-      company: "Power Generation Ltd",
-      role: "Operations Manager",
-      content: "The predictive accuracy is incredible. We've prevented 3 major equipment failures that would have cost us millions.",
+      name: "James Wilson",
+      company: "E-commerce Store",
+      role: "Marketing Director",
+      content: "The AI content generation is incredible. Our posts are more engaging and we've seen a 200% increase in organic reach.",
       rating: 5,
-      avatar: "SC"
+      avatar: "JW"
     },
     {
-      name: "David Thompson",
-      company: "Airlines Group",
-      role: "Fleet Manager",
-      content: "Our aircraft maintenance efficiency improved by 40% and we've reduced maintenance costs by 25% across our entire fleet.",
+      name: "Lisa Chen",
+      company: "Tech Startup",
+      role: "Growth Manager",
+      content: "Multi-platform management made our social media strategy so much more efficient. The analytics insights are game-changing.",
       rating: 5,
-      avatar: "DT"
+      avatar: "LC"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Smart Equipment Monitoring | Zion Tech Group</title>
+        <title>Zion AI Social Media Manager - AI-Powered Social Media Automation | Zion Tech Group</title>
         <meta
           name="description"
-          content="Prevent equipment failures with AI-powered predictive maintenance. Reduce downtime by 60% and save millions with intelligent monitoring and maintenance scheduling."
+          content="Automate your social media with AI-powered content generation, smart scheduling, and multi-platform management. Increase engagement by 150% and save 20 hours per week."
         />
         <meta
           name="keywords"
-          content="AI predictive maintenance, equipment monitoring, IoT sensors, machine learning, maintenance optimization, equipment failure prediction, industrial IoT, smart maintenance"
+          content="AI social media manager, social media automation, content generation, social media scheduling, multi-platform management, social media analytics, engagement automation"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-predictive-maintenance" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-social-media-manager" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -175,19 +175,19 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 AI Predictive Maintenance Platform</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 AI Social Media Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                AI Predictive Maintenance
+                Zion AI Social Media Manager
               </span>
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Prevent equipment failures before they happen with AI-powered predictive maintenance. 
-              Reduce downtime by 60%, save millions in costs, and optimize your maintenance operations with intelligent monitoring.
+              Transform your social media presence with AI-powered content generation, smart scheduling, and multi-platform management. 
+              Increase engagement by 150% and save 20 hours per week on social media tasks.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -209,20 +209,20 @@ export default function AIPredictiveMaintenance() {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300 text-sm">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">150%</div>
+                <div className="text-gray-300 text-sm">Engagement Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-                <div className="text-gray-300 text-sm">Downtime Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">20hrs</div>
+                <div className="text-gray-300 text-sm">Time Saved/Week</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">30%</div>
-                <div className="text-gray-300 text-sm">Cost Savings</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">6</div>
+                <div className="text-gray-300 text-sm">Platforms Supported</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Monitoring</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">200%</div>
+                <div className="text-gray-300 text-sm">Organic Reach</div>
               </div>
             </div>
           </div>
@@ -234,11 +234,11 @@ export default function AIPredictiveMaintenance() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Advanced Predictive Features
+                  Powerful Social Media Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI capabilities that monitor, analyze, and predict equipment behavior for optimal maintenance outcomes.
+                Everything you need to create, schedule, and optimize your social media presence across all platforms.
               </p>
             </div>
             
@@ -269,42 +269,47 @@ export default function AIPredictiveMaintenance() {
           </div>
         </section>
 
-        {/* Industries Section */}
+        {/* Platforms Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Industry Applications
+                  Multi-Platform Support
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven solutions across multiple industries with specialized predictive maintenance capabilities.
+                Manage all your social media accounts from one powerful dashboard with platform-specific optimizations.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {industries.map((industry, index) => (
+              {platforms.map((platform, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   <div className="flex items-start space-x-4">
                     <div
-                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${industry.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${platform.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
-                      {industry.icon}
+                      {platform.icon}
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                          {industry.industry}
-                        </h3>
-                        <span className="text-cyan-400 font-bold text-lg">{industry.savings}</span>
-                      </div>
-                      <p className="text-gray-300 leading-relaxed">
-                        {industry.description}
+                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
+                        {platform.name}
+                      </h3>
+                      <p className="text-gray-300 mb-4 leading-relaxed">
+                        {platform.description}
                       </p>
+                      <ul className="space-y-2">
+                        {platform.features.map((feature, idx) => (
+                          <li key={idx} className="flex items-center text-gray-300">
+                            <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
+                            <span className="text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -319,11 +324,11 @@ export default function AIPredictiveMaintenance() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Flexible Pricing Plans
+                  Simple, Transparent Pricing
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your predictive maintenance needs. Scale up or down as your operations grow.
+                Choose the perfect plan for your social media needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -388,7 +393,7 @@ export default function AIPredictiveMaintenance() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how organizations are transforming their maintenance operations with AI
+                See how businesses are transforming their social media with AI automation
               </p>
             </div>
             
@@ -424,11 +429,11 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Maintenance?
+                Ready to Transform Your Social Media?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of organizations using AI Predictive Maintenance to prevent failures and optimize operations. 
-                Start your free trial today and see the power of intelligent maintenance.
+                Join thousands of businesses using Zion AI Social Media Manager to automate and optimize their social presence. 
+                Start your free trial today and see the difference AI can make.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

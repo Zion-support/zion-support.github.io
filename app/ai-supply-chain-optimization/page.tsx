@@ -1,89 +1,89 @@
-import { ArrowRight, Wrench, BarChart3, Zap, Shield, Clock, CheckCircle, Star, Sparkles, AlertTriangle, TrendingUp, Settings } from "lucide-react";
+import { ArrowRight, Package, BarChart3, Zap, Globe, Clock, CheckCircle, Star, Sparkles, TrendingUp, Truck, Warehouse } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIPredictiveMaintenance() {
+export default function AISupplyChainOptimization() {
   const features = [
     {
-      title: "IoT Sensor Integration",
-      description: "Connect and monitor thousands of sensors across your equipment for real-time data collection and analysis",
-      icon: <Settings className="w-6 h-6" />,
+      title: "Demand Forecasting",
+      description: "Predict future demand with 98% accuracy using advanced machine learning algorithms and market intelligence",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Machine Learning Models",
-      description: "Advanced ML algorithms that learn from historical data to predict equipment failures with 95% accuracy",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Inventory Optimization",
+      description: "Optimize stock levels across all locations to minimize costs while ensuring product availability",
+      icon: <Package className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Real-Time Monitoring",
-      description: "24/7 monitoring of equipment health with instant alerts and automated notifications",
-      icon: <Clock className="w-6 h-6" />,
+      title: "Route Optimization",
+      description: "Plan optimal delivery routes considering traffic, weather, and constraints to reduce transportation costs",
+      icon: <Truck className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Predictive Analytics",
-      description: "Forecast equipment failures weeks or months in advance to prevent costly downtime",
-      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Supplier Risk Assessment",
+      description: "Monitor supplier performance and predict potential disruptions using real-time data and analytics",
+      icon: <Globe className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Automated Work Orders",
-      description: "Generate maintenance work orders automatically based on predicted failure risks and schedules",
-      icon: <Wrench className="w-6 h-6" />,
+      title: "Real-Time Visibility",
+      description: "Track shipments, inventory, and operations across your entire supply chain in real-time",
+      icon: <Clock className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
       title: "Cost Optimization",
-      description: "Optimize maintenance schedules to reduce costs while maximizing equipment uptime",
+      description: "Identify cost-saving opportunities and optimize procurement, logistics, and operations",
       icon: <Zap className="w-6 h-6" />,
       color: "from-red-500 to-pink-500"
     }
   ];
 
-  const industries = [
+  const benefits = [
     {
-      industry: "Manufacturing",
-      description: "Prevent production line failures and optimize manufacturing equipment maintenance",
-      icon: <Settings className="w-8 h-8" />,
+      benefit: "Cost Reduction",
+      description: "Reduce supply chain costs by up to 25% through optimized inventory and logistics",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
-      savings: "30% cost reduction"
+      impact: "25% cost savings"
     },
     {
-      industry: "Energy & Utilities",
-      description: "Monitor power plants, wind turbines, and electrical infrastructure for optimal performance",
+      benefit: "Improved Efficiency",
+      description: "Increase operational efficiency by 40% with automated planning and optimization",
       icon: <Zap className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
-      savings: "25% downtime reduction"
+      impact: "40% efficiency gain"
     },
     {
-      industry: "Transportation",
-      description: "Maintain fleets of vehicles, aircraft, and railway systems with predictive insights",
-      icon: <AlertTriangle className="w-8 h-8" />,
+      benefit: "Risk Mitigation",
+      description: "Reduce supply chain risks by 60% with predictive analytics and early warning systems",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      savings: "40% maintenance efficiency"
+      impact: "60% risk reduction"
     },
     {
-      industry: "Healthcare",
-      description: "Ensure critical medical equipment reliability and prevent service interruptions",
-      icon: <Shield className="w-8 h-8" />,
+      benefit: "Customer Satisfaction",
+      description: "Improve on-time delivery rates by 35% and customer satisfaction scores",
+      icon: <Package className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
-      savings: "50% equipment uptime"
+      impact: "35% better delivery"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$299",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 50 devices",
-        "Basic predictive models",
+        "Up to 5 locations",
+        "Basic demand forecasting",
         "Email support",
-        "Standard monitoring",
+        "Standard analytics",
         "5 users",
         "Basic reporting"
       ],
@@ -91,28 +91,28 @@ export default function AIPredictiveMaintenance() {
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$799",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 500 devices",
-        "Advanced ML models",
+        "Up to 25 locations",
+        "Advanced AI optimization",
         "Priority support",
-        "Real-time monitoring",
+        "Real-time analytics",
         "25 users",
-        "Advanced analytics",
+        "Advanced reporting",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$1,999",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited devices",
-        "Custom ML models",
+        "Unlimited locations",
+        "Custom AI models",
         "Dedicated support manager",
         "White-label solution",
         "Unlimited users",
@@ -125,44 +125,44 @@ export default function AIPredictiveMaintenance() {
 
   const testimonials = [
     {
-      name: "Michael Rodriguez",
-      company: "Industrial Manufacturing Corp",
-      role: "Maintenance Director",
-      content: "Zion AI Predictive Maintenance reduced our unplanned downtime by 60% and saved us over $2M in the first year alone.",
+      name: "Jennifer Walsh",
+      company: "Global Retail Chain",
+      role: "Supply Chain Director",
+      content: "Zion AI Supply Chain Optimization reduced our inventory costs by 30% and improved delivery times by 40%. The ROI was evident within 3 months.",
       rating: 5,
-      avatar: "MR"
+      avatar: "JW"
     },
     {
-      name: "Sarah Chen",
-      company: "Power Generation Ltd",
+      name: "Robert Kim",
+      company: "Manufacturing Corp",
       role: "Operations Manager",
-      content: "The predictive accuracy is incredible. We've prevented 3 major equipment failures that would have cost us millions.",
+      content: "The demand forecasting accuracy is incredible. We've reduced stockouts by 80% and excess inventory by 50% across all our facilities.",
       rating: 5,
-      avatar: "SC"
+      avatar: "RK"
     },
     {
-      name: "David Thompson",
-      company: "Airlines Group",
-      role: "Fleet Manager",
-      content: "Our aircraft maintenance efficiency improved by 40% and we've reduced maintenance costs by 25% across our entire fleet.",
+      name: "Lisa Thompson",
+      company: "E-commerce Platform",
+      role: "Logistics Director",
+      content: "Route optimization alone saved us $2M annually. The AI recommendations are spot-on and easy to implement.",
       rating: 5,
-      avatar: "DT"
+      avatar: "LT"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Smart Equipment Monitoring | Zion Tech Group</title>
+        <title>AI Supply Chain Optimization - Smart Logistics & Inventory Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Prevent equipment failures with AI-powered predictive maintenance. Reduce downtime by 60% and save millions with intelligent monitoring and maintenance scheduling."
+          content="Optimize your supply chain with AI-powered demand forecasting, inventory optimization, and route planning. Reduce costs by 25% and improve efficiency by 40%."
         />
         <meta
           name="keywords"
-          content="AI predictive maintenance, equipment monitoring, IoT sensors, machine learning, maintenance optimization, equipment failure prediction, industrial IoT, smart maintenance"
+          content="AI supply chain optimization, demand forecasting, inventory optimization, route optimization, logistics AI, supply chain analytics, procurement optimization, warehouse management"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-predictive-maintenance" />
+        <link rel="canonical" href="https://ziontechgroup.com/ai-supply-chain-optimization" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -175,19 +175,19 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 AI Predictive Maintenance Platform</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 AI Supply Chain Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                AI Predictive Maintenance
+                AI Supply Chain Optimization
               </span>
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Prevent equipment failures before they happen with AI-powered predictive maintenance. 
-              Reduce downtime by 60%, save millions in costs, and optimize your maintenance operations with intelligent monitoring.
+              Transform your supply chain with AI-powered optimization for demand forecasting, inventory management, and logistics. 
+              Reduce costs by 25% and improve efficiency by 40% with intelligent supply chain automation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -209,20 +209,20 @@ export default function AIPredictiveMaintenance() {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300 text-sm">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">98%</div>
+                <div className="text-gray-300 text-sm">Forecast Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-                <div className="text-gray-300 text-sm">Downtime Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">25%</div>
+                <div className="text-gray-300 text-sm">Cost Reduction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">30%</div>
-                <div className="text-gray-300 text-sm">Cost Savings</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">40%</div>
+                <div className="text-gray-300 text-sm">Efficiency Gain</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Monitoring</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">60%</div>
+                <div className="text-gray-300 text-sm">Risk Reduction</div>
               </div>
             </div>
           </div>
@@ -234,11 +234,11 @@ export default function AIPredictiveMaintenance() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Advanced Predictive Features
+                  Advanced Supply Chain Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI capabilities that monitor, analyze, and predict equipment behavior for optimal maintenance outcomes.
+                Powerful AI capabilities that optimize every aspect of your supply chain for maximum efficiency and cost savings.
               </p>
             </div>
             
@@ -269,41 +269,41 @@ export default function AIPredictiveMaintenance() {
           </div>
         </section>
 
-        {/* Industries Section */}
+        {/* Benefits Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Industry Applications
+                  Proven Business Benefits
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven solutions across multiple industries with specialized predictive maintenance capabilities.
+                Transform your supply chain operations with measurable improvements across all key metrics.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {industries.map((industry, index) => (
+              {benefits.map((benefit, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   <div className="flex items-start space-x-4">
                     <div
-                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${industry.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${benefit.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
-                      {industry.icon}
+                      {benefit.icon}
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                          {industry.industry}
+                          {benefit.benefit}
                         </h3>
-                        <span className="text-cyan-400 font-bold text-lg">{industry.savings}</span>
+                        <span className="text-cyan-400 font-bold text-lg">{benefit.impact}</span>
                       </div>
                       <p className="text-gray-300 leading-relaxed">
-                        {industry.description}
+                        {benefit.description}
                       </p>
                     </div>
                   </div>
@@ -323,7 +323,7 @@ export default function AIPredictiveMaintenance() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your predictive maintenance needs. Scale up or down as your operations grow.
+                Choose the perfect plan for your supply chain optimization needs. Scale up or down as your business grows.
               </p>
             </div>
             
@@ -388,7 +388,7 @@ export default function AIPredictiveMaintenance() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how organizations are transforming their maintenance operations with AI
+                See how businesses are transforming their supply chains with AI optimization
               </p>
             </div>
             
@@ -424,11 +424,11 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Maintenance?
+                Ready to Optimize Your Supply Chain?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of organizations using AI Predictive Maintenance to prevent failures and optimize operations. 
-                Start your free trial today and see the power of intelligent maintenance.
+                Join thousands of businesses using AI Supply Chain Optimization to reduce costs and improve efficiency. 
+                Start your free trial today and transform your logistics operations.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

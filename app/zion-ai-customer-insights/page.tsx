@@ -1,121 +1,121 @@
-import { ArrowRight, Wrench, BarChart3, Zap, Shield, Clock, CheckCircle, Star, Sparkles, AlertTriangle, TrendingUp, Settings } from "lucide-react";
+import { ArrowRight, Users, BarChart3, Zap, Target, Eye, Clock, CheckCircle, Star, Sparkles, TrendingUp, MessageSquare } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIPredictiveMaintenance() {
+export default function ZionAICustomerInsights() {
   const features = [
     {
-      title: "IoT Sensor Integration",
-      description: "Connect and monitor thousands of sensors across your equipment for real-time data collection and analysis",
-      icon: <Settings className="w-6 h-6" />,
+      title: "Behavioral Analytics",
+      description: "Track customer journey patterns, engagement metrics, and interaction data across all touchpoints",
+      icon: <Eye className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Machine Learning Models",
-      description: "Advanced ML algorithms that learn from historical data to predict equipment failures with 95% accuracy",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Sentiment Analysis",
+      description: "Analyze customer feedback, reviews, and communications to understand emotional responses and satisfaction levels",
+      icon: <MessageSquare className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Real-Time Monitoring",
-      description: "24/7 monitoring of equipment health with instant alerts and automated notifications",
-      icon: <Clock className="w-6 h-6" />,
+      title: "Predictive Modeling",
+      description: "Predict customer lifetime value, churn risk, and purchase likelihood using advanced machine learning algorithms",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Predictive Analytics",
-      description: "Forecast equipment failures weeks or months in advance to prevent costly downtime",
-      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Segmentation Intelligence",
+      description: "Automatically create customer segments based on behavior, demographics, and preferences for targeted marketing",
+      icon: <Users className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Automated Work Orders",
-      description: "Generate maintenance work orders automatically based on predicted failure risks and schedules",
-      icon: <Wrench className="w-6 h-6" />,
+      title: "Real-Time Dashboards",
+      description: "Monitor customer insights in real-time with interactive dashboards and customizable reports",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Cost Optimization",
-      description: "Optimize maintenance schedules to reduce costs while maximizing equipment uptime",
+      title: "Actionable Recommendations",
+      description: "Get AI-powered recommendations for improving customer experience, retention, and revenue growth",
       icon: <Zap className="w-6 h-6" />,
       color: "from-red-500 to-pink-500"
     }
   ];
 
-  const industries = [
+  const insights = [
     {
-      industry: "Manufacturing",
-      description: "Prevent production line failures and optimize manufacturing equipment maintenance",
-      icon: <Settings className="w-8 h-8" />,
+      type: "Customer Lifetime Value",
+      description: "Predict and optimize customer value throughout their entire journey",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
-      savings: "30% cost reduction"
+      impact: "25% increase in CLV"
     },
     {
-      industry: "Energy & Utilities",
-      description: "Monitor power plants, wind turbines, and electrical infrastructure for optimal performance",
-      icon: <Zap className="w-8 h-8" />,
+      type: "Churn Prediction",
+      description: "Identify at-risk customers and implement retention strategies",
+      icon: <Target className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
-      savings: "25% downtime reduction"
+      impact: "40% reduction in churn"
     },
     {
-      industry: "Transportation",
-      description: "Maintain fleets of vehicles, aircraft, and railway systems with predictive insights",
-      icon: <AlertTriangle className="w-8 h-8" />,
+      type: "Purchase Intent",
+      description: "Predict when customers are most likely to make a purchase",
+      icon: <Eye className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      savings: "40% maintenance efficiency"
+      impact: "60% higher conversion"
     },
     {
-      industry: "Healthcare",
-      description: "Ensure critical medical equipment reliability and prevent service interruptions",
-      icon: <Shield className="w-8 h-8" />,
+      type: "Satisfaction Scoring",
+      description: "Measure and track customer satisfaction across all interactions",
+      icon: <MessageSquare className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
-      savings: "50% equipment uptime"
+      impact: "35% improvement in NPS"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$59",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 50 devices",
-        "Basic predictive models",
+        "Up to 10,000 customers",
+        "Basic analytics dashboard",
         "Email support",
-        "Standard monitoring",
-        "5 users",
-        "Basic reporting"
+        "Standard insights",
+        "5 data sources",
+        "Monthly reports"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$149",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 500 devices",
-        "Advanced ML models",
+        "Up to 100,000 customers",
+        "Advanced analytics dashboard",
         "Priority support",
-        "Real-time monitoring",
-        "25 users",
-        "Advanced analytics",
+        "Real-time insights",
+        "Unlimited data sources",
+        "Custom reports",
         "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited devices",
-        "Custom ML models",
+        "Unlimited customers",
+        "Custom dashboard development",
         "Dedicated support manager",
+        "Advanced AI models",
         "White-label solution",
-        "Unlimited users",
         "Custom integrations",
         "SLA guarantee"
       ],
@@ -125,44 +125,44 @@ export default function AIPredictiveMaintenance() {
 
   const testimonials = [
     {
-      name: "Michael Rodriguez",
-      company: "Industrial Manufacturing Corp",
-      role: "Maintenance Director",
-      content: "Zion AI Predictive Maintenance reduced our unplanned downtime by 60% and saved us over $2M in the first year alone.",
+      name: "Sarah Mitchell",
+      company: "E-commerce Platform",
+      role: "Customer Success Director",
+      content: "Zion AI Customer Insights helped us reduce churn by 40% and increase customer lifetime value by 25%. The predictive analytics are incredibly accurate.",
+      rating: 5,
+      avatar: "SM"
+    },
+    {
+      name: "David Chen",
+      company: "SaaS Company",
+      role: "VP of Marketing",
+      content: "The customer segmentation and behavioral insights have transformed our marketing strategy. We've seen a 60% increase in campaign effectiveness.",
+      rating: 5,
+      avatar: "DC"
+    },
+    {
+      name: "Maria Rodriguez",
+      company: "Retail Chain",
+      role: "Customer Experience Manager",
+      content: "Real-time customer insights have enabled us to provide personalized experiences at scale. Customer satisfaction scores have improved by 35%.",
       rating: 5,
       avatar: "MR"
-    },
-    {
-      name: "Sarah Chen",
-      company: "Power Generation Ltd",
-      role: "Operations Manager",
-      content: "The predictive accuracy is incredible. We've prevented 3 major equipment failures that would have cost us millions.",
-      rating: 5,
-      avatar: "SC"
-    },
-    {
-      name: "David Thompson",
-      company: "Airlines Group",
-      role: "Fleet Manager",
-      content: "Our aircraft maintenance efficiency improved by 40% and we've reduced maintenance costs by 25% across our entire fleet.",
-      rating: 5,
-      avatar: "DT"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Smart Equipment Monitoring | Zion Tech Group</title>
+        <title>Zion AI Customer Insights - Advanced Customer Analytics Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Prevent equipment failures with AI-powered predictive maintenance. Reduce downtime by 60% and save millions with intelligent monitoring and maintenance scheduling."
+          content="Transform customer data into actionable insights with AI-powered analytics, predictive modeling, and behavioral analysis. Reduce churn by 40% and increase CLV by 25%."
         />
         <meta
           name="keywords"
-          content="AI predictive maintenance, equipment monitoring, IoT sensors, machine learning, maintenance optimization, equipment failure prediction, industrial IoT, smart maintenance"
+          content="customer insights, customer analytics, behavioral analytics, sentiment analysis, predictive modeling, customer segmentation, customer lifetime value, churn prediction"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-predictive-maintenance" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-customer-insights" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -175,19 +175,19 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 AI Predictive Maintenance Platform</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 Customer Analytics Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                AI Predictive Maintenance
+                Zion AI Customer Insights
               </span>
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Prevent equipment failures before they happen with AI-powered predictive maintenance. 
-              Reduce downtime by 60%, save millions in costs, and optimize your maintenance operations with intelligent monitoring.
+              Transform customer data into actionable insights with AI-powered analytics, predictive modeling, and behavioral analysis. 
+              Reduce churn by 40% and increase customer lifetime value by 25%.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -209,20 +209,20 @@ export default function AIPredictiveMaintenance() {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300 text-sm">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+                <div className="text-gray-300 text-sm">Churn Reduction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-                <div className="text-gray-300 text-sm">Downtime Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">25%</div>
+                <div className="text-gray-300 text-sm">CLV Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">30%</div>
-                <div className="text-gray-300 text-sm">Cost Savings</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">60%</div>
+                <div className="text-gray-300 text-sm">Higher Conversion</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Monitoring</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">35%</div>
+                <div className="text-gray-300 text-sm">NPS Improvement</div>
               </div>
             </div>
           </div>
@@ -234,11 +234,11 @@ export default function AIPredictiveMaintenance() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Advanced Predictive Features
+                  Advanced Customer Analytics
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI capabilities that monitor, analyze, and predict equipment behavior for optimal maintenance outcomes.
+                Powerful AI capabilities that understand customer behavior and predict future actions for better business outcomes.
               </p>
             </div>
             
@@ -269,41 +269,41 @@ export default function AIPredictiveMaintenance() {
           </div>
         </section>
 
-        {/* Industries Section */}
+        {/* Insights Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Industry Applications
+                  Key Customer Insights
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven solutions across multiple industries with specialized predictive maintenance capabilities.
+                Unlock the power of customer data with AI-driven insights that drive business growth.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {industries.map((industry, index) => (
+              {insights.map((insight, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   <div className="flex items-start space-x-4">
                     <div
-                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${industry.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${insight.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
-                      {industry.icon}
+                      {insight.icon}
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                          {industry.industry}
+                          {insight.type}
                         </h3>
-                        <span className="text-cyan-400 font-bold text-lg">{industry.savings}</span>
+                        <span className="text-cyan-400 font-bold text-lg">{insight.impact}</span>
                       </div>
                       <p className="text-gray-300 leading-relaxed">
-                        {industry.description}
+                        {insight.description}
                       </p>
                     </div>
                   </div>
@@ -323,7 +323,7 @@ export default function AIPredictiveMaintenance() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your predictive maintenance needs. Scale up or down as your operations grow.
+                Choose the perfect plan for your customer analytics needs. Scale up or down as your business grows.
               </p>
             </div>
             
@@ -388,7 +388,7 @@ export default function AIPredictiveMaintenance() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how organizations are transforming their maintenance operations with AI
+                See how businesses are transforming their customer experience with AI insights
               </p>
             </div>
             
@@ -424,11 +424,11 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Maintenance?
+                Ready to Unlock Customer Insights?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of organizations using AI Predictive Maintenance to prevent failures and optimize operations. 
-                Start your free trial today and see the power of intelligent maintenance.
+                Join thousands of businesses using Zion AI Customer Insights to understand and predict customer behavior. 
+                Start your free trial today and transform your customer experience.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

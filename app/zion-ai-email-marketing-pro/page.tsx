@@ -1,123 +1,123 @@
-import { ArrowRight, Wrench, BarChart3, Zap, Shield, Clock, CheckCircle, Star, Sparkles, AlertTriangle, TrendingUp, Settings } from "lucide-react";
+import { ArrowRight, Mail, BarChart3, Zap, Users, Target, Clock, CheckCircle, Star, Sparkles, Send, TrendingUp } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
-export default function AIPredictiveMaintenance() {
+export default function ZionAIEmailMarketingPro() {
   const features = [
     {
-      title: "IoT Sensor Integration",
-      description: "Connect and monitor thousands of sensors across your equipment for real-time data collection and analysis",
-      icon: <Settings className="w-6 h-6" />,
+      title: "AI Content Generation",
+      description: "Generate compelling email subject lines, content, and CTAs using advanced AI that understands your audience and brand voice",
+      icon: <Mail className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Machine Learning Models",
-      description: "Advanced ML algorithms that learn from historical data to predict equipment failures with 95% accuracy",
-      icon: <BarChart3 className="w-6 h-6" />,
+      title: "Smart Segmentation",
+      description: "Automatically segment your audience based on behavior, preferences, and engagement patterns for targeted campaigns",
+      icon: <Users className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Real-Time Monitoring",
-      description: "24/7 monitoring of equipment health with instant alerts and automated notifications",
-      icon: <Clock className="w-6 h-6" />,
+      title: "Predictive Analytics",
+      description: "Predict the best send times, subject lines, and content types for maximum engagement using machine learning",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Predictive Analytics",
-      description: "Forecast equipment failures weeks or months in advance to prevent costly downtime",
-      icon: <TrendingUp className="w-6 h-6" />,
+      title: "A/B Testing Automation",
+      description: "Automatically test different versions of your emails and optimize for the highest performing elements",
+      icon: <Target className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Automated Work Orders",
-      description: "Generate maintenance work orders automatically based on predicted failure risks and schedules",
-      icon: <Wrench className="w-6 h-6" />,
+      title: "Behavioral Triggers",
+      description: "Set up automated email sequences based on user actions, website behavior, and engagement patterns",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Cost Optimization",
-      description: "Optimize maintenance schedules to reduce costs while maximizing equipment uptime",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Track open rates, click-through rates, conversions, and revenue attribution with detailed reporting",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-red-500 to-pink-500"
     }
   ];
 
-  const industries = [
+  const campaignTypes = [
     {
-      industry: "Manufacturing",
-      description: "Prevent production line failures and optimize manufacturing equipment maintenance",
-      icon: <Settings className="w-8 h-8" />,
+      type: "Welcome Series",
+      description: "Automated onboarding sequences for new subscribers",
+      icon: <Send className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500",
-      savings: "30% cost reduction"
+      performance: "40% higher engagement"
     },
     {
-      industry: "Energy & Utilities",
-      description: "Monitor power plants, wind turbines, and electrical infrastructure for optimal performance",
-      icon: <Zap className="w-8 h-8" />,
+      type: "Abandoned Cart",
+      description: "Recover lost sales with intelligent cart abandonment emails",
+      icon: <Target className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500",
-      savings: "25% downtime reduction"
+      performance: "25% recovery rate"
     },
     {
-      industry: "Transportation",
-      description: "Maintain fleets of vehicles, aircraft, and railway systems with predictive insights",
-      icon: <AlertTriangle className="w-8 h-8" />,
+      type: "Product Recommendations",
+      description: "Personalized product suggestions based on purchase history",
+      icon: <Users className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500",
-      savings: "40% maintenance efficiency"
+      performance: "60% higher conversion"
     },
     {
-      industry: "Healthcare",
-      description: "Ensure critical medical equipment reliability and prevent service interruptions",
-      icon: <Shield className="w-8 h-8" />,
+      type: "Re-engagement",
+      description: "Win back inactive subscribers with targeted campaigns",
+      icon: <TrendingUp className="w-8 h-8" />,
       color: "from-orange-500 to-red-500",
-      savings: "50% equipment uptime"
+      performance: "35% reactivation rate"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$39",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 50 devices",
-        "Basic predictive models",
+        "Up to 5,000 subscribers",
+        "Basic AI content generation",
         "Email support",
-        "Standard monitoring",
-        "5 users",
-        "Basic reporting"
+        "Standard templates",
+        "Basic analytics",
+        "5 campaigns per month"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$99",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 500 devices",
-        "Advanced ML models",
+        "Up to 25,000 subscribers",
+        "Advanced AI features",
         "Priority support",
-        "Real-time monitoring",
-        "25 users",
+        "Custom templates",
         "Advanced analytics",
-        "API access"
+        "Unlimited campaigns",
+        "A/B testing"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$249",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited devices",
-        "Custom ML models",
+        "Unlimited subscribers",
+        "Custom AI training",
         "Dedicated support manager",
         "White-label solution",
-        "Unlimited users",
-        "Custom integrations",
-        "SLA guarantee"
+        "Advanced integrations",
+        "Custom reporting",
+        "API access"
       ],
       popular: false
     }
@@ -125,44 +125,44 @@ export default function AIPredictiveMaintenance() {
 
   const testimonials = [
     {
-      name: "Michael Rodriguez",
-      company: "Industrial Manufacturing Corp",
-      role: "Maintenance Director",
-      content: "Zion AI Predictive Maintenance reduced our unplanned downtime by 60% and saved us over $2M in the first year alone.",
+      name: "Rachel Thompson",
+      company: "E-commerce Store",
+      role: "Marketing Manager",
+      content: "Zion AI Email Marketing Pro increased our email revenue by 180% and reduced our campaign creation time by 70%.",
       rating: 5,
-      avatar: "MR"
+      avatar: "RT"
     },
     {
-      name: "Sarah Chen",
-      company: "Power Generation Ltd",
-      role: "Operations Manager",
-      content: "The predictive accuracy is incredible. We've prevented 3 major equipment failures that would have cost us millions.",
+      name: "Mark Davis",
+      company: "SaaS Company",
+      role: "Growth Director",
+      content: "The AI content generation is incredible. Our open rates increased by 45% and click-through rates by 60%.",
       rating: 5,
-      avatar: "SC"
+      avatar: "MD"
     },
     {
-      name: "David Thompson",
-      company: "Airlines Group",
-      role: "Fleet Manager",
-      content: "Our aircraft maintenance efficiency improved by 40% and we've reduced maintenance costs by 25% across our entire fleet.",
+      name: "Jennifer Lee",
+      company: "Digital Agency",
+      role: "Email Specialist",
+      content: "The predictive analytics and automation features have transformed our email marketing strategy. Highly recommended!",
       rating: 5,
-      avatar: "DT"
+      avatar: "JL"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Predictive Maintenance - Smart Equipment Monitoring | Zion Tech Group</title>
+        <title>Zion AI Email Marketing Pro - AI-Powered Email Automation | Zion Tech Group</title>
         <meta
           name="description"
-          content="Prevent equipment failures with AI-powered predictive maintenance. Reduce downtime by 60% and save millions with intelligent monitoring and maintenance scheduling."
+          content="Transform your email marketing with AI-powered content generation, smart segmentation, and predictive analytics. Increase revenue by 180% and engagement by 45%."
         />
         <meta
           name="keywords"
-          content="AI predictive maintenance, equipment monitoring, IoT sensors, machine learning, maintenance optimization, equipment failure prediction, industrial IoT, smart maintenance"
+          content="AI email marketing, email automation, email content generation, email segmentation, email analytics, email campaigns, marketing automation, email optimization"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-predictive-maintenance" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-email-marketing-pro" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -175,19 +175,19 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 AI Predictive Maintenance Platform</span>
+              <span className="text-cyan-400 text-sm font-medium">#1 AI Email Marketing Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                AI Predictive Maintenance
+                Zion AI Email Marketing Pro
               </span>
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Prevent equipment failures before they happen with AI-powered predictive maintenance. 
-              Reduce downtime by 60%, save millions in costs, and optimize your maintenance operations with intelligent monitoring.
+              Transform your email marketing with AI-powered content generation, smart segmentation, and predictive analytics. 
+              Increase revenue by 180% and engagement by 45% with intelligent email automation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -209,20 +209,20 @@ export default function AIPredictiveMaintenance() {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">95%</div>
-                <div className="text-gray-300 text-sm">Prediction Accuracy</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">180%</div>
+                <div className="text-gray-300 text-sm">Revenue Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">60%</div>
-                <div className="text-gray-300 text-sm">Downtime Reduction</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">45%</div>
+                <div className="text-gray-300 text-sm">Higher Open Rates</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">30%</div>
-                <div className="text-gray-300 text-sm">Cost Savings</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">60%</div>
+                <div className="text-gray-300 text-sm">Higher CTR</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">24/7</div>
-                <div className="text-gray-300 text-sm">Monitoring</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">70%</div>
+                <div className="text-gray-300 text-sm">Time Saved</div>
               </div>
             </div>
           </div>
@@ -234,11 +234,11 @@ export default function AIPredictiveMaintenance() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Advanced Predictive Features
+                  Advanced Email Marketing Features
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Powerful AI capabilities that monitor, analyze, and predict equipment behavior for optimal maintenance outcomes.
+                Powerful AI capabilities that understand your audience and optimize every aspect of your email campaigns.
               </p>
             </div>
             
@@ -269,41 +269,41 @@ export default function AIPredictiveMaintenance() {
           </div>
         </section>
 
-        {/* Industries Section */}
+        {/* Campaign Types Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Industry Applications
+                  Intelligent Campaign Types
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Proven solutions across multiple industries with specialized predictive maintenance capabilities.
+                Pre-built campaign templates with AI optimization for maximum engagement and conversion.
               </p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {industries.map((industry, index) => (
+              {campaignTypes.map((campaign, index) => (
                 <div
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
                 >
                   <div className="flex items-start space-x-4">
                     <div
-                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${industry.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                      className={`w-16 h-16 rounded-lg bg-gradient-to-r ${campaign.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
-                      {industry.icon}
+                      {campaign.icon}
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center justify-between mb-2">
                         <h3 className="text-xl font-semibold text-white group-hover:text-cyan-300 transition-colors">
-                          {industry.industry}
+                          {campaign.type}
                         </h3>
-                        <span className="text-cyan-400 font-bold text-lg">{industry.savings}</span>
+                        <span className="text-cyan-400 font-bold text-lg">{campaign.performance}</span>
                       </div>
                       <p className="text-gray-300 leading-relaxed">
-                        {industry.description}
+                        {campaign.description}
                       </p>
                     </div>
                   </div>
@@ -323,7 +323,7 @@ export default function AIPredictiveMaintenance() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your predictive maintenance needs. Scale up or down as your operations grow.
+                Choose the perfect plan for your email marketing needs. All plans include our core AI features.
               </p>
             </div>
             
@@ -388,7 +388,7 @@ export default function AIPredictiveMaintenance() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See how organizations are transforming their maintenance operations with AI
+                See how businesses are transforming their email marketing with AI
               </p>
             </div>
             
@@ -424,11 +424,11 @@ export default function AIPredictiveMaintenance() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Maintenance?
+                Ready to Transform Your Email Marketing?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of organizations using AI Predictive Maintenance to prevent failures and optimize operations. 
-                Start your free trial today and see the power of intelligent maintenance.
+                Join thousands of businesses using Zion AI Email Marketing Pro to automate and optimize their email campaigns. 
+                Start your free trial today and see the power of AI-driven email marketing.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

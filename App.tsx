@@ -62,6 +62,10 @@ const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendat
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
+// New AI Service Pages
+const AiPredictiveMaintenancePage = React.lazy(() => import("./app/ai-predictive-maintenance/page"));
+const AiSupplyChainOptimizationPage = React.lazy(() => import("./app/ai-supply-chain-optimization/page"));
+
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
   () => import("./app/cloud-infrastructure/page"),
@@ -181,6 +185,26 @@ const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
 
+// New Micro SAAS Pages
+const ZionAIChatbotBuilderPage = React.lazy(
+  () => import("./app/zion-ai-chatbot-builder/page"),
+);
+const ZionAIVoiceAssistantPage = React.lazy(
+  () => import("./app/zion-ai-voice-assistant/page"),
+);
+const ZionAIDocumentAnalyzerPage = React.lazy(
+  () => import("./app/zion-ai-document-analyzer/page"),
+);
+const ZionAISocialMediaManagerPage = React.lazy(
+  () => import("./app/zion-ai-social-media-manager/page"),
+);
+const ZionAIEmailMarketingProPage = React.lazy(
+  () => import("./app/zion-ai-email-marketing-pro/page"),
+);
+const ZionAICustomerInsightsPage = React.lazy(
+  () => import("./app/zion-ai-customer-insights/page"),
+);
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
   () => import("./app/5g-data-analytics/page"),
@@ -273,6 +297,10 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+
+                  {/* New AI Service Routes */}
+                  <Route path="/ai-predictive-maintenance" element={<AiPredictiveMaintenancePage />} />
+                  <Route path="/ai-supply-chain-optimization" element={<AiSupplyChainOptimizationPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -431,6 +459,32 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-chatbot-builder"
+                    element={<ZionAIChatbotBuilderPage />}
+                  />
+                  <Route
+                    path="/zion-ai-voice-assistant"
+                    element={<ZionAIVoiceAssistantPage />}
+                  />
+                  <Route
+                    path="/zion-ai-document-analyzer"
+                    element={<ZionAIDocumentAnalyzerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-social-media-manager"
+                    element={<ZionAISocialMediaManagerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-email-marketing-pro"
+                    element={<ZionAIEmailMarketingProPage />}
+                  />
+                  <Route
+                    path="/zion-ai-customer-insights"
+                    element={<ZionAICustomerInsightsPage />}
                   />
 
                   {/* 5G Solutions Routes */}
