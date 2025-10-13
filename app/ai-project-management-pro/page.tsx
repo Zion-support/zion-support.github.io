@@ -228,6 +228,7 @@ export default function AIProjectManagementPro() {
                 Advanced analytics and insights to drive data-driven decision making
               </p>
             </div>
+          </div>
 
           {/* Pricing Section */}
           <div className="mb-16">
@@ -295,8 +296,8 @@ export default function AIProjectManagementPro() {
             </div>
           </div>
         </div>
-      </div>
-</div>
+      </section>
+    </div>
   );
 };
 
