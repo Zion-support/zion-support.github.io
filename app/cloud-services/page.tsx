@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -7,7 +5,6 @@ import { ArrowRight, Cloud, Shield, Zap, Globe, Database, Server, CheckCircle, T
 
 export default function CloudServices() {
   const services = [
->>>>>>> cursor/website-audit-and-update-with-deployment-3531
     {
       icon: <TrendingUp className="w-6 h-6" />,
       title: "Scalability",

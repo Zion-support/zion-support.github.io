@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import { Calendar, User, ArrowRight, Search, Filter } from 'lucide-react';
