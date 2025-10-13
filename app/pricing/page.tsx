@@ -2,15 +2,40 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 =======
 >>>>>>> origin/clean-main-20251013-145848
 export default function Pricing() {
+=======
+import React from 'react;
+
+import { Helmet } from 'react-helmet-async;
+
+import { Link } from 'react-router-dom;
+
+import { ArrowRight, CheckCircle, Phone, Mail, MapPin } from 'lucide-react;
+
+const PagePage: React.FC = () => {}
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+
+const PricingPage: React.FC = () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
+>>>>>>> origin/cursor/ad-creation-and-management-f267
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
       <Helmet>
+<<<<<<< HEAD
         <title>Pricing - Zion Tech Group</title>
         <meta name="description" content="Advanced pricing solutions by Zion Tech Group" />
+=======
+<<<<<<< HEAD
+        <title>Page - Zion Tech Group</title>
+        <meta name="description" content=Professional Page services by Zion Tech Group. Advanced AI and IT solutions for your business. />
+        <meta name="keywords" content=page, AI solutions, IT services, Zion Tech Group />
+>>>>>>> origin/cursor/ad-creation-and-management-f267
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center">
@@ -60,8 +85,29 @@ export default function Pricing() {
               </ul>
             </div>
           </div>
+=======
+        <title>Pricing - Zion Tech Group</title>
+        <meta name="description" content="Pricing services from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Pricing</h1>
+          <p className="text-gray-300">Coming soon...</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
         </div>
       </div>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+<<<<<<< HEAD
+
+  );  ));)
+=======
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
+};
+
+export default PricingPage;
+>>>>>>> origin/cursor/ad-creation-and-management-f267

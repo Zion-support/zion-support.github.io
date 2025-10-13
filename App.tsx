@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect, Suspense } from 'react';
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+<<<<<<< HEAD
 import Navigation from "./app/components/Navigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
@@ -30,6 +31,45 @@ const TutorialsPage = React.lazy(() => import("./app/tutorials/page"));
 const DemoPage = React.lazy(() => import("./app/demo/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
+=======
+import './app/styles/futuristic.css';
+import Navigation from './app/components/Navigation';
+import Footer from './app/components/Footer';
+import { PageLoader } from './app/components/LoadingStates';
+import ErrorBoundary from './app/components/ErrorBoundary';
+import SEOHead from './app/components/EnhancedSEOHead';
+import SkipLink from './app/components/SkipLink';
+import Breadcrumb from './app/components/Breadcrumb';
+import PerformanceOptimizer from './app/components/PerformanceOptimizer';
+import AccessibilityEnhancer from './app/components/AccessibilityEnhancer';
+import EnhancedAccessibility from './app/components/EnhancedAccessibility';
+import { usePerformanceMonitor } from './app/hooks/usePerformanceMonitor';
+import AnalyticsProvider from './app/components/AnalyticsProvider';
+import PerformanceMonitor from './app/components/PerformanceMonitor';
+import SecurityEnhancer from './app/components/SecurityEnhancer';
+
+<<<<<<< HEAD
+// Lazy load pages
+=======
+// Lazy load pages for better performance
+const HomePage = React.lazy(() => import('./app/page'));
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
+const AboutPage = React.lazy(() => import('./app/about/page'));
+const ContactPage = React.lazy(() => import('./app/contact/page'));
+const ServicesPage = React.lazy(() => import('./app/services/page'));
+const PricingPage = React.lazy(() => import('./app/pricing/page'));
+const BlogPage = React.lazy(() => import('./app/blog/page'));
+const CaseStudiesPage = React.lazy(() => import('./app/case-studies/page'));
+const CareersPage = React.lazy(() => import('./app/careers/page'));
+const PartnersPage = React.lazy(() => import('./app/partners/page'));
+const SupportPage = React.lazy(() => import('./app/support/page'));
+const FAQPage = React.lazy(() => import('./app/faq/page'));
+const DemoPage = React.lazy(() => import('./app/demo/page'));
+const ConsultationPage = React.lazy(() => import('./app/consultation/page'));
+const MicroSaasPage = React.lazy(() => import('./app/micro-saas/page'));
+const AiServicesPage = React.lazy(() => import('./app/ai-services/page'));
+const ItServicesPage = React.lazy(() => import('./app/it-services/page'));
+>>>>>>> origin/cursor/ad-creation-and-management-f267
 
 // AI Services Pages
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));

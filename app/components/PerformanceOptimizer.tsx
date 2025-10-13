@@ -1,6 +1,25 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 interface PerformanceOptimizerProps {
   children: React.ReactNode;
+=======
+<<<<<<< HEAD
+'use client;
+
+import React, { useEffect, useState, useCallback } from 'react;
+
+import { Settings, Zap, CheckCircle, AlertTriangle } from 'lucide-react;
+
+interface PerformanceOptimizerProps {}
+  enableImageOptimization?: boolean;
+
+  enableLazyLoading?: boolean;
+
+  enablePreloading?: boolean;
+
+  enableCodeSplitting?: boolean;
+
+>>>>>>> origin/cursor/ad-creation-and-management-f267
 }
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
   useEffect(() => {
@@ -57,6 +76,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           }
         });
       }
+<<<<<<< HEAD
     };
     optimizePerformance();
     return () => {
@@ -64,5 +84,46 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     };
   }, []);
   return <>{children}</>;
+=======
+
+    }
+
+  }, [enableImageOptimization, enableLazyLoading, enablePreloading, enableCodeSplitting]);
+
+  return null;
+
+=======
+import React, { useEffect } from 'react';
+
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {
+  useEffect(() => {
+    // Performance optimization logic
+    const optimizeImages = () => {
+      const images = document.querySelectorAll('img');
+      images.forEach((img) => {
+        if (!img.hasAttribute('loading')) {
+          img.setAttribute('loading', 'lazy');
+        }
+      });
+    };
+
+    const optimizeAnimations = () => {
+      // Reduce motion for users who prefer it
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.style.setProperty('--animation-duration', '0.01ms');
+      }
+    };
+
+    optimizeImages();
+    optimizeAnimations();
+  }, []);
+
+  return <>{children}</>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
+>>>>>>> origin/cursor/ad-creation-and-management-f267
 };
 export default PerformanceOptimizer;

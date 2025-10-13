@@ -1,4 +1,20 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
+=======
+<<<<<<< HEAD
+'use client;
+
+import React, { useEffect } from 'react;
+
+interface AccessibilityEnhancerProps {}
+  enableKeyboardNavigation?: boolean;
+
+  enableScreenReaderSupport?: boolean;
+
+  enableHighContrast?: boolean;
+
+  enableFocusManagement?: boolean;
+>>>>>>> origin/cursor/ad-creation-and-management-f267
 
 interface AccessibilitySettings {
   highContrast: boolean;
@@ -15,7 +31,81 @@ export default function AccessibilityEnhancer() {
     focusVisible: false
   });
 
+<<<<<<< HEAD
   const [isVisible, setIsVisible] = useState(false);
+=======
+        // Skip to main content
+        if (event.key === 'Tab && event.shiftKey && event.target === document.body) {
+          const skipLink = document.querySelector('a[href="#main-content]) as HTMLAnchorElement;;
+
+          if (skipLink) {
+=======
+    if (enableKeyboardNavigation && typeof window !== 'undefined') {}
+      const handleKeyDown = (event: KeyboardEvent) => {}
+        // Skip to main content
+        if (event.key === 'Tab' && event.shiftKey && event.target === document.body) {}
+          const skipLink = document.querySelector('a[href="#main-content"]') as HTMLAnchorElement;
+          if (skipLink) {}
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
+            skipLink.focus();
+
+            event.preventDefault();
+
+          }
+
+=======
+import React, { useEffect } from 'react';
+
+interface AccessibilityEnhancerProps {
+  children: React.ReactNode;
+}
+
+const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children }) => {
+  useEffect(() => {
+    // Accessibility enhancements
+    const enhanceAccessibility = () => {
+      // Add skip links
+      const skipLink = document.createElement('a');
+      skipLink.href = '#main-content';
+      skipLink.textContent = 'Skip to main content';
+      skipLink.className = 'sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 bg-blue-600 text-white p-2 z-50';
+      document.body.insertBefore(skipLink, document.body.firstChild);
+
+      // Add ARIA labels to interactive elements
+      const buttons = document.querySelectorAll('button:not([aria-label])');
+      buttons.forEach((button) => {
+        if (!button.getAttribute('aria-label') && !button.textContent?.trim()) {
+          button.setAttribute('aria-label', 'Button');
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
+        }
+      });
+    };
+
+<<<<<<< HEAD
+        // Close dropdowns with Escape key
+<<<<<<< HEAD
+        if (event.key === 'Escape) {
+          const openDropdowns = document.querySelectorAll('[aria-expanded="true]);;
+
+          openDropdowns.forEach(dropdown => {
+            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false);
+
+          })        }
+
+=======
+        if (event.key === 'Escape') {}
+          const openDropdowns = document.querySelectorAll('[aria-expanded="true"]');
+          openDropdowns.forEach(dropdown => {}
+            (dropdown as HTMLElement).setAttribute('aria-expanded', 'false');
+          })
+        }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
+      };
+
+      document.addEventListener(keydown, handleKeyDown);
+
+      return () => document.removeEventListener(keydown, handleKeyDown);
+>>>>>>> origin/cursor/ad-creation-and-management-f267
 
   useEffect(() => {
     // Load saved settings from localStorage
@@ -64,12 +154,22 @@ export default function AccessibilityEnhancer() {
     }
   };
 
+<<<<<<< HEAD
   const updateSetting = (key: keyof AccessibilitySettings, value: boolean) => {
     const newSettings = { ...settings, [key]: value };
     setSettings(newSettings);
     applySettings(newSettings);
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings));
   };
+=======
+=======
+    enhanceAccessibility();
+  }, []);
+
+  return <>{children}</>;
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
+};
+>>>>>>> origin/cursor/ad-creation-and-management-f267
 
   const togglePanel = () => {
     setIsVisible(prev => !prev);

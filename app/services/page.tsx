@@ -1,6 +1,50 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
+=======
+'use client;
+
+import React from 'react;
+
+import { Helmet } from 'react-helmet-async;
+
+import { 
+=======
+'use client';
+
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+import { }
+>>>>>>> cursor/fix-errors-and-merge-to-main-d054
+  Brain, 
+  Cloud, 
+  Shield, 
+  BarChart3, 
+  Smartphone, 
+  Database, 
+  Zap, 
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Search,
+<<<<<<< HEAD
+
+} from 'lucide-react;
+
+;
+
+const ServicesPage: React.FC = () => {const services = [;
+    // AI Services
+    {      ico,
+    n: Brain,
+      title: 'AI Solutions,
+      description: 'Advanced artificial intelligence solutions to automate and optimize your business processes.,
+      features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics', 'AI Consulting],
+      price: Starting at $1,500
+      category: 'AI Services,
+>>>>>>> origin/cursor/ad-creation-and-management-f267
 =======
 >>>>>>> origin/clean-main-20251013-145848
 import { Brain, Shield, Cloud, BarChart3, Globe, Zap } from 'lucide-react';
@@ -156,6 +200,32 @@ export default function ServicesPage() {
           ))}
         </div>
       </div>
+<<<<<<< HEAD
     </div>
   );
 }
+=======
+    </React.Fragment>)
+=======
+
+const ServicesPage: React.FC = () => {
+  return (
+    <>
+      <Helmet>
+        <title>Services - Zion Tech Group</title>
+        <meta name="description" content="Services services from Zion Tech Group" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">Services</h1>
+          <p className="text-gray-300">Coming soon...</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+>>>>>>> cursor/fix-errors-and-merge-to-main-92c8
+export default ServicesPage;
+>>>>>>> origin/cursor/ad-creation-and-management-f267
