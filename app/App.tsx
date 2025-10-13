@@ -51,7 +51,9 @@ function App() {
       <BrowserRouter>
         <ErrorBoundary>
           <PerformanceMonitor />
-          <AccessibilityEnhancer />
+          <AccessibilityEnhancer>
+            <div></div>
+          </AccessibilityEnhancer>
           <CriticalResourcePreloader />
           <CacheManager />
           <AdvancedPerformanceMonitor />
