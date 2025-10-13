@@ -1,5 +1,6 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import logger from '../../utils/logger';
 
 interface Props {
   children: ReactNode;
@@ -28,16 +29,8 @@ class ErrorBoundary extends Component<Props, State> {
       errorInfo,
     });
 
-    // Log error to console in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
-
-    // Log error to external service in production
-    if (process.env.NODE_ENV === 'production') {
-      // You can integrate with services like Sentry, LogRocket, etc.
-      console.error('Production error:', error, errorInfo);
-    }
+    // Log error using production-safe logger
+    logger.error('ErrorBoundary caught an error:', error, errorInfo);
   }
 
   handleReset = () => {
