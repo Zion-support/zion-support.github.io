@@ -1,372 +1,292 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import { 
   Rocket, 
   Satellite, 
-  Orbit, 
+  Globe, 
   Zap, 
   Target, 
   CheckCircle, 
   ArrowRight,
   Cpu,
-  Globe,
-  Clock,
-  Users,
-  Award,
-  Star,
   Activity,
-  PieChart,
-  Navigation,
-  MapPin,
-  Gauge
+  BarChart3,
+  Clock,
+  Shield,
+  Star,
+  Award,
+  Brain,
+  TrendingUp,
+  Users,
+  Settings,
+  Monitor
 } from 'lucide-react';
-import EnhancedSEO from '../components/EnhancedSEO';
-import FuturisticCard from '../components/FuturisticCard';
-import FuturisticButton from '../components/FuturisticButton';
-import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const AISpaceMissionOptimizerPage = () => {
+export default function AISpaceMissionOptimizer() {
   const features = [
     {
-      title: "Mission Planning AI",
-      description: "AI-powered mission planning with optimal trajectory calculations and resource allocation",
-      icon: <Rocket className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
+      icon: <Rocket className="w-6 h-6" />,
+      title: "Mission Trajectory Optimization",
+      description: "AI-powered trajectory calculations for optimal fuel efficiency and mission success rates"
     },
     {
-      title: "Real-Time Optimization",
-      description: "Continuous mission optimization based on real-time data and changing conditions",
-      icon: <Activity className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
+      icon: <Satellite className="w-6 h-6" />,
+      title: "Satellite Constellation Management",
+      description: "Intelligent satellite deployment and orbital positioning for maximum coverage"
     },
     {
-      title: "Satellite Management",
-      description: "Comprehensive satellite constellation management and coordination",
-      icon: <Satellite className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
+      icon: <Globe className="w-6 h-6" />,
+      title: "Earth Observation Analytics",
+      description: "Advanced image processing and analysis of Earth observation data for climate monitoring"
     },
     {
-      title: "Risk Assessment",
-      description: "Advanced risk analysis for space missions with collision avoidance",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-orange-500 to-red-500"
+      icon: <Target className="w-6 h-6" />,
+      title: "Precision Landing Systems",
+      description: "AI-guided landing systems with centimeter-level accuracy for planetary exploration"
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Real-time Mission Control",
+      description: "Automated mission monitoring and decision-making for critical space operations"
+    },
+    {
+      icon: <Brain className="w-6 h-6" />,
+      title: "Predictive Maintenance",
+      description: "AI-powered spacecraft health monitoring and predictive maintenance scheduling"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Mission Starter",
-      price: "$499",
+      name: "Space Explorer",
+      price: "$4,999",
       period: "/month",
-      description: "Perfect for small satellite missions and research projects",
+      description: "Perfect for small space agencies and research institutions",
       features: [
-        "Basic mission planning",
-        "5 satellite tracking",
-        "Standard trajectory optimization",
-        "Basic risk assessment",
+        "Basic trajectory optimization",
+        "Single mission support",
+        "Standard analytics",
         "Email support",
-        "Mission reports"
+        "API access"
       ],
       popular: false
     },
     {
-      name: "Mission Professional",
-      price: "$1,999",
+      name: "Space Professional",
+      price: "$12,999",
       period: "/month",
-      description: "Ideal for commercial satellite operators and space agencies",
+      description: "Ideal for commercial space companies and mid-size agencies",
       features: [
         "Advanced mission planning",
-        "50 satellite tracking",
-        "Real-time optimization",
-        "Advanced risk modeling",
+        "Multi-mission support",
+        "Real-time monitoring",
         "Priority support",
-        "API access",
-        "Custom algorithms",
-        "Advanced analytics"
+        "Custom integrations",
+        "White-label options"
       ],
       popular: true
     },
     {
-      name: "Mission Enterprise",
-      price: "$9,999",
-      period: "/month",
-      description: "For large space organizations and government agencies",
+      name: "Space Enterprise",
+      price: "Custom",
+      period: "",
+      description: "For large space agencies and government organizations",
       features: [
-        "Unlimited mission planning",
-        "Unlimited satellite tracking",
-        "AI-powered optimization",
-        "Full risk management",
-        "24/7 dedicated support",
-        "Full API access",
+        "Full mission lifecycle management",
         "Custom AI models",
-        "White-label solution",
-        "SLA guarantee",
-        "Dedicated mission control"
+        "Dedicated support team",
+        "On-premise deployment",
+        "Full customization",
+        "24/7 mission support"
       ],
       popular: false
     }
   ];
 
-  const capabilities = [
+  const benefits = [
     {
-      title: "Trajectory Optimization",
-      description: "Calculate optimal flight paths with 99.9% fuel efficiency",
-      accuracy: "99.9%",
-      icon: <Navigation className="w-6 h-6" />
+      metric: "99.8%",
+      description: "Mission Success Rate",
+      icon: <Target className="w-8 h-8" />
     },
     {
-      title: "Collision Avoidance",
-      description: "Real-time collision detection and avoidance maneuvers",
-      accuracy: "99.8%",
-      icon: <Target className="w-6 h-6" />
+      metric: "40%",
+      description: "Fuel Savings",
+      icon: <Zap className="w-8 h-8" />
     },
     {
-      title: "Resource Management",
-      description: "Optimize fuel, power, and payload allocation",
-      accuracy: "97.5%",
-      icon: <Gauge className="w-6 h-6" />
+      metric: "60%",
+      description: "Faster Mission Planning",
+      icon: <Clock className="w-8 h-8" />
     },
     {
-      title: "Mission Success Rate",
-      description: "Increase mission success rates with AI optimization",
-      accuracy: "94.2%",
-      icon: <Award className="w-6 h-6" />
+      metric: "24/7",
+      description: "Mission Monitoring",
+      icon: <Monitor className="w-8 h-8" />
     }
-  ];
-
-  const stats = [
-    { number: "99.9%", label: "Trajectory Accuracy", icon: <Rocket className="w-6 h-6" /> },
-    { number: "50ms", label: "Real-Time Processing", icon: <Zap className="w-6 h-6" /> },
-    { number: "10,000+", label: "Satellites Tracked", icon: <Satellite className="w-6 h-6" /> },
-    { number: "24/7", label: "Mission Monitoring", icon: <Globe className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      <EnhancedSEO
-        title="AI Space Mission Optimizer - Advanced Space AI | Zion Tech Group"
-        description="Revolutionary AI-powered space mission optimization for satellite management, trajectory planning, and mission control. Starting at $499/month."
-        keywords="space mission AI, satellite optimization, trajectory planning, space technology, mission control, satellite management"
-        canonical="https://ziontechgroup.com/ai-space-mission-optimizer"
-      />
+      <Helmet>
+        <title>AI Space Mission Optimizer - Zion Tech Group</title>
+        <meta name="description" content="Revolutionary AI-powered space mission optimization platform with 99.8% success rate. Advanced algorithms for trajectory planning, satellite management, and space exploration." />
+        <meta name="keywords" content="space AI, mission optimization, satellite management, space exploration, trajectory planning, space technology" />
+      </Helmet>
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        </div>
-        
-        <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <Rocket className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">AI Space Mission Optimizer</span>
-          </div>
-          
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400">
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
+              <Rocket className="w-5 h-5 mr-2 text-blue-400" />
+              <span className="text-blue-300 font-medium">Space AI Technology</span>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               AI Space Mission Optimizer
-            </span>
-          </h1>
-          
-          <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary AI-powered space mission optimization for satellite management, 
-            trajectory planning, and mission control with unprecedented accuracy.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Rocket className="w-5 h-5" />}
-            >
-              Start Free Trial
-            </FuturisticButton>
-            <FuturisticButton
-              href="/demo"
-              variant="outline"
-              size="lg"
-              icon={<Satellite className="w-5 h-5" />}
-            >
-              View Demo
-            </FuturisticButton>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Revolutionize space exploration with AI-powered mission optimization that delivers 99.8% success rates and reduces mission costs by 40% through intelligent trajectory planning and real-time monitoring.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Launch Your Mission
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
+              >
+                Watch Demo
+              </Link>
+            </div>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center group">
-                <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  {stat.icon}
+          {/* Benefits Grid */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-full mb-4">
+                  {benefit.icon}
                 </div>
-                <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-300 text-xs md:text-sm">{stat.label}</div>
+                <div className="text-3xl font-bold text-white mb-2">{benefit.metric}</div>
+                <div className="text-gray-400">{benefit.description}</div>
               </div>
             ))}
           </div>
-        </ResponsiveContainer>
+        </div>
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Space Mission Intelligence
-            </h2>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Harness the power of AI for optimal space mission planning, execution, and management.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {features.map((feature, index) => (
-              <FuturisticCard
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
-              >
-                <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                >
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
-                  {feature.description}
-                </p>
-              </FuturisticCard>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
-      {/* Capabilities Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-blue-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Unmatched Space Mission Performance
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Space AI Capabilities
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Our AI delivers unprecedented accuracy and efficiency in space mission optimization.
+              Harness the power of artificial intelligence to optimize every aspect of space missions from launch to landing.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {capabilities.map((capability, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10 text-center"
-              >
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                  {capability.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
-                  {capability.title}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed mb-3">
-                  {capability.description}
-                </p>
-                <div className="text-2xl font-bold text-blue-400">
-                  {capability.accuracy}
-                </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 hover:border-blue-500/50 transition-all duration-300">
+                <div className="text-blue-400 mb-4">{feature.icon}</div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
               </div>
             ))}
           </div>
-        </ResponsiveContainer>
+        </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <ResponsiveContainer>
+      <section className="py-20 px-4">
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Space Mission Pricing
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Space Mission Plans
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the mission optimization power that matches your space operations.
+              Choose the perfect AI-powered space mission solution for your organization
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <div
-                key={index}
-                className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl ${
-                  plan.popular
-                    ? 'border-blue-500/50 shadow-blue-500/20 scale-105'
-                    : 'border-white/20 hover:border-blue-500/30'
-                }`}
-              >
+              <div key={index} className={`relative bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border rounded-xl p-8 ${plan.popular ? 'border-blue-500/50 ring-2 ring-blue-500/20' : 'border-slate-700/50'}`}>
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
                 )}
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-4xl font-bold text-blue-400">{plan.price}</span>
-                    <span className="text-gray-400 ml-1">{plan.period}</span>
+                  <p className="text-gray-400 mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-5xl font-bold text-white">{plan.price}</span>
+                    <span className="text-gray-400 ml-2">{plan.period}</span>
                   </div>
-                  <p className="text-gray-300 text-sm">{plan.description}</p>
                 </div>
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-gray-300">
+                    <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                      <span className="text-sm">{feature}</span>
+                      <span className="text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
-                <FuturisticButton
-                  href="/contact"
-                  variant={plan.popular ? "primary" : "outline"}
-                  size="lg"
-                  className="w-full"
+                <Link
+                  to="/contact"
+                  className={`w-full inline-flex items-center justify-center px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                    plan.popular
+                      ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:from-blue-700 hover:to-cyan-700'
+                      : 'border border-slate-600 text-slate-300 hover:bg-slate-700/50'
+                  }`}
                 >
-                  Get Started
-                </FuturisticButton>
+                  Launch Mission
+                </Link>
               </div>
             ))}
           </div>
-        </ResponsiveContainer>
+        </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Optimize Your Space Missions?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join the space technology revolution with AI-powered mission optimization.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <FuturisticButton
-              href="/contact"
-              variant="primary"
-              size="lg"
-              icon={<Rocket className="w-5 h-5" />}
-            >
-              Start Free Trial
-            </FuturisticButton>
-            <FuturisticButton
-              href="/pricing"
-              variant="outline"
-              size="lg"
-              icon={<Orbit className="w-5 h-5" />}
-            >
-              View Pricing
-            </FuturisticButton>
+          <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 backdrop-blur-sm border border-blue-500/30 rounded-2xl p-12">
+            <h2 className="text-4xl font-bold text-white mb-6">
+              Ready to Launch Your Next Mission?
+            </h2>
+            <p className="text-xl text-gray-300 mb-8">
+              Join leading space agencies and commercial space companies using AI to optimize their missions and explore the cosmos more efficiently.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105"
+              >
+                Schedule Mission Consultation
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+              <Link
+                to="/demo"
+                className="inline-flex items-center px-8 py-4 border border-blue-500 text-blue-300 font-semibold rounded-lg hover:bg-blue-500/10 transition-all duration-300"
+              >
+                View Mission Demo
+              </Link>
+            </div>
           </div>
         </div>
       </section>
     </div>
   );
-};
-
-export default AISpaceMissionOptimizerPage;
+}
