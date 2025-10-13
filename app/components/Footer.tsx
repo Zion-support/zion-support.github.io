@@ -88,124 +88,6 @@ export default function Footer() {
             </div>
           </div>
 
-<<<<<<< HEAD
-          {/* Services */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/ai-services"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  AI Services
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/cloud-infrastructure"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Cloud Infrastructure
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/cybersecurity-solutions"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/5g-implementation"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  5G Implementation
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Company</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/about"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/careers"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/case-studies"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Case Studies
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/blog"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Blog
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Support</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  to="/contact"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/support"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Help Center
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/pricing"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Pricing
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/consultation"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Consultation
-                </Link>
-              </li>
-            </ul>
-          </div>
-=======
           {/* Quick Links */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">Quick Links</h3>
@@ -302,36 +184,11 @@ export default function Footer() {
               </button>
             </div>
           </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-dcd8
         </div>
 
         {/* Bottom Footer */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-<<<<<<< HEAD
-            <p className="text-gray-400 text-sm">
-              © {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link
-                to="/privacy"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                to="/terms"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                to="/cookies"
-                className="text-gray-400 hover:text-white transition-colors text-sm"
-              >
-                Cookie Policy
-              </Link>
-=======
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <p className="text-gray-400 text-sm">
                 © {currentYear} Zion Tech Group. All rights reserved.
@@ -348,7 +205,6 @@ export default function Footer() {
               <p className="text-gray-500 text-xs">
                 Built with ❤️ by Zion Tech Group
               </p>
->>>>>>> cursor/fix-errors-and-merge-to-main-dcd8
             </div>
           </div>
         </div>
