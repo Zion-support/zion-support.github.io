@@ -1,98 +1,49 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
-=======
 import { Right, Star, Zap } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
 import { Right, Star, Brain, BarChart3, Zap, FileText, MessageCircle, Shield } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
 import FuturisticBackground from '../components/FuturisticBackground';
 
 const AiServicesPage: React.FC = () => {
   const services = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Brain,
-=======
       icon: Star,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
       icon: Brain,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'AI Consulting',
       description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
       color: 'from-purple-500 to-pink-500'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: BarChart3,
-=======
       icon: Zap,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
       icon: BarChart3,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'AI Analytics',
       description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',
       color: 'from-blue-500 to-cyan-500'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Zap,
-=======
       icon: Star,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
       icon: Zap,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'AI Automation',
       description: 'Intelligent automation solutions to streamline your business processes.',
       color: 'from-green-500 to-emerald-500'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: FileText,
-=======
       icon: Zap,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
       icon: FileText,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'AI Content Generation',
       description: 'AI-powered content creation for marketing, documentation, and communication.',
       color: 'from-orange-500 to-red-500'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: MessageSquare,
-=======
       icon: Star,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
       icon: MessageCircle,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'AI Customer Service',
       description: 'Intelligent chatbots and customer service solutions powered by AI.',
       color: 'from-indigo-500 to-purple-500'
     },
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      icon: Shield,
-=======
       icon: Zap,
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-=======
       icon: Shield,
->>>>>>> cursor/fix-errors-and-merge-to-main-ecd7
       title: 'AI Security',
       description: 'AI-powered security solutions to protect your business and data.',
       color: 'from-cyan-500 to-blue-500'

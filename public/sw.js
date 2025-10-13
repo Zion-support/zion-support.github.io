@@ -1,10 +1,14 @@
 
-const CACHE_NAME = 'zion-tech-group-v2';
+// Service Worker for Zion Tech Group
+const CACHE_NAME = 'zion-tech-v1';
 const urlsToCache = [
   '/',
-  '/static/css/main.css',
-  '/static/js/main.js',
-  '/manifest.json'
+  '/assets/index-BLT78pJd.css',
+  '/assets/js/vendor-BYA32aEE.js',
+  '/assets/js/index-DqcfcIlc.js',
+  '/assets/js/router-B67OpBmf.js',
+  '/assets/js/ui-BiJrOvfN.js',
+  '/assets/js/helmet---FNlkog.js'
 ];
 
 self.addEventListener('install', (event) => {
@@ -17,6 +21,12 @@ self.addEventListener('install', (event) => {
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
-      .then((response) => response || fetch(event.request))
+      .then((response) => {
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
   );
 });

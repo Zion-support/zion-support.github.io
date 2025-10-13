@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import { Helmet } from 'react-helmet-async';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
 import { Link } from 'react-router-dom';
 import SEO from '../components/SEO';
 import { 
@@ -20,16 +16,6 @@ import {
 } from '@heroicons/react/24/outline';
 
 export default function AboutPage() {
-<<<<<<< HEAD
-  return (
-    <>
-      <Helmet>
-        <title>About Us - Zion Tech Group</title>
-        <meta name="description" content="Learn about Zion Tech Group's mission, values, and expertise in AI and IT solutions. Discover our team and company culture." />
-        <meta name="keywords" content="about us, company, team, mission, values, AI solutions, IT services" />
-      </Helmet>
-      
-=======
   const values = [
     {
       icon: CheckCircleIcon,
@@ -106,7 +92,6 @@ export default function AboutPage() {
         url="/about"
       />
 
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 opacity-20">
@@ -121,16 +106,9 @@ export default function AboutPage() {
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
               Empowering businesses through innovative technology solutions
             </p>
-<<<<<<< HEAD
-            <p className="text-lg text-gray-400 max-w-3xl mx-auto">
-              Founded in 2020, we've been at the forefront of digital transformation, 
-              helping companies leverage the power of artificial intelligence, cybersecurity, 
-              and cloud technologies to achieve unprecedented growth.
-=======
             <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
               Founded in 2020, Zion Tech Group has been at the forefront of digital transformation, 
               helping businesses leverage cutting-edge AI and IT solutions to achieve their goals.
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
             </p>
           </div>
         </div>
