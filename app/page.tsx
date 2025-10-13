@@ -40,6 +40,34 @@ const HomePage = () => {
 
   const microSaasHighlights = [
     {
+      name: "Zion AI Chatbot Builder",
+      description: "No-code AI chatbot creation platform",
+      price: "From $29/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-chatbot-builder"
+    },
+    {
+      name: "Zion AI Video Generator",
+      description: "AI-powered video creation platform",
+      price: "From $39/month",
+      icon: <Zap className="w-6 h-6" />,
+      link: "/zion-ai-video-generator"
+    },
+    {
+      name: "Zion AI Email Marketing",
+      description: "AI-powered email marketing automation",
+      price: "From $19/month",
+      icon: <Mail className="w-6 h-6" />,
+      link: "/zion-ai-email-marketing"
+    },
+    {
+      name: "Zion AI Social Media Manager",
+      description: "AI-powered social media management",
+      price: "From $29/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/zion-ai-social-media-manager"
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform",
       price: "From $29/month",
@@ -52,13 +80,6 @@ const HomePage = () => {
       price: "From $49/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield"
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
     }
   ];
 
@@ -215,8 +236,8 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {microSaasHighlights.map((saas, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
