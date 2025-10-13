@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Configuration Manager
@@ -17,6 +18,15 @@ export interface AppConfig {
     timeout: number
     retryAttempts: number,
     enableCaching: boolean
+=======
+// ConfigManager utility
+// This file contains utility functions and configurations
+
+export const configManager = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
   features: {
     enableAnalytics: boolean;

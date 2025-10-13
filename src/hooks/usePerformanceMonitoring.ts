@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 // PerformanceMetrics interface removed as it's not used in this hook;
 <<<<<<< HEAD
@@ -7,6 +8,16 @@ export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */}
 =======
 export const _usePerformanceMonitoring = () => {/* TODO: Fix JSX expression */};
   O: Add content};
+=======
+// UsePerformanceMonitoring utility
+// This file contains utility functions and configurations
+
+export const usePerformanceMonitoring = {
+  // Add utility functions here
+  init: () => {
+
+  }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   const { trackPerformance } = useAnalytics();

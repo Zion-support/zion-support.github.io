@@ -28,6 +28,7 @@ class PerformanceMonitor {
     this.setupCustomMetrics();
   }
 
+<<<<<<< HEAD
   private setupWebVitals(): void {
     // First Contentful Paint
     this.observePaint('first-contentful-paint', 'fcp');
@@ -68,6 +69,25 @@ class PerformanceMonitor {
       this.observers.push(observer);
     } catch (error) {
       console.warn('Failed to observe LCP:', error);
+=======
+  // Measure component render time
+  measureRender(componentName: string, startTime: number): void {
+    const renderTime = performance.now() - startTime;
+    this.metrics.set(`${componentName}_render`, renderTime);
+    
+    if (renderTime > 16) { // More than one frame at 60fps
+
+    }
+  }
+
+  // Measure API call performance
+  measureApiCall(endpoint: string, startTime: number): void {
+    const duration = performance.now() - startTime;
+    this.metrics.set(`${endpoint}_api`, duration);
+    
+    if (duration > 1000) { // More than 1 second
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
     }
   }
 
@@ -163,7 +183,38 @@ if (typeof window !== 'undefined') {
 }
 
 export const measureWebVitals = () => {
+<<<<<<< HEAD
   performanceMonitor.init();
+=======
+  if (typeof window === 'undefined') return;
+
+  // Measure Largest Contentful Paint (LCP)
+  new PerformanceObserver((list) => {
+    const entries = list.getEntries();
+    const lastEntry = entries[entries.length - 1];
+
+  }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+  // Measure First Input Delay (FID)
+  new PerformanceObserver((list) => {
+    const entries = list.getEntries();
+    entries.forEach((entry) => {
+
+    });
+  }).observe({ entryTypes: ['first-input'] });
+
+  // Measure Cumulative Layout Shift (CLS)
+  let clsValue = 0;
+  new PerformanceObserver((list) => {
+    const entries = list.getEntries();
+    entries.forEach((entry) => {
+      if (!(entry as any).hadRecentInput) {
+        clsValue += (entry as any).value;
+      }
+    });
+
+  }).observe({ entryTypes: ['layout-shift'] });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 };
 
 export const getPerformanceMetrics = () => {

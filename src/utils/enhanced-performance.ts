@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Enhanced Performance Monitoring
  * Comprehensive performance tracking and optimization utilities
@@ -14,6 +15,15 @@ export class PerformanceMonitor {
     if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
 <<<<<<< HEAD
       this.initializeObservers()
+=======
+// Enhanced-performance utility
+// This file contains utility functions and configurations
+
+export const enhanced-performance = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
   }
   

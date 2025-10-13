@@ -99,6 +99,7 @@ const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
     // Prevent text selection (optional)
     document.addEventListener('selectstart', (e) => {/* TODO: Fix JSX expression */}
       }
+<<<<<<< HEAD
     });
     // Prevent drag and drop;
     document.addEventListener('dragover', (e) => {/* TODO: Fix JSX expression */}
@@ -119,6 +120,22 @@ const addSecurityEventListeners = () => {/* TODO: Fix JSX expression */}
         }
         // Ctrl+A;
         if (e.ctrlKey && e.keyCode === 65) {/* TODO: Fix JSX expression */}
+=======
+    };
+
+    // Add security event logging
+    const addSecurityLogging = () => {
+      // Log security events
+      const logSecurityEvent = (event: string, details: any) => {
+
+        // Send to security monitoring service if available
+        if (window.gtag) {
+          window.gtag('event', 'security_event', {
+            event_category: 'Security',
+            event_label: event,
+            value: 1
+          });
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
         }
       };
     });

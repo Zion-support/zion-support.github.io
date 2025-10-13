@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const removeConsoleLogs = () => {
   console.log('Console logs removal completed');
 };
@@ -200,7 +201,53 @@ async function processFiles() {/* TODO: Fix JSX expression */};
 ];
     'app/**/*.{ts,tsx,js,jsx}',
     'components/**/*.{ts,tsx,js,jsx}',
+=======
+#!/usr/bin/env node
+
+import fs from 'fs';
+import path from 'path';
+import { glob } from 'glob';
+
+// Function to remove console.log statements from a file
+function removeConsoleLogs(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    let modified = false;
+    
+    // Remove console.log, console.warn, console.error statements
+    const consoleRegex = /^\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm;
+    const originalContent = content;
+    content = content.replace(consoleRegex, '');
+    
+    // Remove multi-line console statements
+    const multiLineConsoleRegex = /^\s*console\.(log|warn|error|info|debug)\(\s*[\s\S]*?\);\s*$/gm;
+    content = content.replace(multiLineConsoleRegex, '');
+    
+    // Remove commented console statements that are clearly for debugging
+    const commentedConsoleRegex = /^\s*\/\/\s*console\.(log|warn|error|info|debug)\([^)]*\);\s*$/gm;
+    content = content.replace(commentedConsoleRegex, '');
+    
+    if (content !== originalContent) {
+      fs.writeFileSync(filePath, content, 'utf8');
+      modified = true;
+      console.log(`Cleaned console statements from: ${filePath}`);
+    }
+    
+    return modified;
+  } catch (error) {
+    console.error(`Error processing ${filePath}:`, error.message);
+    return false;
+  }
+}
+
+// Function to process all TypeScript and JavaScript files
+function processFiles() {
+  const patterns = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
     'src/**/*.{ts,tsx,js,jsx}',
+    'app/**/*.{ts,tsx,js,jsx}',
+    'components/**/*.{ts,tsx,js,jsx}'
+  ];
   
   let totalFiles = 0;
   let modifiedFiles = 0;
@@ -212,6 +259,7 @@ async function processFiles() {/* TODO: Fix JSX expression */};
   unchanged: ${totalFiles - modifiedFiles}`);
 <<<<<<< HEAD
   
+<<<<<<< HEAD
   if (modifiedFiles > 0) {/* TODO: Fix JSX expression */}
   } else {/* TODO: Fix JSX expression */}
 export { removeConsoleLogs, processFiles }
@@ -222,3 +270,26 @@ export { removeConsoleLogs, processFiles };
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 `
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
+  patterns.forEach(async (pattern) => {
+    const files = await glob(pattern, { 
+      cwd: process.cwd(),
+      ignore: ['node_modules/**', 'dist/**', 'build/**', '**/*.d.ts']
+    });
+    
+    files.forEach(file => {
+      totalFiles++;
+      if (removeConsoleLogs(file)) {
+        modifiedFiles++;
+      }
+    });
+  });
+  
+  console.log(`\nProcessed ${totalFiles} files`);
+  console.log(`Modified ${modifiedFiles} files`);
+  console.log('Console log removal completed!');
+}
+
+// Run the script
+processFiles();
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa

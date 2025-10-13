@@ -2,8 +2,15 @@
 // This file contains utility functions and configurations
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 interface SEOConfig {
     title: string
+=======
+export const seoEnhancer = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 =======
 interface SEOConfig {title: string};

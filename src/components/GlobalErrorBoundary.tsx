@@ -38,10 +38,17 @@ constructor(props: Props) {
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({ error, errorInfo });
     // Log error to console in development
+<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') {
 <<<<<<< HEAD
     console.error('Error caught by boundary:', error, errorInfo)
   }
+=======
+    if (process.env['NODE_ENV'] === 'development') {
+
+    }
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
     // Call onError callback if provided
     if (this.props.onError) {
     this.props.onError(error, errorInfo)

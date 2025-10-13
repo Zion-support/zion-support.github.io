@@ -291,10 +291,136 @@ export function getMemoryUsage(): {
       total: memory.totalJSHeapSize,
       limit: memory.jsHeapSizeLimit,
     };
+<<<<<<< HEAD
+=======
+    img.onerror = reject;
+    img['src'] = src;
+  });
+};
+
+export const createIntersectionObserver = (
+  callback: (entries: IntersectionObserverEntry[]) => void,
+  options?: IntersectionObserverInit
+): IntersectionObserver => {
+  return new IntersectionObserver(callback, {
+    rootMargin: '50px',
+    threshold: 0.1,
+    ...options
+  });
+};
+
+export const measurePerformance = (name: string, fn: () => void): void => {
+  if (process.env['NODE_ENV'] === 'development') {
+    const start = performance.now();
+    fn();
+    const end = performance.now();
+
+  } else {
+    fn();
+  }
+};
+
+export const getDeviceInfo = () => {
+  const userAgent = navigator.userAgent;
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+  const isTablet = /iPad|Android(?=.*Mobile)/i.test(userAgent);
+  const isDesktop = !isMobile && !isTablet;
+  
+  return {
+    isMobile,
+    isTablet,
+    isDesktop,
+    userAgent
+  };
+};
+
+export const optimizeForDevice = () => {
+  const deviceInfo = getDeviceInfo();
+  
+  if (deviceInfo.isMobile) {
+    // Reduce animations and effects for mobile
+    document.documentElement.style.setProperty('--animation-duration', '0.2s');
+    document.documentElement.style.setProperty('--transition-duration', '0.15s');
+  }
+  
+  return deviceInfo;
+};
+
+export const createPerformanceObserver = (callback: (entries: PerformanceEntry[]) => void) => {
+  if ('PerformanceObserver' in window) {
+    const observer = new PerformanceObserver(callback);
+    observer.observe({ entryTypes: ['measure', 'navigation', 'paint'] });
+    return observer;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
   return null;
 }
 
+<<<<<<< HEAD
+=======
+export const measureWebVitals = () => {
+  const vitals: Record<string, number> = {};
+  
+  const observer = createPerformanceObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.entryType === 'paint') {
+        if (entry.name === 'first-contentful-paint') {
+          vitals.fcp = entry.startTime;
+        }
+      } else if (entry.entryType === 'largest-contentful-paint') {
+        vitals.lcp = entry.startTime;
+      }
+    });
+  });
+  
+  return {
+    vitals,
+    observer
+  };
+};
+
+export const optimizeBundleSize = () => {
+  // Dynamic imports for heavy components
+  const loadHeavyComponent = (componentName: string) => {
+    return import(`../components/${componentName}`).catch(() => {
+
+      return null;
+    });
+  };
+  
+  return { loadHeavyComponent };
+};
+
+export const createLazyComponent = <T extends React.ComponentType<any>>(
+  importFunc: () => Promise<{ default: T }>,
+  fallback?: React.ReactNode
+) => {
+  const LazyComponent = React.lazy(importFunc);
+  
+  return (props: React.ComponentProps<T>) => (
+    <React.Suspense fallback={fallback || <div>Loading...</div>}>
+      <LazyComponent {...props} />
+    </React.Suspense>
+  );
+};
+
+// Memory management utilities
+export const cleanupMemory = () => {
+  if ('memory' in performance) {
+    const memory = (performance as any).memory;
+    // console.log('Memory usage:', {
+      used: Math.round(memory.usedJSHeapSize / 1048576) + ' MB',
+      total: Math.round(memory.totalJSHeapSize / 1048576) + ' MB',
+      limit: Math.round(memory.jsHeapSizeLimit / 1048576) + ' MB'
+    });
+  }
+};
+
+export const scheduleCleanup = () => {
+  // Schedule cleanup every 5 minutes
+  setInterval(cleanupMemory, 5 * 60 * 1000);
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 /**
  * FPS Monitor
  */

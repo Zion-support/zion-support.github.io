@@ -68,6 +68,7 @@ const handleAppInstalled = () => {
       const { outcome } = await deferredPrompt.userChoice;
       if (outcome === 'accepted') {
 <<<<<<< HEAD
+<<<<<<< HEAD
     console.log('User accepted the install prompt')
   } else {
     console.log('User dismissed the install prompt')
@@ -76,6 +77,22 @@ const handleAppInstalled = () => {
       setShowInstallButton(false);
     } catch (error) {
     console.error('Error installing PWA:', error)
+=======
+
+      } else {
+
+      }
+      
+      setDeferredPrompt(null);
+      setShowInstallButton(false);
+    } catch (error) {
+
+    }
+  };
+
+  if (isInstalled || !showInstallButton) {
+    return null;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
   }
   if (isInstalled || !showInstallButton) {

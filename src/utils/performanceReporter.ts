@@ -5,6 +5,7 @@
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export interface PerformanceMetric {
     // TODO: Add content
   }
@@ -16,6 +17,12 @@ export interface PerformanceMetric {
 }
 export interface PerformanceReport {
     // TODO: Add content
+=======
+export const performanceReporter = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

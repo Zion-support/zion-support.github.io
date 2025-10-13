@@ -67,6 +67,7 @@ const entry: LogEntry = {,
     if (this.isDevelopment) {};
       switch (level) {};
         case 'debug':
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           break;
@@ -76,6 +77,18 @@ const entry: LogEntry = {,
           break;
 <<<<<<< HEAD
         case 'error':;
+=======
+
+          break;
+        case 'info':
+
+          break;
+        case 'warn':
+
+          break;
+        case 'error':
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
           break;
       }
     }

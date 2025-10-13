@@ -3,7 +3,12 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { Suspense } from 'react';
+=======
+
+import React, { Suspense, memo, lazy } from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 <<<<<<< HEAD
@@ -58,6 +63,7 @@ import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import Sidebar from './app/components/Sidebar';
 import HomePage from './app/page';
@@ -78,6 +84,16 @@ import EnhancedAccessibility from './app/components/EnhancedAccessibility';
 <<<<<<< HEAD
 <<<<<<< HEAD
 import LoadingSpinner from './app/components/LoadingSpinner';
+=======
+import LoadingSpinner from './src/components/LoadingSpinner';
+import PerformanceMonitor from './src/components/PerformanceMonitor';
+
+// Lazy load main components for better performance
+const UnifiedContentPromotion = lazy(() => import('./src/components/UnifiedContentPromotion'));
+const InteractiveAIROICalculator = lazy(() => import('./src/components/InteractiveAIROICalculator'));
+const ContentShowcase = lazy(() => import('./src/components/ContentShowcase'));
+const InteractiveContentShowcase2026 = lazy(() => import('./src/components/InteractiveContentShowcase2026'));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 
 // Pages
 import HomePage from './app/page';
@@ -248,6 +264,7 @@ const App: React.FC = () => {
       <ErrorBoundary>
 =======
     <ErrorBoundary>
+<<<<<<< HEAD
       <HelmetProvider>
         <EnhancedSEO
           title="Zion Tech Group - Advanced AI and IT Solutions"
@@ -257,6 +274,35 @@ const App: React.FC = () => {
         />
         <SkipLink />
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1507
+=======
+      <PerformanceMonitor>
+        <HelmetProvider>
+        <Helmet>
+          <title>Zion Tech Group - AI & IT Solutions</title>
+          <meta
+            name="description"
+            content="Leading provider of AI-powered enterprise solutions and digital transformation services. Achieve 300% ROI with our cutting-edge AI technology."
+          />
+          <meta
+            name="keywords"
+            content="AI, artificial intelligence, enterprise solutions, digital transformation, IT services"
+          />
+          <meta property="og:title" content="Zion Tech Group - AI & IT Solutions" />
+          <meta
+            property="og:description"
+            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
+          />
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content="https://ziontechgroup.com" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Zion Tech Group - AI & IT Solutions" />
+          <meta
+            name="twitter:description"
+            content="Transform your enterprise with AI-powered solutions achieving 300% ROI, 70% cost reduction, and 90% efficiency gains"
+          />
+          <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
+        </Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
         <Router>
 <<<<<<< HEAD
           <AnalyticsProvider>
@@ -1754,7 +1800,8 @@ function App() {
             <EnhancedAnalytics />
           </AnalyticsProvider>
         </Router>
-      </HelmetProvider>
+        </HelmetProvider>
+      </PerformanceMonitor>
     </ErrorBoundary>
   );
 }

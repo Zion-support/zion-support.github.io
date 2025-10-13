@@ -64,6 +64,7 @@ constructor(props: Props) {
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     // Log error to console for debugging
+<<<<<<< HEAD
     console.error('Error caught by ImprovedErrorBoundary:', {
       message: error.message,
       stack: error.stack,
@@ -72,6 +73,9 @@ constructor(props: Props) {
       userAgent: navigator.userAgent,
       url: window.location.href
     });
+=======
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
     // Call custom error handler if provided
     if (this.props.onError) {
     this.props.onError(error, errorInfo)

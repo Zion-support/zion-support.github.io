@@ -33,10 +33,19 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
+<<<<<<< HEAD
  cursor/analyze-improve-and-deploy-application-cde4;
     // Log error to console in development;
     if (process.env['NODE_ENV'] === 'development') {/* TODO: Fix JSX expression */}
 <<<<<<< HEAD
+=======
+
+ cursor/analyze-improve-and-deploy-application-cde4
+    
+    // Log error to console in development
+    if (process.env['NODE_ENV'] === 'development') {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
     }
     // Call custom error handler if provided;
     if (this.props.onError) {/* TODO: Fix JSX expression */}
@@ -46,11 +55,28 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     if (this.props.enableErrorReporting) {/* TODO: Fix JSX expression */}
     }
   }
+<<<<<<< HEAD
   private reportError = (erro,
   r: Error, errorInf)
   o: ErrorInfo) => {/* TODO: Fix JSX expression */}
   }
   private handleRetry = () => {/* TODO: Fix JSX expression */}
+=======
+
+  private reportError = (error: Error, errorInfo: ErrorInfo) => {
+
+    // Error reporting logic would go here
+
+  };
+
+  private handleRetry = () => {
+    if (this.state.retryCount < this.maxRetries) {
+      this.setState(prevState => ({
+        hasError: false,
+        error: undefined,
+        errorInfo: undefined,
+        retryCount: prevState.retryCount + 1
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
       }));
     }
     // Enhanced error reporting logic;
@@ -61,6 +87,7 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
     }
 =======
     };
+<<<<<<< HEAD
     // Call custom error handler if provided;
     if (this.props.onError) {/* TODO: Fix JSX expression */}
     };
@@ -90,6 +117,32 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
 <<<<<<< HEAD
       // });
     } catch (reportingError) {/* TODO: Fix JSX expression */}
+=======
+
+    // Log to console in development
+    if (process.env['NODE_ENV'] === 'development') {
+      console.group('🚨 Error Boundary Caught Error');
+
+
+
+      console.groupEnd();
+    }
+
+    // Send to error reporting service (implement as needed)
+    try {
+      // In a real app, you would send this to your error reporting service
+      // For now, we'll just log it
+      // eslint-disable-next-line no-console
+
+      // Example: Send to error reporting service
+      // await fetch('/api/errors', {
+      //   method: 'POST',
+      //   headers: {// 'Content-Type': 'application/json'},
+      //   body: JSON.stringify(errorReport)
+      // });
+    } catch (reportingError) {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
     }
   }
 =======
@@ -127,7 +180,13 @@ class EnhancedErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX ex
           }, 2000);
         }
       })
+<<<<<<< HEAD
       .catch(() => {/* TODO: Fix JSX expression */}
+=======
+      .catch(() => {
+        // eslint-disable-next-line no-console
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
       });
   }
   render() {/* TODO: Fix JSX expression */}

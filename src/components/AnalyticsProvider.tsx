@@ -59,10 +59,18 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
       window.gtag('event', event, properties)}
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Also log in development
+<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') {
     console.log('Analytics Event:', event, properties)
   }
   }
+=======
+    if (process.env['NODE_ENV'] === 'development') {
+
+    }
+  };
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   const page = (name: string, properties?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
@@ -75,10 +83,18 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         ...properties})};
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Also log in development
+<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') {
     console.log('Analytics Page:', name, properties)
   }
   }
+=======
+    if (process.env['NODE_ENV'] === 'development') {
+
+    }
+  };
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   const identify = (userId: string, traits?: Record<string, any>) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', trackingId, {
@@ -90,10 +106,18 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         ...traits})};
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     // Also log in development
+<<<<<<< HEAD
     if (process.env['NODE_ENV'] === 'development') {
     console.log('Analytics Identify:', userId, traits)
   }
   }
+=======
+    if (process.env['NODE_ENV'] === 'development') {
+
+    }
+  };
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   const value: AnalyticsContextType = {
     track,
     page,

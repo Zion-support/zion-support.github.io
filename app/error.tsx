@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
@@ -74,6 +75,23 @@ const benefits = [
     'Proven track record of success'
   ];
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+=======
+"use client";
+
+
+export default function Error({
+  error,
+  reset,
+}: {
+  error: Error & { digest?: string };
+  reset: () => void;
+}) {
+  useEffect(() => {
+    // Log the error to an error reporting service
+
+  }, [error]);
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   return (
     <React.Fragment>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

@@ -53,8 +53,49 @@ export default defineConfig(({ mode }) => ({
       compress: {
         drop_console: true,
         drop_debugger: true,
+<<<<<<< HEAD
+=======
+        pure_funcs: ['console.log', 'console.info', 'console.warn', 'console.error'],
+        passes: 3,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+        conditionals: true,
+        dead_code: true,
+        evaluate: true,
+        if_return: true,
+        join_vars: true,
+        loops: true,
+        reduce_vars: true,
+        sequences: true,
+        side_effects: true,
+        switches: true,
+        top_ret: true,
+        toplevel: true,
+        unused: true,
+        hoist_funs: true,
+        hoist_vars: true,
+        collapse_vars: true,
+        reduce_funcs: true,
+        inline: 2,
+        keep_fargs: false,
+        keep_infinity: true,
+        keep_fnames: false,
+        module: true,
+        negate_iife: true,
+        properties: true,
+        pure_getters: true,
+        pure_funcs: ['console.log', 'console.info', 'console.warn', 'console.error'],
+        screw_ie8: true,
+        typeofs: true,
+        warnings: false,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
       },
     },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
 =======
     modulePreload: {
@@ -455,6 +496,48 @@ export default defineConfig({
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
+=======
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: true,
+    cssCodeSplit: true,
+    assetsInlineLimit: 1024, // Optimized for better caching
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react-vendor';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'ui-vendor';
+            }
+            if (id.includes('recharts')) {
+              return 'charts-vendor';
+            }
+            if (id.includes('web-vitals')) {
+              return 'analytics-vendor';
+            }
+            return 'vendor';
+          }
+          
+          // App chunks
+          if (id.includes('/app/')) {
+            return 'app';
+          }
+          if (id.includes('/src/components/')) {
+            return 'components';
+          }
+          if (id.includes('/src/utils/')) {
+            return 'utils';
+          }
+          if (id.includes('/src/hooks/')) {
+            return 'hooks';
+          }
+        },
+        chunkFileNames: 'assets/js/[name]-[hash].js',
+        entryFileNames: 'assets/js/[name]-[hash].js',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
         assetFileNames: (assetInfo) => {
           const ext = assetInfo.name?.split('.').pop();
           if (/\.(css)$/i.test(assetInfo.name || '')) {
@@ -489,6 +572,7 @@ export default defineConfig({
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     },
+<<<<<<< HEAD
 <<<<<<< HEAD
   },
   optimizeDeps: {
@@ -542,6 +626,8 @@ export default defineConfig({
     reportCompressedSize: true,
     cssCodeSplit: true,
     assetsInlineLimit: 4096,
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   },
   server: {
     port: 3000,

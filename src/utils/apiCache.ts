@@ -17,7 +17,14 @@ interface ApiCacheConfig {
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 interface ApiCacheConfig {// TODO: Add content
+=======
+export const apiCache = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

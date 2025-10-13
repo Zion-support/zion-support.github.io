@@ -54,8 +54,21 @@ const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
     }
   }, []);
 
+<<<<<<< HEAD
   return <>{children}</>;
 };
+=======
+  const track = (event: string, properties?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', event, properties);
+    }
+    
+    // Also log in development
+    if (process.env['NODE_ENV'] === 'development') {
+
+    }
+  };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 
 export default AnalyticsProvider;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
@@ -144,6 +157,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
     if (enableDebug) {
       logger.debug('Analytics Event', 'Analytics', { event: JSON.stringify(event) });
     }
+<<<<<<< HEAD
 
     if ((window as unknown as { gtag: (...args: unknown[]) => void }).gtag) {
       (window as unknown as { gtag: (...args: unknown[]) => void }).gtag('event', event.action, {
@@ -151,6 +165,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         event_label: event.label,
         value: event.value,
       });
+=======
+    
+    // Also log in development
+    if (process.env['NODE_ENV'] === 'development') {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
     }
   };
 
@@ -167,6 +187,7 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
         page_location: page,
       });
     }
+<<<<<<< HEAD
   };
 
   const trackPerformance = (metric: string, value: number) => {
@@ -202,6 +223,12 @@ export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({
           context: context || 'unknown',
         },
       });
+=======
+    
+    // Also log in development
+    if (process.env['NODE_ENV'] === 'development') {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
     }
   };
 

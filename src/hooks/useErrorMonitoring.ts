@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 'use client';
 // ErrorInfo interface removed as it's not used in this hook;
@@ -12,6 +13,15 @@ declare global {/* TODO: Fix JSX expression */}
     __REACT_ERROR_HANDLER__?: (erro,
   r: Error, errorInf)
   o: unknown) => void,
+=======
+// UseErrorMonitoring utility
+// This file contains utility functions and configurations
+
+export const useErrorMonitoring = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 }
 export const _useErrorMonitoring = () => {/* TODO: Fix JSX expression */}

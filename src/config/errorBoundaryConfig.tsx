@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
@@ -10,6 +11,15 @@ import React from 'react';
 <<<<<<< HEAD
 export interface ErrorBoundaryConfig {
     // TODO: Add content
+=======
+// ErrorBoundaryConfig utility
+// This file contains utility functions and configurations
+
+export const errorBoundaryConfig = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 }
   /**

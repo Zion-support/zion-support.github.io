@@ -3,8 +3,15 @@
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export interface ValidationResult {
     // TODO: Add content
+=======
+export const validation = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

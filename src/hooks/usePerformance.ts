@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect, useCallback } from 'react';
 interface PerformanceMetrics {
 <<<<<<< HEAD
@@ -5,6 +6,15 @@ interface PerformanceMetrics {
   renderTime: number
   memoryUsage: number,
   networkLatency: number
+=======
+// UsePerformance utility
+// This file contains utility functions and configurations
+
+export const usePerformance = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 export const usePerformance = () => {

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const reportError = (error: Error, context?: Record<string, any>) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'exception', {
@@ -5,6 +6,15 @@ export const reportError = (error: Error, context?: Record<string, any>) => {
       fatal: false,
 <<<<<<< HEAD
       ...context});
+=======
+// ErrorTracking utility
+// This file contains utility functions and configurations
+
+export const errorTracking = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
   
   // Also log to console in development

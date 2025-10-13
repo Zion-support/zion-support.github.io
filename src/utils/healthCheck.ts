@@ -8,6 +8,7 @@ import React from 'react'
 import { logger } from './logger'
 import { performanceMonitor } from './performanceMonitor'
 
+<<<<<<< HEAD
 // Core Web Vitals thresholds
 =======
 import React from 'react';
@@ -17,6 +18,13 @@ import { performanceMonitor } from './performanceMonitor';
 // Core Web Vitals thresholds;
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
 const coreWebVitals = {
+=======
+export const healthCheck = {
+  // Add utility functions here
+  init: () => {
+
+  }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 };
 };
   lcp: { good: 2500, needsImprovement: 4000 },

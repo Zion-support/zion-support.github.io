@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 /**
  * API Interceptor Utility;
@@ -19,6 +20,15 @@ class ErrorHandler {/* TODO: Fix JSX expression */}
       ErrorHandler.instance = new ErrorHandler();
     }
     return ErrorHandler.instance;
+=======
+// ApiInterceptor utility
+// This file contains utility functions and configurations
+
+export const apiInterceptor = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 =======
 class ErrorHandler {/* TODO: Fix JSX expression */};

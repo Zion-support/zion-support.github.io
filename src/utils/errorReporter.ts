@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Enhanced Error Reporting Utility
@@ -13,6 +14,15 @@ export interface ErrorReport {
   url: string
   severity: 'low' | 'medium' | 'high' | 'critical',
   context?: Record<string, unknown>
+=======
+// ErrorReporter utility
+// This file contains utility functions and configurations
+
+export const errorReporter = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 export interface ErrorReporterConfig {
     enableConsoleLogging: boolean;

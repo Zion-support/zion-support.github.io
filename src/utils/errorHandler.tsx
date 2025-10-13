@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Advanced Error Handler
@@ -18,6 +19,16 @@ export enum ErrorType {/* TODO: Fix JSX expression */}
 =======
 export enum ErrorType {/* TODO: Fix JSX expression */};
   O: Add content};
+=======
+// ErrorHandler utility
+// This file contains utility functions and configurations
+
+export const errorHandler = {
+  // Add utility functions here
+  init: () => {
+
+  }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   RUNTIME = 'RUNTIME',

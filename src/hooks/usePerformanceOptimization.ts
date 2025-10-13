@@ -4,6 +4,7 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
   O: Add content,}
 }
 
+<<<<<<< HEAD
   loadTime: number,,
     firstContentfulPaint: number,,
     largestContentfulPaint: number,,
@@ -12,6 +13,12 @@ interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 }
 export const _usePerformanceOptimization = () => {
     // TODO: Add content
+=======
+export const usePerformanceOptimization = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

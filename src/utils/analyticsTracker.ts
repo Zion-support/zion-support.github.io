@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Enhanced Analytics Tracker
@@ -10,6 +11,15 @@ interface AnalyticsEvent {
   label?: string
   value?: number,
   nonInteraction?: boolean
+=======
+// AnalyticsTracker utility
+// This file contains utility functions and configurations
+
+export const analyticsTracker = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 interface PerformanceMetrics {
     metric: string

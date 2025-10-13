@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Service Worker Registration Utility
  */
@@ -6,6 +7,15 @@ export interface ServiceWorkerConfig {
     onSuccess?: (registration: ServiceWorkerRegistration) => void
   onUpdate?: (registration: ServiceWorkerRegistration) => void,
   onError?: (error: Error) => void
+=======
+// RegisterServiceWorker utility
+// This file contains utility functions and configurations
+
+export const registerServiceWorker = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 =======
 }

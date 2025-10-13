@@ -5,8 +5,15 @@
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export enum ErrorSeverity {
     // TODO: Add content
+=======
+export const errorLogger = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

@@ -5,8 +5,15 @@
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export interface EnvConfig {
     // TODO: Add content
+=======
+export const envConfig = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 }
   nodeEnv: 'development' | 'production' | 'test',,

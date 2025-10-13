@@ -8,8 +8,15 @@
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export function generateId(prefix = 'a11y'): string {
     // TODO: Add content
+=======
+export const a11y = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

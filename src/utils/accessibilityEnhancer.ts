@@ -2,8 +2,15 @@
 // This file contains utility functions and configurations
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 interface AccessibilityConfig {
     enableKeyboardNavigation: boolean
+=======
+export const accessibilityEnhancer = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
   enableScreenReaderSupport: boolean;
   enableHighContrast: boolean

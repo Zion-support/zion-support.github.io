@@ -26,7 +26,14 @@ export enum A11ySeverity {
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export enum A11ySeverity {// TODO: Add content
+=======
+export const accessibilityChecker = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

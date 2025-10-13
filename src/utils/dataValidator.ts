@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Data Validation Utility
@@ -7,6 +8,15 @@ export interface ValidationRule<T = unknown> {
 <<<<<<< HEAD
     validate: (value: T) => boolean,
   message: string
+=======
+// DataValidator utility
+// This file contains utility functions and configurations
+
+export const dataValidator = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 export interface FieldRule {
     type: 'required' | 'email' | 'url' | 'number' | 'string' | 'custom';

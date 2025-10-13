@@ -14,10 +14,17 @@
   a: Record,)
           <string, unknown>, context?: string) => console.log('[PERF]', message, data, context),
 
+<<<<<<< HEAD
   error: (message: string, error: Error) => console.error('[ERROR]', message, error)
 }
 interface PerformanceMetrics {
     // TODO: Add content
+=======
+export const performanceOptimizer = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 }
   loadTime: number,,

@@ -5,8 +5,15 @@
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 interface UserEvent {
     // TODO: Add content
+=======
+export const advancedAnalytics = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 }
   id: string

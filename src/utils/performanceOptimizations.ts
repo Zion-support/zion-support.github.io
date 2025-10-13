@@ -4,11 +4,18 @@
 export const _debounce = 
 <<<<<<< HEAD
 
+<<<<<<< HEAD
           <T extends (...args: any[]) => any>(),
     func: T,
   wait: number): ((...args: Parameters,
           <T>) => void) => {
     // TODO: Add content
+=======
+export const performanceOptimizations = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 }
   let timeout: NodeJS.Timeout

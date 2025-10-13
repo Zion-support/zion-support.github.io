@@ -1,4 +1,11 @@
 export const logger = {
+<<<<<<< HEAD
+=======
+  // Add utility functions here
+  init: () => {
+
+  }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 };
 };
   debug: (message: string, ...args: any[]) => {

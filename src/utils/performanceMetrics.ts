@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Performance Metrics Utility
@@ -11,6 +12,15 @@ export interface PerformanceMetric {
   timestamp: Date
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom',
   metadata?: Record<string, unknown>
+=======
+// PerformanceMetrics utility
+// This file contains utility functions and configurations
+
+export const performanceMetrics = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 =======
 }

@@ -4,8 +4,15 @@
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export const _securityHeaders = {
     // TODO: Add content
+=======
+export const security = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

@@ -269,8 +269,21 @@ import { logger } from './utils/logger';
 
 const App: React.FC = () => {
   useEffect(() => {
+<<<<<<< HEAD
     // Initialize global error handling
     logger.info('App initialized', 'App');
+=======
+    // Initialize app
+    const initializeApp = async () => {
+      try {
+        // Add any initialization logic here
+        setIsInitialized(true);
+      } catch (error) {
+
+        setIsInitialized(true);
+      }
+    };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 
     // Initialize performance monitoring
     lazyLoadImages();

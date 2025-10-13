@@ -9,7 +9,14 @@ export interface ApiClientConfig {
  * Enhanced API Client with retry logic, caching, and error handling;
  */
 
+<<<<<<< HEAD
 export interface ApiClientConfig {// TODO: Add content
+=======
+export const apiClient = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

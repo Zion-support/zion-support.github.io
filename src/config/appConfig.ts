@@ -4,8 +4,15 @@
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export interface AppConfig {
     // TODO: Add content
+=======
+export const appConfig = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

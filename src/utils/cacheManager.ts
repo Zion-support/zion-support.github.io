@@ -5,8 +5,15 @@
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export enum CacheStorage {
     // TODO: Add content
+=======
+export const cacheManager = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

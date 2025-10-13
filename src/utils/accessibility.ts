@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Accessibility Utilities
@@ -8,6 +9,15 @@ export interface A11yReport {
     errors: A11yError[]
   warnings: A11yWarning[],
   score: number
+=======
+// Accessibility utility
+// This file contains utility functions and configurations
+
+export const accessibility = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 export interface A11yError {
     type: string

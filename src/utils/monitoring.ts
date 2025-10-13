@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client'
 /**
  * Comprehensive Monitoring Utility;
@@ -12,6 +13,16 @@ export interface PerformanceMetrics {/* TODO: Fix JSX expression */}
 =======
 export interface PerformanceMetrics {/* TODO: Fix JSX expression */};
   O: Add content};
+=======
+// Monitoring utility
+// This file contains utility functions and configurations
+
+export const monitoring = {
+  // Add utility functions here
+  init: () => {
+
+  }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 };
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   lcp?: number;

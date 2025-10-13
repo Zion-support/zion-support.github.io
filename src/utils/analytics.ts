@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 export const trackEvent = (eventName: string, properties?: Record<string, any>) => {
 <<<<<<< HEAD
     </string>if</string> (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', eventName, properties)
+=======
+// Analytics utility
+// This file contains utility functions and configurations
+
+export const analytics = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 }
 

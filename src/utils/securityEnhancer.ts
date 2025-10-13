@@ -2,8 +2,15 @@
 // This file contains utility functions and configurations
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 interface SecurityConfig {
     enableCSP: boolean
+=======
+export const securityEnhancer = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
   enableHTTPS: boolean;
   enableXSSProtection: boolean

@@ -1,8 +1,19 @@
+<<<<<<< HEAD
 /**
  * Performance Configuration
  * Centralized performance monitoring and optimization settings
  */
 export const _performanceConfig = {
+=======
+// Performance utility
+// This file contains utility functions and configurations
+
+export const performance = {
+  // Add utility functions here
+  init: () => {
+
+  }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 };
 };
   // Core Web Vitals thresholds

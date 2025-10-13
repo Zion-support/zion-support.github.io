@@ -35,6 +35,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     serviceWorker: false
   });
   useEffect(() => {
+<<<<<<< HEAD
     if (enableImageOptimization) {
       optimizeImages()
   }
@@ -103,6 +104,40 @@ const setupLazyLoading = () => {
     if ('IntersectionObserver' in window) {;
 const observer = new IntersectionObserver((entries) => {
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+=======
+    // Register service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+
+        })
+        .catch((error) => {
+
+        });
+    }
+
+    // Preload critical resources
+    const preloadCriticalResources = () => {
+      const criticalResources = [
+        '/fonts/inter-var.woff2',
+        '/css/critical.css',
+        '/js/critical.js'
+      ];
+
+      criticalResources.forEach((resource) => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.css') ? 'style' : 'script';
+        document.head.appendChild(link);
+      });
+    };
+
+    // Lazy load images
+    const lazyLoadImages = () => {
+      const images = document.querySelectorAll('img[data-src]');
+      const imageObserver = new IntersectionObserver((entries) => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const img = entry.target as HTMLImageElement;
@@ -153,6 +188,74 @@ const criticalResources = [
         type: 'text/css'
       }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    };
+
+    // Initialize performance optimizations
+    preloadCriticalResources();
+    lazyLoadImages();
+    optimizeAnimations();
+
+    // Performance monitoring
+    const monitorPerformance = () => {
+      // Monitor Core Web Vitals
+      if ('PerformanceObserver' in window) {
+        const observer = new PerformanceObserver((list) => {
+          list.getEntries().forEach((entry) => {
+            if (entry.entryType === 'largest-contentful-paint') {
+
+            }
+            if (entry.entryType === 'first-input') {
+
+            }
+            if (entry.entryType === 'layout-shift') {
+
+            }
+          });
+        });
+
+        observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] });
+      }
+    };
+
+    monitorPerformance();
+
+    // Cleanup function
+    return () => {
+      // Cleanup any observers or timers
+    };
+  }, []);
+
+  const optimizeImages = useCallback(() => {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target as HTMLImageElement;
+          img['src'] = img.dataset['src'] || '';
+          img.classList.remove('lazy');
+          imageObserver.unobserve(img);
+        }
+      });
+    });
+
+    images.forEach((img) => imageObserver.observe(img));
+  }, []);
+
+  const preloadCriticalResources = useCallback(() => {
+    // Preload critical fonts
+    const fontLink = document.createElement('link');
+    fontLink.rel = 'preload';
+    fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
+    fontLink.as = 'style';
+    document.head.appendChild(fontLink);
+
+    // Preload critical images
+    const criticalImages = [
+      '/logo.png',
+      '/og-image.svg',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
     ];
     criticalResources.forEach((resource) => {
     const link = document.createElement('link');

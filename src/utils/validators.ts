@@ -7,6 +7,7 @@ export interface ValidationResult {
   error?: string;
 }
 
+<<<<<<< HEAD
 // URL Validation
 export const isValidUrl = (url: string): boolean => {
   if (!url || typeof url !== 'string') return false;
@@ -15,6 +16,12 @@ export const isValidUrl = (url: string): boolean => {
     return urlObj.protocol === 'http:' || urlObj.protocol === 'https:';
   } catch {
     return false;
+=======
+export const validators = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 =======
   error?: string};

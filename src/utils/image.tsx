@@ -1,9 +1,20 @@
+<<<<<<< HEAD
 'use client';
 import React, { useState, useCallback } from 'react';
 const Image: React.FC = () => {
 <<<<<<< HEAD
     interface ImageProps {
 =======
+=======
+// Image utility
+// This file contains utility functions and configurations
+
+export const image = {
+  // Add utility functions here
+  init: () => {
+
+  }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 };
 interface ImageProps {
 }

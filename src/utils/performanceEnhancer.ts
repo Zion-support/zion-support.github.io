@@ -2,8 +2,15 @@
 // This file contains utility functions and configurations
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 interface PerformanceMetrics {
     lcp: number
+=======
+export const performanceEnhancer = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
   fid: number;
   cls: number;

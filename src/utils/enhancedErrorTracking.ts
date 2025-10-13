@@ -17,7 +17,14 @@ export interface ErrorContext {
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export interface ErrorContext {// TODO: Add content
+=======
+export const enhancedErrorTracking = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

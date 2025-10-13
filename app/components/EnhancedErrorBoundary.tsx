@@ -114,11 +114,25 @@ class EnhancedErrorBoundary extends Component<Props, State> {
     });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     // Log error to console in development
     if (process.env['NODE_ENV'] === 'development') {
       console.error('Error caught by boundary:', error, errorInfo);
     console.error('Error caught by boundary:', error, errorInfo);
     this.setState({ error, errorInfo });
+=======
+    // Log error to external service
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    // Log to console in development
+    if (process.env['NODE_ENV'] === 'development') {
+
+    }
+  }
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   handleRetry = () => {
     this.setState({ hasError: false, error: undefined, errorInfo: undefined });
   };

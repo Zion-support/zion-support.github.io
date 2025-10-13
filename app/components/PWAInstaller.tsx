@@ -258,8 +258,27 @@ const PWAInstaller: React.FC = () => {
   }, []);
 
   const handleInstallClick = async () => {
+<<<<<<< HEAD
     if (!deferredPrompt) {
       return;
+=======
+    if (!deferredPrompt) return;
+
+    try {
+      await deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      
+      if (outcome === 'accepted') {
+
+      } else {
+
+      }
+      
+      setDeferredPrompt(null);
+      setShowInstallButton(false);
+    } catch (error) {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
     }
 
     // Show the install prompt

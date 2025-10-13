@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 /**
  * Enhanced Error Handling System
@@ -14,6 +15,15 @@ interface ErrorContext {
   action?: string,
   props?: Record<string>
   state?: Record<string, unknown>
+=======
+// EnhancedErrorHandler utility
+// This file contains utility functions and configurations
+
+export const enhancedErrorHandler = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 interface ErrorReport {
     id: string;

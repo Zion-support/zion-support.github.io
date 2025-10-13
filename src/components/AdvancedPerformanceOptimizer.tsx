@@ -58,11 +58,27 @@ const,
       measureWebVitals()};
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
   }, [enableWebVitals]);
+<<<<<<< HEAD
   // Advanced caching strategies;
   const setupAdvancedCaching = useCallback(() => {/* TODO: Fix JSX expression */}
         })
         .catch((registrationError) => {/* TODO: Fix JSX expression */}
 <<<<<<< HEAD
+=======
+
+  // Advanced caching strategies
+  const setupAdvancedCaching = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    // Service Worker for advanced caching
+    if ('serviceWorker' in navigator && enableServiceWorker) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+
+        })
+        .catch((registrationError) => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
         });
     }
 =======

@@ -147,6 +147,7 @@ export class GlobalErrorBoundary extends Component<Props, State> {
     };
   }
 
+<<<<<<< HEAD
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     // Log error details
     logger.error('Error caught by boundary', {
@@ -154,6 +155,15 @@ export class GlobalErrorBoundary extends Component<Props, State> {
       stack: error.stack,
       componentStack: errorInfo.componentStack,
     });
+=======
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    this.setState({ error, errorInfo });
+    
+    // Log error to console in development
+    if (process.env['NODE_ENV'] === 'development') {
+
+    }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
 
     // Update state
     this.setState((prevState) => ({

@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 interface LinkProps {
     // TODO: Add content
+=======
+// Link utility
+// This file contains utility functions and configurations
+
+export const link = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 }
   href: string,,

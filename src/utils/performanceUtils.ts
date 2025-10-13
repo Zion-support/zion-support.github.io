@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 =======
 import React from 'react';
 >>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
@@ -17,6 +18,12 @@ export function debounce<T extends (...args: unknown[]) => unknown>(),
   wait: number): (...args: Parameters,
           <T>) => void {
     // TODO: Add content
+=======
+export const performanceUtils = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 
 }

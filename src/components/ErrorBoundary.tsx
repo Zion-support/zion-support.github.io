@@ -27,12 +27,23 @@ class ErrorBoundary extends Component<Props, State> {/* TODO: Fix JSX expression
   r: Error, errorInf)
   o: ErrorInfo) {/* TODO: Fix JSX expression */}
     });
+<<<<<<< HEAD
     // Log error to monitoring service;
 <<<<<<< HEAD
     // console.error('ErrorBoundary caught an)
   error:', error, errorInfo);
     // You can also log to external services here;
     if (typeof window !== 'undefined' && 'gtag' in window) {/* TODO: Fix JSX expression */}
+=======
+
+    // Log error to monitoring service
+
+    // You can also log to external services here
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      (window as any).gtag('event', 'exception', {
+        description: error.message,
+        fatal: false
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
       });
     }
   }

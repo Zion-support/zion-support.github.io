@@ -68,6 +68,53 @@ const AdvancedPerformanceOptimizer: React.FC<AdvancedPerformanceOptimizerProps> 
               imageObserver.unobserve(img);
             }
           }
+<<<<<<< HEAD
+=======
+        }).observe({ entryTypes: ['paint'] });
+
+        // Largest Contentful Paint
+        new PerformanceObserver((list) => {
+          const entries = list.getEntries();
+          const lastEntry = entries[entries.length - 1];
+          setPerformanceMetrics(prev => ({ ...prev, lcp: lastEntry.startTime }));
+        }).observe({ entryTypes: ['largest-contentful-paint'] });
+
+        // First Input Delay
+        new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            setPerformanceMetrics(prev => ({ ...prev, fid: entry.processingStart - entry.startTime }));
+          }
+        }).observe({ entryTypes: ['first-input'] });
+
+        // Cumulative Layout Shift
+        let clsValue = 0;
+        new PerformanceObserver((list) => {
+          for (const entry of list.getEntries()) {
+            if (!(entry as any).hadRecentInput) {
+              clsValue += (entry as any).value;
+              setPerformanceMetrics(prev => ({ ...prev, cls: clsValue }));
+            }
+          }
+        }).observe({ entryTypes: ['layout-shift'] });
+      };
+
+      measureWebVitals();
+    }
+  }, [enableWebVitals]);
+
+  // Advanced caching strategies
+  const setupAdvancedCaching = useCallback(() => {
+    if (typeof window === 'undefined') return;
+
+    // Service Worker for advanced caching
+    if ('serviceWorker' in navigator && enableServiceWorker) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+
+        })
+        .catch((registrationError) => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
         });
       }, {
         rootMargin: '50px 0px',

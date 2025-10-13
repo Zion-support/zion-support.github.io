@@ -5,8 +5,15 @@
  */
 <<<<<<< HEAD
 
+<<<<<<< HEAD
 export interface ValidationRule<T = unknown> {
     // TODO: Add content
+=======
+export const formValidation = {
+  // Add utility functions here
+  init: () => {
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-15aa
   }
 }
   validate: (value: T) => boolean,,
