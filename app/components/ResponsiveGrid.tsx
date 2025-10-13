@@ -1,4 +1,5 @@
 import React from 'react';
+import { cn } from '../lib/utils';
 
 interface ResponsiveGridProps {
   children: React.ReactNode;
@@ -21,19 +22,30 @@ const ResponsiveGrid: React.FC<ResponsiveGridProps> = ({
 }) => {
   const gapClasses = {
     sm: 'gap-2',
-    md: 'gap-6',
-    lg: 'gap-8',
-    xl: 'gap-12'
+    md: 'gap-4',
+    lg: 'gap-6',
+    xl: 'gap-8'
   };
 
-  const gridCols = `grid-cols-${cols.default || 1} ${
-    cols.sm ? `sm:grid-cols-${cols.sm}` : ''
-  } ${cols.md ? `md:grid-cols-${cols.md}` : ''} ${
-    cols.lg ? `lg:grid-cols-${cols.lg}` : ''
-  } ${cols.xl ? `xl:grid-cols-${cols.xl}` : ''}`;
+  const gridColsClasses = {
+    1: 'grid-cols-1',
+    2: 'grid-cols-2',
+    3: 'grid-cols-3',
+    4: 'grid-cols-4',
+    5: 'grid-cols-5',
+    6: 'grid-cols-6'
+  };
+
+  const responsiveClasses = [
+    gridColsClasses[cols.default || 1],
+    cols.sm && `sm:${gridColsClasses[cols.sm]}`,
+    cols.md && `md:${gridColsClasses[cols.md]}`,
+    cols.lg && `lg:${gridColsClasses[cols.lg]}`,
+    cols.xl && `xl:${gridColsClasses[cols.xl]}`
+  ].filter(Boolean).join(' ');
 
   return (
-    <div className={`grid ${gridCols} ${gapClasses[gap]} ${className}`}>
+    <div className={cn('grid', responsiveClasses, gapClasses[gap], className)}>
       {children}
     </div>
   );

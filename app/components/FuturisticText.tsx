@@ -1,32 +1,59 @@
 import React from 'react';
+import { cn } from '../lib/utils';
 
 interface FuturisticTextProps {
   children: React.ReactNode;
-  variant?: 'heading' | 'subheading' | 'body' | 'caption' | 'neon' | 'gradient';
   className?: string;
-  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'p' | 'span' | 'div';
+  variant?: 'gradient' | 'neon' | 'glow' | 'default';
+  size?: 'xs' | 'sm' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl' | '5xl' | '6xl' | '7xl';
+  animate?: boolean;
 }
 
 const FuturisticText: React.FC<FuturisticTextProps> = ({
   children,
-  variant = 'body',
   className = '',
-  as: Component = 'p'
+  variant = 'default',
+  size = 'base',
+  animate = false
 }) => {
-  const baseClasses = "transition-all duration-300";
+  const baseClasses = 'font-bold';
   
   const variantClasses = {
-    heading: "text-4xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400",
-    subheading: "text-2xl md:text-3xl lg:text-4xl font-bold text-white",
-    body: "text-base md:text-lg text-gray-300 leading-relaxed",
-    caption: "text-sm text-gray-400",
-    neon: "text-cyan-400 font-semibold drop-shadow-lg",
-    gradient: "text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 font-semibold"
+    gradient: 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400',
+    neon: 'text-cyan-400 drop-shadow-[0_0_10px_rgba(34,211,238,0.5)]',
+    glow: 'text-white drop-shadow-[0_0_20px_rgba(168,85,247,0.5)]',
+    default: 'text-white'
   };
+  
+  const sizeClasses = {
+    xs: 'text-xs',
+    sm: 'text-sm',
+    base: 'text-base',
+    lg: 'text-lg',
+    xl: 'text-xl',
+    '2xl': 'text-2xl',
+    '3xl': 'text-3xl',
+    '4xl': 'text-4xl',
+    '5xl': 'text-5xl',
+    '6xl': 'text-6xl',
+    '7xl': 'text-7xl'
+  };
+  
+  const animationClasses = animate ? 'animate-pulse' : '';
+  
+  const textClasses = cn(
+    baseClasses,
+    variantClasses[variant],
+    sizeClasses[size],
+    animationClasses,
+    className
+  );
 
-  const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
-
-  return <Component className={classes}>{children}</Component>;
+  return (
+    <span className={textClasses}>
+      {children}
+    </span>
+  );
 };
 
 export default FuturisticText;

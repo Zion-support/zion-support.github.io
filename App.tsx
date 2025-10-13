@@ -91,6 +91,11 @@ const AIDataVisualizationPage = React.lazy(() => import("./app/ai-data-visualiza
 const AIDevOpsAutomationPage = React.lazy(() => import("./app/ai-devops-automation/page"));
 const AIDocumentIntelligencePage = React.lazy(() => import("./app/ai-document-intelligence/page"));
 
+// New Innovative Micro SAAS Services
+const AIEmailAssistantPage = React.lazy(() => import("./app/ai-email-assistant/page"));
+const AIInvoiceGeneratorPage = React.lazy(() => import("./app/ai-invoice-generator/page"));
+const AIVideoGeneratorPage = React.lazy(() => import("./app/ai-video-generator/page"));
+
 // Additional IT Services Pages
 const CloudConsultingPage = React.lazy(() => import("./app/cloud-consulting/page"));
 const DataCenterSolutionsPage = React.lazy(() => import("./app/data-center-solutions/page"));
@@ -195,6 +200,11 @@ function App() {
                                 <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
                                 <Route path="/ai-devops-automation" element={<AIDevOpsAutomationPage />} />
                                 <Route path="/ai-document-intelligence" element={<AIDocumentIntelligencePage />} />
+
+                                {/* New Innovative Micro SAAS Services Routes */}
+                                <Route path="/ai-email-assistant" element={<AIEmailAssistantPage />} />
+                                <Route path="/ai-invoice-generator" element={<AIInvoiceGeneratorPage />} />
+                                <Route path="/ai-video-generator" element={<AIVideoGeneratorPage />} />
 
                                 {/* Additional IT Services Routes */}
                                 <Route path="/cloud-consulting" element={<CloudConsultingPage />} />
