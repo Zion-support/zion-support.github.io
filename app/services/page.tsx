@@ -54,11 +54,7 @@ export default function Services() {
         <title>Services - Zion Tech Group</title>
         <meta
           name="description"
-<<<<<<< HEAD
-          content="Comprehensive technology services including AI solutions, cloud computing, cybersecurity, and digital transformation for modern businesses."
-=======
           content="Comprehensive technology services including AI, cloud infrastructure, cybersecurity, 5G solutions, data analytics, and custom development."
->>>>>>> cursor/fix-errors-and-merge-to-main-86b2
         />
         <meta
           name="keywords"
@@ -71,14 +67,10 @@ export default function Services() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-<<<<<<< HEAD
-              Our Services
-=======
               Our
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
                 {" "}Services
               </span>
->>>>>>> cursor/fix-errors-and-merge-to-main-86b2
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Comprehensive technology solutions designed to accelerate your business growth and digital transformation.
@@ -104,8 +96,6 @@ export default function Services() {
         {/* Services Grid */}
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-<<<<<<< HEAD
-=======
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Technology Solutions
@@ -114,7 +104,6 @@ export default function Services() {
                 Comprehensive technology services designed to accelerate your business growth and digital transformation.
               </p>
             </div>
->>>>>>> cursor/fix-errors-and-merge-to-main-86b2
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
                 <Link
