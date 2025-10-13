@@ -101,6 +101,14 @@ const ZionAIDataCleanerPage = React.lazy(() => import("./app/zion-ai-data-cleane
 const ZionAITaskSchedulerPage = React.lazy(() => import("./app/zion-ai-task-scheduler/page"));
 const ZionAICustomerSupportProPage = React.lazy(() => import("./app/zion-ai-customer-support-pro/page"));
 
+// New Innovative Micro SAAS Services - Additional
+const ZionAIDocumentProcessorPage = React.lazy(() => import("./app/zion-ai-document-processor/page"));
+const ZionAISalesForecasterPage = React.lazy(() => import("./app/zion-ai-sales-forecaster/page"));
+const ZionAIHRAssistantPage = React.lazy(() => import("./app/zion-ai-hr-assistant/page"));
+const ZionAILegalAssistantPage = React.lazy(() => import("./app/zion-ai-legal-assistant/page"));
+const ZionAIHealthcareAssistantPage = React.lazy(() => import("./app/zion-ai-healthcare-assistant/page"));
+const ZionAIRealEstateAnalyzerPage = React.lazy(() => import("./app/zion-ai-real-estate-analyzer/page"));
+
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -225,6 +233,14 @@ function App() {
                             <Route path="/zion-ai-data-cleaner" element={<ZionAIDataCleanerPage />} />
                             <Route path="/zion-ai-task-scheduler" element={<ZionAITaskSchedulerPage />} />
                             <Route path="/zion-ai-customer-support-pro" element={<ZionAICustomerSupportProPage />} />
+                            
+                            {/* Additional New Innovative Micro SAAS Services Routes */}
+                            <Route path="/zion-ai-document-processor" element={<ZionAIDocumentProcessorPage />} />
+                            <Route path="/zion-ai-sales-forecaster" element={<ZionAISalesForecasterPage />} />
+                            <Route path="/zion-ai-hr-assistant" element={<ZionAIHRAssistantPage />} />
+                            <Route path="/zion-ai-legal-assistant" element={<ZionAILegalAssistantPage />} />
+                            <Route path="/zion-ai-healthcare-assistant" element={<ZionAIHealthcareAssistantPage />} />
+                            <Route path="/zion-ai-real-estate-analyzer" element={<ZionAIRealEstateAnalyzerPage />} />
                             
                             {/* 404 Route - Must be last */}
                             <Route path="*" element={<NotFoundPage />} />

@@ -179,5 +179,4 @@ const AdvancedPerformanceMonitor = () => {
   return null
 }
 
-export default AdvancedPerformanceMonitor
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
+export default AdvancedPerformanceMonitor;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, FileText, TrendingUp, Scale, Heart, Home } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
 import FuturisticBackground from "./components/FuturisticBackground";
@@ -144,13 +144,61 @@ const HomePage = () => {
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
       featured: true
+    },
+    {
+      name: "Zion AI Document Processor",
+      description: "Intelligent document processing with 99.8% OCR accuracy and automated classification",
+      price: "From $99/month",
+      icon: <FileText className="w-6 h-6" />,
+      link: "/zion-ai-document-processor",
+      featured: true
+    },
+    {
+      name: "Zion AI Sales Forecaster",
+      description: "Predictive sales analytics with 95% accuracy for revenue forecasting and planning",
+      price: "From $199/month",
+      icon: <TrendingUp className="w-6 h-6" />,
+      link: "/zion-ai-sales-forecaster",
+      featured: true
+    },
+    {
+      name: "Zion AI HR Assistant",
+      description: "Complete HR management with AI-powered recruitment and employee analytics",
+      price: "From $149/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-hr-assistant",
+      featured: true
+    },
+    {
+      name: "Zion AI Legal Assistant",
+      description: "Intelligent legal technology with contract analysis and compliance monitoring",
+      price: "From $299/month",
+      icon: <Scale className="w-6 h-6" />,
+      link: "/zion-ai-legal-assistant",
+      featured: true
+    },
+    {
+      name: "Zion AI Healthcare Assistant",
+      description: "AI-powered healthcare technology for patient monitoring and diagnostics",
+      price: "From $399/month",
+      icon: <Heart className="w-6 h-6" />,
+      link: "/zion-ai-healthcare-assistant",
+      featured: true
+    },
+    {
+      name: "Zion AI Real Estate Analyzer",
+      description: "Intelligent property investment analysis with market insights and valuation",
+      price: "From $199/month",
+      icon: <Home className="w-6 h-6" />,
+      link: "/zion-ai-real-estate-analyzer",
+      featured: true
     }
   ];
 
   const stats = [
-    { number: "10,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
+    { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> },
     { number: "99.9%", label: "Uptime SLA", icon: <Award className="w-6 h-6" /> },
-    { number: "60+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
+    { number: "100+", label: "Micro SAAS Solutions", icon: <Zap className="w-6 h-6" /> },
     { number: "24/7", label: "Support Available", icon: <Shield className="w-6 h-6" /> }
   ];
 
@@ -495,6 +543,7 @@ const HomePage = () => {
         </div>
       </section>
       </main>
+      </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );

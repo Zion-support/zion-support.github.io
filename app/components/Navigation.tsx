@@ -88,7 +88,13 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
         { name: 'Smart Expense Categorizer', path: '/zion-smart-expense-categorizer' },
         { name: 'AI Voice Assistant Pro', path: '/zion-ai-voice-assistant-pro' },
         { name: 'AI Code Reviewer', path: '/zion-ai-code-reviewer' },
-        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' }
+        { name: 'AI Social Media Manager', path: '/zion-ai-social-media-manager' },
+        { name: 'AI Document Processor', path: '/zion-ai-document-processor' },
+        { name: 'AI Sales Forecaster', path: '/zion-ai-sales-forecaster' },
+        { name: 'AI HR Assistant', path: '/zion-ai-hr-assistant' },
+        { name: 'AI Legal Assistant', path: '/zion-ai-legal-assistant' },
+        { name: 'AI Healthcare Assistant', path: '/zion-ai-healthcare-assistant' },
+        { name: 'AI Real Estate Analyzer', path: '/zion-ai-real-estate-analyzer' }
       ]
     },
     {
@@ -214,7 +220,12 @@ export default function Navigation({ onSidebarToggle }: NavigationProps) {
                         >
                           View All Services →
                         </Link>
-                      </div>                {/* Dropdown Menu */}
+                      </div>
+                    </div>
+                  </div>
+                )}
+                
+                {/* Dropdown Menu */}
                 {item.hasDropdown && item.dropdownItems && (
                   <div className="absolute top-full left-0 mt-1 w-64 bg-slate-800/95 backdrop-blur-sm border border-cyan-500/20 rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                     <div className="py-2">

@@ -1,181 +1,134 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { cn } from '../lib/utils';
 import { LucideIcon } from 'lucide-react';
 
 interface FuturisticButtonEnhancedProps {
   children: React.ReactNode;
-  onClick?: () => void;
   href?: string;
+  onClick?: () => void;
   variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   size?: 'sm' | 'md' | 'lg' | 'xl';
-  glowColor?: 'cyan' | 'purple' | 'pink' | 'green' | 'blue' | 'orange';
   icon?: LucideIcon;
   iconPosition?: 'left' | 'right';
-  disabled?: boolean;
-  loading?: boolean;
-  className?: string;
-  animated?: boolean;
+  glowColor?: 'cyan' | 'purple' | 'pink' | 'blue' | 'green' | 'red' | 'orange' | 'yellow';
   neon?: boolean;
+  animated?: boolean;
+  disabled?: boolean;
+  className?: string;
 }
 
 const FuturisticButtonEnhanced: React.FC<FuturisticButtonEnhancedProps> = ({
   children,
-  onClick,
   href,
+  onClick,
   variant = 'primary',
   size = 'md',
-  glowColor = 'cyan',
   icon: Icon,
-  iconPosition = 'right',
-  disabled = false,
-  loading = false,
-  className = '',
+  iconPosition = 'left',
+  glowColor = 'cyan',
+  neon = true,
   animated = true,
-  neon = true
+  disabled = false,
+  className,
 }) => {
-  const baseClasses = `
-    relative inline-flex items-center justify-center font-semibold rounded-lg
-    transition-all duration-300 overflow-hidden group
-    ${disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer'}
-  `;
+  const baseClasses = 'relative inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden group';
 
   const sizeClasses = {
     sm: 'px-3 py-1.5 text-sm',
     md: 'px-4 py-2 text-base',
     lg: 'px-6 py-3 text-lg',
-    xl: 'px-8 py-4 text-xl'
+    xl: 'px-8 py-4 text-xl',
   };
 
   const variantClasses = {
-    primary: `
-      bg-gradient-to-r from-cyan-500 to-purple-600 text-white
-      hover:from-cyan-600 hover:to-purple-700
-      ${neon ? 'shadow-lg shadow-cyan-500/25 hover:shadow-2xl hover:shadow-cyan-500/40' : ''}
-    `,
-    secondary: `
-      bg-gradient-to-r from-slate-700 to-slate-800 text-white
-      hover:from-slate-600 hover:to-slate-700
-      ${neon ? 'shadow-lg shadow-slate-500/25 hover:shadow-2xl hover:shadow-slate-500/40' : ''}
-    `,
-    outline: `
-      border-2 border-cyan-400 text-cyan-400 bg-transparent
-      hover:bg-cyan-400 hover:text-slate-900
-      ${neon ? 'shadow-lg shadow-cyan-500/25 hover:shadow-2xl hover:shadow-cyan-500/40' : ''}
-    `,
-    ghost: `
-      text-cyan-400 bg-transparent
-      hover:bg-cyan-400/10 hover:text-cyan-300
-    `
+    primary: 'text-white',
+    secondary: 'text-gray-300 bg-slate-800/50',
+    outline: 'text-cyan-400 border-2 border-cyan-500/30 hover:border-cyan-500/50',
+    ghost: 'text-gray-300 hover:text-white',
   };
 
   const glowColors = {
-    cyan: 'shadow-cyan-500/25',
-    purple: 'shadow-purple-500/25',
-    pink: 'shadow-pink-500/25',
-    green: 'shadow-green-500/25',
-    blue: 'shadow-blue-500/25',
-    orange: 'shadow-orange-500/25'
+    cyan: 'shadow-cyan-500/25 hover:shadow-cyan-500/40',
+    purple: 'shadow-purple-500/25 hover:shadow-purple-500/40',
+    pink: 'shadow-pink-500/25 hover:shadow-pink-500/40',
+    blue: 'shadow-blue-500/25 hover:shadow-blue-500/40',
+    green: 'shadow-green-500/25 hover:shadow-green-500/40',
+    red: 'shadow-red-500/25 hover:shadow-red-500/40',
+    orange: 'shadow-orange-500/25 hover:shadow-orange-500/40',
+    yellow: 'shadow-yellow-500/25 hover:shadow-yellow-500/40',
   };
 
-  const buttonVariants = {
-    initial: { 
-      scale: 1,
-      boxShadow: '0 0 0 rgba(6, 182, 212, 0)'
-    },
-    hover: { 
-      scale: 1.05,
-      boxShadow: '0 10px 30px rgba(6, 182, 212, 0.4)',
-      transition: { duration: 0.2 }
-    },
-    tap: { 
-      scale: 0.95,
-      transition: { duration: 0.1 }
-    }
+  const gradientClasses = {
+    cyan: 'bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700',
+    purple: 'bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700',
+    pink: 'bg-gradient-to-r from-pink-500 to-red-600 hover:from-pink-600 hover:to-red-700',
+    blue: 'bg-gradient-to-r from-blue-500 to-cyan-600 hover:from-blue-600 hover:to-cyan-700',
+    green: 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700',
+    red: 'bg-gradient-to-r from-red-500 to-pink-600 hover:from-red-600 hover:to-pink-700',
+    orange: 'bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700',
+    yellow: 'bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700',
   };
 
-  const rippleVariants = {
-    initial: { scale: 0, opacity: 1 },
-    animate: { 
-      scale: 4, 
-      opacity: 0,
-      transition: { duration: 0.6, ease: "easeOut" }
-    }
-  };
+  const buttonClasses = cn(
+    baseClasses,
+    sizeClasses[size],
+    variant === 'primary' ? gradientClasses[glowColor] : variantClasses[variant],
+    neon && glowColors[glowColor],
+    animated && 'hover:scale-105 active:scale-95',
+    disabled && 'opacity-50 cursor-not-allowed',
+    className
+  );
 
   const content = (
     <>
       {/* Animated background */}
-      {animated && (
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      )}
-      
-      {/* Neon glow effect */}
-      {neon && (
-        <div className={`
-          absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300
-          bg-gradient-to-r from-${glowColor}-500/20 to-${glowColor}-500/10
-        `} />
-      )}
-      
-      {/* Loading spinner */}
-      {loading && (
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-        </div>
-      )}
-      
+      <div className={cn(
+        'absolute inset-0 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300',
+        `bg-gradient-to-r from-${glowColor}-500/20 to-transparent`,
+        animated && 'animate-pulse'
+      )} />
+
+      {/* Shimmer effect */}
+      <div className={cn(
+        'absolute inset-0 rounded-lg overflow-hidden',
+        'before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent',
+        'before:translate-x-[-100%] group-hover:before:translate-x-[100%] before:transition-transform before:duration-1000'
+      )} />
+
       {/* Content */}
-      <div className={`relative z-10 flex items-center ${loading ? 'opacity-0' : 'opacity-100'}`}>
+      <div className="relative z-10 flex items-center">
         {Icon && iconPosition === 'left' && (
-          <Icon className={`w-4 h-4 ${size === 'sm' ? 'w-3 h-3' : size === 'lg' ? 'w-5 h-5' : size === 'xl' ? 'w-6 h-6' : 'w-4 h-4'} mr-2 group-hover:scale-110 transition-transform duration-200`} />
+          <Icon className={cn('mr-2', size === 'sm' ? 'w-4 h-4' : size === 'lg' ? 'w-6 h-6' : 'w-5 h-5')} />
         )}
-        {children}
+        <span>{children}</span>
         {Icon && iconPosition === 'right' && (
-          <Icon className={`w-4 h-4 ${size === 'sm' ? 'w-3 h-3' : size === 'lg' ? 'w-5 h-5' : size === 'xl' ? 'w-6 h-6' : 'w-4 h-4'} ml-2 group-hover:scale-110 transition-transform duration-200`} />
+          <Icon className={cn('ml-2', size === 'sm' ? 'w-4 h-4' : size === 'lg' ? 'w-6 h-6' : 'w-5 h-5')} />
         )}
       </div>
-      
-      {/* Corner accents */}
-      <div className="absolute top-1 right-1 w-1 h-1 bg-cyan-400 rounded-full opacity-60 group-hover:opacity-100 transition-opacity duration-300" />
-      <div className="absolute bottom-1 left-1 w-1 h-1 bg-purple-400 rounded-full opacity-40 group-hover:opacity-80 transition-opacity duration-300" />
+
+      {/* Neon border effect */}
+      {neon && (
+        <div className={cn(
+          'absolute inset-0 rounded-lg border-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300',
+          `border-${glowColor}-400/50`,
+          animated && 'animate-pulse'
+        )} />
+      )}
     </>
   );
 
-  const buttonClasses = `
-    ${baseClasses}
-    ${sizeClasses[size]}
-    ${variantClasses[variant]}
-    ${className}
-  `;
-
   if (href) {
     return (
-      <motion.a
-        href={href}
-        className={buttonClasses}
-        variants={animated ? buttonVariants : undefined}
-        initial="initial"
-        whileHover={!disabled ? "hover" : undefined}
-        whileTap={!disabled ? "tap" : undefined}
-        onClick={onClick}
-      >
+      <a href={href} className={buttonClasses}>
         {content}
-      </motion.a>
+      </a>
     );
   }
 
   return (
-    <motion.button
-      className={buttonClasses}
-      variants={animated ? buttonVariants : undefined}
-      initial="initial"
-      whileHover={!disabled ? "hover" : undefined}
-      whileTap={!disabled ? "tap" : undefined}
-      onClick={onClick}
-      disabled={disabled || loading}
-    >
+    <button onClick={onClick} disabled={disabled} className={buttonClasses}>
       {content}
-    </motion.button>
+    </button>
   );
 };
 
