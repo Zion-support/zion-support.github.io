@@ -35,8 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 200, // Increased threshold for better chunking
-    assetsInlineLimit: 4096, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 150, // Reduced threshold for better optimization
+    assetsInlineLimit: 2048, // Reduced for better performance
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -83,22 +83,22 @@ export default defineConfig({
       },
       output: {
         manualChunks: (id) => {
-          // Core React libraries
+          // Core React libraries - keep together for better caching
           if (id.includes('react') || id.includes('react-dom')) {
             return 'react-vendor'
           }
-          // Router
+          // Router - separate chunk
           if (id.includes('react-router')) {
             return 'router'
           }
-          // UI libraries
+          // UI libraries - group animations and icons
           if (id.includes('framer-motion')) {
-            return 'animations'
+            return 'ui-animations'
           }
           if (id.includes('lucide-react')) {
-            return 'icons'
+            return 'ui-icons'
           }
-          // SEO and meta
+          // SEO and meta - separate chunk
           if (id.includes('react-helmet')) {
             return 'seo'
           }
@@ -106,57 +106,47 @@ export default defineConfig({
           if (id.includes('recharts')) {
             return 'charts'
           }
-          // Utility libraries
+          // Utility libraries - group small utilities
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
             return 'utils'
           }
-          // Performance monitoring
+          // Performance monitoring - separate chunk
           if (id.includes('web-vitals')) {
             return 'performance'
           }
-          // Error handling
+          // Error handling - separate chunk
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - group by category
+          // Group all AI service pages into fewer chunks
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/ai-')[1]?.split('/')[0];
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'ai-analytics'
-            }
-            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
-              return 'ai-content'
-            }
-            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
-              return 'ai-security'
-            }
-            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
-              return 'ai-customer'
-            }
-            return 'ai-other'
+            return 'ai-services'
           }
-          // Zion service pages - group by category
+          // Group all Zion service pages
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            const serviceName = id.split('/zion-')[1]?.split('/')[0];
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'zion-analytics'
-            }
-            if (serviceName?.includes('ai-')) {
-              return 'zion-ai'
-            }
-            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
-              return 'zion-security'
-            }
-            return 'zion-other'
+            return 'zion-services'
           }
-          // 5G service pages - group together
+          // Group all 5G service pages
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }
-          // Main pages
+          // Main pages - group core pages together
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
             return 'main-pages'
+          }
+          // Components - group by type
+          if (id.includes('/components/')) {
+            if (id.includes('Performance') || id.includes('Analytics')) {
+              return 'components-performance'
+            }
+            if (id.includes('SEO') || id.includes('Accessibility')) {
+              return 'components-seo'
+            }
+            if (id.includes('Loading') || id.includes('Error')) {
+              return 'components-ui'
+            }
+            return 'components-common'
           }
           // Default chunk for other modules
           return 'vendor'
