@@ -19,6 +19,7 @@ import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import GlobalErrorBoundary from "./app/components/GlobalErrorBoundary";
+import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -38,6 +39,21 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+const CaseStudiesPage = React.lazy(() => import("./app/case-studies/page"));
+const CareersPage = React.lazy(() => import("./app/careers/page"));
+const PressPage = React.lazy(() => import("./app/press/page"));
+const DocsPage = React.lazy(() => import("./app/docs/page"));
+const GdprPage = React.lazy(() => import("./app/gdpr/page"));
+const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
+const SecurityPage = React.lazy(() => import("./app/security/page"));
+const DataAnalyticsPage = React.lazy(() => import("./app/data-analytics/page"));
+const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
+const ZionCloudVaultPage = React.lazy(() => import("./app/zion-cloud-vault/page"));
+const ZionContentStudioPage = React.lazy(() => import("./app/zion-content-studio/page"));
+const ZionDataSyncPage = React.lazy(() => import("./app/zion-data-sync/page"));
+const ZionProjectMasterPage = React.lazy(() => import("./app/zion-project-master/page"));
+const AiCybersecurityPage = React.lazy(() => import("./app/ai-cybersecurity/page"));
 
 // New AI Services
 const AIVoiceCloningStudioPage = React.lazy(() => import("./app/ai-voice-cloning-studio/page"));
@@ -128,6 +144,21 @@ function App() {
                         <Route path="/terms" element={<TermsPage />} />
                         <Route path="/cookies" element={<CookiesPage />} />
                         <Route path="/sitemap" element={<SitemapPage />} />
+                        <Route path="/case-studies" element={<CaseStudiesPage />} />
+                        <Route path="/careers" element={<CareersPage />} />
+                        <Route path="/press" element={<PressPage />} />
+                        <Route path="/docs" element={<DocsPage />} />
+                        <Route path="/gdpr" element={<GdprPage />} />
+                        <Route path="/consultation" element={<ConsultationPage />} />
+                        <Route path="/security" element={<SecurityPage />} />
+                        <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+                        <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                        <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                        <Route path="/zion-cloud-vault" element={<ZionCloudVaultPage />} />
+                        <Route path="/zion-content-studio" element={<ZionContentStudioPage />} />
+                        <Route path="/zion-data-sync" element={<ZionDataSyncPage />} />
+                        <Route path="/zion-project-master" element={<ZionProjectMasterPage />} />
+                        <Route path="/ai-cybersecurity" element={<AiCybersecurityPage />} />
                         
                         {/* New AI Services */}
                         <Route path="/ai-voice-cloning-studio" element={<AIVoiceCloningStudioPage />} />
