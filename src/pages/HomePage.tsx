@@ -7,9 +7,10 @@ const ServiceCard = lazy(() => import('../components/ServiceCard'));
 // Loading skeleton component
 const ServiceCardSkeleton: React.FC = () => (
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse">
-    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4">
-    <div className="h-4 bg-gray-200 rounded mb-2">
-    <div className="h-4 bg-gray-200 rounded w-5/6">
+    <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
+    <div className="h-4 bg-gray-200 rounded mb-2"></div>
+    <div className="h-4 bg-gray-200 rounded w-5/6"></div>
+  </div>
 );
 
 const HomePage: React.FC = () => {
@@ -43,7 +44,7 @@ const HomePage: React.FC = () => {
   return (
     <React.Fragment>
       <Helmet>
-        <title>Zion Tech Group - AI & IT Solutions
+        <title>Zion Tech Group - AI & IT Solutions</title>
         <meta
           name="description"
           content="Leading provider of AI-powered enterprise solutions, automation, and digital transformation services."
@@ -52,6 +53,7 @@ const HomePage: React.FC = () => {
           name="keywords"
           content="AI solutions, enterprise AI, digital transformation, automation, cloud services"
         />
+      </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-purple-50">
         {/* Skip to main content for accessibility */}
         <a
@@ -59,6 +61,7 @@ const HomePage: React.FC = () => {
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50"
         >
           Skip to main content
+        </a>
         <main id="main-content" className="container mx-auto px-4 py-16" role="main">
           {/* Hero Section */}
           <section
@@ -102,59 +105,73 @@ const HomePage: React.FC = () => {
           <section className="mb-16" aria-labelledby="services-heading">
             <h2 id="services-heading" className="text-4xl font-bold text-center text-gray-900 mb-12">
               Our Solutions
+            </h2>
             <div className="grid md:grid-cols-3 gap-8">
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover-lift">
-                  <div className="text-4xl mb-4">🤖
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions
+                  <div className="text-4xl mb-4">🤖</div>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">AI Solutions</h3>
                   <p className="text-gray-600 mb-4">
                     Harness the power of artificial intelligence to drive innovation and efficiency in
                     your organization.
+                  </p>
                   <ul className="text-sm text-gray-500 space-y-1">
-                    <li>• Machine Learning Models
-                    <li>• Predictive Analytics
-                    <li>• Natural Language Processing
+                    <li>• Machine Learning Models</li>
+                    <li>• Predictive Analytics</li>
+                    <li>• Natural Language Processing</li>
+                  </ul>
+                </article>
+              </Suspense>
               <Suspense fallback={<ServiceCardSkeleton />}>
                 <article className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover-lift">
-                  <div className="text-4xl mb-4">⚛️
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">Quantum Computing
+                  <div className="text-4xl mb-4">⚛️</div>
+                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">Quantum Computing</h3>
                   <p className="text-gray-600 mb-4">
                     Leverage quantum computing power for complex problem-solving and optimization challenges.
+                  </p>
                   <ul className="text-sm text-gray-500 space-y-1">
-                    <li>• Quantum Algorithms
-                    <li>• Optimization Problems
-                    <li>• Advanced Cryptography
-              <Suspense fallback={<ServiceCardSkeleton />}>
-                <article className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-all duration-300 hover-lift">
-                  <div className="text-4xl mb-4">🔄
-                  <h3 className="text-2xl font-semibold text-gray-900 mb-4">Digital Transformation
-                  <p className="text-gray-600 mb-4">
-                    Transform your business processes with cutting-edge technology and expert consultation.
-                  <ul className="text-sm text-gray-500 space-y-1">
-                    <li>• Process Automation
-                    <li>• Cloud Migration
-                    <li>• System Integration
+                    <li>• Quantum Algorithms</li>
+                    <li>• Optimization Problems</li>
+                    <li>• Advanced Cryptography</li>
+                  </ul>
+                </article>
+              </Suspense>
+            </div>
+          </section>
           {/* Testimonials Section */}
           <section className="py-16 bg-gray-50 rounded-2xl mb-16">
             <div className="container mx-auto px-4">
               <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
                 What Our Clients Say
+              </h2>
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="bg-white p-6 rounded-lg shadow-lg">
                   <p className="text-gray-600 mb-4">
                     "Zion Tech Group transformed our operations with AI solutions that delivered 250% ROI in just 6 months."
-                  <div className="font-semibold text-gray-900">Sarah Johnson
-                  <div className="text-sm text-gray-500">CEO, TechCorp
+                  </p>
+                  <div className="font-semibold text-gray-900">Sarah Johnson</div>
+                  <div className="text-sm text-gray-500">CEO, TechCorp</div>
+                </div>
                 <div className="bg-white p-6 rounded-lg shadow-lg">
                   <p className="text-gray-600 mb-4">
                     "Their quantum computing solutions solved problems we thought were impossible. Exceptional work!"
-                  <div className="font-semibold text-gray-900">Michael Chen
-                  <div className="text-sm text-gray-500">CTO, InnovateLabs
+                  </p>
+                  <div className="font-semibold text-gray-900">Michael Chen</div>
+                  <div className="text-sm text-gray-500">CTO, InnovateLabs</div>
+                </div>
                 <div className="bg-white p-6 rounded-lg shadow-lg">
                   <p className="text-gray-600 mb-4">
                     "The digital transformation exceeded our expectations. Our efficiency increased by 85%."
-                  <div className="font-semibold text-gray-900">Emily Rodriguez
-                  <div className="text-sm text-gray-500">VP Operations, GlobalTech
+                  </p>
+                  <div className="font-semibold text-gray-900">Emily Rodriguez</div>
+                  <div className="text-sm text-gray-500">VP Operations, GlobalTech</div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </React.Fragment>
   );
 };
 
