@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { ArrowRight, Video, Play, Edit, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mic, Palette, Share, Mail, Smartphone, Globe, Cloud, BarChart3, Target, Headphones, Layout } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIVideoGeneratorPage = () => {

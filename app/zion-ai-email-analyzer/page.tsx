@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-=======
+import React, { useState } from 'react';
 import { Shield, Heart, MessageSquare, FileText, Star, Globe, Settings, Headphones, Share, Target, Users, BarChart3 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 
@@ -165,7 +164,6 @@ const ZionAIEmailAnalyzerPage = () => {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
@@ -178,4 +176,6 @@ const ZionAIEmailAnalyzerPage = () => {
       </div>
     </div>
   );
-}
+};
+
+export default ZionAIEmailAnalyzerPage;

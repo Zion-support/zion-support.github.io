@@ -19,10 +19,7 @@ export default function AiPoweredDevops() {
     "AI-driven continuous integration and deployment"
   ];
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
   const pricingPlans = [
     {
       name: "Startup",

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { 
   FileText, 
@@ -108,7 +106,6 @@ const useCases = [
     icon: <Award className="w-6 h-6" />
   }
 ];
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 
 export default function ZionAIDocumentAnalyzer() {
   return (

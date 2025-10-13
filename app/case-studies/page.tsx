@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 import EnhancedSEO from '../components/EnhancedSEO';
 
 export default function CaseStudies() {

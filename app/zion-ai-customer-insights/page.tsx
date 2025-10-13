@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { ArrowRight, Users, BarChart3, TrendingUp, Target, Eye, Heart, Star, CheckCircle, Sparkles, Mail, Smartphone, Globe, Cloud, Settings, Headphones, DollarSign, CreditCard, TrendingDown, Play, Zap } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 import { Helmet } from 'react-helmet-async';
 
 const ZionAICustomerInsightsPage = () => {

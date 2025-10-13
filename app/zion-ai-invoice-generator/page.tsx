@@ -1,8 +1,5 @@
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { ArrowRight, FileText, Download, Settings, Sparkles, CheckCircle, Star, Users, Brain, Mail, Smartphone, Globe, Database, BarChart3, Target, Headphones, Layout, CreditCard, Calculator, Play } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 import { Helmet } from 'react-helmet-async';
 
 const ZionAIInvoiceGeneratorPage = () => {

@@ -7,10 +7,6 @@ import EnhancedPerformanceMonitor from "./components/EnhancedPerformanceMonitor"
 import { ErrorBoundary } from "react-error-boundary";
 import ErrorFallback from "./components/ErrorFallback";
 import { Helmet } from "react-helmet-async";
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 import ImprovedNavigation from "./components/ImprovedNavigation";
 import ImprovedFooter from "./components/ImprovedFooter";
 import ImprovedSidebar from "./components/ImprovedSidebar";

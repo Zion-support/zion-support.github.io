@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, TrendingUp } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import FuturisticBackground from "./components/FuturisticBackground";
-<<<<<<< HEAD
-=======
 import FuturisticButton from "./components/FuturisticButton";
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 import ResponsiveContainer from "./components/ResponsiveContainer";
 
 const HomePage = () => {

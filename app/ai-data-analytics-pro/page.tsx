@@ -1,7 +1,5 @@
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import { 
   TrendingUp, 
   ArrowRight,
@@ -11,7 +9,6 @@ import {
   Brain,
   PieChart
 } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 
 const AIDataAnalyticsProPage = () => {
   const features = [

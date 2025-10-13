@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
 import { Calendar, Clock, CheckCircle, Brain, Shield, Zap, Globe, Mail, Smartphone, MapPin, Star } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
 
 export default function ConsultationPage() {
   const [formData, setFormData] = useState({

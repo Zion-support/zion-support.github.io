@@ -3,15 +3,12 @@ import { Link } from 'react-router-dom';
 import { 
   BarChart3, 
   Cloud, 
-<<<<<<< HEAD
-=======
   Users, 
   ArrowRight,
   Sparkles,
   CheckCircle,
   TrendingUp,
   Settings,
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
   Workflow,
   Target
 } from 'lucide-react';

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { Helmet } from 'react-helmet-async';
 import { Code, Server, Cloud, Zap, Shield, BarChart3, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -140,7 +138,6 @@ export default function DevOpsServices() {
             </div>
           </div>
         </section>
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
       </div>
 </div>
   );

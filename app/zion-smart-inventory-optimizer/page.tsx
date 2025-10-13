@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 import { 
   ArrowRight, 
   Package, 
@@ -255,7 +253,6 @@ const ZionSmartInventoryOptimizerPage = () => {
     }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-b3a8
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
       <Helmet>
