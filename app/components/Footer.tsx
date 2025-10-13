@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
-import { Linkedin, Twitter, Github } from "lucide-react";
+import { Linkedin, Twitter, Github, Mail, Smartphone, MapPin, ArrowRight, Zap, Shield, Brain, Cloud } from "lucide-react";
 
 const Footer = React.memo(() => {
   const currentYear = new Date().getFullYear();
@@ -24,8 +24,14 @@ const Footer = React.memo(() => {
   ], []);
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <footer className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-8 mb-12">
           {/* Company Info */}
@@ -37,9 +43,26 @@ const Footer = React.memo(() => {
               <span className="text-xl font-bold">Zion Tech Group</span>
             </div>
             <p className="text-gray-400 text-sm max-w-md">
-              Leading provider of AI-powered solutions, 5G implementation, and enterprise IT services. 
+              Leading provider of AI-powered solutions, micro SAAS, 5G implementation, and enterprise IT services. 
               We help businesses transform with cutting-edge technology and innovative solutions.
             </p>
+            
+            {/* Contact Information */}
+            <div className="space-y-3">
+              <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <Mail className="w-4 h-4 text-cyan-400" />
+                <span>kleber@ziontechgroup.com</span>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <Smartphone className="w-4 h-4 text-cyan-400" />
+                <span>+1 302 464 0950</span>
+              </div>
+              <div className="flex items-center space-x-3 text-sm text-gray-300">
+                <MapPin className="w-4 h-4 text-cyan-400" />
+                <span>364 E Main St STE 1008, Middletown DE 19709</span>
+              </div>
+            </div>
+            
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
@@ -47,7 +70,7 @@ const Footer = React.memo(() => {
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-cyan-400 transition-colors hover:scale-110 transform duration-300"
                   aria-label={link.name}
                 >
                   {link.icon}
@@ -339,8 +362,35 @@ const Footer = React.memo(() => {
           </div>
         </div>
 
+        {/* CTA Section */}
+        <div className="bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-xl p-8 mb-12 text-center">
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Ready to Transform Your Business?
+          </h3>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Join thousands of businesses already using our solutions to drive growth and innovation. 
+            Start your digital transformation journey today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/contact"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            >
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/demo"
+              className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105 flex items-center justify-center"
+            >
+              <Zap className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+              Watch Demo
+            </Link>
+          </div>
+        </div>
+
         {/* Bottom Footer */}
-        <div className="border-t border-gray-800 pt-8">
+        <div className="border-t border-cyan-500/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm">
               © {currentYear} Zion Tech Group. All rights reserved.
