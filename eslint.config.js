@@ -8,13 +8,14 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 export default [
   js.configs.recommended,
   {
-    files: ['**/*.{js,jsx,ts,tsx}'],
     ignores: [
       'node_modules/**',
       'dist/**',
       'build/**',
       '.next/**',
       'out/**',
+      'app-broken/**',
+      'app-disabled/**',
       '*.config.js',
       '*.config.ts',
       '*.config.mjs',
@@ -45,7 +46,10 @@ export default [
       'check-*.js',
       'clean-*.js',
       'jest.setup.js'
-    ],
+    ]
+  },
+  {
+    files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',

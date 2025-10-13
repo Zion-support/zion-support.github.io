@@ -1,4 +1,4 @@
-&apos;use client&apos;;
+'use client';
 import { createContext, useContext, useState, useEffect } from 'react';
 interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
@@ -7,7 +7,7 @@ interface AnalyticsContextType {
   isEnabled: boolean;
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
-const  ({ children }) => {
+const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
   useEffect(() => {
@@ -22,11 +22,11 @@ const  ({ children }) => {
   const trackPageView = (pageName: string) => {
     if (!isEnabled) return;
     // Track page view logic here
-    console.log(&apos;Page View:&apos;, pageName);
+    console.log('Page View:', pageName);
   };
   const setUser = (newUserId: string, properties?: Record<string, any>) => {
     setUserId(newUserId);
-    console.log(&apos;User Set:&apos;, newUserId, properties);
+    console.log('User Set:', newUserId, properties);
   };
   const value: AnalyticsContextType = {
     trackEvent,

@@ -1,4 +1,4 @@
-&apos;use client&apos;;
+'use client';
 
 export default function ComponentsPage() {
   return (

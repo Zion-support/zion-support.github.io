@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
+import { ArrowRight, Star, Brain, BarChart3, Zap, FileText, MessageSquare, Shield } from 'lucide-react';
 import FuturisticBackground from '../components/FuturisticBackground';
 
 const AiServicesPage: React.FC = () => {
@@ -9,37 +9,37 @@ const AiServicesPage: React.FC = () => {
       icon: Brain,
       title: 'AI Consulting',
       description: 'Strategic AI consulting to help you identify opportunities and develop AI roadmaps.',
-      color: &apos;from-purple-500 to-pink-500&apos;
+      color: 'from-purple-500 to-pink-500'
     },
     {
       icon: BarChart3,
       title: 'AI Analytics',
       description: 'Advanced analytics solutions powered by machine learning and AI algorithms.',
-      color: &apos;from-blue-500 to-cyan-500&apos;
+      color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Zap,
       title: 'AI Automation',
       description: 'Intelligent automation solutions to streamline your business processes.',
-      color: &apos;from-green-500 to-emerald-500&apos;
+      color: 'from-green-500 to-emerald-500'
     },
     {
       icon: FileText,
       title: 'AI Content Generation',
       description: 'AI-powered content creation for marketing, documentation, and communication.',
-      color: &apos;from-orange-500 to-red-500&apos;
+      color: 'from-orange-500 to-red-500'
     },
     {
       icon: MessageSquare,
       title: 'AI Customer Service',
       description: 'Intelligent chatbots and customer service solutions powered by AI.',
-      color: &apos;from-indigo-500 to-purple-500&apos;
+      color: 'from-indigo-500 to-purple-500'
     },
     {
       icon: Shield,
       title: 'AI Security',
       description: 'AI-powered security solutions to protect your business and data.',
-      color: &apos;from-cyan-500 to-blue-500&apos;
+      color: 'from-cyan-500 to-blue-500'
     }
   ];
 
@@ -48,14 +48,14 @@ const AiServicesPage: React.FC = () => {
       name: "Dr. Sarah Johnson",
       company: "MedTech Solutions",
       role: "CTO",
-      content: "Zion&apos;s AI healthcare solutions have revolutionized our diagnostic capabilities. We&apos;ve seen a 40% improvement in accuracy.",
+      content: "Zion's AI healthcare solutions have revolutionized our diagnostic capabilities. We've seen a 40% improvement in accuracy.",
       rating: 5
     },
     {
       name: "Michael Chen",
       company: "E-commerce Plus",
       role: "CEO",
-      content: "The AI automation tools have transformed our operations. We&apos;ve reduced manual work by 80% and increased productivity significantly.",
+      content: "The AI automation tools have transformed our operations. We've reduced manual work by 80% and increased productivity significantly.",
       rating: 5
     },
     {
@@ -94,7 +94,7 @@ const AiServicesPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Get Started
-                  <Right className="w-5 h-5 ml-2 inline" />
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </button>
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                   Learn More
@@ -140,7 +140,7 @@ const AiServicesPage: React.FC = () => {
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                    <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                     <div>
                       <p className="text-white font-semibold">{testimonial.name}</p>
                       <p className="text-cyan-400 text-sm">{testimonial.role}, {testimonial.company}</p>
@@ -163,7 +163,7 @@ const AiServicesPage: React.FC = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                   Start Your AI Journey
-                  <Right className="w-5 h-5 ml-2 inline" />
+                  <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </button>
                 <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                   Schedule Consultation

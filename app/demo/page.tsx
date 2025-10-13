@@ -1,28 +1,32 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Play, Right, Circle, Star, } from 'lucide-react';
+import { Play, ArrowRight, Circle, Star } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
   const features = [
     {
-      icon: title: 'AI-Powered Analytics',
+      icon: '',
+      title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
-      demo: &apos;Live Demo&apos;
+      demo: 'Live Demo'
     },
     {
-      icon: title: 'Advanced ',
+      icon: '',
+      title: 'Advanced Security',
       description: 'Experience our enterprise-grade security features',
-      demo: &apos;Demo&apos;
+      demo: 'Demo'
     },
     {
-      icon: title: 'Business Intelligence',
+      icon: '',
+      title: 'Business Intelligence',
       description: 'Explore our comprehensive BI dashboard',
-      demo: &apos;BI Demo&apos;
+      demo: 'BI Demo'
     },
     {
-      icon: title: 'Team Collaboration',
+      icon: '',
+      title: 'Team Collaboration',
       description: 'See how teams work together seamlessly',
-      demo: &apos;Collaboration Demo&apos;
+      demo: 'Collaboration Demo'
     }
   ];
 
@@ -89,11 +93,10 @@ const DemoPage: React.FC = () => {
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => {
-                const Icon = feature.icon;
                 return (
                   <div key={index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
                     <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="w-8 h-8 text-white" />
+                      <div className="w-8 h-8 bg-white rounded" />
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-2 text-center">{feature.title}</h3>
                     <p className="text-gray-300 mb-4 text-center">{feature.description}</p>
@@ -143,7 +146,7 @@ const DemoPage: React.FC = () => {
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
+                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
                   <div>
                     <p className="text-white font-semibold">{testimonial.name}</p>
                     <p className="text-cyan-400 text-sm">{testimonial.company}</p>
@@ -166,7 +169,7 @@ const DemoPage: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
                 Schedule Live Demo
-                <Right className="w-5 h-5 ml-2 inline" />
+                <ArrowRight className="w-5 h-5 ml-2 inline" />
               </button>
               <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
                 Contact Sales

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Right, User } from 'lucide-react';
+import { ArrowRight, User } from 'lucide-react';
 
 const BlogPage: React.FC = () => {
   const categories = [
@@ -124,7 +124,7 @@ const BlogPage: React.FC = () => {
                   <div className="text-4xl mb-4">{post.image}</div>
                   <div className="flex items-center space-x-4 text-sm text-gray-400 mb-3">
                     <span className="flex items-center">
-                      <className="w-4 h-4 mr-1" />
+                      <div className="w-4 h-4 mr-1 bg-gray-400 rounded" />
                       {new Date(post.date).toLocaleDateString()}
                     </span>
                     <span className="flex items-center">
@@ -140,7 +140,7 @@ const BlogPage: React.FC = () => {
                     <span className="text-cyan-400 text-sm font-medium">{post.readTime}</span>
                     <button className="flex items-center text-cyan-400 hover:text-cyan-300 transition-colors">
                       Read More
-                      <Right className="w-4 h-4 ml-1" />
+                      <ArrowRight className="w-4 h-4 ml-1" />
                     </button>
                   </div>
                 </article>
