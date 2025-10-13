@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, FileText } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
 import FuturisticBackground from "./components/FuturisticBackground";
@@ -137,9 +137,25 @@ const HomePage = () => {
     {
       name: "Zion AI Project Manager Pro",
       description: "AI-powered project management with intelligent task prioritization and resource allocation",
-      price: "From $99/month",
+      price: "From $49/month",
       icon: <Calendar className="w-6 h-6" />,
       link: "/zion-ai-project-manager-pro",
+      featured: true
+    },
+    {
+      name: "Zion AI Document Analyzer",
+      description: "AI-powered document processing with OCR, data extraction, and compliance monitoring",
+      price: "From $29/month",
+      icon: <FileText className="w-6 h-6" />,
+      link: "/zion-ai-document-analyzer",
+      featured: true
+    },
+    {
+      name: "Zion AI Cybersecurity Suite Pro",
+      description: "Advanced AI-powered cybersecurity with threat detection and automated incident response",
+      price: "From $199/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/zion-ai-cybersecurity-suite-pro",
       featured: true
     }
   ];

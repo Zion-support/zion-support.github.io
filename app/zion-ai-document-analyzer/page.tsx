@@ -1,78 +1,73 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
-  Calendar, 
+  FileText, 
   Brain, 
-  Users, 
+  Shield, 
   Zap, 
   ArrowRight, 
   CheckCircle, 
   Star, 
+  Users, 
   Award, 
   BarChart3,
   Clock,
+  DollarSign,
   Target,
   Sparkles,
+  Eye,
+  Search,
+  Download,
+  Upload,
+  FileCheck,
+  AlertTriangle,
   TrendingUp,
   Globe,
   Lock,
   Smartphone,
-  Monitor,
-  Settings,
-  FileText,
-  MessageSquare,
-  Bell,
-  PieChart,
-  Activity,
-  Workflow,
-  Database,
-  Shield,
-  Rocket,
-  Lightbulb,
-  GitBranch,
-  Timer
+  Monitor
 } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 import FuturisticCard from '../components/FuturisticCard';
 import FuturisticButton from '../components/FuturisticButton';
 import ResponsiveContainer from '../components/ResponsiveContainer';
 
-const ZionAIProjectManagerProPage = () => {
+const ZionAIDocumentAnalyzerPage = () => {
   const features = [
     {
-      title: "AI-Powered Task Management",
-      description: "Intelligent task prioritization, automatic scheduling, and smart resource allocation based on team capacity and project requirements",
+      title: "AI-Powered Document Processing",
+      description: "Advanced OCR and NLP technology to extract, analyze, and understand content from any document format",
       icon: <Brain className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Predictive Analytics",
-      description: "Forecast project completion dates, identify potential bottlenecks, and predict resource needs with advanced AI algorithms",
-      icon: <TrendingUp className="w-8 h-8" />,
+      title: "Multi-Format Support",
+      description: "Process PDFs, Word docs, images, scanned documents, and more with 99.9% accuracy",
+      icon: <FileText className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Smart Resource Allocation",
-      description: "Automatically assign tasks to the right team members based on skills, availability, and workload optimization",
-      icon: <Users className="w-8 h-8" />,
+      title: "Intelligent Data Extraction",
+      description: "Automatically extract key information, dates, names, amounts, and structured data",
+      icon: <Search className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Real-time Collaboration",
-      description: "Seamless team communication, file sharing, and collaborative workspace with AI-powered meeting summaries",
-      icon: <MessageSquare className="w-8 h-8" />,
+      title: "Document Classification",
+      description: "Automatically categorize and tag documents by type, importance, and content",
+      icon: <Target className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Automated Reporting",
-      description: "Generate comprehensive project reports, status updates, and stakeholder communications automatically",
-      icon: <FileText className="w-8 h-8" />,
+      title: "Compliance Monitoring",
+      description: "Ensure documents meet regulatory requirements and flag potential compliance issues",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-red-500 to-pink-500"
     },
     {
-      title: "Risk Management",
-      description: "AI-powered risk assessment, early warning systems, and automated mitigation strategies",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Real-time Analytics",
+      description: "Get insights and analytics on document processing patterns and trends",
+      icon: <BarChart3 className="w-8 h-8" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
@@ -80,56 +75,52 @@ const ZionAIProjectManagerProPage = () => {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$19",
-      period: "per user/month",
-      description: "Perfect for small teams",
+      price: "$29",
+      period: "per month",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 10 projects",
-        "Basic AI task management",
-        "5 team members",
+        "Up to 1,000 documents/month",
+        "Basic OCR and text extraction",
+        "5 user accounts",
         "Email support",
         "Standard templates",
-        "Basic analytics",
-        "Mobile app access"
+        "Basic analytics"
       ],
       popular: false,
       color: "from-gray-500 to-gray-600"
     },
     {
       name: "Professional",
-      price: "$49",
-      period: "per user/month",
+      price: "$99",
+      period: "per month",
       description: "Most popular for growing teams",
       features: [
-        "Unlimited projects",
-        "Advanced AI features",
-        "Unlimited team members",
+        "Up to 10,000 documents/month",
+        "Advanced AI analysis",
+        "25 user accounts",
         "Priority support",
-        "Custom workflows",
+        "Custom templates",
         "Advanced analytics",
         "API access",
-        "Integration tools",
-        "Time tracking",
-        "Resource management"
+        "Integration tools"
       ],
       popular: true,
       color: "from-cyan-500 to-purple-600"
     },
     {
       name: "Enterprise",
-      price: "$99",
-      period: "per user/month",
+      price: "$299",
+      period: "per month",
       description: "For large organizations",
       features: [
-        "Everything in Professional",
-        "Custom AI models",
-        "Dedicated support",
-        "White-label options",
+        "Unlimited documents",
+        "Full AI suite",
+        "Unlimited users",
+        "24/7 phone support",
+        "Custom development",
         "Advanced security",
-        "Custom integrations",
-        "Dedicated account manager",
-        "On-premise deployment",
-        "SLA guarantees"
+        "White-label options",
+        "Dedicated account manager"
       ],
       popular: false,
       color: "from-purple-500 to-pink-500"
@@ -138,105 +129,66 @@ const ZionAIProjectManagerProPage = () => {
 
   const testimonials = [
     {
-      name: "David Kim",
-      company: "TechStart Solutions",
-      role: "Project Director",
-      content: "Zion AI Project Manager Pro has transformed how we manage projects. The AI predictions are incredibly accurate, and we've improved delivery times by 40%.",
+      name: "Sarah Johnson",
+      company: "Legal Firm Inc.",
+      role: "Managing Partner",
+      content: "Zion AI Document Analyzer has revolutionized our document processing. We've reduced manual review time by 80% and improved accuracy significantly.",
       rating: 5,
-      avatar: "DK"
+      avatar: "SJ"
     },
     {
-      name: "Lisa Martinez",
-      company: "Creative Agency Co.",
-      role: "Operations Manager",
-      content: "The smart resource allocation feature is a game-changer. It automatically assigns tasks to the right people, saving us hours of manual planning every week.",
+      name: "Michael Chen",
+      company: "Financial Services Co.",
+      role: "Operations Director",
+      content: "The compliance monitoring feature has been a game-changer. We catch potential issues before they become problems, saving us thousands in fines.",
       rating: 5,
-      avatar: "LM"
+      avatar: "MC"
     },
     {
-      name: "James Wilson",
-      company: "Enterprise Corp",
-      role: "VP of Engineering",
-      content: "The predictive analytics help us identify risks before they become problems. We've reduced project overruns by 60% since implementing this tool.",
+      name: "Emily Rodriguez",
+      company: "Healthcare Group",
+      role: "IT Director",
+      content: "Processing medical records has never been easier. The AI understands complex medical terminology and extracts exactly what we need.",
       rating: 5,
-      avatar: "JW"
+      avatar: "ER"
     }
   ];
 
   const useCases = [
     {
-      title: "Software Development",
-      description: "Manage agile sprints, code reviews, and deployment pipelines with AI-powered sprint planning and bug tracking",
-      icon: <GitBranch className="w-6 h-6" />,
+      title: "Legal Document Review",
+      description: "Automatically analyze contracts, agreements, and legal documents for key terms and potential risks",
+      icon: <FileCheck className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Marketing Campaigns",
-      description: "Plan and execute multi-channel marketing campaigns with AI-optimized content scheduling and performance tracking",
-      icon: <Target className="w-6 h-6" />,
+      title: "Financial Document Processing",
+      description: "Extract data from invoices, receipts, and financial statements for accounting and reporting",
+      icon: <DollarSign className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Event Planning",
-      description: "Coordinate complex events with AI-powered vendor management, timeline optimization, and resource allocation",
-      icon: <Calendar className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Construction Projects",
-      description: "Manage construction timelines, resource allocation, and compliance tracking with industry-specific AI models",
-      icon: <Workflow className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Research & Development",
-      description: "Track R&D milestones, manage experiments, and optimize research workflows with AI-powered insights",
-      icon: <Lightbulb className="w-6 h-6" />,
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      title: "Client Services",
-      description: "Deliver exceptional client projects with AI-optimized resource planning and automated progress reporting",
-      icon: <Users className="w-6 h-6" />,
-      color: "from-cyan-500 to-blue-500"
-    }
-  ];
-
-  const aiCapabilities = [
-    {
-      title: "Intelligent Task Prioritization",
-      description: "AI analyzes task dependencies, deadlines, and team capacity to automatically prioritize tasks for optimal project flow",
-      icon: <Target className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "Predictive Timeline Management",
-      description: "Machine learning algorithms predict project completion dates and identify potential delays before they occur",
-      icon: <Timer className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Smart Resource Optimization",
-      description: "AI automatically assigns tasks to the most suitable team members based on skills, availability, and workload",
-      icon: <Users className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Automated Risk Assessment",
-      description: "Continuous monitoring and analysis of project risks with AI-powered early warning systems and mitigation strategies",
-      icon: <Shield className="w-8 h-8" />,
+      title: "Medical Record Analysis",
+      description: "Process patient records, lab reports, and medical documents with healthcare-specific AI models",
+      icon: <Shield className="w-6 h-6" />,
       color: "from-red-500 to-pink-500"
     },
     {
-      title: "Intelligent Reporting",
-      description: "Generate comprehensive project reports, stakeholder updates, and performance analytics automatically",
-      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Insurance Claims Processing",
+      description: "Automatically analyze insurance claims, damage reports, and supporting documentation",
+      icon: <AlertTriangle className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Workflow Automation",
-      description: "Automate repetitive tasks, approvals, and notifications to streamline project management processes",
-      icon: <Zap className="w-8 h-8" />,
+      title: "Research Document Analysis",
+      description: "Process academic papers, research reports, and scientific documents for data extraction",
+      icon: <TrendingUp className="w-6 h-6" />,
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "Compliance Auditing",
+      description: "Ensure documents meet regulatory requirements and identify compliance gaps automatically",
+      icon: <CheckCircle className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
@@ -244,10 +196,10 @@ const ZionAIProjectManagerProPage = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="Zion AI Project Manager Pro - Intelligent Project Management & Team Collaboration | Zion Tech Group"
-        description="Revolutionize project management with AI-powered task prioritization, predictive analytics, and smart resource allocation. Boost team productivity by 40%. Starting at $19/user/month."
-        keywords="AI project management, intelligent project planning, team collaboration, predictive analytics, resource allocation, project automation, agile project management"
-        canonical="https://ziontechgroup.com/zion-ai-project-manager-pro"
+        title="Zion AI Document Analyzer - Intelligent Document Processing & Analysis | Zion Tech Group"
+        description="Transform document processing with AI-powered analysis, OCR, data extraction, and compliance monitoring. Process any document format with 99.9% accuracy. Starting at $29/month."
+        keywords="AI document analyzer, document processing, OCR, data extraction, document analysis, compliance monitoring, intelligent document processing, automated document review"
+        canonical="https://ziontechgroup.com/zion-ai-document-analyzer"
       />
 
       {/* Hero Section */}
@@ -260,18 +212,18 @@ const ZionAIProjectManagerProPage = () => {
         <ResponsiveContainer className="text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
             <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">AI-Powered Project Intelligence</span>
+            <span className="text-cyan-400 text-sm font-medium">AI-Powered Document Intelligence</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              Zion AI Project Manager Pro
+              Zion AI Document Analyzer
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your project management with AI-powered task prioritization, predictive analytics, 
-            and intelligent resource allocation. Boost team productivity by 40% and deliver projects on time, every time.
+            Transform your document processing with AI-powered analysis, intelligent data extraction, 
+            and automated compliance monitoring. Process any document format with 99.9% accuracy.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -297,64 +249,64 @@ const ZionAIProjectManagerProPage = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <TrendingUp className="w-6 h-6 text-cyan-400" />
+                <FileText className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">40%</div>
-              <div className="text-gray-300 text-xs md:text-sm">Productivity Boost</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99.9%</div>
+              <div className="text-gray-300 text-xs md:text-sm">Accuracy Rate</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Target className="w-6 h-6 text-cyan-400" />
+                <Zap className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">95%</div>
-              <div className="text-gray-300 text-xs md:text-sm">On-Time Delivery</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">80%</div>
+              <div className="text-gray-300 text-xs md:text-sm">Time Saved</div>
+            </div>
+            <div className="text-center group">
+              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <Globe className="w-6 h-6 text-cyan-400" />
+              </div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">50+</div>
+              <div className="text-gray-300 text-xs md:text-sm">File Formats</div>
             </div>
             <div className="text-center group">
               <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-6 h-6 text-cyan-400" />
               </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">50,000+</div>
-              <div className="text-gray-300 text-xs md:text-sm">Active Users</div>
-            </div>
-            <div className="text-center group">
-              <div className="w-12 h-12 md:w-16 md:h-16 mx-auto mb-4 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Award className="w-6 h-6 text-cyan-400" />
-              </div>
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">99.9%</div>
-              <div className="text-gray-300 text-xs md:text-sm">Uptime SLA</div>
+              <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">10,000+</div>
+              <div className="text-gray-300 text-xs md:text-sm">Happy Users</div>
             </div>
           </div>
         </ResponsiveContainer>
       </section>
 
-      {/* AI Capabilities Section */}
+      {/* Features Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Revolutionary AI Capabilities
+              Powerful AI Document Processing
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Our advanced AI technology learns from your team's patterns and optimizes project management 
-              processes automatically for maximum efficiency and success.
+              Our advanced AI technology can understand, analyze, and extract information from any document type 
+              with unprecedented accuracy and speed.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {aiCapabilities.map((capability, index) => (
+            {features.map((feature, index) => (
               <FuturisticCard
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
               >
                 <div
-                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${capability.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
+                  className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
-                  {capability.icon}
+                  {feature.icon}
                 </div>
                 <h3 className="text-lg md:text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                  {capability.title}
+                  {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center mb-4 leading-relaxed text-sm md:text-base">
-                  {capability.description}
+                  {feature.description}
                 </p>
               </FuturisticCard>
             ))}
@@ -362,49 +314,15 @@ const ZionAIProjectManagerProPage = () => {
         </ResponsiveContainer>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-        <ResponsiveContainer>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Everything You Need to Succeed
-            </h2>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive project management features designed to streamline workflows and boost team productivity.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
-              >
-                <div
-                  className={`w-12 h-12 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}
-                >
-                  {feature.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </ResponsiveContainer>
-      </section>
-
       {/* Use Cases Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Perfect for Every Industry
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              From software development to event planning, our AI adapts to your specific project management needs.
+              From legal firms to healthcare organizations, our AI document analyzer adapts to your specific needs.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -431,14 +349,14 @@ const ZionAIProjectManagerProPage = () => {
       </section>
 
       {/* Pricing Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your team size and project complexity. All plans include our core AI features.
+              Choose the plan that fits your document processing needs. All plans include our core AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -489,14 +407,14 @@ const ZionAIProjectManagerProPage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
         <ResponsiveContainer>
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Trusted by Project Teams Worldwide
+              Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See what project managers and teams say about Zion AI Project Manager Pro
+              See what our clients say about Zion AI Document Analyzer
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -531,11 +449,11 @@ const ZionAIProjectManagerProPage = () => {
         <ResponsiveContainer>
           <div className="text-center bg-gradient-to-r from-cyan-900/30 to-purple-900/30 rounded-2xl p-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Ready to Revolutionize Your Project Management?
+              Ready to Transform Your Document Processing?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Join thousands of teams already using Zion AI Project Manager Pro to deliver projects faster, 
-              more efficiently, and with greater success. Start your free trial today.
+              Join thousands of businesses already using Zion AI Document Analyzer to streamline their document workflows. 
+              Start your free trial today and experience the power of AI-driven document processing.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <FuturisticButton
@@ -565,4 +483,4 @@ const ZionAIProjectManagerProPage = () => {
   );
 };
 
-export default ZionAIProjectManagerProPage;
+export default ZionAIDocumentAnalyzerPage;
