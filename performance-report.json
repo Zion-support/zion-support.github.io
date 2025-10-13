@@ -1,38 +1,22 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "timestamp": "2025-10-13T06:36:21.034Z",
-=======
-  "timestamp": "2025-10-13T06:39:30.691Z",
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
-=======
-  "timestamp": "2025-10-13T06:54:01.007Z",
->>>>>>> cursor/analyze-improve-and-deploy-application-c69e
-=======
-  "timestamp": "2025-10-13T07:05:36.226Z",
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
-  "optimizations": [
-    "Critical CSS inlined",
-    "Images optimized",
-    "JavaScript bundles minified",
-    "Service worker registered",
-    "PWA manifest created",
-    "Sitemap generated",
-    "Robots.txt created"
-  ],
+  "timestamp": "2025-10-13T07:40:07.773Z",
+  "optimizations": [],
   "recommendations": [
-    "Enable gzip compression on server",
-    "Use CDN for static assets",
-    "Implement lazy loading for images",
-    "Consider using WebP format for images",
-    "Monitor Core Web Vitals regularly"
+    "Consider implementing code splitting for better performance",
+    "Use dynamic imports for large components",
+    "Optimize images and assets",
+    "Implement lazy loading for non-critical resources",
+    "Consider using a CDN for static assets"
   ],
-  "metrics": {
-    "estimatedLCP": "<2.5s",
-    "estimatedFID": "<100ms",
-    "estimatedCLS": "<0.1",
-    "estimatedFCP": "<1.8s",
-    "estimatedTTFB": "<600ms"
-  }
+  "bundleSizes": {
+    "totalJsSize": "393.28 KB",
+    "totalCssSize": "19.88 KB",
+    "totalSize": "413.16 KB"
+  },
+  "largeChunks": [
+    {
+      "file": "react-vendor-HuD8-Yw2.js",
+      "size": "186.51 KB"
+    }
+  ]
 }
