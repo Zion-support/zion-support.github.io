@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Calendar, DollarSign, Target } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Calendar, DollarSign, Target, Heart, BookOpen } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
@@ -73,6 +73,20 @@ const HomePage = () => {
       price: "From $79/month",
       icon: <Target className="w-6 h-6" />,
       link: "/zion-ai-marketing"
+    },
+    {
+      name: "Zion AI Health",
+      description: "Intelligent healthcare management platform",
+      price: "From $39/month",
+      icon: <Heart className="w-6 h-6" />,
+      link: "/zion-ai-health"
+    },
+    {
+      name: "Zion AI Education",
+      description: "Intelligent learning management platform",
+      price: "From $19/month",
+      icon: <BookOpen className="w-6 h-6" />,
+      link: "/zion-ai-education"
     },
     {
       name: "Zion Analytics Pro",
@@ -237,7 +251,7 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}

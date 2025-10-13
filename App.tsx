@@ -193,6 +193,12 @@ const ZionAIFinancePage = React.lazy(
 const ZionAIMarketingPage = React.lazy(
   () => import("./app/zion-ai-marketing/page"),
 );
+const ZionAIHealthPage = React.lazy(
+  () => import("./app/zion-ai-health/page"),
+);
+const ZionAIEducationPage = React.lazy(
+  () => import("./app/zion-ai-education/page"),
+);
 
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
@@ -458,6 +464,14 @@ function App() {
                   <Route
                     path="/zion-ai-marketing"
                     element={<ZionAIMarketingPage />}
+                  />
+                  <Route
+                    path="/zion-ai-health"
+                    element={<ZionAIHealthPage />}
+                  />
+                  <Route
+                    path="/zion-ai-education"
+                    element={<ZionAIEducationPage />}
                   />
 
                   {/* 5G Solutions Routes */}
