@@ -2,6 +2,10 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 
+// Components
+import Header from './app/components/Header';
+import Footer from './app/components/Footer';
+
 // Page Components
 import HomePage from './app/pages/HomePage';
 import AboutPage from './app/pages/AboutPage';
@@ -48,6 +52,7 @@ function App() {
     <HelmetProvider>
       <Router>
         <div className="min-h-screen bg-gray-900">
+          <Header />
           <main className="relative z-10" id="main-content" role="main">
             <Routes>
               {/* Main Pages */}
@@ -78,6 +83,7 @@ function App() {
               } />
             </Routes>
           </main>
+          <Footer />
         </div>
       </Router>
     </HelmetProvider>
