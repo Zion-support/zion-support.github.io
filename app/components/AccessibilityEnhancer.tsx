@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 
 interface AccessibilityEnhancerProps {
   className?: string;

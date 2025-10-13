@@ -5,9 +5,15 @@ interface LoadingProps {
   children?: React.ReactNode;
 }
 
+<<<<<<< HEAD
 export default function Loading({ className = '', children }: LoadingProps) {
   return (
     <div className={`${className}`}>
+=======
+export default function Loading({ className = '', children, ...props }: LoadingProps) {
+  return (
+    <div className={`loading-component ${className}`} {...props}>
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
       {children}
     </div>
   );

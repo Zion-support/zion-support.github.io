@@ -11,4 +11,8 @@ export default function ErrorFallback({ className = '', children }: ErrorFallbac
       {children}
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27

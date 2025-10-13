@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 
 interface SidebarProps {
@@ -12,3 +13,6 @@ export default function Sidebar({ className = '', children }: SidebarProps) {
     </div>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27

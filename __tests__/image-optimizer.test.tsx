@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 
+<<<<<<< HEAD
 // Mock component for testing
 const ImageOptimizer = ({ className = '', children }: { className?: string; children?: React.ReactNode }) => {
   return (
@@ -9,6 +10,14 @@ const ImageOptimizer = ({ className = '', children }: { className?: string; chil
     </div>
   );
 };
+=======
+// Mock IntersectionObserver
+global.IntersectionObserver = jest.fn().mockImplementation(() => ({
+  observe: jest.fn(),
+  unobserve: jest.fn(),
+  disconnect: jest.fn(),
+}));
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
 
 describe('ImageOptimizer Component', () => {
   it('renders with default props', () => {

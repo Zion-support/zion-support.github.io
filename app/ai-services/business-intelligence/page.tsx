@@ -1,7 +1,11 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
+<<<<<<< HEAD
 export default function businessIntelligence() {
+=======
+export default function BusinessIntelligencePage() {
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
   return (
     <div className="min-h-screen bg-gray-900 text-white">
       <Helmet>

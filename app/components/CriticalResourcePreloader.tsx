@@ -1,5 +1,6 @@
 import React from 'react';
 
+<<<<<<< HEAD
 interface CriticalResourcePreloaderProps {
   className?: string;
   children?: React.ReactNode;
@@ -12,3 +13,6 @@ export default function CriticalResourcePreloader({ className = '', children }: 
     </div>
   );
 }
+=======
+
+>>>>>>> origin/cursor/fix-errors-and-merge-to-main-8b27
