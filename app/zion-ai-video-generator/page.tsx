@@ -1,83 +1,84 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Mic, Zap, Shield, BarChart3, Users, CheckCircle, ArrowRight, Star, Clock, DollarSign, Volume2, Brain } from "lucide-react";
+import { Video, Play, Zap, Palette, Globe, Users, CheckCircle, ArrowRight, Star, Clock, DollarSign, Film } from "lucide-react";
 
-export default function AiVoiceAssistant() {
+export default function ZionAiVideoGenerator() {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Voice Recognition",
-      description: "Advanced speech-to-text with 99% accuracy in 50+ languages and dialects"
+      icon: <Video className="w-6 h-6" />,
+      title: "AI Video Generation",
+      description: "Create professional videos from text prompts in minutes with advanced AI technology"
     },
     {
-      icon: <Volume2 className="w-6 h-6" />,
-      title: "Human-like Voice Synthesis",
-      description: "Generate natural-sounding speech with customizable voices and emotions"
+      icon: <Palette className="w-6 h-6" />,
+      title: "Custom Branding",
+      description: "Apply your brand colors, fonts, and logos automatically to all generated content"
     },
     {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Contextual Understanding",
-      description: "AI that understands context, intent, and maintains conversation flow"
+      icon: <Globe className="w-6 h-6" />,
+      title: "Multi-Language Support",
+      description: "Generate videos in 30+ languages with natural-sounding voiceovers"
     },
     {
       icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency voice processing for seamless conversations"
+      title: "Lightning Fast",
+      description: "Generate high-quality videos in under 5 minutes with our optimized AI models"
     },
     {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "End-to-end encryption and compliance with GDPR, HIPAA standards"
+      icon: <Users className="w-6 h-6" />,
+      title: "Team Collaboration",
+      description: "Share projects, review content, and collaborate with your team in real-time"
     },
     {
-      icon: <BarChart3 className="w-6 h-6" />,
-      title: "Analytics & Insights",
-      description: "Track conversation metrics, user satisfaction, and performance analytics"
+      icon: <Film className="w-6 h-6" />,
+      title: "Multiple Formats",
+      description: "Export in 4K, HD, square, vertical, and custom aspect ratios for all platforms"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Starter",
-      price: "$99",
+      name: "Creator",
+      price: "$49",
       period: "month",
-      description: "Perfect for small businesses",
+      description: "Perfect for content creators",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "Basic voice recognition",
-        "Standard voice synthesis",
+        "50 videos per month",
+        "HD quality export",
+        "Basic templates",
         "Email support",
-        "Basic analytics"
+        "Standard voiceovers"
       ],
       popular: false
     },
     {
-      name: "Professional",
-      price: "$299",
+      name: "Business",
+      price: "$149",
       period: "month",
-      description: "Ideal for growing companies",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "Advanced voice recognition",
-        "Custom voice synthesis",
+        "200 videos per month",
+        "4K quality export",
+        "Premium templates",
         "Priority support",
-        "Advanced analytics",
-        "API access"
+        "Custom voiceovers",
+        "Brand kit integration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$399",
       period: "month",
       description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
-        "Custom AI models",
+        "Unlimited videos",
+        "4K+ quality export",
+        "Custom templates",
         "Dedicated support",
         "White-label solution",
-        "Advanced customization",
-        "24/7 monitoring"
+        "API access",
+        "Advanced analytics"
       ],
       popular: false
     }
@@ -85,23 +86,23 @@ export default function AiVoiceAssistant() {
 
   const useCases = [
     {
-      title: "Customer Service",
-      description: "24/7 voice support with intelligent routing and problem resolution",
+      title: "Marketing Videos",
+      description: "Create compelling product demos, explainer videos, and promotional content",
+      icon: <Video className="w-8 h-8" />
+    },
+    {
+      title: "Social Media Content",
+      description: "Generate engaging posts for Instagram, TikTok, YouTube, and LinkedIn",
+      icon: <Globe className="w-8 h-8" />
+    },
+    {
+      title: "Training Materials",
+      description: "Develop educational content and training videos for your team",
       icon: <Users className="w-8 h-8" />
     },
     {
-      title: "Voice Commerce",
-      description: "Enable voice-based shopping and transactions for e-commerce",
-      icon: <Mic className="w-8 h-8" />
-    },
-    {
-      title: "Accessibility",
-      description: "Make applications accessible through voice commands and responses",
-      icon: <Volume2 className="w-8 h-8" />
-    },
-    {
-      title: "Smart Home",
-      description: "Control IoT devices and smart home systems through voice",
+      title: "E-commerce",
+      description: "Create product showcases and promotional videos for online stores",
       icon: <Zap className="w-8 h-8" />
     }
   ];
@@ -109,43 +110,43 @@ export default function AiVoiceAssistant() {
   const testimonials = [
     {
       name: "Alex Thompson",
-      company: "TechCorp Inc.",
-      role: "VP of Customer Experience",
-      content: "Zion AI Voice Assistant reduced our call center costs by 40% while improving customer satisfaction. The voice quality is incredibly natural.",
+      company: "Digital Marketing Agency",
+      role: "Creative Director",
+      content: "Zion AI Video Generator has revolutionized our content creation process. We can now produce 10x more video content with the same team.",
       rating: 5,
       avatar: "AT"
     },
     {
-      name: "Sarah Chen",
-      company: "E-commerce Platform",
-      role: "Product Manager",
-      content: "Our voice commerce feature has increased conversion rates by 25%. Customers love the hands-free shopping experience.",
+      name: "Maria Garcia",
+      company: "E-commerce Store",
+      role: "Marketing Manager",
+      content: "The quality of generated videos is incredible. Our conversion rates increased by 40% after switching to AI-generated product videos.",
       rating: 5,
-      avatar: "SC"
+      avatar: "MG"
     },
     {
-      name: "Michael Rodriguez",
-      company: "Healthcare Provider",
-      role: "IT Director",
-      content: "The accessibility features have been a game-changer for our patients. The voice recognition accuracy is outstanding.",
+      name: "David Kim",
+      company: "Tech Startup",
+      role: "CEO",
+      content: "Perfect for our startup budget. We can create professional marketing videos without hiring a video production team.",
       rating: 5,
-      avatar: "MR"
+      avatar: "DK"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Advanced Voice AI Platform | Zion Tech Group</title>
+        <title>Zion AI Video Generator - Create Professional Videos with AI | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform customer interactions with Zion AI Voice Assistant. Natural voice recognition, human-like synthesis, and contextual understanding. Starting at $99/month."
+          content="Transform text into stunning videos with Zion AI Video Generator. Create professional marketing videos, social media content, and training materials in minutes. Starting at $49/month."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice recognition, speech synthesis, voice AI, conversational AI, voice commerce, accessibility"
+          content="AI video generator, video creation, marketing videos, social media content, video automation, AI video maker, content creation"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-video-generator" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -158,19 +159,19 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 Voice AI Platform 2024</span>
+                <Video className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">#1 AI Video Platform 2024</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  AI Voice Assistant
+                  Zion AI Video Generator
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform customer interactions with our advanced voice AI platform. 
-                Natural voice recognition, human-like synthesis, and contextual understanding for seamless conversations.
+                Transform text into stunning videos with our advanced AI technology. 
+                Create professional marketing videos, social media content, and training materials in minutes.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -186,27 +187,27 @@ export default function AiVoiceAssistant() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Mic className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                  <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
                 </Link>
               </div>
 
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-                  <div className="text-gray-300 text-sm">Voice Recognition Accuracy</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">10x</div>
+                  <div className="text-gray-300 text-sm">Faster Content Creation</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">30+</div>
                   <div className="text-gray-300 text-sm">Languages Supported</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">40%</div>
-                  <div className="text-gray-300 text-sm">Cost Reduction</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">4K</div>
+                  <div className="text-gray-300 text-sm">Quality Export</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                  <div className="text-gray-300 text-sm">Voice Support</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">5min</div>
+                  <div className="text-gray-300 text-sm">Average Generation Time</div>
                 </div>
               </div>
             </div>
@@ -218,10 +219,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Voice AI Capabilities
+                Powerful AI Video Creation Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create intelligent voice experiences that engage and delight your users.
+                Everything you need to create professional videos that engage your audience and drive results.
               </p>
             </div>
             
@@ -251,10 +252,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Perfect for Every Industry
+                Perfect for Every Use Case
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From customer service to smart homes, our voice AI adapts to your needs.
+                From marketing to training, create videos that serve your business needs.
               </p>
             </div>
             
@@ -287,7 +288,7 @@ export default function AiVoiceAssistant() {
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start building voice experiences today with our flexible pricing.
+                Start creating amazing videos today with our flexible pricing plans.
               </p>
             </div>
             
@@ -349,10 +350,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Industry Leaders
+                Loved by Content Creators
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Voice Assistant
+                See what our customers say about Zion AI Video Generator
               </p>
             </div>
             
@@ -387,10 +388,10 @@ export default function AiVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Voice Interactions?
+              Ready to Create Amazing Videos?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Voice Assistant to create engaging voice experiences. 
+              Join thousands of creators and businesses using Zion AI Video Generator to produce professional content at scale. 
               Start your free trial today.
             </p>
             
@@ -407,7 +408,7 @@ export default function AiVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
             

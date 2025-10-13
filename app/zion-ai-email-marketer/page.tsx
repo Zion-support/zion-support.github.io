@@ -1,151 +1,128 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { Mic, Zap, Shield, BarChart3, Users, CheckCircle, ArrowRight, Star, Clock, DollarSign, Volume2, Brain } from "lucide-react";
+import { Mail, Zap, BarChart3, Users, CheckCircle, ArrowRight, Star, Clock, DollarSign, Target, TrendingUp } from "lucide-react";
 
-export default function AiVoiceAssistant() {
+export default function ZionAiEmailMarketer() {
   const features = [
     {
-      icon: <Mic className="w-6 h-6" />,
-      title: "Natural Voice Recognition",
-      description: "Advanced speech-to-text with 99% accuracy in 50+ languages and dialects"
+      icon: <Mail className="w-6 h-6" />,
+      title: "AI-Powered Email Creation",
+      description: "Generate compelling email campaigns with AI that understands your brand voice and audience"
     },
     {
-      icon: <Volume2 className="w-6 h-6" />,
-      title: "Human-like Voice Synthesis",
-      description: "Generate natural-sounding speech with customizable voices and emotions"
-    },
-    {
-      icon: <Brain className="w-6 h-6" />,
-      title: "Contextual Understanding",
-      description: "AI that understands context, intent, and maintains conversation flow"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Real-time Processing",
-      description: "Ultra-low latency voice processing for seamless conversations"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Enterprise Security",
-      description: "End-to-end encryption and compliance with GDPR, HIPAA standards"
+      icon: <Target className="w-6 h-6" />,
+      title: "Smart Segmentation",
+      description: "Automatically segment your audience based on behavior, preferences, and engagement patterns"
     },
     {
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Analytics & Insights",
-      description: "Track conversation metrics, user satisfaction, and performance analytics"
+      title: "Advanced Analytics",
+      description: "Track open rates, click-through rates, conversions, and revenue attribution in real-time"
+    },
+    {
+      icon: <Zap className="w-6 h-6" />,
+      title: "Automated Workflows",
+      description: "Create sophisticated email sequences that nurture leads and drive conversions automatically"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "A/B Testing",
+      description: "Test subject lines, content, and send times to optimize your email performance"
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "ROI Optimization",
+      description: "AI-driven recommendations to maximize your email marketing return on investment"
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$99",
+      price: "$49",
       period: "month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "Basic voice recognition",
-        "Standard voice synthesis",
+        "Up to 5,000 subscribers",
+        "Unlimited emails",
+        "Basic templates",
         "Email support",
-        "Basic analytics"
+        "Standard analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$299",
+      price: "$149",
       period: "month",
       description: "Ideal for growing companies",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "Advanced voice recognition",
-        "Custom voice synthesis",
+        "Up to 25,000 subscribers",
+        "Advanced AI features",
+        "A/B testing",
         "Priority support",
-        "Advanced analytics",
-        "API access"
+        "Custom templates",
+        "Advanced analytics"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$799",
+      price: "$399",
       period: "month",
       description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
+        "Unlimited subscribers",
         "Custom AI models",
         "Dedicated support",
         "White-label solution",
-        "Advanced customization",
-        "24/7 monitoring"
+        "Advanced automation",
+        "API access"
       ],
       popular: false
     }
   ];
 
-  const useCases = [
-    {
-      title: "Customer Service",
-      description: "24/7 voice support with intelligent routing and problem resolution",
-      icon: <Users className="w-8 h-8" />
-    },
-    {
-      title: "Voice Commerce",
-      description: "Enable voice-based shopping and transactions for e-commerce",
-      icon: <Mic className="w-8 h-8" />
-    },
-    {
-      title: "Accessibility",
-      description: "Make applications accessible through voice commands and responses",
-      icon: <Volume2 className="w-8 h-8" />
-    },
-    {
-      title: "Smart Home",
-      description: "Control IoT devices and smart home systems through voice",
-      icon: <Zap className="w-8 h-8" />
-    }
-  ];
-
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "TechCorp Inc.",
-      role: "VP of Customer Experience",
-      content: "Zion AI Voice Assistant reduced our call center costs by 40% while improving customer satisfaction. The voice quality is incredibly natural.",
+      name: "Jennifer Martinez",
+      company: "E-commerce Store",
+      role: "Marketing Director",
+      content: "Zion AI Email Marketer increased our email open rates by 45% and conversion rates by 30%. The AI suggestions are incredibly accurate.",
       rating: 5,
-      avatar: "AT"
+      avatar: "JM"
     },
     {
-      name: "Sarah Chen",
-      company: "E-commerce Platform",
-      role: "Product Manager",
-      content: "Our voice commerce feature has increased conversion rates by 25%. Customers love the hands-free shopping experience.",
+      name: "Robert Kim",
+      company: "SaaS Startup",
+      role: "Growth Manager",
+      content: "The automated workflows saved us hours every week. Our lead nurturing sequences are now fully automated and highly effective.",
       rating: 5,
-      avatar: "SC"
+      avatar: "RK"
     },
     {
-      name: "Michael Rodriguez",
-      company: "Healthcare Provider",
-      role: "IT Director",
-      content: "The accessibility features have been a game-changer for our patients. The voice recognition accuracy is outstanding.",
+      name: "Sarah Thompson",
+      company: "Consulting Firm",
+      role: "CEO",
+      content: "The segmentation and personalization features helped us create more targeted campaigns. Our customer engagement has never been higher.",
       rating: 5,
-      avatar: "MR"
+      avatar: "ST"
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Advanced Voice AI Platform | Zion Tech Group</title>
+        <title>Zion AI Email Marketer - Advanced Email Marketing Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform customer interactions with Zion AI Voice Assistant. Natural voice recognition, human-like synthesis, and contextual understanding. Starting at $99/month."
+          content="Transform your email marketing with Zion AI Email Marketer. AI-powered campaigns, smart segmentation, and advanced analytics. Starting at $49/month."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice recognition, speech synthesis, voice AI, conversational AI, voice commerce, accessibility"
+          content="AI email marketing, email automation, email campaigns, email analytics, email segmentation, marketing automation"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-email-marketer" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -158,19 +135,19 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-                <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-                <span className="text-cyan-400 text-sm font-medium">#1 Voice AI Platform 2024</span>
+                <Mail className="w-4 h-4 text-cyan-400 mr-2" />
+                <span className="text-cyan-400 text-sm font-medium">#1 AI Email Marketing Platform 2024</span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-                  AI Voice Assistant
+                  Zion AI Email Marketer
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Transform customer interactions with our advanced voice AI platform. 
-                Natural voice recognition, human-like synthesis, and contextual understanding for seamless conversations.
+                Transform your email marketing with AI-powered campaigns, smart segmentation, and advanced analytics. 
+                Drive higher engagement and conversions with intelligent automation.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -186,27 +163,27 @@ export default function AiVoiceAssistant() {
                   className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
                 >
                   Watch Demo
-                  <Mic className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                  <Mail className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
                 </Link>
               </div>
 
               {/* Key Stats */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-cyan-400 mb-2">99%</div>
-                  <div className="text-gray-300 text-sm">Voice Recognition Accuracy</div>
+                  <div className="text-3xl font-bold text-cyan-400 mb-2">45%</div>
+                  <div className="text-gray-300 text-sm">Higher Open Rates</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                  <div className="text-gray-300 text-sm">Languages Supported</div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">30%</div>
+                  <div className="text-gray-300 text-sm">More Conversions</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-pink-400 mb-2">40%</div>
-                  <div className="text-gray-300 text-sm">Cost Reduction</div>
+                  <div className="text-3xl font-bold text-pink-400 mb-2">5x</div>
+                  <div className="text-gray-300 text-sm">Faster Campaign Creation</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold text-cyan-400 mb-2">24/7</div>
-                  <div className="text-gray-300 text-sm">Voice Support</div>
+                  <div className="text-gray-300 text-sm">AI Optimization</div>
                 </div>
               </div>
             </div>
@@ -218,10 +195,10 @@ export default function AiVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Advanced Voice AI Capabilities
+                Powerful Email Marketing Features
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create intelligent voice experiences that engage and delight your users.
+                Everything you need to create, send, and optimize email campaigns that drive results.
               </p>
             </div>
             
@@ -246,48 +223,15 @@ export default function AiVoiceAssistant() {
           </div>
         </section>
 
-        {/* Use Cases Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Perfect for Every Industry
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                From customer service to smart homes, our voice AI adapts to your needs.
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {useCases.map((useCase, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 text-center"
-                >
-                  <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
-                    {useCase.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {useCase.title}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {useCase.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
                 Choose Your Plan
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Start building voice experiences today with our flexible pricing.
+                Start growing your business with email marketing today.
               </p>
             </div>
             
@@ -345,14 +289,14 @@ export default function AiVoiceAssistant() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Trusted by Industry Leaders
+                Trusted by Marketing Teams
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion AI Voice Assistant
+                See what our customers say about Zion AI Email Marketer
               </p>
             </div>
             
@@ -387,10 +331,10 @@ export default function AiVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Voice Interactions?
+              Ready to Transform Your Email Marketing?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses using Zion AI Voice Assistant to create engaging voice experiences. 
+              Join thousands of businesses using Zion AI Email Marketer to drive higher engagement and conversions. 
               Start your free trial today.
             </p>
             
@@ -407,7 +351,7 @@ export default function AiVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                <Mail className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
             

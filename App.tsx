@@ -5,6 +5,7 @@ import { HelmetProvider } from "react-helmet-async";
 import "./app/styles/futuristic.css";
 import "./app/styles/futuristic-enhanced.css";
 import Navigation from "./app/components/Navigation";
+import FuturisticNavigation from "./app/components/FuturisticNavigation";
 import Footer from "./app/components/Footer";
 import Sidebar from "./app/components/Sidebar";
 import HomePage from "./app/page";
@@ -61,6 +62,10 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+
+// New AI Service Pages
+const AiVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
+const AiPredictiveMaintenancePage = React.lazy(() => import("./app/ai-predictive-maintenance/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -181,6 +186,26 @@ const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
 
+// New Micro SAAS Pages
+const ZionAiChatbotProPage = React.lazy(
+  () => import("./app/zion-ai-chatbot-pro/page"),
+);
+const ZionAiVideoGeneratorPage = React.lazy(
+  () => import("./app/zion-ai-video-generator/page"),
+);
+const ZionAiCodeReviewerPage = React.lazy(
+  () => import("./app/zion-ai-code-reviewer/page"),
+);
+const ZionAiTranslatorProPage = React.lazy(
+  () => import("./app/zion-ai-translator-pro/page"),
+);
+const ZionAiEmailMarketerPage = React.lazy(
+  () => import("./app/zion-ai-email-marketer/page"),
+);
+const ZionAiSocialManagerPage = React.lazy(
+  () => import("./app/zion-ai-social-manager/page"),
+);
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
   () => import("./app/5g-data-analytics/page"),
@@ -231,7 +256,7 @@ function App() {
             <Router>
               <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                 <FuturisticBackground>
-                  <Navigation onSidebarToggle={toggleSidebar} />
+                  <FuturisticNavigation onSidebarToggle={toggleSidebar} />
                   <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
                   <Breadcrumb />
                   <main id="main-content" role="main">
@@ -273,6 +298,10 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+
+                  {/* New AI Service Routes */}
+                  <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
+                  <Route path="/ai-predictive-maintenance" element={<AiPredictiveMaintenancePage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -431,6 +460,32 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-chatbot-pro"
+                    element={<ZionAiChatbotProPage />}
+                  />
+                  <Route
+                    path="/zion-ai-video-generator"
+                    element={<ZionAiVideoGeneratorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-code-reviewer"
+                    element={<ZionAiCodeReviewerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-translator-pro"
+                    element={<ZionAiTranslatorProPage />}
+                  />
+                  <Route
+                    path="/zion-ai-email-marketer"
+                    element={<ZionAiEmailMarketerPage />}
+                  />
+                  <Route
+                    path="/zion-ai-social-manager"
+                    element={<ZionAiSocialManagerPage />}
                   />
 
                   {/* 5G Solutions Routes */}

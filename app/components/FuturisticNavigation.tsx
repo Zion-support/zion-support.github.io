@@ -1,34 +1,45 @@
-import React, { useState, useCallback, useMemo } from 'react'
-import { Link } from 'react-router-dom'
-import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon } from 'lucide-react'
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, ChevronDown, Zap, Cloud, Shield, Database, Code, Brain, BarChart3, Star, ArrowRight, Sidebar as SidebarIcon } from 'lucide-react';
 
-interface NavigationProps {
-  onSidebarToggle?: () => void
+interface FuturisticNavigationProps {
+  onSidebarToggle?: () => void;
 }
 
-const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
-  const [isOpen, setIsOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
-  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false)
-  const [isItServicesOpen, setIsItServicesOpen] = useState(false)
-  
-  const toggleMenu = useCallback(() => {
-    setIsOpen(!isOpen)
-  }, [isOpen])
+const FuturisticNavigation: React.FC<FuturisticNavigationProps> = ({ onSidebarToggle }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isMicroSaasOpen, setIsMicroSaasOpen] = useState(false);
+  const [isItServicesOpen, setIsItServicesOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const location = useLocation();
 
-  const toggleServices = useCallback(() => {
-    setIsServicesOpen(!isServicesOpen)
-  }, [isServicesOpen])
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
 
-  const toggleMicroSaas = useCallback(() => {
-    setIsMicroSaasOpen(!isMicroSaasOpen)
-  }, [isMicroSaasOpen])
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
-  const toggleItServices = useCallback(() => {
-    setIsItServicesOpen(!isItServicesOpen)
-  }, [isItServicesOpen])
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
-  const aiServices = useMemo(() => [
+  const toggleServices = () => {
+    setIsServicesOpen(!isServicesOpen);
+  };
+
+  const toggleMicroSaas = () => {
+    setIsMicroSaasOpen(!isMicroSaasOpen);
+  };
+
+  const toggleItServices = () => {
+    setIsItServicesOpen(!isItServicesOpen);
+  };
+
+  const aiServices = [
     { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Brain className="w-4 h-4" />, featured: true },
     { name: 'AI Predictive Maintenance', path: '/ai-predictive-maintenance', icon: <Zap className="w-4 h-4" />, featured: true },
     { name: 'AI Analytics Dashboard', path: '/ai-analytics-dashboard-pro', icon: <BarChart3 className="w-4 h-4" /> },
@@ -39,9 +50,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
     { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
     { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
-  ], [])
+  ];
 
-  const itServices = useMemo(() => [
+  const itServices = [
     { name: 'Cloud Infrastructure', path: '/cloud-infrastructure', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Cybersecurity Solutions', path: '/cybersecurity-solutions', icon: <Shield className="w-4 h-4" /> },
     { name: 'Web Development', path: '/web-development', icon: <Code className="w-4 h-4" /> },
@@ -50,9 +61,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Custom Software', path: '/custom-software', icon: <Code className="w-4 h-4" /> },
     { name: 'Network Infrastructure', path: '/network-infrastructure', icon: <Cloud className="w-4 h-4" /> },
     { name: 'Data Analytics', path: '/data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
-  ], [])
+  ];
 
-  const microSaasServices = useMemo(() => [
+  const microSaasServices = [
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
@@ -67,9 +78,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },
     { name: 'Zion Project Master', path: '/zion-project-master', icon: <Code className="w-4 h-4" /> },
     { name: 'Zion Email Automation', path: '/zion-email-automation', icon: <Zap className="w-4 h-4" /> }
-  ], [])
+  ];
 
-  const mainNavItems = useMemo(() => [
+  const mainNavItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
@@ -77,11 +88,15 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Case Studies', path: '/case-studies' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' }
-  ], [])
+  ];
 
   return (
     <nav 
-      className="bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 text-white shadow-2xl border-b border-cyan-500/20 backdrop-blur-md"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled 
+          ? 'bg-slate-900/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl' 
+          : 'bg-gradient-to-r from-slate-900/90 via-purple-900/90 to-slate-900/90 backdrop-blur-md'
+      }`}
       role="navigation"
       aria-label="Main navigation"
     >
@@ -89,7 +104,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
         <div className="flex justify-between items-center py-4">
           <Link 
             to="/" 
-            className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent hover:from-cyan-300 hover:to-purple-300 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+            className="text-2xl font-bold holographic hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
             aria-label="Zion Tech Group - Go to homepage"
           >
             Zion Tech Group
@@ -99,7 +114,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             {/* Sidebar Toggle Button */}
             <button
               onClick={onSidebarToggle}
-              className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
+              className="text-gray-300 hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10 neon-glow-cyan"
               aria-label="Toggle sidebar"
             >
               <SidebarIcon className="w-5 h-5" />
@@ -109,10 +124,14 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="relative group hover:text-cyan-400 transition-all duration-300 font-medium"
+                className={`relative group hover:text-cyan-400 transition-all duration-300 font-medium ${
+                  location.pathname === item.path ? 'text-cyan-400' : 'text-white'
+                }`}
               >
                 {item.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 group-hover:w-full transition-all duration-300"></span>
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300 ${
+                  location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'
+                }`}></span>
               </Link>
             ))}
             
@@ -127,7 +146,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
               </button>
               
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20">
+                <div className="absolute top-full left-0 mt-2 w-80 bg-slate-800/95 backdrop-blur-xl rounded-xl shadow-2xl py-4 z-50 border border-cyan-500/20 holographic-card">
                   <div className="px-4 py-2 border-b border-gray-700 mb-2">
                     <h3 className="text-sm font-semibold text-cyan-400 uppercase tracking-wider">AI Services</h3>
                   </div>
@@ -162,7 +181,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             <div className="relative">
               <button
                 onClick={toggleItServices}
-                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
+                className="flex items-center space-x-1 hover:text-green-400 transition-all duration-300 font-medium group"
               >
                 <span>IT Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isItServicesOpen ? 'rotate-180' : ''}`} />
@@ -194,7 +213,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
             <div className="relative">
               <button
                 onClick={toggleMicroSaas}
-                className="flex items-center space-x-1 hover:text-cyan-400 transition-all duration-300 font-medium group"
+                className="flex items-center space-x-1 hover:text-purple-400 transition-all duration-300 font-medium group"
               >
                 <span>Micro SAAS</span>
                 <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isMicroSaasOpen ? 'rotate-180' : ''}`} />
@@ -234,10 +253,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
 
             <Link
               to="/consultation"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-6 py-3 rounded-lg transition-all duration-300 flex items-center space-x-2 font-semibold shadow-lg hover:shadow-cyan-500/25 group"
+              className="cyber-button group"
             >
               <span>Get Started</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
+              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
             </Link>
           </div>
 
@@ -245,7 +264,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           <div className="lg:hidden">
             <button
               onClick={toggleMenu}
-              className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10"
+              className="text-white hover:text-cyan-400 transition-colors p-2 rounded-lg hover:bg-cyan-500/10 neon-glow-cyan"
             >
               {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -260,7 +279,9 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium"
+                  className={`px-4 py-3 rounded-lg hover:bg-cyan-500/10 hover:text-cyan-400 transition-all duration-300 font-medium ${
+                    location.pathname === item.path ? 'text-cyan-400 bg-cyan-500/10' : 'text-white'
+                  }`}
                   onClick={toggleMenu}
                 >
                   {item.name}
@@ -285,8 +306,8 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                         to={service.path}
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-cyan-400 transition-colors rounded-lg hover:bg-cyan-500/10"
                         onClick={() => {
-                          setIsServicesOpen(false)
-                          toggleMenu()
+                          setIsServicesOpen(false);
+                          toggleMenu();
                         }}
                       >
                         {service.icon}
@@ -316,8 +337,8 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                         to={service.path}
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-green-400 transition-colors rounded-lg hover:bg-green-500/10"
                         onClick={() => {
-                          setIsItServicesOpen(false)
-                          toggleMenu()
+                          setIsItServicesOpen(false);
+                          toggleMenu();
                         }}
                       >
                         {service.icon}
@@ -346,8 +367,8 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                         to={service.path}
                         className="flex items-center space-x-3 px-4 py-2 text-gray-300 hover:text-purple-400 transition-colors rounded-lg hover:bg-purple-500/10"
                         onClick={() => {
-                          setIsMicroSaasOpen(false)
-                          toggleMenu()
+                          setIsMicroSaasOpen(false);
+                          toggleMenu();
                         }}
                       >
                         {service.icon}
@@ -361,7 +382,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
 
               <Link
                 to="/consultation"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 px-4 py-3 rounded-lg transition-all duration-300 text-center font-semibold mt-4 flex items-center justify-center space-x-2"
+                className="cyber-button mt-4 flex items-center justify-center space-x-2"
                 onClick={toggleMenu}
               >
                 <span>Get Started</span>
@@ -372,9 +393,7 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
         )}
       </div>
     </nav>
-  )
-})
+  );
+};
 
-Navigation.displayName = 'Navigation'
-
-export default Navigation
+export default FuturisticNavigation;
