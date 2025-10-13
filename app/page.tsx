@@ -1,22 +1,6 @@
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
 'use client';
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import SEO from './components/SEO';
-<<<<<<< HEAD
-=======
-import EnhancedSEO from './components/EnhancedSEO';
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
-import SEOHead from './components/SEOHead';
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
 import { 
   ArrowRightIcon, 
   ShieldCheckIcon, 
@@ -29,7 +13,6 @@ import {
   MapPinIcon
 } from '@heroicons/react/24/outline';
 
-<<<<<<< HEAD
 export default function HomePage() {
   const structuredData = {
     "@context": "https://schema.org",
@@ -64,38 +47,6 @@ export default function HomePage() {
 
   return (
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <SEO 
-=======
-export default function HomePage()   {
-  return (
-    <>
-<SEO 
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        url="/"
-<<<<<<< HEAD
-=======
-      <EnhancedSEO
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions"
-        canonicalUrl="/"
-        ogImage="/api/placeholder/1200/630"
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-=======
-      <SEOHead 
-        title="Zion Tech Group - Advanced AI and IT Solutions"
-        description="Leading provider of advanced AI and IT solutions, cybersecurity, cloud infrastructure, and digital transformation services for businesses worldwide."
-        keywords="AI solutions, cybersecurity, cloud computing, digital transformation, IT services, micro SaaS, 5G solutions, Zion Tech Group"
-        structuredData={structuredData}
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
-      />
       
       {/* Hero Section */}
       <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">

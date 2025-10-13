@@ -12,7 +12,7 @@ const AccessibilityEnhancer: React.FC = () => {
       document.body.insertBefore(skipLink, document.body.firstChild);
     };
 
-// Focus management for keyboard navigation
+    // Focus management for keyboard navigation
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Tab') {
         document.body.classList.add('keyboard-navigation');
@@ -50,77 +50,6 @@ const AccessibilityEnhancer: React.FC = () => {
         main.setAttribute('role', 'main');
       }
 
-<<<<<<< HEAD
-    // Reduced motion mode
-    if (isReducedMotion) {
-      root.classList.add('reduced-motion');
-    } else {
-      root.classList.remove('reduced-motion');
-    }
-
-    // Font size adjustment
-    root.style.setProperty('--font-size-multiplier', 
-      fontSize === 'large' ? '1.2' : 
-      fontSize === 'extra-large' ? '1.4' : 
-      fontSize === 'small' ? '0.9' : '1'
-    );
-  }, [isHighContrast, isReducedMotion, fontSize]);
-
-  // Keyboard navigation enhancement
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      // Skip to main content
-      if (e.key === 'Tab' && e.shiftKey && e.target === document.body) {
-        e.preventDefault();
-        const mainContent = document.getElementById('main-content');
-        if (mainContent) {
-          mainContent.focus();
-        }
-      }
-
-      // Escape key to close modals/dropdowns
-      if (e.key === 'Escape') {
-        const activeElement = document.activeElement as HTMLElement;
-        if (activeElement && activeElement.blur) {
-          activeElement.blur();
-        }
-      }
-    };
-
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
-  }, []);
-
-  // Focus management
-  useEffect(() => {
-    const handleFocusIn = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.add('focus-visible');
-      }
-    };
-
-    const handleFocusOut = (e: FocusEvent) => {
-      const target = e.target as HTMLElement;
-      if (target) {
-        target.classList.remove('focus-visible');
-      }
-    };
-
-    document.addEventListener('focusin', handleFocusIn);
-    document.addEventListener('focusout', handleFocusOut);
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return () => {
-<<<<<<< HEAD
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
-=======
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
       const nav = document.querySelector('nav');
       if (nav && !nav.getAttribute('role')) {
         nav.setAttribute('role', 'navigation');
@@ -139,13 +68,6 @@ const AccessibilityEnhancer: React.FC = () => {
         if (!img.getAttribute('alt')) {
           img.setAttribute('alt', `Image ${index + 1}`);
         }
-
-=======
-return () => {
-      focusableElements.forEach(element => {
-        element.removeEventListener('focus', handleFocus);
-        element.removeEventListener('blur', handleBlur);
->>>>>>> cursor/fix-errors-and-merge-to-main-fd3e
       });
     };
 
@@ -166,7 +88,7 @@ return () => {
     };
   }, []);
 
-return null;
+  return null;
 };
 
 export default AccessibilityEnhancer;
