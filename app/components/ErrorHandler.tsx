@@ -60,7 +60,9 @@ class ErrorHandler extends Component<Props, State> {
         timestamp: new Date().toISOString()
       };
       // Send to your error reporting service here
-
+      console.log('Error data:', errorData);
+    } catch (logError) {
+      console.error('Failed to log error to service:', logError)
     }
   }
 

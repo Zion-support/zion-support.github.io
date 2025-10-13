@@ -51,7 +51,9 @@ const CacheManager = () => {
           }
           
           return response
-          return fetch(request);
+        } catch (error) {
+          console.error('Failed to cache API response:', error)
+          return fetch(request)
         }
       }
 

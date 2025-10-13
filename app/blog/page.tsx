@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ArrowRight, Search, Calendar, Clock, User, BookOpen, Zap } from "lucide-react";
+import { ArrowRight, Calendar, User, Zap } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
