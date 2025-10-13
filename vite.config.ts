@@ -35,28 +35,8 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
-    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
-=======
-    chunkSizeWarningLimit: 500, // Increased threshold for better chunking
-    assetsInlineLimit: 1024, // Optimized for better caching and faster initial load
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-=======
-    chunkSizeWarningLimit: 150, // Increased threshold for better chunking
-    assetsInlineLimit: 4096, // Increased for better caching of small assets
->>>>>>> cursor/analyze-improve-and-deploy-application-c69e
-=======
-    chunkSizeWarningLimit: 150, // Reduced warning threshold for better performance
-    assetsInlineLimit: 1024, // Reduced for better caching and faster initial load
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-=======
-    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
-    assetsInlineLimit: 2048, // Increased for better caching of small assets
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
+    chunkSizeWarningLimit: 150,
+    assetsInlineLimit: 2048,
     // Enable compression
     reportCompressedSize: true,
     // Optimize for production
@@ -65,7 +45,7 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true,
         pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3, // More passes for better optimization
+        passes: 3,
         unsafe: true,
         unsafe_comps: true,
         unsafe_math: true,
@@ -83,7 +63,7 @@ export default defineConfig({
         unused: true,
       },
       mangle: {
-        safari10: true, // Better Safari compatibility
+        safari10: true,
         toplevel: true,
         properties: {
           regex: /^_/
@@ -109,14 +89,14 @@ export default defineConfig({
           }
           // Router
           if (id.includes('react-router')) {
-            return 'router'
+            return 'router-vendor'
           }
           // UI libraries
           if (id.includes('framer-motion')) {
-            return 'animations'
+            return 'ui-vendor'
           }
           if (id.includes('lucide-react')) {
-            return 'icons'
+            return 'ui-vendor'
           }
           // SEO and meta
           if (id.includes('react-helmet')) {
@@ -128,7 +108,7 @@ export default defineConfig({
           }
           // Utility libraries
           if (id.includes('clsx') || id.includes('tailwind-merge')) {
-            return 'utils'
+            return 'utils-vendor'
           }
           // Performance monitoring
           if (id.includes('web-vitals')) {
@@ -138,127 +118,25 @@ export default defineConfig({
           if (id.includes('react-error-boundary')) {
             return 'error-handling'
           }
-          // AI service pages - split into smaller chunks
+          // AI service pages
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'ai-analytics'
-            }
-            if (serviceName?.includes('content') || serviceName?.includes('generation')) {
-              return 'ai-content'
-            }
-            if (serviceName?.includes('cyber') || serviceName?.includes('security')) {
-              return 'ai-security'
-            }
-            if (serviceName?.includes('customer') || serviceName?.includes('support')) {
-              return 'ai-customer'
-            }
-            return 'ai-other'
-=======
             return `ai-${serviceName || 'services'}`
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
           }
           // Zion service pages
           if (id.includes('/zion-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/zion-')[1]?.split('/')[0];
-<<<<<<< HEAD
-            if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
-              return 'zion-analytics'
-            }
-            if (serviceName?.includes('ai-')) {
-              return 'zion-ai'
-            }
-            if (serviceName?.includes('security') || serviceName?.includes('shield')) {
-              return 'zion-security'
-            }
-            return 'zion-other'
-<<<<<<< HEAD
-<<<<<<< HEAD
-          }
-          // 5G service pages
-=======
-=======
->>>>>>> cursor/website-audit-and-update-with-deployment-cec7
-            if (serviceName && ['analytics', 'automation', 'business-intelligence', 'content-generation'].includes(serviceName)) {
-              return 'ai-core'
-            }
-            if (serviceName && ['healthcare', 'marketing', 'sales', 'customer-service'].includes(serviceName)) {
-              return 'ai-business'
-            }
-            return 'ai-other'
-          }
-          // Zion service pages - group together
-          if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            return 'zion-services'
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-a281
-          }
-=======
-          }
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-          // 5G service pages - group together
-=======
             return `zion-${serviceName || 'services'}`
           }
           // 5G service pages
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/5g-')[1]?.split('/')[0];
             return `5g-${serviceName || 'services'}`
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
-          // Micro SAAS pages
-          if (id.includes('/micro-') && id.includes('/page.tsx')) {
-=======
-          // IT service pages - group together
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') &&
-              (id.includes('devops') || id.includes('cloud') || id.includes('network') || 
-               id.includes('software') || id.includes('web') || id.includes('it-'))) {
-            return 'it-services'
-          }
-          // Micro SAAS pages - group together
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
-              (id.includes('micro-saas') || id.includes('project-management') || 
-               id.includes('customer-relationship') || id.includes('inventory') ||
-               id.includes('financial') || id.includes('employee') || id.includes('social') ||
-               id.includes('email') || id.includes('website') || id.includes('task') ||
-               id.includes('smart-') || id.includes('ai-powered'))) {
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-            return 'micro-saas'
-          }
-          // Main pages - keep core pages together
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
-<<<<<<< HEAD
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-') && !id.includes('/micro-')) {
-=======
-              (id.includes('about') || id.includes('contact') || id.includes('services') || 
-               id.includes('blog') || id.includes('privacy') || id.includes('terms'))) {
->>>>>>> cursor/website-audit-and-update-with-deployment-4146
-            return 'main-pages'
-          }
-          // Large vendor libraries
-          if (id.includes('node_modules')) {
-            // Group large libraries separately
-            if (id.includes('axios') || id.includes('lodash')) {
-              return 'http-utils'
-            }
-            if (id.includes('date-fns') || id.includes('moment')) {
-              return 'date-utils'
-            }
-            return 'vendor'
-=======
           // Other service pages
           if (id.includes('/app/') && id.includes('/page.tsx') && 
               !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
             return 'pages'
->>>>>>> cursor/analyze-improve-and-deploy-application-9867
           }
           // Default chunk for other modules
           return 'vendor'
