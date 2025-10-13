@@ -1,44 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Wrench, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Star, Globe, Smartphone, Code, Database, Cloud, Lock, Sparkles, Settings, AlertTriangle, TrendingUp } from 'lucide-react';
+import { Mic, Volume2, Zap, Shield, BarChart3, Users, ArrowRight, CheckCircle, Star, Globe, Smartphone, Code, Database, Cloud, Lock, Sparkles, Phone, Headphones } from 'lucide-react';
 import SEOOptimizer from '../components/SEOOptimizer';
 
-const AiPredictiveMaintenancePage = () => {
+const ZionAIVoiceAssistantPage = () => {
   const features = [
     {
-      title: "AI-Powered Predictions",
-      description: "Predict equipment failures before they happen using advanced machine learning algorithms and IoT sensor data",
-      icon: <TrendingUp className="w-6 h-6" />,
+      title: "Natural Voice Recognition",
+      description: "Advanced speech-to-text with 99% accuracy in multiple languages and accents",
+      icon: <Mic className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Real-time Monitoring",
-      description: "Monitor equipment health 24/7 with continuous data collection and instant anomaly detection",
-      icon: <Settings className="w-6 h-6" />,
+      title: "Intelligent Responses",
+      description: "AI-powered voice responses that understand context and provide relevant answers",
+      icon: <Volume2 className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Automated Alerts",
-      description: "Get instant notifications when maintenance is needed, preventing costly downtime and equipment damage",
-      icon: <AlertTriangle className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      title: "Maintenance Scheduling",
-      description: "Automatically schedule maintenance tasks based on predicted failure timelines and resource availability",
-      icon: <Wrench className="w-6 h-6" />,
+      title: "Multi-Channel Integration",
+      description: "Deploy across phone systems, mobile apps, smart speakers, and IoT devices",
+      icon: <Phone className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Cost Optimization",
-      description: "Reduce maintenance costs by up to 30% through optimized scheduling and preventive interventions",
+      title: "Real-time Analytics",
+      description: "Monitor call quality, user satisfaction, and conversation insights in real-time",
       icon: <BarChart3 className="w-6 h-6" />,
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "Custom Voice Training",
+      description: "Train the assistant with your specific terminology and business processes",
+      icon: <Headphones className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "Integration Ready",
-      description: "Seamlessly integrate with existing CMMS, ERP, and IoT systems for unified operations management",
-      icon: <Code className="w-6 h-6" />,
+      title: "24/7 Availability",
+      description: "Provide round-the-clock voice support without human intervention",
+      icon: <Shield className="w-6 h-6" />,
       color: "from-pink-500 to-rose-500"
     }
   ];
@@ -46,46 +46,46 @@ const AiPredictiveMaintenancePage = () => {
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$199",
+      price: "$49",
       period: "/month",
-      description: "Perfect for small facilities",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 50 assets",
-        "Basic AI predictions",
-        "Email alerts",
-        "Standard reporting",
-        "Email support"
+        "Up to 500 voice interactions/month",
+        "Basic voice recognition",
+        "Phone integration",
+        "Email support",
+        "Standard voice models"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$149",
       period: "/month",
       description: "Ideal for growing businesses",
       features: [
-        "Up to 500 assets",
-        "Advanced AI predictions",
-        "Multi-channel alerts",
-        "Advanced analytics",
+        "Up to 5,000 voice interactions/month",
+        "Advanced voice recognition",
+        "Multi-channel deployment",
         "Priority support",
-        "API access",
-        "Custom dashboards"
+        "Custom voice training",
+        "Analytics dashboard",
+        "API access"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$399",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited assets",
-        "Custom AI models",
+        "Unlimited voice interactions",
+        "Custom voice models",
         "White-label solution",
         "Dedicated support",
-        "Advanced integrations",
-        "Custom reporting",
+        "Advanced analytics",
+        "Custom integrations",
         "SLA guarantee"
       ],
       popular: false
@@ -94,71 +94,71 @@ const AiPredictiveMaintenancePage = () => {
 
   const useCases = [
     {
-      title: "Manufacturing",
-      description: "Prevent production line failures and optimize equipment performance in manufacturing facilities",
-      icon: <Settings className="w-8 h-8" />,
-      benefits: ["40% reduction in downtime", "25% cost savings", "Improved productivity"]
+      title: "Customer Service",
+      description: "Handle customer inquiries, provide support, and resolve issues through natural voice conversations",
+      icon: <Users className="w-8 h-8" />,
+      benefits: ["90% faster response time", "24/7 availability", "Consistent service quality"]
     },
     {
-      title: "Energy & Utilities",
-      description: "Monitor power plants, wind turbines, and grid infrastructure for optimal performance",
+      title: "Sales Automation",
+      description: "Qualify leads, answer product questions, and schedule appointments through voice interactions",
       icon: <Zap className="w-8 h-8" />,
-      benefits: ["60% fewer outages", "Predictive grid management", "Renewable energy optimization"]
+      benefits: ["3x more qualified leads", "Automated follow-ups", "CRM integration"]
     },
     {
-      title: "Transportation",
-      description: "Maintain fleets, aircraft, and railway systems with predictive maintenance insights",
-      icon: <Globe className="w-8 h-8" />,
-      benefits: ["Enhanced safety", "Reduced maintenance costs", "Improved reliability"]
+      title: "Smart Home Integration",
+      description: "Control IoT devices, manage schedules, and provide information through voice commands",
+      icon: <Smartphone className="w-8 h-8" />,
+      benefits: ["Seamless integration", "Voice-controlled automation", "Personalized experiences"]
     }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <SEOOptimizer
-        title="AI Predictive Maintenance - Smart Equipment Monitoring | Zion Tech Group"
-        description="Prevent equipment failures with AI-powered predictive maintenance. Real-time monitoring, automated alerts, cost optimization. Reduce downtime by 40%. Start free trial!"
-        keywords="AI predictive maintenance, equipment monitoring, IoT sensors, machine learning, maintenance optimization, downtime prevention, asset management"
-        canonical="https://ziontechgroup.com/ai-predictive-maintenance"
+        title="Zion AI Voice Assistant - Intelligent Voice AI Platform | Zion Tech Group"
+        description="Create intelligent voice assistants with natural speech recognition. Multi-channel deployment, custom voice training, real-time analytics. Start free trial!"
+        keywords="AI voice assistant, voice recognition, speech-to-text, voice AI, conversational AI, voice automation, smart assistant"
+        canonical="https://ziontechgroup.com/zion-ai-voice-assistant"
       />
 
       {/* Hero Section */}
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-green-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-blue-400 mr-2" />
-            <span className="text-blue-400 text-sm font-medium">#1 AI Predictive Maintenance Platform</span>
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-green-500/20 to-blue-500/20 border border-green-500/30 mb-6">
+            <Sparkles className="w-4 h-4 text-green-400 mr-2" />
+            <span className="text-green-400 text-sm font-medium">#1 AI Voice Assistant Platform</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            AI-Powered
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-purple-400 animate-pulse">
-              {" "}Predictive Maintenance
+            Intelligent
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400 animate-pulse">
+              {" "}Voice Assistants
             </span>
-            <br />Prevent Failures Before They Happen
+            <br />That Understand You
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            Transform your maintenance operations with AI that predicts equipment failures before they occur. 
-            Reduce downtime by 40% and maintenance costs by 30% with intelligent monitoring.
+            Create sophisticated voice assistants with natural speech recognition and intelligent responses. 
+            Deploy across phone systems, mobile apps, and smart devices.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
+              className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-green-500/25 hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
-              className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               Watch Demo
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
@@ -172,25 +172,25 @@ const AiPredictiveMaintenancePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Advanced Predictive Maintenance Features
+              Advanced Voice AI Features
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Everything you need to implement intelligent maintenance strategies 
-              and optimize your equipment performance with AI.
+              Everything you need to create intelligent voice assistants that deliver 
+              natural, engaging conversations across all channels.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/10"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/10"
               >
                 <div
                   className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
                 >
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-green-400 transition-colors">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 text-center leading-relaxed">
@@ -207,10 +207,10 @@ const AiPredictiveMaintenancePage = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Industry Applications
+              Real-World Applications
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              See how businesses across industries are using our AI predictive maintenance to optimize operations.
+              See how businesses are using our AI voice assistant to transform customer interactions.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -219,10 +219,10 @@ const AiPredictiveMaintenancePage = () => {
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
               >
-                <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
+                <div className="w-16 h-16 rounded-lg bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center text-white mb-4 group-hover:scale-110 transition-transform">
                   {useCase.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-green-400 transition-colors">
                   {useCase.title}
                 </h3>
                 <p className="text-gray-300 mb-4 leading-relaxed">
@@ -230,7 +230,7 @@ const AiPredictiveMaintenancePage = () => {
                 </p>
                 <ul className="space-y-2">
                   {useCase.benefits.map((benefit, i) => (
-                    <li key={i} className="flex items-center text-sm text-blue-400">
+                    <li key={i} className="flex items-center text-sm text-green-400">
                       <CheckCircle className="w-4 h-4 mr-2 flex-shrink-0" />
                       {benefit}
                     </li>
@@ -250,7 +250,7 @@ const AiPredictiveMaintenancePage = () => {
               Simple, Transparent Pricing
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Choose the plan that fits your maintenance needs. All plans include our core AI features.
+              Choose the plan that fits your business needs. All plans include our core voice AI features.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -259,13 +259,13 @@ const AiPredictiveMaintenancePage = () => {
                 key={index}
                 className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
                   plan.popular 
-                    ? 'border-blue-500/50 shadow-2xl shadow-blue-500/20' 
-                    : 'border-white/20 hover:border-blue-500/30'
+                    ? 'border-green-500/50 shadow-2xl shadow-green-500/20' 
+                    : 'border-white/20 hover:border-green-500/30'
                 }`}
               >
                 {plan.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    <span className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       Most Popular
                     </span>
                   </div>
@@ -281,7 +281,7 @@ const AiPredictiveMaintenancePage = () => {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, i) => (
                     <li key={i} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
+                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -290,8 +290,8 @@ const AiPredictiveMaintenancePage = () => {
                   to="/contact"
                   className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
                     plan.popular
-                      ? 'bg-gradient-to-r from-blue-500 to-cyan-600 text-white hover:from-blue-600 hover:to-cyan-700'
-                      : 'border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-slate-900'
+                      ? 'bg-gradient-to-r from-green-500 to-blue-600 text-white hover:from-green-600 hover:to-blue-700'
+                      : 'border border-green-400 text-green-400 hover:bg-green-400 hover:text-slate-900'
                   }`}
                 >
                   Get Started
@@ -303,27 +303,27 @@ const AiPredictiveMaintenancePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/30 to-cyan-900/30">
+      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-900/30 to-blue-900/30">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Transform Your Maintenance?
+            Ready to Build Your Voice Assistant?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Join thousands of businesses already using our AI predictive maintenance 
-            to optimize operations and reduce costs. Start your free trial today.
+            Join thousands of businesses already using our platform to create intelligent, 
+            engaging voice experiences. Start your free trial today.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-blue-500/25 hover:scale-105"
+              className="bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-green-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-green-500/25 hover:scale-105"
             >
               Start Free Trial
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/pricing"
-              className="border border-blue-400 text-blue-400 px-8 py-4 rounded-lg font-semibold hover:bg-blue-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="border border-green-400 text-green-400 px-8 py-4 rounded-lg font-semibold hover:bg-green-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               View All Plans
               <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
@@ -335,4 +335,4 @@ const AiPredictiveMaintenancePage = () => {
   );
 };
 
-export default AiPredictiveMaintenancePage;
+export default ZionAIVoiceAssistantPage;

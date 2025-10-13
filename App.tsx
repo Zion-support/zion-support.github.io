@@ -58,6 +58,14 @@ const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendat
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
 
+// New AI Service Pages
+const AiPredictiveMaintenancePage = React.lazy(
+  () => import("./app/ai-predictive-maintenance/page"),
+);
+const AiSupplyChainOptimizationPage = React.lazy(
+  () => import("./app/ai-supply-chain-optimization/page"),
+);
+
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
   () => import("./app/cloud-infrastructure/page"),
@@ -135,6 +143,14 @@ const MachineLearningPage = React.lazy(() => import("./app/machine-learning/page
 const QuantumComputingPage = React.lazy(() => import("./app/quantum-computing/page"));
 const RoboticsPage = React.lazy(() => import("./app/robotics/page"));
 
+// New IT Service Pages
+const EdgeComputingSolutionsPage = React.lazy(
+  () => import("./app/edge-computing-solutions/page"),
+);
+const QuantumComputingServicesPage = React.lazy(
+  () => import("./app/quantum-computing-services/page"),
+);
+
 // Micro SAAS Pages
 const ZionAnalyticsProPage = React.lazy(
   () => import("./app/zion-analytics-pro/page"),
@@ -175,6 +191,20 @@ const ZionComplianceManagerPage = React.lazy(
 );
 const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
+);
+
+// New Micro SAAS Pages
+const ZionAIChatbotBuilderPage = React.lazy(
+  () => import("./app/zion-ai-chatbot-builder/page"),
+);
+const ZionAIVoiceAssistantPage = React.lazy(
+  () => import("./app/zion-ai-voice-assistant/page"),
+);
+const ZionAIDocumentProcessorPage = React.lazy(
+  () => import("./app/zion-ai-document-processor/page"),
+);
+const ZionAIVideoGeneratorPage = React.lazy(
+  () => import("./app/zion-ai-video-generator/page"),
 );
 
 // 5G Solutions Pages
@@ -261,6 +291,10 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+
+                  {/* New AI Service Routes */}
+                  <Route path="/ai-predictive-maintenance" element={<AiPredictiveMaintenancePage />} />
+                  <Route path="/ai-supply-chain-optimization" element={<AiSupplyChainOptimizationPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -363,6 +397,10 @@ function App() {
                   <Route path="/quantum-computing" element={<QuantumComputingPage />} />
                   <Route path="/robotics" element={<RoboticsPage />} />
 
+                  {/* New IT Service Routes */}
+                  <Route path="/edge-computing-solutions" element={<EdgeComputingSolutionsPage />} />
+                  <Route path="/quantum-computing-services" element={<QuantumComputingServicesPage />} />
+
                   {/* Micro SAAS Routes */}
                   <Route
                     path="/zion-analytics-pro"
@@ -419,6 +457,24 @@ function App() {
                   <Route
                     path="/zion-performance-monitor"
                     element={<ZionPerformanceMonitorPage />}
+                  />
+
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-chatbot-builder"
+                    element={<ZionAIChatbotBuilderPage />}
+                  />
+                  <Route
+                    path="/zion-ai-voice-assistant"
+                    element={<ZionAIVoiceAssistantPage />}
+                  />
+                  <Route
+                    path="/zion-ai-document-processor"
+                    element={<ZionAIDocumentProcessorPage />}
+                  />
+                  <Route
+                    path="/zion-ai-video-generator"
+                    element={<ZionAIVideoGeneratorPage />}
                   />
 
                   {/* 5G Solutions Routes */}
