@@ -14,7 +14,29 @@ export default function Services() {
       originalPrice: "$599/month",
       features: ["Real-time Analytics", "Predictive Modeling", "Custom Dashboards", "API Integration", "Mobile App", "White-label Options"],
       category: "AI Analytics",
-      popular: true
+      popular: true,
+      marketPrice: "$800-1500/month",
+      freeTrial: "14 days",
+      rating: 4.9,
+      users: "2,500+",
+      benefits: [
+        "40% increase in decision-making speed",
+        "60% reduction in manual reporting time",
+        "Real-time insights across all business metrics",
+        "Predictive analytics with 95% accuracy",
+        "Custom dashboard creation in minutes",
+        "Multi-source data integration",
+        "Advanced security and compliance",
+        "24/7 expert support"
+      ],
+      useCases: [
+        "Financial forecasting and budgeting",
+        "Sales performance optimization",
+        "Customer behavior analysis",
+        "Supply chain optimization",
+        "Risk assessment and management",
+        "Marketing campaign effectiveness"
+      ]
     },
     {
       title: "AI Customer Support Automation Suite",

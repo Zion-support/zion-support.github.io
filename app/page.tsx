@@ -495,6 +495,7 @@ const HomePage = () => {
         </div>
       </section>
       </main>
+      </FuturisticBackgroundEnhanced>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );
