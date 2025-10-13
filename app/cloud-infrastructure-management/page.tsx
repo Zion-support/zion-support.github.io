@@ -52,7 +52,6 @@ export default function CloudInfrastructureManagement() {
 
   const managementFeatures = [
     {
-<<<<<<< HEAD
       category: 'Infrastructure Management',
       items: ['Server Provisioning', 'Load Balancing', 'Auto Scaling', 'Resource Monitoring', 'Backup & Recovery', 'Disaster Recovery']
     },
@@ -125,20 +124,9 @@ export default function CloudInfrastructureManagement() {
         'Cost optimization reports',
         'Standard templates',
         'Monthly reports'
-=======
-      category: "Infrastructure Management",
-      items: [
-        "Server Provisioning",
-        "Load Balancing",
-        "Auto Scaling",
-        "Resource Monitoring",
-        "Backup & Recovery",
-        "Disaster Recovery",
->>>>>>> origin/main
       ],
     },
     {
-<<<<<<< HEAD
       name: 'Professional',
       price: '$799',
       period: '/month',
@@ -154,16 +142,6 @@ export default function CloudInfrastructureManagement() {
         'Custom configurations',
         'Weekly reports',
         'API access'
-=======
-      category: "Security & Compliance",
-      items: [
-        "Identity Management",
-        "Access Control",
-        "Encryption",
-        "Vulnerability Scanning",
-        "Compliance Auditing",
-        "Security Monitoring",
->>>>>>> origin/main
       ],
     },
     {
@@ -178,7 +156,6 @@ export default function CloudInfrastructureManagement() {
       ],
     },
     {
-<<<<<<< HEAD
       name: 'Lisa Martinez',
       company: 'E-commerce Platform',
       content: 'The automated scaling and monitoring saved us from multiple outages. Our uptime is now 99.99%.',
@@ -199,16 +176,6 @@ export default function CloudInfrastructureManagement() {
         'White-label options',
         'Real-time reports',
         'Custom integrations'
-=======
-      category: "Support & Maintenance",
-      items: [
-        "24/7 Support",
-        "Proactive Monitoring",
-        "Incident Response",
-        "Performance Tuning",
-        "Capacity Planning",
-        "Health Checks",
->>>>>>> origin/main
       ],
     },
   ];

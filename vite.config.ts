@@ -35,7 +35,7 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 100, // Reduced warning threshold for better performance
+    chunkSizeWarningLimit: 80, // Reduced warning threshold for better performance
     assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
@@ -121,7 +121,6 @@ export default defineConfig({
           // AI service pages - group by category
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             const serviceName = id.split('/ai-')[1]?.split('/')[0];
-<<<<<<< HEAD
             if (serviceName?.includes('analytics') || serviceName?.includes('data')) {
               return 'ai-analytics'
             }
@@ -133,6 +132,12 @@ export default defineConfig({
             }
             if (serviceName?.includes('customer') || serviceName?.includes('support')) {
               return 'ai-customer'
+            }
+            if (serviceName && ['automation', 'business-intelligence'].includes(serviceName)) {
+              return 'ai-core'
+            }
+            if (serviceName && ['healthcare', 'marketing', 'sales'].includes(serviceName)) {
+              return 'ai-business'
             }
             return 'ai-other'
           }
@@ -148,24 +153,9 @@ export default defineConfig({
             if (serviceName?.includes('security') || serviceName?.includes('shield')) {
               return 'zion-security'
             }
-            return 'zion-other'
-          }
-          // 5G service pages
-=======
-            if (serviceName && ['analytics', 'automation', 'business-intelligence', 'content-generation'].includes(serviceName)) {
-              return 'ai-core'
-            }
-            if (serviceName && ['healthcare', 'marketing', 'sales', 'customer-service'].includes(serviceName)) {
-              return 'ai-business'
-            }
-            return 'ai-other'
-          }
-          // Zion service pages - group together
-          if (id.includes('/zion-') && id.includes('/page.tsx')) {
             return 'zion-services'
           }
           // 5G service pages - group together
->>>>>>> cursor/analyze-improve-and-deploy-application-b200
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }

@@ -1,68 +1,115 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
-interface EnhancedLoadingProps {
-  message?: string;
-  showProgress?: boolean;
-  progress?: number;
-}
+const EnhancedLoading: React.FC = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+        staggerChildren: 0.1
+      }
+    }
+  };
 
-const EnhancedLoading: React.FC<EnhancedLoadingProps> = ({
-  message = "Loading...",
-  showProgress = false,
-  progress = 0
-}) => {
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+        ease: "easeOut"
+      }
+    }
+  };
+
+  const spinnerVariants = {
+    animate: {
+      rotate: 360,
+      transition: {
+        duration: 1,
+        repeat: Infinity,
+        ease: "linear"
+      }
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-      <div className="text-center">
-        {/* Animated Logo/Icon */}
-        <div className="mb-8">
-          <div className="w-20 h-20 mx-auto relative">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 animate-spin"></div>
-            <div className="absolute inset-2 rounded-full bg-slate-900 flex items-center justify-center">
-              <div className="w-8 h-8 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-pulse"></div>
-            </div>
+      <motion.div
+        className="text-center"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        {/* Logo/Icon */}
+        <motion.div
+          className="mb-8"
+          variants={itemVariants}
+        >
+          <div className="w-16 h-16 mx-auto bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center">
+            <motion.div
+              className="w-8 h-8 border-2 border-white border-t-transparent rounded-full"
+              variants={spinnerVariants}
+              animate="animate"
+            />
           </div>
-        </div>
+        </motion.div>
 
-        {/* Loading Message */}
-        <h2 className="text-2xl font-bold text-white mb-4 animate-pulse">
-          {message}
-        </h2>
+        {/* Loading Text */}
+        <motion.h2
+          className="text-2xl font-bold text-white mb-4"
+          variants={itemVariants}
+        >
+          Loading Zion Tech Group
+        </motion.h2>
 
         {/* Progress Bar */}
-        {showProgress && (
-          <div className="w-64 mx-auto mb-4">
-            <div className="bg-slate-700 rounded-full h-2 overflow-hidden">
-              <div 
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 h-full transition-all duration-300 ease-out"
-                style={{ width: `${Math.min(100, Math.max(0, progress))}%` }}
-              ></div>
-            </div>
-            <p className="text-sm text-gray-400 mt-2">
-              {Math.round(progress)}% Complete
-            </p>
-          </div>
-        )}
+        <motion.div
+          className="w-64 h-2 bg-gray-700 rounded-full overflow-hidden mx-auto mb-4"
+          variants={itemVariants}
+        >
+          <motion.div
+            className="h-full bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full"
+            initial={{ width: "0%" }}
+            animate={{ width: "100%" }}
+            transition={{ duration: 2, ease: "easeInOut" }}
+          />
+        </motion.div>
 
-        {/* Loading Animation */}
-        <div className="flex justify-center space-x-2">
-          {[...Array(3)].map((_, i) => (
-            <div
+        {/* Loading Message */}
+        <motion.p
+          className="text-gray-300 text-sm"
+          variants={itemVariants}
+        >
+          Preparing your experience...
+        </motion.p>
+
+        {/* Animated Dots */}
+        <motion.div
+          className="flex justify-center space-x-1 mt-4"
+          variants={itemVariants}
+        >
+          {[0, 1, 2].map((i) => (
+            <motion.div
               key={i}
-              className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full animate-bounce"
-              style={{
-                animationDelay: `${i * 0.1}s`,
-                animationDuration: '1s'
+              className="w-2 h-2 bg-cyan-400 rounded-full"
+              animate={{
+                scale: [1, 1.2, 1],
+                opacity: [0.5, 1, 0.5]
               }}
-            ></div>
+              transition={{
+                duration: 1,
+                repeat: Infinity,
+                delay: i * 0.2,
+                ease: "easeInOut"
+              }}
+            />
           ))}
-        </div>
-
-        {/* Additional Info */}
-        <p className="text-gray-400 text-sm mt-6 max-w-md mx-auto">
-          Preparing your experience with cutting-edge technology...
-        </p>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 };
