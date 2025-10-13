@@ -26,7 +26,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   priority = false,
   placeholder = 'empty',
   blurDataURL = '',
-  quality = 75,
   sizes = '100vw',
   loading = 'lazy',
   onLoad,
