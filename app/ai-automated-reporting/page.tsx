@@ -314,3 +314,7 @@
         </section>
       </div>
     </>
+  );
+};
+
+export default AIAutomatedReportingPage;

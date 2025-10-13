@@ -108,9 +108,10 @@ const AppLoadingSpinner = () => (
   <LoadingSpinner />
 );
 
-const App: React.FC = () => {,
-    return(<ErrorBoundary>)
-      <HelmetProvider />
+const App: React.FC = () => {
+  return (
+    <ErrorBoundary>
+      <HelmetProvider>
         <BrowserRouter>
           <div className="App">
             <PerformanceMonitor />
@@ -119,9 +120,29 @@ const App: React.FC = () => {,
               <Routes>
                 {/* Main Pages */}
                 <Route path="/" element={<HomePage />} />
-
+                <Route path="/about" element={<AboutPage />} />
+                <Route path="/services" element={<ServicesPage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/ai-automation" element={<AIAutomationPage />} />
+                <Route path="/ai-data-analytics" element={<AIDataAnalyticsPage />} />
+                <Route path="/ai-email-assistant" element={<AIEmailAssistantPage />} />
+                <Route path="/ai-email-marketing-automation" element={<AIEmailMarketingAutomationPage />} />
+                <Route path="/ai-expense-tracker" element={<AIExpenseTrackerPage />} />
+                <Route path="/ai-financial-analysis" element={<AIFinancialAnalysisPage />} />
+                <Route path="/ai-fraud-detection" element={<AIFraudDetectionPage />} />
+                <Route path="/ai-automated-reporting" element={<AIAutomatedReportingPage />} />
+                <Route path="/ai-data-analytics-pro" element={<AIDataAnalyticsProPage />} />
+                <Route path="/ad-management" element={<AdManagementPage />} />
+                <Route path="/edge-computing" element={<EdgeComputingPage />} />
+                <Route path="*" element={<NotFoundPage />} />
+              </Routes>
+            </Suspense>
+          </div>
+        </BrowserRouter>
+      </HelmetProvider>
+    </ErrorBoundary>
   );
-}
+};
 
 
 

@@ -1,3 +1,13 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { BarChart, TrendingUp, Target, CheckCircle, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react';
+
+const AIFinancialAnalysisPage = () => {
+  const features = [
+    {
+      icon: BarChart,
+      title: 'Advanced Financial Analytics',
+      description: 'Comprehensive financial analysis with machine learning insights.',
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -156,4 +166,4 @@
   );
 };
 
-export default AIFinancialAnalysis;
+export default AIFinancialAnalysisPage;

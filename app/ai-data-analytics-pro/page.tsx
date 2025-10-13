@@ -1,3 +1,13 @@
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { BarChart, TrendingUp, Target, CheckCircle, ArrowRight, Star, Users, Clock, Shield } from 'lucide-react';
+
+const AIDataAnalyticsProPage = () => {
+  const features = [
+    {
+      icon: BarChart,
+      title: 'Advanced Analytics',
+      description: 'Comprehensive data analysis with machine learning insights.',
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -156,4 +166,4 @@
   );
 };
 
-export default AIDataAnalyticsPro;
+export default AIDataAnalyticsProPage;
