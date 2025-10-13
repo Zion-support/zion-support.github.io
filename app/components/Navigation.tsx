@@ -176,17 +176,25 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
   ], []);
 
   return (
-    <nav className="relative z-50 bg-black/20 backdrop-blur-md border-b border-cyan-500/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="relative z-50 bg-black/30 backdrop-blur-xl border-b border-cyan-500/30 shadow-2xl shadow-cyan-500/10">
+      {/* Animated background effect */}
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center space-x-2 group">
-              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-6 h-6 text-white" />
+            <Link to="/" className="flex items-center space-x-2 group relative">
+              <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300 relative overflow-hidden">
+                <Zap className="w-6 h-6 text-white relative z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300">
-                Zion Tech Group
+              <span className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300 relative">
+                <span className="relative z-10">Zion Tech Group</span>
+                <span className="absolute inset-0 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  Zion Tech Group
+                </span>
               </span>
             </Link>
           </div>
@@ -219,12 +227,16 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
 
                   {/* Dropdown Menu */}
                   {item.hasDropdown && isServicesOpen && (
-                    <div className="absolute left-0 mt-2 w-96 bg-black/90 backdrop-blur-md border border-cyan-500/30 rounded-lg shadow-xl z-50">
-                      <div className="p-4">
+                    <div className="absolute left-0 mt-2 w-96 bg-black/95 backdrop-blur-xl border border-cyan-500/40 rounded-xl shadow-2xl shadow-cyan-500/20 z-50 overflow-hidden">
+                      {/* Animated background */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
+                      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+                      
+                      <div className="relative p-6">
                         {item.dropdownItems?.map((section, sectionIndex) => (
-                          <div key={sectionIndex} className="mb-4 last:mb-0">
-                            <div className="flex items-center space-x-2 mb-2 text-cyan-400 font-semibold">
-                              <span>{section.icon}</span>
+                          <div key={sectionIndex} className="mb-6 last:mb-0">
+                            <div className="flex items-center space-x-2 mb-3 text-cyan-400 font-semibold text-sm uppercase tracking-wider">
+                              <span className="w-4 h-4">{section.icon}</span>
                               <span>{section.name}</span>
                             </div>
                             <div className="grid grid-cols-1 gap-1">
@@ -232,11 +244,12 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
                                 <Link
                                   key={subIndex}
                                   to={subItem.path}
-                                  className="flex items-center space-x-2 px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-cyan-500/10 rounded-md transition-all duration-300"
+                                  className="group flex items-center space-x-3 px-4 py-3 text-sm text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/10 hover:to-purple-500/10 rounded-lg transition-all duration-300 relative overflow-hidden"
                                   onClick={() => setIsServicesOpen(false)}
                                 >
-                                  <span>{subItem.icon}</span>
-                                  <span>{subItem.name}</span>
+                                  <span className="w-4 h-4 group-hover:scale-110 transition-transform duration-300">{subItem.icon}</span>
+                                  <span className="relative z-10">{subItem.name}</span>
+                                  <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 </Link>
                               ))}
                             </div>
@@ -254,10 +267,11 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
           <div className="hidden md:block">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300 flex items-center space-x-2"
+              className="group relative bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-2 rounded-lg font-semibold hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 flex items-center space-x-2 overflow-hidden"
             >
-              <span>Get Started</span>
-              <ArrowRight className="w-4 h-4" />
+              <span className="relative z-10">Get Started</span>
+              <ArrowRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </Link>
           </div>
 
@@ -281,31 +295,39 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/90 backdrop-blur-md border-t border-cyan-500/20">
-              {navigationItems.map((item) => (
-                <div key={item.name}>
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-black/95 backdrop-blur-xl border-t border-cyan-500/30 relative overflow-hidden">
+              {/* Animated background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 via-purple-500/5 to-pink-500/5"></div>
+              <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent"></div>
+              
+              <div className="relative">
+                {navigationItems.map((item) => (
+                  <div key={item.name}>
+                    <Link
+                      to={item.path}
+                      className={`group flex items-center space-x-3 px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 relative overflow-hidden ${
+                        isActive(item.path)
+                          ? 'text-cyan-400 bg-gradient-to-r from-cyan-500/20 to-purple-500/20'
+                          : 'text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/10 hover:to-purple-500/10'
+                      }`}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <span className="w-5 h-5 group-hover:scale-110 transition-transform duration-300">{item.icon}</span>
+                      <span className="relative z-10">{item.name}</span>
+                      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </Link>
+                  </div>
+                ))}
+                <div className="pt-4">
                   <Link
-                    to={item.path}
-                    className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
-                      isActive(item.path)
-                        ? 'text-cyan-400 bg-cyan-500/10'
-                        : 'text-gray-300 hover:text-white hover:bg-white/10'
-                    }`}
+                    to="/contact"
+                    className="group block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:shadow-xl hover:shadow-cyan-500/30 transition-all duration-300 relative overflow-hidden"
                     onClick={() => setIsOpen(false)}
                   >
-                    <span>{item.icon}</span>
-                    <span>{item.name}</span>
+                    <span className="relative z-10">Get Started</span>
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </Link>
                 </div>
-              ))}
-              <div className="pt-4">
-                <Link
-                  to="/contact"
-                  className="block w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Get Started
-                </Link>
               </div>
             </div>
           </div>
