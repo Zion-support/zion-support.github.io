@@ -17,6 +17,7 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 const AboutPage = React.lazy(() => import("./app/about/page"));
 const ContactPage = React.lazy(() => import("./app/contact/page"));
 const ServicesPage = React.lazy(() => import("./app/services/page"));
+const MicroSaasPage = React.lazy(() => import("./app/micro-saas/page"));
 const PricingPage = React.lazy(() => import("./app/pricing/page"));
 const BlogPage = React.lazy(() => import("./app/blog/page"));
 const AIServicesPage = React.lazy(() => import("./app/ai-services/page"));
@@ -27,6 +28,17 @@ const PrivacyPage = React.lazy(() => import("./app/privacy/page"));
 const TermsPage = React.lazy(() => import("./app/terms/page"));
 const CookiesPage = React.lazy(() => import("./app/cookies/page"));
 const SitemapPage = React.lazy(() => import("./app/sitemap/page"));
+
+// Micro SAAS Services
+const ZionAnalyticsProPage = React.lazy(() => import("./app/zion-analytics-pro/page"));
+const ZionSecurityShieldPage = React.lazy(() => import("./app/zion-security-shield/page"));
+const ZionAiChatbotBuilderPage = React.lazy(() => import("./app/zion-ai-chatbot-builder/page"));
+
+// IT Services
+const CloudInfrastructurePage = React.lazy(() => import("./app/cloud-infrastructure/page"));
+
+// AI Services
+const AiBusinessIntelligenceProPage = React.lazy(() => import("./app/ai-business-intelligence-pro/page"));
 
 // Main App Component
 function App() {
@@ -53,6 +65,7 @@ function App() {
                       <Route path="/about" element={<AboutPage />} />
                       <Route path="/contact" element={<ContactPage />} />
                       <Route path="/services" element={<ServicesPage />} />
+                      <Route path="/micro-saas" element={<MicroSaasPage />} />
                       <Route path="/pricing" element={<PricingPage />} />
                       <Route path="/blog" element={<BlogPage />} />
                       <Route path="/ai-services" element={<AIServicesPage />} />
@@ -63,6 +76,17 @@ function App() {
                       <Route path="/terms" element={<TermsPage />} />
                       <Route path="/cookies" element={<CookiesPage />} />
                       <Route path="/sitemap" element={<SitemapPage />} />
+                      
+                      {/* Micro SAAS Services */}
+                      <Route path="/zion-analytics-pro" element={<ZionAnalyticsProPage />} />
+                      <Route path="/zion-security-shield" element={<ZionSecurityShieldPage />} />
+                      <Route path="/zion-ai-chatbot-builder" element={<ZionAiChatbotBuilderPage />} />
+                      
+                      {/* IT Services */}
+                      <Route path="/cloud-infrastructure" element={<CloudInfrastructurePage />} />
+                      
+                      {/* AI Services */}
+                      <Route path="/ai-business-intelligence-pro" element={<AiBusinessIntelligenceProPage />} />
                     </Routes>
                   </Suspense>
                 </main>
@@ -70,23 +94,6 @@ function App() {
               </FuturisticBackground>
             </div>
           </Router>
-                  <EnhancedAccessibility>
-                    <div></div>
-                  </EnhancedAccessibility>
-                </FuturisticBackground>
-                <AnalyticsProvider>
-                  <div>
-                    <PerformanceMonitor />
-                    <WebVitalsTracker />
-                    <PerformanceEnhancer />
-                    <SEOOptimizer />
-                    <EnhancedSEO />
-                    <EnhancedSEOOptimizer />
-                  </div>
-                </AnalyticsProvider>
-              </div>
-            </Router>
-          </AccessibilityEnhancer>
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </GlobalErrorBoundary>

@@ -172,6 +172,14 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
+                  to="/micro-saas"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  All Micro SAAS Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/zion-analytics-pro"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
@@ -196,6 +204,14 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
+                  to="/zion-ai-chatbot-builder"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Zion AI Chatbot Builder
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/zion-content-studio"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
@@ -204,18 +220,10 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/zion-data-sync"
+                  to="/zion-lead-magnet"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
-                  Zion Data Sync
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-project-master"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Project Master
+                  Zion Lead Magnet
                 </Link>
               </li>
             </ul>
