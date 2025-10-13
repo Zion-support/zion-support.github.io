@@ -2,6 +2,7 @@ interface SEOConfig {
   title: string;
   description: string;
   keywords: string[];
+<<<<<<< HEAD
   canonicalUrl?: string;
   ogImage?: string;
   ogType?: string;
@@ -17,6 +18,27 @@ interface SEOConfig {
   author?: string;
   publisher?: string;
   language?: string;
+=======
+  canonicalUrl: string;
+  ogImage: string;
+  ogType: string;
+  twitterCard: string;
+  robots: string;
+  author?: string;
+  publishedTime?: string;
+  modifiedTime?: string;
+  section?: string;
+  tags?: string[];
+  viewport?: string;
+  charset?: string;
+  publisher?: string;
+  language?: string;
+  ogTitle?: string;
+  ogDescription?: string;
+  twitterTitle?: string;
+  twitterDescription?: string;
+  twitterImage?: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bca9
   geo?: {
     latitude?: string;
     longitude?: string;
@@ -24,8 +46,13 @@ interface SEOConfig {
     placename?: string;
   };
   alternate?: Array<{
+<<<<<<< HEAD
     hreflang: string;
     href: string;
+=======
+    href: string;
+    hreflang: string;
+>>>>>>> cursor/fix-errors-and-merge-to-main-bca9
   }>;
   structuredData?: any;
 }
