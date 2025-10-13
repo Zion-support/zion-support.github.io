@@ -22,4 +22,3 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     </AnalyticsContext.Provider>
   );
 };
->>>>>>> origin/main
