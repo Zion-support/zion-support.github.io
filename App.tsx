@@ -20,6 +20,11 @@ import FuturisticBackground from "./app/components/FuturisticBackground";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
+import AdvancedPerformanceOptimizer from "./app/components/AdvancedPerformanceOptimizer";
+import EnhancedErrorBoundary from "./app/components/EnhancedErrorBoundary";
+import AdvancedSEO from "./app/components/AdvancedSEO";
+import SecurityEnhancer from "./app/components/SecurityEnhancer";
+import UXEnhancer from "./app/components/UXEnhancer";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -203,7 +208,7 @@ const FiveGSolutionsPage = React.lazy(() => import("./app/5g-solutions/page"));
 function App() {
   return (
     <ErrorHandler>
-      <ErrorBoundary>
+      <EnhancedErrorBoundary>
         <HelmetProvider>
           <AccessibilityEnhancer>
             <Router>
@@ -458,13 +463,22 @@ function App() {
                     <PerformanceEnhancer />
                     <SEOOptimizer />
                     <EnhancedSEO />
+                    <AdvancedPerformanceOptimizer />
+                    <AdvancedSEO
+                      title="Zion Tech Group - Advanced AI and IT Solutions"
+                      description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses."
+                      keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting"
+                      canonical="https://ziontechgroup.com"
+                    />
+                    <SecurityEnhancer />
+                    <UXEnhancer />
                   </div>
                 </AnalyticsProvider>
               </div>
             </Router>
           </AccessibilityEnhancer>
         </HelmetProvider>
-      </ErrorBoundary>
+      </EnhancedErrorBoundary>
     </ErrorHandler>
   );
 }
