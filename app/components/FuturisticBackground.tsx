@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 interface FuturisticBackgroundProps {
@@ -25,6 +26,12 @@ const FuturisticBackground: React.FC = () => {
 =======
 const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
+=======
+'use client';
+import React, { useEffect, useRef } from 'react';
+
+const FuturisticBackground: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -34,6 +41,7 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     let animationId: number;
@@ -47,10 +55,13 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
     }> = [];
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
+<<<<<<< HEAD
 
 <<<<<<< HEAD
     resizeCanvas();
@@ -68,6 +79,36 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
         });
       }
     };
+=======
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    // Quantum particles
+    const particles: Array<{
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;
+    }> = [];
+
+    // Create particles
+    for (let i = 0; i < 50; i++) {
+      particles.push({
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 3 + 1,
+        opacity: Math.random() * 0.5 + 0.2,
+        color: `hsl(${Math.random() * 60 + 180}, 70%, 60%)`
+      });
+    }
+
+    let animationId: number;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -101,13 +142,21 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
             ctx.beginPath();
             ctx.moveTo(particle.x, particle.y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
+<<<<<<< HEAD
             ctx.strokeStyle = `rgba(6, 182, 212, ${0.1 * (1 - distance / 100)})`;
+=======
+            ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
         });
       });
 
+<<<<<<< HEAD
+=======
+      ctx.globalAlpha = 1;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
       animationId = requestAnimationFrame(animate);
     };
 
@@ -115,6 +164,7 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
     createParticles();
     animate();
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
     window.addEventListener('resize', resizeCanvas);
 
@@ -133,6 +183,19 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
       ref={canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none z-0"
       style={{ background: 'linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%)' }}
+=======
+    return () => {
+      cancelAnimationFrame(animationId);
+      window.removeEventListener('resize', resizeCanvas);
+    };
+  }, []);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 w-full h-full pointer-events-none z-0"
+      style={{ background: 'transparent' }}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
     />
 =======
     <div className="relative">
@@ -147,8 +210,12 @@ const FuturisticBackground = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
+<<<<<<< HEAD
 export default FuturisticBackground;
 <<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 =======
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-09ab
+=======
+export default FuturisticBackground;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 import React from 'react';
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 =======
 <<<<<<< HEAD
@@ -259,6 +260,51 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({ items }) => {
               {index > 0 && <span className="text-gray-400 mx-2">/</span>}
               <span className="text-gray-300">{item.name}</span>
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
+=======
+import { useLocation } from 'react-router-dom';
+import { ChevronRight, Home } from 'lucide-react';
+
+const Breadcrumb: React.FC = () => {
+  const location = useLocation();
+  
+  // Don't show breadcrumb on home page
+  if (location.pathname === '/') {
+    return null;
+  }
+
+  const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+  
+  const breadcrumbItems = [
+    { name: 'Home', path: '/', icon: Home }
+  ];
+
+  pathSegments.forEach((segment, index) => {
+    const path = '/' + pathSegments.slice(0, index + 1).join('/');
+    const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+    breadcrumbItems.push({ name, path, icon: null });
+  });
+
+  return (
+    <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
+      <div className="max-w-7xl mx-auto px-4 py-3">
+        <ol className="flex items-center space-x-2 text-sm">
+          {breadcrumbItems.map((item, index) => (
+            <li key={item.path} className="flex items-center">
+              {index > 0 && (
+                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+              )}
+              <a
+                href={item.path}
+                className={`flex items-center space-x-1 transition-colors duration-200 ${
+                  index === breadcrumbItems.length - 1
+                    ? 'text-cyan-400 font-medium'
+                    : 'text-gray-300 hover:text-cyan-400'
+                }`}
+              >
+                {item.icon && <item.icon className="w-4 h-4" />}
+                <span>{item.name}</span>
+              </a>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
             </li>
           ))}
 <<<<<<< HEAD
@@ -367,6 +413,7 @@ export default function Breadcrumb() {
 =======
 };
 
+<<<<<<< HEAD
 export default Breadcrumb;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-01d9
 =======
@@ -374,3 +421,6 @@ export default Breadcrumb;
 
 export default Breadcrumb;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0373
+=======
+export default Breadcrumb;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69

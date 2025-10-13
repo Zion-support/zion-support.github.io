@@ -417,6 +417,7 @@ function App() {
 <<<<<<< HEAD
     <EnhancedErrorBoundary>
       <HelmetProvider>
+<<<<<<< HEAD
         <AnalyticsProvider>
           <PerformanceMonitor />
           <WebVitalsTracker />
@@ -692,6 +693,65 @@ function App() {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
         </AnalyticsProvider>
 <<<<<<< HEAD
+=======
+        <SEOHead 
+          title="Zion Tech Group - AI & IT Solutions"
+          description="Leading provider of enterprise AI solutions, quantum computing, autonomous systems, and digital transformation services. Transform your business with cutting-edge technology."
+          keywords={['AI solutions', 'IT services', 'quantum computing', 'digital transformation', 'enterprise software', 'automation', 'machine learning']}
+          canonicalUrl="https://ziontechgroup.com"
+        />
+        <SkipLink />
+        <ServiceWorker />
+        <Router>
+          <AppWithPerformanceMonitoring>
+            <AnalyticsProvider>
+              <PerformanceOptimizer>
+                <EnhancedAccessibility>
+                  <AccessibilityEnhancer
+                    enableKeyboardNavigation={true}
+                    enableScreenReaderSupport={true}
+                    enableHighContrast={false}
+                    enableFocusManagement={true}
+                  >
+                    <PerformanceMonitor />
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
+                      <FuturisticBackground />
+                      <Navigation />
+                      <Breadcrumb />
+                      <main id="main-content" className="flex-1" tabIndex={-1}>
+                        <Suspense fallback={<PageLoader />}>
+                          <Routes>
+                            <Route path="/" element={<HomePage />} />
+                            <Route path="/about" element={<AboutPage />} />
+                            <Route path="/contact" element={<ContactPage />} />
+                            <Route path="/services" element={<ServicesPage />} />
+                            <Route path="/pricing" element={<PricingPage />} />
+                            <Route path="/blog" element={<BlogPage />} />
+                            <Route path="/case-studies" element={<CaseStudiesPage />} />
+                            <Route path="/careers" element={<CareersPage />} />
+                            <Route path="/ai-services" element={<AiServicesPage />} />
+                            <Route path="/it-services" element={<ItServicesPage />} />
+                            <Route path="/micro-saas" element={<MicroSaasPage />} />
+                            <Route path="/tutorials" element={<TutorialsPage />} />
+                            <Route path="/consultation" element={<ConsultationPage />} />
+                            <Route path="/demo" element={<DemoPage />} />
+                            <Route path="/support" element={<SupportPage />} />
+                            <Route path="/privacy" element={<PrivacyPage />} />
+                            <Route path="/terms" element={<TermsPage />} />
+                            <Route path="/cookies" element={<CookiesPage />} />
+                            <Route path="/sitemap" element={<SitemapPage />} />
+                          </Routes>
+                        </Suspense>
+                      </main>
+                      <Footer />
+                    </div>
+                  </AccessibilityEnhancer>
+                </EnhancedAccessibility>
+              </PerformanceOptimizer>
+            </AnalyticsProvider>
+          </AppWithPerformanceMonitoring>
+        </Router>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0b69
       </HelmetProvider>
     </EnhancedErrorBoundary>
 =======
