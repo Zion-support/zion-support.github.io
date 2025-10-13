@@ -10,108 +10,172 @@ interface Props {
 
 interface State {
   hasError: boolean;
-  error?: Error;
-  errorInfo?: ErrorInfo;
+  error: Error | null;
+  errorInfo: ErrorInfo | null;
+  retryCount: number;
 }
 
 class ImprovedErrorBoundary extends Component<Props, State> {
+  private maxRetries = 3;
+
   constructor(props: Props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = {
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      retryCount: 0,
+    };
   }
 
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+  static getDerivedStateFromError(error: Error): Partial<State> {
+    return {
+      hasError: true,
+      error,
+    };
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    this.setState({ error, errorInfo });
-    
+    this.setState({
+      error,
+      errorInfo,
+    });
+
     // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
-      console.error('Error caught by boundary:', error, errorInfo);
+      console.error('Error Boundary caught an error:', error, errorInfo);
     }
-    
+
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-    
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
+
+    // Log error to external service in production
+    if (process.env.NODE_ENV === 'production') {
+      this.logErrorToService(error, errorInfo);
+    }
   }
 
-  handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined });
+  private logErrorToService = (error: Error, errorInfo: ErrorInfo) => {
+    // In a real application, you would send this to an error tracking service
+    // like Sentry, LogRocket, or Bugsnag
+    try {
+      const errorData = {
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href,
+      };
+
+      // Example: Send to error tracking service
+      // errorTrackingService.captureException(error, { extra: errorData });
+      
+      console.error('Error logged to service:', errorData);
+    } catch (loggingError) {
+      console.error('Failed to log error to service:', loggingError);
+    }
+  };
+
+  private handleRetry = () => {
+    if (this.state.retryCount < this.maxRetries) {
+      this.setState(prevState => ({
+        hasError: false,
+        error: null,
+        errorInfo: null,
+        retryCount: prevState.retryCount + 1,
+      }));
+    }
+  };
+
+  private handleReset = () => {
+    this.setState({
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      retryCount: 0,
+    });
   };
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
+      // Use custom fallback if provided
       if (this.props.fallback) {
         return this.props.fallback;
       }
 
       return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center">
-          <div className="max-w-md mx-auto px-6 text-center">
-            <div className="mb-8">
-              <div className="w-20 h-20 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <AlertTriangle className="w-10 h-10 text-red-400" />
-              </div>
-              <h1 className="text-3xl font-bold text-white mb-4">
-                Oops! Something went wrong
-              </h1>
-              <p className="text-gray-300 mb-6">
-                We're sorry, but something unexpected happened. Our team has been notified and is working to fix this issue.
-              </p>
+        <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center px-4">
+          <div className="max-w-md w-full bg-white/10 backdrop-blur-sm rounded-xl p-8 border border-white/20 text-center">
+            <div className="w-16 h-16 bg-red-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+              <AlertTriangle className="w-8 h-8 text-red-400" />
             </div>
+            
+            <h1 className="text-2xl font-bold text-white mb-4">
+              Oops! Something went wrong
+            </h1>
+            
+            <p className="text-gray-300 mb-6">
+              We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
+            </p>
 
-            <div className="space-y-4">
-              <button
-                onClick={this.handleRetry}
-                className="w-full bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <RefreshCw className="w-5 h-5" />
-                Try Again
-              </button>
-              
-              <Link
-                to="/"
-                className="w-full bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2"
-              >
-                <Home className="w-5 h-5" />
-                Go Home
-              </Link>
-            </div>
-
-            {/* Development Error Details */}
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="mt-8 text-left">
-                <summary className="text-red-400 cursor-pointer hover:text-red-300">
-                  Error Details (Development Only)
+              <details className="mb-6 text-left">
+                <summary className="text-sm text-gray-400 cursor-pointer hover:text-gray-300 mb-2">
+                  Error Details (Development)
                 </summary>
-                <div className="mt-4 p-4 bg-red-900/20 border border-red-500/30 rounded-lg">
-                  <pre className="text-red-300 text-sm overflow-auto">
-                    {this.state.error.toString()}
-                    {this.state.errorInfo?.componentStack}
-                  </pre>
+                <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4 text-xs text-red-300 font-mono overflow-auto">
+                  <div className="mb-2">
+                    <strong>Error:</strong> {this.state.error.message}
+                  </div>
+                  {this.state.error.stack && (
+                    <div className="mb-2">
+                      <strong>Stack:</strong>
+                      <pre className="whitespace-pre-wrap mt-1">{this.state.error.stack}</pre>
+                    </div>
+                  )}
+                  {this.state.errorInfo?.componentStack && (
+                    <div>
+                      <strong>Component Stack:</strong>
+                      <pre className="whitespace-pre-wrap mt-1">{this.state.errorInfo.componentStack}</pre>
+                    </div>
+                  )}
                 </div>
               </details>
             )}
 
-            {/* Contact Support */}
-            <div className="mt-8 pt-6 border-t border-white/10">
-              <p className="text-gray-400 text-sm mb-4">
-                Still having issues? Contact our support team
-              </p>
+            <div className="space-y-3">
+              {this.state.retryCount < this.maxRetries && (
+                <button
+                  onClick={this.handleRetry}
+                  className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
+                >
+                  <RefreshCw className="w-5 h-5 mr-2 group-hover:rotate-180 transition-transform" />
+                  Try Again ({this.maxRetries - this.state.retryCount} attempts left)
+                </button>
+              )}
+
+              <button
+                onClick={this.handleReset}
+                className="w-full border border-cyan-400 text-cyan-400 px-6 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 flex items-center justify-center group"
+              >
+                <Home className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Go to Homepage
+              </button>
+
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                className="w-full bg-white/10 text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-all duration-300 flex items-center justify-center group border border-white/20"
               >
-                <Mail className="w-4 h-4" />
-                Get Support
+                <Mail className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
+                Report Issue
               </Link>
+            </div>
+
+            <div className="mt-6 text-xs text-gray-400">
+              Error ID: {Date.now().toString(36)}
             </div>
           </div>
         </div>
@@ -121,31 +185,5 @@ class ImprovedErrorBoundary extends Component<Props, State> {
     return this.props.children;
   }
 }
-
-// Higher-order component for easier usage
-export const withErrorBoundary = <P extends object>(
-  Component: React.ComponentType<P>,
-  errorBoundaryProps?: Omit<Props, 'children'>
-) => {
-  const WrappedComponent = (props: P) => (
-    <ImprovedErrorBoundary {...errorBoundaryProps}>
-      <Component {...props} />
-    </ImprovedErrorBoundary>
-  );
-  
-  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
-  
-  return WrappedComponent;
-};
-
-// Hook for functional components to handle errors
-export const useErrorHandler = () => {
-  return (error: Error, errorInfo?: ErrorInfo) => {
-    console.error('Error caught by hook:', error, errorInfo);
-    
-    // In production, you might want to send this to an error reporting service
-    // Example: errorReportingService.captureException(error, { extra: errorInfo });
-  };
-};
 
 export default ImprovedErrorBoundary;

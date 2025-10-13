@@ -35,10 +35,13 @@ export default defineConfig({
       polyfill: false,
     },
     // Performance optimizations
-    chunkSizeWarningLimit: 500, // Increased threshold for better chunking
-    assetsInlineLimit: 1024, // Optimized for better caching and faster initial load
+    chunkSizeWarningLimit: 1000, // Increased threshold for better chunking
+    assetsInlineLimit: 2048, // Optimized for better caching and faster initial load
     // Enable compression
     reportCompressedSize: true,
+    // Enhanced build optimizations
+    cssMinify: true,
+    minifyInternalExports: true,
     // Optimize for production
     terserOptions: {
       compress: {

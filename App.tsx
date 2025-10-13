@@ -13,8 +13,10 @@ import AccessibilityEnhancer from "./app/components/AccessibilityEnhancer";
 import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
+import ImprovedErrorBoundary from "./app/components/ImprovedErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
 import EnhancedSEO from "./app/components/EnhancedSEO";
+import ImprovedLoading from "./app/components/ImprovedLoading";
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -115,7 +117,7 @@ function App() {
 
   return (
     <HelmetProvider>
-      <ErrorBoundary>
+      <ImprovedErrorBoundary>
         <AnalyticsProvider>
           <PerformanceMonitor showDetails={process.env.NODE_ENV === 'development'}>
             <WebVitalsTracker>
@@ -133,7 +135,7 @@ function App() {
                       <Breadcrumb />
                       
                       <main id="main-content" role="main" className="relative z-10">
-                        <Suspense fallback={<LoadingPage message="Loading Zion Tech Group..." />}>
+                        <Suspense fallback={<ImprovedLoading message="Loading Zion Tech Group..." variant="futuristic" fullScreen />}>
                           <Routes>
                             {/* Main Pages */}
                             <Route path="/" element={<HomePage />} />

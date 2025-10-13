@@ -174,26 +174,34 @@ const HomePage = () => {
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <EnhancedSEO
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
-        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
-        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
+        description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. 10,000+ active users, 99.9% uptime SLA. Transform your operations with cutting-edge technology."
+        keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology, machine learning, artificial intelligence, business intelligence"
         canonical="https://ziontechgroup.com"
+        structuredData={structuredData}
       />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <section 
+        className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+        aria-labelledby="hero-heading"
+        role="banner"
+      >
         {/* Animated Background Elements */}
-        <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         
         <ResponsiveContainer className="text-center relative z-10">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" />
+          <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6" role="banner">
+            <Sparkles className="w-4 h-4 text-cyan-400 mr-2" aria-hidden="true" />
             <span className="text-cyan-400 text-sm font-medium">#1 Technology Solutions Provider 2024</span>
           </div>
           
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+          <h1 
+            id="hero-heading"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+          >
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
               Welcome to Zion Tech Group
             </span>
@@ -239,10 +247,17 @@ const HomePage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-20 px-4 sm:px-6 lg:px-8"
+        aria-labelledby="services-heading"
+        role="region"
+      >
         <ResponsiveContainer>
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+            <h2 
+              id="services-heading"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+            >
               Our Core Services
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
@@ -250,16 +265,21 @@ const HomePage = () => {
               From AI-powered analytics to enterprise security, we have everything you need.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div 
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+            role="list"
+            aria-label="Core services"
+          >
             {features.map((feature, index) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 cursor-pointer"
+                role="listitem"
               >
                 <Link
                   to={feature.link}
-                  className="block"
-                  aria-label={`Learn more about ${feature.title}`}
+                  className="block focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded-lg"
+                  aria-label={`Learn more about ${feature.title} - ${feature.stats}`}
                 >
                   <div
                     className={`w-12 h-12 md:w-16 md:h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
@@ -286,32 +306,45 @@ const HomePage = () => {
       </section>
 
       {/* Micro SAAS Highlights */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
+      <section 
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-800/50 to-purple-800/50"
+        aria-labelledby="saas-heading"
+        role="region"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 
+              id="saas-heading"
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
+            >
               Featured Micro SAAS Solutions
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div 
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            role="list"
+            aria-label="Featured Micro SAAS solutions"
+          >
             {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-800 rounded-lg"
+                role="listitem"
+                aria-label={`Learn more about ${saas.name} - ${saas.price}`}
               >
                 {saas.featured && (
-                  <div className="absolute top-4 right-4">
+                  <div className="absolute top-4 right-4" aria-hidden="true">
                     <span className="bg-gradient-to-r from-cyan-500 to-purple-500 text-white px-2 py-1 rounded-full text-xs font-semibold">
                       Featured
                     </span>
                   </div>
                 )}
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform" aria-hidden="true">
                     {saas.icon}
                   </div>
                   <div className="flex-1">
@@ -326,7 +359,7 @@ const HomePage = () => {
                 </p>
                 <div className="mt-4 flex items-center text-cyan-400 text-sm font-medium group-hover:text-cyan-300 transition-colors">
                   Learn More
-                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
                 </div>
               </Link>
             ))}
@@ -344,28 +377,42 @@ const HomePage = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section 
+        className="py-20 px-4 sm:px-6 lg:px-8"
+        aria-labelledby="testimonials-heading"
+        role="region"
+      >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 
+              id="testimonials-heading"
+              className="text-3xl md:text-4xl font-bold text-white mb-4"
+            >
               Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               See what our clients say about working with Zion Tech Group
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            role="list"
+            aria-label="Customer testimonials"
+          >
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
                 className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                role="listitem"
               >
-                <div className="flex items-center mb-4">
+                <div className="flex items-center mb-4" aria-label={`${testimonial.rating} star rating`}>
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                    <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" aria-hidden="true" />
                   ))}
                 </div>
-                <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                <blockquote className="text-gray-300 mb-4 italic leading-relaxed">
+                  <p>"{testimonial.content}"</p>
+                </blockquote>
                 <div>
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
@@ -377,9 +424,16 @@ const HomePage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
+      <section 
+        className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30"
+        aria-labelledby="cta-heading"
+        role="region"
+      >
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 
+            id="cta-heading"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6"
+          >
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -388,44 +442,76 @@ const HomePage = () => {
           </p>
           
           {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+          <div 
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
+            role="list"
+            aria-label="Contact information"
+          >
+            <div className="text-center" role="listitem">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3" aria-hidden="true">
                 <Mail className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Email</h3>
-              <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+              <p className="text-cyan-400">
+                <a 
+                  href="mailto:kleber@ziontechgroup.com" 
+                  className="hover:text-cyan-300 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+                  aria-label="Send email to kleber@ziontechgroup.com"
+                >
+                  kleber@ziontechgroup.com
+                </a>
+              </p>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <div className="text-center" role="listitem">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3" aria-hidden="true">
                 <Smartphone className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Phone</h3>
-              <p className="text-cyan-400">+1 302 464 0950</p>
+              <p className="text-cyan-400">
+                <a 
+                  href="tel:+13024640950" 
+                  className="hover:text-cyan-300 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+                  aria-label="Call +1 302 464 0950"
+                >
+                  +1 302 464 0950
+                </a>
+              </p>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+            <div className="text-center" role="listitem">
+              <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3" aria-hidden="true">
                 <Globe className="w-6 h-6 text-white" />
               </div>
               <h3 className="text-white font-semibold mb-2">Address</h3>
-              <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              <address className="text-cyan-400 text-sm not-italic">
+                <a 
+                  href="https://maps.google.com/?q=364+E+Main+St+STE+1008,+Middletown,+DE+19709" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-cyan-300 transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900 rounded"
+                  aria-label="View address on Google Maps"
+                >
+                  364 E Main St STE 1008<br />Middletown DE 19709
+                </a>
+              </address>
             </div>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+              aria-label="Start your digital transformation journey"
             >
               Start Your Journey
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
             </Link>
             <Link
               to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-slate-900"
+              aria-label="Explore our technology services"
             >
               Explore Services
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" aria-hidden="true" />
             </Link>
           </div>
         </div>
