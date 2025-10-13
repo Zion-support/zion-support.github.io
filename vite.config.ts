@@ -73,8 +73,6 @@ export default defineConfig({
           if (id.includes('node_modules')) {
             return 'vendor'
           }
-<<<<<<< HEAD
-=======
           // Performance monitoring - separate chunk
           if (id.includes('web-vitals')) {
             return 'performance'
@@ -131,21 +129,12 @@ export default defineConfig({
           }
           // Default chunk for other modules
           return 'vendor'
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
         },
       },
     },
     rollupOptions: {
       output: {
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom'],
-          'router': ['react-router-dom'],
-          'ui-animations': ['framer-motion'],
-          'ui-icons': ['lucide-react'],
-          'seo': ['react-helmet-async', 'gray-matter'],
-          'analytics': ['web-vitals'],
-          'charts': ['recharts'],
-        },
+        // manualChunks is handled by the function in terserOptions above
       },
     },
   },

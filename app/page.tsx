@@ -2,17 +2,10 @@ import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Monitor, Target, Calendar, FileText } from "lucide-react";
 import EnhancedSEO from "./components/EnhancedSEO";
 import StructuredData from "./components/StructuredData";
-<<<<<<< HEAD
-import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
-import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
-=======
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
 import FuturisticText from "./components/FuturisticText";
-// import FuturisticBackgroundEnhanced from "./components/FuturisticBackgroundEnhanced";
-// import FuturisticCardEnhanced from "./components/FuturisticCardEnhanced";
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
 import FuturisticButtonEnhanced from "./components/FuturisticButtonEnhanced";
 import FuturisticTextEnhanced from "./components/FuturisticTextEnhanced";
 import ResponsiveContainer from "./components/ResponsiveContainer";
@@ -555,19 +548,11 @@ const HomePage = () => {
             </FuturisticButtonEnhanced>
           </div>
         </div>
-<<<<<<< HEAD
-        </section>
-        </main>
-        </FuturisticBackgroundEnhanced>
-        </EnhancedAccessibility>
-      </PerformanceOptimizer>
-=======
       </section>
       </main>
       </FuturisticBackground>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
   );
 };
 

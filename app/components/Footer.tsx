@@ -4,11 +4,7 @@ import {
   Brain, 
   Mail, 
   Phone, 
-<<<<<<< HEAD
-  MapPin, 
-=======
   MapPin,
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
   Clock, 
   ArrowRight,
   Shield,
