@@ -1,109 +1,51 @@
-import React, { useEffect, useState } from 'react';
-import { onCLS, onINP, onFCP, onLCP, onTTFB } from 'web-vitals';
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-ce7d
-
-interface PerformanceMetrics {
-  cls: number | null;
-  inp: number | null;
-  fcp: number | null;
-  lcp: number | null;
-  ttfb: number | null;
-  loadTime: number | null;
-}
+import React, { useEffect, useState } from "react";
 
 const PerformanceMonitor: React.FC = () => {
-  const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null,
-    inp: null,
-    fcp: null,
-    lcp: null,
-<<<<<<< HEAD
-    ttfb: null
+  const [metrics, setMetrics] = useState({
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0
   });
 
   useEffect(() => {
-    // Only run in production
-    if (process.env.NODE_ENV !== 'production') return;
+    // Monitor performance metrics
+    const observer = new PerformanceObserver((list) => {
+      const entries = list.getEntries();
+      entries.forEach((entry) => {
+        if (entry.entryType === "navigation") {
+          setMetrics(prev => ({
+            ...prev,
+            loadTime: entry.duration
+          }));
+        }
+      });
+    });
 
-    const handleMetric = (metric: any) => {
+    observer.observe({ entryTypes: ["navigation", "measure"] });
+
+    // Monitor memory usage if available
+    if ("memory" in performance) {
+      const memory = (performance as any).memory;
       setMetrics(prev => ({
         ...prev,
-        [metric.name]: metric.value
+        memoryUsage: memory.usedJSHeapSize / 1024 / 1024 // Convert to MB
       }));
+    }
 
-      // Send to analytics service
-      if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('event', metric.name, {
-          event_category: 'Web Vitals',
-          value: Math.round(metric.value),
-          event_label: metric.id,
-          non_interaction: true,
-        });
-      }
-    };
-
-    onCLS(handleMetric);
-    onINP(handleMetric);
-    onFCP(handleMetric);
-    onLCP(handleMetric);
-    onTTFB(handleMetric);
+    return () => observer.disconnect();
   }, []);
 
-  // Don't render anything in production
-  if (process.env.NODE_ENV === 'production') {
-      <h3 className="font-bold mb-2">Performance Metrics</h3>
+  // Only show in development
+  if (process.env.NODE_ENV !== "development") {
+    return null;
+  }
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-800 text-white p-3 rounded-lg shadow-lg text-xs font-mono z-50">
       <div className="space-y-1">
-        <div>FCP: {metrics.fcp ? `${metrics.fcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>LCP: {metrics.lcp ? `${metrics.lcp.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>FID: {metrics.fid ? `${metrics.fid.toFixed(2)}ms` : 'Loading...'}</div>
-        <div>CLS: {metrics.cls ? `${metrics.cls.toFixed(4)}` : 'Loading...'}</div>
-        <div>TTFB: {metrics.ttfb ? `${metrics.ttfb.toFixed(2)}ms` : 'Loading...'}</div>
+        <div>Load: {metrics.loadTime.toFixed(0)}ms</div>
+        <div>Memory: {metrics.memoryUsage.toFixed(1)}MB</div>
       </div>
-      
-      <div className="space-y-2 text-xs">
-        {metrics.fcp && (
-          <div className="flex justify-between">
-            <span className="text-gray-300">FCP:</span>
-            <span className={getScoreColor(metrics.fcp, { good: 1800, needsImprovement: 3000 })}>
-              {metrics.fcp.toFixed(0)}ms
-            </span>
-          </div>
-        )}
-        
-        {metrics.lcp && (
-          <div className="flex justify-between">
-            <span className="text-gray-300">LCP:</span>
-            <span className={getScoreColor(metrics.lcp, { good: 2500, needsImprovement: 4000 })}>
-              {metrics.lcp.toFixed(0)}ms
-            </span>
-          </div>
-        )}
-        
-        {metrics.fid && (
-          <div className="flex justify-between">
-            <span className="text-gray-300">FID:</span>
-            <span className={getScoreColor(metrics.fid, { good: 100, needsImprovement: 300 })}>
-              {metrics.fid.toFixed(0)}ms
-            </span>
-          </div>
-        )}
-        
-        {metrics.cls !== undefined && (
-          <div className="flex justify-between">
-            <span className="text-gray-300">CLS:</span>
-            <span className={getScoreColor(metrics.cls, { good: 0.1, needsImprovement: 0.25 })}>
-              {metrics.cls.toFixed(3)}
-            </span>
-          </div>
-        )}
-      </div>
-      
-      <div className="mt-3 pt-2 border-t border-slate-600 text-xs text-gray-400">
-        Press Ctrl+Shift+P to toggle
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
-      </div>
-=======
     </div>
   );
 };
