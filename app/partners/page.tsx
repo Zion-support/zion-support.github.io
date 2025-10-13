@@ -59,7 +59,6 @@ export default function Partners() {
           content="partnerships, technology partners, solution partners, channel partners, strategic alliances, business partnerships, technology integration"
         />
       </Helmet>
-<<<<<<< HEAD
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">
         {/* Hero Section */}
@@ -202,10 +201,6 @@ export default function Partners() {
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
-
-
-
->>>>>>> cursor/website-audit-and-update-with-deployment-4c61
       </div>
     </>
   );
