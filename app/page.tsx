@@ -2,7 +2,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import SEO from './components/SEO';import { 
+import SEO from './components/SEO';
+import { 
   CpuChipIcon, 
   ShieldCheckIcon, 
   CloudIcon, 
@@ -40,7 +41,8 @@ export default function HomePage()  {
         "https://linkedin.com/company/ziontechgroup",
         "https://twitter.com/ziontechgroup",
         "https://github.com/ziontechgroup"
-      ]    }
+      ]
+    }
   ];
 
   const features = [

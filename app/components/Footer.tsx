@@ -6,11 +6,8 @@ import {
   MapPinIcon,
   ArrowRightIcon,
   HeartIcon
-} from '@heroicons/react/24/outline';  ArrowRightIcon
 } from '@heroicons/react/24/outline';
 import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
-  HeartIcon
-} from '@heroicons/react/24/outline';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -23,8 +20,6 @@ const Footer: React.FC = () => {
     { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
     { name: 'Digital Transformation', href: '/digital-transformation' },
     { name: '5G Solutions', href: '/5g-solutions' },
-  ];    { name: 'Micro SaaS', href: '/micro-saas' },
-    { name: '5G Solutions', href: '/5g-solutions' }
   ];
 
   const company = [
@@ -57,9 +52,7 @@ const Footer: React.FC = () => {
     { name: 'Facebook', href: '#', icon: 'facebook' },
     { name: 'Twitter', href: '#', icon: 'twitter' },
     { name: 'LinkedIn', href: '#', icon: 'linkedin' },
-    { name: 'GitHub', href: '#', icon: 'github' }    { name: 'Terms of Service', href: '/terms' }
-    { name: 'Micro SaaS', href: '/micro-saas-solutions' },
-    { name: '5G Solutions', href: '/5g-solutions' }
+    { name: 'GitHub', href: '#', icon: 'github' }
   ];
 
   const company = [
@@ -163,8 +156,6 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-bold text-lg mb-6 bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Services</h3>
             <ul className="space-y-3">
-            <h3 className="text-white font-semibold text-lg mb-4">Services</h3>
-            <ul className="space-y-2">
               {services.map((service) => (
                 <li key={service.name}>
                   <Link 
