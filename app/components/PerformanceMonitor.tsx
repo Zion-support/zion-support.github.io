@@ -190,7 +190,7 @@ const PerformanceMonitor: React.FC = () => {
 =======
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-7f4e
   // Only show in development
-  if (process.env.NODE_ENV !== 'development') {
+  if (typeof process !== 'undefined' && process.env && process.env.NODE_ENV !== 'development') {
     return null;
   }
 <<<<<<< HEAD

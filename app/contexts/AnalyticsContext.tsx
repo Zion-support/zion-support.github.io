@@ -40,6 +40,8 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
   };
 
   const setUser = (newUserId: string, properties?: Record<string, any>) => {
+    if (!isEnabled) return;
+    
     setUserId(newUserId);
     console.log('User Set:', newUserId, properties);
   };

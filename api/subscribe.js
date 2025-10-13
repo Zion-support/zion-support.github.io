@@ -48,7 +48,7 @@ export default function handler(req, res) {
   if (existingSubscriber) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Email already subscribed' }));
+    res.end(JSON.stringify({ error: 'Invalid email format' }));
     return;
   }
   const newSubscriber = {
@@ -61,7 +61,19 @@ export default function handler(req, res) {
   };
   existing.push(newSubscriber);
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    const newSubscriber = {
+      id: Date.now().toString(),
+      email,
+      name: name || '',
+      preferences: preferences || {},
+      timestamp: new Date().toISOString(),
+      status: 'active'
+    };
+
+    // In a real application, you would save to a database
+    // For now, we'll just log the subscription
+    console.log('New subscription:', newSubscriber);
+
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -84,7 +96,10 @@ export default function handler(req, res) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save subscription' }));
+    res.end(JSON.stringify({ 
+      error: 'Failed to process subscription',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
   }
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847

@@ -22,7 +22,9 @@ export default async function handler(req, res) {
       return;
     }
 
-    if (!isValidEmail(email)) {
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
       res.statusCode = 400;
       res.setHeader('Content-Type', 'application/json');
       res.end(JSON.stringify({ error: 'Invalid email format' }));

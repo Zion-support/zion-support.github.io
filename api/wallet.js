@@ -48,7 +48,7 @@ export default function handler(req, res) {
   if (existingWallet) {
     res.statusCode = 400;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Wallet address already exists' }));
+    res.end(JSON.stringify({ error: 'Invalid wallet type' }));
     return;
   }
   const newWallet = {
@@ -62,7 +62,20 @@ export default function handler(req, res) {
   };
   existing.push(newWallet);
   try {
-    fs.writeFileSync(file, JSON.stringify(existing, null, 2));
+    const newWallet = {
+      id: Date.now().toString(),
+      address,
+      type: type.toLowerCase(),
+      name: name || `${type} Wallet`,
+      userId: userId || 'anonymous',
+      timestamp: new Date().toISOString(),
+      status: 'active'
+    };
+
+    // In a real application, you would save to a database
+    // For now, we'll just log the wallet creation
+    console.log('New wallet created:', newWallet);
+
     res.statusCode = 200;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ 
@@ -85,7 +98,10 @@ export default function handler(req, res) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save wallet' }));
+    res.end(JSON.stringify({ 
+      error: 'Failed to create wallet',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
   }
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847

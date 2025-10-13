@@ -78,7 +78,10 @@ export default function handler(req, res) {
 >>>>>>> origin/cursor/fix-errors-and-merge-to-main-52d3
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
-    res.end(JSON.stringify({ error: 'Failed to save rate' }));
+    res.end(JSON.stringify({ 
+      error: 'Failed to calculate shipping rates',
+      details: process.env.NODE_ENV === 'development' ? error.message : undefined
+    }));
   }
 }
 >>>>>>> cursor/fix-errors-and-merge-to-main-b847

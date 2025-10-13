@@ -16,8 +16,9 @@ export default async function handler(req, res) {
   }
 
   try {
-    // Basic checkout session creation logic
-    const sessionData = {
+    // Create checkout session logic here
+    const checkoutSession = {
+      id: `cs_${Date.now()}`,
       productId,
       userId: userId || null,
       timestamp: new Date().toISOString(),

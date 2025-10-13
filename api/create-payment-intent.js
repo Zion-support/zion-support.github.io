@@ -27,8 +27,7 @@ export default async function handler(req, res) {
 
     res.statusCode = 200;
     res.json({ paymentIntent });
-  } catch (_err) { // eslint-disable-line no-unused-vars
-    // console.error("Error:", err);
+  } catch (error) {
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({ error: 'Internal server error' }));
