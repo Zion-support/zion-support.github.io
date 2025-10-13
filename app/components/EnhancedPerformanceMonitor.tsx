@@ -1,205 +1,156 @@
-<<<<<<< HEAD
-    // Measure Core Web Vitals
-    onCLS((metric) => {
-      updateMetric('cls', metric.value);
-      reportMetric('CLS', metric.value);
-    });
 
-    onINP((metric) => {
-      updateMetric('inp', metric.value);
-      reportMetric('INP', metric.value);
-    });
+  const getMetricColor = useCallback((value: number, thresholds: { good: number; poor: number }) => {
+    if (value <= thresholds.good) return 'text-green-600';
+    if (value <= thresholds.poor) return 'text-yellow-600';
+    return 'text-red-600';
+  }, []);
 
-    onFCP((metric) => {
-      updateMetric('fcp', metric.value);
-      reportMetric('FCP', metric.value);
-    });
+  const formatMetric = useCallback((value: number | undefined, suffix = 'ms') => {
+    if (value === undefined || value === null) return 'N/A';
+    return `${value.toFixed(0)}${suffix}`;
+  }, []);
 
-    onLCP((metric) => {
-      updateMetric('lcp', metric.value);
-      reportMetric('LCP', metric.value);
-    });
+  const calculatePerformanceScore = useCallback((metrics: PerformanceMetrics): number => {
+    let score = 100;
+    
+    // LCP scoring (0-100)
+    if (metrics.largestContentfulPaint) {
+      if (metrics.largestContentfulPaint > 4000) score -= 30;
+      else if (metrics.largestContentfulPaint > 2500) score -= 15;
+    }
+    
+    // FID scoring (0-100)
+    if (metrics.firstInputDelay) {
+      if (metrics.firstInputDelay > 300) score -= 25;
+      else if (metrics.firstInputDelay > 100) score -= 10;
+    }
+    
+    // CLS scoring (0-100)
+    if (metrics.cumulativeLayoutShift !== undefined) {
+      if (metrics.cumulativeLayoutShift > 0.25) score -= 20;
+      else if (metrics.cumulativeLayoutShift > 0.1) score -= 10;
+    }
+    
+    // TTFB scoring (0-100)
+    if (metrics.timeToFirstByte) {
+      if (metrics.timeToFirstByte > 1800) score -= 15;
+      else if (metrics.timeToFirstByte > 800) score -= 5;
+    }
+    
+    return Math.max(0, score);
+  }, []);
 
-    onTTFB((metric) => {
-      updateMetric('ttfb', metric.value);
-      reportMetric('TTFB', metric.value);
-    });
+  const updateMetrics = useCallback(() => {
+    const newMetrics: PerformanceMetrics = {};
 
-    // Monitor resource loading performance
-    const observer = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.entryType === 'navigation') {
-          const navEntry = entry as PerformanceNavigationTiming;
-          reportMetric('DOMContentLoaded', navEntry.domContentLoadedEventEnd - navEntry.domContentLoadedEventStart);
-          reportMetric('LoadComplete', navEntry.loadEventEnd - navEntry.loadEventStart);
-        }
-      });
-    });
+    // Load time
+    if (performance.timing) {
+      const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+      if (loadTime > 0) newMetrics.loadTime = loadTime;
+    }
 
-    observer.observe({ entryTypes: ['navigation'] });
-
-    // Monitor long tasks
-    const longTaskObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries();
-      entries.forEach((entry) => {
-        if (entry.duration > 50) {
-          reportMetric('LongTask', entry.duration);
-        }
-      });
-    });
-
-    if ('PerformanceObserver' in window) {
-      try {
-        longTaskObserver.observe({ entryTypes: ['longtask'] });
-      } catch (e) {
-        // Long task observer not supported
+    // Memory usage
+    if (enableMemoryMonitoring && 'memory' in performance) {
+      const memory = (performance as any).memory;
+      if (memory) {
+        newMetrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
       }
     }
 
-    return () => {
-      observer.disconnect();
-      longTaskObserver.disconnect();
-    };
-  }, [updateMetric, reportMetric]);
-
-  // Performance score calculation
-  const getPerformanceScore = useCallback(() => {
-    const scores = [];
-    
-    if (metrics.lcp !== null) {
-      scores.push(metrics.lcp < 2500 ? 100 : metrics.lcp < 4000 ? 80 : 60);
+    // Network information
+    if (enableNetworkMonitoring && 'connection' in navigator) {
+      const connection = (navigator as any).connection;
+      if (connection) {
+        console.log('Network type:', connection.effectiveType);
+        console.log('Downlink speed:', connection.downlink, 'Mbps');
+      }
     }
-    if (metrics.inp !== null) {
-      scores.push(metrics.inp < 100 ? 100 : metrics.inp < 300 ? 80 : 60);
-    }
-    if (metrics.cls !== null) {
-      scores.push(metrics.cls < 0.1 ? 100 : metrics.cls < 0.25 ? 80 : 60);
-    }
-    
-    return scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
-  }, [metrics]);
 
-  const performanceScore = getPerformanceScore();
+    setMetrics(prev => {
+      const updated = { ...prev, ...newMetrics };
+      const score = calculatePerformanceScore(updated);
+      setPerformanceScore(score);
+      
+      if (onMetricsUpdate) {
+        onMetricsUpdate(updated);
+      }
+      
+      return updated;
+    });
+  }, [enableMemoryMonitoring, enableNetworkMonitoring, calculatePerformanceScore, onMetricsUpdate]);
 
-  // Show performance indicator in development
+  // Web Vitals monitoring
   useEffect(() => {
-    if (process.env['NODE_ENV'] === 'development') {
-      setIsVisible(true);
-      const timer = setTimeout(() => setIsVisible(false), 5000);
-      return () => clearTimeout(timer);
-    }
-  }, [metrics]);
-
-  if (!isVisible && process.env['NODE_ENV'] === 'production') {
-    return null;
-  }
+    if (!enableWebVitals) return;
 
   const benefits = [
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
-        <title>EnhancedPerformanceMonitor | Zion Tech Group</title>
-        <meta name="description" content="Professional EnhancedPerformanceMonitor services by Zion Tech Group. Advanced AI and IT solutions for your business." />"
+        <title>EnhancedPerformanceMonitor | Zion Tech Group
+        <meta name="description" content="Professional EnhancedPerformanceMonitor services by Zion Tech Group. Advanced AI and IT solutions for your business." />
         <meta name="keywords" content="EnhancedPerformanceMonitor, AI solutions, IT services, Zion Tech Group, enhancedperformancemonitor" />
-      </Helmet>
-
       {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">"
-        <div className="max-w-7xl mx-auto">"
-          <div className="text-center">"
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">"
+      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
-                EnhancedPerformanceMonitor;
-              </span>
+                EnhancedPerformanceMonitor
               <br />
-              <span className="text-white">Solutions</span>
-            </h1>
+              <span className="text-white">Solutions
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced enhancedperformancemonitor solutions. 
               Powered by cutting-edge AI technology and industry expertise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Get Started
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </button>
               <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-gray-900 transition-all duration-300">
-                Learn More;
-              </button>
-            </div>
-      </section>
-
+                Learn More
+          <button
+            onClick={() => setIsVisible(false)}
+            className="text-gray-400 hover:text-white transition-colors"
+          >
+            ×
     'Proven track record of success'
   ]
-const Component = () => {
-  
-  return (</div>)
-      {/* Features Section */} <section className="py-20 px-4">"
-          <div className="max-w-7xl mx-auto">"
-            <div className="text-center mb-16">"
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+return(</div>)
+      {/* Features Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title
           ))
-          </div>
-        </div>
-      </section>
-      {/* Benefits Section */} <section className="py-20 px-4">"
-          <div className="max-w-7xl mx-auto">"
-            <div className="text-center mb-16">"
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
-        <div className="max-w-7xl mx-auto"></div>"
-          <div className="text-center mb-16"></div>
-            <h2>Key Benefits;</h2>
-            </h2>
-            <p>Experience the power of our enhancedperformancemonitor solutions for your business.,</p>
-                <div key={index}className="flex items-start space-x-3"></div>
+      {/* Benefits Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2>Key Benefits;
+            <p>Experience the power of our enhancedperformancemonitor solutions for your business.,
+                <div key={index}className="flex items-start space-x-3">
                 <CheckCircle />
-                <p className="text-gray-300 text-lg">{benefit</p>}</p>
-            </p>
+                <p className="text-gray-300 text-lg">{benefit</p>}
           ))
-
-          </div>
-        </div>
-      </section>
-      {/* CTA Section */} <section className="py-20 px-4">"
-          <div className="max-w-7xl mx-auto">"
-            <div className="text-center mb-16">"
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>"
+      {/* CTA Section */} <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-white mb-4">Section Title
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        </section>
-        <div className="max-w-4xl mx-auto text-center">"
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">"
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">"
-        <div className="max-w-4xl mx-auto text-center"></div>"
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+        <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md: p-12"></div>,
-            <h2>Ready to Get Started?</h2>
-            </h2>
-            <p>Contact our experts to discuss your enhancedperformancemonitor needs and get a customized solution.</p>
+            <h2>Ready to Get Started?
+            <p>Contact our experts to discuss your enhancedperformancemonitor needs and get a customized solution.
                 <Phone>
                 Call Now;
-              </button>
               <button>
                 <Mail>
                 Email Us;
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-=======
-'use client';
-import React from 'react';
-
-export default function ComponentsPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
   );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
+};
+
+export default EnhancedPerformanceMonitorPage;

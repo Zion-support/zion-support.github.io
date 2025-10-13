@@ -1,23 +1,67 @@
-'use client';
-import React from 'react';
 
-<<<<<<< HEAD
-  cleanup: () => {
-    },
-};
-
-export default Sitemapgenerator;
-=======
-export default function UtilsPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Utils</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
+export const generateRobotsTxt = useCallback((...args) => {}return `User-agent: *;,
+Allow: /,
+Sitemap: https://ziontechgroup.com/sitemap.xml;,
+# Crawl-delay for better server performance,
+export interface SitemapEntry {/* TODO: Fix JSX expression */,}}}
+export const generateSitemap = (): SitemapEntry[] => {/* TODO: Fix JSX expression */,}l: `${baseUrl,}/`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/about`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/services`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/ai-services`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/it-services`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/quantum-computing`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/autonomous-systems`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/micro-saas`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/enterprise`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/contact`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/team`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/case-studies`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/blog`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/privacy`,;
+      lastmo,;
+    },;
+    {/* TODO: Fix JSX expression */,}`;
+  l: `${baseUrl,}/terms`,;
+      lastmo,;
+export const generateRobotsTxt = (): string => {/* TODO: Fix JSX expression */,}}`;
+}`;

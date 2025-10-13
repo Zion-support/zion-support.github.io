@@ -1,4 +1,11 @@
-<<<<<<< HEAD
+import { MetadataRoute } from 'next';
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = 'https://ziontechgroup.com';
+  
+  const routes = [
+    '',
+    '/about',
     '/services',
     '/ai-services',
     '/cloud-services',
@@ -16,26 +23,13 @@
     '/financial-it',
     '/web-development',
   ];
+
+  return routes.map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
     changeFrequency: 'monthly',
     priority: route === '' ? 1 : 0.8,
   }));
 }
 import {MetadataRoute}}from 'next';
 export default function sitemap(): MetadataRoute.Sitemap {return [;}
-=======
-'use client';
-import React from 'react';
-
-export default function AppPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">App</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

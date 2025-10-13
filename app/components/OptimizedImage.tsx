@@ -1,73 +1,76 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
 
 interface OptimizedImageProps {
   src: string;
   alt: string;
-  className?: string;
   width?: number;
   height?: number;
+  className?: string;
   priority?: boolean;
   onLoad?: () => void;
   onError?: () => void;
 }
 
-export default function OptimizedImage({ 
-  src, 
-  alt, 
-  className = '', 
-  width, 
+const OptimizedImage: React.FC<OptimizedImageProps> = ({
+  src,
+  alt,
+  width,
   height,
+  className = '',
   priority = false,
   onLoad,
-  onError;
-}: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true);
+  onError,
+}) => {
+  const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
+  const imgRef = useRef<HTMLImageElement>(null);
 
   const handleLoad = () => {
-  
-    setIsLoading(false);
+    setIsLoaded(true);
     onLoad?.();
   };
 
   const handleError = () => {
-  
-    setIsLoading(false);
     setHasError(true);
     onError?.();
   };
 
   if (hasError) {
     return (
-    <div className={`optimized-image-error ${className}`}>
-        <div className="flex items-center justify-center w-full h-full bg-gray-100 text-gray-500">
-          Failed to load image
-        className="optimized-image"
+      <div
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={{ width, height }}
+      >
+        <span className="text-gray-500">Failed to load image
+    );
+  }
+
+  return (
+    <motion.div
+      className={`relative overflow-hidden ${className}`}
+      style={{ width, height }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      {!isLoaded && (
+        <div className="absolute inset-0 bg-gray-200 animate-pulse" />
+      )}
+      <img
+        ref={imgRef}
+        src={src}
+        alt={alt}
         width={width}
         height={height}
-        loading={priority ? "eager" : "lazy"}"
         onLoad={handleLoad}
         onError={handleError}
-        style={{ opacity: isLoading ? 0 : 1 }}
+        loading={priority ? 'eager' : 'lazy'}
+        className={`transition-opacity duration-300 ${
+          isLoaded ? 'opacity-100' : 'opacity-0'
+        }`}
       />
-    </div>
   );
-}
-=======
-'use client';
-import React from 'react';
+};
 
-export default function ComponentsPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
+export default OptimizedImage;

@@ -1,56 +1,27 @@
-<<<<<<< HEAD
-import React from 'react';
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg';
-  color?: 'primary' | 'secondary' | 'white';
-  text?: string;
-  className?: string;
 }
 
-const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
-  size = 'md', 
-  color = 'primary', 
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
+  size = 'md',
   text,
-  className = ''
-}) => {
-  const sizeClasses = {
-    sm: 'w-4 h-4',
-    md: 'w-8 h-8',
-    lg: 'w-12 h-12'
-  };
-
-  const colorClasses = {
-    primary: 'text-blue-600',
-    secondary: 'text-purple-600',
-    white: 'text-white'
-  };
-
-  return (
-    <div className={`flex flex-col items-center justify-center space-y-2 ${className}`} role="status" aria-label="Loading">
-      <div className={`animate-spin rounded-full border-2 border-gray-300 border-t-transparent ${sizeClasses[size]} ${colorClasses[color]}`}></div>
-      {text && (
-        <p className="text-sm text-gray-600 dark:text-gray-400">{text}</p>
-      )}
-    </div>
   );
 };
 
 export default LoadingSpinner;
-=======
-'use client';
-import React from 'react';
+  className = ''
+}) => {
+  const sizeClasses = {
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8'
+  }
 
-export default function ComponentsPage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
+    <div className={`flex flex-col items-center justify-center ${className}`}>
+      <Loader2 className={`animate-spin text-blue-500 ${sizeClasses[size]}`} />
+      {text && (
+        <p className="mt-2 text-sm text-gray-600">{text}
+      )}
+  )
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
+
+export default LoadingSpinner

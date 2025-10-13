@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+'use client';
+import React from 'react';
+
 const LoadingSkeletonPage: React.FC = () => {
   const features = [
     {
@@ -33,35 +35,32 @@ const LoadingSkeletonPage: React.FC = () => {
     'Cost-effective pricing plans',
     'Proven track record of success'
   ];
+interface SkeletonProps {
+  className?: string;
+  width?: string | number;
+  height?: string | number;
+  rounded?: boolean;
+  animate?: boolean;
+}
+
+const Skeleton: React.FC<SkeletonProps> = ({
+  className = '',
   width = '100%',
   height = '1rem',
   rounded = false,
-  animate = true;
+  animate = true
 }) => {
   const baseClasses = 'bg-gray-300 dark:bg-gray-700';
-  const roundedClasses = rounded ? 'rounded-full' : 'rounded';'
-  const animateClasses = animate ? 'animate-pulse' : '';'
+  const roundedClasses = rounded ? 'rounded-full' : 'rounded';
+  const animateClasses = animate ? 'animate-pulse' : '';
   
   return (
     <div
       className={`${baseClasses} ${roundedClasses} ${animateClasses} ${className}`}
       style={{ width, height }}
       aria-hidden="true"
-export default LoadingSkeletonPage;
-=======
-'use client';
-import React from 'react';
-
-export default function ComponentsPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
+    />
   );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
+};
+
+export default LoadingSkeletonPage;

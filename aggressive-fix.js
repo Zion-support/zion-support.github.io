@@ -1,267 +1,204 @@
+#!/usr/bin/env node
+
 import fs from 'fs';
 import path from 'path';
+import { execSync } from 'child_process';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-import { execSync } from 'child_process';
+// Function to fix unterminated strings and other critical issues
+function fixCriticalIssues(content) {
+  let fixed = content;
+  
+  // Fix unterminated string literals
+  fixed = fixed.replace(/'([^']*?)\s*$/gm, "'$1'");
+  fixed = fixed.replace(/"([^"]*?)\s*$/gm, '"$1"');
+  
+  // Fix unterminated strings in the middle of lines
+  fixed = fixed.replace(/'([^']*?)\s*([^']*?)\s*$/gm, "'$1$2'");
+  fixed = fixed.replace(/"([^"]*?)\s*([^"]*?)\s*$/gm, '"$1$2"');
+  
+  // Fix common patterns that cause unterminated strings
+  fixed = fixed.replace(/'([^']*?)\s*,\s*([^']*?)\s*$/gm, "'$1$2'");
+  fixed = fixed.replace(/"([^"]*?)\s*,\s*([^"]*?)\s*$/gm, '"$1$2"');
+  fixed = fixed.replace(/'([^']*?)\s*;\s*([^']*?)\s*$/gm, "'$1$2'");
+  fixed = fixed.replace(/"([^"]*?)\s*;\s*([^"]*?)\s*$/gm, '"$1$2"');
+  fixed = fixed.replace(/'([^']*?)\s*:\s*([^']*?)\s*$/gm, "'$1$2'");
+  fixed = fixed.replace(/"([^"]*?)\s*:\s*([^"]*?)\s*$/gm, '"$1$2"');
+  
+  // Fix JSX attribute issues
+  fixed = fixed.replace(/className="([^"]*?)\s*$/gm, 'className="$1"');
+  fixed = fixed.replace(/title="([^"]*?)\s*$/gm, 'title="$1"');
+  fixed = fixed.replace(/description="([^"]*?)\s*$/gm, 'description="$1"');
+  
+  // Fix object property issues
+  fixed = fixed.replace(/title:\s*'([^']*?)\s*$/gm, "title: '$1'");
+  fixed = fixed.replace(/description:\s*'([^']*?)\s*$/gm, "description: '$1'");
+  fixed = fixed.replace(/label:\s*'([^']*?)\s*$/gm, "label: '$1'");
+  fixed = fixed.replace(/value:\s*'([^']*?)\s*$/gm, "value: '$1'");
+  
+  // Fix array issues
+  fixed = fixed.replace(/\[\s*'([^']*?)\s*$/gm, "['$1']");
+  fixed = fixed.replace(/\[\s*"([^"]*?)\s*$/gm, '["$1"]');
+  
+  // Fix function call issues
+  fixed = fixed.replace(/\(\s*'([^']*?)\s*$/gm, "('$1')");
+  fixed = fixed.replace(/\(\s*"([^"]*?)\s*$/gm, '("$1")');
+  
+  // Fix JSX closing tag issues
+  fixed = fixed.replace(/<\s*\/\s*>\s*;\s*$/gm, '</>');
+  fixed = fixed.replace(/<\s*\/\s*>\s*,\s*$/gm, '</>');
+  fixed = fixed.replace(/<\s*\/\s*>\s*:\s*$/gm, '</>');
+  
+  // Fix object literal issues
+  fixed = fixed.replace(/\{\s*([^}]*?)\s*:\s*([^}]*?)\s*:\s*([^}]*?)\s*\}/g, '{$1: $2}');
+  fixed = fixed.replace(/\{\s*,\s*/g, '{');
+  fixed = fixed.replace(/\{\s*([^}]*?)\s*,\s*([^}]*?)\s*,\s*([^}]*?)\s*\}/g, '{$1, $2}');
+  
+  // Fix array literal issues
+  fixed = fixed.replace(/\[\s*,\s*/g, '[');
+  fixed = fixed.replace(/\[\s*([^\]]*?)\s*:\s*([^\]]*?)\s*:\s*([^\]]*?)\s*\]/g, '[$1, $2]');
+  
+  // Fix function call issues
+  fixed = fixed.replace(/\(\s*,\s*/g, '(');
+  fixed = fixed.replace(/\(\s*([^)]*?)\s*,\s*([^)]*?)\s*,\s*([^)]*?)\s*\)/g, '($1, $2)');
+  
+  // Fix missing property names
+  fixed = fixed.replace(/\{\s*,\s*icon:/g, '{icon:');
+  fixed = fixed.replace(/\{\s*,\s*title:/g, '{title:');
+  fixed = fixed.replace(/\{\s*,\s*description:/g, '{description:');
+  fixed = fixed.replace(/\{\s*,\s*benefits:/g, '{benefits:');
+  fixed = fixed.replace(/\{\s*,\s*features:/g, '{features:');
+  
+  // Fix semicolon issues
+  fixed = fixed.replace(/;\s*;/g, ';');
+  fixed = fixed.replace(/,\s*,/g, ',');
+  fixed = fixed.replace(/:\s*:/g, ':');
+  
+  // Fix stray characters
+  fixed = fixed.replace(/[^\x20-\x7E\n\r\t]/g, '');
+  
+  // Fix comment syntax in JSX
+  fixed = fixed.replace(/\{\s*\/\*.*?\*\/\s*\}/g, '');
+  fixed = fixed.replace(/\{\s*\/\/.*?\n\s*\}/g, '');
+  
+  return fixed;
+}
 
-// Run TypeScript check and get all files with errors
-const runTypeCheck = () => {
+// Function to resolve merge conflicts by keeping the newer version
+function resolveMergeConflicts(content) {
+  const lines = content.split('\n');
+  const resolved = [];
+  let i = 0;
+  
+  while (i < lines.length) {
+    const line = lines[i];
+    
+    if (line.startsWith('<<<<<<<')) {
+      // Skip the conflict marker and everything until =======
+      i++;
+      while (i < lines.length && !lines[i].startsWith('=======')) {
+        i++;
+      }
+      i++; // Skip the ======= line
+      
+      // Keep everything until >>>>>>>
+      while (i < lines.length && !lines[i].startsWith('>>>>>>>')) {
+        resolved.push(lines[i]);
+        i++;
+      }
+      i++; // Skip the >>>>>>> line
+    } else {
+      resolved.push(line);
+      i++;
+    }
+  }
+  
+  return resolved.join('\n');
+}
+
+// Function to process a single file
+function processFile(filePath) {
   try {
-    const output = execSync('pnpm run type-check 2>&1', { encoding: 'utf8' });
-    return output;
+    console.log(`Processing: ${filePath}`);
+    
+    const content = fs.readFileSync(filePath, 'utf8');
+    let fixed = content;
+    
+    // Check if file has merge conflicts
+    if (content.includes('<<<<<<<') || content.includes('=======') || content.includes('>>>>>>>')) {
+      console.log(`  - Resolving merge conflicts in ${filePath}`);
+      fixed = resolveMergeConflicts(fixed);
+    }
+    
+    // Fix critical issues
+    fixed = fixCriticalIssues(fixed);
+    
+    // Write the fixed content back
+    fs.writeFileSync(filePath, fixed, 'utf8');
+    console.log(`  - Fixed ${filePath}`);
   } catch (error) {
-    return error.stdout || error.stderr || '';
+    console.error(`Error processing ${filePath}:`, error.message);
   }
-};
+}
 
-// Extract file paths from TypeScript errors
-const getFilesWithErrors = (typeCheckOutput) => {
-  const lines = typeCheckOutput.split('\n');
-  const files = new Set();
+// Function to find all TypeScript/JavaScript files
+function findFiles(dir, extensions = ['.tsx', '.ts', '.jsx', '.js']) {
+  const files = [];
   
-  for (const line of lines) {
-    const match = line.match(/^([^(]+)\(/);
-    if (match) {
-      const filePath = match[1].trim();
-      if (filePath.endsWith('.tsx') || filePath.endsWith('.ts')) {
-        files.add(filePath);
+  function traverse(currentDir) {
+    const items = fs.readdirSync(currentDir);
+    
+    for (const item of items) {
+      const fullPath = path.join(currentDir, item);
+      const stat = fs.statSync(fullPath);
+      
+      if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        traverse(fullPath);
+      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {
+        files.push(fullPath);
       }
     }
   }
   
-  return Array.from(files);
-};
+  traverse(dir);
+  return files;
+}
 
-// Generic page template
-const createGenericPage = (serviceName, title, description) => `'use client';
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ArrowRight, CheckCircle, Star, Users, Zap, Shield, BarChart, Target, TrendingUp } from 'lucide-react';
+// Main execution
+console.log('Starting aggressive fix...');
 
-const ${serviceName}Page: React.FC = () => {
-  const features = [
-    {
-      icon: Zap,
-      title: 'Advanced Technology',
-      description: 'Cutting-edge technology solutions for modern businesses.',
-      benefits: ['Latest innovations', 'Scalable solutions', 'High performance', 'Future-proof']
-    },
-    {
-      icon: BarChart,
-      title: 'Data Analytics',
-      description: 'Comprehensive data analysis and insights.',
-      benefits: ['Real-time analytics', 'Custom reports', 'Data visualization', 'Performance metrics']
-    },
-    {
-      icon: Target,
-      title: 'Precision Solutions',
-      description: 'Targeted solutions designed for your specific needs.',
-      benefits: ['Custom solutions', 'Expert consultation', 'Proven results', 'Ongoing support']
-    }
-  ];
+const appDir = path.join(__dirname, 'app');
+const files = findFiles(appDir);
 
-  const stats = [
-    { label: 'Projects Completed', value: '100+' },
-    { label: 'Success Rate', value: '98%' },
-    { label: 'Client Satisfaction', value: '99%' },
-    { label: 'Years Experience', value: '5+' }
-  ];
+console.log(`Found ${files.length} files to process`);
 
-  return (
-    <>
-      <Helmet>
-        <title>${title} | Zion Tech Group</title>
-        <meta name="description" content="${description}" />
-        <meta name="keywords" content="AI, ${serviceName}, automation, technology, solutions" />
-      </Helmet>
+let processed = 0;
+let fixed = 0;
 
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              ${title}
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              ${description}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Get Started
-              </button>
-              <button className="border border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Key Features
-            </h2>
-            <p className="text-xl text-gray-300">
-              Powerful capabilities designed to transform your business
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div key={index} className="bg-gray-800 p-6 rounded-lg">
-                <feature.icon className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 mb-4">
-                  {feature.description}
-                </p>
-                <ul className="space-y-2">
-                  {feature.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-center text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                      {benefit}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-purple-400 mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-gray-300">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Ready to Transform Your Business?
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Get started with our ${serviceName} solution today and see the difference AI can make.
-          </p>
-          <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-            Start Your Journey
-          </button>
-        </div>
-      </section>
-    </>
-  );
-};
-
-export default ${serviceName}Page;
-`;
-
-// Component template for non-page files
-const createComponentTemplate = (componentName) => `import React from 'react';
-
-const ${componentName}: React.FC = () => {
-  return (
-    <div className="${componentName.toLowerCase()}">
-      {/* ${componentName} component */}
-    </div>
-  );
-};
-
-export default ${componentName};
-`;
-
-// Utility template
-const createUtilityTemplate = (utilityName) => `// ${utilityName} utility
-export const ${utilityName} = () => {
-  // Implementation
-};
-`;
-
-// Main function
-const main = () => {
-  console.log('Running TypeScript check to identify files with errors...');
-  const typeCheckOutput = runTypeCheck();
-  const filesWithErrors = getFilesWithErrors(typeCheckOutput);
+for (const file of files) {
+  const originalContent = fs.readFileSync(file, 'utf8');
+  processFile(file);
+  processed++;
   
-  console.log(`Found ${filesWithErrors.length} files with errors`);
-  
-  let fixedCount = 0;
-  
-  for (const filePath of filesWithErrors) {
-    try {
-      const fullPath = path.join(__dirname, filePath);
-      
-      if (!fs.existsSync(fullPath)) {
-        console.log(`File not found: ${filePath}`);
-        continue;
-      }
-      
-      // Determine file type and create appropriate content
-      let newContent = '';
-      const fileName = path.basename(filePath, path.extname(filePath));
-      
-      if (filePath.includes('/page.tsx')) {
-        // It's a page file
-        const serviceName = path.basename(path.dirname(filePath))
-          .split('-')
-          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-          .join('');
-        const title = serviceName
-          .replace(/([A-Z])/g, ' $1')
-          .trim()
-          .split(' ')
-          .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-          .join(' ');
-        const description = `Advanced ${title.toLowerCase()} solutions powered by artificial intelligence to transform your business operations.`;
-        
-        newContent = createGenericPage(serviceName, title, description);
-      } else if (filePath.includes('/components/')) {
-        // It's a component file
-        const componentName = fileName
-          .split('-')
-          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-          .join('');
-        newContent = createComponentTemplate(componentName);
-      } else if (filePath.includes('/utils/')) {
-        // It's a utility file
-        const utilityName = fileName
-          .split('-')
-          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-          .join('');
-        newContent = createUtilityTemplate(utilityName);
-      } else {
-        // Generic TypeScript file
-        newContent = `// ${fileName}\nexport const ${fileName} = () => {\n  // Implementation\n};`;
-      }
-      
-      fs.writeFileSync(fullPath, newContent);
-      console.log(`Fixed: ${filePath}`);
-      fixedCount++;
-      
-    } catch (error) {
-      console.error(`Error fixing ${filePath}:`, error.message);
-    }
+  const newContent = fs.readFileSync(file, 'utf8');
+  if (originalContent !== newContent) {
+    fixed++;
   }
-  
-  console.log(`\nFixed ${fixedCount} files.`);
-};
+}
 
-main();
+console.log(`\nProcessed ${processed} files`);
+console.log(`Fixed ${fixed} files`);
+
+// Run TypeScript check to see remaining errors
+console.log('\nRunning TypeScript check...');
+try {
+  execSync('npx tsc --noEmit --skipLibCheck', { stdio: 'inherit' });
+  console.log('TypeScript check passed!');
+} catch (error) {
+  console.log('TypeScript check failed - some errors may remain');
+}
+
+console.log('Aggressive fix complete!');

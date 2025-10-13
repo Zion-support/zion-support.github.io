@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-import React from 'react';
-
 /**;
  * Security Configuration;
- * Defines security headers and policies for the application;*/
+ * Defines security headers and policies for the application;
  */;
 export const securityHeaders = {// Content Security Policy;
   contentSecurityPolicy: {,
@@ -12,56 +9,56 @@ export const securityHeaders = {// Content Security Policy;
   },;
   // Security Headers;
   headers: {,
-    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',;'
-    'X-XSS-Protection': '1; mode=block',;'
-    'X-Frame-Options': 'SAMEORIGIN',;'
-    'X-Content-Type-Options': 'nosniff',;'
-    'Referrer-Policy': 'strict-origin-when-cross-origin',;'
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',},'
+    'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',;
+    'X-XSS-Protection': '1; mode=block',;
+    'X-Frame-Options': 'SAMEORIGIN',;
+    'X-Content-Type-Options': 'nosniff',;
+    'Referrer-Policy': 'strict-origin-when-cross-origin',;
+    'Permissions-Policy': 'camera=(), microphone=(), geolocation=(), interest-cohort=()',},
 /**;
- * Rate limiting configuration;*/
+ * Rate limiting configuration;
  */;
 export const rateLimitConfig = {windowMs: 15 * 60 * 1000, // 15 minutes;
-export const corsConfig = {origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],';
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],;'
-  allowedHeaders: ['Content-Type', 'Authorization'],;'
-  maxAge: 86400, // 24 hours;}};
+export const corsConfig = {origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http: //localhost:3000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],;
+  allowedHeaders: ['Content-Type', 'Authorization'],;
+  maxAge: 86400, // 24 hours;}}
 /**;
- * Session configuration;*/
+ * Session configuration;
  */;
-export const sessionConfig = {secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',;
+export const sessionConfig = {secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
     maxAge: 24 * 60 * 60 * 1000, // 24 hours;
     sameSite: 'strict' as const,},
-};
+}
 /**;
- * Input validation patterns;*/
+ * Input validation patterns;
  */;
 export const validationPatterns = {}email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,;
   phone: /^\+?[1-9]\d {1,14}}$/,;
   url: /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/,;
 /**;
- * Sanitize user input;*/
+ * Sanitize user input;
  */;
-export function sanitizeInput(input: string): string {,};
+export function sanitizeInput(input: string): string {,}
     .replace(/on\w+\s*=/gi, '') // Remove event handlers;
-    .trim()}};
+    .trim()}}
 /**;
- * Validate email address;*/
+ * Validate email address;
  */;
-export function validateEmail(email: string): boolean {,};
-    return validationPatterns.email.test(email)}};
+export function validateEmail(email: string): boolean {,}
+    return validationPatterns.email.test(email)}}
 /**;
- * Validate URL;*/
+ * Validate URL;
  */;
-export function validateUrl(url: string): boolean {,};
-    return validationPatterns.url.test(url)}};
+export function validateUrl(url: string): boolean {,}
+    return validationPatterns.url.test(url)}}
 /**;
- * Generate secure token;*/
+ * Generate secure token;
  */;
-export function generateSecureToken(length: number = 32): string {,};
-    if (typeof window !== 'undefined' && window.crypto) {;
-    window.crypto.getRandomValues(array)}} else {// Fallback for non-browser environments;};
-export default {securityHeaders,;};
+export function generateSecureToken(length: number = 32): string {,}
+    if (typeof window !== 'undefined' && window.crypto) {
+    window.crypto.getRandomValues(array)}} else {// Fallback for non-browser environments;}
+export default {securityHeaders,;}
   rateLimitConfig,;
   corsConfig,;
   sessionConfig,;
@@ -69,21 +66,4 @@ export default {securityHeaders,;};
   sanitizeInput,;
   validateEmail,;
   validateUrl,;
-  generateSecureToken,}};
-=======
-'use client';
-import React from 'react';
-
-export default function ConfigPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Config</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
+  generateSecureToken,}}

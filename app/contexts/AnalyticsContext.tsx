@@ -1,35 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { createContext } from 'react';
+import React, { createContext, useContext } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, unknown>) => void;
-  trackPageView: (pageName: string, properties?: Record<string, unknown>) => void;
-}
-
-export const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
-=======
-import React, { createContext, useContext, ReactNode } from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
-
-interface AnalyticsContextType {
-  trackEvent: (event: string, properties?: Record<string, any>) => void;
-  trackPageView: (page: string) => void;
+  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
+  trackPageView: (pageName: string) => void;
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
-export const AnalyticsProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const trackEvent = (event: string, properties?: Record<string, any>) => {
+export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
     // Analytics tracking implementation
-    console.log('Analytics event:', event, properties);
+    console.log('Event tracked:', eventName, properties);
   };
 
-  const trackPageView = (page: string) => {
+  const trackPageView = (pageName: string) => {
     // Page view tracking implementation
-    console.log('Page view:', page);
+    console.log('Page view tracked:', pageName);
   };
 
   return (
@@ -37,17 +23,7 @@ export const AnalyticsProvider: React.FC<{ children: ReactNode }> = ({ children 
       {children}
     </AnalyticsContext.Provider>
   );
-<<<<<<< HEAD
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-errors-and-merge-to-main-9706
-=======
-};
->>>>>>> cursor/fix-errors-and-merge-to-main-6ffb
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-a28c
-=======
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
@@ -56,4 +32,3 @@ export const useAnalytics = () => {
   }
   return context;
 };
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

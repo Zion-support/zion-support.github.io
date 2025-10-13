@@ -1,48 +1,15 @@
-'use client';
-<<<<<<< HEAD
-
 import React, { createContext, useContext, useEffect, ReactNode } from 'react';
 
 interface AnalyticsContextType {
-  trackEvent: (eventName: string, properties?: Record<string, any>) => void;
-  trackPageView: (page: string) => void;
+  trackEvent: (eventName: string, parameters?: Record<string, any>) => void;
+  trackPageView: (pageName: string, pagePath: string) => void;
 }
-
-const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 interface AnalyticsProviderProps {
   children: ReactNode;
 }
 
-export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', eventName, properties);
-    }
-  };
-
-  const trackPageView = (page: string) => {
-    if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('config', 'GA_MEASUREMENT_ID', {
-        page_path: page
-      });
-    }
-  };
-
-  useEffect(() => {
-    // Initialize analytics
-    if (typeof window !== 'undefined') {
-      // Track initial page view
-      trackPageView(window.location.pathname);
-    }
-  }, []);
-
-  return (
-    <AnalyticsContext.Provider value={{ trackEvent, trackPageView }}>
-      {children}
-    </AnalyticsContext.Provider>
-  );
-};
+const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 export const useAnalytics = () => {
   const context = useContext(AnalyticsContext);
@@ -52,20 +19,42 @@ export const useAnalytics = () => {
   return context;
 };
 
-export default AnalyticsProvider;
-=======
-import React from 'react';
+export const AnalyticsProvider: React.FC<AnalyticsProviderProps> = ({ children }) => {
+  useEffect(() => {
+    // Initialize Google Analytics if available
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('config', 'GA_MEASUREMENT_ID', {
+        page_title: document.title,
+        page_location: window.location.href,
+      });
+    }
+  }, []);
 
-export default function ComponentsPage() {
+  const trackEvent = (eventName: string, parameters?: Record<string, any>) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', eventName, parameters);
+    }
+  };
+
+  const trackPageView = (pageName: string, pagePath: string) => {
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'page_view', {
+        page_title: pageName,
+        page_location: window.location.origin + pagePath,
+      });
+    }
+  };
+
+  const value: AnalyticsContextType = {
+    trackEvent,
+    trackPageView,
+  };
+
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
+    <AnalyticsContext.Provider value={value}>
+      {children}
+    </AnalyticsContext.Provider>
   );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
+};
+
+export default AnalyticsProvider;

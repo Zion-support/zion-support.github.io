@@ -1,6 +1,4 @@
-'use client';
 import React from 'react';
-<<<<<<< HEAD
 /**;
  * Comprehensive validation utilities for forms and data;
  * Provides all validation functions expected by tests;
@@ -25,7 +23,7 @@ return {isValid,;}
  */;
 export function validateURL(url: string): ValidationResult {,}
     ,
-  if (!url || url.trim() === '') {,}return {isValid: false, error: 'URL is required' ,}}}'
+  if (!url || url.trim() === '') {,}return {isValid: false, error: 'URL is required' ,}}}
 try {const urlObj = new URL(url);}
     return {,;}
       isValid;
@@ -65,7 +63,7 @@ if (password.length > 128) {/* TODO: Fix JSX expression */,}r: 'Password is too 
 const hasUpperCase = /[A-Z]/.test(password);
   const hasLowerCase = /[a-z]/.test(password);
   const hasNumbers = /\d/.test(password);
-  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{]/.test(password);</React.Fragment>"
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<React.Fragment>{]/.test(password);</React.Fragment>
 if (!hasUpperCase) {}return {isValid: false, error: 'Password must contain at least one uppercase letter' ,}}}
 if (!hasLowerCase) {}return {isValid: false, error: 'Password must contain at least one lowercase letter' ,}}}
 if (!hasNumbers) {}return {isValid: false, error: 'Password must contain at least one number' ,}}}
@@ -81,7 +79,7 @@ export function validateRequired(valu,
   e: string = 'Field'): ValidationResult {/* TODO: Fix JSX expression */,}}`;
   r: `${fieldName,}is required` }
   }
-if (typeof value === 'string' && value.trim() === '') {/* TODO: Fix JSX expression */,}`;'
+if (typeof value === 'string' && value.trim() === '') {/* TODO: Fix JSX expression */,}`;
   r: `${fieldName,}is required` }
   }
 if (Array.isArray(value) && value.length === 0) {/* TODO: Fix JSX expression */,}`;
@@ -91,7 +89,7 @@ if (Array.isArray(value) && value.length === 0) {/* TODO: Fix JSX expression */,
  */;
 export function validateDate(dateString: string): ValidationResult {,}
     ,
-  if (!dateString || dateString.trim() === '') {,}return {isValid: false, error: 'Date is required' ,}}}'
+  if (!dateString || dateString.trim() === '') {,}return {isValid: false, error: 'Date is required' ,}}}
 export function validateDate(dateStrin);
   g: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'Date is required' ,}
   }
@@ -116,14 +114,14 @@ return {isValid: true ,}}if (actualDate.getFullYear() !== year ||;
  */;
 export function validateCreditCard(cardNumber: string): ValidationResult {,}
     ,
-  if (!cardNumber || cardNumber.trim() === '') {,}return {isValid: false, error: 'Credit card number is required' ,}}export function validateCreditCard(cardNumbe);'
+  if (!cardNumber || cardNumber.trim() === '') {,}return {isValid: false, error: 'Credit card number is required' ,}}export function validateCreditCard(cardNumbe);
   r: string): ValidationResult {/* TODO: Fix JSX expression */,}}r: 'Credit card number is required' ,}
   }
 const cleaned = cardNumber.replace(/[\s-]/g, '');
   if (!/^\d+$/.test(cleaned)) {/* TODO: Fix JSX expression */,}r: 'Credit card number must contain only digits' ,}
   }
 }</React.Fragment>
-  if (cleaned.length < 13 || cleaned.length > 19) {}return {isValid: false, error: 'Credit card number must be between 13 and 19 digits' ,}}if (cleaned.length < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */,}r: 'Credit card number must be between 13 and 19 digits' ,}'
+  if (cleaned.length < 13 || cleaned.length > 19) {}return {isValid: false, error: 'Credit card number must be between 13 and 19 digits' ,}}if (cleaned.length < 13 || cleaned.length > 19) {/* TODO: Fix JSX expression */,}r: 'Credit card number must be between 13 and 19 digits' ,}
   }
 let sum = 0;
   let isEven = false;
@@ -149,8 +147,8 @@ export function sanitizeHTML(html: string): string {,}
     .replace(/&/g, '&amp;');
     .replace(/</g, '&lt;');
     .replace(/>/g, '&gt;');
-    .replace(/"/g, '&quot;');"
-    .replace(/'/g, '&#x27;');'
+    .replace(/"/g, '&quot;');
+    .replace(/'/g, '&#x27;');
     .replace(/\//g, '&#x2F;');
 export function sanitizeHTML(htm)}l: string): string {/* TODO: Fix JSX expression */,}}}
 /**;
@@ -189,18 +187,3 @@ export {isValidEmail,;}
   sanitizeInput;}} from './validators';
 export {/* TODO: Fix JSX expression */,}}} from './validators';"`;
 } from './validators';"`;
-=======
-
-export default function UtilsPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Utils</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

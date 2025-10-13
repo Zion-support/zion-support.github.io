@@ -1,24 +1,34 @@
-<<<<<<< HEAD
+import React from 'react';
+
+interface ImageOptimizerProps {
+  src: string;
+  alt: string;
+  className?: string;
+  lazy?: boolean;
+  quality?: number;
+  format?: 'webp' | 'jpeg' | 'png';
+  placeholder?: string;
+}
+
 export default function ImageOptimizer({ 
   src, 
   alt, 
   className = '', 
   quality = 80,
   format = 'webp',
-=======
-'use client';
-import React from 'react';
-
-export default function ComponentsPage() {
+  lazy = true,
+  placeholder
+}: ImageOptimizerProps) {
+  // Note: quality, format, and placeholder are available for future implementation
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _unused = { quality, format, placeholder };
+  
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      loading={lazy ? 'lazy' : 'eager'}
+    />
   );
 }
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a

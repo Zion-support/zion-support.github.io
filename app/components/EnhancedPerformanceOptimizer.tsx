@@ -1,9 +1,25 @@
-<<<<<<< HEAD
+'use client';
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-react';
+
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+  enableImageOptimization?: boolean;
+  enableLazyLoading?: boolean;
+  enablePreloading?: boolean;
+  enableCodeSplitting?: boolean;
+}
+
+const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
+  children,
+  enableImageOptimization = true,
+  enableLazyLoading = true,
+  enablePreloading = true,
+  enableCodeSplitting = true
+}) => {
   useEffect(() => {
-    // Preload critical resources;
+    // Preload critical resources
     if (enablePreloading) {
       const preloadLink = document.createElement('link');
       preloadLink.rel = 'preload';
@@ -14,23 +30,11 @@ import { ArrowRight, CheckCircle, Star, Users, Award, TrendingUp } from 'lucide-
       document.head.appendChild(preloadLink);
     }
   }, [enablePreloading]);
-=======
-'use client';
-import React from 'react';
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
 
-export default function ComponentsPage() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
+    <div className="performance-optimizer">
+      {children}
   );
-<<<<<<< HEAD
-=======
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
+};
+
+export default PerformanceOptimizer;

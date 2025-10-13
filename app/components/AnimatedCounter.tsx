@@ -1,19 +1,20 @@
-<<<<<<< HEAD
-    const animate = (currentTime: number) => {,
-=======
 'use client';
 import React from 'react';
+import React, {useState, useEffect}from 'react';
 
-export default function ComponentsPage() {
-  return (
-    <div className="min-h-screen bg-gray-900 text-white py-20">
-      <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold mb-8">Components</h1>
-        <p className="text-gray-300 text-lg">
-          This page is under development.
-        </p>
-      </div>
-    </div>
-  );
-}
->>>>>>> cursor/fix-errors-and-merge-to-main-1a0a
+interface AnimatedCounterProps {end: number,}
+  duration?: number;
+  prefix?: string;
+  suffix?: string;
+  className?: string;}const AnimatedCounter: React.FC<AnimatedCounterProps> = ({,
+  end,
+  duration = 2000,
+  prefix = '',
+  suffix = '',
+  className = ''}) => {const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startTime: number;,
+    let animationFrame: number;,
+
+    const animate = (currentTime: number) => {,
