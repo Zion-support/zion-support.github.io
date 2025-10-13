@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
+import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone, Package, FileText } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
 
 const HomePage = () => {
@@ -47,18 +47,39 @@ const HomePage = () => {
       link: "/zion-analytics-pro"
     },
     {
+      name: "Zion AI Scheduler",
+      description: "Intelligent calendar management system",
+      price: "From $19/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/zion-ai-scheduler"
+    },
+    {
+      name: "Zion Smart Invoicing",
+      description: "AI-powered invoice automation",
+      price: "From $29/month",
+      icon: <FileText className="w-6 h-6" />,
+      link: "/zion-smart-invoicing"
+    },
+    {
+      name: "Zion AI Recruiter",
+      description: "Intelligent talent acquisition platform",
+      price: "From $99/month",
+      icon: <Users className="w-6 h-6" />,
+      link: "/zion-ai-recruiter"
+    },
+    {
+      name: "Zion Smart Inventory",
+      description: "AI-powered inventory management",
+      price: "From $79/month",
+      icon: <Package className="w-6 h-6" />,
+      link: "/zion-smart-inventory"
+    },
+    {
       name: "Zion Security Shield",
       description: "Advanced cybersecurity protection",
       price: "From $49/month",
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield"
-    },
-    {
-      name: "Zion Cloud Vault",
-      description: "Secure cloud storage solution",
-      price: "From $9/month",
-      icon: <Cloud className="w-6 h-6" />,
-      link: "/zion-cloud-vault"
     }
   ];
 
@@ -215,8 +236,8 @@ const HomePage = () => {
               Ready-to-use software solutions that can transform your business operations immediately.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {microSaasHighlights.map((saas, index) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {microSaasHighlights.map((saas, index) => (
               <Link
                 key={index}
                 to={saas.link}

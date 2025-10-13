@@ -36,7 +36,8 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'AI Code Assistant', path: '/ai-code-assistant-pro', icon: <Code className="w-4 h-4" /> },
     { name: 'AI Business Intelligence', path: '/ai-business-intelligence-pro', icon: <Database className="w-4 h-4" /> },
     { name: 'AI Marketing Automation', path: '/ai-marketing', icon: <Zap className="w-4 h-4" /> },
-    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> }
+    { name: 'AI Data Analytics', path: '/ai-data-analytics', icon: <BarChart3 className="w-4 h-4" /> },
+    { name: 'AI Voice Assistant', path: '/ai-voice-assistant', icon: <Brain className="w-4 h-4" /> }
   ], [])
 
   const itServices = useMemo(() => [
@@ -54,6 +55,10 @@ const Navigation = React.memo<NavigationProps>(({ onSidebarToggle }) => {
     { name: 'Zion Analytics Pro', path: '/zion-analytics-pro', icon: <BarChart3 className="w-4 h-4" />, featured: true },
     { name: 'Zion Security Shield', path: '/zion-security-shield', icon: <Shield className="w-4 h-4" />, featured: true },
     { name: 'Zion Cloud Vault', path: '/zion-cloud-vault', icon: <Cloud className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Scheduler', path: '/zion-ai-scheduler', icon: <Brain className="w-4 h-4" />, featured: true },
+    { name: 'Zion Smart Invoicing', path: '/zion-smart-invoicing', icon: <Code className="w-4 h-4" />, featured: true },
+    { name: 'Zion AI Recruiter', path: '/zion-ai-recruiter', icon: <Users className="w-4 h-4" />, featured: true },
+    { name: 'Zion Smart Inventory', path: '/zion-smart-inventory', icon: <Database className="w-4 h-4" />, featured: true },
     { name: 'Zion Content Studio', path: '/zion-content-studio', icon: <Brain className="w-4 h-4" /> },
     { name: 'Zion Data Sync', path: '/zion-data-sync', icon: <Database className="w-4 h-4" /> },
     { name: 'Zion Lead Magnet', path: '/zion-lead-magnet', icon: <Zap className="w-4 h-4" /> },

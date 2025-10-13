@@ -1,77 +1,77 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Brain, Zap, CheckCircle, Star, ArrowRight, Smartphone, Mail, Globe, Volume2, MessageSquare, Headphones } from 'lucide-react';
+import { Users, Brain, Zap, CheckCircle, Star, ArrowRight, Smartphone, Mail, Globe, Search, Target, TrendingUp, FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AIVoiceAssistant() {
+export default function ZionAIRecruiter() {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities that understand context, intent, and emotion in human speech",
+      title: "AI-Powered Candidate Screening",
+      description: "Intelligent resume parsing and candidate matching using advanced machine learning algorithms",
       icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with real-time translation and accent adaptation",
-      icon: <Globe className="w-6 h-6" />,
+      title: "Automated Job Posting",
+      description: "Distribute job postings across multiple platforms with optimized content and targeting",
+      icon: <Target className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Voice Cloning & Customization",
-      description: "Create custom voice profiles and clone voices for personalized experiences",
-      icon: <Mic className="w-6 h-6" />,
+      title: "Smart Interview Scheduling",
+      description: "Automated interview coordination with calendar integration and candidate communication",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Real-time Conversation",
-      description: "Seamless, natural conversations with sub-second response times and context awareness",
-      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Talent Analytics",
+      description: "Comprehensive reporting and insights on hiring metrics, candidate quality, and recruitment ROI",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Basic",
-      price: "$199",
+      name: "Startup",
+      price: "$99",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small teams and startups",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "Basic NLP capabilities",
-        "5 language support",
+        "Up to 10 job postings/month",
+        "Basic AI screening",
+        "Candidate database (1,000)",
         "Email support",
-        "Standard voice options"
+        "Basic analytics"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$299",
       period: "/month",
       description: "Ideal for growing companies",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "Advanced NLP features",
-        "25 language support",
+        "Up to 50 job postings/month",
+        "Advanced AI features",
+        "Candidate database (10,000)",
         "Priority support",
-        "Custom voice training",
-        "API integration"
+        "Advanced analytics",
+        "Team collaboration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$799",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
+        "Unlimited job postings",
         "Full AI capabilities",
-        "50+ language support",
+        "Unlimited candidates",
         "Dedicated support",
-        "Custom voice cloning",
+        "Custom integrations",
         "White-label solution"
       ],
       popular: false
@@ -80,24 +80,24 @@ export default function AIVoiceAssistant() {
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      company: "Customer Service Company",
-      role: "Operations Director",
-      content: "Zion AI Voice Assistant has revolutionized our customer support. The natural conversations feel so human that customers often don't realize they're talking to AI.",
+      name: "Jennifer Lee",
+      company: "Tech Startup",
+      role: "HR Director",
+      content: "Zion AI Recruiter has reduced our time-to-hire by 60%. The AI screening is incredibly accurate and saves us hours of manual work.",
+      rating: 5
+    },
+    {
+      name: "Robert Chen",
+      company: "Consulting Firm",
+      role: "Talent Acquisition Manager",
+      content: "The automated job posting feature has increased our candidate pool by 300%. We're finding better quality candidates than ever before.",
       rating: 5
     },
     {
       name: "Maria Rodriguez",
-      company: "E-learning Platform",
-      role: "Product Manager",
-      content: "The multi-language support is incredible. We can now serve students in 20+ languages with perfect pronunciation and cultural context.",
-      rating: 5
-    },
-    {
-      name: "James Wilson",
-      company: "Healthcare Provider",
-      role: "IT Director",
-      content: "The voice cloning feature allows us to maintain consistent branding across all patient interactions. It's like having our best staff available 24/7.",
+      company: "E-commerce Company",
+      role: "VP of People",
+      content: "The talent analytics dashboard gives us insights we never had before. We can now make data-driven hiring decisions.",
       rating: 5
     }
   ];
@@ -105,16 +105,16 @@ export default function AIVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Intelligent Conversational AI | Zion Tech Group</title>
+        <title>Zion AI Recruiter - Intelligent Talent Acquisition | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI voice assistant with natural language processing, multi-language support, and voice cloning capabilities. Transform customer interactions with intelligent voice AI."
+          content="Revolutionary AI-powered recruitment platform that automates candidate screening, job posting, and interview scheduling. Find the best talent faster with intelligent automation."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, conversational AI, voice AI, natural language processing, voice cloning, multi-language support, voice automation"
+          content="AI recruitment, talent acquisition, candidate screening, job posting automation, HR technology, recruitment software"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-recruiter" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -126,20 +126,20 @@ export default function AIVoiceAssistant() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Voice Assistant</span>
+              <Users className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Recruitment Platform</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI
+              Zion
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Voice Assistant
+                {" "}AI Recruiter
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionary AI voice assistant with natural language processing, multi-language support, 
-              and voice cloning capabilities. Transform customer interactions with intelligent conversational AI.
+              Revolutionary AI-powered recruitment platform that automates candidate screening, job posting, 
+              and interview scheduling. Find the best talent faster with intelligent automation.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -155,7 +155,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Users className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function AIVoiceAssistant() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create intelligent voice interactions
+                Everything you need to streamline your recruitment process and find the best talent
               </p>
             </div>
             
@@ -206,7 +206,7 @@ export default function AIVoiceAssistant() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice interaction needs. All plans include our core AI voice features.
+                Choose the plan that fits your hiring needs. All plans include our core AI recruitment features.
               </p>
             </div>
             
@@ -267,10 +267,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                Trusted by HR Teams Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about our AI Voice Assistant
+                See what our customers say about Zion AI Recruiter
               </p>
             </div>
             
@@ -300,10 +300,10 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Voice Interactions?
+              Ready to Transform Your Recruitment?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already using our AI Voice Assistant to enhance customer experience. 
+              Join thousands of HR teams already using Zion AI Recruiter to find the best talent faster. 
               Start your free trial today - no credit card required.
             </p>
             
@@ -345,7 +345,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Users className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

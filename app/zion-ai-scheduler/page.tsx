@@ -1,78 +1,78 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Brain, Zap, CheckCircle, Star, ArrowRight, Smartphone, Mail, Globe, Volume2, MessageSquare, Headphones } from 'lucide-react';
+import { Calendar, Clock, Users, Zap, CheckCircle, Star, ArrowRight, Brain, Smartphone, Mail, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AIVoiceAssistant() {
+export default function ZionAIScheduler() {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities that understand context, intent, and emotion in human speech",
+      title: "AI-Powered Scheduling",
+      description: "Intelligent calendar management that learns your preferences and automatically schedules meetings",
       icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with real-time translation and accent adaptation",
+      title: "Multi-Platform Integration",
+      description: "Seamlessly integrates with Google Calendar, Outlook, Slack, and 50+ other platforms",
       icon: <Globe className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Voice Cloning & Customization",
-      description: "Create custom voice profiles and clone voices for personalized experiences",
-      icon: <Mic className="w-6 h-6" />,
+      title: "Smart Conflict Resolution",
+      description: "Automatically detects and resolves scheduling conflicts with intelligent suggestions",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Real-time Conversation",
-      description: "Seamless, natural conversations with sub-second response times and context awareness",
-      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Team Coordination",
+      description: "Advanced team scheduling with availability tracking and resource management",
+      icon: <Users className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Basic",
-      price: "$199",
+      name: "Starter",
+      price: "$19",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for individuals and small teams",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "Basic NLP capabilities",
-        "5 language support",
-        "Email support",
-        "Standard voice options"
+        "Up to 5 calendars",
+        "Basic AI scheduling",
+        "Email notifications",
+        "Mobile app access",
+        "Standard integrations"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$49",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "Advanced NLP features",
-        "25 language support",
+        "Up to 25 calendars",
+        "Advanced AI features",
+        "Team collaboration",
+        "Custom integrations",
         "Priority support",
-        "Custom voice training",
-        "API integration"
+        "Analytics dashboard"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$99",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
+        "Unlimited calendars",
         "Full AI capabilities",
-        "50+ language support",
+        "Advanced security",
+        "Custom workflows",
         "Dedicated support",
-        "Custom voice cloning",
-        "White-label solution"
+        "API access"
       ],
       popular: false
     }
@@ -80,24 +80,24 @@ export default function AIVoiceAssistant() {
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      company: "Customer Service Company",
-      role: "Operations Director",
-      content: "Zion AI Voice Assistant has revolutionized our customer support. The natural conversations feel so human that customers often don't realize they're talking to AI.",
+      name: "Sarah Chen",
+      company: "TechStart Inc.",
+      role: "Operations Manager",
+      content: "Zion AI Scheduler has revolutionized how we manage our team's calendar. The AI suggestions save us hours every week.",
       rating: 5
     },
     {
-      name: "Maria Rodriguez",
-      company: "E-learning Platform",
-      role: "Product Manager",
-      content: "The multi-language support is incredible. We can now serve students in 20+ languages with perfect pronunciation and cultural context.",
+      name: "Michael Rodriguez",
+      company: "Consulting Firm",
+      role: "Senior Partner",
+      content: "The intelligent conflict resolution is incredible. It's like having a personal assistant that never makes mistakes.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "Healthcare Provider",
-      role: "IT Director",
-      content: "The voice cloning feature allows us to maintain consistent branding across all patient interactions. It's like having our best staff available 24/7.",
+      name: "Emily Johnson",
+      company: "Marketing Agency",
+      role: "Director",
+      content: "Our team productivity increased by 40% since implementing Zion AI Scheduler. Highly recommended!",
       rating: 5
     }
   ];
@@ -105,16 +105,16 @@ export default function AIVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Intelligent Conversational AI | Zion Tech Group</title>
+        <title>Zion AI Scheduler - Intelligent Calendar Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI voice assistant with natural language processing, multi-language support, and voice cloning capabilities. Transform customer interactions with intelligent voice AI."
+          content="Revolutionary AI-powered scheduling solution that automates calendar management, resolves conflicts, and optimizes team coordination. Start your free trial today."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, conversational AI, voice AI, natural language processing, voice cloning, multi-language support, voice automation"
+          content="AI scheduler, calendar management, meeting scheduling, team coordination, productivity tools, business automation"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-ai-scheduler" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -126,20 +126,20 @@ export default function AIVoiceAssistant() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Voice Assistant</span>
+              <Calendar className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Scheduling Solution</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI
+              Zion
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Voice Assistant
+                {" "}AI Scheduler
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionary AI voice assistant with natural language processing, multi-language support, 
-              and voice cloning capabilities. Transform customer interactions with intelligent conversational AI.
+              Revolutionary AI-powered scheduling that learns your preferences, resolves conflicts automatically, 
+              and optimizes your team's productivity. Never miss another meeting or double-book again.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -155,7 +155,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Calendar className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function AIVoiceAssistant() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create intelligent voice interactions
+                Everything you need to manage your schedule intelligently and efficiently
               </p>
             </div>
             
@@ -206,7 +206,7 @@ export default function AIVoiceAssistant() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice interaction needs. All plans include our core AI voice features.
+                Choose the plan that fits your needs. All plans include our core AI scheduling features.
               </p>
             </div>
             
@@ -267,10 +267,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                Trusted by Teams Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about our AI Voice Assistant
+                See what our customers say about Zion AI Scheduler
               </p>
             </div>
             
@@ -300,10 +300,10 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Voice Interactions?
+              Ready to Transform Your Scheduling?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already using our AI Voice Assistant to enhance customer experience. 
+              Join thousands of teams already using Zion AI Scheduler to optimize their productivity. 
               Start your free trial today - no credit card required.
             </p>
             
@@ -345,7 +345,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Calendar className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

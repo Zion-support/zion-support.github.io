@@ -1,78 +1,78 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Mic, Brain, Zap, CheckCircle, Star, ArrowRight, Smartphone, Mail, Globe, Volume2, MessageSquare, Headphones } from 'lucide-react';
+import { Package, Brain, Zap, CheckCircle, Star, ArrowRight, Smartphone, Mail, Globe, TrendingUp, AlertTriangle, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-export default function AIVoiceAssistant() {
+export default function ZionSmartInventory() {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP capabilities that understand context, intent, and emotion in human speech",
+      title: "AI-Powered Demand Forecasting",
+      description: "Predict inventory needs with machine learning algorithms that analyze sales patterns and market trends",
       icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-Language Support",
-      description: "Support for 50+ languages with real-time translation and accent adaptation",
-      icon: <Globe className="w-6 h-6" />,
+      title: "Automated Reorder Management",
+      description: "Smart reorder points and automated purchase orders to prevent stockouts and overstocking",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Voice Cloning & Customization",
-      description: "Create custom voice profiles and clone voices for personalized experiences",
-      icon: <Mic className="w-6 h-6" />,
+      title: "Real-time Inventory Tracking",
+      description: "Live inventory monitoring across multiple locations with barcode scanning and RFID support",
+      icon: <Package className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Real-time Conversation",
-      description: "Seamless, natural conversations with sub-second response times and context awareness",
-      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Advanced Analytics",
+      description: "Comprehensive reporting on inventory turnover, carrying costs, and optimization opportunities",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Basic",
-      price: "$199",
+      name: "Small Business",
+      price: "$79",
       period: "/month",
-      description: "Perfect for small businesses",
+      description: "Perfect for small retailers and e-commerce",
       features: [
-        "Up to 1,000 voice interactions/month",
-        "Basic NLP capabilities",
-        "5 language support",
+        "Up to 1,000 SKUs",
+        "Basic AI forecasting",
+        "Mobile app access",
         "Email support",
-        "Standard voice options"
+        "Basic reporting"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$499",
+      price: "$199",
       period: "/month",
-      description: "Ideal for growing companies",
+      description: "Ideal for growing businesses",
       features: [
-        "Up to 10,000 voice interactions/month",
-        "Advanced NLP features",
-        "25 language support",
+        "Up to 10,000 SKUs",
+        "Advanced AI features",
+        "Multi-location support",
         "Priority support",
-        "Custom voice training",
+        "Advanced analytics",
         "API integration"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$1,299",
+      price: "$499",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited voice interactions",
+        "Unlimited SKUs",
         "Full AI capabilities",
-        "50+ language support",
+        "Custom integrations",
         "Dedicated support",
-        "Custom voice cloning",
-        "White-label solution"
+        "White-label solution",
+        "Advanced security"
       ],
       popular: false
     }
@@ -80,24 +80,24 @@ export default function AIVoiceAssistant() {
 
   const testimonials = [
     {
-      name: "Alex Chen",
-      company: "Customer Service Company",
-      role: "Operations Director",
-      content: "Zion AI Voice Assistant has revolutionized our customer support. The natural conversations feel so human that customers often don't realize they're talking to AI.",
+      name: "Alex Thompson",
+      company: "E-commerce Store",
+      role: "Operations Manager",
+      content: "Zion Smart Inventory has reduced our stockouts by 85% and cut carrying costs by 30%. The AI forecasting is incredibly accurate.",
       rating: 5
     },
     {
-      name: "Maria Rodriguez",
-      company: "E-learning Platform",
-      role: "Product Manager",
-      content: "The multi-language support is incredible. We can now serve students in 20+ languages with perfect pronunciation and cultural context.",
+      name: "Sarah Kim",
+      company: "Retail Chain",
+      role: "Inventory Director",
+      content: "The automated reorder system has saved us countless hours and prevented costly stockouts. Our inventory turnover has improved dramatically.",
       rating: 5
     },
     {
-      name: "James Wilson",
-      company: "Healthcare Provider",
-      role: "IT Director",
-      content: "The voice cloning feature allows us to maintain consistent branding across all patient interactions. It's like having our best staff available 24/7.",
+      name: "Michael Davis",
+      company: "Manufacturing Company",
+      role: "Supply Chain Manager",
+      content: "The real-time tracking across our multiple warehouses is game-changing. We have complete visibility into our inventory at all times.",
       rating: 5
     }
   ];
@@ -105,16 +105,16 @@ export default function AIVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Intelligent Conversational AI | Zion Tech Group</title>
+        <title>Zion Smart Inventory - AI-Powered Inventory Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionary AI voice assistant with natural language processing, multi-language support, and voice cloning capabilities. Transform customer interactions with intelligent voice AI."
+          content="Revolutionary AI-powered inventory management system with demand forecasting, automated reordering, and real-time tracking. Optimize your inventory operations today."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, conversational AI, voice AI, natural language processing, voice cloning, multi-language support, voice automation"
+          content="AI inventory management, demand forecasting, inventory tracking, supply chain optimization, warehouse management, inventory analytics"
         />
-        <link rel="canonical" href="https://ziontechgroup.com/ai-voice-assistant" />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-smart-inventory" />
       </Helmet>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
@@ -126,20 +126,20 @@ export default function AIVoiceAssistant() {
         <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Mic className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Voice Assistant</span>
+              <Package className="w-4 h-4 text-cyan-400 mr-2" />
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Management</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-              AI
+              Zion
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Voice Assistant
+                {" "}Smart Inventory
               </span>
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Revolutionary AI voice assistant with natural language processing, multi-language support, 
-              and voice cloning capabilities. Transform customer interactions with intelligent conversational AI.
+              Revolutionary AI-powered inventory management that predicts demand, automates reordering, 
+              and optimizes your supply chain. Never run out of stock or overstock again.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -155,7 +155,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Package className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function AIVoiceAssistant() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to create intelligent voice interactions
+                Everything you need to optimize your inventory operations and reduce costs
               </p>
             </div>
             
@@ -206,7 +206,7 @@ export default function AIVoiceAssistant() {
                 Simple, Transparent Pricing
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice interaction needs. All plans include our core AI voice features.
+                Choose the plan that fits your inventory needs. All plans include our core AI management features.
               </p>
             </div>
             
@@ -267,10 +267,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                Trusted by Businesses Worldwide
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about our AI Voice Assistant
+                See what our customers say about Zion Smart Inventory
               </p>
             </div>
             
@@ -300,10 +300,10 @@ export default function AIVoiceAssistant() {
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-cyan-900/30 to-purple-900/30">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Ready to Transform Voice Interactions?
+              Ready to Optimize Your Inventory?
             </h2>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              Join thousands of businesses already using our AI Voice Assistant to enhance customer experience. 
+              Join thousands of businesses already using Zion Smart Inventory to optimize their supply chain. 
               Start your free trial today - no credit card required.
             </p>
             
@@ -345,7 +345,7 @@ export default function AIVoiceAssistant() {
                 className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Watch Demo
-                <Mic className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+                <Package className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
               </Link>
             </div>
           </div>

@@ -22,6 +22,7 @@ import { AnalyticsProvider } from "./app/components/EnhancedAnalytics";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
 import WebVitalsTracker from "./app/components/WebVitalsTracker";
 import FuturisticBackground from "./app/components/FuturisticBackground";
+import FuturisticBackgroundEnhanced from "./app/components/FuturisticBackgroundEnhanced";
 import PerformanceEnhancer from "./app/components/PerformanceEnhancer";
 import SEOOptimizer from "./app/components/SEOOptimizer";
 import ErrorHandler from "./app/components/ErrorHandler";
@@ -61,6 +62,7 @@ const AiProjectManagementPage = React.lazy(() => import("./app/ai-project-manage
 const AiRecommendationEnginePage = React.lazy(() => import("./app/ai-recommendation-engine/page"));
 const AiSalesAutomationPage = React.lazy(() => import("./app/ai-sales-automation/page"));
 const AiWorkflowAutomationPage = React.lazy(() => import("./app/ai-workflow-automation/page"));
+const AiVoiceAssistantPage = React.lazy(() => import("./app/ai-voice-assistant/page"));
 
 // IT Service Pages
 const CloudInfrastructurePage = React.lazy(
@@ -181,6 +183,20 @@ const ZionPerformanceMonitorPage = React.lazy(
   () => import("./app/zion-performance-monitor/page"),
 );
 
+// New Micro SAAS Pages
+const ZionAISchedulerPage = React.lazy(
+  () => import("./app/zion-ai-scheduler/page"),
+);
+const ZionSmartInvoicingPage = React.lazy(
+  () => import("./app/zion-smart-invoicing/page"),
+);
+const ZionAIRecruiterPage = React.lazy(
+  () => import("./app/zion-ai-recruiter/page"),
+);
+const ZionSmartInventoryPage = React.lazy(
+  () => import("./app/zion-smart-inventory/page"),
+);
+
 // 5G Solutions Pages
 const FiveGDataAnalyticsPage = React.lazy(
   () => import("./app/5g-data-analytics/page"),
@@ -228,8 +244,8 @@ function App() {
         <HelmetProvider>
           <AccessibilityEnhancer>
             <Router>
-              <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-                <FuturisticBackground>
+              <div className="min-h-screen">
+                <FuturisticBackgroundEnhanced>
                   <Navigation onSidebarToggle={toggleSidebar} />
                   <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
                   <Breadcrumb />
@@ -272,6 +288,7 @@ function App() {
                   <Route path="/ai-recommendation-engine" element={<AiRecommendationEnginePage />} />
                   <Route path="/ai-sales-automation" element={<AiSalesAutomationPage />} />
                   <Route path="/ai-workflow-automation" element={<AiWorkflowAutomationPage />} />
+                  <Route path="/ai-voice-assistant" element={<AiVoiceAssistantPage />} />
 
                   {/* IT Service Routes */}
                   <Route
@@ -432,6 +449,24 @@ function App() {
                     element={<ZionPerformanceMonitorPage />}
                   />
 
+                  {/* New Micro SAAS Routes */}
+                  <Route
+                    path="/zion-ai-scheduler"
+                    element={<ZionAISchedulerPage />}
+                  />
+                  <Route
+                    path="/zion-smart-invoicing"
+                    element={<ZionSmartInvoicingPage />}
+                  />
+                  <Route
+                    path="/zion-ai-recruiter"
+                    element={<ZionAIRecruiterPage />}
+                  />
+                  <Route
+                    path="/zion-smart-inventory"
+                    element={<ZionSmartInventoryPage />}
+                  />
+
                   {/* 5G Solutions Routes */}
                   <Route
                     path="/5g-data-analytics"
@@ -485,7 +520,7 @@ function App() {
                   <EnhancedAccessibility>
                     <div></div>
                   </EnhancedAccessibility>
-                </FuturisticBackground>
+                </FuturisticBackgroundEnhanced>
                 <AnalyticsProvider>
                   <div>
                     <PerformanceMonitor />
@@ -501,7 +536,6 @@ function App() {
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </ErrorHandler>
-    </GlobalErrorBoundary>
   );
 }
 
