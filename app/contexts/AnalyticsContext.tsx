@@ -5,21 +5,12 @@ interface AnalyticsContextType {
   trackEvent: (eventName: string, properties?: Record<string, any>) => void;
   trackPageView: (pageName: string) => void;
   setUser: (userId: string, properties?: Record<string, any>) => void;
-<<<<<<< HEAD
-=======
   isEnabled: boolean;
->>>>>>> cursor/fix-errors-and-merge-to-main-16fc
 }
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-<<<<<<< HEAD
-  const [userId, setUserId] = useState<string | null>(null);
-
-  const trackEvent = (eventName: string, properties?: Record<string, any>) => {
-    // Analytics tracking implementation
-=======
   const [isEnabled, setIsEnabled] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
 
@@ -32,7 +23,6 @@ export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ chi
     if (!isEnabled) return;
     
     // Track event logic here
->>>>>>> cursor/fix-errors-and-merge-to-main-16fc
     console.log('Analytics Event:', eventName, properties);
   };
 

@@ -29,7 +29,7 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-  } catch (_error) { // eslint-disable-line no-unused-vars
+  } catch (_error) {  
     // console.error('Error reading existing rates:', error);
     existing = [];
   }
@@ -60,7 +60,7 @@ export default function handler(req, res) {
       rate: totalRate,
       id: newRate.id
     }));
-  } catch (_error) { // eslint-disable-line no-unused-vars
+  } catch (_error) {  
     // console.error('Error saving shipping rate:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');
