@@ -1,6 +1,6 @@
 import React from 'react';
-import { } from 'react-router-dom';
-import { Right, Facebook, Twitter, edin, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -34,7 +34,7 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { name: 'Facebook', href: '#', icon: Facebook },
     { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'edIn', href: '#', icon: edin },
+      { name: 'LinkedIn', href: '#', icon: Linkedin },
     { name: 'GitHub', href: '#', icon: Github }
   ];
 
@@ -44,9 +44,9 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <to="/" className="text-2xl font-bold text-white mb-4 block">
+            <Link to="/" className="text-2xl font-bold text-white mb-4 block">
               Zion Tech Group
-            </>
+            </Link>
             <p className="text-gray-300 mb-6 max-w-md">
               Transforming businesses through cutting-edge AI and IT solutions. 
               We help companies innovate and grow in the digital age.
@@ -74,11 +74,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
-                  <to={link.href}
+                  <Link to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
-                  </>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -90,11 +90,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.name}>
-                  <to={link.href}
+                  <Link to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
-                  </>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -106,11 +106,11 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               {footerLinks.support.map((link) => (
                 <li key={link.name}>
-                  <to={link.href}
+                  <Link to={link.href}
                     className="text-gray-300 hover:text-cyan-400 transition-colors"
                   >
                     {link.name}
-                  </>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -132,7 +132,7 @@ const Footer: React.FC = () => {
               />
               <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-r-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center">
                 Subscribe
-                <Right className="w-4 h-4 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-2" />
               </button>
             </div>
           </div>
@@ -142,12 +142,12 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-slate-700/50 flex flex-col md:flex-row justify-between items-center">
           <div className="flex flex-wrap gap-6 mb-4 md:mb-0">
             {footerLinks.legal.map((link) => (
-              <key={link.name}
+              <Link key={link.name}
                 to={link.href}
                 className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
               >
                 {link.name}
-              </>
+              </Link>
             ))}
           </div>
           <p className="text-gray-400 text-sm">
