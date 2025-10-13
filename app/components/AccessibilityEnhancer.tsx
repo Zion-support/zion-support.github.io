@@ -94,6 +94,7 @@ const AccessibilityEnhancer: React.FC<AccessibilityEnhancerProps> = ({ children 
           button.setAttribute('aria-label', 'Button');
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
         }
+<<<<<<< HEAD
       });
     };
 
@@ -154,6 +155,58 @@ export default function AccessibilityEnhancer() {
         setSettings(prev => ({ ...prev, largeText: true }));
         document.documentElement.classList.add('large-text');
       }
+=======
+
+        // Arrow keys for navigation
+        if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(e.key)) {
+          const focusableElements = document.querySelectorAll(
+            'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          );
+          const currentIndex = Array.from(focusableElements).indexOf(document.activeElement as Element);
+          
+          if (currentIndex !== -1) {
+            let nextIndex = currentIndex;
+            if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
+              nextIndex = (currentIndex + 1) % focusableElements.length;
+            } else {
+              nextIndex = currentIndex === 0 ? focusableElements.length - 1 : currentIndex - 1;
+            }
+            
+            (focusableElements[nextIndex] as HTMLElement)?.focus();
+            e.preventDefault();
+          }
+        }
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
+    };
+
+    // Screen reader enhancements
+    const enhanceScreenReader = () => {
+      if (!enableScreenReader) return;
+
+      // Add ARIA landmarks
+      const main = document.querySelector('main');
+      if (main && !main.getAttribute('role')) {
+        main.setAttribute('role', 'main');
+      }
+
+      // Add live regions for dynamic content
+      const liveRegion = document.createElement('div');
+      liveRegion.setAttribute('aria-live', 'polite');
+      liveRegion.setAttribute('aria-atomic', 'true');
+      liveRegion.className = 'sr-only';
+      liveRegion.id = 'live-region';
+      document.body.appendChild(liveRegion);
+
+      return () => {
+        const existingLiveRegion = document.getElementById('live-region');
+        if (existingLiveRegion) {
+          existingLiveRegion.remove();
+        }
+      };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
     };
 
     checkPreferences();
@@ -162,6 +215,7 @@ export default function AccessibilityEnhancer() {
     const highContrastQuery = window.matchMedia('(prefers-contrast: high)');
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 
+<<<<<<< HEAD
     const handleHighContrastChange = (e: MediaQueryListEvent) => {
       setSettings(prev => ({ ...prev, highContrast: e.matches }));
       if (e.matches) {
@@ -657,3 +711,89 @@ export default AccessibilityEnhancer
   return null;
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
+=======
+      const mediaQuery = window.matchMedia('(prefers-contrast: high)');
+      const handleContrastChange = (e: MediaQueryListEvent) => {
+        if (e.matches) {
+          document.documentElement.classList.add('high-contrast');
+        } else {
+          document.documentElement.classList.remove('high-contrast');
+        }
+      };
+
+      addHighContrastStyles();
+      mediaQuery.addEventListener('change', handleContrastChange);
+      handleContrastChange(mediaQuery as any);
+
+      return () => {
+        const existingStyle = document.getElementById('accessibility-high-contrast');
+        if (existingStyle) {
+          existingStyle.remove();
+        }
+        mediaQuery.removeEventListener('change', handleContrastChange);
+      };
+    };
+
+    // Focus management
+    const enhanceFocusManagement = () => {
+      if (!enableFocusManagement) return () => {};
+
+      // Focus trap for modals
+      const trapFocus = (element: HTMLElement) => {
+        const focusableElements = element.querySelectorAll(
+          'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+        );
+        const firstFocusableElement = focusableElements[0] as HTMLElement;
+        const lastFocusableElement = focusableElements[focusableElements.length - 1] as HTMLElement;
+
+        const handleTabKey = (e: KeyboardEvent) => {
+          if (e.key === 'Tab') {
+            if (e.shiftKey) {
+              if (document.activeElement === firstFocusableElement) {
+                lastFocusableElement?.focus();
+                e.preventDefault();
+              }
+            } else {
+              if (document.activeElement === lastFocusableElement) {
+                firstFocusableElement?.focus();
+                e.preventDefault();
+              }
+            }
+          }
+        };
+
+        element.addEventListener('keydown', handleTabKey);
+        firstFocusableElement?.focus();
+
+        return () => {
+          element.removeEventListener('keydown', handleTabKey);
+        };
+      };
+
+      // Apply focus trap to modals and dropdowns
+      const modals = document.querySelectorAll('[role="dialog"], [role="menu"]');
+      const cleanupFunctions = Array.from(modals).map(modal => trapFocus(modal as HTMLElement));
+
+      // Initialize all enhancements
+      addSkipLink();
+      enhanceKeyboardNavigation();
+      enhanceScreenReader();
+      enhanceHighContrast();
+      enhanceFocusManagement();
+
+      return () => {
+        cleanupFunctions.forEach(cleanup => cleanup());
+      };
+    };
+
+    // Initialize all enhancements
+    const cleanup = enhanceFocusManagement();
+
+    return cleanup;
+  }, [enableKeyboardNavigation, enableScreenReader, enableHighContrast, enableFocusManagement]);
+
+  return <>{children}</>;
+};
+
+export default AccessibilityEnhancer;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792

@@ -161,6 +161,7 @@ export default defineConfig({
             return 'error-handling'
           }
 <<<<<<< HEAD
+<<<<<<< HEAD
           // Large page components (lazy load)
           if (id.includes('/app/') && id.includes('/page.tsx')) {
             return 'pages'
@@ -190,6 +191,13 @@ export default defineConfig({
           if (id.includes('/ai-') && id.includes('/page.tsx')) {
             if (id.includes('analytics') || id.includes('data')) {
               return 'ai-analytics'
+=======
+          // AI service pages - group by category
+          if (id.includes('/ai-') && id.includes('/page.tsx')) {
+            const serviceName = id.split('/ai-')[1]?.split('/')[0];
+            if (serviceName && ['analytics', 'automation', 'business-intelligence', 'content-generation'].includes(serviceName)) {
+              return 'ai-core'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
             }
             if (id.includes('content') || id.includes('generation')) {
               return 'ai-content'
@@ -215,8 +223,12 @@ export default defineConfig({
             }
             return 'zion-services'
           }
+<<<<<<< HEAD
           // Group 5G service pages
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
+=======
+          // 5G service pages - group together
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
           if (id.includes('/5g-') && id.includes('/page.tsx')) {
             return '5g-services'
           }

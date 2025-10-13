@@ -182,6 +182,7 @@ const PerformanceMonitor: React.FC = () => {
 
 export default PerformanceMonitor;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-92c8
 >>>>>>> origin/cursor/ad-creation-and-management-f267
 =======
@@ -220,3 +221,5 @@ export default PerformanceMonitor
   return null;
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0680
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0792
