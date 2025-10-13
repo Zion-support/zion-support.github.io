@@ -11,6 +11,10 @@ import HomePage from "./app/page";
 import { LoadingPage } from "./app/components/LoadingStates";
 import { GlobalErrorBoundary } from "./app/components/EnhancedErrorFeedback";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import ProductionErrorBoundary from "./app/components/ProductionErrorBoundary";
+>>>>>>> cursor/analyze-improve-and-deploy-application-c69e
 import EnhancedAccessibility from "./app/components/EnhancedAccessibility";
 import AnalyticsProvider from "./app/components/AnalyticsProvider";
 import PerformanceMonitor from "./app/components/PerformanceMonitor";
@@ -167,7 +171,7 @@ function App() {
 
   useEffect(() => {
     // Initialize performance monitoring
-    if (typeof window !== 'undefined') {
+    if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
       // Add any global initialization logic here
       console.log('Zion Tech Group App initialized');
     }
@@ -175,14 +179,15 @@ function App() {
 
   return (
     <HelmetProvider>
-      <GlobalErrorBoundary>
-        <AnalyticsProvider>
-          <PerformanceMonitor>
-            <WebVitalsTracker>
-              <EnhancedAccessibility>
-                <AccessibilityEnhancer>
-                  <CoreWebVitals>
-                    <Router>
+      <ProductionErrorBoundary>
+        <GlobalErrorBoundary>
+          <AnalyticsProvider>
+            <PerformanceMonitor>
+              <WebVitalsTracker>
+                <EnhancedAccessibility>
+                  <AccessibilityEnhancer>
+                    <CoreWebVitals>
+                      <Router>
                       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
                         <FuturisticBackground>
                           <Navigation onSidebarToggle={toggleSidebar} />
@@ -322,14 +327,15 @@ function App() {
                         </FuturisticBackground>
 >>>>>>> cursor/analyze-improve-and-deploy-application-b200
                       </div>
-                    </Router>
-                  </CoreWebVitals>
-                </AccessibilityEnhancer>
-              </EnhancedAccessibility>
-            </WebVitalsTracker>
-          </PerformanceMonitor>
-        </AnalyticsProvider>
-      </GlobalErrorBoundary>
+                      </Router>
+                    </CoreWebVitals>
+                  </AccessibilityEnhancer>
+                </EnhancedAccessibility>
+              </WebVitalsTracker>
+            </PerformanceMonitor>
+          </AnalyticsProvider>
+        </GlobalErrorBoundary>
+      </ProductionErrorBoundary>
     </HelmetProvider>
 =======
 
