@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
-
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -11,28 +10,22 @@ export default function ContactPage() {
     subject: '',
     message: ''
   });
-
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
-    
     setIsSubmitted(true);
     setIsSubmitting(false);
   };
-
   const contactInfo = [
     {
       icon: Phone,
@@ -59,7 +52,6 @@ export default function ContactPage() {
       description: '9:00 AM - 6:00 PM EST'
     }
   ];
-
   const subjects = [
     'AI Services',
     'IT Services',
@@ -69,7 +61,6 @@ export default function ContactPage() {
     '5G Implementation',
     'Other'
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <Helmet>
@@ -77,7 +68,6 @@ export default function ContactPage() {
         <meta name="description" content="Get in touch with Zion Tech Group for AI solutions, IT services, and digital transformation. Contact our experts today." />
         <meta name="keywords" content="contact, AI services, IT solutions, digital transformation, business consultation" />
       </Helmet>
-      
       {/* Hero Section */}
       <section className="relative py-20 px-4">
         <div className="max-w-7xl mx-auto text-center">
@@ -93,7 +83,6 @@ export default function ContactPage() {
           </p>
         </div>
       </section>
-
       {/* Contact Info */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
@@ -117,27 +106,13 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-
       {/* Contact Form */}
       <section className="py-20 px-4 bg-slate-800/30">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-white text-center mb-16">
             Send us a Message
           </h2>
-          
           {isSubmitted ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-1911
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
             <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50 text-center">
               <div className="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-600 flex items-center justify-center mx-auto mb-4">
                 <CheckCircle className="w-8 h-8 text-white" />
@@ -159,7 +134,6 @@ export default function ContactPage() {
                   });
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
-=======
             <div className="text-center">
               <div className="bg-green-500/20 border border-green-500/30 rounded-xl p-8 mb-8">
                 <h3 className="text-2xl font-bold text-green-400 mb-4">Message Sent Successfully!</h3>
@@ -179,7 +153,6 @@ export default function ContactPage() {
                     });
                   }}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
               >
                 Send Another Message
               </button>
@@ -218,7 +191,6 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label htmlFor="company" className="block text-white font-medium mb-2">
@@ -249,7 +221,6 @@ export default function ContactPage() {
                   />
                 </div>
               </div>
-
               <div className="mb-6">
                 <label htmlFor="subject" className="block text-white font-medium mb-2">
                   Subject *
@@ -270,7 +241,6 @@ export default function ContactPage() {
                   ))}
                 </select>
               </div>
-
               <div className="mb-8">
                 <label htmlFor="message" className="block text-white font-medium mb-2">
                   Message *
@@ -286,7 +256,6 @@ export default function ContactPage() {
                   placeholder="Tell us about your project or how we can help you..."
                 />
               </div>
-
               <div className="text-center">
                 <button
                   type="submit"

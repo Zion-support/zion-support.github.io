@@ -1,25 +1,6 @@
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-3792
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-529c
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-717a
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-8341
-=======
-
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
 export default function ZionAIVoiceAssistantPro() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
@@ -82,7 +63,3 @@ export default function ZionAIVoiceAssistantPro() {
           </div>
   );
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/fix-errors-and-merge-to-main-d3c2
