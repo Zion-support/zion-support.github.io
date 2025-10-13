@@ -73,65 +73,6 @@ export default defineConfig({
           if (id.includes('node_modules')) {
             return 'vendor'
           }
-<<<<<<< HEAD
-=======
-          // Performance monitoring - separate chunk
-          if (id.includes('web-vitals')) {
-            return 'performance'
-          }
-          // Error handling - separate chunk
-          if (id.includes('react-error-boundary')) {
-            return 'error-handling'
-          }
-          // Components - split by functionality
-          if (id.includes('/components/')) {
-            if (id.includes('Enhanced') || id.includes('Advanced')) {
-              return 'enhanced-components'
-            }
-            if (id.includes('Futuristic') || id.includes('Neon')) {
-              return 'ui-components'
-            }
-            if (id.includes('Performance') || id.includes('Analytics')) {
-              return 'monitoring-components'
-            }
-            return 'base-components'
-          }
-          // AI service pages - group by category with smaller chunks
-          if (id.includes('/ai-') && id.includes('/page.tsx')) {
-            return 'ai-services'
-          }
-          // Group all Zion service pages
-          if (id.includes('/zion-') && id.includes('/page.tsx')) {
-            return 'zion-services'
-          }
-          // Group all 5G service pages
-          if (id.includes('/5g-') && id.includes('/page.tsx')) {
-            return '5g-services'
-          }
-          // Main pages - split further
-          if (id.includes('/app/') && id.includes('/page.tsx') && 
-              !id.includes('/ai-') && !id.includes('/zion-') && !id.includes('/5g-')) {
-            if (id.includes('about') || id.includes('contact') || id.includes('services')) {
-              return 'core-pages'
-            }
-            return 'main-pages'
-          }
-          // Components - group by type
-          if (id.includes('/components/')) {
-            if (id.includes('Performance') || id.includes('Analytics')) {
-              return 'components-performance'
-            }
-            if (id.includes('SEO') || id.includes('Accessibility')) {
-              return 'components-seo'
-            }
-            if (id.includes('Loading') || id.includes('Error')) {
-              return 'components-ui'
-            }
-            return 'components-common'
-          }
-          // Default chunk for other modules
-          return 'vendor'
->>>>>>> cursor/fix-errors-and-merge-to-main-b963
         },
       },
     },
