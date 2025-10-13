@@ -24,6 +24,7 @@ const Navigation = () => {
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { name: 'Services', href: '/services', icon: BriefcaseIcon },
+    { name: 'Micro SaaS', href: '/micro-saas-solutions', icon: GlobeAltIcon },
     { name: 'Solutions', href: '/solutions', icon: CogIcon },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
     { name: 'Blog', href: '/blog', icon: DocumentTextIcon },

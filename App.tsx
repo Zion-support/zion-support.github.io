@@ -7,7 +7,7 @@ import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 
 // Page Components
-import HomePage from './app/pages/HomePage';
+import HomePage from './app/page';
 import AboutPage from './app/pages/AboutPage';
 import ContactPage from './app/pages/ContactPage';
 import ServicesPage from './app/pages/ServicesPage';
@@ -19,6 +19,9 @@ import PrivacyPage from './app/pages/PrivacyPage';
 import TermsPage from './app/pages/TermsPage';
 import PricingPage from './app/pages/PricingPage';
 import SolutionsPage from './app/pages/SolutionsPage';
+import MicroSaaSSolutionsPage from './app/micro-saas-solutions/page';
+import AISolutionsPage from './app/ai-solutions/page';
+import ITSolutionsPage from './app/it-solutions/page';
 
 // Error fallback component
 const ErrorFallback = ({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) => (
@@ -60,6 +63,9 @@ function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/micro-saas-solutions" element={<MicroSaaSSolutionsPage />} />
+              <Route path="/ai-solutions" element={<AISolutionsPage />} />
+              <Route path="/it-solutions" element={<ITSolutionsPage />} />
               <Route path="/blog" element={<BlogPage />} />
               <Route path="/tutorials" element={<TutorialsPage />} />
               <Route path="/demo" element={<DemoPage />} />
