@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
@@ -29,3 +30,10 @@ export default function AiChatbotBuilder() {
     </div>
   );
 }
+=======
+'use client';
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10

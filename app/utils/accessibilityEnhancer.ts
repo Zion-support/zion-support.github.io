@@ -5,6 +5,7 @@ interface AccessibilityConfig {
   screenReader: boolean;
 }
 
+<<<<<<< HEAD
 class AccessibilityEnhancer {
   private config: AccessibilityConfig;
 
@@ -43,3 +44,5 @@ class AccessibilityEnhancer {
 }
 export default accessibilityEnhancer;
 export default accessibilityEnhancer;
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10

@@ -67,7 +67,7 @@ const AdvancedSEOOptimizer = ({ seoData }: { seoData?: any }) => {
 };
 
 const AdvancedPerformanceMonitor = ({ enableRealTimeMonitoring, onMetricsUpdate, showRecommendations }: { enableRealTimeMonitoring?: boolean; onMetricsUpdate?: jest.Mock; showRecommendations?: boolean }) => {
-  if (process.env.NODE_ENV === 'production') {
+  if (process.env['NODE_ENV'] === 'production') {
     return null;
   }
   

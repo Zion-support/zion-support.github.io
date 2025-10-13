@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 // Type definitions for Next.js compatibility in Vite
 export interface Metadata {
   title?: string;
@@ -135,3 +136,5 @@ declare module 'next' {
 }
 
 export {};
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10

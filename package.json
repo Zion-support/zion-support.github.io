@@ -38,7 +38,7 @@
     "optimize:images": "node scripts/optimize-images.js",
     "optimize:css": "node scripts/optimize-css.cjs",
     "optimize:assets": "node scripts/optimize-assets.js",
-    "analyze:bundle": "vite build --mode analyze && npx vite-bundle-analyzer dist/stats.html",
+    "analyze:bundle": "node scripts/analyze-bundle.cjs",
     "test:performance": "lighthouse http://localhost:4173 --output=html --output-path=./performance-report.html",
     "audit:security": "npm audit --audit-level=moderate",
     "security:check": "npm audit --audit-level=moderate && npm run audit:security",
@@ -98,12 +98,17 @@
     "generate:sitemap": "node scripts/enhanced-sitemap-generator.cjs",
     "sitemap": "npm run generate:sitemap",
     "optimize:performance": "node scripts/performance-optimizer.cjs",
+<<<<<<< HEAD
     "optimize:performance-enhanced": "node scripts/performance-optimizer-enhanced.cjs",
     "optimize:seo-enhanced": "node scripts/seo-optimizer-enhanced.cjs",
     "lighthouse": "lighthouse http://localhost:3000 --output=html --output-path=./lighthouse-report.html",
     "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\"",
     "analyze:full": "npm run build && npm run analyze:bundle",
     "debug:performance": "localStorage.setItem('debug-performance', 'true') && npm run dev"
+=======
+    "postbuild": "npm run generate:sitemap && npm run optimize:performance && echo \"Build completed successfully\"",
+    "perf:check": "npm run build && npm run analyze:bundle"
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
   },
   "dependencies": {
     "@esbuild/linux-x64": "^0.25.10",

@@ -63,6 +63,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
         ogImage="https://ziontechgroup.com/images/og-image.jpg"
         structuredData={structuredData}
       />
+<<<<<<< HEAD
       
       <div className="container mx-auto px-4 py-20">
         <div className="text-center mb-16">
@@ -73,6 +74,21 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
             We are a cutting-edge technology company specializing in AI solutions, 
             cloud infrastructure, and innovative IT services that transform businesses.
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900>
+=======
+      <PerformanceOptimizer
+        enableImageOptimization={true}
+        enableLazyLoading={true}
+        enablePreloading={true}
+        enableCodeSplitting={true}
+      />
+      <AccessibilityEnhancer
+        enableKeyboardNavigation={true}
+        enableScreenReaderSupport={true}
+        enableHighContrast={true}
+        enableFocusManagement={true}
+      />
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg-enhanced matrix-rain-enhanced futuristic-bg-enhanced quantum-particles neural-connections">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
         {/* Navigation */}
 
         <Navigation />
@@ -87,6 +103,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
         </a>
         
         {/* Content Promotion Banner */}
+<<<<<<< HEAD
             className={text-center mb-16 transition-all duration-1000 ${
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg">
       <PerformanceOptimizer />
@@ -99,6 +116,23 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
           <div className="absolute inset-0 bg-black opacity-20"></div>
           <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center">
+=======
+        <Suspense fallback={<div className="h-16 bg-gray-100 animate-pulse"></div>}>
+          <ContentPromotionBanner />
+        </Suspense>
+        
+        <main id="main-content" className="container mx-auto px-4 py-16 pt-24 quantum-energy-field" role="main">
+          {/* Hero Section */}
+          <section
+            className={`text-center mb-16 transition-all duration-1000 cyber-scan-line holographic-card-enhanced quantum-pulse-enhanced ${
+              isLoaded && isVisible 
+                ? 'opacity-100 translate-y-0' 
+                : 'opacity-0 translate-y-8'
+            }`}
+            aria-labelledby="hero-heading"
+          >
+            <div className="max-w-6xl mx-auto">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
               <h1 
                 id="hero-heading" 
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 holographic-text cyber-text glitch"
@@ -113,6 +147,7 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
                 Transform your business with cutting-edge AI technology, quantum computing solutions, 
                 and comprehensive IT services. We deliver innovation that drives real results.
               </p>
+<<<<<<< HEAD
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <a 
@@ -240,6 +275,60 @@ import AccessibilityEnhancer from './components/AccessibilityEnhancer'
             >
               Watch Demo
             </FuturisticButton>
+=======
+              {/* Key Benefits */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 px-4">
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3">🚀</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">AI-Powered Solutions</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Transform your business with cutting-edge artificial intelligence, machine learning, and automation technologies</p>
+                </div>
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3">⚡</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Proven Results</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Delivering $50M+ annual savings, 95% process automation, and 300% ROI for enterprise clients</p>
+                </div>
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300">
+                  <div className="text-2xl sm:text-3xl mb-3">🔒</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Enterprise Security</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Bank-level security and compliance for your critical data and infrastructure</p>
+                </div>
+                <div className="cyber-card-enhanced hologram-card-enhanced p-4 sm:p-6 hover:scale-105 transition-all duration-300 sm:col-span-2 lg:col-span-1 xl:col-span-1">
+                  <div className="text-2xl sm:text-3xl mb-3">🌐</div>
+                  <h3 className="font-bold text-white mb-3 text-base sm:text-lg">Global Reach</h3>
+                  <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">Serving clients worldwide with 24/7 support and multi-language capabilities</p>
+                </div>
+              </div>
+              {/* CTA Buttons */}
+              <div className="mt-12 flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a
+                  href="tel:+13024640950"
+                  onClick={handlePhoneClick}
+                  className="cyber-button-enhanced w-full sm:w-auto text-center"
+                >
+                  📞 Call Now: (302) 464-0950
+                </a>
+                <a 
+                  href="mailto:kleber@ziontechgroup.com"
+                  className="cyber-button-enhanced w-full sm:w-auto text-center"
+                >
+                  📧 Email Us
+                </a>
+                <a 
+                  href="/contact"
+                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
+                  Get Free Consultation
+                </a>
+              </div>
+            </div>
+          </section>
+        </main>
+        
+        <Footer />
+      </div>
+    </React.Fragment>
+  );
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
 }
       </div>
   );
