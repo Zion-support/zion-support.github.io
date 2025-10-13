@@ -44,6 +44,25 @@ const FiveGSmartCitySolutionsPage = lazy(
 );
 const FiveGSolutionsPage = lazy(() => import("./5g-solutions/page"));
 
+// Additional Service Pages
+const AIServicesPage = lazy(() => import("./ai-services/page"));
+const CloudServicesPage = lazy(() => import("./cloud-services/page"));
+const CybersecurityPage = lazy(() => import("./cybersecurity/page"));
+const WebDevelopmentPage = lazy(() => import("./web-development/page"));
+const AIAnalyticsPage = lazy(() => import("./ai-analytics/page"));
+const AIAutomationPage = lazy(() => import("./ai-automation/page"));
+const AIContentGenerationPage = lazy(() => import("./ai-content-generation/page"));
+const AICustomerServicePage = lazy(() => import("./ai-customer-service/page"));
+const AIMarketingPage = lazy(() => import("./ai-marketing/page"));
+const DataAnalyticsPage = lazy(() => import("./data-analytics/page"));
+const CustomDevelopmentPage = lazy(() => import("./custom-development/page"));
+const SupportPage = lazy(() => import("./support/page"));
+const ConsultationPage = lazy(() => import("./consultation/page"));
+const TutorialsPage = lazy(() => import("./tutorials/page"));
+const DemoPage = lazy(() => import("./demo/page"));
+const SitemapPage = lazy(() => import("./sitemap/page"));
+const MicroSaasPage = lazy(() => import("./micro-saas/page"));
+
 // Main App Component
 function App() {
   return (
@@ -104,6 +123,25 @@ function App() {
                 element={<FiveGSmartCitySolutionsPage />}
               />
               <Route path="/5g-solutions" element={<FiveGSolutionsPage />} />
+
+              {/* Additional Service Routes */}
+              <Route path="/ai-services" element={<AIServicesPage />} />
+              <Route path="/cloud-services" element={<CloudServicesPage />} />
+              <Route path="/cybersecurity" element={<CybersecurityPage />} />
+              <Route path="/web-development" element={<WebDevelopmentPage />} />
+              <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
+              <Route path="/ai-automation" element={<AIAutomationPage />} />
+              <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
+              <Route path="/ai-customer-service" element={<AICustomerServicePage />} />
+              <Route path="/ai-marketing" element={<AIMarketingPage />} />
+              <Route path="/data-analytics" element={<DataAnalyticsPage />} />
+              <Route path="/custom-development" element={<CustomDevelopmentPage />} />
+              <Route path="/support" element={<SupportPage />} />
+              <Route path="/consultation" element={<ConsultationPage />} />
+              <Route path="/tutorials" element={<TutorialsPage />} />
+              <Route path="/demo" element={<DemoPage />} />
+              <Route path="/sitemap" element={<SitemapPage />} />
+              <Route path="/micro-saas" element={<MicroSaasPage />} />
             </Routes>
             </Suspense>
           </AccessibilityEnhancer>
