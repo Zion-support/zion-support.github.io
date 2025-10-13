@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**;
  * Google Analytics gtag types;
  */;
@@ -13,3 +14,25 @@ interface Window {gtag?: (command: GtagCommand, targetId: string, config?: GtagE
   [key: string]: unknown;
   gtag?: (command: GtagCommand, targetId: string, config?: GtagEvent) => void;
 }
+=======
+/**
+ * Google Analytics gtag types
+ */
+interface GtagEvent {
+  event_category?: string;
+  event_label?: string;
+  value?: number;
+  [key: string]: unknown;
+}
+
+type GtagCommand = 'config' | 'set' | 'event' | 'js';
+
+interface Window {
+  gtag: (
+    command: GtagCommand,
+    targetId: string | Date,
+    config?: GtagEvent
+  ) => void;
+  dataLayer: unknown[];
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

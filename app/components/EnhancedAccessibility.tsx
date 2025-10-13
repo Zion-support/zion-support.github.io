@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 'use client;
 
@@ -324,6 +325,27 @@ export default function EnhancedAccessibility({ className = '', children }: Enha
   if (!isVisible && process.env['NODE_ENV'] === 'production') {
     return <>{children}</>;
   }
+=======
+'use client';
+import React, { useEffect, useState } from 'react';
+import { Eye, EyeOff, Volume2, VolumeX, Type, Contrast } from 'lucide-react';
+
+interface AccessibilitySettings {
+  highContrast: boolean;
+  reducedMotion: boolean;
+  fontSize: 'small' | 'medium' | 'large';
+  screenReader: boolean;
+  keyboardNavigation: boolean;
+}
+
+interface EnhancedAccessibilityProps {
+  children: React.ReactNode;
+  enableKeyboardNavigation?: boolean;
+  enableScreenReaderSupport?: boolean;
+  enableHighContrast?: boolean;
+  enableFocusManagement?: boolean;
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
   return (
     <>
@@ -434,10 +456,20 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     reducedMotion: false,
     fontSize: 'medium',
 <<<<<<< HEAD
+<<<<<<< HEAD
     screenReader: false
   });
+=======
+    screenReader: false,
+    keyboardNavigation: true
+  });
 
+  const [showSettings, setShowSettings] = useState(false);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+
+  // Load settings from localStorage
   useEffect(() => {
+<<<<<<< HEAD
     // Check for user preferences
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const prefersHighContrast = window.matchMedia('(prefers-contrast: high)').matches;
@@ -474,6 +506,24 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     const root = document.documentElement;
     
     // High contrast mode
+=======
+    const savedSettings = localStorage.getItem('accessibility-settings');
+    if (savedSettings) {
+      setSettings(JSON.parse(savedSettings));
+    }
+  }, []);
+
+  // Save settings to localStorage
+  useEffect(() => {
+    localStorage.setItem('accessibility-settings', JSON.stringify(settings));
+  }, [settings]);
+
+  // Apply accessibility settings
+  useEffect(() => {
+    const root = document.documentElement;
+    
+    // High contrast
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     if (settings.highContrast) {
       root.classList.add('high-contrast');
     } else {
@@ -490,6 +540,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
     // Font size
     root.classList.remove('font-small', 'font-medium', 'font-large');
     root.classList.add(`font-${settings.fontSize}`);
+<<<<<<< HEAD
     
     // Screen reader optimizations
     if (settings.screenReader) {
@@ -500,6 +551,18 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
   }, [settings]);
 
   // Keyboard navigation support
+=======
+
+    // Screen reader
+    if (settings.screenReader) {
+      root.classList.add('screen-reader-mode');
+    } else {
+      root.classList.remove('screen-reader-mode');
+    }
+  }, [settings]);
+
+  // Keyboard navigation
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       // Skip to main content
@@ -508,6 +571,7 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
         const mainContent = document.getElementById('main-content');
         if (mainContent) {
           mainContent.focus();
+<<<<<<< HEAD
           mainContent.scrollIntoView({ behavior: 'smooth' });
         }
       }
@@ -522,15 +586,29 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
             firstLink.focus();
           }
         }
+=======
+        }
+      }
+
+      // Toggle accessibility settings
+      if (event.key === 'Escape' && event.altKey) {
+        event.preventDefault();
+        setShowSettings(!showSettings);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
+<<<<<<< HEAD
   }, []);
+=======
+  }, [enableKeyboardNavigation, showSettings]);
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
   // Announce page changes to screen readers
   useEffect(() => {
+<<<<<<< HEAD
     const announcePageChange = () => {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
@@ -644,3 +722,117 @@ const EnhancedAccessibility: React.FC<EnhancedAccessibilityProps> = ({
 
 export default EnhancedAccessibility;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
+=======
+    if (!enableFocusManagement) return;
+
+    const manageFocus = () => {
+      const focusableElements = document.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+
+      focusableElements.forEach((element) => {
+        element.addEventListener('focus', () => {
+          element.classList.add('focus-visible');
+        });
+
+        element.addEventListener('blur', () => {
+          element.classList.remove('focus-visible');
+        });
+      });
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', manageFocus);
+    } else {
+      manageFocus();
+    }
+
+    return () => {
+      document.removeEventListener('DOMContentLoaded', manageFocus);
+    };
+  }, [enableFocusManagement]);
+
+  const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
+    setSettings(prev => ({ ...prev, [key]: value }));
+  };
+
+  return (
+    <>
+      {children}
+      
+      {/* Accessibility Settings Panel */}
+      {showSettings && (
+        <div className="fixed top-4 right-4 bg-slate-800 border border-slate-700 rounded-lg p-4 z-50 shadow-lg">
+          <h3 className="text-white font-semibold mb-4">Accessibility Settings</h3>
+          
+          <div className="space-y-3">
+            <label className="flex items-center space-x-2 text-white">
+              <input
+                type="checkbox"
+                checked={settings.highContrast}
+                onChange={(e) => updateSetting('highContrast', e.target.checked)}
+                className="rounded"
+              />
+              <Contrast className="w-4 h-4" />
+              <span>High Contrast</span>
+            </label>
+
+            <label className="flex items-center space-x-2 text-white">
+              <input
+                type="checkbox"
+                checked={settings.reducedMotion}
+                onChange={(e) => updateSetting('reducedMotion', e.target.checked)}
+                className="rounded"
+              />
+              <span>Reduce Motion</span>
+            </label>
+
+            <label className="flex items-center space-x-2 text-white">
+              <input
+                type="checkbox"
+                checked={settings.screenReader}
+                onChange={(e) => updateSetting('screenReader', e.target.checked)}
+                className="rounded"
+              />
+              {settings.screenReader ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
+              <span>Screen Reader Mode</span>
+            </label>
+
+            <div className="flex items-center space-x-2 text-white">
+              <Type className="w-4 h-4" />
+              <span>Font Size:</span>
+              <select
+                value={settings.fontSize}
+                onChange={(e) => updateSetting('fontSize', e.target.value)}
+                className="bg-slate-700 text-white rounded px-2 py-1"
+              >
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+              </select>
+            </div>
+          </div>
+
+          <button
+            onClick={() => setShowSettings(false)}
+            className="mt-4 w-full bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded transition-colors"
+          >
+            Close
+          </button>
+        </div>
+      )}
+
+      {/* Accessibility Toggle Button */}
+      <button
+        onClick={() => setShowSettings(!showSettings)}
+        className="fixed bottom-4 right-4 bg-cyan-600 hover:bg-cyan-700 text-white p-3 rounded-full shadow-lg z-40 transition-colors"
+        aria-label="Toggle accessibility settings"
+      >
+        <Eye className="w-5 h-5" />
+      </button>
+    </>
+  );
+};
+
+export default EnhancedAccessibility;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

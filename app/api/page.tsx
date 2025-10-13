@@ -2,9 +2,8 @@
 =======
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink } from 'lucide-react';
-
+import { Helmet } from 'react-helmet-async'
+import { Code, Database, Zap, Shield, Globe, Cpu, BarChart, Users, Settings, ArrowRight, CheckCircle, Star, ExternalLink } from 'lucide-react'
 const ApiPage: React.FC = () => {
   const apiEndpoints = [
     {
@@ -349,8 +348,14 @@ const ApiPage: React.FC = () => {
             </div>
           </section>
 
+<<<<<<< HEAD
           {/* Support */} <section className="mb-16">
             <div className="cyber-card-enhanced p-8 text-center">
+=======
+          {/* Support */}
+          <section className="mb-16">
+          <div className="cyber-card-enhanced p-8 text-center">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
               <h2 className="text-2xl font-bold text-white mb-4">Need Help?</h2>
               <p className="text-gray-300 mb-6">Our developer support team is here to help you integrate our APIs successfully.</p>
               </p>
@@ -379,8 +384,15 @@ const ApiPage: React.FC = () => {
         </div>
       </div>
     </>
+<<<<<<< HEAD
   );
 };
 
 export default ApiPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+=======
+  )
+}
+
+export default ApiPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

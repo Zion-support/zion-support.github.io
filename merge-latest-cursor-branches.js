@@ -1,0 +1,181 @@
+#!/usr/bin/env node;
+/**
+ * Merge Latest Cursor Branches - Process the newest cursor branches;
+ */ import { execSync } from 'child_process';
+import fs from 'fs';
+//Latest cursor branches to merge;
+const latestCursorBranches = [
+];
+  'cursor/fix-errors-and-merge-to-main-19 db',
+  'cursor/fix-errors-and-merge-to-main-40 d9',
+  'cursor/fix-errors-and-merge-to-main-5 fb2',
+  'cursor/fix-errors-and-merge-to-main-8510',
+  'cursor/fix-errors-and-merge-to-main-9658',
+  'cursor/fix-errors-and-merge-to-main-afb8',
+  'cursor/fix-errors-and-merge-to-main-afbc',
+  'cursor/fix-errors-and-merge-to-main-b319',
+  'cursor/fix-errors-and-merge-to-main-bb50',
+  'cursor/fix-errors-and-merge-to-main-cf0 f',
+  'cursor/fix-errors-and-merge-to-main-e15 f'];
+//Function to safely execute git commands;
+function safeGitCommand(command, description) {
+  try {
+    //     const result = execSync(command, { encoding: 'utf8', stdio: 'pipe' });
+<<<<<<< HEAD
+
+    return { success: true, result }
+  } catch (error) {
+
+    return { success: false, error: error.message }
+function safeGitCommand(command, description) {/* TODO: Fix JSX expression */}
+  o: 'pipe' });
+
+    return {/* TODO: Fix JSX expression */}
+  s: true, result }
+  } catch (error) {/* TODO: Fix JSX expression */}
+  r: error.message }
+  }
+}
+
+=======
+    return { success: true, result }} catch (error) {
+    return { success: false, error: error.message };
+function safeGitCommand(command, description) {/* TODO: Fix JSX expression */};
+  o: 'pipe' });
+    return {/* TODO: Fix JSX expression */};
+  s: true, result }} catch (error) {/* TODO: Fix JSX expression */};
+  r: error.message }};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+//Function to check if branch exists;
+function branchExists(branchName) {
+  try {
+    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, { stdio: 'pipe' });
+function branchExists(branchName) {/* TODO: Fix JSX expression */};
+    execSync(`git show-ref --verify --quiet refs/remotes/origin/${branchName}`, {/* TODO: Fix JSX expression */})
+  o: 'pipe' });
+<<<<<<< HEAD
+    return true;
+  } catch {/* TODO: Fix JSX expression */}
+  }
+}
+
+//Ensure we're on main branch;
+safeGitCommand('git checkout main', 'Switch to main branch');
+safeGitCommand('git pull origin main', 'Pull latest changes from main');
+
+=======
+    return true} catch {/* TODO: Fix JSX expression */};
+  };
+};
+//Ensure we're on main branch;
+safeGitCommand('git checkout main', 'Switch to main branch');
+safeGitCommand('git pull origin main', 'Pull latest changes from main');
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+//Process each branch;
+for (const branch of latestCursorBranches) {
+  //Check if branch exists;
+  if (!branchExists(branch)) {
+    notFoundCount++;
+    results.push({)
+      branch)
+      status: 'not_found'),
+for (const branch of latestCursorBranches) {/* TODO: Fix JSX expression */};
+    });
+<<<<<<< HEAD
+    continue;
+  }
+
+=======
+    continue};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  //Try to merge the branch;
+  const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`)
+    `Merge ${branch}`
+  );
+  if (mergeResult.success) {
+    mergedCount++;
+    results.push({)
+      branch)
+      status: 'merged')});
+  } else {
+    //Try to abort the merge if there was a conflict;
+    safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
+    results.push({)
+      branch)
+      status: 'conflict'),
+      error: mergeResult.error),
+  //Try to merge the branch;`
+  const mergeResult = safeGitCommand(`git merge origin/${branch} --no-ff -m "Merge ${branch} into main"`,`
+    `Merge ${branch}`)
+  );
+<<<<<<< HEAD
+
+  if (mergeResult.success) {/* TODO: Fix JSX expression */}
+    });
+  } else {/* TODO: Fix JSX expression */}`
+=======
+  if (mergeResult.success) {/* TODO: Fix JSX expression */};
+    })} else {/* TODO: Fix JSX expression */}`
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    safeGitCommand('git merge --abort', `Abort merge for ${branch}`);
+    results.push({/* TODO: Fix JSX expression */})
+<<<<<<< HEAD
+    });
+  }
+}
+
+=======
+    })};
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+//Run system checks;
+//Push changes if any were merged;
+if (mergedCount > 0) {
+  if (pushResult.success) {} else {
+if (mergedCount > 0) {/* TODO: Fix JSX expression */};
+  } else {/* TODO: Fix JSX expression */};
+  };
+};
+//Generate comprehensive report;
+const report = {
+};
+  timestamp: new Date().toISOString()
+  summary: {
+    totalBranches: latestCursorBranches.length
+    merged: mergedCount
+    notFound: notFoundCount,
+    successRate: `${Math.round((mergedCount / latestCursorBranches.length) * 100)}%`},
+  systemChecks: {
+    typeCheck: typeCheck.success;
+    lintCheck: lintCheck.success
+    testCheck: testCheck.success
+    buildCheck: buildCheck.success,
+    allPassed: typeCheck.success && lintCheck.success && testCheck.success && buildCheck.success
+  },
+  results: results,
+  status: mergedCount > 0 ? 'success' : 'no-changes',
+const report = {/* TODO: Fix JSX expression */}`
+  e: `${Math.round((mergedCount / latestCursorBranches.length) * 100)}%`},
+  systemCheck,
+  s: {/* TODO: Fix JSX expression */};
+  },
+  result,
+  s: results,
+  statu,
+<<<<<<< HEAD
+  s: mergedCount > 0 ? 'success' : 'no-changes'}
+
+// Save detailed report;
+fs.writeFileSync('latest-cursor-branches-merge-report.json', JSON.stringify(report, null, 2));
+
+=======
+  s: mergedCount > 0 ? 'success' : 'no-changes'};
+// Save detailed report;
+fs.writeFileSync('latest-cursor-branches-merge-report.json', JSON.stringify(report, null, 2));
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+if (report.systemChecks.allPassed) {} else {
+if (report.systemChecks.allPassed) {/* TODO: Fix JSX expression */};
+} else {/* TODO: Fix JSX expression */};
+};
+"`

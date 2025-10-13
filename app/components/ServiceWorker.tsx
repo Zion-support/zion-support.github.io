@@ -219,15 +219,22 @@ const ServiceWorker: React.FC = () => {
         .catch((error) => {
           console.log('Service Worker registration failed:', error);
         });
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     }
   }, []);
 
   return null;
 };
 
+<<<<<<< HEAD
 export default ServiceWorker;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ed4
 =======
 export default ServiceWorker;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+export default ServiceWorker;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

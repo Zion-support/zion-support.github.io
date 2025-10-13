@@ -1,9 +1,14 @@
+<<<<<<< HEAD
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
 const PagePage: React.FC = () => {
+<<<<<<< HEAD
   const features = [
+=======
+const features = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -16,13 +21,19 @@ const PagePage: React.FC = () => {
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses',}}
   ]
+=======
+      description: 'Worldwide deployment and support for international businesses'  }
+  }]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 const benefits = [
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
+<<<<<<< HEAD
 
     '24/7 technical support',
 
@@ -30,12 +41,21 @@ const benefits = [
 
     'Cost-effective pricing plans',
 
+=======
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     'Proven track record of success'
   ]
 return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>)
       <Helmet />
         <title>Page | Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name="description" content="AI-powered solution" />
+=======
+        <meta name="description" content="Advanced AI solutions" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
       {/* Hero Section */} <section className="py-20 px-4">
@@ -85,7 +105,21 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
         </div>
       </section>
     </div>
+<<<<<<< HEAD
   ),
 };
 
 export default PagePage;
+=======
+  )
+}
+export default PagePage
+=======
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+;
+const PagePage: React.FC = () => {
+const features = [
+];
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

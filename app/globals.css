@@ -50,10 +50,17 @@ html {
 }
 
 body {
+<<<<<<< HEAD
   font-family: 'Rajdhani', sans-serif;
   background: var(--bg-dark);
   color: var(--text-primary);
   overflow-x: hidden;
+=======
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 }
 
 /* Cyber Grid Background */
@@ -131,6 +138,7 @@ body {
   100% { transform: translateY(100vh); }
 }
 
+<<<<<<< HEAD
 /* Neon Text Effects */
 .neon-text {
   color: var(--primary-cyan);
@@ -677,11 +685,19 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: #06b6d4;
+=======
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
+<<<<<<< HEAD
   background: #0891b2;
+=======
+  background: #94a3b8;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 }
 
 /* Print styles */
@@ -691,6 +707,7 @@ body {
   }
   
   body {
+<<<<<<< HEAD
     background: white !important;
     color: black !important;
   }
@@ -778,6 +795,14 @@ body {
   
   .form-label {
     @apply block text-sm font-medium text-gray-300 mb-2;
+=======
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   }
 }
 <<<<<<< HEAD

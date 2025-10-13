@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, {Suspense, lazy}from 'react';
 import {BrowserRouter, Routes, Route}}from 'react-router-dom';
 import {HelmetProvider}}from 'react-helmet-async';
@@ -8,26 +9,27 @@ import PerformanceMonitor from './components/PerformanceMonitor';
 'use client';
 import React, { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+=======
+import { lazy } from 'react';
+import React, { Suspense, lazy, useEffect, useCallback } from 'react';
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 import { HelmetProvider } from 'react-helmet-async';
-import ErrorBoundary from './components/ErrorBoundary';
-import PerformanceMonitor from './components/PerformanceMonitor';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Components
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
+import AdvancedErrorBoundary from './components/AdvancedErrorBoundary';
+import AdvancedSEOOptimizer from './components/AdvancedSEOOptimizer';
+import AdvancedPerformanceMonitor from './components/AdvancedPerformanceMonitor';
+import SEOEnhancer from './components/SEOEnhancer';
+import PerformanceDashboard from './components/PerformanceDashboard';
 import LoadingSpinner from './components/LoadingSpinner';
 
-// Lazy load pages for better performance
-const HomePage = lazy(() => import('./page'));
-const AboutPage = lazy(() => import('./about/page'));
-const ContactPage = lazy(() => import('./contact/page'));
-const ServicesPage = lazy(() => import('./services/page'));
-const PricingPage = lazy(() => import('./pricing/page'));
-const CaseStudiesPage = lazy(() => import('./case-studies/page'));
-const BlogPage = lazy(() => import('./blog/page'));
-const TeamPage = lazy(() => import('./team/page'));
-const CareersPage = lazy(() => import('./careers/page'));
-const PrivacyPage = lazy(() => import('./privacy/page'));
-const TermsPage = lazy(() => import('./terms/page'));
-const CookiesPage = lazy(() => import('./cookies/page'));
+// Lazy load pages
+const HomePage = lazy(() => import('./page').catch(() => ({ default: () => <div>Error loading page</div> })));
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 // AI Services;
 const AiServicesPage = lazy(() => import('./ai-services/page'));
@@ -260,3 +262,85 @@ const App: React.FC = () => {
         </ErrorBoundary>
       </BrowserRouter>
     </HelmetProvider>
+=======
+// Import proper utilities
+import { performanceOptimizer, lazyLoadImages, preloadCriticalResources, collectPerformanceMetrics } from './utils/performanceOptimizer';
+import { logger } from './utils/logger';
+
+const App: React.FC = () => {
+  useEffect(() => {
+    // Initialize global error handling
+    logger.info('App initialized', 'App');
+
+    // Initialize performance monitoring
+    lazyLoadImages();
+    preloadCriticalResources();
+    performanceOptimizer.init();
+    
+    // Initialize Web Vitals monitoring
+    if (typeof window !== 'undefined' && 'performance' in window) {
+      const pageLoadMetrics = collectPerformanceMetrics();
+      const metrics = performanceOptimizer.getMetrics();
+      if (pageLoadMetrics) {
+        logger.info('Performance metrics collected', 'App', { metrics: pageLoadMetrics });
+      }
+      if (metrics) {
+        logger.info('Core Web Vitals metrics', 'App', { metrics });
+      }
+    }
+    
+    logger.info('Performance monitoring initialized', 'App');
+    logger.info('🚀 Zion Tech Group App initialized with comprehensive monitoring');
+  }, []);
+
+  const handleError = useCallback((error: Error, errorInfo: any) => {
+    logger.error('Application Error', error, { errorInfo, component: 'ErrorBoundary' });
+  }, []);
+
+  return (
+    <HelmetProvider>
+      <AdvancedErrorBoundary
+        enableErrorReporting={true}
+        enableRetry={true}
+        onError={handleError}
+      >
+        <AccessibilityEnhancer>
+          <SEOEnhancer
+            title="Zion Tech Group - Advanced AI and IT Solutions"
+            description="Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology."
+          >
+            <AdvancedSEOOptimizer
+              seoData={{
+                title: 'Zion Tech Group - Advanced AI and IT Solutions',
+                description: 'Leading provider of enterprise AI solutions, quantum computing, and autonomous systems. Transform your business with our cutting-edge technology.',
+                keywords: ['AI solutions', 'enterprise AI', 'quantum computing', 'autonomous systems', 'digital transformation', 'automation', 'cloud services', 'AI consulting', 'business intelligence', 'machine learning'],
+                canonicalUrl: 'https://ziontechgroup.com'
+              }}
+              enableStructuredData={true}
+              enableOpenGraph={true}
+              enableTwitterCards={true}
+              enableSchemaMarkup={true}
+            />
+            <Router>
+              <div className="App">
+                <main id="main-content">
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <Routes>
+                      <Route path="/" element={<HomePage />} />
+                      {/* Add more routes as needed */}
+                    </Routes>
+                  </Suspense>
+                </main>
+                <AdvancedPerformanceMonitor />
+                <PerformanceDashboard />
+              </div>
+            </Router>
+          </SEOEnhancer>
+        </AccessibilityEnhancer>
+      </AdvancedErrorBoundary>
+    </HelmetProvider>
+  );
+};
+
+export default App;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

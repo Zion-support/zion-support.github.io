@@ -2,6 +2,7 @@
 
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const BusinessIntelligencePage: React.FC = () => {
   const biServices = [
@@ -63,7 +64,54 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 const BusinessIntelligencePage: React.FC = () => {
   const features = [
     {}];
+=======
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react'
+const BusinessIntelligencePage: React.FC = () => {
+  const features = [
+=======
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, BarChart, Database, TrendingUp } from 'lucide-react';
+;
+const BusinessIntelligencePage: React.FC = () => {
+const features = [
+];
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    {
+icon: Brain,
+      title: 'AI-Powered Analytics',
+      description: 'Advanced AI technology to transform your business intelligence and data analysis'
+    },
+    {
+      icon: Zap,
+      title: 'Real-Time Insights',
+      description: 'Lightning-fast data processing and real-time business intelligence'
+    },
+    {
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with encryption and compliance standards for your data'
+    },
+    {
+<<<<<<< HEAD
+      icon: Globe,
+      title: 'Global Analytics',
+      description: 'Worldwide business intelligence deployment and support'
+    }
+  ]
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   const benefits = [
+=======
+      icon: Brain,
+      title: 'AI-Powered Insights',
+      description: 'Machine learning algorithms for predictive analytics and trend analysis'
+    };
+  ];
+;
+const benefits = [
+];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     'Advanced AI technology integration',
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
@@ -72,15 +120,37 @@ const BusinessIntelligencePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
+<<<<<<< HEAD
   ]
+<<<<<<< HEAD
   return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">)</div>
       <Helmet />
+=======
+=======
+  ];
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <Helmet>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <title>Business Intelligence | Zion Tech Group</title>
         <meta name="description" content="Professional Business Intelligence services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
+<<<<<<< HEAD
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
+<<<<<<< HEAD
           <h1 className="text-5xl font-bold text-white mb-6">Business Intelligence;</h1>
+=======
+          <h1 className="text-5xl font-bold text-white mb-6">
+=======
+      {/* Hero Section */};
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+            Business Intelligence
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with our advanced business intelligence solutions.</p>
             Powered by cutting-edge AI technology and industry expertise.
@@ -88,6 +158,11 @@ const BusinessIntelligencePage: React.FC = () => {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">Our business intelligence solutions deliver unmatched performance, security, and scalability.</p>
           </p>
         </div>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           {features.map((feature, index) => (
             <div key={index}className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center hover: bg-white/20 transition-all duration-300">,</div>
               <feature.icon className="h-12 w-12 text-purple-400 mx-auto mb-4" />
@@ -95,6 +170,7 @@ const BusinessIntelligencePage: React.FC = () => {
               <p className="text-gray-300">{feature.description</p>}</p>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -102,6 +178,51 @@ const BusinessIntelligencePage: React.FC = () => {
       {/* Key Benefits */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+          ))}
+        </div>
+        <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-white text-center mb-8">
+            Why Choose Our Business Intelligence Solutions?
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {benefits.map((benefit, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <CheckCircle className="h-6 w-6 text-green-400 flex-shrink-0" />
+                <span className="text-gray-300">{benefit}</span>
+=======
+      </section>
+      {/* Features Section */};
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Why Choose Our Business Intelligence?
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our business intelligence solutions deliver unmatched performance, security, and scalability.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+                <feature .icon className="w-12 h-12 text-purple-400 mb-4" />
+                <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+              </div>
+            ))}
+          </div>
+        </div>
+<<<<<<< HEAD
+{/* Benefits Section */}
+=======
+      </section>
+      {/* Benefits Section */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      <section className="py-16 px-4 bg-white/5">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Why Choose Our BI Solutions?
@@ -192,12 +313,24 @@ const BusinessIntelligencePage: React.FC = () => {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Transform Your Data?
+=======
+<<<<<<< HEAD
+      {/* CTA Section */}
+=======
+      {/* CTA Section */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">
+            Ready to Get Started?
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           </h2>
           <p className="text-xl mb-8 max-w-3xl mx-auto">
             Let our BI experts help you unlock the full potential of your business data
@@ -244,7 +377,18 @@ const BusinessIntelligencePage: React.FC = () => {
         </section>
       </div>
     </div>
+<<<<<<< HEAD
   );
 };
 
 export default BusinessIntelligencePage;
+=======
+  )
+}
+export default BusinessIntelligencePage
+  </button>
+  </button>
+  </h2>
+  </h1>
+  </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

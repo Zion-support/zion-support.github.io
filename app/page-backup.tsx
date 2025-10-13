@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
 import React from 'react';
@@ -7,6 +8,9 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
 'use client';
 import React, {useCallback, useState, useEffect, Suspense, lazy, memo}from 'react';
 =======
+=======
+'use client'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 import React, { useCallback, useState, useEffect, Suspense, lazy, memo } from 'react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 import Navigation from './components/Navigation';
@@ -15,6 +19,7 @@ import PerformanceOptimizer from './components/EnhancedPerformanceOptimizer';
 import SEOOptimizer from './components/SEOOptimizer';
 import AccessibilityEnhancer from './components/AccessibilityEnhancer';
 
+<<<<<<< HEAD
 import StructuredData from './components/StructuredData';
 
 import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react';
@@ -25,6 +30,12 @@ const ServiceCardSkeleton: React.FC = memo(() => (,
 const HomePage: React.FC = () => {,
     const [isLoaded, setIsLoaded] = useState(false);
 =======
+=======
+import StructuredData from './components/StructuredData'
+import { Phone, Mail, MapPin, Clock, ArrowRight, Star, CheckCircle, Zap, Shield, Brain, Cloud, Code, BarChart, Users, Sparkles, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText } from 'lucide-react'
+// Loading skeleton component
+const ServiceCardSkeleton: React.FC = memo(() => (
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   <div className="bg-white rounded-lg shadow-lg p-6 animate-pulse" role="status" aria-label="Loading service card">
     <div className="h-8 bg-gray-200 rounded mb-4 w-3/4"></div>
     <div className="h-4 bg-gray-200 rounded mb-2"></div>
@@ -32,8 +43,10 @@ const HomePage: React.FC = () => {,
   </div>
 ))
 ServiceCardSkeleton.displayName = 'ServiceCardSkeleton',
-
+;
+<<<<<<< HEAD
 const HomePage: React.FC = () => {
+<<<<<<< HEAD
   const [isLoaded, setIsLoaded] = useState(false);
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   const [isVisible, setIsVisible] = useState(false);
@@ -56,6 +69,54 @@ const HomePage: React.FC = () => {
       description: 'Comprehensive security solutions to protect your digital assets and data.',
       benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']},
     {icon: Code,
+=======
+    const [isLoaded, setIsLoaded] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
+  useEffect(() => {
+    setIsLoaded(true)
+    // Trigger visibility animation
+    const timer = setTimeout(() => setIsVisible(true), 100)
+    return () => clearTimeout(timer)
+  }, [])
+  // Analytics tracking for phone clicks - optimized
+  const handlePhoneClick = useCallback(() => {
+    if (typeof window !== 'undefined' && 'gtag' in window) {
+      const gtag = (window as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
+      gtag('event', 'phone_click', {
+        event_category: 'engagement',
+        event_label: 'main_phone_number'
+      })
+    }
+  }, [])
+  const features = [
+=======
+const PageBackupPage: React.FC = () => {
+const features = [
+];
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions that grow with your business needs.',
+      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']
+    },
+    {
+      icon: Shield,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets and data.',
+      benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']
+    },
+    {
+<<<<<<< HEAD
+      icon: Code,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       title: 'Custom Development',
       description: 'Tailored software solutions designed specifically for your business requirements.',
       benefits: ['Web Applications', 'Mobile Apps', 'API Development', 'System Integration']},
@@ -104,9 +165,22 @@ const HomePage: React.FC = () => {
           enableKeyboardNavigation={true}enableScreenReaderSupport={true}enableHighContrast={true}enableFocusManagement={true}>
           <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">{/* Navigation */</div>} <Navigation />
             
+<<<<<<< HEAD
             {/* Skip to main content for accessibility */} <a;
             {/* Hero Section */} <section id="main-content" className="relative pt-20 pb-16 overflow-hidden">
               <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+=======
+            {/* Skip to main content for accessibility */}
+            <a
+              href="#main-content"
+              className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-indigo-600 text-white px-4 py-2 rounded-md z-50">
+              Skip to main content
+            </a>
+
+            {/* Hero Section */}
+            <section id="main-content" className="relative pt-20 pb-16 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                 <div className="text-center">
                   <div className="mb-8">
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 text-sm font-medium mb-6">
@@ -148,6 +222,7 @@ const HomePage: React.FC = () => {
                 </div>
               </div>
 
+<<<<<<< HEAD
 const HomePage: React.FC = memo(() => {,
     const [isLoaded, setIsLoaded] = useState(false);
 
@@ -159,6 +234,29 @@ const HomePage: React.FC = memo(() => {,
     {icon: Cloud,
       benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']},
     {icon: Shield,
+=======
+const HomePage: React.FC = memo(() => {
+    const [isLoaded, setIsLoaded] = useState(false)
+  useEffect(() => {
+    preloadComponents()
+    setIsLoaded(true)
+  }, [])
+  const features = [
+    {
+      icon: Brain,
+      title: 'AI-Powered Solutions',
+      description: 'Cutting-edge artificial intelligence solutions that transform your business operations.',
+      benefits: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+    },
+    {
+      icon: Cloud,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable and secure cloud solutions that grow with your business needs.',
+      benefits: ['AWS/Azure/GCP', 'Container Orchestration', 'Auto-scaling', 'Disaster Recovery']
+    },
+    {
+      icon: Shield,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       title: 'Cybersecurity',
       description: 'Comprehensive security solutions to protect your digital assets and data.',
       benefits: ['Threat Detection', 'Vulnerability Assessment', 'Compliance', 'Incident Response']},
@@ -193,7 +291,55 @@ const HomePage: React.FC = memo(() => {,
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">We help businesses leverage cutting-edge technology to drive growth,</p>
               improve efficiency, and stay ahead of the competition.
+=======
+      icon: Globe,
+      title: 'Global Reach',
+      description: 'Worldwide deployment and support for international businesses'
+    };
+  ];
+;
+const benefits = [
+];
+    'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ];
+  return (
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Transform your business with our advanced page backup solutions. 
+              Powered by cutting-edge AI technology and industry expertise.
             </p>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Our page backup solutions deliver unmatched performance, security, and scalability.
+            </p>
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
+                <p className="text-gray-300">{feature.description}</p>
+              </div>
+              </div>
+            ))
+          </div>
+        </div>
+      </section>
+      {/* CTA Section */};
+      <section className="py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?
+            </h2>
+            <p className="text-xl text-purple-100 mb-8">
+              Contact our experts to discuss your page backup needs and get a customized solution.
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+            </p>
+<<<<<<< HEAD
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
             </section>
 
@@ -202,6 +348,28 @@ const HomePage: React.FC = memo(() => {,
                     <div;
                       key={service.title}className="cyber-card group hover: scale-105 transition-all duration-300",
                       style={{ animationDelay: `${index * 100,}ms` }}
+=======
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            </section>
+
+            {/* Services Section */}
+            <section className="py-20 bg-slate-800/50 backdrop-blur-sm">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-16">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                    Our Core Services
+                  </h2>
+                  <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                    Comprehensive technology solutions designed to accelerate your digital transformation
+                  </p>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {services.map((service, index) => (
+                    <div
+                      key={service.title}
+                      className="cyber-card group hover:scale-105 transition-all duration-300"
+                      style={{ animationDelay: `${index * 100}ms` }}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                     >
                       <div className="p-8">
                         <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center mb-6 group-hover: scale-110 transition-transform">,</div>
@@ -216,10 +384,31 @@ const HomePage: React.FC = memo(() => {,
                             </div>
                           ))}
                         </div>
+<<<<<<< HEAD
                         <a;
                           href={service.href}className="inline-flex items-center space-x-2 text-cyan-400 hover: text-cyan-300 font-medium group-hover:translate-x-1 transition-transform",
             {/* Features Section */} <section className="py-20">
               <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+=======
+                        <a
+                          href={service.href}
+                          className="inline-flex items-center space-x-2 text-cyan-400 hover:text-cyan-300 font-medium group-hover:translate-x-1 transition-transform"
+                        >
+                          <span>Learn More</span>
+                          <ArrowRight className="w-4 h-4" />
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            </section>
+
+            {/* Features Section */}
+            <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
                     Why Choose Zion Tech Group?
@@ -238,9 +427,26 @@ const HomePage: React.FC = memo(() => {,
                         <div className="space-y-2">{feature.benefits.map((benefit, benefitIndex) => (</div>
                             <div key={benefitIndex}className="flex items-center space-x-2">
                               <CheckCircle className="w-4 h-4 text-purple-400 flex-shrink-0" />
+<<<<<<< HEAD
                               <span className="text-sm text-gray-300">{benefit</span>}</span>
             {/* Testimonials Section */} <section className="py-20 bg-slate-900/50">
               <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,</div>
+=======
+                              <span className="text-sm text-gray-300">{benefit}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            {/* Testimonials Section */}
+            <section className="py-20 bg-slate-900/50">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                 <div className="text-center mb-16">
                   <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
                     What Our Clients Say;
@@ -279,10 +485,30 @@ const HomePage: React.FC = memo(() => {,
                     <p className="text-gray-300 mb-4">"The best IT partner we've ever worked with. Their expertise in AI and cloud solutions is unmatched."</p>
                     </p>
                     <div className="flex items-center">
+<<<<<<< HEAD
                       <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3">DW;</div>
             {/* CTA Section */} <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
               <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,</div>
                 <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">,</h2>
+=======
+                      <div className="w-10 h-10 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                        DW
+                      </div>
+                      <div>
+                        <div className="text-white font-semibold">David Wilson</div>
+                        <div className="text-sm text-gray-400">VP Engineering, DataFlow</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className="py-20 bg-gradient-to-r from-cyan-600 to-blue-600">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                   Ready to Transform Your Business?
                 </h2>
                 <p className="text-xl text-cyan-100 mb-8 max-w-3xl mx-auto">Let's discuss how our AI and IT solutions can drive your digital transformation and accelerate growth.</p>
@@ -336,6 +562,7 @@ const HomePage: React.FC = memo(() => {,
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* Benefits Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white/5">
         <div className="max-w-7xl mx-auto">
@@ -369,3 +596,11 @@ const HomePage: React.FC = memo(() => {,
 };
 
 export default PageBackupPage;
+=======
+    </React.Fragment>
+  )
+}
+
+HomePage.displayName = 'HomePage'
+export default HomePage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

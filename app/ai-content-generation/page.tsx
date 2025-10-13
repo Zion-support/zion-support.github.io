@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 
@@ -109,6 +110,15 @@ const AIContentGenerationPage: React.FC = () => {
     }
   ];
 
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer'
+import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
+const AiContentGenerationPage: React.FC = () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   const features = [
     {
 <<<<<<< HEAD
@@ -382,11 +392,21 @@ export default AIContentGenerationPage;
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Benefits Section */} <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">Experience the benefits of our proven solutions;</p>
+=======
+      {/* Benefits Section */}
+      <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Page?</h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience the benefits of our proven solutions
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,</div>
@@ -418,10 +438,19 @@ export default AIContentGenerationPage;
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* CTA Section */} <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
           <p className="text-xl text-gray-300 mb-8">Transform your business with our page solutions today;</p>
+=======
+      {/* CTA Section */}
+      <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold text-white mb-6">Ready to Get Started?</h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Transform your business with our page solutions today
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">,</button>
@@ -453,10 +482,16 @@ export default AIContentGenerationPage;
       <Footer /></Footer>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
     </React.Fragment>
+<<<<<<< HEAD
   ),
 };
 
 export default AiContentGenerationPage;
+=======
+  )
+}
+export default AiContentGenerationPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </button>
   </button>
   </p>
@@ -469,9 +504,41 @@ export default AiContentGenerationPage;
   </main>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+=======
+=======
+import { CheckCircle, ArrowRight } from 'lucide-react';
+;
+const PagePage: React.FC = () => {
+const features = [
+];
+};
+    {
+      title: 'Feature 1',
+      description: 'Description of feature 1',
+      benefits: ['Benefit 1', 'Benefit 2', 'Benefit 3']
+    };
+  ];
+const benefits = [
+];
+    'Increase efficiency by up to 50%',
+    'Reduce costs by 30% with automation',
+    'Improve decision-making with AI insights',
+    'Scale operations without proportional staff increases',
+    </div>
+  );
+};
+    </div>)
+export default PagePage;
+export default AiContentGenerationPage;
+export default PagePage;
+export default AiContentGenerationPage;
+export default PagePage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

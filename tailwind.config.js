@@ -233,13 +233,25 @@ export default {
         '70': '70',
         '80': '80',
         '90': '90',
+<<<<<<< HEAD
         '100': '100'
       }
     }
   },
   plugins: [
+=======
+        '100': '100'}}},
+<<<<<<< HEAD
+  plugins: [,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     function({ addUtilities }) {
       const newUtilities = {
+=======
+  plugins: [,;
+function({ addUtilities }) {;
+const newUtilities = {
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         '.neon-text': {
           color: 'var(--neon-cyan)',
           animation: 'neon-glow 2s ease-in-out infinite alternate'
@@ -322,12 +334,18 @@ export default {
           margin: 'inherit',
           overflow: 'visible',
           clip: 'auto',
+<<<<<<< HEAD
           whiteSpace: 'normal'
 <<<<<<< HEAD
         }
       }
+=======
+          whiteSpace: 'normal'}};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       addUtilities(newUtilities)
+<<<<<<< HEAD
     }
+<<<<<<< HEAD
   ]
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0d10
@@ -343,3 +361,10 @@ export default {
   ]
 };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
+=======
+  ]}
+=======
+    };
+  ]};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

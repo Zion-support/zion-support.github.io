@@ -311,15 +311,27 @@ export default defineConfig(({ mode }) => ({
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
-
 export default defineConfig({
   plugins: [react()],
   resolve: {
     alias: {
+<<<<<<< HEAD
       '@': resolve(__dirname, './src'),
       '@app': resolve(__dirname, './app'),
       '@components': resolve(__dirname, './app/components'),
     },
+=======
+      '@': resolve(__dirname, './app'),
+      '@/components': resolve(__dirname, './app/components'),
+      '@/pages': resolve(__dirname, './app'),
+      '@/utils': resolve(__dirname, './utils'),
+      '@/types': resolve(__dirname, './types'),
+      '@/hooks': resolve(__dirname, './hooks'),
+      '@/config': resolve(__dirname, './config'),
+      '@/data': resolve(__dirname, './data'),
+      '@/content': resolve(__dirname, './content')
+    };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   },
   build: {
     outDir: 'dist',
@@ -336,16 +348,72 @@ export default defineConfig({
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
     rollupOptions: {
       output: {
+<<<<<<< HEAD
         manualChunks: {
           vendor: ['react', 'react-dom'],
           router: ['react-router-dom'],
           ui: ['framer-motion', 'lucide-react'],
+=======
+        manualChunks: (id) => {
+          // Vendor chunks
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+<<<<<<< HEAD
+              return 'vendor-react';
+            }
+            if (id.includes('react-router')) {
+              return 'vendor-router';
+            }
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-ui';
+            }
+            if (id.includes('recharts')) {
+              return 'vendor-charts';
+            }
+            if (id.includes('web-vitals')) {
+              return 'vendor-analytics';
+            }
+            return 'vendor-misc';
+          }
+          // App chunks
+          if (id.includes('/app/ai-')) {
+            return 'ai-services';
+          }
+          if (id.includes('/app/it-')) {
+            return 'it-services';
+          }
+          if (id.includes('/app/components/')) {
+            return 'components';
+          }
+          return 'app';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         },
+=======
+              return 'vendor-react'};
+            if (id.includes('react-router')) {
+              return 'vendor-router'};
+            if (id.includes('framer-motion') || id.includes('lucide-react') || id.includes('@heroicons')) {
+              return 'vendor-ui'};
+            if (id.includes('recharts')) {
+              return 'vendor-charts'};
+            if (id.includes('web-vitals')) {
+              return 'vendor-analytics'};
+            return 'vendor-misc'};
+          // App chunks
+          if (id.includes('/app/ai-')) {
+            return 'ai-services'};
+          if (id.includes('/app/it-')) {
+            return 'it-services'};
+          if (id.includes('/app/components/')) {
+            return 'components'};
+          return 'app'},
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
         chunkFileNames: 'assets/[name]-[hash].js',
         entryFileNames: 'assets/[name]-[hash].js',
         assetFileNames: (assetInfo) => {
           const ext = assetInfo.name?.split('.').pop();
           if (/\.(css)$/i.test(assetInfo.name || '')) {
+<<<<<<< HEAD
             return `assets/css/[name]-[hash].${ext}`;
           }
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
@@ -355,12 +423,26 @@ export default defineConfig({
             return `assets/fonts/[name]-[hash].${ext}`;
           }
           return `assets/[name]-[hash].${ext}`;
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
         },
         assetFileNames: "assets/[name]-[hash].[ext]",
         chunkFileNames: "assets/js/[name]-[hash].js",
         entryFileNames: "assets/js/[name]-[hash].js",
       },
+=======
+        }
+      }
+=======
+            return `assets/css/[name]-[hash].${ext}`};
+          if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name || '')) {
+            return `assets/images/[name]-[hash].${ext}`};
+          if (/\.(woff2?|eot|ttf|otf)$/i.test(assetInfo.name || '')) {
+            return `assets/fonts/[name]-[hash].${ext}`};
+          return `assets/[name]-[hash].${ext}`};
+      };
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     },
 <<<<<<< HEAD
   },
@@ -395,10 +477,21 @@ export default defineConfig({
       },
       mangle: {
         safari10: true,
+<<<<<<< HEAD
       },
       format: {
         comments: false,
       },
+=======
+        properties: {
+          regex: /^_/
+        };
+      },
+      format: {
+        comments: false,
+        ascii_only: true
+      };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     },
     chunkSizeWarningLimit: 500,
     reportCompressedSize: true,
@@ -418,7 +511,13 @@ export default defineConfig({
     include: ['react', 'react-dom', 'react-router-dom'],
   },
   css: {
+<<<<<<< HEAD
     devSourcemap: true,
   },
 });
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
+=======
+    devSourcemap: true
+  };
+});
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

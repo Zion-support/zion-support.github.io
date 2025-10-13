@@ -12,8 +12,7 @@ export default function AiHrSolutionsZionTechGroup() {
         <title>AiHrSolutions - Zion Tech Group</title>
 =======
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async'
 const AiHrSolutionsPage: React.FC = () => {
   return (
     <>
@@ -39,6 +38,11 @@ const AiHrSolutionsPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+
+export default AiHrSolutionsPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

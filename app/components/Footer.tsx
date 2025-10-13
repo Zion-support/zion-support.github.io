@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 'use client;
@@ -61,9 +62,12 @@ const Footer = () => {
 =======
 'use client';
 import React, { memo } from 'react';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Zap, Brain, Cloud, Code, Users } from 'lucide-react';
 
+<<<<<<< HEAD
 const Footer: React.FC = memo(() => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
   const currentYear = new Date().getFullYear();
@@ -1936,11 +1940,70 @@ const Footer: React.FC = () => {
                 <Link to="/system-integration" className="text-gray-300 hover:text-blue-400 transition-colors duration-300 text-sm flex items-center">
                   <ArrowRight className="w-3 h-3 mr-2" />
                   System Integration
+=======
+
+
+
+const Footer: React.FC = () => {
+  return (
+    <footer className='bg-gray-900 text-white py-12'>
+      <div className='container mx-auto px-4'>
+        <div className='grid md:grid-cols-4 gap-8'>
+          {/* Company Info */}
+          <div>
+            <h3 className='text-2xl font-bold mb-4'>Zion Tech Group</h3>
+            <p className='text-gray-300 mb-4'>
+              Leading provider of enterprise AI solutions, quantum computing,
+              and autonomous systems.
+            </p>
+            <div className='text-gray-300'>
+              <p>364 E Main St STE 1008</p>
+              <p>Middletown, DE 19709</p>
+              <p>United States</p>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className='text-lg font-semibold mb-4'>Quick Links</h4>
+            <ul className='space-y-2'>
+              <li>
+                <Link
+                  to='/'
+                  className='text-gray-300 hover:text-white transition-colors'
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/about'
+                  className='text-gray-300 hover:text-white transition-colors'
+                >
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/services'
+                  className='text-gray-300 hover:text-white transition-colors'
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to='/enterprise'
+                  className='text-gray-300 hover:text-white transition-colors'
+                >
+                  Enterprise
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                 </Link>
               </li>
             </ul>
           </div>
 
+<<<<<<< HEAD
           {/* Micro SAAS & 5G */}
           <div className="space-y-6">
             <h3 className="text-lg font-semibold text-white flex items-center">
@@ -2010,6 +2073,44 @@ const Footer: React.FC = () => {
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
             </div>
           </div>
+=======
+          {/* Services */}
+          <div>
+            <h4 className='text-lg font-semibold mb-4'>Services</h4>
+            <ul className='space-y-2 text-gray-300'>
+              <li>AI Solutions</li>
+              <li>Quantum Computing</li>
+              <li>Autonomous Systems</li>
+              <li>Business Intelligence</li>
+              <li>Cloud Migration</li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h4 className='text-lg font-semibold mb-4'>Contact</h4>
+            <div className='space-y-2 text-gray-300'>
+              <p>Email: kleber@ziontechgroup.com</p>
+              <p>Phone: +1 (302) 464-0950</p>
+              <div className='flex space-x-4 mt-4'>
+                <Link to='#'
+                  className='text-gray-300 hover:text-white transition-colors'
+                >
+                  LinkedIn
+                </Link>
+                <Link to='#'
+                  className='text-gray-300 hover:text-white transition-colors'
+                >
+                  Twitter
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className='border-t border-gray-700 mt-8 pt-8 text-center text-gray-300'>
+          <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         </div>
 
 <<<<<<< HEAD
@@ -2209,12 +2310,16 @@ export default Footer
     </footer>
   );
 <<<<<<< HEAD
+<<<<<<< HEAD
 };
 =======
 });
 
 Footer.displayName = 'Footer';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+=======
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
 export default Footer;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009

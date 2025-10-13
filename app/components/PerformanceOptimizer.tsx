@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 =======
 'use client';
@@ -46,18 +47,36 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
   return <>{children}</>;
 =======
   const [isOptimized, setIsOptimized] = useState(false);
+=======
+import React, { useEffect, useCallback } from 'react';
+
+
+interface PerformanceOptimizerProps {
+  children: React.ReactNode;
+}
+
+const PerformanceOptimizerComponent: React.FC<PerformanceOptimizerProps> = ({
+  children,
+}) => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   // Preload critical resources
   useEffect(() => {
     const preloadCriticalResources = () => {
       // Preload critical fonts
       const fontLink = document.createElement('link');
       fontLink.rel = 'preload';
+<<<<<<< HEAD
       fontLink.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap';
+=======
+      fontLink.href =
+        'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       fontLink.as = 'style';
       document.head.appendChild(fontLink);
 
       // Preload critical images
       const criticalImages = [
+<<<<<<< HEAD
         '/logo.svg',
         '/og-image.svg'
       ];
@@ -147,11 +166,44 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     }
   }, []);
 
+=======
+        '/images/hero-bg.jpg',
+        '/images/logo.png',
+        '/images/og-image.jpg',
+      ];
+
+      criticalImages.forEach(src => {
+        const img = new Image();
+        img['src'] = src;
+      });
+    };
+
+    preloadCriticalResources();
+  }, []);
+
+  // Optimize scroll performance
+  const handleScroll = useCallback(() => {
+    // Throttle scroll events for better performance
+    let ticking = false;
+
+    const updateScrollPosition = () => {
+      // Add scroll-based optimizations here
+      ticking = false;
+    };
+
+    if (!ticking) {
+      requestAnimationFrame(updateScrollPosition);
+      ticking = true;
+    }
+  }, []);
+
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   useEffect(() => {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, [handleScroll]);
 
+<<<<<<< HEAD
   // Optimize resize performance
   const handleResize = useCallback(() => {
     let ticking = false;
@@ -387,3 +439,31 @@ interface PerformanceMetrics {
           ticking = true
         }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+  // Add performance monitoring
+  useEffect(() => {
+    if ('performance' in window) {
+      const observer = new PerformanceObserver(list => {
+        list.getEntries().forEach(entry => {
+          if (entry.entryType === 'navigation') {
+             
+            if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log('Navigation timing:', entry); } }
+          }
+        });
+      });
+
+      observer.observe({
+        entryTypes: ['navigation', 'paint', 'largest-contentful-paint'],
+      });
+
+      return () => observer.disconnect();
+    }
+
+    return undefined;
+  }, []);
+
+  return <>{children}</>;
+};
+
+export default PerformanceOptimizerComponent;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

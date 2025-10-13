@@ -12,8 +12,7 @@ export default function DataAnalyticsBiZionTechGroup() {
         <title>DataAnalyticsBi - Zion Tech Group</title>
 =======
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async'
 const DataAnalyticsBiPage: React.FC = () => {
   return (
     <>
@@ -41,6 +40,11 @@ const DataAnalyticsBiPage: React.FC = () => {
         </div>
       </div>
     </>
-  );
+  )
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+
+export default DataAnalyticsBiPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   fallback?: ReactNode;
 'use client;
 
@@ -58,14 +59,25 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-10c6
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+import { Link } from 'react-router-dom';
+import { FileWarning } from 'lucide-react';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
 interface Props {
   children: ReactNode;
   fallback?: ReactNode;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   onError?: (error: Error, errorInfo: ErrorInfo) => void;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
+=======
+  onError?: (error: Error, errorInfo: ErrorInfo) => void;
+  enableErrorReporting?: boolean;
+  enableRetry?: boolean;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 }
 
 interface State {
@@ -89,6 +101,7 @@ export class ErrorBoundary extends Component<Props, State> {
   }
 
   static getDerivedStateFromError(error: Error): State {
+<<<<<<< HEAD
 <<<<<<< HEAD
     // Update state so the next render will show the fallback UI
 =======
@@ -236,6 +249,39 @@ export default ErrorBoundary;
 class ErrorBoundary extends Component<Props, State> {
   public state: State = {
     hasError: false
+=======
+    return { hasError: true, error };
+  }
+
+  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    // Log error to console in development
+    if (process.env['NODE_ENV'] === 'development') {
+       
+      console.error('ErrorBoundary caught an error:', error, errorInfo);
+    }
+
+    // Report error to monitoring service in production
+    if (process.env['NODE_ENV'] === 'production') {
+      // Send to error tracking service
+      if (typeof window !== 'undefined' && 'gtag' in window) {
+        (window as unknown as { gtag: (command: string, eventName: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+          description: error.message,
+          fatal: false
+        });
+      }
+    }
+    
+    this.setState({ errorInfo });
+    
+    if (this.props.onError) {
+      this.props.onError(error, errorInfo);
+    }
+
+    if (this.props.enableErrorReporting && process.env['NODE_ENV'] === 'development') {
+       
+      console.error('Error caught by boundary:', error, errorInfo);
+    }
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   }
 
   public static getDerivedStateFromError(error: Error): State {
@@ -314,15 +360,22 @@ export default ErrorBoundary
       return (
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center p-4">
           <div className="max-w-md w-full bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-8 text-center">
             <div className="w-16 h-16 bg-gradient-to-r from-red-500/20 to-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
               <AlertTriangle className="w-8 h-8 text-red-400" />
+=======
+        <div className="min-h-screen flex items-center justify-center bg-gray-50">
+          <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8 text-center">
+            <div className="mb-6">
+              <FileWarning className="mx-auto h-16 w-16 text-red-500" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
             </div>
-            
-            <h1 className="text-2xl font-bold text-white mb-4">
+            <h1 className="text-2xl font-bold text-gray-900 mb-2">
               Oops! Something went wrong
             </h1>
+<<<<<<< HEAD
             
             <p className="text-gray-300 mb-6">
               We're sorry, but something unexpected happened. Our team has been notified and is working to fix it.
@@ -498,6 +551,37 @@ export default ErrorBoundary
               </details>
             )}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
+=======
+              <p className="text-gray-600 mb-6">
+                We&apos;re sorry for the inconvenience. Please try refreshing the page.
+              </p>
+              <div className="space-y-3">
+                <button
+                  onClick={() => window.location.reload()}
+                  className="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Refresh Page
+                </button>
+                <Link
+                  href="/"
+                  className="block w-full border-2 border-red-600 text-red-600 hover:bg-red-50 font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Go to Homepage
+                </Link>
+              </div>
+              {this.props.enableErrorReporting && this.state.error && (
+                <details className="mt-6 text-left">
+                  <summary className="cursor-pointer text-sm text-gray-500 hover:text-gray-700">
+                    Error Details
+                  </summary>
+                  <div className="mt-2 p-4 bg-gray-100 rounded text-xs">
+                    <div className="mb-2">
+                      <strong>Error:</strong> {this.state.error.message}
+                    </div>
+                  </div>
+                </details>
+              )}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           </div>
         </div>
       );
@@ -508,8 +592,12 @@ export default ErrorBoundary
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default ErrorBoundary;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
 =======
 export default ErrorBoundary;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f74
+=======
+export default ErrorBoundary;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

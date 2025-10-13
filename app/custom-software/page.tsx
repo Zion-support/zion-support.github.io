@@ -15,8 +15,7 @@ export default function CustomSoftwareZionTechGroup() {
         <meta name="description" content="Advanced customsoftware solutions" />
 =======
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
+import { Helmet } from 'react-helmet-async'
 const CustomSoftwarePage: React.FC = () => {
   return (
     <>
@@ -35,6 +34,15 @@ const CustomSoftwarePage: React.FC = () => {
             Discover our comprehensive customsoftware solutions designed to transform your business
           </p>
         </div>
+<<<<<<< HEAD
         <div className="text-center">
           <p className="text-gray-300">Coming Soon - CustomSoftware Solutions</p>
 
+=======
+      </div>
+    </>
+  )
+}
+
+export default CustomSoftwarePage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

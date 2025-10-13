@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client;
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, Star, Server, Shield, Cloud, Database, Network, Code, Monitor, Settings } from 'lucide-react';
@@ -20,6 +21,15 @@ import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import {Cloud,}
+=======
+'use client'
+import React, { useState } from 'react';
+import { Helmet } from 'react-helmet-async';
+<<<<<<< HEAD
+import { Link } from 'react-router-dom'
+import { 
+  Cloud, 
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   Shield, 
   Settings, 
   Database, 
@@ -40,9 +50,9 @@ import {Cloud,}
   Headphones,
   BarChart;} from 'lucide-react';
 import Navigation from '../components/Navigation';
-import Footer from '../components/Footer';
-
+import Footer from '../components/Footer'
 const ItServicesPage: React.FC = () => {
+<<<<<<< HEAD
   const [selectedCategory, setSelectedCategory] = useState('all');
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 
@@ -55,6 +65,10 @@ import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight }
 ;
 
 const ItServicesPage: React.FC = () => {const itServices = [;
+=======
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const services = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     {
       titl,
     e: 'Cloud Infrastructure Management,
@@ -779,6 +793,7 @@ const ITServicesPage: React.FC = () => {
     }
   ];
 
+<<<<<<< HEAD
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
     { number: '99.9%', label: 'Uptime Guarantee', icon: Server },
@@ -790,14 +805,101 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 
+=======
+  const categories = [
+    { id: 'all', name: 'All Services', count: services.length },
+    { id: 'Cloud', name: 'Cloud', count: services.filter(s => s.category === 'Cloud').length },
+    { id: 'Security', name: 'Security', count: services.filter(s => s.category === 'Security').length },
+    { id: 'DevOps', name: 'DevOps', count: services.filter(s => s.category === 'DevOps').length },
+    { id: 'Database', name: 'Database', count: services.filter(s => s.category === 'Database').length },
+    { id: 'Development', name: 'Development', count: services.filter(s => s.category === 'Development').length },
+    { id: 'Networking', name: 'Networking', count: services.filter(s => s.category === 'Networking').length },
+    { id: 'Data Center', name: 'Data Center', count: services.filter(s => s.category === 'Data Center').length },
+    { id: 'Consulting', name: 'Consulting', count: services.filter(s => s.category === 'Consulting').length },
+    { id: 'Managed Services', name: 'Managed Services', count: services.filter(s => s.category === 'Managed Services').length },
+    { id: 'API Development', name: 'API Development', count: services.filter(s => s.category === 'API Development').length },
+    { id: 'E-commerce', name: 'E-commerce', count: services.filter(s => s.category === 'E-commerce').length },
+    { id: 'Software Development', name: 'Software Development', count: services.filter(s => s.category === 'Software Development').length },
+    { id: 'Support', name: 'Support', count: services.filter(s => s.category === 'Support').length },
+    { id: 'Cloud Security', name: 'Cloud Security', count: services.filter(s => s.category === 'Cloud Security').length },
+    { id: 'Data Analytics', name: 'Data Analytics', count: services.filter(s => s.category === 'Data Analytics').length },
+    { id: 'Disaster Recovery', name: 'Disaster Recovery', count: services.filter(s => s.category === 'Disaster Recovery').length },
+    { id: 'Compliance', name: 'Compliance', count: services.filter(s => s.category === 'Compliance').length },
+    { id: 'Cloud Development', name: 'Cloud Development', count: services.filter(s => s.category === 'Cloud Development').length },
+    { id: 'AI Integration', name: 'AI Integration', count: services.filter(s => s.category === 'AI Integration').length },
+    { id: 'Blockchain', name: 'Blockchain', count: services.filter(s => s.category === 'Blockchain').length },
+    { id: 'IoT Development', name: 'IoT Development', count: services.filter(s => s.category === 'IoT Development').length },
+    { id: 'Mobile Development', name: 'Mobile Development', count: services.filter(s => s.category === 'Mobile Development').length },
+    { id: 'Data Engineering', name: 'Data Engineering', count: services.filter(s => s.category === 'Data Engineering').length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: services.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'Cloud Migration', name: 'Cloud Migration', count: services.filter(s => s.category === 'Cloud Migration').length },
+    { id: 'MLOps', name: 'MLOps', count: services.filter(s => s.category === 'MLOps').length },
+    { id: 'Integration', name: 'Integration', count: services.filter(s => s.category === 'Integration').length },
+    { id: 'Performance', name: 'Performance', count: services.filter(s => s.category === 'Performance').length },
+    { id: 'Cloud Optimization', name: 'Cloud Optimization', count: services.filter(s => s.category === 'Cloud Optimization').length },
+    { id: 'Security Automation', name: 'Security Automation', count: services.filter(s => s.category === 'Security Automation').length },
+    { id: 'Data Visualization', name: 'Data Visualization', count: services.filter(s => s.category === 'Data Visualization').length },
+    { id: 'Automation', name: 'Automation', count: services.filter(s => s.category === 'Automation').length }
+  ]
+
+  const filteredServices = services.filter(service => 
+    selectedCategory === 'all' || service.category === selectedCategory
+  )
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   return (
     <>
+=======
+import { Link } from 'react-router-dom';
+import { Cloud, Shield, Settings, Database, Smartphone, Globe, Zap, ArrowRight } from 'lucide-react';
+;
+const ItServicesPage: React.FC = () => {
+const itServices = [
+];
+};
+    { name: 'Cloud Services', href: '/cloud-services', icon: Cloud, description: 'Cloud Solutions' },
+    { name: 'Cloud Migration', href: '/cloud-migration', icon: Cloud, description: 'Seamless Migration' },
+    { name: 'DevOps & CI/CD', href: '/devops', icon: Settings, description: 'Development Operations' },
+    { name: 'Database Services', href: '/database', icon: Database, description: 'Data Management' },
+    { name: 'Cybersecurity', href: '/cybersecurity', icon: Shield, description: 'Security Solutions' },
+    { name: 'Security Monitoring', href: '/security-monitoring', icon: Shield, description: '24/7 Security' },
+    { name: 'Penetration Testing', href: '/penetration-testing', icon: Shield, description: 'Security Testing' },
+    { name: 'IT Infrastructure', href: '/it-infrastructure', icon: Cloud, description: 'Infrastructure Setup' },
+    { name: 'Managed IT Services', href: '/managed-it', icon: Settings, description: '24/7 IT Support' },
+    { name: 'IT Consulting', href: '/it-consulting', icon: Globe, description: 'IT Strategy' },
+    { name: 'Data Analytics', href: '/data-analytics', icon: Database, description: 'Business Intelligence' },
+    { name: 'Mobile Development', href: '/mobile-development', icon: Smartphone, description: 'Mobile Apps' },
+    { name: 'Web Development', href: '/web-development', icon: Globe, description: 'Web Applications' },
+    { name: 'Process Automation', href: '/process-automation', icon: Zap, description: 'Workflow Automation' };
+  ];
+  return (
+    <React .Fragment>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
       <Helmet>
         <title>IT Services - Zion Tech Group</title>
 <<<<<<< HEAD
         <meta name="description" content="Comprehensive IT services including cloud infrastructure, cybersecurity, web development, mobile apps, and DevOps solutions." />
         <meta name="keywords" content="IT services, cloud computing, cybersecurity, web development, mobile development, DevOps" />
       </Helmet>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+      
+      <Navigation />
+      
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 pt-16">
+        <div className="container mx-auto px-4 py-16">
+          <div className="max-w-6xl mx-auto">
+            {/* Header */}
+            <div className="text-center mb-16">
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                IT Services
+              </h1>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Complete IT solutions to modernize your infrastructure and drive business growth. 
+                From cloud migration to cybersecurity, we have the expertise you need.
+              </p>
+            </div>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -829,6 +931,7 @@ import { Helmet } from 'react-helmet-async'
           </div>
         </section>
 
+<<<<<<< HEAD
         {/* Stats Section */}
         <section className="py-16 bg-gradient-to-r from-slate-800/30 to-slate-900/30">
           <div className="container mx-auto px-4">
@@ -837,6 +940,91 @@ import { Helmet } from 'react-helmet-async'
                 <div key={index} className="text-center group">
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-full mb-4 group-hover:scale-110 transition-transform duration-300">
                     <stat.icon className="w-8 h-8 text-cyan-400" />
+=======
+            {/* Services Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+              {filteredServices.map((service) => (
+                <div key={service.id} className="bg-slate-800/50 rounded-lg p-6 hover:bg-slate-800/70 transition-all duration-300">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
+                        <service.icon className="w-6 h-6 text-white" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white">{service.name}</h3>
+                    </div>
+                    {service.popular && (
+                      <span className="bg-purple-500 text-white px-3 py-1 rounded-full text-sm font-semibold flex items-center">
+                        <Star className="w-4 h-4 mr-1" />
+                        Popular
+                      </span>
+                    )}
+=======
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+        <section className="py-20 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              IT <span className="text-cyan-400">Services</span>
+            </h1>
+            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Complete IT solutions to modernize your infrastructure, enhance security, and drive business growth.
+            </p>
+          </div>
+        </section>
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {itServices.map((service, index) => (
+                <Link key={index};
+                  to={service.href};
+                  className="bg-slate-800/50 backdrop-blur-sm rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/40 transition-all duration-300 group">
+                  <service .icon className="w-12 h-12 text-cyan-400 mb-4 group-hover:text-cyan-300 transition-colors" />
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
+                    {service.name};
+                  </h3>
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  <div className="flex items-center text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                    <span className="text-sm font-medium">Learn More</span>
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+                  </div>
+                  
+                  <p className="text-gray-300 mb-4">{service.description}</p>
+                  
+                  <div className="flex items-center justify-between mb-4">
+                    <div>
+                      <span className="text-2xl font-bold text-purple-400">{service.price}</span>
+                      <span className="text-gray-400 text-sm ml-2 line-through">{service.marketPrice}</span>
+                    </div>
+                    <span className="text-gray-400 text-sm">{service.category}</span>
+                  </div>
+
+                  <div className="mb-6">
+                    <h4 className="text-lg font-semibold text-white mb-3">Key Features</h4>
+                    <ul className="space-y-2">
+                      {service.features.slice(0, 3).map((feature, index) => (
+                        <li key={index} className="flex items-start space-x-2">
+                          <CheckCircle className="w-4 h-4 text-green-400 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm text-gray-300">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <Link
+                      to="/contact"
+                      className="flex items-center text-purple-400 hover:text-purple-300 transition-colors"
+                    >
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-1" />
+                    </Link>
+                    <Link
+                      to="/contact"
+                      className="bg-gradient-to-r from-purple-500 to-pink-600 hover:from-purple-600 hover:to-pink-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300"
+                    >
+                      Get Quote
+                    </Link>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -952,6 +1140,7 @@ import { Helmet } from 'react-helmet-async'
               </div>
             </div>
           </div>
+<<<<<<< HEAD
         </section>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
       </div>
@@ -1037,10 +1226,19 @@ export default ITServicesPage;
         </div>
       </div>
     </>
+=======
+<<<<<<< HEAD
+        </div>
+      </main>
+      
+      <Footer />
+    </>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   )
 }
 
 export default ItServicesPage
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 =======
                     Learn More
@@ -1093,3 +1291,13 @@ export default ItServicesPage
 };
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
+=======
+=======
+        </section>
+      </div>
+    </React.Fragment>)
+  );
+};
+export default ItServicesPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

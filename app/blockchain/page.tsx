@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 
@@ -163,8 +164,24 @@ const BlockchainPage: React.FC = () => {
 =======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react';
+=======
+'use client';
+import React from 'react';
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, Shield, Brain, Globe, Zap } from 'lucide-react'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 const BlockchainPage: React.FC = () => {
   const features = [
+=======
+import React from 'react';
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, Star, Link, Shield, Zap, Target, BarChart, Cpu, Sparkles } from 'lucide-react';
+;
+const BlockchainPage: React.FC = () => {
+const blockchainServices = [
+];
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
     {
       icon: Shield,
       title: 'Secure Blockchain Solutions',
@@ -174,8 +191,16 @@ const BlockchainPage: React.FC = () => {
       description: 'Lightning-fast blockchain transactions and smart contract execution',},
     {icon: Brain,
       title: 'AI-Powered Solutions',
+<<<<<<< HEAD
       description: 'Intelligent blockchain solutions powered by advanced AI technology',},
     {icon: Globe,
+=======
+      description: 'Intelligent blockchain solutions powered by advanced AI technology'
+    },
+    {
+<<<<<<< HEAD
+      icon: Globe,
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       title: 'Global Reach',
       description: 'Worldwide blockchain deployment and support for international businesses',}];
   const benefits = [
@@ -197,7 +222,12 @@ const BlockchainPage: React.FC = () => {
       </Helmet>
 <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
+<<<<<<< HEAD
           <h1 className="text-5xl font-bold text-white mb-6">Blockchain Solutions;</h1>
+=======
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Blockchain Solutions
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Transform your business with cutting-edge blockchain technology and decentralized solutions.</p>
             Powered by advanced AI and industry expertise.
@@ -276,8 +306,113 @@ const BlockchainPage: React.FC = () => {
         {/* Key Benefits */}
 =======
         </div>
+<<<<<<< HEAD
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+=======
+{/* Key Benefits */}
+=======
+      title: 'Enterprise Blockchain Solutions',
+      description: 'Private and consortium blockchain solutions for enterprise applications and supply chain management.',
+      icon: '🏢',
+      price: 'Starting at $20,000
+      features: ['Private blockchain setup', 'Consortium management', 'Supply chain tracking', 'Identity management', 'Data privacy'],
+      benefits: ['Improve transparency', 'Reduce fraud', 'Streamline operations'],
+      marketPrice: '$40,000-150,000
+      category: 'Enterprise',
+      technologies: ['Hyperledger', 'Ethereum Enterprise', 'Corda', 'Quorum', 'Fabric']
+    },
+    {
+      title: 'Cross-Chain Bridge Development',
+      description: 'Interoperability solutions for seamless asset and data transfer between different blockchain networks.',
+      icon: '🌉',
+      price: 'Starting at $30,000
+      features: ['Cross-chain bridges', 'Asset wrapping', 'Liquidity pools', 'Security audits', 'Multi-chain support'],
+      benefits: ['Enable blockchain interoperability', 'Increase liquidity', 'Reduce fragmentation'],
+      marketPrice: '$60,000-300,000
+      category: 'Interoperability',
+      technologies: ['Polkadot', 'Cosmos', 'LayerZero', 'Wormhole', 'Chainlink']
+    },
+    {
+      title: 'Web3 Application Development',
+      description: 'Full-stack Web3 applications with wallet integration, smart contract interaction, and decentralized storage.',
+      icon: '🌐',
+      price: 'Starting at $12,000/project',
+      features: ['dApp development', 'Wallet integration', 'Smart contract integration', 'IPFS storage', 'User authentication'],
+      benefits: ['Build decentralized applications', 'Enable user ownership', 'Create new business models'],
+      marketPrice: '$25,000-100,000/project',
+      category: 'Web3',
+technologies: ['React', 'Next.js', 'Web3.js', 'Ethers.js', 'WalletConnect'];)
+},
+    {
+      title: 'Blockchain Analytics Platform',
+      description: 'Comprehensive blockchain data analysis and visualization platform for insights and monitoring.',
+      icon: '📊',
+      price: 'Starting at $8,000
+      features: ['Transaction analysis', 'Address tracking', 'DeFi analytics', 'NFT metrics', 'Custom dashboards'],
+      benefits: ['Gain blockchain insights', 'Monitor network activity', 'Make data-driven decisions'],
+      marketPrice: '$15,000-60,000
+      category: 'Analytics',
+      technologies: ['The Graph', 'Alchemy', 'Moralis', 'Infura', 'Custom APIs'];)
+},
+    {
+      title: 'Staking & Validator Services',
+      description: 'Professional staking services and validator node management for various blockchain networks.',
+      icon: '🏦',
+      price: 'Starting at $2,000
+      features: ['Validator setup', 'Staking management', 'Reward optimization', 'Security monitoring', 'Slashing protection'],
+      benefits: ['Earn passive income', 'Support network security', 'Contribute to decentralization'],
+      marketPrice: '$4,000-20,000
+      category: 'Staking',
+      technologies: ['Ethereum 2.0', 'Cosmos', 'Polkadot', 'Solana', 'Cardano'];)
+},
+    {
+      title: 'Blockchain Consulting',
+      description: 'Strategic blockchain consulting for enterprise adoption, technology selection, and implementation planning.',
+      icon: '💡',
+      price: 'Starting at $300
+      feature,
+    s: ['Technology assessment', 'Use case analysis', 'Implementation strategy', 'Risk assessment', 'ROI analysis'],
+      benefits: ['Make informed decisions', 'Reduce implementation risks', 'Maximize blockchain value'],
+      marketPrice: '$500-1,500
+      category: 'Consulting',
+      technologies: ['Strategic Planning', 'Technology Evaluation', 'Risk Assessment', 'ROI Analysis'];);
+  ];
+;
+const categories = [...new Set(blockchainServices.map(service => service.category))];
+  return (
+    <div>
+        <title>Blockchain Services - Zion Tech Group<
+        <meta name="description" content="Comprehensive blockchain solutions including smart contracts, DeFi protocols, NFT marketplaces, and enterprise blockchain applications." 
+        <meta name="keywords" content="blockchain development, smart contracts, DeFi, NFTs, enterprise blockchain, Web3" 
+      <
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
+        {/* Hero Section */}<
+        <section className="relative overflow-hidden bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
+          <div className="absolute inset-0 bg-black opacity-30"><
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-600/50 to-indigo-800/50"><
+          <div className="relative max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
+            <div className="text-center"><
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                Blockchain Solutions<
+              <
+              <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-3xl mx-auto">
+                Transform your business with cutting-edge blockchain technology and decentralized solutions
+              <
+              <div className="flex flex-col sm:flex-row gap-4 justify-center"><
+                <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-lg">
+                  Explore Blockchain Solutions
+                <
+                <button className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                  Schedule Blockchain Consultation
+                <
+              <
+            <
+          <
+        <
+        {/* Key Benefits *
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -285,8 +420,14 @@ const BlockchainPage: React.FC = () => {
                 Why Choose Our Blockchain Services?
               </h2>
               <p className="text-xl text-gray-600">
+<<<<<<< HEAD
                 Expert blockchain developers delivering secure, scalable, and innovative Web3 solutions
               </p>
+=======
+                Leading blockchain expertise with proven track record in DeFi, NFTs, and enterprise solutions
+<<<<<<< HEAD
+  </
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
@@ -367,6 +508,7 @@ const BlockchainPage: React.FC = () => {
         {/* Services by Category */}
         {categories.map(category => (
           <section key={category} className="py-16 bg-gray-50">
+<<<<<<< HEAD
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 =======
 
@@ -381,6 +523,76 @@ const BlockchainPage: React.FC = () => {
                 <p className="text-xl text-gray-600">
                   Specialized {category.toLowerCase()} services for modern blockchain applications
                 </p>
+=======
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+=======
+              <
+            <
+            <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-4 gap-8"><
+              <div className="text-center"><
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"><
+                  <Link className="w-8 h-8 text-blue-600" 
+                <
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Experts<
+                <p className="text-gray-600">Certified blockchain developers and architects<
+              <
+              <div className="text-center"><
+                <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"><
+                  <Shield className="w-8 h-8 text-green-600" 
+                <
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Security First<
+                <p className="text-gray-600">Comprehensive security audits and best practices<
+              <
+              <div className="text-center"><
+                <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"><
+                  <Zap className="w-8 h-8 text-purple-600" 
+                <
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Rapid Development<
+                <p className="text-gray-600">Fast delivery with proven development frameworks<
+              <
+              <div className="text-center"><
+                <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4"><
+                  <Target className="w-8 h-8 text-orange-600" 
+                <
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Custom Solutions<
+                <p className="text-gray-600">Tailored blockchain solutions for your specific needs<
+              <
+            <
+          <
+        <
+              </h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                From smart contracts to enterprise solutions, we provide comprehensive blockchain development services
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {blockchainServices.map((service, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <div className="mb-4">
+                    <span className="text-2xl font-bold text-blue-600">{service.price}</span>
+                    <span className="text-sm text-gray-500 ml-2">(Market: {service.marketPrice})</span>
+                  </div>
+        {/* Services by Category *
+        {categories.map(category => (
+          <section key={category)} className="py-16 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
+              <div className="text-center mb-12"><
+                <h2 className="text-3xl m,
+    d:text-4xl font-bold text-gray-900 mb-4">
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+                  {category} Services
+  </
+                <p className="text-xl text-gray-600">
+                  Professional {category.toLowerCase()} solutions powered by blockchain technology
+<<<<<<< HEAD
+  </
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {blockchainServices
@@ -397,7 +609,11 @@ const BlockchainPage: React.FC = () => {
                         </div>
                         <div className="text-sm text-green-600 font-semibold">
                           Save up to 50% vs market rates
+<<<<<<< HEAD
                         </div>
+=======
+  </
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                       </div>
                       <div className="mb-4">
                         <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
@@ -614,9 +830,180 @@ const BlockchainPage: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Build the Future of Web3?
             </h2>
+<<<<<<< HEAD
             <p className="text-xl mb-8 text-orange-100">
               Contact our blockchain experts for a free consultation and custom Web3 strategy
             </p>
+=======
+            <p className="text-xl mb-8 text-blue-100">
+=======
+                <
+              <
+              <div className="grid grid-cols-1 md: grid-cols-2 l,
+    g:grid-cols-3 gap-8">
+                {blockchainServices
+                  .filter(service => service.category === category)
+                  .map((service, index) => (<
+                    <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"><
+                      <div className="text-4xl mb-4">{service.icon}<
+                      <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}<
+                      <p className="text-gray-600 mb-4">{service.description}<
+                      <div className="mb-4"><
+                        <div className="flex items-center justify-between mb-2"><
+                          <span className="text-2xl font-bold text-blue-600">{service.price}<
+                          <span className="text-sm text-gray-500">Market: {service.marketPrice}<
+                        <
+                        <div className="text-sm text-green-600 font-semibold">
+                          Save up to 50% vs market rates<
+                        <
+                      <
+                      <div className="mb-4"><
+                        <h4 className="font-semibold text-gray-900 mb-2">Key Features: <
+                        <ul className="space-y-1">)
+                          {service.features.map((feature), featureIndex) => (<li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                              <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" 
+                              {feature};
+                            <)
+                          ))};
+                        <
+                      <
+                      <div className="mb-4"><
+                        <h4 className="font-semibold text-gray-900 mb-2">Technologies: <
+                        <div className="flex flex-wrap gap-2">
+                          {service.technologies.map((tech), techIndex) => (<
+                            <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                              {tech};
+                            <)
+                          ))};
+                        <
+                      <
+                      <div className="mb-6"><
+                        <h4 className="font-semibold text-gray-900 mb-2">Business Benefits: <
+                        <ul className="space-y-1">
+                          {service.benefits.map((benefit), benefitIndex) => (<li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                        Get Blockchain Quote
+                      <
+                    <
+                  ))};
+              <
+            <
+          <
+        ))};
+        {/* Blockchain Capabilities Showcase *
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8"><
+            <div className="text-center mb-12"><
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Our Blockchain Capabilities
+              <
+              <p className="text-xl text-gray-600">
+                Comprehensive blockchain technologies and methodologies for modern business applications
+              <
+            <
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"><
+              <div className="text-center p-6 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-lg"><
+                <Link className="w-12 h-12 text-blue-600 mx-auto mb-4" 
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Smart Contracts<
+                <p className="text-gray-600">Automated contract execution with transparency and security<
+              <
+              <div className="text-center p-6 bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg"><
+                <Shield className="w-12 h-12 text-green-600 mx-auto mb-4" 
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">DeFi Protocols<
+                <p className="text-gray-600">Decentralized finance solutions for modern financial services<
+              <
+              <div className="text-center p-6 bg-gradient-to-br from-purple-50 to-violet-100 rounded-lg"><
+                <Cpu className="w-12 h-12 text-purple-600 mx-auto mb-4" 
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">NFT Marketplaces<
+                <p className="text-gray-600">Digital asset trading and ownership verification platforms<
+              <
+              <div className="text-center p-6 bg-gradient-to-br from-orange-50 to-amber-100 rounded-lg"><
+                <Target className="w-12 h-12 text-orange-600 mx-auto mb-4" 
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Enterprise Solutions<
+                <p className="text-gray-600">Private and consortium blockchains for business applications<
+              <
+              <div className="text-center p-6 bg-gradient-to-br from-pink-50 to-rose-100 rounded-lg"><
+                <Sparkles className="w-12 h-12 text-pink-600 mx-auto mb-4" 
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Web3 Applications<
+                <p className="text-gray-600">Decentralized applications with user-friendly interfaces<
+              <
+              <div className="text-center p-6 bg-gradient-to-br from-indigo-50 to-blue-100 rounded-lg"><
+                <BarChart className="w-12 h-12 text-indigo-600 mx-auto mb-4" 
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">Blockchain Analytics<
+                <p className="text-gray-600">Comprehensive data analysis and visualization tools<
+              <
+            <
+          <
+        <
+        {/* Contact Section *
+        <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"><
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Transform with Blockchain?
+            <
+            <p className="text-xl mb-8 text-blue-100">
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Features:</h4>
+                    <ul className="space-y-1">
+                      {service.features.map((feature, featureIndex) => (
+                        <li key={featureIndex} className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                          {feature};
+                        </li>
+                      ))};
+                    </ul>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
+                    <ul className="space-y-1">
+                      {service.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-center text-sm text-gray-600">
+                          <Star className="w-4 h-4 text-yellow-500 mr-2 flex-shrink-0" />
+                          {benefit};
+                        </li>
+                      ))};
+                    </ul>
+                  </div>
+                  <div className="mb-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {service.technologies.map((tech, techIndex) => (
+                        <span key={techIndex} className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">
+                          {tech};
+                        </span>
+                      ))};
+                    </div>
+                  </div>
+                  <div className="pt-4 border-t">
+                    <span className="inline-block bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full">
+                      {service.category};
+                    </span>
+                  </div>
+                </div>
+              ))};
+            </div>
+          </div>
+        </section>
+        {/* CTA Section */};
+        <section className="bg-gradient-to-r from-blue-600 to-indigo-800 text-white py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              Ready to Build on Blockchain?
+            </h2>
+            <p className="text-xl mb-8 max-w-3xl mx-auto text-blue-100">
+              Let's discuss your blockchain project and create a solution that transforms your business
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a href="/contact"
+                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-300">
+                Start Your Project
+              </a>
+              <a href="/pricing"
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-colors duration-300">
+                View Pricing
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+              Contact our blockchain experts for a free consultation and custom blockchain strategy development
+  </
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="tel:+13024640950"
@@ -665,6 +1052,7 @@ const BlockchainPage: React.FC = () => {
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"></a>
                 📞 +1 302 464 0950
+<<<<<<< HEAD
   </
               <a 
                 href="mailto:kleber@ziontechgroup.com"
@@ -676,10 +1064,29 @@ const BlockchainPage: React.FC = () => {
             <div className="mt-8 text-sm text-blue-200"></div>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
               <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+=======
+              <
+              <a href="mailto:kleber@ziontechgroup.com"
+                className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hove,
+    r:text-blue-600 transition-colors">
+                ✉️ kleber@ziontechgroup.com
+              <
+            <
+            <div className="mt-8 text-sm text-blue-200"><
+              <p>📍 364 E Main St STE 1008, Middletown DE 19709<
+            <
+          <
+        <
+      <
+    <
+  );
+              </a>
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
             </div>
           </div>
         </section>
       </div>
+<<<<<<< HEAD
     </>
   );
 };
@@ -714,3 +1121,27 @@ const BlockchainPage: React.FC = () => {
 
 export default BlockchainPage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+<<<<<<< HEAD
+    </div>
+  )
+}
+export default BlockchainPage
+  </a>
+  </a>
+  </p>
+  </p>
+  </h2>
+  </button>
+  </p>
+  </h2>
+  </p>
+  </h1>
+  </div>
+=======
+    </>
+);
+};
+export default BlockchainPage;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

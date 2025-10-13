@@ -2,7 +2,9 @@ import React from 'react';
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { HelmetProvider, Helmet } from 'react-helmet-async';
 import { MemoryRouter } from 'react-router-dom';
+<<<<<<< HEAD
 
+<<<<<<< HEAD
 // Mock components
 const AdvancedErrorBoundary = ({ children, enableRetry, onError }: { children: React.ReactNode; enableRetry?: boolean; onError?: jest.Mock }) => {
   const [hasError, setHasError] = React.useState(false);
@@ -94,16 +96,36 @@ const AdvancedPerformanceMonitor = ({ enableRealTimeMonitoring, onMetricsUpdate,
   );
 };
 
+=======
+=======
+// Mock components
+const AdvancedErrorBoundary = ({ children }: { children: React.ReactNode }) => {
+  return <div data-testid="error-boundary">{children}</div>;
+};
+const AdvancedSEOOptimizer = ({ title, description }: { title?: string; description?: string }) => {
+  return <div data-testid="seo-optimizer">{title} - {description}</div>;
+};
+const AdvancedPerformanceMonitor = () => {
+};
+  return <div data-testid="performance-monitor">Performance Monitor</div>;
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 // Mock component that throws an error
 const ThrowError = ({ shouldThrow }: { shouldThrow: boolean }) => {
   if (shouldThrow) {
     throw new Error('Test error');
-  }
+  };
   return <div>Test content</div>;
 };
+<<<<<<< HEAD
 
 // Test component for error boundary tests
 // const TestComponent = () => <div>Test component</div>;
+=======
+describe('Advanced Components', () => {
+  it('renders test content without error', () => {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
 // Mock onError callback
 // const onError = jest.fn();
@@ -123,12 +145,14 @@ describe('AdvancedErrorBoundary', () => {
 
     expect(screen.getByText('Test content')).toBeInTheDocument();
   });
+<<<<<<< HEAD
 
   it('renders error UI when there is an error', () => {
     const consoleSpy = jest
       .spyOn(console, 'error')
       .mockImplementation(() => {});
 
+<<<<<<< HEAD
     render(
       <MemoryRouter>
         <AdvancedErrorBoundary enableRetry={true}>
@@ -139,10 +163,27 @@ describe('AdvancedErrorBoundary', () => {
 
     expect(screen.getByText('Unexpected Application Error!')).toBeInTheDocument();
     // The mock error boundary doesn't actually catch errors, so we just check for the error message
+=======
+    // In React testing, errors are caught by error boundaries
+    // We just verify the component doesn't crash the test
+    expect(() => {
+=======
+  describe('AdvancedErrorBoundary', () => {
+    it('renders children when there is no error', () => {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      render(
+        <MemoryRouter>
+          <ThrowError shouldThrow={true} />
+        </MemoryRouter>
+      );
+<<<<<<< HEAD
+    }).not.toThrow();
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
     consoleSpy.mockRestore();
   });
 
+<<<<<<< HEAD
   it('calls onError callback when error occurs', () => {
     const onError = jest.fn();
     const consoleSpy = jest
@@ -388,3 +429,51 @@ describe('AdvancedPerformanceMonitor', () => {
     Object.defineProperty(process.env, 'NODE_ENV', { value: originalEnv, writable: true });
   });
 });
+=======
+=======
+      expect(screen.getByText('Test content')).toBeInTheDocument();
+    });
+    it('renders error UI when there is an error', () => {
+      const consoleSpy = jest
+        .spyOn(console, 'error')
+        .mockImplementation(() => {});
+      render(
+        <MemoryRouter>
+          <AdvancedErrorBoundary>
+            <ThrowError shouldThrow={true} />
+          </AdvancedErrorBoundary>
+        </MemoryRouter>
+      );
+      expect(consoleSpy).toHaveBeenCalled();
+      consoleSpy.mockRestore();
+    });
+  });
+  describe('AdvancedSEOOptimizer', () => {
+    it('renders with title and description', () => {
+      render(
+        <HelmetProvider>
+          <AdvancedSEOOptimizer title="Test Title" description="Test Description" />
+        </HelmetProvider>
+      );
+      expect(screen.getByTestId('seo-optimizer')).toBeInTheDocument();
+      expect(screen.getByText('Test Title - Test Description')).toBeInTheDocument();
+    });
+    it('renders without title and description', () => {
+      render(
+        <HelmetProvider>
+          <AdvancedSEOOptimizer />
+        </HelmetProvider>
+      );
+      expect(screen.getByTestId('seo-optimizer')).toBeInTheDocument();
+    });
+  });
+  describe('AdvancedPerformanceMonitor', () => {
+    it('renders performance monitor', () => {
+      render(<AdvancedPerformanceMonitor />);
+      expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
+      expect(screen.getByText('Performance Monitor')).toBeInTheDocument();
+    });
+  });
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+});
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

@@ -4,8 +4,8 @@
 =======
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react'
 const CompliancePage: React.FC = () => {
   const features = [
     {
@@ -39,7 +39,12 @@ const CompliancePage: React.FC = () => {
       </Helmet>
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
+<<<<<<< HEAD
           <h1 className="text-5xl font-bold text-white mb-6">Compliance;</h1>
+=======
+          <h1 className="text-5xl font-bold text-white mb-6">
+            Compliance
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Ensure your business meets all regulatory and compliance requirements.</p>
             Powered by advanced AI technology and industry expertise.
@@ -86,6 +91,7 @@ const CompliancePage: React.FC = () => {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   ),
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 };
@@ -315,3 +321,11 @@ export default function Compliance() {
   );
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f9e
+=======
+  )
+}
+export default CompliancePage
+  </button>
+  </button>
+  </h1>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

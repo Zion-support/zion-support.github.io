@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 =======
 import React from 'react';
+<<<<<<< HEAD
 import { Helmet } from 'react-helmet-async';
 <<<<<<< HEAD
 import { ArrowRight, CheckCircle, Star, Brain } from "lucide-react";
@@ -103,6 +104,9 @@ const CybersecuritySolutions = () => {
       <Helmet>
 =======
 
+=======
+import { Helmet } from 'react-helmet-async'
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 const CybersecuritySolutionsPage: React.FC = () => {
   return (
     <>
@@ -144,6 +148,7 @@ const CybersecuritySolutionsPage: React.FC = () => {
             ))}
           </div>
         </div>
+<<<<<<< HEAD
 
         {/* Pricing Section */}
         <div className="mb-20">
@@ -192,3 +197,11 @@ const CybersecuritySolutionsPage: React.FC = () => {
               View Case Studies
             </button>
           </div>
+=======
+      </div>
+    </>
+  )
+}
+
+export default CybersecuritySolutionsPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

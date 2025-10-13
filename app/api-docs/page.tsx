@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 'use client';
 <<<<<<< HEAD
 import React, { useState } from 'react';
@@ -28,6 +29,39 @@ const ApiDocsPage: React.FC = () => {
   };
   const apiEndpoints = [
     {
+=======
+'use client'
+import React, { useState } from 'react'
+import { Search, Code, Key, Zap, ArrowRight, Copy, Check, Globe, Brain, Cloud, Shield, Settings, Users, Database, Eye, Sparkles, BookOpen, FileText, Download } from 'lucide-react';
+import Navigation from '../components/Navigation';
+<<<<<<< HEAD
+import Footer from '../components/Footer'
+import SEOOptimizer from '../components/SEOOptimizer'
+export default function APIDocsPage() {
+    const [copiedCode, setCopiedCode] = useState<string | null>(null)
+  const [searchQuery, setSearchQuery] = useState('')
+  const copyToClipboard = (code: string, id: string) => {
+    navigator.clipboard.writeText(code)
+    setCopiedCode(id),
+    setTimeout(() => setCopiedCode(null), 2000)
+  }
+=======
+import Footer from '../components/Footer';
+import SEOOptimizer from '../components/SEOOptimizer';
+export default function APIDocsPage() {;
+const [copiedCode, setCopiedCode] = useState<string | null>(null);
+const [searchQuery, setSearchQuery] = useState('');
+;
+const copyToClipboard = (code: string, id: string) => {
+    navigator.clipboard.writeText(code);
+    setCopiedCode(id);
+    setTimeout(() => setCopiedCode(null), 2000);
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+const apiEndpoints = [
+[
+        {
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       title: 'AI Services',
       description: 'Access our AI-powered services through RESTful APIs',
       endpoints: [
@@ -47,6 +81,7 @@ export default function APIDocsPage() {
     {title: 'AI Services',
       description: 'Artificial Intelligence and Machine Learning APIs',
       icon: Brain,
+<<<<<<< HEAD
       endpoints: [,
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
         {
@@ -65,6 +100,72 @@ export default function APIDocsPage() {
           example: `curl -X GET https://api.ziontechgroup.com/ai/status \\
   -H "Authorization: Bearer YOUR_API_KEY"`
         }
+=======
+      endpoints: [
+<<<<<<< HEAD
+        {
+          name: 'Text Analysis',
+=======
+            {
+          nam,
+    e: 'Text Analysis',
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+          method: 'POST',
+          path: '/api/ai/text-analysis',
+          description: 'Analyze text sentiment, entities, and key phrases',
+          code: `curl -X POST "https://api.ziontechgroup.com/ai/text-analysis" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+<<<<<<< HEAD
+  -H "Content-Type: application/json" \\
+  -d '{
+=======
+  -H "Content-Typ,
+    e: application
+  -d '    {
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+    "text": "Your text to analyze",
+    "features": ["sentiment", "entities", "key_phrases"]
+  }'`
+        },
+        {
+          name: 'Image Recognition',
+          method: 'POST',
+          path: '/api/ai/image-recognition',
+          description: 'Identify objects, faces, and scenes in images',
+          code: `curl -X POST "https://api.ziontechgroup.com/ai/image-recognition" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "image_url": "https://example.com/image.jpg",
+    "features": ["objects", "faces", "text"]
+  }'`
+        };
+      ]
+    },
+    {
+      title: 'Cloud Services',
+      description: 'Cloud infrastructure and deployment APIs',
+      icon: Cloud,
+      endpoints: [
+        {
+          name: 'Deploy Application',
+          method: 'POST',
+          path: '/api/cloud/deploy',
+          description: 'Deploy applications to cloud infrastructure',
+          code: `curl -X POST "https://api.ziontechgroup.com/cloud/deploy" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "app_name": "my-app",
+    "environment": "production",
+    "config": {
+      "cpu": "2",
+      "memory": "4GB",
+      "instances": 3
+    };
+  }'`
+        };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       ]
     },
     {
@@ -72,13 +173,30 @@ export default function APIDocsPage() {
       description: 'Retrieve and analyze your data',
       endpoints: [
         {
+<<<<<<< HEAD
           method: 'GET',
           path: '/api/analytics/dashboard',
           description: 'Get dashboard data',
           example: `curl -X GET https://api.ziontechgroup.com/analytics/dashboard \\
   -H "Authorization: Bearer YOUR_API_KEY"`
         }
+=======
+          name: 'Process Data',
+          method: 'POST',
+          path: '/api/analytics/process',
+          description: 'Process and analyze large datasets',
+          code: `curl -X POST "https://api.ziontechgroup.com/analytics/process" \\
+  -H "Authorization: Bearer YOUR_API_KEY" \\
+  -H "Content-Type: application/json" \\
+  -d '{
+    "dataset_id": "dataset_123",
+    "operations": ["aggregate", "filter", "transform"],
+    "output_format": "json"
+  }'`
+        };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       ]
+<<<<<<< HEAD
     }
 <<<<<<< HEAD
   ];
@@ -132,7 +250,16 @@ export default function ApiDocsZionTechGroup() {
                           <code>{endpoint.example}</code>
 =======
   ]
+<<<<<<< HEAD
   const filteredEndpoints = apiEndpoints.map(category => ({)
+=======
+=======
+    };
+  ];
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+const filteredEndpoints = apiEndpoints.map(category => ({
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     ...category,
     endpoints: category.endpoints.filter(endpoint => ,)
       endpoint.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -144,7 +271,8 @@ export default function ApiDocsZionTechGroup() {
       <SEOOptimizer;
 =======
     )
-  })).filter(category => category.endpoints.length > 0);
+<<<<<<< HEAD
+  })).filter(category => category.endpoints.length > 0)
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900"></div>
       <SEOOptimizer 
@@ -156,8 +284,22 @@ export default function ApiDocsZionTechGroup() {
       <Navigation /></Navigation>
       {/* Hero Section */}
 <section className="py-20 px-4">
+<<<<<<< HEAD
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-5xl font-bold text-white mb-6">API Documentation;</h1>
+=======
+          <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-5xl font-bold text-white mb-6">
+=======
+  })).filter(category => category.endpoints.length > 0);
+  return (<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* Hero Section */};
+      <section className="relative py-20 px-4">
+        <div className="max-w-7xl mx-auto text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+            API Documentation
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">Complete API documentation for Zion Tech Group's AI and IT solutions.</p>
             Explore endpoints, authentication, and integration guides.
@@ -196,11 +338,25 @@ export default function ApiDocsZionTechGroup() {
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* Quick Start */} <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
+=======
+      {/* Quick Start */}
+      <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start</h2>
           <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">,</div>
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+=======
+      {/* Quick Start */};
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-8 text-center">Quick Start<
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
                 <Key className="w-6 h-6 text-white" />
 =======
@@ -222,11 +378,23 @@ export default function ApiDocsZionTechGroup() {
               <button className="text-purple-400 hover:text-purple-300 font-medium"></button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                 Get API Key →
+<<<<<<< HEAD
               </button>
             </div>
+<<<<<<< HEAD
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4"></div>
                 <Code className="w-6 h-6 text-white" /></Code>
+=======
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+=======
+              <
+            <
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <Code className="w-6 h-6 text-white" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
               </div>
               <h3 className="text-xl font-semibold text-white mb-3"></h>2. Make Request</h3>
               <p className="text-gray-300 mb-4">Use our REST API with your preferred language</p>
@@ -236,11 +404,23 @@ export default function ApiDocsZionTechGroup() {
               <button className="text-purple-400 hover:text-purple-300 font-medium"></button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                 View Examples →
+<<<<<<< HEAD
               </button>
             </div>
+<<<<<<< HEAD
             <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10"></div>
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4"></div>
                 <Zap className="w-6 h-6 text-white" /></Zap>
+=======
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10">
+=======
+              <
+            <
+            <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+              <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <Zap className="w-6 h-6 text-white" />
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
               </div>
               <h3 className="text-xl font-semibold text-white mb-3"></h>3. Integrate</h3>
               <p className="text-gray-300 mb-4">Build amazing applications with our APIs</p>
@@ -250,19 +430,35 @@ export default function ApiDocsZionTechGroup() {
               <button className="text-purple-400 hover:text-purple-300 font-medium"></button>
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                 Start Building →
+<<<<<<< HEAD
               </button>
             </div>
           </div>
         </div>
       </section>
 <<<<<<< HEAD
+<<<<<<< HEAD
       {/* API Endpoints */} <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
+=======
+      {/* API Endpoints */}
+=======
+              <
+            <
+          <
+        <
+      <
+      {/* API Endpoints *
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           <h2 className="text-3xl font-bold text-white mb-12 text-center">API Endpoints</h2>
           <div className="space-y-8">{filteredEndpoints.map((category, categoryIndex) => (</div>
               <div key={categoryIndex}className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
                 <div className="flex items-center gap-4 mb-8">
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center">
+<<<<<<< HEAD
                     <category.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -270,14 +466,42 @@ export default function ApiDocsZionTechGroup() {
                     <p className="text-gray-300">{category.description</p>}</p>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <div className="space-y-6">{category.endpoints.map((endpoint, endpointIndex) => (</div>
                     <div key={endpointIndex}className="bg-white/5 rounded-xl p-6 border border-white/10">
+=======
+                <div className="space-y-6">
+                  {category.endpoints.map((endpoint, endpointIndex) => (
+                    <div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white/10">
+=======
+                    <category .icon className="w-6 h-6 text-white" 
+                  <
+                  <div>
+                    <h3 className="text-2xl font-bold text-white mb-2">{category.title}<
+                    <p className="text-gray-300">{category.description}<
+                  <
+                <
+                <div className="space-y-6">)
+                  {category.endpoints.map((endpoint, endpointIndex) => (<div key={endpointIndex} className="bg-white/5 rounded-xl p-6 border border-white
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center gap-4">
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                             endpoint.method === 'POST' 
                               ? 'bg-green-500/20 text-green-400' 
+<<<<<<< HEAD
                               : 'bg-blue-500/20 text-blue-400'}`}>{endpoint.method</span>} </span>
+=======
+                              : 'bg-blue-500/20 text-blue-400'
+                          }`}>
+<<<<<<< HEAD
+                            {endpoint.method}
+=======
+                            {endpoint.method};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+                          </span>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                           <code className="text-purple-400 font-mono">{endpoint.path}</code>
                         </div>
                         <button;
@@ -319,6 +543,7 @@ export default function ApiDocsZionTechGroup() {
                           className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors">
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
                           {copiedCode === `${categoryIndex}-${endpointIndex}` ? (
+<<<<<<< HEAD
                             <React.Fragment></React>
                               <Check className="w-4 h-4" /></Check>
                               Copied!
@@ -326,6 +551,14 @@ export default function ApiDocsZionTechGroup() {
                           ) : (
 <<<<<<< HEAD
                             <React.Fragment>
+=======
+                            <React .Fragment>
+                              <Check className="w-4 h-4" />
+                              Copied!
+                            </React.Fragment>
+                          ) : (
+                            <React .Fragment>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                               <Copy className="w-4 h-4" />
                               Copy;
 =======
@@ -338,7 +571,14 @@ export default function ApiDocsZionTechGroup() {
                         </button>
                       </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
                       <p className="text-gray-300 mb-4">{endpoint.description</p>}</p>
+=======
+                      <p className="text-gray-300 mb-4">{endpoint.description}</p>
+=======
+                      <p className="text-gray-300 mb-4">{endpoint.description}<
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                       <div className="bg-slate-900 rounded-lg p-4 overflow-x-auto">
                         <pre className="text-gray-300 text-sm">
                           <code>{endpoint.code}</code>
@@ -357,6 +597,7 @@ export default function ApiDocsZionTechGroup() {
               </div>
             ))}
           </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
         </section>
         <section className="mb-16">
@@ -383,6 +624,22 @@ export default function ApiDocsZionTechGroup() {
           <h2 className="text-3xl font-bold text-white mb-8">Need Help?</h2>
           <p className="text-gray-300 mb-8">
             Contact our developer support team for assistance with API integration
+=======
+        </div>
+      </section>
+<<<<<<< HEAD
+      {/* CTA Section */}
+=======
+      {/* CTA Section *
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+      <section className="py-20 px-4 bg-gradient-to-r from-purple-600 to-blue-700">
+          <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
+            Ready to Get Started?
+          </h2>
+          <p className="text-xl text-purple-100 mb-8">
+            Start building with our APIs today and create amazing applications.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -434,7 +691,11 @@ export default function ApiDocsZionTechGroup() {
   </
             <button className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-purple-600 transition-colors"></button>
               View SDKs
+<<<<<<< HEAD
 >>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+=======
+<<<<<<< HEAD
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   </
           </div>
         </div>
@@ -499,6 +760,24 @@ export default ApiDocsPage;
     </>
   )
 }
+<<<<<<< HEAD
 
 export default ApiDocsPage
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+  </button>
+  </button>
+  </button>
+  </button>
+  </h1>
+  </SEOOptimizer>
+  </string>
+=======
+            <
+          <
+        <
+      <
+      <Footer />
+    </div>);
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

@@ -1,12 +1,29 @@
+// Type definitions for Next.js compatibility in Vite
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Type definitions for Next.js compatibility in Vite
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 export interface Metadata {
   title?: string;
   description?: string;
   keywords?: string[];
   authors?: Array<{ name: string; url?: string }> | string[];
+<<<<<<< HEAD
+=======
+  creator?: string;
+  publisher?: string;
+  formatDetection?: {
+    email?: boolean;
+    address?: boolean;
+    telephone?: boolean;
+  };
+  metadataBase?: URL;
+  alternates?: {
+    canonical?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   };
   openGraph?: {
     title?: string;
@@ -14,7 +31,11 @@ export interface Metadata {
     url?: string;
     siteName?: string;
     images?: Array<{
+<<<<<<< HEAD
       url: string,
+=======
+      url: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       width?: number;
       height?: number;
       alt?: string;
@@ -25,12 +46,21 @@ export interface Metadata {
     publishedTime?: string;
   };
   twitter?: {
+<<<<<<< HEAD
     card?: 'summary' | 'summary_large_image' | 'app' | 'player';
     site?: string;
     creator?: string;
     title?: string;
     description?: string;
     images?: string[];
+=======
+    card?: string;
+    title?: string;
+    description?: string;
+    images?: string[];
+    site?: string;
+    creator?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   };
   robots?: {
     index?: boolean;
@@ -39,12 +69,17 @@ export interface Metadata {
       index?: boolean;
       follow?: boolean;
       'max-video-preview'?: number;
+<<<<<<< HEAD
       'max-image-preview'?: 'none' | 'standard' | 'large';
+=======
+      'max-image-preview'?: string;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
       'max-snippet'?: number;
     };
   };
   verification?: {
     google?: string;
+<<<<<<< HEAD
     yandex?: string;
     yahoo?: string;
     other?: Record<string, string>;
@@ -299,3 +334,22 @@ export default Next.dPage;
 =======
 >>>>>>> cursor/website-audit-and-update-with-deployment-c0e8
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+=======
+  };
+}
+
+export interface MetadataRoute {
+  sitemap?: string;
+  robots?: string;
+  manifest?: string;
+}
+
+export type MetadataRouteType = 'sitemap' | 'robots' | 'manifest';
+
+export interface MetadataRouteSitemap {
+  url: string;
+  lastModified?: Date | string;
+  changeFrequency?: 'always' | 'hourly' | 'daily' | 'weekly' | 'monthly' | 'yearly' | 'never';
+  priority?: number;
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

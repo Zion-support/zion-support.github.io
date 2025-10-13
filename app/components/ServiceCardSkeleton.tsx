@@ -2,14 +2,29 @@
 'use client';
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {Helmet}}from 'react-helmet-async';
 import {CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe}}from 'lucide-react';
 const ServiceCardSkeletonPage: React.FC = () => {,
 =======
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+const ServiceCardSkeletonPage: React.FC = () => {
+const features = [
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+;
 const ServiceCardSkeletonPage: React.FC = () => {
+<<<<<<< HEAD
   const features = [
+=======
+const features = [
+];
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -22,6 +37,7 @@ const ServiceCardSkeletonPage: React.FC = () => {
       description: 'Bank-level security with encryption and compliance standards',},
     {icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
       description: 'Worldwide deployment and support for international businesses',}}
   ]
@@ -148,3 +164,28 @@ export default function ComponentsPage() {
 };
 
 export default ServiceCardSkeletonPage;
+=======
+<<<<<<< HEAD
+      description: 'Worldwide deployment and support for international businesses'  }
+  }]
+=======
+      description: 'Worldwide deployment and support for international businesses'
+    }
+];;
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+const benefits = [
+];
+'Advanced AI technology integration',
+    'Real-time processing and analytics',
+    'Enterprise-grade security and compliance',
+    'Scalable and flexible solutions',
+    '24/7 technical support',
+    'Easy integration with existing systems',
+    'Cost-effective pricing plans',
+    'Proven track record of success'
+  ]
+)
+}
+export default ServiceCardSkeletonPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

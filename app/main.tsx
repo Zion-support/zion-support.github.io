@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 'use client';
 import React from 'react';
@@ -154,3 +155,19 @@ return(<div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-
 export default MainPage;
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+=======
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './globals.css';
+
+const root = document.getElementById('root');
+
+if (root) {
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

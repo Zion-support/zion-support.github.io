@@ -17,8 +17,13 @@ export default function EnhancedSkipLink() {
         e.preventDefault();
         const main = document.querySelector('#main-content');
         if (main) {
+<<<<<<< HEAD
           main.focus();
           main.scrollIntoView({ behavior: 'smooth' });
+=======
+          main.focus()
+          main.scrollIntoView({ behavior: 'smooth' })
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
         }
       }}
 =======
@@ -30,7 +35,14 @@ export default function EnhancedSkipLink() {
     >
       Skip to main content
     </a>
+<<<<<<< HEAD
   );
 };
 
 export default EnhancedSkipLink;
+=======
+  )
+}
+
+export default EnhancedSkipLink
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

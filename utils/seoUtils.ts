@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const defaultSEOConfig: SEOConfig = {
   title: 'Zion Tech Group - Advanced AI and IT Solutions',
   description: 'Leading provider of advanced AI and IT solutions for businesses worldwide. Expert services in artificial intelligence, cloud computing, cybersecurity, and digital transformation.',
@@ -68,6 +69,40 @@ export const generateMetaTags = (config: SEOConfig): string => {
   }
   if (config.twitterImage || config.ogImage) {
     tags.push(`<meta name="twitter:image" content="${config.twitterImage || config.ogImage}" />`);
+=======
+/**
+ * SEO utility functions;
+ */
+export interface SEOConfig {
+<<<<<<< HEAD
+    title: string;
+  description: string
+  keywords?: string[]
+  ogImage?: string,,
+  canonicalUrl?: string
+  }
+
+=======
+}
+  title: string;
+  description: string;
+  keywords?: string[];
+  ogImage?: string;,
+  canonicalUrl?: string};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export const generateMetaTags = (config: SEOConfig): string => {,
+export interface SEOConfig {/* TODO: Fix JSX expression */};
+};
+export const generateMetaTags = (confi)
+  g: SEOConfig): string => {/* TODO: Fix JSX expression */};
+  const { title, description, keywords, ogImage, canonicalUrl } = config;
+
+  let _tags = `<title>${title}</title>`;`
+  tags += `<meta name="description" content="${description}" />`;
+  if (keywords && keywords.length > 0) {/* TODO: Fix JSX expression */}"`
+<<<<<<< HEAD
+    tags += `<meta name="keywords" content="${keywords.join(', ')}" />`;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
   }
 
   // Geo tags
@@ -90,6 +125,7 @@ export const generateMetaTags = (config: SEOConfig): string => {
     });
   }
 
+<<<<<<< HEAD
   // Structured data
   if (config.structuredData) {
     tags.push(`<script type="application/ld+json">${JSON.stringify(config.structuredData)}</script>`);
@@ -174,3 +210,30 @@ export const optimizeSEOConfig = (config: SEOConfig): SEOConfig => {
 
   return optimized;
 };
+=======
+  return tags;
+}
+
+=======
+    tags += `<meta name="keywords" content="${keywords.join(', ')}" />`};
+  if (ogImage) {/* TODO: Fix JSX expression */}"`
+  g:image" content="${ogImage}" />`};
+  if (canonicalUrl) {/* TODO: Fix JSX expression */}"`
+    tags += `<link rel="canonical" href="${canonicalUrl}" />`};
+  return tags};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+export const updatePageTitle = (title: string) => {,
+  if (typeof window !== 'undefined') {,
+    document.title = title;
+export const updatePageTitle = (titl)
+<<<<<<< HEAD
+  e: string) => {/* TODO: Fix JSX expression */}
+  }
+}
+=======
+  e: string) => {/* TODO: Fix JSX expression */};
+  };
+};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+"`
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

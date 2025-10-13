@@ -62,6 +62,7 @@ export default LoadingSkeletonPage;
 =======
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
@@ -204,3 +205,11 @@ const LoadingSkeleton: React.FC<LoadingSkeletonProps> = ({
 
 export default LoadingSkeleton;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+=======
+import { Helmet } from 'react-helmet-async';
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

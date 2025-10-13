@@ -518,6 +518,7 @@ export const usePerformanceMonitor = () => {useEffect(() => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
           const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
+<<<<<<< HEAD
           console.log('Page load time:', loadTime);}}
     // Run monitoring after page load;
     if (document.readyState === 'complete') {monitorWebVitals();}else {window.addEventListener('load', monitorWebVitals);}}return () => {window.removeEventListener('load', monitorWebVitals);}}, []);
@@ -532,9 +533,16 @@ export const usePerformanceMonitor = () => {useEffect(() => {
       
       setResourceMetrics(prev => [...prev, ...entries]);
     });
+=======
+          console.log('Page load time:', loadTime);
+        }
+      }
+    };
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
     observer.observe({ entryTypes: ['resource'] });
 
+<<<<<<< HEAD
     return () => observer.disconnect();
   }, []);
 
@@ -622,3 +630,10 @@ export const useMemoryUsage = () => {
   };
 };
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0fac
+=======
+    return () => {
+      window.removeEventListener('load', monitorWebVitals);
+    };
+  }, []);
+};
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

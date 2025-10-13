@@ -12,8 +12,8 @@ export default function AIAccountingAssistantZionTechGroup() {
 =======
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Calculator, BarChart, FileText, Shield, Zap, CheckCircle } from 'lucide-react';
+import { Helmet } from 'react-helmet-async'
+import { Calculator, BarChart, FileText, Shield, Zap, CheckCircle } from 'lucide-react'
 const AIAccountingAssistantPage: React.FC = () => {
   const features = [
     { icon: Calculator, title: 'Automated Bookkeeping', description: 'AI-powered automated bookkeeping and transaction categorization.' ,},
@@ -46,7 +46,14 @@ const AIAccountingAssistantPage: React.FC = () => {
           </Link>
         </div>
       </div>
+<<<<<<< HEAD
     </>
   );
 }
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0ff3
+=======
+    </React.Fragment>
+  )
+}
+export default AIAccountingAssistantPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

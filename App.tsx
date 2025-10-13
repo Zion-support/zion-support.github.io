@@ -55,9 +55,12 @@ import EnhancedSEO from "./app/components/EnhancedSEO";
 import Navigation from './app/components/Navigation';
 import Footer from './app/components/Footer';
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import Sidebar from './app/components/Sidebar';
 import HomePage from './app/page';
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 import { PageLoader } from './app/components/LoadingStates';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 import ErrorBoundary from './app/components/ErrorBoundary';
@@ -122,17 +125,25 @@ import SEOHead from './app/components/SEOHead';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
 =======
 import FuturisticBackground from './app/components/FuturisticBackground';
+<<<<<<< HEAD
 import PerformanceOptimizations from './app/components/PerformanceOptimizations';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+=======
+import SecurityEnhancer from './app/components/SecurityEnhancer';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0e37
 // Lazy load pages for better performance
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 const HomePage = React.lazy(() => import('./app/page'));
 =======
 const HomePage = React.lazy(() => import('./app/home/page'));
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1009
+=======
+const HomePage = React.lazy(() => import('./app/page'));
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 const AboutPage = React.lazy(() => import('./app/about/page'));
 const ContactPage = React.lazy(() => import('./app/contact/page'));
 <<<<<<< HEAD
@@ -247,8 +258,12 @@ const App: React.FC = () => {
                 <EnhancedAccessibility>
                   <AccessibilityEnhancer>
                     <PerformanceMonitor />
+<<<<<<< HEAD
                     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid neural-network-bg matrix-rain">
                       <PerformanceOptimizations />
+=======
+                    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 cyber-grid-enhanced neural-network-bg matrix-rain particle-bg data-stream">
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                       <FuturisticBackground />
                       <Navigation />
                       <Sidebar />

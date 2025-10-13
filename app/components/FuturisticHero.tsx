@@ -17,11 +17,26 @@ import { Helmet } from 'react-helmet-async';
 =======
 'use client';
 import React from 'react';
+<<<<<<< HEAD
+import { Helmet } from 'react-helmet-async'
+import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
+const FuturisticHeroPage: React.FC = () => {
+const features = [
+=======
 import { Helmet } from 'react-helmet-async';
 import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
 const FuturisticHeroPage: React.FC = () => {
   const features = [
+=======
+;
+const FuturisticHeroPage: React.FC = () => {
+const features = [
+];
+}
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -40,11 +55,26 @@ const FuturisticHeroPage: React.FC = () => {
     {
       icon: Globe,
       title: 'Global Reach',
+<<<<<<< HEAD
       description: 'Worldwide deployment and support for international businesses',
     }
   ];
   const benefits = [
     'Advanced AI technology integration',
+=======
+<<<<<<< HEAD
+      description: 'Worldwide deployment and support for international businesses'  }
+  }]
+=======
+      description: 'Worldwide deployment and support for international businesses'
+    }
+];;
+;
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+const benefits = [
+];
+'Advanced AI technology integration',
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
     'Real-time processing and analytics',
     'Enterprise-grade security and compliance',
     'Scalable and flexible solutions',
@@ -52,6 +82,7 @@ const FuturisticHeroPage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
+<<<<<<< HEAD
   ];
 =======
 import { Link } from "react-router-dom";
@@ -134,12 +165,27 @@ export default function FuturisticHero() {
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-start space-x-3">
                 <CheckCircle className="h-6 w-6 text-purple-400 mt-1 flex-shrink-0" />
+=======
+<<<<<<< HEAD
+  ]
+return (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+=======
+  ];
+  return (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+            {benefits.map((benefit, index) => (
+                <div key={index} className="flex items-start space-x-3"></div>
+                <CheckCircle>
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
                 <p className="text-gray-300 text-lg">{benefit}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* Contact Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -150,6 +196,15 @@ export default function FuturisticHero() {
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Contact us today to learn more about our futuristic hero solutions and how they can benefit your business.
+=======
+      {/* CTA Section */}
+      <section className="py-20 px-4 sm: px-6 lg:px-8"></section>
+        <div className="max-w-4xl mx-auto text-center"></div>
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12"></div>
+            <h2 className="text-4xl font-bold text-white mb-4">Ready to Get Started?</h2>
+            <p>
+              Contact our experts to discuss your futuristichero needs and get a customized solution.
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-gradient-to-r from-purple-500 to-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:from-purple-600 hover:to-blue-700 transition-all duration-300">
@@ -159,6 +214,7 @@ export default function FuturisticHero() {
                 Schedule Demo
               </button>
             </div>
+<<<<<<< HEAD
           </div>
         </div>
       </section>
@@ -172,3 +228,8 @@ import { ArrowRight, Brain } from 'lucide-react';
 import { ArrowRight, Mail, Brain } from 'lucide-react';
 import { ArrowRight, Mail, Brain } from 'lucide-react';
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+=======
+  )
+}
+export default FuturisticHeroPage
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247

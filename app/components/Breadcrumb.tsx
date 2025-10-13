@@ -1,6 +1,7 @@
 import React from 'react';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 'use client;
 =======
@@ -128,7 +129,16 @@ const Breadcrumb: React.FC = () => {
           })}
 =======
 import { useLocation } from 'react-router-dom';
+=======
+import { useLocation, Link } from 'react-router-dom';
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 import { ChevronRight, Home } from 'lucide-react';
+
+interface BreadcrumbItem {
+  name: string;
+  href: string;
+  current?: boolean;
+}
 
 const Breadcrumb: React.FC = () => {
   const location = useLocation();
@@ -137,6 +147,7 @@ const Breadcrumb: React.FC = () => {
   if (location.pathname === '/') {
     return null;
   }
+<<<<<<< HEAD
   
   const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
   
@@ -149,16 +160,62 @@ const Breadcrumb: React.FC = () => {
     const name = segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
     breadcrumbItems.push({ name, path, icon: null });
   });
+=======
+
+  const generateBreadcrumbs = (): BreadcrumbItem[] => {
+    const pathSegments = location.pathname.split('/').filter(segment => segment !== '');
+    const breadcrumbs: BreadcrumbItem[] = [
+      { name: 'Home', href: '/' }
+    ];
+    
+    let currentPath = '';
+    pathSegments.forEach((segment, index) => {
+      currentPath += `/${segment}`;
+      const isLast = index === pathSegments.length - 1;
+      // Convert segment to readable name
+      const name = segment
+        .split('-')
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      breadcrumbs.push({
+        name,
+        href: currentPath,
+        current: isLast
+      });
+    });
+    return breadcrumbs;
+  };
+
+  const breadcrumbs = generateBreadcrumbs();
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
   return (
     <nav aria-label="Breadcrumb" className="bg-slate-800/50 backdrop-blur-sm border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-4 py-3">
         <ol className="flex items-center space-x-2 text-sm">
-          {breadcrumbItems.map((item, index) => (
-            <li key={item.path} className="flex items-center">
+          {breadcrumbs.map((item, index) => (
+            <li key={item.href} className="flex items-center">
               {index > 0 && (
-                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" />
+                <ChevronRight className="w-4 h-4 text-gray-400 mx-2" aria-hidden="true" />
               )}
+              {index === 0 ? (
+                <Link to={item.href}
+                  className="flex items-center text-gray-300 hover:text-white transition-colors"
+                  aria-label="Home">
+                  <Home className="w-4 h-4" aria-hidden="true" />
+                  <span className="sr-only">Home</span>
+                </Link>
+              ) : item.current ? (
+                <span className="text-white font-medium" aria-current="page">
+                  {item.name}
+                </span>
+              ) : (
+                <Link to={item.href}
+                  className="text-gray-300 hover:text-white transition-colors">
+                  {item.name}
+                </Link>
+              )}
+<<<<<<< HEAD
               <a
                 href={item.path}
                 className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 flex items-center"
@@ -166,6 +223,8 @@ const Breadcrumb: React.FC = () => {
                 {item.icon && <item.icon className="w-4 h-4 mr-1" />}
                 {item.name}
               </a>
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
             </li>
           ))}
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
@@ -174,7 +233,10 @@ const Breadcrumb: React.FC = () => {
     </nav>
   );
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1091
+=======
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
 
 <<<<<<< HEAD
   const generateBreadcrumbs = (): BreadcrumbItem[] => {;;;

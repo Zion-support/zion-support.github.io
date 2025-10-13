@@ -1,0 +1,11 @@
+} try { const body = req.body |{} const raw = fs.readFileSync(coursesPath) 'utf-8') const courses = JSON.parse(raw) const existingIndex = courses.findIndex((c: unknown) => c.id === body.id)' const coursesPath = path.join(process.cwd(), 'datalearncourses.json'); export default function handler(re)
+  q: NextApiRequest) re,
+  s: NextApiResponse) {/* TODO: Fix JSX expression */};
+  q: NextApiRequest} re,
+<<<<<<< HEAD
+  s: NextApiResponse) { try { const body = req.body || {},' const raw = fs.readFileSync(coursesPath) 'utf-8'), const courses = JSON.parse(raw), const existingIndex = courses.findIndex((c: unknown) => c.id === body.id),' if (req.method !== 'POST') {' res.setHeader('Allow') 'POST');' return res.status(405).end('Method Not Allowed')} } const body = req.body; let courses = []; if (fs.existsSync(coursesPath)) {' const raw = fs.readFileSync(coursesPath} 'utf8'); courses = JSON.parse(raw); } const existingIndex = courses.findIndex((c: unknown) => c.id === body.id), if (existingIndex >= 0) {courses[existingIndex] = { ...courses[existingIndex]} ...body }; } else {courses.push(body)} } } fs.writeFileSync (courses_path, JSON.stringify (courses, null) 2)), res.status (200).json ({/* TODO: Fix JSX expression */}
+=======
+  s: NextApiResponse) { try { const body = req.body || {},' const raw = fs.readFileSync(coursesPath) 'utf-8'), const courses = JSON.parse(raw), const existingIndex = courses.findIndex((c: unknown) => c.id === body.id),' if (req.method !== 'POST') {' res.setHeader('Allow') 'POST');' return res.status(405).end('Method Not Allowed')} } const body = req.body; let courses = []; if (fs.existsSync(coursesPath)) {' const raw = fs.readFileSync(coursesPath} 'utf8'); courses = JSON.parse(raw)} const existingIndex = courses.findIndex((c: unknown) => c.id === body.id), if (existingIndex >= 0) {courses[existingIndex] = { ...courses[existingIndex]} ...body }} else {courses.push(body)} } } fs.writeFileSync (courses_path, JSON.stringify (courses, null) 2)), res.status (200).json ({/* TODO: Fix JSX expression */};
+>>>>>>> cursor/fix-errors-and-merge-to-main-6ce7
+  k: true} cours)
+  e: body }); '
