@@ -1,16 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-import { 
-  PhoneIcon, 
-  EnvelopeIcon, 
-  MapPinIcon,
-  ArrowRightIcon,
-  HeartIcon
-} from '@heroicons/react/24/outline';
-=======
-import { ArrowRight, Facebook, Twitter, Linkedin, Github } from 'lucide-react';
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
+import { Facebook, Twitter, Linkedin, Github, Phone, Mail, MapPin } from 'lucide-react';
+
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -24,40 +15,13 @@ const Footer: React.FC = () => {
     { name: '5G Solutions', href: '/5g-solutions' },
   ];
 
-<<<<<<< HEAD
-  const company = [
-    { name: 'About Us', href: '/about' },
-    { name: 'Our Team', href: '/team' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'News', href: '/news' },
-  ];
-
-  const resources = [
-    { name: 'Documentation', href: '/docs' },
-    { name: 'Tutorials', href: '/tutorials' },
-    { name: 'API Reference', href: '/api' },
-    { name: 'Support', href: '/support' },
-    { name: 'Community', href: '/community' },
-    { name: 'Status', href: '/status' },
-  ];
-
-  const legal = [
-    { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
-    { name: 'GDPR', href: '/gdpr' },
-    { name: 'Security', href: '/security' },
-    { name: 'Compliance', href: '/compliance' },
-=======
-  const socialLinks = [
-    { name: 'Facebook', href: '#', icon: Facebook },
-    { name: 'Twitter', href: '#', icon: Twitter },
-    { name: 'LinkedIn', href: '#', icon: Linkedin },
-    { name: 'GitHub', href: '#', icon: Github }
->>>>>>> cursor/analyze-improve-and-deploy-application-c97f
-  ];
+  // Social links for future use
+  // const socialLinks = [
+  //   { name: 'Facebook', href: '#', icon: Facebook },
+  //   { name: 'Twitter', href: '#', icon: Twitter },
+  //   { name: 'LinkedIn', href: '#', icon: Linkedin },
+  //   { name: 'GitHub', href: '#', icon: Github }
+  // ];
 
   return (
     <footer className="bg-slate-900 border-t border-slate-700/50 relative overflow-hidden">
@@ -85,15 +49,15 @@ const Footer: React.FC = () => {
             {/* Contact Info */}
             <div className="space-y-3 mb-6">
               <div className="flex items-center space-x-3 text-gray-300">
-                <PhoneIcon className="w-5 h-5 text-purple-400" />
+                <Phone className="w-5 h-5 text-purple-400" />
                 <span>+1-302-464-0950</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <EnvelopeIcon className="w-5 h-5 text-purple-400" />
+                <Mail className="w-5 h-5 text-purple-400" />
                 <span>kleber@ziontechgroup.com</span>
               </div>
               <div className="flex items-center space-x-3 text-gray-300">
-                <MapPinIcon className="w-5 h-5 text-purple-400" />
+                <MapPin className="w-5 h-5 text-purple-400" />
                 <span>364 E Main St STE 1008, Middletown, DE 19709</span>
               </div>
             </div>

@@ -24,35 +24,15 @@ const FiveGSolutionsPage: React.FC = () => {
     },
     {
       icon: Wifi,
-<<<<<<< HEAD
-      title: 'IoT Integration',
-      description: 'Seamless integration with Internet of Things devices and sensors',
-      benefits: ['IoT connectivity', 'Sensor networks', 'Real-time data', 'Smart automation']
-=======
       title: 'IoT Connectivity',
       description: 'Connect thousands of IoT devices with 5G technology',
       benefits: ['Massive IoT support', 'Low power consumption', 'Real-time monitoring', 'Scalable solutions']
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
+
     }
   ];
 
   const solutions = [
     {
-<<<<<<< HEAD
-      title: 'Enterprise 5G',
-      description: 'Dedicated 5G solutions for large enterprises and organizations',
-      features: ['Private networks', 'Custom configurations', '24/7 support', 'Scalable infrastructure']
-    },
-    {
-      title: 'Small Business 5G',
-      description: 'Affordable 5G solutions tailored for small and medium businesses',
-      features: ['Cost-effective plans', 'Easy setup', 'Local support', 'Flexible contracts']
-    },
-    {
-      title: 'Consumer 5G',
-      description: 'High-speed 5G services for residential and personal use',
-      features: ['Home internet', 'Mobile plans', 'Unlimited data', 'Premium support']
-=======
       title: '5G Network Infrastructure',
       description: 'Complete 5G network setup and optimization',
       price: 'Starting at $50,000',
@@ -69,7 +49,7 @@ const FiveGSolutionsPage: React.FC = () => {
       description: 'IoT device connectivity and management platform',
       price: 'Starting at $35,000',
       features: ['Device management', 'Data analytics', 'Real-time monitoring', 'Scalable architecture']
->>>>>>> cursor/fix-errors-and-merge-to-main-5fc3
+
     }
   ];
 
