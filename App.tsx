@@ -328,6 +328,7 @@ function App() {
 
                               {/* Additional AI Services Routes */}
 <<<<<<< HEAD
+<<<<<<< HEAD
                               <Route path="/ai-chatbot-builder" element={<AIChatbotBuilderPage />} />
 =======
 >>>>>>> cursor/analyze-improve-and-deploy-application-a546
@@ -342,9 +343,28 @@ function App() {
                               <Route path="/ai-data-visualization" element={<AIDataVisualizationPage />} />
                               <Route path="/ai-devops-automation" element={<AIDevOpsAutomationPage />} />
                               <Route path="/ai-document-intelligence" element={<AIDocumentIntelligencePage />} />
+=======
+                              <Route path="/ai-chatbot-builder" element={React.createElement(React.lazy(() => import("./app/ai-chatbot-builder/page")))} />
+                              <Route path="/ai-code-assistant" element={React.createElement(React.lazy(() => import("./app/ai-code-assistant/page")))} />
+                              <Route path="/ai-design-studio" element={React.createElement(React.lazy(() => import("./app/ai-design-studio/page")))} />
+                              <Route path="/ai-business-intelligence" element={React.createElement(React.lazy(() => import("./app/ai-business-intelligence/page")))} />
+                              <Route path="/ai-automation" element={React.createElement(React.lazy(() => import("./app/ai-automation/page")))} />
+                              <Route path="/ai-computer-vision" element={React.createElement(React.lazy(() => import("./app/ai-computer-vision/page")))} />
+                              <Route path="/ai-conversational-ai" element={React.createElement(React.lazy(() => import("./app/ai-conversational-ai/page")))} />
+                              <Route path="/ai-crm" element={React.createElement(React.lazy(() => import("./app/ai-crm/page")))} />
+                              <Route path="/ai-customer-insights" element={React.createElement(React.lazy(() => import("./app/ai-customer-insights/page")))} />
+                              <Route path="/ai-data-visualization" element={React.createElement(React.lazy(() => import("./app/ai-data-visualization/page")))} />
+                              <Route path="/ai-devops-automation" element={React.createElement(React.lazy(() => import("./app/ai-devops-automation/page")))} />
+                              <Route path="/ai-document-intelligence" element={React.createElement(React.lazy(() => import("./app/ai-document-intelligence/page")))} />
+                              <Route path="/ai-marketing-automation" element={React.createElement(React.lazy(() => import("./app/ai-marketing-automation/page")))} />
+                              <Route path="/ai-predictive-analytics" element={React.createElement(React.lazy(() => import("./app/ai-predictive-analytics/page")))} />
+                              <Route path="/ai-voice-assistant" element={React.createElement(React.lazy(() => import("./app/ai-voice-assistant/page")))} />
+                              <Route path="/ai-workflow-automation" element={React.createElement(React.lazy(() => import("./app/ai-workflow-automation/page")))} />
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
 
 <<<<<<< HEAD
                               {/* Additional IT Services Routes */}
+<<<<<<< HEAD
                               <Route path="/cloud-consulting" element={<CloudConsultingPage />} />
                               <Route path="/data-center-solutions" element={<DataCenterSolutionsPage />} />
                               <Route path="/disaster-recovery" element={<DisasterRecoveryPage />} />
@@ -371,6 +391,25 @@ function App() {
                               <Route path="/5g-network-infrastructure" element={<FiveGNetworkInfrastructurePage />} />
                               <Route path="/5g-private-networks" element={<FiveGPrivateNetworksPage />} />
                               <Route path="/5g-smart-city-solutions" element={<FiveGSmartCitySolutionsPage />} />
+=======
+                              <Route path="/cloud-consulting" element={React.createElement(React.lazy(() => import("./app/cloud-consulting/page")))} />
+                              <Route path="/data-center-solutions" element={React.createElement(React.lazy(() => import("./app/data-center-solutions/page")))} />
+                              <Route path="/disaster-recovery" element={React.createElement(React.lazy(() => import("./app/disaster-recovery/page")))} />
+                              <Route path="/it-support" element={React.createElement(React.lazy(() => import("./app/it-support/page")))} />
+                              <Route path="/managed-services" element={React.createElement(React.lazy(() => import("./app/managed-services/page")))} />
+                              <Route path="/security-audit" element={React.createElement(React.lazy(() => import("./app/security-audit/page")))} />
+                              <Route path="/technology-consulting" element={React.createElement(React.lazy(() => import("./app/technology-consulting/page")))} />
+
+                              {/* Additional 5G Services Routes */}
+                              <Route path="/5g-data-analytics" element={React.createElement(React.lazy(() => import("./app/5g-data-analytics/page")))} />
+                              <Route path="/5g-edge-computing" element={React.createElement(React.lazy(() => import("./app/5g-edge-computing/page")))} />
+                              <Route path="/5g-implementation" element={React.createElement(React.lazy(() => import("./app/5g-implementation/page")))} />
+                              <Route path="/5g-iot-solutions" element={React.createElement(React.lazy(() => import("./app/5g-iot-solutions/page")))} />
+                              <Route path="/5g-mobile-applications" element={React.createElement(React.lazy(() => import("./app/5g-mobile-applications/page")))} />
+                              <Route path="/5g-network-infrastructure" element={React.createElement(React.lazy(() => import("./app/5g-network-infrastructure/page")))} />
+                              <Route path="/5g-private-networks" element={React.createElement(React.lazy(() => import("./app/5g-private-networks/page")))} />
+                              <Route path="/5g-smart-city-solutions" element={React.createElement(React.lazy(() => import("./app/5g-smart-city-solutions/page")))} />
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
 
                               {/* Catch all route */}
                               <Route path="*" element={<div className="min-h-screen flex items-center justify-center">

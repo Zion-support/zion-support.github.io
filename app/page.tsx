@@ -3,6 +3,7 @@ import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, C
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import EnhancedSEO from "./components/EnhancedSEO";
 =======
 import AdvancedSEO from "./components/AdvancedSEO";
@@ -13,6 +14,9 @@ import EnhancedSEO from "./components/EnhancedSEO";
 =======
 import EnhancedSEO from "./components/EnhancedSEO";
 >>>>>>> cursor/analyze-improve-and-deploy-application-a546
+=======
+import EnhancedSEO from "./components/EnhancedSEO";
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
 import FuturisticBackground from "./components/FuturisticBackground";
 import FuturisticCard from "./components/FuturisticCard";
 import FuturisticButton from "./components/FuturisticButton";
@@ -189,6 +193,7 @@ const HomePage = () => {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
       <FuturisticBackground />
 >>>>>>> cursor/analyze-improve-and-deploy-application-da10
@@ -205,6 +210,10 @@ const HomePage = () => {
       <FuturisticBackground />
       <EnhancedSEO
 >>>>>>> cursor/analyze-improve-and-deploy-application-a546
+=======
+      <FuturisticBackground />
+      <EnhancedSEO
+>>>>>>> cursor/analyze-improve-and-deploy-application-fdb6
         title="Zion Tech Group - Advanced AI and IT Solutions | Leading Technology Company"
         description="Leading provider of AI-powered solutions, IT services, micro SAAS, and digital transformation for modern businesses. Transform your operations with cutting-edge technology."
         keywords="AI solutions, IT services, micro SAAS, digital transformation, business automation, technology consulting, cybersecurity, cloud solutions, 5G technology"
