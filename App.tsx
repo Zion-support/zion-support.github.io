@@ -183,6 +183,22 @@ function App() {
                               <Route path="/ai-predictive-analytics" element={React.createElement(React.lazy(() => import("./app/ai-predictive-analytics/page")))} />
                               <Route path="/ai-voice-assistant" element={React.createElement(React.lazy(() => import("./app/ai-voice-assistant/page")))} />
                               <Route path="/ai-workflow-automation" element={React.createElement(React.lazy(() => import("./app/ai-workflow-automation/page")))} />
+                              
+                              {/* Missing AI Services Routes */}
+                              <Route path="/ai-automation-platform" element={React.createElement(React.lazy(() => import("./app/ai-automation-platform/page")))} />
+                              <Route path="/ai-data-analytics-pro" element={React.createElement(React.lazy(() => import("./app/ai-data-analytics-pro/page")))} />
+                              <Route path="/ai-hr-recruitment-pro" element={React.createElement(React.lazy(() => import("./app/ai-hr-recruitment-pro/page")))} />
+                              <Route path="/ai-financial-analysis" element={React.createElement(React.lazy(() => import("./app/ai-financial-analysis/page")))} />
+                              <Route path="/ai-voice-assistant-pro" element={React.createElement(React.lazy(() => import("./app/ai-voice-assistant-pro/page")))} />
+                              <Route path="/ai-image-recognition-pro" element={React.createElement(React.lazy(() => import("./app/ai-image-recognition-pro/page")))} />
+                              <Route path="/ai-financial-analytics" element={React.createElement(React.lazy(() => import("./app/ai-financial-analytics/page")))} />
+                              <Route path="/ai-sentiment-analysis-pro" element={React.createElement(React.lazy(() => import("./app/ai-sentiment-analysis-pro/page")))} />
+                              <Route path="/ai-fraud-detection-pro" element={React.createElement(React.lazy(() => import("./app/ai-fraud-detection-pro/page")))} />
+                              <Route path="/ai-language-translation" element={React.createElement(React.lazy(() => import("./app/ai-language-translation/page")))} />
+
+                              {/* Missing Zion Micro SAAS Routes */}
+                              <Route path="/zion-ai-inventory-manager" element={React.createElement(React.lazy(() => import("./app/zion-ai-inventory-manager/page")))} />
+                              <Route path="/zion-hr-assistant-pro" element={React.createElement(React.lazy(() => import("./app/zion-hr-assistant-pro/page")))} />
 
                               {/* Additional IT Services Routes */}
                               <Route path="/cloud-consulting" element={React.createElement(React.lazy(() => import("./app/cloud-consulting/page")))} />
