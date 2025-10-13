@@ -10,8 +10,14 @@ import {
   GlobeAltIcon,
   PhoneIcon,
   EnvelopeIcon,
-  MapPinIcon
+  MapPinIcon,
+  RocketLaunchIcon,
+  SparklesIcon
 } from '@heroicons/react/24/outline';
+import FuturisticBackground from '../components/FuturisticBackground';
+import NeonButton from '../components/NeonButton';
+import FuturisticCard from '../components/FuturisticCard';
+import { microSaasServices, getPopularServices, getNewServices } from '../data/servicesData';
 
 export default function HomePage() {
   return (
@@ -23,49 +29,60 @@ export default function HomePage() {
       </Helmet>
       
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="w-full h-full bg-gradient-to-br from-purple-900/20 to-cyan-900/20"></div>
-        </div>
-        
-        <div className="relative z-10 container mx-auto px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-6xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-cyan-200 bg-clip-text text-transparent">
-              Zion Tech Group
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
+      <FuturisticBackground className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 flex items-center justify-center overflow-hidden">
+        <div className="container mx-auto px-4 text-center">
+          <div className="max-w-5xl mx-auto">
+            {/* Animated Logo */}
+            <div className="mb-8">
+              <h1 className="text-7xl md:text-8xl font-bold mb-4 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-pulse">
+                Zion Tech Group
+              </h1>
+              <div className="flex items-center justify-center gap-2 text-purple-300">
+                <SparklesIcon className="w-6 h-6 animate-spin" />
+                <span className="text-lg font-semibold">Innovation in Every Solution</span>
+                <SparklesIcon className="w-6 h-6 animate-spin" />
+              </div>
+            </div>
+            
+            <p className="text-2xl md:text-3xl text-gray-200 mb-8 leading-relaxed font-light">
               Advanced AI and IT Solutions for Modern Businesses
             </p>
-            <p className="text-lg text-gray-400 mb-12 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
               Empowering businesses with cutting-edge artificial intelligence, cybersecurity solutions, 
               cloud infrastructure, and digital transformation services to drive innovation and growth.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link 
-                to="/contact" 
-                className="group bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
-              >
+            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
+              <NeonButton href="/contact" variant="primary" size="lg">
                 Get Started Today
-                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link 
-                to="/services" 
-                className="group border-2 border-purple-400 text-purple-300 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 flex items-center gap-2"
-              >
+              </NeonButton>
+              <NeonButton href="/services" variant="secondary" size="lg">
                 Explore Services
-                <ArrowRightIcon className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Link>
+              </NeonButton>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
+              <div className="text-center">
+                <div className="text-4xl font-bold text-purple-400 mb-2">50+</div>
+                <div className="text-gray-300 text-sm">Micro SaaS Solutions</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-cyan-400 mb-2">25+</div>
+                <div className="text-gray-300 text-sm">Happy Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-pink-400 mb-2">99%</div>
+                <div className="text-gray-300 text-sm">Success Rate</div>
+              </div>
+              <div className="text-center">
+                <div className="text-4xl font-bold text-green-400 mb-2">24/7</div>
+                <div className="text-gray-300 text-sm">Support</div>
+              </div>
             </div>
           </div>
         </div>
-        
-        {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-purple-500 rounded-full opacity-20 animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-32 h-32 bg-cyan-500 rounded-full opacity-20 animate-pulse delay-1000"></div>
-        <div className="absolute top-1/2 left-20 w-16 h-16 bg-pink-500 rounded-full opacity-20 animate-pulse delay-500"></div>
-      </section>
+      </FuturisticBackground>
 
       {/* Services Section */}
       <section className="py-20 bg-slate-900">
