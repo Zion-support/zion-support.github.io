@@ -2,16 +2,14 @@
 import React from 'react'
 interface StructuredDataProps {
   type?: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'LocalBusiness'
-  data?: Record<string, unknown> origin/cursor/analyze-improve-and-deploy-application-1247
+  data?: Record<string, unknown> origin/cursor/analyze-improve-and-deploy-application-1247;
 }
-
-const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', data }) => {
+const StructuredData: React.FC</string><StructuredDataProps> = ({ type = 'Organization', data }) => {
   const getStructuredData = () => {
     const baseData = {
       "@context": "https://schema.org",
       "@type": type,
     };
-
     switch (type) {
       case 'Organization':
         return {
@@ -47,7 +45,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', 
             priceCurrency: "USD"
           }
         };
-
       case 'WebSite':
         return {
           ...baseData,
@@ -59,7 +56,6 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', 
             "query-input": "required name=search_term_string"
           }
         };
-
       case 'Service':
         return {
           ...baseData,
@@ -105,10 +101,9 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type = 'Organization', 
             ]
           }
         };
-
-const structuredData = data || getDefaultData() origin/cursor/analyze-improve-and-deploy-application-1247
+const structuredData = data || getDefaultData() origin/cursor/analyze-improve-and-deploy-application-1247;
   return (
-    <script
+    </StructuredDataProps><script;
       type="application/ld+json"
       dangerouslySetInnerHTML={{
         __html: JSON.stringify(getStructuredData(), null, 2)
@@ -116,5 +111,5 @@ const structuredData = data || getDefaultData() origin/cursor/analyze-improve-an
     />
 )
 } origin/cursor/analyze-improve-and-deploy-application-1247
-
-export default StructuredData
+;
+export default StructuredData;

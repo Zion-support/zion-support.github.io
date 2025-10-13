@@ -1,12 +1,12 @@
 import React from 'react'
 interface PerformanceMetrics {
-  lcp?: number
-  fid?: number
-  cls?: number
-  fcp?: number
-  ttfb?: number
-  memory?: number
-  navigation?: any
+  lcp?: number;
+  fid?: number;
+  cls?: number;
+  fcp?: number;
+  ttfb?: number;
+  memory?: number;
+  navigation?: any;
 }
 interface PerformanceOptimizerConfig {
   enableLazyLoading: boolean;
@@ -20,15 +20,14 @@ class PerformanceOptimizer {
   private metrics: PerformanceMetrics = {};
   private observers: PerformanceObserver[] = [];
   private marks: Map<string, number> = new Map();
-
-  constructor(config: Partial<PerformanceOptimizerConfig> = {}) {
+  constructor(config: Partial</string><PerformanceOptimizerConfig> = {}) {
     this.config = {
       enableLazyLoading: true,
       enablePreloading: true,
       enableCompression: true,
       enableCaching: true,
       enableMonitoring: true,
-      ...config
+      ...config;
     }
     if (this.config.enableMonitoring) {
       this.initMonitoring()
@@ -36,7 +35,7 @@ class PerformanceOptimizer {
   }
   init() {
     if (typeof window === 'undefined') return
-
+;
     if (this.config.enableLazyLoading) {
       this.lazyLoadImages()
     }
@@ -48,7 +47,7 @@ class PerformanceOptimizer {
     }
   }
   startMark(markName: string): void {
-    if (typeof window === 'undefined') return
+    if (typeof window === 'undefined') return;
     const timestamp = performance.now()
     this.marks.set(markName, timestamp)
     if ('mark' in performance) {
@@ -56,27 +55,26 @@ class PerformanceOptimizer {
     }
   }
   endMark(markName: string): number {
-    if (typeof window === 'undefined') return 0
+    if (typeof window === 'undefined') return 0;
     const startTime = this.marks.get(markName)
     if (!startTime) return 0
-    
-    const duration = performance.now() - startTime
+    ;
+    const duration = performance.now() - startTime;
     this.marks.delete(markName)
-    
     if ('measure' in performance && 'mark' in performance) {
       try {
         performance.measure(`${markName}-duration`, markName)
       } catch {
-        // Ignore measure errors
+        // Ignore measure errors;
       }
     }
-    return duration
+    return duration;
   }
   private initMonitoring() {
     if (typeof window === 'undefined' || !('PerformanceObserver' in window)) return
-
+;
     try {
-      // Monitor Core Web Vitals
+      // Monitor Core Web Vitals;
       this.observeLCP()
       this.observeFID()
       this.observeCLS()
@@ -92,14 +90,14 @@ class PerformanceOptimizer {
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         const lastEntry = entries[entries.length - 1]
-        this.metrics.lcp = lastEntry.startTime
+        this.metrics.lcp = lastEntry.startTime;
       })
       observer.observe({ entryTypes: ['largest-contentful-paint'] })
       this.observers.push(observer)
     } catch {
     } catch {
     } catch {
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeFID() {
@@ -109,7 +107,7 @@ class PerformanceOptimizer {
         entries.forEach((entry: PerformanceEntry) => {
           const fidEntry = entry as PerformanceEntry & { processingStart: number }
           this.metrics.fid = fidEntry.processingStart - fidEntry.startTime
-
+;
         })
       })
       observer.observe({ entryTypes: ['first-input'] })
@@ -117,29 +115,29 @@ class PerformanceOptimizer {
     } catch {
     } catch {
     } catch {
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeCLS() {
     try {
-      let clsValue = 0
+      let clsValue = 0;
       const observer = new PerformanceObserver((list) => {
         const entries = list.getEntries()
         entries.forEach((entry: PerformanceEntry) => {
           const clsEntry = entry as PerformanceEntry & { hadRecentInput?: boolean; value: number }
           if (!clsEntry.hadRecentInput) {
             clsValue += clsEntry.value
-
+;
           }
         })
-        this.metrics.cls = clsValue
+        this.metrics.cls = clsValue;
       })
       observer.observe({ entryTypes: ['layout-shift'] })
       this.observers.push(observer)
     } catch {
     } catch {
     } catch {
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeFCP() {
@@ -148,7 +146,7 @@ class PerformanceOptimizer {
         const entries = list.getEntries()
         entries.forEach((entry) => {
           if (entry.name === 'first-contentful-paint') {
-            this.metrics.fcp = entry.startTime
+            this.metrics.fcp = entry.startTime;
           }
         })
       })
@@ -157,7 +155,7 @@ class PerformanceOptimizer {
     } catch {
     } catch {
     } catch {
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeTTFB() {
@@ -168,7 +166,7 @@ class PerformanceOptimizer {
           const navEntry = entry as PerformanceEntry & { responseStart: number; requestStart: number }
           if (navEntry.responseStart > 0) {
             this.metrics.ttfb = navEntry.responseStart - navEntry.requestStart
-
+;
           }
         })
       })
@@ -177,44 +175,42 @@ class PerformanceOptimizer {
     } catch {
     } catch {
     } catch {
-      // Ignore if not supported
+      // Ignore if not supported;
     }
   }
   private observeMemory() {
     if ('memory' in performance) {
-      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory
+      const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; jsHeapSizeLimit: number } }).memory;
       if (memory) {
-        this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit
+        this.metrics.memory = memory.usedJSHeapSize / memory.jsHeapSizeLimit;
       }
     }
   }
   lazyLoadImages() {
     if (typeof window === 'undefined') return
-
+;
     const images = document.querySelectorAll('img[data-src]')
-    
     if ('IntersectionObserver' in window) {
       const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const img = entry.target as HTMLImageElement
+            const img = entry.target as HTMLImageElement;
             const src = img.getAttribute('data-src')
             if (src) {
-              img['src'] = src
+              img['src'] = src;
               img.removeAttribute('data-src')
               imageObserver.unobserve(img)
             }
           }
         })
       })
-
       images.forEach((img) => imageObserver.observe(img))
     } else {
-      // Fallback for browsers without IntersectionObserver
+      // Fallback for browsers without IntersectionObserver;
       images.forEach((img) => {
         const src = img.getAttribute('data-src')
         if (src) {
-          (img as HTMLImageElement)['src'] = src
+          (img as HTMLImageElement)['src'] = src;
           img.removeAttribute('data-src')
         }
       })
@@ -222,24 +218,23 @@ class PerformanceOptimizer {
   }
   preloadCriticalResources() {
     if (typeof window === 'undefined') return
-
+;
     const criticalResources = [
       '/fonts/inter.woff2'
       '/css/critical.css'
       '/js/critical.js'
     ]
-
     criticalResources.forEach((resource) => {
       const link = document.createElement('link')
       link.rel = 'preload'
-      link.href = resource
+      link.href = resource;
       link.as = resource.endsWith('.css') ? 'style' : 'script'
       document.head.appendChild(link)
     })
   }
   setupCaching() {
     if (typeof window === 'undefined' || !('serviceWorker' in navigator)) return
-
+;
     window.addEventListener('load', () => {
       navigator.serviceWorker.register('/sw.js')
         .then((registration) => {
@@ -255,20 +250,20 @@ class PerformanceOptimizer {
   }
   getNavigationMetrics() {
     if (typeof window === 'undefined') return null
-
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+;
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
     if (!navigation) return null
-
+;
     return {
-      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
-      loadComplete: navigation.loadEventEnd - navigation.loadEventStart
-      domInteractive: navigation.domInteractive - navigation.fetchStart
-      redirect: navigation.redirectEnd - navigation.redirectStart
-      dns: navigation.domainLookupEnd - navigation.domainLookupStart
-      tcp: navigation.connectEnd - navigation.connectStart
-      request: navigation.responseStart - navigation.requestStart
-      response: navigation.responseEnd - navigation.responseStart
-      processing: navigation.domComplete - navigation.responseEnd
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
+      loadComplete: navigation.loadEventEnd - navigation.loadEventStart;
+      domInteractive: navigation.domInteractive - navigation.fetchStart;
+      redirect: navigation.redirectEnd - navigation.redirectStart;
+      dns: navigation.domainLookupEnd - navigation.domainLookupStart;
+      tcp: navigation.connectEnd - navigation.connectStart;
+      request: navigation.responseStart - navigation.requestStart;
+      response: navigation.responseEnd - navigation.responseStart;
+      processing: navigation.domComplete - navigation.responseEnd;
     }
   }
   cleanup() {
@@ -277,12 +272,10 @@ class PerformanceOptimizer {
     this.marks.clear()
   }
 }
-// Create singleton instance
+// Create singleton instance;
 const performanceOptimizer = new PerformanceOptimizer()
-
-// Export functions for backward compatibility
+// Export functions for backward compatibility;
 export const lazyLoadImages = () => performanceOptimizer.lazyLoadImages()
 export const preloadCriticalResources = () => performanceOptimizer.preloadCriticalResources()
 export const collectPerformanceMetrics = () => performanceOptimizer.getNavigationMetrics()
-
-export { performanceOptimizer } origin/cursor/analyze-improve-and-deploy-application-1247
+export { performanceOptimizer } origin/cursor/analyze-improve-and-deploy-application-1247</PerformanceOptimizerConfig>

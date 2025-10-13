@@ -1,15 +1,11 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { DollarSign, TrendingUp, PieChart, BarChart3, Receipt, CreditCard, Smartphone, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Clock, Globe, Award, Target, Lightbulb, Bot, Brain, Cpu, Database, Cloud, Lock, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Helmet , DollarSign, TrendingUp, PieChart, BarChart3, Receipt, CreditCard, Smartphone, Shield, Zap, CheckCircle, ArrowRight, Star, Users, Clock, Globe, Award, Target, Lightbulb, Bot, Brain, Cpu, Database, Cloud, Lock, Eye, Search, Filter, Download, Upload, Share, MessageCircle, Mail, Phone, MapPin, Calendar, Timer, Battery, Wifi2, Signal, Bluetooth, Camera, Mic, Headphones, Speaker, Volume2, VolumeX, Play, Pause, SkipForward, SkipBack, Repeat, Shuffle, Heart, ThumbsUp, ThumbsDown, Bookmark, Flag, AlertTriangle, Info, HelpCircle, Plus, Minus, Edit, Trash2, Save, Copy, Paste, Cut, Undo, Redo, RefreshCw, RotateCcw, RotateCw, Move, Maximize, Minimize, Square, Circle, Triangle, Hexagon, Octagon, Pentagon, Star2, Heart2, Smile, Frown, Meh, Laugh, Angry, Surprised, Confused, Wink, Kiss, Tongue, Wink2, Kiss2, Tongue2, Wink3, Kiss3, Tongue3, Wink4, Kiss4, Tongue4, Wink5, Kiss5, Tongue5, Wink6, Kiss6, Tongue6, Wink7, Kiss7, Tongue7, Wink8, Kiss8, Tongue8, Wink9, Kiss9, Tongue9, Wink10, Kiss10, Tongue10, FileText, Package  } from "react-helmet-async";import { Link } from 'react-router-dom'
   )
 =======
 "use client";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet , Link  } from "react-helmet-async";
 import { CheckCircle, Star, Brain } from "lucide-react";
 export default function AIExpenseTracker() {
-
   const capabilities = [
     {
       title: "Automatic Categorization",
@@ -36,7 +32,6 @@ export default function AIExpenseTracker() {
       icon: <Brain className="w-8 h-8 text-purple-400" />,
     },
   ];
-
   const pricingPlans = [
     {
       name: "Basic",
@@ -86,7 +81,6 @@ export default function AIExpenseTracker() {
       popular: false,
     },
   ];
-
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -110,12 +104,10 @@ export default function AIExpenseTracker() {
       rating: 5,
     },
   ];
-
   return (
     <>
-      <Helmet>
-        <title>AI Expense Tracker - Zion Tech Group</title>
-        <meta
+      <Helmet /><title>AI Expense Tracker - Zion Tech Group</title>
+        <meta;
           name="description"
           content="Smart expense tracking with AI-powered categorization, receipt scanning, and financial insights."
         />
@@ -123,7 +115,7 @@ export default function AIExpenseTracker() {
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -140,7 +132,7 @@ import { Helmet } from 'react-helmet-async';
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -148,27 +140,24 @@ const benefits = [
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
 'Gain competitive advantage with advanced technology'
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             ))}
           </div>
-
           {/* Capabilities Section */}
-          <div className="mb-16">
-            <h2 className="text-3xl font-bold text-white text-center mb-12">
-              Key Capabilities
+          <div className="mb-16" /><h2 className="text-3xl font-bold text-white text-center mb-12">
+              Key Capabilities</h2>
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {capabilities.map((capability, index) => (
-                <div
+                </div><div;
                   key={index}
                   className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center"
-                >
-                  <div className="flex justify-center mb-4">
-                    {capability.icon}
+                 /><div className="flex justify-center mb-4">
+                    {capability.icon}</div>
                   </div>
                   <h3 className="text-xl font-semibold text-white mb-2">
-                    {capability.title}
+                    {capability.title}</h3>
                   </h3>
                   <p className="text-gray-300">{capability.description}</p>
                 </div>
@@ -179,3 +168,4 @@ const benefits = [
       </div>
       <Footer />
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

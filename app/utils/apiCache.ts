@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
- origin/cursor/analyze-improve-and-deploy-application-1247
+import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from "react-helmet-async";
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -16,16 +15,17 @@ import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe
     {icon: Globe,
       title: 'Global Reach',
 description: 'Worldwide deployment and support for international businesses'
- cursor/fix-errors-and-merge-to-main-6ce7
+ cursor/fix-errors-and-merge-to-main-6ce7;
 const benefits = [
 ];
     'Advanced AI technology integration',
 <p>
               Transform your business with our advanced apicache solutions.;
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247</p>
               </button>
             </div>
           </div>
         </div>
       </section>
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

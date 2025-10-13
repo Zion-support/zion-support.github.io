@@ -1,4 +1,4 @@
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 // Update title;
     document.title = this.config.title;
 // Update meta description;
@@ -31,9 +31,10 @@ private updateMetaTag(name: string, content: string): void {,}
     if (typeof document === 'undefined') return;}let meta = document.querySelector(`meta[name="${name)}"]`) as HTMLMetaElement;
     if (!meta) {meta = document.createElement('meta');
       meta.name = name;
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) {
       canonical = document.createElement('link');
       canonical.rel = 'canonical';
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

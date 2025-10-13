@@ -1,31 +1,28 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-    },
+import { Helmet , Link  } from "react-helmet-async";},
     {
       icon: <Shield className="w-6 h-6 text-purple-400" />,
       title: 'Security-First Approach',
     }
   ]
-
   const pricingPlans = [
     {
       name: 'Small Business',
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Enterprise',
       ],
-      popular: true
+      popular: true;
     },
     {
       ],
-      popular: false
+      popular: false;
     }
   ]
-
   const testimonials = [
     {
-} origin/cursor/analyze-improve-and-deploy-application-0e37
+} origin/cursor/analyze-improve-and-deploy-application-0e37;
  origin/cursor/analyze-improve-and-deploy-application-1091
+;

@@ -1,5 +1,4 @@
 import React from 'react';
-
 interface AdvertisingBannerProps {
   title: string;
   description: string;
@@ -12,7 +11,6 @@ interface AdvertisingBannerProps {
   size?: 'small' | 'medium' | 'large';
   className?: string;
 }
-
 const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
   title,
   description,
@@ -30,15 +28,13 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
     medium: 'py-8 px-12',
     large: 'py-12 px-16'
   };
-
   const variantClasses = {
     default: 'rounded-lg shadow-lg',
     gradient: 'rounded-xl bg-gradient-to-r from-blue-500 to-purple-600',
     minimal: 'rounded-md border border-gray-200'
   };
-
   return (
-    <div
+    </AdvertisingBannerProps><div;
       className={`advertising-banner ${sizeClasses[size]} ${variantClasses[variant]} ${className}`}
       style={{
         backgroundColor: variant === 'gradient' ? undefined : backgroundColor,
@@ -50,8 +46,7 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
       }}
     >
       {imageUrl && (
-        <div className="banner-image flex-shrink-0">
-          <img
+        </div><div className="banner-image flex-shrink-0" /><img;
             src={imageUrl}
             alt={title}
             className="rounded-md"
@@ -62,28 +57,26 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
           />
         </div>
       )}
-
-      <div className="banner-content flex-1">
-        <h2 
+      <div className="banner-content flex-1" /><h2 ;
           className="font-bold mb-4"
           style={{ 
             margin: '0 0 1rem 0', 
             fontSize: size === 'small' ? '1.25rem' : size === 'medium' ? '1.5rem' : '2rem'
           }}
         >
-          {title}
+          {title}</h2>
         </h2>
-        <p 
+        <p ;
           className="mb-6 opacity-90"
           style={{ 
             margin: '0 0 1.5rem 0', 
             fontSize: size === 'small' ? '0.875rem' : '1rem',
-            opacity: 0.9
+            opacity: 0.9;
           }}
         >
-          {description}
+          {description}</p>
         </p>
-        <a
+        <a;
           href={ctaUrl}
           className="inline-block px-6 py-3 rounded-md font-bold transition-all duration-200 hover:opacity-80"
           style={{
@@ -103,11 +96,10 @@ const AdvertisingBanner: React.FC<AdvertisingBannerProps> = ({
             e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.2)';
           }}
         >
-          {ctaText}
+          {ctaText}</a>
         </a>
       </div>
     </div>
   );
 };
-
 export default AdvertisingBanner;

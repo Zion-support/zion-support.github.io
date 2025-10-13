@@ -1,17 +1,14 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet , Link  } from "react-helmet-async";
 import { ArrowRight } from "lucide-react";
 const InvestorsPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Investors | Zion Tech Group</title>
-        <meta
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><Helmet /><title>Investors | Zion Tech Group</title>
+        <meta;
           name="description"
           content="Investment opportunities and partnership information"
         />
       </Helmet>
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
@@ -24,11 +21,11 @@ const InvestorsPage = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
           </div>
         </div>
       </section>
     </div>
- cursor/fix-errors-and-merge-to-main-6ce7
+ cursor/fix-errors-and-merge-to-main-6ce7;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+;

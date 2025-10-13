@@ -1,12 +1,12 @@
-import { MetadataRoute } from 'next'; origin/cursor/analyze-improve-and-deploy-application-1232
+import { MetadataRoute } from 'next'; origin/cursor/analyze-improve-and-deploy-application-1232;
 export default function sitemap(): MetadataRoute.Sitemap {return [;}
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
       priority: 1,
     },
     {
       url: `${baseUrl}/about`,
 lastModified: new Date(),
-      changeFrequency: 'monthly', origin/cursor/analyze-improve-and-deploy-application-1247
+      changeFrequency: 'monthly', origin/cursor/analyze-improve-and-deploy-application-1247;
       priority: 0.8,
     },
     {
@@ -47,3 +47,4 @@ lastModified: new Date(),
     },
   ];
 } origin/cursor/analyze-improve-and-deploy-application-1247
+;

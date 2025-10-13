@@ -1,11 +1,8 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
-import { Share2, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Calendar, MessageSquare } from 'lucide-react'
+import { Helmet , Link  } from "react-helmet-async";import { Share2, ArrowRight, CheckCircle, Zap, Brain, Smartphone, Globe, Users, BarChart3, Star, Sparkles, TrendingUp, Target, Calendar, MessageSquare } from 'lucide-react'
 import Layout from '../layout'
-
 export default function AISocialMediaManager() {
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: <Brain className="w-6 h-6 text-cyan-400" />,
       title: 'AI Content Creation',
@@ -24,30 +21,29 @@ export default function AISocialMediaManager() {
     {
 icon: TrendingUp,
       title: 'Growth Optimization',
- cursor/fix-errors-and-merge-to-main-6ce7
-      <Helmet>
-        <title>Ai Social Media Manager - Zion Tech Group</title>
+ cursor/fix-errors-and-merge-to-main-6ce7;
+      <Helmet /><title>Ai Social Media Manager - Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
 {/* Benefits Section */}
-        <section className="py-20 px-4"></section>
-          <div className="max-w-7xl mx-auto"></div>
-            <div className="text-center mb-16"></div>
+        <section className="py-20 px-4" />
+          <div className="max-w-7xl mx-auto" />
+            <div className="text-center mb-16" />
               <h2 className="text-4xl font-bold text-white mb-4">Why Choose Our Solution?</h2>
               <p>
-                Proven results that drive business growth and efficiency
+                Proven results that drive business growth and efficiency</p>
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
- origin/cursor/analyze-improve-and-deploy-application-1247
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" />
+ origin/cursor/analyze-improve-and-deploy-application-1247;
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             </div>
           </div>
@@ -55,3 +51,4 @@ icon: TrendingUp,
       </div>
 <Footer />
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

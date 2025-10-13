@@ -1,33 +1,27 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { ArrowRight , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function MachineLearningZionTechGroup() {
   return (
-    <>
-      <Helmet>
-        <title>MachineLearning - Zion Tech Group</title>
+    <React.Fragment /><Helmet /><title>MachineLearning - Zion Tech Group</title>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            MachineLearning
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center" /><div className="text-center" /><h1 className="text-4xl font-bold text-white mb-6">
+            MachineLearning</h1>
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional machinelearning services coming soon.
+            Professional machinelearning services coming soon.</p>
           </p>
-          <Link
+          <Link;
             to="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
+            Contact Us;
+            </Link><ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
-} origin/cursor/analyze-improve-and-deploy-application-0ff3
+} origin/cursor/analyze-improve-and-deploy-application-0ff3;
 =======
 'use client';
 import React from 'react'
@@ -46,8 +40,8 @@ const benefits = [
             </h1>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Transform your business with our advanced page solutions. 
-              Powered by cutting-edge AI technology and industry expertise.
-            </p> cursor/fix-errors-and-merge-to-main-6ce7
+              Powered by cutting-edge AI technology and industry expertise.</p>
+            </p> cursor/fix-errors-and-merge-to-main-6ce7;
             </div>
           </div>
         </div>
@@ -66,23 +60,18 @@ const benefits = [
         </div>
       </section>
 {/* CTA Section */};
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to Get Started?
+      <section className="py-20 px-4 sm:px-6 lg:px-8" /><div className="max-w-4xl mx-auto text-center" /><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 md:p-12" /><h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to Get Started?</h2>
             </h2>
-            <p className="text-xl text-purple-100 mb-8"> cursor/fix-errors-and-merge-to-main-6ce7
-              Contact our experts to discuss your page needs and get a customized solution.
+            <p className="text-xl text-purple-100 mb-8"> cursor/fix-errors-and-merge-to-main-6ce7;
+              Contact our experts to discuss your page needs and get a customized solution.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center"></div>
-              <button>
-                <Phone>
-                Call Now
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" />
+              <button /><Phone>
+                Call Now</Phone>
               </button>
-              <button>
-                <Mail>
-                Email Us
+              <button /><Mail>
+                Email Us</Mail>
               </button>
             </div>
           </div>
@@ -92,5 +81,5 @@ const benefits = [
 </>
   );
 };
-
 export default PagePage; origin/cursor/analyze-improve-and-deploy-application-1507
+;

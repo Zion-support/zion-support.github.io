@@ -1,15 +1,13 @@
 /**
- * Error Handling Configuration
- * Centralized error tracking and reporting settings
+ * Error Handling Configuration;
+ * Centralized error tracking and reporting settings;
  */
-
 export enum ErrorSeverity {
   LOW = 'low',
   MEDIUM = 'medium',
   HIGH = 'high',
   CRITICAL = 'critical',
 }
-
 export enum ErrorCategory {
   NETWORK = 'network',
   VALIDATION = 'validation',
@@ -21,7 +19,6 @@ export enum ErrorCategory {
   THIRD_PARTY = 'third_party',
   UNKNOWN = 'unknown',
 }
-
 export interface ErrorConfig {
   enabled: boolean;
   logToConsole: boolean;
@@ -31,7 +28,6 @@ export interface ErrorConfig {
   ignoreErrors: RegExp[];
   severityThreshold: ErrorSeverity;
 }
-
 export const errorHandlingConfig: ErrorConfig = {
   enabled: true,
   logToConsole: process.env['NODE_ENV'] !== 'production',
@@ -45,7 +41,6 @@ export const errorHandlingConfig: ErrorConfig = {
   ],
   severityThreshold: ErrorSeverity.LOW,
 };
-
 export const errorMessages = {
   network: {
     offline: 'You are currently offline. Please check your internet connection.',
@@ -67,7 +62,6 @@ export const errorMessages = {
     retry: 'Please try again in a few moments.',
   },
 };
-
 export class AppError extends Error {
   constructor(
     message: string,
@@ -80,5 +74,4 @@ export class AppError extends Error {
     Error.captureStackTrace(this, this.constructor);
   }
 }
-
-export default errorHandlingConfig;
+export default errorHandlingConfig;</string>

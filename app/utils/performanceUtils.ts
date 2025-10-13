@@ -1,42 +1,36 @@
 /**
- * Performance Optimization Utilities
- * Provides utilities for optimizing performance in React applications
+ * Performance Optimization Utilities;
+ * Provides utilities for optimizing performance in React applications;
  */
-
 import { lazy } from 'react';
-
 /**
- * Debounce function to limit execution rate
+ * Debounce function to limit execution rate;
  */
 export function debounce<T extends (...args: unknown[]) => unknown>(
   func: T,
-  wait: number
-): (...args: Parameters<T>) => void {
+  wait: number;
+): (...args: Parameters</T><T>) => void {
   let timeout: NodeJS.Timeout | null = null;
-
-  return function executedFunction(...args: Parameters<T>) {
+  return function executedFunction(...args: Parameters</T><T>) {
     const later = () => {
       timeout = null;
       func(...args);
     };
-
     if (timeout) {
       clearTimeout(timeout);
     }
     timeout = setTimeout(later, wait);
   };
 }
-
 /**
- * Throttle function to limit execution rate
+ * Throttle function to limit execution rate;
  */
-export function throttle<T extends (...args: unknown[]) => unknown>(
+export function throttle</T><T extends (...args: unknown[]) => unknown>(
   func: T,
-  limit: number
-): (...args: Parameters<T>) => void {
+  limit: number;
+): (...args: Parameters</T><T>) => void {
   let inThrottle: boolean;
-
-  return function executedFunction(...args: Parameters<T>) {
+  return function executedFunction(...args: Parameters</T><T>) {
     if (!inThrottle) {
       func(...args);
       inThrottle = true;
@@ -44,95 +38,79 @@ export function throttle<T extends (...args: unknown[]) => unknown>(
     }
   };
 }
-
 /**
- * Memoize function results
+ * Memoize function results;
  */
-export function memoize<T extends (...args: unknown[]) => unknown>(
-  func: T
+export function memoize</T><T extends (...args: unknown[]) => unknown>(
+  func: T;
 ): T {
-  const cache = new Map<string, ReturnType<T>>();
-
-  return ((...args: Parameters<T>): ReturnType<T> => {
+  const cache = new Map</T><string, ReturnType<T>>();
+  return ((...args: Parameters</string><T>): ReturnType</T><T> => {
     const key = JSON.stringify(args);
     if (cache.has(key)) {
       return cache.get(key)!;
     }
-    const result = func(...args) as ReturnType<T>;
+    const result = func(...args) as ReturnType</T><T>;
     cache.set(key, result);
     return result;
   }) as T;
 }
-
 /**
- * Lazy load a component with dynamic import
+ * Lazy load a component with dynamic import;
  */
-export function lazyLoad<T extends React.ComponentType<unknown>>(
+export function lazyLoad</T><T extends React.ComponentType<unknown>>(
   importFunc: () => Promise<{ default: T }>,
-  fallback?: React.ReactNode
-): React.LazyExoticComponent<T> {
+  fallback?: React.ReactNode;
+): React.LazyExoticComponent</T><T> {
   const LazyComponent = React.lazy(importFunc);
-  
   if (fallback) {
     return LazyComponent;
   }
-  
   return LazyComponent;
 }
-
 /**
- * Measure function execution time
+ * Measure function execution time;
  */
-export async function measureTime<T>(
+export async function measureTime</T><T>(
   name: string,
-  func: () => T | Promise<T>
+  func: () => T | Promise</T><T>
 ): Promise<{ result: T; duration: number }> {
   const start = performance.now();
   const result = await func();
   const duration = performance.now() - start;
-  
   if (process.env['NODE_ENV'] === 'development') { if (import.meta.env.DEV) { console.log(`[Performance] ${name}: ${duration.toFixed(2)}ms`); } }
-  
   return { result, duration };
 }
-
 /**
- * Batch async operations
+ * Batch async operations;
  */
-export async function batchAsync<T, R>(
+export async function batchAsync</T><T, R>(
   items: T[],
-  operation: (item: T) => Promise<R>,
-  batchSize = 10
-): Promise<R[]> {
+  operation: (item: T) => Promise</T><R>,
+  batchSize = 10;
+): Promise</R><R[]> {
   const results: R[] = [];
-  
   for (let i = 0; i < items.length; i += batchSize) {
     const batch = items.slice(i, i + batchSize);
     const batchResults = await Promise.all(batch.map(operation));
     results.push(...batchResults);
   }
-  
   return results;
 }
-
 /**
- * Create a request animation frame loop
+ * Create a request animation frame loop;
  */
 export function rafLoop(callback: (time: number) => boolean | void): () => void {
   let rafId: number;
   let running = true;
-
   function loop(time: number) {
     if (!running) return;
-    
     const shouldContinue = callback(time);
     if (shouldContinue !== false) {
       rafId = requestAnimationFrame(loop);
     }
   }
-
   rafId = requestAnimationFrame(loop);
-
   return () => {
     running = false;
     if (rafId) {
@@ -140,26 +118,24 @@ export function rafLoop(callback: (time: number) => boolean | void): () => void 
     }
   };
 }
-
 /**
- * Idle callback wrapper
+ * Idle callback wrapper;
  */
 export function runWhenIdle(
   callback: () => void,
-  options?: IdleRequestOptions
+  options?: IdleRequestOptions;
 ): number {
   if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
     return window.requestIdleCallback(callback, options);
   }
-  // Fallback for browsers that don't support requestIdleCallback
+  // Fallback for browsers that don't support requestIdleCallback;
   if (typeof window !== 'undefined') {
     return (window as Window).setTimeout(callback, 1) as unknown as number;
   }
   return 0;
 }
-
 /**
- * Cancel idle callback
+ * Cancel idle callback;
  */
 export function cancelIdle(id: number): void {
   if (typeof window !== 'undefined') {
@@ -170,58 +146,49 @@ export function cancelIdle(id: number): void {
     }
   }
 }
-
 /**
- * Virtual scroll helper
+ * Virtual scroll helper;
  */
-export class VirtualScroller<T> {
+export class VirtualScroller</R><T> {
   private itemHeight: number;
   private containerHeight: number;
   private items: T[];
-
   constructor(items: T[], itemHeight: number, containerHeight: number) {
     this.items = items;
     this.itemHeight = itemHeight;
     this.containerHeight = containerHeight;
   }
-
   getVisibleRange(scrollTop: number): { start: number; end: number; offsetY: number } {
     const start = Math.floor(scrollTop / this.itemHeight);
     const end = Math.ceil((scrollTop + this.containerHeight) / this.itemHeight);
     const offsetY = start * this.itemHeight;
-
     return {
       start: Math.max(0, start),
       end: Math.min(this.items.length, end),
       offsetY,
     };
   }
-
   getVisibleItems(scrollTop: number): T[] {
     const { start, end } = this.getVisibleRange(scrollTop);
     return this.items.slice(start, end);
   }
-
   getTotalHeight(): number {
     return this.items.length * this.itemHeight;
   }
 }
-
 /**
- * Image lazy loading helper
+ * Image lazy loading helper;
  */
 export function setupLazyImages(
   selector = 'img[data-src]',
-  options?: IntersectionObserverInit
+  options?: IntersectionObserverInit;
 ): () => void {
-  const images = document.querySelectorAll<HTMLImageElement>(selector);
-  
+  const images = document.querySelectorAll</T><HTMLImageElement>(selector);
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const img = entry.target as HTMLImageElement;
         const src = img.dataset['src'];
-        
         if (src) {
           img['src'] = src;
           img.removeAttribute('data-src');
@@ -230,14 +197,11 @@ export function setupLazyImages(
       }
     });
   }, options);
-
   images.forEach((img) => observer.observe(img));
-
   return () => observer.disconnect();
 }
-
 /**
- * Preload critical resources
+ * Preload critical resources;
  */
 export function preloadResources(resources: Array<{ url: string; as: string }>): void {
   resources.forEach(({ url, as }) => {
@@ -248,13 +212,12 @@ export function preloadResources(resources: Array<{ url: string; as: string }>):
     document.head.appendChild(link);
   });
 }
-
 /**
- * Check if code splitting is supported
+ * Check if code splitting is supported;
  */
 export function supportsCodeSplitting(): boolean {
-  // Dynamic imports are supported in modern browsers
-  // We can check by testing if Function constructor accepts import syntax
+  // Dynamic imports are supported in modern browsers;
+  // We can check by testing if Function constructor accepts import syntax;
   try {
     new Function('return import("data:text/javascript,")');
     return true;
@@ -262,9 +225,8 @@ export function supportsCodeSplitting(): boolean {
     return false;
   }
 }
-
 /**
- * Optimize bundle loading
+ * Optimize bundle loading;
  */
 export function prefetchBundle(url: string): void {
   const link = document.createElement('link');
@@ -272,9 +234,8 @@ export function prefetchBundle(url: string): void {
   link.href = url;
   document.head.appendChild(link);
 }
-
 /**
- * Memory usage monitor
+ * Memory usage monitor;
  */
 export function getMemoryUsage(): {
   used: number;
@@ -288,4 +249,4 @@ export function getMemoryUsage(): {
       total: memory.totalJSHeapSize,
       limit: memory.jsHeapSizeLimit,
     };
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247</HTMLImageElement>

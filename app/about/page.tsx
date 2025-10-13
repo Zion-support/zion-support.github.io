@@ -1,12 +1,9 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight, Brain } from "lucide-react"; origin/cursor/analyze-improve-and-deploy-application-0ff3
+import { Helmet , Link  } from "react-helmet-async";
+import { ArrowRight, Brain } from "lucide-react"; origin/cursor/analyze-improve-and-deploy-application-0ff3;
 export default function AboutPage() {
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Link } from 'react-router-dom';
+import { Helmet , Link  } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Users, Award, Zap, Shield, Brain, Cloud, Code, Target, Lightbulb, Heart, Globe, Clock, DollarSign, BarChart, Settings, MessageSquare, FileText, Phone, MapPin, Sparkles, Cpu, Lock, TrendingUp, Calendar, CheckSquare, MessageCircle, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, ShoppingCart } from 'lucide-react';
-
 const AboutPage: React.FC = () => {
   const stats = [
     { number: '500+', label: 'Projects Completed', icon: CheckCircle },
@@ -14,7 +11,6 @@ const AboutPage: React.FC = () => {
     { number: '99%', label: 'Client Satisfaction', icon: Star },
     { number: '24/7', label: 'Support Available', icon: Award },
   ];
-
   const values = [
     {
       icon: Lightbulb,
@@ -41,7 +37,6 @@ const AboutPage: React.FC = () => {
       color: 'from-green-500 to-emerald-500'
     }
   ];
-
   const team = [
     {
       name: 'Kleber Santos',
@@ -74,7 +69,6 @@ const AboutPage: React.FC = () => {
       }
     }
   ];
-
   const timeline = [
     {
       year: '2020',
@@ -102,59 +96,46 @@ const AboutPage: React.FC = () => {
       description: 'Expanded operations internationally and launched our micro SAAS product suite for small and medium businesses.'
     }
   ]; origin/cursor/analyze-improve-and-deploy-application-0e37
-
- origin/cursor/analyze-improve-and-deploy-application-0f1c
- cursor/fix-errors-and-merge-to-main-f512
+;
+ origin/cursor/analyze-improve-and-deploy-application-0f1c;
+ cursor/fix-errors-and-merge-to-main-f512;
   return (
     <>
-      <Helmet>
-<title>About - Zion Tech Group | AI & IT Solutions</title>
-        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions for modern businesses." /> cursor/fix-errors-and-merge-to-main-f512
+      <Helmet /><title>About - Zion Tech Group | AI & IT Solutions</title>
+        <meta name="description" content="Learn about Zion Tech Group, a leading provider of AI and IT solutions for modern businesses." /> cursor/fix-errors-and-merge-to-main-f512;
       </Helmet>
-      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-                About Zion Tech Group
+        </div><section className="pt-20 pb-16 px-4" /><div className="max-w-7xl mx-auto" /><div className="text-center mb-16" /><h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                About Zion Tech Group</h1>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.
+                We are pioneers in AI and IT solutions, dedicated to transforming businesses through innovative technology and cutting-edge artificial intelligence.</p>
               </p>
             </div>
           </div>
         </section>
-
         {/* Mission Section */}
-        <section className="py-20 bg-slate-800">
-          <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
+        <section className="py-20 bg-slate-800" /><div className="container mx-auto px-4" /><div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" /><div /><h2 className="text-4xl font-bold text-white mb-6">Our Mission</h2>
                 <p className="text-lg text-gray-300 mb-6">
-                  To democratize advanced AI and technology solutions, making them accessible 
-                  to businesses of all sizes while delivering unprecedented value and innovation.
+                  To democratize advanced AI and technology solutions, making them accessible ;
+                  to businesses of all sizes while delivering unprecedented value and innovation.</p>
                 </p>
                 <p className="text-lg text-gray-300 mb-8">
-                  We believe that every organization deserves access to cutting-edge technology 
-                  that can transform their operations, enhance their capabilities, and drive 
-                  sustainable growth.
+                  We believe that every organization deserves access to cutting-edge technology ;
+                  that can transform their operations, enhance their capabilities, and drive ;
+                  sustainable growth.</p>
                 </p>
-                <div className="flex items-center space-x-4">
-                  <CheckCircle className="text-green-400 w-6 h-6" />
+                <div className="flex items-center space-x-4" /><CheckCircle className="text-green-400 w-6 h-6" />
                   <span className="text-white font-semibold">Innovation First</span>
                 </div>
               </div>
-              <div className="relative">
-                <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8">
-                  <Brain className="w-16 h-16 text-white mb-4" />
+              <div className="relative" /><div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-8" /><Brain className="w-16 h-16 text-white mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-4">AI-Powered Solutions</h3>
                   <p className="text-gray-200">
-                    Our advanced AI technologies are designed to solve complex business challenges 
+                    Our advanced AI technologies are designed to solve complex business challenges ;
                     and unlock new opportunities for growth and efficiency.
- origin/cursor/analyze-improve-and-deploy-application-0e37
+ origin/cursor/analyze-improve-and-deploy-application-0e37</p>
                   </p>
                 </div>
 'use client';
@@ -162,28 +143,24 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             </div>
           </div>
         </section>
-
 <meta name="description" content="About Us services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              About Us
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" /><div className="text-center" /><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              About Us</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Coming soon - Advanced About Us solutions by Zion Tech Group
+              Coming soon - Advanced About Us solutions by Zion Tech Group</p>
             </p>
           </div>
         </div>
  origin/cursor/analyze-improve-and-deploy-application-1232
-
-export default AboutPage origin/cursor/analyze-improve-and-deploy-application-0f1c
- origin/cursor/analyze-improve-and-deploy-application-1247
+;
+export default AboutPage origin/cursor/analyze-improve-and-deploy-application-0f1c;
+ origin/cursor/analyze-improve-and-deploy-application-1247;
  cursor/fix-errors-and-merge-to-main-f512
+;

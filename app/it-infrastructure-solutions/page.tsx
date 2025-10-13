@@ -2,7 +2,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import Navigation from '../components/Navigation';
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -14,11 +14,11 @@ import Navigation from '../components/Navigation';
       title: 'Growth Optimization',
       description: 'Optimize your business growth with data-driven strategies.',
 benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
         <title>Page - Zion Tech Group</title>
         <meta />
       </Helmet>
- cursor/fix-errors-and-merge-to-main-6ce7
+ cursor/fix-errors-and-merge-to-main-6ce7;
               </div>
             </div>
           </div>
@@ -26,5 +26,6 @@ benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI 
 <Footer />
   )
 }
-export default PagePage
+export default PagePage;
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

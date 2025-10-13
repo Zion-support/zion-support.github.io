@@ -1,8 +1,7 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Zap, Globe } from "lucide-react";
+import { Link , ArrowRight, CheckCircle, Star, Zap, Globe  } from "react-router-dom";
 import EnhancedSEO from '../components/EnhancedSEO'; origin/cursor/analyze-improve-and-deploy-application-0ff3
-
- origin/cursor/analyze-improve-and-deploy-application-1247
+;
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 import { Code, Smartphone, Globe, Database, Shield, BarChart, Users, CheckCircle, ArrowRight, Cloud, Phone } from 'lucide-react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
@@ -18,7 +17,7 @@ import PerformanceOptimizer from '../components/PerformanceOptimizer';
 const process = [
     {
     step: '01',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
       title: 'Discovery & Planning',
       description: 'We analyze your requirements and create a detailed project plan',
       icon: BarChart,},
@@ -36,10 +35,9 @@ const process = [
       icon: Shield,}}
   ]
 return(<>
-
-      <SEOOptimizer
+      <SEOOptimizer;
         title="Web Development Services - Zion Tech Group"
-        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices." origin/cursor/analyze-improve-and-deploy-application-1247
+        description="Professional web development services including frontend, backend, full-stack, and e-commerce solutions. Modern technologies and best practices." origin/cursor/analyze-improve-and-deploy-application-1247;
 const WebDevelopmentPage: React.FC = () => {
   const webServices = [
     {
@@ -100,42 +98,37 @@ const WebDevelopmentPage: React.FC = () => {
     {step: '04',
       title: 'Testing & Launch',
       description: 'Thorough testing and deployment with ongoing support',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247</SEOOptimizer>
             </p>
-            <div className="flex flex-col sm: flex-row gap-4 justify-center"></div>,
+            <div className="flex flex-col sm: flex-row gap-4 justify-center" />,
               <a;
-
             <div className="flex flex-col sm: flex-row gap-4 justify-center"></section>,
-              <a;
+              </a><a;
                 href="/contact";
 className="cyber-button px-8 py-4 text-lg font-semibold hover:scale-105 transition-all duration-300";
-              >Start Your Project<a
+              >Start Your Project</a><a;
                 href="tel:+13024640950"
-                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300" origin/cursor/analyze-improve-and-deploy-application-1247
+                className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300" origin/cursor/analyze-improve-and-deploy-application-1247;
               >Call +1 302 464 0950</a>
               >
                 Start Your Project;
               </a>
               <a>
-
-                Call +1 302 464 0950,
+                Call +1 302 464 0950,</a>
               </a>
             </div>,
           </section>,
 ,;
           {/* Services Grid */}/>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="container mx-auto px-4 py-16">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
-                Web Development
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><div className="container mx-auto px-4 py-16" /><div className="text-center mb-16" /><h1 className="text-4xl md:text-6xl font-bold text-white mb-6" /><span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+                Web Development</span>
               </span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Professional web development services by Zion Tech Group.
+              Professional web development services by Zion Tech Group.</p>
             </p>
- origin/cursor/analyze-improve-and-deploy-application-1091
- cursor/fix-errors-and-merge-to-main-6ce7
+ origin/cursor/analyze-improve-and-deploy-application-1091;
+ cursor/fix-errors-and-merge-to-main-6ce7;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+;

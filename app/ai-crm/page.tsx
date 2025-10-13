@@ -1,13 +1,10 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { ArrowRight , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function AiCrmZionTechGroup() {
   return (
     <>
-      <Helmet>
-        <title>AiCrm - Zion Tech Group</title>
- origin/cursor/analyze-improve-and-deploy-application-1247
+      <Helmet /><title>AiCrm - Zion Tech Group</title>
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
 title: 'AI-Powered Lead Scoring',
@@ -46,7 +43,7 @@ title: 'AI-Powered Lead Scoring',
       icon: Mail,
       stats: '40% higher open rates'
     },
-    { origin/cursor/analyze-improve-and-deploy-application-1256
+    { origin/cursor/analyze-improve-and-deploy-application-1256;
       title: 'Advanced Analytics',
       description: 'Comprehensive analytics dashboard with real-time data visualization.',
       benefits: ['Real-time dashboards', 'Custom reports', 'Data visualization', 'Performance metrics']},
@@ -57,7 +54,7 @@ title: 'AI-Powered Lead Scoring',
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -65,23 +62,21 @@ const benefits = [
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
 'Gain competitive advantage with advanced technology'
- cursor/fix-errors-and-merge-to-main-6ce7
-      <Helmet>
-        <title>Ai Crm - Zion Tech Group</title>
+ cursor/fix-errors-and-merge-to-main-6ce7;
+      <Helmet /><title>Ai Crm - Zion Tech Group</title>
         <meta name="description" content="Advanced AI solutions" />
         <meta name="keywords" content="AI, artificial intelligence, business solutions" />
       </Helmet>
 {/* Hero Section *
         <section className="relative py-20 px-4 overflow-hidden">)
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
+          </section><div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(147,51,234,0.3)_0%,transparent_50%)] animate-pulse" 
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(59,130,246,0.3)_0%,transparent_50%)] animate-pulse" style={{ animationDelay: '1s' }};
-          <div className="relative max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
-              Ai Crm
+          <div className="relative max-w-7xl mx-auto text-center" /><h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight">
+              Ai Crm;
             <
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            </h1><p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Advanced AI-powered ai crm solution for modern businesses.
             <
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
- origin/cursor/analyze-improve-and-deploy-application-1247
- origin/cursor/analyze-improve-and-deploy-application-1256
+            </p><div className="flex flex-col sm:flex-row gap-4 justify-center">
+ origin/cursor/analyze-improve-and-deploy-application-1247;
+ origin/cursor/analyze-improve-and-deploy-application-1256</div>

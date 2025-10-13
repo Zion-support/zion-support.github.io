@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Loader2 } from 'lucide-react';
-
 interface ImageOptimizerProps {
   src: string;
   alt: string;
@@ -12,7 +11,6 @@ interface ImageOptimizerProps {
   onLoad?: () => void;
   onError?: () => void;
 }
-
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src,
   alt,
@@ -27,11 +25,10 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
   const [isInView, setIsInView] = useState(priority);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const imgRef = useRef</ImageOptimizerProps><HTMLImageElement>(null);
 =======
 'use client';
 import React, { useState, useEffect } from 'react';
-
 interface OptimizedImageProps {
   src: string;
   alt: string;
@@ -41,23 +38,21 @@ interface OptimizedImageProps {
   priority?: boolean;
   placeholder?: string;
 }
-
-const OptimizedImage: React.FC<OptimizedImageProps> = ({
+const OptimizedImage: React.FC</HTMLImageElement><OptimizedImageProps> = ({
   src,
   alt,
   width,
   height,
   className = '',
   priority = false,
-  placeholder
+  placeholder;
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(priority);
   const [hasError, setHasError] = useState(false); origin/cursor/analyze-improve-and-deploy-application-1232
-
+;
   useEffect(() => {
     if (priority) return;
-
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -67,45 +62,37 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
       },
       { threshold: 0.1 }
     );
-
 const imgRef = document.querySelector(`[data-src="${src}"]`);
     if (imgRef) {
       observer.observe(imgRef);
     }
-
     return () => observer.disconnect();
   }, [src, priority]);
-
   const handleLoad = () => {
     setIsLoaded(true);
   };
-
   const handleError = () => {
     setHasError(true);
   };
-
   if (hasError) {
     return (
-      <div 
+      </OptimizedImageProps><div ;
         className={`bg-gray-200 flex items-center justify-center ${className}`}
         style={{ width, height }}
-      >
-        <span className="text-gray-400 text-sm">Image failed to load</span>
+       /><span className="text-gray-400 text-sm">Image failed to load</span>
       </div>
     );
   }
-
   return (
     <div className={`relative overflow-hidden ${className}`} style={{ width, height }}>
       {placeholder && !isLoaded && (
-        <div 
+        </div><div ;
           className="absolute inset-0 bg-gradient-to-r from-gray-200 to-gray-300 animate-pulse"
           style={{ backgroundImage: `url(${placeholder})`, backgroundSize: 'cover' }}
-        /> origin/cursor/analyze-improve-and-deploy-application-1232
+        /> origin/cursor/analyze-improve-and-deploy-application-1232;
       )}
-      
       {isInView && (
-        <img
+        <img;
           src={src}
           alt={alt}
           width={width}
@@ -120,15 +107,14 @@ isLoaded ? 'opacity-100' : 'opacity-0'
           style={{ width: '100%', height: '100%', objectFit: 'cover' }}
         />
       )}
-      
       {!isInView && (
-        <div 
+        <div ;
           data-src={src}
           className="absolute inset-0 bg-gray-200 animate-pulse"
-        /> origin/cursor/analyze-improve-and-deploy-application-1232
+        /> origin/cursor/analyze-improve-and-deploy-application-1232;
       )}
     </div>
   );
 };
-
 export default OptimizedImage; origin/cursor/analyze-improve-and-deploy-application-1232
+;

@@ -1,15 +1,12 @@
-import { Link } from "react-router-dom";
-import {
-  Cloud,
+import { Link , Cloud,
   Shield,
   TrendingUp,
   Server,
   Zap,
   BarChart3,
   ArrowRight,
-} from "lucide-react";
+ } from "react-router-dom";
 import Layout from "../layout";
-
 export default function CloudInfrastructureManagement() {
   const features = [
     {
@@ -49,6 +46,6 @@ export default function CloudInfrastructureManagement() {
         "Advanced analytics to optimize infrastructure performance and make data-driven decisions",
     },
   ];
-
   const managementFeatures = [
     { origin/cursor/analyze-improve-and-deploy-application-1091
+;

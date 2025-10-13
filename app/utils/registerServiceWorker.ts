@@ -1,73 +1,62 @@
 /**
- * Service Worker Registration Utility
+ * Service Worker Registration Utility;
  */
-
 export interface ServiceWorkerConfig {
   onSuccess?: (registration: ServiceWorkerRegistration) => void;
   onUpdate?: (registration: ServiceWorkerRegistration) => void;
   onError?: (error: Error) => void;
 }
-
 /**
- * Register service worker with lifecycle callbacks
+ * Register service worker with lifecycle callbacks;
  */
 export async function registerServiceWorker(
   config: ServiceWorkerConfig = {}
 ): Promise<ServiceWorkerRegistration | undefined> {
-  // Check if service workers are supported
+  // Check if service workers are supported;
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
     console.log('[SW] Service Workers not supported');
-    return; origin/cursor/analyze-improve-and-deploy-application-1247
+    return; origin/cursor/analyze-improve-and-deploy-application-1247;
   }
-
   // Only register in production or if explicitly enabled
-
+;
   const isLocalhost = Boolean(
     window.location.hostname === 'localhost' ||
       window.location.hostname === '[::1]' ||
       window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
   );
-// Use isLocalhost for conditional logic if needed
+// Use isLocalhost for conditional logic if needed;
   if (isLocalhost) {
     console.log('[SW] Running on localhost - service worker registration may be limited');
   }
-
   try {
-    // Wait for page to load
-    await new Promise<void>((resolve) => {
+    // Wait for page to load;
+    await new Promise</ServiceWorkerRegistration><void>((resolve) => {
       if (document.readyState === 'complete') {
         resolve();
       } else {
         window.addEventListener('load', () => resolve());
       }
     });
-
     console.log('[SW] Registering service worker...');
-
     const registration = await navigator.serviceWorker.register('/service-worker.js', {
       scope: '/',
     });
-
     console.log('[SW] Service worker registered:', registration);
-
-    // Handle updates
+    // Handle updates;
     registration.addEventListener('updatefound', () => {
-      const installingWorker = registration.installing; origin/cursor/analyze-improve-and-deploy-application-1247
+      const installingWorker = registration.installing; origin/cursor/analyze-improve-and-deploy-application-1247;
       if (!installingWorker) return;
-
       installingWorker.addEventListener('statechange', () => {
         if (installingWorker.state === 'installed') {
           if (navigator.serviceWorker.controller) {
-// New update available
+// New update available;
             console.log('[SW] New content available; please refresh.');
-            
             if (config.onUpdate) {
               config.onUpdate(registration);
             }
           } else {
-            // Content cached for offline use
+            // Content cached for offline use;
             console.log('[SW] Content cached for offline use.');
-            
             if (config.onSuccess) {
               config.onSuccess(registration);
             }
@@ -75,25 +64,21 @@ export async function registerServiceWorker(
         }
       });
     });
-
     return registration;
   } catch (error) {
     console.error('[SW] Registration failed:', error);
-    
     if (config.onError && error instanceof Error) {
       config.onError(error);
     }
   }
 }
-
 /**
- * Unregister service worker
+ * Unregister service worker;
  */
-export async function unregisterServiceWorker(): Promise<boolean> {
+export async function unregisterServiceWorker(): Promise</void><boolean> {
   if (!('serviceWorker' in navigator)) {
     return false;
   }
-
   try {
     const registration = await navigator.serviceWorker.ready;
     const result = await registration.unregister();
@@ -104,15 +89,13 @@ export async function unregisterServiceWorker(): Promise<boolean> {
     return false;
   }
 }
-
 /**
- * Check for service worker updates
+ * Check for service worker updates;
  */
-export async function checkForUpdates(): Promise<void> {
+export async function checkForUpdates(): Promise</boolean><void> {
   if (!('serviceWorker' in navigator)) {
     return;
   }
-
   try {
     const registration = await navigator.serviceWorker.ready;
     await registration.update();
@@ -121,32 +104,27 @@ export async function checkForUpdates(): Promise<void> {
     console.error('[SW] Update check failed:', error);
   }
 }
-
 /**
- * Skip waiting and activate new service worker
+ * Skip waiting and activate new service worker;
  */
 export function skipWaiting(): void {
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
     return;
   }
-
   navigator.serviceWorker.controller.postMessage({ action: 'skipWaiting' });
 }
-
 /**
- * Clear all caches
+ * Clear all caches;
  */
 export function clearCaches(): void {
   if (!('serviceWorker' in navigator) || !navigator.serviceWorker.controller) {
     return;
   }
-
   navigator.serviceWorker.controller.postMessage({ action: 'clearCache' });
   console.log('[SW] Cache clear requested');
 }
-
 /**
- * Get service worker registration status
+ * Get service worker registration status;
  */
 export async function getServiceWorkerStatus(): Promise<{
   supported: boolean;
@@ -160,7 +138,6 @@ export async function getServiceWorkerStatus(): Promise<{
       active: false,
     };
   }
-
   try {
     const registration = await navigator.serviceWorker.getRegistration();
     return {
@@ -176,5 +153,4 @@ export async function getServiceWorkerStatus(): Promise<{
     };
   }
 }
-
-export default registerServiceWorker; origin/cursor/analyze-improve-and-deploy-application-1247
+export default registerServiceWorker; origin/cursor/analyze-improve-and-deploy-application-1247</void>

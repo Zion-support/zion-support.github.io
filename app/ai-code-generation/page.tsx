@@ -1,14 +1,10 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
+import { ArrowRight , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function AICodeGenerationZionTechGroup() {
   return (
     <>
-      <Helmet>
-        <title>AI Code Generation - Zion Tech Group</title>
- origin/cursor/analyze-improve-and-deploy-application-1256
+      <Helmet /><title>AI Code Generation - Zion Tech Group</title>
+ origin/cursor/analyze-improve-and-deploy-application-1256;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -25,7 +21,7 @@ export default function AICodeGenerationZionTechGroup() {
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -46,7 +42,7 @@ const benefits = [
         'GitHub integration',
         'Basic documentation'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Team',
@@ -62,7 +58,7 @@ const benefits = [
         'Code review tools',
         'Custom templates'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -78,7 +74,7 @@ const benefits = [
         'SLA guarantee',
         'On-premise deployment'
       ],
-      popular: false
+      popular: false;
     }
   ];
   const technologies = [
@@ -113,31 +109,26 @@ const benefits = [
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Code Generation - Zion Tech Group</title>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><Helmet /><title>AI Code Generation - Zion Tech Group</title>
         <meta name="description" content="Generate code with AI. Create applications, APIs, and scripts from natural language descriptions. Support for 50+ programming languages. Starting at $99/month." />
         <meta name="keywords" content="AI code generation, programming, code assistant, development tools, automated coding, software development" />
       </Helmet>
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6">
-            <Code className="w-4 h-4 mr-2" />
-            Revolutionary Coding Technology
+      <section className="pt-24 pb-16 px-4" /><div className="max-w-7xl mx-auto text-center" /><div className="inline-flex items-center bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium mb-6" /><Code className="w-4 h-4 mr-2" />
+            Revolutionary Coding Technology;
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6"> origin/cursor/analyze-improve-and-deploy-application-1256
-            AI Code Generation
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6"> origin/cursor/analyze-improve-and-deploy-application-1256;
+            AI Code Generation</h1>
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional AI code generation services coming soon.
+            Professional AI code generation services coming soon.</p>
           </p>
 'Gain competitive advantage with advanced technology'
- cursor/fix-errors-and-merge-to-main-6ce7
+ cursor/fix-errors-and-merge-to-main-6ce7;
               {benefits.map((benefit, index) => (
-                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group"></div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform"></div>
-                    <CheckCircle>
+                <div key={index} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 hover:bg-white/10 transition-all duration-300 group" />
+                  <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform" />
+                    <CheckCircle />
                   </div>
                   <p className="text-lg text-white font-medium">{benefit}</p>
                 </div>
@@ -146,27 +137,25 @@ const benefits = [
           </div>
         </section>
 {/* CTA Section *
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white
+        <section className="py-20 px-4" /><div className="max-w-4xl mx-auto text-center" /><div className="bg-white;
               <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
                 Ready to Get Started?
               <
-              <p className="text-xl text-gray-300 mb-8">
+              </div><p className="text-xl text-gray-300 mb-8">
                 Contact our experts to discuss your requirements and get started today.
               <
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
-                  Contact Us
+              </p><div className="flex flex-col sm:flex-row gap-4 justify-center" /><button className="bg-gradient-to-r from-amber-500 to-blue-600 hover:from-amber-600 hover:to-blue-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">
+                  Contact Us;
                 <
-                <button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hove,
+                </button><button className="border border-amber-400 text-amber-400 hover:bg-amber-400 hove,
     r:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">
-                  Learn More cursor/fix-errors-and-merge-to-main-6ce7
+                  Learn More cursor/fix-errors-and-merge-to-main-6ce7</button>
                 </button>
               </div>
             </div>
           </div>
 </React.Fragment>)
-export default AiCodeGenerationPage; cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+export default AiCodeGenerationPage; cursor/fix-errors-and-merge-to-main-6ce7;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
  origin/cursor/analyze-improve-and-deploy-application-1256
+;

@@ -1,42 +1,37 @@
 /**
- * Environment Variables Validator
- * Ensures all required environment variables are present and valid
+ * Environment Variables Validator;
+ * Ensures all required environment variables are present and valid;
  */
 export interface EnvConfig {
   NODE_ENV: 'development' | 'production' | 'test'
-  NEXT_PUBLIC_API_URL?: string
-  NEXT_PUBLIC_GA_ID?: string
-  NEXT_PUBLIC_SITE_URL?: string
+  NEXT_PUBLIC_API_URL?: string;
+  NEXT_PUBLIC_GA_ID?: string;
+  NEXT_PUBLIC_SITE_URL?: string;
 }
 class EnvValidator {
   private errors: string[] = []
   private warnings: string[] = []
-
   /**
-   * Validate all environment variables
+   * Validate all environment variables;
    */
   validate(): { isValid: boolean; errors: string[]; warnings: string[] } {
     this.errors = []
     this.warnings = []
-
-    // Validate NODE_ENV
+    // Validate NODE_ENV;
     this.validateNodeEnv()
-
-    // Validate optional but recommended variables
+    // Validate optional but recommended variables;
     this.validateOptionalVars()
-
     return {
       isValid: this.errors.length === 0,
       errors: this.errors,
-      warnings: this.warnings
+      warnings: this.warnings;
     }
   }
   /**
-   * Get validated environment configuration
+   * Get validated environment configuration;
    */
   getConfig(): EnvConfig {
     const validation = this.validate()
-
     if (!validation.isValid) {
       throw new Error(
         `Environment validation failed:\n${validation.errors.join('\n')}`
@@ -57,10 +52,9 @@ class EnvValidator {
   private validateNodeEnv(): void {
     const nodeEnv = process.env['NODE_ENV']
     const validEnvs = ['development', 'production', 'test']
-
     if (!nodeEnv) {
       this.errors.push('NODE_ENV is not set')
-      return
+      return;
     }
     if (!validEnvs.includes(nodeEnv)) {
       this.errors.push(
@@ -70,8 +64,7 @@ class EnvValidator {
   }
   private validateOptionalVars(): void {
     const nodeEnv = this.getNodeEnv()
-
-    // In production, these should be set
+    // In production, these should be set;
     if (nodeEnv === 'production') {
       if (!process.env['NEXT_PUBLIC_SITE_URL']) {
         this.warnings.push(
@@ -90,11 +83,11 @@ class EnvValidator {
     return env as 'development' | 'production' | 'test'
   }
 }
-// Export singleton instance
+// Export singleton instance;
 export const envValidator = new EnvValidator()
-
-// Export convenience function
+// Export convenience function;
 export function validateEnv(): EnvConfig {
   return envValidator.getConfig()
 }
 export default envValidator origin/cursor/analyze-improve-and-deploy-application-1247
+;

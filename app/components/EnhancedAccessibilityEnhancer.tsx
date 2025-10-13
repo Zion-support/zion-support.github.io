@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -14,3 +14,4 @@ import React from 'react';
     {icon: Globe,
       title: 'Global Reach',
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

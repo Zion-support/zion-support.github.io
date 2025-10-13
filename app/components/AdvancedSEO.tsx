@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 interface AdvancedSEOProps {
   title: string;
   description: string;
@@ -26,7 +25,6 @@ interface AdvancedSEOProps {
   tags?: string[];
   readingTime?: number;
 }
-
 const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   title,
   description,
@@ -50,7 +48,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   modifiedTime,
   section = 'Technology',
   tags = [],
-  readingTime
+  readingTime;
 }) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`;
   const fullOgTitle = ogTitle || fullTitle;
@@ -60,8 +58,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
   const fullOgImage = ogImage || 'https://ziontechgroup.com/api/placeholder/1200/630';
   const fullTwitterImage = twitterImage || fullOgImage;
   const fullCanonical = canonical || (typeof window !== 'undefined' ? window.location.href : '');
-
-  // Default structured data for organization
+  // Default structured data for organization;
   const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -111,8 +108,7 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       }
     ]
   };
-
-  // Article structured data if publishedTime is provided
+  // Article structured data if publishedTime is provided;
   const articleStructuredData = publishedTime ? {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -136,23 +132,21 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
     "dateModified": modifiedTime || publishedTime,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": fullCanonical
+      "@id": fullCanonical;
     },
     "articleSection": section,
     "keywords": tags.join(', '),
-    "wordCount": readingTime ? readingTime * 200 : undefined
+    "wordCount": readingTime ? readingTime * 200 : undefined;
   } : null;
-
   return (
-    <Helmet>
+    </AdvancedSEOProps><Helmet>
       {/* Basic Meta Tags */}
-      <title>{fullTitle}</title>
+      </Helmet><title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="language" content={lang} />
       <meta name="robots" content={`${noindex ? 'noindex' : 'index'}, ${nofollow ? 'nofollow' : 'follow'}`} />
       <link rel="canonical" href={fullCanonical} />
-
       {/* Author and Publishing */}
       <meta name="author" content={author} />
       {publishedTime && <meta name="article:published_time" content={publishedTime} />}
@@ -161,7 +155,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       {tags.length > 0 && <meta name="article:tag" content={tags.join(', ')} />}
       {readingTime && <meta name="twitter:label1" content="Reading time" />}
       {readingTime && <meta name="twitter:data1" content={`${readingTime} min read`} />}
-
       {/* Open Graph Meta Tags */}
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={fullOgTitle} />
@@ -176,7 +169,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       {tags.length > 0 && tags.map(tag => (
         <meta key={tag} property="article:tag" content={tag} />
       ))}
-
       {/* Twitter Card Meta Tags */}
       <meta name="twitter:card" content={twitterCard} />
       <meta name="twitter:title" content={fullTwitterTitle} />
@@ -184,7 +176,6 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       <meta name="twitter:image" content={fullTwitterImage} />
       <meta name="twitter:site" content="@ziontechgroup" />
       <meta name="twitter:creator" content="@ziontechgroup" />
-
       {/* Additional SEO Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
@@ -193,42 +184,35 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
       <meta name="apple-mobile-web-app-capable" content="yes" />
       <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       <meta name="apple-mobile-web-app-title" content="Zion Tech Group" />
-
       {/* Security Headers */}
       <meta httpEquiv="X-Content-Type-Options" content="nosniff" />
       <meta httpEquiv="X-Frame-Options" content="DENY" />
       <meta httpEquiv="X-XSS-Protection" content="1; mode=block" />
       <meta httpEquiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-
       {/* Performance Hints */}
       <meta name="format-detection" content="telephone=no" />
       <meta name="mobile-web-app-capable" content="yes" />
-
       {/* Favicon and App Icons */}
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
       <link rel="manifest" href="/site.webmanifest" />
-
       {/* Preconnect to external domains for performance */}
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       <link rel="preconnect" href="https://api.ziontechgroup.com" />
       <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(structuredData || defaultStructuredData)}
+        {JSON.stringify(structuredData || defaultStructuredData)}</script>
       </script>
-
       {/* Article structured data if applicable */}
       {articleStructuredData && (
         <script type="application/ld+json">
-          {JSON.stringify(articleStructuredData)}
+          {JSON.stringify(articleStructuredData)}</script>
         </script>
       )}
-
       {/* Breadcrumb structured data */}
       <script type="application/ld+json">
         {JSON.stringify({
@@ -245,13 +229,12 @@ const AdvancedSEO: React.FC<AdvancedSEOProps> = ({
               "@type": "ListItem",
               "position": 2,
               "name": title,
-              "item": fullCanonical
+              "item": fullCanonical;
             }
           ]
-        })}
+        })}</script>
       </script>
     </Helmet>
   );
 };
-
 export default AdvancedSEO;

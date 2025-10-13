@@ -1,12 +1,11 @@
 import React from "react";
-import { ArrowRight, Star, Zap, Target, Monitor } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { ArrowRight, Star, Zap, Target, Monitor , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../components/SEOOptimizer"; origin/cursor/analyze-improve-and-deploy-application-0ff3
-
+;
 import React from 'react;
- origin/cursor/analyze-improve-and-deploy-application-1256
- origin/cursor/analyze-improve-and-deploy-application-1448
+ origin/cursor/analyze-improve-and-deploy-application-1256;
+ origin/cursor/analyze-improve-and-deploy-application-1448;
     {
       icon: Cloud,
       title: 'Cloud Infrastructure',
@@ -45,14 +44,13 @@ import React from 'react;
     {
 import React from 'react'
 import { Helmet } from 'react-helmet-async' origin/cursor/analyze-improve-and-deploy-application-0f1c
-
- origin/cursor/analyze-improve-and-deploy-application-1247
+;
+ origin/cursor/analyze-improve-and-deploy-application-1247;
   return (
-    <>
- cursor/fix-errors-and-merge-to-main-6ce7
-      <Helmet>
-        <title>IT Services - Zion Tech Group</title>
- origin/cursor/analyze-improve-and-deploy-application-1247
+    <React.Fragment>
+ cursor/fix-errors-and-merge-to-main-6ce7;
+      </React><Helmet /><title>IT Services - Zion Tech Group</title>
+ origin/cursor/analyze-improve-and-deploy-application-1247;
                   </div>
                   <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
@@ -61,79 +59,66 @@ import { Helmet } from 'react-helmet-async' origin/cursor/analyze-improve-and-de
             </div>
           </div>
         </section>
-
         {/* Services Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                Our <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">IT Services</span>
+        <section className="py-20" /><div className="container mx-auto px-4" /><div className="text-center mb-16" /><h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Our </h2><span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">IT Services</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Comprehensive technology solutions designed to modernize your infrastructure and accelerate growth
+                Comprehensive technology solutions designed to modernize your infrastructure and accelerate growth</p>
               </p>
             </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service, index) => (
-                <div 
+                </div><div ;
                   key={index}
                   className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 group hover:transform hover:scale-105"
-                >
-                  <div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                    <service.icon className="w-6 h-6 text-white" />
+                 /><div className={`w-12 h-12 bg-gradient-to-r ${service.color} rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`} /><service.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
-                    {service.title}
+                    {service.title}</h3>
                   </h3>
                   <p className="text-gray-300 mb-4 text-sm leading-relaxed">
-                    {service.description}
+                    {service.description}</p>
                   </p>
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
-<li key={featureIndex} className="flex items-center text-sm text-gray-300">
-                        <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /> origin/cursor/analyze-improve-and-deploy-application-1256
+</ul><li key={featureIndex} className="flex items-center text-sm text-gray-300" /><CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" /> origin/cursor/analyze-improve-and-deploy-application-1256;
                         {feature}
                       </li>
                     ))}
                   </ul>
-                  <Link 
+                  <Link ;
                     to="/contact"
                     className="text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-medium group-hover:translate-x-1 inline-block"
-                  >
+                   />
 </div>
             ))}
           </div>
         </section>
-
         {/* Contact Section */}
-        <section className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your IT Infrastructure?</h2>
+        <section className="bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-lg p-8 text-center" /><h2 className="text-3xl font-bold text-white mb-4 neon-text">Ready to Transform Your IT Infrastructure?</h2>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Contact us today for a free consultation and discover how our IT services can help your business grow and succeed.
+            Contact us today for a free consultation and discover how our IT services can help your business grow and succeed.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" /><a;
               href="tel:+13024640950"
               className="cyber-button inline-flex items-center space-x-2"
-            >
-              <Phone className="w-4 h-4" />
+             /><Phone className="w-4 h-4" />
               <span>Call: (302) 464-0950</span>
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="border-2 border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 inline-flex items-center space-x-2"
-            >
-              <Mail className="w-4 h-4" />
+             /><Mail className="w-4 h-4" />
               <span>Email Us</span>
             </a>
           </div>
         </section>
- origin/cursor/analyze-improve-and-deploy-application-1256
-    </>
+ origin/cursor/analyze-improve-and-deploy-application-1256;
+    </React.Fragment>
   );
 };
-
-export default ITServicesPage; origin/cursor/analyze-improve-and-deploy-application-0e37
- cursor/fix-errors-and-merge-to-main-6ce7
+export default ITServicesPage; origin/cursor/analyze-improve-and-deploy-application-0e37;
+ cursor/fix-errors-and-merge-to-main-6ce7;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+;

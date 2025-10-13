@@ -1,19 +1,18 @@
 'use client';
 import React from 'react';
- cursor/fix-errors-and-merge-to-main-6ce7
+ cursor/fix-errors-and-merge-to-main-6ce7;
     'Enterprise-grade security and compliance',
     'Cross-platform deployment capabilities',
     '24/7 technical support',
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
         <title>AR/VR Platform | Zion Tech Group</title>
         <meta name="description" content="Professional AR/VR Platform services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
- cursor/fix-errors-and-merge-to-main-6ce7
-          <div className="text-center">
-            <h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
+ cursor/fix-errors-and-merge-to-main-6ce7;
+          <div className="text-center" /><h1 className="text-4xl md: text-6xl font-bold text-white mb-6">,</h1>
               <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">AR/VR Platform;</span>
   </
               <br />
@@ -34,17 +33,16 @@ import React from 'react';
           </div>
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
+ origin/cursor/analyze-improve-and-deploy-application-1247;
+          <div className="text-center mb-16" /><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
               Why Choose Our AR/VR Platform?
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-Our AR/VR solutions deliver unmatched performance, security, and scalability.
+Our AR/VR solutions deliver unmatched performance, security, and scalability.</p>
             </p>
           </div>
- origin/cursor/analyze-improve-and-deploy-application-1247
- origin/cursor/analyze-improve-and-deploy-application-1460
+ origin/cursor/analyze-improve-and-deploy-application-1247;
+ origin/cursor/analyze-improve-and-deploy-application-1460;
                 <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                 <p className="text-gray-300">{feature.description</p>}</p>
               </div>
@@ -52,24 +50,21 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
           </div>
         </div>
       </section>
- cursor/fix-errors-and-merge-to-main-6ce7
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
+ cursor/fix-errors-and-merge-to-main-6ce7;
+          <div className="text-center mb-16" /><h2 className="text-3xl md: text-4xl font-bold text-white mb-4">,</h2>
               Key Benefits,
   </
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-          <div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto" /><div className="grid grid-cols-1 md: grid-cols-2 gap-6">,</div>
             {benefits.map((benefit, index) => (
-              <div key={index}className="flex items-center space-x-3">
-                <CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
+              <div key={index}className="flex items-center space-x-3" /><CheckCircle className="w-6 h-6 text-green-400 flex-shrink-0" />
                 <span className="text-gray-300">{benefit</span>}</span>
               </div>
             ))}
           </div>
- origin/cursor/analyze-improve-and-deploy-application-1460
+ origin/cursor/analyze-improve-and-deploy-application-1460;
         </div>
       </section>
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
               Ready to Get Started?
             </h2>
             <p className="text-xl text-purple-100 mb-8">Contact our experts to discuss your AR/VR platform needs and get a customized solution.</p>
@@ -89,14 +84,14 @@ Our AR/VR solutions deliver unmatched performance, security, and scalability.
       </section>
     </div>
 </>
-  ); origin/cursor/analyze-improve-and-deploy-application-1507
+  ); origin/cursor/analyze-improve-and-deploy-application-1507;
 };
-
 export default ARVRPlatformPage;
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
   </button>
   </button>
   </h2>
   </button>
   </span>
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+;

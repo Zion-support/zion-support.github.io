@@ -1,8 +1,7 @@
 /**
- * Performance Metrics Utility
- * Advanced performance tracking and monitoring for web applications
+ * Performance Metrics Utility;
+ * Advanced performance tracking and monitoring for web applications;
  */
-
 export interface PerformanceMetric {
   name: string;
   value: number;
@@ -11,16 +10,14 @@ export interface PerformanceMetric {
   category: 'load' | 'runtime' | 'network' | 'memory' | 'custom';
   metadata?: Record<string, unknown>;
 }
-
 export interface WebVitalsMetrics {
-  FCP?: number; // First Contentful Paint
-  LCP?: number; // Largest Contentful Paint
-  FID?: number; // First Input Delay
-  CLS?: number; // Cumulative Layout Shift
-  TTFB?: number; // Time to First Byte
-  INP?: number; // Interaction to Next Paint
+  FCP?: number; // First Contentful Paint;
+  LCP?: number; // Largest Contentful Paint;
+  FID?: number; // First Input Delay;
+  CLS?: number; // Cumulative Layout Shift;
+  TTFB?: number; // Time to First Byte;
+  INP?: number; // Interaction to Next Paint;
 }
-
 export interface PerformanceReport {
   metrics: PerformanceMetric[];
   webVitals: WebVitalsMetrics;
@@ -32,34 +29,30 @@ export interface PerformanceReport {
   };
   timestamp: Date;
 }
-
 export class PerformanceMetrics {
   private static instance: PerformanceMetrics;
   private metrics: PerformanceMetric[] = [];
   private webVitals: WebVitalsMetrics = {};
   private observers: PerformanceObserver[] = [];
-
   constructor() {
     if (typeof window !== 'undefined') {
       this.initializeObservers();
     }
   }
-
   static getInstance(): PerformanceMetrics {
     if (!PerformanceMetrics.instance) {
       PerformanceMetrics.instance = new PerformanceMetrics();
     }
     return PerformanceMetrics.instance;
   }
-
   /**
-   * Initialize performance observers
+   * Initialize performance observers;
    */
   private initializeObservers(): void {
-    // Observe navigation timing
+    // Observe navigation timing;
     if ('PerformanceObserver' in window) {
       try {
-        // Navigation timing
+        // Navigation timing;
         const navObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.entryType === 'navigation') {
@@ -80,8 +73,7 @@ export class PerformanceMetrics {
         });
         navObserver.observe({ entryTypes: ['navigation'] });
         this.observers.push(navObserver);
-
-        // Paint timing
+        // Paint timing;
         const paintObserver = new PerformanceObserver((list) => {
           for (const entry of list.getEntries()) {
             if (entry.name === 'first-contentful-paint') {
@@ -98,8 +90,7 @@ export class PerformanceMetrics {
         });
         paintObserver.observe({ entryTypes: ['paint'] });
         this.observers.push(paintObserver);
-
-        // Largest Contentful Paint
+        // Largest Contentful Paint;
         const lcpObserver = new PerformanceObserver((list) => {
           const entries = list.getEntries();
           const lastEntry = entries[entries.length - 1];
@@ -116,8 +107,7 @@ export class PerformanceMetrics {
         });
         lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
         this.observers.push(lcpObserver);
-
-        // Layout Shift
+        // Layout Shift;
         const clsObserver = new PerformanceObserver((list) => {
           let clsValue = 0;
           for (const entry of list.getEntries()) {
@@ -140,28 +130,23 @@ export class PerformanceMetrics {
       }
     }
   }
-
   /**
-   * Record a custom performance metric
+   * Record a custom performance metric;
    */
   recordMetric(metric: PerformanceMetric): void {
     this.metrics.push(metric);
-
-    // Keep only last 1000 metrics
+    // Keep only last 1000 metrics;
     if (this.metrics.length > 1000) {
       this.metrics.shift();
     }
   }
-
   /**
-   * Record page load time
+   * Record page load time;
    */
   recordPageLoad(): void {
     if (typeof window === 'undefined') return;
-
     const perfData = window.performance.timing;
     const pageLoadTime = perfData.loadEventEnd - perfData.navigationStart;
-
     this.recordMetric({
       name: 'pageLoad',
       value: pageLoadTime,
@@ -176,9 +161,8 @@ export class PerformanceMetrics {
       },
     });
   }
-
   /**
-   * Record network request timing
+   * Record network request timing;
    */
   recordNetworkRequest(url: string, duration: number, status: number): void {
     this.recordMetric({
@@ -193,14 +177,12 @@ export class PerformanceMetrics {
       },
     });
   }
-
   /**
-   * Record memory usage
+   * Record memory usage;
    */
   recordMemoryUsage(): void {
     if (typeof window === 'undefined') return;
     if (!(performance as PerformanceWithMemory).memory) return;
-
     const memory = (performance as PerformanceWithMemory).memory;
     this.recordMetric({
       name: 'memoryUsage',
@@ -215,15 +197,13 @@ export class PerformanceMetrics {
       },
     });
   }
-
   /**
-   * Measure function execution time
+   * Measure function execution time;
    */
-  measureFunction<T>(name: string, fn: () => T): T {
+  measureFunction</string><T>(name: string, fn: () => T): T {
     const startTime = performance.now();
     const result = fn();
     const endTime = performance.now();
-
     this.recordMetric({
       name: `function:${name}`,
       value: endTime - startTime,
@@ -231,18 +211,15 @@ export class PerformanceMetrics {
       timestamp: new Date(),
       category: 'runtime',
     });
-
     return result;
   }
-
   /**
-   * Measure async function execution time
+   * Measure async function execution time;
    */
-  async measureAsyncFunction<T>(name: string, fn: () => Promise<T>): Promise<T> {
+  async measureAsyncFunction</T><T>(name: string, fn: () => Promise</T><T>): Promise</T><T> {
     const startTime = performance.now();
     const result = await fn();
     const endTime = performance.now();
-
     this.recordMetric({
       name: `async:${name}`,
       value: endTime - startTime,
@@ -250,102 +227,83 @@ export class PerformanceMetrics {
       timestamp: new Date(),
       category: 'runtime',
     });
-
     return result;
   }
-
   /**
-   * Get all metrics
+   * Get all metrics;
    */
   getMetrics(): PerformanceMetric[] {
     return [...this.metrics];
   }
-
   /**
-   * Get metrics by category
+   * Get metrics by category;
    */
   getMetricsByCategory(category: PerformanceMetric['category']): PerformanceMetric[] {
     return this.metrics.filter((m) => m.category === category);
   }
-
   /**
-   * Get Web Vitals
+   * Get Web Vitals;
    */
   getWebVitals(): WebVitalsMetrics {
     return { ...this.webVitals };
   }
-
   /**
    * Calculate performance score (0-100)
    */
   calculatePerformanceScore(): number {
     let score = 100;
-
-    // FCP scoring
+    // FCP scoring;
     if (this.webVitals.FCP) {
       if (this.webVitals.FCP > 3000) score -= 20;
       else if (this.webVitals.FCP > 1800) score -= 10;
     }
-
-    // LCP scoring
+    // LCP scoring;
     if (this.webVitals.LCP) {
       if (this.webVitals.LCP > 4000) score -= 25;
       else if (this.webVitals.LCP > 2500) score -= 12;
     }
-
-    // CLS scoring
+    // CLS scoring;
     if (this.webVitals.CLS) {
       if (this.webVitals.CLS > 0.25) score -= 20;
       else if (this.webVitals.CLS > 0.1) score -= 10;
     }
-
-    // FID scoring
+    // FID scoring;
     if (this.webVitals.FID) {
       if (this.webVitals.FID > 300) score -= 15;
       else if (this.webVitals.FID > 100) score -= 8;
     }
-
     return Math.max(0, Math.min(100, score));
   }
-
   /**
-   * Get performance recommendations
+   * Get performance recommendations;
    */
   getRecommendations(): string[] {
     const recommendations: string[] = [];
-
     if (this.webVitals.FCP && this.webVitals.FCP > 1800) {
       recommendations.push('Optimize First Contentful Paint (FCP) - consider reducing render-blocking resources');
     }
-
     if (this.webVitals.LCP && this.webVitals.LCP > 2500) {
       recommendations.push('Improve Largest Contentful Paint (LCP) - optimize largest element loading');
     }
-
     if (this.webVitals.CLS && this.webVitals.CLS > 0.1) {
       recommendations.push('Reduce Cumulative Layout Shift (CLS) - add size attributes to images and embeds');
     }
-
     if (this.webVitals.FID && this.webVitals.FID > 100) {
       recommendations.push('Reduce First Input Delay (FID) - optimize JavaScript execution');
     }
-
     const networkMetrics = this.getMetricsByCategory('network');
     const avgNetworkTime = networkMetrics.reduce((sum, m) => sum + m.value, 0) / networkMetrics.length;
     if (avgNetworkTime > 500) {
       recommendations.push('Optimize network requests - consider caching and reducing payload sizes');
     }
-
     return recommendations;
   }
-
   /**
-   * Generate performance report
+   * Generate performance report;
    */
   generateReport(): PerformanceReport {
     const loadMetrics = this.getMetricsByCategory('load');
     const avgLoadTime = loadMetrics.reduce((sum, m) => sum + m.value, 0) / loadMetrics.length || 0;
-
     return {
       metrics: this.getMetrics(),
       webVitals: this.getWebVitals(),
@@ -358,32 +316,28 @@ export class PerformanceMetrics {
       timestamp: new Date(),
     };
   }
-
   /**
-   * Export metrics as JSON
+   * Export metrics as JSON;
    */
   exportMetrics(): string {
     return JSON.stringify(this.generateReport(), null, 2);
   }
-
   /**
-   * Clear all metrics
+   * Clear all metrics;
    */
   clearMetrics(): void {
     this.metrics = [];
     this.webVitals = {};
   }
-
   /**
-   * Cleanup observers
+   * Cleanup observers;
    */
   cleanup(): void {
     this.observers.forEach((observer) => observer.disconnect());
     this.observers = [];
   }
 }
-
-// Type for performance.memory
+// Type for performance.memory;
 interface PerformanceWithMemory extends Performance {
   memory: {
     usedJSHeapSize: number;
@@ -391,14 +345,11 @@ interface PerformanceWithMemory extends Performance {
     jsHeapSizeLimit: number;
   };
 }
-
-// Type for LayoutShift
+// Type for LayoutShift;
 interface LayoutShift extends PerformanceEntry {
   value: number;
   hadRecentInput: boolean;
 }
-
-// Export singleton instance
+// Export singleton instance;
 export const performanceMetrics = PerformanceMetrics.getInstance();
-
-export default PerformanceMetrics; origin/cursor/analyze-improve-and-deploy-application-1247
+export default PerformanceMetrics; origin/cursor/analyze-improve-and-deploy-application-1247</T>

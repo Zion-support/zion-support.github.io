@@ -1,10 +1,9 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { ArrowRight , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
 =======
 'use client';
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Advanced AI technology integration',
@@ -16,3 +15,4 @@ const benefits = [
     'Cost-effective pricing plans',
     'Proven track record of success'
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

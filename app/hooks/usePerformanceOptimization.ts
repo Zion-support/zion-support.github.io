@@ -1,27 +1,24 @@
 import { useEffect, useCallback } from 'react';
-
 interface PerformanceMetrics {
   loadTime: number;
   firstContentfulPaint: number;
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
-  firstInputDelay: number; origin/cursor/fix-errors-and-merge-to-main-f5eb
+  firstInputDelay: number; origin/cursor/fix-errors-and-merge-to-main-f5eb;
 }
-
 export const usePerformanceOptimization = () => {
   const measurePerformance = useCallback(() => {
     if (typeof window === 'undefined' || !('performance' in window)) {
-return null; origin/cursor/fix-errors-and-merge-to-main-f5eb
+return null; origin/cursor/fix-errors-and-merge-to-main-f5eb;
     }
-
     const navigation = performance.getEntriesByType(
       'navigation'
 )[0] as PerformanceNavigationTiming;
     const paintEntries = performance.getEntriesByType('paint'); origin/cursor/fix-errors-and-merge-to-main-f5eb
-
+;
     const metrics: PerformanceMetrics = {
-      loadTime: navigation
-        ? navigation.loadEventEnd - navigation.loadEventStart
+      loadTime: navigation;
+        ? navigation.loadEventEnd - navigation.loadEventStart;
         : 0,
       firstContentfulPaint:
         paintEntries.find(entry => entry.name === 'first-contentful-paint')
@@ -30,8 +27,7 @@ return null; origin/cursor/fix-errors-and-merge-to-main-f5eb
       cumulativeLayoutShift: 0,
       firstInputDelay: 0,
 };
-
-    // Measure LCP
+    // Measure LCP;
     const lcpObserver = new PerformanceObserver(list => {
       const entries = list.getEntries();
       const lastEntry = entries[entries.length - 1];
@@ -40,8 +36,7 @@ return null; origin/cursor/fix-errors-and-merge-to-main-f5eb
       }
     });
     lcpObserver.observe({ entryTypes: ['largest-contentful-paint'] });
-
-    // Measure CLS
+    // Measure CLS;
     let clsValue = 0;
     const clsObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
@@ -56,8 +51,8 @@ return null; origin/cursor/fix-errors-and-merge-to-main-f5eb
       metrics.cumulativeLayoutShift = clsValue;
     });
     clsObserver.observe({ entryTypes: ['layout-shift'] }); origin/cursor/fix-errors-and-merge-to-main-f5eb
-
-    // Measure FID
+;
+    // Measure FID;
     const fidObserver = new PerformanceObserver(list => {
       for (const entry of list.getEntries()) {
         const fidEntry = entry as PerformanceEntry & {
@@ -68,17 +63,14 @@ processingStart?: number;
       }
     });
     fidObserver.observe({ entryTypes: ['first-input'] });
-
-    // Cleanup observers after a delay
+    // Cleanup observers after a delay;
     setTimeout(() => {
       lcpObserver.disconnect();
       clsObserver.disconnect();
       fidObserver.disconnect();
     }, 10000);
-
     return metrics;
   }, []);
-
   const optimizeImages = useCallback(() => {
     const images = document.querySelectorAll('img[data-src]');
     const imageObserver = new IntersectionObserver(entries => {
@@ -91,13 +83,10 @@ processingStart?: number;
         }
       });
     });
-
     images.forEach(img => imageObserver.observe(img));
   }, []);
-
   const preloadCriticalResources = useCallback(() => {
     const criticalResources = ['/fonts/inter-var.woff2', '/css/critical.css'];
-
     criticalResources.forEach(resource => {
       const link = document.createElement('link');
       link.rel = 'preload';
@@ -109,17 +98,15 @@ processingStart?: number;
       document.head.appendChild(link);
     });
   }, []);
-
   useEffect(() => {
-    // Measure performance after page load
+    // Measure performance after page load;
     const timer = setTimeout(() => {
       const metrics = measurePerformance();
       if (metrics) {
-        // Send metrics to analytics in production
+        // Send metrics to analytics in production;
         if (process.env['NODE_ENV'] === 'production') {
-          // Track metrics in production
+          // Track metrics in production;
         }
-         
         if (process.env['NODE_ENV'] === 'development') { 
           if (import.meta.env.DEV) { 
             console.log('Performance Metrics:', metrics); 
@@ -127,19 +114,17 @@ processingStart?: number;
         }
       }
     }, 1000);
-
-    // Optimize images
+    // Optimize images;
     optimizeImages();
-
-    // Preload critical resources
+    // Preload critical resources;
     preloadCriticalResources();
-
     return () => clearTimeout(timer);
   }, [measurePerformance, optimizeImages, preloadCriticalResources]); origin/cursor/fix-errors-and-merge-to-main-f5eb
-
+;
   return {
     measurePerformance,
     optimizeImages,
     preloadCriticalResources,
 };
 }; origin/cursor/fix-errors-and-merge-to-main-f5eb
+;

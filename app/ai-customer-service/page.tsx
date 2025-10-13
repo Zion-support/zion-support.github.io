@@ -1,21 +1,17 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
+import { ArrowRight , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function AICustomerServiceZionTechGroup() {
   return (
-    <> origin/cursor/analyze-improve-and-deploy-application-0ff3
-      <Helmet>
-        <title>AiCustomerService - Zion Tech Group</title>
+    <> origin/cursor/analyze-improve-and-deploy-application-0ff3;
+      <Helmet /><title>AiCustomerService - Zion Tech Group</title>
         <meta name="description" content="Advanced aicustomerservice solutions" />
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiCustomerServicePage: React.FC = () => {
 const features = [
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -32,7 +28,7 @@ const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -41,3 +37,4 @@ const benefits = [
     'Scale operations without proportional staff increases',
 'Gain competitive advantage with advanced technology'
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

@@ -1,10 +1,9 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react';
+import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from "react-helmet-async";
 const EnhancedLoadingSkeletonPage: React.FC = () => {
   const features = [
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Solutions',
@@ -21,3 +20,4 @@ description: 'Worldwide deployment and support for international businesses'
   }
     }
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

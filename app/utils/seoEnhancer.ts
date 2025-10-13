@@ -1,9 +1,8 @@
 /**
- * SEO Enhancement Utilities
- * Tools to improve search engine optimization
+ * SEO Enhancement Utilities;
+ * Tools to improve search engine optimization;
  */
-
-// Generate meta tags
+// Generate meta tags;
 export const generateMetaTags = (data: {
   title: string;
   description: string;
@@ -47,11 +46,9 @@ export const generateMetaTags = (data: {
       content: data.twitterImage || data.ogImage || '/og-image.jpg',
     },
   ];
-
   return tags;
 };
-
-// SEO Config interface
+// SEO Config interface;
 interface SEOConfig {
   title: string;
   description: string;
@@ -73,8 +70,7 @@ interface SEOConfig {
   section?: string;
   tags?: string[];
 }
-
-// Default SEO config
+// Default SEO config;
 const defaultSEOConfig: SEOConfig = {
   title: 'Zion Holdings',
   description: 'Leading provider of AI-powered business solutions',
@@ -92,8 +88,7 @@ const defaultSEOConfig: SEOConfig = {
   siteName: 'Zion Holdings',
   author: 'Zion Holdings',
 }
-
-// Generate structured data
+// Generate structured data;
 export const generateStructuredData = (data: {
   type: 'Organization' | 'WebSite' | 'Article' | 'Service';
   name: string;
@@ -112,55 +107,47 @@ export const generateStructuredData = (data: {
     logo: data.logo || '',
     sameAs: data.sameAs || [],
   };
-
   return { ...baseStructure, ...data };
 };
-
-// SEO Enhancer class
+// SEO Enhancer class;
 export class SEOEnhancer {
   private static instance: SEOEnhancer;
   private config: SEOConfig;
-
-  constructor(config: Partial<SEOConfig> = {}) {
+  constructor(config: Partial</string><SEOConfig> = {}) {
     this.config = { ...defaultSEOConfig, ...config };
   }
-
-  static getInstance(config?: Partial<SEOConfig>): SEOEnhancer {
+  static getInstance(config?: Partial</SEOConfig><SEOConfig>): SEOEnhancer {
     if (!SEOEnhancer.instance) {
       SEOEnhancer.instance = new SEOEnhancer(config);
     }
     return SEOEnhancer.instance;
   }
-
-  // Update page title
+  // Update page title;
   updateTitle(title: string) {
     if (typeof document !== 'undefined') {
       document.title = title;
     }
   }
-
-  // Update meta description
+  // Update meta description;
   updateDescription(description: string) {
     this.updateMetaTag('description', description);
   }
-
-  // Update meta keywords
+  // Update meta keywords;
   updateKeywords(keywords: string[]) {
     this.updateMetaTag('keywords', keywords.join(', '));
   }
-
-  // Update canonical URL
+  // Update canonical URL;
   updateCanonicalUrl(url: string) {
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) {
-      canonical = document.createElement('link'); origin/cursor/analyze-improve-and-deploy-application-1247
+      canonical = document.createElement('link'); origin/cursor/analyze-improve-and-deploy-application-1247;
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
     canonical.href = url;
   }
-// Update Open Graph tags
-  updateOpenGraph(config: Partial<SEOConfig>) {
+// Update Open Graph tags;
+  updateOpenGraph(config: Partial</SEOConfig><SEOConfig>) {
     const ogTags = [
       { property: 'og:title', content: config.title || this.config.title },
       { property: 'og:description', content: config.description || this.config.description },
@@ -170,30 +157,24 @@ export class SEOEnhancer {
       { property: 'og:site_name', content: config.siteName || this.config.siteName },
       { property: 'og:locale', content: config.locale || this.config.locale },
     ];
-
     if (config.publishedTime) {
       ogTags.push({ property: 'og:published_time', content: config.publishedTime });
     }
-
     if (config.modifiedTime) {
       ogTags.push({ property: 'og:modified_time', content: config.modifiedTime });
     }
-
     if (config.section) {
       ogTags.push({ property: 'og:section', content: config.section });
     }
-
     if (config.tags) {
       ogTags.push({ property: 'og:tags', content: config.tags.join(', ') });
     }
-
     ogTags.forEach(({ property, content }) => {
       this.updateMetaTag(property, content);
     });
   }
-
-  // Update Twitter Card tags
-  updateTwitterCard(config: Partial<SEOConfig>) {
+  // Update Twitter Card tags;
+  updateTwitterCard(config: Partial</SEOConfig><SEOConfig>) {
     const twitterTags = [
       { name: 'twitter:card', content: config.twitterCard || this.config.twitterCard },
       { name: 'twitter:site', content: config.twitterSite || this.config.twitterSite },
@@ -202,50 +183,40 @@ export class SEOEnhancer {
       { name: 'twitter:description', content: config.description || this.config.description },
       { name: 'twitter:image', content: config.ogImage || this.config.ogImage },
     ];
-
     twitterTags.forEach(({ name, content }) => {
       this.updateMetaTag(name, content);
     });
   }
-
-  // Update structured data
-  updateStructuredData(data: Record<string, unknown>) { origin/cursor/analyze-improve-and-deploy-application-1247
+  // Update structured data;
+  updateStructuredData(data: Record</SEOConfig><string, unknown>) { origin/cursor/analyze-improve-and-deploy-application-1247;
     const script = document.createElement('script');
     script.type = 'application/ld+json';
     script.textContent = JSON.stringify(data);
-    
-    // Remove existing structured data
+    // Remove existing structured data;
     const existingScript = document.querySelector('script[type="application/ld+json"]');
 if (existingScript) {
       existingScript.remove();
     }
-    
     document.head.appendChild(script);
   }
-
-  // Update robots meta tag
+  // Update robots meta tag;
   updateRobots(robots: string) {
     this.updateMetaTag('robots', robots);
   }
-
-  // Update language
+  // Update language;
   updateLanguage(language: string) {
     if (typeof document !== 'undefined') {
       document.documentElement.lang = language;
     }
   }
-
-  // Update author
+  // Update author;
   updateAuthor(author: string) {
     this.updateMetaTag('author', author);
   }
-
-  // Helper method to update meta tags
+  // Helper method to update meta tags;
   private updateMetaTag(nameOrProperty: string, content: string) {
     if (typeof document === 'undefined') return;
-
     let meta = document.querySelector(`meta[name="${nameOrProperty}"], meta[property="${nameOrProperty}"]`) as HTMLMetaElement;
-    
     if (!meta) {
       meta = document.createElement('meta');
       if (nameOrProperty.startsWith('og:') || nameOrProperty.startsWith('twitter:')) {
@@ -253,43 +224,34 @@ if (existingScript) {
       } else {
         meta.setAttribute('name', nameOrProperty);
       }
-      document.head.appendChild(meta); origin/cursor/analyze-improve-and-deploy-application-1247
+      document.head.appendChild(meta); origin/cursor/analyze-improve-and-deploy-application-1247;
     }
-    
     meta.content = content;
   }
-// Generate sitemap
+// Generate sitemap;
   generateSitemap(pages: Array<{ url: string; lastmod: string; changefreq: string; priority: string }>) {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${pages.map(page => `  <url>
-    <loc>${page.url}</loc>
+</string><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${pages.map(page => `  </urlset><url /><loc>${page.url}</loc>
     <lastmod>${page.lastmod}</lastmod>
     <changefreq>${page.changefreq}</changefreq>
     <priority>${page.priority}</priority>
-  </url>`).join('\n')} origin/cursor/analyze-improve-and-deploy-application-1247
+  </url>`).join('\n')} origin/cursor/analyze-improve-and-deploy-application-1247;
 </urlset>`;
-
     return sitemap;
   }
-// Generate robots.txt
+// Generate robots.txt;
   generateRobotsTxt(disallowPaths: string[] = []) {
     const robots = `User-agent: *
 Allow: /
-
 ${disallowPaths.map(path => `Disallow: ${path}`).join('\n')}
-
 Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
-
     return robots;
   }
-
-  // Initialize SEO
+  // Initialize SEO;
   initialize(config?: Partial<SEOConfig>) {
     if (typeof document === 'undefined') return;
-
     const finalConfig = { ...this.config, ...config };
-    
     this.updateTitle(finalConfig.title);
     this.updateDescription(finalConfig.description);
     this.updateKeywords(finalConfig.keywords);
@@ -299,16 +261,13 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
     this.updateRobots(finalConfig.robots);
     this.updateLanguage(finalConfig.language);
     this.updateAuthor(finalConfig.author);
-
     if (Object.keys(finalConfig.structuredData).length > 0) {
       this.updateStructuredData(finalConfig.structuredData);
     }
   }
-
-  // Get current SEO data
+  // Get current SEO data;
   getCurrentSEO() {
     if (typeof document === 'undefined') return {};
-    
     return {
       title: document.title,
       description: document.querySelector('meta[name="description"]')?.getAttribute('content') || '',
@@ -317,8 +276,7 @@ Sitemap: ${this.config.canonicalUrl}/sitemap.xml`;
     };
   }
 }
-
-// Generate structured data with type-specific properties
+// Generate structured data with type-specific properties;
 export const generateAdvancedStructuredData = (data: {
   type: 'Organization' | 'WebSite' | 'Article' | 'Service';
   name: string;
@@ -337,8 +295,7 @@ export const generateAdvancedStructuredData = (data: {
     logo: data.logo || '',
     sameAs: data.sameAs || [],
   };
-
-  // Add type-specific properties
+  // Add type-specific properties;
   if (data.type === 'Organization') {
     return {
       ...baseStructure,
@@ -353,7 +310,6 @@ export const generateAdvancedStructuredData = (data: {
       },
     };
   }
-
   if (data.type === 'WebSite') {
     return {
       ...baseStructure,
@@ -367,7 +323,6 @@ export const generateAdvancedStructuredData = (data: {
       },
     };
   }
-
   if (data.type === 'Article') {
     return {
       ...baseStructure,
@@ -387,11 +342,9 @@ export const generateAdvancedStructuredData = (data: {
       dateModified: new Date().toISOString(),
     };
   }
-
   return baseStructure;
 };
-
-// Generate sitemap data
+// Generate sitemap data;
 export const generateSitemapData = (
   pages: Array<{
     url: string;
@@ -419,53 +372,44 @@ export const generateSitemapData = (
     },
   };
 };
-
-// Generate robots.txt content
+// Generate robots.txt content;
 export const generateRobotsTxt = (
   sitemapUrl: string,
   disallowPaths: string[] = []
 ) => {
-  const disallowRules = disallowPaths
+  const disallowRules = disallowPaths;
     .map(path => `Disallow: ${path}`)
     .join('\n');
-
   return `User-agent: *
 ${disallowRules}
-
 Sitemap: ${sitemapUrl}`;
 };
-
-// SEO validation
+// SEO validation;
 export const validateSEOData = (data: {
   title: string;
   description: string;
   url: string;
 }) => {
   const issues: string[] = [];
-
-  // Check title length
+  // Check title length;
   if (data.title.length < 30) {
     issues.push('Title is too short (recommended: 30-60 characters)');
   } else if (data.title.length > 60) {
     issues.push('Title is too long (recommended: 30-60 characters)');
   }
-
-  // Check description length
+  // Check description length;
   if (data.description.length < 120) {
     issues.push('Description is too short (recommended: 120-160 characters)');
   } else if (data.description.length > 160) {
     issues.push('Description is too long (recommended: 120-160 characters)');
   }
-
-  // Check URL format
+  // Check URL format;
   if (!data.url.startsWith('http')) {
-    issues.push('URL should start with http:// or https://'); origin/cursor/analyze-improve-and-deploy-application-1247
+    issues.push('URL should start with http:// or https://'); origin/cursor/analyze-improve-and-deploy-application-1247;
   }
-
   return issues;
 };
-
-// Generate breadcrumb data
+// Generate breadcrumb data;
 export const generateBreadcrumbData = (
   breadcrumbs: Array<{
     name: string;
@@ -483,12 +427,10 @@ export const generateBreadcrumbData = (
     })),
   };
 };
-
-// Initialize SEO enhancements
+// Initialize SEO enhancements;
 export const initializeSEOEnhancements = () => {
   if (typeof document === 'undefined') return;
-
-  // Add structured data for organization
+  // Add structured data for organization;
   const organizationData = generateStructuredData({
     type: 'Organization',
     name: 'Zion Holdings',
@@ -500,9 +442,8 @@ export const initializeSEOEnhancements = () => {
       'https://linkedin.com/company/zion-holdings',
     ],
   });
-
   const script = document.createElement('script');
   script.type = 'application/ld+json';
   script.textContent = JSON.stringify(organizationData);
   document.head.appendChild(script);
-}; origin/cursor/analyze-improve-and-deploy-application-1247
+}; origin/cursor/analyze-improve-and-deploy-application-1247</SEOConfig>

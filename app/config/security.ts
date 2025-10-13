@@ -1,10 +1,9 @@
 /**
- * Security Configuration
- * Defines security headers and policies for the application
+ * Security Configuration;
+ * Defines security headers and policies for the application;
  */
-
 export const securityHeaders = {
-  // Content Security Policy
+  // Content Security Policy;
   contentSecurityPolicy: {
     directives: {
       defaultSrc: ["'self'"],
@@ -28,8 +27,7 @@ export const securityHeaders = {
       upgradeInsecureRequests: true,
     },
   },
-
-  // Security Headers
+  // Security Headers;
   headers: {
     'X-DNS-Prefetch-Control': 'on',
     'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload',
@@ -41,29 +39,26 @@ export const securityHeaders = {
       'camera=(), microphone=(), geolocation=(), interest-cohort=()',
   },
 };
-
 /**
- * Rate limiting configuration
+ * Rate limiting configuration;
  */
 export const rateLimitConfig = {
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 100, // Limit each IP to 100 requests per windowMs
+  windowMs: 15 * 60 * 1000, // 15 minutes;
+  max: 100, // Limit each IP to 100 requests per windowMs;
   message: 'Too many requests from this IP, please try again later.',
 };
-
 /**
- * CORS configuration
+ * CORS configuration;
  */
 export const corsConfig = {
   origin: process.env.ALLOWED_ORIGINS?.split(',') || ['http://localhost:3000'],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
-  maxAge: 86400, // 24 hours
+  maxAge: 86400, // 24 hours;
 };
-
 /**
- * Session configuration
+ * Session configuration;
  */
 export const sessionConfig = {
   secret: process.env.SESSION_SECRET || 'your-secret-key-change-in-production',
@@ -72,13 +67,12 @@ export const sessionConfig = {
   cookie: {
     secure: process.env['NODE_ENV'] === 'production',
     httpOnly: true,
-    maxAge: 24 * 60 * 60 * 1000, // 24 hours
+    maxAge: 24 * 60 * 60 * 1000, // 24 hours;
     sameSite: 'strict' as const,
   },
 };
-
 /**
- * Input validation patterns
+ * Input validation patterns;
  */
 export const validationPatterns = {
   email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
@@ -87,48 +81,43 @@ export const validationPatterns = {
   alphanumeric: /^[a-zA-Z0-9]+$/,
   noSpecialChars: /^[a-zA-Z0-9\s]+$/,
 };
-
 /**
- * Sanitize user input
+ * Sanitize user input;
  */
 export function sanitizeInput(input: string): string {
-  return input
+  return input;
     .replace(/[<>]/g, '') // Remove < and >
-    .replace(/javascript:/gi, '') // Remove javascript: protocol
-    .replace(/on\w+\s*=/gi, '') // Remove event handlers
+    .replace(/javascript:/gi, '') // Remove javascript: protocol;
+    .replace(/on\w+\s*=/gi, '') // Remove event handlers;
     .trim();
 }
-
 /**
- * Validate email address
+ * Validate email address;
  */
 export function validateEmail(email: string): boolean {
   return validationPatterns.email.test(email);
 }
-
 /**
- * Validate URL
+ * Validate URL;
  */
 export function validateUrl(url: string): boolean {
   return validationPatterns.url.test(url);
 }
-
 /**
- * Generate secure token
+ * Generate secure token;
  */
 export function generateSecureToken(length: number = 32): string {
   const array = new Uint8Array(length);
   if (typeof window !== 'undefined' && window.crypto) {
     window.crypto.getRandomValues(array);
   } else {
-    // Fallback for non-browser environments
+    // Fallback for non-browser environments;
     for (let i = 0; i < length; i++) {
       array[i] = Math.floor(Math.random() * 256);
     }
   }
   return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
 }
-
 export default {
   securityHeaders,
   rateLimitConfig,
@@ -140,3 +129,4 @@ export default {
   validateUrl,
   generateSecureToken,
 }; origin/cursor/analyze-improve-and-deploy-application-1247
+;

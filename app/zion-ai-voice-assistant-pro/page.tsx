@@ -1,9 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet , Link  } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, TrendingUp, Monitor } from "lucide-react";
 export default function ZionAIVoiceAssistantPro() {
-
   const pricingPlans = [
     {
       name: "Starter",
@@ -18,7 +16,7 @@ export default function ZionAIVoiceAssistantPro() {
         "Email support",
         "5GB storage"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -35,7 +33,7 @@ export default function ZionAIVoiceAssistantPro() {
         "API access",
         "Analytics dashboard"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -53,10 +51,9 @@ export default function ZionAIVoiceAssistantPro() {
         "Advanced analytics",
         "Custom deployment"
       ],
-      popular: false
+      popular: false;
     }
   ];
-
   const testimonials = [
     {
       name: "Sarah Johnson",
@@ -83,7 +80,6 @@ export default function ZionAIVoiceAssistantPro() {
       avatar: "ER"
     }
   ];
-
   const useCases = [
     {
       title: "Customer Service",
@@ -110,22 +106,16 @@ export default function ZionAIVoiceAssistantPro() {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   return (
-    <> origin/cursor/analyze-improve-and-deploy-application-0ff3
-      <Helmet>
-        <title>ZionAiVoiceAssistantPro - Zion Tech Group</title>
+    <> origin/cursor/analyze-improve-and-deploy-application-0ff3;
+      <Helmet /><title>ZionAiVoiceAssistantPro - Zion Tech Group</title>
         <meta name="description" content="Advanced zionaivoiceassistantpro solutions" />
       </Helmet>
-      <div className="container mx-auto px-4 py-16">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-6">
-            Zion Ai Voice Assistant Pro <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
+      <div className="container mx-auto px-4 py-16" /><div className="text-center mb-16" /><h1 className="text-5xl font-bold text-white mb-6">
+            Zion Ai Voice Assistant Pro </h1><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Solutions</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Discover our comprehensive zionaivoiceassistantpro solutions designed to transform your business
+            Discover our comprehensive zionaivoiceassistantpro solutions designed to transform your business</p>
           </p>
         </div>
-        <div className="text-center">
-          <p className="text-gray-300">Coming Soon - ZionAiVoiceAssistantPro Solutions</p>
-
+        <div className="text-center" /><p className="text-gray-300">Coming Soon - ZionAiVoiceAssistantPro Solutions</p>

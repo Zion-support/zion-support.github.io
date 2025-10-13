@@ -1,5 +1,4 @@
 import React, { createContext, useContext, useEffect, useState, useCallback } from 'react';
-
 interface AccessibilitySettings {
   enableKeyboardNavigation: boolean;
   enableScreenReader: boolean;
@@ -10,7 +9,6 @@ interface AccessibilitySettings {
   fontSize: 'small' | 'medium' | 'large';
   colorScheme: 'light' | 'dark' | 'auto';
 }
-
 interface AccessibilityContextType {
   settings: AccessibilitySettings;
   updateSettings: (newSettings: Partial<AccessibilitySettings>) => void;
@@ -18,7 +16,6 @@ interface AccessibilityContextType {
   announceToScreenReader: (message: string) => void;
   setFocus: (elementId: string) => void;
 }
-
 const defaultSettings: AccessibilitySettings = {
   enableKeyboardNavigation: true,
   enableScreenReader: true,
@@ -29,9 +26,7 @@ const defaultSettings: AccessibilitySettings = {
   fontSize: 'medium',
   colorScheme: 'auto'
 };
-
-const AccessibilityContext = createContext<AccessibilityContextType | undefined>(undefined);
-
+const AccessibilityContext = createContext</AccessibilitySettings><AccessibilityContextType | undefined>(undefined);
 export const useAccessibility = () => {
   const context = useContext(AccessibilityContext);
   if (!context) {
@@ -39,7 +34,6 @@ export const useAccessibility = () => {
   }
   return context;
 };
-
 interface AccessibilityProviderProps {
   children: React.ReactNode;
   enableKeyboardNavigation?: boolean;
@@ -49,112 +43,93 @@ interface AccessibilityProviderProps {
   enableVoiceNavigation?: boolean;
   enableReducedMotion?: boolean;
 }
-
-const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
+const AccessibilityProvider: React.FC</AccessibilityContextType><AccessibilityProviderProps> = ({
   children,
   enableKeyboardNavigation = true,
   enableScreenReader = true,
   enableHighContrast = false,
   enableFocusManagement = true,
   enableVoiceNavigation = false,
-  enableReducedMotion = false
+  enableReducedMotion = false;
 }) => {
-  const [settings, setSettings] = useState<AccessibilitySettings>({
+  const [settings, setSettings] = useState</AccessibilityProviderProps><AccessibilitySettings>({
     ...defaultSettings,
     enableKeyboardNavigation,
     enableScreenReader,
     enableHighContrast,
     enableFocusManagement,
     enableVoiceNavigation,
-    enableReducedMotion
+    enableReducedMotion;
   });
-
-  const updateSettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
+  const updateSettings = useCallback((newSettings: Partial</AccessibilitySettings><AccessibilitySettings>) => {
     setSettings(prev => ({ ...prev, ...newSettings }));
   }, []);
-
   const resetSettings = useCallback(() => {
     setSettings(defaultSettings);
   }, []);
-
   const announceToScreenReader = useCallback((message: string) => {
     if (!settings.enableScreenReader) return;
-    
     const announcement = document.createElement('div');
     announcement.setAttribute('aria-live', 'polite');
     announcement.setAttribute('aria-atomic', 'true');
     announcement.className = 'sr-only';
     announcement.textContent = message;
-    
     document.body.appendChild(announcement);
-    
     setTimeout(() => {
       document.body.removeChild(announcement);
     }, 1000);
   }, [settings.enableScreenReader]);
-
   const setFocus = useCallback((elementId: string) => {
     if (!settings.enableFocusManagement) return;
-    
     const element = document.getElementById(elementId);
     if (element) {
       element.focus();
       element.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   }, [settings.enableFocusManagement]);
-
-  // Apply accessibility settings to the document
+  // Apply accessibility settings to the document;
   useEffect(() => {
     const root = document.documentElement;
-    
-    // Apply high contrast mode
+    // Apply high contrast mode;
     if (settings.enableHighContrast) {
       root.classList.add('high-contrast');
     } else {
       root.classList.remove('high-contrast');
     }
-    
-    // Apply reduced motion
+    // Apply reduced motion;
     if (settings.enableReducedMotion) {
       root.classList.add('reduced-motion');
     } else {
       root.classList.remove('reduced-motion');
     }
-    
-    // Apply font size
+    // Apply font size;
     root.setAttribute('data-font-size', settings.fontSize);
-    
-    // Apply color scheme
+    // Apply color scheme;
     root.setAttribute('data-color-scheme', settings.colorScheme);
-    
-    // Apply keyboard navigation
+    // Apply keyboard navigation;
     if (settings.enableKeyboardNavigation) {
       root.classList.add('keyboard-navigation');
     } else {
       root.classList.remove('keyboard-navigation');
     }
   }, [settings]);
-
-  // Keyboard navigation support
+  // Keyboard navigation support;
   useEffect(() => {
     if (!settings.enableKeyboardNavigation) return;
-
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Skip to main content
+      // Skip to main content;
       if (event.key === 'Tab' && event.shiftKey && event.altKey) {
         event.preventDefault();
         setFocus('main-content');
         announceToScreenReader('Skipped to main content');
       }
-      
-      // Skip to navigation
+      // Skip to navigation;
       if (event.key === 'Tab' && event.altKey) {
         event.preventDefault();
         setFocus('main-navigation');
         announceToScreenReader('Skipped to navigation');
       }
-      
-      // Escape key handling
+      // Escape key handling;
       if (event.key === 'Escape') {
         const activeElement = document.activeElement as HTMLElement;
         if (activeElement && activeElement.blur) {
@@ -162,51 +137,41 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
         }
       }
     };
-
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [settings.enableKeyboardNavigation, setFocus, announceToScreenReader]);
-
-  // Focus management
+  // Focus management;
   useEffect(() => {
     if (!settings.enableFocusManagement) return;
-
     const handleFocusIn = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       if (target) {
-        // Add focus indicator
+        // Add focus indicator;
         target.classList.add('focus-visible');
-        
-        // Announce focus changes for screen readers
+        // Announce focus changes for screen readers;
         if (settings.enableScreenReader && target.getAttribute('aria-label')) {
           announceToScreenReader(target.getAttribute('aria-label') || '');
         }
       }
     };
-
     const handleFocusOut = (event: FocusEvent) => {
       const target = event.target as HTMLElement;
       if (target) {
         target.classList.remove('focus-visible');
       }
     };
-
     document.addEventListener('focusin', handleFocusIn);
     document.addEventListener('focusout', handleFocusOut);
-    
     return () => {
       document.removeEventListener('focusin', handleFocusIn);
       document.removeEventListener('focusout', handleFocusOut);
     };
   }, [settings.enableFocusManagement, settings.enableScreenReader, announceToScreenReader]);
-
-  // Voice navigation support
+  // Voice navigation support;
   useEffect(() => {
     if (!settings.enableVoiceNavigation) return;
-
     const handleVoiceCommand = (event: CustomEvent) => {
       const command = event.detail?.command?.toLowerCase();
-      
       switch (command) {
         case 'navigate home':
           window.location.href = '/';
@@ -230,27 +195,22 @@ const AccessibilityProvider: React.FC<AccessibilityProviderProps> = ({
           console.log('Unknown voice command:', command);
       }
     };
-
     window.addEventListener('voiceCommand' as any, handleVoiceCommand as EventListener);
-    
     return () => {
       window.removeEventListener('voiceCommand' as any, handleVoiceCommand as EventListener);
     };
   }, [settings.enableVoiceNavigation]);
-
   const contextValue: AccessibilityContextType = {
     settings,
     updateSettings,
     resetSettings,
     announceToScreenReader,
-    setFocus
+    setFocus;
   };
-
   return (
-    <AccessibilityContext.Provider value={contextValue}>
-      {children}
+    </AccessibilitySettings><AccessibilityContext.Provider value={contextValue}>
+      {children}</AccessibilityContext>
     </AccessibilityContext.Provider>
   );
 };
-
 export default AccessibilityProvider;

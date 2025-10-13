@@ -1,10 +1,9 @@
 /**
- * Enhanced Error Tracking Utility
- * Provides comprehensive error tracking with detailed context
+ * Enhanced Error Tracking Utility;
+ * Provides comprehensive error tracking with detailed context;
  */
-
 export interface ErrorContext {
-  component?: string; origin/cursor/analyze-improve-and-deploy-application-1247
+  component?: string; origin/cursor/analyze-improve-and-deploy-application-1247;
   action?: string;
   userId?: string;
   sessionId?: string;
@@ -18,21 +17,17 @@ export interface TrackedError {
   userAgent: string;
   url: string;
 }
-
 class EnhancedErrorTracker {
   private errors: TrackedError[] = [];
   private maxErrors = 100;
   private sessionId: string;
-
   constructor() {
     this.sessionId = this.generateSessionId();
     this.setupGlobalErrorHandler();
   }
-
   private generateSessionId(): string {
     return `${Date.now()}-${Math.random().toString(36).substring(7)}`;
   }
-
   private setupGlobalErrorHandler(): void {
     if (typeof window !== 'undefined') {
       window.addEventListener('error', (event) => {
@@ -41,7 +36,6 @@ class EnhancedErrorTracker {
           action: 'Uncaught Error',
         });
       });
-
       window.addEventListener('unhandledrejection', (event) => {
         this.trackError(new Error(event.reason), {
           component: 'Global',
@@ -50,10 +44,8 @@ class EnhancedErrorTracker {
       });
     }
   }
-
   public trackError(error: Error, context: ErrorContext = {}): void {
     if (typeof window === 'undefined') return;
-
     const trackedError: TrackedError = {
       message: error.message,
       stack: error.stack,
@@ -65,56 +57,46 @@ class EnhancedErrorTracker {
       userAgent: navigator.userAgent,
       url: window.location.href,
     };
-
     this.errors.push(trackedError);
-
-    // Keep only the most recent errors
+    // Keep only the most recent errors;
     if (this.errors.length > this.maxErrors) {
       this.errors.shift();
     }
-
-    // Log to console in development
+    // Log to console in development;
     if (process.env['NODE_ENV'] === 'development') {
       console.error('Tracked Error:', trackedError);
     }
-
-    // Send to analytics if available
+    // Send to analytics if available;
     this.sendToAnalytics(trackedError);
   }
-
   private sendToAnalytics(error: TrackedError): void {
     if (
       typeof window !== 'undefined' &&
-      (window as { gtag?: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag
+      (window as { gtag?: (command: string, action: string, parameters: Record</string><string, unknown>) => void }).gtag;
     ) {
-      (window as unknown as { gtag: (command: string, action: string, parameters: Record<string, unknown>) => void }).gtag('event', 'exception', {
+      (window as unknown as { gtag: (command: string, action: string, parameters: Record</string><string, unknown>) => void }).gtag('event', 'exception', {
         description: error.message,
         fatal: false,
         component: error.context.component,
       });
     }
   }
-
   public getErrors(): TrackedError[] {
     return [...this.errors];
   }
-
   public clearErrors(): void {
     this.errors = [];
   }
-
   public getErrorStats(): {
     total: number;
-    byComponent: Record<string, number>;
+    byComponent: Record</string><string, number>;
     recent: TrackedError[];
   } {
-    const byComponent: Record<string, number> = {};
-
+    const byComponent: Record</string><string, number> = {};
     this.errors.forEach((error) => {
       const component = error.context.component || 'Unknown';
       byComponent[component] = (byComponent[component] || 0) + 1;
     });
-
     return {
       total: this.errors.length,
       byComponent,
@@ -122,9 +104,7 @@ class EnhancedErrorTracker {
     };
   }
 }
-
-// Export singleton instance origin/cursor/analyze-improve-and-deploy-application-1247
+// Export singleton instance origin/cursor/analyze-improve-and-deploy-application-1247;
 export const errorTracker = new EnhancedErrorTracker();
-
 export default errorTracker;
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247</string>

@@ -1,20 +1,14 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-
 const ItConsultingPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>It Consulting - Zion Tech Group</title>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><Helmet /><title>It Consulting - Zion Tech Group</title>
         <meta name="description" content="Advanced it consulting solutions and services" />
       </Helmet>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-        <div className="text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            It Consulting
- cursor/fix-errors-and-merge-to-main-6ce7
-    // IT Infrastructure Services
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" /><div className="text-center" /><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            It Consulting;
+ cursor/fix-errors-and-merge-to-main-6ce7;
+    // IT Infrastructure Services;
     {
       id: 'it-infrastructure-design',
       name: 'IT Infrastructure Design & Implementation',
@@ -29,14 +23,14 @@ const ItConsultingPage = () => {
         'Backup and disaster recovery setup',
 'Security infrastructure deployment',
         'Monitoring and management tools',
-        'Documentation and training', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Documentation and training', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Ongoing support and maintenance'
       ],
       benefits: [,
         'Scalable and reliable infrastructure',
 'Improved system performance',
         'Enhanced security posture',
-        'Reduced downtime and outages', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Reduced downtime and outages', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Future-proof technology stack'
       ],
       targetAudience: 'Small to large businesses, Startups, Enterprises',
@@ -59,14 +53,14 @@ const ItConsultingPage = () => {
         'Cloud security implementation',
 'Cost optimization analysis',
         'Performance tuning',
-        'Disaster recovery setup', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Disaster recovery setup', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Training and documentation'
       ],
       benefits: [,
         'Reduce IT costs by 30-50%',
 'Improve scalability and flexibility',
         'Enhanced security and compliance',
-        'Better disaster recovery capabilities', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Better disaster recovery capabilities', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Access to latest technologies'
       ],
       targetAudience: 'Businesses looking to modernize IT infrastructure',
@@ -89,14 +83,14 @@ const ItConsultingPage = () => {
         'Firewall and endpoint protection',
 'Email security implementation',
         'Security awareness training',
-        'Compliance auditing', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Compliance auditing', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Incident response planning'
       ],
       benefits: [,
         'Protect against cyber threats',
 'Ensure regulatory compliance',
         'Reduce security risks by 90%',
-        'Improve incident response time', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Improve incident response time', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Maintain customer trust'
       ],
       targetAudience: 'All businesses handling sensitive data',
@@ -119,14 +113,14 @@ const ItConsultingPage = () => {
         'Wireless network deployment',
 'Network monitoring implementation',
         'Traffic analysis and optimization',
-        'Redundancy and failover setup', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Redundancy and failover setup', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Performance tuning'
       ],
       benefits: [,
         'Improve network performance by 200%',
 'Reduce network downtime',
         'Optimize bandwidth usage',
-        'Enhance user experience', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Enhance user experience', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Future-proof network design'
       ],
       targetAudience: 'Businesses with complex networking needs',
@@ -149,14 +143,14 @@ const ItConsultingPage = () => {
         'Security implementation',
 'Monitoring and alerting',
         'Query optimization',
-        'Capacity planning', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Capacity planning', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Maintenance and updates'
       ],
       benefits: [,
         'Improve database performance by 150%',
 'Ensure data integrity and security',
         'Reduce maintenance overhead',
-        'Optimize storage usage', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Optimize storage usage', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Minimize downtime'
       ],
       targetAudience: 'Businesses with critical data requirements',
@@ -179,14 +173,14 @@ const ItConsultingPage = () => {
         'Software updates and patches',
 'Hardware support and replacement',
         'User training and onboarding',
-        'IT asset management', origin/cursor/analyze-improve-and-deploy-application-1247
+        'IT asset management', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Help desk services'
       ],
       benefits: [,
         'Reduce IT downtime by 80%',
 'Lower IT support costs',
         'Improve user productivity',
-        'Proactive issue resolution', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Proactive issue resolution', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Focus on core business activities'
       ],
       targetAudience: 'Small to medium businesses without dedicated IT staff',
@@ -209,14 +203,14 @@ const ItConsultingPage = () => {
         'API development and integration',
 'Database design and implementation',
         'Testing and quality assurance',
-        'Deployment and maintenance', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Deployment and maintenance', origin/cursor/analyze-improve-and-deploy-application-1247;
         'User training and documentation'
       ],
       benefits: [,
         'Streamline business processes',
 'Improve operational efficiency',
         'Gain competitive advantage',
-        'Reduce manual work', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Reduce manual work', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Scale with business growth'
       ],
       targetAudience: 'Businesses needing custom software solutions',
@@ -239,14 +233,14 @@ const ItConsultingPage = () => {
         'Vendor evaluation and selection',
 'Cost-benefit analysis',
         'Risk assessment and mitigation',
-        'Change management planning', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Change management planning', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Implementation guidance'
       ],
       benefits: [,
         'Align IT with business goals',
 'Optimize technology investments',
         'Reduce implementation risks',
-        'Accelerate digital transformation', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Accelerate digital transformation', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Improve ROI on technology'
       ],
       targetAudience: 'Businesses planning technology initiatives',
@@ -269,14 +263,14 @@ const ItConsultingPage = () => {
         'Disaster recovery testing',
 'Business continuity planning',
         'Cloud-based recovery solutions',
-        'Documentation and procedures', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Documentation and procedures', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Regular testing and updates'
       ],
       benefits: [,
         'Minimize business disruption',
 'Ensure rapid recovery',
         'Protect critical data',
-        'Maintain customer service', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Maintain customer service', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Comply with regulations'
       ],
       targetAudience: 'Businesses requiring high availability',
@@ -299,14 +293,14 @@ const ItConsultingPage = () => {
         'Audit preparation and support',
 'Training and awareness programs',
         'Ongoing compliance monitoring',
-        'Documentation and reporting', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Documentation and reporting', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Remediation planning'
       ],
       benefits: [,
         'Ensure regulatory compliance',
 'Reduce audit findings',
         'Improve security posture',
-        'Avoid penalties and fines', origin/cursor/analyze-improve-and-deploy-application-1247
+        'Avoid penalties and fines', origin/cursor/analyze-improve-and-deploy-application-1247;
         'Build customer trust'
       ],
       targetAudience: 'Healthcare, Finance, Government, Education sectors',
@@ -315,38 +309,35 @@ const ItConsultingPage = () => {
       support: 'Compliance specialist and ongoing monitoring',
       standards: ['HIPAA', 'SOX', 'PCI-DSS', 'GDPR', 'ISO 27001', 'NIST'],
       link: 'https://ziontechgroup.com/compliance-auditing',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
       {/* Hero Section */}</div>
-      <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
+      </h1><section className="py-20 px-4" /><div className="max-w-7xl mx-auto" /><div className="text-center mb-16" /><h2 className="text-4xl font-bold text-white mb-4">Section Title</h2>
               <p className="text-xl text-gray-300">Section description</p>
             </div>
           </div>
         </section>
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true"></div>
-        <div className="relative z-10 max-w-7xl mx-auto text-center"></div>
-          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse"></h1>,
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20" aria-hidden="true" />
+        <div className="relative z-10 max-w-7xl mx-auto text-center" />
+          <h1 className="text-5xl md: text-7xl font-bold text-white mb-6 leading-tight cyber-text neon-pulse" />,
             Professional <span className="holographic-text">IT Services</span>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
           </h1>
 <p>
             Comprehensive IT solutions designed to optimize your technology infrastructure,
-            enhance security, and drive business growth. Expert consulting and implementation. origin/cursor/analyze-improve-and-deploy-application-1247
+            enhance security, and drive business growth. Expert consulting and implementation. origin/cursor/analyze-improve-and-deploy-application-1247</p>
           </p>
         </div>
 </section>
       {/* Search and Filter Section */};
-      <section className="py-12 px-4 sm:px-6 lg:px-8"></section>
-        <div className="max-w-7xl mx-auto"></div>
-          <div className="flex flex-col lg:flex-row gap-6 mb-8"></div>
+      <section className="py-12 px-4 sm:px-6 lg:px-8" />
+        <div className="max-w-7xl mx-auto" />
+          <div className="flex flex-col lg:flex-row gap-6 mb-8" />
             {/* Search */}</div>
-            <div className="flex-1"></div>
-              <div className="relative"></div>
-                <Search>
-                <input
+            <div className="flex-1" />
+              <div className="relative" />
+                <Search /><input;
                   type="text"
                   placeholder="Search IT services..."
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
  origin/cursor/analyze-improve-and-deploy-application-1507
+;

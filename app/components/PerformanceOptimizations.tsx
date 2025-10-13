@@ -1,16 +1,14 @@
 'use client';
 import React, { useEffect } from 'react';
-
 const PerformanceOptimizations: React.FC = () => {
   useEffect(() => {
-    // Preload critical resources
+    // Preload critical resources;
     const preloadCriticalResources = () => {
       const criticalImages = [
         '/images/hero-bg.jpg',
         '/images/ai-services-bg.jpg',
         '/images/it-services-bg.jpg'
       ];
-
       criticalImages.forEach(src => {
         const link = document.createElement('link');
         link.rel = 'preload';
@@ -19,8 +17,7 @@ const PerformanceOptimizations: React.FC = () => {
         document.head.appendChild(link);
       });
     };
-
-    // Optimize images
+    // Optimize images;
     const optimizeImages = () => {
       const images = document.querySelectorAll('img');
       images.forEach(img => {
@@ -32,15 +29,13 @@ const PerformanceOptimizations: React.FC = () => {
         }
       });
     };
-
-    // Preconnect to external domains
+    // Preconnect to external domains;
     const preconnectDomains = () => {
       const domains = [
         'https://fonts.googleapis.com',
         'https://fonts.gstatic.com',
         'https://www.google-analytics.com'
       ];
-
       domains.forEach(domain => {
         const link = document.createElement('link');
         link.rel = 'preconnect';
@@ -48,13 +43,11 @@ const PerformanceOptimizations: React.FC = () => {
         document.head.appendChild(link);
       });
     };
-
-    // Initialize optimizations
+    // Initialize optimizations;
     preloadCriticalResources();
     optimizeImages();
     preconnectDomains();
-
-    // Intersection Observer for lazy loading
+    // Intersection Observer for lazy loading;
     const setupIntersectionObserver = () => {
       if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
@@ -69,16 +62,13 @@ const PerformanceOptimizations: React.FC = () => {
             }
           });
         });
-
         document.querySelectorAll('[data-src]').forEach(el => {
           observer.observe(el);
         });
       }
     };
-
     setupIntersectionObserver();
-
-    // Service Worker registration
+    // Service Worker registration;
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
         .then(registration => {
@@ -89,8 +79,6 @@ const PerformanceOptimizations: React.FC = () => {
         });
     }
   }, []);
-
   return null;
 };
-
 export default PerformanceOptimizations;

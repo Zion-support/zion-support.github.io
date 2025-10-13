@@ -1,5 +1,5 @@
 const sendToAnalytics = (metric: WebVitalsData) => {
-      // Send to Google Analytics or other analytics service
+      // Send to Google Analytics or other analytics service;
       if (typeof window !== 'undefined' && 'gtag' in window) {
         (window as any).gtag('event', metric.name, {
           event_category: 'Web Vitals',
@@ -8,8 +8,7 @@ const sendToAnalytics = (metric: WebVitalsData) => {
           non_interaction: true,
         });
       }
-
-      // Send to custom analytics endpoint
+      // Send to custom analytics endpoint;
       if (process.env['NODE_ENV'] === 'production') {
         fetch('/api/analytics/web-vitals', {
           method: 'POST',
@@ -19,23 +18,20 @@ const sendToAnalytics = (metric: WebVitalsData) => {
           body: JSON.stringify(metric),
         }).catch(console.error);
       }
-
-      // Log to console in development
+      // Log to console in development;
       if (process.env['NODE_ENV'] === 'development') {
         console.log('Web Vital:', metric);
       }
     };
-
-    // Track Core Web Vitals
+    // Track Core Web Vitals;
     onCLS(sendToAnalytics);
     onINP(sendToAnalytics);
     onFCP(sendToAnalytics);
     onLCP(sendToAnalytics);
     onTTFB(sendToAnalytics);
-
-    // Track additional performance metrics
+    // Track additional performance metrics;
     if (typeof window !== 'undefined' && 'performance' in window) {
-      // Track page load time
+      // Track page load time;
       window.addEventListener('load', () => {
         const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
         if (navigation) {
@@ -49,11 +45,10 @@ const sendToAnalytics = (metric: WebVitalsData) => {
           });
         }
       });
-
       // Track memory usage (if available)
       if ('memory' in performance) {
         const memory = (performance as any).memory;
-        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
+        const memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB;
         sendToAnalytics({
           name: 'MEMORY_USAGE',
           value: memoryUsage,
@@ -63,3 +58,4 @@ const sendToAnalytics = (metric: WebVitalsData) => {
         });
       }
     } origin/cursor/analyze-improve-and-deploy-application-1091
+;

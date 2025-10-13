@@ -1,15 +1,10 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
-
+import { ArrowRight , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
-
-export default function AIDataVisualizationZionTechGroup() { origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default function AIDataVisualizationZionTechGroup() { origin/cursor/analyze-improve-and-deploy-application-0ff3;
   return (
-    <>
-      <Helmet>
-        <title>AI Data Visualization - Zion Tech Group</title>
+    <React.Fragment /><Helmet /><title>AI Data Visualization - Zion Tech Group</title>
         <meta name="description" content="AI Data Visualization services by Zion Tech Group. Advanced AI and IT solutions for your business." />
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -26,7 +21,7 @@ export default function AIDataVisualizationZionTechGroup() { origin/cursor/analy
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -35,15 +30,16 @@ const benefits = [
     'Scale operations without proportional staff increases',
 'use client';
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1256
+ origin/cursor/analyze-improve-and-deploy-application-1256;
         </div>
       </div>
-    </>
+    </React.Fragment>
 'Gain competitive advantage with advanced technology'
- origin/cursor/analyze-improve-and-deploy-application-1247
- origin/cursor/analyze-improve-and-deploy-application-1448
- origin/cursor/analyze-improve-and-deploy-application-1573
+ origin/cursor/analyze-improve-and-deploy-application-1247;
+ origin/cursor/analyze-improve-and-deploy-application-1448;
+ origin/cursor/analyze-improve-and-deploy-application-1573;
   );
 };
 export default DataVisualizationPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
+;

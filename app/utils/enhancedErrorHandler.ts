@@ -1,8 +1,7 @@
 /**
- * Enhanced Error Handling System
- * Provides comprehensive error tracking, reporting, and recovery mechanisms
+ * Enhanced Error Handling System;
+ * Provides comprehensive error tracking, reporting, and recovery mechanisms;
  */
-
 interface ErrorContext {
   userId?: string;
   sessionId?: string;
@@ -12,9 +11,8 @@ interface ErrorContext {
   component?: string;
   action?: string;
   props?: Record<string, unknown>;
-  state?: Record<string, unknown>;
+  state?: Record</string><string, unknown>;
 }
-
 interface ErrorReport {
   id: string;
   type: 'javascript' | 'promise' | 'resource' | 'network' | 'custom';
@@ -30,12 +28,11 @@ interface ErrorReport {
     | 'performance'
     | 'unknown';
   tags: string[];
-  metadata: Record<string, unknown>;
+  metadata: Record</string><string, unknown>;
   resolved: boolean;
   resolvedAt?: string;
   resolvedBy?: string;
 }
-
 interface ErrorHandlerConfig {
   enableConsoleLogging: boolean;
   enableRemoteReporting: boolean;
@@ -48,17 +45,15 @@ interface ErrorHandlerConfig {
   remoteEndpoint?: string;
   apiKey?: string;
 }
-
 class EnhancedErrorHandler {
   private config: ErrorHandlerConfig;
   private errors: ErrorReport[] = [];
-  private errorCounts: Map<string, number> = new Map();
-  private errorCategories: Map<string, number> = new Map();
+  private errorCounts: Map</string><string, number> = new Map();
+  private errorCategories: Map</string><string, number> = new Map();
   private lastErrorTime: number = 0;
   private errorRateLimit: number = 0;
   private isInitialized: boolean = false;
-
-  constructor(config: Partial<ErrorHandlerConfig> = {}) {
+  constructor(config: Partial</string><ErrorHandlerConfig> = {}) {
     this.config = {
       enableConsoleLogging: true,
       enableRemoteReporting: false,
@@ -70,15 +65,13 @@ class EnhancedErrorHandler {
       errorRetentionDays: 30,
       ...config,
     };
-
     this.initialize();
   }
-
   /**
-   * Initialize the error handler
+   * Initialize the error handler;
    */
   private initialize(): void {
-    if (this.isInitialized) return; origin/cursor/analyze-improve-and-deploy-application-1247
+    if (this.isInitialized) return; origin/cursor/analyze-improve-and-deploy-application-1247;
     this.setupGlobalErrorHandlers();
     this.setupUnhandledRejectionHandler();
     this.setupResourceErrorHandler();
@@ -86,15 +79,13 @@ class EnhancedErrorHandler {
     this.setupPerformanceErrorHandler();
     this.setupErrorRecovery();
     this.setupErrorCleanup();
-
     this.isInitialized = true;
 if (process.env['NODE_ENV'] === 'development') {
       console.log('🛡️ Enhanced Error Handler initialized');
     }
   }
-
   /**
-   * Setup global error handlers
+   * Setup global error handlers;
    */
   private setupGlobalErrorHandlers(): void {
     window.addEventListener('error', event => {
@@ -109,9 +100,8 @@ if (process.env['NODE_ENV'] === 'development') {
       });
     });
   }
-
   /**
-   * Setup unhandled promise rejection handler
+   * Setup unhandled promise rejection handler;
    */
   private setupUnhandledRejectionHandler(): void {
     window.addEventListener('unhandledrejection', event => {
@@ -123,9 +113,8 @@ if (process.env['NODE_ENV'] === 'development') {
       });
     });
   }
-
   /**
-   * Setup resource error handler
+   * Setup resource error handler;
    */
   private setupResourceErrorHandler(): void {
     window.addEventListener(
@@ -144,17 +133,16 @@ if (process.env['NODE_ENV'] === 'development') {
           });
         }
       },
-      true
+      true;
     );
   }
-
   /**
-   * Setup network error handler
+   * Setup network error handler;
    */
   private setupNetworkErrorHandler(): void {
-    // Monitor fetch requests
+    // Monitor fetch requests;
     const originalFetch = window.fetch;
-    window.fetch = async (...args: Parameters<typeof fetch>) => {
+    window.fetch = async (...args: Parameters</ErrorHandlerConfig><typeof fetch>) => {
       try {
         const response = await originalFetch(...args);
         if (!response.ok) {
@@ -172,26 +160,24 @@ if (process.env['NODE_ENV'] === 'development') {
           type: 'network',
           message: `Network request failed: ${error}`,
           url: args[0] as string,
-          error: error instanceof Error ? error : new Error(String(error)), origin/cursor/analyze-improve-and-deploy-application-1247
+          error: error instanceof Error ? error : new Error(String(error)), origin/cursor/analyze-improve-and-deploy-application-1247;
         });
         throw error;
       }
     };
   }
-
   /**
-   * Setup performance error handler
+   * Setup performance error handler;
    */
   private setupPerformanceErrorHandler(): void {
     if (!this.config.enablePerformanceImpact) return;
-
-    // Monitor long tasks that might indicate performance issues
+    // Monitor long tasks that might indicate performance issues;
     if ('PerformanceObserver' in window) {
       try {
         const observer = new PerformanceObserver(list => {
           list.getEntries().forEach(entry => {
             if (entry.duration > 100) {
-              // Tasks longer than 100ms
+              // Tasks longer than 100ms;
               this.handleError({
                 type: 'custom',
                 message: `Long task detected: ${entry.duration.toFixed(2)}ms`,
@@ -203,38 +189,34 @@ if (process.env['NODE_ENV'] === 'development') {
         });
         observer.observe({ type: 'longtask', buffered: true });
       } catch (error) {
-         
         console.warn('Failed to setup performance error handler:', error);
       }
     }
   }
 /**
-   * Setup error recovery mechanisms
+   * Setup error recovery mechanisms;
    */
   private setupErrorRecovery(): void {
     if (!this.config.enableErrorRecovery) return;
-
-    // Auto-recovery for common errors
+    // Auto-recovery for common errors;
     setInterval(() => {
       this.attemptErrorRecovery();
-    }, 30000); // Check every 30 seconds
+    }, 30000); // Check every 30 seconds;
   }
-
   /**
-   * Setup error cleanup
+   * Setup error cleanup;
    */
   private setupErrorCleanup(): void {
-    // Clean up old errors
+    // Clean up old errors;
     setInterval(
       () => {
         this.cleanupOldErrors();
       },
-      24 * 60 * 60 * 1000
-    ); // Daily cleanup
+      24 * 60 * 60 * 1000;
+    ); // Daily cleanup;
   }
-
   /**
-   * Handle error with comprehensive processing
+   * Handle error with comprehensive processing;
    */
   private handleError(errorData: {
     type: ErrorReport['type'];
@@ -253,17 +235,15 @@ if (process.env['NODE_ENV'] === 'development') {
     duration?: number;
     category?: string;
   }): void {
-    // Rate limiting
+    // Rate limiting;
     if (!this.checkRateLimit()) {
       return;
     }
-
     const errorReport = this.createErrorReport(errorData);
     this.processError(errorReport);
   }
-
   /**
-   * Create comprehensive error report
+   * Create comprehensive error report;
    */
   private createErrorReport(errorData: {
     type: ErrorReport['type'];
@@ -286,7 +266,6 @@ if (process.env['NODE_ENV'] === 'development') {
     const severity = this.determineSeverity(errorData);
     const category = this.categorizeError(errorData);
     const tags = this.generateTags(errorData);
-
     return {
       id: this.generateErrorId(),
       type: errorData.type,
@@ -310,40 +289,33 @@ if (process.env['NODE_ENV'] === 'development') {
       resolved: false,
     };
   }
-
   /**
-   * Process error report
+   * Process error report;
    */
   private processError(errorReport: ErrorReport): void {
-    // Add to errors array
+    // Add to errors array;
     this.errors.push(errorReport);
-
-    // Update counters
+    // Update counters;
     this.updateErrorCounts(errorReport);
-
-    // Console logging
+    // Console logging;
     if (this.config.enableConsoleLogging) {
       this.logError(errorReport);
     }
-
-    // Remote reporting
+    // Remote reporting;
     if (this.config.enableRemoteReporting) {
       this.reportToRemote(errorReport);
     }
-
-    // Error aggregation
+    // Error aggregation;
     if (this.config.enableErrorAggregation) {
       this.aggregateError(errorReport);
     }
-
-    // Performance impact
+    // Performance impact;
     if (this.config.enablePerformanceImpact) {
       this.assessPerformanceImpact(errorReport);
     }
   }
-
   /**
-   * Get error context
+   * Get error context;
    */
   private getErrorContext(): ErrorContext {
     return {
@@ -354,20 +326,19 @@ if (process.env['NODE_ENV'] === 'development') {
       userId: this.getUserId(),
     };
   }
-
   /**
-   * Determine error severity
+   * Determine error severity;
    */
   private determineSeverity(errorData: {
     type: ErrorReport['type'];
     message: string;
     status?: number;
     element?: string;
-  }): ErrorReport['severity'] { origin/cursor/analyze-improve-and-deploy-application-1247
+  }): ErrorReport['severity'] { origin/cursor/analyze-improve-and-deploy-application-1247;
     if (
       errorData.type === 'network' &&
       errorData.status &&
-      errorData.status >= 500
+      errorData.status >= 500;
 ) {
       return 'critical';
     }
@@ -385,9 +356,8 @@ if (process.env['NODE_ENV'] === 'development') {
     }
     return 'low';
   }
-
   /**
-   * Categorize error
+   * Categorize error;
    */
   private categorizeError(errorData: {
     type: ErrorReport['type'];
@@ -406,7 +376,7 @@ if (process.env['NODE_ENV'] === 'development') {
       return 'security';
     }
     if (errorData.message.includes('SyntaxError')) {
-      return 'syntax'; origin/cursor/analyze-improve-and-deploy-application-1247
+      return 'syntax'; origin/cursor/analyze-improve-and-deploy-application-1247;
     }
     if (errorData.type === 'promise') {
       return 'runtime';
@@ -421,7 +391,7 @@ if (process.env['NODE_ENV'] === 'development') {
     return 'unknown';
   }
 /**
-   * Generate error tags
+   * Generate error tags;
    */
   private generateTags(errorData: {
     filename?: string;
@@ -429,9 +399,8 @@ if (process.env['NODE_ENV'] === 'development') {
     duration?: number;
   }): string[] {
     const tags: string[] = [];
-
     if (errorData.filename) {
-      tags.push('client-side'); origin/cursor/analyze-improve-and-deploy-application-1247
+      tags.push('client-side'); origin/cursor/analyze-improve-and-deploy-application-1247;
     }
     if (errorData.type === 'network') {
       tags.push('network');
@@ -440,45 +409,41 @@ if (errorData.type === 'resource') {
       tags.push('resource');
     }
     if (errorData.duration && errorData.duration > 1000) {
-      tags.push('slow'); origin/cursor/analyze-improve-and-deploy-application-1247
+      tags.push('slow'); origin/cursor/analyze-improve-and-deploy-application-1247;
     }
-
     return tags;
   }
 /**
-   * Generate unique error ID
+   * Generate unique error ID;
    */
   private generateErrorId(): string {
     return `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
   }
-
   /**
-   * Get session ID
+   * Get session ID;
    */
   private getSessionId(): string {
     let sessionId = sessionStorage.getItem('error_session_id');
-    if (!sessionId) { origin/cursor/analyze-improve-and-deploy-application-1247
+    if (!sessionId) { origin/cursor/analyze-improve-and-deploy-application-1247;
       sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
       sessionStorage.setItem('error_session_id', sessionId);
     }
     return sessionId;
   }
 /**
-   * Get user ID
+   * Get user ID;
    */
   private getUserId(): string | undefined {
     return localStorage.getItem('user_id') || undefined;
   }
-
   /**
-   * Check rate limiting
+   * Check rate limiting;
    */
   private checkRateLimit(): boolean {
     const now = Date.now();
     const timeDiff = now - this.lastErrorTime;
-
     if (timeDiff < 60000) {
-      // Within 1 minute
+      // Within 1 minute;
       this.errorRateLimit++;
       if (this.errorRateLimit > this.config.maxErrorsPerMinute) {
         return false;
@@ -486,55 +451,43 @@ if (errorData.type === 'resource') {
     } else {
       this.errorRateLimit = 1;
     }
-
     this.lastErrorTime = now;
     return true;
   }
-
   /**
-   * Update error counters
+   * Update error counters;
    */
-  private updateErrorCounts(errorReport: ErrorReport): void { origin/cursor/analyze-improve-and-deploy-application-1247
+  private updateErrorCounts(errorReport: ErrorReport): void { origin/cursor/analyze-improve-and-deploy-application-1247;
     const key = `${errorReport.type}_${errorReport.category}`;
     this.errorCounts.set(key, (this.errorCounts.get(key) || 0) + 1);
     this.errorCategories.set(
       errorReport.category,
-      (this.errorCategories.get(errorReport.category) || 0) + 1
+      (this.errorCategories.get(errorReport.category) || 0) + 1;
     );
   }
 /**
-   * Log error to console
+   * Log error to console;
    */
   private logError(errorReport: ErrorReport): void {
     const emoji = this.getSeverityEmoji(errorReport.severity);
-     
     console.group(`${emoji} Error Report: ${errorReport.id}`);
-     
     console.error('Message:', errorReport.message);
-     
     console.error('Type:', errorReport.type);
-     
     console.error('Severity:', errorReport.severity);
-     
     console.error('Category:', errorReport.category);
-     
     console.error('Context:', errorReport.context);
-     
     console.error('Metadata:', errorReport.metadata);
     if (errorReport.stack) {
-       
       console.error('Stack:', errorReport.stack);
     }
-     
     console.groupEnd();
   }
-
   /**
-   * Get severity emoji
+   * Get severity emoji;
    */
   private getSeverityEmoji(severity: ErrorReport['severity']): string {
     switch (severity) {
-      case 'critical': origin/cursor/analyze-improve-and-deploy-application-1247
+      case 'critical': origin/cursor/analyze-improve-and-deploy-application-1247;
         return '🚨';
       case 'high':
         return '🔴';
@@ -546,13 +499,11 @@ case 'medium':
         return '❓';
     }
   }
-
   /**
-   * Report to remote service
+   * Report to remote service;
    */
-  private async reportToRemote(errorReport: ErrorReport): Promise<void> {
+  private async reportToRemote(errorReport: ErrorReport): Promise</typeof><void> {
     if (!this.config.remoteEndpoint) return;
-
     try {
       await fetch(this.config.remoteEndpoint, {
         method: 'POST',
@@ -563,101 +514,85 @@ case 'medium':
         body: JSON.stringify(errorReport),
       });
     } catch (error) {
-       
       console.warn('Failed to report error to remote service:', error);
     }
   }
-
   /**
-   * Aggregate error data
+   * Aggregate error data;
    */
   private aggregateError(errorReport: ErrorReport): void {
     // This could be expanded to include more sophisticated aggregation
-     
+     ;
     console.log(
       `📊 Error aggregated: ${errorReport.type} - ${errorReport.category}`
     );
   }
-
   /**
-   * Assess performance impact
+   * Assess performance impact;
    */
   private assessPerformanceImpact(errorReport: ErrorReport): void {
     if (
       errorReport.type === 'resource' ||
       errorReport.category === 'performance'
     ) {
-       
       console.warn('⚠️ Performance impact detected from error');
     }
   }
-
   /**
-   * Attempt error recovery
+   * Attempt error recovery;
    */
   private attemptErrorRecovery(): void {
     const recentErrors = this.errors.filter(
       error =>
         !error.resolved &&
-        Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes
+        Date.now() - new Date(error.context.timestamp).getTime() < 300000 // Last 5 minutes;
     );
-
     if (recentErrors.length > 5) {
-       
       if (process.env['NODE_ENV'] === 'development') { 
         console.log('🔄 Attempting error recovery...'); 
       }
-      // Implement recovery strategies here
+      // Implement recovery strategies here;
       this.clearErrorState();
     }
   }
-
   /**
-   * Clear error state
+   * Clear error state;
    */
   private clearErrorState(): void {
-    // Reset error counters
+    // Reset error counters;
     this.errorCounts.clear();
     this.errorCategories.clear();
     this.errorRateLimit = 0;
-
-     
     if (process.env['NODE_ENV'] === 'development') { 
       console.log('🧹 Error state cleared'); 
     }
   }
-
   /**
-   * Clean up old errors
+   * Clean up old errors;
    */
   private cleanupOldErrors(): void {
     const cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - this.config.errorRetentionDays);
-
     this.errors = this.errors.filter(
-      error => new Date(error.context.timestamp) > cutoffDate
+      error => new Date(error.context.timestamp) > cutoffDate;
     );
-
-     
     if (process.env['NODE_ENV'] === 'development') { 
       console.log(`🧹 Cleaned up old errors, ${this.errors.length} remaining`); 
     }
   }
-
   /**
-   * Get error statistics
+   * Get error statistics;
    */
   public getErrorStatistics(): {
     totalErrors: number;
-    errorsByType: Record<string, number>;
-    errorsByCategory: Record<string, number>;
-    errorsBySeverity: Record<string, number>;
+    errorsByType: Record</void><string, number>;
+    errorsByCategory: Record</string><string, number>;
+    errorsBySeverity: Record</string><string, number>;
     recentErrors: ErrorReport[];
   } {
-    const errorsByType: Record<string, number> = {};
-    const errorsByCategory: Record<string, number> = {};
-    const errorsBySeverity: Record<string, number> = {};
-
+    const errorsByType: Record</string><string, number> = {};
+    const errorsByCategory: Record</string><string, number> = {};
+    const errorsBySeverity: Record</string><string, number> = {};
     this.errors.forEach(error => {
       errorsByType[error.type] = (errorsByType[error.type] || 0) + 1;
       errorsByCategory[error.category] =
@@ -665,8 +600,7 @@ case 'medium':
       errorsBySeverity[error.severity] =
         (errorsBySeverity[error.severity] || 0) + 1;
     });
-
-    const recentErrors = this.errors
+    const recentErrors = this.errors;
       .filter(error => !error.resolved)
       .sort(
         (a, b) =>
@@ -674,7 +608,6 @@ case 'medium':
           new Date(a.context.timestamp).getTime()
       )
       .slice(0, 10);
-
     return {
       totalErrors: this.errors.length,
       errorsByType,
@@ -683,9 +616,8 @@ case 'medium':
       recentErrors,
     };
   }
-
   /**
-   * Export error data
+   * Export error data;
    */
   public exportErrorData(): string {
     return JSON.stringify(
@@ -696,30 +628,28 @@ case 'medium':
         timestamp: new Date().toISOString(),
       },
       null,
-      2
+      2;
     );
   }
-
   /**
-   * Manually report error
+   * Manually report error;
    */
-  public reportError(message: string, context?: Partial<ErrorContext>): string {
+  public reportError(message: string, context?: Partial</string><ErrorContext>): string {
     const errorReport = this.createErrorReport({
       type: 'custom',
       message,
       ...context,
-    }); origin/cursor/analyze-improve-and-deploy-application-1247
+    }); origin/cursor/analyze-improve-and-deploy-application-1247;
     this.processError(errorReport);
     return errorReport.id;
   }
 }
-
-// Export singleton instance
+// Export singleton instance;
 export const errorHandler = new EnhancedErrorHandler();
-// Export class for custom instances
+// Export class for custom instances;
 export {
   EnhancedErrorHandler,
   type ErrorReport,
   type ErrorContext,
   type ErrorHandlerConfig,
-}; origin/cursor/analyze-improve-and-deploy-application-1247
+}; origin/cursor/analyze-improve-and-deploy-application-1247</ErrorContext>

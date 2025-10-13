@@ -1,5 +1,5 @@
 import {
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 export const microSAASServices = [
 ];
   // Productivity & Management Tools;
@@ -66,7 +66,7 @@ icon: '🎯',
     category: 'Marketing',
     rating: 4.8,
     users: '18,000+',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
       'Integration with 50+ tools';
     ],;
     pricing: {,
@@ -110,7 +110,7 @@ pricing: {
     min: 500,
       max: 2000,
       currency: 'USD'
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
       'Competitor analysis';
     ],;
     pricing: {,
@@ -154,7 +154,7 @@ pricing: {
     min: 20,
       max: 80,
       currency: 'USD'
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
       'Cost optimization';
     ],;
     pricing: {,
@@ -195,7 +195,7 @@ pricing: {
     min: 300,
       max: 1200,
       currency: 'USD'
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
       'Custom quantum applications';
     ],;
     pricing: {,
@@ -234,3 +234,4 @@ pricing: {
       max: 2500,
       currency: 'USD'
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

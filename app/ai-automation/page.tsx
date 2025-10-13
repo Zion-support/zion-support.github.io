@@ -1,15 +1,13 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async' origin/cursor/analyze-improve-and-deploy-application-0f1c
-
+;
 const AiAutomationPage: React.FC = () => {
- origin/cursor/analyze-improve-and-deploy-application-0ff3
+ origin/cursor/analyze-improve-and-deploy-application-0ff3;
   return (
-    <>
-      <Helmet>
-        <title>AI Automation - Zion Tech Group</title>
+    <React.Fragment /><Helmet /><title>AI Automation - Zion Tech Group</title>
         <meta name="description" content="AI Automation services by Zion Tech Group. Advanced AI and IT solutions for your business." />
- cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+ cursor/fix-errors-and-merge-to-main-6ce7;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -26,7 +24,7 @@ const AiAutomationPage: React.FC = () => {
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -39,25 +37,25 @@ const benefits = [
       industry: 'Healthcare',
       description: 'Automate patient scheduling, insurance verification, and medical record processing.',
       savings: '60% reduction in administrative time',
-      icon: Shield
+      icon: Shield;
     },
     {
       industry: 'Finance',
       description: 'Streamline loan processing, fraud detection, and compliance reporting.',
       savings: '45% faster processing times',
-      icon: TrendingUp
+      icon: TrendingUp;
     },
     {
       industry: 'E-commerce',
       description: 'Automate inventory management, order processing, and customer service.',
       savings: '70% reduction in manual errors',
-      icon: Globe
+      icon: Globe;
     },
     {
       industry: 'Manufacturing',
       description: 'Optimize production scheduling, quality control, and supply chain management.',
       savings: '50% improvement in efficiency',
-      icon: Target
+      icon: Target;
     }
   ];
   const pricingPlans = [
@@ -73,7 +71,7 @@ const benefits = [
         'Email support',
         '10,000 process executions/month'
       ],
-      popular: false
+      popular: false;
     },
     {
       name: 'Professional',
@@ -89,7 +87,7 @@ const benefits = [
         'API integrations',
         'Custom workflow templates'
       ],
-      popular: true
+      popular: true;
     },
     {
       name: 'Enterprise',
@@ -106,28 +104,24 @@ const benefits = [
         'White-label options',
         'Dedicated account manager'
       ],
-      popular: false
+      popular: false;
     }
   ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Navigation /> origin/cursor/analyze-improve-and-deploy-application-1256
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Automation
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><Navigation /> origin/cursor/analyze-improve-and-deploy-application-1256
+      ;
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" /><div className="text-center" /><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Automation</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Coming soon - Advanced AI Automation solutions by Zion Tech Group
+              Coming soon - Advanced AI Automation solutions by Zion Tech Group</p>
             </p>
           </div>
         </div>
       </div>
-    </>
+    </React.Fragment>
   )
 }
-
-export default AiAutomationPage
+export default AiAutomationPage;
  origin/cursor/analyze-improve-and-deploy-application-1256
+;

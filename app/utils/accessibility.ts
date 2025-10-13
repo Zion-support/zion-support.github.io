@@ -1,54 +1,46 @@
 /**
-* Accessibility Utilities
- * WCAG 2.1 Level AA compliance helpers
+* Accessibility Utilities;
+ * WCAG 2.1 Level AA compliance helpers;
  */
-
 export interface A11yReport {
   errors: A11yError[];
   warnings: A11yWarning[];
   score: number;
 }
-
 export interface A11yError {
   type: string;
   element: string;
   message: string;
   wcag: string;
 }
-
 export interface A11yWarning {
   type: string;
   element: string;
   message: string;
   suggestion: string;
 }
-
 class AccessibilityService {
-  // Check color contrast ratio
+  // Check color contrast ratio;
   public checkColorContrast(foreground: string, background: string): {
     ratio: number;
     passes: { normal: boolean; large: boolean };
   } {
     const rgb1 = this.hexToRgb(foreground);
     const rgb2 = this.hexToRgb(background);
-    
     const l1 = this.getLuminance(rgb1);
     const l2 = this.getLuminance(rgb2);
-    
     const ratio = l1 > l2 ? (l1 + 0.05) / (l2 + 0.05) : (l2 + 0.05) / (l1 + 0.05);
-    
     return {
       ratio: Math.round(ratio * 100) / 100,
       passes: {
-        normal: ratio >= 4.5, // WCAG AA for normal text
+        normal: ratio >= 4.5, // WCAG AA for normal text;
         large: ratio >= 3, // WCAG AA for large text (18pt+ or 14pt+ bold)
       },
     };
   }
-
   private hexToRgb(hex: string): { r: number; g: number; b: number } {
     const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    return result
+    return result;
       ? {
           r: parseInt(result[1], 16),
           g: parseInt(result[2], 16),
@@ -56,7 +48,6 @@ class AccessibilityService {
         }
       : { r: 0, g: 0, b: 0 };
   }
-
   private getLuminance(rgb: { r: number; g: number; b: number }): number {
     const [r, g, b] = [rgb.r, rgb.g, rgb.b].map((val) => {
       const v = val / 255;
@@ -64,13 +55,11 @@ class AccessibilityService {
     });
     return 0.2126 * r + 0.7152 * g + 0.0722 * b;
   }
-
-  // Audit page for accessibility issues
+  // Audit page for accessibility issues;
   public auditPage(): A11yReport {
     const errors: A11yError[] = [];
     const warnings: A11yWarning[] = [];
-
-    // Check for missing alt text on images
+    // Check for missing alt text on images;
     document.querySelectorAll('img').forEach((img) => {
       if (!img.hasAttribute('alt')) {
         errors.push({
@@ -88,13 +77,11 @@ class AccessibilityService {
         });
       }
     });
-
-    // Check for missing form labels
+    // Check for missing form labels;
     document.querySelectorAll('input, select, textarea').forEach((input) => {
       const hasLabel = input.hasAttribute('aria-label') || 
                        input.hasAttribute('aria-labelledby') ||
                        document.querySelector(`label[for="${input.id}"]`);
-      
       if (!hasLabel) {
         errors.push({
           type: 'missing-label',
@@ -104,8 +91,7 @@ class AccessibilityService {
         });
       }
     });
-
-    // Check for proper heading hierarchy
+    // Check for proper heading hierarchy;
     const headings = Array.from(document.querySelectorAll('h1, h2, h3, h4, h5, h6'));
     let prevLevel = 0;
     headings.forEach((heading) => {
@@ -120,8 +106,7 @@ class AccessibilityService {
       }
       prevLevel = level;
     });
-
-    // Check for skip navigation link
+    // Check for skip navigation link;
     const hasSkipLink = document.querySelector('a[to="#main"], a[to="#content"]');
     if (!hasSkipLink) {
       warnings.push({
@@ -131,8 +116,7 @@ class AccessibilityService {
         suggestion: 'Add a skip link to main content for keyboard users',
       });
     }
-
-    // Check for language attribute
+    // Check for language attribute;
     const html = document.documentElement;
     if (!html.hasAttribute('lang')) {
       errors.push({
@@ -142,12 +126,10 @@ class AccessibilityService {
         wcag: '3.1.1 (Level A)',
       });
     }
-
-    // Check for sufficient link text
+    // Check for sufficient link text;
     document.querySelectorAll('a').forEach((link) => {
       const text = link.textContent?.trim() || '';
       const ariaLabel = link.getAttribute('aria-label');
-      
       if (!text && !ariaLabel) {
         errors.push({
           type: 'empty-link',
@@ -164,8 +146,7 @@ class AccessibilityService {
         });
       }
     });
-
-    // Check for touch target size
+    // Check for touch target size;
     document.querySelectorAll('button, a, input, select').forEach((element) => {
       const rect = element.getBoundingClientRect();
       if (rect.width < 44 || rect.height < 44) {
@@ -177,49 +158,42 @@ class AccessibilityService {
         });
       }
     });
-
     // Calculate score (100 - errors * 10 - warnings * 2)
     const score = Math.max(0, 100 - errors.length * 10 - warnings.length * 2);
-
     return {
       errors,
       warnings,
       score,
     };
   }
-
-  // Add keyboard navigation helpers
+  // Add keyboard navigation helpers;
   public enhanceKeyboardNavigation(): void {
-    // Add focus visible class for keyboard navigation
+    // Add focus visible class for keyboard navigation;
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Tab') {
         document.body.classList.add('keyboard-nav');
       }
     });
-
     document.addEventListener('mousedown', () => {
       document.body.classList.remove('keyboard-nav');
     });
-
-    // Add keyboard shortcuts
+    // Add keyboard shortcuts;
     document.addEventListener('keydown', (e) => {
-      // Alt + H: Go to main heading
+      // Alt + H: Go to main heading;
       if (e.altKey && e.key === 'h') {
         const mainHeading = document.querySelector('h1');
         if (mainHeading) {
           (mainHeading as HTMLElement).focus();
         }
       }
-
-      // Alt + M: Go to main content
+      // Alt + M: Go to main content;
       if (e.altKey && e.key === 'm') {
         const mainContent = document.querySelector('main');
         if (mainContent) {
           (mainContent as HTMLElement).focus();
         }
       }
-
-      // Alt + N: Go to navigation
+      // Alt + N: Go to navigation;
       if (e.altKey && e.key === 'n') {
         const nav = document.querySelector('nav');
         if (nav) {
@@ -228,19 +202,16 @@ class AccessibilityService {
       }
     });
   }
-
-  // Announce screen reader messages
+  // Announce screen reader messages;
   public announce(message: string, priority: 'polite' | 'assertive' = 'polite'): void {
     const announcer = document.getElementById('a11y-announcer') || this.createAnnouncer();
     announcer.setAttribute('aria-live', priority);
     announcer.textContent = message;
-
-    // Clear after announcement
+    // Clear after announcement;
     setTimeout(() => {
       announcer.textContent = '';
     }, 1000);
   }
-
   private createAnnouncer(): HTMLElement {
     const announcer = document.createElement('div');
     announcer.id = 'a11y-announcer';
@@ -251,16 +222,13 @@ class AccessibilityService {
     document.body.appendChild(announcer);
     return announcer;
   }
-
-  // Trap focus within a modal
+  // Trap focus within a modal;
   public trapFocus(element: HTMLElement): () => void {
     const focusableElements = element.querySelectorAll(
       'a[href], button:not([disabled]), textarea:not([disabled]), input:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
     );
-
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
     const handleTabKey = (e: KeyboardEvent) => {
       if (e.key === 'Tab') {
         if (e.shiftKey && document.activeElement === firstElement) {
@@ -271,24 +239,19 @@ class AccessibilityService {
           firstElement.focus();
         }
       }
-
       if (e.key === 'Escape') {
         element.dispatchEvent(new CustomEvent('close'));
       }
     };
-
     element.addEventListener('keydown', handleTabKey);
-
-    // Return cleanup function
+    // Return cleanup function;
     return () => {
       element.removeEventListener('keydown', handleTabKey);
     };
   }
-
-  // Check if element is visible to screen readers
+  // Check if element is visible to screen readers;
   public isAccessible(element: HTMLElement): boolean {
     const style = window.getComputedStyle(element);
-    
     return !(
       style.display === 'none' ||
       style.visibility === 'hidden' ||
@@ -298,8 +261,7 @@ class AccessibilityService {
     );
   }
 }
-
-// Singleton instance
+// Singleton instance;
 const a11y = new AccessibilityService();
-
 export default a11y; origin/cursor/analyze-improve-and-deploy-application-1247
+;

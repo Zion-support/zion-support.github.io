@@ -1,9 +1,7 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { ArrowRight, CheckCircle, Star, Brain, Globe, TrendingUp, Monitor, MessageSquare, Phone } from "lucide-react";
+import { Helmet , ArrowRight, CheckCircle, Star, Brain, Globe, TrendingUp, Monitor, MessageSquare, Phone  } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import SEOOptimizer from "../../components/SEOOptimizer";
-
 export default function AiQuantumComputing() {
   const features = [
     "Quantum machine learning algorithms for complex optimization",
@@ -19,7 +17,6 @@ export default function AiQuantumComputing() {
     "Quantum hardware integration and testing",
     "Quantum software development and deployment"
   ];
-
   const pricingPlans = [
     {
       name: "Research",
@@ -35,7 +32,7 @@ export default function AiQuantumComputing() {
         "5 user accounts",
         "Standard quantum gates"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Enterprise",
@@ -54,7 +51,7 @@ export default function AiQuantumComputing() {
         "Quantum error correction",
         "Dedicated quantum resources"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Quantum Lab",
@@ -75,10 +72,9 @@ export default function AiQuantumComputing() {
         "White-label quantum solutions",
         "On-premise quantum deployment"
       ],
-      popular: false
+      popular: false;
     }
   ];
-
   const testimonials = [
     {
       name: "Dr. Sarah Chen",
@@ -105,7 +101,6 @@ export default function AiQuantumComputing() {
       avatar: "EW"
     }
   ];
-
   const applications = [
     {
       title: "Drug Discovery",
@@ -132,16 +127,14 @@ export default function AiQuantumComputing() {
       color: "from-orange-500 to-red-500"
     }
   ];
-
   return (
     <>
-      <Helmet>
-        <title>AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group</title>
-        <meta
+      <Helmet /><title>AI Quantum Computing - Revolutionary Quantum Solutions | Zion Tech Group</title>
+        <meta;
           name="description"
           content="Harness the power of quantum computing with AI. Zion's quantum platform offers quantum machine learning, simulation, and optimization for breakthrough discoveries and solutions."
         />
-        <meta
+        <meta;
           name="keywords"
           content="quantum computing, quantum AI, quantum machine learning, quantum simulation, quantum optimization, quantum cryptography, quantum algorithms"
         />
@@ -150,7 +143,7 @@ export default function AiQuantumComputing() {
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -167,7 +160,7 @@ import { Helmet } from 'react-helmet-async';
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -175,7 +168,7 @@ const benefits = [
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
 'Gain competitive advantage with advanced technology'
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             </div>
           </div>
@@ -183,3 +176,4 @@ const benefits = [
 </div>
       <Footer />
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

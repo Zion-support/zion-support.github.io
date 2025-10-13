@@ -1,20 +1,16 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { ArrowRight , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
-
-export default function AiPredictiveAnalyticsZionTechGroup() { origin/cursor/analyze-improve-and-deploy-application-0ff3
+export default function AiPredictiveAnalyticsZionTechGroup() { origin/cursor/analyze-improve-and-deploy-application-0ff3;
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AiPredictiveAnalytics - Zion Tech Group</title>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><Helmet /><title>AiPredictiveAnalytics - Zion Tech Group</title>
         <meta name="description" content="Advanced aipredictiveanalytics solutions" />
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
 const AiPredictiveAnalyticsPage: React.FC = () => {
 const features = [
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -31,7 +27,7 @@ const features = [
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -40,3 +36,4 @@ const benefits = [
     'Scale operations without proportional staff increases',
 'Gain competitive advantage with advanced technology'
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

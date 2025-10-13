@@ -1,8 +1,6 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award } from 'lucide-react'
-const CompliancePage: React.FC = () => {
+import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe, FileCheck, Lock, Award  } from "react-helmet-async";const CompliancePage: React.FC = () => {
   const features = [
     {
       icon: FileCheck,
@@ -26,6 +24,7 @@ const CompliancePage: React.FC = () => {
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
- origin/cursor/analyze-improve-and-deploy-application-0f9e
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-0f9e;
+ origin/cursor/analyze-improve-and-deploy-application-1247;
  origin/cursor/analyze-improve-and-deploy-application-13a2
+;

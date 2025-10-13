@@ -1,12 +1,8 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { ArrowRight , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function AiVoiceSolutionsZionTechGroup() {
   return (
-    <>
-      <Helmet>
-        <title>AiVoiceSolutions - Zion Tech Group</title>
+    <React.Fragment /><Helmet /><title>AiVoiceSolutions - Zion Tech Group</title>
 =======
 import React from 'react';
 import { Helmet } from 'react-helmet-async'
@@ -16,26 +12,25 @@ const AiVoiceSolutionsPage: React.FC = () => {
   <Helmet />
         <title>AI Voice Solutions - Zion Tech Group</title>
         <meta name="description" content="Advanced AI voice solutions including speech recognition, text-to-speech, voice assistants, and conversational AI for enhanced customer experiences." />
-        <meta name="keywords" content="AI voice solutions, speech recognition, text-to-speech, voice assistants, conversational AI, voice technology" /> origin/cursor/analyze-improve-and-deploy-application-1232
+        <meta name="keywords" content="AI voice solutions, speech recognition, text-to-speech, voice assistants, conversational AI, voice technology" /> origin/cursor/analyze-improve-and-deploy-application-1232;
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            AiVoiceSolutions
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center" /><div className="text-center" /><h1 className="text-4xl font-bold text-white mb-6">
+            AiVoiceSolutions</h1>
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional aivoicesolutions services coming soon.
+            Professional aivoicesolutions services coming soon.</p>
           </p>
-          <Link
+          <Link;
             to="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
+            Contact Us;
+            </Link><ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </div>
-    </>
+    </React.Fragment>
   )
 }
 export default AiVoiceSolutionsPage origin/cursor/analyze-improve-and-deploy-application-1247
+;

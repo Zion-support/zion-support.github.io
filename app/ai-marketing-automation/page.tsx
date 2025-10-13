@@ -1,9 +1,6 @@
-import { ArrowRight, Globe } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { ArrowRight, Globe , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom";
-
 export default function AIMarketingAutomation() {
-
   const pricing = [
     {
       name: "Starter",
@@ -17,7 +14,7 @@ export default function AIMarketingAutomation() {
         "Social media posting",
         "Email support"
       ],
-      popular: false
+      popular: false;
     },
     {
       name: "Professional",
@@ -32,7 +29,7 @@ export default function AIMarketingAutomation() {
         "Advanced analytics",
         "Priority support"
       ],
-      popular: true
+      popular: true;
     },
     {
       name: "Enterprise",
@@ -47,103 +44,85 @@ export default function AIMarketingAutomation() {
         "Custom integrations",
         "Dedicated support"
       ],
-      popular: false
+      popular: false;
     }
   ];
-
   return (
-    <>
-      <Helmet>
-        <title>AI Marketing Automation - Zion Tech Group | Advanced Marketing Solutions</title>
-        <meta
+    <React.Fragment /><Helmet /><title>AI Marketing Automation - Zion Tech Group | Advanced Marketing Solutions</title>
+        <meta;
           name="description"
           content="AI-powered marketing automation platform with email campaigns, social media management, lead scoring, and advanced analytics. Transform your marketing with intelligent automation."
         />
-        <meta
+        <meta;
           name="keywords"
           content="AI marketing automation, email marketing, social media automation, lead scoring, marketing analytics, customer segmentation, workflow automation, marketing technology"
         />
       </Helmet>
-
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-cyan-500/10 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3),transparent_50%)]"></div>
-        
+        </div><div className="absolute inset-0 bg-gradient-to-r from-pink-500/10 via-purple-500/10 to-cyan-500/10 animate-pulse" />
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.3),transparent_50%)]" />
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-block">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
-                AI Marketing
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 animate-pulse">
-                  {" "}Automation
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10" /><div className="max-w-7xl mx-auto text-center" /><div className="inline-block" /><h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
+                AI Marketing;
+                </h1><span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 animate-pulse">
+                  {" "}Automation</span>
                 </span>
-                <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 rounded-lg blur opacity-30 animate-pulse"></div>
+                <div className="absolute -inset-1 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 rounded-lg blur opacity-30 animate-pulse" />
               </h1>
             </div>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
               Transform your marketing with AI-powered automation. From intelligent email campaigns to social media management, 
-              our platform helps you engage customers, nurture leads, and drive conversions at scale.
+              our platform helps you engage customers, nurture leads, and drive conversions at scale.</p>
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
+            <div className="flex flex-col sm:flex-row gap-4 justify-center" /><Link;
                 to="/contact"
                 className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-pink-500/25 hover:scale-105"
               >
-                Get Started
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                Get Started;
+                </Link><ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <Link
+              <Link;
                 to="/demo"
                 className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
               >
-                Watch Demo
+                Watch Demo</Link>
               </Link>
             </div>
           </div>
         </section>
-
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
-                  Powerful Features
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10" /><div className="max-w-7xl mx-auto" /><div className="text-center mb-16" /><h2 className="text-3xl md:text-4xl font-bold text-white mb-4" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+                  Powerful Features</span>
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Discover the comprehensive suite of AI-powered marketing automation tools designed to boost your campaigns and drive results.
+                Discover the comprehensive suite of AI-powered marketing automation tools designed to boost your campaigns and drive results.</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div
+                </div><div;
                   key={index}
                   className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-pink-500/10 relative overflow-hidden"
                 >
                   {/* Animated background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  <div className="relative z-10">
-                    <div
+                  </div><div className="absolute inset-0 bg-gradient-to-r from-pink-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="relative z-10" /><div;
                       className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
                     >
-                      {feature.icon}
+                      {feature.icon}</div>
                     </div>
                     <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-pink-300 transition-colors">
-                      {feature.title}
+                      {feature.title}</h3>
                     </h3>
                     <p className="text-gray-300 text-center mb-4 leading-relaxed">
-                      {feature.description}
+                      {feature.description}</p>
                     </p>
-                    
                     {/* Benefits */}
                     <div className="space-y-2">
                       {feature.benefits.map((benefit, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-300">
-                          <div className="w-2 h-2 bg-pink-400 rounded-full mr-3"></div>
+                        </div><div key={idx} className="flex items-center text-sm text-gray-300" /><div className="w-2 h-2 bg-pink-400 rounded-full mr-3" />
                           {benefit}
                         </div>
                       ))}
@@ -154,65 +133,52 @@ export default function AIMarketingAutomation() {
             </div>
           </div>
         </section>
-
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
-                  Pricing Plans
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10" /><div className="max-w-7xl mx-auto" /><div className="text-center mb-16" /><h2 className="text-3xl md:text-4xl font-bold text-white mb-4" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-400 to-purple-400">
+                  Pricing Plans</span>
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the perfect plan for your marketing automation needs. All plans include our core AI features and 24/7 support.
+                Choose the perfect plan for your marketing automation needs. All plans include our core AI features and 24/7 support.</p>
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
-                <div
+                </div><div;
                   key={index}
                   className={`group bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 hover:shadow-2xl relative overflow-hidden ${
-                    plan.popular 
+                    plan.popular ;
                       ? 'border-pink-400 hover:shadow-pink-500/25' 
                       : 'border-white/20 hover:shadow-pink-500/10'
                   }`}
                 >
                   {plan.popular && (
-                    <div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-2 text-sm font-semibold">
-                      Most Popular
+                    </div><div className="absolute top-0 left-0 right-0 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-2 text-sm font-semibold">
+                      Most Popular</div>
                     </div>
                   )}
-                  
-                  <div className={`${plan.popular ? 'pt-8' : ''}`}>
-                    <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
+                  <div className={`${plan.popular ? 'pt-8' : ''}`} /><h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <p className="text-gray-300 mb-6">{plan.description}</p>
-                    
-                    <div className="mb-6">
-                      <span className="text-4xl font-bold text-white">{plan.price}</span>
+                    <div className="mb-6" /><span className="text-4xl font-bold text-white">{plan.price}</span>
                       <span className="text-gray-300">{plan.period}</span>
                     </div>
-                    
                     <ul className="space-y-3 mb-8">
                       {plan.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center text-gray-300">
-                          <div className="w-5 h-5 bg-pink-400 rounded-full flex items-center justify-center mr-3">
-                            <div className="w-2 h-2 bg-white rounded-full"></div>
+                        </ul><li key={idx} className="flex items-center text-gray-300" /><div className="w-5 h-5 bg-pink-400 rounded-full flex items-center justify-center mr-3" /><div className="w-2 h-2 bg-white rounded-full" />
                           </div>
                           {feature}
                         </li>
                       ))}
                     </ul>
-                    
-                    <Link
+                    <Link;
                       to="/contact"
                       className={`w-full py-3 px-6 rounded-lg font-semibold transition-all duration-300 text-center block ${
-                        plan.popular
+                        plan.popular;
                           ? 'bg-gradient-to-r from-pink-500 to-purple-600 text-white hover:from-pink-600 hover:to-purple-700'
                           : 'border border-pink-400 text-pink-400 hover:bg-pink-400 hover:text-slate-900'
                       }`}
                     >
-                      Get Started
+                      Get Started</Link>
                     </Link>
                   </div>
                 </div>
@@ -220,62 +186,49 @@ export default function AIMarketingAutomation() {
             </div>
           </div>
         </section>
-
         {/* Contact Information Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Automate Your Marketing?
+        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10" /><div className="max-w-4xl mx-auto text-center" /><div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10" /><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Ready to Automate Your Marketing?</h2>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of businesses already using our AI marketing automation platform to drive growth and increase conversions.
+                Join thousands of businesses already using our AI marketing automation platform to drive growth and increase conversions.</p>
               </p>
-              
               {/* Contact Details */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Email className="w-6 h-6 text-white" />
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8" /><div className="text-center" /><div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3" /><Email className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Email</h3>
                   <p className="text-pink-400">kleber@ziontechgroup.com</p>
                 </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Smartphone className="w-6 h-6 text-white" />
+                <div className="text-center" /><div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3" /><Smartphone className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Phone</h3>
                   <p className="text-pink-400">+1 302 464 0950</p>
                 </div>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
-                    <Globe className="w-6 h-6 text-white" />
+                <div className="text-center" /><div className="w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3" /><Globe className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-white font-semibold mb-2">Address</h3>
-                  <p className="text-pink-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+                  <p className="text-pink-400 text-sm">364 E Main St STE 1008</p><br />Middletown DE 19709</p>
                 </div>
               </div>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
+              <div className="flex flex-col sm:flex-row gap-4 justify-center" /><Link;
                   to="/contact"
                   className="group bg-gradient-to-r from-pink-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-pink-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-pink-500/25 hover:scale-105"
                 >
-                  Start Your Free Trial
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  Start Your Free Trial;
+                  </Link><ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Link>
-                <Link
+                <Link;
                   to="/demo"
                   className="border border-pink-400 text-pink-400 px-8 py-4 rounded-lg font-semibold hover:bg-pink-400 hover:text-slate-900 transition-all duration-300 hover:scale-105"
                 >
-                  Watch Demo
+                  Watch Demo</Link>
                 </Link>
               </div>
             </div>
           </div>
         </section>
       </div>
-    </>
+    </React.Fragment>
   );
 } origin/cursor/analyze-improve-and-deploy-application-0ff3
+;

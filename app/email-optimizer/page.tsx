@@ -1,9 +1,7 @@
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async'
-import { CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe } from 'lucide-react'
-const PagePage: React.FC = () => {
- cursor/fix-errors-and-merge-to-main-6ce7
+import { Helmet , CheckCircle, ArrowRight, Phone, Mail, MapPin, Zap, Shield, Brain, Globe  } from "react-helmet-async";const PagePage: React.FC = () => {
+ cursor/fix-errors-and-merge-to-main-6ce7;
 const benefits = [
 ];
     'Advanced AI technology integration',
@@ -14,5 +12,6 @@ const benefits = [
     'Easy integration with existing systems',
     'Cost-effective pricing plans',
     'Proven track record of success'
- cursor/fix-errors-and-merge-to-main-6ce7
+ cursor/fix-errors-and-merge-to-main-6ce7;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+;

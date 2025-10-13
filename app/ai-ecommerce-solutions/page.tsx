@@ -1,10 +1,9 @@
-import { ArrowRight } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { ArrowRight , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom"; origin/cursor/analyze-improve-and-deploy-application-0ff3
-
+;
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -21,7 +20,7 @@ import { Link } from "react-router-dom"; origin/cursor/analyze-improve-and-deplo
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -29,14 +28,14 @@ const benefits = [
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
 'Gain competitive advantage with advanced technology'
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247</div>
                   </div>
                 </div>
 ))}
             </div>
           </div>
         </section>
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             ))}
           </div>
@@ -44,3 +43,4 @@ const benefits = [
 </div>
       <Footer />
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

@@ -1,16 +1,14 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet , Link  } from "react-helmet-async";
 import { ArrowRight } from "lucide-react";
 export default function AIAgriculturalIntelligenceProZionTechGroup() {
   return (
     <>
-      <Helmet>
-        <title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
+      <Helmet /><title>AI Agricultural Intelligence Pro - Zion Tech Group</title>
 =======
 'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -27,7 +25,7 @@ import { Helmet } from 'react-helmet-async';
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -36,3 +34,4 @@ const benefits = [
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

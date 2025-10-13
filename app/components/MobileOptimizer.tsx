@@ -1,9 +1,8 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react"; origin/cursor/analyze-improve-and-deploy-application-0ff3
+import { Helmet , Link  } from "react-helmet-async";
+import { ArrowRight } from "lucide-react"; origin/cursor/analyze-improve-and-deploy-application-0ff3;
 export default function MobileOptimizer() {
   useEffect(() => {
-    // Add viewport meta tag if not present
+    // Add viewport meta tag if not present;
     let viewport = document.querySelector('meta[name="viewport"]');
     if (!viewport) {
       viewport = document.createElement('meta');
@@ -11,8 +10,7 @@ export default function MobileOptimizer() {
       viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes');
       document.head.appendChild(viewport);
     }
-
-    // Add touch-friendly classes
+    // Add touch-friendly classes;
     const addTouchClasses = () => {
       const buttons = document.querySelectorAll('button, a[role="button"]');
       buttons.forEach(button => {
@@ -21,29 +19,24 @@ export default function MobileOptimizer() {
         }
       });
     };
-
-    // Initial setup
+    // Initial setup;
     addTouchClasses();
-
-    // Re-run on DOM changes
+    // Re-run on DOM changes;
     const observer = new MutationObserver(addTouchClasses);
     observer.observe(document.body, { childList: true, subtree: true });
-
-    // Handle orientation changes
+    // Handle orientation changes;
     const handleOrientationChange = () => {
       setTimeout(() => {
         window.scrollTo(0, 0);
       }, 100);
     };
-
     window.addEventListener('orientationchange', handleOrientationChange);
-
     return () => {
       observer.disconnect();
       window.removeEventListener('orientationchange', handleOrientationChange);
     };
   }, []);
-
   return null;
 }
  origin/cursor/analyze-improve-and-deploy-application-0fdb
+;

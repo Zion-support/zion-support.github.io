@@ -1,10 +1,9 @@
-import { ArrowRight, Brain, Zap, Globe, TrendingUp, Target, Monitor, Phone } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import { ArrowRight, Brain, Zap, Globe, TrendingUp, Target, Monitor, Phone , Helmet  } from "lucide-react";
 import { Link } from "react-router-dom"; origin/cursor/analyze-improve-and-deploy-application-0ff3
-
+;
 import { CheckCircle, Star, Zap, Shield, Clock, Users, TrendingUp, Globe, Brain, Cpu, Target, BarChart, MessageSquare, Eye, Sparkles, ArrowRight, Phone, Mail, MapPin, DollarSign, Award, Lock, Database, Cloud, Code, Smartphone, Settings, BarChart3, FileText, Search, Bot, Palette, Camera, Music, Video, Gamepad2, ShoppingCart, CreditCard, Building, Factory, Car, Plane, Ship, Train, Home, Heart, Stethoscope, GraduationCap, Briefcase, Wrench, Hammer, Paintbrush, Scissors, BookOpen, Calculator, Calendar, Clock3, Compass, Globe2, Map, Navigation, PieChart, TrendingDown, Activity, Zap as Lightning, Target as Crosshair, Shield as Security, Users as People, Star as StarIcon, CheckCircle as Check, ArrowRight as Arrow, Phone as PhoneIcon, Mail as MailIcon, MapPin as Location } from 'lucide-react';
- origin/cursor/analyze-improve-and-deploy-application-0f1c
- origin/cursor/analyze-improve-and-deploy-application-1573
+ origin/cursor/analyze-improve-and-deploy-application-0f1c;
+ origin/cursor/analyze-improve-and-deploy-application-1573;
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
       color: 'text-purple-600',
@@ -68,8 +67,8 @@ const ServicesPage: React.FC = () => {
     }
   ];
  origin/cursor/analyze-improve-and-deploy-application-1573
-
- origin/cursor/analyze-improve-and-deploy-application-1448
+;
+ origin/cursor/analyze-improve-and-deploy-application-1448;
   const benefits = [
     {
       icon: TrendingUp,
@@ -92,194 +91,152 @@ const ServicesPage: React.FC = () => {
       description: 'World-class engineers and data scientists with proven track records'
 'use client';
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { Brain, Cloud, Shield, BarChart3, Code, Users, Zap, ArrowRight, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart, Rocket } from 'lucide-react';
+import { Helmet , Brain, Cloud, Shield, BarChart3, Code, Users, Zap, ArrowRight, Cpu, Target, Globe, Database, Smartphone, Lock, TrendingUp, Settings, Calendar, CheckSquare, FileText, MessageCircle, Heart, DollarSign, Box, Monitor, Link as LinkIcon, Server, Package, Mic, Workflow, Eye, Wifi, MessageSquare, CheckCircle, ShoppingCart, Rocket  } from "react-helmet-async";
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
- origin/cursor/analyze-improve-and-deploy-application-1232
+ origin/cursor/analyze-improve-and-deploy-application-1232;
     }
   ];
-
   return (
 <>
-      <SEOOptimizer
+      <SEOOptimizer;
         title="Service - Zion Tech Group"
         description="Professional AI and IT servicess for your business transformation."
         keywords={['AI services', 'IT solutions', 'business transformation']}
         canonicalUrl="https://ziontechgroup.com/service"
       />
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900">
-        <Navigation />
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900" /><Navigation />
         <div className="container mx-auto px-4 py-8">
           {/* Hero Section */}
-          <section className="text-center mb-16 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl"></div>
-            <div className="relative z-10 py-16 px-4">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                  Service
+          </div><section className="text-center mb-16 relative overflow-hidden" /><div className="absolute inset-0 bg-gradient-to-r from-indigo-600/20 to-purple-600/20 rounded-3xl" />
+            <div className="relative z-10 py-16 px-4" /><h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight" /><span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
+                  Service</span>
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Professional AI and IT services designed to transform your business operations.
+                Professional AI and IT services designed to transform your business operations.</p>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" /><a;
                   href="/contact"
                   className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 hover:scale-105"
                 >
-                  Get Started Today
+                  Get Started Today</a>
                 </a>
-                <a
+                <a;
                   href="/contact"
                   className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300"
                 >
-                  Contact Us
+                  Contact Us</a>
                 </a>
-              </div> origin/cursor/analyze-improve-and-deploy-application-1256
+              </div> origin/cursor/analyze-improve-and-deploy-application-1256;
             </div>
           </div>
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12 cyber-card">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12 cyber-card" /><div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8" /><div className="flex items-center space-x-2" /><Phone className="w-5 h-5" />
                 <span className="text-white font-medium">+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
+              <div className="flex items-center space-x-2" /><Mail className="w-5 h-5" />
                 <span className="text-white font-medium">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
+              <div className="flex items-center space-x-2" /><MapPin className="w-5 h-5" />
                 <span className="text-white font-medium">Middletown, DE</span>
       </section>
 <>
-      <Helmet>
-        <title>Services - Zion Tech Group | AI & IT Solutions</title>
+      <Helmet /><title>Services - Zion Tech Group | AI & IT Solutions</title>
         <meta name="description" content="Explore our comprehensive AI and IT services. From AI chatbots to cloud infrastructure, we provide cutting-edge solutions for your business." />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
-        <Navigation />
-        
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20" /><Navigation />
  origin/cursor/analyze-improve-and-deploy-application-1232
-
- origin/cursor/analyze-improve-and-deploy-application-1448
+;
+ origin/cursor/analyze-improve-and-deploy-application-1448;
       {/* Service Categories */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Service Categories
+      <section className="py-16 px-4" /><div className="max-w-7xl mx-auto" /><h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Service Categories</h2>
           </h2>
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 cyber-card">
-                <div className="flex items-center mb-8">
-                  <div className={`w-16 h-16 ${category.bgColor} rounded-xl flex items-center justify-center mr-6`}>
-                    <category.icon className={`w-8 h-8 ${category.color}`} />
+              </div><div key={categoryIndex} className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 cyber-card" /><div className="flex items-center mb-8" /><div className={`w-16 h-16 ${category.bgColor} rounded-xl flex items-center justify-center mr-6`} /><category.icon className={`w-8 h-8 ${category.color}`} />
                   </div>
-                  <div>
-                    <h3 className="text-3xl font-bold text-white mb-2">{category.title}</h3>
+                  <div /><h3 className="text-3xl font-bold text-white mb-2">{category.title}</h3>
                     <p className="text-gray-300">Comprehensive solutions for your business needs</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.services.map((service, serviceIndex) => (
-                    <div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card">
-                      <h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
+                    </div><div key={serviceIndex} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-all duration-300 cyber-card" /><h4 className="text-xl font-bold text-white mb-3">{service.name}</h4>
                       <p className="text-gray-300 mb-4 text-sm">{service.description}</p>
-                      
                       {/* Features */}
-                      <div className="mb-4">
-                        <h5 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h5>
+                      <div className="mb-4" /><h5 className="text-sm font-semibold text-cyan-400 mb-2">Key Features:</h5>
                         <ul className="space-y-1">
                           {service.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center text-xs text-gray-300">
-                              <CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
+                            </ul><li key={featureIndex} className="flex items-center text-xs text-gray-300" /><CheckCircle className="w-3 h-3 text-green-400 mr-2 flex-shrink-0" />
                               {feature}
                             </li>
                           ))}
                         </ul>
                       </div>
-                      
-                      <div className="flex items-center justify-between">
-                        <span className="text-2xl font-bold text-cyan-400">{service.price}</span>
-                        <a
+                      <div className="flex items-center justify-between" /><span className="text-2xl font-bold text-cyan-400">{service.price}</span>
+                        <a;
                           href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.name}`}
                           className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all"
                         >
-                          Get Started
+                          Get Started</a>
                         </a>
                       </div>
                     </div>
                   ))}
                 </div>
 </section>
-
           {/* CTA Section */}
-          <section className="text-center py-16">
-            <div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8">
-              <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
+          <section className="text-center py-16" /><div className="bg-gradient-to-r from-indigo-900/50 to-purple-900/50 rounded-2xl p-8" /><h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
               <p className="text-gray-300 mb-6 text-lg">
-                Contact us for a free consultation and discover how our services can help your business.
+                Contact us for a free consultation and discover how our services can help your business.</p>
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <a
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" /><a;
                   href="tel:+13024640950"
                   className="flex items-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  <Phone className="w-5 h-5" />
-                  +1 302 464 0950
+                 /><Phone className="w-5 h-5" />
+                  +1 302 464 0950;
                 </a>
-                <a
+                <a;
                   href="mailto:kleber@ziontechgroup.com"
                   className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
-                >
-                  <Mail className="w-5 h-5" />
-                  kleber@ziontechgroup.com
-                </a> origin/cursor/analyze-improve-and-deploy-application-1256
+                 /><Mail className="w-5 h-5" />
+                  kleber@ziontechgroup.com;
+                </a> origin/cursor/analyze-improve-and-deploy-application-1256;
               </div>
             ))}
           </div>
         </div>
       </section>
 {/* Additional Services */}
-      <section className="py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Additional Services
+      <section className="py-16 bg-gray-50" /><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" /><div className="text-center mb-12" /><h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Additional Services</h2>
             </h2>
             <p className="text-xl text-gray-600">
-              Specialized solutions for specific business needs
+              Specialized solutions for specific business needs</p>
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {additionalServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
-                <div className="text-4xl mb-4">{service.icon}</div>
+              </div><div key={index} className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow" /><div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                 <p className="text-gray-600 mb-4">{service.description}</p>
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                      <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                    </ul><li key={featureIndex} className="flex items-center text-sm text-gray-600" /><CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
                 </ul>
- origin/cursor/analyze-improve-and-deploy-application-1448
+ origin/cursor/analyze-improve-and-deploy-application-1448;
       {/* Benefits Section */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
-            Why Choose Our Services?
+      <section className="py-16 px-4" /><div className="max-w-7xl mx-auto" /><h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12 neon-text">
+            Why Choose Our Services?</h2>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 cyber-card">
-                <benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
+              </div><div key={index} className="bg-white/10 backdrop-blur-sm rounded-lg p-6 text-center hover:bg-white/20 transition-all duration-300 cyber-card" /><benefit.icon className="w-12 h-12 text-cyan-400 mx-auto mb-4" />
                 <h3 className="text-xl font-bold text-white mb-3">{benefit.title}</h3>
                 <p className="text-gray-300 text-sm">{benefit.description}</p>
               </div>
@@ -288,54 +245,45 @@ import Footer from '../components/Footer';
         </div>
       </section>
 {/* Contact Section */}
-      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
- origin/cursor/analyze-improve-and-deploy-application-1448
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-indigo-600 text-white" /><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" /><h2 className="text-3xl md:text-4xl font-bold mb-4">
+ origin/cursor/analyze-improve-and-deploy-application-1448;
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Ready to Transform Your Business?
+      </h2><section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600" /><div className="max-w-4xl mx-auto text-center" /><h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            Ready to Transform Your Business?</h2>
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Get started with our services today and see the difference AI and IT solutions can make.
+            Get started with our services today and see the difference AI and IT solutions can make.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" /><a;
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              Call (302) 464-0950
+              Call (302) 464-0950</a>
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us
+              Email Us</a>
             </a>
           </div>
         </div>
       </section>
 <>
-      <Helmet>
-        <title>Services - Zion Tech Group</title>
+      <Helmet /><title>Services - Zion Tech Group</title>
         <meta name="description" content="Services services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              Services
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" /><div className="text-center" /><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              Services</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Coming soon - Advanced Services solutions by Zion Tech Group
+              Coming soon - Advanced Services solutions by Zion Tech Group</p>
             </p>
           </div>
         </div>
  origin/cursor/analyze-improve-and-deploy-application-1247
-
-export default ServicesPage
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
+;
+export default ServicesPage;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c;
  cursor/fix-errors-and-merge-to-main-f512
+;

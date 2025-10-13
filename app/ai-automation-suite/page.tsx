@@ -1,7 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
-import { CheckCircle, TrendingUp, Phone, Mail, MapPin, Zap, Bot, Settings, Workflow } from 'lucide-react';
-
+import { Helmet , CheckCircle, TrendingUp, Phone, Mail, MapPin, Zap, Bot, Settings, Workflow  } from "react-helmet-async";
 const AIAutomationSuitePage: React.FC = () => {
   const automationServices = [
     {
@@ -275,139 +273,103 @@ const AIAutomationSuitePage: React.FC = () => {
       contactInfo: 'Contact: kleber@ziontechgroup.com | +1 302 464 0950'
     }
   ];
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>AI Automation Suite - Zion Tech Group</title>
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><Helmet /><title>AI Automation Suite - Zion Tech Group</title>
         <meta name="description" content="Comprehensive AI automation solutions including workflow automation, email processing, document handling, and customer service. Starting at $199/month." />
         <meta name="keywords" content="ai automation, workflow automation, email automation, document processing, customer service automation, sales automation" />
       </Helmet>
-      
       {/* Hero Section */}
-      <section className="pt-24 pb-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
-            AI Automation Suite
+      <section className="pt-24 pb-16 px-4" /><div className="max-w-7xl mx-auto text-center" /><h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
+            AI Automation Suite</h1>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Transform your business operations with intelligent automation that learns, adapts, and scales with your needs.
+            Transform your business operations with intelligent automation that learns, adapts, and scales with your needs.</p>
           </p>
-          
           {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-cyan-400 mb-2">10+</div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12" /><div className="bg-white/10 backdrop-blur-sm rounded-lg p-6" /><div className="text-3xl font-bold text-cyan-400 mb-2">10+</div>
               <div className="text-gray-300">Automation Tools</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-green-400 mb-2">$199</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6" /><div className="text-3xl font-bold text-green-400 mb-2">$199</div>
               <div className="text-gray-300">Starting Price</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6" /><div className="text-3xl font-bold text-purple-400 mb-2">80%</div>
               <div className="text-gray-300">Task Automation</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6" /><div className="text-3xl font-bold text-orange-400 mb-2">99.9%</div>
               <div className="text-gray-300">Accuracy</div>
             </div>
           </div>
-          
           {/* Contact Info */}
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12">
-            <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
-              <div className="flex items-center space-x-2">
-                <Phone className="w-5 h-5" />
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-lg p-6 mb-12" /><div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8" /><div className="flex items-center space-x-2" /><Phone className="w-5 h-5" />
                 <span className="text-white font-medium">+1 302 464 0950</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-5 h-5" />
+              <div className="flex items-center space-x-2" /><Mail className="w-5 h-5" />
                 <span className="text-white font-medium">kleber@ziontechgroup.com</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-5 h-5" />
+              <div className="flex items-center space-x-2" /><MapPin className="w-5 h-5" />
                 <span className="text-white font-medium">Middletown, DE</span>
               </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Services Grid */}
-      <section className="py-16 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Choose Your Automation Solution
+      <section className="py-16 px-4" /><div className="max-w-7xl mx-auto" /><h2 className="text-3xl font-bold text-white text-center mb-12">
+            Choose Your Automation Solution</h2>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {automationServices.map((service, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105">
-                <div className="text-center mb-6">
-                  <div className="text-5xl mb-4">{service.icon}</div>
+              </div><div key={index} className="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105" /><div className="text-center mb-6" /><div className="text-5xl mb-4">{service.icon}</div>
                   <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 text-sm">{service.description}</p>
                 </div>
-                
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-2xl font-bold text-green-600">{service.price}</span>
+                <div className="mb-6" /><div className="flex items-center justify-between mb-4" /><span className="text-2xl font-bold text-green-600">{service.price}</span>
                     <span className="text-sm text-gray-500">Market: {service.marketPrice}</span>
                   </div>
                   <div className="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full inline-block">
-                    {service.category}
+                    {service.category}</div>
                   </div>
                 </div>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
+                <div className="mb-6" /><h4 className="font-semibold text-gray-900 mb-3">Key Features:</h4>
                   <ul className="space-y-2">
                     {service.features.slice(0, 4).map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm text-gray-600">
-                        <CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
+                      </ul><li key={featureIndex} className="flex items-center text-sm text-gray-600" /><CheckCircle className="w-4 h-4 text-green-500 mr-2 flex-shrink-0" />
                         {feature}
                       </li>
                     ))}
                     {service.features.length > 4 && (
                       <li className="text-sm text-gray-500">
-                        +{service.features.length - 4} more features
+                        +{service.features.length - 4} more features</li>
                       </li>
                     )}
                   </ul>
                 </div>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
+                <div className="mb-6" /><h4 className="font-semibold text-gray-900 mb-3">Benefits:</h4>
                   <ul className="space-y-1">
                     {service.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="text-sm text-gray-600 flex items-center">
-                        <TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
+                      </ul><li key={benefitIndex} className="text-sm text-gray-600 flex items-center" /><TrendingUp className="w-3 h-3 text-blue-500 mr-2 flex-shrink-0" />
                         {benefit}
                       </li>
                     ))}
                   </ul>
                 </div>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
+                <div className="mb-6" /><h4 className="font-semibold text-gray-900 mb-3">Technologies:</h4>
                   <div className="flex flex-wrap gap-2">
                     {service.technologies.map((tech, techIndex) => (
-                      <span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
-                        {tech}
+                      </div><span key={techIndex} className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded">
+                        {tech}</span>
                       </span>
                     ))}
                   </div>
                 </div>
-                
-                <div className="text-center">
-                  <a
+                <div className="text-center" /><a;
                     href={`mailto:kleber@ziontechgroup.com?subject=Interest in ${service.title}`}
                     className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:from-purple-700 hover:to-blue-700 transition-all inline-block"
                   >
-                    Get Started Now
+                    Get Started Now</a>
                   </a>
                   <p className="text-xs text-gray-500 mt-2">
-                    {service.contactInfo}
+                    {service.contactInfo}</p>
                   </p>
                 </div>
               </div>
@@ -415,28 +377,24 @@ const AIAutomationSuitePage: React.FC = () => {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            Ready to Automate Your Business?
+      <section className="py-16 px-4 bg-gradient-to-r from-purple-600 to-blue-600" /><div className="max-w-4xl mx-auto text-center" /><h2 className="text-3xl font-bold text-white mb-6">
+            Ready to Automate Your Business?</h2>
           </h2>
           <p className="text-xl text-purple-100 mb-8">
-            Get started with our AI automation suite today and transform your operations.
+            Get started with our AI automation suite today and transform your operations.</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" /><a;
               href="tel:+13024640950"
               className="bg-white text-purple-600 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors"
             >
-              Call (302) 464-0950
+              Call (302) 464-0950</a>
             </a>
-            <a
+            <a;
               href="mailto:kleber@ziontechgroup.com"
               className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-medium hover:bg-white hover:text-purple-600 transition-colors"
             >
-              Email Us
+              Email Us</a>
             </a>
           </div>
         </div>
@@ -444,5 +402,4 @@ const AIAutomationSuitePage: React.FC = () => {
     </div>
   );
 };
-
 export default AIAutomationSuitePage;

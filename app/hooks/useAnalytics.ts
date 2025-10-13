@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     }
   }, []);
 const trackPageView = useCallback((pagePath: string, pageTitle: string) => {,
@@ -12,3 +12,4 @@ const trackConversion = useCallback((conversionId: string, value?: number) => {i
     }
   }, []);
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

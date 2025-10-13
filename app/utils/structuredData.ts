@@ -1,16 +1,14 @@
 /**
- * Enhanced Structured Data (JSON-LD) utilities for improved SEO
+ * Enhanced Structured Data (JSON-LD) utilities for improved SEO;
  */
-
 export interface StructuredDataConfig {
   title?: string;
   description?: string;
   url?: string;
   image?: string;
 }
-
 /**
- * Generate comprehensive organization schema
+ * Generate comprehensive organization schema;
  */
 export const getOrganizationSchema = () => ({
   '@context': 'https://schema.org',
@@ -66,9 +64,8 @@ export const getOrganizationSchema = () => ({
     worstRating: '1',
   },
 });
-
 /**
- * Generate website schema for search action
+ * Generate website schema for search action;
  */
 export const getWebsiteSchema = () => ({
   '@context': 'https://schema.org',
@@ -85,9 +82,8 @@ export const getWebsiteSchema = () => ({
     'query-input': 'required name=search_term_string',
   },
 });
-
 /**
- * Generate service catalog schema
+ * Generate service catalog schema;
  */
 export const getServiceSchema = () => ({
   '@context': 'https://schema.org',
@@ -145,9 +141,8 @@ export const getServiceSchema = () => ({
     ],
   },
 });
-
 /**
- * Generate local business schema
+ * Generate local business schema;
  */
 export const getLocalBusinessSchema = () => ({
   '@context': 'https://schema.org',
@@ -172,9 +167,8 @@ export const getLocalBusinessSchema = () => ({
     closes: '18:00',
   }],
 });
-
 /**
- * Generate breadcrumb list schema
+ * Generate breadcrumb list schema;
  */
 export const getBreadcrumbSchema = (items: Array<{name: string; url: string}>) => ({
   '@context': 'https://schema.org',
@@ -186,9 +180,8 @@ export const getBreadcrumbSchema = (items: Array<{name: string; url: string}>) =
     item: item.url,
   })),
 });
-
 /**
- * Generate all schemas for homepage
+ * Generate all schemas for homepage;
  */
 export const getHomepageSchemas = () => [
   getOrganizationSchema(),
@@ -196,13 +189,11 @@ export const getHomepageSchemas = () => [
   getServiceSchema(),
   getLocalBusinessSchema(),
 ];
-
 /**
- * Render structured data scripts
+ * Render structured data scripts;
  */
 export const renderStructuredData = (schemas: unknown[]) => {
   return schemas.map((schema, _index) => (
-
     JSON.stringify(schema)
   ));
 };

@@ -1,17 +1,14 @@
 /**
- * Advanced Error Tracking and Reporting System
- * Provides comprehensive error tracking with categorization and analytics
+ * Advanced Error Tracking and Reporting System;
+ * Provides comprehensive error tracking with categorization and analytics;
  */
-
 import { logger } from './logger';
-
 export enum ErrorSeverity {
   Low = 'low',
   Medium = 'medium',
   High = 'high',
   Critical = 'critical',
 }
-
 export enum ErrorCategory {
   Network = 'network',
   Validation = 'validation',
@@ -20,7 +17,6 @@ export enum ErrorCategory {
   Configuration = 'configuration',
   ExternalService = 'external_service',
 }
-
 export interface ErrorMetadata {
   category: ErrorCategory;
   severity: ErrorSeverity;
@@ -33,7 +29,6 @@ export interface ErrorMetadata {
   userAgent?: string;
   url?: string;
 }
-
 export interface TrackedError {
   id: string;
   message: string;
@@ -42,31 +37,26 @@ export interface TrackedError {
   firstSeen: number;
   lastSeen: number;
 }
-
 class ErrorTrackingService {
   private static instance: ErrorTrackingService;
-  private errors: Map<string, TrackedError> = new Map();
+  private errors: Map</string><string, TrackedError> = new Map();
   private errorListeners: Array<(error: TrackedError) => void> = [];
   private maxStoredErrors = 1000;
-
   private constructor() {
     this.setupGlobalErrorHandlers();
   }
-
   static getInstance(): ErrorTrackingService {
     if (!ErrorTrackingService.instance) {
-      ErrorTrackingService.instance = new ErrorTrackingService(); origin/cursor/analyze-improve-and-deploy-application-1247
+      ErrorTrackingService.instance = new ErrorTrackingService(); origin/cursor/analyze-improve-and-deploy-application-1247;
     }
     return ErrorTrackingService.instance;
   }
-
 /**
-   * Set up global error handlers
-   */ origin/cursor/analyze-improve-and-deploy-application-1247
+   * Set up global error handlers;
+   */ origin/cursor/analyze-improve-and-deploy-application-1247;
   private setupGlobalErrorHandlers(): void {
     if (typeof window === 'undefined') return;
-
-    // Handle unhandled errors
+    // Handle unhandled errors;
     window.addEventListener('error', (event) => {
 this.trackError(
         event.error || new Error(event.message),
@@ -81,8 +71,7 @@ this.trackError(
         }
       );
     });
-
-    // Handle unhandled promise rejections
+    // Handle unhandled promise rejections;
     window.addEventListener('unhandledrejection', (event) => {
       this.trackError(
         new Error(`Unhandled Promise Rejection: ${event.reason}`),
@@ -94,17 +83,15 @@ this.trackError(
       );
     });
   }
-
   /**
-   * Track an error with metadata
+   * Track an error with metadata;
    */
   trackError(
     error: Error,
-    metadata: Partial<ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
+    metadata: Partial</string><ErrorMetadata> & { category: ErrorCategory; severity: ErrorSeverity }
   ): string {
     const errorId = this.generateErrorId(error.message);
     const timestamp = Date.now();
-
     const fullMetadata: ErrorMetadata = {
       ...metadata,
       timestamp,
@@ -112,16 +99,14 @@ this.trackError(
       userAgent: typeof window !== 'undefined' ? window.navigator.userAgent : undefined,
       url: typeof window !== 'undefined' ? window.location.href : undefined,
     };
-
     const existingError = this.errors.get(errorId);
-
     if (existingError) {
-      // Update existing error
+      // Update existing error;
       existingError.occurrences++;
       existingError.lastSeen = timestamp;
       existingError.metadata = fullMetadata;
     } else {
-      // Create new error entry
+      // Create new error entry;
       const trackedError: TrackedError = {
         id: errorId,
         message: error.message,
@@ -129,19 +114,17 @@ this.trackError(
         occurrences: 1,
         firstSeen: timestamp,
         lastSeen: timestamp,
-      }; origin/cursor/analyze-improve-and-deploy-application-1247
+      }; origin/cursor/analyze-improve-and-deploy-application-1247;
       this.errors.set(errorId, trackedError);
-
-      // Notify listeners
+      // Notify listeners;
       this.notifyListeners(trackedError);
-// Maintain max stored errors
+// Maintain max stored errors;
       if (this.errors.size > this.maxStoredErrors) {
         const oldestKey = Array.from(this.errors.keys())[0];
         this.errors.delete(oldestKey);
       }
     }
-
-    // Log the error
+    // Log the error;
     logger.error(
       `[${metadata.severity.toUpperCase()}] ${error.message}`,
       error,
@@ -152,45 +135,39 @@ this.trackError(
         ...metadata.context,
       }
     );
-
-    // Send to external service if critical
+    // Send to external service if critical;
     if (metadata.severity === ErrorSeverity.Critical) {
-      this.reportToExternalService(errorId); origin/cursor/analyze-improve-and-deploy-application-1247
+      this.reportToExternalService(errorId); origin/cursor/analyze-improve-and-deploy-application-1247;
     }
-
     return errorId;
   }
-
 /**
-   * Generate a unique error ID based on the message
+   * Generate a unique error ID based on the message;
    */
   private generateErrorId(message: string): string {
-    // Simple hash function for error ID
+    // Simple hash function for error ID;
     let hash = 0;
     for (let i = 0; i < message.length; i++) {
       const char = message.charCodeAt(i);
       hash = ((hash << 5) - hash) + char;
-      hash = hash & hash; // Convert to 32bit integer
+      hash = hash & hash; // Convert to 32bit integer;
     }
     return `err_${Math.abs(hash).toString(36)}`;
   }
-
   /**
-   * Add an error listener
+   * Add an error listener;
    */
   addListener(listener: (error: TrackedError) => void): void {
     this.errorListeners.push(listener);
   }
-
   /**
-   * Remove an error listener
+   * Remove an error listener;
    */
   removeListener(listener: (error: TrackedError) => void): void {
     this.errorListeners = this.errorListeners.filter(l => l !== listener);
   }
-
   /**
-   * Notify all listeners of a new error
+   * Notify all listeners of a new error;
    */
   private notifyListeners(error: TrackedError): void {
     this.errorListeners.forEach(listener => {
@@ -201,14 +178,12 @@ this.trackError(
       }
     });
   }
-
   /**
-   * Report critical errors to external service
+   * Report critical errors to external service;
    */
-  private async reportToExternalService(errorId: string): Promise<void> {
+  private async reportToExternalService(errorId: string): Promise</ErrorMetadata><void> {
     const error = this.errors.get(errorId);
     if (!error) return;
-
     try {
       if (typeof window !== 'undefined' && 'fetch' in window) {
         await fetch('/api/error-report', {
@@ -221,51 +196,43 @@ this.trackError(
       logger.error('Failed to report error to external service', reportError as Error);
     }
   }
-
   /**
-   * Get all tracked errors
+   * Get all tracked errors;
    */
   getErrors(): TrackedError[] {
     return Array.from(this.errors.values());
   }
-
   /**
-   * Get errors by category
+   * Get errors by category;
    */
   getErrorsByCategory(category: ErrorCategory): TrackedError[] {
     return this.getErrors().filter(e => e.metadata.category === category);
   }
-
   /**
-   * Get errors by severity
+   * Get errors by severity;
    */
   getErrorsBySeverity(severity: ErrorSeverity): TrackedError[] {
     return this.getErrors().filter(e => e.metadata.severity === severity);
   }
-
   /**
-   * Get error statistics
+   * Get error statistics;
    */
   getStatistics(): {
     total: number;
-    byCategory: Record<ErrorCategory, number>;
-    bySeverity: Record<ErrorSeverity, number>;
+    byCategory: Record</void><ErrorCategory, number>;
+    bySeverity: Record</ErrorCategory><ErrorSeverity, number>;
     topErrors: TrackedError[];
   } {
     const errors = this.getErrors();
-    
-    const byCategory = {} as Record<ErrorCategory, number>;
-    const bySeverity = {} as Record<ErrorSeverity, number>;
-
+    const byCategory = {} as Record</ErrorSeverity><ErrorCategory, number>;
+    const bySeverity = {} as Record</ErrorCategory><ErrorSeverity, number>;
     errors.forEach(error => {
       byCategory[error.metadata.category] = (byCategory[error.metadata.category] || 0) + error.occurrences;
       bySeverity[error.metadata.severity] = (bySeverity[error.metadata.severity] || 0) + error.occurrences;
     });
-
-    const topErrors = errors
+    const topErrors = errors;
       .sort((a, b) => b.occurrences - a.occurrences)
       .slice(0, 10);
-
     return {
       total: errors.length,
       byCategory,
@@ -273,16 +240,14 @@ this.trackError(
       topErrors,
     };
   }
-
   /**
-   * Clear all errors
+   * Clear all errors;
    */
   clearErrors(): void {
     this.errors.clear();
   }
-
   /**
-   * Clear errors older than specified time
+   * Clear errors older than specified time;
    */
   clearOldErrors(maxAge: number): void {
     const now = Date.now();
@@ -293,25 +258,21 @@ this.trackError(
     }
   }
 }
-
 export const errorTracking = ErrorTrackingService.getInstance();
 export default ErrorTrackingService;
-
-// Export convenience functions for easier testing and usage
+// Export convenience functions for easier testing and usage;
 export const trackError = (
   error: Error,
-  options?: Partial<Omit<ErrorMetadata, 'timestamp'>>
+  options?: Partial</ErrorSeverity><Omit<ErrorMetadata, 'timestamp'>>
 ) => {
   const category = options?.category || ErrorCategory.Runtime;
   const severity = options?.severity || ErrorSeverity.Medium;
-  
   return errorTracking.trackError(error, {
     ...options,
     category,
     severity,
   });
 };
-
 export const getErrorStatistics = () => {
   const stats = errorTracking.getStatistics();
   const errors = errorTracking.getErrors().map(error => ({
@@ -325,9 +286,8 @@ export const getErrorStatistics = () => {
     errors,
   };
 };
-
 export const clearErrorHistory = () => errorTracking.clearErrors();
 export const addErrorListener = (listener: (error: TrackedError) => void) => 
   errorTracking.addListener(listener);
 export const removeErrorListener = (listener: (error: TrackedError) => void) => 
-  errorTracking.removeListener(listener); origin/cursor/analyze-improve-and-deploy-application-1247
+  errorTracking.removeListener(listener); origin/cursor/analyze-improve-and-deploy-application-1247</Omit>

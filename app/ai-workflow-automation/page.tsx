@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -17,7 +17,7 @@ import { Helmet } from 'react-helmet-async';
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
@@ -25,39 +25,35 @@ const benefits = [
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
     'Gain competitive advantage with advanced technology'
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
               </div>
             </div>
           </div>
         </section>
- origin/cursor/analyze-improve-and-deploy-application-0ff3
+ origin/cursor/analyze-improve-and-deploy-application-0ff3;
   return (
     <>
-      <Helmet>
-        <title>AI Workflow Automation - Zion Tech Group</title>
+      <Helmet /><title>AI Workflow Automation - Zion Tech Group</title>
         <meta name="description" content="AI Workflow Automation services by Zion Tech Group. Advanced AI and IT solutions for your business." />
       </Helmet>
-      
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              AI Workflow Automation
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20" /><div className="text-center" /><h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+              AI Workflow Automation</h1>
             </h1>
             <p className="text-xl text-gray-300 mb-8">
-              Coming soon - Advanced AI Workflow Automation solutions by Zion Tech Group
+              Coming soon - Advanced AI Workflow Automation solutions by Zion Tech Group</p>
             </p>
           </div>
         </div>
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c
- origin/cursor/analyze-improve-and-deploy-application-1448
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-0f1c;
+ origin/cursor/analyze-improve-and-deploy-application-1448;
       </div>
 <Footer />
- cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
- origin/cursor/analyze-improve-and-deploy-application-1448
- origin/cursor/analyze-improve-and-deploy-application-1573
+ cursor/fix-errors-and-merge-to-main-6ce7;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
+ origin/cursor/analyze-improve-and-deploy-application-1448;
+ origin/cursor/analyze-improve-and-deploy-application-1573;
   );
 };
 export default WorkflowAutomationPage;
 >>>>>>> origin/cursor/analyze-improve-and-deploy-application-1256
+;

@@ -1,89 +1,71 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet , Link  } from "react-helmet-async";
 import { ArrowRight } from "lucide-react";
 const ErrorboundaryconfigPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>Errorboundaryconfig | Zion Tech Group</title>
-        <meta
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><Helmet /><title>Errorboundaryconfig | Zion Tech Group</title>
+        <meta;
           name="description"
           content="Professional errorboundaryconfig services by Zion Tech Group"
         />
       </Helmet>
-
-      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-              Errorboundaryconfig
+      <div className="pt-20 pb-16 px-4 sm:px-6 lg:px-8" /><div className="max-w-7xl mx-auto text-center" /><h1 className="text-4xl md:text-6xl font-bold text-white mb-6" /><span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+              Errorboundaryconfig</span>
             </span>
           </h1>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Professional errorboundaryconfig services by Zion Tech Group
+            Professional errorboundaryconfig services by Zion Tech Group</p>
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" /><Link;
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
             >
-              Get Started
-              <ArrowRight className="w-5 h-5 ml-2" />
+              Get Started;
+              </Link><ArrowRight className="w-5 h-5 ml-2" />
             </Link>
-            <Link
+            <Link;
               to="/contact"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
             >
-              Learn More
+              Learn More</Link>
             </Link>
           </div>
 =======
 /**
- * Error Boundary Configuration
- * Centralized configuration for error handling across the application
+ * Error Boundary Configuration;
+ * Centralized configuration for error handling across the application;
  */
-
 import React from 'react';
-
-
 export interface ErrorBoundaryConfig {
   /**
-   * Whether to log errors to console
+   * Whether to log errors to console;
    */
   logErrors: boolean;
-
   /**
-   * Whether to show detailed error messages
+   * Whether to show detailed error messages;
    */
   showDetails: boolean;
-
   /**
-   * Whether to send errors to external service
+   * Whether to send errors to external service;
    */
   reportErrors: boolean;
-
   /**
-   * Error reporting endpoint
+   * Error reporting endpoint;
    */
   reportingEndpoint?: string;
-
   /**
-   * Whether to show error overlay in development
+   * Whether to show error overlay in development;
    */
   showErrorOverlay: boolean;
-
   /**
-   * Maximum number of errors to store
+   * Maximum number of errors to store;
    */
   maxStoredErrors: number;
-
   /**
-   * Custom error messages by error type
+   * Custom error messages by error type;
    */
   customMessages: Record<string, string>;
-
   /**
-   * Fallback UI components
+   * Fallback UI components;
    */
   fallbackComponents: {
     default: React.ComponentType<{ error: Error; resetError: () => void }>;
@@ -91,9 +73,8 @@ export interface ErrorBoundaryConfig {
     notFound: React.ComponentType<{ error: Error; resetError: () => void }>;
   };
 }
-
 /**
- * Default error messages
+ * Default error messages;
  */
 const DEFAULT_ERROR_MESSAGES = {
   default: 'Something went wrong. Please try again.',
@@ -103,13 +84,11 @@ const DEFAULT_ERROR_MESSAGES = {
   serverError: 'Server error occurred. Please try again later.',
   validation: 'Validation error. Please check your input.',
 };
-
 /**
- * Get error boundary configuration based on environment
+ * Get error boundary configuration based on environment;
  */
 export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
   const isDevelopment = process.env['NODE_ENV'] === 'development';
-
   return {
     logErrors: true,
     showDetails: isDevelopment,
@@ -125,9 +104,8 @@ export function getErrorBoundaryConfig(): ErrorBoundaryConfig {
     },
   };
 }
-
 /**
- * Default error fallback component
+ * Default error fallback component;
  */
 function DefaultErrorFallback({
   error,
@@ -137,16 +115,12 @@ function DefaultErrorFallback({
   resetError: () => void;
 }) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full">
-          <svg
+    </string><div className="min-h-screen flex items-center justify-center bg-gray-50 px-4" /><div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6" /><div className="flex items-center justify-center w-12 h-12 mx-auto bg-red-100 rounded-full" /><svg;
             className="w-6 h-6 text-red-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-          >
-            <path
+           /><path;
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
@@ -155,37 +129,35 @@ function DefaultErrorFallback({
           </svg>
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-          Oops! Something went wrong
+          Oops! Something went wrong</h2>
         </h2>
         <p className="mt-2 text-center text-gray-600">
-          {error.message || 'An unexpected error occurred'}
+          {error.message || 'An unexpected error occurred'}</p>
         </p>
         {process.env['NODE_ENV'] === 'development' && (
           <pre className="mt-4 p-4 bg-gray-100 rounded text-xs overflow-auto">
-            {error.stack}
+            {error.stack}</pre>
           </pre>
         )}
-        <div className="mt-6 flex gap-4">
-          <button
+        <div className="mt-6 flex gap-4" /><button;
             onClick={resetError}
             className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Try Again
+            Try Again</button>
           </button>
-          <button
+          <button;
             onClick={() => (window.location.href = '/')}
             className="flex-1 bg-gray-200 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
-            Go Home
-          </button> origin/cursor/analyze-improve-and-deploy-application-1247
+            Go Home</button>
+          </button> origin/cursor/analyze-improve-and-deploy-application-1247;
         </div>
       </div>
     </div>
   );
 }
-
 /**
- * Network error fallback component
+ * Network error fallback component;
  */
 function NetworkErrorFallback({
   resetError,
@@ -194,16 +166,12 @@ function NetworkErrorFallback({
   resetError: () => void;
 }) {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6">
-        <div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full">
-          <svg
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4" /><div className="max-w-md w-full bg-white rounded-lg shadow-lg p-6" /><div className="flex items-center justify-center w-12 h-12 mx-auto bg-yellow-100 rounded-full" /><svg;
             className="w-6 h-6 text-yellow-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
-          >
-            <path
+           /><path;
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
@@ -212,60 +180,54 @@ function NetworkErrorFallback({
           </svg>
         </div>
         <h2 className="mt-4 text-2xl font-bold text-center text-gray-900">
-          Connection Issue
+          Connection Issue</h2>
         </h2>
         <p className="mt-2 text-center text-gray-600">
-          Unable to connect to the server. Please check your internet connection
-          and try again.
+          Unable to connect to the server. Please check your internet connection;
+          and try again.</p>
         </p>
-        <div className="mt-6">
-          <button
+        <div className="mt-6" /><button;
             onClick={resetError}
             className="w-full bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Retry Connection
+            Retry Connection</button>
           </button>
         </div>
       </div>
     </div>
   );
 }
-
 /**
- * Not found error fallback component
+ * Not found error fallback component;
  */
 function NotFoundFallback(): JSX.Element {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
-      <div className="max-w-md w-full text-center">
-        <h1 className="text-6xl font-bold text-gray-900">404</h1>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4" /><div className="max-w-md w-full text-center" /><h1 className="text-6xl font-bold text-gray-900">404</h1>
         <h2 className="mt-4 text-2xl font-bold text-gray-900">
-          Page Not Found
+          Page Not Found</h2>
         </h2>
         <p className="mt-2 text-gray-600">
-          The page you're looking for doesn't exist or has been moved.
+          The page you're looking for doesn't exist or has been moved.</p>
         </p>
-        <div className="mt-6 flex gap-4 justify-center">
-          <button
+        <div className="mt-6 flex gap-4 justify-center" /><button;
             onClick={() => (window.location.href = '/')}
             className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Go Home
+            Go Home</button>
           </button>
-          <button
+          <button;
             onClick={() => window.history.back()}
             className="bg-gray-200 text-gray-800 px-6 py-2 rounded-lg hover:bg-gray-300 transition-colors"
           >
-            Go Back
+            Go Back</button>
           </button>
         </div>
       </div>
     </div>
   );
 }
-
 /**
- * Get error type from error object
+ * Get error type from error object;
  */
 export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES {
   if (error.message.includes('Network') || error.message.includes('fetch')) {
@@ -285,9 +247,8 @@ export function getErrorType(error: Error): keyof typeof DEFAULT_ERROR_MESSAGES 
   }
   return 'default';
 }
-
 /**
- * Format error for logging
+ * Format error for logging;
  */
 export function formatErrorForLogging(error: Error): Record<string, unknown> {
   return {
@@ -300,5 +261,4 @@ export function formatErrorForLogging(error: Error): Record<string, unknown> {
     url: typeof window !== 'undefined' ? window.location.href : 'unknown',
   };
 }
-
-export default getErrorBoundaryConfig; origin/cursor/analyze-improve-and-deploy-application-1247
+export default getErrorBoundaryConfig; origin/cursor/analyze-improve-and-deploy-application-1247</string>

@@ -1,9 +1,9 @@
 /**
- * Performance Configuration
- * Centralized performance monitoring and optimization settings
+ * Performance Configuration;
+ * Centralized performance monitoring and optimization settings;
  */
 export const performanceConfig = {
-  // Core Web Vitals thresholds
+  // Core Web Vitals thresholds;
   metrics: {
     lcp: {
       good: 2500,
@@ -26,22 +26,22 @@ export const performanceConfig = {
       needsImprovement: 1800,
     },
   },
-  // Cache strategies
+  // Cache strategies;
   cache: {
     static: {
-      maxAge: 31536000, // 1 year
-      staleWhileRevalidate: 86400, // 1 day
+      maxAge: 31536000, // 1 year;
+      staleWhileRevalidate: 86400, // 1 day;
     },
     dynamic: {
-      maxAge: 3600, // 1 hour
-      staleWhileRevalidate: 60, // 1 minute
+      maxAge: 3600, // 1 hour;
+      staleWhileRevalidate: 60, // 1 minute;
     },
     api: {
-      maxAge: 300, // 5 minutes
-      staleWhileRevalidate: 30, // 30 seconds
+      maxAge: 300, // 5 minutes;
+      staleWhileRevalidate: 30, // 30 seconds;
     },
   },
-  // Resource hints
+  // Resource hints;
   preload: [
     { href: '/fonts/inter-var.woff2', as: 'font', type: 'font/woff2', crossorigin: 'anonymous' },
   ],
@@ -49,7 +49,7 @@ export const performanceConfig = {
     '/api/health',
     '/api/config',
   ],
-  // Image optimization
+  // Image optimization;
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
@@ -57,7 +57,7 @@ export const performanceConfig = {
     minimumCacheTTL: 60,
     dangerouslyAllowSVG: false,
   },
-  // Bundle optimization
+  // Bundle optimization;
   bundle: {
     minChunkSize: 20000,
     maxChunkSize: 244000,
@@ -65,27 +65,26 @@ export const performanceConfig = {
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
-priority: -10, origin/cursor/fix-errors-and-merge-to-main-f5eb
+priority: -10, origin/cursor/fix-errors-and-merge-to-main-f5eb;
           reuseExistingChunk: true,
         },
         default: {
           minChunks: 2,
-priority: -20, origin/cursor/fix-errors-and-merge-to-main-f5eb
+priority: -20, origin/cursor/fix-errors-and-merge-to-main-f5eb;
           reuseExistingChunk: true,
         },
       },
     },
   },
-  // Performance monitoring
+  // Performance monitoring;
   monitoring: {
     enabled: true,
-    sampleRate: 1.0, // 100% in production
-    reportInterval: 30000, // 30 seconds
+    sampleRate: 1.0, // 100% in production;
+    reportInterval: 30000, // 30 seconds;
     sendToAnalytics: true,
     logThreshold: 'needsImprovement',
   },
 };
-
 export type PerformanceConfig = typeof performanceConfig;
-
 export default performanceConfig; origin/cursor/fix-errors-and-merge-to-main-f5eb
+;

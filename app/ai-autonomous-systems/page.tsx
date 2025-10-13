@@ -1,40 +1,35 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet , Link  } from "react-helmet-async";
 import { ArrowRight } from "lucide-react";
 export default function AiAutonomousSystemsZionTechGroup() {
   return (
-    <>
-      <Helmet>
-        <title>AiAutonomousSystems - Zion Tech Group</title>
+    <React.Fragment /><Helmet /><title>AiAutonomousSystems - Zion Tech Group</title>
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-6">
-            AiAutonomousSystems
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 flex items-center justify-center" /><div className="text-center" /><h1 className="text-4xl font-bold text-white mb-6">
+            AiAutonomousSystems</h1>
           </h1>
           <p className="text-lg text-gray-300 mb-8">
-            Professional aiautonomoussystems services coming soon.
+            Professional aiautonomoussystems services coming soon.</p>
           </p>
-          <Link
+          <Link;
             to="/contact"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors"
           >
-            Contact Us
-            <ArrowRight className="ml-2 h-5 w-5" />
+            Contact Us;
+            </Link><ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
-} origin/cursor/analyze-improve-and-deploy-application-0ff3
- origin/cursor/analyze-improve-and-deploy-application-1247
+} origin/cursor/analyze-improve-and-deploy-application-0ff3;
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 'use client';
 import React from 'react';
 import {Helmet}}from 'react-helmet-async';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer'
 import { CheckCircle, ArrowRight, Star, Clock, Zap, Shield, Brain, BarChart, Target, TrendingUp, Globe, Database, Users, Settings } from 'lucide-react'
-const AiAutonomousSystemsPage: React.FC = () => { origin/cursor/analyze-improve-and-deploy-application-1247
+const AiAutonomousSystemsPage: React.FC = () => { origin/cursor/analyze-improve-and-deploy-application-1247;
   const features = [
     {
       icon: Brain,
@@ -54,18 +49,16 @@ const AiAutonomousSystemsPage: React.FC = () => { origin/cursor/analyze-improve-
       description: 'Optimize your business growth with data-driven strategies.',
       benefits: ['Growth strategies', 'Market analysis', 'Competitive insights', 'ROI optimization']},
   ]
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
         <title>AI Autonomous Systems - Zion Tech Group</title>
         <meta name="description" content="Cutting-edge autonomous systems powered by advanced AI technology." />
         <meta name="keywords" content="AI autonomous systems, artificial intelligence, autonomous technology, AI solutions, intelligent automation" />
       </Helmet>
 <main className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
         {/* Hero Section */}
-        <section className="relative py-20 px-4 sm: px-6 lg:px-8">
- origin/cursor/analyze-improve-and-deploy-application-1247
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center">
-              <h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
+        </main><section className="relative py-20 px-4 sm: px-6 lg:px-8">
+ origin/cursor/analyze-improve-and-deploy-application-1247;
+          </section><div className="max-w-7xl mx-auto" /><div className="text-center" /><h1 className="text-4xl md: text-6xl font-bold text-gray-900 mb-6">,</h1>
                 AI Autonomous Systems;
   </
               <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">Transform your business with intelligent solutions powered by cutting-edge AI technology.</p>
@@ -75,7 +68,7 @@ const AiAutonomousSystemsPage: React.FC = () => { origin/cursor/analyze-improve-
                   Get Started;
   </
                 <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover: bg-blue-50 transition-colors">,</button>
- cursor/fix-errors-and-merge-to-main-e1a2
+ cursor/fix-errors-and-merge-to-main-e1a2;
                     ))}
                   </ul>
                 </div>
@@ -84,34 +77,34 @@ const AiAutonomousSystemsPage: React.FC = () => { origin/cursor/analyze-improve-
           </div>
         </section>
 {/* CTA Section */}
-        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600"></section>
-          <div className="max-w-4xl mx-auto text-center"></div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6"></h2>
+        <section className="py-20 px-4 sm: px-6 lg:px-8 bg-blue-600" />
+          <div className="max-w-4xl mx-auto text-center" />
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6" />
               Ready to Transform Your Business?
             </h2>
-            <p className="text-xl text-blue-100 mb-8"></p>
+            <p className="text-xl text-blue-100 mb-8" />
               Join thousands of businesses already using our AI platform.
- origin/cursor/analyze-improve-and-deploy-application-1460
+ origin/cursor/analyze-improve-and-deploy-application-1460;
             </p>
-            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold"></button>
->>>>>>> cursor/fix-errors-and-merge-to-main-e1a2
+            <button className="bg-white text-blue-600 px-8 py-3 rounded-lg hover:bg-gray-100 transition-colors font-semibold" />
+>>>>>>> cursor/fix-errors-and-merge-to-main-e1a2;
               Start Your Free Trial,
   </
           </div>
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
             {features.map((feature, index) => (
-<div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group"></div>
-                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300"></div>
-                  <CheckCircle className="w-6 h-6 text-white" /></CheckCircle>
+<div key={index} className="bg-slate-800/50 backdrop-blur-sm border border-gray-700 rounded-xl p-6 hover:border-blue-400/50 transition-all duration-300 group" />
+                <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300" />
+                  <CheckCircle className="w-6 h-6 text-white" / />
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3"></h>{feature.title}</h3>
+                <h3 className="text-xl font-semibold text-white mb-3" />{feature.title}</h3>
                 <p className="text-gray-300 mb-4">{feature.description}</p>
-                <ul className="space-y-2"></ul>
+                <ul className="space-y-2" />
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400"></li>
-                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" /></CheckCircle>
+                    <li key={benefitIndex} className="flex items-center text-sm text-gray-400" />
+                      <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" / />
                       {benefit}
- cursor/fix-errors-and-merge-to-main-e1a2
+ cursor/fix-errors-and-merge-to-main-e1a2;
                   ))}
                 </ul>
               </div>
@@ -121,28 +114,26 @@ const AiAutonomousSystemsPage: React.FC = () => { origin/cursor/analyze-improve-
     </>
   );
 };
-export default AiAutonomousSystemsPage; cursor/fix-errors-and-merge-to-main-6ce7
+export default AiAutonomousSystemsPage; cursor/fix-errors-and-merge-to-main-6ce7;
         </div>
       </section>
 {/* Benefits Section */}
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
   </
           </div>
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,</div>
             {benefits.map((benefit, index) => (
-              <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <CheckCircle className="w-8 h-8 text-white" />
- cursor/fix-errors-and-merge-to-main-e1a2
+              <div key={index}className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center" /><div className="w-16 h-16 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full mx-auto mb-4 flex items-center justify-center" /><CheckCircle className="w-8 h-8 text-white" />
+ cursor/fix-errors-and-merge-to-main-e1a2;
                 </div>
-                <h3 className="text-lg font-semibold text-white"></h>{benefit}</h3>
+                <h3 className="text-lg font-semibold text-white" />{benefit}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
 {/* CTA Section */}
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
   </
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,</div>
             <button className="bg-gradient-to-r from-blue-500 to-purple-600 hover: from-blue-600 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105">,</button>
@@ -150,15 +141,16 @@ export default AiAutonomousSystemsPage; cursor/fix-errors-and-merge-to-main-6ce7
   </
             <button className="border border-blue-400 text-blue-400 hover: bg-blue-400 hover:text-white font-bold py-4 px-8 rounded-lg transition-all duration-300">,</button>
               Contact Sales;
- cursor/fix-errors-and-merge-to-main-e1a2
+ cursor/fix-errors-and-merge-to-main-e1a2;
   </
           </div>
         </div>
       </section>
-      <Footer /></Footer>
+      <Footer / />
     </div>
- cursor/website-audit-and-update-with-deployment-c0e8
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232
- cursor/fix-errors-and-merge-to-main-6ce7
->>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247
+ cursor/website-audit-and-update-with-deployment-c0e8;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1232;
+ cursor/fix-errors-and-merge-to-main-6ce7;
+>>>>>>> origin/cursor/analyze-improve-and-deploy-application-1247;
  origin/cursor/analyze-improve-and-deploy-application-1460
+;

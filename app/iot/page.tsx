@@ -1,18 +1,15 @@
-import { Helmet } from "react-helmet-async";
-import { Link } from "react-router-dom";
+import { Helmet , Link  } from "react-helmet-async";
 import { ArrowRight } from "lucide-react";
 const IoTPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <Helmet>
-        <title>IoT Solutions | Zion Tech Group</title>
-        <meta
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900" /><Helmet /><title>IoT Solutions | Zion Tech Group</title>
+        <meta;
           name="description"
           content="Internet of Things solutions for connected devices and smart systems"
         />
 =======
 import React from 'react';
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       title: 'IoT Device Management Platform',
       description: 'Comprehensive IoT device management and monitoring platform for connected devices.',
@@ -25,7 +22,7 @@ import React from 'react';
 technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP']
   },
     {
-    title: 'Smart City Solutions', origin/cursor/analyze-improve-and-deploy-application-1247
+    title: 'Smart City Solutions', origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'Comprehensive smart city infrastructure including traffic management, environmental monitoring, and citizen services.',
       icon: '🏙️',
       price: 'Starting at $15,000/month',;
@@ -36,7 +33,7 @@ technologies: ['AWS IoT', 'Azure IoT', 'Google Cloud IoT', 'MQTT', 'CoAP']
 technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Edge Computing', 'AI Analytics']
   },
     {
-    title: 'Industrial IoT (IIoT)', origin/cursor/analyze-improve-and-deploy-application-1247
+    title: 'Industrial IoT (IIoT)', origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'Industrial IoT solutions for manufacturing, energy, and logistics with predictive maintenance and optimization.',
       icon: '🏭',
       price: 'Starting at $8,000/month',;
@@ -44,7 +41,7 @@ technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Edge Computing', 'AI Analytics']
       benefits: ['Reduce downtime by 40%', 'Improve product quality', 'Lower energy costs'],
       marketPrice: '$15,000-60,000/month',;
       category: 'Industrial IoT',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'IoT-powered agricultural monitoring and optimization for crop management and livestock tracking.',
       icon: '🌾',
       price: 'Starting at $3,500/month',;
@@ -55,7 +52,7 @@ technologies: ['LoRaWAN', 'NB-IoT', '5G', 'Edge Computing', 'AI Analytics']
 technologies: ['LoRaWAN', 'Sigfox', 'Satellite IoT', 'Drones', 'Computer Vision']
   },
     {
-    title: 'Smart Home Automation', origin/cursor/analyze-improve-and-deploy-application-1247
+    title: 'Smart Home Automation', origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'Complete smart home solutions with energy management, security, and comfort automation.',
       icon: '🏠',
       price: 'Starting at $1,500/month',;
@@ -66,7 +63,7 @@ technologies: ['LoRaWAN', 'Sigfox', 'Satellite IoT', 'Drones', 'Computer Vision'
 technologies: ['Zigbee', 'Z-Wave', 'WiFi', 'Bluetooth', 'Matter']
   },
     {
-    title: 'Healthcare IoT Solutions', origin/cursor/analyze-improve-and-deploy-application-1247
+    title: 'Healthcare IoT Solutions', origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'Medical IoT devices and platforms for patient monitoring, telemedicine, and health analytics.',
       icon: '🏥',
       price: 'Starting at $5,000/month',;
@@ -77,7 +74,7 @@ technologies: ['Zigbee', 'Z-Wave', 'WiFi', 'Bluetooth', 'Matter']
 technologies: ['Bluetooth LE', 'WiFi', 'Cellular', 'Edge Computing', 'AI Analytics']
   },
     {
-    title: 'Fleet Management IoT', origin/cursor/analyze-improve-and-deploy-application-1247
+    title: 'Fleet Management IoT', origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'Comprehensive fleet tracking and management solutions for vehicles, drones, and logistics.',
       icon: '🚛',
       price: 'Starting at $2,000/month',;
@@ -88,7 +85,7 @@ technologies: ['Bluetooth LE', 'WiFi', 'Cellular', 'Edge Computing', 'AI Analyti
 technologies: ['GPS', 'Cellular', 'Satellite', 'OBD-II', 'Telematics']
   },
     {
-    title: 'Environmental Monitoring', origin/cursor/analyze-improve-and-deploy-application-1247
+    title: 'Environmental Monitoring', origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'IoT-based environmental monitoring for air quality, water quality, and climate data collection.',
       icon: '🌍',
       price: 'Starting at $3,000/month',;
@@ -99,7 +96,7 @@ technologies: ['GPS', 'Cellular', 'Satellite', 'OBD-II', 'Telematics']
 technologies: ['LoRaWAN', 'NB-IoT', 'Satellite', 'Edge Computing', 'AI Analytics']
   },
     {
-    title: 'Retail IoT Solutions', origin/cursor/analyze-improve-and-deploy-application-1247
+    title: 'Retail IoT Solutions', origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'Smart retail solutions including inventory management, customer analytics, and automated checkout.',
       icon: '🛒',
       price: 'Starting at $4,000/month',;
@@ -110,7 +107,7 @@ technologies: ['LoRaWAN', 'NB-IoT', 'Satellite', 'Edge Computing', 'AI Analytics
 technologies: ['RFID', 'Computer Vision', 'Beacons', 'Edge Computing', 'AI Analytics']
   },
     {
-    title: 'Energy Management IoT', origin/cursor/analyze-improve-and-deploy-application-1247
+    title: 'Energy Management IoT', origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'Smart energy management solutions for buildings, grids, and renewable energy systems.',
       icon: '⚡',
       price: 'Starting at $3,500/month',;
@@ -121,7 +118,7 @@ technologies: ['RFID', 'Computer Vision', 'Beacons', 'Edge Computing', 'AI Analy
 technologies: ['Modbus', 'BACnet', 'LoRaWAN', 'Edge Computing', 'AI Optimization']
   },
     {
-    title: 'IoT Security Solutions', origin/cursor/analyze-improve-and-deploy-application-1247
+    title: 'IoT Security Solutions', origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'Comprehensive IoT security including device authentication, data encryption, and threat monitoring.',
       icon: '🔒',
       price: 'Starting at $2,800/month',;
@@ -129,7 +126,7 @@ technologies: ['Modbus', 'BACnet', 'LoRaWAN', 'Edge Computing', 'AI Optimization
       benefits: ['Protect IoT devices', 'Ensure data privacy', 'Meet compliance requirements'],
       marketPrice: '$5,000-20,000/month',;
       category: 'IoT Security',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
       description: 'Advanced analytics platform for IoT data processing, visualization, and insights generation.',
       icon: '📊',
       price: 'Starting at $4,500/month',;
@@ -138,3 +135,4 @@ technologies: ['Modbus', 'BACnet', 'LoRaWAN', 'Edge Computing', 'AI Optimization
       marketPrice: '$8,000-35,000/month',;
       category: 'Analytics',
  origin/cursor/analyze-improve-and-deploy-application-1247
+;

@@ -1,7 +1,5 @@
 import React from 'react'
-import { Helmet } from 'react-helmet-async'
-import { Link } from 'react-router-dom'
- origin/cursor/analyze-improve-and-deploy-application-1247
+import { Helmet , Link  } from "react-helmet-async";origin/cursor/analyze-improve-and-deploy-application-1247;
     {
       icon: Brain,
       title: 'AI-Powered Intelligence',
@@ -18,12 +16,13 @@ import { Link } from 'react-router-dom'
     {icon: TrendingUp,
       title: 'Growth Optimization',
 description: 'Optimize your business growth with data-driven strategies.',
- origin/cursor/analyze-improve-and-deploy-application-1247
+ origin/cursor/analyze-improve-and-deploy-application-1247;
 const benefits = [
 ];
     'Increase efficiency by up to 50%',
     'Reduce costs by 30% with automation',
     'Improve decision-making with AI insights',
     'Scale operations without proportional staff increases',
-import { ArrowRight } from 'lucide-react' origin/cursor/analyze-improve-and-deploy-application-0f1c
+import { ArrowRight } from 'lucide-react' origin/cursor/analyze-improve-and-deploy-application-0f1c;
  origin/cursor/analyze-improve-and-deploy-application-1247
+;
