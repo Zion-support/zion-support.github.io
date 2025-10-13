@@ -5,8 +5,6 @@ interface AnalyticsContextType {
   trackPageView: (pageName: string) => void;
   setUser: (userId: string, properties?: Record<string, any>) => void;
   isEnabled: boolean;
-  isEnabled: boolean;
-  isEnabled: boolean;
 }
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(undefined);
 export const AnalyticsProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {

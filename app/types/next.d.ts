@@ -5,6 +5,7 @@ declare module 'next' {
   }
   interface NextConfig {
     // Add any Next.js specific types here
+    [key: string]: any;
   }
 }
 // Export a utility function
