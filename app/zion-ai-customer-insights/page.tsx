@@ -1,89 +1,90 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mic, Brain, Zap, CheckCircle, Star, Volume2, Headphones, MessageSquare, Clock } from "lucide-react";
+import { ArrowRight, Users, BarChart3, Brain, Target, TrendingUp, CheckCircle, Star, MessageSquare, Heart, Zap } from "lucide-react";
 
-export default function AIVoiceAssistant() {
+export default function ZionAICustomerInsights() {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP understands context and intent with 98% accuracy",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Sentiment Analysis",
+      description: "AI analyzes customer feedback to understand emotions and satisfaction levels",
+      icon: <Heart className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-language Support",
-      description: "Speak in 50+ languages with real-time translation",
-      icon: <Volume2 className="w-6 h-6" />,
+      title: "Behavioral Analytics",
+      description: "Track customer journey patterns and identify key touchpoints",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Voice Recognition",
-      description: "Crystal clear voice recognition with noise cancellation",
-      icon: <Mic className="w-6 h-6" />,
+      title: "Predictive Modeling",
+      description: "Predict customer churn, lifetime value, and purchase likelihood",
+      icon: <Brain className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Responses",
-      description: "Contextual responses that learn from your preferences",
-      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Real-time Dashboards",
+      description: "Monitor customer insights with live, interactive dashboards",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Task Automation",
-      description: "Execute complex tasks through voice commands",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Segmentation Engine",
+      description: "Automatically segment customers based on behavior and preferences",
+      icon: <Target className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "24/7 Availability",
-      description: "Always ready to assist, never takes a break",
-      icon: <Clock className="w-6 h-6" />,
+      title: "Feedback Processing",
+      description: "Process and analyze customer feedback from multiple channels",
+      icon: <MessageSquare className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Personal",
-      price: "$29",
+      name: "Starter",
+      price: "$39",
       period: "/month",
-      description: "Perfect for individuals",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 interactions/month",
-        "Basic voice recognition",
+        "Up to 1,000 customers",
+        "Basic sentiment analysis",
         "Email support",
-        "5 languages",
-        "Standard responses"
+        "Standard dashboards",
+        "Monthly reports"
       ],
       popular: false
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$99",
       period: "/month",
-      description: "Most popular for businesses",
+      description: "Most popular for growing companies",
       features: [
-        "Up to 10,000 interactions/month",
+        "Up to 10,000 customers",
         "Advanced AI features",
         "Priority support",
-        "50+ languages",
-        "Custom voice training",
-        "API access"
+        "Real-time dashboards",
+        "Predictive modeling",
+        "Custom segments"
       ],
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$299",
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited interactions",
+        "Unlimited customers",
         "All AI features",
         "24/7 support",
         "Custom integrations",
-        "White-label options",
-        "Advanced analytics"
+        "Advanced analytics",
+        "API access",
+        "White-label options"
       ],
       popular: false
     }
@@ -91,51 +92,51 @@ export default function AIVoiceAssistant() {
 
   const benefits = [
     {
-      title: "Save 15+ Hours Weekly",
-      description: "Voice commands eliminate manual tasks and typing",
-      icon: <Clock className="w-6 h-6" />,
+      title: "Increase Retention by 40%",
+      description: "Identify at-risk customers and take proactive action",
+      icon: <Users className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Increase Productivity by 40%",
-      description: "Hands-free operation boosts efficiency",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Boost Revenue by 25%",
+      description: "Target the right customers with personalized offers",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "98% Accuracy Rate",
-      description: "Advanced AI ensures precise understanding",
-      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Reduce Churn by 60%",
+      description: "Predict and prevent customer churn before it happens",
+      icon: <Target className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Seamless Integration",
-      description: "Works with all your existing tools and systems",
-      icon: <Headphones className="w-6 h-6" />,
+      title: "Save 15+ Hours Weekly",
+      description: "Automated insights eliminate manual analysis",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "Tech Startup",
-      role: "CEO",
-      content: "Zion AI Voice Assistant has transformed how I work. I can manage my entire day through voice commands while staying focused on important tasks.",
-      rating: 5
-    },
-    {
-      name: "Maria Rodriguez",
-      company: "Consulting Firm",
-      role: "Operations Manager",
-      content: "The multi-language support is incredible. I can communicate with international clients seamlessly in their native languages.",
-      rating: 5
-    },
-    {
-      name: "David Kim",
+      name: "Rachel Thompson",
       company: "E-commerce Platform",
-      role: "CTO",
-      content: "The task automation features are game-changing. I can schedule meetings, send emails, and manage projects all through voice commands.",
+      role: "Customer Success Manager",
+      content: "Zion AI Customer Insights helped us identify why customers were churning. We've reduced churn by 60% in just 3 months.",
+      rating: 5
+    },
+    {
+      name: "David Park",
+      company: "SaaS Startup",
+      role: "VP of Marketing",
+      content: "The predictive modeling is incredibly accurate. We can now target customers with personalized offers and see immediate results.",
+      rating: 5
+    },
+    {
+      name: "Lisa Chen",
+      company: "Retail Chain",
+      role: "Customer Experience Director",
+      content: "The sentiment analysis gives us insights we never had before. We can now address customer concerns proactively.",
       rating: 5
     }
   ];
@@ -143,14 +144,14 @@ export default function AIVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Intelligent Voice AI | Zion Tech Group</title>
+        <title>Zion AI Customer Insights - AI-Powered Customer Analytics | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionize productivity with AI-powered voice assistant. 98% accuracy, 50+ languages, task automation. Save 15+ hours weekly. Starting at $29/month."
+          content="Transform customer data into actionable insights with AI-powered analytics. Increase retention by 40%, boost revenue by 25%, and reduce churn by 60%. Starting at $39/month."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, natural language processing, voice recognition, task automation, voice commands, productivity AI"
+          content="customer insights, customer analytics, sentiment analysis, behavioral analytics, predictive modeling, customer segmentation, churn prediction, customer lifetime value"
         />
       </Helmet>
 
@@ -164,20 +165,20 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Voice Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Customer Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
-              AI Voice
+              Zion AI Customer
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Assistant
+                {" "}Insights
               </span>
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Revolutionize productivity with AI-powered voice assistant. 98% accuracy, 50+ languages, 
-              and intelligent task automation. Save 15+ hours weekly with hands-free operation.
+              Transform customer data into actionable insights with AI-powered analytics. 
+              Increase retention by 40%, boost revenue by 25%, and reduce churn by 60%.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -199,16 +200,16 @@ export default function AIVoiceAssistant() {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">98%</div>
-                <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">40%</div>
+                <div className="text-gray-300 text-sm">Retention Increase</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Languages</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">25%</div>
+                <div className="text-gray-300 text-sm">Revenue Boost</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">40%</div>
-                <div className="text-gray-300 text-sm">Productivity Boost</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">60%</div>
+                <div className="text-gray-300 text-sm">Churn Reduction</div>
               </div>
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-400 mb-2">15+</div>
@@ -228,7 +229,7 @@ export default function AIVoiceAssistant() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need for intelligent voice interaction
+                Everything you need to understand and engage your customers better
               </p>
             </div>
             
@@ -265,11 +266,11 @@ export default function AIVoiceAssistant() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Why Choose AI Voice Assistant?
+                  Proven Results
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the power of intelligent voice interaction
+                See the measurable impact of AI-powered customer insights
               </p>
             </div>
             
@@ -306,7 +307,7 @@ export default function AIVoiceAssistant() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice AI needs
+                Choose the plan that fits your customer base and needs
               </p>
             </div>
             
@@ -366,11 +367,11 @@ export default function AIVoiceAssistant() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Trusted by Professionals
+                  Trusted by Customer Success Teams
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Voice Assistant
+                See what our customers say about Zion AI Customer Insights
               </p>
             </div>
             
@@ -401,10 +402,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Productivity?
+                Ready to Understand Your Customers Better?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of professionals already using AI Voice Assistant to work smarter and faster.
+                Join thousands of businesses already using AI to gain deep customer insights and drive growth.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

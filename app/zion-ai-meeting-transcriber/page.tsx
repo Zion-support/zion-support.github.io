@@ -1,59 +1,59 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mic, Brain, Zap, CheckCircle, Star, Volume2, Headphones, MessageSquare, Clock } from "lucide-react";
+import { ArrowRight, Mic, FileText, Clock, Users, CheckCircle, Star, Zap, Brain, Shield, Globe } from "lucide-react";
 
-export default function AIVoiceAssistant() {
+export default function ZionAIMeetingTranscriber() {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP understands context and intent with 98% accuracy",
-      icon: <Brain className="w-6 h-6" />,
+      title: "Real-time Transcription",
+      description: "Convert speech to text instantly with 99.5% accuracy",
+      icon: <Mic className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
       title: "Multi-language Support",
-      description: "Speak in 50+ languages with real-time translation",
-      icon: <Volume2 className="w-6 h-6" />,
+      description: "Supports 50+ languages with automatic detection",
+      icon: <Globe className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Voice Recognition",
-      description: "Crystal clear voice recognition with noise cancellation",
-      icon: <Mic className="w-6 h-6" />,
+      title: "Speaker Identification",
+      description: "Automatically identify and label different speakers",
+      icon: <Users className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Responses",
-      description: "Contextual responses that learn from your preferences",
-      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Action Items Extraction",
+      description: "AI-powered extraction of tasks and decisions",
+      icon: <CheckCircle className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Task Automation",
-      description: "Execute complex tasks through voice commands",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Meeting Summaries",
+      description: "Generate concise summaries with key points",
+      icon: <FileText className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "24/7 Availability",
-      description: "Always ready to assist, never takes a break",
-      icon: <Clock className="w-6 h-6" />,
+      title: "Integration Ready",
+      description: "Works with Zoom, Teams, Google Meet, and more",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Personal",
+      name: "Starter",
       price: "$29",
       period: "/month",
-      description: "Perfect for individuals",
+      description: "Perfect for small teams",
       features: [
-        "Up to 1,000 interactions/month",
-        "Basic voice recognition",
+        "Up to 10 hours/month",
+        "Basic transcription",
+        "2 languages",
         "Email support",
-        "5 languages",
-        "Standard responses"
+        "Standard accuracy"
       ],
       popular: false
     },
@@ -61,14 +61,14 @@ export default function AIVoiceAssistant() {
       name: "Professional",
       price: "$79",
       period: "/month",
-      description: "Most popular for businesses",
+      description: "Most popular for growing teams",
       features: [
-        "Up to 10,000 interactions/month",
+        "Up to 50 hours/month",
         "Advanced AI features",
+        "10 languages",
         "Priority support",
-        "50+ languages",
-        "Custom voice training",
-        "API access"
+        "Speaker identification",
+        "Action items extraction"
       ],
       popular: true
     },
@@ -78,64 +78,38 @@ export default function AIVoiceAssistant() {
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited interactions",
+        "Unlimited hours",
         "All AI features",
+        "50+ languages",
         "24/7 support",
         "Custom integrations",
-        "White-label options",
-        "Advanced analytics"
+        "Advanced analytics",
+        "API access"
       ],
       popular: false
     }
   ];
 
-  const benefits = [
-    {
-      title: "Save 15+ Hours Weekly",
-      description: "Voice commands eliminate manual tasks and typing",
-      icon: <Clock className="w-6 h-6" />,
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      title: "Increase Productivity by 40%",
-      description: "Hands-free operation boosts efficiency",
-      icon: <Zap className="w-6 h-6" />,
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      title: "98% Accuracy Rate",
-      description: "Advanced AI ensures precise understanding",
-      icon: <CheckCircle className="w-6 h-6" />,
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      title: "Seamless Integration",
-      description: "Works with all your existing tools and systems",
-      icon: <Headphones className="w-6 h-6" />,
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "Tech Startup",
+      name: "Sarah Chen",
+      company: "TechStart Inc.",
       role: "CEO",
-      content: "Zion AI Voice Assistant has transformed how I work. I can manage my entire day through voice commands while staying focused on important tasks.",
+      content: "Zion AI Meeting Transcriber has revolutionized our team meetings. We save 2 hours per week on note-taking and never miss important action items.",
       rating: 5
     },
     {
-      name: "Maria Rodriguez",
-      company: "Consulting Firm",
-      role: "Operations Manager",
-      content: "The multi-language support is incredible. I can communicate with international clients seamlessly in their native languages.",
+      name: "Michael Rodriguez",
+      company: "Consulting Group",
+      role: "Project Manager",
+      content: "The speaker identification feature is incredibly accurate. It's like having a professional secretary in every meeting.",
       rating: 5
     },
     {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "CTO",
-      content: "The task automation features are game-changing. I can schedule meetings, send emails, and manage projects all through voice commands.",
+      name: "Emily Johnson",
+      company: "Marketing Agency",
+      role: "Director",
+      content: "Integration with our existing tools was seamless. The AI summaries help us stay focused on what matters most.",
       rating: 5
     }
   ];
@@ -143,14 +117,14 @@ export default function AIVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Intelligent Voice AI | Zion Tech Group</title>
+        <title>Zion AI Meeting Transcriber - Real-time Meeting Transcription | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionize productivity with AI-powered voice assistant. 98% accuracy, 50+ languages, task automation. Save 15+ hours weekly. Starting at $29/month."
+          content="Transform your meetings with AI-powered real-time transcription. 99.5% accuracy, multi-language support, speaker identification, and automatic action item extraction. Starting at $29/month."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, natural language processing, voice recognition, task automation, voice commands, productivity AI"
+          content="meeting transcription, AI transcription, real-time transcription, meeting notes, speaker identification, action items, meeting summaries, Zoom transcription, Teams transcription"
         />
       </Helmet>
 
@@ -164,20 +138,20 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Voice Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Meeting Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
-              AI Voice
+              Zion AI Meeting
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Assistant
+                {" "}Transcriber
               </span>
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Revolutionize productivity with AI-powered voice assistant. 98% accuracy, 50+ languages, 
-              and intelligent task automation. Save 15+ hours weekly with hands-free operation.
+              Transform your meetings with AI-powered real-time transcription. Never miss important details again with 99.5% accuracy, 
+              speaker identification, and automatic action item extraction.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -199,7 +173,7 @@ export default function AIVoiceAssistant() {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">98%</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">99.5%</div>
                 <div className="text-gray-300 text-sm">Accuracy Rate</div>
               </div>
               <div className="text-center">
@@ -207,12 +181,12 @@ export default function AIVoiceAssistant() {
                 <div className="text-gray-300 text-sm">Languages</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">40%</div>
-                <div className="text-gray-300 text-sm">Productivity Boost</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">2M+</div>
+                <div className="text-gray-300 text-sm">Hours Transcribed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">15+</div>
-                <div className="text-gray-300 text-sm">Hours Saved Weekly</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">10K+</div>
+                <div className="text-gray-300 text-sm">Happy Users</div>
               </div>
             </div>
           </div>
@@ -228,7 +202,7 @@ export default function AIVoiceAssistant() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need for intelligent voice interaction
+                Everything you need to transform your meetings into actionable insights
               </p>
             </div>
             
@@ -259,43 +233,6 @@ export default function AIVoiceAssistant() {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10 bg-gradient-to-r from-slate-800/50 to-purple-800/50">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Why Choose AI Voice Assistant?
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the power of intelligent voice interaction
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden text-center"
-                >
-                  <div
-                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${benefit.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                  >
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-gray-300 leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
         {/* Pricing Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
@@ -306,7 +243,7 @@ export default function AIVoiceAssistant() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice AI needs
+                Choose the plan that fits your team size and needs
               </p>
             </div>
             
@@ -366,11 +303,11 @@ export default function AIVoiceAssistant() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Trusted by Professionals
+                  Trusted by Teams Worldwide
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Voice Assistant
+                See what our customers say about Zion AI Meeting Transcriber
               </p>
             </div>
             
@@ -401,10 +338,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Productivity?
+                Ready to Transform Your Meetings?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of professionals already using AI Voice Assistant to work smarter and faster.
+                Join thousands of teams already using Zion AI Meeting Transcriber to make their meetings more productive and efficient.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

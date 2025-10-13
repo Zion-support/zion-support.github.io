@@ -111,6 +111,33 @@ export default function Services() {
       color: "from-amber-500 to-yellow-500",
       price: "Starting at $349/month",
       features: ["Risk Assessment", "Fraud Detection", "Investment Analysis", "Compliance Reporting"]
+    },
+    {
+      title: "AI Voice Assistant",
+      description: "Revolutionize productivity with AI-powered voice assistant. 98% accuracy, 50+ languages, and intelligent task automation.",
+      icon: <Brain className="w-8 h-8" />,
+      path: "/ai-voice-assistant",
+      color: "from-cyan-500 to-blue-500",
+      price: "Starting at $29/month",
+      features: ["Natural Language Processing", "Multi-language Support", "Task Automation", "24/7 Availability"]
+    },
+    {
+      title: "AI Predictive Maintenance",
+      description: "Revolutionize maintenance with AI-powered predictive analytics. Reduce downtime by 60%, cut costs by 40%.",
+      icon: <Shield className="w-8 h-8" />,
+      path: "/ai-predictive-maintenance",
+      color: "from-red-500 to-orange-500",
+      price: "Starting at $99/month",
+      features: ["Machine Learning Models", "Real-time Monitoring", "Failure Prediction", "Cost Optimization"]
+    },
+    {
+      title: "Edge Computing Solutions",
+      description: "Revolutionize infrastructure with edge computing. Reduce latency by 90%, cut bandwidth costs by 60%.",
+      icon: <Wifi className="w-8 h-8" />,
+      path: "/edge-computing-solutions",
+      color: "from-purple-500 to-indigo-500",
+      price: "Starting at $199/month",
+      features: ["Ultra-Low Latency", "Distributed Processing", "IoT Integration", "Global Deployment"]
     }
   ];
 

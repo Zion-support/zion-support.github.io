@@ -1,59 +1,59 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Mic, Brain, Zap, CheckCircle, Star, Volume2, Headphones, MessageSquare, Clock } from "lucide-react";
+import { ArrowRight, Package, BarChart3, Brain, AlertTriangle, CheckCircle, Star, Zap, TrendingUp, ShoppingCart } from "lucide-react";
 
-export default function AIVoiceAssistant() {
+export default function ZionAIInventoryManager() {
   const features = [
     {
-      title: "Natural Language Processing",
-      description: "Advanced NLP understands context and intent with 98% accuracy",
+      title: "AI Demand Forecasting",
+      description: "Predict demand with 95% accuracy using machine learning algorithms",
       icon: <Brain className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Multi-language Support",
-      description: "Speak in 50+ languages with real-time translation",
-      icon: <Volume2 className="w-6 h-6" />,
+      title: "Automated Reordering",
+      description: "Smart reorder points prevent stockouts and overstocking",
+      icon: <Package className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Voice Recognition",
-      description: "Crystal clear voice recognition with noise cancellation",
-      icon: <Mic className="w-6 h-6" />,
+      title: "Real-time Tracking",
+      description: "Monitor inventory levels across multiple locations in real-time",
+      icon: <BarChart3 className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Smart Responses",
-      description: "Contextual responses that learn from your preferences",
-      icon: <MessageSquare className="w-6 h-6" />,
+      title: "Low Stock Alerts",
+      description: "Get instant notifications when inventory levels are low",
+      icon: <AlertTriangle className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     },
     {
-      title: "Task Automation",
-      description: "Execute complex tasks through voice commands",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Analytics Dashboard",
+      description: "Comprehensive insights into inventory performance and trends",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-indigo-500 to-purple-500"
     },
     {
-      title: "24/7 Availability",
-      description: "Always ready to assist, never takes a break",
-      icon: <Clock className="w-6 h-6" />,
+      title: "Multi-location Support",
+      description: "Manage inventory across warehouses, stores, and online channels",
+      icon: <ShoppingCart className="w-6 h-6" />,
       color: "from-cyan-500 to-blue-500"
     }
   ];
 
   const pricingPlans = [
     {
-      name: "Personal",
+      name: "Starter",
       price: "$29",
       period: "/month",
-      description: "Perfect for individuals",
+      description: "Perfect for small businesses",
       features: [
-        "Up to 1,000 interactions/month",
-        "Basic voice recognition",
+        "Up to 1,000 products",
+        "Basic forecasting",
         "Email support",
-        "5 languages",
-        "Standard responses"
+        "Standard reports",
+        "1 location"
       ],
       popular: false
     },
@@ -61,13 +61,13 @@ export default function AIVoiceAssistant() {
       name: "Professional",
       price: "$79",
       period: "/month",
-      description: "Most popular for businesses",
+      description: "Most popular for growing businesses",
       features: [
-        "Up to 10,000 interactions/month",
+        "Up to 10,000 products",
         "Advanced AI features",
         "Priority support",
-        "50+ languages",
-        "Custom voice training",
+        "Real-time alerts",
+        "Multi-location support",
         "API access"
       ],
       popular: true
@@ -78,12 +78,12 @@ export default function AIVoiceAssistant() {
       period: "/month",
       description: "For large organizations",
       features: [
-        "Unlimited interactions",
+        "Unlimited products",
         "All AI features",
         "24/7 support",
         "Custom integrations",
-        "White-label options",
-        "Advanced analytics"
+        "Advanced analytics",
+        "White-label options"
       ],
       popular: false
     }
@@ -91,51 +91,51 @@ export default function AIVoiceAssistant() {
 
   const benefits = [
     {
-      title: "Save 15+ Hours Weekly",
-      description: "Voice commands eliminate manual tasks and typing",
-      icon: <Clock className="w-6 h-6" />,
+      title: "Reduce Stockouts by 80%",
+      description: "AI-powered forecasting prevents inventory shortages",
+      icon: <Package className="w-6 h-6" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Increase Productivity by 40%",
-      description: "Hands-free operation boosts efficiency",
-      icon: <Zap className="w-6 h-6" />,
+      title: "Cut Costs by 30%",
+      description: "Optimize inventory levels and reduce carrying costs",
+      icon: <TrendingUp className="w-6 h-6" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "98% Accuracy Rate",
-      description: "Advanced AI ensures precise understanding",
-      icon: <CheckCircle className="w-6 h-6" />,
+      title: "Save 20+ Hours Weekly",
+      description: "Automated inventory management eliminates manual work",
+      icon: <Zap className="w-6 h-6" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Seamless Integration",
-      description: "Works with all your existing tools and systems",
-      icon: <Headphones className="w-6 h-6" />,
+      title: "Increase Accuracy by 95%",
+      description: "AI-powered tracking ensures precise inventory counts",
+      icon: <CheckCircle className="w-6 h-6" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const testimonials = [
     {
-      name: "Alex Thompson",
-      company: "Tech Startup",
-      role: "CEO",
-      content: "Zion AI Voice Assistant has transformed how I work. I can manage my entire day through voice commands while staying focused on important tasks.",
-      rating: 5
-    },
-    {
-      name: "Maria Rodriguez",
-      company: "Consulting Firm",
+      name: "Michael Rodriguez",
+      company: "Retail Chain",
       role: "Operations Manager",
-      content: "The multi-language support is incredible. I can communicate with international clients seamlessly in their native languages.",
+      content: "Zion AI Inventory Manager has revolutionized our stock management. We've reduced stockouts by 80% and cut costs by 30%.",
       rating: 5
     },
     {
-      name: "David Kim",
-      company: "E-commerce Platform",
-      role: "CTO",
-      content: "The task automation features are game-changing. I can schedule meetings, send emails, and manage projects all through voice commands.",
+      name: "Sarah Johnson",
+      company: "E-commerce Store",
+      role: "Inventory Coordinator",
+      content: "The AI forecasting is incredibly accurate. We never run out of popular items anymore and our carrying costs have dropped significantly.",
+      rating: 5
+    },
+    {
+      name: "David Chen",
+      company: "Wholesale Distributor",
+      role: "Supply Chain Director",
+      content: "Managing inventory across multiple locations used to be a nightmare. Now it's automated and we have complete visibility.",
       rating: 5
     }
   ];
@@ -143,14 +143,14 @@ export default function AIVoiceAssistant() {
   return (
     <>
       <Helmet>
-        <title>AI Voice Assistant - Intelligent Voice AI | Zion Tech Group</title>
+        <title>Zion AI Inventory Manager - Smart Inventory Management | Zion Tech Group</title>
         <meta
           name="description"
-          content="Revolutionize productivity with AI-powered voice assistant. 98% accuracy, 50+ languages, task automation. Save 15+ hours weekly. Starting at $29/month."
+          content="Revolutionize inventory management with AI-powered forecasting, automated reordering, and real-time tracking. Reduce stockouts by 80% and cut costs by 30%. Starting at $29/month."
         />
         <meta
           name="keywords"
-          content="AI voice assistant, voice AI, natural language processing, voice recognition, task automation, voice commands, productivity AI"
+          content="inventory management, AI forecasting, stock management, automated reordering, inventory tracking, demand forecasting, stock optimization, warehouse management"
         />
       </Helmet>
 
@@ -164,20 +164,20 @@ export default function AIVoiceAssistant() {
           <div className="max-w-7xl mx-auto text-center">
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
               <Brain className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">AI-Powered Voice Intelligence</span>
+              <span className="text-cyan-400 text-sm font-medium">AI-Powered Inventory Intelligence</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 relative">
-              AI Voice
+              Zion AI Inventory
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
-                {" "}Assistant
+                {" "}Manager
               </span>
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 rounded-lg blur opacity-30 animate-pulse"></div>
             </h1>
             
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Revolutionize productivity with AI-powered voice assistant. 98% accuracy, 50+ languages, 
-              and intelligent task automation. Save 15+ hours weekly with hands-free operation.
+              Revolutionize inventory management with AI-powered forecasting, automated reordering, 
+              and real-time tracking. Reduce stockouts by 80% and cut costs by 30%.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -199,19 +199,19 @@ export default function AIVoiceAssistant() {
             {/* Key Stats */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">98%</div>
-                <div className="text-gray-300 text-sm">Accuracy Rate</div>
+                <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
+                <div className="text-gray-300 text-sm">Stockout Reduction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">50+</div>
-                <div className="text-gray-300 text-sm">Languages</div>
+                <div className="text-3xl font-bold text-purple-400 mb-2">30%</div>
+                <div className="text-gray-300 text-sm">Cost Reduction</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-pink-400 mb-2">40%</div>
-                <div className="text-gray-300 text-sm">Productivity Boost</div>
+                <div className="text-3xl font-bold text-pink-400 mb-2">95%</div>
+                <div className="text-gray-300 text-sm">Forecasting Accuracy</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">15+</div>
+                <div className="text-3xl font-bold text-green-400 mb-2">20+</div>
                 <div className="text-gray-300 text-sm">Hours Saved Weekly</div>
               </div>
             </div>
@@ -228,7 +228,7 @@ export default function AIVoiceAssistant() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need for intelligent voice interaction
+                Everything you need to optimize your inventory management
               </p>
             </div>
             
@@ -265,11 +265,11 @@ export default function AIVoiceAssistant() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Why Choose AI Voice Assistant?
+                  Proven Results
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Experience the power of intelligent voice interaction
+                See the measurable impact of AI-powered inventory management
               </p>
             </div>
             
@@ -306,7 +306,7 @@ export default function AIVoiceAssistant() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your voice AI needs
+                Choose the plan that fits your inventory needs
               </p>
             </div>
             
@@ -366,11 +366,11 @@ export default function AIVoiceAssistant() {
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                  Trusted by Professionals
+                  Trusted by Inventory Managers
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about AI Voice Assistant
+                See what our customers say about Zion AI Inventory Manager
               </p>
             </div>
             
@@ -401,10 +401,10 @@ export default function AIVoiceAssistant() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Transform Your Productivity?
+                Ready to Optimize Your Inventory?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Join thousands of professionals already using AI Voice Assistant to work smarter and faster.
+                Join thousands of businesses already using AI to streamline inventory management and reduce costs.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
