@@ -501,7 +501,6 @@ function App() {
         </HelmetProvider>
       </EnhancedErrorBoundary>
     </ErrorHandler>
-    </GlobalErrorBoundary>
   );
 }
 

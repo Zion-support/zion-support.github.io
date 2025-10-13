@@ -31,9 +31,6 @@ export default function CloudServices() {
     }
   ];
 
-<<<<<<< HEAD
-export default function GDataAnalyticsZionTechGroupPage() {
-=======
   const benefits = [
     { icon: <TrendingUp className="w-6 h-6" />, title: 'Cost Optimization', description: 'Reduce IT costs by up to 40% with efficient cloud solutions' },
     { icon: <Zap className="w-6 h-6" />, title: 'Scalability', description: 'Scale resources instantly based on demand' },
@@ -41,7 +38,6 @@ export default function GDataAnalyticsZionTechGroupPage() {
     { icon: <Clock className="w-6 h-6" />, title: '24/7 Support', description: 'Round-the-clock technical support and monitoring' }
   ];
 
->>>>>>> cursor/fix-errors-and-merge-to-main-6b10
   return (
     <>
       <Helmet>

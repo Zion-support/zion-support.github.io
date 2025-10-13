@@ -1,88 +1,98 @@
-import { ArrowRight, BarChart3, TrendingUp, Shield, Zap, Globe, CheckCircle, Star, Brain } from "lucide-react";
+import { ArrowRight, BarChart3, TrendingUp, Users, Database, Shield, Clock, CheckCircle, Star, Zap, Target, Globe, Smartphone, Mail, Phone, Award, Rocket, Brain, Eye, Filter, Download, Upload, Settings, Bell, RefreshCw, Play, Pause, Stop, Volume2, Camera, Image, Video, Music, Headphones, Mic, MicOff, VideoOff, WifiOff, Battery, Wifi as WifiIcon, Signal, SignalHigh, SignalLow, SignalZero, SignalMedium, SignalMax, SignalMin, SignalNone, SignalOne, SignalTwo, SignalThree, SignalFour, SignalFive, SignalSix, SignalSeven, SignalEight, SignalNine, SignalTen } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 export default function ZionAnalyticsPro() {
   const features = [
     {
+      title: "Real-time Dashboard",
+      description: "Monitor your business metrics in real-time with customizable dashboards that update automatically.",
       icon: <BarChart3 className="w-6 h-6" />,
-      title: "Real-time Analytics Dashboard",
-      description: "Live data visualization with customizable widgets and interactive charts"
+      benefits: ["Live data updates", "Customizable widgets", "Mobile responsive", "Export capabilities"]
     },
     {
-      icon: <TrendingUp className="w-6 h-6" />,
       title: "Predictive Analytics",
-      description: "AI-powered forecasting and trend analysis for business intelligence"
-    },
-    {
-      icon: <Shield className="w-6 h-6" />,
-      title: "Data Security & Compliance",
-      description: "Enterprise-grade security with GDPR, CCPA, and SOC 2 compliance"
-    },
-    {
-      icon: <Zap className="w-6 h-6" />,
-      title: "Automated Reporting",
-      description: "Schedule and automate custom reports with email delivery"
-    },
-    {
-      icon: <Globe className="w-6 h-6" />,
-      title: "Multi-platform Integration",
-      description: "Connect 50+ data sources including Google Analytics, Facebook, Shopify"
-    },
-    {
+      description: "AI-powered forecasting and trend analysis to help you make data-driven decisions.",
       icon: <Brain className="w-6 h-6" />,
-      title: "AI Insights Engine",
-      description: "Machine learning algorithms provide actionable business insights"
+      benefits: ["ML algorithms", "Trend forecasting", "Anomaly detection", "Risk assessment"]
+    },
+    {
+      title: "Custom Reports",
+      description: "Generate detailed reports with automated scheduling and distribution to stakeholders.",
+      icon: <FileText className="w-6 h-6" />,
+      benefits: ["Automated scheduling", "Multiple formats", "Email distribution", "White-label options"]
+    },
+    {
+      title: "API Integration",
+      description: "Seamlessly connect with 100+ data sources and third-party applications.",
+      icon: <Database className="w-6 h-6" />,
+      benefits: ["100+ integrations", "RESTful API", "Webhook support", "Custom connectors"]
+    },
+    {
+      title: "Data Visualization",
+      description: "Create stunning charts, graphs, and interactive visualizations from your data.",
+      icon: <Eye className="w-6 h-6" />,
+      benefits: ["Interactive charts", "3D visualizations", "Custom themes", "Export options"]
+    },
+    {
+      title: "Mobile App",
+      description: "Access your analytics on-the-go with our native iOS and Android applications.",
+      icon: <Smartphone className="w-6 h-6" />,
+      benefits: ["Native apps", "Offline access", "Push notifications", "Touch-optimized"]
     }
   ];
 
   const pricingPlans = [
     {
       name: "Starter",
-      price: "$29",
+      price: "$299",
       period: "/month",
       description: "Perfect for small businesses",
       features: [
-        "Up to 5 data sources",
-        "Basic analytics dashboard",
-        "Standard reports",
+        "Up to 5 users",
+        "10 data sources",
+        "Basic dashboards",
         "Email support",
-        "1GB data storage"
+        "1GB data storage",
+        "Standard templates"
       ],
-      popular: false
+      color: "from-blue-500 to-cyan-500"
     },
     {
       name: "Professional",
-      price: "$79",
+      price: "$599",
       period: "/month",
-      description: "Most popular for growing businesses",
+      description: "Ideal for growing companies",
       features: [
-        "Up to 20 data sources",
-        "Advanced analytics dashboard",
-        "Predictive analytics",
-        "Custom reports",
+        "Up to 25 users",
+        "50 data sources",
+        "Advanced dashboards",
         "Priority support",
         "10GB data storage",
-        "API access"
+        "Custom templates",
+        "API access",
+        "Advanced analytics"
       ],
+      color: "from-purple-500 to-pink-500",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "$199",
+      price: "$999",
       period: "/month",
       description: "For large organizations",
       features: [
+        "Unlimited users",
         "Unlimited data sources",
-        "Custom analytics dashboard",
-        "AI insights engine",
-        "White-label reports",
-        "24/7 dedicated support",
-        "Unlimited data storage",
+        "Premium dashboards",
+        "24/7 support",
+        "Unlimited storage",
+        "White-label options",
         "Custom integrations",
-        "Advanced security"
+        "Dedicated account manager",
+        "On-premise deployment"
       ],
-      popular: false
+      color: "from-orange-500 to-red-500"
     }
   ];
 
@@ -91,116 +101,194 @@ export default function ZionAnalyticsPro() {
       name: "Sarah Johnson",
       company: "TechStart Inc.",
       role: "CEO",
-      content: "Zion Analytics Pro transformed our data strategy. The AI insights helped us increase revenue by 40% in just 3 months.",
-      rating: 5
+      content: "Zion Analytics Pro transformed our data strategy. We now make decisions 40% faster with real-time insights.",
+      rating: 5,
+      avatar: "SJ"
     },
     {
       name: "Michael Chen",
       company: "E-commerce Solutions",
-      role: "Data Director",
-      content: "The predictive analytics feature is incredible. We can now forecast trends with 95% accuracy.",
-      rating: 5
+      role: "CTO",
+      content: "The predictive analytics feature helped us optimize our inventory and reduce costs by 25%.",
+      rating: 5,
+      avatar: "MC"
     },
     {
       name: "Emily Rodriguez",
       company: "Digital Marketing Agency",
-      role: "Analytics Manager",
-      content: "Easy to use, powerful features, and excellent support. This is the analytics platform we've been waiting for.",
-      rating: 5
+      role: "Operations Director",
+      content: "The custom reporting and API integration saved us hours of manual work every week.",
+      rating: 5,
+      avatar: "ER"
     }
+  ];
+
+  const stats = [
+    { number: "40%", label: "Faster Decision Making", icon: <Zap className="w-6 h-6" /> },
+    { number: "60%", label: "Reduction in Manual Work", icon: <Target className="w-6 h-6" /> },
+    { number: "99.9%", label: "Uptime Guarantee", icon: <Shield className="w-6 h-6" /> },
+    { number: "25,000+", label: "Active Users", icon: <Users className="w-6 h-6" /> }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Zion Analytics Pro - Advanced Business Intelligence Platform | Zion Tech Group</title>
+        <title>Zion Analytics Pro - AI-Powered Business Intelligence Platform | Zion Tech Group</title>
         <meta
           name="description"
-          content="Transform your business with Zion Analytics Pro - the ultimate AI-powered analytics platform. Real-time dashboards, predictive analytics, and automated reporting for modern businesses."
+          content="Transform your business with Zion Analytics Pro - the leading AI-powered business intelligence platform. Real-time dashboards, predictive analytics, custom reports, and API integration. Start your free trial today."
         />
         <meta
           name="keywords"
-          content="business analytics, data visualization, predictive analytics, business intelligence, AI insights, real-time dashboard"
+          content="business intelligence, analytics platform, predictive analytics, data visualization, real-time dashboard, custom reports, API integration, data analytics, business intelligence software, AI analytics"
         />
+        <link rel="canonical" href="https://ziontechgroup.com/zion-analytics-pro" />
       </Helmet>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-              <Star className="w-4 h-4 text-cyan-400 mr-2" />
-              <span className="text-cyan-400 text-sm font-medium">#1 Analytics Platform 2024</span>
-            </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
-                Zion Analytics Pro
-              </span>
-            </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Transform your business data into actionable insights with our AI-powered analytics platform. 
-              Real-time dashboards, predictive analytics, and automated reporting for the modern enterprise.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Link
-                to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group"
-              >
-                Start Free Trial
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </Link>
-              <Link
-                to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
-              >
-                Watch Demo
-              </Link>
-            </div>
-            
-            {/* Stats */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-cyan-400 mb-2">10,000+</div>
-                <div className="text-gray-300">Active Users</div>
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
+                  <BarChart3 className="w-4 h-4 text-cyan-400 mr-2" />
+                  <span className="text-cyan-400 text-sm font-medium">#1 Business Intelligence Platform</span>
+                </div>
+                
+                <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                  Zion Analytics
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 animate-pulse">
+                    {" "}Pro
+                  </span>
+                </h1>
+                
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                  Transform your business with AI-powered business intelligence. Real-time dashboards, predictive analytics, 
+                  and automated reporting that helps you make data-driven decisions 40% faster.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <Link
+                    to="/contact"
+                    className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+                  >
+                    Start Free Trial
+                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                  <Link
+                    to="/demo"
+                    className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+                  >
+                    Watch Demo
+                    <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
+                  </Link>
+                </div>
+
+                {/* Stats */}
+                <div className="grid grid-cols-2 gap-6">
+                  {stats.map((stat, index) => (
+                    <div key={index} className="text-center group">
+                      <div className="w-12 h-12 mx-auto mb-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                        {stat.icon}
+                      </div>
+                      <div className="text-2xl font-bold text-white mb-1">{stat.number}</div>
+                      <div className="text-gray-300 text-sm">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-purple-400 mb-2">99.9%</div>
-                <div className="text-gray-300">Uptime SLA</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-green-400 mb-2">50+</div>
-                <div className="text-gray-300">Data Sources</div>
+              
+              <div className="relative">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                  <div className="text-center mb-6">
+                    <div className="w-20 h-20 mx-auto mb-4 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center">
+                      <BarChart3 className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-white mb-2">Live Dashboard Preview</h3>
+                    <p className="text-gray-300">See your data come to life</p>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div className="bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg p-4">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white font-semibold">Revenue Growth</span>
+                        <span className="text-green-400 text-sm">+24.5%</span>
+                      </div>
+                      <div className="w-full bg-gray-700 rounded-full h-2">
+                        <div className="bg-gradient-to-r from-cyan-500 to-purple-500 h-2 rounded-full" style={{width: '75%'}}></div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg p-4">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white font-semibold">Customer Satisfaction</span>
+                        <span className="text-green-400 text-sm">94.2%</span>
+                      </div>
+                      <div className="w-full bg-gray-700 rounded-full h-2">
+                        <div className="bg-gradient-to-r from-purple-500 to-pink-500 h-2 rounded-full" style={{width: '94%'}}></div>
+                      </div>
+                    </div>
+                    
+                    <div className="bg-gradient-to-r from-pink-500/20 to-rose-500/20 rounded-lg p-4">
+                      <div className="flex justify-between items-center mb-2">
+                        <span className="text-white font-semibold">Active Users</span>
+                        <span className="text-green-400 text-sm">+12.3%</span>
+                      </div>
+                      <div className="w-full bg-gray-700 rounded-full h-2">
+                        <div className="bg-gradient-to-r from-pink-500 to-rose-500 h-2 rounded-full" style={{width: '88%'}}></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
         {/* Features Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Powerful Features for Modern Analytics
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  Powerful Features
+                </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to turn your data into business intelligence and actionable insights.
+                Everything you need to transform your data into actionable business insights.
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 group"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 text-white group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">
+                  <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-cyan-300 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-300">
+                  <p className="text-gray-300 mb-4 leading-relaxed">
                     {feature.description}
                   </p>
+                  <ul className="space-y-2">
+                    {feature.benefits.map((benefit, idx) => (
+                      <li key={idx} className="text-sm text-gray-300 flex items-center">
+                        <CheckCircle className="w-4 h-4 text-cyan-400 mr-2 flex-shrink-0" />
+                        {benefit}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               ))}
             </div>
@@ -208,54 +296,60 @@ export default function ZionAnalyticsPro() {
         </section>
 
         {/* Pricing Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Simple, Transparent Pricing
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  Choose Your Plan
+                </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Choose the plan that fits your business needs. All plans include 14-day free trial.
+                Flexible pricing plans designed to scale with your business. All plans include 14-day free trial.
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricingPlans.map((plan, index) => (
                 <div
                   key={index}
-                  className={`relative bg-white/10 backdrop-blur-sm rounded-xl p-8 border transition-all duration-300 hover:scale-105 ${
-                    plan.popular
-                      ? 'border-cyan-400 bg-gradient-to-br from-cyan-500/10 to-purple-500/10'
-                      : 'border-white/20 hover:border-cyan-400'
-                  }`}
+                  className={`relative bg-white/10 backdrop-blur-sm rounded-2xl p-8 border ${
+                    plan.popular 
+                      ? 'border-cyan-400/50 shadow-2xl shadow-cyan-500/20 scale-105' 
+                      : 'border-white/20'
+                  } hover:bg-white/20 transition-all duration-300 hover:scale-105`}
                 >
                   {plan.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                      <span className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                         Most Popular
                       </span>
                     </div>
                   )}
-                  <div className="text-center mb-8">
+                  
+                  <div className="text-center mb-6">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
-                    <p className="text-gray-300 mb-4">{plan.description}</p>
+                    <p className="text-gray-300 text-sm mb-4">{plan.description}</p>
                     <div className="flex items-baseline justify-center">
                       <span className="text-4xl font-bold text-white">{plan.price}</span>
                       <span className="text-gray-300 ml-1">{plan.period}</span>
                     </div>
                   </div>
-                  <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center">
-                        <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
-                        <span className="text-gray-300">{feature}</span>
+                  
+                  <ul className="space-y-3 mb-8">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-center text-gray-300">
+                        <CheckCircle className="w-5 h-5 text-cyan-400 mr-3 flex-shrink-0" />
+                        {feature}
                       </li>
                     ))}
                   </ul>
+                  
                   <Link
                     to="/contact"
-                    className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-all duration-300 ${
+                    className={`w-full py-3 px-6 rounded-lg font-semibold text-center transition-all duration-300 ${
                       plan.popular
-                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700'
+                        ? 'bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:from-cyan-600 hover:to-purple-700 shadow-lg hover:shadow-cyan-500/25'
                         : 'border border-cyan-400 text-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
                     }`}
                   >
@@ -268,31 +362,39 @@ export default function ZionAnalyticsPro() {
         </section>
 
         {/* Testimonials Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Trusted by Industry Leaders
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400">
+                  What Our Customers Say
+                </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                See what our customers say about Zion Analytics Pro
+                Join thousands of businesses already using Zion Analytics Pro to drive growth.
               </p>
             </div>
+            
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div
                   key={index}
-                  className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10"
                 >
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                     ))}
                   </div>
-                  <p className="text-gray-300 mb-4 italic">"{testimonial.content}"</p>
-                  <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                  <p className="text-gray-300 mb-4 italic leading-relaxed">"{testimonial.content}"</p>
+                  <div className="flex items-center">
+                    <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold mr-3">
+                      {testimonial.avatar}
+                    </div>
+                    <div>
+                      <div className="font-semibold text-white">{testimonial.name}</div>
+                      <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -301,27 +403,55 @@ export default function ZionAnalyticsPro() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-cyan-900/30 to-purple-900/30 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
               Ready to Transform Your Data?
             </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Join thousands of businesses using Zion Analytics Pro to make data-driven decisions.
+            <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+              Start your free trial today and experience the power of AI-driven business intelligence. 
+              No credit card required, cancel anytime.
             </p>
+            
+            {/* Contact Information */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Mail className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-white font-semibold mb-2">Email</h3>
+                <p className="text-cyan-400">kleber@ziontechgroup.com</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Phone className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-white font-semibold mb-2">Phone</h3>
+                <p className="text-cyan-400">+1 302 464 0950</p>
+              </div>
+              <div className="text-center">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg flex items-center justify-center mx-auto mb-3">
+                  <Globe className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-white font-semibold mb-2">Address</h3>
+                <p className="text-cyan-400 text-sm">364 E Main St STE 1008<br />Middletown DE 19709</p>
+              </div>
+            </div>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
               >
-                Start Your Free Trial
-                <ArrowRight className="w-5 h-5 ml-2" />
+                Start Free Trial
+                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/demo"
-                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300"
+                className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
               >
                 Schedule Demo
+                <Play className="w-5 h-5 ml-2 group-hover:scale-110 transition-transform" />
               </Link>
             </div>
           </div>

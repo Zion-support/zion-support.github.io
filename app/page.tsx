@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Brain, Shield, Zap, Globe, ArrowRight, Star, Users, Award, BarChart3, Cloud, Sparkles, Mail, Smartphone } from "lucide-react";
 import SEOOptimizer from "./components/SEOOptimizer";
+import FuturisticCard from "./components/FuturisticCard";
+import FuturisticButton from "./components/FuturisticButton";
 
 const HomePage = () => {
   const features = [
@@ -130,20 +132,24 @@ const HomePage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            <FuturisticButton
+              variant="neon"
+              size="lg"
+              icon="arrow"
+              href="/contact"
+              className="group"
             >
               Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/demo"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            </FuturisticButton>
+            <FuturisticButton
+              variant="secondary"
+              size="lg"
+              icon="sparkles"
+              href="/demo"
+              className="group"
             >
               Watch Demo
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
+            </FuturisticButton>
           </div>
           
           {/* Stats */}
@@ -178,26 +184,35 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={feature.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="group focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 focus:ring-offset-slate-900"
                 aria-label={`Learn more about ${feature.title}`}
               >
-                <div
-                  className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300`}
-                  aria-hidden="true"
+                <FuturisticCard
+                  variant="holographic"
+                  size="md"
+                  hover={true}
+                  animated={true}
+                  glow={true}
+                  className="h-full"
                 >
-                  {feature.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
-                  {feature.title}
-                </h3>
-                <p className="text-gray-300 text-center mb-4 leading-relaxed">
-                  {feature.description}
-                </p>
-                <div className="text-center">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400">
-                    {feature.stats}
-                  </span>
-                </div>
+                  <div
+                    className={`w-16 h-16 rounded-lg bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+                    aria-hidden="true"
+                  >
+                    {feature.icon}
+                  </div>
+                  <h3 className="text-xl font-semibold text-white mb-3 text-center group-hover:text-cyan-400 transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-gray-300 text-center mb-4 leading-relaxed">
+                    {feature.description}
+                  </p>
+                  <div className="text-center">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-cyan-400 border border-cyan-500/30">
+                      {feature.stats}
+                    </span>
+                  </div>
+                </FuturisticCard>
               </Link>
             ))}
           </div>
@@ -220,33 +235,44 @@ const HomePage = () => {
               <Link
                 key={index}
                 to={saas.link}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105"
+                className="group"
               >
-                <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform">
-                    {saas.icon}
+                <FuturisticCard
+                  variant="neon"
+                  size="md"
+                  hover={true}
+                  animated={true}
+                  glow={true}
+                  className="h-full"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-purple-500 to-cyan-500 flex items-center justify-center text-white mr-4 group-hover:scale-110 transition-transform shadow-lg">
+                      {saas.icon}
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
+                        {saas.name}
+                      </h3>
+                      <p className="text-cyan-400 font-medium">{saas.price}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-white group-hover:text-cyan-400 transition-colors">
-                      {saas.name}
-                    </h3>
-                    <p className="text-cyan-400 font-medium">{saas.price}</p>
-                  </div>
-                </div>
-                <p className="text-gray-300 text-sm leading-relaxed">
-                  {saas.description}
-                </p>
+                  <p className="text-gray-300 text-sm leading-relaxed">
+                    {saas.description}
+                  </p>
+                </FuturisticCard>
               </Link>
             ))}
           </div>
           <div className="text-center mt-12">
-            <Link
-              to="/micro-saas"
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-500 to-cyan-600 text-white font-semibold rounded-lg hover:from-purple-600 hover:to-cyan-700 transition-all duration-300 group"
+            <FuturisticButton
+              variant="holographic"
+              size="lg"
+              icon="arrow"
+              href="/micro-saas"
+              className="group"
             >
               View All Micro SAAS Solutions
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </FuturisticButton>
           </div>
         </div>
       </section>
@@ -264,9 +290,14 @@ const HomePage = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div
+              <FuturisticCard
                 key={index}
-                className="group bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/10 relative overflow-hidden"
+                variant="cyber"
+                size="md"
+                hover={true}
+                animated={true}
+                glow={true}
+                className="group"
               >
                 <div className="flex items-center mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
@@ -278,7 +309,7 @@ const HomePage = () => {
                   <div className="font-semibold text-white">{testimonial.name}</div>
                   <div className="text-sm text-gray-400">{testimonial.role}, {testimonial.company}</div>
                 </div>
-              </div>
+              </FuturisticCard>
             ))}
           </div>
         </div>
@@ -321,20 +352,24 @@ const HomePage = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              to="/contact"
-              className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
+            <FuturisticButton
+              variant="neon"
+              size="lg"
+              icon="arrow"
+              href="/contact"
+              className="group"
             >
               Start Your Journey
-              <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              to="/services"
-              className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
+            </FuturisticButton>
+            <FuturisticButton
+              variant="secondary"
+              size="lg"
+              icon="sparkles"
+              href="/services"
+              className="group"
             >
               Explore Services
-              <Sparkles className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
-            </Link>
+            </FuturisticButton>
           </div>
         </div>
       </section>
