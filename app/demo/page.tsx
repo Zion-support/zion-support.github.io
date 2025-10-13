@@ -1,216 +1,92 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Play, Right, Circle, Star } from 'lucide-react';
-const DemoPage: React.FC = () => {
-  const features = [{
-      icon: 'Analytics',';
-      title: 'AI-Powered Analytics',';
-      description: 'See how our AI analyzes your data in real-time',';
-      demo: 'Live Demo'';
-    },
-    {
-      icon: 'Security',';
-      title: 'Advanced Security',';
-      description: 'Experience our enterprise-grade security features',';
-      demo: 'Demo'';
-    },
-    {
-      icon: 'Intelligence',';
-      title: 'Business Intelligence',';
-      description: 'Explore our comprehensive BI dashboard',';
-      demo: 'BI Demo'';
-    },
-    {
-      icon: 'Collaboration',';
-      title: 'Team Collaboration',';
-      description: 'See how teams work together seamlessly',';
-      demo: 'Collaboration Demo'';
-=======
-import React from 'react';
-import { Helmet } from 'react-helmet-async';
-
-import { Play, Right, Star, BarChart3, Shield } from 'lucide-react';
 
 const DemoPage: React.FC = () => {
   const features = [
     {
-
-      icon: BarChart3,
-
+      icon: 'Analytics',
       title: 'AI-Powered Analytics',
       description: 'See how our AI analyzes your data in real-time',
       demo: 'Live Demo'
     },
     {
-
-      icon: Shield,
-
+      icon: 'Security',
       title: 'Advanced Security',
       description: 'Experience our enterprise-grade security features',
       demo: 'Demo'
     },
     {
-
-      icon: BarChart3,
-
+      icon: 'Intelligence',
       title: 'Business Intelligence',
-      description: 'Explore our comprehensive BI dashboard',
-      demo: 'BI Demo'
+      description: 'Discover insights that drive business growth',
+      demo: 'Interactive Demo'
     },
     {
-
-      icon: Play,
-
-      title: 'Team Collaboration',
-      description: 'See how teams work together seamlessly',
-      demo: 'Collaboration Demo'
->>>>>>> cursor/analyze-improve-and-deploy-application-3b5b
-    }
-  ];
-
-  const testimonials = [{
-      name: "Sarah Johnson",
-      company: "TechCorp Inc.",
-      content: "The demo was incredibly insightful. We could see exactly how the solution would work for our business.",
-      rating: 5;
-    },
-    {
-      name: "Michael Chen",
-      company: "DataFlow Systems",
-      content: "The live demonstration helped us understand the full potential of the AI solutions.",
-      rating: 5;
-    },
-    {
-      name: "Emily Rodriguez",
-      company: "InnovateLabs",
-      content: "The demo team was knowledgeable and answered all our questions thoroughly.",
-      rating: 5;
+      icon: 'Automation',
+      title: 'Process Automation',
+      description: 'Watch how we streamline your workflows',
+      demo: 'Live Demo'
     }
   ];
 
   return (
     <>
       <Helmet>
-        <title>Demo - See Our Solutions in Action | Zion Tech Group</title>
-        <meta name="description" content="Experience our AI and IT solutions through interactive demos. See how our technology can transform your business." />
-        <meta name="keywords" content="demo, demonstration, AI demo, IT solutions demo, interactive demo, product showcase" />
+        <title>Demo - Zion Tech Group</title>
+        <meta name="description" content="Experience our AI and IT solutions through interactive demos." />
       </Helmet>
+      
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              See It In;
-              <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
-                Action;
-              </span>
+        <div className="container mx-auto px-4 py-16">
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold text-white mb-6">
+              Interactive Demos
             </h1>
-            <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-              Experience our AI and IT solutions through interactive demos.;
-              See how our technology can transform your business.;
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Experience our cutting-edge AI and IT solutions through hands-on demonstrations.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                <Play className="w-5 h-5 mr-2 inline" />
-                Start Demo;
-              </button>
-              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
-                Schedule Live Demo;
-              </button>
-            </div>
           </div>
-        </section>
-        {/* Demo Features */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Interactive Demos;
-            </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {features.map((feature, _index) => {
-                const Icon = feature.icon;
-                return (
-                  <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50 hover:border-cyan-500/50 transition-all duration-300 group">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                      <Icon className="w-8 h-8 text-white" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-white mb-2 text-center">{feature.title}</h3>
-                    <p className="text-gray-300 mb-4 text-center">{feature.description}</p>
-                    <button className="w-full px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                      {feature.demo}
-                    </button>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
-        {/* Demo Section */}
-        <section className="py-20 px-4 bg-slate-800/30">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
-              Watch Our Solutions in Action;
-            </h2>
-            <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-2xl p-8 border border-slate-700/50">
-              <div className="aspect-video bg-slate-700/50 rounded-xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center mx-auto mb-4">
-                    <Play className="w-10 h-10 text-white ml-1" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Product Demo </h3>
-                  <p className="text-gray-300 mb-4">See our AI solutions in action</p>
-                  <button className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300">
-                    Play </button>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            {features.map((feature, index) => (
+              <div key={index} className="bg-white/10 backdrop-blur-lg rounded-xl p-8 border border-white/20 hover:bg-white/20 transition-all duration-300">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-6">
+                  <Circle className="w-8 h-8 text-white" />
                 </div>
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-300 mb-6">
+                  {feature.description}
+                </p>
+                <button className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 hover:from-purple-700 hover:to-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center">
+                  <Play className="w-5 h-5 mr-2" />
+                  {feature.demo}
+                </button>
               </div>
-            </div>
+            ))}
           </div>
-        </section>
-        {/* Testimonials */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold text-white text-center mb-16">
-              What Say About Our Demos;
+
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-white mb-8">
+              Ready to Get Started?
             </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {testimonials.map((testimonial, _index) => (
-                <div key={_index} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-slate-700/50">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-gray-300 mb-4 italic">&ldquo;{testimonial.content}&rdquo;</p>
-                  <div>
-                    <p className="text-white font-semibold">{testimonial.name}</p>
-                    <p className="text-cyan-400 text-sm">{testimonial.company}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-6">
-              Ready to See More?;
-            </h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Schedule a personalized demo with our experts to see how our solutions can work for your specific needs.;
+            <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
+              Contact our team to schedule a personalized demo tailored to your business needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25">
-                Schedule Live Demo;
-                <Right className="w-5 h-5 ml-2 inline" />
+              <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 flex items-center justify-center">
+                Schedule Demo
+                <Right className="w-5 h-5 ml-2" />
               </button>
-              <button className="px-8 py-4 border border-cyan-500/30 text-cyan-400 rounded-xl font-semibold hover:bg-cyan-500/10 transition-all duration-300">
-                Contact Sales;
+              <button className="bg-white/10 backdrop-blur-lg text-white font-bold py-3 px-8 rounded-lg border border-white/20 hover:bg-white/20 transition-all duration-300 flex items-center justify-center">
+                <Star className="w-5 h-5 mr-2" />
+                View Case Studies
               </button>
             </div>
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
