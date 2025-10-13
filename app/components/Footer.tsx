@@ -19,7 +19,8 @@ import {
   Database,
   Users,
   Award,
-  Star
+  Star,
+  Monitor
 } from "lucide-react";
 import FuturisticButton from "./FuturisticButton";
 
@@ -52,7 +53,11 @@ const Footer = React.memo(() => {
     { name: "Cloud Services", path: "/cloud-services", icon: <Cloud className="w-4 h-4" /> },
     { name: "Cybersecurity", path: "/cybersecurity", icon: <Shield className="w-4 h-4" /> },
     { name: "Web Development", path: "/web-development", icon: <Code className="w-4 h-4" /> },
-    { name: "Data Analytics", path: "/data-analytics", icon: <BarChart3 className="w-4 h-4" /> }
+    { name: "Data Analytics", path: "/data-analytics", icon: <BarChart3 className="w-4 h-4" /> },
+    { name: "Quantum Computing", path: "/quantum-computing", icon: <Brain className="w-4 h-4" /> },
+    { name: "Blockchain", path: "/blockchain", icon: <Shield className="w-4 h-4" /> },
+    { name: "IoT Solutions", path: "/iot-solutions", icon: <Globe className="w-4 h-4" /> },
+    { name: "AR/VR Solutions", path: "/ar-vr-solutions", icon: <Monitor className="w-4 h-4" /> }
   ], []);
 
   const companyLinks = useMemo(() => [
@@ -312,6 +317,54 @@ const Footer = React.memo(() => {
             <ul className="space-y-2">
               <li>
                 <Link
+                  to="/zion-ai-neural-interface"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Neural Interface
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-holographic-workspace"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Holographic Workspace
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/quantum-data-encryption-vault"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Quantum Data Encryption Vault
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-voice-cloning-studio"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Voice Cloning Studio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-quantum-financial-oracle"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Quantum Financial Oracle
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/ai-space-mission-optimizer"
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  AI Space Mission Optimizer
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/zion-analytics-pro"
                   className="text-gray-400 hover:text-purple-400 transition-colors"
                 >
@@ -328,34 +381,10 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/zion-cloud-vault"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                  to="/micro-saas"
+                  className="text-purple-400 hover:text-purple-300 transition-colors font-medium"
                 >
-                  Zion Cloud Vault
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-content-studio"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Content Studio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-data-sync"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Data Sync
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/zion-project-master"
-                  className="text-gray-400 hover:text-purple-400 transition-colors"
-                >
-                  Zion Project Master
+                  View All Micro SAAS →
                 </Link>
               </li>
             </ul>

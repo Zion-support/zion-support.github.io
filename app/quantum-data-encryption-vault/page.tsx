@@ -1,97 +1,97 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Monitor, ArrowRight, CheckCircle, Star, Zap, Shield, BarChart3, Users, Clock, Award, Target, TrendingUp, Cpu, Database, Globe, Mic, Eye, Hand, Layers, Box } from 'lucide-react';
+import { Shield, ArrowRight, CheckCircle, Star, Zap, Lock, BarChart3, Users, Clock, Award, Target, TrendingUp, Cpu, Database, Globe, Mic, Eye, Hand, Layers, Box, Key } from 'lucide-react';
 import EnhancedSEO from '../components/EnhancedSEO';
 
-const AIHolographicWorkspace = () => {
+const QuantumDataEncryptionVault = () => {
   const features = [
     {
-      title: "3D Holographic Display",
-      description: "Immersive 3D holographic interface that projects data and applications into your physical space.",
-      icon: <Monitor className="w-8 h-8" />,
+      title: "Quantum Encryption",
+      description: "Unbreakable quantum encryption using quantum key distribution and post-quantum cryptography algorithms.",
+      icon: <Shield className="w-8 h-8" />,
       color: "from-blue-500 to-cyan-500"
     },
     {
-      title: "Remote Collaboration",
-      description: "Seamless collaboration with team members in shared holographic workspaces from anywhere in the world.",
-      icon: <Users className="w-8 h-8" />,
+      title: "Zero-Knowledge Architecture",
+      description: "Complete data sovereignty with zero-knowledge architecture that ensures even we cannot access your data.",
+      icon: <Lock className="w-8 h-8" />,
       color: "from-purple-500 to-pink-500"
     },
     {
-      title: "Data Visualization",
-      description: "Transform complex data into interactive 3D visualizations that you can manipulate with gestures.",
-      icon: <BarChart3 className="w-8 h-8" />,
+      title: "Data Sovereignty",
+      description: "Full control over your data location and access with quantum-secured data sovereignty guarantees.",
+      icon: <Globe className="w-8 h-8" />,
       color: "from-green-500 to-emerald-500"
     },
     {
-      title: "Gesture Control",
-      description: "Control your holographic workspace with natural hand gestures and eye tracking technology.",
-      icon: <Hand className="w-8 h-8" />,
+      title: "Compliance Ready",
+      description: "Built-in compliance with GDPR, HIPAA, SOX, and other major regulatory frameworks worldwide.",
+      icon: <Award className="w-8 h-8" />,
       color: "from-orange-500 to-red-500"
     }
   ];
 
   const capabilities = [
-    "3D holographic projection technology",
-    "Real-time remote collaboration tools",
-    "Gesture and eye-tracking controls",
-    "Interactive 3D data visualization",
-    "Spatial audio and haptic feedback",
-    "Multi-user virtual meeting rooms",
-    "3D file and document management",
-    "Augmented reality integration",
-    "Virtual whiteboard and sketching",
-    "3D model manipulation and editing",
-    "Spatial computing applications",
-    "Immersive presentation capabilities"
+    "Quantum key distribution (QKD) encryption",
+    "Post-quantum cryptographic algorithms",
+    "Zero-knowledge proof systems",
+    "Homomorphic encryption capabilities",
+    "Multi-party computation protocols",
+    "Quantum random number generation",
+    "End-to-end quantum encryption",
+    "Secure multi-party key management",
+    "Quantum-resistant digital signatures",
+    "Confidential computing environments",
+    "Quantum-secured data backup",
+    "Real-time threat detection and response"
   ];
 
   const pricingPlans = [
     {
-      name: "Holographic Starter",
-      price: "$399",
+      name: "Quantum Vault Basic",
+      price: "$599",
       period: "/month",
-      description: "Perfect for individuals exploring holographic workspace technology",
+      description: "Essential quantum encryption for small to medium businesses",
       features: [
-        "Basic 3D holographic display",
-        "Single-user workspace",
-        "Gesture control interface",
-        "Basic data visualization",
+        "Quantum encryption for up to 1TB",
+        "Zero-knowledge architecture",
+        "Basic compliance features",
         "Email support",
-        "10GB holographic storage"
+        "99.9% uptime SLA",
+        "Standard security monitoring"
       ],
       popular: false
     },
     {
-      name: "Holographic Professional",
-      price: "$799",
+      name: "Quantum Vault Professional",
+      price: "$1,199",
       period: "/month",
-      description: "Advanced features for teams and professionals",
+      description: "Advanced quantum security for growing enterprises",
       features: [
-        "All Starter features",
-        "Multi-user collaboration",
-        "Advanced 3D visualization",
-        "Spatial audio integration",
+        "All Basic features",
+        "Up to 10TB quantum encryption",
+        "Advanced compliance tools",
         "Priority support",
-        "100GB holographic storage",
+        "99.99% uptime SLA",
+        "Real-time threat detection",
         "API access",
-        "Custom workspace templates"
+        "Custom encryption policies"
       ],
       popular: true
     },
     {
-      name: "Holographic Enterprise",
-      price: "$1,599",
+      name: "Quantum Vault Enterprise",
+      price: "$2,399",
       period: "/month",
-      description: "Complete solution for large organizations",
+      description: "Complete quantum security solution for large organizations",
       features: [
         "All Professional features",
-        "Unlimited users",
-        "Custom holographic applications",
-        "White-label interface",
+        "Unlimited quantum encryption",
+        "Custom compliance frameworks",
         "Dedicated support team",
-        "Unlimited holographic storage",
-        "Advanced security protocols",
+        "99.999% uptime SLA",
+        "Advanced threat intelligence",
+        "White-label solutions",
         "SLA guarantee"
       ],
       popular: false
@@ -100,45 +100,45 @@ const AIHolographicWorkspace = () => {
 
   const testimonials = [
     {
-      name: "Dr. Alex Thompson",
-      company: "Future Tech Labs",
-      role: "Research Director",
-      content: "The holographic workspace has revolutionized how we collaborate. The 3D data visualization capabilities are absolutely mind-blowing.",
+      name: "Dr. Michael Zhang",
+      company: "Quantum Security Labs",
+      role: "Chief Security Officer",
+      content: "The quantum encryption capabilities are truly next-generation. We've never seen this level of security and data sovereignty in a single solution.",
       rating: 5,
-      avatar: "AT"
+      avatar: "MZ"
     },
     {
-      name: "Maria Rodriguez",
-      company: "Design Innovation Co.",
-      role: "Creative Director",
-      content: "Working in 3D space has completely changed our design process. We can now visualize and iterate on concepts in ways we never thought possible.",
+      name: "Sarah Johnson",
+      company: "Global Financial Services",
+      role: "Compliance Director",
+      content: "The compliance features are outstanding. We can now meet all regulatory requirements while maintaining the highest level of data security.",
       rating: 5,
-      avatar: "MR"
+      avatar: "SJ"
     },
     {
-      name: "James Chen",
-      company: "Global Engineering Solutions",
+      name: "Robert Chen",
+      company: "Healthcare Data Systems",
       role: "CTO",
-      content: "The remote collaboration features are incredible. Our distributed team feels like they're working in the same room, even across continents.",
+      content: "The zero-knowledge architecture gives us complete confidence in our data security. Even the service provider cannot access our sensitive healthcare data.",
       rating: 5,
-      avatar: "JC"
+      avatar: "RC"
     }
   ];
 
   const stats = [
-    { number: "360°", label: "Field of View", icon: <Eye className="w-6 h-6" /> },
-    { number: "4K", label: "Holographic Resolution", icon: <Monitor className="w-6 h-6" /> },
-    { number: "50+", label: "Concurrent Users", icon: <Users className="w-6 h-6" /> },
-    { number: "99.9%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> }
+    { number: "256-bit", label: "Quantum Key Length", icon: <Key className="w-6 h-6" /> },
+    { number: "99.999%", label: "Uptime SLA", icon: <Shield className="w-6 h-6" /> },
+    { number: "Zero", label: "Data Breaches", icon: <Lock className="w-6 h-6" /> },
+    { number: "50+", label: "Compliance Standards", icon: <Award className="w-6 h-6" /> }
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
       <EnhancedSEO
-        title="AI Holographic Workspace - 3D Immersive Collaboration | Zion Tech Group"
-        description="3D holographic interface for immersive remote collaboration and data visualization. Transform your workspace with cutting-edge holographic technology."
-        keywords="holographic workspace, 3D collaboration, immersive technology, remote work, data visualization, gesture control, spatial computing"
-        canonical="https://ziontechgroup.com/ai-holographic-workspace"
+        title="Quantum Data Encryption Vault - Unbreakable Security | Zion Tech Group"
+        description="Unbreakable quantum encryption for sensitive data with zero-knowledge architecture. Protect your data with next-generation quantum security technology."
+        keywords="quantum encryption, data security, zero-knowledge architecture, quantum cryptography, data sovereignty, compliance, quantum key distribution"
+        canonical="https://ziontechgroup.com/quantum-data-encryption-vault"
       />
 
       {/* Hero Section */}
@@ -150,19 +150,19 @@ const AIHolographicWorkspace = () => {
         
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 mb-6">
-            <Monitor className="w-4 h-4 text-cyan-400 mr-2" />
-            <span className="text-cyan-400 text-sm font-medium">Next-Gen Holographic Technology</span>
+            <Shield className="w-4 h-4 text-cyan-400 mr-2" />
+            <span className="text-cyan-400 text-sm font-medium">Quantum-Grade Security</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400">
-              AI Holographic Workspace
+              Quantum Data Encryption Vault
             </span>
           </h1>
           
           <p className="text-lg md:text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-            3D holographic interface for immersive remote collaboration and data visualization. 
-            Transform your workspace with cutting-edge holographic technology that brings the future to your present.
+            Unbreakable quantum encryption for sensitive data with zero-knowledge architecture. 
+            Protect your most valuable data with next-generation quantum security technology.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -170,14 +170,14 @@ const AIHolographicWorkspace = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Experience Holographic Future
+              Secure Your Data Now
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
               to="/demo"
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
-              Watch Holographic Demo
+              Watch Security Demo
               <Eye className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
@@ -202,10 +202,10 @@ const AIHolographicWorkspace = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-              Revolutionary Holographic Capabilities
+              Unbreakable Quantum Security
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of workspace technology with our cutting-edge holographic interface.
+              Experience the ultimate in data security with our quantum-grade encryption technology.
             </p>
           </div>
           
@@ -237,10 +237,10 @@ const AIHolographicWorkspace = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Advanced Holographic Features
+              Advanced Quantum Security Features
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Unlock the full potential of holographic workspace technology with our comprehensive feature set.
+              Unlock the full potential of quantum security with our comprehensive feature set.
             </p>
           </div>
           
@@ -270,10 +270,10 @@ const AIHolographicWorkspace = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Choose Your Holographic Plan
+              Choose Your Quantum Security Plan
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Select the perfect plan for your holographic workspace needs and step into the future.
+              Select the perfect plan for your quantum encryption needs and secure your data.
             </p>
           </div>
 
@@ -334,7 +334,7 @@ const AIHolographicWorkspace = () => {
               What Our Users Say
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Hear from professionals who are already using our holographic workspace technology.
+              Hear from security professionals who trust our quantum encryption technology.
             </p>
           </div>
           
@@ -371,11 +371,11 @@ const AIHolographicWorkspace = () => {
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
-            Ready to Step Into the Future?
+            Ready to Secure Your Data?
           </h2>
           <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-            Transform your workspace with holographic technology and experience collaboration like never before. 
-            Start your holographic journey today.
+            Protect your most sensitive data with quantum-grade encryption and zero-knowledge architecture. 
+            Start your quantum security journey today.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -383,7 +383,7 @@ const AIHolographicWorkspace = () => {
               to="/contact"
               className="bg-gradient-to-r from-cyan-500 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 flex items-center justify-center group shadow-lg hover:shadow-cyan-500/25 hover:scale-105"
             >
-              Start Your Holographic Journey
+              Secure Your Data Now
               <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -391,7 +391,7 @@ const AIHolographicWorkspace = () => {
               className="border border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-slate-900 transition-all duration-300 group hover:scale-105"
             >
               View All Plans
-              <Monitor className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
+              <Shield className="w-5 h-5 ml-2 group-hover:rotate-12 transition-transform" />
             </Link>
           </div>
         </div>
@@ -400,4 +400,4 @@ const AIHolographicWorkspace = () => {
   );
 };
 
-export default AIHolographicWorkspace;
+export default QuantumDataEncryptionVault;

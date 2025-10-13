@@ -136,6 +136,54 @@ const HomePage = () => {
       icon: <Shield className="w-6 h-6" />,
       link: "/zion-security-shield",
       featured: false
+    },
+    {
+      name: "AI Holographic Workspace",
+      description: "3D holographic interface for immersive remote collaboration and data visualization",
+      price: "From $399/month",
+      icon: <Monitor className="w-6 h-6" />,
+      link: "/ai-holographic-workspace",
+      featured: true
+    },
+    {
+      name: "Quantum Data Encryption Vault",
+      description: "Unbreakable quantum encryption for sensitive data with zero-knowledge architecture",
+      price: "From $599/month",
+      icon: <Shield className="w-6 h-6" />,
+      link: "/quantum-data-encryption-vault",
+      featured: true
+    },
+    {
+      name: "AI Climate Prediction Engine",
+      description: "Advanced climate modeling with 98.5% accuracy for weather and environmental forecasting",
+      price: "From $299/month",
+      icon: <Globe className="w-6 h-6" />,
+      link: "/ai-climate-prediction-engine",
+      featured: false
+    },
+    {
+      name: "Neural Memory Assistant",
+      description: "AI-powered memory enhancement and knowledge management system",
+      price: "From $149/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/ai-neural-memory-assistant",
+      featured: false
+    },
+    {
+      name: "AI Drug Discovery Pro",
+      description: "Accelerated pharmaceutical research with AI-powered molecular analysis",
+      price: "From $999/month",
+      icon: <BarChart3 className="w-6 h-6" />,
+      link: "/ai-drug-discovery-pro",
+      featured: false
+    },
+    {
+      name: "Telepathic Interface System",
+      description: "Direct neural communication interface for seamless human-AI interaction",
+      price: "From $799/month",
+      icon: <Brain className="w-6 h-6" />,
+      link: "/ai-telepathic-interface",
+      featured: false
     }
   ];
 
