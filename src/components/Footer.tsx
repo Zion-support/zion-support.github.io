@@ -1,27 +1,40 @@
 'use client';
-import { memo } from 'react';
-import { } from 'react-router-dom';
-import { Right, Facebook, Twitter, edin, Instagram, Youtube, Github, Star, Circle } from 'lucide-react';
+import React, { memo } from 'react';
+import { Link } from 'react-router-dom';
+import { Right, Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Star, Circle } from 'lucide-react';
 
+const Footer: React.FC = () => {
+  const footerLinks = [
+    { name: 'Home', href: '/' },
+    { name: 'About', href: '/about' },
+    { name: 'Services', href: '/services' },
+    { name: 'Contact', href: '/contact' }
   ];
 
+  const socialLinks = [
+    { name: 'Facebook', href: '#', icon: Facebook },
+    { name: 'Twitter', href: '#', icon: Twitter },
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+    { name: 'Instagram', href: '#', icon: Instagram },
+    { name: 'YouTube', href: '#', icon: Youtube },
+    { name: 'GitHub', href: '#', icon: Github }
   ];
 
+  const serviceLinks = [
+    { name: 'AI Services', href: '/ai-services' },
+    { name: 'IT Solutions', href: '/it-solutions' },
+    { name: 'Digital Transformation', href: '/digital-transformation' },
+    { name: 'Cloud Migration', href: '/cloud-migration' }
   ];
 
-  ];
-
-  ];
-
-  ];
-
-  ];
-
-  ];
-
-                  <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group
-                  <p className="text-sm text-cyan-400">AI & IT Solutions
-            <p className="text-gray-300 text-sm leading-relaxed">
+  return (
+    <footer className="bg-slate-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="col-span-1 md:col-span-2">
+            <h3 className="text-xl font-bold text-white cyber-text neon-pulse">Zion Tech Group</h3>
+            <p className="text-sm text-cyan-400">AI & IT Solutions</p>
+            <p className="text-gray-300 text-sm leading-relaxed mt-4">
               Leading provider of AI-powered enterprise solutions, quantum computing, autonomous systems, 
               and digital transformation services. Transform your business with cutting-edge technology.
                   <to={service.url}

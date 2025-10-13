@@ -1,7 +1,7 @@
-import { useEffect, Node } from 'react';
+import React, { useEffect } from 'react';
 
 interface PerformanceOptimizerProps {
-  children: Node;
+  children: React.ReactNode;
 }
 
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children }) => {

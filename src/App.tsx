@@ -1,4 +1,4 @@
-import ./components/ from './components/';
+import React, { lazy, Suspense } from 'react';
 import Footer from './components/Footer';
 import LoadingSpinner from './components/LoadingSpinner';
 import ErrorBoundary from './components/ErrorBoundary';

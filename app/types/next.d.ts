@@ -1,7 +1,7 @@
 // Next.js type declarations
 declare module 'next' {
   interface NextApiRequest {
-    user?: any;
+    user?: unknown;
   }
   interface NextConfig {
     // Add any Next.js specific types here

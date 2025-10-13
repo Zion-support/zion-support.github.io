@@ -3,13 +3,8 @@ const isValidEmail = (email) => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 };
-async function handler(req, res) {
-export default function handler(req, res) {
 
 export default async function handler(req, res) {
-
-export default async function handler(req, res) {
-
   if (req.method !== 'POST') {
     res.statusCode = 405;
     res.setHeader('Content-Type', 'application/json');
@@ -18,11 +13,7 @@ export default async function handler(req, res) {
   }
   
   try {
-
-    const { email 
-} catch (error) {
-  console.error('Error:', error);
-} = req.body || {};
+    const { email } = req.body || {};
     
     if (!email) {
       res.statusCode = 400;

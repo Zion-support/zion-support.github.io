@@ -1,5 +1,5 @@
 import React from 'react';
-import { User, X } from 'lucide-react';
+import { User, X, Home, Settings, HelpCircle } from 'lucide-react';
 
 interface SidebarNavigationProps {
   isOpen: boolean;
@@ -7,10 +7,10 @@ interface SidebarNavigationProps {
 }
 
 const navigationItems = [
-  { name: '', href: '/', icon: },
+  { name: 'Home', href: '/', icon: Home },
   { name: 'Profile', href: '/profile', icon: User },
-  { name: '', href: '/settings', icon: },
-  { name: 'Help', href: '/help', icon: },
+  { name: 'Settings', href: '/settings', icon: Settings },
+  { name: 'Help', href: '/help', icon: HelpCircle },
 ];
 
 const SidebarNavigation: React.FC<SidebarNavigationProps> = ({ isOpen, onClose }) => {

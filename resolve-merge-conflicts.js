@@ -12,11 +12,13 @@ function resolveMergeConflicts(filePath) {
 
     let content = fs.readFileSync(filePath, 'utf8');
     
-    if (!content.includes('      return false; // No conflicts
+    if (!content.includes('<<<<<<< HEAD')) {
+      return false; // No conflicts
+    }
     
-} catch (error) {
-  console.error('Error:', error);
-}
+  } catch (error) {
+    console.error('Error:', error);
+  }
     
     console.log(`Resolving conflicts in: ${filePath}`);
     

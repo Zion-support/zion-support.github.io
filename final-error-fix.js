@@ -9,7 +9,7 @@ const createBasicPageTemplate = (pageName) => `'use client';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const ${pageName}: React: React: React.FC = () => {
+const ${pageName}: React.FC = () => {
   return (
     <div className="min-h-screen bg-white">
       <Helmet>

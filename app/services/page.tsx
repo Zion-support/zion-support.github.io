@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Circle, Star, Right, 3, 3, 2, as as as as Star as Circle as Right as as Icon, as Icon, as } from 'lucide-react';
+import { Circle, Star, Right, CheckCircle, Cloud, Shield, Database, Settings } from 'lucide-react';
 
 const ServicesPage: React.FC = () => {
   const serviceCategories = [
@@ -22,9 +22,9 @@ const ServicesPage: React.FC = () => {
       color: 'text-blue-600',
       bgColor: 'bg-blue-50',
       services: [
-        { name: 'Migration', price: '$3,000/month', description: 'Seamless migration to cloud platforms with minimal downtime', features: ['AWS/Azure/GCP Migration', 'Data Transfer', 'Setup', 'Performance Optimization'] },
-        { name: 'Network ', price: '$2,200/month', description: 'Comprehensive network security solutions and monitoring', features: ['Firewall Configuration', 'Intrusion Detection', 'VPN Setup', 'Audits'] },
-        { name: 'Management', price: '$1,800/month', description: 'design, optimization, and maintenance services', features: ['Design', 'Performance Tuning', 'Backup Solutions', 'Data Recovery'] },
+        { name: 'Cloud Migration', price: '$3,000/month', description: 'Seamless migration to cloud platforms with minimal downtime', features: ['AWS/Azure/GCP Migration', 'Data Transfer', 'Cloud Setup', 'Performance Optimization'] },
+        { name: 'Network Security', price: '$2,200/month', description: 'Comprehensive network security solutions and monitoring', features: ['Firewall Configuration', 'Intrusion Detection', 'VPN Setup', 'Security Audits'] },
+        { name: 'Database Management', price: '$1,800/month', description: 'Database design, optimization, and maintenance services', features: ['Database Design', 'Performance Tuning', 'Backup Solutions', 'Data Recovery'] },
         { name: 'DevOps & CI/CD', price: '$2,000/month', description: 'Automated deployment and continuous integration solutions', features: ['Pipeline Setup', 'Automated Testing', 'Deployment Automation', 'Monitoring'] }
       ]
     },
@@ -33,7 +33,7 @@ const ServicesPage: React.FC = () => {
       color: 'text-green-600',
       bgColor: 'bg-green-50',
       services: [
-        { name: 'Digital Strategy', price: '$2,800/month', description: 'Comprehensive digital transformation strategy and implementation', features: ['Digital Assessment', 'Technology Roadmap', 'Change Management', 'ing Programs'] },
+        { name: 'Digital Strategy', price: '$2,800/month', description: 'Comprehensive digital transformation strategy and implementation', features: ['Digital Assessment', 'Technology Roadmap', 'Change Management', 'Training Programs'] },
         { name: 'Process Automation', price: '$1,600/month', description: 'Business process automation and optimization solutions', features: ['Process Analysis', 'Workflow Design', 'Automation Implementation', 'Performance Monitoring'] },
         { name: 'Data Analytics', price: '$1,900/month', description: 'Advanced data analytics and business intelligence solutions', features: ['Data Visualization', 'Predictive Analytics', 'Dashboard Creation', 'Insights Generation'] }
       ]

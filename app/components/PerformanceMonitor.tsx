@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 // Type definitions for browser APIs
 declare global {
@@ -12,13 +12,6 @@ declare global {
     responseStart: number;
   }
 }
-  
-  interface PerformanceEntry {
-    name: string;
-    entryType: string;
-    startTime: number;
-    duration: number;
-  }
 
 interface PerformanceMetrics {
   fcp: number | null;

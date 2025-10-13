@@ -1,5 +1,16 @@
 import { useState, useEffect } from 'react';
 
+// Extend the global PerformanceEntry interface if not available
+declare global {
+  interface PerformanceEntry {
+    processingStart?: number;
+    hadRecentInput?: boolean;
+    value?: number;
+    responseStart?: number;
+    requestStart?: number;
+  }
+}
+
 interface PerformanceMetrics {
   fcp?: number;
   lcp?: number;

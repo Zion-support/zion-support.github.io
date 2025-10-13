@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ResponsiveContainerProps {
-  children: .Node;
+  children: React.ReactNode;
   className?: string;
 }
 

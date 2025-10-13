@@ -14,6 +14,11 @@ export const optimizeImage = (
   
   // In a real implementation, you would use a service like Cloudinary or ImageKit
   // For now, we'll return the original src with query parameters
+  if (typeof URLSearchParams === 'undefined') {
+    // Fallback for environments without URLSearchParams
+    return src;
+  }
+  
   const params = new URLSearchParams();
   
   if (width) params.set('w', width.toString());

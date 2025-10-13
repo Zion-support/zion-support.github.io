@@ -12,14 +12,14 @@ function resolveMergeConflicts(content) {
   // Remove all merge conflict markers and keep only the HEAD version
   let resolved = content
     // Remove all conflict markers and everything between them
-    .replace(/
+    .replace(/<<<<<<< HEAD[\s\S]*?=======[\s\S]*?>>>>>>> [^\n]+/g, '')
     // Remove any remaining conflict markers
-    .replace(/
+    .replace(/<<<<<<< HEAD|=======|>>>>>>> [^\n]+/g, '')
     // Clean up multiple empty lines
     .replace(/\n\s*\n\s*\n/g, '\n\n')
     // Clean up trailing whitespace
-    .replace(/[ \t]+$/gm, '');
-    // Remove empty lines at the end;
+    .replace(/[ \t]+$/gm, '')
+    // Remove empty lines at the end
     .replace(/\n+$/, '\n');
 
   return resolved;
