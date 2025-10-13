@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 'use client';
-=======
-
-'use client';
-
->>>>>>> origin/main
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
@@ -22,7 +16,8 @@ import {
   CurrencyDollarIcon,
   ClockIcon,
   UserGroupIcon,
-  CogIcon
+  CogIcon,
+  MapPinIcon
 } from '@heroicons/react/24/outline';
 
 export default function MicroSaaSSolutionsPage()   {
@@ -463,6 +458,367 @@ export default function MicroSaaSSolutionsPage()   {
       benefits: ["Better engagement", "Optimized planning", "Success metrics"],
       useCases: ["Conferences", "Webinars", "Corporate events"],
       href: "/ai-event-management"
+    },
+    {
+      title: "AI Blockchain Analytics Platform",
+      description: "Advanced blockchain analytics with transaction monitoring, DeFi insights, and crypto market intelligence.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Transaction monitoring",
+        "DeFi analytics",
+        "Market intelligence",
+        "Risk assessment",
+        "Portfolio tracking",
+        "Compliance reporting"
+      ],
+      color: "from-yellow-500 to-amber-500",
+      price: "$599/month",
+      setupFee: "$3,500",
+      benefits: ["Real-time insights", "Risk mitigation", "Compliance ready"],
+      useCases: ["Crypto exchanges", "DeFi protocols", "Investment firms"],
+      href: "/ai-blockchain-analytics"
+    },
+    {
+      title: "AI Climate Intelligence System",
+      description: "Environmental monitoring and climate analytics with predictive modeling and sustainability tracking.",
+      icon: GlobeAltIcon,
+      features: [
+        "Climate monitoring",
+        "Predictive modeling",
+        "Sustainability tracking",
+        "Carbon footprint analysis",
+        "Environmental reporting",
+        "Risk assessment"
+      ],
+      color: "from-green-500 to-teal-500",
+      price: "$449/month",
+      setupFee: "$2,500",
+      benefits: ["ESG compliance", "Cost savings", "Sustainability goals"],
+      useCases: ["Manufacturing", "Agriculture", "Energy sector"],
+      href: "/ai-climate-intelligence"
+    },
+    {
+      title: "AI Autonomous Vehicle Fleet Manager",
+      description: "Intelligent fleet management for autonomous vehicles with route optimization and safety monitoring.",
+      icon: CogIcon,
+      features: [
+        "Route optimization",
+        "Safety monitoring",
+        "Predictive maintenance",
+        "Fleet analytics",
+        "Real-time tracking",
+        "Performance metrics"
+      ],
+      color: "from-blue-500 to-indigo-500",
+      price: "$799/month",
+      setupFee: "$5,000",
+      benefits: ["30% efficiency gain", "Safety improvement", "Cost reduction"],
+      useCases: ["Logistics", "Transportation", "Delivery services"],
+      href: "/ai-autonomous-fleet"
+    },
+    {
+      title: "AI Quantum Computing Simulator",
+      description: "Quantum computing simulation and optimization platform for complex problem solving and research.",
+      icon: CpuChipIcon,
+      features: [
+        "Quantum simulation",
+        "Algorithm optimization",
+        "Research tools",
+        "Performance analysis",
+        "Collaboration platform",
+        "Educational resources"
+      ],
+      color: "from-purple-500 to-violet-500",
+      price: "$1,299/month",
+      setupFee: "$8,000",
+      benefits: ["Cutting-edge technology", "Research acceleration", "Innovation support"],
+      useCases: ["Research institutions", "Tech companies", "Universities"],
+      href: "/ai-quantum-simulator"
+    },
+    {
+      title: "AI Space Mission Planner",
+      description: "Advanced space mission planning and satellite management with orbital mechanics and mission optimization.",
+      icon: RocketLaunchIcon,
+      features: [
+        "Mission planning",
+        "Orbital mechanics",
+        "Satellite tracking",
+        "Launch optimization",
+        "Risk assessment",
+        "Mission analytics"
+      ],
+      color: "from-slate-500 to-gray-500",
+      price: "$1,999/month",
+      setupFee: "$15,000",
+      benefits: ["Mission success", "Cost optimization", "Risk reduction"],
+      useCases: ["Space agencies", "Satellite companies", "Research labs"],
+      href: "/ai-space-mission"
+    },
+    {
+      title: "AI Metaverse Platform Builder",
+      description: "Complete metaverse development platform with AI-powered world creation and virtual interaction tools.",
+      icon: GlobeAltIcon,
+      features: [
+        "3D world creation",
+        "AI avatars",
+        "Virtual interactions",
+        "Asset management",
+        "Performance optimization",
+        "Analytics dashboard"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "$899/month",
+      setupFee: "$6,000",
+      benefits: ["Immersive experiences", "AI-powered interactions", "Scalable platform"],
+      useCases: ["Gaming companies", "Virtual events", "Education platforms"],
+      href: "/ai-metaverse-builder"
+    },
+    {
+      title: "AI Edge Computing Manager",
+      description: "Intelligent edge computing orchestration with real-time processing and distributed AI deployment.",
+      icon: CloudIcon,
+      features: [
+        "Edge orchestration",
+        "Real-time processing",
+        "Distributed AI",
+        "Resource optimization",
+        "Latency monitoring",
+        "Performance analytics"
+      ],
+      color: "from-orange-500 to-red-500",
+      price: "$699/month",
+      setupFee: "$4,500",
+      benefits: ["Ultra-low latency", "Real-time processing", "Cost efficiency"],
+      useCases: ["IoT networks", "Smart cities", "Manufacturing"],
+      href: "/ai-edge-computing"
+    },
+    {
+      title: "AI Digital Twin Creator",
+      description: "Comprehensive digital twin platform with real-time synchronization and predictive maintenance capabilities.",
+      icon: ChartBarIcon,
+      features: [
+        "Digital twin creation",
+        "Real-time sync",
+        "Predictive maintenance",
+        "Simulation engine",
+        "Performance monitoring",
+        "Analytics dashboard"
+      ],
+      color: "from-emerald-500 to-green-500",
+      price: "$1,199/month",
+      setupFee: "$7,500",
+      benefits: ["Predictive insights", "Cost savings", "Risk mitigation"],
+      useCases: ["Manufacturing", "Smart buildings", "Infrastructure"],
+      href: "/ai-digital-twin"
+    },
+    {
+      title: "AI Neuromorphic Computing Suite",
+      description: "Advanced neuromorphic computing platform with brain-inspired algorithms and ultra-efficient processing.",
+      icon: CpuChipIcon,
+      features: [
+        "Neuromorphic algorithms",
+        "Ultra-efficient processing",
+        "Pattern recognition",
+        "Learning optimization",
+        "Energy efficiency",
+        "Performance analytics"
+      ],
+      color: "from-violet-500 to-purple-500",
+      price: "$1,599/month",
+      setupFee: "$10,000",
+      benefits: ["Ultra-efficiency", "Advanced learning", "Energy savings"],
+      useCases: ["Research labs", "Tech companies", "AI development"],
+      href: "/ai-neuromorphic"
+    },
+    {
+      title: "AI Synthetic Data Generator",
+      description: "Advanced synthetic data generation platform with privacy-preserving AI and realistic data creation.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Synthetic data generation",
+        "Privacy preservation",
+        "Realistic data creation",
+        "Quality validation",
+        "Custom datasets",
+        "Analytics tools"
+      ],
+      color: "from-teal-500 to-cyan-500",
+      price: "$399/month",
+      setupFee: "$2,500",
+      benefits: ["Privacy compliance", "Data quality", "Cost efficiency"],
+      useCases: ["Research", "Testing", "Privacy-sensitive apps"],
+      href: "/ai-synthetic-data"
+    },
+    {
+      title: "AI 6G Network Optimizer",
+      description: "Next-generation 6G network optimization with ultra-low latency and massive connectivity management.",
+      icon: GlobeAltIcon,
+      features: [
+        "6G optimization",
+        "Ultra-low latency",
+        "Massive connectivity",
+        "Network slicing",
+        "Performance monitoring",
+        "Predictive analytics"
+      ],
+      color: "from-indigo-500 to-purple-500",
+      price: "$1,499/month",
+      setupFee: "$12,000",
+      benefits: ["Future-ready", "Ultra-performance", "Scalable networks"],
+      useCases: ["Telecom operators", "Smart cities", "IoT networks"],
+      href: "/ai-6g-optimizer"
+    },
+    {
+      title: "AI Biometric Security Suite",
+      description: "Advanced biometric security with multi-modal authentication and behavioral analysis capabilities.",
+      icon: ShieldCheckIcon,
+      features: [
+        "Multi-modal biometrics",
+        "Behavioral analysis",
+        "Fraud detection",
+        "Identity verification",
+        "Privacy protection",
+        "Compliance tools"
+      ],
+      color: "from-red-500 to-pink-500",
+      price: "$549/month",
+      setupFee: "$3,500",
+      benefits: ["Enhanced security", "Fraud prevention", "User convenience"],
+      useCases: ["Financial services", "Healthcare", "Government"],
+      href: "/ai-biometric-security"
+    },
+    {
+      title: "AI Augmented Reality Creator",
+      description: "Complete AR development platform with AI-powered object recognition and immersive experience creation.",
+      icon: GlobeAltIcon,
+      features: [
+        "AR world creation",
+        "Object recognition",
+        "Spatial mapping",
+        "Interactive elements",
+        "Performance optimization",
+        "Analytics dashboard"
+      ],
+      color: "from-rose-500 to-pink-500",
+      price: "$799/month",
+      setupFee: "$5,500",
+      benefits: ["Immersive experiences", "AI-powered recognition", "Easy development"],
+      useCases: ["Retail", "Education", "Manufacturing"],
+      href: "/ai-ar-creator"
+    },
+    {
+      title: "AI Predictive Maintenance Pro",
+      description: "Advanced predictive maintenance with IoT integration and machine learning for equipment optimization.",
+      icon: CogIcon,
+      features: [
+        "Predictive analytics",
+        "IoT integration",
+        "Machine learning",
+        "Failure prediction",
+        "Maintenance scheduling",
+        "Cost optimization"
+      ],
+      color: "from-amber-500 to-yellow-500",
+      price: "$649/month",
+      setupFee: "$4,000",
+      benefits: ["Reduced downtime", "Cost savings", "Extended equipment life"],
+      useCases: ["Manufacturing", "Utilities", "Transportation"],
+      href: "/ai-predictive-maintenance"
+    },
+    {
+      title: "AI Smart City Platform",
+      description: "Comprehensive smart city management with IoT integration, traffic optimization, and citizen services.",
+      icon: GlobeAltIcon,
+      features: [
+        "Smart city management",
+        "Traffic optimization",
+        "Citizen services",
+        "IoT integration",
+        "Data analytics",
+        "Resource optimization"
+      ],
+      color: "from-blue-500 to-cyan-500",
+      price: "$2,999/month",
+      setupFee: "$25,000",
+      benefits: ["City efficiency", "Citizen satisfaction", "Resource optimization"],
+      useCases: ["City governments", "Urban planners", "Infrastructure"],
+      href: "/ai-smart-city"
+    },
+    {
+      title: "AI Personalization Engine",
+      description: "Advanced personalization platform with real-time recommendations and behavioral analysis.",
+      icon: UserGroupIcon,
+      features: [
+        "Real-time personalization",
+        "Behavioral analysis",
+        "Recommendation engine",
+        "A/B testing",
+        "Performance tracking",
+        "Custom algorithms"
+      ],
+      color: "from-purple-500 to-pink-500",
+      price: "$299/month",
+      setupFee: "$1,800",
+      benefits: ["Higher engagement", "Better conversions", "Personalized experiences"],
+      useCases: ["E-commerce", "Media", "SaaS platforms"],
+      href: "/ai-personalization"
+    },
+    {
+      title: "AI Voice Cloning Studio",
+      description: "Professional voice cloning and synthesis platform with natural speech generation and customization.",
+      icon: PhoneIcon,
+      features: [
+        "Voice cloning",
+        "Speech synthesis",
+        "Natural voices",
+        "Custom training",
+        "Multi-language support",
+        "Quality control"
+      ],
+      color: "from-violet-500 to-purple-500",
+      price: "$199/month",
+      setupFee: "$1,200",
+      benefits: ["Natural voices", "Custom training", "Multi-language"],
+      useCases: ["Content creation", "Accessibility", "Entertainment"],
+      href: "/ai-voice-cloning"
+    },
+    {
+      title: "AI Code Review Assistant",
+      description: "Intelligent code review platform with automated analysis, security scanning, and quality improvement suggestions.",
+      icon: CpuChipIcon,
+      features: [
+        "Automated code review",
+        "Security scanning",
+        "Quality analysis",
+        "Best practices",
+        "Performance optimization",
+        "Team collaboration"
+      ],
+      color: "from-green-500 to-emerald-500",
+      price: "$149/month",
+      setupFee: "$800",
+      benefits: ["Code quality", "Security improvement", "Team productivity"],
+      useCases: ["Software development", "DevOps", "Code quality"],
+      href: "/ai-code-review"
+    },
+    {
+      title: "AI Translation Hub",
+      description: "Advanced translation platform with real-time language processing and cultural context understanding.",
+      icon: GlobeAltIcon,
+      features: [
+        "Real-time translation",
+        "Cultural context",
+        "Multi-language support",
+        "Voice translation",
+        "Document processing",
+        "Quality assurance"
+      ],
+      color: "from-cyan-500 to-blue-500",
+      price: "$89/month",
+      setupFee: "$500",
+      benefits: ["Accurate translations", "Cultural context", "Real-time processing"],
+      useCases: ["Global businesses", "Content creators", "Education"],
+      href: "/ai-translation-hub"
     }
   ];
 
@@ -648,27 +1004,40 @@ export default function MicroSaaSSolutionsPage()   {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
               <h3 className="text-2xl font-bold text-white mb-4">Starter</h3>
-              <div className="text-4xl font-bold text-green-400 mb-6">$99-299<span className="text-lg text-gray-400">/month</span></div>
+              <div className="text-4xl font-bold text-green-400 mb-6">$89-299<span className="text-lg text-gray-400">/month</span></div>
+              <div className="text-sm text-gray-400 mb-6">Perfect for small businesses and startups</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Basic AI features</span>
+                  <span>Basic AI features & automation</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Email support</span>
+                  <span>Email & chat support (24-48h)</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Standard setup</span>
+                  <span>Standard setup & onboarding</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Monthly updates</span>
+                  <span>Monthly updates & maintenance</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Basic analytics & reporting</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Up to 5 users</span>
                 </li>
               </ul>
+              <div className="text-center mb-6">
+                <div className="text-sm text-gray-400">Setup fee: <span className="text-yellow-400 font-semibold">$500-2,000</span></div>
+                <div className="text-xs text-gray-500 mt-1">One-time implementation cost</div>
+              </div>
               <Link to="/contact" className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-cyan-700 transition-all">
-                Get Started
+                Start Free Trial
               </Link>
             </div>
 
@@ -679,59 +1048,93 @@ export default function MicroSaaSSolutionsPage()   {
                 </span>
               </div>
               <h3 className="text-2xl font-bold text-white mb-4">Professional</h3>
-              <div className="text-4xl font-bold text-green-400 mb-6">$299-599<span className="text-lg text-gray-400">/month</span></div>
+              <div className="text-4xl font-bold text-green-400 mb-6">$299-799<span className="text-lg text-gray-400">/month</span></div>
+              <div className="text-sm text-gray-300 mb-6">Ideal for growing businesses and teams</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Advanced AI features</span>
+                  <span>Advanced AI features & ML models</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Priority support</span>
+                  <span>Priority support (4-8h response)</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Custom setup</span>
+                  <span>Custom setup & integration</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Weekly updates</span>
+                  <span>Weekly updates & new features</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>API access</span>
+                  <span>Full API access & webhooks</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Advanced analytics & insights</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Up to 25 users</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Custom training & onboarding</span>
                 </li>
               </ul>
+              <div className="text-center mb-6">
+                <div className="text-sm text-gray-300">Setup fee: <span className="text-yellow-400 font-semibold">$1,500-5,000</span></div>
+                <div className="text-xs text-gray-400 mt-1">Includes custom configuration</div>
+              </div>
               <Link to="/contact" className="w-full bg-white text-purple-900 px-6 py-3 rounded-lg font-semibold text-center hover:bg-gray-100 transition-all">
-                Get Started
+                Start Free Trial
               </Link>
             </div>
 
             <div className="bg-gradient-to-br from-slate-800 to-slate-700 p-8 rounded-xl border border-slate-600">
               <h3 className="text-2xl font-bold text-white mb-4">Enterprise</h3>
               <div className="text-4xl font-bold text-green-400 mb-6">Custom<span className="text-lg text-gray-400">/month</span></div>
+              <div className="text-sm text-gray-400 mb-6">Tailored solutions for large organizations</div>
               <ul className="space-y-3 mb-8">
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Full AI capabilities</span>
+                  <span>Full AI capabilities & custom models</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>24/7 dedicated support</span>
+                  <span>24/7 dedicated support & SLA</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>White-label solution</span>
+                  <span>White-label & custom branding</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Daily updates</span>
+                  <span>Daily updates & hotfixes</span>
                 </li>
                 <li className="flex items-center text-gray-300">
                   <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
-                  <span>Custom integrations</span>
+                  <span>Custom integrations & APIs</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Unlimited users & data</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>Dedicated account manager</span>
+                </li>
+                <li className="flex items-center text-gray-300">
+                  <CheckCircleIcon className="w-5 h-5 text-green-400 mr-3" />
+                  <span>On-premise deployment option</span>
                 </li>
               </ul>
+              <div className="text-center mb-6">
+                <div className="text-sm text-gray-400">Setup fee: <span className="text-yellow-400 font-semibold">$5,000-50,000+</span></div>
+                <div className="text-xs text-gray-500 mt-1">Based on complexity & requirements</div>
+              </div>
               <Link to="/contact" className="w-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white px-6 py-3 rounded-lg font-semibold text-center hover:from-purple-700 hover:to-cyan-700 transition-all">
                 Contact Sales
               </Link>
@@ -768,14 +1171,61 @@ export default function MicroSaaSSolutionsPage()   {
               </Link>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-8 justify-center items-center text-gray-300">
-              <div className="flex items-center gap-3">
+            <div className="grid md:grid-cols-3 gap-8 justify-center items-center text-gray-300 max-w-4xl mx-auto">
+              <div className="flex items-center justify-center gap-3">
                 <PhoneIcon className="w-6 h-6 text-purple-400" />
-                <span>+1-302-464-0950</span>
+                <div className="text-center">
+                  <div className="font-semibold">+1-302-464-0950</div>
+                  <div className="text-sm text-gray-400">Call us anytime</div>
+                </div>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center justify-center gap-3">
                 <EnvelopeIcon className="w-6 h-6 text-purple-400" />
-                <span>kleber@ziontechgroup.com</span>
+                <div className="text-center">
+                  <div className="font-semibold">kleber@ziontechgroup.com</div>
+                  <div className="text-sm text-gray-400">Email us directly</div>
+                </div>
+              </div>
+              <div className="flex items-center justify-center gap-3">
+                <MapPinIcon className="w-6 h-6 text-purple-400" />
+                <div className="text-center">
+                  <div className="font-semibold">Middletown, DE</div>
+                  <div className="text-sm text-gray-400">364 E Main St STE 1008</div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-12 p-6 bg-slate-800/50 rounded-xl border border-slate-700 max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold text-white mb-4 text-center">Why Choose Zion Tech Group?</h3>
+              <div className="grid md:grid-cols-2 gap-6 text-gray-300">
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span><strong>Proven Track Record:</strong> 50+ successful deployments</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span><strong>Rapid Deployment:</strong> 2-4 weeks average setup time</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span><strong>24/7 Support:</strong> Round-the-clock technical assistance</span>
+                  </div>
+                </div>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span><strong>Enterprise Security:</strong> Bank-level encryption & compliance</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span><strong>Scalable Solutions:</strong> Grow from startup to enterprise</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <CheckCircleIcon className="w-5 h-5 text-green-400 flex-shrink-0" />
+                    <span><strong>ROI Guarantee:</strong> 300% average ROI within 6 months</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

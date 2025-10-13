@@ -15,7 +15,8 @@ import {
   CurrencyDollarIcon,
   CogIcon,
   ChevronDownIcon,
-  GlobeAltIcon
+  GlobeAltIcon,
+  CpuChipIcon
 } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
@@ -27,32 +28,61 @@ const Navigation = () => {
     { name: 'Home', href: '/', icon: HomeIcon },
     { name: 'About', href: '/about', icon: InformationCircleIcon },
     { 
-      name: 'Services', 
-      href: '/services', 
-      icon: BriefcaseIcon,
+      name: 'AI Solutions', 
+      href: '/ai-solutions', 
+      icon: CpuChipIcon,
       submenu: [
-        { name: 'AI Solutions', href: '/ai-solutions' },
-        { name: 'IT Solutions', href: '/it-solutions' },
-        { name: 'Micro SaaS Solutions', href: '/micro-saas-solutions' },
-        { name: 'Cybersecurity', href: '/cybersecurity' },
-        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
-        { name: 'Digital Transformation', href: '/digital-transformation' },
-        { name: '5G Solutions', href: '/5g-solutions' }
+        { name: 'AI Analytics Dashboard', href: '/ai-analytics-dashboard' },
+        { name: 'AI Content Management', href: '/ai-content-management' },
+        { name: 'AI Customer Support', href: '/ai-customer-support-bot' },
+        { name: 'AI Project Management', href: '/ai-project-management' },
+        { name: 'AI E-commerce Optimizer', href: '/ai-ecommerce-optimizer' },
+        { name: 'AI Marketing Automation', href: '/ai-marketing-automation' },
+        { name: 'AI Voice Assistant', href: '/ai-voice-assistant' },
+        { name: 'AI Translation Hub', href: '/ai-translation-hub' }
       ]
     },
-<<<<<<< HEAD
-    { name: 'Solutions', href: '/solutions', icon: CogIcon },
+    { 
+      name: 'Micro SaaS', 
+      href: '/micro-saas-solutions', 
+      icon: GlobeAltIcon,
+      submenu: [
+        { name: 'All Micro SaaS Solutions', href: '/micro-saas-solutions' },
+        { name: 'AI Blockchain Analytics', href: '/ai-blockchain-analytics' },
+        { name: 'AI Climate Intelligence', href: '/ai-climate-intelligence' },
+        { name: 'AI Metaverse Builder', href: '/ai-metaverse-builder' },
+        { name: 'AI Smart City Platform', href: '/ai-smart-city' },
+        { name: 'AI Quantum Simulator', href: '/ai-quantum-simulator' },
+        { name: 'AI Space Mission Planner', href: '/ai-space-mission' },
+        { name: 'AI Digital Twin Creator', href: '/ai-digital-twin' }
+      ]
+    },
+    { 
+      name: 'IT Solutions', 
+      href: '/it-solutions', 
+      icon: BriefcaseIcon,
+      submenu: [
+        { name: 'Cloud Infrastructure', href: '/cloud-solutions' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
+        { name: 'Digital Transformation', href: '/digital-transformation' },
+        { name: '5G Solutions', href: '/5g-solutions' },
+        { name: 'Edge Computing', href: '/ai-edge-computing' },
+        { name: 'Predictive Maintenance', href: '/ai-predictive-maintenance' },
+        { name: 'Quality Assurance', href: '/ai-quality-assurance' },
+        { name: 'Code Review Assistant', href: '/ai-code-review' }
+      ]
+    },
     { name: 'Pricing', href: '/pricing', icon: CurrencyDollarIcon },
-    { name: 'Blog', href: '/blog', icon: DocumentTextIcon },
-    { name: 'Tutorials', href: '/tutorials', icon: AcademicCapIcon },
+    { name: 'Resources', href: '/resources', icon: DocumentTextIcon, submenu: [
+      { name: 'Blog', href: '/blog' },
+      { name: 'Tutorials', href: '/tutorials' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'API Reference', href: '/api' },
+      { name: 'Support Center', href: '/support' }
+    ]},
     { name: 'Demo', href: '/demo', icon: PlayIcon },
-    { name: 'Support', href: '/support', icon: QuestionMarkCircleIcon },
     { name: 'Contact', href: '/contact', icon: PhoneIcon }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/analyze-improve-and-deploy-application-b99c
->>>>>>> origin/main
   ];
 
   const isActive = (path: string) => {
@@ -73,7 +103,6 @@ const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-<<<<<<< HEAD
             {navigation.map((item) => {
               const Icon = item.icon;
               return (
@@ -111,38 +140,6 @@ const Navigation = () => {
                 </div>
               );
             })}
-=======
-{navigation.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.href}
-                  className="flex items-center space-x-1 text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors"
-                  onMouseEnter={() => item.submenu && setIsServicesOpen(true)}
-                  onMouseLeave={() => item.submenu && setIsServicesOpen(false)}
-                >
-                  <item.icon className="w-4 h-4" />
-                  <span>{item.name}</span>
-                  {item.submenu && <ChevronDownIcon className="w-4 h-4" />}
-                </Link>
-                
-                {/* Dropdown Menu */}
-                {item.submenu && isServicesOpen && (
-                  <div className="absolute left-0 mt-2 w-56 bg-slate-800 rounded-lg shadow-lg py-2 z-50 border border-slate-700">
-                    {item.submenu.map((subItem) => (
-                      <Link
-                        key={subItem.name}
-                        to={subItem.href}
-                        className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-700 transition-colors"
-                        onClick={() => setIsServicesOpen(false)}
-                      >
-                        {subItem.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
->>>>>>> origin/main
           </div>
 
           {/* CTA Button */}
