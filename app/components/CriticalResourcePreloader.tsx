@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React from 'react';
+=======
+'use client'
+>>>>>>> cursor/fix-errors-and-merge-to-main-31f8
 
 interface CriticalresourcepreloaderProps {
   className?: string;
