@@ -15,20 +15,70 @@ import {
   Sparkles,
   Star,
   CheckCircle,
-  TrendingUp
+  TrendingUp,
+  Video,
+  FileText,
+  Mail,
+  Package
 } from 'lucide-react';
 
 const MicroSaasPage = () => {
   const microSaasProducts = [
     {
+      name: "Zion AI Video Generator",
+      description: "Create professional videos with AI. Text-to-video generation, voice synthesis, 4K quality, and custom branding",
+      price: "From $49/month",
+      icon: <Video className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      link: "/zion-ai-video-generator",
+      features: ["AI Video Creation", "Text-to-Video", "Voice Synthesis", "4K Quality"],
+      popular: true
+    },
+    {
+      name: "Zion AI Invoice Generator",
+      description: "Automated invoice creation with AI. Smart templates, payment tracking, and multi-currency support",
+      price: "From $29/month",
+      icon: <FileText className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      link: "/zion-ai-invoice-generator",
+      features: ["AI Invoice Generation", "Smart Templates", "Payment Tracking", "Multi-currency"],
+      popular: true
+    },
+    {
+      name: "Zion AI Customer Insights",
+      description: "Unlock customer insights with AI. Sentiment analysis, behavioral patterns, and churn prediction",
+      price: "From $99/month",
+      icon: <Users className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      link: "/zion-ai-customer-insights",
+      features: ["Sentiment Analysis", "Behavioral Patterns", "Churn Prediction", "Lifetime Value"]
+    },
+    {
+      name: "Zion AI Email Analyzer",
+      description: "Optimize email campaigns with AI. Sentiment analysis, spam detection, and performance metrics",
+      price: "From $39/month",
+      icon: <Mail className="w-8 h-8" />,
+      color: "from-indigo-500 to-purple-500",
+      link: "/zion-ai-email-analyzer",
+      features: ["Email Analysis", "Spam Detection", "Performance Metrics", "ROI Tracking"]
+    },
+    {
+      name: "Zion Smart Inventory Optimizer",
+      description: "AI-powered inventory management with demand forecasting, automated reorder points, and cost optimization",
+      price: "From $79/month",
+      icon: <Package className="w-8 h-8" />,
+      color: "from-orange-500 to-red-500",
+      link: "/zion-smart-inventory-optimizer",
+      features: ["Demand Forecasting", "Automated Reorder", "Dead Stock Detection", "Cost Optimization"]
+    },
+    {
       name: "Zion Analytics Pro",
       description: "AI-powered business intelligence platform with real-time dashboards and predictive analytics",
       price: "From $299/month",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
+      color: "from-cyan-500 to-blue-500",
       link: "/zion-analytics-pro",
-      features: ["Real-time Analytics", "Predictive Insights", "Custom Dashboards", "API Integration"],
-      popular: true
+      features: ["Real-time Analytics", "Predictive Insights", "Custom Dashboards", "API Integration"]
     },
     {
       name: "Zion Security Shield",
@@ -37,8 +87,7 @@ const MicroSaasPage = () => {
       icon: <Shield className="w-8 h-8" />,
       color: "from-red-500 to-orange-500",
       link: "/zion-security-shield",
-      features: ["Threat Detection", "Automated Response", "24/7 Monitoring", "Compliance Reports"],
-      popular: true
+      features: ["Threat Detection", "Automated Response", "24/7 Monitoring", "Compliance Reports"]
     },
     {
       name: "Zion Cloud Vault",

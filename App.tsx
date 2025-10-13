@@ -14,12 +14,9 @@ import CoreWebVitals from "./app/components/CoreWebVitals";
 import FuturisticBackground from "./app/components/FuturisticBackground";
 import ErrorBoundary from "./app/components/ErrorBoundary";
 import Breadcrumb from "./app/components/Breadcrumb";
-<<<<<<< HEAD
 import EnhancedSEO from "./app/components/EnhancedSEO";
-=======
 import PerformanceOptimizer from "./app/components/PerformanceOptimizer";
 import EnhancedAnalytics from "./app/components/EnhancedAnalytics";
->>>>>>> cursor/analyze-improve-and-deploy-application-c4da
 
 // Lazy load pages for better performance
 const AboutPage = React.lazy(() => import("./app/about/page"));
@@ -37,6 +34,9 @@ const ConsultationPage = React.lazy(() => import("./app/consultation/page"));
 const SupportPage = React.lazy(() => import("./app/support/page"));
 
 // AI Services Pages
+const AI3DGenerationPage = React.lazy(() => import("./app/ai-3d-generation/page"));
+const AIBlockchainSolutionsPage = React.lazy(() => import("./app/ai-blockchain-solutions/page"));
+const AIClimateSolutionsProPage = React.lazy(() => import("./app/ai-climate-solutions-pro/page"));
 const AIAnalyticsPage = React.lazy(() => import("./app/ai-analytics/page"));
 const AIContentGenerationPage = React.lazy(() => import("./app/ai-content-generation/page"));
 const AICustomerSupportPage = React.lazy(() => import("./app/ai-customer-support/page"));
@@ -160,6 +160,9 @@ function App() {
                             <Route path="/support" element={<SupportPage />} />
 
                             {/* AI Services Routes */}
+                            <Route path="/ai-3d-generation" element={<AI3DGenerationPage />} />
+                            <Route path="/ai-blockchain-solutions" element={<AIBlockchainSolutionsPage />} />
+                            <Route path="/ai-climate-solutions-pro" element={<AIClimateSolutionsProPage />} />
                             <Route path="/ai-analytics" element={<AIAnalyticsPage />} />
                             <Route path="/ai-content-generation" element={<AIContentGenerationPage />} />
                             <Route path="/ai-customer-support" element={<AICustomerSupportPage />} />

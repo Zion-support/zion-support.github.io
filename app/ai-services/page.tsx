@@ -13,16 +13,43 @@ import {
   ArrowRight,
   Sparkles,
   Target,
-  TrendingUp
+  TrendingUp,
+  Box,
+  Link as LinkIcon,
+  Leaf
 } from 'lucide-react';
 
 const AIServicesPage = () => {
   const aiServices = [
     {
+      title: "AI 3D Generation",
+      description: "Create stunning 3D models with AI. Text-to-3D conversion, image reconstruction, and real-time rendering.",
+      icon: <Box className="w-8 h-8" />,
+      color: "from-blue-500 to-cyan-500",
+      link: "/ai-3d-generation",
+      features: ["Text-to-3D", "Image Reconstruction", "Real-time Rendering", "Multiple Formats"]
+    },
+    {
+      title: "AI Blockchain Solutions",
+      description: "Revolutionary AI-powered blockchain development. Smart contracts, DeFi protocols, and NFT platforms.",
+      icon: <LinkIcon className="w-8 h-8" />,
+      color: "from-purple-500 to-pink-500",
+      link: "/ai-blockchain-solutions",
+      features: ["Smart Contracts", "DeFi Protocols", "NFT Platforms", "Trading Algorithms"]
+    },
+    {
+      title: "AI Climate Solutions Pro",
+      description: "Combat climate change with AI. Carbon reduction, renewable energy optimization, and sustainability reporting.",
+      icon: <Leaf className="w-8 h-8" />,
+      color: "from-green-500 to-emerald-500",
+      link: "/ai-climate-solutions-pro",
+      features: ["Carbon Reduction", "Renewable Energy", "Climate Risk", "Sustainability"]
+    },
+    {
       title: "AI Analytics",
       description: "Transform your data into actionable insights with our advanced AI analytics platform.",
       icon: <BarChart3 className="w-8 h-8" />,
-      color: "from-blue-500 to-cyan-500",
+      color: "from-indigo-500 to-purple-500",
       link: "/ai-analytics",
       features: ["Predictive Analytics", "Real-time Insights", "Custom Dashboards"]
     },
@@ -30,7 +57,7 @@ const AIServicesPage = () => {
       title: "AI Content Generation",
       description: "Create high-quality content at scale with our AI-powered content generation tools.",
       icon: <Code className="w-8 h-8" />,
-      color: "from-purple-500 to-pink-500",
+      color: "from-pink-500 to-rose-500",
       link: "/ai-content-generation",
       features: ["Automated Writing", "SEO Optimization", "Multi-language Support"]
     },
@@ -46,7 +73,7 @@ const AIServicesPage = () => {
       title: "AI Customer Support",
       description: "Enhance customer experience with intelligent chatbots and support automation.",
       icon: <Users className="w-8 h-8" />,
-      color: "from-green-500 to-emerald-500",
+      color: "from-teal-500 to-cyan-500",
       link: "/ai-customer-support",
       features: ["Smart Chatbots", "Sentiment Analysis", "Multi-channel Support"]
     },
@@ -54,7 +81,7 @@ const AIServicesPage = () => {
       title: "AI Data Analytics",
       description: "Unlock the power of your data with advanced AI analytics and machine learning.",
       icon: <Database className="w-8 h-8" />,
-      color: "from-indigo-500 to-purple-500",
+      color: "from-violet-500 to-purple-500",
       link: "/ai-data-analytics",
       features: ["Data Mining", "Pattern Recognition", "Predictive Modeling"]
     },
