@@ -15,7 +15,8 @@ jest.mock('react-router-dom', () => {
       key: 'default'
     }),
     Link: ({ to, children, ...props }) => {
-      return React.createElement('a', { href: to, ...props }, children);
+      const mockReact = jest.requireActual('react');
+      return mockReact.createElement('a', { href: to, ...props }, children);
     },
     BrowserRouter: ({ children }) => children,
     MemoryRouter: ({ children }) => children,
@@ -23,10 +24,13 @@ jest.mock('react-router-dom', () => {
     Route: ({ element }) => element,
     useParams: () => ({}),
     useSearchParams: () => [new URLSearchParams(), jest.fn()],
-    createBrowserRouter: () => ({
-      path: '/',
-      element: React.createElement('div')
-    })
+    createBrowserRouter: () => {
+      const mockReact = jest.requireActual('react');
+      return {
+        path: '/',
+        element: mockReact.createElement('div')
+      };
+    }
   };
 });
 

@@ -285,12 +285,7 @@ import { Right, Circle, Star, } from 'lucide-react';
                 {departments.map((dept) => (
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Work on cutting-edge AI and IT solutions that transform businesses worldwide.
-<<<<<<< HEAD
-              Be part of a team that's shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
-=======
-              Be part of a team that&apos;s shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.
->>>>>>> cursor/fix-errors-and-merge-to-main-0c82
-          {/* Why Work With Us */}
+              Be part of a team that's shaping the future of AI and IT solutions. We&apos;re looking for passionate individuals who want to make a difference.          {/* Why Work With Us */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
             <div>
               <h2 className="text-4xl font-bold text-white mb-6">Why Work With Us?</h2>
@@ -394,7 +389,6 @@ import { Right, Circle, Star, } from 'lucide-react';
                     setSelectedDepartment('all);
 
                     setSelectedLocation('all);
-
 
                   className={bg-white/10 backdrop-blur-lg rounded-2xl p-8 border ${
                     position.featured ? 'border-purple-400 shadow-2xl shadow-purple-500/25' : 'border-white/20
