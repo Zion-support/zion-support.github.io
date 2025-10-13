@@ -185,15 +185,10 @@ const HomePage = () => {
             canonical="https://ziontechgroup.com"
           />
 
-<<<<<<< HEAD
       {/* Main Content */}
       <main id="main-content" role="main" aria-label="Main content">
         {/* Hero Section */}
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-=======
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden" aria-labelledby="hero-heading">
->>>>>>> cursor/analyze-improve-and-deploy-application-9610
+        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden" aria-labelledby="hero-heading">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
@@ -446,7 +441,7 @@ const HomePage = () => {
         </div>
       </section>
       </main>
-        </div>
+      </div>
       </EnhancedAccessibility>
     </PerformanceOptimizer>
   );
