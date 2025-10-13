@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-'use client'
-import { useEffect, useState } from 'react'
-=======
 'use client';
 import React, { useState, useEffect, useCallback } from 'react';
 import { Activity, Zap, AlertTriangle, CheckCircle } from 'lucide-react';
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
 
 interface PerformanceMetrics {
   fcp: number | null
@@ -17,9 +12,6 @@ interface PerformanceMetrics {
   loadTime: number | null
 }
 
-<<<<<<< HEAD
-const AdvancedPerformanceMonitor = () => {
-=======
 interface PerformanceRecommendation {
   type: 'warning' | 'error' | 'info';
   message: string;
@@ -27,14 +19,12 @@ interface PerformanceRecommendation {
 }
 
 const AdvancedPerformanceMonitor: React.FC = () => {
->>>>>>> cursor/fix-errors-and-merge-to-main-0ca7
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
     fcp: null,
     lcp: null,
     fid: null,
     cls: null,
     ttfb: null,
-<<<<<<< HEAD
     memoryUsage: null,
     loadTime: null
   })
@@ -70,11 +60,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
           reportMetric('TTFB', metric.value)
         })
       } catch (error) {
-<<<<<<< HEAD
-        console.error('Failed to measure web vitals:', error);
-=======
         console.warn('Performance monitoring error:', error);
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
       }
     }
 
@@ -119,11 +105,7 @@ const AdvancedPerformanceMonitor: React.FC = () => {
 
       // Log to console in development
       if (process.env.NODE_ENV === 'development') {
-<<<<<<< HEAD
-        console.log(`Performance Metric: ${name} = ${value}`);
-=======
         console.log('Performance metric:', { name, value, timestamp: Date.now() });
->>>>>>> cursor/fix-errors-and-merge-to-main-3db5
       }
     }
 
