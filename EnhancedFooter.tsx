@@ -22,4 +22,9 @@ const EnhancedFooter: React.FC = () => {
           </p>
         </div>
       </section>
+    </div>
+  );
+};
+
+export default EnhancedFooter;
 

@@ -32,7 +32,7 @@ export default function handler(req, res) {
       existing = JSON.parse(data);
       if (!Array.isArray(existing)) existing = [];
     }
-  } catch (_error) { // eslint-disable-line no-unused-vars
+  } catch (_error) {  
     // console.error('Error reading existing subscribers:', error);
     existing = [];
   }
@@ -66,7 +66,7 @@ export default function handler(req, res) {
       message: 'Successfully subscribed to newsletter',
       id: newSubscriber.id
     }));
-  } catch (_error) { // eslint-disable-line no-unused-vars
+  } catch (_error) {  
     // console.error('Error saving subscriber:', error);
     res.statusCode = 500;
     res.setHeader('Content-Type', 'application/json');

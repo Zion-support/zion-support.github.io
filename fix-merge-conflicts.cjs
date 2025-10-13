@@ -1,59 +1,57 @@
-#!/usr/bin/env node
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
+// Files with merge conflicts
+const files = [
+  '/workspace/app/zion-ai-inventory-manager/page.tsx',
+  '/workspace/app/zion-ai-social-media-manager/page.tsx',
+  '/workspace/app/zion-ai-email-analyzer/page.tsx',
+  '/workspace/app/zion-smart-inventory-optimizer/page.tsx',
+  '/workspace/app/zion-ai-performance-optimizer/page.tsx',
+  '/workspace/app/zion-smart-expense-categorizer/page.tsx',
+  '/workspace/app/zion-ai-voice-assistant-pro/page.tsx'
+];
+
+function fixMergeConflicts(filePath) {
+  try {
+    let content = fs.readFileSync(filePath, 'utf8');
+    
+    // Remove merge conflict markers and keep the content between HEAD and the first =======
+    const lines = content.split('\n');
+    const fixedLines = [];
+    let inConflict = false;
+    let keepContent = true;
+    
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      
+      if (line.startsWith('<<<<<<< HEAD')) {
+        inConflict = true;
+        keepContent = true;
+        continue;
+      } else if (line.startsWith('=======')) {
+        keepContent = false;
         continue;
       } else if (line.startsWith('>>>>>>>')) {
         inConflict = false;
-        conflictType = '';
+        keepContent = true;
         continue;
       }
       
-      if (!inConflict) {
+      if (!inConflict || keepContent) {
         fixedLines.push(line);
-      } else if (inConflict && conflictType === 'head') {
-        fixedLines.push(line);
-
       }
     }
-
-    // Clean up multiple empty lines
-    content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
     
-    // Remove any remaining orphaned markers
-    content = content.replace(/^<<<<<<<|^
-    }
-    
-    return modified;
->>>>>>> origin/cursor/fix-errors-and-merge-to-main-c68e
+    const fixedContent = fixedLines.join('\n');
+    fs.writeFileSync(filePath, fixedContent, 'utf8');
+    console.log(`Fixed merge conflicts in: ${filePath}`);
   } catch (error) {
-
-    return false;
+    console.error(`Error fixing ${filePath}:`, error.message);
   }
 }
 
-    const items = fs.readdirSync(currentDir);
-    
-    for (const item of items) {
-      const fullPath = path.join(currentDir, item);
-      const stat = fs.statSync(fullPath);
+// Fix all files
+files.forEach(fixMergeConflicts);
 
-            files.push(fullPath);
-          }
-        } catch (error) {
-          // Skip files that can't be read
-
-        }
-      }
-    } catch (error) {
-      // Skip directories that can't be read
-    }
-  }
-
-  return files;
-}
-
-// Main execution
-
+console.log('All merge conflicts fixed!');
