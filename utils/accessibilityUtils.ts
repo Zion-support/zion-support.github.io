@@ -1,14 +1,10 @@
 export interface AccessibilityConfig {
   enabled: boolean;
-
   announceChanges: boolean;
   highContrast: boolean;
   reducedMotion: boolean;
-
-  highContrast: boolean;
   fontSize: number;
   screenReader: boolean;
-
 }
 
 export class AccessibilityUtils {
@@ -20,12 +16,14 @@ export class AccessibilityUtils {
       announceChanges: true,
       highContrast: false,
       reducedMotion: false,
+      fontSize: 16,
+      screenReader: false,
       ...config
     };
   }
 
 
-  announceToScreenReader(message: string) {
+  announceToScreenReader(message: string): void {
     if (this.config.enabled && this.config.announceChanges) {
       const announcement = document.createElement('div');
       announcement.setAttribute('aria-live', 'polite');
@@ -37,11 +35,12 @@ export class AccessibilityUtils {
       setTimeout(() => {
         document.body.removeChild(announcement);
       }, 1000);
+    }
+  }
 
   init(): void {
     if (this.config.enabled) {
       console.log('Accessibility utils initialized');
-
     }
   }
 

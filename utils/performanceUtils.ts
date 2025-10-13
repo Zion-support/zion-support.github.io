@@ -6,6 +6,12 @@ export interface PerformanceMetrics {
   fps: number;
 }
 
+interface PerformanceConfig {
+  enabled: boolean;
+  monitoring: boolean;
+  optimization: boolean;
+}
+
 export class PerformanceUtils {
   private metrics: PerformanceMetrics = {
     loadTime: 0,
@@ -14,44 +20,42 @@ export class PerformanceUtils {
     fps: 0
   };
 
-  measureLoadTime() {
+  private config: PerformanceConfig;
 
-interface PerformanceConfig {
-  enabled: boolean;
-  monitoring: boolean;
-  optimization: boolean;
-}
+  constructor(config: Partial<PerformanceConfig> = {}) {
+    this.config = {
+      enabled: true,
+      monitoring: true,
+      optimization: true,
+      ...config
+    };
+  }
 
-
+  measureLoadTime(): void {
     if (typeof window !== 'undefined' && window.performance) {
       const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
       this.metrics.loadTime = navigation.loadEventEnd - navigation.loadEventStart;
     }
   }
 
-
-  measureRenderTime() {
+  measureRenderTime(): void {
     if (typeof window !== 'undefined' && window.performance) {
       const paintEntries = window.performance.getEntriesByType('paint');
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint');
       if (fcp) {
         this.metrics.renderTime = fcp.startTime;
       }
-
-    if (typeof window !== 'undefined') {
-      this.metrics.loadTime = performance.now();
-
     }
   }
 
-  measureMemoryUsage() {
+  measureMemoryUsage(): void {
     if (typeof window !== 'undefined' && (window as unknown as { performance?: { memory?: { usedJSHeapSize: number } } }).performance?.memory) {
       const memory = (window as unknown as { performance: { memory: { usedJSHeapSize: number } } }).performance.memory;
       this.metrics.memoryUsage = memory.usedJSHeapSize / 1024 / 1024; // Convert to MB
     }
   }
 
-  measureFPS() {
+  measureFPS(): void {
     let lastTime = performance.now();
     let frameCount = 0;
     
@@ -75,21 +79,12 @@ interface PerformanceConfig {
     return { ...this.metrics };
   }
 
-  reset() {
+  reset(): void {
     this.metrics = {
       loadTime: 0,
       renderTime: 0,
       memoryUsage: 0,
       fps: 0
-    };
-  }
-
-  constructor(config: Partial<PerformanceConfig> = {}) {
-    this.config = {
-      enabled: true,
-      monitoring: true,
-      optimization: true,
-      ...config
     };
   }
 
