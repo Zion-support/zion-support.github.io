@@ -56,9 +56,9 @@ const Footer = React.memo(() => {
             </div>
           </div>
 
-          {/* Services */}
+          {/* AI Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Services</h4>
+            <h4 className="text-lg font-semibold mb-4">AI Services</h4>
             <ul className="space-y-2">
               <li>
                 <Link
@@ -68,53 +68,6 @@ const Footer = React.memo(() => {
                   AI Services
                 </Link>
               </li>
-              <li>
-                <Link
-                  to="/cloud-services"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Cloud Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/cybersecurity"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Cybersecurity
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/5g-solutions"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  5G Solutions
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/data-analytics"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Data Analytics
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/web-development"
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Web Development
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Solutions */}
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Solutions</h4>
-            <ul className="space-y-2">
               <li>
                 <Link
                   to="/ai-analytics"
@@ -149,10 +102,57 @@ const Footer = React.memo(() => {
               </li>
               <li>
                 <Link
-                  to="/ai-marketing"
+                  to="/ai-cybersecurity-suite-pro"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  AI Marketing
+                  AI Cybersecurity
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* IT Services */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">IT Services</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/cloud-services"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cloud Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/cybersecurity"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/web-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Web Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/mobile-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Mobile Development
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/custom-development"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Custom Development
                 </Link>
               </li>
               <li>
@@ -163,12 +163,114 @@ const Footer = React.memo(() => {
                   Data Analytics
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Micro SAAS */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Micro SAAS</h4>
+            <ul className="space-y-2">
               <li>
                 <Link
-                  to="/custom-development"
+                  to="/zion-analytics-pro"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  Custom Development
+                  Zion Analytics Pro
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-security-shield"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Security Shield
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-cloud-vault"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Cloud Vault
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-content-studio"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Content Studio
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/zion-data-sync"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Zion Data Sync
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/micro-saas"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  View All Solutions
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* 5G Solutions */}
+          <div>
+            <h4 className="text-lg font-semibold mb-4">5G Solutions</h4>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  to="/5g-solutions"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  5G Solutions
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-data-analytics"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  5G Data Analytics
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-edge-computing"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  5G Edge Computing
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-implementation"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  5G Implementation
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-mobile-applications"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  5G Mobile Apps
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/5g-smart-city-solutions"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
+                  Smart City Solutions
                 </Link>
               </li>
             </ul>
