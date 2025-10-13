@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface StructuredDataProps {
-  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList';
+  type: 'Organization' | 'WebSite' | 'WebPage' | 'Service' | 'FAQPage' | 'BreadcrumbList' | 'SoftwareApplication';
   data: any;
 }
 
@@ -91,6 +91,18 @@ const StructuredData: React.FC<StructuredDataProps> = ({ type, data }) => {
         return {
           ...baseData,
           "itemListElement": data.itemListElement || []
+        };
+
+      case 'SoftwareApplication':
+        return {
+          ...baseData,
+          "name": data.name || "Software Application",
+          "description": data.description || "",
+          "url": data.url || "",
+          "applicationCategory": data.applicationCategory || "BusinessApplication",
+          "operatingSystem": data.operatingSystem || "Web",
+          "offers": data.offers || {},
+          "provider": data.provider || {}
         };
 
       default:

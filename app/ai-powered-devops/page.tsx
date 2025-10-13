@@ -2,7 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ArrowRight, CheckCircle, Star, Brain, Zap, Award, DollarSign, Globe, TrendingUp, Monitor, MessageSquare, Eye, Rocket, Phone } from 'lucide-react';
 import { Link } from "react-router-dom";
-import SEOOptimizer from "../../components/SEOOptimizer";
+import SEOOptimizer from "../components/SEOOptimizer";
 
 export default function AiPoweredDevops() {
   const features = [
@@ -148,10 +148,7 @@ export default function AiPoweredDevops() {
         />
         <link rel="canonical" href="https://ziontechgroup.com/ai-powered-devops" />
       </Helmet>
-      <SEOOptimizer
-        title="AI-Powered DevOps - Intelligent Development Operations | Zion Tech Group"
-        description="Revolutionize your DevOps with AI. Automated testing, intelligent deployment, predictive scaling, and smart monitoring. Transform your development operations with Zion's AI-powered DevOps platform."
-      />
+      <SEOOptimizer>
 
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
         {/* Hero Section */}
@@ -449,6 +446,7 @@ export default function AiPoweredDevops() {
           </div>
         </section>
       </div>
+      </SEOOptimizer>
     </>
   );
 }
